@@ -1,0 +1,58 @@
+# Propositions de relations (audit_lore.py --llm), tous scénarios.
+# Passer `valide: true` sur celles à garder, puis (GUI « Audit du lore » ou CLI) :
+#   python3 generator/audit_lore.py --all --appliquer --dry-run
+#   python3 generator/audit_lore.py --all --appliquer
+# Les entrées déjà présentes ne sont jamais écrasées par un nouveau run.
+propositions:
+- scenario: fortress_world
+  slug: ergo_wian_sovereign_holdings_fortress_world
+  relation: alliance
+  cible: gelecek_meclisi_fortress_world
+  raison: Le Gelecek Meclisi Fragmentaire, en tant qu'assemblée résiduelle des marges, pourrait négocier
+    ou résister aux contrats de service d'Ergo-Wian, créant une tension diplomatique ou une alliance de
+    circonstance pour l'accès aux ressources.
+  valide: false
+  date: '2026-09-26'
+- scenario: fortress_world
+  slug: ergo_wian_sovereign_holdings_fortress_world
+  relation: alliance
+  cible: consortium_sino_finlandais_de_flotte_autonome_fortress_world
+  raison: Le Consortium Sino-Finlandais de Flotte Autonome, opérant dans l'Arctique, pourrait être un
+    partenaire logistique ou un rival pour le contrôle des corridors maritimes, en lien avec la NAT.
+  valide: false
+  date: '2026-09-26'
+- scenario: fortress_world
+  slug: ergo_wian_sovereign_holdings_fortress_world
+  relation: alliance
+  cible: coalition_arctique_des_blocs_continentaux_fortress_world
+  raison: La Coalition Arctique des Blocs Continentaux pourrait être un forum où l'EWSD négocie ou s'oppose
+    aux autres blocs pour le partage des ressources et des voies arctiques.
+  valide: false
+  date: '2026-09-26'
+- scenario: fortress_world
+  slug: ergo_wian_sovereign_holdings_fortress_world
+  relation: opposition
+  cible: factions_anti_privatisation_des_voies_souveraines_scandinaves_fortress_world
+  raison: Ces factions locales pourraient s'opposer à la militarisation et à la privatisation des corridors
+    arctiques par la NAT, en lien avec les tensions nordiques mentionnées dans le lore.
+  valide: true
+  date: '2026-09-26'
+  applique: '2026-09-26'
+- scenario: fortress_world
+  slug: ergo_wian_sovereign_holdings_fortress_world
+  relation: opposition
+  cible: milices_de_piraterie_logistique_arctique_fortress_world
+  raison: Les milices de piraterie logistique arctique pourraient cibler les convois de l'EWSD et de la
+    NAT, créant des conflits armés pour le contrôle des ressources.
+  valide: true
+  date: '2026-09-26'
+  applique: '2026-09-26'
+- scenario: fortress_world
+  slug: ergo_wian_sovereign_holdings_fortress_world
+  relation: opposition
+  cible: les_veilleurs_des_nappes_phreatiques_fortress_world
+  raison: Ajout manuel — les Sentinelles accusent l'EWSD de pomper l'eau des zones grises (texte de la
+    fiche).
+  valide: true
+  date: '2026-09-26'
+  applique: '2026-09-26'

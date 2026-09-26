@@ -1,6 +1,6 @@
 # Audit du lore — new_sustainability
 
-*Généré par `audit_lore.py` le 2026-09-25 19:17 — réécrit à chaque run, ne pas éditer. Règles : `documentation/lore_regles.yaml`.*
+*Généré par `audit_lore.py` le 2026-09-26 08:36 — réécrit à chaque run, ne pas éditer. Règles : `documentation/lore_regles.yaml`.*
 
 ## Résumé
 

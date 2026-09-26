@@ -4881,6 +4881,321 @@ def _parse_localisation_review(vault_root: Path) -> list:
     return items
 
 
+# ── Relations & lore — étape 5 « Valider les propositions de l'IA » ──────────
+# (26 septembre 2026, S17). Écran GUI au-dessus de trois fichiers écrits par
+# generator/audit_lore.py --llm :
+#   documentation/need_action/audit_lore_propositions.yaml  relations proposées
+#   state/audit_lore_cache.json                             contradictions (par fiche)
+#   state/audit_lore_rejets.json                            relations rejetées +
+#                                                           contradictions marquées traitées
+# Décision David (26 sept) : une proposition rejetée est SUPPRIMÉE du fichier
+# de propositions ; elle est inscrite dans audit_lore_rejets.json pour que
+# audit_lore.py ne la repropose jamais. L'écriture dans les fiches passe par
+# audit_lore.py --appliquer (même code que la CLI), jamais par cette route.
+
+LORE_ENTETE_PROPOSITIONS = (
+    "# Propositions de relations (audit_lore.py --llm), tous scénarios.\n"
+    "# À trier dans le GUI : « Relations & lore » → « 5. Valider les propositions de l'IA ».\n"
+    "# (ou à la main : `valide: true` sur celles à garder, puis\n"
+    "#   python3 generator/audit_lore.py --all --appliquer --dry-run\n"
+    "#   python3 generator/audit_lore.py --all --appliquer)\n"
+    "# Les entrées déjà présentes ne sont jamais écrasées par un nouveau run ;\n"
+    "# une proposition rejetée est retirée d'ici et notée dans state/audit_lore_rejets.json.\n")
+TIMEOUT_LORE_APPLIQUER = 300
+
+
+def _lore_chemins():
+    vault_root = Path(load_config().get("vault_root", ""))
+    return {
+        "vault": vault_root,
+        "propositions": vault_root / "documentation" / "need_action" / "audit_lore_propositions.yaml",
+        "cache": vault_root / "state" / "audit_lore_cache.json",
+        "rejets": vault_root / "state" / "audit_lore_rejets.json",
+        "instances": vault_root / "instances",
+    }
+
+
+def _lore_lire_propositions(chemins):
+    import yaml as _yaml
+    p = chemins["propositions"]
+    if not p.exists():
+        return []
+    data = _yaml.safe_load(p.read_text(encoding="utf-8")) or {}
+    return data.get("propositions") or []
+
+
+def _lore_ecrire_propositions(chemins, liste):
+    import shutil
+    import yaml as _yaml
+    p = chemins["propositions"]
+    p.parent.mkdir(parents=True, exist_ok=True)
+    if p.exists():
+        shutil.copy2(p, p.with_suffix(".yaml.bak"))
+    p.write_text(LORE_ENTETE_PROPOSITIONS + _yaml.safe_dump(
+        {"propositions": liste}, allow_unicode=True, sort_keys=False, width=100), encoding="utf-8")
+
+
+def _lore_lire_rejets(chemins):
+    try:
+        data = json.loads(chemins["rejets"].read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        data = {}
+    data.setdefault("relations", [])
+    data.setdefault("contradictions", [])
+    return data
+
+
+def _lore_ecrire_rejets(chemins, data):
+    chemins["rejets"].parent.mkdir(parents=True, exist_ok=True)
+    chemins["rejets"].write_text(json.dumps(data, ensure_ascii=False, indent=1), encoding="utf-8")
+
+
+def _lore_cle_prop(p):
+    return (p.get("scenario"), p.get("slug"), p.get("relation"), p.get("cible"))
+
+
+def _lore_cle_contr(scenario, slug, c):
+    return (scenario, slug, str(c.get("champ") or ""), " ".join(str(c.get("extrait") or "").split()))
+
+
+def _lore_fiche(chemins, slug, memo):
+    """{name, role, fichier, texte, mtime} d'une instance (None si absente)."""
+    if slug in memo:
+        return memo[slug]
+    import yaml as _yaml
+    path = chemins["instances"] / f"{slug}.md"
+    info = None
+    if path.exists():
+        texte = path.read_text(encoding="utf-8")
+        fm = {}
+        m = re.match(r"^---\s*\n(.*?)\n---", texte, re.DOTALL)
+        if m:
+            try:
+                fm = _yaml.safe_load(m.group(1)) or {}
+            except _yaml.YAMLError:
+                fm = {}
+        info = {"name": fm.get("name") or slug,
+                "role": " ".join(str(fm.get("role_dans_scenario") or "").split())[:300],
+                "fichier": path.name, "texte": " ".join(texte.split()),
+                "mtime": path.stat().st_mtime}
+    memo[slug] = info
+    return info
+
+
+@app.route("/api/lore/propositions", methods=["GET"])
+def lore_propositions_liste():
+    """
+    GET /api/lore/propositions — lecture seule. Regroupe par fiche relue :
+    relations proposées (fichier de propositions) et contradictions signalées
+    (cache LLM), avec les noms lisibles des fiches cibles.
+    """
+    from datetime import datetime as _dt
+    chemins = _lore_chemins()
+    try:
+        props = _lore_lire_propositions(chemins)
+    except Exception as e:  # YAML édité à la main et cassé
+        return jsonify({"error": f"Fichier de propositions illisible : {e}"}), 500
+    try:
+        cache = json.loads(chemins["cache"].read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        cache = {}
+    rejets = _lore_lire_rejets(chemins)
+    contr_vues = {tuple(x.get("cle") or []) for x in rejets["contradictions"]}
+
+    memo, fiches = {}, {}
+
+    def fiche_de(scenario, slug):
+        cle = f"{scenario}/{slug}"
+        if cle not in fiches:
+            info = _lore_fiche(chemins, slug, memo)
+            fiches[cle] = {"scenario": scenario, "slug": slug,
+                           "name": info["name"] if info else slug,
+                           "fichier": info["fichier"] if info else None,
+                           "introuvable": info is None,
+                           "relue_le": None, "fiche_modifiee_depuis": False,
+                           "contradictions": [], "propositions": []}
+        return fiches[cle]
+
+    for cle, entree in cache.items():
+        if "/" not in cle or not isinstance(entree, dict):
+            continue
+        scenario, slug = cle.split("/", 1)
+        contr = (entree.get("resultat") or {}).get("contradictions") or []
+        if not contr:
+            continue
+        f = fiche_de(scenario, slug)
+        info = _lore_fiche(chemins, slug, memo)
+        f["relue_le"] = entree.get("date")
+        try:
+            relue_ts = _dt.fromisoformat(entree.get("date")).timestamp()
+            f["fiche_modifiee_depuis"] = bool(info and info["mtime"] > relue_ts + 1)
+        except (TypeError, ValueError):
+            pass
+        for c in contr:
+            extrait = " ".join(str(c.get("extrait") or "").split())
+            f["contradictions"].append({
+                "champ": c.get("champ"), "extrait": c.get("extrait"),
+                "probleme": c.get("probleme"), "correction": c.get("correction"),
+                # Indice seulement : l'IA ne cite pas toujours mot pour mot.
+                "extrait_present": bool(info and extrait and extrait in info["texte"]),
+                "vue": _lore_cle_contr(scenario, slug, c) in contr_vues,
+            })
+
+    for p in props:
+        scenario, slug = p.get("scenario"), p.get("slug")
+        if not scenario or not slug:
+            continue
+        f = fiche_de(scenario, slug)
+        cible = _lore_fiche(chemins, p.get("cible"), memo)
+        f["propositions"].append({
+            "relation": p.get("relation"), "cible": p.get("cible"),
+            "cible_name": cible["name"] if cible else p.get("cible"),
+            "cible_role": cible["role"] if cible else "",
+            "cible_introuvable": cible is None,
+            "raison": " ".join(str(p.get("raison") or "").split()),
+            "valide": p.get("valide") is True, "applique": p.get("applique"),
+            "date": p.get("date"),
+        })
+        if not f["relue_le"]:
+            f["relue_le"] = p.get("date")
+
+    liste = sorted(fiches.values(), key=lambda f: (f["scenario"], f["name"].lower()))
+    toutes = [p for f in liste for p in f["propositions"]]
+    return jsonify({
+        "ok": True, "fiches": liste,
+        "compteurs": {
+            "a_trier": sum(1 for p in toutes if not p["valide"] and not p["applique"]),
+            "gardees": sum(1 for p in toutes if p["valide"] and not p["applique"]),
+            "appliquees": sum(1 for p in toutes if p["applique"]),
+            "contradictions": sum(1 for f in liste for c in f["contradictions"] if not c["vue"]),
+            "rejetees": len(rejets["relations"]),
+        },
+    })
+
+
+@app.route("/api/lore/propositions/decider", methods=["POST"])
+def lore_propositions_decider():
+    """
+    POST /api/lore/propositions/decider
+    Body : {scenario, slug, relation, cible, decision: "garder"|"a_trier"|"rejeter"}
+    garder → valide: true ; a_trier → valide: false ; rejeter → retirée du
+    fichier (.bak) et inscrite dans state/audit_lore_rejets.json. Refusé pour
+    une proposition déjà appliquée (elle est déjà écrite dans la fiche).
+    """
+    from datetime import date as _date
+    data = request.get_json(silent=True) or {}
+    decision = data.get("decision")
+    if decision not in ("garder", "a_trier", "rejeter"):
+        return jsonify({"error": "decision doit valoir garder, a_trier ou rejeter"}), 400
+    cle = (data.get("scenario"), data.get("slug"), data.get("relation"), data.get("cible"))
+    chemins = _lore_chemins()
+    try:
+        props = _lore_lire_propositions(chemins)
+    except Exception as e:
+        return jsonify({"error": f"Fichier de propositions illisible : {e}"}), 500
+    cible = next((p for p in props if _lore_cle_prop(p) == cle), None)
+    if cible is None:
+        return jsonify({"error": "Proposition introuvable (fichier modifié entre-temps ? recharge l'écran)"}), 404
+    if cible.get("applique"):
+        return jsonify({"error": "Déjà écrite dans la fiche le "
+                                 f"{cible['applique']} — pour l'annuler, retire la relation à la main "
+                                 "dans la fiche (et chez la fiche cible)."}), 409
+    if decision == "rejeter":
+        props = [p for p in props if _lore_cle_prop(p) != cle]
+        rejets = _lore_lire_rejets(chemins)
+        if not any(tuple(r.get("cle") or []) == cle for r in rejets["relations"]):
+            rejets["relations"].append({"cle": list(cle), "raison": cible.get("raison", ""),
+                                        "date": _date.today().isoformat()})
+            _lore_ecrire_rejets(chemins, rejets)
+    else:
+        cible["valide"] = decision == "garder"
+    _lore_ecrire_propositions(chemins, props)
+    return jsonify({"ok": True})
+
+
+@app.route("/api/lore/contradictions/marquer", methods=["POST"])
+def lore_contradictions_marquer():
+    """
+    POST /api/lore/contradictions/marquer
+    Body : {scenario, slug, champ, extrait, vue: true|false}
+    Une contradiction « traitée » (corrigée à la main, ou jugée faux positif)
+    est masquée de l'écran. Rien n'est écrit dans la fiche.
+    """
+    from datetime import date as _date
+    data = request.get_json(silent=True) or {}
+    scenario, slug = data.get("scenario"), data.get("slug")
+    if not scenario or not slug:
+        return jsonify({"error": "scenario et slug requis"}), 400
+    cle = list(_lore_cle_contr(scenario, slug, data))
+    chemins = _lore_chemins()
+    rejets = _lore_lire_rejets(chemins)
+    rejets["contradictions"] = [x for x in rejets["contradictions"] if x.get("cle") != cle]
+    if data.get("vue", True):
+        rejets["contradictions"].append({"cle": cle, "date": _date.today().isoformat()})
+    _lore_ecrire_rejets(chemins, rejets)
+    return jsonify({"ok": True})
+
+
+@app.route("/api/lore/propositions/appliquer", methods=["POST"])
+def lore_propositions_appliquer():
+    """
+    POST /api/lore/propositions/appliquer
+    Body : {dry_run: bool}
+    Pour chaque scénario ayant des propositions gardées non appliquées :
+    audit_lore.py --scenario X --appliquer [--dry-run], puis (écriture réelle
+    seulement) la réciprocité fix_alliances_oppositions.py --scenario X
+    --reciprocite-seule --ignorer-exclus, pour inscrire la relation chez la
+    fiche cible aussi. En simulation, la réciprocité n'est pas lancée : elle
+    lirait les fiches AVANT l'écriture et n'annoncerait rien d'utile.
+    """
+    data = request.get_json(silent=True) or {}
+    dry_run = bool(data.get("dry_run", True))
+    cfg = load_config()
+    pipeline_dir = Path(cfg.get("pipeline_dir", ""))
+    chemins = _lore_chemins()
+    try:
+        props = _lore_lire_propositions(chemins)
+    except Exception as e:
+        return jsonify({"error": f"Fichier de propositions illisible : {e}"}), 500
+    scenarios = sorted({p.get("scenario") for p in props
+                        if p.get("valide") is True and not p.get("applique") and p.get("scenario")})
+    if not scenarios:
+        return jsonify({"ok": True, "sortie": "Aucune proposition gardée en attente d'application.",
+                        "scenarios": []})
+
+    def lancer(cmd):
+        r = subprocess.run(cmd, cwd=pipeline_dir, capture_output=True, text=True,
+                           timeout=TIMEOUT_LORE_APPLIQUER, stdin=subprocess.DEVNULL)
+        texte = (r.stdout or "") + (("\n" + r.stderr) if r.returncode and r.stderr else "")
+        return r.returncode, texte.rstrip()
+
+    blocs = []
+    try:
+        for sc in scenarios:
+            cmd = [sys.executable, "audit_lore.py", "--scenario", sc, "--appliquer"]
+            if dry_run:
+                cmd.append("--dry-run")
+            code, texte = lancer(cmd)
+            blocs.append(f"$ {' '.join(cmd[1:])}\n{texte}")
+            if code:
+                return jsonify({"error": f"audit_lore.py a échoué (code {code})",
+                                "sortie": "\n\n".join(blocs)}), 500
+            if not dry_run:
+                cmd = [sys.executable, "fix_alliances_oppositions.py", "--scenario", sc,
+                       "--reciprocite-seule", "--ignorer-exclus"]
+                code, texte = lancer(cmd)
+                blocs.append(f"$ {' '.join(cmd[1:])}\n{texte}")
+                if code:
+                    return jsonify({"error": f"Réciprocité échouée (code {code}) — les relations "
+                                             "sont écrites dans les fiches relues, relance l'étape 2",
+                                    "sortie": "\n\n".join(blocs)}), 500
+    except subprocess.TimeoutExpired:
+        return jsonify({"error": f"Expiré après {TIMEOUT_LORE_APPLIQUER}s", "sortie": "\n\n".join(blocs)}), 504
+    except FileNotFoundError:
+        return jsonify({"error": f"Script introuvable dans {pipeline_dir}"}), 500
+    return jsonify({"ok": True, "dry_run": dry_run, "scenarios": scenarios, "sortie": "\n\n".join(blocs)})
+
+
 # ── Exécution des scripts ─────────────────────────────────────────────────────
 
 @app.route("/api/run", methods=["POST"])
@@ -4915,8 +5230,16 @@ def run_script():
     cfg = load_config()
     pipeline_dir = cfg.get("pipeline_dir", ".")
 
-    # Construire la commande
-    cmd = ["python3", script_cfg["script"]] + [str(a) for a in extra_args]
+    # Construire la commande. `fixed_args` (26 septembre 2026, section
+    # « Relations & lore ») : arguments toujours passés pour cette entrée,
+    # jamais affichés dans le formulaire -- permet à plusieurs entrées du
+    # sidebar de partager un même script avec un rôle différent (ex.
+    # fix_alliances_oppositions.py : « 2. Rendre les relations réciproques »
+    # = --reciprocite-seule fixe ; audit_lore.py : « 4. Relecture IA » =
+    # --llm fixe). Ajoutés côté serveur, pas par app.js : un formulaire ne
+    # peut pas les oublier.
+    fixed_args = [str(a) for a in script_cfg.get("fixed_args", [])]
+    cmd = ["python3", script_cfg["script"]] + fixed_args + [str(a) for a in extra_args]
 
     # Injecter les variables LLM + clés API
     env = os.environ.copy()

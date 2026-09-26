@@ -44,6 +44,7 @@ oppositions:
 - armada_logistique_nordique_fortress_world
 - bloc_atlantique_fortress_world
 - coalition_arctique_des_blocs_continentaux_fortress_world
+- ergo_wian_sovereign_holdings_fortress_world
 - geneve_bunker_fortress_world
 - ironclad_logistics_fortress_world
 - kalaallit_nunaat_sovereign_fund_fortress_world
@@ -118,6 +119,7 @@ La contradiction centrale de ces factions réside dans leur dépendance aux inst
 - [[frontieres_du_systeme]]
 
 
+
 ## Relations
 **Alliés :**
 - [[cellules_universitaires_dissidentes_des_zones_tampons_fortress_world]]
@@ -131,6 +133,7 @@ La contradiction centrale de ces factions réside dans leur dépendance aux inst
 - [[armada_logistique_nordique_fortress_world]]
 - [[bloc_atlantique_fortress_world]]
 - [[coalition_arctique_des_blocs_continentaux_fortress_world]]
+- [[ergo_wian_sovereign_holdings_fortress_world]]
 - [[geneve_bunker_fortress_world]]
 - [[ironclad_logistics_fortress_world]]
 - [[kalaallit_nunaat_sovereign_fund_fortress_world]]

@@ -1,3 +1,9 @@
+# Audit du lore — dernier lancement (2026-09-26 10:15)
+
+Scénarios : fortress_world
+
+---
+
 # Audit du lore — fortress_world
 
 *Généré par `audit_lore.py` le 2026-09-26 10:15 — réécrit à chaque run, ne pas éditer. Règles : `documentation/lore_regles.yaml`.*

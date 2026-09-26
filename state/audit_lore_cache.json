@@ -1,0 +1,52 @@
+{
+ "fortress_world/ergo_wian_sovereign_holdings_fortress_world": {
+  "empreinte": "04923829b7d21d6a",
+  "date": "2026-09-26T09:44:31",
+  "resultat": {
+   "contradictions": [
+    {
+     "champ": "localisation",
+     "extrait": "lieu=Euro-Nord (Espace Nordique et Arctique)",
+     "probleme": "Le lore établi indique que 'Euro-Nord' est le nom donné par le Hors à l'Espace Nordique et Arctique, et non un lieu distinct. La formulation suggère une équivalence incorrecte entre 'Euro-Nord' et 'Espace Nordique et Arctique' comme deux entités séparées.",
+     "correction": "lieu=Espace Nordique et Arctique (surnommé 'Euro-Nord' dans le Hors)"
+    },
+    {
+     "champ": "tensions_narratives",
+     "extrait": "les Gardiens des Aquifères Oubliés accusent l'EWSD de pomper illégalement les ressources hydriques des zones grises",
+     "probleme": "Le lore établi mentionne 'Les Sentinelles des Aquifères Oubliés' comme nom officiel de cette faction, et non 'Gardiens des Aquifères Oubliés'.",
+     "correction": "les Sentinelles des Aquifères Oubliés accusent l'EWSD de pomper illégalement les ressources hydriques des zones grises"
+    },
+    {
+     "champ": "responsabilites|description_journalistique",
+     "extrait": "migrations forcées vers les ceintures productives eurasiatiques",
+     "probleme": "Le lore établi utilise le slug 'zone_usines_forteresses_eurasie_fortress_world' pour désigner les 'Ceinture Productive Eurasiatique — Zones de Labeur Sous Mandat'. La fiche utilise une formulation non standardisée ('ceintures productives eurasiatiques').",
+     "correction": "migrations forcées vers les Ceintures Productives Eurasiatiques — Zones de Labeur Sous Mandat"
+    }
+   ],
+   "alliances_proposees": [
+    {
+     "slug": "gelecek_meclisi_fortress_world",
+     "raison": "Le Gelecek Meclisi Fragmentaire, en tant qu'assemblée résiduelle des marges, pourrait négocier ou résister aux contrats de service d'Ergo-Wian, créant une tension diplomatique ou une alliance de circonstance pour l'accès aux ressources."
+    },
+    {
+     "slug": "consortium_sino_finlandais_de_flotte_autonome_fortress_world",
+     "raison": "Le Consortium Sino-Finlandais de Flotte Autonome, opérant dans l'Arctique, pourrait être un partenaire logistique ou un rival pour le contrôle des corridors maritimes, en lien avec la NAT."
+    },
+    {
+     "slug": "coalition_arctique_des_blocs_continentaux_fortress_world",
+     "raison": "La Coalition Arctique des Blocs Continentaux pourrait être un forum où l'EWSD négocie ou s'oppose aux autres blocs pour le partage des ressources et des voies arctiques."
+    }
+   ],
+   "oppositions_proposees": [
+    {
+     "slug": "factions_anti_privatisation_des_voies_souveraines_scandinaves_fortress_world",
+     "raison": "Ces factions locales pourraient s'opposer à la militarisation et à la privatisation des corridors arctiques par la NAT, en lien avec les tensions nordiques mentionnées dans le lore."
+    },
+    {
+     "slug": "milices_de_piraterie_logistique_arctique_fortress_world",
+     "raison": "Les milices de piraterie logistique arctique pourraient cibler les convois de l'EWSD et de la NAT, créant des conflits armés pour le contrôle des ressources."
+    }
+   ]
+  }
+ }
+}

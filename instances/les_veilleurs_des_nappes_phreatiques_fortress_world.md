@@ -46,6 +46,7 @@ oppositions:
 - agences_de_securite_interieure_des_etats_forteresses_fortress_world
 - biolock_agritech_fortress_world
 - consortium_eurasiatique_des_ressources_fermees_fortress_world
+- ergo_wian_sovereign_holdings_fortress_world
 - milices_privees_de_protection_des_sites_germinaux_fortress_world
 type_relation_dominante: conflit
 
@@ -109,4 +110,5 @@ Les Sentinelles sont tiraillées entre leur ancrage local et la nécessité de s
 - [[agences_de_securite_interieure_des_etats_forteresses_fortress_world]]
 - [[biolock_agritech_fortress_world]]
 - [[consortium_eurasiatique_des_ressources_fermees_fortress_world]]
+- [[ergo_wian_sovereign_holdings_fortress_world]]
 - [[milices_privees_de_protection_des_sites_germinaux_fortress_world]]

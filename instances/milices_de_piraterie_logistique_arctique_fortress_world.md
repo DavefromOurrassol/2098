@@ -49,6 +49,7 @@ oppositions:
 - consortium_sino_finlandais_de_flotte_autonome_fortress_world
 - consortiums_energetiques_du_bloc_ourrassol_fortress_world
 - corps_des_inspecteurs_de_conformite_inter_blocs_fortress_world
+- ergo_wian_sovereign_holdings_fortress_world
 - instances_aria_concurrentes_des_blocs_rivaux_fortress_world
 - ironclad_logistics_fortress_world
 - kalaallit_nunaat_sovereign_fund_fortress_world
@@ -122,6 +123,7 @@ Les milices sont prises en étau entre leur utilité instrumentale pour certains
 
 
 
+
 ## Relations
 **Alliés :**
 - [[consortium_des_pecheries_autonomes_du_grand_nord_fortress_world]]
@@ -142,6 +144,7 @@ Les milices sont prises en étau entre leur utilité instrumentale pour certains
 - [[consortium_sino_finlandais_de_flotte_autonome_fortress_world]]
 - [[consortiums_energetiques_du_bloc_ourrassol_fortress_world]]
 - [[corps_des_inspecteurs_de_conformite_inter_blocs_fortress_world]]
+- [[ergo_wian_sovereign_holdings_fortress_world]]
 - [[instances_aria_concurrentes_des_blocs_rivaux_fortress_world]]
 - [[ironclad_logistics_fortress_world]]
 - [[kalaallit_nunaat_sovereign_fund_fortress_world]]

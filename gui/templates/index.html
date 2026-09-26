@@ -488,6 +488,33 @@
     .injev-result-box { margin-top: 10px; padding: 8px 10px; border-radius: 4px; font-size: 11px; line-height: 1.5; }
     .injev-result-box.ok { background: #eaf7ef; border: 1px solid #b7e0c4; color: #2e7d4f; }
     .injev-result-box.error { background: #fdeceb; border: 1px solid #f0b8b0; color: #c0392b; }
+
+    /* ── Relations & lore — étape 5 « Valider les propositions de l'IA »
+       (26 septembre 2026, S17) -- réutilise les classes .chantiers-* pour
+       les groupes/lignes/boutons, n'ajoute que le contenu propre. ── */
+    #tab-lore_propositions { display: none; flex-direction: column; height: 100%; padding: 20px; box-sizing: border-box; overflow-y: auto; }
+    #tab-lore_propositions.active { display: flex; }
+    .lore-aide { font-size: 12px; color: #34495e; background: #eef4fb; border: 1px solid #cfe0f0; border-radius: 6px; padding: 8px 12px; margin-bottom: 12px; line-height: 1.5; }
+    .lore-appliquer { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; padding: 10px 12px; border: 1px solid #ddd; border-radius: 6px; margin-bottom: 12px; background: #fafafa; font-size: 12px; }
+    #lore-sortie { font-family: 'JetBrains Mono', monospace; font-size: 11px; white-space: pre-wrap; background: #f7f7f5; border: 1px solid #e3e3e3; border-radius: 6px; padding: 10px; margin-bottom: 12px; max-height: 260px; overflow-y: auto; }
+    .lore-slug { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: #aaa; }
+    .lore-muted { font-size: 11px; color: #999; }
+    .lore-role { margin-top: 2px; }
+    .lore-bloc { margin-top: 10px; }
+    .lore-bloc-titre { font-size: 11px; font-weight: 600; color: #666; margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.03em; }
+    .lore-item { border: 1px solid #eee; border-radius: 6px; padding: 8px 10px; margin-bottom: 6px; background: #fff; }
+    .lore-item-traitee { opacity: 0.55; }
+    .lore-champ { font-family: 'JetBrains Mono', monospace; font-size: 10px; background: #f5f0e0; color: #8a6d10; border-radius: 3px; padding: 1px 5px; }
+    .lore-extrait { font-style: italic; color: #444; margin: 4px 0; }
+    .lore-texte { color: #555; margin-top: 3px; line-height: 1.4; }
+    .lore-indice { font-size: 10px; color: #888; margin-left: 6px; }
+    .lore-indice-present { color: #b5651d; }
+    .lore-rel { font-size: 11px; font-weight: 600; border-radius: 8px; padding: 1px 8px; }
+    .lore-rel-alliance { background: #e8f5ed; color: #2e7d4f; }
+    .lore-rel-opposition { background: #fdecea; color: #c0392b; }
+    .lore-choix-actif { font-weight: 700; }
+    .lore-choix-actif.lore-choix-garder { background: #2e7d4f; border-color: #2e7d4f; color: #fff; }
+    .lore-choix-actif.lore-choix-a_trier { background: #eee; border-color: #999; color: #333; }
   </style>
 </head>
 <body>
@@ -1047,6 +1074,34 @@
         <button id="chantiers-appliquer-tout" class="chantiers-btn chantiers-btn-primary">Appliquer les propositions approuvées</button>
       </div>
       <div id="chantiers-list"></div>
+    </div>
+
+    <!-- ── Relations & lore — étape 5 (26 septembre 2026, S17) ── -->
+    <div id="tab-lore_propositions" class="tab-content">
+      <div class="chantiers-toolbar">
+        <span class="tab-page-title" style="margin:0">5. Valider les propositions de l'IA</span>
+        <label for="lore-scenario" style="font-size:12px;color:#888">Scénario</label>
+        <select id="lore-scenario"><option value="">Tous</option></select>
+        <label style="font-size:12px;color:#888"><input type="checkbox" id="lore-voir-appliquees" style="margin:0"> Afficher les relations déjà écrites</label>
+        <label style="font-size:12px;color:#888"><input type="checkbox" id="lore-voir-traitees" style="margin:0"> Afficher les contradictions traitées</label>
+        <div class="chantiers-toolbar-spacer"></div>
+        <span id="lore-compteurs" class="chantiers-count"></span>
+      </div>
+      <div class="lore-aide">
+        Ce que l'étape 4 « Relecture IA » a trouvé, fiche par fiche.
+        <b>Relations proposées</b> : <b>Garder</b> = sera écrite dans la fiche au clic sur « Écrire dans les fiches »
+        (et inscrite aussi chez la fiche cible, par réciprocité) ; <b>À trier</b> = en attente ;
+        <b>Rejeter</b> = supprimée, jamais reproposée. Chaque choix est enregistré immédiatement.
+        <b>Contradictions</b> : rien n'est corrigé automatiquement — ouvre la fiche dans Obsidian, corrige le texte,
+        puis « Marquer comme traitée ».
+      </div>
+      <div class="lore-appliquer">
+        <button id="lore-btn-simuler" class="chantiers-btn">1. Simuler l'écriture</button>
+        <button id="lore-btn-ecrire" class="chantiers-btn chantiers-btn-primary">2. Écrire dans les fiches</button>
+        <span id="lore-appliquer-aide" class="lore-muted"></span>
+      </div>
+      <pre id="lore-sortie" style="display:none"></pre>
+      <div id="lore-liste"></div>
     </div>
 
     <!-- ── Audit & édition de sujets (5 septembre 2026, chantier "Suite

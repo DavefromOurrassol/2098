@@ -1527,11 +1527,11 @@
   },
   {
     "id": "fix_alliances_oppositions",
-    "label": "Corriger les alliances / oppositions",
+    "label": "Compléter les relations avec l'IA",
     "icon": "🤝",
-    "section": "entites_nettoyage",
+    "section": "entites_creation",
     "script": "fix_alliances_oppositions.py",
-    "description": "Remplit les alliances et oppositions manquantes sur les fiches déjà complétées, en s'assurant que chaque relation est bien réciproque (si A dit qu'il est allié à B, B doit le dire aussi) — et peut résoudre automatiquement les cas où deux fiches se contredisent (l'une dit « allié », l'autre dit « opposé »). Les rapports ci-dessous ne montrent que le dernier lancement, pas un historique cumulé.",
+    "description": "Demande à l'IA de proposer les alliances/oppositions manquantes des fiches déjà complétées, puis rend les relations réciproques (sauf case contraire). Payant. Pour la réciprocité seule, sans IA, utilise l'étape 2 de la section « Relations & lore ». Les rapports ci-dessous ne montrent que le dernier lancement.",
     "requires": [],
     "options": [
       {
@@ -1571,14 +1571,7 @@
         "flag": "--dry-run",
         "type": "checkbox",
         "label": "Simulation (rien n'est écrit, mais l'IA est quand même sollicitée)",
-        "description": "N'écrit rien sur le disque. ⚠️ Si le remplissage par l'IA est actif (case « Réciprocité seule » décochée ci-dessous), l'IA est quand même appelée pour de vrai — un coût réel est engagé — seule l'écriture du résultat final est sautée.",
-        "default": false
-      },
-      {
-        "flag": "--reciprocite-seule",
-        "type": "checkbox",
-        "label": "Réciprocité seule (sans l'IA)",
-        "description": "Ignore complètement le remplissage par l'IA ; vérifie seulement la réciprocité des alliances/oppositions déjà présentes (et résout les conflits, si la case ci-dessous est cochée).",
+        "description": "N'écrit rien sur le disque. ⚠️ L'IA est quand même appelée pour de vrai — un coût réel est engagé, seule l'écriture du résultat final est sautée.",
         "default": false
       },
       {
@@ -1592,8 +1585,8 @@
         "flag": "--ignorer-exclus",
         "type": "checkbox",
         "label": "Ne pas propager les personnages en réserve",
-        "default": false,
-        "description": "Vérification de réciprocité : les fiches exclues des articles (personnages « en réserve », outil 🎯) ne sont pas inscrites dans les relations des autres fiches — sinon elles réapparaîtraient indirectement dans le contexte des articles. Les relations des autres fiches vers elles restent propagées normalement."
+        "default": true,
+        "description": "Cochée par défaut. Les personnages exclus des articles (« en réserve », outil 🎯) ne sont pas inscrits chez les autres fiches — sinon ils réapparaîtraient indirectement dans le contexte des articles. Leurs relations à sens unique restent donc volontaires."
       },
       {
         "flag": "--resoudre-conflits",
@@ -1634,11 +1627,11 @@
   },
   {
     "id": "audit_lore",
-    "label": "Audit du lore",
+    "label": "1. Vérifier le lore",
     "icon": "🔍",
-    "section": "entites_nettoyage",
+    "section": "relations_lore",
     "script": "audit_lore.py",
-    "description": "Vérifie la cohérence du lore des fiches instances. Sans IA (par défaut, gratuit, ne modifie aucune fiche) : règles de lore du fichier lore_regles.yaml (termes périmés, zones abandonnées, lieux en quarantaine…), fiches actives en zone de quarantaine, fiches « transnationales » que leur texte localise pourtant, relations à sens unique ou contradictoires, relations vers un autre scénario. Avec « Relecture IA » : chaque fiche ciblée est confrontée à sa zone, à ses alliés et aux règles, et l'IA signale les contradictions et propose des relations — propositions à valider à la main (valide: true) dans le fichier ci-dessous, puis à appliquer avec « Appliquer les propositions validées ». Ne vérifie pas ce que validate.py couvre déjà (slugs inexistants, zone inconnue, liens cassés).",
+    "description": "Point de départ : diagnostic complet, gratuit, sans IA, qui ne modifie rien. Signale les règles de lore enfreintes (termes périmés, zones abandonnées, quarantaines…), les relations à sens unique ou contradictoires, les relations vers un autre scénario et les fiches « transnationales » que leur texte localise. En fin de sortie, « À faire ensuite » indique quelle étape lancer pour chaque problème trouvé. Ne refait pas ce que validate.py couvre déjà (slugs inexistants, zones inconnues, liens cassés).",
     "requires": [],
     "options": [
       {
@@ -1662,98 +1655,97 @@
         "type": "checkbox",
         "label": "Inclure les articles publiés",
         "default": false,
-        "description": "Applique aussi les règles de lore aux articles déjà générés du scénario (titre, chapo, texte). Sans IA."
-      },
-      {
-        "flag": "--llm",
-        "type": "checkbox",
-        "label": "Relecture IA (payante)",
-        "default": false,
-        "description": "⚠️ Un appel IA par fiche ciblée (sauf fiches inchangées depuis la dernière relecture, gardées en cache). Au-delà de 15 appels, il faut cibler (une fiche, une zone, un nombre max) ou cocher « Autoriser un lancement complet ». Coche d'abord « Estimer seulement » pour voir le nombre d'appels."
-      },
-      {
-        "flag": "--estimer",
-        "type": "checkbox",
-        "label": "Estimer seulement (aucun appel IA)",
-        "default": false,
-        "depends_on": "--llm",
-        "description": "Liste les fiches qui seraient relues et le nombre d'appels, sans rien appeler."
-      },
-      {
-        "flag": "--slug",
-        "type": "slug_select",
-        "label": "Une seule fiche",
-        "slug_type": "instances",
-        "optional": true,
-        "requires_scenario_selected": true,
-        "depends_on": "--llm",
-        "description": "Relecture IA d'une seule instance du scénario choisi."
-      },
-      {
-        "flag": "--zone",
-        "type": "text",
-        "label": "Une zone (et ses sous-zones)",
-        "optional": true,
-        "placeholder": "ex : espace_nordique_arctique",
-        "depends_on": "--llm",
-        "description": "Slug de zone du scénario choisi : relit les instances localisées dans cette zone ou l'une de ses sous-zones."
-      },
-      {
-        "flag": "--limit",
-        "type": "number",
-        "label": "Nombre de fiches max (plus fort impact d'abord)",
-        "min": 1,
-        "optional": true,
-        "depends_on": "--llm",
-        "description": "Relit les N fiches au plus fort impact (impact local + global)."
-      },
-      {
-        "flag": "--tout",
-        "type": "checkbox",
-        "label": "Autoriser un lancement complet (plus de 15 appels)",
-        "default": false,
-        "depends_on": "--llm",
-        "advanced": true,
-        "description": "Lève le garde-fou des 15 appels sans ciblage. Peut coûter cher : estimer d'abord."
-      },
-      {
-        "flag": "--no-cache",
-        "type": "checkbox",
-        "label": "Ignorer le cache (relire même les fiches inchangées)",
-        "default": false,
-        "depends_on": "--llm",
-        "advanced": true,
-        "description": "Refait l'appel IA même si la fiche, sa zone, ses alliés et les règles n'ont pas changé depuis la dernière relecture."
-      },
-      {
-        "flag": "--appliquer",
-        "type": "checkbox",
-        "label": "Appliquer les propositions validées",
-        "default": false,
-        "description": "N'audite pas : écrit dans les fiches les relations marquées valide: true dans le fichier de propositions (sauvegarde .bak de chaque fiche), pour le(s) scénario(s) choisi(s). Refuse toute relation qui créerait un conflit. Les autres cases (sauf Scénario / Tous et Simulation) sont alors ignorées."
-      },
-      {
-        "flag": "--dry-run",
-        "type": "checkbox",
-        "label": "Simulation (rien n'est écrit)",
-        "default": false,
-        "depends_on": "--appliquer",
-        "description": "Avec « Appliquer » : affiche les relations qui seraient écrites, sans toucher aux fiches."
+        "description": "Applique aussi les règles de lore aux articles déjà générés (titre, chapo, texte)."
       }
     ],
     "yaml_files": [
       {
         "path": "documentation/need_action/audit_lore_dernier_lancement.md",
-        "label": "Rapport du dernier lancement (réécrit à chaque audit)",
+        "label": "Rapport détaillé du dernier lancement",
         "readonly": true
-      },
-      {
-        "path": "documentation/need_action/audit_lore_propositions.yaml",
-        "label": "Propositions de relations de l'IA — passer valide: true sur celles à garder"
       },
       {
         "path": "documentation/lore_regles.yaml",
         "label": "Règles de lore par scénario (termes périmés, quarantaines…)"
+      }
+    ],
+    "gui_verified": true,
+    "required_one_of": [
+      [
+        "--scenario",
+        "--all"
+      ]
+    ]
+  },
+  {
+    "id": "relations_reciprocite",
+    "label": "2. Rendre les relations réciproques",
+    "icon": "🤝",
+    "section": "relations_lore",
+    "script": "fix_alliances_oppositions.py",
+    "fixed_args": [
+      "--reciprocite-seule"
+    ],
+    "description": "Gratuit, sans IA. Si une fiche A cite B comme allié (ou opposant), ajoute A dans la même liste chez B. Corrige les « relations à sens unique » de l'étape 1. « Simulation » est cochée par défaut : lance une fois pour voir les ajouts, puis décoche-la et relance pour écrire.",
+    "requires": [],
+    "options": [
+      {
+        "flag": "--all",
+        "type": "checkbox",
+        "label": "Tous les scénarios",
+        "default": false,
+        "mutually_exclusive_with": "scenario"
+      },
+      {
+        "flag": "--scenario",
+        "type": "select",
+        "label": "Scénario",
+        "source": "config_scenarios",
+        "default": "",
+        "optional": true,
+        "mutually_exclusive_with": "all"
+      },
+      {
+        "flag": "--dry-run",
+        "type": "checkbox",
+        "label": "Simulation (rien n'est écrit)",
+        "default": true,
+        "description": "Décoche pour écrire réellement dans les fiches."
+      },
+      {
+        "flag": "--ignorer-exclus",
+        "type": "checkbox",
+        "label": "Ne pas propager les personnages en réserve",
+        "default": true,
+        "description": "Cochée par défaut. Les personnages exclus des articles (« en réserve », outil 🎯) ne sont pas inscrits chez les autres fiches — sinon ils réapparaîtraient indirectement dans le contexte des articles. Leurs relations à sens unique restent donc volontaires."
+      },
+      {
+        "flag": "--resoudre-conflits",
+        "type": "checkbox",
+        "label": "Résoudre les conflits (opposition prioritaire, rétroactif)",
+        "description": "Pour les relations contradictoires (A dit « allié », B dit « opposé ») : l'opposition l'emporte, l'alliance est retirée. Sans effet si l'étape 1 n'en a trouvé aucune.",
+        "default": false
+      },
+      {
+        "flag": "--bascule-en-opposition",
+        "type": "checkbox",
+        "label": "Résolution forte (bascule aussi en opposition)",
+        "description": "Avec « Résoudre les conflits » activé : au lieu de simplement retirer l'alliance en trop, ajoute aussi explicitement l'entité aux oppositions. Par défaut, la correction est plus prudente : elle retire seulement, sans rien ajouter.",
+        "default": false,
+        "depends_on": "--resoudre-conflits",
+        "advanced": true
+      }
+    ],
+    "yaml_files": [
+      {
+        "path": "documentation/need_action/fix_alliances_conflits_reciprocite.md",
+        "label": "Rapport des conflits détectés (dernier lancement)",
+        "readonly": true
+      },
+      {
+        "path": "documentation/need_action/fix_alliances_conflits_reciprocite_resolus.md",
+        "label": "Rapport des conflits résolus (dernier lancement)",
+        "readonly": true
       }
     ],
     "gui_verified": false,
@@ -1766,11 +1758,11 @@
   },
   {
     "id": "corriger_relations_inter_scenarios",
-    "label": "Corriger les relations entre scénarios",
+    "label": "3. Retirer les relations vers un autre scénario",
     "icon": "🔀",
-    "section": "entites_nettoyage",
+    "section": "relations_lore",
     "script": "corriger_relations_inter_scenarios.py",
-    "description": "Corrige les alliances/oppositions qui pointent vers une fiche d'un AUTRE scénario (erreur de génération, signalée par l'Audit du lore). Si la même entité existe dans le bon scénario, la relation est remplacée par elle ; sinon elle est retirée. Les 2 alliés « reference » de la NAT (fortress_world) sont conservés volontairement. Aperçu par défaut — coche « Exécuter » pour écrire (sauvegarde .bak de chaque fiche). Sans IA.",
+    "description": "Gratuit, sans IA. Une alliance/opposition qui pointe vers une fiche d'un AUTRE scénario est une erreur de génération : elle est remplacée par la même entité du bon scénario si elle existe, sinon retirée. Les exceptions voulues (les 2 alliés « reference » de la NAT) sont conservées. Aperçu par défaut — coche « Exécuter pour de vrai » pour écrire (.bak de chaque fiche).",
     "requires": [],
     "options": [
       {
@@ -1804,6 +1796,98 @@
         "label": "Exécuter pour de vrai",
         "default": false,
         "description": "Sans cette case : aperçu seulement, rien n'est modifié."
+      }
+    ],
+    "gui_verified": true,
+    "required_one_of": [
+      [
+        "--scenario",
+        "--all"
+      ]
+    ]
+  },
+  {
+    "id": "audit_lore_ia",
+    "label": "4. Relecture IA du lore (payante)",
+    "icon": "🤖",
+    "section": "relations_lore",
+    "script": "audit_lore.py",
+    "fixed_args": [
+      "--llm"
+    ],
+    "description": "Chaque fiche ciblée est relue par l'IA, confrontée à sa zone, à ses relations et aux règles de lore. Résultat : contradictions signalées et relations proposées, à trier ensuite à l'étape 5. Rien n'est écrit dans les fiches. ⚠️ Un appel IA par fiche (~8 000 jetons en entrée) ; les fiches inchangées depuis leur dernière relecture sont gardées en cache. Au-delà de 15 appels, il faut cibler (une fiche, une zone ou un nombre max).",
+    "requires": [],
+    "options": [
+      {
+        "flag": "--all",
+        "type": "checkbox",
+        "label": "Tous les scénarios",
+        "default": false,
+        "mutually_exclusive_with": "scenario"
+      },
+      {
+        "flag": "--scenario",
+        "type": "select",
+        "label": "Scénario",
+        "source": "config_scenarios",
+        "default": "",
+        "optional": true,
+        "mutually_exclusive_with": "all"
+      },
+      {
+        "flag": "--estimer",
+        "type": "checkbox",
+        "label": "Estimer seulement (aucun appel IA)",
+        "default": true,
+        "description": "Cochée par défaut : liste les fiches qui seraient relues et le nombre d'appels, sans rien appeler. Décoche-la pour lancer la relecture."
+      },
+      {
+        "flag": "--slug",
+        "type": "slug_select",
+        "label": "Une seule fiche",
+        "slug_type": "instances",
+        "optional": true,
+        "requires_scenario_selected": true,
+        "description": "Relecture IA d'une seule instance du scénario choisi."
+      },
+      {
+        "flag": "--zone",
+        "type": "text",
+        "label": "Une zone (et ses sous-zones)",
+        "optional": true,
+        "placeholder": "ex : espace_nordique_arctique",
+        "description": "Slug de zone du scénario choisi : relit les instances localisées dans cette zone ou l'une de ses sous-zones."
+      },
+      {
+        "flag": "--limit",
+        "type": "number",
+        "label": "Nombre de fiches max (plus fort impact d'abord)",
+        "min": 1,
+        "optional": true,
+        "description": "Relit les N fiches au plus fort impact (impact local + global)."
+      },
+      {
+        "flag": "--tout",
+        "type": "checkbox",
+        "label": "Autoriser un lancement complet (plus de 15 appels)",
+        "default": false,
+        "advanced": true,
+        "description": "Lève le garde-fou des 15 appels sans ciblage. Peut coûter cher : estimer d'abord."
+      },
+      {
+        "flag": "--no-cache",
+        "type": "checkbox",
+        "label": "Ignorer le cache (relire même les fiches inchangées)",
+        "default": false,
+        "advanced": true,
+        "description": "Refait l'appel IA même si la fiche, sa zone, ses alliés et les règles n'ont pas changé depuis la dernière relecture."
+      }
+    ],
+    "yaml_files": [
+      {
+        "path": "documentation/need_action/audit_lore_dernier_lancement.md",
+        "label": "Rapport détaillé du dernier lancement",
+        "readonly": true
       }
     ],
     "gui_verified": false,

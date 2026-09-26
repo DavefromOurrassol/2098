@@ -88,6 +88,8 @@ GEOGRAPHIE_DIR = VAULT_ROOT / "geographie"
 NEED_ACTION_DIR = VAULT_ROOT / "documentation" / "need_action"
 REGLES_PATH = VAULT_ROOT / "documentation" / "lore_regles.yaml"
 CACHE_PATH = VAULT_ROOT / "state" / "audit_lore_cache.json"
+# Relations rejetées dans le GUI (étape 5) : jamais reproposées (26 sept).
+REJETS_PATH = VAULT_ROOT / "state" / "audit_lore_rejets.json"
 PROPOSITIONS_PATH = NEED_ACTION_DIR / "audit_lore_propositions.yaml"
 DERNIER_RAPPORT_PATH = NEED_ACTION_DIR / "audit_lore_dernier_lancement.md"
 
@@ -554,12 +556,16 @@ def lire_json(path, defaut):
         return defaut
 
 
+# Même texte que LORE_ENTETE_PROPOSITIONS dans gui/app.py (qui réécrit aussi
+# ce fichier depuis l'étape 5) : garder les deux identiques.
 ENTETE_PROPOSITIONS = (
     "# Propositions de relations (audit_lore.py --llm), tous scénarios.\n"
-    "# Passer `valide: true` sur celles à garder, puis (GUI « Audit du lore » ou CLI) :\n"
+    "# À trier dans le GUI : « Relations & lore » → « 5. Valider les propositions de l'IA ».\n"
+    "# (ou à la main : `valide: true` sur celles à garder, puis\n"
     "#   python3 generator/audit_lore.py --all --appliquer --dry-run\n"
-    "#   python3 generator/audit_lore.py --all --appliquer\n"
-    "# Les entrées déjà présentes ne sont jamais écrasées par un nouveau run.\n")
+    "#   python3 generator/audit_lore.py --all --appliquer)\n"
+    "# Les entrées déjà présentes ne sont jamais écrasées par un nouveau run ;\n"
+    "# une proposition rejetée est retirée d'ici et notée dans state/audit_lore_rejets.json.\n")
 
 
 def chemin_propositions(scenario=None):
@@ -581,11 +587,19 @@ def lire_propositions():
     return data.get("propositions") or []
 
 
+def cles_rejetees():
+    """Clés (scenario, slug, relation, cible) rejetées dans le GUI (étape 5)."""
+    data = lire_json(REJETS_PATH, {})
+    return {tuple(r.get("cle") or []) for r in data.get("relations") or []}
+
+
 def fusionner_propositions(scenario, nouvelles):
     """Ajoute les nouvelles propositions sans toucher à celles déjà présentes
-    (validées, refusées ou appliquées). Clé : (scenario, slug, relation, cible)."""
+    (validées ou appliquées), et sans jamais reproposer une relation rejetée
+    dans le GUI. Clé : (scenario, slug, relation, cible)."""
     liste = lire_propositions()
     cles = {(p.get("scenario"), p.get("slug"), p.get("relation"), p.get("cible")) for p in liste}
+    cles |= cles_rejetees()
     ajoutees = 0
     for p in nouvelles:
         cle = (scenario, p["slug"], p["relation"], p["cible"])
@@ -740,7 +754,10 @@ def rapport_md(scenario, r):
           f"- Règles de lore — **erreurs : {len(regles_err)}**, à relire : {len(regles_rel)}",
           f"- Quarantaine (fiche active localisée en zone interdite) : {len(r['quarantaine'])}",
           f"- Transnationales localisées dans le texte (info) : {len(r['transnationales'])}",
-          f"- Relations à sens unique : {len(r['reciprocite'])} — contradictoires : {len(r['conflits'])}",
+          f"- Relations à sens unique à corriger : {_n_a_corriger(r)}"
+          + (f" (+ {len(r['reciprocite']) - _n_a_corriger(r)} volontaires : personnages en réserve)"
+             if len(r['reciprocite']) != _n_a_corriger(r) else "")
+          + f" — contradictoires : {len(r['conflits'])}",
           f"- Relations inter-scénarios (info) : {len(r['inter_scenarios'])}"]
     if r.get("llm"):
         n_c = sum(len(d.get("contradictions") or []) for d in r["llm"]["resultats"].values())
@@ -768,14 +785,22 @@ def rapport_md(scenario, r):
              f"**{x['trajectoire']}**" for x in r["quarantaine"]])
     section("3. Relations contradictoires (A allié de B, B opposé à A)",
             [f"- `{c['allie_a_corriger']}` liste `{c['opposant']}` en alliance, "
-             f"qui le liste en opposition" for c in r["conflits"]])
-    section("4. Relations à sens unique",
-            [f"- `{m['source']}` cite `{m['cible']}` ({m['champ']}), pas l'inverse"
-             for m in r["reciprocite"]],
-            vide="Rien à signaler.")
-    if r["reciprocite"]:
-        L.insert(-1, f"Correction automatique possible : `python3 generator/fix_alliances_oppositions.py "
-                     f"--scenario {scenario} --reciprocite-seule --dry-run` puis sans `--dry-run`.")
+             f"qui le liste en opposition" for c in r["conflits"]]
+            + (["", "→ Correction : **2. Rendre les relations réciproques**, case « Résoudre les "
+                "conflits » cochée (l'opposition l'emporte)."] if r["conflits"] else []))
+    a_corriger = [m for m in r["reciprocite"] if not m.get("reserve")]
+    volontaires = [m for m in r["reciprocite"] if m.get("reserve")]
+    lignes4 = [f"- `{m['source']}` cite `{m['cible']}` ({m['champ']}), pas l'inverse"
+               for m in a_corriger] or ["Rien à corriger."]
+    if a_corriger:
+        lignes4 += ["", "→ Correction : GUI « Relations & lore » → **2. Rendre les relations réciproques** "
+                    f"(CLI : `python3 generator/fix_alliances_oppositions.py --scenario {scenario} "
+                    "--reciprocite-seule --ignorer-exclus --dry-run`, puis sans `--dry-run`)."]
+    if volontaires:
+        lignes4 += ["", f"Volontaires, rien à faire ({len(volontaires)}) — personnages en réserve, "
+                    "jamais propagés chez les autres fiches :"]
+        lignes4 += [f"- `{m['source']}` cite `{m['cible']}` ({m['champ']})" for m in volontaires]
+    section("4. Relations à sens unique", lignes4)
     section("5. Règles de lore — à relire", bloc_regles(regles_rel))
     section("6. Transnationales mais localisées dans le texte (information)",
             ["Souvent légitime (une organisation transnationale nomme les zones où elle agit) ; à rattacher seulement si la fiche vit en réalité dans une seule zone.", ""]
@@ -783,7 +808,10 @@ def rapport_md(scenario, r):
                for x in r["transnationales"]])
     section("7. Relations inter-scénarios (information)",
             [f"- `{x['slug']}` → `{x['ref']}` ({x['champ']}, scénario {x['scenario_ref']})"
-             for x in r["inter_scenarios"]])
+             for x in r["inter_scenarios"]]
+            + (["", "→ Si elles ne sont pas voulues : **3. Retirer les relations vers un autre "
+                "scénario** (en aperçu d'abord ; les exceptions déclarées sont conservées)."]
+               if r["inter_scenarios"] else []))
     if r.get("llm"):
         lignes = []
         for slug, d in sorted(r["llm"]["resultats"].items()):
@@ -804,13 +832,48 @@ def rapport_md(scenario, r):
         for e in r["llm"]["echecs"]:
             lignes.append(f"- ✗ `{e['slug']}` : échec LLM — {e['erreur']}")
         section("8. Relecture LLM (contradictions et relations proposées)", lignes)
-        L.append(f"Propositions de relations à valider : `{chemin_propositions(scenario).relative_to(VAULT_ROOT)}`")
+        L.append("→ Trier les propositions et relire les contradictions : GUI « Relations & lore » → "
+                 "**5. Valider les propositions de l'IA** "
+                 f"(fichier : `{chemin_propositions(scenario).relative_to(VAULT_ROOT)}`).")
     return "\n".join(L) + "\n"
 
 
 # ─────────────────────────────────────────────────────────────────────────
 # Orchestration
 # ─────────────────────────────────────────────────────────────────────────
+
+def _n_a_corriger(r):
+    return sum(1 for m in r["reciprocite"] if not m.get("reserve"))
+
+
+def prochaines_etapes(r, scenario):
+    """Lignes « À faire ensuite » : quelle étape du GUI lancer pour chaque
+    problème trouvé (section « Relations & lore », étapes 1 à 5)."""
+    out = []
+    err = sum(1 for x in r["regles"] if x["gravite"] == "erreur")
+    rel = len(r["regles"]) - err
+    if err or r["quarantaine"]:
+        out.append(f"  • {err + len(r['quarantaine'])} erreur(s) de lore / quarantaine → à corriger à la "
+                   "main dans les fiches (rapport, sections 1 et 2)")
+    if rel:
+        out.append(f"  • {rel} passage(s) à relire → rapport, section 5 (souvent légitimes)")
+    n = _n_a_corriger(r)
+    if n or r["conflits"]:
+        detail = f"{n} relation(s) à sens unique" + (f", {len(r['conflits'])} contradictoire(s) "
+                                                      "(cocher « Résoudre les conflits »)" if r["conflits"] else "")
+        out.append(f"  • {detail} → étape 2 « Rendre les relations réciproques »")
+    if r["inter_scenarios"]:
+        out.append(f"  • {len(r['inter_scenarios'])} relation(s) vers un autre scénario → étape 3 si elles "
+                   "ne sont pas voulues (exceptions déclarées conservées)")
+    en_attente = sum(1 for p in lire_propositions()
+                     if p.get("scenario") == scenario and p.get("valide") is not True and not p.get("applique"))
+    if en_attente:
+        out.append(f"  • {en_attente} proposition(s) de l'IA à trier → étape 5 « Valider les propositions de l'IA »")
+    if not out:
+        return ["  À faire ensuite : rien à corriger."
+                + ("" if r.get("llm") else " (Étape 4 « Relecture IA » possible pour aller plus loin.)")]
+    return ["  À faire ensuite :"] + out
+
 
 def auditer(scenario, args, regles):
     conf = regles_du_scenario(regles, scenario)
@@ -820,6 +883,12 @@ def auditer(scenario, args, regles):
     articles = charger_articles(scenario) if args.avec_articles else {}
 
     manquantes, conflits = ctrl_reciprocite(scenario)
+    # Personnages en réserve (exclus des articles, outil 🎯) : l'étape 2 les
+    # laisse volontairement à sens unique (--ignorer-exclus), ce ne sont donc
+    # pas des problèmes à corriger.
+    reserve = {s for s, f in fiches.items() if f["fm"].get("exclure_articles")}
+    for m in manquantes:
+        m["reserve"] = m["source"] in reserve
     r = {
         "scenario": scenario,
         "n_fiches": len(fiches), "n_evenements": len(evenements), "n_articles": len(articles),
@@ -844,12 +913,16 @@ def auditer(scenario, args, regles):
           + (f", {len(articles)} article(s)" if articles else ""))
     print(f"  Règles : {err} erreur(s), {len(r['regles']) - err} à relire")
     print(f"  Quarantaine : {len(r['quarantaine'])} | Transnationales localisées : {len(r['transnationales'])}")
-    print(f"  Réciprocité : {len(manquantes)} à sens unique, {len(conflits)} contradictoire(s) | "
-          f"Inter-scénarios : {len(r['inter_scenarios'])}")
+    n_vol = len(manquantes) - _n_a_corriger(r)
+    print(f"  Réciprocité : {_n_a_corriger(r)} à sens unique à corriger"
+          + (f" (+ {n_vol} volontaires, personnages en réserve)" if n_vol else "")
+          + f", {len(conflits)} contradictoire(s) | Inter-scénarios : {len(r['inter_scenarios'])}")
     if r.get("llm"):
         print(f"  LLM : {len(r['llm']['resultats'])} relue(s), {len(r['llm']['echecs'])} échec(s), "
               f"{r['llm']['propositions_ajoutees']} proposition(s) ajoutée(s)")
-    print(f"  → {r['rapport_md']}")
+    for ligne in prochaines_etapes(r, scenario):
+        print(ligne)
+    print(f"  → rapport détaillé : {r['rapport_md']}")
     return r
 
 

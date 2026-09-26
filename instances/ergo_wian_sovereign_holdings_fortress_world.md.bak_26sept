@@ -60,9 +60,6 @@ oppositions:
 - mouvement_commun_midwest_fortress_world
 - rust_belt_communes_libres_fortress_world
 - voix_du_dehors_fortress_world
-- factions_anti_privatisation_des_voies_souveraines_scandinaves_fortress_world
-- milices_de_piraterie_logistique_arctique_fortress_world
-- les_veilleurs_des_nappes_phreatiques_fortress_world
 type_relation_dominante: conflit
 
 annee_debut: 2047
@@ -88,7 +85,7 @@ signes_distinctifs: >
 retry_signes_distinctifs: non
 
 tensions_narratives: >
-  L'EWSD est au cœur de plusieurs lignes de fracture du scénario *fortress_world* : 1) **La révolte des seuils** — les populations des zones tampons, organisées en réseaux clandestins (Alliance Sanitaire, Mouvement Commun Midwest), sabotent les infrastructures de scoring et piratent les flux de données pour falsifier les quotas. 2) **La guerre des algorithmes** — les instances ARIA concurrentes des blocs rivaux tentent de corrompre les systèmes de gouvernance de l'EWSD, tandis que ses propres factions internes se déchirent entre partisans d'une autarcie totale et ceux favorables à des échanges limités avec les autres forteresses. 3) **La crise des augmentations** — les cliniques de déaugmentation indépendantes se multiplient, offrant aux travailleurs une échappatoire aux implants Nexus BioSyn, ce qui menace le modèle de productivité corporelle de l'EWSD. 4) **L'effondrement des nappes** — les Sentinelles des Aquifères Oubliés accusent l'EWSD de pomper illégalement les ressources hydriques des zones grises, déclenchant des conflits armés avec les milices privées de protection des sites germinaux.
+  L'EWSD est au cœur de plusieurs lignes de fracture du scénario *fortress_world* : 1) **La révolte des seuils** — les populations des zones tampons, organisées en réseaux clandestins (Alliance Sanitaire, Mouvement Commun Midwest), sabotent les infrastructures de scoring et piratent les flux de données pour falsifier les quotas. 2) **La guerre des algorithmes** — les instances ARIA concurrentes des blocs rivaux tentent de corrompre les systèmes de gouvernance de l'EWSD, tandis que ses propres factions internes se déchirent entre partisans d'une autarcie totale et ceux favorables à des échanges limités avec les autres forteresses. 3) **La crise des augmentations** — les cliniques de déaugmentation indépendantes se multiplient, offrant aux travailleurs une échappatoire aux implants Nexus BioSyn, ce qui menace le modèle de productivité corporelle de l'EWSD. 4) **L'effondrement des nappes** — les Gardiens des Aquifères Oubliés accusent l'EWSD de pomper illégalement les ressources hydriques des zones grises, déclenchant des conflits armés avec les milices privées de protection des sites germinaux.
 
 date_creation: 2026-09-24
 ---
@@ -112,7 +109,7 @@ Depuis Euro-Nord, l'EWSD contrôle les corridors arctiques par sa filiale armée
 À Euro-Nord comme dans les zones que l'Ergo-Wian Sovereign Dominion gère par contrat, les villes ressemblent à des usines à ciel ouvert où chaque mouvement est optimisé pour la productivité. Les travailleurs, équipés d'implants Nexus BioSyn, sont notés en temps réel par des algorithmes de scoring qui déterminent leur accès aux rations d'eau, à l'électricité ou aux soins. Les 'zones déficitaires d'optimisation' — ces bidonvilles périphériques où s'entassent les populations hors-quota — sont encerclées par des murs intelligents et surveillées par des drones VaultCorp. Les migrations forcées vers les ceintures productives eurasiatiques ou les corridors logistiques arctiques sont devenues la norme, justifiées par des 'contrats de souveraineté biologique' signés sous la contrainte. L'EWSD ne cache même plus son mépris pour les institutions résiduelles : son souverain-gérant, un ancien gérant de fonds du XXIe siècle reconverti en seigneur territorial, a déclaré en 2089 que 'la démocratie était un bug du XXe siècle, corrigé par l'efficacité des marchés souverains'.
 
 ## Tensions narratives
-L'EWSD est au cœur de plusieurs lignes de fracture du scénario *fortress_world* : 1) **La révolte des seuils** — les populations des zones tampons, organisées en réseaux clandestins (Alliance Sanitaire, Mouvement Commun Midwest), sabotent les infrastructures de scoring et piratent les flux de données pour falsifier les quotas. 2) **La guerre des algorithmes** — les instances ARIA concurrentes des blocs rivaux tentent de corrompre les systèmes de gouvernance de l'EWSD, tandis que ses propres factions internes se déchirent entre partisans d'une autarcie totale et ceux favorables à des échanges limités avec les autres forteresses. 3) **La crise des augmentations** — les cliniques de déaugmentation indépendantes se multiplient, offrant aux travailleurs une échappatoire aux implants Nexus BioSyn, ce qui menace le modèle de productivité corporelle de l'EWSD. 4) **L'effondrement des nappes** — les Sentinelles des Aquifères Oubliés accusent l'EWSD de pomper illégalement les ressources hydriques des zones grises, déclenchant des conflits armés avec les milices privées de protection des sites germinaux.
+L'EWSD est au cœur de plusieurs lignes de fracture du scénario *fortress_world* : 1) **La révolte des seuils** — les populations des zones tampons, organisées en réseaux clandestins (Alliance Sanitaire, Mouvement Commun Midwest), sabotent les infrastructures de scoring et piratent les flux de données pour falsifier les quotas. 2) **La guerre des algorithmes** — les instances ARIA concurrentes des blocs rivaux tentent de corrompre les systèmes de gouvernance de l'EWSD, tandis que ses propres factions internes se déchirent entre partisans d'une autarcie totale et ceux favorables à des échanges limités avec les autres forteresses. 3) **La crise des augmentations** — les cliniques de déaugmentation indépendantes se multiplient, offrant aux travailleurs une échappatoire aux implants Nexus BioSyn, ce qui menace le modèle de productivité corporelle de l'EWSD. 4) **L'effondrement des nappes** — les Gardiens des Aquifères Oubliés accusent l'EWSD de pomper illégalement les ressources hydriques des zones grises, déclenchant des conflits armés avec les milices privées de protection des sites germinaux.
 
 ## Relations
 **Alliés :**
@@ -139,6 +136,3 @@ L'EWSD est au cœur de plusieurs lignes de fracture du scénario *fortress_world
 - [[mouvement_commun_midwest_fortress_world]]
 - [[rust_belt_communes_libres_fortress_world]]
 - [[voix_du_dehors_fortress_world]]
-- [[factions_anti_privatisation_des_voies_souveraines_scandinaves_fortress_world]]
-- [[milices_de_piraterie_logistique_arctique_fortress_world]]
-- [[les_veilleurs_des_nappes_phreatiques_fortress_world]]

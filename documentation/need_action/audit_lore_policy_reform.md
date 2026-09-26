@@ -1,6 +1,6 @@
 # Audit du lore — policy_reform
 
-*Généré par `audit_lore.py` le 2026-09-25 19:17 — réécrit à chaque run, ne pas éditer. Règles : `documentation/lore_regles.yaml`.*
+*Généré par `audit_lore.py` le 2026-09-26 08:37 — réécrit à chaque run, ne pas éditer. Règles : `documentation/lore_regles.yaml`.*
 
 ## Résumé
 

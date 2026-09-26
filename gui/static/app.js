@@ -56,6 +56,10 @@ const SECTIONS = [
   { key: 'articles',           label: 'Articles' },
   { key: 'presse',             label: 'Presse & journaux' },
   { key: 'entites_creation',   label: 'Entités & événements — création' },
+  // 26 septembre 2026 (S17) : les outils de cohérence des relations et du
+  // lore, dans l'ordre où on les enchaîne (étapes 1 à 5 -- l'étape 5 est
+  // l'onglet 'lore_propositions', ajouté dans buildNav() ci-dessous).
+  { key: 'relations_lore',     label: 'Relations & lore — étapes 1 → 5' },
   { key: 'entites_nettoyage',  label: 'Entités & événements — nettoyage' },
   { key: 'geo_construction',   label: 'Géographie — construction' },
   { key: 'geo_diagnostic',     label: 'Géographie — diagnostic' },
@@ -98,6 +102,12 @@ function buildNav() {
     // Articles, sans la limite de mois de parution actif.
     if (section.key === 'entites_creation') {
       nav.appendChild(makeNavItem('sujets', '🧭', 'Audit par sujet', null, 'tab'));
+    }
+    // Étape 5 de « Relations & lore » (26 septembre 2026) : écran de tri
+    // des propositions de l'IA -- onglet custom, rangé après les étapes
+    // 1 à 4 (entrées scripts_config.json de la même section).
+    if (section.key === 'relations_lore') {
+      nav.appendChild(makeNavItem('lore_propositions', '✅', "5. Valider les propositions de l'IA", null, 'tab'));
     }
     nav.appendChild(makeDivider());
   });
@@ -343,6 +353,7 @@ function showTab(tab) {
     if (tab === 'signaux') loadSignaux();
     if (tab === 'resumes') loadResumes();
     if (tab === 'sujets')    loadSujets();
+    if (tab === 'lore_propositions') loadLorePropositions();
     if (tab === 'review')    loadReview();
     if (tab === 'config')    loadConfigForm();
   }
@@ -9320,5 +9331,291 @@ async function regenererResume(scenario) {
       toutBtn.disabled = false;
     }
     renderResumesGrid();
+  }
+}
+
+
+/* ══════════════════════════════════════════════════
+   Relations & lore — étape 5 « Valider les propositions de l'IA »
+   (26 septembre 2026, S17)
+   ──────────────────────────────────────────────────
+   Trie ce que l'étape 4 (audit_lore.py --llm) a produit, fiche par fiche :
+   - relations proposées : Garder / À trier / Rejeter (chaque clic est
+     enregistré tout de suite ; Rejeter supprime la proposition et la note
+     comme rejetée pour qu'elle ne soit jamais reproposée -- décision David) ;
+   - contradictions signalées : lecture seule, à corriger à la main dans
+     Obsidian, puis « Marquer comme traitée » pour les masquer.
+   L'écriture dans les fiches passe par audit_lore.py --appliquer (route
+   /api/lore/propositions/appliquer), simulation obligatoire avant chaque
+   écriture réelle, réciprocité enchaînée automatiquement après.
+   ══════════════════════════════════════════════════ */
+
+const LoreState = {
+  data: null,
+  simulationAJour: false,   // repasse à false à chaque décision
+  enCours: false,
+};
+
+function _loreEsc(v) {
+  return String(v ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+}
+
+function _loreOuvrirDansObsidian(fichier) {
+  const vaultRoot = (State.config?.vault_root || '').replace(/[/\\]+$/, '');
+  if (!vaultRoot || !fichier) return;
+  const vaultName = vaultRoot.split(/[/\\]/).pop();
+  const chemin = `instances/${fichier.replace(/\.md$/i, '')}`;
+  window.open(`obsidian://open?vault=${encodeURIComponent(vaultName)}&file=${encodeURIComponent(chemin)}`, '_blank');
+}
+
+async function loadLorePropositions() {
+  const sel = document.getElementById('lore-scenario');
+  if (sel && sel.options.length <= 1) {
+    (State.config?.scenarios || []).forEach(sc => {
+      const o = document.createElement('option');
+      o.value = sc; o.textContent = sc; sel.appendChild(o);
+    });
+    sel.addEventListener('change', renderLorePropositions);
+    document.getElementById('lore-voir-appliquees').addEventListener('change', renderLorePropositions);
+    document.getElementById('lore-voir-traitees').addEventListener('change', renderLorePropositions);
+    document.getElementById('lore-btn-simuler').addEventListener('click', () => loreAppliquer(true));
+    document.getElementById('lore-btn-ecrire').addEventListener('click', () => loreAppliquer(false));
+  }
+  await refreshLorePropositions();
+}
+
+async function refreshLorePropositions() {
+  const liste = document.getElementById('lore-liste');
+  liste.innerHTML = '<div class="chantiers-empty">Chargement…</div>';
+  try {
+    const res = await fetch('/api/lore/propositions');
+    const data = await res.json();
+    if (!res.ok || data.error) {
+      liste.innerHTML = `<div class="chantiers-empty">Erreur : ${_loreEsc(data.error || res.statusText)}</div>`;
+      return;
+    }
+    LoreState.data = data;
+    renderLorePropositions();
+  } catch (e) {
+    liste.innerHTML = `<div class="chantiers-empty">Erreur réseau : ${_loreEsc(e.message)}</div>`;
+  }
+}
+
+function renderLorePropositions() {
+  const data = LoreState.data;
+  if (!data) return;
+  const scenario = document.getElementById('lore-scenario').value;
+  const voirAppliquees = document.getElementById('lore-voir-appliquees').checked;
+  const voirTraitees = document.getElementById('lore-voir-traitees').checked;
+  const c = data.compteurs || {};
+
+  document.getElementById('lore-compteurs').textContent =
+    `${c.a_trier || 0} à trier · ${c.gardees || 0} gardée(s) à écrire · ` +
+    `${c.contradictions || 0} contradiction(s) à relire · ${c.appliquees || 0} déjà écrite(s) · ` +
+    `${c.rejetees || 0} rejetée(s)`;
+
+  // Barre d'application
+  const nGardees = c.gardees || 0;
+  const btnSim = document.getElementById('lore-btn-simuler');
+  const btnEcr = document.getElementById('lore-btn-ecrire');
+  btnSim.disabled = LoreState.enCours || nGardees === 0;
+  btnEcr.disabled = LoreState.enCours || nGardees === 0 || !LoreState.simulationAJour;
+  document.getElementById('lore-appliquer-aide').textContent = nGardees === 0
+    ? 'Aucune relation gardée à écrire pour l\'instant.'
+    : (LoreState.simulationAJour
+        ? `${nGardees} relation(s) gardée(s) : simulation à jour, tu peux écrire.`
+        : `${nGardees} relation(s) gardée(s) : lance d'abord la simulation.`);
+
+  const fiches = (data.fiches || []).filter(f => !scenario || f.scenario === scenario);
+  const liste = document.getElementById('lore-liste');
+  liste.innerHTML = '';
+  let nAffichees = 0;
+
+  // Regroupement par scénario (même gabarit visuel que l'onglet Chantiers)
+  const parScenario = {};
+  for (const f of fiches) {
+    const props = f.propositions.filter(p => voirAppliquees || !p.applique);
+    const contr = f.contradictions.filter(x => voirTraitees || !x.vue);
+    if (!props.length && !contr.length) continue;
+    (parScenario[f.scenario] = parScenario[f.scenario] || []).push({ f, props, contr });
+  }
+
+  for (const [sc, items] of Object.entries(parScenario)) {
+    const groupe = document.createElement('div');
+    groupe.className = 'chantiers-scenario-group';
+    groupe.innerHTML = `<div class="chantiers-scenario-header">${_loreEsc(sc)}
+      <span class="chantiers-scenario-count">${items.length} fiche(s)</span></div>`;
+    for (const it of items) {
+      groupe.appendChild(renderLoreFiche(it.f, it.props, it.contr));
+      nAffichees++;
+    }
+    liste.appendChild(groupe);
+  }
+
+  if (!nAffichees) {
+    liste.innerHTML = `<div class="chantiers-empty">Rien à trier${scenario ? ' pour ce scénario' : ''}. ` +
+      `Les propositions apparaissent ici après une étape 4 « Relecture IA du lore » réellement lancée ` +
+      `(pas en « Estimer seulement »).</div>`;
+  }
+}
+
+function renderLoreFiche(f, props, contr) {
+  const row = document.createElement('div');
+  row.className = 'chantiers-row lore-fiche';
+
+  const modif = f.fiche_modifiee_depuis
+    ? '<span class="chantiers-type-badge" title="La fiche a changé depuis la relecture IA">modifiée depuis la relecture</span>' : '';
+  const relue = f.relue_le ? `<span class="lore-muted">relue le ${_loreEsc(String(f.relue_le).replace('T', ' '))}</span>` : '';
+  const head = document.createElement('div');
+  head.className = 'chantiers-row-head';
+  head.innerHTML = `<span class="chantiers-cible">${_loreEsc(f.name)}</span>
+    <span class="lore-slug">${_loreEsc(f.slug)}</span> ${relue} ${modif}`;
+  if (f.fichier) {
+    const btn = document.createElement('button');
+    btn.className = 'chantiers-btn';
+    btn.textContent = 'Ouvrir dans Obsidian';
+    btn.style.marginLeft = 'auto';
+    btn.addEventListener('click', () => _loreOuvrirDansObsidian(f.fichier));
+    head.appendChild(btn);
+  }
+  row.appendChild(head);
+
+  // ── Contradictions ──
+  if (contr.length) {
+    const bloc = document.createElement('div');
+    bloc.className = 'lore-bloc';
+    bloc.innerHTML = '<div class="lore-bloc-titre">⚠ Contradictions signalées — à corriger à la main dans la fiche</div>';
+    for (const x of contr) {
+      const item = document.createElement('div');
+      item.className = 'lore-item' + (x.vue ? ' lore-item-traitee' : '');
+      const presence = x.extrait_present
+        ? '<span class="lore-indice lore-indice-present">extrait toujours présent dans la fiche</span>'
+        : '<span class="lore-indice">extrait introuvable dans la fiche (déjà corrigé, ou l\'IA a reformulé)</span>';
+      item.innerHTML = `
+        <div><span class="lore-champ">${_loreEsc(x.champ || '?')}</span> ${presence}</div>
+        <div class="lore-extrait">« ${_loreEsc(x.extrait)} »</div>
+        <div class="lore-texte"><b>Problème :</b> ${_loreEsc(x.probleme)}</div>
+        ${x.correction ? `<div class="lore-texte"><b>Proposé :</b> « ${_loreEsc(x.correction)} »</div>` : ''}`;
+      const btn = document.createElement('button');
+      btn.className = 'chantiers-btn';
+      btn.textContent = x.vue ? 'Réafficher comme à relire' : 'Marquer comme traitée';
+      btn.title = 'Corrigée à la main, ou jugée sans objet. Ne modifie pas la fiche.';
+      btn.addEventListener('click', () => loreMarquerContradiction(f, x, !x.vue, btn));
+      const actions = document.createElement('div');
+      actions.className = 'chantiers-actions';
+      actions.appendChild(btn);
+      item.appendChild(actions);
+      bloc.appendChild(item);
+    }
+    row.appendChild(bloc);
+  }
+
+  // ── Relations proposées ──
+  if (props.length) {
+    const bloc = document.createElement('div');
+    bloc.className = 'lore-bloc';
+    bloc.innerHTML = '<div class="lore-bloc-titre">Relations proposées par l\'IA</div>';
+    for (const p of props) {
+      const item = document.createElement('div');
+      item.className = 'lore-item';
+      const typeBadge = p.relation === 'alliance'
+        ? '<span class="lore-rel lore-rel-alliance">🤝 Alliance avec</span>'
+        : '<span class="lore-rel lore-rel-opposition">⚔ Opposition à</span>';
+      const introuvable = p.cible_introuvable ? ' <span class="lore-indice lore-indice-present">fiche cible introuvable</span>' : '';
+      item.innerHTML = `
+        <div>${typeBadge} <b>${_loreEsc(p.cible_name)}</b> <span class="lore-slug">${_loreEsc(p.cible)}</span>${introuvable}</div>
+        ${p.cible_role ? `<div class="lore-muted lore-role">Qui est-ce : ${_loreEsc(p.cible_role)}</div>` : ''}
+        <div class="lore-texte"><b>Raison donnée par l'IA :</b> ${_loreEsc(p.raison)}</div>`;
+      const actions = document.createElement('div');
+      actions.className = 'chantiers-actions';
+      if (p.applique) {
+        actions.innerHTML = `<span class="chantiers-statut-badge chantiers-statut-traite">✓ écrite dans la fiche le ${_loreEsc(p.applique)}</span>`;
+      } else {
+        const etat = p.valide ? 'garder' : 'a_trier';
+        [['garder', '✓ Garder'], ['a_trier', 'À trier'], ['rejeter', '✗ Rejeter']].forEach(([val, lib]) => {
+          const b = document.createElement('button');
+          b.className = 'chantiers-btn lore-choix'
+            + (val === etat ? ' lore-choix-actif lore-choix-' + val : '')
+            + (val === 'rejeter' ? ' chantiers-btn-danger' : '');
+          b.textContent = lib;
+          b.addEventListener('click', () => loreDecider(f, p, val, actions));
+          actions.appendChild(b);
+        });
+      }
+      item.appendChild(actions);
+      bloc.appendChild(item);
+    }
+    row.appendChild(bloc);
+  }
+  return row;
+}
+
+async function loreDecider(f, p, decision, actionsEl) {
+  const etatActuel = p.valide ? 'garder' : 'a_trier';
+  if (decision === etatActuel) return;
+  if (decision === 'rejeter' && !confirm(
+      `Rejeter « ${p.relation} ${p.cible_name} » pour ${f.name} ?\n\n` +
+      'La proposition est supprimée et ne sera plus jamais proposée par l\'IA.')) return;
+  actionsEl.querySelectorAll('button').forEach(b => { b.disabled = true; });
+  try {
+    const res = await fetch('/api/lore/propositions/decider', {
+      method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ scenario: f.scenario, slug: f.slug, relation: p.relation, cible: p.cible, decision }),
+    });
+    const data = await res.json();
+    if (!res.ok || data.error) {
+      alert(`Erreur : ${data.error || res.statusText}`);
+    }
+  } catch (e) {
+    alert(`Erreur réseau : ${e.message}`);
+  }
+  LoreState.simulationAJour = false;
+  await refreshLorePropositions();
+}
+
+async function loreMarquerContradiction(f, x, vue, btn) {
+  btn.disabled = true;
+  try {
+    const res = await fetch('/api/lore/contradictions/marquer', {
+      method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ scenario: f.scenario, slug: f.slug, champ: x.champ, extrait: x.extrait, vue }),
+    });
+    const data = await res.json();
+    if (!res.ok || data.error) alert(`Erreur : ${data.error || res.statusText}`);
+  } catch (e) {
+    alert(`Erreur réseau : ${e.message}`);
+  }
+  await refreshLorePropositions();
+}
+
+async function loreAppliquer(dryRun) {
+  if (!dryRun && !confirm('Écrire les relations gardées dans les fiches ?\n\n' +
+      'Une sauvegarde .bak de chaque fiche est faite, puis la réciprocité est lancée ' +
+      'pour inscrire la relation chez la fiche cible aussi.')) return;
+  const sortie = document.getElementById('lore-sortie');
+  sortie.style.display = '';
+  sortie.textContent = dryRun ? 'Simulation en cours…' : 'Écriture en cours…';
+  LoreState.enCours = true;
+  renderLorePropositions();
+  try {
+    const res = await fetch('/api/lore/propositions/appliquer', {
+      method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ dry_run: dryRun }),
+    });
+    const data = await res.json();
+    if (!res.ok || data.error) {
+      sortie.textContent = `✗ ${data.error || res.statusText}\n\n${data.sortie || ''}`;
+      LoreState.simulationAJour = false;
+    } else {
+      sortie.textContent = (dryRun ? 'SIMULATION — rien n\'a été écrit.\n\n' : '✓ Écrit.\n\n') + (data.sortie || '');
+      LoreState.simulationAJour = dryRun;
+    }
+  } catch (e) {
+    sortie.textContent = `✗ Erreur réseau : ${e.message}`;
+    LoreState.simulationAJour = false;
+  } finally {
+    LoreState.enCours = false;
+    await refreshLorePropositions();
   }
 }
