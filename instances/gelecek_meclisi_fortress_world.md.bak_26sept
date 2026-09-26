@@ -1,5 +1,5 @@
 ---
-name: Gelecek Meclisi Fragmentaire
+name: gelecek_meclisi_fragmentaire
 type: instance
 slug: gelecek_meclisi_fortress_world
 entite: gelecek_meclisi
@@ -89,7 +89,7 @@ tensions_narratives: >
 date_creation: 2026-08-16
 ---
 
-# Gelecek Meclisi Fragmentaire
+# gelecek_meclisi_fragmentaire
 
 ## Rôle dans [[fortress_world]]
 Assemblée émergente et fragmentée, née de la nécessité de négocier des issues communes entre les blocs forteresses et les zones grises, malgré l'absence de légitimité centrale. Elle agit comme un forum informel où se croisent diplomates résiduels, ingénieurs dissidents, contrebandiers énergétiques et représentants des populations exclues, cherchant à articuler des logiques locales (accès aux ressources, corridors humanitaires) avec les impératifs de souveraineté des blocs. Son rôle est moins de gouverner que de *lubrifier* les frictions systémiques, en proposant des cadres d'action collective temporaires (ex. quotas de transit, échanges de données climatiques) qui évitent l'escalade militaire ou l'effondrement logistique.
