@@ -44,7 +44,7 @@ oppositions:
 - agences_de_securite_interieure_des_etats_forteresses_fortress_world
 - alpha47_fortress_world
 - ergo_wian_sovereign_holdings_fortress_world
-- sigrid_halvorsen_fortress_world
+- ingrid_solberg_fortress_world
 - la_garde_du_seuil_fortress_world
 - neurosentry_fortress_world
 type_relation_dominante: conflit
@@ -121,6 +121,6 @@ Les Échos du Hors sont tiraillés entre deux destins : devenir les gardiens d'u
 - [[agences_de_securite_interieure_des_etats_forteresses_fortress_world]]
 - [[alpha47_fortress_world]]
 - [[ergo_wian_sovereign_holdings_fortress_world]]
-- [[sigrid_halvorsen_fortress_world]]
+- [[ingrid_solberg_fortress_world]]
 - [[la_garde_du_seuil_fortress_world]]
 - [[neurosentry_fortress_world]]

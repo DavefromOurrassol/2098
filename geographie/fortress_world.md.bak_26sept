@@ -255,7 +255,7 @@ zones:
     par un Commandement militaro-civil autoritaire appuyé sur une infrastructure numérique
     souveraine (NexCore, ANBA). Il maintient un ordre intérieur répressif, contrôle
     ses frontières par biométrie et réprime toute dissidence ou archive non certifiée.
-    Son centre politique est Halifax-Haute.
+    Son cœur politique est symboliquement localisé à Bruxelles-Forteresse.
   statut: dominant
   tensions_internes: Tension entre l'appareil sécuritaire (Commandement, ANBA) et
     les ingénieurs dissidents, les réseaux mesh clandestins et les zones abandonnées
@@ -775,9 +775,9 @@ zones:
   description: Base opérationnelle de Vasil Orentchev, seigneur de guerre logistique
     qui y reçoit dans un complexe fortifié aux abords de l'ancienne métropole kazakhe.
     Depuis Almaty, trois écrans affichent en temps réel des corridors gris que ni
-    Halifax ni Moscou-Est ne reconnaissent officiellement mais utilisent sans interruption.
-    Nœud névralgique des flux de ressources critiques traversant les zones grises
-    centrasiatiques.
+    Bruxelles-Forteresse ni Moscou-Est ne reconnaissent officiellement mais utilisent
+    sans interruption. Nœud névralgique des flux de ressources critiques traversant
+    les zones grises centrasiatiques.
   statut: fragmenté
   tensions_internes: Fragilité liée à la disparition progressive des zones grises
     sous pression des blocs ; risque d'instabilité à la succession d'Orentchev dont
@@ -981,9 +981,9 @@ zones:
     déserts d'Asie centrale, ni reconnues ni cartographiées officiellement par les
     blocs qui les utilisent pourtant sans interruption depuis 2047. C'est le domaine
     opérationnel de Vasil Orentchev, dont les convois blindés y transitent chaque
-    semaine avec énergie, matières critiques et humains autorisés. Ni Halifax ni le
-    Conseil de Moscou-Est n'en reconnaissent l'existence — les trois écrans du complexe
-    d'Almaty en affichent pourtant l'état en temps réel.
+    semaine avec énergie, matières critiques et humains autorisés. Ni Bruxelles-Forteresse
+    ni le Conseil de Moscou-Est n'en reconnaissent l'existence — les trois écrans
+    du complexe d'Almaty en affichent pourtant l'état en temps réel.
   statut: fragmenté
   tensions_internes: Pression croissante des blocs pour internaliser ces corridors
     en éliminant les intermédiaires ; perturbations par les factions djihadistes logistiques
@@ -1770,9 +1770,9 @@ zones:
   description: Base de commandement et centre de coordination logistique de Vasil
     Orentchev aux abords de l'ancienne métropole kazakhe. Depuis ses trois écrans
     affichant en temps réel l'état des corridors gris centrasiatiques, Orentchev gère
-    les flux de ressources que ni Halifax ni Moscou-Est ne reconnaissent officiellement
-    mais utilisent sans interruption depuis 2047. Le seul endroit où un journaliste
-    autorisé peut rencontrer le seigneur de guerre logistique.
+    les flux de ressources que ni Bruxelles-Forteresse ni Moscou-Est ne reconnaissent
+    officiellement mais utilisent sans interruption depuis 2047. Le seul endroit où
+    un journaliste autorisé peut rencontrer le seigneur de guerre logistique.
   statut: fragmenté
   tensions_internes: Repose entièrement sur l'autorité personnelle d'Orentchev ; plusieurs
     lieutenants ambitieux attendent l'effacement du maître ; rumeurs de transit de
@@ -1951,11 +1951,11 @@ zones:
   promu_depuis: Nappes phréatiques contaminées
 - slug: nexcore_atlantique_infrastructure
   nom: Infrastructures NexCore Atlantique
-  niveau: 2
+  niveau: 3
   type: infrastructure
-  parent: bloc_atlantique
+  parent: bruxelles_forteresse
   origine_reelle:
-  - entite: Nouvelle-Écosse
+  - entite: Bruxelles
     type_entite: region_administrative
     portion: null
   description: Nœud central de NexCore Bloc Atlantique, opérateur nationalisé de facto
@@ -2932,7 +2932,7 @@ Zone sous gouvernance précaire du Pacte Vert Amazônia, coalition fragile entre
 
 **Transition** : 2040-2052 — voir [[effondrement_reseau_mondial_communication_fortress_world]]
 
-Bloc géopolitique fermé centré sur l'espace atlantique nord, gouverné par un Commandement militaro-civil autoritaire appuyé sur une infrastructure numérique souveraine (NexCore, ANBA). Il maintient un ordre intérieur répressif, contrôle ses frontières par biométrie et réprime toute dissidence ou archive non certifiée. Son centre politique est Halifax-Haute.
+Bloc géopolitique fermé centré sur l'espace atlantique nord, gouverné par un Commandement militaro-civil autoritaire appuyé sur une infrastructure numérique souveraine (NexCore, ANBA). Il maintient un ordre intérieur répressif, contrôle ses frontières par biométrie et réprime toute dissidence ou archive non certifiée. Son cœur politique est symboliquement localisé à Bruxelles-Forteresse.
 
 **Tensions internes** : Tension entre l'appareil sécuritaire (Commandement, ANBA) et les ingénieurs dissidents, les réseaux mesh clandestins et les zones abandonnées du Midwest désertifié. La répression du Mouvement Commun Américain en 2052 a produit une résistance clandestine structurée.
 
@@ -3083,7 +3083,7 @@ Ensemble diffus de territoires interstitiels situés entre les blocs fermés —
 
 **Transition** : 2047-2098
 
-Base opérationnelle de Vasil Orentchev, seigneur de guerre logistique qui y reçoit dans un complexe fortifié aux abords de l'ancienne métropole kazakhe. Depuis Almaty, trois écrans affichent en temps réel des corridors gris que ni Halifax ni Moscou-Est ne reconnaissent officiellement mais utilisent sans interruption. Nœud névralgique des flux de ressources critiques traversant les zones grises centrasiatiques.
+Base opérationnelle de Vasil Orentchev, seigneur de guerre logistique qui y reçoit dans un complexe fortifié aux abords de l'ancienne métropole kazakhe. Depuis Almaty, trois écrans affichent en temps réel des corridors gris que ni Bruxelles-Forteresse ni Moscou-Est ne reconnaissent officiellement mais utilisent sans interruption. Nœud névralgique des flux de ressources critiques traversant les zones grises centrasiatiques.
 
 **Tensions internes** : Fragilité liée à la disparition progressive des zones grises sous pression des blocs ; risque d'instabilité à la succession d'Orentchev dont le réseau repose sur sa seule autorité personnelle ; accusations de transit de composants d'armes non-conventionnels.
 
@@ -3199,7 +3199,7 @@ Réseau de voies maritimes arctiques déglaciées gérées sous monopole de la N
 
 **Transition** : 2047-2098
 
-Réseau de routes logistiques informelles traversant les steppes et déserts d'Asie centrale, ni reconnues ni cartographiées officiellement par les blocs qui les utilisent pourtant sans interruption depuis 2047. C'est le domaine opérationnel de Vasil Orentchev, dont les convois blindés y transitent chaque semaine avec énergie, matières critiques et humains autorisés. Ni Halifax ni le Conseil de Moscou-Est n'en reconnaissent l'existence — les trois écrans du complexe d'Almaty en affichent pourtant l'état en temps réel.
+Réseau de routes logistiques informelles traversant les steppes et déserts d'Asie centrale, ni reconnues ni cartographiées officiellement par les blocs qui les utilisent pourtant sans interruption depuis 2047. C'est le domaine opérationnel de Vasil Orentchev, dont les convois blindés y transitent chaque semaine avec énergie, matières critiques et humains autorisés. Ni Bruxelles-Forteresse ni le Conseil de Moscou-Est n'en reconnaissent l'existence — les trois écrans du complexe d'Almaty en affichent pourtant l'état en temps réel.
 
 **Tensions internes** : Pression croissante des blocs pour internaliser ces corridors en éliminant les intermédiaires ; perturbations par les factions djihadistes logistiques d'Asie centrale qui taxent certains passages ; rumeurs de transit de composants d'armes non-conventionnels.
 
@@ -3595,7 +3595,7 @@ Point de passage obligé pour toute autorisation de transit arctique, opérant d
 
 **Transition** : 2047-2098
 
-Base de commandement et centre de coordination logistique de Vasil Orentchev aux abords de l'ancienne métropole kazakhe. Depuis ses trois écrans affichant en temps réel l'état des corridors gris centrasiatiques, Orentchev gère les flux de ressources que ni Halifax ni Moscou-Est ne reconnaissent officiellement mais utilisent sans interruption depuis 2047. Le seul endroit où un journaliste autorisé peut rencontrer le seigneur de guerre logistique.
+Base de commandement et centre de coordination logistique de Vasil Orentchev aux abords de l'ancienne métropole kazakhe. Depuis ses trois écrans affichant en temps réel l'état des corridors gris centrasiatiques, Orentchev gère les flux de ressources que ni Bruxelles-Forteresse ni Moscou-Est ne reconnaissent officiellement mais utilisent sans interruption depuis 2047. Le seul endroit où un journaliste autorisé peut rencontrer le seigneur de guerre logistique.
 
 **Tensions internes** : Repose entièrement sur l'autorité personnelle d'Orentchev ; plusieurs lieutenants ambitieux attendent l'effacement du maître ; rumeurs de transit de composants d'armes non-conventionnels.
 
@@ -3683,7 +3683,7 @@ Sites de contamination hydrique documentés par le Réseau Vert Clandestin dans 
 
 *Sources attestées : coalition_vivant_fortress_world, le_temoin_fortress_world*
 
-#### Infrastructures NexCore Atlantique — sous [[bloc_atlantique]]
+##### Infrastructures NexCore Atlantique — sous [[bruxelles_forteresse]]
 
 *infrastructure — niveau 3 — statut : dominant*
 

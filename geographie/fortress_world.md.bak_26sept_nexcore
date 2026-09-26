@@ -1955,7 +1955,7 @@ zones:
   type: infrastructure
   parent: bloc_atlantique
   origine_reelle:
-  - entite: Nouvelle-Écosse
+  - entite: Bruxelles
     type_entite: region_administrative
     portion: null
   description: Nœud central de NexCore Bloc Atlantique, opérateur nationalisé de facto

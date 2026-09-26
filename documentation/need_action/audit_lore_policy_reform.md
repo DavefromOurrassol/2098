@@ -1,15 +1,15 @@
 # Audit du lore — policy_reform
 
-*Généré par `audit_lore.py` le 2026-09-26 08:37 — réécrit à chaque run, ne pas éditer. Règles : `documentation/lore_regles.yaml`.*
+*Généré par `audit_lore.py` le 2026-09-26 16:01 — réécrit à chaque run, ne pas éditer. Règles : `documentation/lore_regles.yaml`.*
 
 ## Résumé
 
-- Fiches analysées : 119 (+ 14 événements)
+- Fiches analysées : 119 (+ 14 événements) (+ 30 articles)
 - Règles de lore — **erreurs : 0**, à relire : 0
 - Quarantaine (fiche active localisée en zone interdite) : 0
 - Transnationales localisées dans le texte (info) : 17
-- Relations à sens unique : 0 — contradictoires : 0
-- Relations inter-scénarios (info) : 0
+- Relations à sens unique à corriger : 0 — contradictoires : 0
+- Relations inter-scénarios (erreurs) : 0
 
 *Non vérifié ici (voir `validate.py`) : slugs inexistants, relations en texte libre, zone inconnue, type_lieu, wikilinks cassés.*
 
@@ -27,7 +27,7 @@ Rien à signaler.
 
 ## 4. Relations à sens unique
 
-Rien à signaler.
+Rien à corriger.
 
 ## 5. Règles de lore — à relire
 
@@ -55,7 +55,7 @@ Souvent légitime (une organisation transnationale nomme les zones où elle agit
 - `reseaux_de_capteurs_ia_climatiques_deployes_par_les_etats_membres_policy_reform` — cite : La Haye (`la_haye_tribunal`), Nairobi (`nairobi_hub`)
 - `trame_bioclimatique_policy_reform` — cite : Nairobi (`nairobi_hub`)
 
-## 7. Relations inter-scénarios (information)
+## 7. Relations inter-scénarios (erreurs : les scénarios sont des mondes parallèles)
 
 Rien à signaler.
 

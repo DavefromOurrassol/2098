@@ -40,8 +40,6 @@ zone_systemique:
 
 alliances:
 - anba_siege_atlantique_fortress_world
-- conseil_des_etats_nordiques_integres_reference
-- consortium_energetique_baltique_reference
 - contrats_de_service_d_ergo_wian_fortress_world
 - ergo_wian_sovereign_holdings_fortress_world
 - ironclad_logistics_fortress_world
@@ -108,8 +106,6 @@ Les blocs dépendent d'une route commerciale possédée par un gouvernement-entr
 ## Relations
 **Alliés :**
 - [[anba_siege_atlantique_fortress_world]]
-- [[conseil_des_etats_nordiques_integres_reference]]
-- [[consortium_energetique_baltique_reference]]
 - [[contrats_de_service_d_ergo_wian_fortress_world]]
 - [[ergo_wian_sovereign_holdings_fortress_world]]
 - [[ironclad_logistics_fortress_world]]

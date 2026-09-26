@@ -9526,7 +9526,8 @@ function renderLoreFiche(f, props, contr) {
       item.innerHTML = `
         <div>${typeBadge} <b>${_loreEsc(p.cible_name)}</b> <span class="lore-slug">${_loreEsc(p.cible)}</span>${introuvable}</div>
         ${p.cible_role ? `<div class="lore-muted lore-role">Qui est-ce : ${_loreEsc(p.cible_role)}</div>` : ''}
-        <div class="lore-texte"><b>Raison donnée par l'IA :</b> ${_loreEsc(p.raison)}</div>`;
+        <div class="lore-texte"><b>Raison donnée par l'IA :</b> ${_loreEsc(p.raison)}</div>
+        ${p.preuve ? `<div class="lore-texte"><b>Extrait cité :</b> <i>« ${_loreEsc(p.preuve)} »</i></div>` : ''}`;
       const actions = document.createElement('div');
       actions.className = 'chantiers-actions';
       if (p.applique) {

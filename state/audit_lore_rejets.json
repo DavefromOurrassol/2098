@@ -1,0 +1,53 @@
+{
+ "relations": [
+  {
+   "cle": [
+    "fortress_world",
+    "ergo_wian_sovereign_holdings_fortress_world",
+    "alliance",
+    "gelecek_meclisi_fortress_world"
+   ],
+   "raison": "Le Gelecek Meclisi Fragmentaire, en tant qu'assemblée résiduelle des marges, pourrait négocier ou résister aux contrats de service d'Ergo-Wian, créant une tension diplomatique ou une alliance de circonstance pour l'accès aux ressources.",
+   "date": "2026-09-26"
+  },
+  {
+   "cle": [
+    "fortress_world",
+    "ergo_wian_sovereign_holdings_fortress_world",
+    "alliance",
+    "coalition_arctique_des_blocs_continentaux_fortress_world"
+   ],
+   "raison": "La Coalition Arctique des Blocs Continentaux pourrait être un forum où l'EWSD négocie ou s'oppose aux autres blocs pour le partage des ressources et des voies arctiques.",
+   "date": "2026-09-26"
+  }
+ ],
+ "contradictions": [
+  {
+   "cle": [
+    "fortress_world",
+    "ergo_wian_sovereign_holdings_fortress_world",
+    "localisation",
+    "lieu=Euro-Nord (Espace Nordique et Arctique)"
+   ],
+   "date": "2026-09-26"
+  },
+  {
+   "cle": [
+    "fortress_world",
+    "ergo_wian_sovereign_holdings_fortress_world",
+    "tensions_narratives",
+    "les Gardiens des Aquifères Oubliés accusent l'EWSD de pomper illégalement les ressources hydriques des zones grises"
+   ],
+   "date": "2026-09-26"
+  },
+  {
+   "cle": [
+    "fortress_world",
+    "ergo_wian_sovereign_holdings_fortress_world",
+    "responsabilites|description_journalistique",
+    "migrations forcées vers les ceintures productives eurasiatiques"
+   ],
+   "date": "2026-09-26"
+  }
+ ]
+}

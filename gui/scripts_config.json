@@ -1762,7 +1762,7 @@
     "icon": "🔀",
     "section": "relations_lore",
     "script": "corriger_relations_inter_scenarios.py",
-    "description": "Gratuit, sans IA. Une alliance/opposition qui pointe vers une fiche d'un AUTRE scénario est une erreur de génération : elle est remplacée par la même entité du bon scénario si elle existe, sinon retirée. Les exceptions voulues (les 2 alliés « reference » de la NAT) sont conservées. Aperçu par défaut — coche « Exécuter pour de vrai » pour écrire (.bak de chaque fiche).",
+    "description": "Gratuit, sans IA. Les scénarios sont des mondes parallèles : une alliance/opposition qui pointe vers une fiche d'un AUTRE scénario est toujours une erreur. Elle est remplacée par la même entité du bon scénario si elle existe, sinon retirée. Aperçu par défaut — coche « Exécuter pour de vrai » pour écrire (.bak de chaque fiche).",
     "requires": [],
     "options": [
       {
@@ -1780,15 +1780,6 @@
         "default": "",
         "optional": true,
         "mutually_exclusive_with": "all"
-      },
-      {
-        "flag": "--garder",
-        "type": "text",
-        "label": "Exception à conserver (fiche:relation)",
-        "optional": true,
-        "advanced": true,
-        "placeholder": "ex : ma_fiche_breakdown:autre_fiche_reference",
-        "description": "Une relation inter-scénarios à garder telle quelle, au format slug_de_la_fiche:slug_de_la_relation."
       },
       {
         "flag": "--execute",

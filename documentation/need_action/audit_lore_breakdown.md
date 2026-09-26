@@ -1,15 +1,15 @@
 # Audit du lore — breakdown
 
-*Généré par `audit_lore.py` le 2026-09-26 08:36 — réécrit à chaque run, ne pas éditer. Règles : `documentation/lore_regles.yaml`.*
+*Généré par `audit_lore.py` le 2026-09-26 15:59 — réécrit à chaque run, ne pas éditer. Règles : `documentation/lore_regles.yaml`.*
 
 ## Résumé
 
-- Fiches analysées : 150 (+ 16 événements)
+- Fiches analysées : 150 (+ 16 événements) (+ 19 articles)
 - Règles de lore — **erreurs : 0**, à relire : 0
 - Quarantaine (fiche active localisée en zone interdite) : 0
 - Transnationales localisées dans le texte (info) : 6
-- Relations à sens unique : 0 — contradictoires : 0
-- Relations inter-scénarios (info) : 0
+- Relations à sens unique à corriger : 0 — contradictoires : 0
+- Relations inter-scénarios (erreurs) : 0
 
 *Non vérifié ici (voir `validate.py`) : slugs inexistants, relations en texte libre, zone inconnue, type_lieu, wikilinks cassés.*
 
@@ -27,7 +27,7 @@ Rien à signaler.
 
 ## 4. Relations à sens unique
 
-Rien à signaler.
+Rien à corriger.
 
 ## 5. Règles de lore — à relire
 
@@ -44,7 +44,7 @@ Souvent légitime (une organisation transnationale nomme les zones où elle agit
 - `milices_contractuelles_des_anciens_etats_membres_breakdown` — cite : Corridor des Lithiums (`corridor_lithium_bouches`)
 - `reseau_des_organisations_humanitaires_hors_cadre_onusien_breakdown` — cite : Bassorah (`bassorah_exode`)
 
-## 7. Relations inter-scénarios (information)
+## 7. Relations inter-scénarios (erreurs : les scénarios sont des mondes parallèles)
 
 Rien à signaler.
 

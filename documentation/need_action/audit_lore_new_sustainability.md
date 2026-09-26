@@ -1,15 +1,15 @@
 # Audit du lore — new_sustainability
 
-*Généré par `audit_lore.py` le 2026-09-26 08:36 — réécrit à chaque run, ne pas éditer. Règles : `documentation/lore_regles.yaml`.*
+*Généré par `audit_lore.py` le 2026-09-26 16:00 — réécrit à chaque run, ne pas éditer. Règles : `documentation/lore_regles.yaml`.*
 
 ## Résumé
 
-- Fiches analysées : 119 (+ 12 événements)
+- Fiches analysées : 119 (+ 12 événements) (+ 74 articles)
 - Règles de lore — **erreurs : 0**, à relire : 0
 - Quarantaine (fiche active localisée en zone interdite) : 0
 - Transnationales localisées dans le texte (info) : 28
-- Relations à sens unique : 0 — contradictoires : 0
-- Relations inter-scénarios (info) : 0
+- Relations à sens unique à corriger : 0 — contradictoires : 0
+- Relations inter-scénarios (erreurs) : 0
 
 *Non vérifié ici (voir `validate.py`) : slugs inexistants, relations en texte libre, zone inconnue, type_lieu, wikilinks cassés.*
 
@@ -27,7 +27,7 @@ Rien à signaler.
 
 ## 4. Relations à sens unique
 
-Rien à signaler.
+Rien à corriger.
 
 ## 5. Règles de lore — à relire
 
@@ -66,7 +66,7 @@ Souvent légitime (une organisation transnationale nomme les zones où elle agit
 - `reseaux_de_gouvernance_territoriale_distribues_new_sustainability` — cite : Parlement des Territoires de Nairobi (`parlement_territoires_nairobi`), Nairobi (`nairobi_observatoire_climatique`), Chicago-Lacustre (`chicago_lacustre_compact`), Dakar (`dakar_ctsa_noeud`), Genève (`sommet_urgence_numerique_geneve_2041`), Manaus (`manaus_antenne_consortium`)
 - `reseaux_neo_democratiques_plaidant_pour_la_gouvernance_participative_directe_new_sustainability` — cite : Genève (`sommet_urgence_numerique_geneve_2041`)
 
-## 7. Relations inter-scénarios (information)
+## 7. Relations inter-scénarios (erreurs : les scénarios sont des mondes parallèles)
 
 Rien à signaler.
 

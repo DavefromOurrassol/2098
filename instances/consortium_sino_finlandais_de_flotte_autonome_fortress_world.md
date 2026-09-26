@@ -34,16 +34,17 @@ zone_geographique:
 zone_systemique:
 - société
 alliances:
-- bloc_pacifique_nord_fortress_world
-- kalaallit_nunaat_sovereign_fund_fortress_world
 - bloc_atlantique_fortress_world
+- bloc_pacifique_nord_fortress_world
+- ergo_wian_sovereign_holdings_fortress_world
 - ironclad_logistics_fortress_world
+- kalaallit_nunaat_sovereign_fund_fortress_world
 - pacte_forteresses_souveraines_fortress_world
 oppositions:
 - armada_logistique_nordique_fortress_world
-- milices_de_piraterie_logistique_arctique_fortress_world
-- factions_djihadistes_logistiques_d_asie_centrale_fortress_world
 - cartels_miniers_militarises_subsahariens_fortress_world
+- factions_djihadistes_logistiques_d_asie_centrale_fortress_world
+- milices_de_piraterie_logistique_arctique_fortress_world
 - reseaux_de_contrebande_energetique_transfrontaliere_fortress_world
 type_relation_dominante: dépendance
 annee_debut: 2041
@@ -108,18 +109,20 @@ Le Consortium navigue dans une contradiction structurelle : sa neutralité affic
 - [[geopolitique_conflits]]
 - [[energie_ressources_critiques]]
 
+
 ## Relations
 **Alliés :**
-- [[bloc_pacifique_nord_fortress_world]]
-- [[kalaallit_nunaat_sovereign_fund_fortress_world]]
 - [[bloc_atlantique_fortress_world]]
+- [[bloc_pacifique_nord_fortress_world]]
+- [[ergo_wian_sovereign_holdings_fortress_world]]
 - [[ironclad_logistics_fortress_world]]
+- [[kalaallit_nunaat_sovereign_fund_fortress_world]]
 - [[pacte_forteresses_souveraines_fortress_world]]
 **Opposants :**
 - [[armada_logistique_nordique_fortress_world]]
-- [[milices_de_piraterie_logistique_arctique_fortress_world]]
-- [[factions_djihadistes_logistiques_d_asie_centrale_fortress_world]]
 - [[cartels_miniers_militarises_subsahariens_fortress_world]]
+- [[factions_djihadistes_logistiques_d_asie_centrale_fortress_world]]
+- [[milices_de_piraterie_logistique_arctique_fortress_world]]
 - [[reseaux_de_contrebande_energetique_transfrontaliere_fortress_world]]
 
 ## Notes

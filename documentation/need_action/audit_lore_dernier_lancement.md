@@ -1,4 +1,4 @@
-# Audit du lore — dernier lancement (2026-09-26 10:15)
+# Audit du lore — dernier lancement (2026-09-26 16:09)
 
 Scénarios : fortress_world
 
@@ -6,16 +6,16 @@ Scénarios : fortress_world
 
 # Audit du lore — fortress_world
 
-*Généré par `audit_lore.py` le 2026-09-26 10:15 — réécrit à chaque run, ne pas éditer. Règles : `documentation/lore_regles.yaml`.*
+*Généré par `audit_lore.py` le 2026-09-26 16:09 — réécrit à chaque run, ne pas éditer. Règles : `documentation/lore_regles.yaml`.*
 
 ## Résumé
 
-- Fiches analysées : 151 (+ 16 événements)
-- Règles de lore — **erreurs : 0**, à relire : 0
+- Fiches analysées : 151 (+ 16 événements) (+ 60 articles)
+- Règles de lore — **erreurs : 0**, à relire : 1
 - Quarantaine (fiche active localisée en zone interdite) : 0
 - Transnationales localisées dans le texte (info) : 23
-- Relations à sens unique : 24 — contradictoires : 0
-- Relations inter-scénarios (info) : 2
+- Relations à sens unique à corriger : 0 (+ 24 volontaires : personnages en réserve) — contradictoires : 0
+- Relations inter-scénarios (erreurs) : 0
 
 *Non vérifié ici (voir `validate.py`) : slugs inexistants, relations en texte libre, zone inconnue, type_lieu, wikilinks cassés.*
 
@@ -33,35 +33,38 @@ Rien à signaler.
 
 ## 4. Relations à sens unique
 
-- `anton_vasko_fortress_world` cite `administrations_de_controle_frontalier_des_blocs_fortress_world` (oppositions), pas l'inverse
-- `raimon_fortress_world` cite `administrations_de_controle_frontalier_des_blocs_fortress_world` (oppositions), pas l'inverse
-- `anton_vasko_fortress_world` cite `agences_de_securite_interieure_des_etats_forteresses_fortress_world` (oppositions), pas l'inverse
-- `malo_fortress_world` cite `agences_de_securite_interieure_des_etats_forteresses_fortress_world` (oppositions), pas l'inverse
-- `raimon_fortress_world` cite `agences_de_securite_interieure_des_etats_forteresses_fortress_world` (oppositions), pas l'inverse
-- `malo_fortress_world` cite `bureaux_de_controle_frontalier_des_blocs_fermes_fortress_world` (oppositions), pas l'inverse
-- `anton_vasko_fortress_world` cite `cellules_universitaires_dissidentes_des_zones_tampons_fortress_world` (oppositions), pas l'inverse
-- `malo_fortress_world` cite `coalitions_des_deplaces_et_apatrides_fortress_world` (alliances), pas l'inverse
-- `anton_vasko_fortress_world` cite `coalitions_des_deplaces_et_apatrides_fortress_world` (oppositions), pas l'inverse
-- `hyphan_raghavan_fortress_world` cite `ergo_wian_sovereign_holdings_fortress_world` (oppositions), pas l'inverse
-- `raimon_fortress_world` cite `la_garde_du_seuil_fortress_world` (alliances), pas l'inverse
-- `hyphan_raghavan_fortress_world` cite `les_cycles_fortress_world` (alliances), pas l'inverse
-- `anton_vasko_fortress_world` cite `les_recycleurs_fortress_world` (alliances), pas l'inverse
-- `hyphan_raghavan_fortress_world` cite `les_recycleurs_fortress_world` (alliances), pas l'inverse
-- `malo_fortress_world` cite `les_recycleurs_fortress_world` (alliances), pas l'inverse
-- `anton_vasko_fortress_world` cite `milices_privees_de_protection_des_sites_germinaux_fortress_world` (alliances), pas l'inverse
-- `malo_fortress_world` cite `milices_privees_de_protection_des_sites_germinaux_fortress_world` (oppositions), pas l'inverse
-- `raimon_fortress_world` cite `milices_privees_de_protection_des_sites_germinaux_fortress_world` (oppositions), pas l'inverse
-- `hyphan_raghavan_fortress_world` cite `mouvement_de_reconquete_europeenne_fortress_world` (oppositions), pas l'inverse
-- `raimon_fortress_world` cite `reseau_des_cartographes_des_zones_grises_fortress_world` (alliances), pas l'inverse
-- `malo_fortress_world` cite `reseaux_d_echange_clandestin_inter_zones_fortress_world` (alliances), pas l'inverse
-- `raimon_fortress_world` cite `reseaux_d_echange_clandestin_inter_zones_fortress_world` (alliances), pas l'inverse
-- `anton_vasko_fortress_world` cite `reseaux_de_contrebande_energetique_transfrontaliere_fortress_world` (alliances), pas l'inverse
-- `raimon_fortress_world` cite `tribu_des_cinq_nations_fortress_world` (alliances), pas l'inverse
-Correction automatique possible : `python3 generator/fix_alliances_oppositions.py --scenario fortress_world --reciprocite-seule --dry-run` puis sans `--dry-run`.
+Rien à corriger.
+
+Volontaires, rien à faire (24) — personnages en réserve, jamais propagés chez les autres fiches :
+- `anton_vasko_fortress_world` cite `administrations_de_controle_frontalier_des_blocs_fortress_world` (oppositions)
+- `raimon_fortress_world` cite `administrations_de_controle_frontalier_des_blocs_fortress_world` (oppositions)
+- `anton_vasko_fortress_world` cite `agences_de_securite_interieure_des_etats_forteresses_fortress_world` (oppositions)
+- `malo_fortress_world` cite `agences_de_securite_interieure_des_etats_forteresses_fortress_world` (oppositions)
+- `raimon_fortress_world` cite `agences_de_securite_interieure_des_etats_forteresses_fortress_world` (oppositions)
+- `malo_fortress_world` cite `bureaux_de_controle_frontalier_des_blocs_fermes_fortress_world` (oppositions)
+- `anton_vasko_fortress_world` cite `cellules_universitaires_dissidentes_des_zones_tampons_fortress_world` (oppositions)
+- `malo_fortress_world` cite `coalitions_des_deplaces_et_apatrides_fortress_world` (alliances)
+- `anton_vasko_fortress_world` cite `coalitions_des_deplaces_et_apatrides_fortress_world` (oppositions)
+- `hyphan_raghavan_fortress_world` cite `ergo_wian_sovereign_holdings_fortress_world` (oppositions)
+- `raimon_fortress_world` cite `la_garde_du_seuil_fortress_world` (alliances)
+- `hyphan_raghavan_fortress_world` cite `les_cycles_fortress_world` (alliances)
+- `anton_vasko_fortress_world` cite `les_recycleurs_fortress_world` (alliances)
+- `hyphan_raghavan_fortress_world` cite `les_recycleurs_fortress_world` (alliances)
+- `malo_fortress_world` cite `les_recycleurs_fortress_world` (alliances)
+- `anton_vasko_fortress_world` cite `milices_privees_de_protection_des_sites_germinaux_fortress_world` (alliances)
+- `malo_fortress_world` cite `milices_privees_de_protection_des_sites_germinaux_fortress_world` (oppositions)
+- `raimon_fortress_world` cite `milices_privees_de_protection_des_sites_germinaux_fortress_world` (oppositions)
+- `hyphan_raghavan_fortress_world` cite `mouvement_de_reconquete_europeenne_fortress_world` (oppositions)
+- `raimon_fortress_world` cite `reseau_des_cartographes_des_zones_grises_fortress_world` (alliances)
+- `malo_fortress_world` cite `reseaux_d_echange_clandestin_inter_zones_fortress_world` (alliances)
+- `raimon_fortress_world` cite `reseaux_d_echange_clandestin_inter_zones_fortress_world` (alliances)
+- `anton_vasko_fortress_world` cite `reseaux_de_contrebande_energetique_transfrontaliere_fortress_world` (alliances)
+- `raimon_fortress_world` cite `tribu_des_cinq_nations_fortress_world` (alliances)
 
 ## 5. Règles de lore — à relire
 
-Rien à signaler.
+**bruxelles_pas_un_centre** — En 2098, Bruxelles-Forteresse (dans le Hors, Zone Euro Sud) n'abrite que les vestiges de l'ancien gouvernement européen, sans pouvoir réel. Le seul centre politique du Bloc Atlantique est Halifax-Haute (décision du 26 sept 2026). Légitime en rappel historique, incohérent si Bruxelles est décrite comme un centre de pouvoir actuel.
+- `corps_des_inspecteurs_de_conformite_inter_blocs_fortress_world` (instance, localisation.lieu) — **Bruxelles + siège** → *Halifax-Haute (centre du Bloc Atlantique)* : « Siège tournant — Genève-Bunker / Bruxelles-Forteresse / Zones Tampons »
 
 ## 6. Transnationales mais localisées dans le texte (information)
 
@@ -91,8 +94,7 @@ Souvent légitime (une organisation transnationale nomme les zones où elle agit
 - `terrashield_geoengineering_fortress_world` — cite : Amazonie (`amazonie_pacte_vert`)
 - `voix_du_dehors_fortress_world` — cite : Tbilissi-Nord (`tbilissi_nord_zone_franche`), Marchés Gris de Casablanca-Périphérie (`marches_gris_casablanca`)
 
-## 7. Relations inter-scénarios (information)
+## 7. Relations inter-scénarios (erreurs : les scénarios sont des mondes parallèles)
 
-- `armada_logistique_nordique_fortress_world` → `conseil_des_etats_nordiques_integres_reference` (alliances, scénario reference)
-- `armada_logistique_nordique_fortress_world` → `consortium_energetique_baltique_reference` (alliances, scénario reference)
+Rien à signaler.
 

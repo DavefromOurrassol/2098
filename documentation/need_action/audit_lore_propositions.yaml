@@ -1,34 +1,20 @@
 # Propositions de relations (audit_lore.py --llm), tous scénarios.
-# Passer `valide: true` sur celles à garder, puis (GUI « Audit du lore » ou CLI) :
+# À trier dans le GUI : « Relations & lore » → « 5. Valider les propositions de l'IA ».
+# (ou à la main : `valide: true` sur celles à garder, puis
 #   python3 generator/audit_lore.py --all --appliquer --dry-run
-#   python3 generator/audit_lore.py --all --appliquer
-# Les entrées déjà présentes ne sont jamais écrasées par un nouveau run.
+#   python3 generator/audit_lore.py --all --appliquer)
+# Les entrées déjà présentes ne sont jamais écrasées par un nouveau run ;
+# une proposition rejetée est retirée d'ici et notée dans state/audit_lore_rejets.json.
 propositions:
-- scenario: fortress_world
-  slug: ergo_wian_sovereign_holdings_fortress_world
-  relation: alliance
-  cible: gelecek_meclisi_fortress_world
-  raison: Le Gelecek Meclisi Fragmentaire, en tant qu'assemblée résiduelle des marges, pourrait négocier
-    ou résister aux contrats de service d'Ergo-Wian, créant une tension diplomatique ou une alliance de
-    circonstance pour l'accès aux ressources.
-  valide: false
-  date: '2026-09-26'
 - scenario: fortress_world
   slug: ergo_wian_sovereign_holdings_fortress_world
   relation: alliance
   cible: consortium_sino_finlandais_de_flotte_autonome_fortress_world
   raison: Le Consortium Sino-Finlandais de Flotte Autonome, opérant dans l'Arctique, pourrait être un
     partenaire logistique ou un rival pour le contrôle des corridors maritimes, en lien avec la NAT.
-  valide: false
+  valide: true
   date: '2026-09-26'
-- scenario: fortress_world
-  slug: ergo_wian_sovereign_holdings_fortress_world
-  relation: alliance
-  cible: coalition_arctique_des_blocs_continentaux_fortress_world
-  raison: La Coalition Arctique des Blocs Continentaux pourrait être un forum où l'EWSD négocie ou s'oppose
-    aux autres blocs pour le partage des ressources et des voies arctiques.
-  valide: false
-  date: '2026-09-26'
+  applique: '2026-09-26'
 - scenario: fortress_world
   slug: ergo_wian_sovereign_holdings_fortress_world
   relation: opposition
@@ -56,3 +42,27 @@ propositions:
   valide: true
   date: '2026-09-26'
   applique: '2026-09-26'
+- scenario: fortress_world
+  slug: bloc_atlantique_fortress_world
+  relation: alliance
+  cible: anba_siege_atlantique_fortress_world
+  raison: L'ANBA (Autorité Numérique du Bloc Atlantique) gère les flux d'information et les infrastructures
+    critiques du Bloc Atlantique, ce qui inclut nécessairement le contrôle des flux informationnels entrants
+    et sortants du PAPC.
+  preuve: 'Le PAPC [...] coordonne la doctrine de souveraineté biopolitique entre ses États membres, incluant
+    le contrôle des flux informationnels [...] Anba Siege Atlantique — Division Accès Protégés : gestion
+    des accès numériques sécurisés, alignée sur les besoins du PAPC.'
+  valide: true
+  date: '2026-09-26'
+- scenario: fortress_world
+  slug: bloc_atlantique_fortress_world
+  relation: opposition
+  cible: cellules_mouvement_commun_midwest_fortress_world
+  raison: Le Mouvement Commun Américain, dont les Cellules du Dehors sont issues, a été réprimé par le
+    Bloc Atlantique en 2052, ce qui en fait un opposant historique et structuré au PAPC.
+  preuve: 'Le PAPC est traversé par [...] des cellules dissidentes internes [...] sapant le récit officiel
+    de ''chaos barbare'' au-delà des digues. [...] Cellules du Dehors — Réseau Commun Midwest : Réseau
+    clandestin issu de la répression du Mouvement Commun Américain en 2052, opérant dans les zones abandonnées
+    du Midwest.'
+  valide: true
+  date: '2026-09-26'

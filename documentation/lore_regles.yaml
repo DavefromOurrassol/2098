@@ -120,3 +120,18 @@ fortress_world:
       message: >-
         La NAT est la filiale armée d'Ergo-Wian, fait connu de tous en 2098 :
         elle n'est ni neutre ni indépendante.
+
+    - id: bruxelles_pas_un_centre
+      gravite: a_relire
+      ignorer_negation: true
+      meme_phrase:
+        - [Bruxelles, Bruxelles-Forteresse]
+        - [capitale, siège, cœur politique, centre politique, centre du pouvoir,
+           gouverne, gouvernent, quartier général, QG]
+      suggestion: Halifax-Haute (centre du Bloc Atlantique)
+      message: >-
+        En 2098, Bruxelles-Forteresse (dans le Hors, Zone Euro Sud) n'abrite que
+        les vestiges de l'ancien gouvernement européen, sans pouvoir réel. Le
+        seul centre politique du Bloc Atlantique est Halifax-Haute (décision du
+        26 sept 2026). Légitime en rappel historique, incohérent si Bruxelles
+        est décrite comme un centre de pouvoir actuel.

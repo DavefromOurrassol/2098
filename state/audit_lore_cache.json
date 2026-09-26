@@ -48,5 +48,39 @@
     }
    ]
   }
+ },
+ "fortress_world/bloc_atlantique_fortress_world": {
+  "empreinte": "bc949cf235699a67",
+  "date": "2026-09-26T12:47:56",
+  "resultat": {
+   "contradictions": [
+    {
+     "champ": "localisation",
+     "extrait": "lieu=Bloc Atlantique (siège à Halifax-Haute)",
+     "probleme": "Le lore établi indique que le cœur politique symbolique du Bloc Atlantique est localisé à Bruxelles-Forteresse, pas à Halifax-Haute.",
+     "correction": "lieu=Bloc Atlantique (siège opérationnel à Halifax-Haute, cœur politique symbolique à Bruxelles-Forteresse)"
+    },
+    {
+     "champ": "role_dans_scenario|description_journalistique",
+     "extrait": "la Chambre de Recours Algorithmique de Bruxelles Résiduelle refuse systématiquement de déclassifier",
+     "probleme": "Le lore établi décrit la Chambre de Recours Algorithmique comme un vestige quasi-fantomatique sans capacité réelle de refus systématique, contrairement à ce que suggère la fiche.",
+     "correction": "la Chambre de Recours Algorithmique de Bruxelles Résiduelle, vestige d'une ambition démocratique, n'a plus les moyens de contraindre le PAPC à déclassifier ses critères"
+    }
+   ],
+   "alliances_proposees": [
+    {
+     "slug": "anba_siege_atlantique_fortress_world",
+     "raison": "L'ANBA (Autorité Numérique du Bloc Atlantique) gère les flux d'information et les infrastructures critiques du Bloc Atlantique, ce qui inclut nécessairement le contrôle des flux informationnels entrants et sortants du PAPC.",
+     "preuve": "Le PAPC [...] coordonne la doctrine de souveraineté biopolitique entre ses États membres, incluant le contrôle des flux informationnels [...] Anba Siege Atlantique — Division Accès Protégés : gestion des accès numériques sécurisés, alignée sur les besoins du PAPC."
+    }
+   ],
+   "oppositions_proposees": [
+    {
+     "slug": "cellules_mouvement_commun_midwest_fortress_world",
+     "raison": "Le Mouvement Commun Américain, dont les Cellules du Dehors sont issues, a été réprimé par le Bloc Atlantique en 2052, ce qui en fait un opposant historique et structuré au PAPC.",
+     "preuve": "Le PAPC est traversé par [...] des cellules dissidentes internes [...] sapant le récit officiel de 'chaos barbare' au-delà des digues. [...] Cellules du Dehors — Réseau Commun Midwest : Réseau clandestin issu de la répression du Mouvement Commun Américain en 2052, opérant dans les zones abandonnées du Midwest."
+    }
+   ]
+  }
  }
 }

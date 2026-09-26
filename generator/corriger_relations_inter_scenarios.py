@@ -13,9 +13,10 @@ Pour chaque relation `X_{autre_scenario}` d'une fiche du scénario S :
       -> REMPLACÉE par `X_S` (l'intention est conservée)
   - sinon -> RETIRÉE
 
-Exceptions conservées telles quelles (décision David, 25 sept 2026) : les
-2 alliés `_reference` de la NAT (fortress_world). Ajouter d'autres
-exceptions avec --garder fiche:relation.
+AUCUNE exception (décision David, 26 sept 2026) : les scénarios sont des
+mondes parallèles, une relation vers un autre scénario est toujours une
+erreur. Les 2 alliés `_reference` de la NAT, conservés le 25 sept, ne le
+sont plus ; l'option --garder a été retirée.
 
 Écriture via fix_alliances_oppositions.write_alliances_patch() (frontmatter
 + section « ## Relations »), .bak par fiche ; une fiche qui n'a plus aucune
@@ -38,17 +39,11 @@ from fix_alliances_oppositions import (  # noqa: E402
     INSTANCES_DIR, SCENARIOS, parse_md, write_alliances_patch,
 )
 
-EXCEPTIONS = {
-    ("armada_logistique_nordique_fortress_world", "conseil_des_etats_nordiques_integres_reference"),
-    ("armada_logistique_nordique_fortress_world", "consortium_energetique_baltique_reference"),
-}
-
-
 def scenario_de(ref, sauf):
     return next((s for s in SCENARIOS if s != sauf and ref.endswith(f"_{s}")), None)
 
 
-def planifier(scenario, exceptions):
+def planifier(scenario):
     fiches = {}
     for path in sorted(INSTANCES_DIR.glob(f"*_{scenario}.md")):
         fm, _ = parse_md(path)
@@ -62,7 +57,7 @@ def planifier(scenario, exceptions):
         for champ, liste in (("alliances", al), ("oppositions", op)):
             for ref in list(liste):
                 autre = scenario_de(ref, scenario)
-                if not autre or (slug, ref) in exceptions:
+                if not autre:
                     continue
                 base = ref[: -len(autre) - 1]
                 candidat = f"{base}_{scenario}"
@@ -99,21 +94,13 @@ def main():
     g = ap.add_mutually_exclusive_group(required=True)
     g.add_argument("--scenario", choices=SCENARIOS)
     g.add_argument("--all", action="store_true")
-    ap.add_argument("--garder", action="append", default=[], metavar="FICHE:RELATION",
-                    help="Exception supplémentaire à conserver (répétable)")
     ap.add_argument("--execute", action="store_true", help="Écrit (sinon aperçu)")
     args = ap.parse_args()
-
-    exceptions = set(EXCEPTIONS)
-    for g_ in args.garder:
-        if ":" not in g_:
-            ap.error(f"--garder attend fiche:relation, reçu {g_!r}")
-        exceptions.add(tuple(g_.split(":", 1)))
 
     print(f"Mode : {'ÉCRITURE' if args.execute else 'APERÇU (rien écrit)'}")
     total_r = total_f = 0
     for sc in (SCENARIOS if args.all else [args.scenario]):
-        plan, journal = planifier(sc, exceptions)
+        plan, journal = planifier(sc)
         print(f"\n=== {sc} : {len(journal)} relation(s), {len(plan)} fiche(s)")
         print("\n".join(journal) if journal else "  (rien)")
         total_r += len(journal)

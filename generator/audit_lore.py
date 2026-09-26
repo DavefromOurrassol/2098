@@ -109,6 +109,16 @@ CLES_NON_TEXTE = {
 CHAMPS_LLM = ["role_dans_scenario", "responsabilites", "description_journalistique",
               "tensions_narratives"]
 SEUIL_CONFIRMATION_LLM = 15  # au-delà, --limit / --slug / --zone / --tout requis
+# Version des consignes LLM : entre dans l'empreinte du cache, pour qu'un
+# changement de consignes fasse relire les fiches au lieu de resservir
+# d'anciennes réponses. v2 (26 sept) : relations certaines seulement.
+VERSION_PROMPT = "v2-relations-certaines"
+# Formulations hypothétiques : une proposition dont la raison en contient une
+# est écartée même si l'IA a enfreint la consigne (filet de sécurité).
+_HYPOTHETIQUE = re.compile(r"(?<!\w)(pourrai(?:t|ent)|potentiellement|éventuellement|eventuellement|"
+                           r"peut-être|peut etre|serait susceptible|ou (?:un |une |bien )?(?:rival|rivale|"
+                           r"adversaire|partenaire|allié|alliée|s'opposer|résister|resister))(?!\w)",
+                           re.IGNORECASE)
 
 
 # ─────────────────────────────────────────────────────────────────────────
@@ -416,8 +426,11 @@ def contexte_zone(fm, zones):
 def faits_etablis(conf):
     lignes = [f"- {' '.join(str(q.get('message', '')).split())}" for q in conf["zones_quarantaine"]
               if q.get("message")]
+    # Toutes les règles, pas seulement les erreurs : le message d'une règle
+    # « à relire » énonce lui aussi un fait établi (ex. Bruxelles n'est plus
+    # un centre de pouvoir), utile à l'IA pour repérer une contradiction.
     lignes += [f"- {' '.join(str(r.get('message', '')).split())}" for r in conf["regles"]
-               if r.get("message") and r.get("gravite") == "erreur"]
+               if r.get("message")]
     return "\n".join(lignes) or "(aucun)"
 
 
@@ -467,18 +480,41 @@ trajectoire: {fm.get('trajectoire')}
       "probleme": "ce qui contredit le lore établi ci-dessus, et lequel",
       "correction": "reformulation proposée de l'extrait"}}
   ],
-  "alliances_proposees": [{{"slug": "slug_valide", "raison": "une phrase"}}],
-  "oppositions_proposees": [{{"slug": "slug_valide", "raison": "une phrase"}}]
+  "alliances_proposees": [{{"slug": "slug_valide", "raison": "une phrase affirmative",
+                           "preuve": "citation exacte qui établit la relation"}}],
+  "oppositions_proposees": [{{"slug": "slug_valide", "raison": "une phrase affirmative",
+                             "preuve": "citation exacte qui établit la relation"}}]
 }}
 
-RÈGLES IMPÉRATIVES :
-- Une contradiction n'existe QUE par rapport au lore établi fourni ci-dessus
-  (zone, relations, faits du scénario). Pas de remarque de style, pas de goût,
-  pas d'invention de lore. Aucune contradiction réelle → tableau vide.
-- Relations : UNIQUEMENT des slugs de la liste des instances réelles, jamais
-  la fiche elle-même, jamais un slug déjà présent dans ses relations actuelles,
-  jamais le même slug dans les deux listes. 0 à 3 par liste, seulement si le
-  contenu des fiches le justifie clairement. Tableau vide accepté.
+RÈGLES IMPÉRATIVES — CONTRADICTIONS :
+- Une contradiction n'existe QUE si la fiche affirme un FAIT incompatible avec
+  le lore établi fourni ci-dessus (zone, relations, faits du scénario) : un
+  nom propre erroné, une localisation fausse, une relation inversée, une date
+  ou un statut contraire.
+- NE SONT PAS des contradictions : une formulation différente d'un même fait,
+  un nom générique en minuscules au lieu du nom officiel complet, un surnom
+  accompagné du nom officiel, une remarque de style ou de goût, un détail que
+  le lore fourni ne mentionne pas. Aucune contradiction réelle → tableau vide.
+- « extrait » est une citation exacte, mot pour mot, d'un champ de la fiche.
+
+RÈGLES IMPÉRATIVES — RELATIONS PROPOSÉES :
+- Ne propose QUE des relations CERTAINES et durables : le texte de la fiche
+  relue, ou la description de l'instance cible dans la liste ci-dessus, dit
+  explicitement (ou implique sans ambiguïté) une coopération (alliance) ou un
+  conflit (opposition) entre les deux.
+- INTERDIT : une relation hypothétique ou au conditionnel (« pourrait »,
+  « éventuellement »), une alternative (« allié OU rival », « négocier OU
+  résister »), une simple coexistence dans la même zone, la participation à
+  un même forum ou marché, une relation seulement « plausible ».
+- Si tu hésites entre alliance et opposition, ne propose RIEN pour ce slug.
+- « raison » : une phrase affirmative, sans conditionnel. « preuve » : une
+  citation exacte (fiche relue ou description de la cible) qui établit la
+  relation. Pas de preuve citable → pas de proposition.
+- UNIQUEMENT des slugs de la liste des instances réelles, jamais la fiche
+  elle-même, jamais un slug déjà présent dans ses relations actuelles, jamais
+  le même slug dans les deux listes. 0 à 3 par liste.
+- La réponse attendue la plupart du temps est : aucune relation proposée.
+  Des tableaux vides sont une bonne réponse.
 """
     return system, user
 
@@ -499,7 +535,19 @@ def valider_reponse(data, index, slug, fm):
             plat[champ] = []
             continue
         # Déjà présent ou fiche elle-même : filtré en silence (pas une erreur de fond)
-        data[champ_llm] = [p for p in liste if p["slug"] not in existants and p["slug"] != slug]
+        liste = [p for p in liste if p["slug"] not in existants and p["slug"] != slug]
+        # Consignes v2 : sans preuve ou formulée au conditionnel → écartée
+        # (et comptée), plutôt que de relancer un appel payant.
+        gardees = []
+        for p in liste:
+            texte = f"{p.get('raison', '')} {p.get('preuve', '')}"
+            if not str(p.get("preuve") or "").strip() or _HYPOTHETIQUE.search(texte):
+                ecartees = data.setdefault("_ecartees", [])
+                if not any(e.get("slug") == p["slug"] and e.get("relation") == champ for e in ecartees):
+                    ecartees.append({**p, "relation": champ})
+            else:
+                gardees.append(p)
+        data[champ_llm] = gardees
         plat[champ] = [p["slug"] for p in data[champ_llm]]
     erreurs += validate_targeted(plat, index, slug)
     return erreurs, data
@@ -540,7 +588,7 @@ def auditer_llm(slug, fm, scenario, fiches, zones, conf, index):
 
 def empreinte(slug, f, zones, conf, index, fiches):
     fm = f["fm"]
-    morceaux = [f["path"].read_text(encoding="utf-8"), contexte_zone(fm, zones),
+    morceaux = [VERSION_PROMPT, f["path"].read_text(encoding="utf-8"), contexte_zone(fm, zones),
                 faits_etablis(conf), json.dumps(sorted(index), ensure_ascii=False)]
     for champ in ("alliances", "oppositions"):
         for ref in fm.get(champ) or []:
@@ -674,10 +722,13 @@ def passe_llm(scenario, fiches, zones, conf, args):
                                     ("oppositions_proposees", "opposition")):
             for p in data.get(champ_llm) or []:
                 nouvelles.append({"slug": slug, "relation": relation, "cible": p["slug"],
-                                  "raison": p.get("raison", ""), "valide": False,
+                                  "raison": p.get("raison", ""), "preuve": p.get("preuve", ""),
+                                  "valide": False,
                                   "date": date.today().isoformat()})
     ajoutees = fusionner_propositions(scenario, nouvelles)
-    return {"resultats": resultats, "echecs": echecs, "propositions_ajoutees": ajoutees}
+    n_ecartees = sum(len(d.get("_ecartees") or []) for d in resultats.values())
+    return {"resultats": resultats, "echecs": echecs, "propositions_ajoutees": ajoutees,
+            "propositions_ecartees": n_ecartees}
 
 
 # ─────────────────────────────────────────────────────────────────────────
@@ -758,7 +809,7 @@ def rapport_md(scenario, r):
           + (f" (+ {len(r['reciprocite']) - _n_a_corriger(r)} volontaires : personnages en réserve)"
              if len(r['reciprocite']) != _n_a_corriger(r) else "")
           + f" — contradictoires : {len(r['conflits'])}",
-          f"- Relations inter-scénarios (info) : {len(r['inter_scenarios'])}"]
+          f"- Relations inter-scénarios (erreurs) : {len(r['inter_scenarios'])}"]
     if r.get("llm"):
         n_c = sum(len(d.get("contradictions") or []) for d in r["llm"]["resultats"].values())
         L.append(f"- LLM : {len(r['llm']['resultats'])} fiche(s) relue(s), {n_c} contradiction(s), "
@@ -806,18 +857,18 @@ def rapport_md(scenario, r):
             ["Souvent légitime (une organisation transnationale nomme les zones où elle agit) ; à rattacher seulement si la fiche vit en réalité dans une seule zone.", ""]
             + [f"- `{x['slug']}` — cite : " + ", ".join(f"{n} (`{s}`)" for s, n in x["zones_citees"].items())
                for x in r["transnationales"]])
-    section("7. Relations inter-scénarios (information)",
+    section("7. Relations inter-scénarios (erreurs : les scénarios sont des mondes parallèles)",
             [f"- `{x['slug']}` → `{x['ref']}` ({x['champ']}, scénario {x['scenario_ref']})"
              for x in r["inter_scenarios"]]
-            + (["", "→ Si elles ne sont pas voulues : **3. Retirer les relations vers un autre "
-                "scénario** (en aperçu d'abord ; les exceptions déclarées sont conservées)."]
+            + (["", "→ Correction : **3. Retirer les relations vers un autre scénario** (remplacée par "
+                "la même entité du bon scénario si elle existe, sinon retirée ; en aperçu d'abord)."]
                if r["inter_scenarios"] else []))
     if r.get("llm"):
         lignes = []
         for slug, d in sorted(r["llm"]["resultats"].items()):
             cs = d.get("contradictions") or []
             ps = (d.get("alliances_proposees") or []) + (d.get("oppositions_proposees") or [])
-            if not cs and not ps:
+            if not cs and not ps and not d.get("_ecartees"):
                 continue
             lignes.append(f"### `{slug}`")
             for c in cs:
@@ -826,8 +877,15 @@ def rapport_md(scenario, r):
                     lignes.append(f"  - Proposé : « {c['correction']} »")
             for p in d.get("alliances_proposees") or []:
                 lignes.append(f"- ➕ alliance `{p['slug']}` — {p.get('raison', '')}")
+                if p.get("preuve"):
+                    lignes.append(f"  - Extrait cité : « {p['preuve']} »")
             for p in d.get("oppositions_proposees") or []:
                 lignes.append(f"- ➖ opposition `{p['slug']}` — {p.get('raison', '')}")
+                if p.get("preuve"):
+                    lignes.append(f"  - Extrait cité : « {p['preuve']} »")
+            for p in d.get("_ecartees") or []:
+                lignes.append(f"- ⊘ écartée ({p.get('relation')}, conditionnel ou sans preuve) `{p['slug']}` — "
+                              f"{p.get('raison', '')}")
             lignes.append("")
         for e in r["llm"]["echecs"]:
             lignes.append(f"- ✗ `{e['slug']}` : échec LLM — {e['erreur']}")
@@ -863,15 +921,15 @@ def prochaines_etapes(r, scenario):
                                                       "(cocher « Résoudre les conflits »)" if r["conflits"] else "")
         out.append(f"  • {detail} → étape 2 « Rendre les relations réciproques »")
     if r["inter_scenarios"]:
-        out.append(f"  • {len(r['inter_scenarios'])} relation(s) vers un autre scénario → étape 3 si elles "
-                   "ne sont pas voulues (exceptions déclarées conservées)")
+        out.append(f"  • {len(r['inter_scenarios'])} relation(s) vers un autre scénario (toujours une erreur) "
+                   "→ étape 3 « Retirer les relations vers un autre scénario »")
     en_attente = sum(1 for p in lire_propositions()
                      if p.get("scenario") == scenario and p.get("valide") is not True and not p.get("applique"))
     if en_attente:
         out.append(f"  • {en_attente} proposition(s) de l'IA à trier → étape 5 « Valider les propositions de l'IA »")
     if not out:
         return ["  À faire ensuite : rien à corriger."
-                + ("" if r.get("llm") else " (Étape 4 « Relecture IA » possible pour aller plus loin.)")]
+                + ("" if r.get("llm_demande") else " (Étape 4 « Relecture IA » possible pour aller plus loin.)")]
     return ["  À faire ensuite :"] + out
 
 
@@ -900,6 +958,7 @@ def auditer(scenario, args, regles):
                    + ctrl_regles(evenements, conf, "evenement")
                    + ctrl_regles(articles, conf, "article")),
     }
+    r["llm_demande"] = bool(args.llm)
     if args.llm:
         r["llm"] = passe_llm(scenario, fiches, zones, conf, args)
 
@@ -919,7 +978,9 @@ def auditer(scenario, args, regles):
           + f", {len(conflits)} contradictoire(s) | Inter-scénarios : {len(r['inter_scenarios'])}")
     if r.get("llm"):
         print(f"  LLM : {len(r['llm']['resultats'])} relue(s), {len(r['llm']['echecs'])} échec(s), "
-              f"{r['llm']['propositions_ajoutees']} proposition(s) ajoutée(s)")
+              f"{r['llm']['propositions_ajoutees']} proposition(s) ajoutée(s)"
+              + (f", {r['llm'].get('propositions_ecartees', 0)} écartée(s) (conditionnel ou sans preuve)"
+                 if r['llm'].get('propositions_ecartees') else ""))
     for ligne in prochaines_etapes(r, scenario):
         print(ligne)
     print(f"  → rapport détaillé : {r['rapport_md']}")

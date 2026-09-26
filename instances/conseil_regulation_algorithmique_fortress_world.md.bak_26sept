@@ -7,7 +7,7 @@ scenario: fortress_world
 statut: officialise_enrichi
 localisation:
   zone: bloc_atlantique
-  lieu: Halifax-Haute, bâtiment 7
+  lieu: Bruxelles-Forteresse, bâtiment 7
   type_lieu: infrastructure
 type_dans_scenario: institution
 role_dans_scenario: >
@@ -79,7 +79,7 @@ description_journalistique: >
   sont sans appel.
 signes_distinctifs: >
   Logo — un œil stylisé dans un réseau de neurones. Siège — tour de verre
-  à Halifax-Haute, bâtiment 7. Couleur institutionnelle — bleu acier.
+  à Bruxelles-Forteresse, bâtiment 7. Couleur institutionnelle — bleu acier.
 tensions_narratives: >
   Accusée de favoriser les IA des grandes corporations atlantiques. Rumeurs
   de backdoors dans les systèmes certifiés. Tension croissante avec les

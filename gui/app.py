@@ -5053,6 +5053,7 @@ def lore_propositions_liste():
             "cible_role": cible["role"] if cible else "",
             "cible_introuvable": cible is None,
             "raison": " ".join(str(p.get("raison") or "").split()),
+            "preuve": " ".join(str(p.get("preuve") or "").split()),
             "valide": p.get("valide") is True, "applique": p.get("applique"),
             "date": p.get("date"),
         })
