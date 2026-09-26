@@ -4796,8 +4796,11 @@ async function openArbreZonePanel(slug, options = {}) {
     document.getElementById('arbre-zone-tree').innerHTML =
       _renderArbreNode(data.arbre, true);
 
-    document.getElementById('arbre-zone-tree').querySelectorAll('.arbre-zone-move-btn').forEach(btn => {
+    document.getElementById('arbre-zone-tree').querySelectorAll('.arbre-zone-move-btn:not(.arbre-zone-sousz-btn)').forEach(btn => {
       btn.addEventListener('click', () => _ouvrirReparentPanel(btn.dataset.slug, btn.dataset.nom));
+    });
+    document.getElementById('arbre-zone-tree').querySelectorAll('.arbre-zone-sousz-btn').forEach(btn => {
+      btn.addEventListener('click', () => _ouvrirSousZonePanel(btn.dataset.slug, btn.dataset.nom, data.arbre.slug));
     });
     document.getElementById('arbre-zone-tree').querySelectorAll('.arbre-zone-renommer-btn').forEach(btn => {
       btn.addEventListener('click', () => _ouvrirRenommerSousZone(btn.dataset.slug, btn.dataset.nom, data.arbre.slug));
@@ -4849,6 +4852,9 @@ function _renderArbreNode(node, estRacine) {
   html += `<span class="arbre-zone-nom" style="cursor:pointer;text-decoration:underline dotted;" title="Localiser sur la carte">${node.nom}</span>`;
   html += `<span class="arbre-zone-slug">${node.slug}</span>`;
   html += `${typeLabel}${statutLabel}`;
+  // Boutons regroupés dans un même bloc aligné à droite, même format
+  // (classe commune .arbre-zone-btn — 26 sept 2026, rationalisation).
+  html += `<span class="arbre-zone-actions">`;
   if (!estRacine) {
     html += `<button class="arbre-zone-move-btn" data-slug="${node.slug}" data-nom="${node.nom.replace(/"/g, '&quot;')}" title="Déplacer vers un autre parent">↗️ déplacer</button>`;
     // Renommer une sous-zone (24 sept 2026) : slug et/ou nom, même route
@@ -4871,7 +4877,11 @@ function _renderArbreNode(node, estRacine) {
     html += `<button class="arbre-zone-topdown-btn" data-slug="${node.slug}" data-nom="${node.nom.replace(/"/g, '&quot;')}" title="P24 étape C — réviser cette zone contre le patron spatial narratif du scénario (ex. suite à un signalement check_patron_spatial_coherence.py)">🧭 réviser (patron spatial)</button>`;
     html += `<button class="arbre-zone-editer-btn" data-slug="${node.slug}" title="Éditer cette zone : renommer, couleur/motif/hachures, pays et overlays">✏️ éditer</button>`;
   }
+  // S16 (26 sept 2026) : créer une sous-zone directement sous ce nœud.
+  html += `<button class="arbre-zone-move-btn arbre-zone-sousz-btn" data-slug="${node.slug}" data-nom="${node.nom.replace(/"/g, '&quot;')}" title="Créer une sous-zone rattachée à cette zone">➕ sous-zone</button>`;
+  html += `</span>`;
   html += `</div>`;
+  html += `<div id="sousz-panel-${node.slug}"></div>`;
   html += `<div id="reparent-panel-${node.slug}"></div>`;
   html += `<div id="renommer-sz-panel-${node.slug}"></div>`;
   html += `<div id="topdown-panel-${node.slug}"></div>`;
@@ -6631,7 +6641,7 @@ async function chantiersAppliquerTout() {
 // initRedactionResizer ci-dessus : panneau à droite de sa poignée,
 // largeur calculée depuis le bord droit fixe, une clé localStorage
 // distincte par onglet pour que chacun garde sa propre largeur).
-function initPanelResizer(panelSelector, resizerId, storageKey) {
+function initPanelResizer(panelSelector, resizerId, storageKey, onResize) {
   const panel   = document.querySelector(panelSelector);
   const resizer = document.getElementById(resizerId);
   if (!panel || !resizer) return;
@@ -6662,6 +6672,7 @@ function initPanelResizer(panelSelector, resizerId, storageKey) {
     let largeur = rect.right - e.clientX;
     largeur = Math.max(MIN_WIDTH, Math.min(MAX_WIDTH, largeur));
     panel.style.width = `${largeur}px`;
+    if (onResize) onResize();
   });
 
   document.addEventListener('mouseup', () => {
@@ -6670,15 +6681,21 @@ function initPanelResizer(panelSelector, resizerId, storageKey) {
     resizer.classList.remove('dragging');
     document.body.classList.remove('panel-resizing');
     localStorage.setItem(storageKey, parseInt(panel.style.width, 10));
+    if (onResize) onResize();
   });
 
   resizer.addEventListener('dblclick', () => {
     panel.style.width = '';
     localStorage.removeItem(storageKey);
+    if (onResize) onResize();
   });
 }
 
 initPanelResizer('#tab-articles .articles-sidebar', 'articles-resizer', 'ourrassol_articles_panel_width');
+// Carte (26 sept 2026) : panneau latéral (légende, arbre des zones)
+// redimensionnable ; la carte Leaflet doit recalculer sa taille à chaque fois.
+initPanelResizer('#tab-carte .carte-sidebar', 'carte-resizer', 'ourrassol_carte_panel_width',
+                 () => CarteState.map && CarteState.map.invalidateSize());
 initPanelResizer('#tab-instances .articles-sidebar', 'instances-resizer', 'ourrassol_instances_panel_width');
 initPanelResizer('#tab-event_instances .articles-sidebar', 'event-instances-resizer', 'ourrassol_event_instances_panel_width');
 
@@ -9717,4 +9734,92 @@ function renderLoreCorrection(f, x) {
   zone.appendChild(btns);
   zone.appendChild(apercu);
   return zone;
+}
+
+// ── S16 : créer une sous-zone depuis l'arbre de la Carte (26 sept 2026) ──
+// Formulaire sous le nœud parent → Aperçu (dry_run) → Créer. Le niveau est
+// déduit du parent côté serveur ; le texte « ## Zones » de la géographie est
+// mis à jour automatiquement (ZoneRepository._save_geo).
+function _slugifierNom(nom) {
+  return String(nom || '').normalize('NFD').replace(/[̀-ͯ]/g, '')
+    .toLowerCase().replace(/[^a-z0-9]+/g, '_').replace(/^_+|_+$/g, '');
+}
+
+function _ouvrirSousZonePanel(parentSlug, parentNom, racineSlug) {
+  const container = document.getElementById(`sousz-panel-${parentSlug}`);
+  if (!container) return;
+  if (container.dataset.open === '1') { container.innerHTML = ''; container.dataset.open = '0'; return; }
+  container.dataset.open = '1';
+  const types = ['ville', 'region', 'infrastructure', 'site_strategique', 'territoire_autonome',
+                 'territoire_herite', 'zone_sinistree', 'union_regionale', 'bloc_continental', 'autre'];
+  const statuts = ['stable', 'dominant', 'fragmenté', 'en_declin', 'disparu', 'emergent'];
+  const id = s => `sousz-${s}-${parentSlug}`;
+  container.innerHTML = `
+    <div class="carte-panel-proposal-box" style="margin:4px 0 8px 16px;font-size:10px">
+      <label style="font-size:10px;color:#666">Nouvelle sous-zone de « ${parentNom} »</label>
+      <input type="text" id="${id('nom')}" placeholder="Nom affiché (ex : Milan)" style="width:100%;padding:3px;margin:4px 0">
+      <input type="text" id="${id('slug')}" placeholder="slug (rempli automatiquement)" style="width:100%;padding:3px;margin-bottom:4px;font-family:'JetBrains Mono',monospace">
+      <select id="${id('type')}" style="width:100%;padding:3px;margin-bottom:4px">${types.map(t => `<option value="${t}">${t}</option>`).join('')}</select>
+      <select id="${id('statut')}" style="width:100%;padding:3px;margin-bottom:4px">${statuts.map(t => `<option value="${t}">${t}</option>`).join('')}</select>
+      <input type="text" id="${id('origine')}" placeholder="Lieu réel d'origine (optionnel, ex : Milan) — plusieurs : séparés par des virgules" style="width:100%;padding:3px;margin-bottom:4px">
+      <textarea id="${id('desc')}" placeholder="Description (optionnel)" rows="2" style="width:100%;padding:3px;margin-bottom:4px;font-size:10px"></textarea>
+      <button id="${id('apercu')}" class="yaml-btn">🔍 Aperçu</button>
+      <button id="${id('creer')}" class="yaml-btn" disabled>Créer la sous-zone</button>
+      <div id="${id('msg')}" style="margin-top:4px"></div>
+    </div>`;
+
+  const el = s => document.getElementById(id(s));
+  let slugTouche = false;
+  el('slug').addEventListener('input', () => { slugTouche = true; el('creer').disabled = true; });
+  el('nom').addEventListener('input', () => {
+    if (!slugTouche) el('slug').value = _slugifierNom(el('nom').value);
+    el('creer').disabled = true;
+  });
+  ['type', 'statut', 'origine', 'desc'].forEach(s => el(s).addEventListener('input', () => { el('creer').disabled = true; }));
+
+  const corps = dryRun => ({
+    scenario: CarteState.scenario, parent_slug: parentSlug,
+    slug: el('slug').value.trim(), nom: el('nom').value.trim(),
+    type: el('type').value, statut: el('statut').value,
+    origine_reelle: el('origine').value.split(',').map(s => s.trim()).filter(Boolean)
+      .map(e => ({ entite: e, type_entite: 'region_administrative', portion: null })),
+    description: el('desc').value.trim(), dry_run: dryRun,
+  });
+  const appel = async dryRun => {
+    const res = await fetch('/api/carte/creer_sous_zone', {
+      method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(corps(dryRun)),
+    });
+    return [res, await res.json()];
+  };
+
+  el('apercu').addEventListener('click', async () => {
+    try {
+      const [res, d] = await appel(true);
+      if (!res.ok || d.error) {
+        el('msg').innerHTML = `<span class="carte-panel-error">✗ ${d.error || res.statusText}</span>`;
+        el('creer').disabled = true;
+        return;
+      }
+      el('msg').textContent = `✓ « ${d.nom} » (${d.slug}) sera créée au niveau ${d.niveau}, sous « ${d.parent_nom} ». Rien n'est encore écrit.`;
+      el('creer').disabled = false;
+    } catch (e) {
+      el('msg').innerHTML = `<span class="carte-panel-error">✗ Erreur réseau : ${e.message}</span>`;
+    }
+  });
+
+  el('creer').addEventListener('click', async () => {
+    el('creer').disabled = true;
+    try {
+      const [res, d] = await appel(false);
+      if (!res.ok || d.error) {
+        el('msg').innerHTML = `<span class="carte-panel-error">✗ ${d.error || res.statusText}</span>`;
+        return;
+      }
+      await openArbreZonePanel(racineSlug);
+      const msg = document.getElementById('carte-panel-msg');
+      if (msg) msg.textContent = `✓ Sous-zone « ${d.nom} » créée sous « ${d.parent_nom} ».`;
+    } catch (e) {
+      el('msg').innerHTML = `<span class="carte-panel-error">✗ Erreur réseau : ${e.message}</span>`;
+    }
+  });
 }

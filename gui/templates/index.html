@@ -55,9 +55,9 @@
     #carte-toggle-villes.active { border-color: #3b6fd4; background: #eef4fa; color: #2a52a8; font-weight: 600; }
     .carte-status { font-size: 12px; color: #888; }
     .carte-diagnostic { background: #fff4e0; border: 1px solid #e0b060; border-radius: 4px; padding: 8px 12px; font-size: 11px; margin-bottom: 10px; color: #7a5010; }
-    .carte-layout { display: flex; gap: 16px; flex: 1; min-height: 0; }
+    .carte-layout { display: flex; gap: 6px; flex: 1; min-height: 0; }
     #carte-map { flex: 1; min-width: 0; border-radius: 6px; border: 1px solid #ddd; background: #eeecea; }
-    .carte-sidebar { width: 300px; flex-shrink: 0; display: flex; flex-direction: column; gap: 12px; overflow-y: auto; }
+    .carte-sidebar { width: 300px; min-width: 280px; max-width: 900px; box-sizing: border-box; flex-shrink: 0; display: flex; flex-direction: column; gap: 12px; overflow-y: auto; }
     .carte-legend { background: #fff; border: 1px solid #ddd; border-radius: 6px; padding: 10px; font-size: 11px; }
     .carte-legend-item { display: flex; align-items: center; gap: 6px; padding: 2px 0; }
     .carte-legend-rename-btn {
@@ -120,6 +120,21 @@
       font-size: 9px; padding: 2px 6px; border-radius: 3px; color: #b5651d;
     }
     .arbre-zone-split-btn:hover { background: #fdf2e8; }
+    /* ── Boutons de l'arbre des zones : un seul format (26 sept 2026) ──
+       Tous regroupés à droite de la ligne, même taille, même bordure ;
+       ces règles l'emportent sur les anciennes couleurs par bouton. */
+    .arbre-zone-actions {
+      margin-left: auto; display: inline-flex; flex-wrap: wrap; gap: 4px;
+      justify-content: flex-end;
+    }
+    .arbre-zone-actions button {
+      margin-left: 0 !important; border: 1px solid #dde3ee !important;
+      background: #fff !important; color: #3b6fd4 !important; cursor: pointer;
+      font-size: 10px !important; line-height: 1.3; padding: 2px 7px !important;
+      border-radius: 3px !important; white-space: nowrap; font-family: inherit;
+      opacity: 1 !important;
+    }
+    .arbre-zone-actions button:hover { background: #eef4fa !important; border-color: #3b6fd4 !important; }
     .arbre-zone-type {
       background: #eef4fa; color: #3b6fd4; border-radius: 3px;
       padding: 1px 5px; font-size: 9px; text-transform: uppercase;
@@ -674,6 +689,7 @@
       <div id="carte-diagnostic" class="carte-diagnostic" style="display:none"></div>
       <div class="carte-layout">
         <div id="carte-map"></div>
+        <div class="panel-resizer" id="carte-resizer" title="Glisser pour élargir/réduire le panneau (double-clic : largeur par défaut)"></div>
         <div class="carte-sidebar">
           <div class="carte-search">
             <input type="text" id="carte-search-input" placeholder="🔍 Rechercher une zone (tous niveaux)…" autocomplete="off">

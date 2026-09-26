@@ -1735,7 +1735,9 @@ class ZoneRepository:
             "sources_attestees": sources_attestees or [],
         }
         zones.append(nouvelle_zone)
-        gf.body = gf.body.rstrip("\n") + f"\n\n### {nom}\n{description}\n"
+        # Plus d'ajout manuel « ### nom » en fin de corps (26 sept 2026) : il
+        # atterrissait APRÈS « ## Notes » ; _save_geo() reconstruit désormais
+        # toute la section « ## Zones » depuis le frontmatter.
         self._save_geo(gf)
 
         pays_synchronises = []
@@ -1770,6 +1772,65 @@ class ZoneRepository:
     # Ne touche PAS au corps markdown (le texte narratif éventuel sous cette
     # zone reste dans le fichier, à nettoyer à la main si besoin -- purement
     # cosmétique, sans effet sur aucune fonctionnalité).
+
+    # ── CRÉER une sous-zone (niveau 2, 3…) — S16, 26 sept 2026 ───────────
+    #
+    # Pendant de creer_zone_n1 pour une zone rattachée à un parent existant
+    # (avant : script ponctuel, ou création N1 puis « ↗️ déplacer »). Pas de
+    # ménage des pays ni de zones_pays.json : une sous-zone ne « possède »
+    # pas de pays sur la carte, son origine_reelle est descriptive (une ville,
+    # une région administrative…) et optionnelle.
+
+    def creer_sous_zone(self, scenario: str, parent_slug: str, slug: str, nom: str,
+                        type_zone: str, statut: str, origine_reelle: Optional[list] = None,
+                        description: str = "", tensions_internes: str = "",
+                        dry_run: bool = True) -> dict:
+        if not re.match(r"^[a-z0-9_]+$", slug or ""):
+            raise ZoneRepositoryError("slug : lettres minuscules, chiffres, underscores uniquement")
+        if not (nom or "").strip():
+            raise ZoneRepositoryError("nom requis")
+        if type_zone not in ZONE_TYPES:
+            raise ZoneRepositoryError(f"type invalide, doit être parmi : {', '.join(ZONE_TYPES)}")
+        if statut not in ZONE_STATUTS:
+            raise ZoneRepositoryError(f"statut invalide, doit être parmi : {', '.join(ZONE_STATUTS)}")
+        origine_reelle = [o for o in (origine_reelle or []) if isinstance(o, dict) and o.get("entite")]
+        for o in origine_reelle:
+            o.setdefault("type_entite", "region_administrative")
+            o.setdefault("portion", None)
+            if o["type_entite"] not in TYPE_ENTITE_REELLE:
+                raise ZoneRepositoryError(
+                    f"origine_reelle : type_entite doit être parmi {', '.join(TYPE_ENTITE_REELLE)}")
+
+        gf = self._load_geo(scenario)
+        zones = gf.zones
+        parent = self._find(zones, parent_slug)
+        if not parent:
+            raise ZoneRepositoryError(f"Zone parente '{parent_slug}' introuvable dans '{scenario}'")
+        if self._find(zones, slug):
+            raise ZoneRepositoryError(f"Le slug '{slug}' existe déjà dans ce scénario")
+        niveau = int(parent.get("niveau") or 1) + 1
+
+        nouvelle = {
+            "slug": slug, "nom": nom.strip(), "niveau": niveau, "type": type_zone,
+            "parent": parent_slug, "origine_reelle": origine_reelle,
+            "description": (description or "").strip(), "statut": statut,
+            "tensions_internes": (tensions_internes or "").strip(),
+            "periode_transition": None, "evenement_transition": None,
+            "lieux_emblematiques": [], "relations": {"allies": [], "rivaux": []},
+            "sources_attestees": [],
+        }
+        rapport = {"ok": True, "dry_run": dry_run, "scenario": scenario, "slug": slug,
+                   "nom": nouvelle["nom"], "niveau": niveau, "parent": parent_slug,
+                   "parent_nom": parent.get("nom", parent_slug)}
+        if dry_run:
+            return rapport
+        # Insérée juste après le dernier descendant du parent : l'arbre reste
+        # lisible dans le frontmatter (le corps, lui, est reconstruit en arbre).
+        descendants = set(self._zone_descendants(zones, parent_slug)) | {parent_slug}
+        idx = max(i for i, z in enumerate(zones) if z.get("slug") in descendants)
+        zones.insert(idx + 1, nouvelle)
+        self._save_geo(gf)
+        return rapport
 
     def supprimer_zone_n1(self, scenario: str, slug: str, dry_run: bool = True) -> dict:
         """Supprime une zone (n'importe quel niveau -- voir fix ci-dessous),

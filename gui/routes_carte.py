@@ -443,6 +443,36 @@ def creer_zone_niveau1():
     return _handle(_do)
 
 
+# ── Écriture : création d'une sous-zone (S16, 26 sept 2026) ────────────────
+
+@carte_bp.route("/api/carte/creer_sous_zone", methods=["POST"])
+def creer_sous_zone():
+    """
+    Body JSON : { scenario, parent_slug, slug, nom, type, statut,
+                  origine_reelle?: [{entite, type_entite?}], description?,
+                  tensions_internes?, dry_run?: bool (défaut true) }
+    Crée une zone rattachée à `parent_slug` (niveau = parent + 1). Aperçu par
+    défaut ; dry_run=false écrit (.bak de la géographie, texte « ## Zones »
+    mis à jour automatiquement par ZoneRepository._save_geo).
+    """
+    data = request.get_json() or {}
+    scenario = (data.get("scenario") or "").strip()
+    parent_slug = (data.get("parent_slug") or "").strip()
+    slug = (data.get("slug") or "").strip()
+    nom = (data.get("nom") or "").strip()
+    type_zone = (data.get("type") or "").strip()
+    statut = (data.get("statut") or "").strip()
+    if not scenario or not parent_slug or not slug or not nom or not type_zone or not statut:
+        return jsonify({"error": "scenario, parent_slug, slug, nom, type, statut requis"}), 400
+    return _handle(lambda: _repo().creer_sous_zone(
+        scenario, parent_slug, slug, nom, type_zone, statut,
+        origine_reelle=data.get("origine_reelle"),
+        description=data.get("description") or "",
+        tensions_internes=data.get("tensions_internes") or "",
+        dry_run=bool(data.get("dry_run", True)),
+    ))
+
+
 # ── Écriture : suppression d'une zone niveau 1 ──────────────────────────────
 
 @carte_bp.route("/api/carte/impact_supprimer_zone", methods=["POST"])
