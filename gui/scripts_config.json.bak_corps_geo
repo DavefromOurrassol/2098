@@ -2098,47 +2098,6 @@
     ]
   },
   {
-    "id": "regenerer_corps_geographie",
-    "label": "Mettre à jour le texte des géographies",
-    "icon": "📝",
-    "section": "geo_construction",
-    "script": "regenerer_corps_geographie.py",
-    "description": "Gratuit, sans IA. Réécrit la partie texte (« ## Zones ») de geographie/{scénario}.md à partir du frontmatter, la seule référence lue par la Carte et les scripts. Ne touche ni au frontmatter, ni à « Vue d'ensemble », ni aux « Notes ». Inutile après une modification faite depuis la Carte (le texte est alors mis à jour automatiquement) : à lancer après une modification par un script ou à la main. Aperçu par défaut — coche « Exécuter pour de vrai » pour écrire (.bak_corps).",
-    "requires": [],
-    "options": [
-      {
-        "flag": "--all",
-        "type": "checkbox",
-        "label": "Tous les scénarios",
-        "default": false,
-        "mutually_exclusive_with": "scenario"
-      },
-      {
-        "flag": "--scenario",
-        "type": "select",
-        "label": "Scénario",
-        "source": "config_scenarios",
-        "default": "",
-        "optional": true,
-        "mutually_exclusive_with": "all"
-      },
-      {
-        "flag": "--execute",
-        "type": "checkbox",
-        "label": "Exécuter pour de vrai",
-        "default": false,
-        "description": "Sans cette case : aperçu seulement, rien n'est modifié."
-      }
-    ],
-    "gui_verified": false,
-    "required_one_of": [
-      [
-        "--scenario",
-        "--all"
-      ]
-    ]
-  },
-  {
     "id": "scan_geographie_complet",
     "label": "Scanner la géographie",
     "icon": "🧪",

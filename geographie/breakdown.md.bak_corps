@@ -3176,9 +3176,9 @@ _Maillage récursif enrichi le 2026-06-30 (1 nouvelle(s) zone(s) ajoutée(s) sou
 
 ### Afrique Centrale et Australe
 
-*zone_sinistree — statut : fragmenté*
+*zone_sinistree — niveau 1 — statut : fragmenté*
 
-**Origine réelle (2026)** : République démocratique du Congo, République du Congo, Afrique du Sud, Rwanda, Kenya, São Tomé-et-Príncipe, Cameroun, République centrafricaine, Gabon, Guinée équatoriale, Angola, Zambie, Malawi, Tanzanie, Ouganda, Burundi, Namibie, Botswana, Lesotho, Eswatini, Mozambique, Zimbabwe
+**Origine réelle (2026)** : République démocratique du Congo, République du Congo, Afrique du Sud, Rwanda, Kenya
 
 **Transition** : 2061-2091
 
@@ -3186,97 +3186,15 @@ Zone de conflits hydriques et extractivistes intenses, structurée autour du bas
 
 **Tensions internes** : Guerre de l'eau entre communautés riveraines du bassin du Congo ; milices extractivistes opérant hors cadre légal sur les ressources critiques ; trois délégations rivales se disputent la légitimité du CRRC à Nairobi.
 
-**Rivaux** : Genève-Bunker (Nœud Institutionnel Résiduel) ([[geneve_bunker_institutions]])
+**Rivaux** : geneve_bunker_institutions
 
 *Sources attestées : amara_diallo_nkosi_breakdown, conseil_regulation_ressources_breakdown, bloc_de_johannesburg_breakdown, milices_extractivistes_du_bassin_du_congo_breakdown, factions_etatiques_residuelles_de_souverainete_hydrique_breakdown*
 
-#### Johannesburg (Bloc Austral) — sous [[afrique_centrale_australe]]
-
-*ville — niveau 2 — statut : stable*
-
-**Origine réelle (2026)** : Johannesburg, Afrique du Sud
-
-**Transition** : 2071-2098
-
-Siège du Bloc de Johannesburg, force de fragmentation institutionnelle contestant depuis l'Afrique australe toute tentative de centralisation de la gouvernance globale. Ce bloc incarne la résistance aux structures héritées comme le CRRC, défendant une souveraineté régionale australe contre les prétentions de Nairobi ou Genève.
-
-**Tensions internes** : Tension interne entre factions favorables à une reconsolidation régionale sous leadership johannesbourgeois et celles défendant une fragmentation totale comme protection contre l'exploitation extractive.
-
-**Rivaux** : Nairobi (Siège du CRRC) ([[nairobi_crrc]]), Genève-Bunker (Nœud Institutionnel Résiduel) ([[geneve_bunker_institutions]])
-
-*Sources attestées : bloc_de_johannesburg_breakdown*
-
-#### Brazzaville-Nord — sous [[afrique_centrale_australe]]
-
-*ville — niveau 2 — statut : fragmenté*
-
-**Origine réelle (2026)** : Brazzaville, République du Congo
-
-**Transition** : 2067-2098
-
-Base opérationnelle d'Amara Diallo-Nkosi, médiatrice hydrique errante. Point de départ de ses missions entre les avant-postes du Kivu disputé, cette ville-relais maintient un semblant de coordination informelle entre communautés riveraines du bassin du Congo en conflit pour l'eau.
-
-**Tensions internes** : Pression des milices extractivistes et des factions hydriques sur les opérations de médiation ; la présence de Diallo-Nkosi attire à la fois protection intéressée et menaces des factions cherchant à capturer son expertise.
-
-**Rivaux** : Kivu Disputé ([[kivu_dispute]])
-
-*Sources attestées : amara_diallo_nkosi_breakdown*
-
-#### Kivu Disputé — sous [[afrique_centrale_australe]]
-
-*zone_sinistree — niveau 2 — statut : fragmenté*
-
-**Origine réelle (2026)** : Province du Kivu, République démocratique du Congo
-
-**Transition** : 2067-2098
-
-Zone de conflit intense pour l'accès à l'eau, théâtre principal des déplacements d'Amara Diallo-Nkosi. Les accords de redistribution des eaux de 2067, aujourd'hui effondrés avec les États qui les portaient, ont laissé place à une guerre de l'eau entre communautés riveraines. Trois millions de personnes dépendent de la médiation informelle de Diallo-Nkosi pour un accès à peu près fiable à l'eau potable.
-
-**Tensions internes** : Guerre de l'eau entre communautés riveraines ; milices extractivistes opérant hors cadre légal ; tension entre factions cherchant à capturer Diallo-Nkosi pour monopoliser son expertise hydrologue.
-
-**Rivaux** : Brazzaville-Nord ([[brazzaville_nord]])
-
-*Sources attestées : amara_diallo_nkosi_breakdown, milices_extractivistes_du_bassin_du_congo_breakdown, factions_etatiques_residuelles_de_souverainete_hydrique_breakdown*
-
-#### Nairobi (Siège du CRRC) — sous [[afrique_centrale_australe]]
-
-*ville — niveau 2 — statut : en_declin*
-
-**Origine réelle (2026)** : Nairobi, Kenya
-
-**Transition** : 2061-2091
-
-Siège nominal du Conseil de Régulation des Ressources Critiques, aujourd'hui partiellement occupé par des déplacés climatiques. Trois délégations rivales s'y disputent le titre de représentation légitime du CRRC : l'une brandissant des accréditations de gouvernements dissous, l'autre relayant depuis un cargo au large de Mombasa, la troisième s'étant réinstallée à Genève. Surnommé 'le Fantôme de Nairobi'.
-
-**Tensions internes** : Trois délégations rivales sans mandat reconnu se disputent la légitimité institutionnelle ; les couloirs du siège sont partiellement occupés par des déplacés climatiques ; aucune grande puissance extractive n'écoute réellement le CRRC mais toutes y maintiennent un attaché.
-
-**Alliés** : Genève-Bunker (Nœud Institutionnel Résiduel) ([[geneve_bunker_institutions]])
-
-**Rivaux** : Johannesburg (Bloc Austral) ([[bloc_johannesburg]])
-
-*Sources attestées : conseil_regulation_ressources_breakdown, amara_diallo_nkosi_breakdown*
-
-##### Cargo au Large de Mombasa (Délégation CRRC) — sous [[nairobi_crrc]]
-
-*infrastructure — niveau 3 — statut : en_declin*
-
-**Origine réelle (2026)** : Mombasa, Kenya
-
-**Transition** : 2071-2098
-
-Base flottante de l'une des trois délégations rivales du CRRC, transmettant ses résolutions par satellite crypté depuis un cargo ancré au large de Mombasa. Cette délégation, incapable de se maintenir physiquement à Nairobi, a choisi la mobilité comme protection et comme forme de légitimité alternative — ni au sol, ni dissolue. Symbole de l'institutionnel rendu nomade par la pression des effondrements.
-
-**Tensions internes** : Légitimité contestée par les deux autres délégations CRRC ; dépendance aux ressources du cargo pour la survie physique de la délégation ; risque d'interception ou de sabotage des communications satellite.
-
-**Rivaux** : Johannesburg (Bloc Austral) ([[bloc_johannesburg]])
-
-*Sources attestées : conseil_regulation_ressources_breakdown*
-
 ### Afrique de l'Ouest – Nœuds Lagos et Sahel
 
-*region — statut : fragmenté*
+*region — niveau 1 — statut : fragmenté*
 
-**Origine réelle (2026)** : Nigeria, Ghana, Sénégal, Côte d'Ivoire, Burkina Faso, Gambie, Guinée-Bissau, Guinée, Sierra Leone, Liberia, Togo, Bénin
+**Origine réelle (2026)** : Nigeria, Ghana, Sénégal, Côte d'Ivoire, Burkina Faso
 
 **Transition** : 2051-2080 — voir [[effondrement_reseau_mondial_communication_breakdown]]
 
@@ -3285,6 +3203,147 @@ Région structurée autour de Lagos comme nœud technologique et commercial surv
 **Tensions internes** : Compétition entre factions locales pour le contrôle des archives numériques (Mnemos, NexCore) ; la diaspora tech sahélienne détient des compétences hydrologiques critiques sans ancrage territorial fixe.
 
 *Sources attestées : nexcore_breakdown, reseau_mnemos_breakdown, diaspora_tech_sahel_breakdown, nexus_biosyn_breakdown, conseil_regulation_ressources_breakdown*
+
+### Amazonie (Pacte des Gardiens)
+
+*zone_sinistree — niveau 1 — statut : fragmenté*
+
+**Origine réelle (2026)** : Brésil, Colombie, Pérou
+
+**Transition** : 2041-2098
+
+Zone forestière amazonienne en décrochage rapide, gouvernée en fragments par le Pacte des Gardiens — héritier fracturé du Consortium Amazônia Viva. Des conseils autochtones tiennent encore quelques refuges de forêt primaire autour de Manaus, tandis que des blocs extractivistes avancent dans le chaos institutionnel. La ligne de vie : conserver assez de canopée pour que les cycles hydrologiques régionaux ne basculent pas définitivement.
+
+**Tensions internes** : Fracture entre conseils autochtones refusant les zones tampons et scientifiques errants prônant des compromis ; question de l'armement des gardiens contre les blocs extractivistes ; négociations secrètes de certains délégués avec des enclaves corporatives vendant des données biodiversité contre protection armée.
+
+**Lieux emblématiques** :
+- Manaus (site du Pacte des Gardiens) (ville) — Ancienne capitale amazonienne, siège des réunions du Pacte à la lueur de lampes à huile végétale dans des bâtiments repris par la forêt
+
+*Sources attestées : consortium_amazonia_viva_breakdown*
+
+### Arc Eurasien Central
+
+*zone_sinistree — niveau 1 — statut : fragmenté*
+
+**Origine réelle (2026)** : Russie, Kazakhstan, Géorgie, Azerbaïdjan, Ukraine
+
+**Transition** : 2055-2080 — voir [[conflit_israel_iran_2026_breakdown]]
+
+Vaste zone de corridors d'approvisionnement fracturés s'étendant de l'ancienne Géorgie aux plaines kazakhes, en passant par le bassin caspien et l'Oural. Aucun État souverain n'y exerce de contrôle stable ; le pouvoir y est détenu par des seigneurs de guerre logistiques, des consortiums énergétiques et des factions militaires héritières de blocs dissous. Les traités de l'Alliance des Blocs Souverains y sont invoqués comme armes rhétoriques entre belligérants (Bloc IV contre Bloc IX) sans jamais contraindre la paix.
+
+**Tensions internes** : Conflit permanent entre factions énergétiques héritières des pactes ABS et seigneurs de guerre logistiques ; le bassin caspien est un point de friction entre blocs régionaux rivaux aux frontières indéfinissables.
+
+**Rivaux** : arctique_nordark, zone_golfe_levant
+
+*Sources attestées : vasil_orentchev_breakdown, alliance_blocs_souverains_breakdown, consortium_energetique_oural_caspien_breakdown, enclaves_industrielles_du_corridor_oural_caspien_breakdown, factions_energetiques_heritieres_des_pactes_abs_breakdown, reseaux_de_renseignement_informels_issus_de_l_ancienne_structure_militaire_eurasienne_breakdown, federation_russe_residuelle_district_de_mourmansk_breakdown*
+
+### Arc Sahélo-Méditerranéen
+
+*region — niveau 1 — statut : fragmenté*
+
+**Origine réelle (2026)** : France, Espagne, Tunisie, Algérie, Maroc, Mali, Niger, Sénégal
+
+**Transition** : 2070-2091
+
+Arc de transit précaire reliant le Sahel à la Méditerranée, structuré autour de réseaux de courriers nomades, de villes-États portuaires survivantes et de territoires ruraux autonomes. La région anciennement française (Massif Central, vallée de l'Allier, Occitanie, plaines de l'Ebre) abrite des enclaves communautaires des Confédérations du Seuil Dernier, des fragments Terrafond et des cellules des Racines-Mères. Sfax et les côtes méditerranéennes servent de relais aux Bouches de l'Abîme et aux réseaux de courriers sahélo-méditerranéens.
+
+**Tensions internes** : Fracture entre factions accélérationnistes sabotant les infrastructures et attentistes des Confédérations du Seuil ; tension entre branches ouvertes et fermées des Racines-Mères ; fragments Terrafond sous pression des milices agro-territoriales.
+
+*Sources attestées : collectifs_du_seuil_breakdown, cooperative_terrafond_breakdown, mouvement_racines_vivantes_breakdown, voix_du_dehors_breakdown, reseau_des_courriers_nomades_sahelo_mediterraneens_breakdown, ligue_mediterraneenne_des_villes_etats_portuaires_breakdown, federation_communs_territoriaux_breakdown, trame_bioclimatique_breakdown*
+
+### Arctique Nordark
+
+*territoire_autonome — niveau 1 — statut : dominant*
+
+**Origine réelle (2026)** : Norvège, Suède, Finlande, Islande, Danemark (Groenland)
+
+**Transition** : 2060-2085
+
+Zone arctique déglacialisée contrôlée de facto par le Konsortiet Nordark, une puissance logistique privée opérant depuis le 'nœud Nordark' de Tromsø. Ni État ni simple entreprise, Nordark fixe les prix de passage, lève ses propres milices et arbitre les conflits de transit. Elle contrôle les derniers corridors fonctionnels entre les blocs eurasiatique et nord-américain, rendant cette zone stratégiquement indispensable à l'échelle planétaire.
+
+**Tensions internes** : Fracture entre factions militaires intégrées réclamant une partition des revenus et technocrates logistiques ; l'ouverture de nouveaux passages arctiques due au dégel échappe au contrôle de Nordark, attirant des acteurs hostiles.
+
+**Rivaux** : arc_eurasien_central, espace_nord_americain_fragmente
+
+*Sources attestées : armada_logistique_nordique_breakdown, enclaves_industrielles_de_bergen_troms_breakdown, factions_militaires_residuelles_de_l_ex_otan_nordique_breakdown, milices_separatistes_du_conseil_des_pecheries_d_islande_breakdown, hanse_baltique_recomposee_breakdown*
+
+### Asie–Pacifique (Corridors sino-sibériens et Pacifique Nord)
+
+*bloc_continental — niveau 1 — statut : stable*
+
+**Origine réelle (2026)** : Chine, Corée du Sud, Japon, Russie (Sibérie orientale), Viêt Nam
+
+**Transition** : 2049-2075 — voir [[effondrement_reseau_mondial_communication_breakdown]]
+
+Espace structuré autour du conglomérat sino-sibérien Bohai Transit comme l'un des rares opérateurs de flux encore fonctionnels à l'échelle continentale, et de la Coalition Pacifique Nord incarnant le repli souverainiste sur les ressources critiques. Séoul abrite encore des collectifs utilisant les anciens protocoles NexCore. Le delta du Mékong est présent comme territoire des cellules Racines-Mères. La Ligue Eurasiatique-Coalition Pacifique représente un pôle autonome contestant l'ordre global.
+
+**Tensions internes** : Tension entre logiques souverainistes de la Coalition Pacifique et besoins de flux trans-régionaux de Bohai Transit ; fragmentation informationnelle avec les îlots NexCore locaux sans coordination.
+
+**Rivaux** : arc_eurasien_central
+
+*Sources attestées : conglometrat_sino_siberien_bohai_transit_breakdown, coalition_pacifique_nord_breakdown, ligue_eurasiatique_coalition_pacifique_breakdown, nexcore_breakdown, mouvement_racines_vivantes_breakdown, nexus_biosyn_breakdown*
+
+### Espace Nord-Américain Fragmenté
+
+*zone_sinistree — niveau 1 — statut : fragmenté*
+
+**Origine réelle (2026)** : États-Unis d'Amérique, Canada
+
+**Transition** : 2040-2075 — voir [[election_parti_commun_americain_breakdown]]
+
+L'ancien espace fédéral nord-américain s'est disloqué en plusieurs entités territoriales distinctes après l'échec de la gouvernance nationale unifiée. La 'victoire' du Parti Commun à Philadelphia-Centrale (avec seulement 41% dans les territoires encore capables d'élire) n'a fait qu'accélérer la sécession de fait des États du Sud et du Centre. Des zones grises comme Detroit-Sud illustrent la substitution de l'État par des milices locales administrant une économie de récupération.
+
+**Tensions internes** : Trois entités territoriales distinctes coexistent sans reconnaissance mutuelle ; les milices locales exercent un pouvoir arbitraire sur les populations dans les zones de collapse ; tension entre entités côtières encore fonctionnelles et intérieur en effondrement.
+
+**Rivaux** : arctique_nordark
+
+*Sources attestées : election_parti_commun_americain_breakdown, arrestation_chris_van_derburgh_breakdown, coalition_pacifique_nord_breakdown*
+
+### Genève-Bunker (Nœud Institutionnel Résiduel)
+
+*site_strategique — niveau 1 — statut : en_declin*
+
+**Origine réelle (2026)** : Suisse
+
+**Transition** : 2049-2071
+
+Genève subsiste en 2098 comme lieu physique de survie des institutions internationales fantômes — le Bureau de Coordination d'Urgence Climatique (vestige de l'AMSC) dans une tour à moitié abandonnée, les Archives Neutres de Genève-Bunker comme dernier référentiel de légitimité juridique internationale, et une délégation du CRRC qui s'y est réinstallée en revendiquant la continuité juridique des accords de Nairobi. Nœud archivistique et diplomatique sans pouvoir réel, mais dont les archives sont convoitées par tous les blocs.
+
+**Tensions internes** : Faction interne du BCUC milite pour dissoudre l'agence et redistribuer les données en open source ; groupe de directeurs régionaux tente secrètement de ressusciter l'AMSC sous forme autoritaire ; archivistes-juristes s'opposent aux commandants de terrain sur la valeur des traités ABS.
+
+**Rivaux** : afrique_centrale_australe, arc_eurasien_central
+
+*Sources attestées : agence_stabilisation_climatique_breakdown, alliance_blocs_souverains_breakdown, archives_neutres_de_geneve_breakdown, conseil_regulation_ressources_breakdown*
+
+### Nordeste Brésilien (Frente Sertão Livre)
+
+*region — niveau 1 — statut : fragmenté*
+
+**Origine réelle (2026)** : Pernambuco, Brésil, Ceará, Brésil, Piauí, Brésil
+
+**Transition** : 2030-2098
+
+Semi-aride nordeste et franges du cerrado brésilien où l'effondrement des structures étatiques a laissé place à la Frente Sertão Livre — constellation de nœuds communautaires autonomes articulés autour de citernes collectives, banques de semences sèches et micro-réseaux solaires. Leurs marchés hebdomadaires sous des baobabs transplantés constituent les seules zones d'échange non taxées par des milices dans la région. Les capitales côtières se sont liquidéfiées sous la montée des eaux et les émeutes de la faim.
+
+**Tensions internes** : Tension entre refus de hiérarchie formelle et nécessité d'une défense collective coordonnée ; nœuds épuisés acceptant des pactes avec des cartels logistiques contre carburant et médicaments ; test existentiel de l'accueil des réfugiés côtiers désespérés.
+
+*Sources attestées : frente_sertao_livre_breakdown*
+
+### Zone Golfe Persique–Levant
+
+*zone_sinistree — niveau 1 — statut : fragmenté*
+
+**Origine réelle (2026)** : Israël, Iran, Arabie saoudite, Irak, Émirats arabes unis
+
+**Transition** : 2027-2045 — voir [[conflit_israel_iran_2026_breakdown]]
+
+Zone grise permanente issue du conflit israélo-iranien de 2027 et de la fermeture du détroit d'Ormuz. La destruction partielle des infrastructures pétrolières du Golfe a rendu caducs les derniers mécanismes de régulation internationale des ressources énergétiques. Aucun acteur souverain n'y exerce de contrôle stable ; la zone sert de modèle fractal à d'autres régions en voie de désintégration, et les flux migratoires qu'elle génère saturent les corridors eurasiens.
+
+**Tensions internes** : État de guerre permanente de basse à moyenne intensité entre entités héritières ; les flux d'hydrocarbures ont été redessinnés pour les décennies suivantes sans régulation internationale.
+
+**Rivaux** : arc_eurasien_central
+
+*Sources attestées : conflit_israel_iran_2026_breakdown, vasil_orentchev_breakdown*
 
 #### Agadez (Fragment Ligue du Sahel Numérique) — sous [[afrique_de_louest_lagos_sahel]]
 
@@ -3300,90 +3359,29 @@ Nœud de la Ligue des Cités du Sahel Numérique où des panneaux solaires estam
 
 *Sources attestées : ligue_des_cites_du_sahel_numerique_breakdown, diaspora_tech_sahel_breakdown, reseau_des_courriers_nomades_sahelo_mediterraneens_breakdown*
 
-#### Lagos-Est (Nœud NexCore) — sous [[afrique_de_louest_lagos_sahel]]
+#### Archives Neutres de Genève-Bunker — sous [[geneve_bunker_institutions]]
 
-*ville — niveau 2 — statut : fragmenté*
+*site_strategique — niveau 2 — statut : en_declin*
 
-**Origine réelle (2026)** : Lagos, Nigeria (zone est)
+**Origine réelle (2026)** : Genève, Suisse
 
-**Transition** : 2051-2098 — voir [[effondrement_reseau_mondial_communication_breakdown]]
+**Transition** : 2049-2098
 
-Quartier de Lagos abritant des serveurs fragmentaires de NexCore, l'un des rares nœuds technologiques survivants en Afrique de l'Ouest. Ces serveurs opèrent sans coordination avec les autres fragments NexCore mondiaux — le réseau mondial est mort en 2051, ne laissant que des îles qui parfois ignorent mutuellement leur existence.
+Dernier référentiel partagé de légitimité juridique internationale, point d'ancrage physique pour des normes que les États et blocs contestent ou ignorent. Les archivistes-juristes qui y travaillent ont recensé 340 violations croisées des traités ABS entre 2091 et 2097. Convoité par tous les acteurs géopolitiques comme ultime monnaie d'échange institutionnelle.
 
-**Tensions internes** : Compétition entre factions locales pour le contrôle des serveurs ; question de savoir si reconnecter les fragments NexCore serait une libération ou un nouveau vecteur de contrôle ; pression des consortiums logistiques sur les ressources numériques.
+**Tensions internes** : Opposition entre archivistes-juristes voulant préserver les traités comme socle normatif futur et commandants de terrain voulant les effacer pour repartir de zéro ; menace permanente d'espionnage ou de saisie par les blocs régionaux.
 
-**Alliés** : Lagos-Intérieur (Cluster Mnemos) ([[lagos_interieur_mnemos]])
+**Alliés** : tour_bcuc_geneve
 
-*Sources attestées : nexcore_breakdown*
+**Rivaux** : bloc_johannesburg, arc_eurasien_central
 
-#### Lagos-Intérieur (Cluster Mnemos) — sous [[afrique_de_louest_lagos_sahel]]
-
-*ville — niveau 2 — statut : fragmenté*
-
-**Origine réelle (2026)** : Lagos, Nigeria (zone intérieure)
-
-**Transition** : 2051-2098 — voir [[effondrement_reseau_mondial_communication_breakdown]]
-
-Quartier de Lagos concentrant un cluster Mnemos contenant des données agricoles stratégiques que trois factions se disputent à coups d'ultimatums. Ces archives, conçues comme un bien commun planétaire, sont devenues une ressource de pouvoir jalousement gardée, inaccessibles à ceux qui en auraient le plus besoin.
-
-**Tensions internes** : Trois factions se disputent le contrôle des archives agricoles par ultimatums ; gardiens locaux aux agendas divergents refusent la synchronisation avec d'autres clusters Mnemos ; risque de corruption délibérée des archives pour les rendre inutilisables.
-
-**Alliés** : Lagos-Est (Nœud NexCore) ([[lagos_est_nexcore]])
-
-*Sources attestées : reseau_mnemos_breakdown*
-
-### Amazonie (Pacte des Gardiens)
-
-*zone_sinistree — statut : fragmenté*
-
-**Origine réelle (2026)** : Brésil, Colombie, Pérou, Belize, Panama, Équateur, Paraguay, Guyana, Suriname
-
-**Transition** : 2041-2098
-
-Zone forestière amazonienne en décrochage rapide, gouvernée en fragments par le Pacte des Gardiens — héritier fracturé du Consortium Amazônia Viva. Des conseils autochtones tiennent encore quelques refuges de forêt primaire autour de Manaus, tandis que des blocs extractivistes avancent dans le chaos institutionnel. La ligne de vie : conserver assez de canopée pour que les cycles hydrologiques régionaux ne basculent pas définitivement.
-
-**Tensions internes** : Fracture entre conseils autochtones refusant les zones tampons et scientifiques errants prônant des compromis ; question de l'armement des gardiens contre les blocs extractivistes ; négociations secrètes de certains délégués avec des enclaves corporatives vendant des données biodiversité contre protection armée.
-
-**Lieux emblématiques** :
-- Manaus (site du Pacte des Gardiens) (ville) — Ancienne capitale amazonienne, siège des réunions du Pacte à la lueur de lampes à huile végétale dans des bâtiments repris par la forêt
-
-*Sources attestées : consortium_amazonia_viva_breakdown*
-
-#### Medellín (Marché BioSyn) — sous [[amazon_pacte_gardiens]]
-
-*ville — niveau 2 — statut : fragmenté*
-
-**Origine réelle (2026)** : Medellín, Colombie
-
-**Transition** : 2055-2098
-
-Marché de distribution de biosyn générique, analogue au nœud de Karachi mais dans l'espace américain fragmenté. Des opérateurs locaux y brandissent des licences photocopiées et des codes d'activation expirés de Nexus BioSyn pour exercer un monopole sur la nourriture et la guérison. Le mot 'biosyn' y est devenu un nom commun désignant tout produit biotechnologique, témoignant de la survie de la marque après la dissolution de l'entreprise.
-
-**Tensions internes** : Compétition entre opérateurs locaux aux licences douteuses ; pirates biologiques tentant de libérer les séquences propriétaires ; populations sous la menace d'une coupure de licence pour leurs cultures génétiquement verrouillées.
-
-*Sources attestées : nexus_biosyn_breakdown*
-
-### Arc Eurasien Central
-
-*zone_sinistree — statut : fragmenté*
-
-**Origine réelle (2026)** : Russie, Kazakhstan, Géorgie, Azerbaïdjan, Ukraine, Estonie, Lettonie, Lituanie, Allemagne, Belgique, Pays-Bas, Autriche, Hongrie, Roumanie, Serbie, Liechtenstein, Croatie, Slovénie, Bosnie-Herzégovine, Macédoine du Nord, Albanie, Bulgarie, Moldavie, Biélorussie, Slovaquie, Kosovo, Turkménistan, Tadjikistan, République tchèque, Ouzbékistan, Kirghizistan, Mongolie
-
-**Transition** : 2055-2080 — voir [[conflit_israel_iran_2026_breakdown]]
-
-Vaste zone de corridors d'approvisionnement fracturés s'étendant de l'ancienne Géorgie aux plaines kazakhes, en passant par le bassin caspien et l'Oural. Aucun État souverain n'y exerce de contrôle stable ; le pouvoir y est détenu par des seigneurs de guerre logistiques, des consortiums énergétiques et des factions militaires héritières de blocs dissous. Les traités de l'Alliance des Blocs Souverains y sont invoqués comme armes rhétoriques entre belligérants (Bloc IV contre Bloc IX) sans jamais contraindre la paix.
-
-**Tensions internes** : Conflit permanent entre factions énergétiques héritières des pactes ABS et seigneurs de guerre logistiques ; le bassin caspien est un point de friction entre blocs régionaux rivaux aux frontières indéfinissables.
-
-**Rivaux** : Arctique Nordark ([[arctique_nordark]]), Zone Golfe Persique–Levant ([[zone_golfe_levant]])
-
-*Sources attestées : vasil_orentchev_breakdown, alliance_blocs_souverains_breakdown, consortium_energetique_oural_caspien_breakdown, enclaves_industrielles_du_corridor_oural_caspien_breakdown, factions_energetiques_heritieres_des_pactes_abs_breakdown, reseaux_de_renseignement_informels_issus_de_l_ancienne_structure_militaire_eurasienne_breakdown, federation_russe_residuelle_district_de_mourmansk_breakdown*
+*Sources attestées : archives_neutres_de_geneve_breakdown, alliance_blocs_souverains_breakdown*
 
 #### Bassin Caspien (Zone de Conflit Bloc IV–Bloc IX) — sous [[arc_eurasien_central]]
 
 *zone_sinistree — niveau 2 — statut : fragmenté*
 
-**Origine réelle (2026)** : Mer Caspienne (zone frontalière Russie/Kazakhstan/Azerbaïdjan/Turkménistan)
+**Origine réelle (2026)** : Mer Caspienne (zone frontalière Russie/Kazakhstan/Azerbaïdjan/Iran/Turkménistan)
 
 **Transition** : 2071-2097
 
@@ -3391,104 +3389,55 @@ Théâtre principal des violations croisées des traités ABS entre Bloc IV et B
 
 **Tensions internes** : Conflit permanent entre Bloc IV et Bloc IX sur les droits d'extraction ; les traités ABS sont invoqués comme armes rhétoriques par les deux camps sans jamais contraindre la paix ; aucune procédure d'arbitrage n'a abouti depuis 2091.
 
-**Rivaux** : Zone Golfe Persique–Levant ([[zone_golfe_levant]])
+**Rivaux** : zone_golfe_levant
 
 *Sources attestées : alliance_blocs_souverains_breakdown, factions_energetiques_heritieres_des_pactes_abs_breakdown, consortium_energetique_oural_caspien_breakdown*
 
-#### Corridor Oural-Caspien — sous [[arc_eurasien_central]]
+#### Bassorah — sous [[zone_golfe_levant]]
 
-*region — niveau 2 — statut : fragmenté*
+*ville — niveau 2 — statut : fragmenté*
 
-**Origine réelle (2026)** : Russie (Oural), Kazakhstan (nord-ouest)
+**Origine réelle (2026)** : Bassorah, Irak
 
-**Transition** : 2055-2085
+**Transition** : 2027-2045 — voir [[conflit_israel_iran_2026_breakdown]]
 
-Corridor industriel résiduel s'étendant de l'Oural au bassin caspien, maintenant une capacité productive fragmentée dans des enclaves isolées. Contrôlé en partie par Vasil Orentchev et ses convois armés, c'est l'axe central du convoyage de carburant synthétique, pièces industrielles et médicaments de base dans l'arc eurasien.
+Point de départ documenté de l'exode migratoire massif vers l'arc eurasien à partir de 2027, photographié par Le Signal sur les réseaux mesh lors du conflit israélo-iranien. Les colonnes de réfugiés quittant Bassorah ont initié un flux qui ne s'est jamais arrêté, saturant les corridors eurasiens et modifiant durablement l'équilibre démographique de la zone.
 
-**Tensions internes** : Les enclaves industrielles survivantes négocient individuellement avec Orentchev, créant une dépendance structurelle que certaines populations commencent à contester publiquement ; les factions militaires héritières de blocs dissous cherchent à prendre le contrôle des nœuds productifs.
+**Tensions internes** : Ville résiduelle sous pression migratoire continue ; infrastructures en délabrement avancé ; contrôle disputé entre factions locales héritières.
 
-**Lieux emblématiques** :
-- Enclaves industrielles résiduelles (infrastructure) — Îlots de capacité productive maintenant un minimum d'activité manufacturière hors réseaux globaux effondrés
+*Sources attestées : conflit_israel_iran_2026_breakdown, vasil_orentchev_breakdown*
 
-**Rivaux** : Bassin Caspien (Zone de Conflit Bloc IV–Bloc IX) ([[bassin_caspien_zone_conflit]])
+#### Johannesburg (Bloc Austral) — sous [[afrique_centrale_australe]]
 
-*Sources attestées : vasil_orentchev_breakdown, enclaves_industrielles_du_corridor_oural_caspien_breakdown, consortium_energetique_oural_caspien_breakdown*
+*ville — niveau 2 — statut : stable*
 
-#### Corridors Eurasiens (Axes de Convoyage Armé) — sous [[arc_eurasien_central]]
+**Origine réelle (2026)** : Johannesburg, Afrique du Sud
 
-*infrastructure — niveau 2 — statut : fragmenté*
+**Transition** : 2071-2098
 
-**Origine réelle (2026)** : Géorgie, Azerbaïdjan, Kazakhstan
+Siège du Bloc de Johannesburg, force de fragmentation institutionnelle contestant depuis l'Afrique australe toute tentative de centralisation de la gouvernance globale. Ce bloc incarne la résistance aux structures héritées comme le CRRC, défendant une souveraineté régionale australe contre les prétentions de Nairobi ou Genève.
 
-**Transition** : 2027-2098 — voir [[conflit_israel_iran_2026_breakdown]]
+**Tensions internes** : Tension interne entre factions favorables à une reconsolidation régionale sous leadership johannesbourgeois et celles défendant une fragmentation totale comme protection contre l'exploitation extractive.
 
-Axes de transit armé s'étendant de l'ancienne Géorgie aux plaines kazakhes, opérés par des seigneurs de guerre logistiques dont Vasil Orentchev est la figure centrale. Ces corridors constituent l'unique voie d'approvisionnement des enclaves de la zone ; les flux migratoires du Golfe et du Levant les saturent depuis 2027.
+**Rivaux** : nairobi_crrc, geneve_bunker_institutions
 
-**Tensions internes** : Saturation par les flux migratoires issus de la zone Golfe-Levant ; compétition entre opérateurs privés armés pour le contrôle des axes ; saboteurs actifs ciblant les infrastructures pour fragiliser les opérateurs dominants.
+*Sources attestées : bloc_de_johannesburg_breakdown*
 
-**Rivaux** : Zone Golfe Persique–Levant ([[zone_golfe_levant]])
+#### Brazzaville-Nord — sous [[afrique_centrale_australe]]
 
-*Sources attestées : vasil_orentchev_breakdown, conflit_israel_iran_2026_breakdown, saboteurs_des_corridors_de_transit_breakdown*
+*ville — niveau 2 — statut : fragmenté*
 
-#### District de Mourmansk (Fédération Russe Résiduelle) — sous [[arc_eurasien_central]]
+**Origine réelle (2026)** : Brazzaville, République du Congo
 
-*territoire_herite — niveau 2 — statut : en_declin*
+**Transition** : 2067-2098
 
-**Origine réelle (2026)** : Russie (oblast de Mourmansk)
+Base opérationnelle d'Amara Diallo-Nkosi, médiatrice hydrique errante. Point de départ de ses missions entre les avant-postes du Kivu disputé, cette ville-relais maintient un semblant de coordination informelle entre communautés riveraines du bassin du Congo en conflit pour l'eau.
 
-**Transition** : 2055-2085
+**Tensions internes** : Pression des milices extractivistes et des factions hydriques sur les opérations de médiation ; la présence de Diallo-Nkosi attire à la fois protection intéressée et menaces des factions cherchant à capturer son expertise.
 
-Fragment résiduel de l'ancienne structure étatique russe maintenant un contrôle partiel sur des ressources énergétiques et des infrastructures portuaires arctiques. Acteur géopolitique fragmenté opérant à la jonction de l'arc eurasien et de la sphère d'influence Nordark, nœud de tension et de négociation dans un contexte de délitement étatique avancé.
+**Rivaux** : kivu_dispute
 
-**Tensions internes** : Pression de Nordark sur les accès portuaires arctiques ; factions militaires internes se disputant les revenus des infrastructures énergétiques résiduelles ; ambiguïté de statut entre entité héritière de l'État russe et proto-seigneurie régionale.
-
-**Rivaux** : Arctique Nordark ([[arctique_nordark]])
-
-*Sources attestées : federation_russe_residuelle_district_de_mourmansk_breakdown*
-
-##### Port de Mourmansk — sous [[district_mourmansk_residuel]]
-
-*infrastructure — niveau 3 — statut : fragmenté*
-
-**Origine réelle (2026)** : Mourmansk, Russie
-
-**Transition** : 2060-2098
-
-Infrastructure portuaire arctique disputée entre les factions résiduelles de l'État russe à Mourmansk et le Konsortiet Nordark qui cherche à l'intégrer dans son empire logistique. Dernier grand port en eau libre de la façade arctique russe, il constitue un nœud stratégique incontournable pour les flux entre l'arc eurasien et les corridors arctiques. Son contrôle détermine en partie qui peut prétendre à une souveraineté effective sur la région.
-
-**Tensions internes** : Conflit ouvert entre factions locales pro-autonomie et pression de Nordark pour absorber le port dans son réseau tarifaire ; sabotage des installations par des factions militaires internes refusant toute concession.
-
-**Rivaux** : Tromsø / Nœud Nordark ([[noeud_nordark_tromso]])
-
-*Sources attestées : federation_russe_residuelle_district_de_mourmansk_breakdown, armada_logistique_nordique_breakdown*
-
-#### Nœud Mnemos du Bassin Pannonien — sous [[arc_eurasien_central]]
-
-*infrastructure — niveau 2 — statut : en_declin*
-
-**Origine réelle (2026)** : Hongrie / bassin des Carpates
-
-**Transition** : 2051-2098 — voir [[effondrement_reseau_mondial_communication_breakdown]]
-
-Nœud isolé de l'ancien réseau Mnemos, tournant sur des panneaux solaires rafistolés quelque part dans le bassin pannonien. Gardé par une poignée de techniciens qui refusent de partager leurs archives médicales sans contrepartie alimentaire. Emblème de la promesse trahie de Mnemos : une infrastructure conçue pour résister à l'effondrement qui s'est elle-même fragmentée avec lui.
-
-**Tensions internes** : Négociation permanente des techniciens pour obtenir des vivres en échange d'accès aux archives médicales ; risque de corruption délibérée des données pour les protéger des envahisseurs ; rumeurs d'un nœud maître polaire intact attirant des expéditions dangereuses.
-
-*Sources attestées : reseau_mnemos_breakdown*
-
-### Arc Sahélo-Méditerranéen
-
-*region — statut : fragmenté*
-
-**Origine réelle (2026)** : France, Espagne, Tunisie, Algérie, Maroc, Mali, Niger, Grèce, Monaco, Andorre, Saint-Marin, Malte, Monténégro, Égypte, Libye, Mauritanie, Cap-Vert, Djibouti, Somalie, Érythrée, Italie, Portugal, Turquie, Soudan, Tchad
-
-**Transition** : 2070-2091
-
-Arc de transit précaire reliant le Sahel à la Méditerranée, structuré autour de réseaux de courriers nomades, de villes-États portuaires survivantes et de territoires ruraux autonomes. La région anciennement française (Massif Central, vallée de l'Allier, Occitanie, plaines de l'Ebre) abrite des enclaves communautaires des Confédérations du Seuil Dernier, des fragments Terrafond et des cellules des Racines-Mères. Sfax et les côtes méditerranéennes servent de relais aux Bouches de l'Abîme et aux réseaux de courriers sahélo-méditerranéens.
-
-**Tensions internes** : Fracture entre factions accélérationnistes sabotant les infrastructures et attentistes des Confédérations du Seuil ; tension entre branches ouvertes et fermées des Racines-Mères ; fragments Terrafond sous pression des milices agro-territoriales.
-
-*Sources attestées : collectifs_du_seuil_breakdown, cooperative_terrafond_breakdown, mouvement_racines_vivantes_breakdown, voix_du_dehors_breakdown, reseau_des_courriers_nomades_sahelo_mediterraneens_breakdown, ligue_mediterraneenne_des_villes_etats_portuaires_breakdown, federation_communs_territoriaux_breakdown, trame_bioclimatique_breakdown*
+*Sources attestées : amara_diallo_nkosi_breakdown*
 
 #### Carthage-Nord (Fragment NexCore) — sous [[arc_sahelo_mediterraneen]]
 
@@ -3502,7 +3451,7 @@ Nœud NexCore survivant en Afrique du Nord, cité comme fragment autonome dans l
 
 **Tensions internes** : Pression des réseaux de courriers nomades et de la Ligue méditerranéenne pour accéder aux archives NexCore ; débat interne sur la reconnexion aux autres fragments comme libération ou vecteur de contrôle.
 
-**Alliés** : Sfax ([[sfax_relais_bouches]])
+**Alliés** : sfax_relais_bouches
 
 *Sources attestées : nexcore_breakdown*
 
@@ -3519,6 +3468,345 @@ Corridor d'extraction de lithium et de ressources critiques sahéliennes, théâ
 **Tensions internes** : Conflits permanents entre milices extractivistes et communautés locales ; flux migratoires fuyant les zones d'extraction vers les côtes méditerranéennes via les réseaux de courriers nomades ; pression des consortiums logistiques cherchant à sécuriser les voies d'évacuation des ressources.
 
 *Sources attestées : voix_du_dehors_breakdown, reseau_des_courriers_nomades_sahelo_mediterraneens_breakdown*
+
+#### Corridor Oural-Caspien — sous [[arc_eurasien_central]]
+
+*region — niveau 2 — statut : fragmenté*
+
+**Origine réelle (2026)** : Russie (Oural), Kazakhstan (nord-ouest)
+
+**Transition** : 2055-2085
+
+Corridor industriel résiduel s'étendant de l'Oural au bassin caspien, maintenant une capacité productive fragmentée dans des enclaves isolées. Contrôlé en partie par Vasil Orentchev et ses convois armés, c'est l'axe central du convoyage de carburant synthétique, pièces industrielles et médicaments de base dans l'arc eurasien.
+
+**Tensions internes** : Les enclaves industrielles survivantes négocient individuellement avec Orentchev, créant une dépendance structurelle que certaines populations commencent à contester publiquement ; les factions militaires héritières de blocs dissous cherchent à prendre le contrôle des nœuds productifs.
+
+**Lieux emblématiques** :
+- Enclaves industrielles résiduelles (infrastructure) — Îlots de capacité productive maintenant un minimum d'activité manufacturière hors réseaux globaux effondrés
+
+**Rivaux** : bassin_caspien_zone_conflit
+
+*Sources attestées : vasil_orentchev_breakdown, enclaves_industrielles_du_corridor_oural_caspien_breakdown, consortium_energetique_oural_caspien_breakdown*
+
+#### Corridors Eurasiens (Axes de Convoyage Armé) — sous [[arc_eurasien_central]]
+
+*infrastructure — niveau 2 — statut : fragmenté*
+
+**Origine réelle (2026)** : Géorgie, Azerbaïdjan, Kazakhstan
+
+**Transition** : 2027-2098 — voir [[conflit_israel_iran_2026_breakdown]]
+
+Axes de transit armé s'étendant de l'ancienne Géorgie aux plaines kazakhes, opérés par des seigneurs de guerre logistiques dont Vasil Orentchev est la figure centrale. Ces corridors constituent l'unique voie d'approvisionnement des enclaves de la zone ; les flux migratoires du Golfe et du Levant les saturent depuis 2027.
+
+**Tensions internes** : Saturation par les flux migratoires issus de la zone Golfe-Levant ; compétition entre opérateurs privés armés pour le contrôle des axes ; saboteurs actifs ciblant les infrastructures pour fragiliser les opérateurs dominants.
+
+**Rivaux** : zone_golfe_levant
+
+*Sources attestées : vasil_orentchev_breakdown, conflit_israel_iran_2026_breakdown, saboteurs_des_corridors_de_transit_breakdown*
+
+#### Cracovie (Antenne du Registre des Zones Non Récupérables) — sous [[geneve_bunker_institutions]]
+
+*site_strategique — niveau 2 — statut : en_declin*
+
+**Origine réelle (2026)** : Cracovie, Pologne
+
+**Transition** : 2055-2098
+
+Sous-sol cracovien abritant l'une des antennes encore actives du Registre des Zones Non Récupérables, compilant avec rigueur bureaucratique absurde des archives sur des territoires officiellement effacés. Ses agents — fonctionnaires oubliés ou simples dépositaires — remplissent des formulaires pour des États qui n'existent plus. Le Registre est ici devenu le seul témoin systématique de ce que l'ancien monde a délibérément laissé mourir dans l'arc eurasien.
+
+**Tensions internes** : Agents dissidents cherchant à transmettre les données aux communautés concernées contre ceux les monétisant auprès de seigneuries logistiques ; risque que la publication des archives fournisse aux prédateurs une cartographie précise des territoires sans défense.
+
+**Alliés** : archives_neutres_geneve
+
+*Sources attestées : bureau_des_territoires_residuels_breakdown*
+
+#### Delta du Mékong (Cellules Racines-Mères) — sous [[asie_pacifique_sud_est]]
+
+*region — niveau 2 — statut : fragmenté*
+
+**Origine réelle (2026)** : Delta du Mékong, Viêt Nam/Cambodge
+
+**Transition** : 2070-2098
+
+Territoire des cellules Racines-Mères dans les friches du delta, où leurs cairns — trois pierres empilées, une branche d'aubépine fichée au sommet — jalonnent les routes défoncées de la décroissance. Certaines cellules sauvent des vies en produisant de la nourriture là où plus rien ne pousse ; d'autres ont fermé leurs frontières avec du fil barbelé béni.
+
+**Tensions internes** : Fracture entre branches ouvertes fondées sur la réciprocité et branches closes xénophobes ; certaines cellules nouent des alliances avec des technologies de biologie synthétique qui risquent de faire exploser le mouvement ; lutte pour la légitimité de l'héritage Racines.
+
+*Sources attestées : mouvement_racines_vivantes_breakdown*
+
+#### Détroit d'Ormuz — sous [[zone_golfe_levant]]
+
+*infrastructure — niveau 2 — statut : fragmenté*
+
+**Origine réelle (2026)** : Détroit d'Ormuz (Oman/Iran)
+
+**Transition** : 2027-2045 — voir [[conflit_israel_iran_2026_breakdown]]
+
+Fermé par l'Arabie saoudite en 2027 à titre 'préventif' lors du conflit israélo-iranien, déclenchant une panique énergétique mondiale immédiate. Cette fermeture a rendu caducs les derniers mécanismes de régulation internationale des ressources énergétiques et redessiné les flux d'hydrocarbures pour les décennies suivantes.
+
+**Tensions internes** : Contrôle disputé entre factions héritières des États du Golfe ; aucun acteur souverain n'y exerce de contrôle stable ; les tentatives de réouverture négociée se heurtent à l'absence d'interlocuteur légitime.
+
+*Sources attestées : conflit_israel_iran_2026_breakdown*
+
+#### Detroit-Sud — sous [[espace_nord_americain_fragmente]]
+
+*zone_sinistree — niveau 2 — statut : fragmenté*
+
+**Origine réelle (2026)** : Détroit, Michigan, États-Unis
+
+**Transition** : 2060-2098 — voir [[arrestation_chris_van_derburgh_breakdown]]
+
+Zone de collapse emblématique illustrant la substitution de l'État par des milices locales administrant une économie de récupération. En 2078, l'arrestation de Chris Van Derburgh — collecteur de déchets technologiques accusé de 'hoarding stratégique' — y a documenté l'état de droit par la force : une transaction de pouvoir déguisée en procédure dans un monde sans légalité réelle.
+
+**Tensions internes** : Pouvoir arbitraire des milices locales sur les populations ; économie de récupération des objets du passé technologique comme enjeu de survie et de domination ; absence de cadre légal remplacée par des rapports de force.
+
+**Lieux emblématiques** :
+- Zones de récupération technologique (site_strategique) — Caches de dispositifs 2024-2027 (batteries, processeurs, câbles) constituant des ressources vitales dans l'économie de récupération
+
+**Rivaux** : philadelphia_centrale
+
+*Sources attestées : arrestation_chris_van_derburgh_breakdown, election_parti_commun_americain_breakdown*
+
+#### District de Mourmansk (Fédération Russe Résiduelle) — sous [[arc_eurasien_central]]
+
+*territoire_herite — niveau 2 — statut : en_declin*
+
+**Origine réelle (2026)** : Russie (oblast de Mourmansk)
+
+**Transition** : 2055-2085
+
+Fragment résiduel de l'ancienne structure étatique russe maintenant un contrôle partiel sur des ressources énergétiques et des infrastructures portuaires arctiques. Acteur géopolitique fragmenté opérant à la jonction de l'arc eurasien et de la sphère d'influence Nordark, nœud de tension et de négociation dans un contexte de délitement étatique avancé.
+
+**Tensions internes** : Pression de Nordark sur les accès portuaires arctiques ; factions militaires internes se disputant les revenus des infrastructures énergétiques résiduelles ; ambiguïté de statut entre entité héritière de l'État russe et proto-seigneurie régionale.
+
+**Rivaux** : arctique_nordark
+
+*Sources attestées : federation_russe_residuelle_district_de_mourmansk_breakdown*
+
+#### Enclaves Finlandaises — sous [[arctique_nordark]]
+
+*region — niveau 2 — statut : en_declin*
+
+**Origine réelle (2026)** : Finlande
+
+**Transition** : 2070-2097
+
+Territoires finlandais dépendants des convois Nordark pour leur approvisionnement alimentaire fondamental. En 2097, le droit de passage d'un convoi alimentaire vers ces enclaves a augmenté de 340% en six mois, illustrant la vulnérabilité extrême des populations locales face au feudalisme de flux imposé par le Konsortiet.
+
+**Tensions internes** : Dépendance alimentaire totale envers Nordark ; montée des mouvements de résistance locaux contre les tarifs de passage ; absence d'alternatives logistiques viables.
+
+**Rivaux** : noeud_nordark_tromso
+
+*Sources attestées : armada_logistique_nordique_breakdown*
+
+#### Enclaves Industrielles de Bergen–Tromsø — sous [[arctique_nordark]]
+
+*infrastructure — niveau 2 — statut : stable*
+
+**Origine réelle (2026)** : Bergen, Norvège, Tromsø, Norvège
+
+**Transition** : 2065-2085
+
+Pôles de survie industrielle locale maintenant une capacité productive résiduelle sous la dépendance logistique de Nordark. Ces enclaves fournissent une base manufacturière minimale à l'empire logistique du Konsortiet, en échange d'une protection armée et d'un accès prioritaire aux convois d'approvisionnement.
+
+**Tensions internes** : Dépendance totale envers Nordark pour l'approvisionnement en matières premières ; tensions entre techniciens locaux souhaitant une autonomie accrue et commandants Nordark maintenant le contrôle par le monopole logistique.
+
+**Alliés** : noeud_nordark_tromso
+
+*Sources attestées : enclaves_industrielles_de_bergen_troms_breakdown*
+
+#### États du Sud et du Centre (Entités Sécessionistes) — sous [[espace_nord_americain_fragmente]]
+
+*territoire_herite — niveau 2 — statut : fragmenté*
+
+**Origine réelle (2026)** : États du Sud des États-Unis, États du Centre des États-Unis
+
+**Transition** : 2075-2098 — voir [[election_parti_commun_americain_breakdown]]
+
+Entités territoriales ayant refusé de reconnaître la victoire électorale du Parti Commun en 2075, constituant l'une des trois entités distinctes de l'espace nord-américain fragmenté. Ces territoires ont développé leurs propres structures de gouvernance de facto — milices, seigneuries agro-territoriales, enclaves fortifiées — sans reconnaissance mutuelle avec Philadelphia-Centrale ni avec les zones côtières encore partiellement fonctionnelles.
+
+**Tensions internes** : Absence de cohérence interne entre les différentes entités sécessionistes ; compétition entre seigneuries locales pour les ressources agricoles et hydriques ; pression des flux migratoires internes nord-américains.
+
+**Rivaux** : philadelphia_centrale
+
+*Sources attestées : election_parti_commun_americain_breakdown*
+
+#### Compact de l'Eau Dernière (Grands Lacs) — sous [[espace_nord_americain_fragmente]]
+
+*territoire_autonome — niveau 2 — statut : fragmenté*
+
+**Origine réelle (2026)** : Région des Grands Lacs, États-Unis / Canada
+
+**Transition** : 2053-2098 — voir [[secession_grands_lacs_eau_douce_breakdown]]
+
+Confédération lacustre née de la Charte de Souveraineté Hydrique signée en 2053 à Chicago-Lacustre, rédigée en trois langues autochtones et en anglais, non reconnue par Washington. Épine dorsale industrielle assurée par les Communes Libres du Rust Belt, elle regroupe 8 entités étatiques résiduelles et 40 nations autochtones mais se fracture rapidement en zones de contrôle disputées. L'eau douce, théoriquement protégée, est devenue l'enjeu d'une guerre d'usure entre milices hydriques, nations autochtones souveraines et enclaves corporatives.
+
+**Tensions internes** : Fracture interne entre entités membres sur les droits de transit (détroit de Mackinac) ; pression des milices d'accaparement hydrique aux marges ; afflux de réfugiés du Midwest menaçant les équilibres locaux ; tension entre communes autogérées et seigneuries foncières opportunistes.
+
+**Lieux emblématiques** :
+- Chicago-Lacustre (ville) — Capitale de facto du Compact, ancienne grande métropole reconvertie en nœud de gouvernance confédérale fragile
+- Détroit de Mackinac (site_strategique) — Point de friction militarisé sur les droits de transit lacustres entre factions rivales
+
+**Alliés** : philadelphia_centrale
+
+**Rivaux** : etats_sud_centre_americain
+
+*Sources attestées : secession_grands_lacs_eau_douce_breakdown, exode_midwest_desertification_2044_breakdown, election_parti_commun_americain_breakdown*
+
+#### Groenland (Fonds des Glaces Libérées) — sous [[arctique_nordark]]
+
+*territoire_autonome — niveau 2 — statut : dominant*
+
+**Origine réelle (2026)** : Groenland (Danemark / Kalaallit Nunaat)
+
+**Transition** : 2035-2098 — voir [[groenland_encheres_terres_rares_breakdown]]
+
+Territoire kalaallit devenu l'une des rares entités étatiques solvables en 2098 grâce à la rente des gisements minéraux et hydrocarbures rendus exploitables par la fonte du pergélisol. Le Kalaallit Nunaat Sovereign Fund y opère depuis un bunker pressurisé à Nuuk, monnayant terres rares et gigawatts à des blocs régionaux en guerre de ressources. Les enchères chaotiques d'octobre 2043 ont généré une décennie de conflits de juridiction entre factions énergétiques héritières.
+
+**Tensions internes** : Fracture entre faction souverainiste radicale voulant un arsenal militaire autonome et faction redistribution conditionnelle ; groupes inuit dissidents accusant le Fonds de reproduire le modèle extractiviste colonial ; militarisation croissante du territoire par les concurrents évincés des enchères de Nuuk.
+
+**Lieux emblématiques** :
+- Nuuk (siège du Fonds des Glaces Libérées) (ville) — Bunker pressurisé abritant le Kalaallit Nunaat Sovereign Fund, centre de négociation des ressources arctiques
+
+**Rivaux** : noeud_nordark_tromso, arc_eurasien_central
+
+*Sources attestées : kalaallit_nunaat_sovereign_fund_breakdown, groenland_encheres_terres_rares_breakdown*
+
+#### Haïfa (Zone de Frappes Balistiques) — sous [[zone_golfe_levant]]
+
+*zone_sinistree — niveau 2 — statut : fragmenté*
+
+**Origine réelle (2026)** : Haïfa, Israël
+
+**Transition** : 2027-2045 — voir [[conflit_israel_iran_2026_breakdown]]
+
+Cible des salves de missiles balistiques iraniens en représailles aux frappes israéliennes de septembre 2027. Ville côtière partiellement détruite dont l'état illustre la spirale d'escalade mutuelle qui a rendu impossible toute médiation. Les infrastructures portuaires et les champs gaziers offshore associés ont été gravement endommagés, contribuant à la désorganisation des flux énergétiques régionaux.
+
+**Tensions internes** : Contrôle disputé entre factions héritières de l'État israélien ; infrastructures partiellement fonctionnelles sous administration de facto de groupes armés locaux.
+
+*Sources attestées : conflit_israel_iran_2026_breakdown*
+
+#### Hanse Baltique Recomposée — sous [[geneve_bunker_institutions]]
+
+*union_regionale — niveau 2 — statut : stable*
+
+**Origine réelle (2026)** : Estonie, Lettonie, Lituanie, Pologne (côte baltique)
+
+**Transition** : 2060-2098
+
+Bloc de résistance régionale structuré maintenant des flux économiques et une cohérence institutionnelle minimale dans l'espace baltique, en marge de l'empire Nordark. La Hanse Recomposée s'appuie sur des réseaux commerciaux historiques réactivés pour maintenir une forme d'autonomie vis-à-vis du Konsortiet, tout en négociant des accords de transit qui la placent dans une dépendance structurelle difficile à assumer.
+
+**Tensions internes** : Dépendance aux corridors Nordark pour les échanges nord-sud ; factions favorables à une intégration formelle dans l'empire Nordark contre tenants d'une autonomie coûteuse ; pression des factions militaires résiduelles de l'ex-OTAN nordique cherchant à instrumentaliser la Hanse.
+
+**Rivaux** : noeud_nordark_tromso
+
+*Sources attestées : hanse_baltique_recomposee_breakdown*
+
+#### Ispahan–Fordow (Sites Frappés) — sous [[zone_golfe_levant]]
+
+*zone_sinistree — niveau 2 — statut : disparu*
+
+**Origine réelle (2026)** : Ispahan, Iran, Fordow, Iran
+
+**Transition** : 2027-2027 — voir [[conflit_israel_iran_2026_breakdown]]
+
+Sites des installations nucléaires iraniennes frappées en septembre 2027 lors des frappes israéliennes qui ont déclenché la crise énergétique mondiale. Zones de contamination et de dévastation symbolisant le point de basculement irréversible du conflit israélo-iranien. Leur destruction a supprimé toute possibilité d'accord nucléaire futur et transformé durablement la géopolitique régionale en état de guerre permanente.
+
+*Sources attestées : conflit_israel_iran_2026_breakdown*
+
+#### Islande (Milices des Pêcheries) — sous [[arctique_nordark]]
+
+*territoire_autonome — niveau 2 — statut : fragmenté*
+
+**Origine réelle (2026)** : Islande
+
+**Transition** : 2065-2098
+
+Territoire contrôlé de facto par les milices séparatistes du Conseil des Pêcheries d'Islande, qui exercent un contrôle sur des portions de l'Atlantique Nord et contestent toute gouvernance extérieure sur les droits de pêche et les eaux territoriales. Leur résistance à l'autorité de Nordark sur les routes arctiques en fait un point de friction permanent, car ils revendiquent l'autonomie des passages nord-atlantiques que le Konsortiet cherche à intégrer dans son empire logistique.
+
+**Tensions internes** : Tension permanente avec Nordark sur le contrôle des eaux territoriales et des droits de passage ; fractures internes entre factions de pêcheurs pragmatiques acceptant des accords avec le Konsortiet et séparatistes intransigeants.
+
+**Rivaux** : noeud_nordark_tromso
+
+*Sources attestées : milices_separatistes_du_conseil_des_pecheries_d_islande_breakdown*
+
+#### Islande (Milices des Pêcheries) — sous [[arctique_nordark]]
+
+*territoire_autonome — niveau 2 — statut : fragmenté*
+
+**Origine réelle (2026)** : Islande
+
+**Transition** : 2065-2098
+
+Territoire contrôlé de facto par les milices séparatistes du Conseil des Pêcheries d'Islande, qui exercent un contrôle sur des portions de l'Atlantique Nord et contestent toute gouvernance extérieure sur les droits de pêche et les eaux territoriales. Leur résistance à l'autorité de Nordark sur les routes arctiques en fait un point de friction permanent, car ils revendiquent l'autonomie des passages nord-atlantiques que le Konsortiet cherche à intégrer dans son empire logistique.
+
+**Tensions internes** : Tension permanente avec Nordark sur le contrôle des eaux territoriales et des droits de passage ; fractures internes entre factions de pêcheurs pragmatiques acceptant des accords avec le Konsortiet et séparatistes intransigeants.
+
+**Rivaux** : noeud_nordark_tromso
+
+*Sources attestées : milices_separatistes_du_conseil_des_pecheries_d_islande_breakdown*
+
+#### Karachi (Marché BioSyn) — sous [[asie_pacifique_sud_est]]
+
+*ville — niveau 2 — statut : fragmenté*
+
+**Origine réelle (2026)** : Karachi, Pakistan
+
+**Transition** : 2055-2098
+
+Marché de distribution de biosyn générique, où des opérateurs locaux brandissent des licences photocopiées et des codes d'activation expirés de Nexus BioSyn pour justifier leur monopole sur la nourriture et la guérison. Le mot 'biosyn' y est devenu un nom commun : une ampoule de biosyn, un sac de graines biosyn. La marque a survécu à l'entreprise.
+
+**Tensions internes** : Compétition entre opérateurs locaux brandissant des licences de légitimité douteuse ; pirates biologiques tentant de décoder et libérer les séquences propriétaires ; populations vivant sous la menace d'une 'coupure de licence' pour leurs cultures génétiquement verrouillées.
+
+*Sources attestées : nexus_biosyn_breakdown*
+
+#### Kivu Disputé — sous [[afrique_centrale_australe]]
+
+*zone_sinistree — niveau 2 — statut : fragmenté*
+
+**Origine réelle (2026)** : Province du Kivu, République démocratique du Congo
+
+**Transition** : 2067-2098
+
+Zone de conflit intense pour l'accès à l'eau, théâtre principal des déplacements d'Amara Diallo-Nkosi. Les accords de redistribution des eaux de 2067, aujourd'hui effondrés avec les États qui les portaient, ont laissé place à une guerre de l'eau entre communautés riveraines. Trois millions de personnes dépendent de la médiation informelle de Diallo-Nkosi pour un accès à peu près fiable à l'eau potable.
+
+**Tensions internes** : Guerre de l'eau entre communautés riveraines ; milices extractivistes opérant hors cadre légal ; tension entre factions cherchant à capturer Diallo-Nkosi pour monopoliser son expertise hydrologue.
+
+**Rivaux** : brazzaville_nord
+
+*Sources attestées : amara_diallo_nkosi_breakdown, milices_extractivistes_du_bassin_du_congo_breakdown, factions_etatiques_residuelles_de_souverainete_hydrique_breakdown*
+
+#### Lagos-Est (Nœud NexCore) — sous [[afrique_de_louest_lagos_sahel]]
+
+*ville — niveau 2 — statut : fragmenté*
+
+**Origine réelle (2026)** : Lagos, Nigeria (zone est)
+
+**Transition** : 2051-2098 — voir [[effondrement_reseau_mondial_communication_breakdown]]
+
+Quartier de Lagos abritant des serveurs fragmentaires de NexCore, l'un des rares nœuds technologiques survivants en Afrique de l'Ouest. Ces serveurs opèrent sans coordination avec les autres fragments NexCore mondiaux — le réseau mondial est mort en 2051, ne laissant que des îles qui parfois ignorent mutuellement leur existence.
+
+**Tensions internes** : Compétition entre factions locales pour le contrôle des serveurs ; question de savoir si reconnecter les fragments NexCore serait une libération ou un nouveau vecteur de contrôle ; pression des consortiums logistiques sur les ressources numériques.
+
+**Alliés** : lagos_interieur_mnemos
+
+*Sources attestées : nexcore_breakdown*
+
+#### Lagos-Intérieur (Cluster Mnemos) — sous [[afrique_de_louest_lagos_sahel]]
+
+*ville — niveau 2 — statut : fragmenté*
+
+**Origine réelle (2026)** : Lagos, Nigeria (zone intérieure)
+
+**Transition** : 2051-2098 — voir [[effondrement_reseau_mondial_communication_breakdown]]
+
+Quartier de Lagos concentrant un cluster Mnemos contenant des données agricoles stratégiques que trois factions se disputent à coups d'ultimatums. Ces archives, conçues comme un bien commun planétaire, sont devenues une ressource de pouvoir jalousement gardée, inaccessibles à ceux qui en auraient le plus besoin.
+
+**Tensions internes** : Trois factions se disputent le contrôle des archives agricoles par ultimatums ; gardiens locaux aux agendas divergents refusent la synchronisation avec d'autres clusters Mnemos ; risque de corruption délibérée des archives pour les rendre inutilisables.
+
+**Alliés** : lagos_est_nexcore
+
+*Sources attestées : reseau_mnemos_breakdown*
 
 #### Lyon (Ruines A7 / Lyon-Part-Dieu) — sous [[arc_sahelo_mediterraneen]]
 
@@ -3556,178 +3844,65 @@ Territoire des Cicatrices Vertes — tronçons orphelins de la Trame Bioclimatiq
 
 *Sources attestées : trame_bioclimatique_breakdown, federation_communs_territoriaux_breakdown, mouvement_racines_vivantes_breakdown*
 
-##### Ancien Centre de Contrôle Continental (Trame Bioclimatique — Rumeur) — sous [[massif_central_cicatrices_vertes]]
+#### Medellín (Marché BioSyn) — sous [[espace_nord_americain_fragmente]]
 
-*site_strategique — niveau 3 — statut : emergent*
+*ville — niveau 2 — statut : fragmenté*
 
-**Origine réelle (2026)** : Massif Central, France
+**Origine réelle (2026)** : Medellín, Colombie
 
-**Transition** : 2070-2098
+**Transition** : 2055-2098
 
-Localisation supposée d'un ancien centre de contrôle continental de la Trame Bioclimatique qui serait encore actif, gérant automatiquement des flux que personne ne comprend plus. Sa découverte constituerait soit la clé pour sauver la Trame continentale, soit l'opportunité d'achever son pillage systématique. Les techniciens nomades qui tentent de reconnecter les tronçons orphelins cherchent activement ce centre, ce que les factions contrôlant les Cicatrices Vertes perçoivent comme une menace directe à leur pouvoir.
+Marché de distribution de biosyn générique, analogue au nœud de Karachi mais dans l'espace américain fragmenté. Des opérateurs locaux y brandissent des licences photocopiées et des codes d'activation expirés de Nexus BioSyn pour exercer un monopole sur la nourriture et la guérison. Le mot 'biosyn' y est devenu un nom commun désignant tout produit biotechnologique, témoignant de la survie de la marque après la dissolution de l'entreprise.
 
-**Tensions internes** : Incertitude sur l'existence et la localisation du centre ; factions rivales organisant des expéditions de reconnaissance ; risque que sa découverte déclenche une guerre entre les seigneurs du territoire.
+**Tensions internes** : Compétition entre opérateurs locaux aux licences douteuses ; pirates biologiques tentant de libérer les séquences propriétaires ; populations sous la menace d'une coupure de licence pour leurs cultures génétiquement verrouillées.
 
-*Sources attestées : trame_bioclimatique_breakdown*
+*Sources attestées : nexus_biosyn_breakdown*
 
-#### Occitanie (Cellules Racines-Mères) — sous [[arc_sahelo_mediterraneen]]
+#### Midwest Désertifié (Zone de Déprise) — sous [[espace_nord_americain_fragmente]]
 
-*region — niveau 2 — statut : fragmenté*
+*zone_sinistree — niveau 2 — statut : disparu*
 
-**Origine réelle (2026)** : Occitanie, France
+**Origine réelle (2026)** : Midwest des États-Unis
 
-**Transition** : 2070-2098
+**Transition** : 2044-2060 — voir [[exode_midwest_desertification_2044_breakdown]]
 
-Territoire de l'ancienne région française où les cellules Racines-Mères jalonnent les routes défoncées de leurs cairns caractéristiques — trois pierres empilées, une branche d'aubépine au sommet. Les branches y sont particulièrement divisées entre factions ouvertes pratiquant la réciprocité et branches closes ayant érigé des frontières ritualisées. La proximité de Lyon-Part-Dieu et de l'arc sahélien en fait un nœud de tension entre mouvements de survie communautaire et logiques de fermeture tribale.
+Ancien grenier américain ravagé par trois étés consécutifs à plus de 55°C en 2044, ayant provoqué l'exode de 18 millions de personnes en dix-huit mois. Le Bureau des Territoires Résiduels s'est effondré sous la pression, ses archives brûlées ou falsifiées. Des seigneuries foncières opportunistes ont accaparé les terres abandonnées à prix nuls, constituant des fiefs agricoles armés dans un espace sans gouvernance.
 
-**Tensions internes** : Fracture profonde entre branches ouvertes et branches closes ; certaines cellules s'allient avec des technologies de biologie synthétique contestées par les branches traditionalistes ; lutte pour la légitimité de l'héritage des Racines.
+**Tensions internes** : Présence résiduelle de seigneuries foncières armées exploitant des terres accaparées ; populations sans identité documentée tombées dans des circuits de main-d'œuvre captive ; culture de méfiance radicale entre communautés héritée du traumatisme de 2044.
 
-**Alliés** : Massif Central (Cicatrices Vertes / Trame Bioclimatique) ([[massif_central_cicatrices_vertes]])
+*Sources attestées : exode_midwest_desertification_2044_breakdown*
 
-*Sources attestées : mouvement_racines_vivantes_breakdown*
+#### Nairobi (Siège du CRRC) — sous [[afrique_centrale_australe]]
 
-#### Plaines de l'Ebre (Fragments Terrafond sous tutelle milicienne) — sous [[arc_sahelo_mediterraneen]]
+*ville — niveau 2 — statut : en_declin*
 
-*region — niveau 2 — statut : fragmenté*
+**Origine réelle (2026)** : Nairobi, Kenya
 
-**Origine réelle (2026)** : Vallée de l'Èbre, Espagne
+**Transition** : 2061-2091
 
-**Transition** : 2087-2098
+Siège nominal du Conseil de Régulation des Ressources Critiques, aujourd'hui partiellement occupé par des déplacés climatiques. Trois délégations rivales s'y disputent le titre de représentation légitime du CRRC : l'une brandissant des accréditations de gouvernements dissous, l'autre relayant depuis un cargo au large de Mombasa, la troisième s'étant réinstallée à Genève. Surnommé 'le Fantôme de Nairobi'.
 
-Fragments Terrafond des plaines espagnoles placés sous tutelle milicienne agro-territoriale. Le nom 'Terrafond' y est invoqué comme légitimité politique par des chefs locaux qui trahissent les principes fondateurs du réseau originel en exerçant un pouvoir autoritaire sur les populations agricoles.
+**Tensions internes** : Trois délégations rivales sans mandat reconnu se disputent la légitimité institutionnelle ; les couloirs du siège sont partiellement occupés par des déplacés climatiques ; aucune grande puissance extractive n'écoute réellement le CRRC mais toutes y maintiennent un attaché.
 
-**Tensions internes** : Instrumentalisation du nom Terrafond par des pouvoirs autoritaires locaux ; tension entre fragments voulant maintenir l'éthique fondatrice et ceux ayant capitulé devant les milices ; pression des seigneuries foncières sur les ressources en eau.
+**Alliés** : geneve_bunker_institutions
 
-**Rivaux** : Vallée de l'Allier (Fragment Terrafond) ([[vallee_allier_terrafond]])
+**Rivaux** : bloc_johannesburg
 
-*Sources attestées : cooperative_terrafond_breakdown*
+*Sources attestées : conseil_regulation_ressources_breakdown, amara_diallo_nkosi_breakdown*
 
-#### Sfax — sous [[arc_sahelo_mediterraneen]]
+#### Nœud Mnemos du Bassin Pannonien — sous [[arc_eurasien_central]]
 
-*ville — niveau 2 — statut : stable*
+*infrastructure — niveau 2 — statut : en_declin*
 
-**Origine réelle (2026)** : Sfax, Tunisie
+**Origine réelle (2026)** : Hongrie / bassin des Carpates
 
-**Transition** : 2070-2098
+**Transition** : 2051-2098 — voir [[effondrement_reseau_mondial_communication_breakdown]]
 
-Relais méditerranéen des Bouches de l'Abîme et nœud de la Ligue Méditerranéenne des Villes-États Portuaires. Des paquets plastifiés y sont glissés sous des portes, et le réseau de courriers nomades sahélo-méditerranéens y fait transiter personnes, messages et marchandises entre le Sahel effondré et les nœuds encore fonctionnels du pourtour méditerranéen.
+Nœud isolé de l'ancien réseau Mnemos, tournant sur des panneaux solaires rafistolés quelque part dans le bassin pannonien. Gardé par une poignée de techniciens qui refusent de partager leurs archives médicales sans contrepartie alimentaire. Emblème de la promesse trahie de Mnemos : une infrastructure conçue pour résister à l'effondrement qui s'est elle-même fragmentée avec lui.
 
-**Tensions internes** : Risque de corruption des cellules des Bouches par des factions régionales ; tension entre logique portuaire ouverte et pressions des blocs cherchant à contrôler les flux informationnels et logistiques.
+**Tensions internes** : Négociation permanente des techniciens pour obtenir des vivres en échange d'accès aux archives médicales ; risque de corruption délibérée des données pour les protéger des envahisseurs ; rumeurs d'un nœud maître polaire intact attirant des expéditions dangereuses.
 
-*Sources attestées : voix_du_dehors_breakdown, reseau_des_courriers_nomades_sahelo_mediterraneens_breakdown, ligue_mediterraneenne_des_villes_etats_portuaires_breakdown*
-
-#### Vallée de l'Allier (Fragment Terrafond) — sous [[arc_sahelo_mediterraneen]]
-
-*region — niveau 2 — statut : en_declin*
-
-**Origine réelle (2026)** : Vallée de l'Allier, Auvergne, France
-
-**Transition** : 2087-2098
-
-Fragment survivant de la Coopérative Terrafond dans une vallée carbonisée. Huit familles y cultivent un hectare de sorgho sous filet anti-UV de récupération, sans savoir si d'autres fragments Terrafond existent encore. Le logo des trois rivières entrelacées sur fond ocre persiste sur une pancarte délavée, emblème d'un réseau désormais réduit à une langue commune sans corps central.
-
-**Tensions internes** : Isolement total des autres fragments Terrafond ; tension entre préserver le nom comme promesse de reconnexion et y renoncer pour éviter d'attirer des prédateurs ; rumeurs d'un 'Nœud-Mère' tentant de recontacter les fragments.
-
-*Sources attestées : cooperative_terrafond_breakdown*
-
-### Arctique Nordark
-
-*territoire_autonome — statut : dominant*
-
-**Origine réelle (2026)** : Norvège, Suède, Finlande, Islande, Danemark (Groenland), Arctique, Groenland
-
-**Transition** : 2060-2085
-
-Zone arctique déglacialisée contrôlée de facto par le Konsortiet Nordark, une puissance logistique privée opérant depuis le 'nœud Nordark' de Tromsø. Ni État ni simple entreprise, Nordark fixe les prix de passage, lève ses propres milices et arbitre les conflits de transit. Elle contrôle les derniers corridors fonctionnels entre les blocs eurasiatique et nord-américain, rendant cette zone stratégiquement indispensable à l'échelle planétaire.
-
-**Tensions internes** : Fracture entre factions militaires intégrées réclamant une partition des revenus et technocrates logistiques ; l'ouverture de nouveaux passages arctiques due au dégel échappe au contrôle de Nordark, attirant des acteurs hostiles.
-
-**Rivaux** : Arc Eurasien Central ([[arc_eurasien_central]]), Espace Nord-Américain Fragmenté ([[espace_nord_americain_fragmente]])
-
-*Sources attestées : armada_logistique_nordique_breakdown, enclaves_industrielles_de_bergen_troms_breakdown, factions_militaires_residuelles_de_l_ex_otan_nordique_breakdown, milices_separatistes_du_conseil_des_pecheries_d_islande_breakdown, hanse_baltique_recomposee_breakdown*
-
-#### Enclaves Finlandaises — sous [[arctique_nordark]]
-
-*region — niveau 2 — statut : en_declin*
-
-**Origine réelle (2026)** : Finlande
-
-**Transition** : 2070-2097
-
-Territoires finlandais dépendants des convois Nordark pour leur approvisionnement alimentaire fondamental. En 2097, le droit de passage d'un convoi alimentaire vers ces enclaves a augmenté de 340% en six mois, illustrant la vulnérabilité extrême des populations locales face au feudalisme de flux imposé par le Konsortiet.
-
-**Tensions internes** : Dépendance alimentaire totale envers Nordark ; montée des mouvements de résistance locaux contre les tarifs de passage ; absence d'alternatives logistiques viables.
-
-**Rivaux** : Tromsø / Nœud Nordark ([[noeud_nordark_tromso]])
-
-*Sources attestées : armada_logistique_nordique_breakdown*
-
-#### Enclaves Industrielles de Bergen–Tromsø — sous [[arctique_nordark]]
-
-*infrastructure — niveau 2 — statut : stable*
-
-**Origine réelle (2026)** : Bergen, Norvège, Tromsø, Norvège
-
-**Transition** : 2065-2085
-
-Pôles de survie industrielle locale maintenant une capacité productive résiduelle sous la dépendance logistique de Nordark. Ces enclaves fournissent une base manufacturière minimale à l'empire logistique du Konsortiet, en échange d'une protection armée et d'un accès prioritaire aux convois d'approvisionnement.
-
-**Tensions internes** : Dépendance totale envers Nordark pour l'approvisionnement en matières premières ; tensions entre techniciens locaux souhaitant une autonomie accrue et commandants Nordark maintenant le contrôle par le monopole logistique.
-
-**Alliés** : Tromsø / Nœud Nordark ([[noeud_nordark_tromso]])
-
-*Sources attestées : enclaves_industrielles_de_bergen_troms_breakdown*
-
-#### Groenland (Fonds des Glaces Libérées) — sous [[arctique_nordark]]
-
-*territoire_autonome — niveau 2 — statut : dominant*
-
-**Origine réelle (2026)** : Groenland (Danemark / Kalaallit Nunaat)
-
-**Transition** : 2035-2098 — voir [[groenland_encheres_terres_rares_breakdown]]
-
-Territoire kalaallit devenu l'une des rares entités étatiques solvables en 2098 grâce à la rente des gisements minéraux et hydrocarbures rendus exploitables par la fonte du pergélisol. Le Kalaallit Nunaat Sovereign Fund y opère depuis un bunker pressurisé à Nuuk, monnayant terres rares et gigawatts à des blocs régionaux en guerre de ressources. Les enchères chaotiques d'octobre 2043 ont généré une décennie de conflits de juridiction entre factions énergétiques héritières.
-
-**Tensions internes** : Fracture entre faction souverainiste radicale voulant un arsenal militaire autonome et faction redistribution conditionnelle ; groupes inuit dissidents accusant le Fonds de reproduire le modèle extractiviste colonial ; militarisation croissante du territoire par les concurrents évincés des enchères de Nuuk.
-
-**Lieux emblématiques** :
-- Nuuk (siège du Fonds des Glaces Libérées) (ville) — Bunker pressurisé abritant le Kalaallit Nunaat Sovereign Fund, centre de négociation des ressources arctiques
-
-**Rivaux** : Tromsø / Nœud Nordark ([[noeud_nordark_tromso]]), Arc Eurasien Central ([[arc_eurasien_central]])
-
-*Sources attestées : kalaallit_nunaat_sovereign_fund_breakdown, groenland_encheres_terres_rares_breakdown*
-
-#### Islande (Milices des Pêcheries) — sous [[arctique_nordark]]
-
-*territoire_autonome — niveau 2 — statut : fragmenté*
-
-**Origine réelle (2026)** : Islande
-
-**Transition** : 2065-2098
-
-Territoire contrôlé de facto par les milices séparatistes du Conseil des Pêcheries d'Islande, qui exercent un contrôle sur des portions de l'Atlantique Nord et contestent toute gouvernance extérieure sur les droits de pêche et les eaux territoriales. Leur résistance à l'autorité de Nordark sur les routes arctiques en fait un point de friction permanent, car ils revendiquent l'autonomie des passages nord-atlantiques que le Konsortiet cherche à intégrer dans son empire logistique.
-
-**Tensions internes** : Tension permanente avec Nordark sur le contrôle des eaux territoriales et des droits de passage ; fractures internes entre factions de pêcheurs pragmatiques acceptant des accords avec le Konsortiet et séparatistes intransigeants.
-
-**Rivaux** : Tromsø / Nœud Nordark ([[noeud_nordark_tromso]])
-
-*Sources attestées : milices_separatistes_du_conseil_des_pecheries_d_islande_breakdown*
-
-#### Islande (Milices des Pêcheries) — sous [[arctique_nordark]]
-
-*territoire_autonome — niveau 2 — statut : fragmenté*
-
-**Origine réelle (2026)** : Islande
-
-**Transition** : 2065-2098
-
-Territoire contrôlé de facto par les milices séparatistes du Conseil des Pêcheries d'Islande, qui exercent un contrôle sur des portions de l'Atlantique Nord et contestent toute gouvernance extérieure sur les droits de pêche et les eaux territoriales. Leur résistance à l'autorité de Nordark sur les routes arctiques en fait un point de friction permanent, car ils revendiquent l'autonomie des passages nord-atlantiques que le Konsortiet cherche à intégrer dans son empire logistique.
-
-**Tensions internes** : Tension permanente avec Nordark sur le contrôle des eaux territoriales et des droits de passage ; fractures internes entre factions de pêcheurs pragmatiques acceptant des accords avec le Konsortiet et séparatistes intransigeants.
-
-**Rivaux** : Tromsø / Nœud Nordark ([[noeud_nordark_tromso]])
-
-*Sources attestées : milices_separatistes_du_conseil_des_pecheries_d_islande_breakdown*
+*Sources attestées : reseau_mnemos_breakdown*
 
 #### Tromsø / Nœud Nordark — sous [[arctique_nordark]]
 
@@ -3744,71 +3919,74 @@ Ancienne ville portuaire norvégienne transformée en hub logistique armé, siè
 **Lieux emblématiques** :
 - Siège du Konsortiet Nordark (infrastructure) — Centre de commandement logistique et financier de Nordark, accès strictement contrôlé
 
-**Rivaux** : District de Mourmansk (Fédération Russe Résiduelle) ([[district_mourmansk_residuel]])
+**Rivaux** : district_mourmansk_residuel
 
 *Sources attestées : armada_logistique_nordique_breakdown*
 
-##### Autorité du Passage Arctique (Fantôme Institutionnel) — sous [[noeud_nordark_tromso]]
-
-*site_strategique — niveau 3 — statut : en_declin*
-
-**Origine réelle (2026)** : Tromsø, Norvège
-
-**Transition** : 2031-2098
-
-Institution fantôme fondée en 2031 sur une promesse de co-gouvernance entre États arctiques et nations inuites, yupik et samies. En 2098, trois délégués — dont deux se nient mutuellement toute légitimité — continuent de tamponner des documents dans un immeuble partiellement chauffé de Tromsø. Ses archives sont détenues par au moins quatre acteurs différents et constituent des munitions juridiques plutôt qu'un instrument de régulation réel.
-
-**Tensions internes** : Faction armée samie menaçant de publier les archives complètes pour prouver que les droits autochtones ont été contournés dès la fondation ; Bohai Transit et factions militaires nordiques se disputant le siège pour contrôler la légitimité juridique ; peuples autochtones co-gardiens soit absorbés dans des consortiums, soit en résistance armée.
-
-**Rivaux** : Groenland (Fonds des Glaces Libérées) ([[groenland_fonds_glaces]]), Corridor Sino-Sibérien (Axe Bohai Transit) ([[seul_kanal_bohai]])
-
-*Sources attestées : arctic_passage_authority_breakdown, armada_logistique_nordique_breakdown*
-
-#### Zone Polaire (Nœud Maître Mnemos — Rumeur) — sous [[arctique_nordark]]
-
-*site_strategique — niveau 2 — statut : emergent*
-
-**Origine réelle (2026)** : Arctique (zone indéterminée)
-
-**Transition** : 2051-2098 — voir [[effondrement_reseau_mondial_communication_breakdown]]
-
-Localisation rumored d'un nœud maître Mnemos encore intact contenant la sauvegarde complète du réseau originel, quelque part en zone polaire. Son existence supposée attire des expéditions aussi désespérées que dangereuses depuis plusieurs années. La superposition de ce mythe avec le territoire Nordark crée une tension supplémentaire : si le nœud existe, Nordark en contrôle l'accès de facto, ce que les gardiens de clusters Mnemos survivants refusent d'accepter.
-
-**Tensions internes** : Incertitude sur l'existence réelle du nœud ; factions rivales organisant des expéditions concurrentes ; risque que Nordark cherche à s'emparer du nœud pour contrôler la mémoire informationnelle globale.
-
-**Rivaux** : Tromsø / Nœud Nordark ([[noeud_nordark_tromso]])
-
-*Sources attestées : reseau_mnemos_breakdown*
-
-### Asie–Pacifique (Corridors sino-sibériens et Pacifique Nord)
-
-*bloc_continental — statut : stable*
-
-**Origine réelle (2026)** : Chine, Corée du Sud, Japon, Russie (Sibérie orientale), Viêt Nam, Philippines, Bhoutan, Sri Lanka, Maldives, Birmanie, Laos, Cambodge, Brunei, Timor oriental, Corée du Nord, Taïwan, Seychelles, Nauru, Tuvalu, Indonésie, Vietnam, Singapour
-
-**Transition** : 2049-2075 — voir [[effondrement_reseau_mondial_communication_breakdown]]
-
-Espace structuré autour du conglomérat sino-sibérien Bohai Transit comme l'un des rares opérateurs de flux encore fonctionnels à l'échelle continentale, et de la Coalition Pacifique Nord incarnant le repli souverainiste sur les ressources critiques. Séoul abrite encore des collectifs utilisant les anciens protocoles NexCore. Le delta du Mékong est présent comme territoire des cellules Racines-Mères. La Ligue Eurasiatique-Coalition Pacifique représente un pôle autonome contestant l'ordre global.
-
-**Tensions internes** : Tension entre logiques souverainistes de la Coalition Pacifique et besoins de flux trans-régionaux de Bohai Transit ; fragmentation informationnelle avec les îlots NexCore locaux sans coordination.
-
-**Rivaux** : Arc Eurasien Central ([[arc_eurasien_central]])
-
-*Sources attestées : conglometrat_sino_siberien_bohai_transit_breakdown, coalition_pacifique_nord_breakdown, ligue_eurasiatique_coalition_pacifique_breakdown, nexcore_breakdown, mouvement_racines_vivantes_breakdown, nexus_biosyn_breakdown*
-
-#### Delta du Mékong (Cellules Racines-Mères) — sous [[asie_pacifique_sud_est]]
+#### Occitanie (Cellules Racines-Mères) — sous [[arc_sahelo_mediterraneen]]
 
 *region — niveau 2 — statut : fragmenté*
 
-**Origine réelle (2026)** : Delta du Mékong, Viêt Nam/Cambodge
+**Origine réelle (2026)** : Occitanie, France
 
 **Transition** : 2070-2098
 
-Territoire des cellules Racines-Mères dans les friches du delta, où leurs cairns — trois pierres empilées, une branche d'aubépine fichée au sommet — jalonnent les routes défoncées de la décroissance. Certaines cellules sauvent des vies en produisant de la nourriture là où plus rien ne pousse ; d'autres ont fermé leurs frontières avec du fil barbelé béni.
+Territoire de l'ancienne région française où les cellules Racines-Mères jalonnent les routes défoncées de leurs cairns caractéristiques — trois pierres empilées, une branche d'aubépine au sommet. Les branches y sont particulièrement divisées entre factions ouvertes pratiquant la réciprocité et branches closes ayant érigé des frontières ritualisées. La proximité de Lyon-Part-Dieu et de l'arc sahélien en fait un nœud de tension entre mouvements de survie communautaire et logiques de fermeture tribale.
 
-**Tensions internes** : Fracture entre branches ouvertes fondées sur la réciprocité et branches closes xénophobes ; certaines cellules nouent des alliances avec des technologies de biologie synthétique qui risquent de faire exploser le mouvement ; lutte pour la légitimité de l'héritage Racines.
+**Tensions internes** : Fracture profonde entre branches ouvertes et branches closes ; certaines cellules s'allient avec des technologies de biologie synthétique contestées par les branches traditionalistes ; lutte pour la légitimité de l'héritage des Racines.
+
+**Alliés** : massif_central_cicatrices_vertes
 
 *Sources attestées : mouvement_racines_vivantes_breakdown*
+
+#### Philadelphia-Centrale — sous [[espace_nord_americain_fragmente]]
+
+*ville — niveau 2 — statut : en_declin*
+
+**Origine réelle (2026)** : Philadelphie, Pennsylvanie, États-Unis
+
+**Transition** : 2075-2098 — voir [[election_parti_commun_americain_breakdown]]
+
+Siège nominal du gouvernement du Parti Commun depuis l'élection de 2075. Marcus Webb y a pris ses fonctions dans un bâtiment sans chauffage ; son autorité s'arrête aux limites de ce que ses alliés locaux contrôlent réellement. Symbole de l'impossibilité d'une gouvernance nationale unifiée dans l'espace nord-américain fragmenté.
+
+**Tensions internes** : Autorité limitée aux alliés locaux ; refus de reconnaissance par les États du Sud et du Centre ; décalage abyssal entre les prétentions institutionnelles et la réalité du contrôle territorial.
+
+**Lieux emblématiques** :
+- Bâtiment du gouvernement Parti Commun (infrastructure) — Siège sans chauffage du président Webb, symbole de la gouvernance nominale
+
+**Rivaux** : detroit_sud
+
+*Sources attestées : election_parti_commun_americain_breakdown*
+
+#### Plaines de l'Ebre (Fragments Terrafond sous tutelle milicienne) — sous [[arc_sahelo_mediterraneen]]
+
+*region — niveau 2 — statut : fragmenté*
+
+**Origine réelle (2026)** : Vallée de l'Èbre, Espagne
+
+**Transition** : 2087-2098
+
+Fragments Terrafond des plaines espagnoles placés sous tutelle milicienne agro-territoriale. Le nom 'Terrafond' y est invoqué comme légitimité politique par des chefs locaux qui trahissent les principes fondateurs du réseau originel en exerçant un pouvoir autoritaire sur les populations agricoles.
+
+**Tensions internes** : Instrumentalisation du nom Terrafond par des pouvoirs autoritaires locaux ; tension entre fragments voulant maintenir l'éthique fondatrice et ceux ayant capitulé devant les milices ; pression des seigneuries foncières sur les ressources en eau.
+
+**Rivaux** : vallee_allier_terrafond
+
+*Sources attestées : cooperative_terrafond_breakdown*
+
+#### Grand São Paulo (Infrastructure RPDA Zombie) — sous [[nordeste_bresil_frente]]
+
+*zone_sinistree — niveau 2 — statut : fragmenté*
+
+**Origine réelle (2026)** : São Paulo, Brésil
+
+**Transition** : 2080-2098
+
+Mégapole brésilienne où la Rede Paulista de Distribuição Algorítmica continue d'émettre des ordres d'allocation d'eau, d'énergie et de logement depuis des serveurs non synchronisés, sans mise à jour démographique depuis 2091. Des fragments du système tournent en autonomie dans des enclaves, produisant des décisions algorithmiques localement contradictoires. Des milices ont appris à injecter de fausses données pour détourner des flux énergétiques destinés aux camps de déplacés.
+
+**Tensions internes** : Guerre autour des nœuds résiduels entre reconstructeurs d'une gouvernance algorithmique réformée et radicaux refusant toute délégation technique ; biais d'allocation favorisant les zones à faible densité (accident ou intention ?) ; groupes brûlant les nœuds réseaux encore actifs.
+
+*Sources attestées : rede_paulista_de_distribuicao_algoritmica_breakdown*
 
 #### Séoul (Collectif NexCore) — sous [[asie_pacifique_sud_est]]
 
@@ -3836,82 +4014,145 @@ Axe logistique continental opéré par le conglomérat Bohai Transit, l'un des r
 
 **Tensions internes** : Tension entre souverainisme de la Coalition Pacifique voulant nationaliser le corridor et logique de flux ouverts de Bohai Transit ; saboteurs ciblant les nœuds critiques ; pression des factions militaires eurasiatiques aux frontières.
 
-**Rivaux** : Arc Eurasien Central ([[arc_eurasien_central]])
+**Rivaux** : arc_eurasien_central
 
 *Sources attestées : conglometrat_sino_siberien_bohai_transit_breakdown, coalition_pacifique_nord_breakdown*
 
-### Espace Nord-Américain Fragmenté
+#### Sfax — sous [[arc_sahelo_mediterraneen]]
 
-*zone_sinistree — statut : fragmenté*
+*ville — niveau 2 — statut : stable*
 
-**Origine réelle (2026)** : États-Unis d'Amérique, Canada, Mexique, Uruguay
+**Origine réelle (2026)** : Sfax, Tunisie
 
-**Transition** : 2040-2075 — voir [[election_parti_commun_americain_breakdown]]
+**Transition** : 2070-2098
 
-L'ancien espace fédéral nord-américain s'est disloqué en plusieurs entités territoriales distinctes après l'échec de la gouvernance nationale unifiée. La 'victoire' du Parti Commun à Philadelphia-Centrale (avec seulement 41% dans les territoires encore capables d'élire) n'a fait qu'accélérer la sécession de fait des États du Sud et du Centre. Des zones grises comme Detroit-Sud illustrent la substitution de l'État par des milices locales administrant une économie de récupération.
+Relais méditerranéen des Bouches de l'Abîme et nœud de la Ligue Méditerranéenne des Villes-États Portuaires. Des paquets plastifiés y sont glissés sous des portes, et le réseau de courriers nomades sahélo-méditerranéens y fait transiter personnes, messages et marchandises entre le Sahel effondré et les nœuds encore fonctionnels du pourtour méditerranéen.
 
-**Tensions internes** : Trois entités territoriales distinctes coexistent sans reconnaissance mutuelle ; les milices locales exercent un pouvoir arbitraire sur les populations dans les zones de collapse ; tension entre entités côtières encore fonctionnelles et intérieur en effondrement.
+**Tensions internes** : Risque de corruption des cellules des Bouches par des factions régionales ; tension entre logique portuaire ouverte et pressions des blocs cherchant à contrôler les flux informationnels et logistiques.
 
-**Rivaux** : Arctique Nordark ([[arctique_nordark]])
+*Sources attestées : voix_du_dehors_breakdown, reseau_des_courriers_nomades_sahelo_mediterraneens_breakdown, ligue_mediterraneenne_des_villes_etats_portuaires_breakdown*
 
-*Sources attestées : election_parti_commun_americain_breakdown, arrestation_chris_van_derburgh_breakdown, coalition_pacifique_nord_breakdown*
+#### Terminal Pétrolier de Kharg — sous [[zone_golfe_levant]]
 
-#### Detroit-Sud — sous [[espace_nord_americain_fragmente]]
+*site_strategique — niveau 2 — statut : disparu*
 
-*zone_sinistree — niveau 2 — statut : fragmenté*
+**Origine réelle (2026)** : Île de Kharg, Iran
 
-**Origine réelle (2026)** : Détroit, Michigan, États-Unis
+**Transition** : 2027-2027 — voir [[conflit_israel_iran_2026_breakdown]]
 
-**Transition** : 2060-2098 — voir [[arrestation_chris_van_derburgh_breakdown]]
+Terminal pétrolier frappé en septembre 2027 lors des frappes israéliennes sur les infrastructures iraniennes, symbole de l'effondrement énergétique mondial. Les champignons de fumée noire captés par les satellites avant même que les chancelleries se réunissent ont marqué le début irréversible de la fragmentation des marchés énergétiques mondiaux.
 
-Zone de collapse emblématique illustrant la substitution de l'État par des milices locales administrant une économie de récupération. En 2078, l'arrestation de Chris Van Derburgh — collecteur de déchets technologiques accusé de 'hoarding stratégique' — y a documenté l'état de droit par la force : une transaction de pouvoir déguisée en procédure dans un monde sans légalité réelle.
+*Sources attestées : conflit_israel_iran_2026_breakdown*
 
-**Tensions internes** : Pouvoir arbitraire des milices locales sur les populations ; économie de récupération des objets du passé technologique comme enjeu de survie et de domination ; absence de cadre légal remplacée par des rapports de force.
+#### Tour BCUC (47e étage) — sous [[geneve_bunker_institutions]]
 
-**Lieux emblématiques** :
-- Zones de récupération technologique (site_strategique) — Caches de dispositifs 2024-2027 (batteries, processeurs, câbles) constituant des ressources vitales dans l'économie de récupération
+*infrastructure — niveau 2 — statut : en_declin*
 
-**Rivaux** : Philadelphia-Centrale ([[philadelphia_centrale]])
+**Origine réelle (2026)** : Genève, Suisse
 
-*Sources attestées : arrestation_chris_van_derburgh_breakdown, election_parti_commun_americain_breakdown*
+**Transition** : 2049-2071
 
-#### États du Sud et du Centre (Entités Sécessionistes) — sous [[espace_nord_americain_fragmente]]
+Siège du Bureau de Coordination d'Urgence Climatique au 47e étage d'une tour de Genève à moitié abandonnée. Une centaine de fonctionnaires y impriment des rapports que personne ne lit, émettant des 'alertes planétaires' en trois langues mortes de la diplomatie internationale. Les serveurs contiennent l'historique de cinquante ans d'interventions géo-ingénieristes, convoités par espionnage par tous les blocs.
 
-*territoire_herite — niveau 2 — statut : fragmenté*
+**Tensions internes** : Faction interne milite pour dissoudre l'agence et redistribuer les données en open source ; groupe de directeurs régionaux tente secrètement de ressusciter l'AMSC sous forme autoritaire ; le Directeur Général signe des décrets avec l'aplomb d'un homme qui gouvernerait encore le monde.
 
-**Origine réelle (2026)** : États du Sud des États-Unis, États du Centre des États-Unis
+**Alliés** : archives_neutres_geneve
 
-**Transition** : 2075-2098 — voir [[election_parti_commun_americain_breakdown]]
+*Sources attestées : agence_stabilisation_climatique_breakdown*
 
-Entités territoriales ayant refusé de reconnaître la victoire électorale du Parti Commun en 2075, constituant l'une des trois entités distinctes de l'espace nord-américain fragmenté. Ces territoires ont développé leurs propres structures de gouvernance de facto — milices, seigneuries agro-territoriales, enclaves fortifiées — sans reconnaissance mutuelle avec Philadelphia-Centrale ni avec les zones côtières encore partiellement fonctionnelles.
+#### Vallée de l'Allier (Fragment Terrafond) — sous [[arc_sahelo_mediterraneen]]
 
-**Tensions internes** : Absence de cohérence interne entre les différentes entités sécessionistes ; compétition entre seigneuries locales pour les ressources agricoles et hydriques ; pression des flux migratoires internes nord-américains.
+*region — niveau 2 — statut : en_declin*
 
-**Rivaux** : Philadelphia-Centrale ([[philadelphia_centrale]])
+**Origine réelle (2026)** : Vallée de l'Allier, Auvergne, France
+
+**Transition** : 2087-2098
+
+Fragment survivant de la Coopérative Terrafond dans une vallée carbonisée. Huit familles y cultivent un hectare de sorgho sous filet anti-UV de récupération, sans savoir si d'autres fragments Terrafond existent encore. Le logo des trois rivières entrelacées sur fond ocre persiste sur une pancarte délavée, emblème d'un réseau désormais réduit à une langue commune sans corps central.
+
+**Tensions internes** : Isolement total des autres fragments Terrafond ; tension entre préserver le nom comme promesse de reconnexion et y renoncer pour éviter d'attirer des prédateurs ; rumeurs d'un 'Nœud-Mère' tentant de recontacter les fragments.
+
+*Sources attestées : cooperative_terrafond_breakdown*
+
+#### Zone Polaire (Nœud Maître Mnemos — Rumeur) — sous [[arctique_nordark]]
+
+*site_strategique — niveau 2 — statut : emergent*
+
+**Origine réelle (2026)** : Arctique (zone indéterminée)
+
+**Transition** : 2051-2098 — voir [[effondrement_reseau_mondial_communication_breakdown]]
+
+Localisation rumored d'un nœud maître Mnemos encore intact contenant la sauvegarde complète du réseau originel, quelque part en zone polaire. Son existence supposée attire des expéditions aussi désespérées que dangereuses depuis plusieurs années. La superposition de ce mythe avec le territoire Nordark crée une tension supplémentaire : si le nœud existe, Nordark en contrôle l'accès de facto, ce que les gardiens de clusters Mnemos survivants refusent d'accepter.
+
+**Tensions internes** : Incertitude sur l'existence réelle du nœud ; factions rivales organisant des expéditions concurrentes ; risque que Nordark cherche à s'emparer du nœud pour contrôler la mémoire informationnelle globale.
+
+**Rivaux** : noeud_nordark_tromso
+
+*Sources attestées : reseau_mnemos_breakdown*
+
+#### Zones Côtières Nord-Américaines (Entités Fonctionnelles Résiduelles) — sous [[espace_nord_americain_fragmente]]
+
+*region — niveau 2 — statut : en_declin*
+
+**Origine réelle (2026)** : Côte Est des États-Unis, Côte Ouest des États-Unis, Canada côtier
+
+**Transition** : 2060-2098 — voir [[election_parti_commun_americain_breakdown]]
+
+Mégapoles et États côtiers encore partiellement fonctionnels qui ont permis l'élection technique du Parti Commun en 2075. Ces territoires maintiennent des infrastructures minimales — énergie, communications, commerce — et constituent le socle territorial réel de l'autorité nominale de Philadelphia-Centrale. Leur cohérence relative par rapport à l'intérieur en effondrement les place dans une position ambiguë : assez stables pour être convoités, trop fragmentés pour imposer leur ordre.
+
+**Tensions internes** : Pression démographique des flux migratoires internes ; tension entre velléités d'autonomie des mégapoles et allégeance nominale à Philadelphia-Centrale ; concurrence pour les ressources hydriques et alimentaires avec les territoires de l'intérieur.
+
+**Alliés** : philadelphia_centrale
+
+**Rivaux** : etats_sud_centre_americain
 
 *Sources attestées : election_parti_commun_americain_breakdown*
 
-#### Compact de l'Eau Dernière (Grands Lacs) — sous [[espace_nord_americain_fragmente]]
+##### Autorité du Passage Arctique (Fantôme Institutionnel) — sous [[noeud_nordark_tromso]]
 
-*territoire_autonome — niveau 2 — statut : fragmenté*
+*site_strategique — niveau 3 — statut : en_declin*
 
-**Origine réelle (2026)** : Région des Grands Lacs, États-Unis / Canada
+**Origine réelle (2026)** : Tromsø, Norvège
 
-**Transition** : 2053-2098 — voir [[secession_grands_lacs_eau_douce_breakdown]]
+**Transition** : 2031-2098
 
-Confédération lacustre née de la Charte de Souveraineté Hydrique signée en 2053 à Chicago-Lacustre, rédigée en trois langues autochtones et en anglais, non reconnue par Washington. Épine dorsale industrielle assurée par les Communes Libres du Rust Belt, elle regroupe 8 entités étatiques résiduelles et 40 nations autochtones mais se fracture rapidement en zones de contrôle disputées. L'eau douce, théoriquement protégée, est devenue l'enjeu d'une guerre d'usure entre milices hydriques, nations autochtones souveraines et enclaves corporatives.
+Institution fantôme fondée en 2031 sur une promesse de co-gouvernance entre États arctiques et nations inuites, yupik et samies. En 2098, trois délégués — dont deux se nient mutuellement toute légitimité — continuent de tamponner des documents dans un immeuble partiellement chauffé de Tromsø. Ses archives sont détenues par au moins quatre acteurs différents et constituent des munitions juridiques plutôt qu'un instrument de régulation réel.
 
-**Tensions internes** : Fracture interne entre entités membres sur les droits de transit (détroit de Mackinac) ; pression des milices d'accaparement hydrique aux marges ; afflux de réfugiés du Midwest menaçant les équilibres locaux ; tension entre communes autogérées et seigneuries foncières opportunistes.
+**Tensions internes** : Faction armée samie menaçant de publier les archives complètes pour prouver que les droits autochtones ont été contournés dès la fondation ; Bohai Transit et factions militaires nordiques se disputant le siège pour contrôler la légitimité juridique ; peuples autochtones co-gardiens soit absorbés dans des consortiums, soit en résistance armée.
 
-**Lieux emblématiques** :
-- Chicago-Lacustre (ville) — Capitale de facto du Compact, ancienne grande métropole reconvertie en nœud de gouvernance confédérale fragile
-- Détroit de Mackinac (site_strategique) — Point de friction militarisé sur les droits de transit lacustres entre factions rivales
+**Rivaux** : groenland_fonds_glaces, seul_kanal_bohai
 
-**Alliés** : Philadelphia-Centrale ([[philadelphia_centrale]])
+*Sources attestées : arctic_passage_authority_breakdown, armada_logistique_nordique_breakdown*
 
-**Rivaux** : États du Sud et du Centre (Entités Sécessionistes) ([[etats_sud_centre_americain]])
+##### Cargo au Large de Mombasa (Délégation CRRC) — sous [[nairobi_crrc]]
 
-*Sources attestées : secession_grands_lacs_eau_douce_breakdown, exode_midwest_desertification_2044_breakdown, election_parti_commun_americain_breakdown*
+*infrastructure — niveau 3 — statut : en_declin*
+
+**Origine réelle (2026)** : Mombasa, Kenya
+
+**Transition** : 2071-2098
+
+Base flottante de l'une des trois délégations rivales du CRRC, transmettant ses résolutions par satellite crypté depuis un cargo ancré au large de Mombasa. Cette délégation, incapable de se maintenir physiquement à Nairobi, a choisi la mobilité comme protection et comme forme de légitimité alternative — ni au sol, ni dissolue. Symbole de l'institutionnel rendu nomade par la pression des effondrements.
+
+**Tensions internes** : Légitimité contestée par les deux autres délégations CRRC ; dépendance aux ressources du cargo pour la survie physique de la délégation ; risque d'interception ou de sabotage des communications satellite.
+
+**Rivaux** : bloc_johannesburg
+
+*Sources attestées : conseil_regulation_ressources_breakdown*
+
+##### Ancien Centre de Contrôle Continental (Trame Bioclimatique — Rumeur) — sous [[massif_central_cicatrices_vertes]]
+
+*site_strategique — niveau 3 — statut : emergent*
+
+**Origine réelle (2026)** : Massif Central, France
+
+**Transition** : 2070-2098
+
+Localisation supposée d'un ancien centre de contrôle continental de la Trame Bioclimatique qui serait encore actif, gérant automatiquement des flux que personne ne comprend plus. Sa découverte constituerait soit la clé pour sauver la Trame continentale, soit l'opportunité d'achever son pillage systématique. Les techniciens nomades qui tentent de reconnecter les tronçons orphelins cherchent activement ce centre, ce que les factions contrôlant les Cicatrices Vertes perçoivent comme une menace directe à leur pouvoir.
+
+**Tensions internes** : Incertitude sur l'existence et la localisation du centre ; factions rivales organisant des expéditions de reconnaissance ; risque que sa découverte déclenche une guerre entre les seigneurs du territoire.
+
+*Sources attestées : trame_bioclimatique_breakdown*
 
 ##### Communes Libres du Rust Belt (Forges du Commun) — sous [[grandes_lacs_compact_eau]]
 
@@ -3928,716 +4169,26 @@ Réseau de dix-neuf communes actives dans l'ancienne ceinture industrielle amér
 **Lieux emblématiques** :
 - Carrie Furnace (Pittsburgh) (infrastructure) — Ancienne usine sidérurgique reconvertie en centrale de récupération thermique, symbole de la résilience du mouvement
 
-**Rivaux** : Detroit-Sud ([[detroit_sud]])
+**Rivaux** : detroit_sud
 
 *Sources attestées : mouvement_des_communes_du_rust_belt_breakdown, secession_grands_lacs_eau_douce_breakdown, exode_midwest_desertification_2044_breakdown*
 
-#### Midwest Désertifié (Zone de Déprise) — sous [[espace_nord_americain_fragmente]]
+##### Port de Mourmansk — sous [[district_mourmansk_residuel]]
 
-*zone_sinistree — niveau 2 — statut : disparu*
+*infrastructure — niveau 3 — statut : fragmenté*
 
-**Origine réelle (2026)** : Midwest des États-Unis
-
-**Transition** : 2044-2060 — voir [[exode_midwest_desertification_2044_breakdown]]
-
-Ancien grenier américain ravagé par trois étés consécutifs à plus de 55°C en 2044, ayant provoqué l'exode de 18 millions de personnes en dix-huit mois. Le Bureau des Territoires Résiduels s'est effondré sous la pression, ses archives brûlées ou falsifiées. Des seigneuries foncières opportunistes ont accaparé les terres abandonnées à prix nuls, constituant des fiefs agricoles armés dans un espace sans gouvernance.
-
-**Tensions internes** : Présence résiduelle de seigneuries foncières armées exploitant des terres accaparées ; populations sans identité documentée tombées dans des circuits de main-d'œuvre captive ; culture de méfiance radicale entre communautés héritée du traumatisme de 2044.
-
-*Sources attestées : exode_midwest_desertification_2044_breakdown*
-
-#### Philadelphia-Centrale — sous [[espace_nord_americain_fragmente]]
-
-*ville — niveau 2 — statut : en_declin*
-
-**Origine réelle (2026)** : Philadelphie, Pennsylvanie, États-Unis
-
-**Transition** : 2075-2098 — voir [[election_parti_commun_americain_breakdown]]
-
-Siège nominal du gouvernement du Parti Commun depuis l'élection de 2075. Marcus Webb y a pris ses fonctions dans un bâtiment sans chauffage ; son autorité s'arrête aux limites de ce que ses alliés locaux contrôlent réellement. Symbole de l'impossibilité d'une gouvernance nationale unifiée dans l'espace nord-américain fragmenté.
-
-**Tensions internes** : Autorité limitée aux alliés locaux ; refus de reconnaissance par les États du Sud et du Centre ; décalage abyssal entre les prétentions institutionnelles et la réalité du contrôle territorial.
-
-**Lieux emblématiques** :
-- Bâtiment du gouvernement Parti Commun (infrastructure) — Siège sans chauffage du président Webb, symbole de la gouvernance nominale
-
-**Rivaux** : Detroit-Sud ([[detroit_sud]])
-
-*Sources attestées : election_parti_commun_americain_breakdown*
-
-#### Zones Côtières Nord-Américaines (Entités Fonctionnelles Résiduelles) — sous [[espace_nord_americain_fragmente]]
-
-*region — niveau 2 — statut : en_declin*
-
-**Origine réelle (2026)** : Côte Est des États-Unis, Côte Ouest des États-Unis, Canada côtier
-
-**Transition** : 2060-2098 — voir [[election_parti_commun_americain_breakdown]]
-
-Mégapoles et États côtiers encore partiellement fonctionnels qui ont permis l'élection technique du Parti Commun en 2075. Ces territoires maintiennent des infrastructures minimales — énergie, communications, commerce — et constituent le socle territorial réel de l'autorité nominale de Philadelphia-Centrale. Leur cohérence relative par rapport à l'intérieur en effondrement les place dans une position ambiguë : assez stables pour être convoités, trop fragmentés pour imposer leur ordre.
-
-**Tensions internes** : Pression démographique des flux migratoires internes ; tension entre velléités d'autonomie des mégapoles et allégeance nominale à Philadelphia-Centrale ; concurrence pour les ressources hydriques et alimentaires avec les territoires de l'intérieur.
-
-**Alliés** : Philadelphia-Centrale ([[philadelphia_centrale]])
-
-**Rivaux** : États du Sud et du Centre (Entités Sécessionistes) ([[etats_sud_centre_americain]])
-
-*Sources attestées : election_parti_commun_americain_breakdown*
-
-### Genève-Bunker (Nœud Institutionnel Résiduel)
-
-*site_strategique — statut : fragmenté*
-
-**Origine réelle (2026)** : Suisse, Irlande, Luxembourg, Vatican, Pologne
-
-**Transition** : 2049-2071
-
-Genève en 2098 est un site fortifié abritant les dernières archives juridiques et climatiques de l'ère pré-effondrement, convoitées par les blocs rivaux. Les structures institutionnelles ont été vidées de leur substance : le BCUC n'est plus qu'une coquille disputée entre factions locales, les Archives Neutres sont gérées par une milice privée sous contrat avec le Bloc IX, et le CRRC n'existe plus que comme label fantôme utilisé pour légitimer des raids sur les données. Aucun pouvoir supranational n'y subsiste, seulement des fragments de légitimité instrumentalisables.
-
-**Tensions internes** : Conflits permanents entre la milice archivistique du Bloc IX, les mercenaires du Bloc IV chargés de la 'protection' des données, et des groupes locaux tentant de monnayer l'accès aux archives. Les anciens fonctionnaires survivent comme intermédiaires ou otages.
-
-**Rivaux** : Afrique Centrale et Australe ([[afrique_centrale_australe]]), Arc Eurasien Central ([[arc_eurasien_central]])
-
-*Sources attestées : agence_stabilisation_climatique_breakdown, alliance_blocs_souverains_breakdown, archives_neutres_de_geneve_breakdown, conseil_regulation_ressources_breakdown*
-
-#### Archives Neutres de Genève-Bunker — sous [[geneve_bunker_institutions]]
-
-*site_strategique — niveau 2 — statut : en_declin*
-
-**Origine réelle (2026)** : Genève, Suisse
-
-**Transition** : 2049-2098
-
-Dernier référentiel partagé de légitimité juridique internationale, point d'ancrage physique pour des normes que les États et blocs contestent ou ignorent. Les archivistes-juristes qui y travaillent ont recensé 340 violations croisées des traités ABS entre 2091 et 2097. Convoité par tous les acteurs géopolitiques comme ultime monnaie d'échange institutionnelle.
-
-**Tensions internes** : Opposition entre archivistes-juristes voulant préserver les traités comme socle normatif futur et commandants de terrain voulant les effacer pour repartir de zéro ; menace permanente d'espionnage ou de saisie par les blocs régionaux.
-
-**Alliés** : Tour BCUC (47e étage) ([[tour_bcuc_geneve]])
-
-**Rivaux** : Johannesburg (Bloc Austral) ([[bloc_johannesburg]]), Arc Eurasien Central ([[arc_eurasien_central]])
-
-*Sources attestées : archives_neutres_de_geneve_breakdown, alliance_blocs_souverains_breakdown*
-
-#### Cracovie (Antenne du Registre des Zones Non Récupérables) — sous [[geneve_bunker_institutions]]
-
-*site_strategique — niveau 2 — statut : en_declin*
-
-**Origine réelle (2026)** : Cracovie, Pologne
-
-**Transition** : 2055-2098
-
-Sous-sol cracovien abritant l'une des antennes encore actives du Registre des Zones Non Récupérables, compilant avec rigueur bureaucratique absurde des archives sur des territoires officiellement effacés. Ses agents — fonctionnaires oubliés ou simples dépositaires — remplissent des formulaires pour des États qui n'existent plus. Le Registre est ici devenu le seul témoin systématique de ce que l'ancien monde a délibérément laissé mourir dans l'arc eurasien.
-
-**Tensions internes** : Agents dissidents cherchant à transmettre les données aux communautés concernées contre ceux les monétisant auprès de seigneuries logistiques ; risque que la publication des archives fournisse aux prédateurs une cartographie précise des territoires sans défense.
-
-**Alliés** : Archives Neutres de Genève-Bunker ([[archives_neutres_geneve]])
-
-*Sources attestées : bureau_des_territoires_residuels_breakdown*
-
-#### Hanse Baltique Recomposée — sous [[geneve_bunker_institutions]]
-
-*union_regionale — niveau 2 — statut : stable*
-
-**Origine réelle (2026)** : Pologne (côte baltique)
+**Origine réelle (2026)** : Mourmansk, Russie
 
 **Transition** : 2060-2098
 
-Bloc de résistance régionale structuré maintenant des flux économiques et une cohérence institutionnelle minimale dans l'espace baltique, en marge de l'empire Nordark. La Hanse Recomposée s'appuie sur des réseaux commerciaux historiques réactivés pour maintenir une forme d'autonomie vis-à-vis du Konsortiet, tout en négociant des accords de transit qui la placent dans une dépendance structurelle difficile à assumer.
+Infrastructure portuaire arctique disputée entre les factions résiduelles de l'État russe à Mourmansk et le Konsortiet Nordark qui cherche à l'intégrer dans son empire logistique. Dernier grand port en eau libre de la façade arctique russe, il constitue un nœud stratégique incontournable pour les flux entre l'arc eurasien et les corridors arctiques. Son contrôle détermine en partie qui peut prétendre à une souveraineté effective sur la région.
 
-**Tensions internes** : Dépendance aux corridors Nordark pour les échanges nord-sud ; factions favorables à une intégration formelle dans l'empire Nordark contre tenants d'une autonomie coûteuse ; pression des factions militaires résiduelles de l'ex-OTAN nordique cherchant à instrumentaliser la Hanse.
+**Tensions internes** : Conflit ouvert entre factions locales pro-autonomie et pression de Nordark pour absorber le port dans son réseau tarifaire ; sabotage des installations par des factions militaires internes refusant toute concession.
 
-**Rivaux** : Tromsø / Nœud Nordark ([[noeud_nordark_tromso]])
+**Rivaux** : noeud_nordark_tromso
 
-*Sources attestées : hanse_baltique_recomposee_breakdown*
+*Sources attestées : federation_russe_residuelle_district_de_mourmansk_breakdown, armada_logistique_nordique_breakdown*
 
-#### Tour BCUC (47e étage) — sous [[geneve_bunker_institutions]]
-
-*infrastructure — niveau 2 — statut : en_declin*
-
-**Origine réelle (2026)** : Genève, Suisse
-
-**Transition** : 2049-2071
-
-Siège du Bureau de Coordination d'Urgence Climatique au 47e étage d'une tour de Genève à moitié abandonnée. Une centaine de fonctionnaires y impriment des rapports que personne ne lit, émettant des 'alertes planétaires' en trois langues mortes de la diplomatie internationale. Les serveurs contiennent l'historique de cinquante ans d'interventions géo-ingénieristes, convoités par espionnage par tous les blocs.
-
-**Tensions internes** : Faction interne milite pour dissoudre l'agence et redistribuer les données en open source ; groupe de directeurs régionaux tente secrètement de ressusciter l'AMSC sous forme autoritaire ; le Directeur Général signe des décrets avec l'aplomb d'un homme qui gouvernerait encore le monde.
-
-**Alliés** : Archives Neutres de Genève-Bunker ([[archives_neutres_geneve]])
-
-*Sources attestées : agence_stabilisation_climatique_breakdown*
-
-### Nordeste Brésilien (Frente Sertão Livre)
-
-*region — statut : fragmenté*
-
-**Origine réelle (2026)** : Pernambuco, Brésil, Ceará, Brésil, Piauí, Brésil
-
-**Transition** : 2030-2098
-
-Semi-aride nordeste et franges du cerrado brésilien où l'effondrement des structures étatiques a laissé place à la Frente Sertão Livre — constellation de nœuds communautaires autonomes articulés autour de citernes collectives, banques de semences sèches et micro-réseaux solaires. Leurs marchés hebdomadaires sous des baobabs transplantés constituent les seules zones d'échange non taxées par des milices dans la région. Les capitales côtières se sont liquidéfiées sous la montée des eaux et les émeutes de la faim.
-
-**Tensions internes** : Tension entre refus de hiérarchie formelle et nécessité d'une défense collective coordonnée ; nœuds épuisés acceptant des pactes avec des cartels logistiques contre carburant et médicaments ; test existentiel de l'accueil des réfugiés côtiers désespérés.
-
-*Sources attestées : frente_sertao_livre_breakdown*
-
-#### Grand São Paulo (Infrastructure RPDA Zombie) — sous [[nordeste_bresil_frente]]
-
-*zone_sinistree — niveau 2 — statut : fragmenté*
-
-**Origine réelle (2026)** : São Paulo, Brésil
-
-**Transition** : 2080-2098
-
-Mégapole brésilienne où la Rede Paulista de Distribuição Algorítmica continue d'émettre des ordres d'allocation d'eau, d'énergie et de logement depuis des serveurs non synchronisés, sans mise à jour démographique depuis 2091. Des fragments du système tournent en autonomie dans des enclaves, produisant des décisions algorithmiques localement contradictoires. Des milices ont appris à injecter de fausses données pour détourner des flux énergétiques destinés aux camps de déplacés.
-
-**Tensions internes** : Guerre autour des nœuds résiduels entre reconstructeurs d'une gouvernance algorithmique réformée et radicaux refusant toute délégation technique ; biais d'allocation favorisant les zones à faible densité (accident ou intention ?) ; groupes brûlant les nœuds réseaux encore actifs.
-
-*Sources attestées : rede_paulista_de_distribuicao_algoritmica_breakdown*
-
-### Zone Golfe Persique–Levant
-
-*zone_sinistree — statut : fragmenté*
-
-**Origine réelle (2026)** : Israël, Iran, Arabie saoudite, Irak, Émirats arabes unis, Chypre, Arménie, Afghanistan, Jordanie, Oman, Bahreïn, Palestine, Yémen, Liban, Syrie, Qatar, Koweït
-
-**Transition** : 2027-2045 — voir [[conflit_israel_iran_2026_breakdown]]
-
-Zone grise permanente issue du conflit israélo-iranien de 2027 et de la fermeture du détroit d'Ormuz. La destruction partielle des infrastructures pétrolières du Golfe a rendu caducs les derniers mécanismes de régulation internationale des ressources énergétiques. Aucun acteur souverain n'y exerce de contrôle stable ; la zone sert de modèle fractal à d'autres régions en voie de désintégration, et les flux migratoires qu'elle génère saturent les corridors eurasiens.
-
-**Tensions internes** : État de guerre permanente de basse à moyenne intensité entre entités héritières ; les flux d'hydrocarbures ont été redessinnés pour les décennies suivantes sans régulation internationale.
-
-**Rivaux** : Arc Eurasien Central ([[arc_eurasien_central]])
-
-*Sources attestées : conflit_israel_iran_2026_breakdown, vasil_orentchev_breakdown*
-
-#### Bassorah — sous [[zone_golfe_levant]]
-
-*ville — niveau 2 — statut : fragmenté*
-
-**Origine réelle (2026)** : Bassorah, Irak
-
-**Transition** : 2027-2045 — voir [[conflit_israel_iran_2026_breakdown]]
-
-Point de départ documenté de l'exode migratoire massif vers l'arc eurasien à partir de 2027, photographié par Le Signal sur les réseaux mesh lors du conflit israélo-iranien. Les colonnes de réfugiés quittant Bassorah ont initié un flux qui ne s'est jamais arrêté, saturant les corridors eurasiens et modifiant durablement l'équilibre démographique de la zone.
-
-**Tensions internes** : Ville résiduelle sous pression migratoire continue ; infrastructures en délabrement avancé ; contrôle disputé entre factions locales héritières.
-
-*Sources attestées : conflit_israel_iran_2026_breakdown, vasil_orentchev_breakdown*
-
-#### Détroit d'Ormuz — sous [[zone_golfe_levant]]
-
-*infrastructure — niveau 2 — statut : fragmenté*
-
-**Origine réelle (2026)** : Détroit d'Ormuz (Oman/Iran)
-
-**Transition** : 2027-2045 — voir [[conflit_israel_iran_2026_breakdown]]
-
-Fermé par l'Arabie saoudite en 2027 à titre 'préventif' lors du conflit israélo-iranien, déclenchant une panique énergétique mondiale immédiate. Cette fermeture a rendu caducs les derniers mécanismes de régulation internationale des ressources énergétiques et redessiné les flux d'hydrocarbures pour les décennies suivantes.
-
-**Tensions internes** : Contrôle disputé entre factions héritières des États du Golfe ; aucun acteur souverain n'y exerce de contrôle stable ; les tentatives de réouverture négociée se heurtent à l'absence d'interlocuteur légitime.
-
-*Sources attestées : conflit_israel_iran_2026_breakdown*
-
-#### Haïfa (Zone de Frappes Balistiques) — sous [[zone_golfe_levant]]
-
-*zone_sinistree — niveau 2 — statut : fragmenté*
-
-**Origine réelle (2026)** : Haïfa, Israël
-
-**Transition** : 2027-2045 — voir [[conflit_israel_iran_2026_breakdown]]
-
-Cible des salves de missiles balistiques iraniens en représailles aux frappes israéliennes de septembre 2027. Ville côtière partiellement détruite dont l'état illustre la spirale d'escalade mutuelle qui a rendu impossible toute médiation. Les infrastructures portuaires et les champs gaziers offshore associés ont été gravement endommagés, contribuant à la désorganisation des flux énergétiques régionaux.
-
-**Tensions internes** : Contrôle disputé entre factions héritières de l'État israélien ; infrastructures partiellement fonctionnelles sous administration de facto de groupes armés locaux.
-
-*Sources attestées : conflit_israel_iran_2026_breakdown*
-
-#### Ispahan–Fordow (Sites Frappés) — sous [[zone_golfe_levant]]
-
-*zone_sinistree — niveau 2 — statut : disparu*
-
-**Origine réelle (2026)** : Ispahan, Iran, Fordow, Iran
-
-**Transition** : 2027-2027 — voir [[conflit_israel_iran_2026_breakdown]]
-
-Sites des installations nucléaires iraniennes frappées en septembre 2027 lors des frappes israéliennes qui ont déclenché la crise énergétique mondiale. Zones de contamination et de dévastation symbolisant le point de basculement irréversible du conflit israélo-iranien. Leur destruction a supprimé toute possibilité d'accord nucléaire futur et transformé durablement la géopolitique régionale en état de guerre permanente.
-
-*Sources attestées : conflit_israel_iran_2026_breakdown*
-
-#### Terminal Pétrolier de Kharg — sous [[zone_golfe_levant]]
-
-*site_strategique — niveau 2 — statut : disparu*
-
-**Origine réelle (2026)** : Île de Kharg, Iran
-
-**Transition** : 2027-2027 — voir [[conflit_israel_iran_2026_breakdown]]
-
-Terminal pétrolier frappé en septembre 2027 lors des frappes israéliennes sur les infrastructures iraniennes, symbole de l'effondrement énergétique mondial. Les champignons de fumée noire captés par les satellites avant même que les chancelleries se réunissent ont marqué le début irréversible de la fragmentation des marchés énergétiques mondiaux.
-
-*Sources attestées : conflit_israel_iran_2026_breakdown*
-
-### Archipel Anglo-Celtique
-
-*territoire_autonome — statut : stable*
-
-**Origine réelle (2026)** : Royaume-Uni, Angleterre, Pays de Galles
-
-**Transition** : 2030-2060 — voir [[Effondrement des accords post-Brexit et montée des milices locales.]]
-
-Ancien Royaume-Uni fragmenté en entités autonomes, centré sur Londres comme nœud financier résiduel. Les îles conservent une relative stabilité grâce à leur insularité et à des réseaux logistiques privés.
-
-**Tensions internes** : Conflits entre élites financières et communautés locales, pression migratoire depuis l'Europe continentale.
-
-**Lieux emblématiques** :
-- Londres
-- Édimbourg
-- Cardiff
-
-**Alliés** : Genève-Bunker (Nœud Institutionnel Résiduel) ([[geneve_bunker_institutions]])
-
-**Rivaux** : Arc Eurasien Central ([[arc_eurasien_central]])
-
-### Inde (Sous-Continent Résilient)
-
-*territoire_herite — statut : fragmenté*
-
-**Origine réelle (2026)** : Inde, Bangladesh, Pakistan
-
-**Transition** : 2050-2075 — voir [[Effondrement du système fédéral indien après la crise climatique de 2048.]]
-
-L'Inde de 2098 est un archipel de mégapoles autonomes et de zones rurales abandonnées, unie par des réseaux informels de survie. Les conflits pour l'eau et les terres arables dominent la région, tandis que les anciennes structures étatiques se sont effritées.
-
-**Tensions internes** : Guerres entre cités-États, pénuries chroniques, montée des cultes millénaristes.
-
-**Lieux emblématiques** :
-- Delhi (Citadelle Autonome)
-- Mumbai (Port Franc)
-- Bengaluru (Nœud Technologique Résiduel)
-
-**Rivaux** : Asie–Pacifique (Corridors sino-sibériens et Pacifique Nord) ([[asie_pacifique_sud_est]])
-
-#### Karachi (Marché BioSyn) — sous [[inde_sous_continent_resilient]]
-
-*ville — niveau 2 — statut : fragmenté*
-
-**Origine réelle (2026)** : Karachi, Pakistan
-
-**Transition** : 2055-2098
-
-Marché de distribution de biosyn générique, où des opérateurs locaux brandissent des licences photocopiées et des codes d'activation expirés de Nexus BioSyn pour justifier leur monopole sur la nourriture et la guérison. Le mot 'biosyn' y est devenu un nom commun : une ampoule de biosyn, un sac de graines biosyn. La marque a survécu à l'entreprise.
-
-**Tensions internes** : Compétition entre opérateurs locaux brandissant des licences de légitimité douteuse ; pirates biologiques tentant de décoder et libérer les séquences propriétaires ; populations vivant sous la menace d'une 'coupure de licence' pour leurs cultures génétiquement verrouillées.
-
-*Sources attestées : nexus_biosyn_breakdown*
-
-### Venezuela (Archipel Pétrolier)
-
-*territoire_herite — statut : fragmenté*
-
-**Origine réelle (2026)** : Venezuela
-
-**Transition** : 2035-2060 — voir [[Effondrement de l'État vénézuélien après l'épuisement des réserves pétrolières faciles.]]
-
-Le Venezuela de 2098 est un territoire morcelé en enclaves contrôlées par des seigneurs de guerre et des cartels, centré autour des dernières réserves pétrolières exploitables. Les zones côtières sont dominées par des cités-États marchandes.
-
-**Tensions internes** : Guerres entre factions pour le contrôle des ressources, effondrement des infrastructures.
-
-**Lieux emblématiques** :
-- Caracas (Citadelle Assiégée)
-- Maracaibo (Port Franc)
-- Orinoco (Zone Minière Disputée)
-
-**Rivaux** : Arc Sahélo-Méditerranéen ([[arc_sahelo_mediterraneen]])
-
-### Chili (Cordillère Autonome)
-
-*territoire_autonome — statut : stable*
-
-**Origine réelle (2026)** : Chili
-
-**Transition** : 2040-2070 — voir [[Sécession de fait après l'effondrement des gouvernements sud-américains.]]
-
-Le Chili de 2098 est une entité autonome centrée sur la cordillère des Andes, contrôlant les dernières ressources en eau et en minerais stratégiques. Les villes côtières sont des hubs commerciaux indépendants.
-
-**Tensions internes** : Conflits entre élites minières et communautés locales, pression migratoire.
-
-**Lieux emblématiques** :
-- Santiago (Capitale Autonome)
-- Valparaíso (Port Franc)
-- Atacama (Zone Minière Stratégique)
-
-**Rivaux** : Venezuela (Archipel Pétrolier) ([[venezuela_archipel_petrolier]])
-
-### Australie (Continent Insulaire)
-
-*territoire_autonome — statut : stable*
-
-**Origine réelle (2026)** : Australie
-
-**Transition** : 2050-2080 — voir [[Retrait progressif de l'État fédéral après la crise climatique de 2045.]]
-
-L'Australie de 2098 est un continent insulaire divisé en plusieurs entités autonomes, centré sur des mégapoles côtières et des zones intérieures abandonnées. Les ressources minières et agricoles sont contrôlées par des conglomérats locaux.
-
-**Tensions internes** : Conflits entre cités-États, pression des migrants climatiques, gestion des ressources en eau.
-
-**Lieux emblématiques** :
-- Sydney (Nœud Financier)
-- Melbourne (Citadelle Culturelle)
-- Outback (Zone Désertique Abandonnée)
-
-**Alliés** : Nouvelle-Zélande (Archipel Pacifique) ([[nouvelle_zelande_archipel_pacifique]])
-
-### Nouvelle-Zélande (Archipel Pacifique)
-
-*territoire_autonome — statut : stable*
-
-**Origine réelle (2026)** : Nouvelle-Zélande, Polynésie française
-
-**Transition** : 2040-2070 — voir [[Fermeture des frontières après la montée des eaux et les crises migratoires.]]
-
-La Nouvelle-Zélande de 2098 est un archipel autonome, devenu un refuge pour les élites et les technologies résiduelles. Les îles sont divisées en communautés fermées et en zones agricoles hautement contrôlées.
-
-**Tensions internes** : Contrôle strict des frontières, tensions entre élites et populations locales.
-
-**Lieux emblématiques** :
-- Auckland (Capitale Technologique)
-- Wellington (Nœud Politique)
-- South Island (Réserve Agricole)
-
-**Alliés** : Australie (Continent Insulaire) ([[australie_continent_insulaire]])
-
-### Himalaya Népalais (Sanctuaire Autonome)
-
-*territoire_autonome — statut : emergent*
-
-**Origine réelle (2026)** : Népal
-
-**Transition** : 2050-2075
-
-Région montagneuse isolée, devenue un sanctuaire autonome après l'effondrement des États-nations voisins. Structurée autour de communautés locales et de monastères bouddhistes.
-
-**Tensions internes** : Conflits entre factions locales et pressions extérieures pour le contrôle des ressources hydriques.
-
-**Lieux emblématiques** :
-- Kathmandu
-- Everest Base Camp
-
-**Rivaux** : Arc Eurasien Central ([[arc_eurasien_central]]), Asie–Pacifique (Corridors sino-sibériens et Pacifique Nord) ([[asie_pacifique_sud_est]])
-
-### Archipel des Comores (Autonomie Insulaire)
-
-*territoire_autonome — statut : emergent*
-
-**Origine réelle (2026)** : Comores
-
-**Transition** : 2050-2075
-
-Les Comores subsistent comme un territoire autonome en marge des grands blocs, structuré autour de réseaux locaux de pêche et de commerce maritime. L'isolement géographique a permis une relative stabilité malgré les crises globales.
-
-**Tensions internes** : Conflits entre îles pour le contrôle des ressources halieutiques et des routes maritimes locales.
-
-**Lieux emblématiques** :
-- Moroni
-- Anjouan
-
-**Rivaux** : Madagascar ([[Madagascar]])
-
-### Madagascar (Île Résiliente)
-
-*territoire_autonome — statut : stable*
-
-**Origine réelle (2026)** : Madagascar
-
-**Transition** : 2040-2065
-
-Madagascar a développé une économie de subsistance et des réseaux locaux résilients, tirant parti de son isolement pour éviter les pires effets des effondrements globaux. Les ressources naturelles uniques (biodiversité, minerais) attirent des convoitises extérieures.
-
-**Tensions internes** : Pressions externes pour l'accès aux ressources, tensions entre communautés côtières et intérieures.
-
-**Lieux emblématiques** :
-- Antananarivo
-- Toamasina
-
-**Rivaux** : Comores ([[Comores]]), Maurice ([[Maurice]])
-
-### Maurice (Hub Financier Résiduel)
-
-*territoire_autonome — statut : stable*
-
-**Origine réelle (2026)** : Maurice
-
-**Transition** : 2035-2060
-
-Maurice a maintenu son statut de place financière offshore, attirant des capitaux et des élites en fuite. Son économie repose sur des services haut de gamme et une neutralité politique stricte pour éviter les conflits.
-
-**Tensions internes** : Inégalités sociales croissantes entre une élite financière et une population locale marginalisée.
-
-**Lieux emblématiques** :
-- Port-Louis
-
-**Rivaux** : Madagascar ([[Madagascar]])
-
-### Cuba (Archipel Résilient)
-
-*territoire_autonome — statut : stable*
-
-**Origine réelle (2026)** : Cuba
-
-**Transition** : 2050-2075
-
-Cuba subsiste comme un archipel autonome, préservant une partie de son système de santé et de son agriculture locale malgré l'effondrement des échanges mondiaux. Les tensions internes sont liées à la gestion des ressources limitées.
-
-**Tensions internes** : Conflits entre factions pro-ouverture et isolationnistes, pression sur les ressources alimentaires.
-
-**Lieux emblématiques** :
-- La Havane
-- Santiago de Cuba
-
-**Rivaux** : Espace Nord-Américain Fragmenté ([[espace_nord_americain_fragmente]])
-
-### Haïti (Territoire Sinistré)
-
-*zone_sinistree — statut : en_declin*
-
-**Origine réelle (2026)** : Haïti
-
-**Transition** : 2030-2060
-
-Haïti est une zone sinistrée où l'État a disparu, laissant place à des réseaux locaux de survie et à des milices. Les infrastructures sont quasi inexistantes, mais une culture de résistance persiste.
-
-**Tensions internes** : Violences inter-gangs, pénuries chroniques, absence de gouvernance centrale.
-
-**Lieux emblématiques** :
-- Port-au-Prince
-- Cap-Haïtien
-
-**Rivaux** : République Dominicaine (État Frontalier) ([[republicque_dominicaine_etat_frontalier]])
-
-### République Dominicaine (État Frontalier)
-
-*territoire_autonome — statut : fragmenté*
-
-**Origine réelle (2026)** : République dominicaine
-
-**Transition** : 2040-2070
-
-La République dominicaine maintient une structure étatique minimale, mais est constamment menacée par les crises internes et les pressions migratoires en provenance d'Haïti. Les ressources touristiques résiduelles sont contrôlées par des milices locales.
-
-**Tensions internes** : Conflits entre élites économiques et groupes armés, gestion des frontières avec Haïti.
-
-**Lieux emblématiques** :
-- Saint-Domingue
-- Punta Cana
-
-**Rivaux** : Haïti (Territoire Sinistré) ([[haiti_territoire_sinistre]])
-
-### Jamaïque (Hub des Caraïbes)
-
-*territoire_autonome — statut : stable*
-
-**Origine réelle (2026)** : Jamaïque, Bahamas
-
-**Transition** : 2050-2080
-
-La Jamaïque sert de plaque tournante pour les échanges informels dans les Caraïbes, grâce à son positionnement géographique et à ses réseaux historiques. Le pays est dirigé par une alliance de clans commerciaux et de communautés locales.
-
-**Tensions internes** : Rivalités entre clans, pression des groupes criminels transnationaux.
-
-**Lieux emblématiques** :
-- Kingston
-- Montego Bay
-
-**Alliés** : Cuba (Archipel Résilient) ([[cuba_archipel_resilient]])
-
-### Guatemala (Corridor Centre-Américain)
-
-*territoire_autonome — statut : fragmenté*
-
-**Origine réelle (2026)** : Guatemala, Nicaragua
-
-**Transition** : 2045-2075
-
-Le Guatemala est un territoire fragmenté, traversés par des corridors de migration et de contrebande. Les anciennes structures étatiques ont cédé la place à des seigneurs de guerre locaux et à des réseaux criminels.
-
-**Tensions internes** : Guerres entre cartels, migrations massives, pénuries de ressources.
-
-**Lieux emblématiques** :
-- Guatemala City
-- Quetzaltenango
-
-**Rivaux** : Honduras (Territoire Disputé) ([[honduras_territoire_dispute]]), Salvador (Enclave Résistante) ([[salvador_enclave_resistante]])
-
-### Honduras (Territoire Disputé)
-
-*territoire_autonome — statut : fragmenté*
-
-**Origine réelle (2026)** : Honduras
-
-**Transition** : 2040-2070
-
-Le Honduras est un territoire sans gouvernance centrale, divisé entre des zones contrôlées par des cartels, des milices locales et des communautés autonomes. Les ressources naturelles sont exploitées de manière anarchique.
-
-**Tensions internes** : Conflits armés pour le contrôle des routes et des ressources, insécurité généralisée.
-
-**Lieux emblématiques** :
-- Tegucigalpa
-- San Pedro Sula
-
-**Rivaux** : Guatemala (Corridor Centre-Américain) ([[guatemala_corridor_centre_americain]]), Salvador (Enclave Résistante) ([[salvador_enclave_resistante]])
-
-### Salvador (Enclave Résistante)
-
-*territoire_autonome — statut : stable*
-
-**Origine réelle (2026)** : Salvador, Costa Rica
-
-**Transition** : 2050-2080
-
-Le Salvador a réussi à maintenir une certaine stabilité grâce à une gouvernance locale forte et à des alliances avec des acteurs internationaux résiduels. Le pays sert de refuge relatif dans une région instable.
-
-**Tensions internes** : Pression des groupes criminels extérieurs, gestion des flux migratoires.
-
-**Lieux emblématiques** :
-- San Salvador
-- Santa Ana
-
-**Rivaux** : Guatemala (Corridor Centre-Américain) ([[guatemala_corridor_centre_americain]]), Honduras (Territoire Disputé) ([[honduras_territoire_dispute]])
-
-### Caraïbes Insulaires (Réseau Résiduel)
-
-*territoire_autonome — statut : emergent*
-
-**Origine réelle (2026)** : Trinité-et-Tobago, Barbade, Sainte-Lucie, Grenade, Saint-Vincent-et-les-Grenadines, Antigua-et-Barbuda
-
-**Transition** : 2050-2075
-
-Ensemble d'îles caribéennes survivant en marge des grands blocs continentaux, structurées autour de réseaux de pêche et de commerce informel. Les anciennes frontières nationales y ont peu de sens.
-
-**Tensions internes** : Conflits pour le contrôle des ressources halieutiques et des points d'accostage sûrs.
-
-**Rivaux** : Amazonie (Pacte des Gardiens) ([[amazon_pacte_gardiens]])
-
-### Antilles Orientales (Archipel Fragmenté)
-
-*territoire_autonome — statut : fragmenté*
-
-**Origine réelle (2026)** : Saint-Christophe-et-Niévès, Dominique
-
-**Transition** : 2050-2075
-
-Archipel des Petites Antilles en survie autonome, structuré autour de micro-communautés insulaires. Les anciennes dépendances coloniales ont disparu, laissant place à des réseaux de troc et de défense côtière.
-
-**Tensions internes** : Conflits pour le contrôle des ressources halieutiques et des points d'accès à l'eau douce.
-
-**Rivaux** : Arc Sahélo-Méditerranéen ([[arc_sahelo_mediterraneen]])
-
-### Mélanésie Insulaire
-
-*territoire_autonome — statut : fragmenté*
-
-**Origine réelle (2026)** : Papouasie-Nouvelle-Guinée, Fidji, Vanuatu, Îles Salomon
-
-**Transition** : 2040-2065
-
-Région mélanésienne en survie, marquée par des conflits inter-tribaux et une économie de subsistance. Les anciennes frontières coloniales ont cédé face à des alliances locales autour des ressources forestières et minières.
-
-**Tensions internes** : Luttes pour le contrôle des terres rares et des zones côtières.
-
-**Rivaux** : Asie–Pacifique (Corridors sino-sibériens et Pacifique Nord) ([[asie_pacifique_sud_est]])
-
-### Polynésie Centrale
-
-*territoire_autonome — statut : stable*
-
-**Origine réelle (2026)** : Samoa, Tonga
-
-**Transition** : 2035-2060
-
-Archipel polynésien ayant préservé une relative stabilité grâce à son isolement et à des traditions communautaires fortes. Les échanges maritimes restent limités mais vitaux.
-
-**Tensions internes** : Pression démographique sur les ressources limitées des atolls.
-
-### Micronésie du Pacifique Central
-
-*territoire_autonome — statut : fragmenté*
-
-**Origine réelle (2026)** : Kiribati, Micronésie, Palaos, Îles Marshall
-
-**Transition** : 2045-2070
-
-Archipel micronésien dispersé, confronté à la montée des eaux et à des tensions pour le contrôle des zones de pêche. Les anciennes structures étatiques ont laissé place à des confédérations locales.
-
-**Tensions internes** : Conflits pour l'accès aux terres habitables et aux ressources halieutiques.
-
-**Rivaux** : Polynésie Centrale ([[polynesie_centrale]])
-
-### Éthiopie (Hautes Terres Autonome)
-
-*territoire_autonome — statut : emergent*
-
-**Origine réelle (2026)** : Éthiopie
-
-**Transition** : 2050-2075
-
-L'Éthiopie de 2098 est une région montagneuse ayant développé une autonomie relative grâce à son isolement géographique. Structurée autour de communautés locales résilientes, elle tire parti de ses ressources agricoles et de son héritage culturel unique.
-
-**Tensions internes** : Conflits interethniques persistants et pression des groupes armés cherchant à contrôler les rares ressources.
-
-**Lieux emblématiques** :
-- Addis-Abeba
-- Lalibela
-- Lac Tana
-
-**Alliés** : Madagascar (Île Résiliente) ([[madagascar_ile_resiliente]])
-
-**Rivaux** : Afrique Centrale et Australe ([[afrique_centrale_australe]]), Zone Golfe Persique–Levant ([[zone_golfe_levant]])
-
-### Argentine (Pampas Autonome)
-
-*territoire_autonome — statut : fragmenté*
-
-**Origine réelle (2026)** : Argentine
-
-**Transition** : 2050-2075
-
-L'Argentine de 2098 est un territoire fragmenté en zones agricoles autonomes et en enclaves urbaines. Les pampas, autrefois grenier à blé, sont désormais gérées par des communautés locales et des seigneurs de guerre. Buenos Aires subsiste comme nœud résiduel de commerce informel.
-
-**Tensions internes** : Conflits entre factions agricoles, milices urbaines et cartels contrôlant les dernières ressources.
-
-**Lieux emblématiques** :
-- Buenos Aires
-- Rosario
-- Córdoba
-
-**Alliés** : Chili (Cordillère Autonome) ([[chili_cordillere_autonome]])
-
-**Rivaux** : Espace Nord-Américain Fragmenté ([[espace_nord_americain_fragmente]])
-
-### Bolivie (Altiplano Stratégique)
-
-*territoire_autonome — statut : fragmenté*
-
-**Origine réelle (2026)** : Bolivie
-
-**Transition** : 2040-2065
-
-La Bolivie de 2098 est centrée sur l'Altiplano, où les dernières réserves de lithium et d'eau sont contrôlées par des factions locales et des corporations résiduelles. La Paz et Oruro sont des nœuds de pouvoir disputés.
-
-**Tensions internes** : Guerres entre clans miniers, milices urbaines et groupes écologistes radicaux.
-
-**Lieux emblématiques** :
-- La Paz
-- Oruro
-- Uyuni
-
-**Alliés** : Chili (Cordillère Autonome) ([[chili_cordillere_autonome]])
-
-**Rivaux** : perou ([[perou]]), brésil ([[brésil]])
-
-### Écosse
-
-*territoire_autonome — statut : stable*
-
-**Origine réelle (2026)** : Écosse
 
 ## Notes / zones à enrichir
 _Espace libre, jamais lu par les scripts — ajoute ici tes idées, brouillons, zones à

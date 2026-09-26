@@ -2578,9 +2578,9 @@ _Maillage récursif enrichi le 2026-06-23 (12 nouvelle(s) zone(s) ajoutée(s) so
 
 ### Afrique continentale — Union Panafricaine et bassins versants
 
-*union_regionale — statut : emergent*
+*union_regionale — niveau 1 — statut : emergent*
 
-**Origine réelle (2026)** : Mali, Sénégal, République Démocratique du Congo, République du Congo, Union Africaine (ensemble du continent), Ghana, Maroc, Algérie, Tunisie, Niger, Mozambique, Zimbabwe, Soudan, Tchad, Bangladesh, Burkina Faso, Nigeria, Égypte, Libye, Mauritanie, Gambie, Guinée-Bissau, Guinée, Sierra Leone, Liberia, Côte d'Ivoire, Togo, Bénin, Cap-Vert, São Tomé-et-Príncipe, Cameroun, République centrafricaine, Gabon, Guinée équatoriale, Angola, Zambie, Malawi, Tanzanie, Ouganda, Burundi, Namibie, Botswana, Lesotho, Eswatini, Comores, Madagascar, Afrique du Sud, Éthiopie
+**Origine réelle (2026)** : Mali, Sénégal, République Démocratique du Congo, République du Congo, Union Africaine (ensemble du continent)
 
 **Transition** : 2071-2089
 
@@ -2588,9 +2588,242 @@ L'Afrique continentale de 2098 s'est dotée d'une Union Panafricaine dotée d'un
 
 **Tensions internes** : Opposition entre la vision continentale africaine portée par des figures comme Amara Diallo-Nkosi et une gouvernance globale tendant à effacer les spécificités locales ; pression des lobbies agro-industriels du bassin du Congo ; rumeurs de rapport critique sur les dérives IA dans les bassins versants asiatiques qui pourrait fracturer les alliances institutionnelles africaines.
 
-**Alliés** : Hub institutionnel Nairobi-Kigali ([[hub_nairobi_kigali]])
+**Alliés** : hub_nairobi_kigali
 
 *Sources attestées : amara_diallo_nkosi_new_sustainability, agence_globale_de_regeneration_des_bassins_versants_agrb_onu_new_sustainability, collectifs_riverains_du_bassin_du_congo_new_sustainability, lobbies_agro_industriels_du_bassin_du_congo_new_sustainability, prisme_global_new_sustainability, observatoire_climatique_narratif_de_nairobi_new_sustainability*
+
+### Amériques reconfigurées
+
+*bloc_continental — niveau 1 — statut : emergent*
+
+**Origine réelle (2026)** : États-Unis, Brésil, Colombie, Canada, Amérique latine (ensemble)
+
+**Transition** : 2055-2075 — voir [[election_parti_commun_americain_new_sustainability]]
+
+Le continent américain de 2098 a été profondément reconfiguré par l'élection de la Coalition de Transition Sociale aux États-Unis en 2055, ouvrant une convergence progressive entre systèmes économiques nord et sud-américains. Manaus (Amazonie brésilienne) est un nœud majeur du Réseau Vivant Continental. Medellín est citée comme site de dispensaires biotechnologiques de Nexus BioSyn. Barcelone-Hub (en Europe mais siège ibérique de la CMTCA) et le corridor ibérique énergétique se raccordent aux flux continentaux.
+
+**Tensions internes** : Convergence en cours mais inégale entre Nord et Sud américains ; les zones amazoniennes du RVC sont instrumentées sans consultation des populations locales ; tension entre réformes redistributives et résistances des industries extractives résiduelles.
+
+**Alliés** : centre_institutionnel_geneve
+
+*Sources attestées : election_parti_commun_americain_new_sustainability, trame_bioclimatique_new_sustainability, nexus_biosyn_new_sustainability, internationale_travailleurs_augmentes_new_sustainability, grille_aria_new_sustainability*
+
+### Qaanaaq — Siège flottant du Nuna Siku Governance Council
+
+*territoire_autonome — niveau 1 — statut : stable*
+
+**Origine réelle (2026)** : Danemark / Groenland, Canada (Nunavut), Norvège (Svalbard)
+
+**Transition** : 2041-2065
+
+Le Nuna Siku Governance Council administre depuis son siège flottant ancré au large de Qaanaaq le corridor maritime arctique rendu structurellement navigable par la fonte des glaces. Institution hybride mature reconnue par le droit international régénératif de 2098, elle co-gouverne le passage Nord-Ouest et Nord-Est entre États membres, peuples autochtones circumpolaires et systèmes IA allocatifs. Un représentant inuit peut y opposer son veto à une décision de transit d'un État du G20 — et ce veto est respecté.
+
+**Tensions internes** : Le Mouvement Souverainiste de la Ceinture Boréale accuse le Conseil d'avoir transformé la résistance autochtone en procédure administrative ; plusieurs États membres cherchent à réviser les droits de veto autochtones jugés 'inefficients' face aux flux énergétiques intercontinentaux.
+
+**Alliés** : union_nordique_europe_nord, hub_nairobi_kigali
+
+**Rivaux** : bloc_eurasien_souverainiste
+
+*Sources attestées : arctic_passage_authority_new_sustainability*
+
+### Bloc Eurasien souverainiste
+
+*bloc_continental — niveau 1 — statut : fragmenté*
+
+**Origine réelle (2026)** : Russie, Chine, Asie centrale (Kazakhstan, Ouzbékistan, etc.)
+
+**Transition** : 2040-2070
+
+Le Bloc Eurasien de 2098 regroupe des États qui résistent aux modèles de transition écologique imposés par les centres institutionnels de Genève et Nairobi. Il comprend des factions souverainistes actives, une alliance numérique Eurasie-Pacifique qui impose ses propres normes, et des gouvernements hydriques refusant les accords de partage transfrontalier. Des bassins versants asiatiques sont au cœur de controverses sur la délégation décisionnelle aux IA.
+
+**Tensions internes** : Fracture entre intégration dans les accords globaux et revendication d'autonomie ; contestation de la légitimité des cadres environnementaux globaux perçus comme néo-impérialistes ; les 'blocs périphériques' dénoncent une technocratie de la régénération décidant depuis les centres.
+
+**Rivaux** : centre_institutionnel_geneve, hub_nairobi_kigali
+
+*Sources attestées : souverainistes_du_bloc_eurasien_new_sustainability, alliance_numerique_eurasie_pacifique_new_sustainability, bloc_des_gouvernements_souverainistes_hydriques_new_sustainability, amara_diallo_nkosi_new_sustainability, factions_souverainistes_des_blocs_peripheriques_new_sustainability, conseil_regulation_algorithmique_new_sustainability*
+
+### Genève-Centre institutionnel mondial
+
+*ville — niveau 1 — statut : dominant*
+
+**Origine réelle (2026)** : Suisse, Genève
+
+**Transition** : 2041-2058 — voir [[effondrement_reseau_mondial_communication_new_sustainability]]
+
+Genève est en 2098 le siège de plusieurs institutions technocratiques mondiales majeures, dont l'APRC (stabilisation climatique) et le CGAI (gouvernance algorithmique). Son littoral a été rehaussé de trois mètres après les accords de 2044. Elle incarne la synthèse entre technocratie efficace et légitimité négociée, abritant aussi les accords de gouvernance numérique dits 'Genève III' qui régulent les plateformes comme Prisme Global.
+
+**Tensions internes** : Concentration d'institutions non élues sur un territoire restreint ; contestation croissante de leur légitimité démocratique par les blocs périphériques et les mouvements souverainistes.
+
+**Alliés** : hub_nairobi_kigali
+
+**Rivaux** : bloc_eurasien_souverainiste
+
+*Sources attestées : agence_stabilisation_climatique_new_sustainability, bureau_gouvernance_algorithmique_new_sustainability, observatoire_anti_monopole_de_geneve_new_sustainability, prisme_global_new_sustainability, effondrement_reseau_mondial_communication_new_sustainability*
+
+### Tours de contrôle orbital Helios
+
+*infrastructure — niveau 1 — statut : dominant*
+
+**Origine réelle (2026)** : Internet mondial / GAFAM (héritage), Ensemble des infrastructures orbitales et énergétiques mondiales
+
+**Transition** : 2045-2075
+
+Helios est en 2098 un acteur hybride public-privé dont les tours de contrôle orbital scintillent au-dessus des continents sous le sceau bleu du Conseil Énergétique Intercontinental. Ancien oligopole privé partiellement démantelé sous la pression des régulateurs, il opère désormais ses infrastructures orbitales et ses réseaux d'hydrogène vert sous licence de bien commun, tout en conservant une position dominante dans la gouvernance énergétique mondiale. Il incarne la transformation d'un prédateur en partenaire institutionnel — surveillance et audits officiels inclus.
+
+**Tensions internes** : Une faction dirigeante milite discrètement pour renégocier les licences communes lors du renouvellement du traité de 2101 afin de récupérer la souveraineté tarifaire ; la montée des réseaux micro-énergétiques communautaires remet en question la pertinence d'un acteur centralisé ; les algorithmes d'optimisation IA d'Helios restent délibérément opaques malgré les audits officiels.
+
+**Alliés** : centre_institutionnel_geneve, hub_nairobi_kigali
+
+**Rivaux** : bloc_eurasien_souverainiste
+
+*Sources attestées : consortium_helios_new_sustainability*
+
+### Hub institutionnel Nairobi-Kigali
+
+*region — niveau 1 — statut : dominant*
+
+**Origine réelle (2026)** : Kenya, Rwanda
+
+**Transition** : 2041-2065
+
+Nairobi est en 2098 la capitale institutionnelle mondiale de la gouvernance territoriale et algorithmique : elle abrite le Parlement des Territoires (Traité de 2041), le Conseil Mondial de l'IA Régénérative (Accords de Séoul 2040), et constitue un nœud médiatique global. Kigali, choisie en 2061 comme symbole de la réconciliation post-extractiviste, héberge l'AMRRT (gestion des ressources mondiales). Ces deux villes forment ensemble le pôle institutionnel africain dominant du monde de 2098.
+
+**Tensions internes** : Tension entre les délégués des États et ceux des régions autonomes au Parlement des Territoires ; débat sur la pondération des votes ; l'AMRRT est accusée de décider depuis Kigali quelles terres méritent d'être exploitées ou 'mises au repos'.
+
+**Alliés** : centre_institutionnel_geneve, afrique_continentale
+
+*Sources attestées : assemblee_territoires_new_sustainability, conseil_regulation_algorithmique_new_sustainability, conseil_regulation_ressources_new_sustainability, coalition_vivant_new_sustainability, le_temoin_new_sustainability, arrestation_chris_van_derburgh_new_sustainability, nexus_biosyn_new_sustainability, grille_aria_new_sustainability*
+
+### Infrastructure numérique mondiale (NexCore / Mnemos / Prisme)
+
+*infrastructure — niveau 1 — statut : dominant*
+
+**Origine réelle (2026)** : Canada (Montréal), Nigeria (Lagos), Singapour, Internet mondial / GAFAM (héritage)
+
+**Transition** : 2040-2043 — voir [[effondrement_reseau_mondial_communication_new_sustainability]]
+
+L'infrastructure numérique mondiale de 2098 est le résultat de la reconstruction post-effondrement de 2040 : NexCore Communs (coopérative mondiale née en 2043 après démantèlement du conglomérat privé), Mnemos (réseau cognitif planétaire né des cendres des effondrements informationnels des années 2030) et Prisme Global (plateforme narrative distribuée entre Lagos, Montréal et Singapour) en forment les trois piliers. Ensemble, ils constituent la colonne vertébrale cognitive et informationnelle du monde stabilisé.
+
+**Tensions internes** : Pression des États voulant plus de contrôle sur les données ; accusations de domination culturelle persistante malgré la structure coopérative ; territoires souverainistes revendiquant des mémoires locales non-synchronisées ; biais algorithmiques favorisant les épistémologies des anciens centres de pouvoir.
+
+**Alliés** : centre_institutionnel_geneve, hub_nairobi_kigali
+
+**Rivaux** : bloc_eurasien_souverainiste
+
+*Sources attestées : nexcore_new_sustainability, reseau_mnemos_new_sustainability, prisme_global_new_sustainability, effondrement_reseau_mondial_communication_new_sustainability, reseau_des_communs_numeriques_globaux_new_sustainability*
+
+### Moyen-Orient et Golfe post-pétrolier
+
+*region — niveau 1 — statut : en_declin*
+
+**Origine réelle (2026)** : Israël, Iran, Arabie Saoudite, Qatar, Turquie
+
+**Transition** : 2026-2045 — voir [[conflit_israel_iran_2026_new_sustainability]]
+
+Le Moyen-Orient de 2098 porte la cicatrice du conflit Israël-Iran de 2026, qui a paradoxalement catalysé la transition énergétique hors pétrole dans la région. Le choc des prix du pétrole (+60%) et la neutralité active de la Turquie, de l'Arabie Saoudite et du Qatar ont conduit à une accélération des investissements dans les renouvelables et à une refonte des cadres de sécurité collective. La région est aujourd'hui engagée dans une transition post-extractiviste, avec des tensions résiduelles.
+
+**Tensions internes** : Cicatrice durable du conflit de 2026 ; transition énergétique inégale selon les pays ; résistances des industries extractives résiduelles dans certaines zones.
+
+*Sources attestées : conflit_israel_iran_2026_new_sustainability, le_temoin_new_sustainability*
+
+### Ourrassol — Commission Territoriale
+
+*ville — niveau 1 — statut : stable*
+
+**Origine réelle (2026)** : Lieu fictif du simulateur Ourrassol 2098
+
+**Transition** : 2041-2098
+
+Ourrassol est la ville fictive siège du simulateur de presse, dotée en 2098 d'une Commission Territoriale qui consulte quotidiennement Mnemos pour ses décisions. Elle incarne une unité urbaine représentative du monde stabilisé de new_sustainability — ville de taille intermédiaire intégrée aux systèmes de gouvernance algorithmique globale, où les décisions d'ARIA sur les ressources se répercutent concrètement sur la vie quotidienne des habitants et des institutions locales.
+
+**Tensions internes** : Tension entre la dépendance aux systèmes de gouvernance algorithmique globaux (ARIA, Mnemos) et la volonté d'autonomie décisionnelle locale ; les délais de notification réglementaires imposés par ARIA alimentent le débat local sur la souveraineté territoriale.
+
+**Lieux emblématiques** :
+- Commission Territoriale d'Ourrassol (infrastructure) — Instance locale de gouvernance consultant Mnemos, affectée par les décisions d'ARIA sur les ressources
+
+**Alliés** : infrastructure_numerique_globale
+
+*Sources attestées : reseau_mnemos_new_sustainability, grille_aria_new_sustainability*
+
+### Réseau Vivant Continental (RVC) — Trame bioclimatique planétaire
+
+*infrastructure — niveau 1 — statut : dominant*
+
+**Origine réelle (2026)** : Brésil (Amazonie), Kenya, Ensemble des corridors de biodiversité continentaux
+
+**Transition** : 2050-2080
+
+Le Réseau Vivant Continental est l'infrastructure écologique planétaire de 2098 : corridors de biodiversité instrumentés par des essaims d'IA, forêts-éponges calibrées pour l'irrigation atmosphérique, puits de carbone vivants. Il s'étend de Manaus à Nairobi et constitue l'épine dorsale de la stabilisation climatique mondiale. Sa gouvernance est distribuée entre blocs continentaux via le Consortium de Régénération Planétaire, dans un équilibre technocratique fragile.
+
+**Tensions internes** : Communautés autochtones revendiquant la co-gouvernance de corridors tracés sans leur consentement ; suspicion des blocs continentaux sur la priorisation des zones à forte valorisation énergétique ; vulnérabilité croissante comme cible géopolitique ou de cyber-sabotage ; opacité des algorithmes décisionnels.
+
+**Lieux emblématiques** :
+- Nairobi (ville) — Nœud oriental du RVC en Afrique de l'Est
+
+**Alliés** : hub_nairobi_kigali, afrique_continentale, ameriques_reconfigurees
+
+*Sources attestées : trame_bioclimatique_new_sustainability, consortium_de_regeneration_planetaire_new_sustainability, communautes_locales_exclues_des_corridors_new_sustainability, prisme_global_new_sustainability, reseau_des_bio_communs_regionaux_new_sustainability*
+
+### Te Moana Nui — Plateforme flottante de la Confédération du Pacifique Austral
+
+*territoire_autonome — niveau 1 — statut : emergent*
+
+**Origine réelle (2026)** : Tuvalu, Kiribati, Îles Marshall, Tonga
+
+**Transition** : 2039-2047 — voir [[tuvalu_submersion_souverainete_flottante_new_sustainability]]
+
+Ancrée par 3 000 mètres de fond entre Fidji et Samoa, la plateforme Te Moana Nui est le siège de la Confédération Maritime du Pacifique Austral — première entité politique post-territoriale reconnue par l'ONU en 2047 après la submersion de Tuvalu. Ce que le monde appelait 'les nations qui disparaissent' est devenu l'une des entités politiques les plus influentes du système onusien, transformant l'injustice subie en jurisprudence universelle sur la souveraineté post-territoriale.
+
+**Tensions internes** : Tiraillement entre le rôle de témoin moral — condition de son influence — et la tentation d'une agentivité politique pleine ; la faction des Gardiens de la Mémoire résiste à l'intégration trop profonde dans la gouvernance technocratique ; crise identitaire latente pour les générations nées sur plateforme n'ayant jamais vu de terre émergée.
+
+**Lieux emblématiques** :
+- Funafuti-sur-Mer (site_strategique) — Plateforme ancrée à l'emplacement de l'ancienne capitale tuvaluane, lieu de la cérémonie fondatrice de 2039
+
+**Alliés** : hub_nairobi_kigali, centre_institutionnel_geneve
+
+*Sources attestées : pacifique_sud_resilience_network_new_sustainability, tuvalu_submersion_souverainete_flottante_new_sustainability, assemblee_territoires_new_sustainability*
+
+### Union Nordique et Europe du Nord
+
+*union_regionale — niveau 1 — statut : stable*
+
+**Origine réelle (2026)** : Finlande, Suède, Norvège, Danemark
+
+**Transition** : 2041-2060
+
+L'Union Nordique de 2098 s'est dotée d'un Conseil de Délibération Augmentée qui articule données environnementales et légitimité délibérative. Helsinki y joue un rôle intellectuel central, abritant l'Institut de Philosophie des Systèmes Hybrides, foyer de la pensée critique sur la gouvernance humain-IA. La Ceinture Boréale — forêts nordiques — fait l'objet de revendications souverainistes sur les décisions de durabilité.
+
+**Tensions internes** : Le mouvement souverainiste de la Ceinture Boréale conteste les grands accords environnementaux ; tension entre la tradition délibérative nordique et la dérive technocratique des institutions globales, incarnée par la figure de Leena Väinälä.
+
+**Alliés** : centre_institutionnel_geneve
+
+*Sources attestées : leena_vainala_new_sustainability, conseil_de_deliberation_augmentee_de_l_union_nordique_new_sustainability, institut_de_philosophie_des_systemes_hybrides_d_helsinki_new_sustainability, mouvement_souverainiste_de_la_ceinture_boreale_new_sustainability*
+
+#### Bandar Abbas — Site des premières frappes de 2026 — sous [[moyen_orient_golfe]]
+
+*site_strategique — niveau 2 — statut : en_declin*
+
+**Origine réelle (2026)** : Iran, Bandar Abbas
+
+**Transition** : 2026-2030 — voir [[conflit_israel_iran_2026_new_sustainability]]
+
+Bandar Abbas est le site des premières frappes israéliennes d'octobre 2026 sur les sites nucléaires iraniens, devenu symbole du conflit catalyseur qui a accéléré la transition énergétique mondiale. En 2098, la ville porte la cicatrice durable de l'événement fondateur de la recomposition géopolitique du Moyen-Orient, et est régulièrement évoquée dans les récits mémoriels du monde stabilisé.
+
+*Sources attestées : conflit_israel_iran_2026_new_sustainability, le_temoin_new_sustainability*
+
+#### Barcelone-Hub — Bureau ibérique de la CMTCA — sous [[nouveau_califat_barcelone]]
+
+*ville — niveau 2 — statut : stable*
+
+**Origine réelle (2026)** : Espagne, Barcelone
+
+**Transition** : 2055-2075
+
+Barcelone-Hub est le siège européen de la Confédération Mondiale des Travailleurs Cognitifs Augmentés (CMTCA), aux côtés de Nairobi-Node. Depuis ses bureaux modulaires, les délégués de la CMTCA négocient avec des IA de médiation institutionnelle les clauses des accords productifs continentaux, incarnant la transformation d'un syndicat de combat en acteur institutionnalisé de la gouvernance mondiale du travail augmenté. Son rattachement aux Amériques reconfigurées reflète les flux ibériques vers le corridor énergétique atlantique.
+
+**Tensions internes** : Fracture interne entre 'intégrateurs' favorables à la négociation permanente et 'dissidents du confort' accusant la Confédération d'avoir légitimé l'optimisation en l'encadrant sans la questionner.
+
+*Sources attestées : internationale_travailleurs_augmentes_new_sustainability*
 
 #### Bassin du Congo — Forêt tropicale contestée — sous [[afrique_continentale]]
 
@@ -2604,155 +2837,25 @@ Le bassin du Congo est l'un des enjeux écologiques et politiques majeurs de 209
 
 **Tensions internes** : Opposition frontale entre collectifs riverains revendiquant la souveraineté locale et lobbies agro-industriels ; opacité des algorithmes du RVC décidant quels territoires méritent régénération ou exploitation.
 
-**Alliés** : Sahel — Zone de régénération prioritaire ([[sahel_zone_regeneration]])
+**Alliés** : sahel_zone_regeneration
 
 *Sources attestées : collectifs_riverains_du_bassin_du_congo_new_sustainability, lobbies_agro_industriels_du_bassin_du_congo_new_sustainability, trame_bioclimatique_new_sustainability*
 
-#### Brazzaville — Siège africain de l'AGRB — sous [[afrique_continentale]]
+#### Bassins versants asiatiques — Zones de dérives algorithmiques — sous [[bloc_eurasien_souverainiste]]
 
-*ville — niveau 2 — statut : emergent*
+*zone_sinistree — niveau 2 — statut : fragmenté*
 
-**Origine réelle (2026)** : République du Congo, Brazzaville
+**Origine réelle (2026)** : Asie centrale (Kazakhstan, Ouzbékistan, etc.), Chine
 
-**Transition** : 2071-2089
+**Transition** : 2071-2098
 
-Brazzaville abrite le siège africain de l'Agence Globale de Régénération des Bassins Versants (AGRB), structure hybride humain-IA mise en place sous l'égide des Nations Unies restructurées. C'est ici qu'Amara Diallo-Nkosi, architecte senior des Accords de Kinshasa-Sahel, dirige ses équipes et prépare son rapport critique sur les dérives de la délégation décisionnelle aux IA dans trois bassins versants asiatiques.
+Trois bassins versants asiatiques non nommés précisément dans le corpus constituent la zone documentée par le rapport critique qu'Amara Diallo-Nkosi prépare en 2098 sur les dérives de la délégation décisionnelle aux IA dans la gouvernance hydrique. Ces bassins incarnent les tensions entre le modèle de gouvernance algorithmique promu par les institutions globales et les réalités locales ignorées par les systèmes d'optimisation, et pourraient fracturer les alliances institutionnelles africaines si le rapport est rendu public.
 
-**Tensions internes** : Tension entre la vision communautaire terrain d'Amara Diallo-Nkosi et la pression des nouvelles générations formées aux interfaces IA qui remettent en cause la nécessité de la médiation humaine.
+**Tensions internes** : Opposition entre les gouvernements souverainistes hydriques qui refusent les accords de partage transfrontalier et les institutions globales qui imposent des algorithmes décisionnels opaques ; les populations riveraines n'ont pas été consultées sur les décisions hydrologiques qui les affectent.
 
-**Alliés** : Kinshasa — Pôle des négociations hydriques ([[kinshasa_accords]]), Bassin du Congo — Forêt tropicale contestée ([[bassin_du_congo]])
+**Rivaux** : brazzaville_agrb, kinshasa_accords
 
-*Sources attestées : amara_diallo_nkosi_new_sustainability, agence_globale_de_regeneration_des_bassins_versants_agrb_onu_new_sustainability*
-
-#### Conseil Technique de l'Eau — Union Panafricaine — sous [[afrique_continentale]]
-
-*infrastructure — niveau 2 — statut : emergent*
-
-**Origine réelle (2026)** : Union Africaine (ensemble du continent)
-
-**Transition** : 2071-2089
-
-Instance technique de l'Union Panafricaine spécialisée dans la gouvernance hydrique continentale, le Conseil Technique de l'Eau est l'héritier institutionnel des Accords de Kinshasa-Sahel (2071-2089). Amara Diallo-Nkosi y siège en 2098, articulant la vision communautaire terrain avec les systèmes de gouvernance algorithmique hydrique. Il arbitre en dernier ressort les conflits entre États membres sur la redistribution de l'eau.
-
-**Tensions internes** : Opposition entre partisans de la médiation humaine de terrain portée par Diallo-Nkosi et nouvelle génération formée aux interfaces IA remettant en cause la nécessité de cette médiation ; pression des lobbies agro-industriels du bassin du Congo pour contourner ses décisions.
-
-**Alliés** : Brazzaville — Siège africain de l'AGRB ([[brazzaville_agrb]]), Kinshasa — Pôle des négociations hydriques ([[kinshasa_accords]])
-
-**Rivaux** : Bassins versants asiatiques — Zones de dérives algorithmiques ([[bassins_versants_asiatiques_derives]])
-
-*Sources attestées : amara_diallo_nkosi_new_sustainability, agence_globale_de_regeneration_des_bassins_versants_agrb_onu_new_sustainability*
-
-#### Dakar — Nœud dominant de la CTSA — sous [[afrique_continentale]]
-
-*ville — niveau 2 — statut : dominant*
-
-**Origine réelle (2026)** : Sénégal, Dakar
-
-**Transition** : 2041-2070
-
-Dakar est l'un des deux nœuds les plus puissants de la Confédération des Territoires Sahéliens Autonomes (CTSA), organisation de gouvernance distribuée fondée sur les cendres des politiques d'aide conditionnelle des années 2030 et reliant quarante-trois cités de la bande sahélienne de Dakar à Djibouti. La ville est aussi le lieu de formation de la jeunesse d'Amara Diallo-Nkosi avant Delft. En 2098, sa puissance de nœud crée une asymétrie croissante avec les cités périphériques de la CTSA.
-
-**Tensions internes** : Dakar et Addis-Abeba reproduisent à l'échelle confédérale les rapports de force que la CTSA promettait d'abolir, marginali­sant les cités périphériques membres fondateurs ; pression du CGAI pour intégrer les protocoles CTSA dans le cadre mondial.
-
-**Alliés** : Sahel — Zone de régénération prioritaire ([[sahel_zone_regeneration]]), Kinshasa — Pôle des négociations hydriques ([[kinshasa_accords]])
-
-*Sources attestées : ligue_des_cites_du_sahel_numerique_new_sustainability, amara_diallo_nkosi_new_sustainability*
-
-#### Kinshasa — Pôle des négociations hydriques — sous [[afrique_continentale]]
-
-*ville — niveau 2 — statut : stable*
-
-**Origine réelle (2026)** : République Démocratique du Congo, Kinshasa
-
-**Transition** : 2071-2089
-
-Lieu des négociations des Accords de Kinshasa-Sahel (2071-2089), Kinshasa a été le théâtre des grandes tractations de gouvernance hydrique continentale africaine. Elle incarne la capacité du continent à produire ses propres cadres normatifs sur l'eau, en résistant à l'effacement des spécificités locales par la gouvernance globale.
-
-**Tensions internes** : Pression persistante des lobbies agro-industriels du bassin du Congo voulant contourner les accords de redistribution hydrique.
-
-**Alliés** : Brazzaville — Siège africain de l'AGRB ([[brazzaville_agrb]]), Bassin du Congo — Forêt tropicale contestée ([[bassin_du_congo]])
-
-*Sources attestées : amara_diallo_nkosi_new_sustainability*
-
-##### Bamako — Berceau de formation hydrique africaine — sous [[kinshasa_accords]]
-
-*ville — niveau 3 — statut : stable*
-
-**Origine réelle (2026)** : Mali, Bamako
-
-**Transition** : 2071-2089
-
-Bamako est la ville natale d'Amara Diallo-Nkosi et le lieu de sa formation intellectuelle initiale avant Dakar et Delft. Elle représente symboliquement l'ancrage sahélien de la gouvernance hydrique africaine — la ville d'origine de celle qui a imposé le principe de validation communautaire terrain dans tous les accords de redistribution de l'eau. En 2098, elle reste un point de référence dans les récits de légitimité terrain de l'AGRB.
-
-**Tensions internes** : Tension entre le statut symbolique de ville-origine d'une figure tutélaire de la gouvernance hydrique et la réalité d'une région sahélienne dont les terres ont été classées patrimoine régénératif sans consultation.
-
-**Alliés** : Sahel — Zone de régénération prioritaire ([[sahel_zone_regeneration]])
-
-*Sources attestées : amara_diallo_nkosi_new_sustainability*
-
-#### Ouagadougou Nouvelle — Siège tournant de la CTSA — sous [[afrique_continentale]]
-
-*ville — niveau 2 — statut : emergent*
-
-**Origine réelle (2026)** : Ouagadougou
-
-**Transition** : 2041-2070
-
-Ouagadougou Nouvelle accueille en 2098 le siège tournant de la Confédération des Territoires Sahéliens Autonomes (CTSA), dont les assemblées trimestrielles de quarante-trois cités délibèrent sur les protocoles d'interopérabilité open-source exportés jusqu'en Bolivie et au Kazakhstan. La rotation du siège est elle-même un mécanisme politique d'équilibre entre les nœuds dominants et les cités périphériques.
-
-**Tensions internes** : La rotation du siège ne suffit pas à compenser les asymétries entre cités-nœuds riches en données et cités périphériques ; question ouverte sur l'identité africaine ou globale de la CTSA face aux demandes d'adhésion d'Asie centrale.
-
-**Alliés** : Dakar — Nœud dominant de la CTSA ([[dakar_ctsa_noeud]]), Sahel — Zone de régénération prioritaire ([[sahel_zone_regeneration]])
-
-*Sources attestées : ligue_des_cites_du_sahel_numerique_new_sustainability*
-
-#### Sahel — Corridors verts du RVC — sous [[afrique_continentale]]
-
-*region — niveau 2 — statut : emergent*
-
-**Origine réelle (2026)** : Mali, Sénégal
-
-**Transition** : 2060-2085
-
-Les corridors verts du Sahel constituent l'une des zones de reforestation prioritaires du RVC, décrits dans les récits de Prisme Global comme des écosystèmes instrumentés 'de loin ressemblant à de la nature revenue à l'état sauvage, de près instrumentés jusqu'à la racine'. Chaque arbre y porte un identifiant biosensoriel, chaque rivière est guidée par des modèles prédictifs. Zone de chevauchement entre le RVC et l'Afrique continentale.
-
-**Tensions internes** : Communautés locales dont les terres ont été classées 'patrimoine régénératif' sans consultation ; opacité des algorithmes de priorisation du Consortium de Régénération Planétaire.
-
-**Alliés** : Sahel — Zone de régénération prioritaire ([[sahel_zone_regeneration]]), Bassin du Congo — Forêt tropicale contestée ([[bassin_du_congo]])
-
-*Sources attestées : trame_bioclimatique_new_sustainability, prisme_global_new_sustainability, communautes_locales_exclues_des_corridors_new_sustainability*
-
-#### Sahel — Zone de régénération prioritaire — sous [[afrique_continentale]]
-
-*zone_sinistree — niveau 2 — statut : emergent*
-
-**Origine réelle (2026)** : Mali, Sénégal
-
-**Transition** : 2071-2089
-
-Le Sahel constitue en 2098 l'une des zones de régénération prioritaires du Réseau Vivant Continental, avec des corridors verts instrumentés par des essaims d'IA écologiques et des programmes de reforestation algorithmique. Mentionné dans les accords hydriques et les récits de reforestation de Prisme Global, il symbolise à la fois la réussite de la stabilisation climatique et les paradoxes d'une nature 'revenue à l'état sauvage' mais instrumentée jusqu'à la racine.
-
-**Tensions internes** : Les populations locales voient leurs terres classées 'patrimoine régénératif' sans consultation préalable ; les corridors verts du RVC traversent des territoires ancestraux sans co-gouvernance.
-
-**Alliés** : Bassin du Congo — Forêt tropicale contestée ([[bassin_du_congo]])
-
-*Sources attestées : prisme_global_new_sustainability, trame_bioclimatique_new_sustainability, amara_diallo_nkosi_new_sustainability*
-
-### Amériques reconfigurées
-
-*bloc_continental — statut : emergent*
-
-**Origine réelle (2026)** : États-Unis, Brésil, Colombie, Canada, Amérique latine (ensemble), Royaume-Uni, Angleterre, Pays de Galles, Mexique, Argentine, Pérou, Venezuela, Chili, Bolivie, Cuba, Haïti, République dominicaine, Jamaïque, Bahamas, Belize, Guatemala, Honduras, Salvador, Nicaragua, Costa Rica, Panama, Guyana, Suriname, Équateur, Paraguay, Uruguay, Grenade, Saint-Vincent-et-les-Grenadines, Antigua-et-Barbuda, Saint-Christophe-et-Niévès, Dominique
-
-**Transition** : 2055-2075 — voir [[election_parti_commun_americain_new_sustainability]]
-
-Le continent américain de 2098 a été profondément reconfiguré par l'élection de la Coalition de Transition Sociale aux États-Unis en 2055, ouvrant une convergence progressive entre systèmes économiques nord et sud-américains. Manaus (Amazonie brésilienne) est un nœud majeur du Réseau Vivant Continental. Medellín est citée comme site de dispensaires biotechnologiques de Nexus BioSyn. Barcelone-Hub (en Europe mais siège ibérique de la CMTCA) et le corridor ibérique énergétique se raccordent aux flux continentaux.
-
-**Tensions internes** : Convergence en cours mais inégale entre Nord et Sud américains ; les zones amazoniennes du RVC sont instrumentées sans consultation des populations locales ; tension entre réformes redistributives et résistances des industries extractives résiduelles.
-
-**Alliés** : Genève-Centre institutionnel mondial ([[centre_institutionnel_geneve]])
-
-*Sources attestées : election_parti_commun_americain_new_sustainability, trame_bioclimatique_new_sustainability, nexus_biosyn_new_sustainability, internationale_travailleurs_augmentes_new_sustainability, grille_aria_new_sustainability*
+*Sources attestées : amara_diallo_nkosi_new_sustainability, bloc_des_gouvernements_souverainistes_hydriques_new_sustainability*
 
 #### Belém — Siège du Consortium Amazônia Viva — sous [[ameriques_reconfigurees]]
 
@@ -2769,11 +2872,61 @@ Belém abrite le siège opérationnel du Consortium Amazônia Viva, dont la faç
 **Lieux emblématiques** :
 - Antenne de Leticia (Colombie) (infrastructure) — Antenne opérationnelle du Consortium en territoire colombien, relais pour les négociations andines
 
-**Alliés** : Manaus — Nœud occidental du RVC ([[manaus_rvc]]), Hub institutionnel Nairobi-Kigali ([[hub_nairobi_kigali]])
+**Alliés** : manaus_rvc, hub_nairobi_kigali
 
-**Rivaux** : Bloc Eurasien souverainiste ([[bloc_eurasien_souverainiste]])
+**Rivaux** : bloc_eurasien_souverainiste
 
 *Sources attestées : consortium_amazonia_viva_new_sustainability, traite_souverainete_carbone_amazonie_new_sustainability, trame_bioclimatique_new_sustainability*
+
+#### Brazzaville — Siège africain de l'AGRB — sous [[afrique_continentale]]
+
+*ville — niveau 2 — statut : emergent*
+
+**Origine réelle (2026)** : République du Congo, Brazzaville
+
+**Transition** : 2071-2089
+
+Brazzaville abrite le siège africain de l'Agence Globale de Régénération des Bassins Versants (AGRB), structure hybride humain-IA mise en place sous l'égide des Nations Unies restructurées. C'est ici qu'Amara Diallo-Nkosi, architecte senior des Accords de Kinshasa-Sahel, dirige ses équipes et prépare son rapport critique sur les dérives de la délégation décisionnelle aux IA dans trois bassins versants asiatiques.
+
+**Tensions internes** : Tension entre la vision communautaire terrain d'Amara Diallo-Nkosi et la pression des nouvelles générations formées aux interfaces IA qui remettent en cause la nécessité de la médiation humaine.
+
+**Alliés** : kinshasa_accords, bassin_du_congo
+
+*Sources attestées : amara_diallo_nkosi_new_sustainability, agence_globale_de_regeneration_des_bassins_versants_agrb_onu_new_sustainability*
+
+#### Bruxelles — Tribunal de Gouvernance Algorithmique — sous [[union_nordique_europe_nord]]
+
+*ville — niveau 2 — statut : emergent*
+
+**Origine réelle (2026)** : Belgique, Bruxelles
+
+**Transition** : 2060-2098
+
+Bruxelles abrite le Tribunal de Gouvernance Algorithmique, instance juridique traitant les procès liés aux décisions des IA de gouvernance. En 2098, un procès y est en cours pour déterminer qui programme les priorités d'ARIA — la grille IA de gouvernance des ressources continentales — et selon quels axiomes éthiques non publiés. Des chercheurs y ont présenté des preuves de micro-biais systématiques défavorisant les zones rurales à faible rendement énergétique.
+
+**Tensions internes** : Débat entre la faction technocratique voulant retirer le délai de notification aux élus et les partisans de la co-gouvernance humaine ; question de la légitimité juridique d'un tribunal face à des systèmes IA dont le code n'est pas entièrement public.
+
+**Alliés** : centre_institutionnel_geneve
+
+*Sources attestées : grille_aria_new_sustainability*
+
+#### Ceinture Boréale — Forêts nordiques souverainistes — sous [[union_nordique_europe_nord]]
+
+*region — niveau 2 — statut : fragmenté*
+
+**Origine réelle (2026)** : Finlande, Suède, Norvège
+
+**Transition** : 2041-2060
+
+Les forêts boréales nordiques font l'objet d'un mouvement souverainiste actif qui conteste les grands accords environnementaux en revendiquant que ces régions — poumons verts et réservoirs de ressources critiques — décident elles-mêmes de leur modèle de durabilité. Le mouvement oppose une tradition délibérative nordique ancrée dans les territoires à la dérive technocratique des institutions globales.
+
+**Tensions internes** : Le mouvement souverainiste boréal est en tension avec le Conseil de Délibération Augmentée de l'Union Nordique lui-même allié à Genève ; question non résolue sur l'autodétermination territoriale face aux accords de gouvernance globale.
+
+**Alliés** : bloc_eurasien_souverainiste
+
+**Rivaux** : centre_institutionnel_geneve
+
+*Sources attestées : mouvement_souverainiste_de_la_ceinture_boreale_new_sustainability*
 
 #### Chicago-Lacustre — Siège de la Confédération des Grands Lacs — sous [[ameriques_reconfigurees]]
 
@@ -2790,135 +2943,117 @@ Depuis le district de l'ancien Navy Pier reconverti, Chicago-Lacustre accueille 
 **Lieux emblématiques** :
 - Navy Pier — Salle du Conseil tricaméral (infrastructure) — Lieu de délibération tricamérale État-tribu-municipalité, modèle mondial de gouvernance hydrique
 
-**Alliés** : Hub institutionnel Nairobi-Kigali ([[hub_nairobi_kigali]]), Genève-Centre institutionnel mondial ([[centre_institutionnel_geneve]])
+**Alliés** : hub_nairobi_kigali, centre_institutionnel_geneve
 
 *Sources attestées : great_lakes_autonomous_compact_new_sustainability*
 
-#### Manaus — Nœud occidental du RVC — sous [[ameriques_reconfigurees]]
+#### Commission Territoriale d'Ourrassol — sous [[ourrassol_commission_territoriale]]
 
-*ville — niveau 2 — statut : emergent*
+*infrastructure — niveau 2 — statut : stable*
 
-**Origine réelle (2026)** : Brésil, Manaus
+**Origine réelle (2026)** : Lieu fictif du simulateur Ourrassol 2098
 
-**Transition** : 2055-2075
+**Transition** : 2041-2098
 
-Manaus est en 2098 le nœud occidental majeur du Réseau Vivant Continental en Amazonie brésilienne. Depuis ici partent les corridors de biodiversité instrumentés qui s'étendent vers l'Afrique orientale. La ville est un point de convergence entre l'infrastructure écologique planétaire du RVC, la dynamique de convergence économique des Amériques reconfigurées, et les tensions avec les populations amazoniennes non consultées sur le tracé des corridors.
+Instance locale de gouvernance territoriale d'Ourrassol, la Commission consulte quotidiennement Mnemos — comme toutes les instances équivalentes dans le monde de 2098 — pour contextualiser ses décisions avec des données historiques vérifiées. Elle est soumise aux décisions d'ARIA sur la redistribution des ressources énergétiques et alimentaires, illustrant la manière dont la gouvernance algorithmique globale se répercute au niveau des territoires les plus locaux.
 
-**Tensions internes** : Les zones amazoniennes du RVC sont instrumentées sans consultation des populations locales ; tension entre impératifs de régénération systémique globale et droits des communautés autochtones.
+**Tensions internes** : Frustration des élus locaux face aux délais de notification réglementaires d'ARIA jugés insuffisants pour permettre une délibération locale réelle ; dépendance épistémique à Mnemos dont les algorithmes de priorisation des savoirs ne sont pas neutres.
 
-*Sources attestées : trame_bioclimatique_new_sustainability, election_parti_commun_americain_new_sustainability*
+*Sources attestées : reseau_mnemos_new_sustainability, grille_aria_new_sustainability*
 
-##### Manaus — Antenne du Consortium Amazônia Viva — sous [[manaus_rvc]]
+#### Conseil Technique de l'Eau — Union Panafricaine — sous [[afrique_continentale]]
 
-*infrastructure — niveau 3 — statut : emergent*
+*infrastructure — niveau 2 — statut : emergent*
 
-**Origine réelle (2026)** : Brésil, Manaus
+**Origine réelle (2026)** : Union Africaine (ensemble du continent)
 
-**Transition** : 2053-2098 — voir [[traite_souverainete_carbone_amazonie_new_sustainability]]
+**Transition** : 2071-2089
 
-L'antenne de Manaus du Consortium Amazônia Viva constitue le relais opérationnel entre le siège de Belém et le nœud occidental du RVC. Depuis ici sont coordonnées les données bioclimatiques des capteurs forestiers amazoniens alimentant les négociations carboniques du Consortium, et sont reçues les délégations autochtones qui contestent les tracés des corridors du RVC tracés sans leur consentement.
+Instance technique de l'Union Panafricaine spécialisée dans la gouvernance hydrique continentale, le Conseil Technique de l'Eau est l'héritier institutionnel des Accords de Kinshasa-Sahel (2071-2089). Amara Diallo-Nkosi y siège en 2098, articulant la vision communautaire terrain avec les systèmes de gouvernance algorithmique hydrique. Il arbitre en dernier ressort les conflits entre États membres sur la redistribution de l'eau.
 
-**Tensions internes** : Point de friction entre les impératifs du RVC instrumenté et les revendications de co-gouvernance des communautés autochtones amazoniennes locales ; les algorithmes de modélisation forestière favorisent les zones à forte densité de carbone certifiable au détriment des zones d'occupation ancestrale.
+**Tensions internes** : Opposition entre partisans de la médiation humaine de terrain portée par Diallo-Nkosi et nouvelle génération formée aux interfaces IA remettant en cause la nécessité de cette médiation ; pression des lobbies agro-industriels du bassin du Congo pour contourner ses décisions.
 
-**Alliés** : Belém — Siège du Consortium Amazônia Viva ([[belem_consortium_amazonia]]), Delta équatorial — Fermes régénératives ([[delta_equatorial_fermes_regeneratives]])
+**Alliés** : brazzaville_agrb, kinshasa_accords
 
-*Sources attestées : consortium_amazonia_viva_new_sustainability, trame_bioclimatique_new_sustainability, communautes_locales_exclues_des_corridors_new_sustainability*
+**Rivaux** : bassins_versants_asiatiques_derives
 
-#### Medellín — Site des dispensaires Nexus BioSyn — sous [[ameriques_reconfigurees]]
+*Sources attestées : amara_diallo_nkosi_new_sustainability, agence_globale_de_regeneration_des_bassins_versants_agrb_onu_new_sustainability*
 
-*ville — niveau 2 — statut : emergent*
+#### Corridor ibérique énergétique — sous [[nouveau_califat_barcelone]]
 
-**Origine réelle (2026)** : Colombie, Medellín
+*infrastructure — niveau 2 — statut : dominant*
 
-**Transition** : 2055-2075
+**Origine réelle (2026)** : Espagne, Portugal
 
-Medellín abrite des dispensaires cellulaires de Nexus BioSyn Consortium for Life Sciences, opérant sous licence publique encadrée. La ville incarne la tension entre l'accès universel juridiquement garanti aux thérapies cellulaires et la persistance d'une dépendance infrastructurelle invisible envers le géant biotechnologique, dont les brevets sur les variantes optimisées de semences et les thérapies de cinquième génération restent une zone grise explosive.
+**Transition** : 2055-2080
 
-**Tensions internes** : Les mouvements de bio-communs accusent Nexus BioSyn d'un 'verrouillage progressif doux' ; les thérapies cellulaires de cinquième génération non encore soumises aux accords de licence universelle créent une zone grise éthique.
+Le corridor ibérique énergétique est une infrastructure de transit et de production d'énergie renouvelable reliant la péninsule ibérique aux flux énergétiques continentaux atlantiques. ARIA y a redirigé en 2098 14% de la capacité solaire vers les fermes verticales du delta du Rhône, illustrant la gouvernance algorithmique des ressources en temps réel. Il constitue un nœud clé dans les flux de convergence entre les systèmes économiques américains et européens.
 
-*Sources attestées : nexus_biosyn_new_sustainability*
+**Tensions internes** : Les décisions d'ARIA sur le corridor sont notifiées aux élus locaux six minutes avant exécution — délai réglementaire jugé insuffisant par certains ; débat sur la souveraineté énergétique locale face à l'optimisation algorithmique.
 
-### Qaanaaq — Siège flottant du Nuna Siku Governance Council
+**Alliés** : barcelone_hub
 
-*territoire_autonome — statut : stable*
+*Sources attestées : grille_aria_new_sustainability*
 
-**Origine réelle (2026)** : Danemark / Groenland, Norvège (Svalbard), Islande, Arctique
+#### Dakar — Nœud dominant de la CTSA — sous [[afrique_continentale]]
 
-**Transition** : 2041-2065
+*ville — niveau 2 — statut : dominant*
 
-Le Nuna Siku Governance Council administre depuis son siège flottant ancré au large de Qaanaaq le corridor maritime arctique rendu structurellement navigable par la fonte des glaces. Institution hybride mature reconnue par le droit international régénératif de 2098, elle co-gouverne le passage Nord-Ouest et Nord-Est entre États membres, peuples autochtones circumpolaires et systèmes IA allocatifs. Un représentant inuit peut y opposer son veto à une décision de transit d'un État du G20 — et ce veto est respecté.
+**Origine réelle (2026)** : Sénégal, Dakar
 
-**Tensions internes** : Le Mouvement Souverainiste de la Ceinture Boréale accuse le Conseil d'avoir transformé la résistance autochtone en procédure administrative ; plusieurs États membres cherchent à réviser les droits de veto autochtones jugés 'inefficients' face aux flux énergétiques intercontinentaux.
+**Transition** : 2041-2070
 
-**Alliés** : Union Nordique et Europe du Nord ([[union_nordique_europe_nord]]), Hub institutionnel Nairobi-Kigali ([[hub_nairobi_kigali]])
+Dakar est l'un des deux nœuds les plus puissants de la Confédération des Territoires Sahéliens Autonomes (CTSA), organisation de gouvernance distribuée fondée sur les cendres des politiques d'aide conditionnelle des années 2030 et reliant quarante-trois cités de la bande sahélienne de Dakar à Djibouti. La ville est aussi le lieu de formation de la jeunesse d'Amara Diallo-Nkosi avant Delft. En 2098, sa puissance de nœud crée une asymétrie croissante avec les cités périphériques de la CTSA.
 
-**Rivaux** : Bloc Eurasien souverainiste ([[bloc_eurasien_souverainiste]])
+**Tensions internes** : Dakar et Addis-Abeba reproduisent à l'échelle confédérale les rapports de force que la CTSA promettait d'abolir, marginali­sant les cités périphériques membres fondateurs ; pression du CGAI pour intégrer les protocoles CTSA dans le cadre mondial.
 
-*Sources attestées : arctic_passage_authority_new_sustainability*
+**Alliés** : sahel_zone_regeneration, kinshasa_accords
 
-### Bloc Eurasien souverainiste
+*Sources attestées : ligue_des_cites_du_sahel_numerique_new_sustainability, amara_diallo_nkosi_new_sustainability*
 
-*bloc_continental — statut : fragmenté*
+#### Delta équatorial — Fermes régénératives — sous [[reseau_vivant_continental]]
 
-**Origine réelle (2026)** : Russie, Chine, Asie centrale (Kazakhstan, Ouzbékistan, etc.), Hongrie, République tchèque, Roumanie, Serbie, Ukraine, Kazakhstan, Géorgie, Ouzbékistan, Kirghizistan, Mongolie, Corée du Sud, Bosnie-Herzégovine, Macédoine du Nord, Bulgarie, Moldavie, Biélorussie, Slovaquie, Kosovo, Arménie, Turkménistan, Tadjikistan, Afghanistan, Corée du Nord, Taïwan, Pologne
+*infrastructure — niveau 2 — statut : emergent*
 
-**Transition** : 2040-2070
+**Origine réelle (2026)** : Brésil (Amazonie), Ensemble des deltas équatoriaux
 
-Le Bloc Eurasien de 2098 regroupe des États qui résistent aux modèles de transition écologique imposés par les centres institutionnels de Genève et Nairobi. Il comprend des factions souverainistes actives, une alliance numérique Eurasie-Pacifique qui impose ses propres normes, et des gouvernements hydriques refusant les accords de partage transfrontalier. Des bassins versants asiatiques sont au cœur de controverses sur la délégation décisionnelle aux IA.
+**Transition** : 2060-2098
 
-**Tensions internes** : Fracture entre intégration dans les accords globaux et revendication d'autonomie ; contestation de la légitimité des cadres environnementaux globaux perçus comme néo-impérialistes ; les 'blocs périphériques' dénoncent une technocratie de la régénération décidant depuis les centres.
+Le delta équatorial abrite des fermes régénératives qui consultent Mnemos pour leurs opérations quotidiennes, illustrant l'intégration de l'infrastructure cognitive dans la production alimentaire mondiale. Ces fermes constituent un exemple paradigmatique du modèle techno-régénératif du RVC — ni tout à fait naturelles, ni tout à fait industrielles — opérant à l'interface entre l'infrastructure écologique planétaire et les besoins alimentaires des populations locales.
 
-**Rivaux** : Genève-Centre institutionnel mondial ([[centre_institutionnel_geneve]]), Hub institutionnel Nairobi-Kigali ([[hub_nairobi_kigali]])
+**Tensions internes** : Les populations locales des zones d'interface voient leurs terres intégrées dans le système régénératif sans co-gouvernance réelle ; les algorithmes de Mnemos qui guident les pratiques agricoles favorisent subtilement les épistémologies des anciens centres de pouvoir.
 
-*Sources attestées : souverainistes_du_bloc_eurasien_new_sustainability, alliance_numerique_eurasie_pacifique_new_sustainability, bloc_des_gouvernements_souverainistes_hydriques_new_sustainability, amara_diallo_nkosi_new_sustainability, factions_souverainistes_des_blocs_peripheriques_new_sustainability, conseil_regulation_algorithmique_new_sustainability*
+**Alliés** : manaus_rvc
 
-#### Bassins versants asiatiques — Zones de dérives algorithmiques — sous [[bloc_eurasien_souverainiste]]
+*Sources attestées : reseau_mnemos_new_sustainability, trame_bioclimatique_new_sustainability*
+
+#### Delta du Mékong — Zone de mobilité climatique — sous [[reseau_vivant_continental]]
 
 *zone_sinistree — niveau 2 — statut : fragmenté*
 
-**Origine réelle (2026)** : Asie centrale (Kazakhstan, Ouzbékistan, etc.), Chine
+**Origine réelle (2026)** : Vietnam, Cambodge
 
-**Transition** : 2071-2098
+**Transition** : 2050-2080
 
-Trois bassins versants asiatiques non nommés précisément dans le corpus constituent la zone documentée par le rapport critique qu'Amara Diallo-Nkosi prépare en 2098 sur les dérives de la délégation décisionnelle aux IA dans la gouvernance hydrique. Ces bassins incarnent les tensions entre le modèle de gouvernance algorithmique promu par les institutions globales et les réalités locales ignorées par les systèmes d'optimisation, et pourraient fracturer les alliances institutionnelles africaines si le rapport est rendu public.
+Le delta du Mékong est une zone de mobilité climatique instrumentée dans le réseau narratif de Prisme Global et dans les corridors du RVC. Fortement affecté par la montée des eaux et les perturbations hydrologiques, il constitue l'un des exemples paradigmatiques de la gestion IA des écosystèmes en crise, avec des populations déplacées dont les récits alimentent quotidiennement les plateformes narratives mondiales.
 
-**Tensions internes** : Opposition entre les gouvernements souverainistes hydriques qui refusent les accords de partage transfrontalier et les institutions globales qui imposent des algorithmes décisionnels opaques ; les populations riveraines n'ont pas été consultées sur les décisions hydrologiques qui les affectent.
+**Tensions internes** : Populations déplacées climatiques non représentées dans les instances de gouvernance du RVC ; algorithmes de priorisation dont les critères sont opaques.
 
-**Rivaux** : Brazzaville — Siège africain de l'AGRB ([[brazzaville_agrb]]), Kinshasa — Pôle des négociations hydriques ([[kinshasa_accords]])
+*Sources attestées : prisme_global_new_sustainability, trame_bioclimatique_new_sustainability*
 
-*Sources attestées : amara_diallo_nkosi_new_sustainability, bloc_des_gouvernements_souverainistes_hydriques_new_sustainability*
+#### Funafuti-sur-Mer — Plateforme mémorielle de Tuvalu — sous [[te_moana_nui_plateforme]]
 
-#### Séoul — Lieu des Accords de 2040 — sous [[bloc_eurasien_souverainiste]]
+*site_strategique — niveau 2 — statut : stable*
 
-*ville — niveau 2 — statut : stable*
+**Origine réelle (2026)** : Tuvalu
 
-**Origine réelle (2026)** : Séoul
+**Transition** : 2039-2047 — voir [[tuvalu_submersion_souverainete_flottante_new_sustainability]]
 
-**Transition** : 2040-2045
+Plateforme ancrée à l'emplacement de l'ancienne capitale tuvaluane, Funafuti-sur-Mer est le lieu de la cérémonie fondatrice de septembre 2039 où le dernier Conseil des ministres tuvaluan s'est tenu en territoire semi-immergé avant de transférer formellement la souveraineté à la Confédération Maritime. Site mémoriel central de la Confédération et symbole mondial du droit post-territorial, retransmis en direct sur Prisme Global.
 
-Séoul est le lieu historique des Accords de 2040 qui ont fondé le Conseil Mondial de l'IA Régénérative, aujourd'hui siégeant à Nairobi-Centre. Paradoxalement rattachée au bloc eurasien souverainiste dont elle incarne une figure ambivalente — à la fois origine des cadres de gouvernance globale et point d'ancrage d'une Asie qui résiste à leur application uniforme — Séoul reste un symbole de la bifurcation entre intégration et résistance.
+**Tensions internes** : Tension entre la préservation du site comme lieu de mémoire vivante et sa patrimonialisation par des générations nées sur plateforme n'ayant jamais vu la terre émergée originale.
 
-**Tensions internes** : Tension entre l'héritage fondateur des Accords de Séoul et les positions souverainistes actuelles du bloc eurasien vis-à-vis des institutions qui en sont nées.
-
-*Sources attestées : conseil_regulation_algorithmique_new_sustainability*
-
-### Genève-Centre institutionnel mondial
-
-*ville — statut : dominant*
-
-**Origine réelle (2026)** : Suisse, Genève, Allemagne, Italie, Autriche, Luxembourg, Monaco, Liechtenstein, Saint-Marin, Vatican
-
-**Transition** : 2041-2058 — voir [[effondrement_reseau_mondial_communication_new_sustainability]]
-
-Genève est en 2098 le siège de plusieurs institutions technocratiques mondiales majeures, dont l'APRC (stabilisation climatique) et le CGAI (gouvernance algorithmique). Son littoral a été rehaussé de trois mètres après les accords de 2044. Elle incarne la synthèse entre technocratie efficace et légitimité négociée, abritant aussi les accords de gouvernance numérique dits 'Genève III' qui régulent les plateformes comme Prisme Global.
-
-**Tensions internes** : Concentration d'institutions non élues sur un territoire restreint ; contestation croissante de leur légitimité démocratique par les blocs périphériques et les mouvements souverainistes.
-
-**Alliés** : Hub institutionnel Nairobi-Kigali ([[hub_nairobi_kigali]])
-
-**Rivaux** : Bloc Eurasien souverainiste ([[bloc_eurasien_souverainiste]])
-
-*Sources attestées : agence_stabilisation_climatique_new_sustainability, bureau_gouvernance_algorithmique_new_sustainability, observatoire_anti_monopole_de_geneve_new_sustainability, prisme_global_new_sustainability, effondrement_reseau_mondial_communication_new_sustainability*
+*Sources attestées : tuvalu_submersion_souverainete_flottante_new_sustainability, pacifique_sud_resilience_network_new_sustainability*
 
 #### Genève-Lacus — Siège du CGAI — sous [[centre_institutionnel_geneve]]
 
@@ -2946,9 +3081,277 @@ Vigie critique hébergée à Genève, l'Observatoire Anti-Monopole surveille les
 
 **Tensions internes** : Tension entre son mandat de surveillance critique et sa dépendance institutionnelle envers les mêmes organisations de Genève qu'il est censé contrôler ; ses rapports sont souvent enterrés dans des procédures techniques longues.
 
-**Alliés** : Bruxelles — Tribunal de Gouvernance Algorithmique ([[bruxelles_tribunal_algo]])
+**Alliés** : bruxelles_tribunal_algo
 
 *Sources attestées : observatoire_anti_monopole_de_geneve_new_sustainability, nexus_biosyn_new_sustainability, consortium_helios_new_sustainability*
+
+#### Golfe Persique — Terminaux pétroliers ciblés — sous [[moyen_orient_golfe]]
+
+*zone_sinistree — niveau 2 — statut : en_declin*
+
+**Origine réelle (2026)** : Arabie Saoudite, Qatar, Iran
+
+**Transition** : 2026-2045 — voir [[conflit_israel_iran_2026_new_sustainability]]
+
+Les terminaux pétroliers du Golfe Persique ont été ciblés lors de la riposte iranienne de 2026, provoquant un choc pétrolier de +60% qui a agi comme électrochoc pour les investissements dans les renouvelables et l'indépendance énergétique régionale. En 2098, la région incarne la transition post-extractiviste du Moyen-Orient, ses anciens terminaux reconvertis ou abandonnés comme témoins d'une ère révolue.
+
+**Tensions internes** : Résistances résiduelles des industries extractives dans certaines zones ; transition énergétique inégale selon les pays du Golfe.
+
+*Sources attestées : conflit_israel_iran_2026_new_sustainability*
+
+#### Helsinki — Institut de Philosophie des Systèmes Hybrides — sous [[union_nordique_europe_nord]]
+
+*ville — niveau 2 — statut : stable*
+
+**Origine réelle (2026)** : Finlande, Helsinki
+
+**Transition** : 2041-2060
+
+Helsinki abrite l'Institut de Philosophie des Systèmes Hybrides, foyer de la pensée critique mondiale sur la gouvernance humain-IA, et le bureau de Leena Väinälä — philosophe finlandaise dont les murs couverts de manuscrits annotés à la main contrastent avec un monde qui n'écrit plus. Väinälä y a co-rédigé les Chartes de 2041 structurant la coordination climatique globale, tout en développant sa critique acerbe de la 'démocratie somnambule'.
+
+**Tensions internes** : Paradoxe de Väinälä : en siégeant dans les instances qu'elle critique, légitime-t-elle ce qu'elle combat ? Une faction de jeunes philosophes 'post-délibératifs' la considère désormais comme une figure anachronique.
+
+**Alliés** : centre_institutionnel_geneve
+
+*Sources attestées : leena_vainala_new_sustainability, institut_de_philosophie_des_systemes_hybrides_d_helsinki_new_sustainability*
+
+#### Kinshasa — Pôle des négociations hydriques — sous [[afrique_continentale]]
+
+*ville — niveau 2 — statut : stable*
+
+**Origine réelle (2026)** : République Démocratique du Congo, Kinshasa
+
+**Transition** : 2071-2089
+
+Lieu des négociations des Accords de Kinshasa-Sahel (2071-2089), Kinshasa a été le théâtre des grandes tractations de gouvernance hydrique continentale africaine. Elle incarne la capacité du continent à produire ses propres cadres normatifs sur l'eau, en résistant à l'effacement des spécificités locales par la gouvernance globale.
+
+**Tensions internes** : Pression persistante des lobbies agro-industriels du bassin du Congo voulant contourner les accords de redistribution hydrique.
+
+**Alliés** : brazzaville_agrb, bassin_du_congo
+
+*Sources attestées : amara_diallo_nkosi_new_sustainability*
+
+#### Lagos — Nœud de serveurs Prisme Global — sous [[infrastructure_numerique_globale]]
+
+*infrastructure — niveau 2 — statut : dominant*
+
+**Origine réelle (2026)** : Nigeria, Lagos
+
+**Transition** : 2040-2043 — voir [[effondrement_reseau_mondial_communication_new_sustainability]]
+
+Lagos héberge l'un des trois nœuds de serveurs distribués de Prisme Global, la plateforme narrative traitant 4,7 milliards de contributions locales par jour. Ce nœud africain incarne la dimension de pluralisme géographique revendiquée par Prisme Global, tout en concentrant des questions de gouvernance des données et de souveraineté informationnelle pour le continent africain.
+
+**Tensions internes** : Accusations de domination culturelle persistante malgré la structure distribuée ; certains États africains revendiquent un contrôle accru sur les données hébergées sur leur territoire.
+
+**Alliés** : montreal_prisme, singapour_prisme
+
+*Sources attestées : prisme_global_new_sustainability, nexcore_new_sustainability*
+
+#### Manaus — Nœud occidental du RVC — sous [[ameriques_reconfigurees]]
+
+*ville — niveau 2 — statut : emergent*
+
+**Origine réelle (2026)** : Brésil, Manaus
+
+**Transition** : 2055-2075
+
+Manaus est en 2098 le nœud occidental majeur du Réseau Vivant Continental en Amazonie brésilienne. Depuis ici partent les corridors de biodiversité instrumentés qui s'étendent vers l'Afrique orientale. La ville est un point de convergence entre l'infrastructure écologique planétaire du RVC, la dynamique de convergence économique des Amériques reconfigurées, et les tensions avec les populations amazoniennes non consultées sur le tracé des corridors.
+
+**Tensions internes** : Les zones amazoniennes du RVC sont instrumentées sans consultation des populations locales ; tension entre impératifs de régénération systémique globale et droits des communautés autochtones.
+
+*Sources attestées : trame_bioclimatique_new_sustainability, election_parti_commun_americain_new_sustainability*
+
+#### Medellín — Site des dispensaires Nexus BioSyn — sous [[ameriques_reconfigurees]]
+
+*ville — niveau 2 — statut : emergent*
+
+**Origine réelle (2026)** : Colombie, Medellín
+
+**Transition** : 2055-2075
+
+Medellín abrite des dispensaires cellulaires de Nexus BioSyn Consortium for Life Sciences, opérant sous licence publique encadrée. La ville incarne la tension entre l'accès universel juridiquement garanti aux thérapies cellulaires et la persistance d'une dépendance infrastructurelle invisible envers le géant biotechnologique, dont les brevets sur les variantes optimisées de semences et les thérapies de cinquième génération restent une zone grise explosive.
+
+**Tensions internes** : Les mouvements de bio-communs accusent Nexus BioSyn d'un 'verrouillage progressif doux' ; les thérapies cellulaires de cinquième génération non encore soumises aux accords de licence universelle créent une zone grise éthique.
+
+*Sources attestées : nexus_biosyn_new_sustainability*
+
+#### Montréal — Nœud de serveurs Prisme Global / NexCore — sous [[infrastructure_numerique_globale]]
+
+*infrastructure — niveau 2 — statut : dominant*
+
+**Origine réelle (2026)** : Canada, Montréal
+
+**Transition** : 2040-2043 — voir [[effondrement_reseau_mondial_communication_new_sustainability]]
+
+Montréal abrite l'un des trois nœuds de serveurs distribués de Prisme Global et un centre opérationnel majeur de NexCore Communs. La ville est l'un des points d'ancrage nord-américains de l'infrastructure numérique mondiale reconstruite après l'effondrement de 2040, dans un contexte de convergence progressive entre les systèmes économiques nord et sud-américains.
+
+**Tensions internes** : Pression des États nord-américains pour plus de contrôle sur les données hébergées ; débat sur la gouvernance coopérative de NexCore — trop grande pour être vraiment démocratique.
+
+**Alliés** : lagos_prisme, singapour_prisme
+
+*Sources attestées : prisme_global_new_sustainability, nexcore_new_sustainability, effondrement_reseau_mondial_communication_new_sustainability*
+
+#### Nairobi-Centre — sous [[hub_nairobi_kigali]]
+
+*ville — niveau 2 — statut : dominant*
+
+**Origine réelle (2026)** : Kenya, Nairobi
+
+**Transition** : 2040-2050
+
+Cœur urbain et institutionnel du hub africain, Nairobi-Centre abrite le Conseil Mondial de l'IA Régénérative (né des Accords de Séoul 2040) et le Réseau d'Information Ouvert. C'est ici que Kofi Asante-Mensah officie comme correspondant global senior, et que Chris van Derburgh exerçait comme conservateur indépendant avant son arrestation de 2078. La ville incarne la synthèse entre gouvernance algorithmique globale et vitalité urbaine africaine.
+
+**Tensions internes** : Pression des États souhaitant reprendre le contrôle de leurs IA nationales face au Conseil Mondial ; accusations de lenteur réglementaire face à l'accélération technologique.
+
+**Lieux emblématiques** :
+- Siège du Conseil Mondial de l'IA Régénérative (infrastructure) — 340 experts permanents, 89 États membres, audits publics trimestriels diffusés en direct
+- Réseau d'Information Ouvert — bureau de Nairobi (infrastructure) — Base opérationnelle de Kofi Asante-Mensah, correspondant global senior
+
+*Sources attestées : conseil_regulation_algorithmique_new_sustainability, le_temoin_new_sustainability, arrestation_chris_van_derburgh_new_sustainability*
+
+#### Nairobi-Node — Bureau de la CMTCA — sous [[hub_nairobi_kigali]]
+
+*infrastructure — niveau 2 — statut : stable*
+
+**Origine réelle (2026)** : Kenya, Nairobi
+
+**Transition** : 2055-2075
+
+Nairobi-Node est le bureau africain de la Confédération Mondiale des Travailleurs Cognitifs Augmentés (CMTCA), pendant africain du Barcelone-Hub européen. Depuis ici, les délégués de la CMTCA négocient en session mixte avec des IA de médiation institutionnelle les clauses des accords productifs continentaux africains, incarnant la transformation du mouvement syndical en acteur institutionnel de la gouvernance mondiale du travail augmenté.
+
+**Tensions internes** : Fracture entre 'intégrateurs' favorables à la négociation permanente dans les structures technocratiques et 'dissidents du confort' qui accusent la Confédération d'avoir légitimé l'optimisation sans la questionner ; pression des États africains pour des régulations nationales plus autonomes.
+
+**Alliés** : barcelone_hub, nairobi_centre
+
+*Sources attestées : internationale_travailleurs_augmentes_new_sustainability*
+
+#### Nuuk — Siège du Fonds Souverain Kalaallit Nunaat — sous [[union_nordique_europe_nord]]
+
+*ville — niveau 2 — statut : dominant*
+
+**Origine réelle (2026)** : Danemark / Groenland, Nuuk
+
+**Transition** : 2050-2098
+
+Depuis ses bureaux de verre et de bois flotté arctique surplombant le fjord de Nuuk, le Kivfak Nunani gère un portefeuille de 2 400 milliards de crédits carbone-équivalents, fortune née de la fonte des glaces du XXIe siècle. Ses négociateurs, formés à Helsinki et Singapour mais ancrés dans la culture kalaallit, ont obtenu en 2096 un siège permanent au Conseil de Gouvernance Algorithmique Intégrée en bloquant six semaines un traité d'accès aux corridors arctiques.
+
+**Tensions internes** : Fracture entre la faction jeune radicale 'Sermersooq' poussant à nationaliser intégralement les ressources et la direction technocratique misant sur l'intégration institutionnelle ; les communautés inuit des zones non urbanisées contestent la captation de la rente par une élite nuukoise jugée déconnectée.
+
+**Alliés** : centre_institutionnel_geneve, arctic_passage_qaanaaq
+
+*Sources attestées : kalaallit_nunaat_sovereign_fund_new_sustainability*
+
+#### Ouagadougou Nouvelle — Siège tournant de la CTSA — sous [[afrique_continentale]]
+
+*ville — niveau 2 — statut : emergent*
+
+**Origine réelle (2026)** : Burkina Faso, Ouagadougou
+
+**Transition** : 2041-2070
+
+Ouagadougou Nouvelle accueille en 2098 le siège tournant de la Confédération des Territoires Sahéliens Autonomes (CTSA), dont les assemblées trimestrielles de quarante-trois cités délibèrent sur les protocoles d'interopérabilité open-source exportés jusqu'en Bolivie et au Kazakhstan. La rotation du siège est elle-même un mécanisme politique d'équilibre entre les nœuds dominants et les cités périphériques.
+
+**Tensions internes** : La rotation du siège ne suffit pas à compenser les asymétries entre cités-nœuds riches en données et cités périphériques ; question ouverte sur l'identité africaine ou globale de la CTSA face aux demandes d'adhésion d'Asie centrale.
+
+**Alliés** : dakar_ctsa_noeud, sahel_zone_regeneration
+
+*Sources attestées : ligue_des_cites_du_sahel_numerique_new_sustainability*
+
+#### Parlement des Territoires de Nairobi — sous [[hub_nairobi_kigali]]
+
+*infrastructure — niveau 2 — statut : dominant*
+
+**Origine réelle (2026)** : Kenya, Nairobi
+
+**Transition** : 2041-2045
+
+Bâtiment conçu pour durer mille ans, le Parlement des Territoires siège à Nairobi et accueille 340 délégués représentant 195 États, 89 régions autonomes et 12 écosystèmes protégés, traduits en 94 langues en temps réel. Créé par le Traité de Nairobi de 2041, il est l'instance mondiale de gouvernance territoriale sur l'aménagement, les migrations climatiques et les droits du sol. Sa présidente Nilufar Rashidova en est à son deuxième mandat.
+
+**Tensions internes** : Tension permanente entre délégués des États et délégués des régions autonomes sur la souveraineté ; débat non résolu sur la pondération des votes — un État de 2 millions face à un écosystème de 500 millions d'hectares.
+
+**Alliés** : siege_circulaire_kigali_amrrt
+
+*Sources attestées : assemblee_territoires_new_sustainability, arrestation_chris_van_derburgh_new_sustainability, coalition_vivant_new_sustainability*
+
+#### Sahel — Corridors verts du RVC — sous [[reseau_vivant_continental]]
+
+*region — niveau 2 — statut : emergent*
+
+**Origine réelle (2026)** : Mali, Sénégal
+
+**Transition** : 2060-2085
+
+Les corridors verts du Sahel constituent l'une des zones de reforestation prioritaires du RVC, décrits dans les récits de Prisme Global comme des écosystèmes instrumentés 'de loin ressemblant à de la nature revenue à l'état sauvage, de près instrumentés jusqu'à la racine'. Chaque arbre y porte un identifiant biosensoriel, chaque rivière est guidée par des modèles prédictifs. Zone de chevauchement entre le RVC et l'Afrique continentale.
+
+**Tensions internes** : Communautés locales dont les terres ont été classées 'patrimoine régénératif' sans consultation ; opacité des algorithmes de priorisation du Consortium de Régénération Planétaire.
+
+**Alliés** : sahel_zone_regeneration, bassin_du_congo
+
+*Sources attestées : trame_bioclimatique_new_sustainability, prisme_global_new_sustainability, communautes_locales_exclues_des_corridors_new_sustainability*
+
+#### Sahel — Zone de régénération prioritaire — sous [[afrique_continentale]]
+
+*zone_sinistree — niveau 2 — statut : emergent*
+
+**Origine réelle (2026)** : Mali, Sénégal
+
+**Transition** : 2071-2089
+
+Le Sahel constitue en 2098 l'une des zones de régénération prioritaires du Réseau Vivant Continental, avec des corridors verts instrumentés par des essaims d'IA écologiques et des programmes de reforestation algorithmique. Mentionné dans les accords hydriques et les récits de reforestation de Prisme Global, il symbolise à la fois la réussite de la stabilisation climatique et les paradoxes d'une nature 'revenue à l'état sauvage' mais instrumentée jusqu'à la racine.
+
+**Tensions internes** : Les populations locales voient leurs terres classées 'patrimoine régénératif' sans consultation préalable ; les corridors verts du RVC traversent des territoires ancestraux sans co-gouvernance.
+
+**Alliés** : bassin_du_congo
+
+*Sources attestées : prisme_global_new_sustainability, trame_bioclimatique_new_sustainability, amara_diallo_nkosi_new_sustainability*
+
+#### Séoul — Lieu des Accords de 2040 — sous [[bloc_eurasien_souverainiste]]
+
+*ville — niveau 2 — statut : stable*
+
+**Origine réelle (2026)** : Corée du Sud, Séoul
+
+**Transition** : 2040-2045
+
+Séoul est le lieu historique des Accords de 2040 qui ont fondé le Conseil Mondial de l'IA Régénérative, aujourd'hui siégeant à Nairobi-Centre. Paradoxalement rattachée au bloc eurasien souverainiste dont elle incarne une figure ambivalente — à la fois origine des cadres de gouvernance globale et point d'ancrage d'une Asie qui résiste à leur application uniforme — Séoul reste un symbole de la bifurcation entre intégration et résistance.
+
+**Tensions internes** : Tension entre l'héritage fondateur des Accords de Séoul et les positions souverainistes actuelles du bloc eurasien vis-à-vis des institutions qui en sont nées.
+
+*Sources attestées : conseil_regulation_algorithmique_new_sustainability*
+
+#### Siège circulaire de Kigali — AMRRT — sous [[hub_nairobi_kigali]]
+
+*infrastructure — niveau 2 — statut : dominant*
+
+**Origine réelle (2026)** : Rwanda, Kigali
+
+**Transition** : 2061-2075
+
+Choisi en 2061 comme symbole de la réconciliation post-extractiviste, le siège circulaire de Kigali abrite l'Autorité Mondiale de Régulation des Ressources et Technologies (AMRRT). L'IA Arbiter-7 y assiste les commissaires issus de quotas régionaux stricts ; en 2097, elle a tranché plus de 340 litiges inter-étatiques sans escalade armée. L'AMRRT publie chaque lundi son tableau de bord des ressources mondiales consulté par 194 gouvernements.
+
+**Tensions internes** : Accusée d'être un gouvernement mondial de facto jamais élu ; les blocs périphériques dénoncent une technocratie décidant depuis Kigali quelles terres peuvent être exploitées ou doivent 'se reposer' ; risque de divergence entre Arbiter-7 et les commissaires humains.
+
+**Alliés** : parlement_territoires_nairobi
+
+*Sources attestées : conseil_regulation_ressources_new_sustainability*
+
+#### Singapour — Nœud de serveurs Prisme Global — sous [[infrastructure_numerique_globale]]
+
+*infrastructure — niveau 2 — statut : stable*
+
+**Origine réelle (2026)** : Singapour
+
+**Transition** : 2040-2043 — voir [[effondrement_reseau_mondial_communication_new_sustainability]]
+
+Singapour héberge l'un des trois nœuds de serveurs distribués de Prisme Global, assurant la présence asiatique de l'infrastructure narrative mondiale. Sa position géographique en fait un point de friction potentiel avec l'alliance numérique Eurasie-Pacifique du bloc eurasien souverainiste, qui impose ses propres normes numériques et de durabilité dans la région.
+
+**Tensions internes** : Tension entre le rôle de nœud de l'infrastructure numérique globale ouverte et la pression de l'alliance numérique eurasienne qui impose ses propres normes dans la région Asie-Pacifique.
+
+**Alliés** : lagos_prisme, montreal_prisme
+
+**Rivaux** : bloc_eurasien_souverainiste
+
+*Sources attestées : prisme_global_new_sustainability, nexcore_new_sustainability*
 
 #### Genève — Site du Sommet d'Urgence Numérique de 2041 — sous [[centre_institutionnel_geneve]]
 
@@ -2960,7 +3363,7 @@ Vigie critique hébergée à Genève, l'Observatoire Anti-Monopole surveille les
 
 En 2041, Genève a accueilli le Sommet d'Urgence Numérique qui a abouti aux Accords de Reconstruction Ouverte, base légale de la création de NexCore Communs en 2043. Ce site mémoriel et fonctionnel incarne le moment fondateur de la reconstruction numérique mondiale post-effondrement, et reste un lieu de référence symbolique pour les débats sur la gouvernance des biens communs numériques.
 
-**Alliés** : Montréal — Nœud de serveurs Prisme Global / NexCore ([[montreal_prisme]]), Lagos — Nœud de serveurs Prisme Global ([[lagos_prisme]]), Singapour — Nœud de serveurs Prisme Global ([[singapour_prisme]])
+**Alliés** : montreal_prisme, lagos_prisme, singapour_prisme
 
 *Sources attestées : effondrement_reseau_mondial_communication_new_sustainability, nexcore_new_sustainability*
 
@@ -2978,440 +3381,21 @@ Complexe architectural surplombant le nouveau littoral de Genève rehaussé apr�
 
 *Sources attestées : agence_stabilisation_climatique_new_sustainability*
 
-### Tours de contrôle orbital Helios
+##### Bamako — Berceau de formation hydrique africaine — sous [[kinshasa_accords]]
 
-*infrastructure — statut : dominant*
+*ville — niveau 3 — statut : stable*
 
-**Origine réelle (2026)** : Internet mondial / GAFAM (héritage), Ensemble des infrastructures orbitales et énergétiques mondiales
+**Origine réelle (2026)** : Mali, Bamako
 
-**Transition** : 2045-2075
+**Transition** : 2071-2089
 
-Helios est en 2098 un acteur hybride public-privé dont les tours de contrôle orbital scintillent au-dessus des continents sous le sceau bleu du Conseil Énergétique Intercontinental. Ancien oligopole privé partiellement démantelé sous la pression des régulateurs, il opère désormais ses infrastructures orbitales et ses réseaux d'hydrogène vert sous licence de bien commun, tout en conservant une position dominante dans la gouvernance énergétique mondiale. Il incarne la transformation d'un prédateur en partenaire institutionnel — surveillance et audits officiels inclus.
+Bamako est la ville natale d'Amara Diallo-Nkosi et le lieu de sa formation intellectuelle initiale avant Dakar et Delft. Elle représente symboliquement l'ancrage sahélien de la gouvernance hydrique africaine — la ville d'origine de celle qui a imposé le principe de validation communautaire terrain dans tous les accords de redistribution de l'eau. En 2098, elle reste un point de référence dans les récits de légitimité terrain de l'AGRB.
 
-**Tensions internes** : Une faction dirigeante milite discrètement pour renégocier les licences communes lors du renouvellement du traité de 2101 afin de récupérer la souveraineté tarifaire ; la montée des réseaux micro-énergétiques communautaires remet en question la pertinence d'un acteur centralisé ; les algorithmes d'optimisation IA d'Helios restent délibérément opaques malgré les audits officiels.
+**Tensions internes** : Tension entre le statut symbolique de ville-origine d'une figure tutélaire de la gouvernance hydrique et la réalité d'une région sahélienne dont les terres ont été classées patrimoine régénératif sans consultation.
 
-**Alliés** : Genève-Centre institutionnel mondial ([[centre_institutionnel_geneve]]), Hub institutionnel Nairobi-Kigali ([[hub_nairobi_kigali]])
+**Alliés** : sahel_zone_regeneration
 
-**Rivaux** : Bloc Eurasien souverainiste ([[bloc_eurasien_souverainiste]])
-
-*Sources attestées : consortium_helios_new_sustainability*
-
-### Hub institutionnel Nairobi-Kigali
-
-*region — statut : dominant*
-
-**Origine réelle (2026)** : Kenya, Rwanda
-
-**Transition** : 2041-2065
-
-Nairobi est en 2098 la capitale institutionnelle mondiale de la gouvernance territoriale et algorithmique : elle abrite le Parlement des Territoires (Traité de 2041), le Conseil Mondial de l'IA Régénérative (Accords de Séoul 2040), et constitue un nœud médiatique global. Kigali, choisie en 2061 comme symbole de la réconciliation post-extractiviste, héberge l'AMRRT (gestion des ressources mondiales). Ces deux villes forment ensemble le pôle institutionnel africain dominant du monde de 2098.
-
-**Tensions internes** : Tension entre les délégués des États et ceux des régions autonomes au Parlement des Territoires ; débat sur la pondération des votes ; l'AMRRT est accusée de décider depuis Kigali quelles terres méritent d'être exploitées ou 'mises au repos'.
-
-**Alliés** : Genève-Centre institutionnel mondial ([[centre_institutionnel_geneve]]), Afrique continentale — Union Panafricaine et bassins versants ([[afrique_continentale]])
-
-*Sources attestées : assemblee_territoires_new_sustainability, conseil_regulation_algorithmique_new_sustainability, conseil_regulation_ressources_new_sustainability, coalition_vivant_new_sustainability, le_temoin_new_sustainability, arrestation_chris_van_derburgh_new_sustainability, nexus_biosyn_new_sustainability, grille_aria_new_sustainability*
-
-#### Nairobi-Centre — sous [[hub_nairobi_kigali]]
-
-*ville — niveau 2 — statut : dominant*
-
-**Origine réelle (2026)** : Nairobi
-
-**Transition** : 2040-2050
-
-Cœur urbain et institutionnel du hub africain, Nairobi-Centre abrite le Conseil Mondial de l'IA Régénérative (né des Accords de Séoul 2040) et le Réseau d'Information Ouvert. C'est ici que Kofi Asante-Mensah officie comme correspondant global senior, et que Chris van Derburgh exerçait comme conservateur indépendant avant son arrestation de 2078. La ville incarne la synthèse entre gouvernance algorithmique globale et vitalité urbaine africaine.
-
-**Tensions internes** : Pression des États souhaitant reprendre le contrôle de leurs IA nationales face au Conseil Mondial ; accusations de lenteur réglementaire face à l'accélération technologique.
-
-**Lieux emblématiques** :
-- Siège du Conseil Mondial de l'IA Régénérative (infrastructure) — 340 experts permanents, 89 États membres, audits publics trimestriels diffusés en direct
-- Réseau d'Information Ouvert — bureau de Nairobi (infrastructure) — Base opérationnelle de Kofi Asante-Mensah, correspondant global senior
-
-*Sources attestées : conseil_regulation_algorithmique_new_sustainability, le_temoin_new_sustainability, arrestation_chris_van_derburgh_new_sustainability*
-
-##### Nairobi — Observatoire Climatique Narratif — sous [[nairobi_centre]]
-
-*infrastructure — niveau 3 — statut : stable*
-
-**Origine réelle (2026)** : Nairobi
-
-**Transition** : 2050-2098
-
-L'Observatoire Climatique Narratif de Nairobi produit des données sur les dynamiques narratives climatiques en Afrique subsaharienne, servant de référence pour calibrer les discours médiatiques et politiques à l'échelle continentale et mondiale. Il constitue un nœud de jonction entre les flux narratifs de Prisme Global et les institutions de gouvernance africaine, alimentant les débats de l'Union Panafricaine sur la représentation des réalités locales dans les grands récits globaux.
-
-**Tensions internes** : Tension entre la mission de production de données 'neutres' et la réalité d'un outil de cadrage narratif dont les choix éditoriaux influencent les décisions institutionnelles ; accusations de proximité excessive avec les institutions de Genève.
-
-**Alliés** : Lagos — Nœud de serveurs Prisme Global ([[lagos_prisme]])
-
-*Sources attestées : observatoire_climatique_narratif_de_nairobi_new_sustainability, prisme_global_new_sustainability*
-
-##### Serres verticales de Nairobi — Nexus BioSyn — sous [[nairobi_centre]]
-
-*infrastructure — niveau 3 — statut : stable*
-
-**Origine réelle (2026)** : Nairobi
-
-**Transition** : 2055-2075
-
-Les serres verticales de Nairobi sont l'une des vitrines institutionnelles de Nexus BioSyn Consortium, opérant sous licence publique encadrée. Elles incarnent la coexistence entre gouvernance technocratique globale et production alimentaire régénérative locale, avec les logos verts de Nexus BioSyn côtoyant les mandats de l'OMS Étendue. Lieu symbolique de la tension entre accès universel garanti aux biotechnologies et dépendance infrastructurelle invisible envers le géant biotechnologique.
-
-**Tensions internes** : Les mouvements de bio-communs accusent Nexus BioSyn d'un 'verrouillage progressif doux' depuis ces installations ; le code source des algorithmes de semences reste propriétaire malgré les audits officiels.
-
-**Alliés** : Medellín — Site des dispensaires Nexus BioSyn ([[medellin_biosyn]])
-
-*Sources attestées : nexus_biosyn_new_sustainability*
-
-#### Nairobi-Node — Bureau de la CMTCA — sous [[hub_nairobi_kigali]]
-
-*infrastructure — niveau 2 — statut : stable*
-
-**Origine réelle (2026)** : Nairobi
-
-**Transition** : 2055-2075
-
-Nairobi-Node est le bureau africain de la Confédération Mondiale des Travailleurs Cognitifs Augmentés (CMTCA), pendant africain du Barcelone-Hub européen. Depuis ici, les délégués de la CMTCA négocient en session mixte avec des IA de médiation institutionnelle les clauses des accords productifs continentaux africains, incarnant la transformation du mouvement syndical en acteur institutionnel de la gouvernance mondiale du travail augmenté.
-
-**Tensions internes** : Fracture entre 'intégrateurs' favorables à la négociation permanente dans les structures technocratiques et 'dissidents du confort' qui accusent la Confédération d'avoir légitimé l'optimisation sans la questionner ; pression des États africains pour des régulations nationales plus autonomes.
-
-**Alliés** : Barcelone-Hub — Bureau ibérique de la CMTCA ([[barcelone_hub]]), Nairobi-Centre ([[nairobi_centre]])
-
-*Sources attestées : internationale_travailleurs_augmentes_new_sustainability*
-
-#### Parlement des Territoires de Nairobi — sous [[hub_nairobi_kigali]]
-
-*infrastructure — niveau 2 — statut : dominant*
-
-**Origine réelle (2026)** : Nairobi
-
-**Transition** : 2041-2045
-
-Bâtiment conçu pour durer mille ans, le Parlement des Territoires siège à Nairobi et accueille 340 délégués représentant 195 États, 89 régions autonomes et 12 écosystèmes protégés, traduits en 94 langues en temps réel. Créé par le Traité de Nairobi de 2041, il est l'instance mondiale de gouvernance territoriale sur l'aménagement, les migrations climatiques et les droits du sol. Sa présidente Nilufar Rashidova en est à son deuxième mandat.
-
-**Tensions internes** : Tension permanente entre délégués des États et délégués des régions autonomes sur la souveraineté ; débat non résolu sur la pondération des votes — un État de 2 millions face à un écosystème de 500 millions d'hectares.
-
-**Alliés** : Siège circulaire de Kigali — AMRRT ([[siege_circulaire_kigali_amrrt]])
-
-*Sources attestées : assemblee_territoires_new_sustainability, arrestation_chris_van_derburgh_new_sustainability, coalition_vivant_new_sustainability*
-
-#### Siège circulaire de Kigali — AMRRT — sous [[hub_nairobi_kigali]]
-
-*infrastructure — niveau 2 — statut : dominant*
-
-**Origine réelle (2026)** : Rwanda, Kigali
-
-**Transition** : 2061-2075
-
-Choisi en 2061 comme symbole de la réconciliation post-extractiviste, le siège circulaire de Kigali abrite l'Autorité Mondiale de Régulation des Ressources et Technologies (AMRRT). L'IA Arbiter-7 y assiste les commissaires issus de quotas régionaux stricts ; en 2097, elle a tranché plus de 340 litiges inter-étatiques sans escalade armée. L'AMRRT publie chaque lundi son tableau de bord des ressources mondiales consulté par 194 gouvernements.
-
-**Tensions internes** : Accusée d'être un gouvernement mondial de facto jamais élu ; les blocs périphériques dénoncent une technocratie décidant depuis Kigali quelles terres peuvent être exploitées ou doivent 'se reposer' ; risque de divergence entre Arbiter-7 et les commissaires humains.
-
-**Alliés** : Parlement des Territoires de Nairobi ([[parlement_territoires_nairobi]])
-
-*Sources attestées : conseil_regulation_ressources_new_sustainability*
-
-### Infrastructure numérique mondiale (NexCore / Mnemos / Prisme)
-
-*infrastructure — statut : dominant*
-
-**Origine réelle (2026)** : Canada (Montréal), Nigeria (Lagos), Singapour
-
-**Transition** : 2040-2043 — voir [[effondrement_reseau_mondial_communication_new_sustainability]]
-
-L'infrastructure numérique mondiale de 2098 est le résultat de la reconstruction post-effondrement de 2040 : NexCore Communs (coopérative mondiale née en 2043 après démantèlement du conglomérat privé), Mnemos (réseau cognitif planétaire né des cendres des effondrements informationnels des années 2030) et Prisme Global (plateforme narrative distribuée entre Lagos, Montréal et Singapour) en forment les trois piliers. Ensemble, ils constituent la colonne vertébrale cognitive et informationnelle du monde stabilisé.
-
-**Tensions internes** : Pression des États voulant plus de contrôle sur les données ; accusations de domination culturelle persistante malgré la structure coopérative ; territoires souverainistes revendiquant des mémoires locales non-synchronisées ; biais algorithmiques favorisant les épistémologies des anciens centres de pouvoir.
-
-**Alliés** : Genève-Centre institutionnel mondial ([[centre_institutionnel_geneve]]), Hub institutionnel Nairobi-Kigali ([[hub_nairobi_kigali]])
-
-**Rivaux** : Bloc Eurasien souverainiste ([[bloc_eurasien_souverainiste]])
-
-*Sources attestées : nexcore_new_sustainability, reseau_mnemos_new_sustainability, prisme_global_new_sustainability, effondrement_reseau_mondial_communication_new_sustainability, reseau_des_communs_numeriques_globaux_new_sustainability*
-
-#### Lagos — Nœud de serveurs Prisme Global — sous [[infrastructure_numerique_globale]]
-
-*infrastructure — niveau 2 — statut : dominant*
-
-**Origine réelle (2026)** : Lagos
-
-**Transition** : 2040-2043 — voir [[effondrement_reseau_mondial_communication_new_sustainability]]
-
-Lagos héberge l'un des trois nœuds de serveurs distribués de Prisme Global, la plateforme narrative traitant 4,7 milliards de contributions locales par jour. Ce nœud africain incarne la dimension de pluralisme géographique revendiquée par Prisme Global, tout en concentrant des questions de gouvernance des données et de souveraineté informationnelle pour le continent africain.
-
-**Tensions internes** : Accusations de domination culturelle persistante malgré la structure distribuée ; certains États africains revendiquent un contrôle accru sur les données hébergées sur leur territoire.
-
-**Alliés** : Montréal — Nœud de serveurs Prisme Global / NexCore ([[montreal_prisme]]), Singapour — Nœud de serveurs Prisme Global ([[singapour_prisme]])
-
-*Sources attestées : prisme_global_new_sustainability, nexcore_new_sustainability*
-
-#### Montréal — Nœud de serveurs Prisme Global / NexCore — sous [[infrastructure_numerique_globale]]
-
-*infrastructure — niveau 2 — statut : dominant*
-
-**Origine réelle (2026)** : Montréal
-
-**Transition** : 2040-2043 — voir [[effondrement_reseau_mondial_communication_new_sustainability]]
-
-Montréal abrite l'un des trois nœuds de serveurs distribués de Prisme Global et un centre opérationnel majeur de NexCore Communs. La ville est l'un des points d'ancrage nord-américains de l'infrastructure numérique mondiale reconstruite après l'effondrement de 2040, dans un contexte de convergence progressive entre les systèmes économiques nord et sud-américains.
-
-**Tensions internes** : Pression des États nord-américains pour plus de contrôle sur les données hébergées ; débat sur la gouvernance coopérative de NexCore — trop grande pour être vraiment démocratique.
-
-**Alliés** : Lagos — Nœud de serveurs Prisme Global ([[lagos_prisme]]), Singapour — Nœud de serveurs Prisme Global ([[singapour_prisme]])
-
-*Sources attestées : prisme_global_new_sustainability, nexcore_new_sustainability, effondrement_reseau_mondial_communication_new_sustainability*
-
-#### Singapour — Nœud de serveurs Prisme Global — sous [[infrastructure_numerique_globale]]
-
-*infrastructure — niveau 2 — statut : stable*
-
-**Origine réelle (2026)** : Singapour
-
-**Transition** : 2040-2043 — voir [[effondrement_reseau_mondial_communication_new_sustainability]]
-
-Singapour héberge l'un des trois nœuds de serveurs distribués de Prisme Global, assurant la présence asiatique de l'infrastructure narrative mondiale. Sa position géographique en fait un point de friction potentiel avec l'alliance numérique Eurasie-Pacifique du bloc eurasien souverainiste, qui impose ses propres normes numériques et de durabilité dans la région.
-
-**Tensions internes** : Tension entre le rôle de nœud de l'infrastructure numérique globale ouverte et la pression de l'alliance numérique eurasienne qui impose ses propres normes dans la région Asie-Pacifique.
-
-**Alliés** : Lagos — Nœud de serveurs Prisme Global ([[lagos_prisme]]), Montréal — Nœud de serveurs Prisme Global / NexCore ([[montreal_prisme]])
-
-**Rivaux** : Bloc Eurasien souverainiste ([[bloc_eurasien_souverainiste]])
-
-*Sources attestées : prisme_global_new_sustainability, nexcore_new_sustainability*
-
-### Moyen-Orient et Golfe post-pétrolier
-
-*region — statut : en_declin*
-
-**Origine réelle (2026)** : Israël, Iran, Arabie Saoudite, Qatar, Turquie, Grèce, Azerbaïdjan, Émirats arabes unis, Irak, Yémen, Liban, Syrie, Koweït, Pakistan, Cambodge, Chypre, Jordanie, Oman, Bahreïn, Palestine, Djibouti, Somalie, Érythrée
-
-**Transition** : 2026-2045 — voir [[conflit_israel_iran_2026_new_sustainability]]
-
-Le Moyen-Orient de 2098 porte la cicatrice du conflit Israël-Iran de 2026, qui a paradoxalement catalysé la transition énergétique hors pétrole dans la région. Le choc des prix du pétrole (+60%) et la neutralité active de la Turquie, de l'Arabie Saoudite et du Qatar ont conduit à une accélération des investissements dans les renouvelables et à une refonte des cadres de sécurité collective. La région est aujourd'hui engagée dans une transition post-extractiviste, avec des tensions résiduelles.
-
-**Tensions internes** : Cicatrice durable du conflit de 2026 ; transition énergétique inégale selon les pays ; résistances des industries extractives résiduelles dans certaines zones.
-
-*Sources attestées : conflit_israel_iran_2026_new_sustainability, le_temoin_new_sustainability*
-
-#### Bandar Abbas — Site des premières frappes de 2026 — sous [[moyen_orient_golfe]]
-
-*site_strategique — niveau 2 — statut : en_declin*
-
-**Origine réelle (2026)** : Iran, Bandar Abbas
-
-**Transition** : 2026-2030 — voir [[conflit_israel_iran_2026_new_sustainability]]
-
-Bandar Abbas est le site des premières frappes israéliennes d'octobre 2026 sur les sites nucléaires iraniens, devenu symbole du conflit catalyseur qui a accéléré la transition énergétique mondiale. En 2098, la ville porte la cicatrice durable de l'événement fondateur de la recomposition géopolitique du Moyen-Orient, et est régulièrement évoquée dans les récits mémoriels du monde stabilisé.
-
-*Sources attestées : conflit_israel_iran_2026_new_sustainability, le_temoin_new_sustainability*
-
-#### Golfe Persique — Terminaux pétroliers ciblés — sous [[moyen_orient_golfe]]
-
-*zone_sinistree — niveau 2 — statut : en_declin*
-
-**Origine réelle (2026)** : Arabie Saoudite, Qatar, Iran
-
-**Transition** : 2026-2045 — voir [[conflit_israel_iran_2026_new_sustainability]]
-
-Les terminaux pétroliers du Golfe Persique ont été ciblés lors de la riposte iranienne de 2026, provoquant un choc pétrolier de +60% qui a agi comme électrochoc pour les investissements dans les renouvelables et l'indépendance énergétique régionale. En 2098, la région incarne la transition post-extractiviste du Moyen-Orient, ses anciens terminaux reconvertis ou abandonnés comme témoins d'une ère révolue.
-
-**Tensions internes** : Résistances résiduelles des industries extractives dans certaines zones ; transition énergétique inégale selon les pays du Golfe.
-
-*Sources attestées : conflit_israel_iran_2026_new_sustainability*
-
-### Ourrassol — Commission Territoriale
-
-*ville — statut : stable*
-
-**Origine réelle (2026)** : Lieu fictif du simulateur Ourrassol 2098
-
-**Transition** : 2041-2098
-
-Ourrassol est la ville fictive siège du simulateur de presse, dotée en 2098 d'une Commission Territoriale qui consulte quotidiennement Mnemos pour ses décisions. Elle incarne une unité urbaine représentative du monde stabilisé de new_sustainability — ville de taille intermédiaire intégrée aux systèmes de gouvernance algorithmique globale, où les décisions d'ARIA sur les ressources se répercutent concrètement sur la vie quotidienne des habitants et des institutions locales.
-
-**Tensions internes** : Tension entre la dépendance aux systèmes de gouvernance algorithmique globaux (ARIA, Mnemos) et la volonté d'autonomie décisionnelle locale ; les délais de notification réglementaires imposés par ARIA alimentent le débat local sur la souveraineté territoriale.
-
-**Lieux emblématiques** :
-- Commission Territoriale d'Ourrassol (infrastructure) — Instance locale de gouvernance consultant Mnemos, affectée par les décisions d'ARIA sur les ressources
-
-**Alliés** : Infrastructure numérique mondiale (NexCore / Mnemos / Prisme) ([[infrastructure_numerique_globale]])
-
-*Sources attestées : reseau_mnemos_new_sustainability, grille_aria_new_sustainability*
-
-#### Commission Territoriale d'Ourrassol — sous [[ourrassol_commission_territoriale]]
-
-*infrastructure — niveau 2 — statut : stable*
-
-**Origine réelle (2026)** : Lieu fictif du simulateur Ourrassol 2098
-
-**Transition** : 2041-2098
-
-Instance locale de gouvernance territoriale d'Ourrassol, la Commission consulte quotidiennement Mnemos — comme toutes les instances équivalentes dans le monde de 2098 — pour contextualiser ses décisions avec des données historiques vérifiées. Elle est soumise aux décisions d'ARIA sur la redistribution des ressources énergétiques et alimentaires, illustrant la manière dont la gouvernance algorithmique globale se répercute au niveau des territoires les plus locaux.
-
-**Tensions internes** : Frustration des élus locaux face aux délais de notification réglementaires d'ARIA jugés insuffisants pour permettre une délibération locale réelle ; dépendance épistémique à Mnemos dont les algorithmes de priorisation des savoirs ne sont pas neutres.
-
-*Sources attestées : reseau_mnemos_new_sustainability, grille_aria_new_sustainability*
-
-### Réseau Vivant Continental (RVC) — Trame bioclimatique planétaire
-
-*infrastructure — statut : dominant*
-
-**Origine réelle (2026)** : Brésil (Amazonie), Ensemble des corridors de biodiversité continentaux, Inde, Indonésie, Vietnam, Népal, Bhoutan, Sri Lanka, Birmanie, Laos
-
-**Transition** : 2050-2080
-
-Le Réseau Vivant Continental est l'infrastructure écologique planétaire de 2098 : corridors de biodiversité instrumentés par des essaims d'IA, forêts-éponges calibrées pour l'irrigation atmosphérique, puits de carbone vivants. Il s'étend de Manaus à Nairobi et constitue l'épine dorsale de la stabilisation climatique mondiale. Sa gouvernance est distribuée entre blocs continentaux via le Consortium de Régénération Planétaire, dans un équilibre technocratique fragile.
-
-**Tensions internes** : Communautés autochtones revendiquant la co-gouvernance de corridors tracés sans leur consentement ; suspicion des blocs continentaux sur la priorisation des zones à forte valorisation énergétique ; vulnérabilité croissante comme cible géopolitique ou de cyber-sabotage ; opacité des algorithmes décisionnels.
-
-**Lieux emblématiques** :
-- Nairobi (ville) — Nœud oriental du RVC en Afrique de l'Est
-
-**Alliés** : Hub institutionnel Nairobi-Kigali ([[hub_nairobi_kigali]]), Afrique continentale — Union Panafricaine et bassins versants ([[afrique_continentale]]), Amériques reconfigurées ([[ameriques_reconfigurees]])
-
-*Sources attestées : trame_bioclimatique_new_sustainability, consortium_de_regeneration_planetaire_new_sustainability, communautes_locales_exclues_des_corridors_new_sustainability, prisme_global_new_sustainability, reseau_des_bio_communs_regionaux_new_sustainability*
-
-#### Delta équatorial — Fermes régénératives — sous [[reseau_vivant_continental]]
-
-*infrastructure — niveau 2 — statut : emergent*
-
-**Origine réelle (2026)** : Brésil (Amazonie), Ensemble des deltas équatoriaux
-
-**Transition** : 2060-2098
-
-Le delta équatorial abrite des fermes régénératives qui consultent Mnemos pour leurs opérations quotidiennes, illustrant l'intégration de l'infrastructure cognitive dans la production alimentaire mondiale. Ces fermes constituent un exemple paradigmatique du modèle techno-régénératif du RVC — ni tout à fait naturelles, ni tout à fait industrielles — opérant à l'interface entre l'infrastructure écologique planétaire et les besoins alimentaires des populations locales.
-
-**Tensions internes** : Les populations locales des zones d'interface voient leurs terres intégrées dans le système régénératif sans co-gouvernance réelle ; les algorithmes de Mnemos qui guident les pratiques agricoles favorisent subtilement les épistémologies des anciens centres de pouvoir.
-
-**Alliés** : Manaus — Nœud occidental du RVC ([[manaus_rvc]])
-
-*Sources attestées : reseau_mnemos_new_sustainability, trame_bioclimatique_new_sustainability*
-
-#### Delta du Mékong — Zone de mobilité climatique — sous [[reseau_vivant_continental]]
-
-*zone_sinistree — niveau 2 — statut : fragmenté*
-
-**Transition** : 2050-2080
-
-Le delta du Mékong est une zone de mobilité climatique instrumentée dans le réseau narratif de Prisme Global et dans les corridors du RVC. Fortement affecté par la montée des eaux et les perturbations hydrologiques, il constitue l'un des exemples paradigmatiques de la gestion IA des écosystèmes en crise, avec des populations déplacées dont les récits alimentent quotidiennement les plateformes narratives mondiales.
-
-**Tensions internes** : Populations déplacées climatiques non représentées dans les instances de gouvernance du RVC ; algorithmes de priorisation dont les critères sont opaques.
-
-*Sources attestées : prisme_global_new_sustainability, trame_bioclimatique_new_sustainability*
-
-### Te Moana Nui — Plateforme flottante de la Confédération du Pacifique Austral
-
-*territoire_autonome — statut : emergent*
-
-**Origine réelle (2026)** : Tuvalu, Kiribati, Îles Marshall, Tonga, Philippines, Nouvelle-Zélande, Polynésie française, Maldives, Brunei, Timor oriental, Maurice, Seychelles, Trinité-et-Tobago, Barbade, Sainte-Lucie, Fidji, Vanuatu, Îles Salomon, Samoa, Micronésie, Palaos, Nauru
-
-**Transition** : 2039-2047 — voir [[tuvalu_submersion_souverainete_flottante_new_sustainability]]
-
-Ancrée par 3 000 mètres de fond entre Fidji et Samoa, la plateforme Te Moana Nui est le siège de la Confédération Maritime du Pacifique Austral — première entité politique post-territoriale reconnue par l'ONU en 2047 après la submersion de Tuvalu. Ce que le monde appelait 'les nations qui disparaissent' est devenu l'une des entités politiques les plus influentes du système onusien, transformant l'injustice subie en jurisprudence universelle sur la souveraineté post-territoriale.
-
-**Tensions internes** : Tiraillement entre le rôle de témoin moral — condition de son influence — et la tentation d'une agentivité politique pleine ; la faction des Gardiens de la Mémoire résiste à l'intégration trop profonde dans la gouvernance technocratique ; crise identitaire latente pour les générations nées sur plateforme n'ayant jamais vu de terre émergée.
-
-**Lieux emblématiques** :
-- Funafuti-sur-Mer (site_strategique) — Plateforme ancrée à l'emplacement de l'ancienne capitale tuvaluane, lieu de la cérémonie fondatrice de 2039
-
-**Alliés** : Hub institutionnel Nairobi-Kigali ([[hub_nairobi_kigali]]), Genève-Centre institutionnel mondial ([[centre_institutionnel_geneve]])
-
-*Sources attestées : pacifique_sud_resilience_network_new_sustainability, tuvalu_submersion_souverainete_flottante_new_sustainability, assemblee_territoires_new_sustainability*
-
-#### Funafuti-sur-Mer — Plateforme mémorielle de Tuvalu — sous [[te_moana_nui_plateforme]]
-
-*site_strategique — niveau 2 — statut : stable*
-
-**Origine réelle (2026)** : Tuvalu
-
-**Transition** : 2039-2047 — voir [[tuvalu_submersion_souverainete_flottante_new_sustainability]]
-
-Plateforme ancrée à l'emplacement de l'ancienne capitale tuvaluane, Funafuti-sur-Mer est le lieu de la cérémonie fondatrice de septembre 2039 où le dernier Conseil des ministres tuvaluan s'est tenu en territoire semi-immergé avant de transférer formellement la souveraineté à la Confédération Maritime. Site mémoriel central de la Confédération et symbole mondial du droit post-territorial, retransmis en direct sur Prisme Global.
-
-**Tensions internes** : Tension entre la préservation du site comme lieu de mémoire vivante et sa patrimonialisation par des générations nées sur plateforme n'ayant jamais vu la terre émergée originale.
-
-*Sources attestées : tuvalu_submersion_souverainete_flottante_new_sustainability, pacifique_sud_resilience_network_new_sustainability*
-
-### Union Nordique et Europe du Nord
-
-*union_regionale — statut : stable*
-
-**Origine réelle (2026)** : Finlande, Suède, Norvège, Écosse, Pays-Bas, Portugal, Espagne, France, Belgique, Irlande, Andorre, Malte, Croatie, Slovénie, Monténégro, Albanie, Lituanie, Lettonie, Estonie
-
-**Transition** : 2041-2060
-
-L'Union Nordique de 2098 s'est dotée d'un Conseil de Délibération Augmentée qui articule données environnementales et légitimité délibérative. Helsinki y joue un rôle intellectuel central, abritant l'Institut de Philosophie des Systèmes Hybrides, foyer de la pensée critique sur la gouvernance humain-IA. La Ceinture Boréale — forêts nordiques — fait l'objet de revendications souverainistes sur les décisions de durabilité.
-
-**Tensions internes** : Le mouvement souverainiste de la Ceinture Boréale conteste les grands accords environnementaux ; tension entre la tradition délibérative nordique et la dérive technocratique des institutions globales, incarnée par la figure de Leena Väinälä.
-
-**Alliés** : Genève-Centre institutionnel mondial ([[centre_institutionnel_geneve]])
-
-*Sources attestées : leena_vainala_new_sustainability, conseil_de_deliberation_augmentee_de_l_union_nordique_new_sustainability, institut_de_philosophie_des_systemes_hybrides_d_helsinki_new_sustainability, mouvement_souverainiste_de_la_ceinture_boreale_new_sustainability*
-
-#### Bruxelles — Tribunal de Gouvernance Algorithmique — sous [[union_nordique_europe_nord]]
-
-*ville — niveau 2 — statut : emergent*
-
-**Origine réelle (2026)** : Bruxelles
-
-**Transition** : 2060-2098
-
-Bruxelles abrite le Tribunal de Gouvernance Algorithmique, instance juridique traitant les procès liés aux décisions des IA de gouvernance. En 2098, un procès y est en cours pour déterminer qui programme les priorités d'ARIA — la grille IA de gouvernance des ressources continentales — et selon quels axiomes éthiques non publiés. Des chercheurs y ont présenté des preuves de micro-biais systématiques défavorisant les zones rurales à faible rendement énergétique.
-
-**Tensions internes** : Débat entre la faction technocratique voulant retirer le délai de notification aux élus et les partisans de la co-gouvernance humaine ; question de la légitimité juridique d'un tribunal face à des systèmes IA dont le code n'est pas entièrement public.
-
-**Alliés** : Genève-Centre institutionnel mondial ([[centre_institutionnel_geneve]])
-
-*Sources attestées : grille_aria_new_sustainability*
-
-##### Tribunal de Gouvernance Algorithmique de Bruxelles — sous [[bruxelles_tribunal_algo]]
-
-*infrastructure — niveau 3 — statut : emergent*
-
-**Origine réelle (2026)** : Bruxelles
-
-**Transition** : 2060-2098
-
-Instance juridique hébergée à Bruxelles traitant les procès liés aux décisions des IA de gouvernance. En 2098, un procès y est en cours pour déterminer qui programme les priorités d'ARIA et selon quels axiomes éthiques non publiés. Des chercheurs y ont présenté des preuves de micro-biais systématiques défavorisant les zones rurales à faible rendement énergétique, faisant du Tribunal l'arène principale du débat mondial sur la légitimité algorithmique.
-
-**Tensions internes** : Débat entre la faction technocratique voulant retirer le délai de notification aux élus et les partisans de la co-gouvernance humaine ; question de la légitimité juridique d'un tribunal face à des systèmes IA dont le code n'est pas entièrement public.
-
-**Alliés** : Genève-Centre institutionnel mondial ([[centre_institutionnel_geneve]]), Bruxelles — Tribunal de Gouvernance Algorithmique ([[bruxelles_tribunal_algo]])
-
-*Sources attestées : grille_aria_new_sustainability*
-
-#### Ceinture Boréale — Forêts nordiques souverainistes — sous [[union_nordique_europe_nord]]
-
-*region — niveau 2 — statut : fragmenté*
-
-**Origine réelle (2026)** : Finlande, Suède, Norvège
-
-**Transition** : 2041-2060
-
-Les forêts boréales nordiques font l'objet d'un mouvement souverainiste actif qui conteste les grands accords environnementaux en revendiquant que ces régions — poumons verts et réservoirs de ressources critiques — décident elles-mêmes de leur modèle de durabilité. Le mouvement oppose une tradition délibérative nordique ancrée dans les territoires à la dérive technocratique des institutions globales.
-
-**Tensions internes** : Le mouvement souverainiste boréal est en tension avec le Conseil de Délibération Augmentée de l'Union Nordique lui-même allié à Genève ; question non résolue sur l'autodétermination territoriale face aux accords de gouvernance globale.
-
-**Alliés** : Bloc Eurasien souverainiste ([[bloc_eurasien_souverainiste]])
-
-**Rivaux** : Genève-Centre institutionnel mondial ([[centre_institutionnel_geneve]])
-
-*Sources attestées : mouvement_souverainiste_de_la_ceinture_boreale_new_sustainability*
-
-#### Helsinki — Institut de Philosophie des Systèmes Hybrides — sous [[union_nordique_europe_nord]]
-
-*ville — niveau 2 — statut : stable*
-
-**Origine réelle (2026)** : Finlande, Helsinki
-
-**Transition** : 2041-2060
-
-Helsinki abrite l'Institut de Philosophie des Systèmes Hybrides, foyer de la pensée critique mondiale sur la gouvernance humain-IA, et le bureau de Leena Väinälä — philosophe finlandaise dont les murs couverts de manuscrits annotés à la main contrastent avec un monde qui n'écrit plus. Väinälä y a co-rédigé les Chartes de 2041 structurant la coordination climatique globale, tout en développant sa critique acerbe de la 'démocratie somnambule'.
-
-**Tensions internes** : Paradoxe de Väinälä : en siégeant dans les instances qu'elle critique, légitime-t-elle ce qu'elle combat ? Une faction de jeunes philosophes 'post-délibératifs' la considère désormais comme une figure anachronique.
-
-**Alliés** : Genève-Centre institutionnel mondial ([[centre_institutionnel_geneve]])
-
-*Sources attestées : leena_vainala_new_sustainability, institut_de_philosophie_des_systemes_hybrides_d_helsinki_new_sustainability*
+*Sources attestées : amara_diallo_nkosi_new_sustainability*
 
 ##### Bureau de Leena Väinälä — Institut d'Helsinki — sous [[helsinki_philosophie]]
 
@@ -3427,6 +3411,20 @@ Bureau aux murs couverts de manuscrits annotés à la main dans un monde qui n'�
 
 *Sources attestées : leena_vainala_new_sustainability, institut_de_philosophie_des_systemes_hybrides_d_helsinki_new_sustainability*
 
+#### Delta du Rhône — Fermes verticales — sous [[union_nordique_europe_nord]]
+
+*infrastructure — niveau 3 — statut : stable*
+
+**Origine réelle (2026)** : France, Camargue / delta du Rhône
+
+**Transition** : 2060-2098
+
+Le delta du Rhône abrite en 2098 un complexe de fermes verticales alimenté par la capacité solaire redistribuée algorithmiquement par ARIA depuis le corridor ibérique. En mars 2098, ARIA y a redirigé 14% de la capacité solaire ibérique après détection d'une anomalie de rendement liée à trois jours de canicule résiduelle — exemple paradigmatique de la gouvernance IA des ressources alimentaires et énergétiques.
+
+**Tensions internes** : Les élus locaux ont été notifiés de la décision d'ARIA six minutes avant exécution, alimentant le procès de Bruxelles sur les limites du délai réglementaire minimal.
+
+*Sources attestées : grille_aria_new_sustainability*
+
 ##### Institut de Philosophie des Systèmes Hybrides d'Helsinki — sous [[helsinki_philosophie]]
 
 *infrastructure — niveau 3 — statut : stable*
@@ -3439,113 +3437,74 @@ Foyer de la pensée critique mondiale sur la gouvernance humain-IA, l'Institut d
 
 **Tensions internes** : Fracture générationnelle entre la tradition délibérative portée par Väinälä et les jeunes philosophes 'post-délibératifs' qui la considèrent comme anachronique ; l'Institut risque d'être instrumentalisé par les institutions qu'il est censé critiquer.
 
-**Alliés** : Genève-Lacus — Siège du CGAI ([[geneve_lacus_cgai]]), Bruxelles — Tribunal de Gouvernance Algorithmique ([[bruxelles_tribunal_algo]])
+**Alliés** : geneve_lacus_cgai, bruxelles_tribunal_algo
 
 *Sources attestées : leena_vainala_new_sustainability, institut_de_philosophie_des_systemes_hybrides_d_helsinki_new_sustainability*
 
-#### Nuuk — Siège du Fonds Souverain Kalaallit Nunaat — sous [[union_nordique_europe_nord]]
+##### Manaus — Antenne du Consortium Amazônia Viva — sous [[manaus_rvc]]
 
-*ville — niveau 2 — statut : dominant*
+*infrastructure — niveau 3 — statut : emergent*
 
-**Origine réelle (2026)** : Nuuk
+**Origine réelle (2026)** : Brésil, Manaus
+
+**Transition** : 2053-2098 — voir [[traite_souverainete_carbone_amazonie_new_sustainability]]
+
+L'antenne de Manaus du Consortium Amazônia Viva constitue le relais opérationnel entre le siège de Belém et le nœud occidental du RVC. Depuis ici sont coordonnées les données bioclimatiques des capteurs forestiers amazoniens alimentant les négociations carboniques du Consortium, et sont reçues les délégations autochtones qui contestent les tracés des corridors du RVC tracés sans leur consentement.
+
+**Tensions internes** : Point de friction entre les impératifs du RVC instrumenté et les revendications de co-gouvernance des communautés autochtones amazoniennes locales ; les algorithmes de modélisation forestière favorisent les zones à forte densité de carbone certifiable au détriment des zones d'occupation ancestrale.
+
+**Alliés** : belem_consortium_amazonia, delta_equatorial_fermes_regeneratives
+
+*Sources attestées : consortium_amazonia_viva_new_sustainability, trame_bioclimatique_new_sustainability, communautes_locales_exclues_des_corridors_new_sustainability*
+
+##### Nairobi — Observatoire Climatique Narratif — sous [[nairobi_centre]]
+
+*infrastructure — niveau 3 — statut : stable*
+
+**Origine réelle (2026)** : Kenya, Nairobi
 
 **Transition** : 2050-2098
 
-Depuis ses bureaux de verre et de bois flotté arctique surplombant le fjord de Nuuk, le Kivfak Nunani gère un portefeuille de 2 400 milliards de crédits carbone-équivalents, fortune née de la fonte des glaces du XXIe siècle. Ses négociateurs, formés à Helsinki et Singapour mais ancrés dans la culture kalaallit, ont obtenu en 2096 un siège permanent au Conseil de Gouvernance Algorithmique Intégrée en bloquant six semaines un traité d'accès aux corridors arctiques.
+L'Observatoire Climatique Narratif de Nairobi produit des données sur les dynamiques narratives climatiques en Afrique subsaharienne, servant de référence pour calibrer les discours médiatiques et politiques à l'échelle continentale et mondiale. Il constitue un nœud de jonction entre les flux narratifs de Prisme Global et les institutions de gouvernance africaine, alimentant les débats de l'Union Panafricaine sur la représentation des réalités locales dans les grands récits globaux.
 
-**Tensions internes** : Fracture entre la faction jeune radicale 'Sermersooq' poussant à nationaliser intégralement les ressources et la direction technocratique misant sur l'intégration institutionnelle ; les communautés inuit des zones non urbanisées contestent la captation de la rente par une élite nuukoise jugée déconnectée.
+**Tensions internes** : Tension entre la mission de production de données 'neutres' et la réalité d'un outil de cadrage narratif dont les choix éditoriaux influencent les décisions institutionnelles ; accusations de proximité excessive avec les institutions de Genève.
 
-**Alliés** : Genève-Centre institutionnel mondial ([[centre_institutionnel_geneve]]), Qaanaaq — Siège flottant du Nuna Siku Governance Council ([[arctic_passage_qaanaaq]])
+**Alliés** : lagos_prisme
 
-*Sources attestées : kalaallit_nunaat_sovereign_fund_new_sustainability*
+*Sources attestées : observatoire_climatique_narratif_de_nairobi_new_sustainability, prisme_global_new_sustainability*
 
-#### Delta du Rhône — Fermes verticales — sous [[union_nordique_europe_nord]]
+##### Serres verticales de Nairobi — Nexus BioSyn — sous [[nairobi_centre]]
 
-*infrastructure — niveau 2 — statut : stable*
+*infrastructure — niveau 3 — statut : stable*
 
-**Origine réelle (2026)** : Camargue / delta du Rhône
-
-**Transition** : 2060-2098
-
-Le delta du Rhône abrite en 2098 un complexe de fermes verticales alimenté par la capacité solaire redistribuée algorithmiquement par ARIA depuis le corridor ibérique. En mars 2098, ARIA y a redirigé 14% de la capacité solaire ibérique après détection d'une anomalie de rendement liée à trois jours de canicule résiduelle — exemple paradigmatique de la gouvernance IA des ressources alimentaires et énergétiques.
-
-**Tensions internes** : Les élus locaux ont été notifiés de la décision d'ARIA six minutes avant exécution, alimentant le procès de Bruxelles sur les limites du délai réglementaire minimal.
-
-*Sources attestées : grille_aria_new_sustainability*
-
-### Japon — Archipel de la Résilience Écologique
-
-*territoire_autonome — statut : stable*
-
-**Origine réelle (2026)** : Japon
-
-**Transition** : 2050-2075 — voir [[Crise énergétique de 2047 et typhon dévastateur de 2052, accélérant la transition vers l'autosuffisance.]]
-
-En 2098, le Japon a transformé son archipel en un modèle de résilience écologique, combinant technologies vertes, gestion intégrée des risques climatiques et préservation de sa culture insulaire. Les villes flottantes et les fermes verticales symbolisent cette adaptation.
-
-**Tensions internes** : Tensions entre traditionalistes et modernistes sur l'équilibre entre innovation technologique et préservation des écosystèmes naturels.
-
-**Lieux emblématiques** :
-- Tokyo Bay Floating Eco-City
-- Kyoto Biocultural Reserve
-- Hokkaido Wind Farm Nexus
-
-**Alliés** : Hub institutionnel Nairobi-Kigali ([[hub_nairobi_kigali]]), Réseau Vivant Continental (RVC) — Trame bioclimatique planétaire ([[reseau_vivant_continental]])
-
-**Rivaux** : Bloc Eurasien souverainiste ([[bloc_eurasien_souverainiste]])
-
-### Australie — Continent Vert Autonome
-
-*territoire_autonome — statut : stable*
-
-**Origine réelle (2026)** : Australie, Papouasie-Nouvelle-Guinée
-
-**Transition** : 2050-2075 — voir [[Crise hydrique de 2048 et adoption du Pacte Vert Australien.]]
-
-L'Australie de 2098 a transformé son désert en un réseau de fermes verticales et de corridors écologiques, gouverné par un Conseil de la Biodiversité. Elle sert de laboratoire mondial pour la restauration des écosystèmes arides.
-
-**Tensions internes** : Conflits entre traditionalistes aborigènes et technocrates sur l'usage des terres.
-
-**Lieux emblématiques** :
-- Great Barrier Reef (restauré)
-- Sydney (siège du Conseil)
-- Uluru (zone sacrée autonomisée)
-
-**Alliés** : Hub institutionnel Nairobi-Kigali ([[hub_nairobi_kigali]]), Réseau Vivant Continental (RVC) — Trame bioclimatique planétaire ([[reseau_vivant_continental]])
-
-**Rivaux** : Bloc Eurasien souverainiste ([[bloc_eurasien_souverainiste]])
-
-### Nouveau Califat Barcelone
-
-*union_regionale — statut : dominant*
-
-#### Barcelone-Hub — Bureau ibérique de la CMTCA — sous [[nouveau_califat_barcelone]]
-
-*ville — niveau 2 — statut : stable*
-
-**Origine réelle (2026)** : Barcelone
+**Origine réelle (2026)** : Kenya, Nairobi
 
 **Transition** : 2055-2075
 
-Barcelone-Hub est le siège européen de la Confédération Mondiale des Travailleurs Cognitifs Augmentés (CMTCA), aux côtés de Nairobi-Node. Depuis ses bureaux modulaires, les délégués de la CMTCA négocient avec des IA de médiation institutionnelle les clauses des accords productifs continentaux, incarnant la transformation d'un syndicat de combat en acteur institutionnalisé de la gouvernance mondiale du travail augmenté. Son rattachement aux Amériques reconfigurées reflète les flux ibériques vers le corridor énergétique atlantique.
+Les serres verticales de Nairobi sont l'une des vitrines institutionnelles de Nexus BioSyn Consortium, opérant sous licence publique encadrée. Elles incarnent la coexistence entre gouvernance technocratique globale et production alimentaire régénérative locale, avec les logos verts de Nexus BioSyn côtoyant les mandats de l'OMS Étendue. Lieu symbolique de la tension entre accès universel garanti aux biotechnologies et dépendance infrastructurelle invisible envers le géant biotechnologique.
 
-**Tensions internes** : Fracture interne entre 'intégrateurs' favorables à la négociation permanente et 'dissidents du confort' accusant la Confédération d'avoir légitimé l'optimisation en l'encadrant sans la questionner.
+**Tensions internes** : Les mouvements de bio-communs accusent Nexus BioSyn d'un 'verrouillage progressif doux' depuis ces installations ; le code source des algorithmes de semences reste propriétaire malgré les audits officiels.
 
-*Sources attestées : internationale_travailleurs_augmentes_new_sustainability*
+**Alliés** : medellin_biosyn
 
-#### Corridor ibérique énergétique — sous [[nouveau_califat_barcelone]]
+*Sources attestées : nexus_biosyn_new_sustainability*
 
-*infrastructure — niveau 2 — statut : dominant*
+##### Tribunal de Gouvernance Algorithmique de Bruxelles — sous [[bruxelles_tribunal_algo]]
 
-**Transition** : 2055-2080
+*infrastructure — niveau 3 — statut : emergent*
 
-Le corridor ibérique énergétique est une infrastructure de transit et de production d'énergie renouvelable reliant la péninsule ibérique aux flux énergétiques continentaux atlantiques. ARIA y a redirigé en 2098 14% de la capacité solaire vers les fermes verticales du delta du Rhône, illustrant la gouvernance algorithmique des ressources en temps réel. Il constitue un nœud clé dans les flux de convergence entre les systèmes économiques américains et européens.
+**Origine réelle (2026)** : Belgique, Bruxelles
 
-**Tensions internes** : Les décisions d'ARIA sur le corridor sont notifiées aux élus locaux six minutes avant exécution — délai réglementaire jugé insuffisant par certains ; débat sur la souveraineté énergétique locale face à l'optimisation algorithmique.
+**Transition** : 2060-2098
 
-**Alliés** : Barcelone-Hub — Bureau ibérique de la CMTCA ([[barcelone_hub]])
+Instance juridique hébergée à Bruxelles traitant les procès liés aux décisions des IA de gouvernance. En 2098, un procès y est en cours pour déterminer qui programme les priorités d'ARIA et selon quels axiomes éthiques non publiés. Des chercheurs y ont présenté des preuves de micro-biais systématiques défavorisant les zones rurales à faible rendement énergétique, faisant du Tribunal l'arène principale du débat mondial sur la légitimité algorithmique.
+
+**Tensions internes** : Débat entre la faction technocratique voulant retirer le délai de notification aux élus et les partisans de la co-gouvernance humaine ; question de la légitimité juridique d'un tribunal face à des systèmes IA dont le code n'est pas entièrement public.
+
+**Alliés** : centre_institutionnel_geneve, bruxelles_tribunal_algo
 
 *Sources attestées : grille_aria_new_sustainability*
+
 
 ## Notes / zones à enrichir
 _Espace libre, jamais lu par les scripts — ajoute ici tes idées, brouillons, zones à

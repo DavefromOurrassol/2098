@@ -3300,9 +3300,9 @@ _Maillage récursif enrichi le 2026-06-23 (20 nouvelle(s) zone(s) ajoutée(s) so
 
 ### Amazonie — Pacte Amazônia Viva
 
-*territoire_autonome — statut : emergent*
+*territoire_autonome — niveau 1 — statut : emergent*
 
-**Origine réelle (2026)** : Brésil, Colombie, Pérou, Venezuela, Bolivie, Équateur, Guyana, Suriname
+**Origine réelle (2026)** : Brésil, Colombie, Pérou, Venezuela
 
 **Transition** : 2041-2070
 
@@ -3314,31 +3314,17 @@ Confédération souple de nations autochtones, de collectifs scientifiques et de
 - Grande confluence de Manaus (site_strategique) — Lieu fondateur du Pacte en 2041, assemblée fluviale itinérante sur pirogues élargies et plateformes de bambou
 - Corridors marges amazoniennes (region) — Zones grises entre communautés où les enclaves extractivistes grignotent le territoire
 
-**Alliés** : Chiapas et Bioterritoires Mésoaméricains ([[chiapas_et_bioterritoires_mesoamericains]]), Confédération des Communs de l'Arc Septentrional ([[confederation_communs_arc_septentrional]])
+**Alliés** : chiapas_et_bioterritoires_mesoamericains, confederation_communs_arc_septentrional
 
-**Rivaux** : Enclaves Extractivistes et États Résiduels ([[enclaves_extractivistes_et_etats_residuels]])
-
-*Sources attestées : consortium_amazonia_viva_eco_communalism*
-
-#### Grande Confluence de Manaus — sous [[amazonie_pacte_viva]]
-
-*site_strategique — niveau 2 — statut : stable*
-
-**Origine réelle (2026)** : Manaus
-
-**Transition** : 2041-2098
-
-Site fondateur du Pacte Amazônia Viva lors de la grande confluence de 2041, et lieu de réunion bisannuel des assemblées fluviales itinérantes sur des pirogues élargies et des plateformes de bambou ancrées aux confluences. En 2098, cet espace incarne la diplomatie du vivant : ses représentants — moitiés chamanes, moitiés agronomes — y négocient des échanges de semences avec d'autres confédérations aussi naturellement qu'ils cartographient l'avancée du tapir dans les zones réhabilitées.
-
-**Tensions internes** : Tensions lors des assemblées entre nations autochtones refusant le partage de cartographies sacrées et collectifs scientifiques membres du Pacte.
+**Rivaux** : enclaves_extractivistes_et_etats_residuels
 
 *Sources attestées : consortium_amazonia_viva_eco_communalism*
 
 ### Arc Septentrional
 
-*union_regionale — statut : emergent*
+*union_regionale — niveau 1 — statut : emergent*
 
-**Origine réelle (2026)** : Finlande, Suède, Norvège, Danemark, Estonie, Lettonie, Lituanie, Écosse, Islande, Arctique, Groenland
+**Origine réelle (2026)** : Finlande, Suède, Norvège, Danemark, Estonie, Lettonie, Lituanie
 
 **Transition** : 2030-2045
 
@@ -3346,90 +3332,13 @@ Réseau de bioterritoires post-étatiques couvrant l'espace fenno-scandinave et 
 
 **Tensions internes** : Tensions entre communautés autonomistes radicales refusant toute coordination supralocale et confédéralistes pragmatiques ; montée en puissance de facilitateurs formés sur les protocoles algorithmiques qui divergent de la philosophie originelle des chartes communales.
 
-**Alliés** : Europe Occidentale Reconstituée ([[europe_occidentale_reconstituee]])
+**Alliés** : europe_occidentale_reconstituee
 
 *Sources attestées : leena_vainala_eco_communalism, reseau_des_assemblees_de_bassin_fennoscandien_eco_communalism, confederation_des_communs_de_l_arc_septentrional_eco_communalism*
 
-#### Confédération des Communs de l'Arc Septentrional — sous [[arc_septentrional]]
-
-*union_regionale — niveau 2 — statut : emergent*
-
-**Origine réelle (2026)** : Finlande, Estonie, Lettonie, Lituanie, Danemark
-
-**Transition** : 2038-2055
-
-Organisation post-étatique structurant les communs des États baltiques et nordiques en une confédération de chartes locales inspirée des textes de Leena Väinälä. Elle incarne la viabilité d'une organisation territoriale post-étatique fondée sur les communs à grande échelle, servant de référence institutionnelle pour d'autres régions du monde en transition.
-
-**Tensions internes** : Instrumentalisation des chartes par des factions locales pour légitimer des fermetures identitaires ou des oligarchies de façade délibérative ; nouvelle génération de facilitateurs préférant des protocoles algorithmiques légers en conflit générationnel avec les praticiens des chartes originelles.
-
-**Alliés** : Réseau des Assemblées de Bassin Fennoscandien ([[reseau_assemblees_fennoscandien]]), Europe Occidentale Reconstituée ([[europe_occidentale_reconstituee]])
-
-*Sources attestées : confederation_des_communs_de_l_arc_septentrional_eco_communalism, leena_vainala_eco_communalism*
-
-#### Kalaallit Nunaat — Fonds des Terres Émergées — sous [[arc_septentrional]]
-
-*territoire_autonome — niveau 2 — statut : fragmenté*
-
-**Transition** : 2041-2070
-
-Territoire groenlandais devenu indépendant de facto en 2041, dont le Fonds des Terres Émergées contrôle l'accès à des gisements de lithium et de terres rares libérés par la fonte des glaces. Paradoxe vivant du monde éco-communaliste : l'un des rares acteurs disposant encore d'une capacité d'accumulation et de projection continentale, dont les corridors arctiques ont servi de lignes de vie aux communautés fennoscandinaviennes et canadiennes lors de l'effondrement logistique. En 2098, le Fonds oscille entre sa vocation souverainiste et la pression interne de dissolution en dotations communautaires décentralisées.
-
-**Tensions internes** : Faction interne des jeunes délégués des fjords plaidant pour la dissolution progressive du Fonds en réseau de dotations communautaires ; ancienne garde résistant au nom de la souveraineté durement acquise ; enclaves extractivistes tentant de corrompre les gestionnaires locaux pour contourner les clauses écologiques ; communs sécessionnistes refusant l'autorité du Fonds sur des terres qu'ils considèrent comme les leurs.
-
-**Lieux emblématiques** :
-- Nuuk — Maison longue du Fonds (site_strategique) — Siège du Fonds des Terres Émergées, bâtiment en pierre locale à toit végétalisé accueillant les délégués en kayak solaire depuis les fjords
-
-**Alliés** : Arc Septentrional ([[arc_septentrional]]), Confédération des Communs de l'Arc Septentrional ([[confederation_communs_arc_septentrional]])
-
-**Rivaux** : Enclaves Extractivistes et États Résiduels ([[enclaves_extractivistes_et_etats_residuels]])
-
-*Sources attestées : kalaallit_nunaat_sovereign_fund_eco_communalism*
-
-#### Réseau des Assemblées de Bassin Fennoscandien — sous [[arc_septentrional]]
-
-*union_regionale — niveau 2 — statut : emergent*
-
-**Origine réelle (2026)** : Finlande, Suède, Norvège
-
-**Transition** : 2035-2055
-
-Structure de coordination régionale de l'Arc Septentrional, articulant souveraineté territoriale et gestion des communs naturels à l'échelle des bassins versants fennoscandiens. Contre-modèle délibéré aux institutions étatiques centralisées, il fédère les assemblées locales autour des unités hydrologiques naturelles — lacs, rivières, fjords — héritant des pratiques de concertation de la culture nordique tout en les radicalisant vers une gouvernance post-étatique.
-
-**Tensions internes** : Montée en puissance de facilitateurs formés sur les protocoles algorithmiques qui divergent de la philosophie originelle des chartes communales ; tension entre communes autonomistes radicales et confédéralistes pragmatiques sur le degré de coordination acceptable.
-
-*Sources attestées : reseau_des_assemblees_de_bassin_fennoscandien_eco_communalism, leena_vainala_eco_communalism*
-
-#### Tampere — sous [[arc_septentrional]]
-
-*ville — niveau 2 — statut : stable*
-
-**Origine réelle (2026)** : Tampere
-
-**Transition** : 2035-2045
-
-Ville de Finlande devenue lieu fondateur du mouvement éco-communaliste fenno-scandien grâce à l'élaboration en 2038 de la Charte de Tampere sur les communs numériques, texte de référence de Leena Väinälä. En 2098, elle reste un symbole actif des confédérations locales post-effondrement, ses principes étant imprimés sur papier local dans des dizaines de communes qui n'ont jamais eu accès à internet global.
-
-**Tensions internes** : Tension entre la vénération de la Charte comme texte sacré et les tentatives de révision portées par la nouvelle génération de facilitateurs algorithmiques qui souhaitent l'adapter à des protocoles numériques légers.
-
-*Sources attestées : leena_vainala_eco_communalism, confederation_des_communs_de_l_arc_septentrional_eco_communalism*
-
-#### Nuuk — Maison longue du Fonds — sous [[arc_septentrional]]
-
-*site_strategique — niveau 2 — statut : stable*
-
-**Origine réelle (2026)** : Nuuk
-
-**Transition** : 2041-2098
-
-Siège du Fonds des Terres Émergées du Kalaallit Nunaat, bâtiment en pierre locale aux toits végétalisés ressemblant davantage à une maison longue traditionnelle agrandie qu'à un bâtiment financier. En 2098, les délégués y arrivent en kayak solaire depuis les fjords. C'est ici que se négocie l'accès aux gisements de lithium et terres rares stratégiques pour les réseaux coopératifs du cercle polaire, et que se joue la tension entre logique souverainiste et dissolution communautaire.
-
-**Tensions internes** : Les assemblées internes sont le théâtre du conflit générationnel entre partisans de la dissolution du Fonds et défenseurs de la rente souveraine ; tentatives d'infiltration par des agents des enclaves extractivistes.
-
-*Sources attestées : kalaallit_nunaat_sovereign_fund_eco_communalism*
-
 ### Bioterritoires d'Amérique du Nord
 
-*territoire_herite — statut : fragmenté*
+*territoire_herite — niveau 1 — statut : fragmenté*
 
 **Origine réelle (2026)** : États-Unis d'Amérique, Canada
 
@@ -3439,99 +3348,15 @@ Anciens territoires américains et canadiens dissous en bioterritoires autonomes
 
 **Tensions internes** : Processus de dissolution institutionnelle encore inachevé dans certaines zones ; résistance de fragments d'États résiduels ; coexistence de bioterritoires avancés et de zones encore dépendantes des anciennes structures.
 
-**Rivaux** : Enclaves Extractivistes et États Résiduels ([[enclaves_extractivistes_et_etats_residuels]])
+**Rivaux** : enclaves_extractivistes_et_etats_residuels
 
 *Sources attestées : election_parti_commun_americain_eco_communalism, assemblee_territoires_eco_communalism*
-
-#### Bioterritoires de l'Atlantique Nord — sous [[bioterritoires_amerique_du_nord]]
-
-*region — niveau 2 — statut : fragmenté*
-
-**Origine réelle (2026)** : États-Unis d'Amérique, Canada
-
-**Transition** : 2048-2065 — voir [[election_parti_commun_americain_eco_communalism]]
-
-Ensemble de bioterritoires côtiers de la façade atlantique nord-américaine, parmi les plus avancés dans la dissolution des anciennes structures fédérales. Après la dissolution du Parti Commun américain en 2048, ces territoires ont rapidement adopté le vocabulaire des 'gardiens de territoire' et intégré les principes de redistribution locale dans leurs assemblées bioterrititoriales, bénéficiant d'une tradition de gouvernance locale forte héritée de la Nouvelle-Angleterre.
-
-**Tensions internes** : Résistance de fragments d'États résiduels sur les couloirs logistiques côtiers ; tension entre bioterritoires prospères et zones industrielles reconverties incomplètement ; question de l'intégration des communautés autochtones côtières dans les nouvelles structures.
-
-**Alliés** : La Grande-Vallée ([[grande_vallee_bioterritoire]])
-
-**Rivaux** : Enclaves Extractivistes et États Résiduels ([[enclaves_extractivistes_et_etats_residuels]])
-
-*Sources attestées : election_parti_commun_americain_eco_communalism, assemblee_territoires_eco_communalism*
-
-#### La Grande-Vallée — sous [[bioterritoires_amerique_du_nord]]
-
-*region — niveau 2 — statut : stable*
-
-**Origine réelle (2026)** : États-Unis d'Amérique
-
-**Transition** : 2048-2065 — voir [[election_parti_commun_americain_eco_communalism]]
-
-Bioterritoire nord-américain où opère une coalition de Gardiens du Territoire — sept membres dont trois héritiers de traditions autochtones et quatre formés par l'Université Nomade — qui se lèvent avant l'aube pour mesurer les eaux et savent quels arbres sont malades avant que les instruments le détectent. Quand ils parlent à l'assemblée, les débats s'arrêtent, témoignant d'une autorité morale et écologique sans équivalent institutionnel.
-
-**Tensions internes** : Tension entre la transmission traditionnelle autochtone et l'intégration des données numériques dans la pratique des Gardiens ; débat sur les limites de leur autorité — quand le territoire dit non, les humains doivent-ils obéir ?
-
-*Sources attestées : coalition_vivant_eco_communalism, assemblee_territoires_eco_communalism*
-
-#### Confédération des Friches Vivantes — sous [[bioterritoires_amerique_du_nord]]
-
-*union_regionale — niveau 2 — statut : stable*
-
-**Origine réelle (2026)** : Michigan, Pennsylvania, Ohio
-
-**Transition** : 2040-2098 — voir [[election_parti_commun_americain_eco_communalism]]
-
-Héritière des premières communes du Rust Belt américain, la Confédération des Friches Vivantes tisse depuis plus de soixante ans un réseau de plusieurs centaines de communautés autonomes reliées par des protocoles de mutualisation des ressources et de gouvernance par délibération. Ses Assemblées Tournantes trisannuelles coordonnent sans centre fixe des territoires allant des ruines de Pittsburgh et Detroit aux zones grises de Mandchourie désindustrialisée. En 2098, 94% des communes affiliées ont atteint l'autosuffisance alimentaire de base.
-
-**Tensions internes** : Fragments d'États résiduels cherchant à la régulariser comme interlocutrice institutionnelle, ce qui divise ses membres entre ceux qui y voient une victoire et ceux qui y lisent le début de leur domestication ; pression des consortiums logistiques sur les friches à haute valeur minière ; génération née dans les friches questionnant la centralité de la mémoire ouvrière dans l'identité confédérale.
-
-**Lieux emblématiques** :
-- Pittsburgh reconverti (ville) — Ancien bastion industriel devenu commune emblématique avec ateliers de biométhanisation et taille des haies bocagères
-- Detroit reconverti (ville) — Friche vivante fondatrice, référence mondiale de régénération écologique non étatique
-
-**Alliés** : La Grande-Vallée ([[grande_vallee_bioterritoire]]), Bioterritoires de l'Atlantique Nord ([[bioterritoires_atlantique_nord]])
-
-**Rivaux** : Enclaves Extractivistes et États Résiduels ([[enclaves_extractivistes_et_etats_residuels]])
-
-*Sources attestées : mouvement_des_communes_du_rust_belt_eco_communalism*
-
-##### Pittsburgh Reconverti — sous [[rust_belt_confederation_friches]]
-
-*ville — niveau 3 — statut : stable*
-
-**Origine réelle (2026)** : Pittsburgh, Pennsylvania
-
-**Transition** : 2040-2070
-
-Ancienne ville industrielle reconvertie en commune emblématique de la Confédération des Friches Vivantes, reconnaissable à ses toits végétalisés sur des charpentes métalliques d'autrefois et à ses ateliers où d'anciens ouvriers sidérurgistes forment des jeunes à la biométhanisation et à la taille des haies bocagères. En 2098, Pittsburgh incarne la transformation possible des paysages industriels en communs vivants énergétiques et agricoles.
-
-**Tensions internes** : Tension entre la génération des fondateurs porteurs de mémoire ouvrière et les jeunes nés dans la friche qui questionnent cette identité ; pression des consortiums logistiques sur les infrastructures métallurgiques résiduelles à valeur minière.
-
-*Sources attestées : mouvement_des_communes_du_rust_belt_eco_communalism*
-
-#### Université Nomade — sous [[bioterritoires_amerique_du_nord]]
-
-*infrastructure — niveau 2 — statut : emergent*
-
-**Origine réelle (2026)** : États-Unis d'Amérique, Canada
-
-**Transition** : 2048-2070 — voir [[election_parti_commun_americain_eco_communalism]]
-
-Institution de formation itinérante formant les Gardiens du Territoire nord-américains dans les bioterritoires, aux côtés des transmissions par les anciens issus des traditions autochtones. Quatre des sept Gardiens de la Grande-Vallée en sont issus. Elle circule entre les bioterritoires, adaptant ses contenus aux réalités locales, et constitue l'un des rares liens de coordination éducative entre les communautés fragmentées du continent.
-
-**Tensions internes** : Tension entre les savoirs transmis par l'Université Nomade — plus formalisés, parfois influencés par les protocoles numériques — et la transmission traditionnelle autochtone par les anciens ; question de la légitimité de son autorité pédagogique dans des communautés souveraines.
-
-**Alliés** : La Grande-Vallée ([[grande_vallee_bioterritoire]])
-
-*Sources attestées : coalition_vivant_eco_communalism, assemblee_territoires_eco_communalism*
 
 ### Bioterritoires Anatoliens
 
-*territoire_herite — statut : fragmenté*
+*territoire_herite — niveau 1 — statut : fragmenté*
 
-**Origine réelle (2026)** : Turquie, Géorgie, Azerbaïdjan, Arménie
+**Origine réelle (2026)** : Turquie
 
 **Transition** : 2027-2060 — voir [[conflit_israel_iran_2026_eco_communalism]]
 
@@ -3539,49 +3364,17 @@ Territoire de la péninsule anatolienne recomposé après avoir absorbé une vag
 
 **Tensions internes** : Tensions entre populations d'accueil et réfugiés intégrés autour des ressources en eau et des droits territoriaux ; pression des fragments d'États résiduels tentant de réaffirmer une souveraineté sur les corridors migratoires ; question non résolue de l'appartenance aux réseaux de bassins versants méditerranéens.
 
-**Alliés** : Maghreb Méditerranéen ([[maghreb_mediterraneen]])
+**Alliés** : maghreb_mediterraneen
 
-**Rivaux** : Enclaves Extractivistes et États Résiduels ([[enclaves_extractivistes_et_etats_residuels]]), Proche-Orient en Crise ([[proche_orient_en_crise]])
-
-*Sources attestées : conflit_israel_iran_2026_eco_communalism*
-
-#### Bassins Versants Méditerranéens Anatoliens — sous [[bioterritoires_anatoliens]]
-
-*region — niveau 2 — statut : emergent*
-
-**Origine réelle (2026)** : Turquie
-
-**Transition** : 2035-2070
-
-Bassins versants de la façade méditerranéenne et égéenne de l'Anatolie, espaces de recomposition bioterritoriale intégrant les savoirs hydrauliques et semenciers apportés par les réfugiés du Proche-Orient. Ces territoires sont les mieux avancés dans la transition anatolienne, ayant absorbé des pratiques de gouvernance collective de l'eau héritées de régions inaccessibles, mais leur appartenance aux réseaux de bassins versants méditerranéens — Terrafond et Confédération des Bassins Vivants — reste une question non résolue.
-
-**Tensions internes** : Débat sur l'intégration ou non aux réseaux européens de bassins versants ; tension entre les nouvelles pratiques apportées par les réfugiés et les communautés d'accueil revendiquant l'antériorité territoriale.
-
-**Alliés** : Maghreb Méditerranéen ([[maghreb_mediterraneen]]), Réseau Terrafond des Bassins ([[reseau_terrafond_bassins]])
-
-*Sources attestées : conflit_israel_iran_2026_eco_communalism*
-
-#### Corridors Migratoires Anatoliens — sous [[bioterritoires_anatoliens]]
-
-*zone_sinistree — niveau 2 — statut : fragmenté*
-
-**Origine réelle (2026)** : Turquie
-
-**Transition** : 2027-2060 — voir [[conflit_israel_iran_2026_eco_communalism]]
-
-Axes de transit des flux migratoires massifs issus du Proche-Orient depuis le conflit de 2027, traversant les bioterritoires anatoliens qui tentent de gérer leur transformation démographique forcée. Ces corridors restent des espaces de tension entre fragments d'États résiduels tentant de réaffirmer une souveraineté sur les passages et les nouvelles populations apportant des pratiques de gouvernance de l'eau et des semences héritées de régions désormais inaccessibles.
-
-**Tensions internes** : Revendications de contrôle des corridors par les fragments d'États résiduels ; frictions entre populations d'accueil et réfugiés autour des droits territoriaux et des ressources en eau ; transmission des savoirs agronomiques des réfugiés comme levier paradoxal de la transition bioterritoriale anatolienne.
-
-**Rivaux** : Enclaves Extractivistes et États Résiduels ([[enclaves_extractivistes_et_etats_residuels]]), Proche-Orient en Crise ([[proche_orient_en_crise]])
+**Rivaux** : enclaves_extractivistes_et_etats_residuels, proche_orient_en_crise
 
 *Sources attestées : conflit_israel_iran_2026_eco_communalism*
 
 ### Chiapas et Bioterritoires Mésoaméricains
 
-*territoire_autonome — statut : stable*
+*territoire_autonome — niveau 1 — statut : stable*
 
-**Origine réelle (2026)** : Chiapas, Mexique, Guatemala, Cuba, Haïti, République dominicaine, Jamaïque, Bahamas, Belize, Honduras, Salvador, Nicaragua, Costa Rica, Panama, Sierra Leone, Liberia
+**Origine réelle (2026)** : Chiapas, Mexique, Guatemala
 
 **Transition** : 2025-2045
 
@@ -3591,43 +3384,11 @@ Zone d'ancrage fort du mouvement éco-communaliste mondial, héritière des prat
 
 *Sources attestées : assemblee_territoires_eco_communalism*
 
-#### Chiapas — sous [[chiapas_et_bioterritoires_mesoamericains]]
-
-*region — niveau 2 — statut : stable*
-
-**Origine réelle (2026)** : Chiapas, Mexique
-
-**Transition** : 2025-2045
-
-Région hôte de la session plénière de l'Assemblée des Territoires d'octobre 2098, accueillant 340 délégués de 89 bioterritoires. Héritière directe des pratiques zapatistes d'autonomie territoriale, elle incarne la convergence entre traditions autochtones de gouvernance et délibération éco-communaliste contemporaine, servant de référence mondiale pour la coordination horizontale sans autorité centrale.
-
-**Tensions internes** : Tension entre transmission des savoirs autochtones et intégration des pratiques délibératives formalisées venant de l'extérieur ; pression des factions extractivistes sur les ressources forestières de la région.
-
-**Rivaux** : Enclaves Extractivistes et États Résiduels ([[enclaves_extractivistes_et_etats_residuels]])
-
-*Sources attestées : assemblee_territoires_eco_communalism*
-
-##### Session Plénière du Chiapas — Octobre 2098 — sous [[chiapas_region]]
-
-*site_strategique — niveau 3 — statut : stable*
-
-**Origine réelle (2026)** : Chiapas, Mexique
-
-**Transition** : 2098-2098
-
-Site et événement de la session plénière itinérante de l'Assemblée des Territoires d'octobre 2098, accueillant 340 délégués de 89 bioterritoires sur 6 continents. Sans président, sans siège permanent, sans budget centralisé, cette session confirme le statut du Chiapas comme bioterritoire de référence mondiale. La délibération y prend le temps qu'il faut — 'à la vitesse des arbres', selon la déléguée de Polynésie.
-
-**Tensions internes** : Tension entre délégués voulant plus de coordination globale sur les crises climatiques et ceux qui refusent tout mécanisme supralocal ; question non résolue : peut-on gérer le climat sans autorité centrale ?
-
-**Alliés** : La Grande-Vallée ([[grande_vallee_bioterritoire]]), Polynésie Reconstituée ([[polynesie_reconstituee]])
-
-*Sources attestées : assemblee_territoires_eco_communalism*
-
 ### Enclaves Extractivistes et États Résiduels
 
-*zone_sinistree — statut : en_declin*
+*zone_sinistree — niveau 1 — statut : en_declin*
 
-**Origine réelle (2026)** : Zones industrielles et urbaines mondiales diverses, Qatar, Koweït, Singapour, Monaco, Oman, Bahreïn
+**Origine réelle (2026)** : Zones industrielles et urbaines mondiales diverses
 
 **Transition** : 2040-2098
 
@@ -3635,361 +3396,33 @@ Ensemble hétérogène de fragments d'États centraux résiduels, d'enclaves tec
 
 **Tensions internes** : Compétition interne entre agro-conglomérats, consortiums industriels de l'eau, opérateurs d'IA propriétaires et fragments étatiques pour le contrôle des ressources résiduelles ; leur légitimité est en érosion constante face à la montée du modèle communaliste.
 
-**Rivaux** : Europe Occidentale Reconstituée ([[europe_occidentale_reconstituee]]), Arc Septentrional ([[arc_septentrional]]), Bioterritoires d'Amérique du Nord ([[bioterritoires_amerique_du_nord]])
+**Rivaux** : europe_occidentale_reconstituee, arc_septentrional, bioterritoires_amerique_du_nord
 
 *Sources attestées : agro_conglomerats_des_enclaves_technologiques_eco_communalism, fragments_d_etats_centraux_residuels_eco_communalism, consortiums_industriels_de_l_eau_eco_communalism, enclaves_extractivistes_residuelles_des_corridors_eco_communalism, consortiums_logistiques_neo_industriels_des_terres_reconstruites_eco_communalism, consortium_des_operateurs_d_ia_proprietaires_sur_les_trames_eco_communalism*
 
-#### Corridors Extractivistes Résiduels — sous [[enclaves_extractivistes_et_etats_residuels]]
-
-*zone_sinistree — niveau 2 — statut : en_declin*
-
-**Origine réelle (2026)** : Zones industrielles et urbaines mondiales diverses
-
-**Transition** : 2040-2098
-
-Réseau de corridors logistiques et extractivistes qui persistent dans les interstices entre les bioterritoires, tentant de maintenir des flux marchands et industriels à l'échelle interrégionale. Ces espaces linéaires — anciens axes autoroutiers, voies ferrées, pipelines partiellement opérationnels — sont le terrain de prédilection des consortiums logistiques néo-industriels qui exercent une pression extractive sur les terres reconstruites adjacentes.
-
-**Tensions internes** : Compétition entre consortiums logistiques et agro-conglomérats pour le contrôle des nœuds névralgiques ; infiltrations régulières des bioterritoires adjacents pour cartographier les ressources ; légitimité en érosion constante face à la montée du modèle communaliste.
-
-**Rivaux** : Europe Occidentale Reconstituée ([[europe_occidentale_reconstituee]]), Bioterritoires d'Amérique du Nord ([[bioterritoires_amerique_du_nord]]), Arc Septentrional ([[arc_septentrional]])
-
-*Sources attestées : enclaves_extractivistes_residuelles_des_corridors_eco_communalism, consortiums_logistiques_neo_industriels_des_terres_reconstruites_eco_communalism*
-
-#### Zones Post-Industrielles d'Eurasie Centrale — sous [[enclaves_extractivistes_et_etats_residuels]]
-
-*region — niveau 2 — statut : fragmenté*
-
-**Transition** : 2040-2098
-
-Extension de la Confédération des Friches Vivantes vers les zones post-industrielles d'Europe centrale (Łódź) et d'Asie du Nord-Est (Mandchourie désindustrialisée), espaces où la présence des communs coexiste avec des corridors extractivistes résiduels. Ces zones hybrides sont des terrains d'affrontement entre la logique de régénération communale et la pression des fragments d'États résiduels cherchant à régulariser les confédérations pour en faire des interlocutrices institutionnelles.
-
-**Tensions internes** : Pression des consortiums logistiques sur les friches à haute valeur minière ; coexistence précaire entre communes autogérées et fragments d'États résiduels revendiquant une juridiction sur les mêmes territoires.
-
-**Lieux emblématiques** :
-- Łódź reconstituée (ville) — Ancienne ville textile polonaise en transition vers une friche vivante, référence européenne de la Confédération
-- Mandchourie désindustrialisée (region) — Extension nord-est asiatique du modèle des friches, en tension avec les fragments d'États résiduels
-
-**Alliés** : Confédération des Friches Vivantes ([[rust_belt_confederation_friches]])
-
-**Rivaux** : Europe Occidentale Reconstituée ([[europe_occidentale_reconstituee]])
-
-*Sources attestées : mouvement_des_communes_du_rust_belt_eco_communalism*
-
 ### Europe Occidentale Reconstituée
 
-*union_regionale — statut : stable*
+*union_regionale — niveau 1 — statut : fragmenté*
 
-**Origine réelle (2026)** : France, Belgique, Pays-Bas, Allemagne, Suisse, Italie, Royaume-Uni, Angleterre, Pays de Galles, Espagne, Portugal, Ukraine, Pologne, République tchèque, Irlande, Luxembourg, Andorre, Liechtenstein, Saint-Marin, Vatican, Kosovo
+**Origine réelle (2026)** : France, Belgique, Pays-Bas, Allemagne, Suisse, Italie
 
 **Transition** : 2030-2060 — voir [[effondrement_reseau_mondial_communication_eco_communalism]]
 
-Réseau décentralisé de bioterritoires autonomes couvrant l'Europe de l'Ouest, organisés autour de bassins versants (vallée de l'Ourthe, bassin rhénan, Apennins restaurés, Massif Central, Cévennes, Rhône). Chaque communauté gère ses ressources locales via des assemblées de bassin et des coopératives, en lien avec le réseau Terrafond des Bassins. Les anciennes structures étatiques ont cédé la place à des dynamiques locales, bien que des tensions persistent avec les enclaves extractivistes résiduelles.
+Mosaïque de bioterritoires couvrant l'espace d'Europe de l'Ouest, organisés autour de bassins versants (vallée de l'Ourthe, bassin rhénan, Apennins restaurés, Massif Central, Cévennes, Rhône). Cœur du réseau Terrafond des Bassins et de la Confédération des Racines Vivantes, cette zone est l'épicentre du projet éco-communaliste avec des infrastructures institutionnelles denses (assemblées, coopératives, trame Mnemos). Les fragments d'États résiduels y subsistent en tension avec les nouvelles structures communales.
 
-**Tensions internes** : Divergences entre communautés sur le degré d'autonomie locale vs. coordination régionale ; résistance des enclaves extractivistes et des fragments d'États résiduels ; enjeux d'accueil des populations déplacées des zones désertifiées.
+**Tensions internes** : Fracture entre autonomistes durs et confédéralistes pragmatiques ; communautés repliées sur l'appartenance ethnique ou géographique trahissant l'universalisme originel ; pression des consortiums industriels et des enclaves extractivistes ; question non résolue de l'accueil des populations déplacées des zones désertifiées.
 
-**Alliés** : Arc Septentrional ([[arc_septentrional]]), Maghreb Méditerranéen ([[maghreb_mediterraneen]]), Bassin Danubien Éco-Communaliste ([[bassin_danubien]])
+**Alliés** : arc_septentrional, maghreb_mediterraneen
 
-**Rivaux** : Enclaves Extractivistes et États Résiduels ([[enclaves_extractivistes_et_etats_residuels]])
+**Rivaux** : enclaves_extractivistes_et_etats_residuels
 
 *Sources attestées : cooperative_terrafond_eco_communalism, mouvement_racines_vivantes_eco_communalism, collectifs_du_seuil_eco_communalism, reseau_mnemos_eco_communalism, prisme_global_eco_communalism, trame_bioclimatique_eco_communalism, federation_communs_territoriaux_eco_communalism, voix_du_dehors_eco_communalism, arrestation_chris_van_derburgh_eco_communalism, effondrement_reseau_mondial_communication_eco_communalism*
 
-#### Apennins Restaurés — sous [[europe_occidentale_reconstituee]]
-
-*region — niveau 2 — statut : emergent*
-
-**Origine réelle (2026)** : Apennins, Italie
-
-**Transition** : 2040-2070
-
-Chaîne montagneuse d'Italie devenue l'un des tronçons emblématiques de la Tresse Verte, perceptible depuis les sentiers de crête où les corridors écologiques restaurés sont visibles à l'œil nu. Bioterritoire de référence pour les pratiques de restauration écologique collective dans l'espace méditerranéen nord.
-
-**Tensions internes** : Question de la continuité entre territoires : certaines communautés du plateau bloquent des extensions de corridors en invoquant leur souveraineté alimentaire ; tension entre traditions locales et protocoles de restauration formalisés.
-
-*Sources attestées : trame_bioclimatique_eco_communalism*
-
-#### Cévennes Intérieure — sous [[europe_occidentale_reconstituee]]
-
-*region — niveau 2 — statut : fragmenté*
-
-**Origine réelle (2026)** : Cévennes, France
-
-**Transition** : 2030-2070
-
-Zone interstice aux lisières des chemins forestiers entretenus et des panneaux de coopération régionale, où se réfugient les Veilleurs du Seuil dans leurs Sillons — ces longues bâtisses mi-enterrées tapissées de graines et de schémas techniques qui ressemblent moins à des refuges qu'à des tombeaux anticipatoires. En 2098, la Cévenne intérieure est à la fois une énigme et un reproche vivant pour les bâtisseurs du monde éco-communaliste.
-
-**Tensions internes** : Les Veilleurs du Seuil y jugent la renaissance éco-communaliste insuffisante et provisoire ; tension avec les délégués des bassins versants qui voudraient accéder aux savoirs techniques précieux conservés dans les Sillons.
-
-*Sources attestées : collectifs_du_seuil_eco_communalism*
-
-##### Les Sillons de la Cévenne — sous [[cevennes_interieure]]
-
-*infrastructure — niveau 3 — statut : stable*
-
-**Origine réelle (2026)** : Cévennes, France
-
-**Transition** : 2030-2098
-
-Longues bâtisses mi-enterrées tapissées de graines et de schémas techniques, cœur opérationnel et symbolique des Veilleurs du Seuil dans la Cévenne intérieure. Ces structures, à mi-chemin entre refuges, bibliothèques et tombeaux anticipatoires, concentrent des savoirs agronomiques, médicaux et techniques que les assemblées des bassins versants convoitent mais ne peuvent obtenir aux conditions imposées par les Veilleurs.
-
-**Tensions internes** : Question des conditions d'accès aux savoirs archivés : libre partage dans le réseau communal ou transmission ritualisée selon les protocoles des Porteurs de mémoire ; risque d'infiltration par des agents corporatifs cherchant à cartographier les ressources indirectement révélées par les archives.
-
-*Sources attestées : collectifs_du_seuil_eco_communalism*
-
-#### Confédération des Bassins Vivants — sous [[europe_occidentale_reconstituee]]
-
-*union_regionale — niveau 2 — statut : fragmenté*
-
-**Origine réelle (2026)** : France, Belgique, Allemagne, Italie
-
-**Transition** : 2045-2080
-
-Principal organe de coordination entre les communs territoriaux autonomes d'Europe occidentale, sans siège fixe ni drapeau unique. Se réunit deux fois l'an sous des tentes modulaires ornées des totems végétaux de chaque territoire membre. Ses délégués sont tirés au sort parmi les conseils de communs, renouvelés par rotation saisonnière. Ses protocoles d'urgence hydrique ont évité trois conflits armés entre bassins rivaux depuis 2071.
-
-**Tensions internes** : Fracture vive entre 'autonomistes durs' refusant toute supra-autorité et 'confédéralistes pragmatiques' plaidant pour la mutualisation des risques climatiques ; certains bassins membres enrichis exercent une influence disproportionnée recréant de facto des rapports de domination ; question non résolue de l'accueil des populations déplacées des zones désertifiées.
-
-**Alliés** : Arc Septentrional ([[arc_septentrional]]), Maghreb Méditerranéen ([[maghreb_mediterraneen]])
-
-**Rivaux** : Enclaves Extractivistes et États Résiduels ([[enclaves_extractivistes_et_etats_residuels]])
-
-*Sources attestées : federation_communs_territoriaux_eco_communalism*
-
-#### Couloirs Forestiers du Bassin Rhénan — sous [[europe_occidentale_reconstituee]]
-
-*infrastructure — niveau 2 — statut : stable*
-
-**Origine réelle (2026)** : Bassin du Rhin, Allemagne
-
-**Transition** : 2040-2060
-
-Corridors écologiques de la Tresse Verte reliant les communautés de l'ancien bassin rhénan, nés dans les années 2040 de l'accumulation patiente de milliers de micro-décisions collectives. Les gardiens de trame y assurent la continuité biologique entre communes, bassins versants et collectifs bioterritoriaux, faisant de cet espace l'un des tronçons les plus denses de l'infrastructure écologique distribuée d'Europe.
-
-**Tensions internes** : Factions techniques militant pour intégrer des capteurs numériques dans la gestion des corridors, ce qui rouvrirait la porte à des formes de centralisation ; enclaves extractivistes tentant de monétiser les corridors.
-
-**Rivaux** : Enclaves Extractivistes et États Résiduels ([[enclaves_extractivistes_et_etats_residuels]])
-
-*Sources attestées : trame_bioclimatique_eco_communalism*
-
-#### Le Fil Commun — sous [[europe_occidentale_reconstituee]]
-
-*infrastructure — niveau 2 — statut : stable*
-
-**Origine réelle (2026)** : France, Belgique
-
-**Transition** : 2038-2060 — voir [[effondrement_reseau_mondial_communication_eco_communalism]]
-
-Réseau de journalisme d'investigation décentralisé né des cendres des grandes plateformes médiatiques effondrées, comptant environ deux mille correspondants permanents et plusieurs dizaines de milliers de relayeurs occasionnels. Reconnaissable à l'encre de synthèse végétale sur papier recyclé gris ou au timbre sonore particulier de ses bulletins radio. Sans siège, il existe dans les courriers chiffrés, les messagers cyclistes entre bassins de vie, les antennes radio basse puissance et les assemblées où les correspondants lisent leurs enquêtes à voix haute.
-
-**Tensions internes** : Tiraillement entre vocation d'outil commun et tentation de certains nœuds régionaux de l'instrumentaliser pour amplifier leurs positions dans les négociations de ressources ; enquête sur la dissimulation de données de contamination hydrique menaçant de fracturer le réseau selon des lignes géographiques ; débat interne sur la transparence totale face aux équilibres locaux précaires.
-
-*Sources attestées : voix_du_dehors_eco_communalism, conflit_israel_iran_2026_eco_communalism*
-
-#### Massif Central — sous [[europe_occidentale_reconstituee]]
-
-*region — niveau 2 — statut : fragmenté*
-
-**Origine réelle (2026)** : Massif Central, France
-
-**Transition** : 2035-2060
-
-Lieu du grand rassemblement saisonnier de la Confédération des Racines Vivantes, où des milliers de délégués venus à pied ou à vélo échangent semences, récits et protocoles de soin du sol. Abrite des nœuds Mnemos alimentés par des micro-turbines hydrauliques, des Sillons des Veilleurs du Seuil dans ses plateaux désertés, et le hameau de Corrèze-Haute où se trouve le nœud 47 de Mémoire des Terres.
-
-**Tensions internes** : Fracture entre communautés des Racines Vivantes voulant refermer les territoires sur eux-mêmes et partisans d'une fédération plus large ; présence des Veilleurs du Seuil dans les plateaux désertés qui exercent une pression prophétique sur les reconstructeurs.
-
-**Alliés** : Vallée de l'Ourthe ([[vallee_de_l_ourthe]])
-
-*Sources attestées : mouvement_racines_vivantes_eco_communalism, reseau_mnemos_eco_communalism, prisme_global_eco_communalism, collectifs_du_seuil_eco_communalism*
-
-##### Corrèze-Haute — Nœud 47 — sous [[massif_central_bioterritoire]]
-
-*site_strategique — niveau 3 — statut : stable*
-
-**Origine réelle (2026)** : Corrèze, France
-
-**Transition** : 2038-2050 — voir [[effondrement_reseau_mondial_communication_eco_communalism]]
-
-Hameau abritant dans une ancienne grange reconvertie le nœud 47 de 'Mémoire des Terres' : trois serveurs refroidis à l'air libre, une antenne radio artisanale et une bibliothécaire de soixante ans qui encode à la main les comptes rendus des assemblées locales. Deux fois par an, une 'Lettre de Territoire' part vers les nœuds voisins — imprimée sur papier recyclé et transmise numériquement aux rares communes connectées.
-
-**Tensions internes** : Vulnérabilité face aux tentatives d'infiltration d'agents d'enclaves corporatives cherchant à cartographier les ressources territoriales que la Trame révèle indirectement.
-
-*Sources attestées : prisme_global_eco_communalism, reseau_mnemos_eco_communalism*
-
-##### Marges Urbaines des Racines Vivantes — sous [[massif_central_bioterritoire]]
-
-*zone_sinistree — niveau 3 — statut : fragmenté*
-
-**Origine réelle (2026)** : France
-
-**Transition** : 2050-2098
-
-Zones périurbaines et urbaines dégradées où subsistent quelques cellules de la Confédération des Racines Vivantes tentant de prouver que la réconciliation avec les cycles naturels peut s'inventer aussi dans le béton fissuré. Espaces de tension maximale entre l'idéal rural de la Confédération et les réalités d'une urbanité résiduelle peuplée de populations qui n'ont pas pu ou voulu rejoindre les bioterritoires.
-
-**Tensions internes** : Pari risqué d'implanter les pratiques rurales des Racines dans des environnements dégradés ; accusations de certains nœuds ruraux de 'trahison de l'esprit du mouvement' ; attraction des populations marginalisées que les communs ruraux refusent d'absorber.
-
-*Sources attestées : mouvement_racines_vivantes_eco_communalism*
-
-##### Plateaux Désertés du Massif Central — sous [[massif_central_bioterritoire]]
-
-*zone_sinistree — niveau 3 — statut : fragmenté*
-
-**Origine réelle (2026)** : Massif Central, France
-
-**Transition** : 2030-2098
-
-Zones de repli des Veilleurs du Seuil dans leurs Sillons semi-enterrés, ces longues bâtisses mi-enterrées tapissées de graines et de schémas techniques qui ressemblent moins à des refuges qu'à des tombeaux anticipatoires. Espaces où la déprise agricole et l'abandon humain ont créé un vide que les Veilleurs habitent comme un reproche vivant adressé aux reconstructeurs éco-communalistes.
-
-**Tensions internes** : Les Sillons contiennent des savoirs techniques précieux que les réseaux coopératifs voudraient intégrer, mais les Veilleurs posent des conditions d'accès que les assemblées refusent ; jeunes générations déçues par la lenteur de la reconstruction attirées par la radicalité du retrait.
-
-*Sources attestées : collectifs_du_seuil_eco_communalism, mouvement_racines_vivantes_eco_communalism*
-
-###### Les Sillons du Plateau — sous [[plateaux_desertes_massif_central]]
-
-*infrastructure — niveau 4 — statut : stable*
-
-**Origine réelle (2026)** : Massif Central, France
-
-**Transition** : 2030-2098
-
-Longues bâtisses semi-enterrées des Veilleurs du Seuil dans les plateaux désertés du Massif Central, tapissées de graines et de schémas techniques, ressemblant moins à des refuges qu'à des tombeaux anticipatoires. Archives de savoirs techniques, agronomiques et médicaux précieux que les réseaux coopératifs voudraient intégrer, mais auxquels les Veilleurs ne donnent accès qu'à des conditions que les assemblées refusent. Miroir sombre des Sillons de la Cévenne.
-
-**Tensions internes** : Conditions d'accès aux savoirs posées par les Veilleurs incompatibles avec les principes d'horizontalité des assemblées ; risque d'infiltration par des agents corporatifs ; attraction des jeunes déçus par la lenteur de la reconstruction.
-
-**Alliés** : Les Sillons de la Cévenne ([[sillons_cevennes]])
-
-*Sources attestées : collectifs_du_seuil_eco_communalism*
-
-#### Réseau Terrafond des Bassins — sous [[europe_occidentale_reconstituee]]
-
-*infrastructure — niveau 2 — statut : stable*
-
-**Origine réelle (2026)** : Belgique, France, Allemagne
-
-**Transition** : 2030-2050
-
-Réseau de plus de 340 coopératives sur une douzaine de bassins versants d'Europe occidentale et du Maghreb méditerranéen, fondé dans les années 2030 sur les ruines des filières agro-industrielles effondrées. Épine dorsale productive des territoires réorganisés, il transforme la logique du bassin versant en unité économique fondamentale. Chaque assemblée de bassin vote ses propres règles d'échange, mais toutes partagent un principe commun : aucune coopérative ne peut accumuler au-delà de ses besoins documentés sur trois ans.
-
-**Tensions internes** : Bassins prospères attirant des flux migratoires que leurs communs ne peuvent absorber ; zones climatiquement dégradées réclamant des transferts que les bassins riches rechignent à accorder ; frictions croissantes autour des aquifères transfrontaliers avec des micro-États voisins refusant le principe de communs partagés.
-
-**Alliés** : Maghreb Méditerranéen ([[maghreb_mediterraneen]]), Vallée de l'Ourthe ([[vallee_de_l_ourthe]])
-
-**Rivaux** : Enclaves Extractivistes et États Résiduels ([[enclaves_extractivistes_et_etats_residuels]])
-
-*Sources attestées : cooperative_terrafond_eco_communalism*
-
-#### Trame Mnemos — sous [[europe_occidentale_reconstituee]]
-
-*infrastructure — niveau 2 — statut : fragmenté*
-
-**Origine réelle (2026)** : France, Allemagne, Italie
-
-**Transition** : 2038-2060 — voir [[effondrement_reseau_mondial_communication_eco_communalism]]
-
-Épine dorsale informationnelle des communautés éco-communalistes, reliant des milliers de nœuds mémoriels autonomes disséminés dans les territoires relocalisés. Née des cendres de Prisme Global après l'effondrement des datacenters européens de 2038, elle ne prétend plus à la couverture planétaire mais assure la continuité des savoirs techniques, agricoles, médicaux et culturels. Sa gouvernance par conseils de bibliothécaires-nœuds en fait autant une institution culturelle qu'une infrastructure technique.
-
-**Tensions internes** : Nœuds dont les communautés ont développé des protocoles incompatibles menaçant de créer des archipels de savoirs inaccessibles ; assemblées refusant de partager des innovations jugées stratégiques ; agents d'enclaves corporatives cherchant à infiltrer des nœuds pour cartographier les ressources territoriales ; jeunes générations questionnant l'archivage de 'savoirs du monde d'avant'.
-
-**Alliés** : Arc Septentrional ([[arc_septentrional]])
-
-**Rivaux** : Enclaves Extractivistes et États Résiduels ([[enclaves_extractivistes_et_etats_residuels]])
-
-*Sources attestées : reseau_mnemos_eco_communalism, prisme_global_eco_communalism*
-
-##### Zone Mémoire de la Grande Coupure — sous [[trame_mnemos_noeud_reseau]]
-
-*site_strategique — niveau 3 — statut : stable*
-
-**Origine réelle (2026)** : Allemagne, France
-
-**Transition** : 2040-2050 — voir [[effondrement_reseau_mondial_communication_eco_communalism]]
-
-Ensemble de nœuds de la Trame Mnemos fondés dans l'urgence des semaines suivant la Grande Coupure de 2040, quand des dizaines de communautés ont commencé à déployer leurs propres réseaux mesh locaux pour remplacer l'architecture numérique centralisée effondrée. Ces nœuds fondateurs gardent la mémoire du basculement et servent de référence protocolaire pour les nouveaux nœuds. Ils constituent la colonne vertébrale historique de Mémoire des Terres.
-
-**Tensions internes** : Nœuds fondateurs dont l'autorité historique est contestée par les nœuds récents revendiquant une gouvernance égalitaire sans hiérarchie d'ancienneté.
-
-*Sources attestées : reseau_mnemos_eco_communalism, prisme_global_eco_communalism, effondrement_reseau_mondial_communication_eco_communalism*
-
-##### Mémoire des Terres — sous [[trame_mnemos_noeud_reseau]]
-
-*infrastructure — niveau 3 — statut : fragmenté*
-
-**Origine réelle (2026)** : France, Allemagne
-
-**Transition** : 2038-2060 — voir [[effondrement_reseau_mondial_communication_eco_communalism]]
-
-Héritière fragmentée de Prisme Global après l'effondrement des datacenters européens de 2038, 'Mémoire des Terres' est une fédération lâche de nœuds narratifs locaux — archives vivantes tenues par des communautés rurales, des coopératives urbaines et des cercles de mémoire intergénérationnelle. Revendique 2 300 nœuds actifs sur quatre continents, sans que personne ne sache vraiment combien fonctionnent encore. Son autorité n'est plus éditoriale mais protocolaire : elle fournit un langage commun de description du monde sans prétendre en fixer le sens.
-
-**Tensions internes** : Tentation des nœuds les plus puissants de s'autonomiser en systèmes d'information locaux fermés ; accusations du protocole 'Trame' comme vecteur d'homogénéisation culturelle masquée ; frictions politiques vives sur la mémoire des territoires disparus — qui a le droit de raconter ce qui n'existe plus ?
-
-**Rivaux** : Enclaves Extractivistes et États Résiduels ([[enclaves_extractivistes_et_etats_residuels]])
-
-*Sources attestées : prisme_global_eco_communalism, reseau_mnemos_eco_communalism*
-
-#### La Tresse Verte — sous [[europe_occidentale_reconstituee]]
-
-*infrastructure — niveau 2 — statut : stable*
-
-**Origine réelle (2026)** : Apennins, Bassin du Rhin, France, Italie
-
-**Transition** : 2040-2060
-
-Infrastructure écologique distribuée née dans les années 2040 de l'accumulation de milliers de micro-décisions collectives, constituant l'épine dorsale biologique du monde fragmenté de 2098. Elle n'a pas de centre de commandement : elle est le résultat d'une coordination horizontale entre communes, bassins versants et collectifs bioterritoriaux. Imperceptible sur une carte unique, elle se perçoit depuis les sentiers de crête des Apennins restaurés ou en traversant les corridors forestiers du bassin rhénan.
-
-**Tensions internes** : Une communauté du plateau central bloque depuis sept ans l'extension d'un corridor amphibien en invoquant sa souveraineté alimentaire ; factions techniques militant pour intégrer des capteurs numériques qui rouvrirait la porte à des formes de centralisation ; certaines communautés riches en biodiversité commencent à en faire un argument de prestige dans les échanges interterritoriaux.
-
-**Rivaux** : Enclaves Extractivistes et États Résiduels ([[enclaves_extractivistes_et_etats_residuels]])
-
-*Sources attestées : trame_bioclimatique_eco_communalism*
-
-#### Vallée de l'Ourthe — sous [[europe_occidentale_reconstituee]]
-
-*region — niveau 2 — statut : stable*
-
-**Origine réelle (2026)** : Province de Liège, Belgique
-
-**Transition** : 2030-2045
-
-Berceau historique du Réseau Terrafond des Bassins, reconnaissable à ses silos peints en ocre et aux panneaux d'affichage des bilans de récolte accrochés à l'entrée des villages. Fondé dans les années 2030 sur les ruines des filières agro-industrielles effondrées, ce bassin versant est devenu le modèle emblématique de la coopérative éco-communaliste fonctionnant selon le principe qu'aucune coopérative ne peut accumuler au-delà de ses besoins documentés sur trois ans.
-
-**Tensions internes** : Pression des flux migratoires attirés par la prospérité du bassin ; question des transferts vers les bassins climatiquement dégradés que les membres rechignent à accorder.
-
-**Alliés** : Massif Central ([[massif_central_bioterritoire]])
-
-*Sources attestées : cooperative_terrafond_eco_communalism*
-
-#### Vallée du Rhône Reconstituée — sous [[europe_occidentale_reconstituee]]
-
-*region — niveau 2 — statut : stable*
-
-**Origine réelle (2026)** : Vallée du Rhône, France
-
-**Transition** : 2040-2080 — voir [[arrestation_chris_van_derburgh_eco_communalism]]
-
-Bioterritoire organisé autour du bassin versant du Rhône reconstitué, connu pour avoir accueilli en 2078 le procès communautaire de Chris van Derburgh — délibération exemplaire sur la frontière entre possession personnelle et communs de la mémoire. L'affaire a généré un débat fondateur dans le Réseau des Assemblées sur le 'droit à la mémoire personnelle'.
-
-**Tensions internes** : Débat persistant entre les partisans d'une sobriété stricte et ceux qui défendent le droit à la mémoire personnelle comme issue du procès Van Derburgh ; pression des consortiums industriels sur les ressources hydriques du Rhône.
-
-*Sources attestées : arrestation_chris_van_derburgh_eco_communalism, federation_communs_territoriaux_eco_communalism*
-
-##### Site du Procès Van Derburgh — sous [[vallee_du_rhone_reconstituee]]
-
-*site_strategique — niveau 3 — statut : stable*
-
-**Origine réelle (2026)** : Vallée du Rhône, France
-
-**Transition** : 2078-2098 — voir [[arrestation_chris_van_derburgh_eco_communalism]]
-
-Lieu de la délibération communautaire exemplaire d'automne 2078 concernant Chris van Derburgh et sa collection d'objets de 2026. Après trois sessions de délibération, la communauté a voté pour le 'droit à la mémoire personnelle' — Van Derburgh garde sa collection en l'ouvrant comme archive communautaire. Ce cercle de délibération est devenu une référence jurisprudentielle dans le Réseau des Assemblées sur la frontière entre possession personnelle et communs de la mémoire.
-
-**Tensions internes** : Débat persistant entre les partisans d'une sobriété stricte et ceux qui défendent le droit à la mémoire personnelle issu du précédent Van Derburgh.
-
-**Alliés** : Mémoire des Terres ([[memoire_des_terres_federation]])
-
-*Sources attestées : arrestation_chris_van_derburgh_eco_communalism, federation_communs_territoriaux_eco_communalism*
-
 ### Maghreb Méditerranéen
 
-*union_regionale — statut : fragmenté*
+*union_regionale — niveau 1 — statut : fragmenté*
 
-**Origine réelle (2026)** : Maroc, Algérie, Tunisie, Libye, Grèce, Malte, Chypre, Monténégro, Albanie, Togo, Bénin, Égypte
+**Origine réelle (2026)** : Maroc, Algérie, Tunisie, Libye
 
 **Transition** : 2027-2050 — voir [[conflit_israel_iran_2026_eco_communalism]]
 
@@ -3997,49 +3430,17 @@ Zone de bassins versants méditerranéens intégrée au Réseau Terrafond des Ba
 
 **Tensions internes** : Zones climatiquement dégradées réclamant des transferts que les bassins riches rechignent à accorder ; recomposition démographique liée aux réfugiés du Proche-Orient ; tensions autour des aquifères transfrontaliers avec des micro-États voisins.
 
-**Alliés** : Europe Occidentale Reconstituée ([[europe_occidentale_reconstituee]])
+**Alliés** : europe_occidentale_reconstituee
 
-**Rivaux** : Proche-Orient en Crise ([[proche_orient_en_crise]])
-
-*Sources attestées : cooperative_terrafond_eco_communalism, conflit_israel_iran_2026_eco_communalism*
-
-#### Aquifères Transfrontaliers du Maghreb — sous [[maghreb_mediterraneen]]
-
-*site_strategique — niveau 2 — statut : fragmenté*
-
-**Origine réelle (2026)** : Tunisie
-
-**Transition** : 2035-2098
-
-Nappes phréatiques transfrontalières du Maghreb constituant un enjeu stratégique majeur dans le contexte de dégradation climatique. Gérées collectivement par certains bioterritoires adhérant aux principes Terrafond, elles font l'objet d'une contestation permanente de la part des consortiums industriels de l'eau et des micro-États résiduels refusant le principe de communs partagés.
-
-**Tensions internes** : Frictions croissantes entre bioterritoires adoptant la logique des communs et micro-États résiduels revendiquant une souveraineté nationale sur les nappes ; pression des consortiums industriels de l'eau cherchant à privatiser l'accès ; zones climatiquement dégradées en conflit avec les bassins disposant de réserves.
-
-**Alliés** : Réseau Terrafond des Bassins ([[reseau_terrafond_bassins]])
-
-**Rivaux** : Enclaves Extractivistes et États Résiduels ([[enclaves_extractivistes_et_etats_residuels]])
-
-*Sources attestées : cooperative_terrafond_eco_communalism*
-
-#### Zones Climatiquement Dégradées du Maghreb — sous [[maghreb_mediterraneen]]
-
-*zone_sinistree — niveau 2 — statut : en_declin*
-
-**Origine réelle (2026)** : Libye
-
-**Transition** : 2027-2098 — voir [[conflit_israel_iran_2026_eco_communalism]]
-
-Territoires du Maghreb intérieur frappés par une désertification avancée et peuplés de communautés qui peinent à atteindre l'autosuffisance. Sources de flux migratoires vers les bassins versants côtiers plus riches et vers l'Europe occidentale. Ces zones réclament des transferts que les bassins prospères rechignent à accorder, créant une ligne de fracture structurelle dans le Réseau Terrafond.
-
-**Tensions internes** : Revendications de transferts de ressources refusées par les bassins riches ; pression démographique sur les zones encore productives ; populations réfugiées du Proche-Orient surimposées aux flux migratoires internes.
+**Rivaux** : proche_orient_en_crise
 
 *Sources attestées : cooperative_terrafond_eco_communalism, conflit_israel_iran_2026_eco_communalism*
 
 ### Nordeste Brésilien — Frente Sertão Livre
 
-*territoire_autonome — statut : emergent*
+*territoire_autonome — niveau 1 — statut : emergent*
 
-**Origine réelle (2026)** : Ceará, Pernambuco, Bahia
+**Origine réelle (2026)** : Ceará, Pernambuco, Bahia, Brésil
 
 **Transition** : 2035-2070
 
@@ -4052,31 +3453,17 @@ Réseau de communautés semi-arides du Nordeste brésilien organisées en coopé
 - Caruaru (ville) — Ville-relais des circuits de semences et d'apprentis agronomes
 - Feira de Santana (ville) — Ancrage coopératif majeur du réseau Frente
 
-**Alliés** : Amazonie — Pacte Amazônia Viva ([[amazonie_pacte_viva]]), Chiapas et Bioterritoires Mésoaméricains ([[chiapas_et_bioterritoires_mesoamericains]])
+**Alliés** : amazonie_pacte_viva, chiapas_et_bioterritoires_mesoamericains
 
-**Rivaux** : Enclaves Extractivistes et États Résiduels ([[enclaves_extractivistes_et_etats_residuels]])
-
-*Sources attestées : frente_sertao_livre_eco_communalism*
-
-#### Fortaleza — sous [[nordeste_bresilien_frente]]
-
-*ville — niveau 2 — statut : fragmenté*
-
-**Origine réelle (2026)** : Fortaleza, Ceará
-
-**Transition** : 2035-2098
-
-Principal nœud de circulation des délégués du Frente Sertão Livre, point de départ et d'arrivée des messagers à vélo et camionnettes solaires qui portent des arbitrages collectifs plutôt que des ordres à travers le Nordeste. Ville côtière reconvertie en base logistique d'un réseau sans siège central, où se tiennent certaines des assemblées les plus tendues sur la question de la formalisation juridique du Frente.
-
-**Tensions internes** : Pression des municípios locaux offrant des subventions en échange d'une formalisation juridique ; présence d'agents des corporations biotechnologiques cherchant à identifier les leaders du réseau.
+**Rivaux** : enclaves_extractivistes_et_etats_residuels
 
 *Sources attestées : frente_sertao_livre_eco_communalism*
 
 ### Polynésie Reconstituée
 
-*territoire_autonome — statut : emergent*
+*territoire_autonome — niveau 1 — statut : emergent*
 
-**Origine réelle (2026)** : Polynésie française, Fidji, Tonga, Samoa, Nouvelle-Calédonie, Nouvelle-Zélande, Maldives, Cap-Vert, São Tomé-et-Príncipe, Comores, Maurice, Seychelles, Antigua-et-Barbuda, Saint-Christophe-et-Niévès, Dominique, Îles Marshall, Nauru, Tuvalu
+**Origine réelle (2026)** : Polynésie française, Fidji, Tonga, Samoa, Nouvelle-Calédonie
 
 **Transition** : 2040-2070
 
@@ -4086,27 +3473,11 @@ Bioterritoire insulaire reconstitué, acteur à part entière du réseau global 
 
 *Sources attestées : le_temoin_eco_communalism, assemblee_territoires_eco_communalism*
 
-#### Archives Communautaires de Polynésie — sous [[polynesie_reconstituee]]
-
-*infrastructure — niveau 2 — statut : emergent*
-
-**Origine réelle (2026)** : Polynésie française, Fidji
-
-**Transition** : 2050-2098
-
-Système d'archivage communautaire hybride — cahiers manuscrits numérisés une fois par semaine, réseaux mesh locaux, rassemblements saisonniers — développé par des archivistes comme Mele Tupou pour documenter les pratiques communautaires, les conflits de gouvernance locale et les succès des assemblées bioterrititoriales. Le débat central porte sur ce qu'il convient de documenter versus garder oral pour protéger la vie privée communautaire.
-
-**Tensions internes** : Tension entre préservation de la mémoire et protection de la vie privée communautaire ; débat sur la frontière entre mémoire collective et récit personnel ; vulnérabilité des archives face aux épisodes climatiques répétés.
-
-**Alliés** : Mémoire des Terres ([[memoire_des_terres_federation]])
-
-*Sources attestées : le_temoin_eco_communalism, assemblee_territoires_eco_communalism*
-
 ### Proche-Orient en Crise
 
-*zone_sinistree — statut : disparu*
+*zone_sinistree — niveau 1 — statut : disparu*
 
-**Origine réelle (2026)** : Israël, Iran, Irak, Syrie, Arabie Saoudite, Émirats arabes unis, Yémen, Liban, Pakistan, Jordanie, Palestine
+**Origine réelle (2026)** : Israël, Iran, Irak, Syrie, Arabie Saoudite, Émirats arabes unis
 
 **Transition** : 2027-2035 — voir [[conflit_israel_iran_2026_eco_communalism]]
 
@@ -4114,29 +3485,15 @@ Zone déstabilisée par le conflit israélo-iranien de 2027 qui a détruit les i
 
 **Tensions internes** : Absence d'autorité étatique stable ; zones de guerre traversées par des correspondants nomades du Fil Commun ; populations déplacées massives recombinant durablement les démographies d'accueil.
 
-**Rivaux** : Maghreb Méditerranéen ([[maghreb_mediterraneen]])
+**Rivaux** : maghreb_mediterraneen
 
 *Sources attestées : conflit_israel_iran_2026_eco_communalism*
 
-#### Ports du Golfe — sous [[proche_orient_en_crise]]
-
-*zone_sinistree — niveau 2 — statut : disparu*
-
-**Origine réelle (2026)** : Émirats arabes unis, Arabie Saoudite, Irak
-
-**Transition** : 2027-2035 — voir [[conflit_israel_iran_2026_eco_communalism]]
-
-Infrastructures portuaires du Golfe Persique détruites ou mises hors service lors des ripostes iraniennes de 2027, marquant la rupture définitive des dernières routes maritimes d'hydrocarbures. En 2098, ces zones restent symboliques de la 'seconde coupure' et de la fin de l'ère fossile à l'échelle régionale ; elles sont traversées par des correspondants nomades du Fil Commun documentant l'absence de tout pouvoir étatique stable.
-
-**Tensions internes** : Absence totale d'autorité ; zones traversées par des flux migratoires et des correspondants nomades ; mémoire de la destruction utilisée comme argument de légitimité par diverses factions régionales.
-
-*Sources attestées : conflit_israel_iran_2026_eco_communalism, voix_du_dehors_eco_communalism*
-
 ### Ligue des Cités du Sahel Numérique
 
-*union_regionale — statut : emergent*
+*union_regionale — niveau 1 — statut : emergent*
 
-**Origine réelle (2026)** : Niger, Burkina Faso, Mali, Sénégal, Ghana, Soudan, Tchad, Mauritanie, Gambie, Guinée-Bissau, Guinée, Côte d'Ivoire
+**Origine réelle (2026)** : Niger, Burkina Faso, Mali, Sénégal
 
 **Transition** : 2040-2070 — voir [[forum_agadez_souverainete_numerique_eco_communalism]]
 
@@ -4150,11 +3507,33 @@ Réseau de dix-huit villes sahéliennes ayant développé une infrastructure num
 - Ouagadougou (ville) — Métropole fondatrice de la Ligue, siège de facto des ingénieurs malgré l'horizontalité affichée
 - Bamako-Ouest (ville) — Cité membre, point d'extension vers les réseaux ouest-africains
 
-**Alliés** : Maghreb Méditerranéen ([[maghreb_mediterraneen]]), Europe Occidentale Reconstituée ([[europe_occidentale_reconstituee]])
+**Alliés** : maghreb_mediterraneen, europe_occidentale_reconstituee
 
-**Rivaux** : Enclaves Extractivistes et États Résiduels ([[enclaves_extractivistes_et_etats_residuels]])
+**Rivaux** : enclaves_extractivistes_et_etats_residuels
 
 *Sources attestées : ligue_des_cites_du_sahel_numerique_eco_communalism, forum_agadez_souverainete_numerique_eco_communalism*
+
+### São Paulo — Fragments Algorithmiques
+
+*zone_sinistree — niveau 1 — statut : fragmenté*
+
+**Origine réelle (2026)** : São Paulo, São Paulo, Brésil
+
+**Transition** : 2040-2098 — voir [[effondrement_reseau_mondial_communication_eco_communalism]]
+
+Mégalopole de vingt millions d'âmes dont le grand système d'allocation algorithmique centralisé (APD) a été démembré après l'effondrement des réseaux centraux dans les années 2040. Ce qui subsiste est une constellation de modules locaux déconnectés, repris en main par des assemblées territoriales qui les ont désossés, partiellement réécrits et font tourner sur des serveurs communautaires à faible consommation. En 2098, São Paulo est l'archétype de la ville post-industrielle ni pleinement communaliste ni entièrement effondrée, où coexistent des modules algorithmiques généreux et des fragments servant des intérêts locaux clientélistes.
+
+**Tensions internes** : Question de la légitimité de modification des paramètres algorithmiques : assemblées organisées revendiquant l'audit permanent mais manquant de compétences techniques, collectifs de techniciens sobres ayant le savoir sans le mandat démocratique ; opérateurs d'IA propriétaires proposant de 'réunifier' les fragments en échange d'accès aux données ; biais historiques du système original favorisant les zones mieux dotées jamais vraiment effacés.
+
+**Lieux emblématiques** :
+- Brasilândia (region) — Quartier où un panneau solaire alimente un serveur grand comme une valise gérant la distribution d'eau coopérative
+- Guarulhos (ville) — Zone où une faction locale a modifié en silence les seuils de priorité de l'algorithme, excluant les familles hors périmètre coopératif
+
+**Alliés** : nordeste_bresilien_frente
+
+**Rivaux** : enclaves_extractivistes_et_etats_residuels
+
+*Sources attestées : rede_paulista_de_distribuicao_algoritmica_eco_communalism*
 
 #### Agadez — sous [[sahel_numerique_ligue]]
 
@@ -4173,41 +3552,87 @@ Ville hôte du Forum de souveraineté numérique d'octobre 2062 — dix jours de
 
 *Sources attestées : ligue_des_cites_du_sahel_numerique_eco_communalism, forum_agadez_souverainete_numerique_eco_communalism*
 
-#### Ouagadougou — sous [[sahel_numerique_ligue]]
+#### Apennins Restaurés — sous [[europe_occidentale_reconstituee]]
 
-*ville — niveau 2 — statut : dominant*
+*region — niveau 2 — statut : emergent*
 
-**Origine réelle (2026)** : Ouagadougou, Burkina Faso
+**Origine réelle (2026)** : Apennins, Italie
 
-**Transition** : 2040-2098
+**Transition** : 2040-2070
 
-Métropole fondatrice et plus grande cité de la Ligue des Cités du Sahel Numérique, concentrant de facto la majorité des ingénieurs SahelOS et des serveurs malgré le principe d'horizontalité affiché. Cette asymétrie structurelle est la principale source de tension interne entre Ouagadougou et les cités fondatrices comme Agadez qui revendiquent une voix égale. En 2098, la ville est le nœud technique de référence tout en cherchant à masquer cette prééminence derrière les protocoles de la Tente des Protocoles.
+Chaîne montagneuse d'Italie devenue l'un des tronçons emblématiques de la Tresse Verte, perceptible depuis les sentiers de crête où les corridors écologiques restaurés sont visibles à l'œil nu. Bioterritoire de référence pour les pratiques de restauration écologique collective dans l'espace méditerranéen nord.
 
-**Tensions internes** : Asymétrie technique et humaine croissante avec les autres cités membres ; accusation de reconduire une hiérarchie métropolitaine sous un vocabulaire horizontal.
+**Tensions internes** : Question de la continuité entre territoires : certaines communautés du plateau bloquent des extensions de corridors en invoquant leur souveraineté alimentaire ; tension entre traditions locales et protocoles de restauration formalisés.
 
-*Sources attestées : ligue_des_cites_du_sahel_numerique_eco_communalism*
+*Sources attestées : trame_bioclimatique_eco_communalism*
 
-### São Paulo — Fragments Algorithmiques
+#### Aquifères Transfrontaliers du Maghreb — sous [[maghreb_mediterraneen]]
 
-*zone_sinistree — statut : fragmenté*
+*site_strategique — niveau 2 — statut : fragmenté*
 
-**Origine réelle (2026)** : São Paulo, São Paulo
+**Origine réelle (2026)** : Maroc, Algérie, Tunisie
 
-**Transition** : 2040-2098 — voir [[effondrement_reseau_mondial_communication_eco_communalism]]
+**Transition** : 2035-2098
 
-Mégalopole de vingt millions d'âmes dont le grand système d'allocation algorithmique centralisé (APD) a été démembré après l'effondrement des réseaux centraux dans les années 2040. Ce qui subsiste est une constellation de modules locaux déconnectés, repris en main par des assemblées territoriales qui les ont désossés, partiellement réécrits et font tourner sur des serveurs communautaires à faible consommation. En 2098, São Paulo est l'archétype de la ville post-industrielle ni pleinement communaliste ni entièrement effondrée, où coexistent des modules algorithmiques généreux et des fragments servant des intérêts locaux clientélistes.
+Nappes phréatiques transfrontalières du Maghreb constituant un enjeu stratégique majeur dans le contexte de dégradation climatique. Gérées collectivement par certains bioterritoires adhérant aux principes Terrafond, elles font l'objet d'une contestation permanente de la part des consortiums industriels de l'eau et des micro-États résiduels refusant le principe de communs partagés.
 
-**Tensions internes** : Question de la légitimité de modification des paramètres algorithmiques : assemblées organisées revendiquant l'audit permanent mais manquant de compétences techniques, collectifs de techniciens sobres ayant le savoir sans le mandat démocratique ; opérateurs d'IA propriétaires proposant de 'réunifier' les fragments en échange d'accès aux données ; biais historiques du système original favorisant les zones mieux dotées jamais vraiment effacés.
+**Tensions internes** : Frictions croissantes entre bioterritoires adoptant la logique des communs et micro-États résiduels revendiquant une souveraineté nationale sur les nappes ; pression des consortiums industriels de l'eau cherchant à privatiser l'accès ; zones climatiquement dégradées en conflit avec les bassins disposant de réserves.
 
-**Lieux emblématiques** :
-- Brasilândia (region) — Quartier où un panneau solaire alimente un serveur grand comme une valise gérant la distribution d'eau coopérative
-- Guarulhos (ville) — Zone où une faction locale a modifié en silence les seuils de priorité de l'algorithme, excluant les familles hors périmètre coopératif
+**Alliés** : reseau_terrafond_bassins
 
-**Alliés** : Nordeste Brésilien — Frente Sertão Livre ([[nordeste_bresilien_frente]])
+**Rivaux** : enclaves_extractivistes_et_etats_residuels
 
-**Rivaux** : Enclaves Extractivistes et États Résiduels ([[enclaves_extractivistes_et_etats_residuels]])
+*Sources attestées : cooperative_terrafond_eco_communalism*
 
-*Sources attestées : rede_paulista_de_distribuicao_algoritmica_eco_communalism*
+#### Archives Communautaires de Polynésie — sous [[polynesie_reconstituee]]
+
+*infrastructure — niveau 2 — statut : emergent*
+
+**Origine réelle (2026)** : Polynésie française, Fidji
+
+**Transition** : 2050-2098
+
+Système d'archivage communautaire hybride — cahiers manuscrits numérisés une fois par semaine, réseaux mesh locaux, rassemblements saisonniers — développé par des archivistes comme Mele Tupou pour documenter les pratiques communautaires, les conflits de gouvernance locale et les succès des assemblées bioterrititoriales. Le débat central porte sur ce qu'il convient de documenter versus garder oral pour protéger la vie privée communautaire.
+
+**Tensions internes** : Tension entre préservation de la mémoire et protection de la vie privée communautaire ; débat sur la frontière entre mémoire collective et récit personnel ; vulnérabilité des archives face aux épisodes climatiques répétés.
+
+**Alliés** : memoire_des_terres_federation
+
+*Sources attestées : le_temoin_eco_communalism, assemblee_territoires_eco_communalism*
+
+#### Bassins Versants Méditerranéens Anatoliens — sous [[bioterritoires_anatoliens]]
+
+*region — niveau 2 — statut : emergent*
+
+**Origine réelle (2026)** : Turquie
+
+**Transition** : 2035-2070
+
+Bassins versants de la façade méditerranéenne et égéenne de l'Anatolie, espaces de recomposition bioterritoriale intégrant les savoirs hydrauliques et semenciers apportés par les réfugiés du Proche-Orient. Ces territoires sont les mieux avancés dans la transition anatolienne, ayant absorbé des pratiques de gouvernance collective de l'eau héritées de régions inaccessibles, mais leur appartenance aux réseaux de bassins versants méditerranéens — Terrafond et Confédération des Bassins Vivants — reste une question non résolue.
+
+**Tensions internes** : Débat sur l'intégration ou non aux réseaux européens de bassins versants ; tension entre les nouvelles pratiques apportées par les réfugiés et les communautés d'accueil revendiquant l'antériorité territoriale.
+
+**Alliés** : maghreb_mediterraneen, reseau_terrafond_bassins
+
+*Sources attestées : conflit_israel_iran_2026_eco_communalism*
+
+#### Bioterritoires de l'Atlantique Nord — sous [[bioterritoires_amerique_du_nord]]
+
+*region — niveau 2 — statut : fragmenté*
+
+**Origine réelle (2026)** : États-Unis d'Amérique, Canada
+
+**Transition** : 2048-2065 — voir [[election_parti_commun_americain_eco_communalism]]
+
+Ensemble de bioterritoires côtiers de la façade atlantique nord-américaine, parmi les plus avancés dans la dissolution des anciennes structures fédérales. Après la dissolution du Parti Commun américain en 2048, ces territoires ont rapidement adopté le vocabulaire des 'gardiens de territoire' et intégré les principes de redistribution locale dans leurs assemblées bioterrititoriales, bénéficiant d'une tradition de gouvernance locale forte héritée de la Nouvelle-Angleterre.
+
+**Tensions internes** : Résistance de fragments d'États résiduels sur les couloirs logistiques côtiers ; tension entre bioterritoires prospères et zones industrielles reconverties incomplètement ; question de l'intégration des communautés autochtones côtières dans les nouvelles structures.
+
+**Alliés** : grande_vallee_bioterritoire
+
+**Rivaux** : enclaves_extractivistes_et_etats_residuels
+
+*Sources attestées : election_parti_commun_americain_eco_communalism, assemblee_territoires_eco_communalism*
 
 #### Brasilândia — sous [[sao_paulo_algorithmique]]
 
@@ -4223,6 +3648,144 @@ Quartier périphérique de São Paulo où un panneau solaire alimente un serveur
 
 *Sources attestées : rede_paulista_de_distribuicao_algoritmica_eco_communalism*
 
+#### Cévennes Intérieure — sous [[europe_occidentale_reconstituee]]
+
+*region — niveau 2 — statut : fragmenté*
+
+**Origine réelle (2026)** : Cévennes, France
+
+**Transition** : 2030-2070
+
+Zone interstice aux lisières des chemins forestiers entretenus et des panneaux de coopération régionale, où se réfugient les Veilleurs du Seuil dans leurs Sillons — ces longues bâtisses mi-enterrées tapissées de graines et de schémas techniques qui ressemblent moins à des refuges qu'à des tombeaux anticipatoires. En 2098, la Cévenne intérieure est à la fois une énigme et un reproche vivant pour les bâtisseurs du monde éco-communaliste.
+
+**Tensions internes** : Les Veilleurs du Seuil y jugent la renaissance éco-communaliste insuffisante et provisoire ; tension avec les délégués des bassins versants qui voudraient accéder aux savoirs techniques précieux conservés dans les Sillons.
+
+*Sources attestées : collectifs_du_seuil_eco_communalism*
+
+#### Chiapas — sous [[chiapas_et_bioterritoires_mesoamericains]]
+
+*region — niveau 2 — statut : stable*
+
+**Origine réelle (2026)** : Chiapas, Mexique
+
+**Transition** : 2025-2045
+
+Région hôte de la session plénière de l'Assemblée des Territoires d'octobre 2098, accueillant 340 délégués de 89 bioterritoires. Héritière directe des pratiques zapatistes d'autonomie territoriale, elle incarne la convergence entre traditions autochtones de gouvernance et délibération éco-communaliste contemporaine, servant de référence mondiale pour la coordination horizontale sans autorité centrale.
+
+**Tensions internes** : Tension entre transmission des savoirs autochtones et intégration des pratiques délibératives formalisées venant de l'extérieur ; pression des factions extractivistes sur les ressources forestières de la région.
+
+**Rivaux** : enclaves_extractivistes_et_etats_residuels
+
+*Sources attestées : assemblee_territoires_eco_communalism*
+
+#### Confédération des Bassins Vivants — sous [[europe_occidentale_reconstituee]]
+
+*union_regionale — niveau 2 — statut : fragmenté*
+
+**Origine réelle (2026)** : France, Belgique, Allemagne, Italie
+
+**Transition** : 2045-2080
+
+Principal organe de coordination entre les communs territoriaux autonomes d'Europe occidentale, sans siège fixe ni drapeau unique. Se réunit deux fois l'an sous des tentes modulaires ornées des totems végétaux de chaque territoire membre. Ses délégués sont tirés au sort parmi les conseils de communs, renouvelés par rotation saisonnière. Ses protocoles d'urgence hydrique ont évité trois conflits armés entre bassins rivaux depuis 2071.
+
+**Tensions internes** : Fracture vive entre 'autonomistes durs' refusant toute supra-autorité et 'confédéralistes pragmatiques' plaidant pour la mutualisation des risques climatiques ; certains bassins membres enrichis exercent une influence disproportionnée recréant de facto des rapports de domination ; question non résolue de l'accueil des populations déplacées des zones désertifiées.
+
+**Alliés** : arc_septentrional, maghreb_mediterraneen
+
+**Rivaux** : enclaves_extractivistes_et_etats_residuels
+
+*Sources attestées : federation_communs_territoriaux_eco_communalism*
+
+#### Confédération des Communs de l'Arc Septentrional — sous [[arc_septentrional]]
+
+*union_regionale — niveau 2 — statut : emergent*
+
+**Origine réelle (2026)** : Finlande, Estonie, Lettonie, Lituanie, Danemark
+
+**Transition** : 2038-2055
+
+Organisation post-étatique structurant les communs des États baltiques et nordiques en une confédération de chartes locales inspirée des textes de Leena Väinälä. Elle incarne la viabilité d'une organisation territoriale post-étatique fondée sur les communs à grande échelle, servant de référence institutionnelle pour d'autres régions du monde en transition.
+
+**Tensions internes** : Instrumentalisation des chartes par des factions locales pour légitimer des fermetures identitaires ou des oligarchies de façade délibérative ; nouvelle génération de facilitateurs préférant des protocoles algorithmiques légers en conflit générationnel avec les praticiens des chartes originelles.
+
+**Alliés** : reseau_assemblees_fennoscandien, europe_occidentale_reconstituee
+
+*Sources attestées : confederation_des_communs_de_l_arc_septentrional_eco_communalism, leena_vainala_eco_communalism*
+
+#### Couloirs Forestiers du Bassin Rhénan — sous [[europe_occidentale_reconstituee]]
+
+*infrastructure — niveau 2 — statut : stable*
+
+**Origine réelle (2026)** : Bassin du Rhin, Allemagne
+
+**Transition** : 2040-2060
+
+Corridors écologiques de la Tresse Verte reliant les communautés de l'ancien bassin rhénan, nés dans les années 2040 de l'accumulation patiente de milliers de micro-décisions collectives. Les gardiens de trame y assurent la continuité biologique entre communes, bassins versants et collectifs bioterritoriaux, faisant de cet espace l'un des tronçons les plus denses de l'infrastructure écologique distribuée d'Europe.
+
+**Tensions internes** : Factions techniques militant pour intégrer des capteurs numériques dans la gestion des corridors, ce qui rouvrirait la porte à des formes de centralisation ; enclaves extractivistes tentant de monétiser les corridors.
+
+**Rivaux** : enclaves_extractivistes_et_etats_residuels
+
+*Sources attestées : trame_bioclimatique_eco_communalism*
+
+#### Corridors Migratoires Anatoliens — sous [[bioterritoires_anatoliens]]
+
+*zone_sinistree — niveau 2 — statut : fragmenté*
+
+**Origine réelle (2026)** : Turquie, Syrie
+
+**Transition** : 2027-2060 — voir [[conflit_israel_iran_2026_eco_communalism]]
+
+Axes de transit des flux migratoires massifs issus du Proche-Orient depuis le conflit de 2027, traversant les bioterritoires anatoliens qui tentent de gérer leur transformation démographique forcée. Ces corridors restent des espaces de tension entre fragments d'États résiduels tentant de réaffirmer une souveraineté sur les passages et les nouvelles populations apportant des pratiques de gouvernance de l'eau et des semences héritées de régions désormais inaccessibles.
+
+**Tensions internes** : Revendications de contrôle des corridors par les fragments d'États résiduels ; frictions entre populations d'accueil et réfugiés autour des droits territoriaux et des ressources en eau ; transmission des savoirs agronomiques des réfugiés comme levier paradoxal de la transition bioterritoriale anatolienne.
+
+**Rivaux** : enclaves_extractivistes_et_etats_residuels, proche_orient_en_crise
+
+*Sources attestées : conflit_israel_iran_2026_eco_communalism*
+
+#### Le Fil Commun — sous [[europe_occidentale_reconstituee]]
+
+*infrastructure — niveau 2 — statut : stable*
+
+**Origine réelle (2026)** : France, Belgique
+
+**Transition** : 2038-2060 — voir [[effondrement_reseau_mondial_communication_eco_communalism]]
+
+Réseau de journalisme d'investigation décentralisé né des cendres des grandes plateformes médiatiques effondrées, comptant environ deux mille correspondants permanents et plusieurs dizaines de milliers de relayeurs occasionnels. Reconnaissable à l'encre de synthèse végétale sur papier recyclé gris ou au timbre sonore particulier de ses bulletins radio. Sans siège, il existe dans les courriers chiffrés, les messagers cyclistes entre bassins de vie, les antennes radio basse puissance et les assemblées où les correspondants lisent leurs enquêtes à voix haute.
+
+**Tensions internes** : Tiraillement entre vocation d'outil commun et tentation de certains nœuds régionaux de l'instrumentaliser pour amplifier leurs positions dans les négociations de ressources ; enquête sur la dissimulation de données de contamination hydrique menaçant de fracturer le réseau selon des lignes géographiques ; débat interne sur la transparence totale face aux équilibres locaux précaires.
+
+*Sources attestées : voix_du_dehors_eco_communalism, conflit_israel_iran_2026_eco_communalism*
+
+#### Fortaleza — sous [[nordeste_bresilien_frente]]
+
+*ville — niveau 2 — statut : fragmenté*
+
+**Origine réelle (2026)** : Fortaleza, Ceará
+
+**Transition** : 2035-2098
+
+Principal nœud de circulation des délégués du Frente Sertão Livre, point de départ et d'arrivée des messagers à vélo et camionnettes solaires qui portent des arbitrages collectifs plutôt que des ordres à travers le Nordeste. Ville côtière reconvertie en base logistique d'un réseau sans siège central, où se tiennent certaines des assemblées les plus tendues sur la question de la formalisation juridique du Frente.
+
+**Tensions internes** : Pression des municípios locaux offrant des subventions en échange d'une formalisation juridique ; présence d'agents des corporations biotechnologiques cherchant à identifier les leaders du réseau.
+
+*Sources attestées : frente_sertao_livre_eco_communalism*
+
+#### La Grande-Vallée — sous [[bioterritoires_amerique_du_nord]]
+
+*region — niveau 2 — statut : stable*
+
+**Origine réelle (2026)** : États-Unis d'Amérique
+
+**Transition** : 2048-2065 — voir [[election_parti_commun_americain_eco_communalism]]
+
+Bioterritoire nord-américain où opère une coalition de Gardiens du Territoire — sept membres dont trois héritiers de traditions autochtones et quatre formés par l'Université Nomade — qui se lèvent avant l'aube pour mesurer les eaux et savent quels arbres sont malades avant que les instruments le détectent. Quand ils parlent à l'assemblée, les débats s'arrêtent, témoignant d'une autorité morale et écologique sans équivalent institutionnel.
+
+**Tensions internes** : Tension entre la transmission traditionnelle autochtone et l'intégration des données numériques dans la pratique des Gardiens ; débat sur les limites de leur autorité — quand le territoire dit non, les humains doivent-ils obéir ?
+
+*Sources attestées : coalition_vivant_eco_communalism, assemblee_territoires_eco_communalism*
+
 #### Guarulhos — Module Capturé — sous [[sao_paulo_algorithmique]]
 
 *zone_sinistree — niveau 2 — statut : fragmenté*
@@ -4237,598 +3800,447 @@ Municípion périurbain de São Paulo où une faction locale a modifié en silen
 
 *Sources attestées : rede_paulista_de_distribuicao_algoritmica_eco_communalism*
 
-### Bassin Danubien Éco-Communaliste
+#### Kalaallit Nunaat — Fonds des Terres Émergées — sous [[arc_septentrional]]
 
-*territoire_autonome — statut : emergent*
+*territoire_autonome — niveau 2 — statut : fragmenté*
 
-**Origine réelle (2026)** : Hongrie, Slovaquie, Autriche, Roumanie, Serbie, Croatie, Slovénie, Bosnie-Herzégovine, Macédoine du Nord, Bulgarie, Moldavie
+**Origine réelle (2026)** : Groenland
 
-**Transition** : 2050-2075 — voir [[Effondrement des États-nations centre-européens après la crise énergétique de 2048.]]
+**Transition** : 2041-2070
 
-Réseau de communautés autonomes organisées autour du bassin du Danube, axées sur la gestion collective des ressources hydriques et agricoles. Héritier des mouvements écologistes centre-européens des années 2040.
+Territoire groenlandais devenu indépendant de facto en 2041, dont le Fonds des Terres Émergées contrôle l'accès à des gisements de lithium et de terres rares libérés par la fonte des glaces. Paradoxe vivant du monde éco-communaliste : l'un des rares acteurs disposant encore d'une capacité d'accumulation et de projection continentale, dont les corridors arctiques ont servi de lignes de vie aux communautés fennoscandinaviennes et canadiennes lors de l'effondrement logistique. En 2098, le Fonds oscille entre sa vocation souverainiste et la pression interne de dissolution en dotations communautaires décentralisées.
 
-**Tensions internes** : Conflits avec les enclaves extractivistes résiduelles et divisions entre zones urbaines et rurales.
-
-**Lieux emblématiques** :
-- Budapest
-- Vienne
-- Bratislava
-
-**Alliés** : Europe Occidentale Reconstituée ([[europe_occidentale_reconstituee]]), Arc Septentrional ([[arc_septentrional]])
-
-**Rivaux** : Enclaves Extractivistes et États Résiduels ([[enclaves_extractivistes_et_etats_residuels]])
-
-### Sibérie et Steppes Autonomes
-
-*territoire_autonome — statut : fragmenté*
-
-**Origine réelle (2026)** : Russie (Sibérie et Extrême-Orient), Kazakhstan (Nord), Chine, Biélorussie, Tadjikistan
-
-**Transition** : 2060-2085 — voir [[Désintégration de l'État russe central après l'effondrement des infrastructures pétrolières en 2055.]]
-
-Vaste réseau de communautés autonomes en Sibérie et dans les steppes eurasiennes, organisées autour de la gestion des ressources forestières et minières. Marqué par des tensions avec les enclaves extractivistes résiduelles.
-
-**Tensions internes** : Conflits entre communautés autochtones et anciennes élites industrielles, pression des enclaves extractivistes.
+**Tensions internes** : Faction interne des jeunes délégués des fjords plaidant pour la dissolution progressive du Fonds en réseau de dotations communautaires ; ancienne garde résistant au nom de la souveraineté durement acquise ; enclaves extractivistes tentant de corrompre les gestionnaires locaux pour contourner les clauses écologiques ; communs sécessionnistes refusant l'autorité du Fonds sur des terres qu'ils considèrent comme les leurs.
 
 **Lieux emblématiques** :
-- Novossibirsk
-- Iakoutsk
-- Ekaterinbourg
+- Nuuk — Maison longue du Fonds (site_strategique) — Siège du Fonds des Terres Émergées, bâtiment en pierre locale à toit végétalisé accueillant les délégués en kayak solaire depuis les fjords
 
-**Alliés** : Arc Septentrional ([[arc_septentrional]])
+**Alliés** : arc_septentrional, confederation_communs_arc_septentrional
 
-**Rivaux** : Enclaves Extractivistes et États Résiduels ([[enclaves_extractivistes_et_etats_residuels]]), Proche-Orient en Crise ([[proche_orient_en_crise]])
+**Rivaux** : enclaves_extractivistes_et_etats_residuels
 
-### Steppes Eurasatiques Autonomes
+*Sources attestées : kalaallit_nunaat_sovereign_fund_eco_communalism*
 
-*territoire_autonome — statut : emergent*
+#### Grande Confluence de Manaus — sous [[amazonie_pacte_viva]]
 
-**Origine réelle (2026)** : Ouzbékistan, Kirghizistan, Turkménistan
+*site_strategique — niveau 2 — statut : stable*
 
-**Transition** : 2050-2075 — voir [[Effondrement des infrastructures pétrolières et gazières en Asie centrale (2048).]]
+**Origine réelle (2026)** : Manaus, Brésil
 
-Réseau de communautés nomades et sédentaires organisées autour de la gestion collective des ressources en eau et des pâturages. Héritières des traditions kazakhes et de l'écologie radicale, ces zones ont rejeté les modèles extractivistes.
+**Transition** : 2041-2098
 
-**Tensions internes** : Conflits entre traditionalistes et technophiles sur l'usage des drones pour la gestion des troupeaux.
+Site fondateur du Pacte Amazônia Viva lors de la grande confluence de 2041, et lieu de réunion bisannuel des assemblées fluviales itinérantes sur des pirogues élargies et des plateformes de bambou ancrées aux confluences. En 2098, cet espace incarne la diplomatie du vivant : ses représentants — moitiés chamanes, moitiés agronomes — y négocient des échanges de semences avec d'autres confédérations aussi naturellement qu'ils cartographient l'avancée du tapir dans les zones réhabilitées.
 
-**Lieux emblématiques** :
-- Astaná (devenue centre de coordination écologique)
-- Lac Balkhach (zone restaurée)
+**Tensions internes** : Tensions lors des assemblées entre nations autochtones refusant le partage de cartographies sacrées et collectifs scientifiques membres du Pacte.
 
-**Alliés** : Bioterritoires Anatoliens ([[bioterritoires_anatoliens]]), Ligue des Cités du Sahel Numérique ([[sahel_numerique_ligue]])
+*Sources attestées : consortium_amazonia_viva_eco_communalism*
 
-**Rivaux** : Enclaves Extractivistes et États Résiduels ([[enclaves_extractivistes_et_etats_residuels]])
+#### Massif Central — sous [[europe_occidentale_reconstituee]]
 
-### Delta et Savanes Nigérianes
+*region — niveau 2 — statut : fragmenté*
 
-*territoire_autonome — statut : fragmenté*
-
-**Origine réelle (2026)** : Nigeria, Angola
-
-**Transition** : 2040-2065 — voir [[Guerre civile nigériane (2035-2045) et effondrement partiel de l'État central.]]
-
-Réseau de communautés éco-communalistes dans le delta du Niger et les savanes, en lutte contre les dernières enclaves pétrolières. Les bioterritoires y sont organisés autour de la gestion de l'eau et des forêts-galerie.
-
-**Tensions internes** : Conflits violents entre communautés locales et milices protégeant les infrastructures pétrolières résiduelles.
-
-**Lieux emblématiques** :
-- Port Harcourt (reconverti en hub écologique)
-- Parc national de Yankari (zone restaurée)
-
-**Alliés** : Ligue des Cités du Sahel Numérique ([[sahel_numerique_ligue]]), Maghreb Méditerranéen ([[maghreb_mediterraneen]])
-
-**Rivaux** : Enclaves Extractivistes et États Résiduels ([[enclaves_extractivistes_et_etats_residuels]])
-
-### Rift Est-Africain
-
-*territoire_autonome — statut : emergent*
-
-**Origine réelle (2026)** : Kenya, Rwanda, Zambie, Malawi, Tanzanie, Ouganda, Burundi, Djibouti
-
-**Transition** : 2055-2080 — voir [[Crise climatique majeure dans la Corne de l'Afrique (2050) accélérant les transitions locales.]]
-
-Confédération de bioterritoires organisés autour du Rift est-africain, combinant agriculture régénérative, énergie géothermique et protection de la biodiversité. Héritière des mouvements écologistes kényans et tanzaniens.
-
-**Tensions internes** : Débats sur l'équilibre entre tourisme écologique et préservation stricte des écosystèmes.
-
-**Lieux emblématiques** :
-- Nairobi (devenue capitale des assemblées écologiques)
-- Lac Nakuru (zone protégée emblématique)
-
-**Alliés** : Ligue des Cités du Sahel Numérique ([[sahel_numerique_ligue]]), Delta et Savanes Nigérianes ([[delta_et_savanes_nigerianes]])
-
-**Rivaux** : Enclaves Extractivistes et États Résiduels ([[enclaves_extractivistes_et_etats_residuels]])
-
-### Afrique du Sud — Bioterritoire du Cap
-
-*territoire_autonome — statut : emergent*
-
-**Origine réelle (2026)** : Afrique du Sud, Zimbabwe, Lesotho, Eswatini
-
-**Transition** : 2050-2075 — voir [[Effondrement des infrastructures centrales et montée des assemblées locales après la crise climatique de 2048.]]
-
-Ancien État sud-africain transformé en réseau de bioterritoires autonomes, intégrant des pratiques d'agriculture régénérative et des énergies renouvelables. Les anciennes villes comme Le Cap et Johannesburg sont devenues des hubs d'innovation éco-communaliste.
-
-**Tensions internes** : Conflits entre communautés locales et anciennes élites économiques, tensions sur l'accès à l'eau.
-
-**Lieux emblématiques** :
-- Le Cap
-- Johannesburg
-- Durban
-
-**Alliés** : Maghreb Méditerranéen ([[maghreb_mediterraneen]]), Ligue des Cités du Sahel Numérique ([[sahel_numerique_ligue]])
-
-**Rivaux** : Enclaves Extractivistes et États Résiduels ([[enclaves_extractivistes_et_etats_residuels]])
-
-### Congo — Bassin du Fleuve
-
-*territoire_autonome — statut : fragmenté*
-
-**Origine réelle (2026)** : République démocratique du Congo, Cameroun, République centrafricaine, Gabon, Guinée équatoriale, République du Congo
-
-**Transition** : 2040-2070 — voir [[Effondrement de l'État central après des décennies de conflits et de pression internationale pour une gestion durable des ressources.]]
-
-Réseau de communautés locales gérant collectivement les ressources du bassin du Congo. Les anciennes structures étatiques ont cédé la place à des assemblées de bassin versant et des coopératives minières éthiques.
-
-**Tensions internes** : Conflits entre groupes armés résiduels et communautés locales, pression des enclaves extractivistes.
-
-**Lieux emblématiques** :
-- Kinshasa
-- Lubumbashi
-- Kisangani
-
-**Alliés** : Amazonie — Pacte Amazônia Viva ([[amazonie_pacte_viva]])
-
-**Rivaux** : Enclaves Extractivistes et États Résiduels ([[enclaves_extractivistes_et_etats_residuels]])
-
-### Éthiopie — Hautes Terres Vertes
-
-*territoire_autonome — statut : stable*
-
-**Origine réelle (2026)** : Éthiopie
-
-**Transition** : 2035-2065 — voir [[Transition pacifique vers un modèle éco-communaliste après l'effondrement des régimes autoritaires régionaux.]]
-
-Réseau de communautés rurales et urbaines organisées autour de l'agroécologie et de la gestion collective des ressources en eau. Addis-Abeba est devenue un centre d'innovation en permaculture et en énergie renouvelable.
-
-**Tensions internes** : Conflits interethniques résiduels, pression démographique sur les ressources.
-
-**Lieux emblématiques** :
-- Addis-Abeba
-- Bahir Dar
-- Gondar
-
-**Alliés** : Ligue des Cités du Sahel Numérique ([[sahel_numerique_ligue]])
-
-### Mozambique — Côte de l'Océan Indien
-
-*territoire_autonome — statut : emergent*
-
-**Origine réelle (2026)** : Mozambique
-
-**Transition** : 2045-2070 — voir [[Transition vers l'autonomie locale après l'effondrement des infrastructures centrales et la montée des assemblées côtières.]]
-
-Réseau de communautés côtières et insulaires gérant collectivement les ressources marines et les écosystèmes littoraux. Maputo est devenue un centre de recherche en aquaculture durable et en énergies marémotrices.
-
-**Tensions internes** : Conflits avec des enclaves extractivistes résiduelles, pression des cyclones et de la montée des eaux.
-
-**Lieux emblématiques** :
-- Maputo
-- Beira
-- Nampula
-
-**Alliés** : Polynésie Reconstituée ([[polynesie_reconstituee]])
-
-**Rivaux** : Enclaves Extractivistes et États Résiduels ([[enclaves_extractivistes_et_etats_residuels]])
-
-### Japon — Archipel Résilient
-
-*territoire_autonome — statut : stable*
-
-**Origine réelle (2026)** : Japon, Taïwan
-
-**Transition** : 2030-2060 — voir [[Transition vers l'éco-communalisme après les crises énergétiques des années 2030 et les catastrophes naturelles répétées.]]
-
-Réseau d'îles autonomes organisées autour de la gestion collective des ressources et de la résilience face aux catastrophes naturelles. Tokyo est devenue une mégalopole décentralisée en districts auto-suffisants.
-
-**Tensions internes** : Conflits entre générations sur l'adoption des technologies vertes, pression démographique.
-
-**Lieux emblématiques** :
-- Tokyo
-- Osaka
-- Kyoto
-
-**Alliés** : Polynésie Reconstituée ([[polynesie_reconstituee]])
-
-**Rivaux** : Enclaves Extractivistes et États Résiduels ([[enclaves_extractivistes_et_etats_residuels]])
-
-### Inde — Bassins Sacrés
-
-*union_regionale — statut : fragmenté*
-
-**Origine réelle (2026)** : Inde, Népal, Bhoutan
-
-**Transition** : 2040-2080 — voir [[Effondrement partiel des structures étatiques centrales après des crises climatiques et sociales répétées, menant à une réorganisation autour des bassins fluviaux.]]
-
-Confédération de bioterritoires organisés autour des grands fleuves indiens (Gange, Yamuna, Godavari). Les villes comme Delhi et Mumbai sont devenues des hubs de gouvernance décentralisée et d'innovation agroécologique.
-
-**Tensions internes** : Conflits interrégionaux sur l'accès à l'eau, pression démographique et migrations internes.
-
-**Lieux emblématiques** :
-- Delhi
-- Mumbai
-- Varanasi
-- Bangalore
-
-**Rivaux** : Enclaves Extractivistes et États Résiduels ([[enclaves_extractivistes_et_etats_residuels]])
-
-### Archipel Nusantara Autonome
-
-*territoire_autonome — statut : emergent*
-
-**Origine réelle (2026)** : Indonésie, Philippines, Brunei, Timor oriental
-
-**Transition** : 2050-2075 — voir [[Effondrement du gouvernement central indonésien après la crise climatique de 2048.]]
-
-Confédération décentralisée d'îles organisées en bioterritoires, héritière des luttes autochtones et écologistes. Les assemblées locales gèrent les ressources maritimes et forestières de manière collective.
-
-**Tensions internes** : Conflits entre communautés côtières et intérieures sur l'allocation des ressources, pression des enclaves extractivistes résiduelles.
-
-**Lieux emblématiques** :
-- Java
-- Sumatra
-- Bornéo
-- Papouasie
-
-**Alliés** : Polynésie Reconstituée ([[polynesie_reconstituee]])
-
-**Rivaux** : Enclaves Extractivistes et États Résiduels ([[enclaves_extractivistes_et_etats_residuels]])
-
-### Delta du Mékong Communautaire
-
-*territoire_autonome — statut : stable*
-
-**Origine réelle (2026)** : Vietnam, Laos, Cambodge
-
-**Transition** : 2040-2065 — voir [[Dissolution de l'État central vietnamien après l'effondrement des chaînes d'approvisionnement mondiales.]]
-
-Réseau de communautés agricoles et fluviales organisées autour de la gestion collective des ressources hydriques et des écosystèmes du Mékong. Héritier des coopératives socialistes et des mouvements écologistes locaux.
-
-**Tensions internes** : Conflits avec les dernières enclaves industrielles du nord, pression démographique sur les terres arables.
-
-**Lieux emblématiques** :
-- Hô Chi Minh-Ville
-- Hanoï
-- Delta du Mékong
-
-**Alliés** : Chiapas et Bioterritoires Mésoaméricains ([[chiapas_et_bioterritoires_mesoamericains]])
-
-**Rivaux** : Enclaves Extractivistes et États Résiduels ([[enclaves_extractivistes_et_etats_residuels]])
-
-### Bengale Écologique
-
-*territoire_autonome — statut : fragmenté*
-
-**Origine réelle (2026)** : Bangladesh
-
-**Transition** : 2055-2080 — voir [[Submersion partielle du pays et effondrement des infrastructures centrales.]]
-
-Territoire organisé en communautés fluviales et deltaïques, spécialisées dans l'agriculture résiliente et la gestion des inondations. Fortement marqué par les migrations climatiques internes.
-
-**Tensions internes** : Conflits entre communautés côtières et intérieures, pression des réfugiés climatiques.
-
-**Lieux emblématiques** :
-- Dacca
-- Delta du Gange
-- Sundarbans
-
-**Rivaux** : Enclaves Extractivistes et États Résiduels ([[enclaves_extractivistes_et_etats_residuels]])
-
-### Steppes Mongoles Autonomes
-
-*territoire_autonome — statut : stable*
-
-**Origine réelle (2026)** : Mongolie
-
-**Transition** : 2045-2070 — voir [[Effondrement de l'État central mongol après la crise des exportations minières.]]
-
-Confédération de tribus nomades et de communautés pastorales organisées autour de la gestion collective des pâturages et des ressources en eau. Héritière des traditions mongoles pré-modernes.
-
-**Tensions internes** : Conflits avec les dernières enclaves minières, pression des changements climatiques sur les pâturages.
-
-**Lieux emblématiques** :
-- Oulan-Bator
-- Gobi
-- Steppes de l'Est
-
-**Rivaux** : Enclaves Extractivistes et États Résiduels ([[enclaves_extractivistes_et_etats_residuels]])
-
-### Pampas et Patagonie Communautaires
-
-*territoire_autonome — statut : emergent*
-
-**Origine réelle (2026)** : Argentine, Paraguay, Uruguay
-
-**Transition** : 2050-2075 — voir [[Effondrement de l'État argentin après la crise économique de 2047.]]
-
-Réseau de communautés rurales et urbaines organisées autour de la gestion collective des terres agricoles et des ressources naturelles. Fortement influencé par les mouvements écologistes et autochtones.
-
-**Tensions internes** : Conflits entre grands propriétaires terriens résiduels et coopératives paysannes.
-
-**Lieux emblématiques** :
-- Buenos Aires
-- Patagonie
-- Pampas
-
-**Alliés** : Amazonie — Pacte Amazônia Viva ([[amazonie_pacte_viva]]), Nordeste Brésilien — Frente Sertão Livre ([[nordeste_bresilien_frente]])
-
-**Rivaux** : Enclaves Extractivistes et États Résiduels ([[enclaves_extractivistes_et_etats_residuels]])
-
-### Australie Aborigène Reconstituée
-
-*territoire_autonome — statut : stable*
-
-**Origine réelle (2026)** : Australie
-
-**Transition** : 2040-2065 — voir [[Reconnaissance officielle des droits autochtones et effondrement des structures étatiques centrales.]]
-
-Territoire organisé autour des communautés autochtones et des bioterritoires, avec une gestion collective des ressources en eau et des écosystèmes désertiques. Héritier des luttes pour la reconnaissance des droits autochtones.
-
-**Tensions internes** : Conflits avec les dernières enclaves urbaines et minières, pression des changements climatiques.
-
-**Lieux emblématiques** :
-- Uluru
-- Sydney
-- Grand Désert de Sable
-
-**Alliés** : Polynésie Reconstituée ([[polynesie_reconstituee]])
-
-**Rivaux** : Enclaves Extractivistes et États Résiduels ([[enclaves_extractivistes_et_etats_residuels]])
-
-### Corée — Péninsule Verte
-
-*territoire_autonome — statut : emergent*
-
-**Origine réelle (2026)** : Corée du Sud
-
-**Transition** : 2050-2075
-
-Ancienne Corée du Sud transformée en réseau de bioterritoires autonomes, axés sur l'agriculture urbaine et la résilience écologique. Les villes comme Séoul sont devenues des hubs d'innovation verte.
-
-**Tensions internes** : Conflits entre anciennes élites industrielles et nouvelles communautés éco-communalistes.
-
-**Lieux emblématiques** :
-- Séoul
-- Busan
-
-**Alliés** : Japon — Archipel Résilient ([[japon_archipel_resilient]])
-
-**Rivaux** : Enclaves Extractivistes et États Résiduels ([[enclaves_extractivistes_et_etats_residuels]])
-
-### Chili — Cordillère et Pacifique
-
-*territoire_autonome — statut : emergent*
-
-**Origine réelle (2026)** : Chili
-
-**Transition** : 2060-2085
-
-Réseau de communautés autonomes organisées autour des écosystèmes andins et côtiers, avec une forte emphase sur la gestion collective des ressources en eau et en énergie.
-
-**Tensions internes** : Conflits entre communautés minières résiduelles et nouvelles structures éco-communalistes.
-
-**Lieux emblématiques** :
-- Santiago
-- Valparaíso
-
-**Alliés** : Pampas et Patagonie Communautaires ([[pampas_et_patagonie_communautaires]])
-
-**Rivaux** : Enclaves Extractivistes et États Résiduels ([[enclaves_extractivistes_et_etats_residuels]])
-
-### Afghanistan — Hauts Plateaux Communautaires
-
-*territoire_autonome — statut : emergent*
-
-**Origine réelle (2026)** : Afghanistan
-
-**Transition** : 2050-2075
-
-Réseau de communautés montagnardes organisées autour de la gestion collective des ressources en eau et des pâturages. Héritier des traditions tribales et des pratiques agricoles résilientes, ce bioterritoire émerge après l'effondrement des structures étatiques centrales.
-
-**Tensions internes** : Conflits entre communautés pour l'accès aux ressources rares, pression des enclaves extractivistes résiduelles.
-
-**Lieux emblématiques** :
-- Kaboul
-- Bamiyan
-- Herat
-
-**Alliés** : Sibérie et Steppes Autonomes ([[siberie_et_steppes_autonomes]]), Steppes Eurasatiques Autonomes ([[steppes_eurasiatiques_autonomes]])
-
-**Rivaux** : Enclaves Extractivistes et États Résiduels ([[enclaves_extractivistes_et_etats_residuels]])
-
-### Sri Lanka — Île Émeraude
-
-*territoire_autonome — statut : emergent*
-
-**Origine réelle (2026)** : Sri Lanka
-
-**Transition** : 2050-2075
-
-Bioterritoire insulaire organisé autour de la gestion collective des forêts tropicales, des ressources côtières et des traditions autochtones. Héritier des luttes pour la souveraineté alimentaire et la résilience climatique.
-
-**Tensions internes** : Conflits entre communautés côtières et intérieures sur l'allocation des ressources en eau.
-
-**Lieux emblématiques** :
-- Colombo (port communautaire)
-- Kandy (centre spirituel et agricole)
-
-**Alliés** : Inde — Bassins Sacrés ([[inde_bassins_sacres]]), Delta du Mékong Communautaire ([[delta_mekong_communautaire]])
-
-**Rivaux** : Enclaves Extractivistes et États Résiduels ([[enclaves_extractivistes_et_etats_residuels]])
-
-### Birmanie — Forêts et Deltas Communautaires
-
-*territoire_autonome — statut : fragmenté*
-
-**Origine réelle (2026)** : Birmanie
-
-**Transition** : 2040-2065
-
-Réseau de communautés organisées autour de la gestion des forêts tropicales, des deltas de l'Irrawaddy et des zones montagneuses. Marqué par des tensions entre groupes ethniques et héritages des conflits historiques.
-
-**Tensions internes** : Divergences entre communautés des hautes terres et des plaines sur l'usage des ressources hydriques.
-
-**Lieux emblématiques** :
-- Rangoon (hub communautaire)
-- Mandalay (centre culturel)
-
-**Alliés** : Inde — Bassins Sacrés ([[inde_bassins_sacres]]), Archipel Nusantara Autonome ([[archipel_nusantara_autonome]])
-
-**Rivaux** : Enclaves Extractivistes et États Résiduels ([[enclaves_extractivistes_et_etats_residuels]])
-
-### Corée du Nord — Bioterritoires Démantelés
-
-*territoire_herite — statut : emergent*
-
-**Origine réelle (2026)** : Corée du Nord
-
-**Transition** : 2055-2080 — voir [[Effondrement du régime en 2055]]
-
-Ancien État centralisé transformé en réseau de communautés locales après l'effondrement du régime en 2055. Axé sur la décontamination des sols et la réhabilitation des écosystèmes montagneux.
-
-**Tensions internes** : Conflits entre anciennes élites et nouvelles assemblées locales sur la redistribution des terres.
-
-**Lieux emblématiques** :
-- Pyongyang (en reconstruction communautaire)
-- Mont Paektu (symbole de résilience)
-
-**Alliés** : Japon — Archipel Résilient ([[japon_archipel_resilient]])
-
-**Rivaux** : Enclaves Extractivistes et États Résiduels ([[enclaves_extractivistes_et_etats_residuels]])
-
-### Corne de l'Afrique — Territoires Nomades et Côtiers
-
-*territoire_autonome — statut : emergent*
-
-**Origine réelle (2026)** : Somalie, Érythrée
-
-**Transition** : 2050-2075
-
-Réseau de communautés nomades, pastorales et côtières organisées autour de la gestion collective des ressources en eau, des pâturages et des écosystèmes marins. Héritier des traditions somalies et des adaptations aux changements climatiques extrêmes.
-
-**Tensions internes** : Conflits entre communautés sédentaires et nomades pour l'accès aux ressources, pression des enclaves extractivistes résiduelles.
-
-**Lieux emblématiques** :
-- Mogadiscio
-- Hargeisa
-- Bosaso
-
-**Alliés** : Rift Est-Africain ([[rift_est_africain]]), Éthiopie — Hautes Terres Vertes ([[ethiopie_hautes_terres_vertes]])
-
-**Rivaux** : Enclaves Extractivistes et États Résiduels ([[enclaves_extractivistes_et_etats_residuels]])
-
-### Namibie — Désert et Côtes Communautaires
-
-*territoire_autonome — statut : emergent*
-
-**Origine réelle (2026)** : Namibie, Botswana
-
-**Transition** : 2040-2065
-
-Réseau de communautés adaptées aux écosystèmes désertiques et côtiers, spécialisées dans la gestion de l'eau, l'énergie solaire et la protection des écosystèmes marins. Fortes influences des peuples autochtones comme les Himba et les Nama.
-
-**Tensions internes** : Conflits pour l'accès à l'eau entre communautés, pression des anciennes industries minières.
-
-**Lieux emblématiques** :
-- Windhoek
-- Swakopmund
-- Lüderitz
-
-**Alliés** : Afrique du Sud — Bioterritoire du Cap ([[afrique_du_sud_bioterritoire]])
-
-**Rivaux** : Enclaves Extractivistes et États Résiduels ([[enclaves_extractivistes_et_etats_residuels]])
-
-### Madagascar — Île de la Biodiversité Autonome
-
-*territoire_autonome — statut : stable*
-
-**Origine réelle (2026)** : Madagascar
+**Origine réelle (2026)** : Massif Central, France
 
 **Transition** : 2035-2060
 
-Bioterritoire insulaire organisé autour de la protection de sa biodiversité unique et de la gestion collective des ressources forestières, agricoles et marines. Fortes influences des traditions malgaches et des mouvements écologistes locaux.
+Lieu du grand rassemblement saisonnier de la Confédération des Racines Vivantes, où des milliers de délégués venus à pied ou à vélo échangent semences, récits et protocoles de soin du sol. Abrite des nœuds Mnemos alimentés par des micro-turbines hydrauliques, des Sillons des Veilleurs du Seuil dans ses plateaux désertés, et le hameau de Corrèze-Haute où se trouve le nœud 47 de Mémoire des Terres.
 
-**Tensions internes** : Conflits entre conservation stricte et besoins de développement local, pression des anciennes industries extractives.
+**Tensions internes** : Fracture entre communautés des Racines Vivantes voulant refermer les territoires sur eux-mêmes et partisans d'une fédération plus large ; présence des Veilleurs du Seuil dans les plateaux désertés qui exercent une pression prophétique sur les reconstructeurs.
+
+**Alliés** : vallee_de_l_ourthe
+
+*Sources attestées : mouvement_racines_vivantes_eco_communalism, reseau_mnemos_eco_communalism, prisme_global_eco_communalism, collectifs_du_seuil_eco_communalism*
+
+#### Ouagadougou — sous [[sahel_numerique_ligue]]
+
+*ville — niveau 2 — statut : dominant*
+
+**Origine réelle (2026)** : Ouagadougou, Burkina Faso
+
+**Transition** : 2040-2098
+
+Métropole fondatrice et plus grande cité de la Ligue des Cités du Sahel Numérique, concentrant de facto la majorité des ingénieurs SahelOS et des serveurs malgré le principe d'horizontalité affiché. Cette asymétrie structurelle est la principale source de tension interne entre Ouagadougou et les cités fondatrices comme Agadez qui revendiquent une voix égale. En 2098, la ville est le nœud technique de référence tout en cherchant à masquer cette prééminence derrière les protocoles de la Tente des Protocoles.
+
+**Tensions internes** : Asymétrie technique et humaine croissante avec les autres cités membres ; accusation de reconduire une hiérarchie métropolitaine sous un vocabulaire horizontal.
+
+*Sources attestées : ligue_des_cites_du_sahel_numerique_eco_communalism*
+
+#### Ports du Golfe — sous [[proche_orient_en_crise]]
+
+*zone_sinistree — niveau 2 — statut : disparu*
+
+**Origine réelle (2026)** : Émirats arabes unis, Arabie Saoudite, Irak
+
+**Transition** : 2027-2035 — voir [[conflit_israel_iran_2026_eco_communalism]]
+
+Infrastructures portuaires du Golfe Persique détruites ou mises hors service lors des ripostes iraniennes de 2027, marquant la rupture définitive des dernières routes maritimes d'hydrocarbures. En 2098, ces zones restent symboliques de la 'seconde coupure' et de la fin de l'ère fossile à l'échelle régionale ; elles sont traversées par des correspondants nomades du Fil Commun documentant l'absence de tout pouvoir étatique stable.
+
+**Tensions internes** : Absence totale d'autorité ; zones traversées par des flux migratoires et des correspondants nomades ; mémoire de la destruction utilisée comme argument de légitimité par diverses factions régionales.
+
+*Sources attestées : conflit_israel_iran_2026_eco_communalism, voix_du_dehors_eco_communalism*
+
+#### Réseau des Assemblées de Bassin Fennoscandien — sous [[arc_septentrional]]
+
+*union_regionale — niveau 2 — statut : emergent*
+
+**Origine réelle (2026)** : Finlande, Suède, Norvège
+
+**Transition** : 2035-2055
+
+Structure de coordination régionale de l'Arc Septentrional, articulant souveraineté territoriale et gestion des communs naturels à l'échelle des bassins versants fennoscandiens. Contre-modèle délibéré aux institutions étatiques centralisées, il fédère les assemblées locales autour des unités hydrologiques naturelles — lacs, rivières, fjords — héritant des pratiques de concertation de la culture nordique tout en les radicalisant vers une gouvernance post-étatique.
+
+**Tensions internes** : Montée en puissance de facilitateurs formés sur les protocoles algorithmiques qui divergent de la philosophie originelle des chartes communales ; tension entre communes autonomistes radicales et confédéralistes pragmatiques sur le degré de coordination acceptable.
+
+*Sources attestées : reseau_des_assemblees_de_bassin_fennoscandien_eco_communalism, leena_vainala_eco_communalism*
+
+#### Réseau Terrafond des Bassins — sous [[europe_occidentale_reconstituee]]
+
+*infrastructure — niveau 2 — statut : stable*
+
+**Origine réelle (2026)** : Belgique, France, Allemagne, Maroc, Algérie
+
+**Transition** : 2030-2050
+
+Réseau de plus de 340 coopératives sur une douzaine de bassins versants d'Europe occidentale et du Maghreb méditerranéen, fondé dans les années 2030 sur les ruines des filières agro-industrielles effondrées. Épine dorsale productive des territoires réorganisés, il transforme la logique du bassin versant en unité économique fondamentale. Chaque assemblée de bassin vote ses propres règles d'échange, mais toutes partagent un principe commun : aucune coopérative ne peut accumuler au-delà de ses besoins documentés sur trois ans.
+
+**Tensions internes** : Bassins prospères attirant des flux migratoires que leurs communs ne peuvent absorber ; zones climatiquement dégradées réclamant des transferts que les bassins riches rechignent à accorder ; frictions croissantes autour des aquifères transfrontaliers avec des micro-États voisins refusant le principe de communs partagés.
+
+**Alliés** : maghreb_mediterraneen, vallee_de_l_ourthe
+
+**Rivaux** : enclaves_extractivistes_et_etats_residuels
+
+*Sources attestées : cooperative_terrafond_eco_communalism*
+
+#### Confédération des Friches Vivantes — sous [[bioterritoires_amerique_du_nord]]
+
+*union_regionale — niveau 2 — statut : stable*
+
+**Origine réelle (2026)** : Michigan, Pennsylvania, Ohio
+
+**Transition** : 2040-2098 — voir [[election_parti_commun_americain_eco_communalism]]
+
+Héritière des premières communes du Rust Belt américain, la Confédération des Friches Vivantes tisse depuis plus de soixante ans un réseau de plusieurs centaines de communautés autonomes reliées par des protocoles de mutualisation des ressources et de gouvernance par délibération. Ses Assemblées Tournantes trisannuelles coordonnent sans centre fixe des territoires allant des ruines de Pittsburgh et Detroit aux zones grises de Mandchourie désindustrialisée. En 2098, 94% des communes affiliées ont atteint l'autosuffisance alimentaire de base.
+
+**Tensions internes** : Fragments d'États résiduels cherchant à la régulariser comme interlocutrice institutionnelle, ce qui divise ses membres entre ceux qui y voient une victoire et ceux qui y lisent le début de leur domestication ; pression des consortiums logistiques sur les friches à haute valeur minière ; génération née dans les friches questionnant la centralité de la mémoire ouvrière dans l'identité confédérale.
 
 **Lieux emblématiques** :
-- Antananarivo
-- Toamasina
-- Antsirabe
+- Pittsburgh reconverti (ville) — Ancien bastion industriel devenu commune emblématique avec ateliers de biométhanisation et taille des haies bocagères
+- Detroit reconverti (ville) — Friche vivante fondatrice, référence mondiale de régénération écologique non étatique
 
-**Alliés** : Polynésie Reconstituée ([[polynesie_reconstituee]]), Mozambique — Côte de l'Océan Indien ([[mozambique_cote_indienne]])
+**Alliés** : grande_vallee_bioterritoire, bioterritoires_atlantique_nord
 
-**Rivaux** : Enclaves Extractivistes et États Résiduels ([[enclaves_extractivistes_et_etats_residuels]])
+**Rivaux** : enclaves_extractivistes_et_etats_residuels
 
-### Caraïbes Insulaires Autonomes
+*Sources attestées : mouvement_des_communes_du_rust_belt_eco_communalism*
 
-*territoire_autonome — statut : emergent*
+#### Tampere — sous [[arc_septentrional]]
 
-**Origine réelle (2026)** : Trinité-et-Tobago, Barbade, Sainte-Lucie, Grenade, Saint-Vincent-et-les-Grenadines
+*ville — niveau 2 — statut : stable*
 
-**Transition** : 2050-2075
+**Origine réelle (2026)** : Tampere
 
-Réseau d'îles caribéennes organisées en bioterritoires autonomes, axées sur la résilience climatique et la gestion collective des ressources marines. Héritières des luttes décoloniales et écologistes du XXIe siècle.
+**Transition** : 2035-2045
 
-**Tensions internes** : Conflits entre communautés locales et anciennes élites économiques, pression des enclaves touristiques résiduelles.
+Ville de Finlande devenue lieu fondateur du mouvement éco-communaliste fenno-scandien grâce à l'élaboration en 2038 de la Charte de Tampere sur les communs numériques, texte de référence de Leena Väinälä. En 2098, elle reste un symbole actif des confédérations locales post-effondrement, ses principes étant imprimés sur papier local dans des dizaines de communes qui n'ont jamais eu accès à internet global.
+
+**Tensions internes** : Tension entre la vénération de la Charte comme texte sacré et les tentatives de révision portées par la nouvelle génération de facilitateurs algorithmiques qui souhaitent l'adapter à des protocoles numériques légers.
+
+*Sources attestées : leena_vainala_eco_communalism, confederation_des_communs_de_l_arc_septentrional_eco_communalism*
+
+#### Trame Mnemos — sous [[europe_occidentale_reconstituee]]
+
+*infrastructure — niveau 2 — statut : fragmenté*
+
+**Origine réelle (2026)** : France, Allemagne, Italie
+
+**Transition** : 2038-2060 — voir [[effondrement_reseau_mondial_communication_eco_communalism]]
+
+Épine dorsale informationnelle des communautés éco-communalistes, reliant des milliers de nœuds mémoriels autonomes disséminés dans les territoires relocalisés. Née des cendres de Prisme Global après l'effondrement des datacenters européens de 2038, elle ne prétend plus à la couverture planétaire mais assure la continuité des savoirs techniques, agricoles, médicaux et culturels. Sa gouvernance par conseils de bibliothécaires-nœuds en fait autant une institution culturelle qu'une infrastructure technique.
+
+**Tensions internes** : Nœuds dont les communautés ont développé des protocoles incompatibles menaçant de créer des archipels de savoirs inaccessibles ; assemblées refusant de partager des innovations jugées stratégiques ; agents d'enclaves corporatives cherchant à infiltrer des nœuds pour cartographier les ressources territoriales ; jeunes générations questionnant l'archivage de 'savoirs du monde d'avant'.
+
+**Alliés** : arc_septentrional
+
+**Rivaux** : enclaves_extractivistes_et_etats_residuels
+
+*Sources attestées : reseau_mnemos_eco_communalism, prisme_global_eco_communalism*
+
+#### La Tresse Verte — sous [[europe_occidentale_reconstituee]]
+
+*infrastructure — niveau 2 — statut : stable*
+
+**Origine réelle (2026)** : Apennins, Bassin du Rhin, France, Italie
+
+**Transition** : 2040-2060
+
+Infrastructure écologique distribuée née dans les années 2040 de l'accumulation de milliers de micro-décisions collectives, constituant l'épine dorsale biologique du monde fragmenté de 2098. Elle n'a pas de centre de commandement : elle est le résultat d'une coordination horizontale entre communes, bassins versants et collectifs bioterritoriaux. Imperceptible sur une carte unique, elle se perçoit depuis les sentiers de crête des Apennins restaurés ou en traversant les corridors forestiers du bassin rhénan.
+
+**Tensions internes** : Une communauté du plateau central bloque depuis sept ans l'extension d'un corridor amphibien en invoquant sa souveraineté alimentaire ; factions techniques militant pour intégrer des capteurs numériques qui rouvrirait la porte à des formes de centralisation ; certaines communautés riches en biodiversité commencent à en faire un argument de prestige dans les échanges interterritoriaux.
+
+**Rivaux** : enclaves_extractivistes_et_etats_residuels
+
+*Sources attestées : trame_bioclimatique_eco_communalism*
+
+#### Université Nomade — sous [[bioterritoires_amerique_du_nord]]
+
+*infrastructure — niveau 2 — statut : emergent*
+
+**Origine réelle (2026)** : États-Unis d'Amérique, Canada
+
+**Transition** : 2048-2070 — voir [[election_parti_commun_americain_eco_communalism]]
+
+Institution de formation itinérante formant les Gardiens du Territoire nord-américains dans les bioterritoires, aux côtés des transmissions par les anciens issus des traditions autochtones. Quatre des sept Gardiens de la Grande-Vallée en sont issus. Elle circule entre les bioterritoires, adaptant ses contenus aux réalités locales, et constitue l'un des rares liens de coordination éducative entre les communautés fragmentées du continent.
+
+**Tensions internes** : Tension entre les savoirs transmis par l'Université Nomade — plus formalisés, parfois influencés par les protocoles numériques — et la transmission traditionnelle autochtone par les anciens ; question de la légitimité de son autorité pédagogique dans des communautés souveraines.
+
+**Alliés** : grande_vallee_bioterritoire
+
+*Sources attestées : coalition_vivant_eco_communalism, assemblee_territoires_eco_communalism*
+
+#### Vallée de l'Ourthe — sous [[europe_occidentale_reconstituee]]
+
+*region — niveau 2 — statut : stable*
+
+**Origine réelle (2026)** : Province de Liège, Belgique
+
+**Transition** : 2030-2045
+
+Berceau historique du Réseau Terrafond des Bassins, reconnaissable à ses silos peints en ocre et aux panneaux d'affichage des bilans de récolte accrochés à l'entrée des villages. Fondé dans les années 2030 sur les ruines des filières agro-industrielles effondrées, ce bassin versant est devenu le modèle emblématique de la coopérative éco-communaliste fonctionnant selon le principe qu'aucune coopérative ne peut accumuler au-delà de ses besoins documentés sur trois ans.
+
+**Tensions internes** : Pression des flux migratoires attirés par la prospérité du bassin ; question des transferts vers les bassins climatiquement dégradés que les membres rechignent à accorder.
+
+**Alliés** : massif_central_bioterritoire
+
+*Sources attestées : cooperative_terrafond_eco_communalism*
+
+#### Vallée du Rhône Reconstituée — sous [[europe_occidentale_reconstituee]]
+
+*region — niveau 2 — statut : stable*
+
+**Origine réelle (2026)** : Vallée du Rhône, France
+
+**Transition** : 2040-2080 — voir [[arrestation_chris_van_derburgh_eco_communalism]]
+
+Bioterritoire organisé autour du bassin versant du Rhône reconstitué, connu pour avoir accueilli en 2078 le procès communautaire de Chris van Derburgh — délibération exemplaire sur la frontière entre possession personnelle et communs de la mémoire. L'affaire a généré un débat fondateur dans le Réseau des Assemblées sur le 'droit à la mémoire personnelle'.
+
+**Tensions internes** : Débat persistant entre les partisans d'une sobriété stricte et ceux qui défendent le droit à la mémoire personnelle comme issue du procès Van Derburgh ; pression des consortiums industriels sur les ressources hydriques du Rhône.
+
+*Sources attestées : arrestation_chris_van_derburgh_eco_communalism, federation_communs_territoriaux_eco_communalism*
+
+#### Zones Climatiquement Dégradées du Maghreb — sous [[maghreb_mediterraneen]]
+
+*zone_sinistree — niveau 2 — statut : en_declin*
+
+**Origine réelle (2026)** : Libye, Algérie
+
+**Transition** : 2027-2098 — voir [[conflit_israel_iran_2026_eco_communalism]]
+
+Territoires du Maghreb intérieur frappés par une désertification avancée et peuplés de communautés qui peinent à atteindre l'autosuffisance. Sources de flux migratoires vers les bassins versants côtiers plus riches et vers l'Europe occidentale. Ces zones réclament des transferts que les bassins prospères rechignent à accorder, créant une ligne de fracture structurelle dans le Réseau Terrafond.
+
+**Tensions internes** : Revendications de transferts de ressources refusées par les bassins riches ; pression démographique sur les zones encore productives ; populations réfugiées du Proche-Orient surimposées aux flux migratoires internes.
+
+*Sources attestées : cooperative_terrafond_eco_communalism, conflit_israel_iran_2026_eco_communalism*
+
+#### Corridors Extractivistes Résiduels — sous [[enclaves_extractivistes_et_etats_residuels]]
+
+*zone_sinistree — niveau 2 — statut : en_declin*
+
+**Origine réelle (2026)** : Zones industrielles et urbaines mondiales diverses
+
+**Transition** : 2040-2098
+
+Réseau de corridors logistiques et extractivistes qui persistent dans les interstices entre les bioterritoires, tentant de maintenir des flux marchands et industriels à l'échelle interrégionale. Ces espaces linéaires — anciens axes autoroutiers, voies ferrées, pipelines partiellement opérationnels — sont le terrain de prédilection des consortiums logistiques néo-industriels qui exercent une pression extractive sur les terres reconstruites adjacentes.
+
+**Tensions internes** : Compétition entre consortiums logistiques et agro-conglomérats pour le contrôle des nœuds névralgiques ; infiltrations régulières des bioterritoires adjacents pour cartographier les ressources ; légitimité en érosion constante face à la montée du modèle communaliste.
+
+**Rivaux** : europe_occidentale_reconstituee, bioterritoires_amerique_du_nord, arc_septentrional
+
+*Sources attestées : enclaves_extractivistes_residuelles_des_corridors_eco_communalism, consortiums_logistiques_neo_industriels_des_terres_reconstruites_eco_communalism*
+
+#### Zones Post-Industrielles d'Eurasie Centrale — sous [[enclaves_extractivistes_et_etats_residuels]]
+
+*region — niveau 2 — statut : fragmenté*
+
+**Origine réelle (2026)** : Pologne, République tchèque, Chine
+
+**Transition** : 2040-2098
+
+Extension de la Confédération des Friches Vivantes vers les zones post-industrielles d'Europe centrale (Łódź) et d'Asie du Nord-Est (Mandchourie désindustrialisée), espaces où la présence des communs coexiste avec des corridors extractivistes résiduels. Ces zones hybrides sont des terrains d'affrontement entre la logique de régénération communale et la pression des fragments d'États résiduels cherchant à régulariser les confédérations pour en faire des interlocutrices institutionnelles.
+
+**Tensions internes** : Pression des consortiums logistiques sur les friches à haute valeur minière ; coexistence précaire entre communes autogérées et fragments d'États résiduels revendiquant une juridiction sur les mêmes territoires.
 
 **Lieux emblématiques** :
-- Port-of-Spain
-- Scarborough
+- Łódź reconstituée (ville) — Ancienne ville textile polonaise en transition vers une friche vivante, référence européenne de la Confédération
+- Mandchourie désindustrialisée (region) — Extension nord-est asiatique du modèle des friches, en tension avec les fragments d'États résiduels
 
-**Alliés** : Polynésie Reconstituée ([[polynesie_reconstituee]]), Chiapas et Bioterritoires Mésoaméricains ([[chiapas_et_bioterritoires_mesoamericains]])
+**Alliés** : rust_belt_confederation_friches
 
-**Rivaux** : Enclaves Extractivistes et États Résiduels ([[enclaves_extractivistes_et_etats_residuels]])
+**Rivaux** : europe_occidentale_reconstituee
 
-### Mélanésie Autonome
+*Sources attestées : mouvement_des_communes_du_rust_belt_eco_communalism*
 
-*territoire_autonome — statut : emergent*
+##### Session Plénière du Chiapas — Octobre 2098 — sous [[chiapas_region]]
 
-**Origine réelle (2026)** : Papouasie-Nouvelle-Guinée, Vanuatu, Îles Salomon
+*site_strategique — niveau 3 — statut : stable*
 
-**Transition** : 2050-2075
+**Origine réelle (2026)** : Chiapas, Mexique
 
-Confédération de communautés mélanésiennes organisées autour de la gestion collective des forêts tropicales et des récifs coralliens. Héritière des luttes autochtones pour la souveraineté écologique.
+**Transition** : 2098-2098
 
-**Tensions internes** : Conflits entre communautés côtières et montagnardes sur l'accès aux ressources.
+Site et événement de la session plénière itinérante de l'Assemblée des Territoires d'octobre 2098, accueillant 340 délégués de 89 bioterritoires sur 6 continents. Sans président, sans siège permanent, sans budget centralisé, cette session confirme le statut du Chiapas comme bioterritoire de référence mondiale. La délibération y prend le temps qu'il faut — 'à la vitesse des arbres', selon la déléguée de Polynésie.
 
-**Lieux emblématiques** :
-- Port Moresby
-- Rabaul
-- Bougainville
+**Tensions internes** : Tension entre délégués voulant plus de coordination globale sur les crises climatiques et ceux qui refusent tout mécanisme supralocal ; question non résolue : peut-on gérer le climat sans autorité centrale ?
 
-**Alliés** : Archipel Nusantara Autonome ([[archipel_nusantara_autonome]]), Australie Aborigène Reconstituée ([[australie_aborigene_reconstituee]])
+**Alliés** : grande_vallee_bioterritoire, polynesie_reconstituee
 
-**Rivaux** : Enclaves Extractivistes et États Résiduels ([[enclaves_extractivistes_et_etats_residuels]])
+*Sources attestées : assemblee_territoires_eco_communalism*
 
-### Micronésie Insulaire
+##### Corrèze-Haute — Nœud 47 — sous [[massif_central_bioterritoire]]
 
-*territoire_autonome — statut : emergent*
+*site_strategique — niveau 3 — statut : stable*
 
-**Origine réelle (2026)** : Kiribati, Micronésie, Palaos
+**Origine réelle (2026)** : Corrèze, France
 
-**Transition** : 2040-2065
+**Transition** : 2038-2050 — voir [[effondrement_reseau_mondial_communication_eco_communalism]]
 
-Réseau d'atolls et d'îles micronésiennes organisées en communautés autonomes, spécialisées dans la gestion des ressources marines et la résilience climatique. Menacée par la montée des eaux.
+Hameau abritant dans une ancienne grange reconvertie le nœud 47 de 'Mémoire des Terres' : trois serveurs refroidis à l'air libre, une antenne radio artisanale et une bibliothécaire de soixante ans qui encode à la main les comptes rendus des assemblées locales. Deux fois par an, une 'Lettre de Territoire' part vers les nœuds voisins — imprimée sur papier recyclé et transmise numériquement aux rares communes connectées.
 
-**Tensions internes** : Débats sur la relocalisation des populations face à l'élévation du niveau de la mer.
+**Tensions internes** : Vulnérabilité face aux tentatives d'infiltration d'agents d'enclaves corporatives cherchant à cartographier les ressources territoriales que la Trame révèle indirectement.
 
-**Lieux emblématiques** :
-- Tarawa
-- Kiritimati
+*Sources attestées : prisme_global_eco_communalism, reseau_mnemos_eco_communalism*
 
-**Alliés** : Polynésie Reconstituée ([[polynesie_reconstituee]])
+##### Zone Mémoire de la Grande Coupure — sous [[trame_mnemos_noeud_reseau]]
 
-**Rivaux** : Enclaves Extractivistes et États Résiduels ([[enclaves_extractivistes_et_etats_residuels]])
+*site_strategique — niveau 3 — statut : stable*
+
+**Origine réelle (2026)** : Allemagne, France
+
+**Transition** : 2040-2050 — voir [[effondrement_reseau_mondial_communication_eco_communalism]]
+
+Ensemble de nœuds de la Trame Mnemos fondés dans l'urgence des semaines suivant la Grande Coupure de 2040, quand des dizaines de communautés ont commencé à déployer leurs propres réseaux mesh locaux pour remplacer l'architecture numérique centralisée effondrée. Ces nœuds fondateurs gardent la mémoire du basculement et servent de référence protocolaire pour les nouveaux nœuds. Ils constituent la colonne vertébrale historique de Mémoire des Terres.
+
+**Tensions internes** : Nœuds fondateurs dont l'autorité historique est contestée par les nœuds récents revendiquant une gouvernance égalitaire sans hiérarchie d'ancienneté.
+
+*Sources attestées : reseau_mnemos_eco_communalism, prisme_global_eco_communalism, effondrement_reseau_mondial_communication_eco_communalism*
+
+##### Marges Urbaines des Racines Vivantes — sous [[massif_central_bioterritoire]]
+
+*zone_sinistree — niveau 3 — statut : fragmenté*
+
+**Origine réelle (2026)** : France
+
+**Transition** : 2050-2098
+
+Zones périurbaines et urbaines dégradées où subsistent quelques cellules de la Confédération des Racines Vivantes tentant de prouver que la réconciliation avec les cycles naturels peut s'inventer aussi dans le béton fissuré. Espaces de tension maximale entre l'idéal rural de la Confédération et les réalités d'une urbanité résiduelle peuplée de populations qui n'ont pas pu ou voulu rejoindre les bioterritoires.
+
+**Tensions internes** : Pari risqué d'implanter les pratiques rurales des Racines dans des environnements dégradés ; accusations de certains nœuds ruraux de 'trahison de l'esprit du mouvement' ; attraction des populations marginalisées que les communs ruraux refusent d'absorber.
+
+*Sources attestées : mouvement_racines_vivantes_eco_communalism*
+
+##### Mémoire des Terres — sous [[trame_mnemos_noeud_reseau]]
+
+*infrastructure — niveau 3 — statut : fragmenté*
+
+**Origine réelle (2026)** : France, Allemagne
+
+**Transition** : 2038-2060 — voir [[effondrement_reseau_mondial_communication_eco_communalism]]
+
+Héritière fragmentée de Prisme Global après l'effondrement des datacenters européens de 2038, 'Mémoire des Terres' est une fédération lâche de nœuds narratifs locaux — archives vivantes tenues par des communautés rurales, des coopératives urbaines et des cercles de mémoire intergénérationnelle. Revendique 2 300 nœuds actifs sur quatre continents, sans que personne ne sache vraiment combien fonctionnent encore. Son autorité n'est plus éditoriale mais protocolaire : elle fournit un langage commun de description du monde sans prétendre en fixer le sens.
+
+**Tensions internes** : Tentation des nœuds les plus puissants de s'autonomiser en systèmes d'information locaux fermés ; accusations du protocole 'Trame' comme vecteur d'homogénéisation culturelle masquée ; frictions politiques vives sur la mémoire des territoires disparus — qui a le droit de raconter ce qui n'existe plus ?
+
+**Rivaux** : enclaves_extractivistes_et_etats_residuels
+
+*Sources attestées : prisme_global_eco_communalism, reseau_mnemos_eco_communalism*
+
+##### Nuuk — Maison longue du Fonds — sous [[kalaallit_nunaat_bioterritoire]]
+
+*site_strategique — niveau 3 — statut : stable*
+
+**Origine réelle (2026)** : Nuuk, Groenland
+
+**Transition** : 2041-2098
+
+Siège du Fonds des Terres Émergées du Kalaallit Nunaat, bâtiment en pierre locale aux toits végétalisés ressemblant davantage à une maison longue traditionnelle agrandie qu'à un bâtiment financier. En 2098, les délégués y arrivent en kayak solaire depuis les fjords. C'est ici que se négocie l'accès aux gisements de lithium et terres rares stratégiques pour les réseaux coopératifs du cercle polaire, et que se joue la tension entre logique souverainiste et dissolution communautaire.
+
+**Tensions internes** : Les assemblées internes sont le théâtre du conflit générationnel entre partisans de la dissolution du Fonds et défenseurs de la rente souveraine ; tentatives d'infiltration par des agents des enclaves extractivistes.
+
+*Sources attestées : kalaallit_nunaat_sovereign_fund_eco_communalism*
+
+##### Pittsburgh Reconverti — sous [[rust_belt_confederation_friches]]
+
+*ville — niveau 3 — statut : stable*
+
+**Origine réelle (2026)** : Pittsburgh, Pennsylvania
+
+**Transition** : 2040-2070
+
+Ancienne ville industrielle reconvertie en commune emblématique de la Confédération des Friches Vivantes, reconnaissable à ses toits végétalisés sur des charpentes métalliques d'autrefois et à ses ateliers où d'anciens ouvriers sidérurgistes forment des jeunes à la biométhanisation et à la taille des haies bocagères. En 2098, Pittsburgh incarne la transformation possible des paysages industriels en communs vivants énergétiques et agricoles.
+
+**Tensions internes** : Tension entre la génération des fondateurs porteurs de mémoire ouvrière et les jeunes nés dans la friche qui questionnent cette identité ; pression des consortiums logistiques sur les infrastructures métallurgiques résiduelles à valeur minière.
+
+*Sources attestées : mouvement_des_communes_du_rust_belt_eco_communalism*
+
+##### Plateaux Désertés du Massif Central — sous [[massif_central_bioterritoire]]
+
+*zone_sinistree — niveau 3 — statut : fragmenté*
+
+**Origine réelle (2026)** : Massif Central, France
+
+**Transition** : 2030-2098
+
+Zones de repli des Veilleurs du Seuil dans leurs Sillons semi-enterrés, ces longues bâtisses mi-enterrées tapissées de graines et de schémas techniques qui ressemblent moins à des refuges qu'à des tombeaux anticipatoires. Espaces où la déprise agricole et l'abandon humain ont créé un vide que les Veilleurs habitent comme un reproche vivant adressé aux reconstructeurs éco-communalistes.
+
+**Tensions internes** : Les Sillons contiennent des savoirs techniques précieux que les réseaux coopératifs voudraient intégrer, mais les Veilleurs posent des conditions d'accès que les assemblées refusent ; jeunes générations déçues par la lenteur de la reconstruction attirées par la radicalité du retrait.
+
+*Sources attestées : collectifs_du_seuil_eco_communalism, mouvement_racines_vivantes_eco_communalism*
+
+##### Les Sillons de la Cévenne — sous [[cevennes_interieure]]
+
+*infrastructure — niveau 3 — statut : stable*
+
+**Origine réelle (2026)** : Cévennes, France
+
+**Transition** : 2030-2098
+
+Longues bâtisses mi-enterrées tapissées de graines et de schémas techniques, cœur opérationnel et symbolique des Veilleurs du Seuil dans la Cévenne intérieure. Ces structures, à mi-chemin entre refuges, bibliothèques et tombeaux anticipatoires, concentrent des savoirs agronomiques, médicaux et techniques que les assemblées des bassins versants convoitent mais ne peuvent obtenir aux conditions imposées par les Veilleurs.
+
+**Tensions internes** : Question des conditions d'accès aux savoirs archivés : libre partage dans le réseau communal ou transmission ritualisée selon les protocoles des Porteurs de mémoire ; risque d'infiltration par des agents corporatifs cherchant à cartographier les ressources indirectement révélées par les archives.
+
+*Sources attestées : collectifs_du_seuil_eco_communalism*
+
+##### Site du Procès Van Derburgh — sous [[vallee_du_rhone_reconstituee]]
+
+*site_strategique — niveau 3 — statut : stable*
+
+**Origine réelle (2026)** : Vallée du Rhône, France
+
+**Transition** : 2078-2098 — voir [[arrestation_chris_van_derburgh_eco_communalism]]
+
+Lieu de la délibération communautaire exemplaire d'automne 2078 concernant Chris van Derburgh et sa collection d'objets de 2026. Après trois sessions de délibération, la communauté a voté pour le 'droit à la mémoire personnelle' — Van Derburgh garde sa collection en l'ouvrant comme archive communautaire. Ce cercle de délibération est devenu une référence jurisprudentielle dans le Réseau des Assemblées sur la frontière entre possession personnelle et communs de la mémoire.
+
+**Tensions internes** : Débat persistant entre les partisans d'une sobriété stricte et ceux qui défendent le droit à la mémoire personnelle issu du précédent Van Derburgh.
+
+**Alliés** : memoire_des_terres_federation
+
+*Sources attestées : arrestation_chris_van_derburgh_eco_communalism, federation_communs_territoriaux_eco_communalism*
+
+###### Les Sillons du Plateau — sous [[plateaux_desertes_massif_central]]
+
+*infrastructure — niveau 4 — statut : stable*
+
+**Origine réelle (2026)** : Massif Central, France
+
+**Transition** : 2030-2098
+
+Longues bâtisses semi-enterrées des Veilleurs du Seuil dans les plateaux désertés du Massif Central, tapissées de graines et de schémas techniques, ressemblant moins à des refuges qu'à des tombeaux anticipatoires. Archives de savoirs techniques, agronomiques et médicaux précieux que les réseaux coopératifs voudraient intégrer, mais auxquels les Veilleurs ne donnent accès qu'à des conditions que les assemblées refusent. Miroir sombre des Sillons de la Cévenne.
+
+**Tensions internes** : Conditions d'accès aux savoirs posées par les Veilleurs incompatibles avec les principes d'horizontalité des assemblées ; risque d'infiltration par des agents corporatifs ; attraction des jeunes déçus par la lenteur de la reconstruction.
+
+**Alliés** : sillons_cevennes
+
+*Sources attestées : collectifs_du_seuil_eco_communalism*
+
 
 ## Notes / zones à enrichir
 _Espace libre, jamais lu par les scripts — ajoute ici tes idées, brouillons, zones à

@@ -9600,6 +9600,15 @@ async function loreAppliquer(dryRun) {
       'pour inscrire la relation chez la fiche cible aussi.')) return;
   const sortie = document.getElementById('lore-sortie');
   sortie.style.display = '';
+  // Retour à la ligne forcé (26 sept) : une règle générale sur <pre> dans
+  // style.css l'emportait sur celle de index.html -- sortie sur une seule
+  // ligne, illisible. Inline + !important pour ne plus en dépendre.
+  sortie.style.setProperty('white-space', 'pre-wrap', 'important');
+  sortie.style.setProperty('overflow-wrap', 'anywhere', 'important');
+  sortie.style.setProperty('word-break', 'break-word', 'important');
+  sortie.style.setProperty('overflow-x', 'hidden', 'important');
+  sortie.style.setProperty('overflow-y', 'auto', 'important');
+  sortie.style.setProperty('max-height', '320px', 'important');
   sortie.textContent = dryRun ? 'Simulation en cours…' : 'Écriture en cours…';
   LoreState.enCours = true;
   renderLorePropositions();

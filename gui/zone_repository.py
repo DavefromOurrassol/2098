@@ -176,11 +176,31 @@ class ZoneRepository:
         fm = yaml.safe_load(parts[1]) or {}
         return GeoFile(path=path, raw=raw, fm=fm, body=parts[2])
 
+    def _corps_a_jour(self, gf: GeoFile) -> str:
+        """Section « ## Zones » du corps reconstruite depuis le frontmatter
+        (26 sept 2026, S15) — même code que generator/regenerer_corps_geographie.py
+        (importé, pas dupliqué), pour que le corps ne prenne plus de retard
+        après une modification faite depuis la Carte. En cas d'échec (script
+        absent, erreur), le corps est gardé tel quel : l'écriture du frontmatter
+        ne doit jamais être bloquée par ce confort de lecture."""
+        try:
+            import importlib.util
+            chemin = self.vault_root / "generator" / "regenerer_corps_geographie.py"
+            spec = importlib.util.spec_from_file_location("regenerer_corps_geographie", chemin)
+            mod = importlib.util.module_from_spec(spec)
+            spec.loader.exec_module(mod)
+            corps, _ = mod.corps_regenere(gf.body, gf.zones)
+            return corps
+        except Exception as e:  # noqa: BLE001 — jamais bloquant
+            print(f"[zone_repository] corps markdown non régénéré ({e}) — frontmatter écrit quand même")
+            return gf.body
+
     def _save_geo(self, gf: GeoFile) -> None:
         bak = gf.path.with_suffix(gf.path.suffix + ".bak")
         bak.write_text(gf.raw, encoding="utf-8")
         new_fm = yaml.dump(gf.fm, allow_unicode=True, sort_keys=False,
                             default_flow_style=False)
+        gf.body = self._corps_a_jour(gf)
         gf.path.write_text("---\n" + new_fm + "---" + gf.body, encoding="utf-8")
 
     def _load_zones_pays(self) -> dict:

@@ -1613,6 +1613,57 @@ def _generate_narrative_report(issues_by_scenario, total_issues):
 # PIPELINE PRINCIPAL
 # ─────────────────────────────────────────
 
+# ─────────────────────────────────────────
+# 11. TEXTE DES GÉOGRAPHIES (26 sept 2026, S15)
+# ─────────────────────────────────────────
+
+def validate_geographie_corps(result, fix=False):
+    """
+    Avertit quand la section « ## Zones » (texte lisible) d'un
+    geographie/{scenario}.md ne correspond plus à son frontmatter (la seule
+    référence lue par la Carte et les scripts). Même rendu que
+    generator/regenerer_corps_geographie.py (importé, pas dupliqué). La Carte
+    tient ce texte à jour toute seule ; ce contrôle attrape les modifications
+    faites par un script ou à la main. Avertissement seulement — avec --fix,
+    le texte est réécrit (.bak_corps).
+    """
+    import importlib.util
+    import shutil
+    chemin = os.path.join(GENERATOR_DIR, "regenerer_corps_geographie.py")
+    if not os.path.exists(chemin):
+        result.info("Géographie", "regenerer_corps_geographie.py absent — contrôle du texte ignoré")
+        return
+    spec = importlib.util.spec_from_file_location("regenerer_corps_geographie", chemin)
+    mod = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(mod)
+    for scenario in mod.SCENARIOS:
+        path = os.path.join(GEOGRAPHIE_DIR, f"{scenario}.md")
+        if not os.path.exists(path):
+            continue
+        with open(path, encoding="utf-8") as f:
+            raw = f.read()
+        m = re.match(r"^(---\s*\n(.*?)\n---\s*\n)(.*)$", raw, re.DOTALL)
+        if not m:
+            continue
+        try:
+            zones = (yaml.safe_load(m.group(2)) or {}).get("zones") or []
+        except yaml.YAMLError:
+            continue  # frontmatter illisible : déjà signalé par les autres contrôles
+        neuf, _ = mod.corps_regenere(m.group(3), zones)
+        if neuf == m.group(3):
+            continue
+        rel = os.path.relpath(path, VAULT_PATH)
+        if fix:
+            shutil.copy2(path, path + ".bak_corps")
+            with open(path, "w", encoding="utf-8") as f:
+                f.write(m.group(1) + neuf)
+            result.fix(rel, "texte « ## Zones » régénéré depuis le frontmatter (.bak_corps)")
+        else:
+            result.warning("Géographie", rel,
+                           "texte « ## Zones » en retard sur le frontmatter — lancer « 📝 Mettre à "
+                           "jour le texte des géographies » (ou validate.py --fix)")
+
+
 def run(verbose=False, report=False, fix=False, localisation_only=False, narrative=False):
     result = ValidationResult()
 
@@ -1627,35 +1678,38 @@ def run(verbose=False, report=False, fix=False, localisation_only=False, narrati
 
     print("\n[validate] Démarrage de la validation...")
 
-    print("[validate] 1/10 — Nomenclature...")
+    print("[validate] 1/11 — Nomenclature...")
     validate_nomenclature(result)
 
-    print("[validate] 2/10 — Cohérence systémique...")
+    print("[validate] 2/11 — Cohérence systémique...")
     validate_systemic(result)
 
-    print("[validate] 3/10 — Entités et instances...")
+    print("[validate] 3/11 — Entités et instances...")
     validate_entities(result)
 
-    print("[validate] 4/10 — Thématiques...")
+    print("[validate] 4/11 — Thématiques...")
     validate_thematiques(result)
 
-    print("[validate] 5/10 — Localisation...")
+    print("[validate] 5/11 — Localisation...")
     validate_localisation(result)
 
-    print("[validate] 6/10 — Références croisées...")
+    print("[validate] 6/11 — Références croisées...")
     validate_cross_references(result)
 
-    print("[validate] 7/10 — Matrice d'influence...")
+    print("[validate] 7/11 — Matrice d'influence...")
     validate_matrix(result)
 
-    print("[validate] 8/10 — Événements...")
+    print("[validate] 8/11 — Événements...")
     validate_events(result)
 
-    print("[validate] 9/10 — Signaux faibles (section 7 ↔ section 12)...")
+    print("[validate] 9/11 — Signaux faibles (section 7 ↔ section 12)...")
     validate_signals(result)
 
-    print("[validate] 10/10 — Cohérence narrative post-injection...")
+    print("[validate] 10/11 — Cohérence narrative post-injection...")
     validate_narrative_coherence(result, force=narrative)
+
+    print("[validate] 11/11 — Texte des géographies (corps ↔ frontmatter)...")
+    validate_geographie_corps(result, fix=fix)
 
     print_results(result, verbose=verbose)
 
