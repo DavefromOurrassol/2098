@@ -422,6 +422,9 @@ zones:
   - entite: Slovaquie
     type_entite: pays
     portion: null
+  - entite: Italie
+    type_entite: pays
+    portion: null
   description: 'Zone européenne occidentale où persistent des institutions hybrides
     : Bruxelles-Nouveau accueille le siège du Consortium Helios (énergie solaire terrestre
     à grande échelle), Genève reste le siège de l''AMSC et du Conseil de Genève pour
@@ -2425,9 +2428,6 @@ zones:
   - entite: Espagne
     type_entite: pays
     portion: null
-  - entite: Italie
-    type_entite: pays
-    portion: null
   description: Espaces de transition écologique aux marges de l'Europe Occidentale
     Reconstruite, gérés partiellement par le Réseau Terrafond et investis par le Mouvement
     des Racines Vivantes. Ces zones tampons accueillent des réfugiés climatiques dont
@@ -3157,7 +3157,7 @@ République écossaise autonome centrée sur les énergies marines renouvelables
 
 *union_regionale — statut : stable*
 
-**Origine réelle (2026)** : France, Belgique, Espagne, Allemagne, Suisse, Royaume-Uni, Angleterre, Pays-Bas, Autriche, République tchèque, Irlande, Luxembourg, Monaco, Andorre, Liechtenstein, Saint-Marin, Vatican, Malte, Croatie, Slovénie, Slovaquie
+**Origine réelle (2026)** : France, Belgique, Espagne, Allemagne, Suisse, Royaume-Uni, Angleterre, Pays-Bas, Autriche, République tchèque, Irlande, Luxembourg, Monaco, Andorre, Liechtenstein, Saint-Marin, Vatican, Malte, Croatie, Slovénie, Slovaquie, Italie
 
 **Transition** : 2040-2070 — voir [[arrestation_chris_van_derburgh_reference]]
 
@@ -3274,7 +3274,7 @@ Territoire ibérique intégré aux bassins du Réseau Terrafond après les grand
 
 *zone_sinistree — niveau 2 — statut : fragmenté*
 
-**Origine réelle (2026)** : France, Espagne, Italie
+**Origine réelle (2026)** : France, Espagne
 
 **Transition** : 2040-2098
 

@@ -488,6 +488,7 @@
     "Australie": "australie_forteresse_insulaire",
     "Nouvelle-Zélande": "australie_forteresse_insulaire",
     "Groenland": "bloc_atlantique",
+    "Arctique": "espace_nordique_arctique",
     "Polynésie française": "australie_forteresse_insulaire",
     "Irlande": "zone_interdite_heysham",
     "Luxembourg": "zone_euro_sud",
@@ -805,6 +806,7 @@
     "Îles Marshall": "te_moana_nui_plateforme",
     "Nauru": "te_moana_nui_plateforme",
     "Tuvalu": "te_moana_nui_plateforme",
+    "Internet mondial / GAFAM (héritage)": "helios_tours_orbitales",
     "Danemark / Groenland": "arctic_passage_qaanaaq"
   },
   "eco_communalism": {
