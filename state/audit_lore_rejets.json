@@ -19,6 +19,16 @@
    ],
    "raison": "La Coalition Arctique des Blocs Continentaux pourrait être un forum où l'EWSD négocie ou s'oppose aux autres blocs pour le partage des ressources et des voies arctiques.",
    "date": "2026-09-26"
+  },
+  {
+   "cle": [
+    "fortress_world",
+    "bloc_atlantique_fortress_world",
+    "alliance",
+    "anba_siege_atlantique_fortress_world"
+   ],
+   "raison": "L'ANBA (Autorité Numérique du Bloc Atlantique) gère les flux d'information et les infrastructures critiques du Bloc Atlantique, ce qui inclut nécessairement le contrôle des flux informationnels entrants et sortants du PAPC.",
+   "date": "2026-09-26"
   }
  ],
  "contradictions": [
@@ -46,6 +56,24 @@
     "ergo_wian_sovereign_holdings_fortress_world",
     "responsabilites|description_journalistique",
     "migrations forcées vers les ceintures productives eurasiatiques"
+   ],
+   "date": "2026-09-26"
+  },
+  {
+   "cle": [
+    "fortress_world",
+    "bloc_atlantique_fortress_world",
+    "localisation",
+    "lieu=Bloc Atlantique (siège à Halifax-Haute)"
+   ],
+   "date": "2026-09-26"
+  },
+  {
+   "cle": [
+    "fortress_world",
+    "bloc_atlantique_fortress_world",
+    "role_dans_scenario|description_journalistique",
+    "la Chambre de Recours Algorithmique de Bruxelles Résiduelle refuse systématiquement de déclassifier"
    ],
    "date": "2026-09-26"
   }

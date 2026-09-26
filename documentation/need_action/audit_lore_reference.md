@@ -1,11 +1,11 @@
 # Audit du lore — reference
 
-*Généré par `audit_lore.py` le 2026-09-26 16:01 — réécrit à chaque run, ne pas éditer. Règles : `documentation/lore_regles.yaml`.*
+*Généré par `audit_lore.py` le 2026-09-26 16:41 — réécrit à chaque run, ne pas éditer. Règles : `documentation/lore_regles.yaml`.*
 
 ## Résumé
 
 - Fiches analysées : 190 (+ 14 événements) (+ 14 articles)
-- Règles de lore — **erreurs : 0**, à relire : 0
+- Règles de lore — **erreurs : 0**, à relire : 2
 - Quarantaine (fiche active localisée en zone interdite) : 0
 - Transnationales localisées dans le texte (info) : 48
 - Relations à sens unique à corriger : 0 — contradictoires : 0
@@ -31,7 +31,9 @@ Rien à corriger.
 
 ## 5. Règles de lore — à relire
 
-Rien à signaler.
+**ergo_wian_non_democratique** — Ergo-Wian est un gouvernement-entreprise NON démocratique : ni élections, ni suffrage, ni dirigeants élus. À relire : une phrase qui associe Ergo-Wian à la démocratie ne doit le faire que pour la nier ou pour parler de ceux qui s'y opposent.
+- `ergo_wian_sovereign_holdings_reference` (instance, description_journalistique) — **Ergo-Wian + démocratie** : « Depuis son siège social flottant au-dessus de l'ancienne ville de Rotterdam, Ergo-Wian Sovereign Holdings règne sur un archipel de territoires où la démocratie a été remplacée par des contrats à durée déterminée. »
+- `ergo_wian_sovereign_holdings_reference` (instance, description_journalistique) — **Ergo-Wian + vote** : « Son modèle, exporté via des partenariats avec des États en faillite, a fait d'Ergo-Wian le premier 'gouvernement-entreprise' coté en Bourse, où les actionnaires votent les lois comme on vote des dividendes. »
 
 ## 6. Transnationales mais localisées dans le texte (information)
 

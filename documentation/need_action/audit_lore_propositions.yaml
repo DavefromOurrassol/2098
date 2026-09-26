@@ -44,18 +44,6 @@ propositions:
   applique: '2026-09-26'
 - scenario: fortress_world
   slug: bloc_atlantique_fortress_world
-  relation: alliance
-  cible: anba_siege_atlantique_fortress_world
-  raison: L'ANBA (Autorité Numérique du Bloc Atlantique) gère les flux d'information et les infrastructures
-    critiques du Bloc Atlantique, ce qui inclut nécessairement le contrôle des flux informationnels entrants
-    et sortants du PAPC.
-  preuve: 'Le PAPC [...] coordonne la doctrine de souveraineté biopolitique entre ses États membres, incluant
-    le contrôle des flux informationnels [...] Anba Siege Atlantique — Division Accès Protégés : gestion
-    des accès numériques sécurisés, alignée sur les besoins du PAPC.'
-  valide: true
-  date: '2026-09-26'
-- scenario: fortress_world
-  slug: bloc_atlantique_fortress_world
   relation: opposition
   cible: cellules_mouvement_commun_midwest_fortress_world
   raison: Le Mouvement Commun Américain, dont les Cellules du Dehors sont issues, a été réprimé par le
@@ -66,3 +54,4 @@ propositions:
     du Midwest.'
   valide: true
   date: '2026-09-26'
+  applique: '2026-09-26'

@@ -5137,6 +5137,105 @@ def lore_contradictions_marquer():
     return jsonify({"ok": True})
 
 
+def _lore_motif_extrait(extrait):
+    """Motif qui retrouve l'extrait mot pour mot, mais quels que soient les
+    espaces et retours à la ligne entre les mots (un texte YAML plié `>`
+    coupe les phrases sur plusieurs lignes)."""
+    mots = str(extrait or "").split()
+    if not mots:
+        return None
+    return re.compile(r"\s+".join(re.escape(m) for m in mots))
+
+
+def _lore_frontmatter_valide(texte):
+    import yaml as _yaml
+    m = re.match(r"^---\s*\n(.*?)\n---", texte, re.DOTALL)
+    if not m:
+        return False
+    try:
+        return isinstance(_yaml.safe_load(m.group(1)), dict)
+    except _yaml.YAMLError:
+        return False
+
+
+def _lore_corriger_texte(texte, motif, nouveau):
+    """Remplace toutes les occurrences. Dans le frontmatter, essaie d'abord le
+    texte tel quel, puis avec les apostrophes doublées (scalaire YAML entre
+    apostrophes) ou les guillemets échappés (entre guillemets) si le YAML ne
+    se lit plus. Retourne (texte_corrigé | None, n_frontmatter, n_corps)."""
+    m = re.match(r"^(---\s*\n.*?\n---)(.*)$", texte, re.DOTALL)
+    if not m:
+        return None, 0, 0
+    fm, corps = m.group(1), m.group(2)
+    n_fm, n_corps = len(motif.findall(fm)), len(motif.findall(corps))
+    corps_corrige = motif.sub(lambda _m: nouveau, corps)
+    for variante in (nouveau, nouveau.replace("'", "''"), nouveau.replace('"', '\\"')):
+        candidat = motif.sub(lambda _m: variante, fm) + corps_corrige
+        if _lore_frontmatter_valide(candidat):
+            return candidat, n_fm, n_corps
+    return None, n_fm, n_corps
+
+
+@app.route("/api/lore/contradictions/corriger", methods=["POST"])
+def lore_contradictions_corriger():
+    """
+    POST /api/lore/contradictions/corriger (26 septembre 2026)
+    Body : {scenario, slug, champ, extrait, nouveau, confirmer: bool}
+    Remplace, dans la fiche instance, l'extrait signalé par l'IA par le texte
+    `nouveau` (la reformulation proposée, éventuellement retouchée à la main).
+    confirmer=false → aperçu seul (occurrences, avant/après), rien n'est écrit.
+    confirmer=true  → .bak_correction, écriture, relecture du frontmatter, puis
+    la contradiction est marquée traitée. Refusé si l'extrait est introuvable
+    ou si le frontmatter ne se lirait plus après correction.
+    """
+    import shutil
+    from datetime import date as _date
+    data = request.get_json(silent=True) or {}
+    scenario, slug = data.get("scenario"), data.get("slug")
+    extrait, nouveau = data.get("extrait") or "", " ".join(str(data.get("nouveau") or "").split())
+    if not scenario or not slug or not extrait.strip():
+        return jsonify({"error": "scenario, slug et extrait requis"}), 400
+    if not nouveau:
+        return jsonify({"error": "Le texte de remplacement est vide"}), 400
+    chemins = _lore_chemins()
+    path = chemins["instances"] / f"{slug}.md"
+    if not path.exists():
+        return jsonify({"error": f"Fiche introuvable : {path.name}"}), 404
+    texte = path.read_text(encoding="utf-8")
+    motif = _lore_motif_extrait(extrait)
+    occurrences = list(motif.finditer(texte))
+    if not occurrences:
+        return jsonify({"error": "Extrait introuvable dans la fiche (déjà corrigé, ou l'IA l'a "
+                                 "reformulé) — correction à faire à la main."}), 404
+    corrige, n_fm, n_corps = _lore_corriger_texte(texte, motif, nouveau)
+    if corrige is None:
+        return jsonify({"error": "Le frontmatter ne se lirait plus après correction — rien écrit, "
+                                 "correction à faire à la main."}), 422
+
+    o = occurrences[0]
+    avant = " ".join(texte[max(0, o.start() - 80):o.end() + 80].split())
+    i = corrige.find(nouveau) if nouveau in corrige else corrige.find(nouveau.replace("'", "''"))
+    apres = " ".join(corrige[max(0, i - 80):i + len(nouveau) + 80].split()) if i >= 0 else nouveau
+    reponse = {"ok": True, "fichier": path.name, "occurrences": len(occurrences),
+               "dans_frontmatter": n_fm, "dans_corps": n_corps, "avant": avant, "apres": apres}
+    if not data.get("confirmer"):
+        return jsonify({**reponse, "apercu": True})
+
+    shutil.copy2(path, path.with_suffix(".md.bak_correction"))
+    path.write_text(corrige, encoding="utf-8")
+    if not _lore_frontmatter_valide(path.read_text(encoding="utf-8")):
+        shutil.copy2(path.with_suffix(".md.bak_correction"), path)
+        return jsonify({"error": "Relecture échouée — fiche restaurée depuis le .bak_correction"}), 500
+
+    rejets = _lore_lire_rejets(chemins)
+    cle = list(_lore_cle_contr(scenario, slug, data))
+    if not any(x.get("cle") == cle for x in rejets["contradictions"]):
+        rejets["contradictions"].append({"cle": cle, "date": _date.today().isoformat(),
+                                         "corrigee": True})
+        _lore_ecrire_rejets(chemins, rejets)
+    return jsonify({**reponse, "apercu": False})
+
+
 @app.route("/api/lore/propositions/appliquer", methods=["POST"])
 def lore_propositions_appliquer():
     """

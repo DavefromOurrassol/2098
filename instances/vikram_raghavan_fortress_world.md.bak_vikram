@@ -15,7 +15,7 @@ role_dans_scenario: >
   Membre influent des Recycleurs de Paris, Vikram Raghavan incarne la figure du protecteur bienveillant des communautés migrantes et précaires de la forteresse européenne. Officiellement, il est le tuteur de sa nièce Hyphan Raghavan, héritière d'une lignée de réfugiés de la guerre indo-arabe de 2038, et un négociateur clé pour la survie des siens dans les interstices urbains de Paris. En secret, il sert d'intermédiaire entre les Recycleurs et les forces de la Reconquête Européenne, livrant des Dédoublés et des esclaves en échange de ressources critiques et de protections pour son réseau. Son pouvoir repose sur cette dualité : une façade de légitimité morale et affective, masquant une exploitation systémique des vulnérabilités de sa propre communauté.
 
 responsabilites: >
-  Vikram supervise les opérations de récupération et de recyclage des déchets technologiques dans les zones grises de Paris, tout en gérant les flux de main-d'œuvre migrante vers les chantiers souterrains de la ville. Il négocie en secret, à l'insu de presque tous, avec les agents d'Ergo-Wian et les milices de la Reconquête Européenne pour le placement de travailleurs sous contrat de servitude, y compris des Dédoublés, en échange de crédits énergétiques et de sécurité pour les siens. Il maintient également un réseau de protection pour les familles des Recycleurs, tout en sélectionnant discrètement celles et ceux qui seront sacrifiés pour préserver l'équilibre précaire de son pouvoir.
+  Vikram supervise les opérations de récupération et de recyclage des déchets technologiques dans les zones grises de Paris, tout en gérant les flux de main-d'œuvre migrante vers les chantiers souterrains de la ville. Il négocie directement avec les agents d'Ergo-Wian et les milices de la Reconquête Européenne pour le placement de travailleurs sous contrat de servitude, y compris des Dédoublés, en échange de crédits énergétiques et de sécurité pour les siens. Il maintient également un réseau de protection pour les familles des Recycleurs, tout en sélectionnant discrètement celles et ceux qui seront sacrifiés pour préserver l'équilibre précaire de son pouvoir.
 
 impact_local: 4
 impact_systemique_global: 2
@@ -36,6 +36,7 @@ zone_systemique:
 
 alliances:
 - les_recycleurs_fortress_world
+- ergo_wian_sovereign_holdings_fortress_world
 - mouvement_de_reconquete_europeenne_fortress_world
 - contrats_de_service_d_ergo_wian_fortress_world
 oppositions:
@@ -81,7 +82,7 @@ signes_distinctifs: >
 retry_signes_distinctifs: non
 
 tensions_narratives: >
-  La montée en puissance de Vikram coïncide avec l'intensification des purges de la Reconquête Européenne et la radicalisation des Recycleurs. Sa nièce, Hyphan, hostile à Ergo-Wian sans être une rebelle, pourrait bien être la faille dans son armure. Les rumeurs de trahison se multiplient, et certains membres des Recycleurs commencent à remettre en question son leadership. Par ailleurs, Ergo-Wian exige des livraisons toujours plus importantes, mettant Vikram dans une position intenable : jusqu'où peut-il sacrifier les siens pour préserver son pouvoir ? Son ascension pourrait bien se terminer par une chute brutale, ou par une alliance encore plus sombre avec les forces qu'il prétend combattre.
+  La montée en puissance de Vikram coïncide avec l'intensification des purges de la Reconquête Européenne et la radicalisation des Recycleurs. Sa nièce, Hyphan, devenue une figure de la résistance, pourrait bien être la faille dans son armure. Les rumeurs de trahison se multiplient, et certains membres des Recycleurs commencent à remettre en question son leadership. Par ailleurs, Ergo-Wian exige des livraisons toujours plus importantes, mettant Vikram dans une position intenable : jusqu'où peut-il sacrifier les siens pour préserver son pouvoir ? Son ascension pourrait bien se terminer par une chute brutale, ou par une alliance encore plus sombre avec les forces qu'il prétend combattre.
 
 date_creation: 2026-09-24
 ---
@@ -92,7 +93,7 @@ date_creation: 2026-09-24
 Membre influent des Recycleurs de Paris, Vikram Raghavan incarne la figure du protecteur bienveillant des communautés migrantes et précaires de la forteresse européenne. Officiellement, il est le tuteur de sa nièce Hyphan Raghavan, héritière d'une lignée de réfugiés de la guerre indo-arabe de 2038, et un négociateur clé pour la survie des siens dans les interstices urbains de Paris. En secret, il sert d'intermédiaire entre les Recycleurs et les forces de la Reconquête Européenne, livrant des Dédoublés et des esclaves en échange de ressources critiques et de protections pour son réseau. Son pouvoir repose sur cette dualité : une façade de légitimité morale et affective, masquant une exploitation systémique des vulnérabilités de sa propre communauté.
 
 ## Responsabilités
-Vikram supervise les opérations de récupération et de recyclage des déchets technologiques dans les zones grises de Paris, tout en gérant les flux de main-d'œuvre migrante vers les chantiers souterrains de la ville. Il négocie en secret, à l'insu de presque tous, avec les agents d'Ergo-Wian et les milices de la Reconquête Européenne pour le placement de travailleurs sous contrat de servitude, y compris des Dédoublés, en échange de crédits énergétiques et de sécurité pour les siens. Il maintient également un réseau de protection pour les familles des Recycleurs, tout en sélectionnant discrètement celles et ceux qui seront sacrifiés pour préserver l'équilibre précaire de son pouvoir.
+Vikram supervise les opérations de récupération et de recyclage des déchets technologiques dans les zones grises de Paris, tout en gérant les flux de main-d'œuvre migrante vers les chantiers souterrains de la ville. Il négocie directement avec les agents d'Ergo-Wian et les milices de la Reconquête Européenne pour le placement de travailleurs sous contrat de servitude, y compris des Dédoublés, en échange de crédits énergétiques et de sécurité pour les siens. Il maintient également un réseau de protection pour les familles des Recycleurs, tout en sélectionnant discrètement celles et ceux qui seront sacrifiés pour préserver l'équilibre précaire de son pouvoir.
 
 ## Variables influencées
 - [[geopolitique_conflits]]
@@ -104,11 +105,12 @@ Vikram supervise les opérations de récupération et de recyclage des déchets 
 Dans les entrailles de Paris, où les néons des tours Nexus7 côtoient les ombres des bidonvilles high-tech, Vikram Raghavan règne en maître ambigu. Connu sous le surnom de 'L'Oncle' parmi les Recycleurs, il est à la fois le sauveur et le bourreau de sa communauté. Ses discours sur la résilience des migrants, diffusés via les Cycles de Paris, contrastent avec les rumeurs persistantes de ses transactions avec Ergo-Wian. Les familles qu'il protège le vénèrent ; celles qu'il livre aux milices de la Reconquête Européenne le maudissent. Son dernier coup d'éclat ? Avoir placé sa propre nièce, Hyphan, dans un convoi de Dédoublés vers les mines d'Alpha47, tout en négociant une exemption pour son quartier. Un équilibriste des temps sombres, dont le sourire chaleureux cache une froideur calculée.
 
 ## Tensions narratives
-La montée en puissance de Vikram coïncide avec l'intensification des purges de la Reconquête Européenne et la radicalisation des Recycleurs. Sa nièce, Hyphan, hostile à Ergo-Wian sans être une rebelle, pourrait bien être la faille dans son armure. Les rumeurs de trahison se multiplient, et certains membres des Recycleurs commencent à remettre en question son leadership. Par ailleurs, Ergo-Wian exige des livraisons toujours plus importantes, mettant Vikram dans une position intenable : jusqu'où peut-il sacrifier les siens pour préserver son pouvoir ? Son ascension pourrait bien se terminer par une chute brutale, ou par une alliance encore plus sombre avec les forces qu'il prétend combattre.
+La montée en puissance de Vikram coïncide avec l'intensification des purges de la Reconquête Européenne et la radicalisation des Recycleurs. Sa nièce, Hyphan, devenue une figure de la résistance, pourrait bien être la faille dans son armure. Les rumeurs de trahison se multiplient, et certains membres des Recycleurs commencent à remettre en question son leadership. Par ailleurs, Ergo-Wian exige des livraisons toujours plus importantes, mettant Vikram dans une position intenable : jusqu'où peut-il sacrifier les siens pour préserver son pouvoir ? Son ascension pourrait bien se terminer par une chute brutale, ou par une alliance encore plus sombre avec les forces qu'il prétend combattre.
 
 ## Relations
 **Alliés :**
 - [[les_recycleurs_fortress_world]]
+- [[ergo_wian_sovereign_holdings_fortress_world]]
 - [[mouvement_de_reconquete_europeenne_fortress_world]]
 - [[contrats_de_service_d_ergo_wian_fortress_world]]
 **Opposants :**

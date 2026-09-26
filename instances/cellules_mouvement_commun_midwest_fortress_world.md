@@ -55,6 +55,7 @@ alliances:
 oppositions:
 - administrations_de_controle_frontalier_des_blocs_fortress_world
 - agences_de_securite_interieure_des_etats_forteresses_fortress_world
+- bloc_atlantique_fortress_world
 - bureau_des_territoires_residuels_fortress_world
 - conseil_moscou_est_fortress_world
 - dispositifs_de_surveillance_numerique_souveraine_fortress_world
@@ -62,9 +63,9 @@ oppositions:
 - front_resilient_pro_systeme_fortress_world
 - geneve_bunker_fortress_world
 - grille_aria_fortress_world
-- sigrid_halvorsen_fortress_world
 - pacte_forteresses_souveraines_fortress_world
 - reseaux_prives_de_securite_aux_frontieres_fortress_world
+- sigrid_halvorsen_fortress_world
 - systemes_de_scoring_de_productivite_corporative_fortress_world
 - vaultcorp_security_fortress_world
 type_relation_dominante: conflit
@@ -138,6 +139,7 @@ La décentralisation absolue protège le réseau mais interdit toute montée en 
 **Opposants :**
 - [[administrations_de_controle_frontalier_des_blocs_fortress_world]]
 - [[agences_de_securite_interieure_des_etats_forteresses_fortress_world]]
+- [[bloc_atlantique_fortress_world]]
 - [[bureau_des_territoires_residuels_fortress_world]]
 - [[conseil_moscou_est_fortress_world]]
 - [[dispositifs_de_surveillance_numerique_souveraine_fortress_world]]
@@ -145,8 +147,8 @@ La décentralisation absolue protège le réseau mais interdit toute montée en 
 - [[front_resilient_pro_systeme_fortress_world]]
 - [[geneve_bunker_fortress_world]]
 - [[grille_aria_fortress_world]]
-- [[sigrid_halvorsen_fortress_world]]
 - [[pacte_forteresses_souveraines_fortress_world]]
 - [[reseaux_prives_de_securite_aux_frontieres_fortress_world]]
+- [[sigrid_halvorsen_fortress_world]]
 - [[systemes_de_scoring_de_productivite_corporative_fortress_world]]
 - [[vaultcorp_security_fortress_world]]

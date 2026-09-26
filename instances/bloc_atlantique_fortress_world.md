@@ -87,6 +87,7 @@ oppositions:
 - regimes_autoritaires_du_bloc_eurasiatique_occidental_fortress_world
 - reseaux_de_passeurs_d_information_aux_frontieres_inter_blocs_fortress_world
 - voix_du_dehors_fortress_world
+- cellules_mouvement_commun_midwest_fortress_world
 type_relation_dominante: alliance stratégique
 
 annee_debut: 2061
@@ -188,3 +189,4 @@ Le PAPC est traversé par une fracture croissante entre sa faction technocratiqu
 - [[regimes_autoritaires_du_bloc_eurasiatique_occidental_fortress_world]]
 - [[reseaux_de_passeurs_d_information_aux_frontieres_inter_blocs_fortress_world]]
 - [[voix_du_dehors_fortress_world]]
+- [[cellules_mouvement_commun_midwest_fortress_world]]

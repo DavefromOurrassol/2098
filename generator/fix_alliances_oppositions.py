@@ -226,16 +226,35 @@ def patch_alliances_oppositions_frontmatter(raw_frontmatter_block, alliances, op
     return block
 
 
+# Une section « ## Relations » complète : du titre jusqu'au prochain titre
+# de niveau 2 ou à la fin du corps (DOTALL, lazy). Remplace l'ancien motif
+# ligne à ligne (26 sept 2026), qui ne reconnaissait pas une section en tout
+# début de corps ni une dernière ligne sans retour final.
+_RELATIONS_SECTION = re.compile(r"(^|\n)## Relations\n.*?(?=\n## |\Z)", re.DOTALL)
+
+
 def patch_relations_section(body, alliances, oppositions):
     """
-    Ajoute ou met à jour la section '## Relations' du corps Markdown,
+    Ajoute, met à jour ou retire la section '## Relations' du corps Markdown,
     dans le même style que write_enriched_fiche() (wikilinks [[...]]).
-    Insérée avant '## Notes' si présente, sinon en fin de corps.
-    Si alliances et oppositions sont vides, ne fait rien (pas de section
-    vide ajoutée).
+
+    - Section déjà présente : remplacée À SA PLACE (26 sept 2026 — avant,
+      elle était retirée puis réinsérée en fin de corps, ce qui déplaçait
+      la section à chaque passe de réciprocité).
+    - Section absente : insérée avant '## Notes' si présente, sinon en fin
+      de corps.
+    - Alliances ET oppositions vides : la section existante est RETIRÉE
+      (26 sept 2026 — avant, la fonction ne faisait rien et laissait
+      l'ancienne section, donc des wikilinks vers des relations pourtant
+      retirées du frontmatter). Aucune section vide n'est jamais ajoutée.
     """
+    existante = _RELATIONS_SECTION.search(body)
+
     if not alliances and not oppositions:
-        return body
+        if not existante:
+            return body
+        sans = _RELATIONS_SECTION.sub(lambda m: m.group(1), body, count=1)
+        return re.sub(r"\n{3,}", "\n\n", sans).lstrip("\n")
 
     lines = ["## Relations"]
     if alliances:
@@ -248,17 +267,11 @@ def patch_relations_section(body, alliances, oppositions):
             lines.append(f"- [[{o}]]")
     relations_block = "\n".join(lines)
 
-    # Retire une éventuelle ancienne section Relations (cas réciprocité
-    # qui tourne une 2e fois sur une fiche déjà patchée une 1re fois)
-    body_wo_relations = re.sub(
-        r"\n## Relations\n(?:.*?\n)*?(?=\n## |\Z)", "\n", body
-    )
-
-    if "## Notes" in body_wo_relations:
-        return body_wo_relations.replace(
-            "## Notes", f"{relations_block}\n\n## Notes", 1
-        )
-    return body_wo_relations.rstrip("\n") + f"\n\n{relations_block}\n"
+    if existante:
+        return _RELATIONS_SECTION.sub(lambda m: m.group(1) + relations_block + "\n", body, count=1)
+    if "## Notes" in body:
+        return body.replace("## Notes", f"{relations_block}\n\n## Notes", 1)
+    return body.rstrip("\n") + f"\n\n{relations_block}\n"
 
 
 def write_alliances_patch(path, alliances, oppositions):

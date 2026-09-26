@@ -134,4 +134,47 @@ fortress_world:
         les vestiges de l'ancien gouvernement européen, sans pouvoir réel. Le
         seul centre politique du Bloc Atlantique est Halifax-Haute (décision du
         26 sept 2026). Légitime en rappel historique, incohérent si Bruxelles
-        est décrite comme un centre de pouvoir actuel.
+        est décrite comme un centre de pouvoir actuel. Bruxelles-Forteresse est
+        une ville-forteresse du Hors gouvernée par Ergo-Wian (gouverneure Sigrid
+        Halvorsen), interface entre Euro-Nord et le Hors.
+
+reference:
+
+  regles:
+
+    - id: ergo_wian_non_democratique
+      gravite: a_relire
+      ignorer_negation: true
+      meme_phrase:
+        - [Ergo-Wian, EWSD]
+        - [démocratie, démocratique, démocratiquement, élu, élue, élus, élection,
+           élections, électoral, électorale, suffrage, vote, votes]
+      message: >-
+        Ergo-Wian est un gouvernement-entreprise NON démocratique : ni élections,
+        ni suffrage, ni dirigeants élus. À relire : une phrase qui associe
+        Ergo-Wian à la démocratie ne doit le faire que pour la nier ou pour
+        parler de ceux qui s'y opposent.
+
+    - id: ergo_wian_succession
+      gravite: a_relire
+      meme_phrase:
+        - [Ergo-Wian, EWSD]
+        - [successeur, successeuse, successeurs, succession, héritier, héritière,
+           dauphin, dauphine]
+      message: >-
+        La successeuse désignée d'Ergo-Wian est Hyphan. À relire : toute mention
+        de la succession d'Ergo-Wian doit désigner Hyphan, jamais quelqu'un
+        d'autre.
+
+    - id: democratie_pas_la_norme
+      gravite: a_relire
+      ignorer_negation: true
+      meme_phrase:
+        - [démocratie, démocraties, démocratique, démocratiques]
+        - [norme, majorité, majoritaire, majoritaires, généralisée, généralisées,
+           dominante, dominant, universelle, triomphe, triomphé, partout]
+      message: >-
+        En 2098, la démocratie n'est plus la norme : de nombreuses zones sont des
+        enclaves technofascistes ou des techno-monarchies gouvernées par un CEO.
+        À relire : une phrase qui présente la démocratie comme la règle
+        générale contredit le scénario.

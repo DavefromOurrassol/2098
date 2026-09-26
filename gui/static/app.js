@@ -9506,6 +9506,10 @@ function renderLoreFiche(f, props, contr) {
       actions.className = 'chantiers-actions';
       actions.appendChild(btn);
       item.appendChild(actions);
+      // Correction depuis le GUI (26 sept 2026) : seulement si l'extrait est
+      // retrouvé dans la fiche. Texte pré-rempli avec la reformulation de
+      // l'IA, modifiable ; aperçu obligatoire avant écriture.
+      if (!x.vue && x.extrait_present) item.appendChild(renderLoreCorrection(f, x));
       bloc.appendChild(item);
     }
     row.appendChild(bloc);
@@ -9619,4 +9623,89 @@ async function loreAppliquer(dryRun) {
     LoreState.enCours = false;
     await refreshLorePropositions();
   }
+}
+
+// ── Étape 5 : corriger une contradiction depuis le GUI (26 septembre 2026) ──
+// Remplace l'extrait signalé par un texte choisi (reformulation de l'IA,
+// modifiable). Deux temps : Aperçu (rien écrit) → Appliquer (écrit la fiche,
+// .bak_correction, contradiction marquée traitée).
+function renderLoreCorrection(f, x) {
+  const zone = document.createElement('div');
+  zone.className = 'lore-correction';
+  zone.style.cssText = 'margin-top:8px; padding:8px; border:1px dashed #ccc; border-radius:4px; background:#fafafa;';
+  zone.innerHTML = `<div class="lore-muted">Texte de remplacement (modifiable) :</div>`;
+  const ta = document.createElement('textarea');
+  ta.rows = 3;
+  ta.style.cssText = 'width:100%; box-sizing:border-box; font-family:inherit; font-size:12px; padding:6px; margin-top:4px;';
+  ta.value = x.correction || x.extrait || '';
+  zone.appendChild(ta);
+  const apercu = document.createElement('div');
+  apercu.className = 'lore-apercu';
+  apercu.style.cssText = 'display:none; margin-top:6px; font-size:12px;';
+  const btns = document.createElement('div');
+  btns.className = 'chantiers-actions';
+  const bApercu = document.createElement('button');
+  bApercu.className = 'chantiers-btn';
+  bApercu.textContent = 'Aperçu de la correction';
+  const bAppliquer = document.createElement('button');
+  bAppliquer.className = 'chantiers-btn chantiers-btn-primary';
+  bAppliquer.textContent = 'Appliquer dans la fiche';
+  bAppliquer.disabled = true;
+  ta.addEventListener('input', () => { bAppliquer.disabled = true; apercu.style.display = 'none'; });
+
+  const appel = async (confirmer) => {
+    const res = await fetch('/api/lore/contradictions/corriger', {
+      method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ scenario: f.scenario, slug: f.slug, champ: x.champ,
+                             extrait: x.extrait, nouveau: ta.value, confirmer }),
+    });
+    return [res, await res.json()];
+  };
+
+  bApercu.addEventListener('click', async () => {
+    bApercu.disabled = true;
+    try {
+      const [res, d] = await appel(false);
+      apercu.style.display = '';
+      if (!res.ok || d.error) {
+        apercu.innerHTML = `<span class="lore-indice lore-indice-present">✗ ${_loreEsc(d.error || res.statusText)}</span>`;
+        bAppliquer.disabled = true;
+      } else {
+        apercu.innerHTML = `
+          <div><b>${d.occurrences} occurrence(s)</b> dans ${_loreEsc(d.fichier)}
+            (${d.dans_frontmatter} dans l'en-tête, ${d.dans_corps} dans le corps)</div>
+          <div class="lore-texte"><b>Avant :</b> …${_loreEsc(d.avant)}…</div>
+          <div class="lore-texte"><b>Après :</b> …${_loreEsc(d.apres)}…</div>`;
+        bAppliquer.disabled = false;
+      }
+    } catch (e) {
+      apercu.style.display = '';
+      apercu.textContent = `✗ Erreur réseau : ${e.message}`;
+    } finally {
+      bApercu.disabled = false;
+    }
+  });
+
+  bAppliquer.addEventListener('click', async () => {
+    if (!confirm(`Écrire la correction dans ${f.name} ?\n\nUne sauvegarde .bak_correction est faite avant.`)) return;
+    bAppliquer.disabled = true;
+    try {
+      const [res, d] = await appel(true);
+      if (!res.ok || d.error) {
+        alert(`Erreur : ${d.error || res.statusText}`);
+        bAppliquer.disabled = false;
+        return;
+      }
+    } catch (e) {
+      alert(`Erreur réseau : ${e.message}`);
+      return;
+    }
+    await refreshLorePropositions();
+  });
+
+  btns.appendChild(bApercu);
+  btns.appendChild(bAppliquer);
+  zone.appendChild(btns);
+  zone.appendChild(apercu);
+  return zone;
 }
