@@ -80,13 +80,12 @@ tensions_narratives: 'La tension centrale qui les déchire oppose les partisans 
   : défendre des emplois dans une industrie qui programme leur disparition.'
 date_creation: 2026-06-20
 localisation:
-  zone: europe_occidentale_reconstructee
+  zone: europe_occidentale_reconstruite
   lieu: Lyon-Métropole
   type_lieu: ville
 annee_debut_verifiee: true
 trajectoire: émergent
 est_clandestin: false
-
 ---
 
 # Syndicats de travailleurs de la transition énergétique

@@ -77,12 +77,11 @@ tensions_narratives: 'AgriSynth se trouve au cœur d''une contradiction structur
   en cas de panne ou de piratage.'
 date_creation: 2026-06-20
 localisation:
-  zone: europe_occidentale_reconstructee
+  zone: europe_occidentale_reconstruite
   lieu: Lyon-Métropole
   type_lieu: ville
 trajectoire: émergent
 est_clandestin: false
-
 ---
 
 # AgriSynth

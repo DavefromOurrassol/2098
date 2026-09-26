@@ -353,7 +353,7 @@ zones:
   - entite: Écosse
     type_entite: region_administrative
     portion: null
-- slug: europe_occidentale_reconstructee
+- slug: europe_occidentale_reconstruite
   nom: Europe Occidentale Reconstruite
   niveau: 1
   type: union_regionale
@@ -488,7 +488,7 @@ zones:
     type: ville
   relations:
     allies:
-    - europe_occidentale_reconstructee
+    - europe_occidentale_reconstruite
     rivaux:
     - corridor_arctique_nordique
   sources_attestees: []
@@ -1221,7 +1221,7 @@ zones:
   nom: Bassin de la Garonne Reconstruite
   niveau: 2
   type: region
-  parent: europe_occidentale_reconstructee
+  parent: europe_occidentale_reconstruite
   origine_reelle:
   - entite: Bassin de la Garonne
     type_entite: region_administrative
@@ -1294,7 +1294,7 @@ zones:
   nom: Bruxelles-Nouveau
   niveau: 2
   type: ville
-  parent: europe_occidentale_reconstructee
+  parent: europe_occidentale_reconstruite
   origine_reelle:
   - entite: Bruxelles
     type_entite: autre
@@ -1784,7 +1784,7 @@ zones:
   nom: Lyon-Métropole
   niveau: 2
   type: ville
-  parent: europe_occidentale_reconstructee
+  parent: europe_occidentale_reconstruite
   origine_reelle:
   - entite: Lyon
     type_entite: autre
@@ -1815,7 +1815,7 @@ zones:
   nom: Massif Central
   niveau: 2
   type: region
-  parent: europe_occidentale_reconstructee
+  parent: europe_occidentale_reconstruite
   origine_reelle:
   - entite: Massif Central
     type_entite: region_administrative
@@ -2035,7 +2035,7 @@ zones:
   nom: Plaines Ibériques Réhumidifiées
   niveau: 2
   type: region
-  parent: europe_occidentale_reconstructee
+  parent: europe_occidentale_reconstruite
   origine_reelle:
   - entite: Espagne
     type_entite: pays
@@ -2420,7 +2420,7 @@ zones:
   nom: Zones Tampons Climatiques Européennes
   niveau: 2
   type: zone_sinistree
-  parent: europe_occidentale_reconstructee
+  parent: europe_occidentale_reconstruite
   origine_reelle:
   - entite: France
     type_entite: pays
@@ -3169,7 +3169,7 @@ Zone européenne occidentale où persistent des institutions hybrides : Bruxelle
 
 *Sources attestées : consortium_helios_reference, agence_stabilisation_climatique_reference, cooperative_terrafond_reference, arrestation_chris_van_derburgh_reference, conseil_de_geneve_pour_les_droits_biosociaux_reference, leena_vainala_reference, cooperatives_agro_ecologiques_du_bassin_mediterraneen_reference*
 
-#### Bassin de la Garonne Reconstruite — sous [[europe_occidentale_reconstructee]]
+#### Bassin de la Garonne Reconstruite — sous [[europe_occidentale_reconstruite]]
 
 *region — niveau 2 — statut : stable*
 
@@ -3186,7 +3186,7 @@ Zone agroécologique du Réseau Terrafond ayant produit en 2097 son meilleur ren
 
 *Sources attestées : cooperative_terrafond_reference*
 
-#### Bruxelles-Nouveau — sous [[europe_occidentale_reconstructee]]
+#### Bruxelles-Nouveau — sous [[europe_occidentale_reconstruite]]
 
 *ville — niveau 2 — statut : dominant*
 
@@ -3228,7 +3228,7 @@ Extension opérationnelle spatiale du Consortium Helios, gérant depuis Kourou l
 
 *Sources attestées : consortium_helios_reference*
 
-#### Lyon-Métropole — sous [[europe_occidentale_reconstructee]]
+#### Lyon-Métropole — sous [[europe_occidentale_reconstruite]]
 
 *ville — niveau 2 — statut : stable*
 
@@ -3242,7 +3242,7 @@ Ville française ordinaire de l'Europe Occidentale Reconstruite, lieu de l'arres
 
 *Sources attestées : arrestation_chris_van_derburgh_reference*
 
-#### Massif Central — sous [[europe_occidentale_reconstructee]]
+#### Massif Central — sous [[europe_occidentale_reconstruite]]
 
 *region — niveau 2 — statut : en_declin*
 
@@ -3256,7 +3256,7 @@ Zone semi-aride intégrée aux bassins Terrafond, marges de la transition agroé
 
 *Sources attestées : cooperative_terrafond_reference, mouvement_racines_vivantes_reference*
 
-#### Plaines Ibériques Réhumidifiées — sous [[europe_occidentale_reconstructee]]
+#### Plaines Ibériques Réhumidifiées — sous [[europe_occidentale_reconstruite]]
 
 *region — niveau 2 — statut : stable*
 
@@ -3270,7 +3270,7 @@ Territoire ibérique intégré aux bassins du Réseau Terrafond après les grand
 
 *Sources attestées : cooperative_terrafond_reference, cooperatives_agro_ecologiques_du_bassin_mediterraneen_reference*
 
-#### Zones Tampons Climatiques Européennes — sous [[europe_occidentale_reconstructee]]
+#### Zones Tampons Climatiques Européennes — sous [[europe_occidentale_reconstruite]]
 
 *zone_sinistree — niveau 2 — statut : fragmenté*
 
@@ -3303,7 +3303,7 @@ Zone centrée sur Lisbonne, devenue un hub logistique et financier secondaire po
 - Alentejo (Périphérie Agro-industrielle) (region) — Région rurale en déclin, reconvertie en zone de production agricole intensive pour les marchés urbains ibériques et européens.
 - Porto (Ville Satellite Déclinante) (ville) — Ancienne métropole industrielle, désormais en perte de vitesse face à Lisbonne, mais conservant un rôle culturel et logistique secondaire.
 
-**Alliés** : Europe Occidentale Reconstruite ([[europe_occidentale_reconstructee]])
+**Alliés** : Europe Occidentale Reconstruite ([[europe_occidentale_reconstruite]])
 
 **Rivaux** : Corridor Arctique Nordique ([[corridor_arctique_nordique]])
 

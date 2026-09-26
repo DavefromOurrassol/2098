@@ -102,12 +102,11 @@ tensions_narratives: 'La Fédération est tiraillée entre son idéal d''autonom
   la ligne de clivage interne est de plus en plus difficile à tenir.'
 date_creation: 2026-06-20
 localisation:
-  zone: europe_occidentale_reconstructee
+  zone: europe_occidentale_reconstruite
   lieu: Lyon-Métropole (siège fédéral tournant)
   type_lieu: ville
 trajectoire: émergent
 est_clandestin: false
-
 ---
 
 # Fédération des Cliniques Autonomes

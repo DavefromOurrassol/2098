@@ -1,4 +1,4 @@
-# Audit du lore — dernier lancement (2026-09-26 16:41)
+# Audit du lore — dernier lancement (2026-09-26 20:16)
 
 Scénarios : reference
 
@@ -6,7 +6,7 @@ Scénarios : reference
 
 # Audit du lore — reference
 
-*Généré par `audit_lore.py` le 2026-09-26 16:41 — réécrit à chaque run, ne pas éditer. Règles : `documentation/lore_regles.yaml`.*
+*Généré par `audit_lore.py` le 2026-09-26 20:16 — réécrit à chaque run, ne pas éditer. Règles : `documentation/lore_regles.yaml`.*
 
 ## Résumé
 
@@ -59,9 +59,9 @@ Souvent légitime (une organisation transnationale nomme les zones où elle agit
 - `consortiums_energetiques_opaques_reference` — cite : Corridors Eurasiens Périphériques (`corridors_eurasiens_peripheriques`), Nairobi (`nairobi_nexus_biosyn`)
 - `consortiums_mediatiques_corporatifs_reference` — cite : Bruxelles-Nouveau (`bruxelles_nouveau`), Singapour-Est (`singapour_est_nexcore`)
 - `consortiums_prives_de_gestion_des_donnees_critiques_reference` — cite : Singapour-Est (`singapour_est_nexcore`)
-- `cooperatives_agro_ecologiques_de_reconstruction_territoriale_reference` — cite : Europe Occidentale Reconstruite (`europe_occidentale_reconstructee`)
+- `cooperatives_agro_ecologiques_de_reconstruction_territoriale_reference` — cite : Europe Occidentale Reconstruite (`europe_occidentale_reconstruite`)
 - `cooperatives_agro_ecologiques_du_bassin_mediterraneen_reference` — cite : Plaines Ibériques Réhumidifiées (`plaines_iberiques_rehumidifiees`)
-- `cooperatives_energetiques_decentralisees_reference` — cite : Amériques Multipolaires (`ameriques_multipolaires`), Europe Occidentale Reconstruite (`europe_occidentale_reconstructee`)
+- `cooperatives_energetiques_decentralisees_reference` — cite : Amériques Multipolaires (`ameriques_multipolaires`), Europe Occidentale Reconstruite (`europe_occidentale_reconstruite`)
 - `corporations_d_extraction_energetique_non_signataires_reference` — cite : Corridors Eurasiens Périphériques (`corridors_eurasiens_peripheriques`)
 - `deepfield_institute_reference` — cite : Amériques Multipolaires (`ameriques_multipolaires`), États-Unis post-2055 (`etats_unis_crise_constitutionnelle`)
 - `elias_mork_reference` — cite : Genève (`geneve_conseil_biosocial`)

@@ -80,12 +80,11 @@ tensions_narratives: Tiraillés entre la défense de l'emploi humain et la néce
   du périmètre syndical traditionnel.
 date_creation: 2026-06-20
 localisation:
-  zone: europe_occidentale_reconstructee
+  zone: europe_occidentale_reconstruite
   lieu: Massif Central / Plaines Ibériques Réhumidifiées
   type_lieu: region
 trajectoire: émergent
 est_clandestin: false
-
 ---
 
 # Syndicats de travail rural hybride
