@@ -46,8 +46,10 @@ alliances:
 - lobbies_agro_industriels_a_haute_consommation_d_eau_reference
 - plateformes_centralisees_de_narration_officielle_reference
 oppositions:
+- agence_de_regulation_des_detroits_strategiques_ards_reference
 - agence_stabilisation_climatique_reference
 - arctic_passage_authority_reference
+- assemblee_territoires_reference
 - autorites_regionales_de_regulation_hydrologique_reference
 - banque_des_communs_reference
 - bruxelles_nouveau_reference
@@ -59,8 +61,10 @@ oppositions:
 - delta_du_gange_reference
 - europe_occidentale_reconstructee_reference
 - fonds_d_investissement_foncier_climatique_reference
+- gelecek_meclisi_reference
 - geneve_lac_retreite_reference
 - great_lakes_autonomous_compact_reference
+- institut_des_seuils_demographiques_reference
 - institutions_multilaterales_survivantes_reference
 - kinshasa_accords_hydriques_reference
 - mouvement_pour_la_libre_circulation_des_personnes_et_des_donnees_reference
@@ -77,6 +81,7 @@ oppositions:
 - reseaux_de_gouvernance_multilaterale_survivants_reference
 - singapour_est_reference
 - terrametrics_reference
+- the_lattice_reference
 - union_africaine_resilience_reference
 type_relation_dominante: conflit
 annee_debut: 2032
@@ -143,6 +148,7 @@ La contradiction centrale du Bloc réside dans le fait que plusieurs de ses memb
 - [[climat_environnement_global]]
 
 
+
 ## Relations
 **Alliés :**
 - [[alliance_blocs_souverains_reference]]
@@ -157,8 +163,10 @@ La contradiction centrale du Bloc réside dans le fait que plusieurs de ses memb
 - [[lobbies_agro_industriels_a_haute_consommation_d_eau_reference]]
 - [[plateformes_centralisees_de_narration_officielle_reference]]
 **Opposants :**
+- [[agence_de_regulation_des_detroits_strategiques_ards_reference]]
 - [[agence_stabilisation_climatique_reference]]
 - [[arctic_passage_authority_reference]]
+- [[assemblee_territoires_reference]]
 - [[autorites_regionales_de_regulation_hydrologique_reference]]
 - [[banque_des_communs_reference]]
 - [[bruxelles_nouveau_reference]]
@@ -170,8 +178,10 @@ La contradiction centrale du Bloc réside dans le fait que plusieurs de ses memb
 - [[delta_du_gange_reference]]
 - [[europe_occidentale_reconstructee_reference]]
 - [[fonds_d_investissement_foncier_climatique_reference]]
+- [[gelecek_meclisi_reference]]
 - [[geneve_lac_retreite_reference]]
 - [[great_lakes_autonomous_compact_reference]]
+- [[institut_des_seuils_demographiques_reference]]
 - [[institutions_multilaterales_survivantes_reference]]
 - [[kinshasa_accords_hydriques_reference]]
 - [[mouvement_pour_la_libre_circulation_des_personnes_et_des_donnees_reference]]
@@ -188,6 +198,7 @@ La contradiction centrale du Bloc réside dans le fait que plusieurs de ses memb
 - [[reseaux_de_gouvernance_multilaterale_survivants_reference]]
 - [[singapour_est_reference]]
 - [[terrametrics_reference]]
+- [[the_lattice_reference]]
 - [[union_africaine_resilience_reference]]
 
 ## Notes

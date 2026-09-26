@@ -46,6 +46,7 @@ alliances:
 - mouvement_pour_la_justice_ecologique_communautaire_policy_reform
 - mouvement_pour_la_souverainete_energetique_commune_msec_policy_reform
 - reseau_des_auditeurs_algorithmiques_independants_raai_policy_reform
+- reseau_des_cartographes_des_zones_grises_policy_reform
 - reseau_des_journalistes_d_investigation_energetique_policy_reform
 - tribunal_algorithmique_de_bruxelles_policy_reform
 oppositions:
@@ -59,9 +60,12 @@ oppositions:
 - consortiums_prives_de_gouvernance_algorithmique_policy_reform
 - courant_autoritaire_recuperateur_du_vocabulaire_communautaire_policy_reform
 - directive_kontinuum_policy_reform
+- ergo_wian_sovereign_holdings_policy_reform
 - faction_regulatrice_dure_au_sein_du_cei_policy_reform
 - front_techno_utopiste_de_la_decision_automatisee_policy_reform
 - grille_aria_policy_reform
+- meridian_assembly_policy_reform
+- nexcore_policy_reform
 - oracle_des_seuils_policy_reform
 - rede_paulista_de_distribuicao_algoritmica_policy_reform
 - reseau_des_lobbyistes_techniques_onu_energie_policy_reform
@@ -132,6 +136,7 @@ Les Collectifs sont tiraillés entre leur efficacité croissante — qui les rap
 - [[valeurs_culture_tempo_sociale]]
 
 
+
 ## Relations
 **Alliés :**
 - [[bureau_international_du_travail_augmente_bita_policy_reform]]
@@ -146,6 +151,7 @@ Les Collectifs sont tiraillés entre leur efficacité croissante — qui les rap
 - [[mouvement_pour_la_justice_ecologique_communautaire_policy_reform]]
 - [[mouvement_pour_la_souverainete_energetique_commune_msec_policy_reform]]
 - [[reseau_des_auditeurs_algorithmiques_independants_raai_policy_reform]]
+- [[reseau_des_cartographes_des_zones_grises_policy_reform]]
 - [[reseau_des_journalistes_d_investigation_energetique_policy_reform]]
 - [[tribunal_algorithmique_de_bruxelles_policy_reform]]
 **Opposants :**
@@ -159,9 +165,12 @@ Les Collectifs sont tiraillés entre leur efficacité croissante — qui les rap
 - [[consortiums_prives_de_gouvernance_algorithmique_policy_reform]]
 - [[courant_autoritaire_recuperateur_du_vocabulaire_communautaire_policy_reform]]
 - [[directive_kontinuum_policy_reform]]
+- [[ergo_wian_sovereign_holdings_policy_reform]]
 - [[faction_regulatrice_dure_au_sein_du_cei_policy_reform]]
 - [[front_techno_utopiste_de_la_decision_automatisee_policy_reform]]
 - [[grille_aria_policy_reform]]
+- [[meridian_assembly_policy_reform]]
+- [[nexcore_policy_reform]]
 - [[oracle_des_seuils_policy_reform]]
 - [[rede_paulista_de_distribuicao_algoritmica_policy_reform]]
 - [[reseau_des_lobbyistes_techniques_onu_energie_policy_reform]]

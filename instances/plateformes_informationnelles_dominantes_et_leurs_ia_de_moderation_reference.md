@@ -48,6 +48,7 @@ oppositions:
 - cooperatives_ia_open_source_reference
 - ong_de_preservation_patrimoniale_numerique_reference
 - pacte_des_souverains_reference
+- reseau_des_cartographes_des_zones_grises_reference
 - reseau_des_chercheurs_en_ethique_des_systemes_distribues_reference
 - reseau_meshcommons_netsolidaire_reference
 - reseaux_de_capteurs_citoyens_reference
@@ -118,6 +119,7 @@ La tension centrale réside dans leur double nature : outils de stabilisation é
 
 
 
+
 ## Relations
 **Alliés :**
 - [[conseil_regulation_algorithmique_reference]]
@@ -135,6 +137,7 @@ La tension centrale réside dans leur double nature : outils de stabilisation é
 - [[cooperatives_ia_open_source_reference]]
 - [[ong_de_preservation_patrimoniale_numerique_reference]]
 - [[pacte_des_souverains_reference]]
+- [[reseau_des_cartographes_des_zones_grises_reference]]
 - [[reseau_des_chercheurs_en_ethique_des_systemes_distribues_reference]]
 - [[reseau_meshcommons_netsolidaire_reference]]
 - [[reseaux_de_capteurs_citoyens_reference]]

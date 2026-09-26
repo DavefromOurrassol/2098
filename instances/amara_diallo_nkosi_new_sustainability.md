@@ -36,16 +36,13 @@ zone_systemique:
     - société
 
 alliances:
-    - agence_globale_de_regeneration_des_bassins_versants_agrb_onu_new_sustainability
-    - commission_hydrique_de_l_union_africaine_reference
-    - reseau_des_ingenieurs_climatiques_du_sud_global_new_sustainability
-    - collectifs_riverains_du_bassin_du_congo_new_sustainability
-
+- agence_globale_de_regeneration_des_bassins_versants_agrb_onu_new_sustainability
+- reseau_des_ingenieurs_climatiques_du_sud_global_new_sustainability
+- collectifs_riverains_du_bassin_du_congo_new_sustainability
 oppositions:
-    - lobbies_agro_industriels_du_bassin_du_congo_new_sustainability
-    - factions_technocratiques_de_la_delegation_ia_totale_new_sustainability
-    - bloc_des_gouvernements_souverainistes_hydriques_new_sustainability
-
+- lobbies_agro_industriels_du_bassin_du_congo_new_sustainability
+- factions_technocratiques_de_la_delegation_ia_totale_new_sustainability
+- bloc_des_gouvernements_souverainistes_hydriques_new_sustainability
 type_relation_dominante: coopération
 
 annee_debut: 2041
@@ -90,12 +87,19 @@ Elle supervise la mise en œuvre des quotas de redistribution des eaux du bassin
 - [[energie_ressources_critiques]]
 - [[demographie_mobilite_humaine]]
 
-## Relations
-**Alliés** : [[agence_globale_de_regeneration_des_bassins_versants_agrb_onu_new_sustainability]], [[commission_hydrique_de_l_union_africaine_reference]], [[reseau_des_ingenieurs_climatiques_du_sud_global_new_sustainability]], [[collectifs_riverains_du_bassin_du_congo_new_sustainability]]
-**Opposants** : [[lobbies_agro_industriels_du_bassin_du_congo_new_sustainability]], [[factions_technocratiques_de_la_delegation_ia_totale_new_sustainability]], [[bloc_des_gouvernements_souverainistes_hydriques_new_sustainability]]
 
 ## Description journalistique
 À 74 ans, Amara Diallo-Nkosi arrive encore la première dans la salle. Ses collaborateurs à l'AGRB de Brazzaville la décrivent comme quelqu'un qui lit les rapports d'IA hydrique en diagonal avant de poser la question que personne n'a osé formuler : 'Et les gens qui vivent là, qu'est-ce qu'on leur a demandé ?' Fille de Bamako, formée à Dakar puis à Delft, elle a passé vingt ans les pieds dans la boue des deltas avant de négocier dans les salles vitrées de Kinshasa. Aujourd'hui, son nom est associé à un principe informel mais universellement respecté dans les cercles de gouvernance hydrique mondiale : aucun accord de redistribution ne peut être ratifié sans une phase de validation communautaire terrain. Ses détracteurs l'accusent de ralentir des systèmes qui fonctionnent. Ses partisans répondent que c'est précisément pour ça qu'ils fonctionnent.
 
 ## Tensions narratives
 La tension centrale de sa trajectoire en 2098 est celle de l'obsolescence programmée : les nouvelles générations d'architectes hydriques, formées dès l'enfance aux interfaces IA, remettent en cause la nécessité d'une médiation humaine dans des systèmes jugés suffisamment matures pour s'autoréguler. Diallo-Nkosi résiste — non par conservatisme, soutient-elle, mais parce qu'elle a vu des algorithmes optimiser l'équité au détriment de la dignité. Une deuxième ligne de fracture oppose sa vision continentale africaine à une gouvernance globale qui tend à effacer les spécificités locales au nom de l'efficacité systémique. Enfin, une rumeur persistante circule dans les couloirs de l'AGRB : elle préparerait un rapport critique sur les dérives de la délégation décisionnelle aux IA dans trois bassins versants asiatiques — un document qui pourrait fracturer les alliances institutionnelles qu'elle a elle-même construites.
+
+## Relations
+**Alliés :**
+- [[agence_globale_de_regeneration_des_bassins_versants_agrb_onu_new_sustainability]]
+- [[reseau_des_ingenieurs_climatiques_du_sud_global_new_sustainability]]
+- [[collectifs_riverains_du_bassin_du_congo_new_sustainability]]
+**Opposants :**
+- [[lobbies_agro_industriels_du_bassin_du_congo_new_sustainability]]
+- [[factions_technocratiques_de_la_delegation_ia_totale_new_sustainability]]
+- [[bloc_des_gouvernements_souverainistes_hydriques_new_sustainability]]

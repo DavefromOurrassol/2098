@@ -40,6 +40,7 @@ alliances:
 - bureau_gouvernance_algorithmique_policy_reform
 - conseil_de_regulation_climatique_global_policy_reform
 - conseil_regulation_algorithmique_policy_reform
+- ilse_varga_holm_policy_reform
 - oracle_des_seuils_policy_reform
 - pacifique_sud_resilience_network_policy_reform
 - reseau_des_metropoles_n_uds_policy_reform
@@ -117,6 +118,7 @@ L'Office est écartelé entre sa mission humaniste affichée — garantir des mo
 - [[organisation_territoires]]
 
 
+
 ## Relations
 **Alliés :**
 - [[agence_technocratique_pour_la_resilience_biospherique_atrb_policy_reform]]
@@ -125,6 +127,7 @@ L'Office est écartelé entre sa mission humaniste affichée — garantir des mo
 - [[bureau_gouvernance_algorithmique_policy_reform]]
 - [[conseil_de_regulation_climatique_global_policy_reform]]
 - [[conseil_regulation_algorithmique_policy_reform]]
+- [[ilse_varga_holm_policy_reform]]
 - [[oracle_des_seuils_policy_reform]]
 - [[pacifique_sud_resilience_network_policy_reform]]
 - [[reseau_des_metropoles_n_uds_policy_reform]]

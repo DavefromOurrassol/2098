@@ -69,6 +69,7 @@ oppositions:
 - fonds_mondial_de_redistribution_technologique_new_sustainability
 - fonds_mondial_de_regeneration_ecologique_new_sustainability
 - fonds_mondial_de_transition_ecologique_du_travail_new_sustainability
+- gelecek_meclisi_new_sustainability
 - hub_nairobi_kigali_new_sustainability
 - institut_de_philosophie_des_systemes_hybrides_d_helsinki_new_sustainability
 - kalaallit_nunaat_sovereign_fund_new_sustainability
@@ -143,6 +144,7 @@ Ces factions sont tiraillées entre leur rejet des institutions mondiales et leu
 - [[gouvernance_institutions]]
 
 
+
 ## Relations
 **Alliés :**
 - [[alliance_numerique_eurasie_pacifique_new_sustainability]]
@@ -182,6 +184,7 @@ Ces factions sont tiraillées entre leur rejet des institutions mondiales et leu
 - [[fonds_mondial_de_redistribution_technologique_new_sustainability]]
 - [[fonds_mondial_de_regeneration_ecologique_new_sustainability]]
 - [[fonds_mondial_de_transition_ecologique_du_travail_new_sustainability]]
+- [[gelecek_meclisi_new_sustainability]]
 - [[hub_nairobi_kigali_new_sustainability]]
 - [[institut_de_philosophie_des_systemes_hybrides_d_helsinki_new_sustainability]]
 - [[kalaallit_nunaat_sovereign_fund_new_sustainability]]

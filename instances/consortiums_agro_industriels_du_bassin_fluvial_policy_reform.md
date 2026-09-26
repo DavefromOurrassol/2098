@@ -34,6 +34,7 @@ zone_systemique:
 alliances:
 - conglomerats_d_automatisation_industrielle_integrale_policy_reform
 - consortium_agro_pacifique_policy_reform
+- ergo_wian_sovereign_holdings_policy_reform
 - factions_technocratiques_de_la_marchandisation_hydrique_policy_reform
 - lobbies_des_energies_fossiles_residuelles_policy_reform
 - reseau_des_lobbyistes_techniques_onu_energie_policy_reform
@@ -43,12 +44,15 @@ oppositions:
 - autorite_continentale_des_ressources_aquatiques_acra_policy_reform
 - autorite_mondiale_du_vivant_amv_policy_reform
 - coalition_des_semences_libres_policy_reform
+- coalition_vivant_policy_reform
 - collectifs_de_biohackers_agro_communautaires_policy_reform
 - conseil_de_regulation_climatique_global_policy_reform
 - consortium_africain_de_biotechnologies_sociales_policy_reform
 - consortium_amazonia_viva_policy_reform
 - great_lakes_autonomous_compact_policy_reform
+- hyphan_raghavan_policy_reform
 - institut_de_therapeutique_integree_de_nairobi_policy_reform
+- les_veilleurs_des_nappes_phreatiques_policy_reform
 - les_veilleurs_du_fleuve_policy_reform
 - mouvement_pour_la_justice_ecologique_communautaire_policy_reform
 type_relation_dominante: compétition
@@ -118,10 +122,12 @@ La tension fondamentale de ces consortiums réside dans leur position d'acteurs 
 - [[organisation_territoires]]
 
 
+
 ## Relations
 **Alliés :**
 - [[conglomerats_d_automatisation_industrielle_integrale_policy_reform]]
 - [[consortium_agro_pacifique_policy_reform]]
+- [[ergo_wian_sovereign_holdings_policy_reform]]
 - [[factions_technocratiques_de_la_marchandisation_hydrique_policy_reform]]
 - [[lobbies_des_energies_fossiles_residuelles_policy_reform]]
 - [[reseau_des_lobbyistes_techniques_onu_energie_policy_reform]]
@@ -131,12 +137,15 @@ La tension fondamentale de ces consortiums réside dans leur position d'acteurs 
 - [[autorite_continentale_des_ressources_aquatiques_acra_policy_reform]]
 - [[autorite_mondiale_du_vivant_amv_policy_reform]]
 - [[coalition_des_semences_libres_policy_reform]]
+- [[coalition_vivant_policy_reform]]
 - [[collectifs_de_biohackers_agro_communautaires_policy_reform]]
 - [[conseil_de_regulation_climatique_global_policy_reform]]
 - [[consortium_africain_de_biotechnologies_sociales_policy_reform]]
 - [[consortium_amazonia_viva_policy_reform]]
 - [[great_lakes_autonomous_compact_policy_reform]]
+- [[hyphan_raghavan_policy_reform]]
 - [[institut_de_therapeutique_integree_de_nairobi_policy_reform]]
+- [[les_veilleurs_des_nappes_phreatiques_policy_reform]]
 - [[les_veilleurs_du_fleuve_policy_reform]]
 - [[mouvement_pour_la_justice_ecologique_communautaire_policy_reform]]
 

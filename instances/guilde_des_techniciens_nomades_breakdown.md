@@ -37,6 +37,7 @@ zone_systemique:
 - société
 alliances:
 - agadez_ligue_sahel_numerique_breakdown
+- agence_de_regulation_des_detroits_strategiques_ards_breakdown
 - brigades_medicales_itinerantes_breakdown
 - collectif_des_climatologues_sans_etat_breakdown
 - collectifs_de_reparation_energetique_breakdown
@@ -46,6 +47,8 @@ alliances:
 - enclaves_agro_communautaires_autonomes_breakdown
 - enclaves_industrielles_du_corridor_oural_caspien_breakdown
 - front_techno_reconstructionniste_breakdown
+- gelecek_meclisi_breakdown
+- ilse_varga_holm_breakdown
 - lagos_est_nexcore_breakdown
 - ligue_des_cites_du_sahel_numerique_breakdown
 - nairobi_crrc_breakdown
@@ -118,9 +121,11 @@ La Guilde est tiraillée entre sa vocation de service universel et la logique de
 - [[systemes_productifs_travail]]
 
 
+
 ## Relations
 **Alliés :**
 - [[agadez_ligue_sahel_numerique_breakdown]]
+- [[agence_de_regulation_des_detroits_strategiques_ards_breakdown]]
 - [[brigades_medicales_itinerantes_breakdown]]
 - [[collectif_des_climatologues_sans_etat_breakdown]]
 - [[collectifs_de_reparation_energetique_breakdown]]
@@ -130,6 +135,8 @@ La Guilde est tiraillée entre sa vocation de service universel et la logique de
 - [[enclaves_agro_communautaires_autonomes_breakdown]]
 - [[enclaves_industrielles_du_corridor_oural_caspien_breakdown]]
 - [[front_techno_reconstructionniste_breakdown]]
+- [[gelecek_meclisi_breakdown]]
+- [[ilse_varga_holm_breakdown]]
 - [[lagos_est_nexcore_breakdown]]
 - [[ligue_des_cites_du_sahel_numerique_breakdown]]
 - [[nairobi_crrc_breakdown]]

@@ -52,6 +52,7 @@ oppositions:
 - federation_des_cliniques_autonomes_reference
 - frente_sertao_livre_reference
 - internationale_travailleurs_augmentes_reference
+- les_veilleurs_des_nappes_phreatiques_reference
 - les_veilleurs_du_fleuve_reference
 - lyon_metropole_reference
 - mouvement_pour_la_libre_circulation_des_personnes_et_des_donnees_reference
@@ -126,6 +127,7 @@ La tension centrale réside dans l'ambivalence de leur légitimité : tolérés 
 
 
 
+
 ## Relations
 **Alliés :**
 - [[agences_de_securite_regionales_de_normalisation_des_zones_grises_reference]]
@@ -148,6 +150,7 @@ La tension centrale réside dans l'ambivalence de leur légitimité : tolérés 
 - [[federation_des_cliniques_autonomes_reference]]
 - [[frente_sertao_livre_reference]]
 - [[internationale_travailleurs_augmentes_reference]]
+- [[les_veilleurs_des_nappes_phreatiques_reference]]
 - [[les_veilleurs_du_fleuve_reference]]
 - [[lyon_metropole_reference]]
 - [[mouvement_pour_la_libre_circulation_des_personnes_et_des_donnees_reference]]

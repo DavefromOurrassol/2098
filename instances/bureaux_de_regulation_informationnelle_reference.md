@@ -47,6 +47,7 @@ alliances:
 - reseaux_de_gouvernance_multilaterale_survivants_reference
 - tribunal_algorithmique_de_bruxelles_reference
 oppositions:
+- aurelio_stahl_reference
 - collectifs_academiques_independants_reference
 - collectifs_de_journalisme_embarque_reference
 - collectifs_de_journalistes_independants_regionaux_reference
@@ -54,15 +55,20 @@ oppositions:
 - consortiums_mediatiques_corporatifs_reference
 - consortiums_prives_de_gestion_des_donnees_critiques_reference
 - helsinki_communs_numeriques_reference
+- kaspar_lind_reference
+- kindling_reference
+- maelys_okonkwo_reference
 - mouvement_pour_la_libre_circulation_des_personnes_et_des_donnees_reference
 - plateformes_informationnelles_dominantes_et_leurs_ia_de_moderation_reference
 - prisme_global_reference
+- reseau_des_cartographes_des_zones_grises_reference
 - reseau_des_chercheurs_en_ethique_des_systemes_distribues_reference
 - reseau_meshcommons_netsolidaire_reference
 - reseaux_de_capteurs_citoyens_reference
 - reseaux_de_lanceurs_d_alerte_institutionnels_dissidents_reference
 - services_de_contre_information_des_blocs_geopolitiques_concurrents_reference
 - tbilissi_noeud_mnemos_reference
+- terminal_kharg_data_haven_reference
 type_relation_dominante: dépendance
 annee_debut: 2026
 annee_fin: null
@@ -130,6 +136,7 @@ Les BRI sont pris en étau entre leur mission de protection de l'espace informat
 - [[valeurs_culture_tempo_sociale]]
 
 
+
 ## Relations
 **Alliés :**
 - [[bureau_des_territoires_residuels_reference]]
@@ -142,6 +149,7 @@ Les BRI sont pris en étau entre leur mission de protection de l'espace informat
 - [[reseaux_de_gouvernance_multilaterale_survivants_reference]]
 - [[tribunal_algorithmique_de_bruxelles_reference]]
 **Opposants :**
+- [[aurelio_stahl_reference]]
 - [[collectifs_academiques_independants_reference]]
 - [[collectifs_de_journalisme_embarque_reference]]
 - [[collectifs_de_journalistes_independants_regionaux_reference]]
@@ -149,15 +157,20 @@ Les BRI sont pris en étau entre leur mission de protection de l'espace informat
 - [[consortiums_mediatiques_corporatifs_reference]]
 - [[consortiums_prives_de_gestion_des_donnees_critiques_reference]]
 - [[helsinki_communs_numeriques_reference]]
+- [[kaspar_lind_reference]]
+- [[kindling_reference]]
+- [[maelys_okonkwo_reference]]
 - [[mouvement_pour_la_libre_circulation_des_personnes_et_des_donnees_reference]]
 - [[plateformes_informationnelles_dominantes_et_leurs_ia_de_moderation_reference]]
 - [[prisme_global_reference]]
+- [[reseau_des_cartographes_des_zones_grises_reference]]
 - [[reseau_des_chercheurs_en_ethique_des_systemes_distribues_reference]]
 - [[reseau_meshcommons_netsolidaire_reference]]
 - [[reseaux_de_capteurs_citoyens_reference]]
 - [[reseaux_de_lanceurs_d_alerte_institutionnels_dissidents_reference]]
 - [[services_de_contre_information_des_blocs_geopolitiques_concurrents_reference]]
 - [[tbilissi_noeud_mnemos_reference]]
+- [[terminal_kharg_data_haven_reference]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

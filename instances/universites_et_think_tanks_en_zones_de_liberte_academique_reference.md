@@ -36,6 +36,7 @@ zone_geographique:
 zone_systemique:
 - société
 alliances:
+- aurelio_stahl_reference
 - collectifs_academiques_independants_reference
 - collectifs_de_journalisme_embarque_reference
 - collectifs_de_journalistes_independants_regionaux_reference
@@ -120,8 +121,10 @@ La tension principale réside dans leur dépendance croissante aux infrastructur
 - [[organisation_territoires]]
 
 
+
 ## Relations
 **Alliés :**
+- [[aurelio_stahl_reference]]
 - [[collectifs_academiques_independants_reference]]
 - [[collectifs_de_journalisme_embarque_reference]]
 - [[collectifs_de_journalistes_independants_regionaux_reference]]

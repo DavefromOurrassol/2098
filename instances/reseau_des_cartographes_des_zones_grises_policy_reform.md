@@ -36,20 +36,20 @@ zone_systemique:
     - société
 
 alliances:
-    - collectifs_de_hackers_biospheriques_policy_reform
-    - collectifs_citoyens_de_deliberation_augmentee_policy_reform
-    - collectifs_citoyens_pour_l_audit_algorithmique_ouvert_policy_reform
-    - front_des_autonomies_territoriales_radicales_policy_reform
-    - les_hors_prisme_policy_reform
-    - mouvement_pour_la_justice_ecologique_communautaire_policy_reform
-
+- collectifs_citoyens_de_deliberation_augmentee_policy_reform
+- collectifs_citoyens_pour_l_audit_algorithmique_ouvert_policy_reform
+- collectifs_de_hackers_biospheriques_policy_reform
+- front_des_autonomies_territoriales_radicales_policy_reform
+- les_hors_prisme_policy_reform
+- maelys_okonkwo_policy_reform
+- mouvement_pour_la_justice_ecologique_communautaire_policy_reform
+- terminal_kharg_data_haven_policy_reform
 oppositions:
-    - conseil_de_gouvernance_de_l_information_policy_reform
-    - bureau_gouvernance_algorithmique_policy_reform
-    - autorite_mondiale_du_vivant_amv_policy_reform
-    - consortium_technologique_de_planification_territoriale_policy_reform
-    - factions_technocratiques_de_la_marchandisation_hydrique_policy_reform
-
+- autorite_mondiale_du_vivant_amv_policy_reform
+- bureau_gouvernance_algorithmique_policy_reform
+- conseil_de_gouvernance_de_l_information_policy_reform
+- consortium_technologique_de_planification_territoriale_policy_reform
+- factions_technocratiques_de_la_marchandisation_hydrique_policy_reform
 type_relation_dominante: rivalité
 
 annee_debut: 2047
@@ -92,12 +92,26 @@ L'Atlas Fantôme cartographie les zones grises (territoires abandonnés, zones d
 - [[organisation_territoires]]
 - [[valeurs_culture_tempo_sociale]]
 
-## Relations
-**Alliés** : [[collectifs_de_hackers_biospheriques_policy_reform]], [[collectifs_citoyens_de_deliberation_augmentee_policy_reform]], [[collectifs_citoyens_pour_l_audit_algorithmique_ouvert_policy_reform]], [[front_des_autonomies_territoriales_radicales_policy_reform]], [[les_hors_prisme_policy_reform]], [[mouvement_pour_la_justice_ecologique_communautaire_policy_reform]]
-**Opposants** : [[conseil_de_gouvernance_de_l_information_policy_reform]], [[bureau_gouvernance_algorithmique_policy_reform]], [[autorite_mondiale_du_vivant_amv_policy_reform]], [[consortium_technologique_de_planification_territoriale_policy_reform]], [[factions_technocratiques_de_la_marchandisation_hydrique_policy_reform]]
 
 ## Description journalistique
 En 2098, l'Atlas Fantôme est devenu une légende urbaine parmi les militants de la connaissance libre. Né dans l'ombre des crises territoriales des années 2040, ce réseau clandestin a transformé la cartographie en acte de résistance. Ses membres, souvent anonymes, opèrent depuis des bases mobiles ou des enclaves autonomes, utilisant des technologies low-tech et des protocoles de communication chiffrés pour échapper à la surveillance des États et des consortiums. Leur travail a permis à des centaines de communautés de revendiquer leur souveraineté sur des terres oubliées, tout en exposant les stratégies de contrôle des institutions globales. Aujourd'hui, l'Atlas Fantôme est à la fois craint et vénéré : craint par ceux qui cherchent à verrouiller l'information, vénéré par ceux qui luttent pour un monde où la connaissance reste un bien commun.
 
 ## Tensions narratives
 L'Atlas Fantôme est tiraillé entre deux forces contradictoires : d'un côté, la tentation de se structurer en une organisation plus visible pour peser davantage dans les débats globaux ; de l'autre, la nécessité de rester clandestin pour échapper à la répression. Certains membres prônent une alliance avec les institutions pour légaliser leur travail, tandis que d'autres y voient une trahison des principes fondateurs du réseau. Par ailleurs, la montée des technologies de surveillance algorithmique menace directement leur modèle, poussant le réseau à innover constamment pour rester insaisissable. Enfin, la question de la marchandisation de leurs données par des acteurs privés ou étatiques reste un sujet de tension permanente.
+
+## Relations
+**Alliés :**
+- [[collectifs_citoyens_de_deliberation_augmentee_policy_reform]]
+- [[collectifs_citoyens_pour_l_audit_algorithmique_ouvert_policy_reform]]
+- [[collectifs_de_hackers_biospheriques_policy_reform]]
+- [[front_des_autonomies_territoriales_radicales_policy_reform]]
+- [[les_hors_prisme_policy_reform]]
+- [[maelys_okonkwo_policy_reform]]
+- [[mouvement_pour_la_justice_ecologique_communautaire_policy_reform]]
+- [[terminal_kharg_data_haven_policy_reform]]
+**Opposants :**
+- [[autorite_mondiale_du_vivant_amv_policy_reform]]
+- [[bureau_gouvernance_algorithmique_policy_reform]]
+- [[conseil_de_gouvernance_de_l_information_policy_reform]]
+- [[consortium_technologique_de_planification_territoriale_policy_reform]]
+- [[factions_technocratiques_de_la_marchandisation_hydrique_policy_reform]]

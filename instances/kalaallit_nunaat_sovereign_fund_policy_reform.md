@@ -41,6 +41,7 @@ alliances:
 - agence_internationale_de_l_energie_reformatee_aier_policy_reform
 - arctic_passage_authority_policy_reform
 - conseil_regulation_ressources_policy_reform
+- consortium_des_pecheries_autonomes_du_grand_nord_policy_reform
 - consortium_des_villes_etats_durables_policy_reform
 - fonds_de_stabilisation_climatique_onu_3_policy_reform
 - fonds_souverain_de_transition_verte_fstv_policy_reform
@@ -107,6 +108,7 @@ La tension centrale du KNSF-AGRC en 2098 est celle du choix entre deux légitimi
 - [[agence_internationale_de_l_energie_reformatee_aier_policy_reform]]
 - [[arctic_passage_authority_policy_reform]]
 - [[conseil_regulation_ressources_policy_reform]]
+- [[consortium_des_pecheries_autonomes_du_grand_nord_policy_reform]]
 - [[consortium_des_villes_etats_durables_policy_reform]]
 - [[fonds_de_stabilisation_climatique_onu_3_policy_reform]]
 - [[fonds_souverain_de_transition_verte_fstv_policy_reform]]

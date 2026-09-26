@@ -56,6 +56,7 @@ oppositions:
 - factions_technocratiques_de_la_delegation_ia_totale_new_sustainability
 - fonds_mondial_de_transition_ecologique_du_travail_new_sustainability
 - great_lakes_autonomous_compact_new_sustainability
+- institut_des_seuils_demographiques_new_sustainability
 - lobbies_des_plateformes_de_consensus_automatise_new_sustainability
 - programme_onusien_de_mobilite_climatique_new_sustainability
 - reseau_global_de_cliniques_regeneratives_new_sustainability
@@ -122,6 +123,7 @@ La tension fondamentale de ces collectifs réside dans leur double invisibilité
 - [[organisation_territoires]]
 
 
+
 ## Relations
 **Alliés :**
 - [[collectifs_anarcho_autonomistes_des_zones_libres_new_sustainability]]
@@ -144,6 +146,7 @@ La tension fondamentale de ces collectifs réside dans leur double invisibilité
 - [[factions_technocratiques_de_la_delegation_ia_totale_new_sustainability]]
 - [[fonds_mondial_de_transition_ecologique_du_travail_new_sustainability]]
 - [[great_lakes_autonomous_compact_new_sustainability]]
+- [[institut_des_seuils_demographiques_new_sustainability]]
 - [[lobbies_des_plateformes_de_consensus_automatise_new_sustainability]]
 - [[programme_onusien_de_mobilite_climatique_new_sustainability]]
 - [[reseau_global_de_cliniques_regeneratives_new_sustainability]]

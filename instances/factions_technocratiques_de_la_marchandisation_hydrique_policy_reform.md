@@ -42,23 +42,29 @@ oppositions:
 - amara_diallo_nkosi_policy_reform
 - autorite_continentale_des_ressources_aquatiques_acra_policy_reform
 - coalition_des_villes_de_reconversion_policy_reform
+- coalition_vivant_policy_reform
 - collectifs_de_defense_hydrique_saheliens_policy_reform
 - collectifs_de_gouvernance_communautaire_decentralisee_policy_reform
 - collectifs_de_hackers_biospheriques_policy_reform
 - conseil_regulation_ressources_policy_reform
 - consortium_amazonia_viva_policy_reform
+- consortium_des_pecheries_autonomes_du_grand_nord_policy_reform
 - federation_des_mutuelles_biotech_policy_reform
 - fonds_mondial_pour_la_transition_ecosystemique_fmte_policy_reform
 - fonds_souverain_de_transition_verte_fstv_policy_reform
 - front_des_communes_algorithmiques_policy_reform
 - gouvernement_israel_policy_reform
 - great_lakes_autonomous_compact_policy_reform
+- hyphan_raghavan_policy_reform
 - institut_brookings_singapour_de_politique_computationnelle_policy_reform
+- les_veilleurs_des_nappes_phreatiques_policy_reform
 - les_veilleurs_du_fleuve_policy_reform
+- maelys_okonkwo_policy_reform
 - mouvement_pour_la_justice_ecologique_communautaire_policy_reform
 - mouvement_pour_la_souverainete_energetique_commune_msec_policy_reform
 - office_integre_des_flux_migratoires_policy_reform
 - reseau_des_auditeurs_algorithmiques_independants_raai_policy_reform
+- reseau_des_cartographes_des_zones_grises_policy_reform
 - syndicat_des_ingenieurs_orbitaux_policy_reform
 type_relation_dominante: compétition
 annee_debut: 2028
@@ -126,6 +132,7 @@ La tension centrale réside dans le paradoxe de leur positionnement : elles opè
 - [[systeme_economique_redistribution]]
 
 
+
 ## Relations
 **Alliés :**
 - [[coalition_des_operateurs_energetiques_prives_anti_quotas_policy_reform]]
@@ -138,23 +145,29 @@ La tension centrale réside dans le paradoxe de leur positionnement : elles opè
 - [[amara_diallo_nkosi_policy_reform]]
 - [[autorite_continentale_des_ressources_aquatiques_acra_policy_reform]]
 - [[coalition_des_villes_de_reconversion_policy_reform]]
+- [[coalition_vivant_policy_reform]]
 - [[collectifs_de_defense_hydrique_saheliens_policy_reform]]
 - [[collectifs_de_gouvernance_communautaire_decentralisee_policy_reform]]
 - [[collectifs_de_hackers_biospheriques_policy_reform]]
 - [[conseil_regulation_ressources_policy_reform]]
 - [[consortium_amazonia_viva_policy_reform]]
+- [[consortium_des_pecheries_autonomes_du_grand_nord_policy_reform]]
 - [[federation_des_mutuelles_biotech_policy_reform]]
 - [[fonds_mondial_pour_la_transition_ecosystemique_fmte_policy_reform]]
 - [[fonds_souverain_de_transition_verte_fstv_policy_reform]]
 - [[front_des_communes_algorithmiques_policy_reform]]
 - [[gouvernement_israel_policy_reform]]
 - [[great_lakes_autonomous_compact_policy_reform]]
+- [[hyphan_raghavan_policy_reform]]
 - [[institut_brookings_singapour_de_politique_computationnelle_policy_reform]]
+- [[les_veilleurs_des_nappes_phreatiques_policy_reform]]
 - [[les_veilleurs_du_fleuve_policy_reform]]
+- [[maelys_okonkwo_policy_reform]]
 - [[mouvement_pour_la_justice_ecologique_communautaire_policy_reform]]
 - [[mouvement_pour_la_souverainete_energetique_commune_msec_policy_reform]]
 - [[office_integre_des_flux_migratoires_policy_reform]]
 - [[reseau_des_auditeurs_algorithmiques_independants_raai_policy_reform]]
+- [[reseau_des_cartographes_des_zones_grises_policy_reform]]
 - [[syndicat_des_ingenieurs_orbitaux_policy_reform]]
 
 ## Notes

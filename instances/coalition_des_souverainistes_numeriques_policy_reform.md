@@ -40,7 +40,10 @@ alliances:
 - front_souverainiste_de_l_information_regionale_policy_reform
 - front_souverainiste_des_blocs_non_signataires_policy_reform
 - gouvernements_populistes_anti_depossession_policy_reform
+- terminal_kharg_data_haven_policy_reform
+- the_lattice_policy_reform
 oppositions:
+- agence_de_regulation_des_detroits_strategiques_ards_policy_reform
 - bureau_gouvernance_algorithmique_policy_reform
 - bureau_international_du_travail_augmente_bita_policy_reform
 - conseil_de_gouvernance_de_l_information_policy_reform
@@ -55,9 +58,12 @@ oppositions:
 - directive_kontinuum_policy_reform
 - faction_regulatrice_dure_au_sein_du_cei_policy_reform
 - fonds_mondial_de_resilience_infrastructurelle_policy_reform
+- gelecek_meclisi_policy_reform
 - gouvernement_israel_policy_reform
 - grille_aria_policy_reform
 - institut_brookings_singapour_de_politique_computationnelle_policy_reform
+- institut_des_seuils_demographiques_policy_reform
+- nexcore_policy_reform
 - office_integre_des_flux_migratoires_policy_reform
 - oracle_des_seuils_policy_reform
 - reseau_des_auditeurs_algorithmiques_independants_raai_policy_reform
@@ -134,6 +140,7 @@ La Coalition est tiraillée entre des membres aux intérêts divergents : certai
 
 
 
+
 ## Relations
 **Alliés :**
 - [[conglomerats_d_automatisation_industrielle_integrale_policy_reform]]
@@ -141,7 +148,10 @@ La Coalition est tiraillée entre des membres aux intérêts divergents : certai
 - [[front_souverainiste_de_l_information_regionale_policy_reform]]
 - [[front_souverainiste_des_blocs_non_signataires_policy_reform]]
 - [[gouvernements_populistes_anti_depossession_policy_reform]]
+- [[terminal_kharg_data_haven_policy_reform]]
+- [[the_lattice_policy_reform]]
 **Opposants :**
+- [[agence_de_regulation_des_detroits_strategiques_ards_policy_reform]]
 - [[bureau_gouvernance_algorithmique_policy_reform]]
 - [[bureau_international_du_travail_augmente_bita_policy_reform]]
 - [[conseil_de_gouvernance_de_l_information_policy_reform]]
@@ -156,9 +166,12 @@ La Coalition est tiraillée entre des membres aux intérêts divergents : certai
 - [[directive_kontinuum_policy_reform]]
 - [[faction_regulatrice_dure_au_sein_du_cei_policy_reform]]
 - [[fonds_mondial_de_resilience_infrastructurelle_policy_reform]]
+- [[gelecek_meclisi_policy_reform]]
 - [[gouvernement_israel_policy_reform]]
 - [[grille_aria_policy_reform]]
 - [[institut_brookings_singapour_de_politique_computationnelle_policy_reform]]
+- [[institut_des_seuils_demographiques_policy_reform]]
+- [[nexcore_policy_reform]]
 - [[office_integre_des_flux_migratoires_policy_reform]]
 - [[oracle_des_seuils_policy_reform]]
 - [[reseau_des_auditeurs_algorithmiques_independants_raai_policy_reform]]

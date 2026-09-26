@@ -44,6 +44,7 @@ alliances:
 - frente_sertao_livre_breakdown
 - seigneuries_logistiques_armees_breakdown
 oppositions:
+- coalition_vivant_breakdown
 - etats_fragmentes_nationalisant_les_stocks_breakdown
 - front_de_resistance_aux_peages_sur_les_ressources_breakdown
 - ligue_mediterraneenne_des_villes_etats_portuaires_breakdown
@@ -110,6 +111,7 @@ La question centrale est de savoir si un acteur — milice montante, bloc régio
 - [[frente_sertao_livre_breakdown]]
 - [[seigneuries_logistiques_armees_breakdown]]
 **Opposants :**
+- [[coalition_vivant_breakdown]]
 - [[etats_fragmentes_nationalisant_les_stocks_breakdown]]
 - [[front_de_resistance_aux_peages_sur_les_ressources_breakdown]]
 - [[ligue_mediterraneenne_des_villes_etats_portuaires_breakdown]]

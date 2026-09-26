@@ -43,6 +43,7 @@ alliances:
 - directive_kontinuum_policy_reform
 - institut_brookings_singapour_de_politique_computationnelle_policy_reform
 - leena_vainala_policy_reform
+- nexcore_policy_reform
 - oracle_des_seuils_policy_reform
 - rede_paulista_de_distribuicao_algoritmica_policy_reform
 - reseau_des_auditeurs_algorithmiques_independants_raai_policy_reform
@@ -54,6 +55,7 @@ oppositions:
 - consortiums_prives_de_gouvernance_algorithmique_policy_reform
 - front_de_souverainete_biologique_eurasiatique_policy_reform
 - front_souverainiste_des_blocs_non_signataires_policy_reform
+- meridian_assembly_policy_reform
 - union_technocratique_eurasiatique_policy_reform
 type_relation_dominante: coopération
 annee_debut: 2027
@@ -121,6 +123,7 @@ Le Conseil est écartelé entre sa vocation universaliste et le refus croissant 
 - [[geopolitique_conflits]]
 
 
+
 ## Relations
 **Alliés :**
 - [[bureau_gouvernance_algorithmique_policy_reform]]
@@ -135,6 +138,7 @@ Le Conseil est écartelé entre sa vocation universaliste et le refus croissant 
 - [[directive_kontinuum_policy_reform]]
 - [[institut_brookings_singapour_de_politique_computationnelle_policy_reform]]
 - [[leena_vainala_policy_reform]]
+- [[nexcore_policy_reform]]
 - [[oracle_des_seuils_policy_reform]]
 - [[rede_paulista_de_distribuicao_algoritmica_policy_reform]]
 - [[reseau_des_auditeurs_algorithmiques_independants_raai_policy_reform]]
@@ -146,6 +150,7 @@ Le Conseil est écartelé entre sa vocation universaliste et le refus croissant 
 - [[consortiums_prives_de_gouvernance_algorithmique_policy_reform]]
 - [[front_de_souverainete_biologique_eurasiatique_policy_reform]]
 - [[front_souverainiste_des_blocs_non_signataires_policy_reform]]
+- [[meridian_assembly_policy_reform]]
 - [[union_technocratique_eurasiatique_policy_reform]]
 
 ## Notes

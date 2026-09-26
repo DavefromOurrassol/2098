@@ -37,11 +37,16 @@ zone_geographique:
 zone_systemique:
 - société
 alliances:
+- agence_de_regulation_des_detroits_strategiques_ards_breakdown
+- coalition_vivant_breakdown
 - collectif_hackers_decroissance_infrastructure_breakdown
 - communes_rust_belt_zones_libres_breakdown
+- consortium_des_pecheries_autonomes_du_grand_nord_breakdown
 - factions_secessionnistes_agrariennes_du_desert_breakdown
+- les_veilleurs_des_nappes_phreatiques_breakdown
 - les_veilleurs_du_fleuve_breakdown
 - mouvement_des_communes_du_rust_belt_breakdown
+- reseau_des_cartographes_des_zones_grises_breakdown
 - saboteurs_des_corridors_de_transit_breakdown
 oppositions:
 - arctic_passage_authority_breakdown
@@ -55,6 +60,7 @@ oppositions:
 - corridor_lithium_bouches_breakdown
 - directive_kontinuum_breakdown
 - enclaves_corporatives_fortifiees_breakdown
+- ergo_wian_sovereign_holdings_breakdown
 - etats_fragmentes_nationalisant_les_stocks_breakdown
 - etats_fragments_en_guerre_pour_les_stations_atmospheriques_breakdown
 - factions_energetiques_heritieres_des_pactes_abs_breakdown
@@ -133,13 +139,19 @@ Le Front est tiraillé entre sa posture de résistance non-violente héritée de
 - [[organisation_territoires]]
 
 
+
 ## Relations
 **Alliés :**
+- [[agence_de_regulation_des_detroits_strategiques_ards_breakdown]]
+- [[coalition_vivant_breakdown]]
 - [[collectif_hackers_decroissance_infrastructure_breakdown]]
 - [[communes_rust_belt_zones_libres_breakdown]]
+- [[consortium_des_pecheries_autonomes_du_grand_nord_breakdown]]
 - [[factions_secessionnistes_agrariennes_du_desert_breakdown]]
+- [[les_veilleurs_des_nappes_phreatiques_breakdown]]
 - [[les_veilleurs_du_fleuve_breakdown]]
 - [[mouvement_des_communes_du_rust_belt_breakdown]]
+- [[reseau_des_cartographes_des_zones_grises_breakdown]]
 - [[saboteurs_des_corridors_de_transit_breakdown]]
 **Opposants :**
 - [[arctic_passage_authority_breakdown]]
@@ -153,6 +165,7 @@ Le Front est tiraillé entre sa posture de résistance non-violente héritée de
 - [[corridor_lithium_bouches_breakdown]]
 - [[directive_kontinuum_breakdown]]
 - [[enclaves_corporatives_fortifiees_breakdown]]
+- [[ergo_wian_sovereign_holdings_breakdown]]
 - [[etats_fragmentes_nationalisant_les_stocks_breakdown]]
 - [[etats_fragments_en_guerre_pour_les_stations_atmospheriques_breakdown]]
 - [[factions_energetiques_heritieres_des_pactes_abs_breakdown]]

@@ -43,6 +43,7 @@ alliances:
 - arctic_passage_authority_new_sustainability
 - conseil_energetique_intercontinental_new_sustainability
 - conseil_regulation_ressources_new_sustainability
+- consortium_des_pecheries_autonomes_du_grand_nord_new_sustainability
 - fonds_mondial_de_regeneration_ecologique_new_sustainability
 - great_lakes_autonomous_compact_new_sustainability
 - mouvement_souverainiste_de_la_ceinture_boreale_new_sustainability
@@ -109,6 +110,7 @@ La tension fondamentale du Kivfak Nunani en 2098 tient à une question que ses p
 - [[arctic_passage_authority_new_sustainability]]
 - [[conseil_energetique_intercontinental_new_sustainability]]
 - [[conseil_regulation_ressources_new_sustainability]]
+- [[consortium_des_pecheries_autonomes_du_grand_nord_new_sustainability]]
 - [[fonds_mondial_de_regeneration_ecologique_new_sustainability]]
 - [[great_lakes_autonomous_compact_new_sustainability]]
 - [[mouvement_souverainiste_de_la_ceinture_boreale_new_sustainability]]

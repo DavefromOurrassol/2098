@@ -38,8 +38,10 @@ alliances:
 - collectifs_de_desobeissance_algorithmique_new_sustainability
 - collectifs_de_narration_sauvage_hors_protocole_new_sustainability
 - communautes_locales_exclues_des_corridors_new_sustainability
+- les_veilleurs_des_nappes_phreatiques_new_sustainability
 - les_veilleurs_du_fleuve_new_sustainability
 - mouvement_communautaire_des_micro_grids_energetiques_new_sustainability
+- nadia_ferreira_sato_new_sustainability
 - reseau_des_bio_communs_regionaux_new_sustainability
 - reseau_des_communs_numeriques_globaux_new_sustainability
 - reseau_des_communs_productifs_regeneratifs_new_sustainability
@@ -118,6 +120,7 @@ Le réseau est pris en étau entre l'attrait croissant de ses pratiques régén�
 - [[climat_environnement_global]]
 
 
+
 ## Relations
 **Alliés :**
 - [[coalition_anti_algorithme_des_autonomies_locales_new_sustainability]]
@@ -125,8 +128,10 @@ Le réseau est pris en étau entre l'attrait croissant de ses pratiques régén�
 - [[collectifs_de_desobeissance_algorithmique_new_sustainability]]
 - [[collectifs_de_narration_sauvage_hors_protocole_new_sustainability]]
 - [[communautes_locales_exclues_des_corridors_new_sustainability]]
+- [[les_veilleurs_des_nappes_phreatiques_new_sustainability]]
 - [[les_veilleurs_du_fleuve_new_sustainability]]
 - [[mouvement_communautaire_des_micro_grids_energetiques_new_sustainability]]
+- [[nadia_ferreira_sato_new_sustainability]]
 - [[reseau_des_bio_communs_regionaux_new_sustainability]]
 - [[reseau_des_communs_numeriques_globaux_new_sustainability]]
 - [[reseau_des_communs_productifs_regeneratifs_new_sustainability]]

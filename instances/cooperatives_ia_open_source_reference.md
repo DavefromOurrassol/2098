@@ -43,6 +43,7 @@ alliances:
 - ong_de_preservation_patrimoniale_numerique_reference
 - prisme_global_reference
 - reseau_des_administrations_locales_rurales_participatives_reference
+- reseau_des_cartographes_des_zones_grises_reference
 - reseau_des_chercheurs_en_ethique_des_systemes_distribues_reference
 - reseau_des_villes_etats_pilotes_en_gouvernance_participative_reference
 - reseau_meshcommons_netsolidaire_reference
@@ -127,6 +128,7 @@ La tension centrale qui traverse ce réseau est celle de la viabilité face à l
 - [[gouvernance_institutions]]
 
 
+
 ## Relations
 **Alliés :**
 - [[administrations_hybrides_des_cites_relais_peripheriques_reference]]
@@ -141,6 +143,7 @@ La tension centrale qui traverse ce réseau est celle de la viabilité face à l
 - [[ong_de_preservation_patrimoniale_numerique_reference]]
 - [[prisme_global_reference]]
 - [[reseau_des_administrations_locales_rurales_participatives_reference]]
+- [[reseau_des_cartographes_des_zones_grises_reference]]
 - [[reseau_des_chercheurs_en_ethique_des_systemes_distribues_reference]]
 - [[reseau_des_villes_etats_pilotes_en_gouvernance_participative_reference]]
 - [[reseau_meshcommons_netsolidaire_reference]]

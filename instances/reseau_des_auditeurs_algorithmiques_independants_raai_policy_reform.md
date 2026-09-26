@@ -50,8 +50,10 @@ alliances:
 - courants_post_technocratiques_de_reconquete_democratique_policy_reform
 - faction_regulatrice_dure_au_sein_du_cei_policy_reform
 - front_des_communes_algorithmiques_policy_reform
+- kaspar_lind_policy_reform
 - les_hors_prisme_policy_reform
 - les_veilleurs_du_fleuve_policy_reform
+- maelys_okonkwo_policy_reform
 - mouvement_pour_la_souverainete_energetique_commune_msec_policy_reform
 - observatoire_mondial_des_ressources_critiques_policy_reform
 - oracle_des_seuils_policy_reform
@@ -70,7 +72,9 @@ oppositions:
 - factions_technocratiques_de_la_marchandisation_hydrique_policy_reform
 - front_souverainiste_des_blocs_non_signataires_policy_reform
 - front_techno_utopiste_de_la_decision_automatisee_policy_reform
+- nexcore_policy_reform
 - reseau_des_lobbyistes_techniques_onu_energie_policy_reform
+- terminal_kharg_data_haven_policy_reform
 type_relation_dominante: coopération
 annee_debut: 2033
 annee_fin: null
@@ -132,6 +136,7 @@ Le RAAI est pris en étau entre son mandat d'indépendance et la dépendance cro
 - [[gouvernance_institutions]]
 
 
+
 ## Relations
 **Alliés :**
 - [[bureau_gouvernance_algorithmique_policy_reform]]
@@ -150,8 +155,10 @@ Le RAAI est pris en étau entre son mandat d'indépendance et la dépendance cro
 - [[courants_post_technocratiques_de_reconquete_democratique_policy_reform]]
 - [[faction_regulatrice_dure_au_sein_du_cei_policy_reform]]
 - [[front_des_communes_algorithmiques_policy_reform]]
+- [[kaspar_lind_policy_reform]]
 - [[les_hors_prisme_policy_reform]]
 - [[les_veilleurs_du_fleuve_policy_reform]]
+- [[maelys_okonkwo_policy_reform]]
 - [[mouvement_pour_la_souverainete_energetique_commune_msec_policy_reform]]
 - [[observatoire_mondial_des_ressources_critiques_policy_reform]]
 - [[oracle_des_seuils_policy_reform]]
@@ -170,7 +177,9 @@ Le RAAI est pris en étau entre son mandat d'indépendance et la dépendance cro
 - [[factions_technocratiques_de_la_marchandisation_hydrique_policy_reform]]
 - [[front_souverainiste_des_blocs_non_signataires_policy_reform]]
 - [[front_techno_utopiste_de_la_decision_automatisee_policy_reform]]
+- [[nexcore_policy_reform]]
 - [[reseau_des_lobbyistes_techniques_onu_energie_policy_reform]]
+- [[terminal_kharg_data_haven_policy_reform]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

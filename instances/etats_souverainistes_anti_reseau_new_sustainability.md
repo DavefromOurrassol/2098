@@ -57,6 +57,7 @@ oppositions:
 - consortium_d_interoperabilite_ia_humain_new_sustainability
 - consortium_de_regeneration_planetaire_new_sustainability
 - consortium_des_ia_climatiques_new_sustainability
+- gelecek_meclisi_new_sustainability
 - great_lakes_compact_new_sustainability
 - institut_de_philosophie_des_systemes_hybrides_d_helsinki_new_sustainability
 - les_passeurs_de_limites_new_sustainability
@@ -69,6 +70,7 @@ oppositions:
 - parlement_deliberatif_mondial_new_sustainability
 - reseau_des_agences_climatiques_regionales_new_sustainability
 - reseau_des_bio_communs_regionaux_new_sustainability
+- reseau_des_cartographes_des_zones_grises_new_sustainability
 - reseau_des_communs_numeriques_globaux_new_sustainability
 - reseau_des_communs_productifs_regeneratifs_new_sustainability
 - reseau_des_hubs_urbains_regeneratifs_new_sustainability
@@ -142,6 +144,7 @@ La contradiction centrale de ces États est qu'ils dépendent des infrastructure
 
 
 
+
 ## Relations
 **Alliés :**
 - [[bloc_des_gouvernements_souverainistes_hydriques_new_sustainability]]
@@ -168,6 +171,7 @@ La contradiction centrale de ces États est qu'ils dépendent des infrastructure
 - [[consortium_d_interoperabilite_ia_humain_new_sustainability]]
 - [[consortium_de_regeneration_planetaire_new_sustainability]]
 - [[consortium_des_ia_climatiques_new_sustainability]]
+- [[gelecek_meclisi_new_sustainability]]
 - [[great_lakes_compact_new_sustainability]]
 - [[institut_de_philosophie_des_systemes_hybrides_d_helsinki_new_sustainability]]
 - [[les_passeurs_de_limites_new_sustainability]]
@@ -180,6 +184,7 @@ La contradiction centrale de ces États est qu'ils dépendent des infrastructure
 - [[parlement_deliberatif_mondial_new_sustainability]]
 - [[reseau_des_agences_climatiques_regionales_new_sustainability]]
 - [[reseau_des_bio_communs_regionaux_new_sustainability]]
+- [[reseau_des_cartographes_des_zones_grises_new_sustainability]]
 - [[reseau_des_communs_numeriques_globaux_new_sustainability]]
 - [[reseau_des_communs_productifs_regeneratifs_new_sustainability]]
 - [[reseau_des_hubs_urbains_regeneratifs_new_sustainability]]

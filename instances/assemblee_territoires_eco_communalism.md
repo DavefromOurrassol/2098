@@ -36,13 +36,19 @@ alliances:
 - confederation_bassins_vivants_eco_communalism
 - consortium_amazonia_viva_eco_communalism
 - frente_sertao_livre_eco_communalism
+- institut_des_seuils_demographiques_eco_communalism
 - kalaallit_nunaat_bioterritoire_eco_communalism
 - le_temoin_eco_communalism
+- reseau_des_cartographes_des_zones_grises_eco_communalism
 - reseau_terrafond_bassins_eco_communalism
 - sao_paulo_algorithmique_eco_communalism
 - tresse_verte_corridor_eco_communalism
 oppositions:
 - enclaves_extractivistes_et_etats_residuels_eco_communalism
+- ergo_wian_sovereign_holdings_eco_communalism
+- kindling_eco_communalism
+- meridian_assembly_eco_communalism
+- the_tidewater_canon_eco_communalism
 type_relation_dominante: coopération
 annee_debut: 2052
 annee_fin:
@@ -102,10 +108,16 @@ tout mécanisme supralocal. Peut-on gérer le climat sans autorité centrale ?
 - [[confederation_bassins_vivants_eco_communalism]]
 - [[consortium_amazonia_viva_eco_communalism]]
 - [[frente_sertao_livre_eco_communalism]]
+- [[institut_des_seuils_demographiques_eco_communalism]]
 - [[kalaallit_nunaat_bioterritoire_eco_communalism]]
 - [[le_temoin_eco_communalism]]
+- [[reseau_des_cartographes_des_zones_grises_eco_communalism]]
 - [[reseau_terrafond_bassins_eco_communalism]]
 - [[sao_paulo_algorithmique_eco_communalism]]
 - [[tresse_verte_corridor_eco_communalism]]
 **Opposants :**
 - [[enclaves_extractivistes_et_etats_residuels_eco_communalism]]
+- [[ergo_wian_sovereign_holdings_eco_communalism]]
+- [[kindling_eco_communalism]]
+- [[meridian_assembly_eco_communalism]]
+- [[the_tidewater_canon_eco_communalism]]

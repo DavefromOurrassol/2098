@@ -45,7 +45,9 @@ alliances:
 - conseil_technocratique_de_gouvernance_alimentaire_new_sustainability
 - consortium_de_regeneration_planetaire_new_sustainability
 - consortium_des_ia_climatiques_new_sustainability
+- gelecek_meclisi_new_sustainability
 - institut_de_philosophie_des_systemes_hybrides_d_helsinki_new_sustainability
+- institut_des_seuils_demographiques_new_sustainability
 - oracle_des_seuils_new_sustainability
 - reseau_des_agences_climatiques_regionales_new_sustainability
 - reseau_mnemos_new_sustainability
@@ -128,6 +130,7 @@ La tension centrale du Consortium réside dans la contradiction entre son mandat
 - [[gouvernance_institutions]]
 
 
+
 ## Relations
 **Alliés :**
 - [[agence_mondiale_de_modelisation_climatique_ammc_new_sustainability]]
@@ -141,7 +144,9 @@ La tension centrale du Consortium réside dans la contradiction entre son mandat
 - [[conseil_technocratique_de_gouvernance_alimentaire_new_sustainability]]
 - [[consortium_de_regeneration_planetaire_new_sustainability]]
 - [[consortium_des_ia_climatiques_new_sustainability]]
+- [[gelecek_meclisi_new_sustainability]]
 - [[institut_de_philosophie_des_systemes_hybrides_d_helsinki_new_sustainability]]
+- [[institut_des_seuils_demographiques_new_sustainability]]
 - [[oracle_des_seuils_new_sustainability]]
 - [[reseau_des_agences_climatiques_regionales_new_sustainability]]
 - [[reseau_mnemos_new_sustainability]]

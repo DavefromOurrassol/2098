@@ -33,9 +33,12 @@ zone_systemique:
 - société
 alliances:
 - amara_diallo_nkosi_policy_reform
+- coalition_vivant_policy_reform
 - collectifs_de_biohackers_agro_communautaires_policy_reform
 - collectifs_de_gouvernance_communautaire_decentralisee_policy_reform
 - front_des_autonomies_territoriales_radicales_policy_reform
+- hyphan_raghavan_policy_reform
+- les_veilleurs_des_nappes_phreatiques_policy_reform
 - les_veilleurs_du_fleuve_policy_reform
 - mouvement_pour_la_justice_ecologique_communautaire_policy_reform
 - pacifique_sud_resilience_network_policy_reform
@@ -111,12 +114,16 @@ Les Collectifs sont pris en étau entre le Bloc Souverainiste Non-Signataire qui
 - [[organisation_territoires]]
 
 
+
 ## Relations
 **Alliés :**
 - [[amara_diallo_nkosi_policy_reform]]
+- [[coalition_vivant_policy_reform]]
 - [[collectifs_de_biohackers_agro_communautaires_policy_reform]]
 - [[collectifs_de_gouvernance_communautaire_decentralisee_policy_reform]]
 - [[front_des_autonomies_territoriales_radicales_policy_reform]]
+- [[hyphan_raghavan_policy_reform]]
+- [[les_veilleurs_des_nappes_phreatiques_policy_reform]]
 - [[les_veilleurs_du_fleuve_policy_reform]]
 - [[mouvement_pour_la_justice_ecologique_communautaire_policy_reform]]
 - [[pacifique_sud_resilience_network_policy_reform]]

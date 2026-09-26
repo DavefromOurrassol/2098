@@ -32,19 +32,23 @@ zone_systemique:
 - société
 alliances:
 - consortiums_prives_de_gouvernance_algorithmique_policy_reform
+- ergo_wian_sovereign_holdings_policy_reform
 - factions_technocratiques_de_la_marchandisation_hydrique_policy_reform
 - front_des_souverainistes_energetiques_policy_reform
 - gouvernements_populistes_anti_depossession_policy_reform
 - lobbies_des_energies_fossiles_residuelles_policy_reform
 - syndicats_d_extraction_privee_non_regules_policy_reform
 oppositions:
+- agence_de_regulation_des_detroits_strategiques_ards_policy_reform
 - agence_internationale_de_l_energie_reformatee_aier_policy_reform
 - agence_stabilisation_climatique_policy_reform
 - agence_technocratique_pour_la_resilience_biospherique_atrb_policy_reform
 - arctic_passage_authority_policy_reform
 - bloc_des_nations_a_economie_carbone_controlee_policy_reform
 - coalition_des_villes_de_reconversion_policy_reform
+- coalition_vivant_policy_reform
 - conseil_de_regulation_climatique_global_policy_reform
+- consortium_des_pecheries_autonomes_du_grand_nord_policy_reform
 - consortium_des_villes_etats_durables_policy_reform
 - federation_des_mutuelles_biotech_policy_reform
 - fonds_de_stabilisation_climatique_onu_3_policy_reform
@@ -52,6 +56,8 @@ oppositions:
 - fonds_souverain_de_transition_verte_fstv_policy_reform
 - grille_aria_policy_reform
 - kalaallit_nunaat_sovereign_fund_policy_reform
+- les_veilleurs_des_nappes_phreatiques_policy_reform
+- maelys_okonkwo_policy_reform
 - mouvement_pour_la_justice_ecologique_communautaire_policy_reform
 - mouvement_pour_la_souverainete_energetique_commune_msec_policy_reform
 - observatoire_mondial_des_ressources_critiques_policy_reform
@@ -121,22 +127,27 @@ La Coalition est prise en étau entre ses membres historiques issus des énergie
 - [[systeme_economique_redistribution]]
 
 
+
 ## Relations
 **Alliés :**
 - [[consortiums_prives_de_gouvernance_algorithmique_policy_reform]]
+- [[ergo_wian_sovereign_holdings_policy_reform]]
 - [[factions_technocratiques_de_la_marchandisation_hydrique_policy_reform]]
 - [[front_des_souverainistes_energetiques_policy_reform]]
 - [[gouvernements_populistes_anti_depossession_policy_reform]]
 - [[lobbies_des_energies_fossiles_residuelles_policy_reform]]
 - [[syndicats_d_extraction_privee_non_regules_policy_reform]]
 **Opposants :**
+- [[agence_de_regulation_des_detroits_strategiques_ards_policy_reform]]
 - [[agence_internationale_de_l_energie_reformatee_aier_policy_reform]]
 - [[agence_stabilisation_climatique_policy_reform]]
 - [[agence_technocratique_pour_la_resilience_biospherique_atrb_policy_reform]]
 - [[arctic_passage_authority_policy_reform]]
 - [[bloc_des_nations_a_economie_carbone_controlee_policy_reform]]
 - [[coalition_des_villes_de_reconversion_policy_reform]]
+- [[coalition_vivant_policy_reform]]
 - [[conseil_de_regulation_climatique_global_policy_reform]]
+- [[consortium_des_pecheries_autonomes_du_grand_nord_policy_reform]]
 - [[consortium_des_villes_etats_durables_policy_reform]]
 - [[federation_des_mutuelles_biotech_policy_reform]]
 - [[fonds_de_stabilisation_climatique_onu_3_policy_reform]]
@@ -144,6 +155,8 @@ La Coalition est prise en étau entre ses membres historiques issus des énergie
 - [[fonds_souverain_de_transition_verte_fstv_policy_reform]]
 - [[grille_aria_policy_reform]]
 - [[kalaallit_nunaat_sovereign_fund_policy_reform]]
+- [[les_veilleurs_des_nappes_phreatiques_policy_reform]]
+- [[maelys_okonkwo_policy_reform]]
 - [[mouvement_pour_la_justice_ecologique_communautaire_policy_reform]]
 - [[mouvement_pour_la_souverainete_energetique_commune_msec_policy_reform]]
 - [[observatoire_mondial_des_ressources_critiques_policy_reform]]

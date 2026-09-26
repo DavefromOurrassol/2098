@@ -38,6 +38,7 @@ alliances:
 - conseil_de_geneve_pour_les_droits_biosociaux_reference
 - cooperatives_ia_open_source_reference
 - federation_communs_territoriaux_reference
+- gelecek_meclisi_reference
 - helsinki_communs_numeriques_reference
 - leena_vainala_reference
 - ligue_des_metropoles_du_sud_pour_les_infrastructures_libres_reference
@@ -50,6 +51,7 @@ oppositions:
 - consortium_des_grandes_plateformes_ia_integrees_reference
 - consortium_des_plateformes_ia_centralisees_anti_deliberation_reference
 - consortiums_prives_de_gestion_des_donnees_critiques_reference
+- ergo_wian_sovereign_holdings_reference
 - etats_a_tendance_centraliste_numerique_reference
 - gouvernements_a_regime_de_productivite_mandatee_reference
 - lobbies_agro_industriels_a_haute_consommation_d_eau_reference
@@ -120,6 +122,7 @@ Le Réseau se trouve écartelé entre son idéal d'autonomie radicale et la néc
 - [[valeurs_culture_tempo_sociale]]
 
 
+
 ## Relations
 **Alliés :**
 - [[agence_internationale_des_energies_renouvelables_irena_2_reference]]
@@ -129,6 +132,7 @@ Le Réseau se trouve écartelé entre son idéal d'autonomie radicale et la néc
 - [[conseil_de_geneve_pour_les_droits_biosociaux_reference]]
 - [[cooperatives_ia_open_source_reference]]
 - [[federation_communs_territoriaux_reference]]
+- [[gelecek_meclisi_reference]]
 - [[helsinki_communs_numeriques_reference]]
 - [[leena_vainala_reference]]
 - [[ligue_des_metropoles_du_sud_pour_les_infrastructures_libres_reference]]
@@ -141,6 +145,7 @@ Le Réseau se trouve écartelé entre son idéal d'autonomie radicale et la néc
 - [[consortium_des_grandes_plateformes_ia_integrees_reference]]
 - [[consortium_des_plateformes_ia_centralisees_anti_deliberation_reference]]
 - [[consortiums_prives_de_gestion_des_donnees_critiques_reference]]
+- [[ergo_wian_sovereign_holdings_reference]]
 - [[etats_a_tendance_centraliste_numerique_reference]]
 - [[gouvernements_a_regime_de_productivite_mandatee_reference]]
 - [[lobbies_agro_industriels_a_haute_consommation_d_eau_reference]]

@@ -37,6 +37,7 @@ alliances:
 - consortiums_industriels_de_l_eau_eco_communalism
 - consortiums_logistiques_neo_industriels_des_terres_reconstruites_eco_communalism
 - courant_techno_solutionniste_pro_re_globalisation_numerique_eco_communalism
+- ergo_wian_sovereign_holdings_eco_communalism
 - factions_extractivistes_des_aquiferes_communs_eco_communalism
 - factions_technophiles_de_la_geo_ingenierie_centralisee_eco_communalism
 - fragments_d_etats_centraux_residuels_eco_communalism
@@ -57,6 +58,7 @@ oppositions:
 - confederation_bassins_vivants_eco_communalism
 - confederation_communs_arc_septentrional_eco_communalism
 - consortium_amazonia_viva_eco_communalism
+- consortium_des_pecheries_autonomes_du_grand_nord_eco_communalism
 - cooperatives_d_habitat_regeneratif_eco_communalism
 - cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism
 - enclaves_extractivistes_et_etats_residuels_eco_communalism
@@ -143,6 +145,7 @@ La tension centrale est celle d'un anachronisme armé : ces enclaves survivent p
 - [[frontieres_du_systeme]]
 
 
+
 ## Relations
 **Alliés :**
 - [[agro_conglomerats_des_enclaves_technologiques_eco_communalism]]
@@ -151,6 +154,7 @@ La tension centrale est celle d'un anachronisme armé : ces enclaves survivent p
 - [[consortiums_industriels_de_l_eau_eco_communalism]]
 - [[consortiums_logistiques_neo_industriels_des_terres_reconstruites_eco_communalism]]
 - [[courant_techno_solutionniste_pro_re_globalisation_numerique_eco_communalism]]
+- [[ergo_wian_sovereign_holdings_eco_communalism]]
 - [[factions_extractivistes_des_aquiferes_communs_eco_communalism]]
 - [[factions_technophiles_de_la_geo_ingenierie_centralisee_eco_communalism]]
 - [[fragments_d_etats_centraux_residuels_eco_communalism]]
@@ -171,6 +175,7 @@ La tension centrale est celle d'un anachronisme armé : ces enclaves survivent p
 - [[confederation_bassins_vivants_eco_communalism]]
 - [[confederation_communs_arc_septentrional_eco_communalism]]
 - [[consortium_amazonia_viva_eco_communalism]]
+- [[consortium_des_pecheries_autonomes_du_grand_nord_eco_communalism]]
 - [[cooperatives_d_habitat_regeneratif_eco_communalism]]
 - [[cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism]]
 - [[enclaves_extractivistes_et_etats_residuels_eco_communalism]]

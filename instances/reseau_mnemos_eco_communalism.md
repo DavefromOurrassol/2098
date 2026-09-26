@@ -41,13 +41,13 @@ alliances:
 - archives_ouvertes_des_jurisprudences_communales_aojc_eco_communalism
 - assemblees_bioterritoriales_regionales_eco_communalism
 - collectifs_de_techniciens_sobres_eco_communalism
+- gelecek_meclisi_eco_communalism
 - guildes_des_semenciers_itinerants_eco_communalism
 - ligue_des_cites_du_sahel_numerique_eco_communalism
 - oracle_des_seuils_eco_communalism
-- reseaux_de_medecine_traditionnelle_augmentee_reference
+- terminal_kharg_data_haven_eco_communalism
 oppositions:
 - directive_kontinuum_eco_communalism
-- enclaves_corporatives_fortifiees_breakdown
 - factions_autoritaires_de_controle_du_savoir_eco_communalism
 - factions_communautaires_refusant_le_partage_narratif_exterieur_eco_communalism
 - reseau_des_marches_noirs_de_donnees_extractivistes_eco_communalism
@@ -107,13 +107,13 @@ La Trame peine à synchroniser des nœuds dont les communautés ont développé 
 - [[archives_ouvertes_des_jurisprudences_communales_aojc_eco_communalism]]
 - [[assemblees_bioterritoriales_regionales_eco_communalism]]
 - [[collectifs_de_techniciens_sobres_eco_communalism]]
+- [[gelecek_meclisi_eco_communalism]]
 - [[guildes_des_semenciers_itinerants_eco_communalism]]
 - [[ligue_des_cites_du_sahel_numerique_eco_communalism]]
 - [[oracle_des_seuils_eco_communalism]]
-- [[reseaux_de_medecine_traditionnelle_augmentee_reference]]
+- [[terminal_kharg_data_haven_eco_communalism]]
 **Opposants :**
 - [[directive_kontinuum_eco_communalism]]
-- [[enclaves_corporatives_fortifiees_breakdown]]
 - [[factions_autoritaires_de_controle_du_savoir_eco_communalism]]
 - [[factions_communautaires_refusant_le_partage_narratif_exterieur_eco_communalism]]
 - [[reseau_des_marches_noirs_de_donnees_extractivistes_eco_communalism]]

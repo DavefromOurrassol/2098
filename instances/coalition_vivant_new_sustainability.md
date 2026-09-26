@@ -37,6 +37,7 @@ alliances:
 - commission_territoriale_ourrassol_new_sustainability
 - consortium_africain_de_biotechnologies_sociales_new_sustainability
 - consortium_amazonia_viva_new_sustainability
+- consortium_des_pecheries_autonomes_du_grand_nord_new_sustainability
 - hub_nairobi_kigali_new_sustainability
 - nexcore_new_sustainability
 - pacifique_sud_resilience_network_new_sustainability
@@ -107,6 +108,7 @@ le Protocole du Vivant comme une menace à leur souveraineté.
 - [[commission_territoriale_ourrassol_new_sustainability]]
 - [[consortium_africain_de_biotechnologies_sociales_new_sustainability]]
 - [[consortium_amazonia_viva_new_sustainability]]
+- [[consortium_des_pecheries_autonomes_du_grand_nord_new_sustainability]]
 - [[hub_nairobi_kigali_new_sustainability]]
 - [[nexcore_new_sustainability]]
 - [[pacifique_sud_resilience_network_new_sustainability]]

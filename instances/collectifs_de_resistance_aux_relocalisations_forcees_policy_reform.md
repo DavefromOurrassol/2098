@@ -36,6 +36,7 @@ alliances:
 - collectifs_de_gouvernance_communautaire_decentralisee_policy_reform
 - front_des_autonomies_territoriales_radicales_policy_reform
 - front_souverainiste_des_blocs_non_signataires_policy_reform
+- hyphan_raghavan_policy_reform
 - mouvement_pour_la_justice_ecologique_communautaire_policy_reform
 - mouvement_pour_la_souverainete_territoriale_absolue_policy_reform
 oppositions:
@@ -45,6 +46,8 @@ oppositions:
 - consortium_de_geo_ingenierie_atmospherique_pacifique_policy_reform
 - consortium_technologique_de_planification_territoriale_policy_reform
 - fonds_mondial_pour_la_transition_ecosystemique_fmte_policy_reform
+- ilse_varga_holm_policy_reform
+- institut_des_seuils_demographiques_policy_reform
 - office_integre_des_flux_migratoires_policy_reform
 - reseau_des_metropoles_n_uds_policy_reform
 - reseaux_academiques_prospectivistes_du_pacte_de_geneve_2081_policy_reform
@@ -113,11 +116,13 @@ Le réseau est traversé par une ligne de fracture entre ceux qui misent sur le 
 - [[gouvernance_institutions]]
 
 
+
 ## Relations
 **Alliés :**
 - [[collectifs_de_gouvernance_communautaire_decentralisee_policy_reform]]
 - [[front_des_autonomies_territoriales_radicales_policy_reform]]
 - [[front_souverainiste_des_blocs_non_signataires_policy_reform]]
+- [[hyphan_raghavan_policy_reform]]
 - [[mouvement_pour_la_justice_ecologique_communautaire_policy_reform]]
 - [[mouvement_pour_la_souverainete_territoriale_absolue_policy_reform]]
 **Opposants :**
@@ -127,6 +132,8 @@ Le réseau est traversé par une ligne de fracture entre ceux qui misent sur le 
 - [[consortium_de_geo_ingenierie_atmospherique_pacifique_policy_reform]]
 - [[consortium_technologique_de_planification_territoriale_policy_reform]]
 - [[fonds_mondial_pour_la_transition_ecosystemique_fmte_policy_reform]]
+- [[ilse_varga_holm_policy_reform]]
+- [[institut_des_seuils_demographiques_policy_reform]]
 - [[office_integre_des_flux_migratoires_policy_reform]]
 - [[reseau_des_metropoles_n_uds_policy_reform]]
 - [[reseaux_academiques_prospectivistes_du_pacte_de_geneve_2081_policy_reform]]

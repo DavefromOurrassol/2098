@@ -33,6 +33,7 @@ zone_systemique:
 - société
 alliances:
 - administrations_hybrides_des_cites_relais_peripheriques_reference
+- agence_de_regulation_des_detroits_strategiques_ards_reference
 - collectifs_academiques_independants_reference
 - commission_hydrique_de_l_union_africaine_reference
 - cooperative_terrafond_reference
@@ -60,6 +61,7 @@ oppositions:
 - etats_a_tendance_centraliste_numerique_reference
 - factions_eurasiatiques_contre_la_tarification_hydrique_reference
 - gouvernements_federaux_residuels_souverainistes_reference
+- les_veilleurs_des_nappes_phreatiques_reference
 - lobbies_agro_industriels_a_haute_consommation_d_eau_reference
 - operateurs_logistiques_prives_des_zones_grises_eurasiennes_reference
 type_relation_dominante: coopération
@@ -126,9 +128,11 @@ Elles sont constamment écartelées entre les injonctions des blocs économiques
 - [[organisation_territoires]]
 
 
+
 ## Relations
 **Alliés :**
 - [[administrations_hybrides_des_cites_relais_peripheriques_reference]]
+- [[agence_de_regulation_des_detroits_strategiques_ards_reference]]
 - [[collectifs_academiques_independants_reference]]
 - [[commission_hydrique_de_l_union_africaine_reference]]
 - [[cooperative_terrafond_reference]]
@@ -156,6 +160,7 @@ Elles sont constamment écartelées entre les injonctions des blocs économiques
 - [[etats_a_tendance_centraliste_numerique_reference]]
 - [[factions_eurasiatiques_contre_la_tarification_hydrique_reference]]
 - [[gouvernements_federaux_residuels_souverainistes_reference]]
+- [[les_veilleurs_des_nappes_phreatiques_reference]]
 - [[lobbies_agro_industriels_a_haute_consommation_d_eau_reference]]
 - [[operateurs_logistiques_prives_des_zones_grises_eurasiennes_reference]]
 

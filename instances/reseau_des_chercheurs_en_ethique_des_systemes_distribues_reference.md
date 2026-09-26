@@ -31,6 +31,7 @@ zone_geographique:
 zone_systemique:
 - société
 alliances:
+- aurelio_stahl_reference
 - collectifs_academiques_independants_reference
 - collectifs_de_journalisme_embarque_reference
 - collectifs_de_journalistes_independants_regionaux_reference
@@ -39,6 +40,8 @@ alliances:
 - cooperatives_ia_open_source_reference
 - helsinki_communs_numeriques_reference
 - institut_polytechnique_de_ouagadougou_reference
+- kaspar_lind_reference
+- lamplight_reference
 - leena_vainala_reference
 - mouvement_pour_la_libre_circulation_des_personnes_et_des_donnees_reference
 - ong_de_preservation_patrimoniale_numerique_reference
@@ -129,8 +132,10 @@ Le Réseau est tiraillé entre l'exigence d'indépendance radicale et la tentati
 - [[valeurs_culture_tempo_sociale]]
 
 
+
 ## Relations
 **Alliés :**
+- [[aurelio_stahl_reference]]
 - [[collectifs_academiques_independants_reference]]
 - [[collectifs_de_journalisme_embarque_reference]]
 - [[collectifs_de_journalistes_independants_regionaux_reference]]
@@ -139,6 +144,8 @@ Le Réseau est tiraillé entre l'exigence d'indépendance radicale et la tentati
 - [[cooperatives_ia_open_source_reference]]
 - [[helsinki_communs_numeriques_reference]]
 - [[institut_polytechnique_de_ouagadougou_reference]]
+- [[kaspar_lind_reference]]
+- [[lamplight_reference]]
 - [[leena_vainala_reference]]
 - [[mouvement_pour_la_libre_circulation_des_personnes_et_des_donnees_reference]]
 - [[ong_de_preservation_patrimoniale_numerique_reference]]

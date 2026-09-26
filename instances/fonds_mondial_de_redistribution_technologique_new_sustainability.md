@@ -41,6 +41,7 @@ alliances:
 - conseil_mondial_de_la_regeneration_ecosystemique_cmre_new_sustainability
 - consortium_africain_de_biotechnologies_sociales_new_sustainability
 - consortium_helios_new_sustainability
+- ergo_wian_sovereign_holdings_new_sustainability
 - grille_aria_new_sustainability
 - hub_nairobi_kigali_new_sustainability
 - ligue_des_cites_du_sahel_numerique_new_sustainability
@@ -58,6 +59,7 @@ oppositions:
 - lobbies_agro_industriels_du_bassin_du_congo_new_sustainability
 - lobbies_d_extraction_miniere_des_zones_tampons_new_sustainability
 - nexcore_new_sustainability
+- terminal_kharg_data_haven_new_sustainability
 type_relation_dominante: coopération
 annee_debut: 2040
 annee_fin: null
@@ -126,6 +128,7 @@ La tension centrale du FMRT réside dans la contradiction entre son mandat redis
 - [[technologie_information]]
 
 
+
 ## Relations
 **Alliés :**
 - [[agence_globale_de_regeneration_des_bassins_versants_agrb_onu_new_sustainability]]
@@ -135,6 +138,7 @@ La tension centrale du FMRT réside dans la contradiction entre son mandat redis
 - [[conseil_mondial_de_la_regeneration_ecosystemique_cmre_new_sustainability]]
 - [[consortium_africain_de_biotechnologies_sociales_new_sustainability]]
 - [[consortium_helios_new_sustainability]]
+- [[ergo_wian_sovereign_holdings_new_sustainability]]
 - [[grille_aria_new_sustainability]]
 - [[hub_nairobi_kigali_new_sustainability]]
 - [[ligue_des_cites_du_sahel_numerique_new_sustainability]]
@@ -152,6 +156,7 @@ La tension centrale du FMRT réside dans la contradiction entre son mandat redis
 - [[lobbies_agro_industriels_du_bassin_du_congo_new_sustainability]]
 - [[lobbies_d_extraction_miniere_des_zones_tampons_new_sustainability]]
 - [[nexcore_new_sustainability]]
+- [[terminal_kharg_data_haven_new_sustainability]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

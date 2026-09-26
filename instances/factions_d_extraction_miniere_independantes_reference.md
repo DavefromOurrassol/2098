@@ -41,6 +41,7 @@ alliances:
 - vasil_orentchev_reference
 - zones_grises_globales_reference
 oppositions:
+- agence_de_regulation_des_detroits_strategiques_ards_reference
 - arctic_passage_authority_reference
 - blocs_signataires_du_pacte_energetique_multilateral_reference
 - cartel_des_terres_rares_d_asie_centrale_reference
@@ -119,6 +120,7 @@ La tension centrale est celle de la dépendance honteuse : les institutions mult
 
 
 
+
 ## Relations
 **Alliés :**
 - [[administrations_hybrides_des_cites_relais_peripheriques_reference]]
@@ -129,6 +131,7 @@ La tension centrale est celle de la dépendance honteuse : les institutions mult
 - [[vasil_orentchev_reference]]
 - [[zones_grises_globales_reference]]
 **Opposants :**
+- [[agence_de_regulation_des_detroits_strategiques_ards_reference]]
 - [[arctic_passage_authority_reference]]
 - [[blocs_signataires_du_pacte_energetique_multilateral_reference]]
 - [[cartel_des_terres_rares_d_asie_centrale_reference]]

@@ -32,6 +32,7 @@ zone_geographique:
 zone_systemique:
 - société
 alliances:
+- aurelio_stahl_policy_reform
 - collectifs_citoyens_pour_l_audit_algorithmique_ouvert_policy_reform
 - collectifs_de_gouvernance_communautaire_decentralisee_policy_reform
 - collectifs_de_hackers_biospheriques_policy_reform
@@ -39,10 +40,14 @@ alliances:
 - courants_post_technocratiques_de_reconquete_democratique_policy_reform
 - federation_des_mutuelles_biotech_policy_reform
 - front_des_communes_algorithmiques_policy_reform
+- gelecek_meclisi_policy_reform
+- kaspar_lind_policy_reform
 - leena_vainala_policy_reform
+- maelys_okonkwo_policy_reform
 - mouvement_pour_la_justice_ecologique_communautaire_policy_reform
 - mouvement_pour_la_souverainete_energetique_commune_msec_policy_reform
 - reseau_des_auditeurs_algorithmiques_independants_raai_policy_reform
+- reseau_des_cartographes_des_zones_grises_policy_reform
 - reseau_des_journalistes_d_investigation_energetique_policy_reform
 - syndicat_des_ingenieurs_orbitaux_policy_reform
 - tribunal_algorithmique_de_bruxelles_policy_reform
@@ -122,8 +127,10 @@ La tension fondamentale de ces collectifs réside dans leur dépendance aux outi
 - [[valeurs_culture_tempo_sociale]]
 
 
+
 ## Relations
 **Alliés :**
+- [[aurelio_stahl_policy_reform]]
 - [[collectifs_citoyens_pour_l_audit_algorithmique_ouvert_policy_reform]]
 - [[collectifs_de_gouvernance_communautaire_decentralisee_policy_reform]]
 - [[collectifs_de_hackers_biospheriques_policy_reform]]
@@ -131,10 +138,14 @@ La tension fondamentale de ces collectifs réside dans leur dépendance aux outi
 - [[courants_post_technocratiques_de_reconquete_democratique_policy_reform]]
 - [[federation_des_mutuelles_biotech_policy_reform]]
 - [[front_des_communes_algorithmiques_policy_reform]]
+- [[gelecek_meclisi_policy_reform]]
+- [[kaspar_lind_policy_reform]]
 - [[leena_vainala_policy_reform]]
+- [[maelys_okonkwo_policy_reform]]
 - [[mouvement_pour_la_justice_ecologique_communautaire_policy_reform]]
 - [[mouvement_pour_la_souverainete_energetique_commune_msec_policy_reform]]
 - [[reseau_des_auditeurs_algorithmiques_independants_raai_policy_reform]]
+- [[reseau_des_cartographes_des_zones_grises_policy_reform]]
 - [[reseau_des_journalistes_d_investigation_energetique_policy_reform]]
 - [[syndicat_des_ingenieurs_orbitaux_policy_reform]]
 - [[tribunal_algorithmique_de_bruxelles_policy_reform]]

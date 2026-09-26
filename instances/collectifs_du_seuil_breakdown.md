@@ -42,11 +42,11 @@ alliances:
 - consortium_amazonia_viva_breakdown
 - factions_secessionnistes_agrariennes_du_desert_breakdown
 - oracle_des_seuils_breakdown
-- reseaux_de_troc_inter_cooperatives_et_marges_periurbaines_eco_communalism
 oppositions:
 - front_humanitaire_d_urgence_non_affilie_breakdown
 - front_techno_reconstructionniste_breakdown
 - gouvernements_regionaux_residuels_reterritorialisants_breakdown
+- holdfast_breakdown
 type_relation_dominante: conflit
 
 annee_debut: 2041
@@ -106,8 +106,8 @@ La fracture entre les factions 'attentistes' qui refusent toute action offensive
 - [[consortium_amazonia_viva_breakdown]]
 - [[factions_secessionnistes_agrariennes_du_desert_breakdown]]
 - [[oracle_des_seuils_breakdown]]
-- [[reseaux_de_troc_inter_cooperatives_et_marges_periurbaines_eco_communalism]]
 **Opposants :**
 - [[front_humanitaire_d_urgence_non_affilie_breakdown]]
 - [[front_techno_reconstructionniste_breakdown]]
 - [[gouvernements_regionaux_residuels_reterritorialisants_breakdown]]
+- [[holdfast_breakdown]]

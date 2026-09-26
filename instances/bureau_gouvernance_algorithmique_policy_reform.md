@@ -38,6 +38,7 @@ zone_systemique:
     - énergie
 
 alliances:
+- agence_de_regulation_des_detroits_strategiques_ards_policy_reform
 - conseil_de_gouvernance_de_l_information_policy_reform
 - conseil_intergouvernemental_de_regulation_technologique_policy_reform
 - conseil_onu_de_gouvernance_numerique_et_ia_policy_reform
@@ -51,6 +52,7 @@ alliances:
 - fonds_de_stabilisation_climatique_onu_3_policy_reform
 - gouvernement_israel_policy_reform
 - institut_brookings_singapour_de_politique_computationnelle_policy_reform
+- institut_des_seuils_demographiques_policy_reform
 - office_integre_des_flux_migratoires_policy_reform
 - oracle_des_seuils_policy_reform
 - rede_paulista_de_distribuicao_algoritmica_policy_reform
@@ -74,9 +76,14 @@ oppositions:
 - front_souverainiste_des_blocs_non_signataires_policy_reform
 - gouvernements_populistes_anti_depossession_policy_reform
 - internationale_decroissante_anti_planification_policy_reform
+- kaspar_lind_policy_reform
 - les_hors_prisme_policy_reform
+- maelys_okonkwo_policy_reform
+- meridian_assembly_policy_reform
 - mouvement_pour_la_justice_ecologique_communautaire_policy_reform
-- reseau_des_chercheurs_en_ethique_des_systemes_distribues_reference
+- reseau_des_cartographes_des_zones_grises_policy_reform
+- terminal_kharg_data_haven_policy_reform
+- the_lattice_policy_reform
 type_relation_dominante: dépendance
 
 annee_debut: 2041
@@ -130,6 +137,7 @@ La tension centrale de l'ACRA repose sur le paradoxe de sa légitimité : plus s
 
 ## Relations
 **Alliés :**
+- [[agence_de_regulation_des_detroits_strategiques_ards_policy_reform]]
 - [[conseil_de_gouvernance_de_l_information_policy_reform]]
 - [[conseil_intergouvernemental_de_regulation_technologique_policy_reform]]
 - [[conseil_onu_de_gouvernance_numerique_et_ia_policy_reform]]
@@ -143,6 +151,7 @@ La tension centrale de l'ACRA repose sur le paradoxe de sa légitimité : plus s
 - [[fonds_de_stabilisation_climatique_onu_3_policy_reform]]
 - [[gouvernement_israel_policy_reform]]
 - [[institut_brookings_singapour_de_politique_computationnelle_policy_reform]]
+- [[institut_des_seuils_demographiques_policy_reform]]
 - [[office_integre_des_flux_migratoires_policy_reform]]
 - [[oracle_des_seuils_policy_reform]]
 - [[rede_paulista_de_distribuicao_algoritmica_policy_reform]]
@@ -166,6 +175,11 @@ La tension centrale de l'ACRA repose sur le paradoxe de sa légitimité : plus s
 - [[front_souverainiste_des_blocs_non_signataires_policy_reform]]
 - [[gouvernements_populistes_anti_depossession_policy_reform]]
 - [[internationale_decroissante_anti_planification_policy_reform]]
+- [[kaspar_lind_policy_reform]]
 - [[les_hors_prisme_policy_reform]]
+- [[maelys_okonkwo_policy_reform]]
+- [[meridian_assembly_policy_reform]]
 - [[mouvement_pour_la_justice_ecologique_communautaire_policy_reform]]
-- [[reseau_des_chercheurs_en_ethique_des_systemes_distribues_reference]]
+- [[reseau_des_cartographes_des_zones_grises_policy_reform]]
+- [[terminal_kharg_data_haven_policy_reform]]
+- [[the_lattice_policy_reform]]

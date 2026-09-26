@@ -34,14 +34,13 @@ zone_systemique:
     - société
 
 alliances:
-    - institut_de_philosophie_des_systemes_hybrides_d_helsinki_new_sustainability
-    - factions_technocratiques_du_conseil_de_regulation_informationnelle_global_new_sustainability
-
+- aurelio_stahl_new_sustainability
+- factions_technocratiques_du_conseil_de_regulation_informationnelle_global_new_sustainability
+- institut_de_philosophie_des_systemes_hybrides_d_helsinki_new_sustainability
 oppositions:
-    - coalition_anti_algorithme_des_autonomies_locales_new_sustainability
-    - collectifs_de_desobeissance_algorithmique_new_sustainability
-    - parlement_territoires_nairobi_new_sustainability
-
+- coalition_anti_algorithme_des_autonomies_locales_new_sustainability
+- collectifs_de_desobeissance_algorithmique_new_sustainability
+- parlement_territoires_nairobi_new_sustainability
 type_relation_dominante: rivalité
 
 annee_debut: 2026
@@ -95,12 +94,19 @@ Conservation des archives historiques du Deepfield Institute (2026-2053), inclua
 - [[technologie_information]]
 - [[frontieres_du_systeme]]
 
-## Relations
-**Alliés** : [[institut_de_philosophie_des_systemes_hybrides_d_helsinki_new_sustainability]], [[factions_technocratiques_du_conseil_de_regulation_informationnelle_global_new_sustainability]]
-**Opposants** : [[coalition_anti_algorithme_des_autonomies_locales_new_sustainability]], [[collectifs_de_desobeissance_algorithmique_new_sustainability]], [[parlement_territoires_nairobi_new_sustainability]]
 
 ## Description journalistique
 « Deepfield ? Un fantôme qui hante encore les couloirs du pouvoir », résume Leena Väinälä, historienne des systèmes hybrides. Dans les archives climatisées du Centre Institutionnel de Genève, des milliers de dossiers jaunis racontent l'histoire d'une institution qui croyait dur comme fer que la survie de l'humanité passait par le sacrifice des libertés. Aujourd'hui, ses rapports sont étudiés comme des reliques : on y trouve des modèles de « quarantaine cognitive » pour les populations jugées « non adaptatives », des algorithmes de rationnement hydrique appliqués sans consultation, et des scénarios de « recentrage démographique » qui font frémir. Pourtant, certains technocrates actuels y puisent encore des arguments pour justifier des restrictions algorithmiques... au nom de la stabilité, bien sûr.
 
 ## Tensions narratives
 Faut-il brûler les archives Deepfield ? La question divise. Pour les néo-démocrates, elles incarnent les dérives d'une gouvernance déconnectée ; pour les souverainistes hydriques, elles prouvent que la « main invisible des algorithmes » a échoué. Certains collectifs de désobéissance algorithmique piratent régulièrement leurs rapports pour en révéler le contenu, tandis que des factions technocratiques tentent de les réhabiliter en les présentant comme des « précurseurs mal compris ». Leur héritage resurgit dans les débats sur la délégation de souveraineté aux IA climatiques, où leurs scénarios de rupture systémique sont parfois cités... sans toujours préciser leur origine.
+
+## Relations
+**Alliés :**
+- [[aurelio_stahl_new_sustainability]]
+- [[factions_technocratiques_du_conseil_de_regulation_informationnelle_global_new_sustainability]]
+- [[institut_de_philosophie_des_systemes_hybrides_d_helsinki_new_sustainability]]
+**Opposants :**
+- [[coalition_anti_algorithme_des_autonomies_locales_new_sustainability]]
+- [[collectifs_de_desobeissance_algorithmique_new_sustainability]]
+- [[parlement_territoires_nairobi_new_sustainability]]

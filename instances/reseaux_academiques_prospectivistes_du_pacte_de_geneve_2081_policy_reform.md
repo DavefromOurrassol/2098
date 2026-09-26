@@ -35,6 +35,7 @@ zone_systemique:
 alliances:
 - agence_stabilisation_climatique_policy_reform
 - agence_technocratique_pour_la_resilience_biospherique_atrb_policy_reform
+- aurelio_stahl_policy_reform
 - autorite_mondiale_du_vivant_amv_policy_reform
 - bloc_des_nations_a_economie_carbone_controlee_policy_reform
 - conseil_de_regulation_climatique_global_policy_reform
@@ -43,6 +44,7 @@ alliances:
 - consortium_africain_de_biotechnologies_sociales_policy_reform
 - consortium_amazonia_viva_policy_reform
 - fonds_mondial_de_resilience_infrastructurelle_policy_reform
+- gelecek_meclisi_policy_reform
 - institut_brookings_singapour_de_politique_computationnelle_policy_reform
 - office_integre_des_flux_migratoires_policy_reform
 - oracle_des_seuils_policy_reform
@@ -128,10 +130,12 @@ Le réseau est écartelé entre sa vocation d'indépendance académique et sa d�
 - [[valeurs_culture_tempo_sociale]]
 
 
+
 ## Relations
 **Alliés :**
 - [[agence_stabilisation_climatique_policy_reform]]
 - [[agence_technocratique_pour_la_resilience_biospherique_atrb_policy_reform]]
+- [[aurelio_stahl_policy_reform]]
 - [[autorite_mondiale_du_vivant_amv_policy_reform]]
 - [[bloc_des_nations_a_economie_carbone_controlee_policy_reform]]
 - [[conseil_de_regulation_climatique_global_policy_reform]]
@@ -140,6 +144,7 @@ Le réseau est écartelé entre sa vocation d'indépendance académique et sa d�
 - [[consortium_africain_de_biotechnologies_sociales_policy_reform]]
 - [[consortium_amazonia_viva_policy_reform]]
 - [[fonds_mondial_de_resilience_infrastructurelle_policy_reform]]
+- [[gelecek_meclisi_policy_reform]]
 - [[institut_brookings_singapour_de_politique_computationnelle_policy_reform]]
 - [[office_integre_des_flux_migratoires_policy_reform]]
 - [[oracle_des_seuils_policy_reform]]

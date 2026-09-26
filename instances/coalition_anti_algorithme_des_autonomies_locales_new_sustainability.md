@@ -37,7 +37,9 @@ alliances:
 - collectifs_riverains_du_bassin_du_congo_new_sustainability
 - communautes_locales_exclues_des_corridors_new_sustainability
 - factions_internes_contestataires_du_bureau_de_moderation_new_sustainability
+- ilse_varga_holm_new_sustainability
 - internationale_souverainiste_de_deconnexion_territoriale_new_sustainability
+- les_veilleurs_des_nappes_phreatiques_new_sustainability
 - mouvement_communautaire_des_micro_grids_energetiques_new_sustainability
 - mouvement_pour_l_autodetermination_territoriale_new_sustainability
 - mouvement_souverainiste_de_la_ceinture_boreale_new_sustainability
@@ -59,9 +61,13 @@ oppositions:
 - conseil_technocratique_de_coordination_regionale_new_sustainability
 - consortium_d_interoperabilite_ia_humain_new_sustainability
 - consortium_des_ia_climatiques_new_sustainability
+- deepfield_institute_new_sustainability
 - directive_kontinuum_new_sustainability
+- ergo_wian_sovereign_holdings_new_sustainability
 - factions_technocratiques_de_la_delegation_ia_totale_new_sustainability
+- gelecek_meclisi_new_sustainability
 - grille_aria_new_sustainability
+- nadia_ferreira_sato_new_sustainability
 - observatoire_climatique_narratif_de_nairobi_new_sustainability
 - operateurs_de_fusion_energetique_regionaux_new_sustainability
 - oracle_des_seuils_new_sustainability
@@ -133,6 +139,7 @@ La contradiction fondamentale qui ronge la Coalition est d'ordre existentiel : p
 - [[technologie_information]]
 
 
+
 ## Relations
 **Alliés :**
 - [[collectifs_anarcho_autonomistes_des_zones_libres_new_sustainability]]
@@ -141,7 +148,9 @@ La contradiction fondamentale qui ronge la Coalition est d'ordre existentiel : p
 - [[collectifs_riverains_du_bassin_du_congo_new_sustainability]]
 - [[communautes_locales_exclues_des_corridors_new_sustainability]]
 - [[factions_internes_contestataires_du_bureau_de_moderation_new_sustainability]]
+- [[ilse_varga_holm_new_sustainability]]
 - [[internationale_souverainiste_de_deconnexion_territoriale_new_sustainability]]
+- [[les_veilleurs_des_nappes_phreatiques_new_sustainability]]
 - [[mouvement_communautaire_des_micro_grids_energetiques_new_sustainability]]
 - [[mouvement_pour_l_autodetermination_territoriale_new_sustainability]]
 - [[mouvement_souverainiste_de_la_ceinture_boreale_new_sustainability]]
@@ -163,9 +172,13 @@ La contradiction fondamentale qui ronge la Coalition est d'ordre existentiel : p
 - [[conseil_technocratique_de_coordination_regionale_new_sustainability]]
 - [[consortium_d_interoperabilite_ia_humain_new_sustainability]]
 - [[consortium_des_ia_climatiques_new_sustainability]]
+- [[deepfield_institute_new_sustainability]]
 - [[directive_kontinuum_new_sustainability]]
+- [[ergo_wian_sovereign_holdings_new_sustainability]]
 - [[factions_technocratiques_de_la_delegation_ia_totale_new_sustainability]]
+- [[gelecek_meclisi_new_sustainability]]
 - [[grille_aria_new_sustainability]]
+- [[nadia_ferreira_sato_new_sustainability]]
 - [[observatoire_climatique_narratif_de_nairobi_new_sustainability]]
 - [[operateurs_de_fusion_energetique_regionaux_new_sustainability]]
 - [[oracle_des_seuils_new_sustainability]]

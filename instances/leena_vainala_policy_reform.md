@@ -36,17 +36,12 @@ zone_systemique:
     - société
 
 alliances:
-    - communs_numeriques_agroecologiques_reference
-    - conseil_onu_de_gouvernance_numerique_et_ia_policy_reform
-    - universites_et_think_tanks_en_zones_de_liberte_academique_reference
-    - collectifs_citoyens_de_deliberation_augmentee_policy_reform
-
+- conseil_onu_de_gouvernance_numerique_et_ia_policy_reform
+- collectifs_citoyens_de_deliberation_augmentee_policy_reform
 oppositions:
-    - bloc_des_architectes_d_efficience_algorithmique_new_sustainability
-    - consortiums_prives_de_gouvernance_algorithmique_policy_reform
-    - courant_autoritaire_recuperateur_du_vocabulaire_communautaire_policy_reform
-    - front_techno_utopiste_de_la_decision_automatisee_policy_reform
-
+- consortiums_prives_de_gouvernance_algorithmique_policy_reform
+- courant_autoritaire_recuperateur_du_vocabulaire_communautaire_policy_reform
+- front_techno_utopiste_de_la_decision_automatisee_policy_reform
 type_relation_dominante: rivalité
 
 annee_debut: 2031
@@ -90,12 +85,18 @@ Rédige et négocie des protocoles de délibération citoyenne insérés dans le
 - [[technologie_information]]
 - [[valeurs_culture_tempo_sociale]]
 
-## Relations
-**Alliés** : [[communs_numeriques_agroecologiques_reference]], [[conseil_onu_de_gouvernance_numerique_et_ia_policy_reform]], [[universites_et_think_tanks_en_zones_de_liberte_academique_reference]], [[collectifs_citoyens_de_deliberation_augmentee_policy_reform]]
-**Opposants** : [[bloc_des_architectes_d_efficience_algorithmique_new_sustainability]], [[consortiums_prives_de_gouvernance_algorithmique_policy_reform]], [[courant_autoritaire_recuperateur_du_vocabulaire_communautaire_policy_reform]], [[front_techno_utopiste_de_la_decision_automatisee_policy_reform]]
 
 ## Description journalistique
 On la croise toujours avec deux écrans pliés sous le bras et une tasse de café noir finlandais qu'elle ne finit jamais — trop de réunions, trop de textes à corriger. Leena Väinälä, 71 ans, est l'une de ces rares intellectuelles dont les idées ont réussi à entrer dans les institutions sans tout à fait s'y dissoudre. Ses chartes des communs numériques, rédigées dans les années 2030 dans une chambre d'hôtel de Tampere, sont aujourd'hui citées dans dix-sept traités de gouvernance internationale. Le problème, dit-elle sans sourire, c'est qu'on cite les mots et qu'on oublie la procédure. En 2098, elle siège trois jours par semaine au Conseil de régulation numérique de Genève, et consacre les quatre autres à tenter de réparer ce que le Conseil abîme. Célébrée comme architecte de la démocratie numérique, elle se décrit elle-même comme une plombière qui colmate des fuites dans un bâtiment construit sans elle.
 
 ## Tensions narratives
 La tension centrale de Väinälä en 2098 est celle de la cooptation : jusqu'où peut-on travailler de l'intérieur d'un système technocratique sans en devenir le visage légitime ? Ses anciens alliés des communs l'accusent de caution intellectuelle ; les institutions la tolèrent précisément parce qu'elle les critique avec un vocabulaire qu'elles contrôlent. Une deuxième tension émerge autour de son héritage : ses chartes sont désormais invoquées par des régimes autoritaires pour justifier la régulation des plateformes sans délibération réelle. Enfin, une question biographique hante ses entretiens : que fera-t-elle si le prochain traité de gouvernance IA exclut définitivement toute procédure délibérative — partira-t-elle, ou signera-t-elle quand même ?
+
+## Relations
+**Alliés :**
+- [[conseil_onu_de_gouvernance_numerique_et_ia_policy_reform]]
+- [[collectifs_citoyens_de_deliberation_augmentee_policy_reform]]
+**Opposants :**
+- [[consortiums_prives_de_gouvernance_algorithmique_policy_reform]]
+- [[courant_autoritaire_recuperateur_du_vocabulaire_communautaire_policy_reform]]
+- [[front_techno_utopiste_de_la_decision_automatisee_policy_reform]]

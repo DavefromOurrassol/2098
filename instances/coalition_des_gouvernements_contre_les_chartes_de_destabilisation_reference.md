@@ -53,6 +53,7 @@ oppositions:
 - reseau_meshcommons_netsolidaire_reference
 - reseaux_de_gouvernance_multilaterale_survivants_reference
 - singapour_est_reference
+- the_lattice_reference
 - voix_du_dehors_reference
 - zones_grises_globales_reference
 type_relation_dominante: conflit
@@ -123,6 +124,7 @@ La Coalition est structurellement tiraillée entre des membres aux régimes trè
 - [[frontieres_du_systeme]]
 
 
+
 ## Relations
 **Alliés :**
 - [[bloc_des_souverainistes_climatiques_reference]]
@@ -147,6 +149,7 @@ La Coalition est structurellement tiraillée entre des membres aux régimes trè
 - [[reseau_meshcommons_netsolidaire_reference]]
 - [[reseaux_de_gouvernance_multilaterale_survivants_reference]]
 - [[singapour_est_reference]]
+- [[the_lattice_reference]]
 - [[voix_du_dehors_reference]]
 - [[zones_grises_globales_reference]]
 

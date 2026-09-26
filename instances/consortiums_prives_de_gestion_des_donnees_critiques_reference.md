@@ -43,9 +43,12 @@ alliances:
 - consortium_des_plateformes_ia_centralisees_anti_deliberation_reference
 - consortiums_energetiques_des_megapoles_reference
 - datasovereign_reference
+- ergo_wian_sovereign_holdings_reference
 - gouvernements_a_regime_de_productivite_mandatee_reference
+- holdfast_reference
 - institutions_multilaterales_survivantes_reference
 - services_de_contre_information_des_blocs_geopolitiques_concurrents_reference
+- terminal_kharg_data_haven_reference
 oppositions:
 - bloc_des_etats_du_sud_global_contre_la_cession_de_donnees_reference
 - bureaux_de_regulation_informationnelle_reference
@@ -57,9 +60,12 @@ oppositions:
 - federation_des_cliniques_autonomes_reference
 - helsinki_communs_numeriques_reference
 - institut_polytechnique_de_ouagadougou_reference
+- lamplight_reference
+- nadia_ferreira_sato_reference
 - observatoire_climatique_des_territoires_oct_reference
 - ong_de_preservation_patrimoniale_numerique_reference
 - ong_de_tracabilite_des_ressources_critiques_reference
+- raised_hands_reference
 - regulateurs_de_l_union_eurasiatique_sur_les_donnees_critiques_reference
 - reseau_des_chercheurs_en_ethique_des_systemes_distribues_reference
 - reseau_des_villes_etats_pilotes_en_gouvernance_participative_reference
@@ -138,6 +144,7 @@ La tension centrale réside dans leur double légitimité contradictoire : prest
 - [[energie_ressources_critiques]]
 
 
+
 ## Relations
 **Alliés :**
 - [[administrations_hybrides_des_cites_relais_peripheriques_reference]]
@@ -149,9 +156,12 @@ La tension centrale réside dans leur double légitimité contradictoire : prest
 - [[consortium_des_plateformes_ia_centralisees_anti_deliberation_reference]]
 - [[consortiums_energetiques_des_megapoles_reference]]
 - [[datasovereign_reference]]
+- [[ergo_wian_sovereign_holdings_reference]]
 - [[gouvernements_a_regime_de_productivite_mandatee_reference]]
+- [[holdfast_reference]]
 - [[institutions_multilaterales_survivantes_reference]]
 - [[services_de_contre_information_des_blocs_geopolitiques_concurrents_reference]]
+- [[terminal_kharg_data_haven_reference]]
 **Opposants :**
 - [[bloc_des_etats_du_sud_global_contre_la_cession_de_donnees_reference]]
 - [[bureaux_de_regulation_informationnelle_reference]]
@@ -163,9 +173,12 @@ La tension centrale réside dans leur double légitimité contradictoire : prest
 - [[federation_des_cliniques_autonomes_reference]]
 - [[helsinki_communs_numeriques_reference]]
 - [[institut_polytechnique_de_ouagadougou_reference]]
+- [[lamplight_reference]]
+- [[nadia_ferreira_sato_reference]]
 - [[observatoire_climatique_des_territoires_oct_reference]]
 - [[ong_de_preservation_patrimoniale_numerique_reference]]
 - [[ong_de_tracabilite_des_ressources_critiques_reference]]
+- [[raised_hands_reference]]
 - [[regulateurs_de_l_union_eurasiatique_sur_les_donnees_critiques_reference]]
 - [[reseau_des_chercheurs_en_ethique_des_systemes_distribues_reference]]
 - [[reseau_des_villes_etats_pilotes_en_gouvernance_participative_reference]]

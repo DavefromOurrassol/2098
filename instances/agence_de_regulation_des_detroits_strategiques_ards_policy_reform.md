@@ -38,27 +38,27 @@ zone_systemique:
     - infrastructure
 
 alliances:
-    - agence_internationale_de_l_energie_reformatee_aier_policy_reform
-    - agence_stabilisation_climatique_policy_reform
-    - arctic_passage_authority_policy_reform
-    - autorite_continentale_des_ressources_aquatiques_acra_policy_reform
-    - autorite_mondiale_du_vivant_amv_policy_reform
-    - bureau_gouvernance_algorithmique_policy_reform
-    - conseil_regulation_ressources_policy_reform
-    - fonds_mondial_de_resilience_infrastructurelle_policy_reform
-    - observatoire_mondial_des_ressources_critiques_policy_reform
-    - oracle_des_seuils_policy_reform
-
+- agence_internationale_de_l_energie_reformatee_aier_policy_reform
+- agence_stabilisation_climatique_policy_reform
+- arctic_passage_authority_policy_reform
+- autorite_continentale_des_ressources_aquatiques_acra_policy_reform
+- autorite_mondiale_du_vivant_amv_policy_reform
+- bureau_gouvernance_algorithmique_policy_reform
+- conseil_regulation_ressources_policy_reform
+- fonds_mondial_de_resilience_infrastructurelle_policy_reform
+- ilse_varga_holm_policy_reform
+- institut_des_seuils_demographiques_policy_reform
+- observatoire_mondial_des_ressources_critiques_policy_reform
+- oracle_des_seuils_policy_reform
 oppositions:
-    - coalition_des_operateurs_energetiques_prives_anti_quotas_policy_reform
-    - coalition_des_souverainistes_numeriques_policy_reform
-    - front_de_souverainete_biologique_eurasiatique_policy_reform
-    - front_des_autonomies_territoriales_radicales_policy_reform
-    - front_des_souverainistes_energetiques_policy_reform
-    - front_souverainiste_de_l_information_regionale_policy_reform
-    - lobbies_des_energies_fossiles_residuelles_policy_reform
-    - syndicats_d_extraction_privee_non_regules_policy_reform
-
+- coalition_des_operateurs_energetiques_prives_anti_quotas_policy_reform
+- coalition_des_souverainistes_numeriques_policy_reform
+- front_de_souverainete_biologique_eurasiatique_policy_reform
+- front_des_autonomies_territoriales_radicales_policy_reform
+- front_des_souverainistes_energetiques_policy_reform
+- front_souverainiste_de_l_information_regionale_policy_reform
+- lobbies_des_energies_fossiles_residuelles_policy_reform
+- syndicats_d_extraction_privee_non_regules_policy_reform
 type_relation_dominante: alliance stratégique
 
 annee_debut: 2038
@@ -102,12 +102,33 @@ Institution internationale dominante basée aux détroits d'Ormuz et de Malacca,
 - [[gouvernance_institutions]]
 - [[organisation_territoires]]
 
-## Relations
-**Alliés** : [[agence_internationale_de_l_energie_reformatee_aier_policy_reform]], [[agence_stabilisation_climatique_policy_reform]], [[arctic_passage_authority_policy_reform]], [[autorite_continentale_des_ressources_aquatiques_acra_policy_reform]], [[autorite_mondiale_du_vivant_amv_policy_reform]], [[bureau_gouvernance_algorithmique_policy_reform]], [[conseil_regulation_ressources_policy_reform]], [[fonds_mondial_de_resilience_infrastructurelle_policy_reform]], [[observatoire_mondial_des_ressources_critiques_policy_reform]], [[oracle_des_seuils_policy_reform]]
-**Opposants** : [[coalition_des_operateurs_energetiques_prives_anti_quotas_policy_reform]], [[coalition_des_souverainistes_numeriques_policy_reform]], [[front_de_souverainete_biologique_eurasiatique_policy_reform]], [[front_des_autonomies_territoriales_radicales_policy_reform]], [[front_des_souverainistes_energetiques_policy_reform]], [[front_souverainiste_de_l_information_regionale_policy_reform]], [[lobbies_des_energies_fossiles_residuelles_policy_reform]], [[syndicats_d_extraction_privee_non_regules_policy_reform]]
 
 ## Description journalistique
 Depuis son quartier général flottant ancré au milieu du détroit d'Ormuz, l'ARDS est devenue en deux décennies l'arbitre incontournable des mers. Ses « corridors verts » – des voies maritimes sécurisées par des drones sous-marins et des patrouilles mixtes État-privé – acheminent 85 % des terres rares et 60 % du pétrole mondial. Les images de ses « audits surprise » sur les pétroliers, où des inspecteurs en combinaison blindée vérifient les cargaisons en temps réel, sont devenues un symbole de la gouvernance post-nationale. Pourtant, derrière cette façade de neutralité technique, l'ARDS est régulièrement accusée de favoriser les blocs signataires de ses accords, au détriment des États dissidents ou des milices locales qui contrôlent des portions de détroits. Ses décisions – comme le blocage temporaire des exportations iraniennes en 2052 ou la taxation des convois chinois en 2067 – ont provoqué des crises diplomatiques majeures, mais jamais de rupture durable : trop d'acteurs dépendent de ses services pour oser la défier frontalement.
 
 ## Tensions narratives
 1. **Souveraineté vs. régulation** : Les États riverains (Iran, Oman, Indonésie, Malaisie) contestent régulièrement l'autorité de l'ARDS sur leurs eaux territoriales, tandis que les blocs souverains (UE, Chine, États-Unis) tentent de l'instrumentaliser pour leurs propres intérêts. 2. **Piraterie 2.0** : Les attaques de convois se sont sophistiquées, avec des drones sous-marins autonomes et des cyberattaques ciblant les systèmes de navigation. L'ARDS peine à adapter ses protocoles de sécurité, conçus pour une piraterie « traditionnelle ». 3. **Monopoles privés** : Des consortiums comme la Coalition des Opérateurs Énergétiques Privés Anti-Quotas financent des milices locales pour contourner les taxes de l'ARDS, créant une économie parallèle des ressources. 4. **Climat et géopolitique** : La fonte des glaces en Arctique ouvre de nouvelles routes maritimes, réduisant l'importance des détroits traditionnels. L'ARDS tente de s'étendre vers le nord, mais se heurte à l'Arctic Passage Authority, qui défend une approche plus locale de la régulation.
+
+## Relations
+**Alliés :**
+- [[agence_internationale_de_l_energie_reformatee_aier_policy_reform]]
+- [[agence_stabilisation_climatique_policy_reform]]
+- [[arctic_passage_authority_policy_reform]]
+- [[autorite_continentale_des_ressources_aquatiques_acra_policy_reform]]
+- [[autorite_mondiale_du_vivant_amv_policy_reform]]
+- [[bureau_gouvernance_algorithmique_policy_reform]]
+- [[conseil_regulation_ressources_policy_reform]]
+- [[fonds_mondial_de_resilience_infrastructurelle_policy_reform]]
+- [[ilse_varga_holm_policy_reform]]
+- [[institut_des_seuils_demographiques_policy_reform]]
+- [[observatoire_mondial_des_ressources_critiques_policy_reform]]
+- [[oracle_des_seuils_policy_reform]]
+**Opposants :**
+- [[coalition_des_operateurs_energetiques_prives_anti_quotas_policy_reform]]
+- [[coalition_des_souverainistes_numeriques_policy_reform]]
+- [[front_de_souverainete_biologique_eurasiatique_policy_reform]]
+- [[front_des_autonomies_territoriales_radicales_policy_reform]]
+- [[front_des_souverainistes_energetiques_policy_reform]]
+- [[front_souverainiste_de_l_information_regionale_policy_reform]]
+- [[lobbies_des_energies_fossiles_residuelles_policy_reform]]
+- [[syndicats_d_extraction_privee_non_regules_policy_reform]]

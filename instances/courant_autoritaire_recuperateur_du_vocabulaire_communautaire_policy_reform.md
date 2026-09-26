@@ -40,6 +40,7 @@ alliances:
 - factions_internes_dissidentes_des_contributeurs_historiques_policy_reform
 - union_technocratique_eurasiatique_policy_reform
 oppositions:
+- aurelio_stahl_policy_reform
 - collectifs_citoyens_de_deliberation_augmentee_policy_reform
 - collectifs_citoyens_pour_l_audit_algorithmique_ouvert_policy_reform
 - collectifs_de_gouvernance_communautaire_decentralisee_policy_reform
@@ -48,6 +49,7 @@ oppositions:
 - consortium_des_villes_etats_durables_policy_reform
 - courants_post_technocratiques_de_reconquete_democratique_policy_reform
 - front_des_communes_algorithmiques_policy_reform
+- gelecek_meclisi_policy_reform
 - institut_brookings_singapour_de_politique_computationnelle_policy_reform
 - leena_vainala_policy_reform
 - mouvement_pour_la_justice_ecologique_communautaire_policy_reform
@@ -120,6 +122,7 @@ La contradiction centrale est que ce courant dépend des institutions réformatr
 - [[technologie_information]]
 
 
+
 ## Relations
 **Alliés :**
 - [[bureau_gouvernance_algorithmique_policy_reform]]
@@ -129,6 +132,7 @@ La contradiction centrale est que ce courant dépend des institutions réformatr
 - [[factions_internes_dissidentes_des_contributeurs_historiques_policy_reform]]
 - [[union_technocratique_eurasiatique_policy_reform]]
 **Opposants :**
+- [[aurelio_stahl_policy_reform]]
 - [[collectifs_citoyens_de_deliberation_augmentee_policy_reform]]
 - [[collectifs_citoyens_pour_l_audit_algorithmique_ouvert_policy_reform]]
 - [[collectifs_de_gouvernance_communautaire_decentralisee_policy_reform]]
@@ -137,6 +141,7 @@ La contradiction centrale est que ce courant dépend des institutions réformatr
 - [[consortium_des_villes_etats_durables_policy_reform]]
 - [[courants_post_technocratiques_de_reconquete_democratique_policy_reform]]
 - [[front_des_communes_algorithmiques_policy_reform]]
+- [[gelecek_meclisi_policy_reform]]
 - [[institut_brookings_singapour_de_politique_computationnelle_policy_reform]]
 - [[leena_vainala_policy_reform]]
 - [[mouvement_pour_la_justice_ecologique_communautaire_policy_reform]]

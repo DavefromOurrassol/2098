@@ -38,7 +38,6 @@ zone_geographique:
 zone_systemique:
 - société
 alliances:
-- arctic_passage_authority_breakdown
 - consortium_energetique_oural_caspien_breakdown
 - consortiums_energetiques_samoiedes_du_yamal_breakdown
 - factions_energetiques_heritieres_des_pactes_abs_breakdown
@@ -120,9 +119,9 @@ Le District est écartelé entre la Hanse Baltique Recomposée et les acteurs no
 - [[energie_ressources_critiques]]
 
 
+
 ## Relations
 **Alliés :**
-- [[arctic_passage_authority_breakdown]]
 - [[consortium_energetique_oural_caspien_breakdown]]
 - [[consortiums_energetiques_samoiedes_du_yamal_breakdown]]
 - [[factions_energetiques_heritieres_des_pactes_abs_breakdown]]

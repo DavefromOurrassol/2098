@@ -39,19 +39,20 @@ zone_systemique:
     - sécurité
 
 alliances:
-    - arctic_passage_authority_reference
-    - autorites_regionales_de_regulation_hydrologique_reference
-    - consortium_des_grandes_plateformes_logistiques_globales_reference
-    - agence_internationale_des_energies_renouvelables_irena_2_reference
-    - banque_mondiale_des_transitions_climatiques_reference
-
+- agence_internationale_des_energies_renouvelables_irena_2_reference
+- arctic_passage_authority_reference
+- autorites_regionales_de_regulation_hydrologique_reference
+- banque_mondiale_des_transitions_climatiques_reference
+- consortium_des_grandes_plateformes_logistiques_globales_reference
+- ilse_varga_holm_reference
+- institut_des_seuils_demographiques_reference
 oppositions:
-    - milices_concurrentes_des_droits_de_passage_reference
-    - factions_d_extraction_miniere_independantes_reference
-    - corporations_d_extraction_energetique_non_signataires_reference
-    - bloc_des_souverainistes_climatiques_reference
-    - pacte_des_souverains_reference
-
+- bloc_des_souverainistes_climatiques_reference
+- corporations_d_extraction_energetique_non_signataires_reference
+- factions_d_extraction_miniere_independantes_reference
+- milices_concurrentes_des_droits_de_passage_reference
+- pacte_des_souverains_reference
+- terminal_kharg_data_haven_reference
 type_relation_dominante: rivalité
 
 annee_debut: 2047
@@ -95,12 +96,26 @@ L'ARPS gère les quotas de transit pour les ressources critiques (énergie, mine
 - [[organisation_territoires]]
 - [[systeme_economique_redistribution]]
 
-## Relations
-**Alliés** : [[arctic_passage_authority_reference]], [[autorites_regionales_de_regulation_hydrologique_reference]], [[consortium_des_grandes_plateformes_logistiques_globales_reference]], [[agence_internationale_des_energies_renouvelables_irena_2_reference]], [[banque_mondiale_des_transitions_climatiques_reference]]
-**Opposants** : [[milices_concurrentes_des_droits_de_passage_reference]], [[factions_d_extraction_miniere_independantes_reference]], [[corporations_d_extraction_energetique_non_signataires_reference]], [[bloc_des_souverainistes_climatiques_reference]], [[pacte_des_souverains_reference]]
 
 ## Description journalistique
 En 2098, l'ARPS est devenue l'arbitre invisible mais incontournable des flux mondiaux. Ses inspecteurs, reconnaissables à leurs combinaisons grises estampillées du logo 'Δ' (pour 'détroit'), patrouillent sur les porte-conteneurs géants et les convois arctiques, vérifiant les quotas de transit et les taxes climatiques. Les 'accords de passage' négociés par l'ARPS sont affichés en temps réel sur les écrans des bourses logistiques, déterminant le prix des denrées et de l'énergie. Pourtant, son autorité est sans cesse contestée : les milices des détroits bloquent régulièrement les navires, tandis que les États souverains accusent l'agence de 'colonisation douce' des routes maritimes.
 
 ## Tensions narratives
 L'ARPS est au cœur d'un bras de fer entre les mégapoles autonomes, qui veulent des flux libres, et les États souverains, qui refusent de céder le contrôle de leurs eaux territoriales. Son modèle de gouvernance hybride est menacé par la montée des blocs souverainistes, qui proposent une alternative radicale : la nationalisation pure et simple des détroits. Par ailleurs, les milices locales, équipées de drones et de mines flottantes, sapent son autorité en instaurant des 'péages pirates'. Enfin, la fonte des glaces ouvre de nouvelles routes arctiques, mais l'ARPS peine à imposer ses règles dans ces zones disputées entre la Russie, les consortiums privés et les peuples autochtones.
+
+## Relations
+**Alliés :**
+- [[agence_internationale_des_energies_renouvelables_irena_2_reference]]
+- [[arctic_passage_authority_reference]]
+- [[autorites_regionales_de_regulation_hydrologique_reference]]
+- [[banque_mondiale_des_transitions_climatiques_reference]]
+- [[consortium_des_grandes_plateformes_logistiques_globales_reference]]
+- [[ilse_varga_holm_reference]]
+- [[institut_des_seuils_demographiques_reference]]
+**Opposants :**
+- [[bloc_des_souverainistes_climatiques_reference]]
+- [[corporations_d_extraction_energetique_non_signataires_reference]]
+- [[factions_d_extraction_miniere_independantes_reference]]
+- [[milices_concurrentes_des_droits_de_passage_reference]]
+- [[pacte_des_souverains_reference]]
+- [[terminal_kharg_data_haven_reference]]

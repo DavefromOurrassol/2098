@@ -37,20 +37,19 @@ zone_systemique:
     - société
 
 alliances:
-    - collectifs_de_biohackers_agro_communautaires_policy_reform
-    - collectifs_de_defense_hydrique_saheliens_policy_reform
-    - collectifs_de_gouvernance_communautaire_decentralisee_policy_reform
-    - mouvement_pour_la_justice_ecologique_communautaire_policy_reform
-    - reseau_des_auditeurs_algorithmiques_independants_raai_policy_reform
-    - consortium_amazonia_viva_policy_reform
-
+- coalition_vivant_policy_reform
+- collectifs_de_biohackers_agro_communautaires_policy_reform
+- collectifs_de_defense_hydrique_saheliens_policy_reform
+- collectifs_de_gouvernance_communautaire_decentralisee_policy_reform
+- consortium_amazonia_viva_policy_reform
+- mouvement_pour_la_justice_ecologique_communautaire_policy_reform
+- reseau_des_auditeurs_algorithmiques_independants_raai_policy_reform
 oppositions:
-    - autorite_continentale_des_ressources_aquatiques_acra_policy_reform
-    - factions_technocratiques_de_la_marchandisation_hydrique_policy_reform
-    - consortiums_agro_industriels_du_bassin_fluvial_policy_reform
-    - conseil_regulation_ressources_policy_reform
-    - grille_aria_policy_reform
-
+- autorite_continentale_des_ressources_aquatiques_acra_policy_reform
+- conseil_regulation_ressources_policy_reform
+- consortiums_agro_industriels_du_bassin_fluvial_policy_reform
+- factions_technocratiques_de_la_marchandisation_hydrique_policy_reform
+- grille_aria_policy_reform
 type_relation_dominante: rivalité
 
 annee_debut: 2029
@@ -95,12 +94,25 @@ Elles assurent la surveillance des bassins fluviaux et des nappes phréatiques, 
 - [[sante_biotechnologies]]
 - [[climat_environnement_global]]
 
-## Relations
-**Alliés** : [[collectifs_de_biohackers_agro_communautaires_policy_reform]], [[collectifs_de_defense_hydrique_saheliens_policy_reform]], [[collectifs_de_gouvernance_communautaire_decentralisee_policy_reform]], [[mouvement_pour_la_justice_ecologique_communautaire_policy_reform]], [[reseau_des_auditeurs_algorithmiques_independants_raai_policy_reform]], [[consortium_amazonia_viva_policy_reform]]
-**Opposants** : [[autorite_continentale_des_ressources_aquatiques_acra_policy_reform]], [[factions_technocratiques_de_la_marchandisation_hydrique_policy_reform]], [[consortiums_agro_industriels_du_bassin_fluvial_policy_reform]], [[conseil_regulation_ressources_policy_reform]], [[grille_aria_policy_reform]]
 
 ## Description journalistique
 Depuis les rives du Mékong jusqu’aux deltas oubliés du Niger, les Sentinelles Fluviales sont devenues les gardiennes invisibles de l’eau et de la terre. Dans un monde où les algorithmes et les agences internationales décident du sort des ressources, ces réseaux locaux, souvent composés de pêcheurs, d’agriculteurs et de hackers biosphériques, agissent comme un filet de sécurité pour les communautés marginalisées. Leur force ? Une connaissance intime du terrain et une méfiance viscérale envers les structures de pouvoir. Leur faiblesse ? Leur fragmentation, qui les empêche de peser sur les décisions globales. Pourtant, leur influence grandit, alimentée par les crises hydriques et les échecs répétés des régulations technocratiques.
 
 ## Tensions narratives
 Les Sentinelles Fluviales sont au cœur d’un paradoxe : leur efficacité locale les rend indispensables, mais leur refus de s’intégrer aux structures globales les prive de moyens et de reconnaissance. Leur alliance avec des collectifs d’audit algorithmique pourrait leur offrir une voix plus forte, mais au risque de perdre leur autonomie. Par ailleurs, leur opposition frontale aux autorités hydriques et aux consortiums agro-industriels en fait des cibles pour les factions technocratiques, qui cherchent à les discréditer ou à les infiltrer. Leur avenir dépendra de leur capacité à concilier leur ancrage territorial avec une stratégie plus large, sans tomber dans le piège de la récupération politique.
+
+## Relations
+**Alliés :**
+- [[coalition_vivant_policy_reform]]
+- [[collectifs_de_biohackers_agro_communautaires_policy_reform]]
+- [[collectifs_de_defense_hydrique_saheliens_policy_reform]]
+- [[collectifs_de_gouvernance_communautaire_decentralisee_policy_reform]]
+- [[consortium_amazonia_viva_policy_reform]]
+- [[mouvement_pour_la_justice_ecologique_communautaire_policy_reform]]
+- [[reseau_des_auditeurs_algorithmiques_independants_raai_policy_reform]]
+**Opposants :**
+- [[autorite_continentale_des_ressources_aquatiques_acra_policy_reform]]
+- [[conseil_regulation_ressources_policy_reform]]
+- [[consortiums_agro_industriels_du_bassin_fluvial_policy_reform]]
+- [[factions_technocratiques_de_la_marchandisation_hydrique_policy_reform]]
+- [[grille_aria_policy_reform]]

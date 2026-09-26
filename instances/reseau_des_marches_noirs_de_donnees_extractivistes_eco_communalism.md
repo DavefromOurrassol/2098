@@ -41,6 +41,7 @@ alliances:
 - enclaves_extractivistes_residuelles_des_corridors_eco_communalism
 - factions_extractivistes_des_aquiferes_communs_eco_communalism
 - reseaux_de_notables_communautaires_capturistes_eco_communalism
+- terminal_kharg_data_haven_eco_communalism
 oppositions:
 - assemblees_bioterritoriales_regionales_eco_communalism
 - collectifs_de_cartographie_ecologique_participative_eco_communalism
@@ -53,6 +54,7 @@ oppositions:
 - oracle_des_seuils_eco_communalism
 - plateformes_centralisees_de_reagregation_globale_eco_communalism
 - rede_paulista_de_distribuicao_algoritmica_eco_communalism
+- reseau_des_cartographes_des_zones_grises_eco_communalism
 - reseau_mnemos_eco_communalism
 - reseaux_de_bibliotheques_archives_communautaires_eco_communalism
 - reseaux_de_radio_communautaire_basse_consommation_eco_communalism
@@ -122,6 +124,7 @@ Le paradoxe central du réseau réside dans sa dépendance aux infrastructures c
 - [[systeme_economique_redistribution]]
 
 
+
 ## Relations
 **Alliés :**
 - [[cartels_de_narration_de_penurie_eco_communalism]]
@@ -133,6 +136,7 @@ Le paradoxe central du réseau réside dans sa dépendance aux infrastructures c
 - [[enclaves_extractivistes_residuelles_des_corridors_eco_communalism]]
 - [[factions_extractivistes_des_aquiferes_communs_eco_communalism]]
 - [[reseaux_de_notables_communautaires_capturistes_eco_communalism]]
+- [[terminal_kharg_data_haven_eco_communalism]]
 **Opposants :**
 - [[assemblees_bioterritoriales_regionales_eco_communalism]]
 - [[collectifs_de_cartographie_ecologique_participative_eco_communalism]]
@@ -145,6 +149,7 @@ Le paradoxe central du réseau réside dans sa dépendance aux infrastructures c
 - [[oracle_des_seuils_eco_communalism]]
 - [[plateformes_centralisees_de_reagregation_globale_eco_communalism]]
 - [[rede_paulista_de_distribuicao_algoritmica_eco_communalism]]
+- [[reseau_des_cartographes_des_zones_grises_eco_communalism]]
 - [[reseau_mnemos_eco_communalism]]
 - [[reseaux_de_bibliotheques_archives_communautaires_eco_communalism]]
 - [[reseaux_de_radio_communautaire_basse_consommation_eco_communalism]]

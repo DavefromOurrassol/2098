@@ -39,9 +39,11 @@ zone_systemique:
     - économie
 
 alliances:
+- agence_de_regulation_des_detroits_strategiques_ards_policy_reform
 - agence_internationale_de_l_energie_reformatee_aier_policy_reform
 - conseil_de_regulation_climatique_global_policy_reform
 - conseil_regulation_ressources_policy_reform
+- consortium_des_pecheries_autonomes_du_grand_nord_policy_reform
 - fonds_mondial_de_resilience_infrastructurelle_policy_reform
 - great_lakes_autonomous_compact_policy_reform
 - kalaallit_nunaat_sovereign_fund_policy_reform
@@ -106,9 +108,11 @@ La tension centrale de l'APA en 2098 est une question de fond : la représentati
 
 ## Relations
 **Alliés :**
+- [[agence_de_regulation_des_detroits_strategiques_ards_policy_reform]]
 - [[agence_internationale_de_l_energie_reformatee_aier_policy_reform]]
 - [[conseil_de_regulation_climatique_global_policy_reform]]
 - [[conseil_regulation_ressources_policy_reform]]
+- [[consortium_des_pecheries_autonomes_du_grand_nord_policy_reform]]
 - [[fonds_mondial_de_resilience_infrastructurelle_policy_reform]]
 - [[great_lakes_autonomous_compact_policy_reform]]
 - [[kalaallit_nunaat_sovereign_fund_policy_reform]]

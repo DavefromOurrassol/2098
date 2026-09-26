@@ -44,6 +44,7 @@ alliances:
 - commission_territoriale_ourrassol_new_sustainability
 - conseil_technocratique_de_coordination_regionale_new_sustainability
 - fonds_mondial_de_redistribution_technologique_new_sustainability
+- institut_des_seuils_demographiques_new_sustainability
 - rede_paulista_de_distribuicao_algoritmica_new_sustainability
 - reseaux_de_medecine_regenerative_universelle_new_sustainability
 oppositions:
@@ -108,6 +109,7 @@ La question de savoir qui programme les priorités d'ARIA — et selon quels axi
 - [[commission_territoriale_ourrassol_new_sustainability]]
 - [[conseil_technocratique_de_coordination_regionale_new_sustainability]]
 - [[fonds_mondial_de_redistribution_technologique_new_sustainability]]
+- [[institut_des_seuils_demographiques_new_sustainability]]
 - [[rede_paulista_de_distribuicao_algoritmica_new_sustainability]]
 - [[reseaux_de_medecine_regenerative_universelle_new_sustainability]]
 **Opposants :**

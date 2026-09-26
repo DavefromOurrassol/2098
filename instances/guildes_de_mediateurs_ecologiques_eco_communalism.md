@@ -30,6 +30,7 @@ zone_geographique:
 zone_systemique:
 - société
 alliances:
+- agence_de_regulation_des_detroits_strategiques_ards_eco_communalism
 - amazonie_pacte_viva_eco_communalism
 - archives_ouvertes_des_jurisprudences_communales_aojc_eco_communalism
 - assemblees_bioterritoriales_regionales_eco_communalism
@@ -43,10 +44,13 @@ alliances:
 - confederation_bassins_vivants_eco_communalism
 - conseils_de_bassin_versant_eco_communalistes_eco_communalism
 - consortium_amazonia_viva_eco_communalism
+- consortium_des_pecheries_autonomes_du_grand_nord_eco_communalism
 - cooperatives_d_habitat_regeneratif_eco_communalism
 - federation_communs_territoriaux_eco_communalism
 - fraternites_ecospiritualistes_des_anciens_survivalistes_eco_communalism
+- gelecek_meclisi_eco_communalism
 - guildes_des_semenciers_itinerants_eco_communalism
+- ilse_varga_holm_eco_communalism
 - mouvement_des_communes_du_rust_belt_eco_communalism
 - reseau_des_assemblees_de_bassin_fennoscandien_eco_communalism
 - reseau_terrafond_bassins_eco_communalism
@@ -67,6 +71,7 @@ oppositions:
 - factions_extractivistes_des_aquiferes_communs_eco_communalism
 - factions_technophiles_de_la_geo_ingenierie_centralisee_eco_communalism
 - reseaux_de_notables_communautaires_capturistes_eco_communalism
+- the_tidewater_canon_eco_communalism
 type_relation_dominante: coopération
 annee_debut: 2038
 annee_fin: null
@@ -132,8 +137,10 @@ La légitimité des Guildes repose entièrement sur la confiance volontaire des 
 - [[systemes_productifs_travail]]
 
 
+
 ## Relations
 **Alliés :**
+- [[agence_de_regulation_des_detroits_strategiques_ards_eco_communalism]]
 - [[amazonie_pacte_viva_eco_communalism]]
 - [[archives_ouvertes_des_jurisprudences_communales_aojc_eco_communalism]]
 - [[assemblees_bioterritoriales_regionales_eco_communalism]]
@@ -147,10 +154,13 @@ La légitimité des Guildes repose entièrement sur la confiance volontaire des 
 - [[confederation_bassins_vivants_eco_communalism]]
 - [[conseils_de_bassin_versant_eco_communalistes_eco_communalism]]
 - [[consortium_amazonia_viva_eco_communalism]]
+- [[consortium_des_pecheries_autonomes_du_grand_nord_eco_communalism]]
 - [[cooperatives_d_habitat_regeneratif_eco_communalism]]
 - [[federation_communs_territoriaux_eco_communalism]]
 - [[fraternites_ecospiritualistes_des_anciens_survivalistes_eco_communalism]]
+- [[gelecek_meclisi_eco_communalism]]
 - [[guildes_des_semenciers_itinerants_eco_communalism]]
+- [[ilse_varga_holm_eco_communalism]]
 - [[mouvement_des_communes_du_rust_belt_eco_communalism]]
 - [[reseau_des_assemblees_de_bassin_fennoscandien_eco_communalism]]
 - [[reseau_terrafond_bassins_eco_communalism]]
@@ -171,6 +181,7 @@ La légitimité des Guildes repose entièrement sur la confiance volontaire des 
 - [[factions_extractivistes_des_aquiferes_communs_eco_communalism]]
 - [[factions_technophiles_de_la_geo_ingenierie_centralisee_eco_communalism]]
 - [[reseaux_de_notables_communautaires_capturistes_eco_communalism]]
+- [[the_tidewater_canon_eco_communalism]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

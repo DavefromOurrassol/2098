@@ -30,20 +30,19 @@ zone_systemique:
   - infrastructure
   - société
 alliances:
-  - amazonie_pacte_viva_eco_communalism
-  - assemblees_de_bassin_versant_eco_communalism
-  - brigades_de_restauration_ecologique_eco_communalism
-  - confederation_bassins_vivants_eco_communalism
-  - kalaallit_nunaat_sovereign_fund_eco_communalism
-  - mutuelles_de_sante_territoriales_eco_communalism
-  - reseaux_de_reconstruction_cooperative_inter_communautes_eco_communalism
-  - reseaux_de_troc_inter_cooperatives_et_marges_periurbaines_eco_communalism
-  - tresse_verte_corridor_eco_communalism
-  - zones_extractivistes_corridors_eco_communalism
+- amazonie_pacte_viva_eco_communalism
+- assemblees_de_bassin_versant_eco_communalism
+- brigades_de_restauration_ecologique_eco_communalism
+- confederation_bassins_vivants_eco_communalism
+- kalaallit_nunaat_sovereign_fund_eco_communalism
+- mutuelles_de_sante_territoriales_eco_communalism
+- reseaux_de_reconstruction_cooperative_inter_communautes_eco_communalism
+- reseaux_de_troc_inter_cooperatives_et_marges_periurbaines_eco_communalism
+- tresse_verte_corridor_eco_communalism
+- zones_extractivistes_corridors_eco_communalism
 oppositions:
-  - agro_conglomerats_des_enclaves_technologiques_eco_communalism
-  - factions_extractivistes_des_aquiferes_communs_eco_communalism
-  - seigneuries_foncieres_opportunistes_breakdown
+- agro_conglomerats_des_enclaves_technologiques_eco_communalism
+- factions_extractivistes_des_aquiferes_communs_eco_communalism
 type_relation_dominante: coopération
 annee_debut: 2031
 annee_fin:
@@ -101,4 +100,3 @@ La tension centrale est celle du seuil : jusqu'où étendre le réseau sans perd
 **Opposants :**
 - [[agro_conglomerats_des_enclaves_technologiques_eco_communalism]]
 - [[factions_extractivistes_des_aquiferes_communs_eco_communalism]]
-- [[seigneuries_foncieres_opportunistes_breakdown]]

@@ -39,6 +39,8 @@ alliances:
 - consortium_africain_de_biotechnologies_sociales_policy_reform
 - consortium_amazonia_viva_policy_reform
 - federation_des_mutuelles_biotech_policy_reform
+- hyphan_raghavan_policy_reform
+- les_veilleurs_des_nappes_phreatiques_policy_reform
 - mouvement_pour_la_justice_ecologique_communautaire_policy_reform
 oppositions:
 - agence_technocratique_pour_la_resilience_biospherique_atrb_policy_reform
@@ -115,6 +117,7 @@ La Coalition se retrouve prise en étau entre deux impératifs contradictoires :
 - [[systemes_productifs_travail]]
 
 
+
 ## Relations
 **Alliés :**
 - [[collectifs_de_biohackers_agro_communautaires_policy_reform]]
@@ -123,6 +126,8 @@ La Coalition se retrouve prise en étau entre deux impératifs contradictoires :
 - [[consortium_africain_de_biotechnologies_sociales_policy_reform]]
 - [[consortium_amazonia_viva_policy_reform]]
 - [[federation_des_mutuelles_biotech_policy_reform]]
+- [[hyphan_raghavan_policy_reform]]
+- [[les_veilleurs_des_nappes_phreatiques_policy_reform]]
 - [[mouvement_pour_la_justice_ecologique_communautaire_policy_reform]]
 **Opposants :**
 - [[agence_technocratique_pour_la_resilience_biospherique_atrb_policy_reform]]

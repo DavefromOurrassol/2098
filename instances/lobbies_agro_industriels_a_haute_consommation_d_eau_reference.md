@@ -39,6 +39,7 @@ alliances:
 - lobbies_industriels_des_etats_non_signataires_reference
 oppositions:
 - amara_diallo_nkosi_reference
+- assemblee_territoires_reference
 - autorites_regionales_de_regulation_hydrologique_reference
 - banque_des_communs_reference
 - commission_hydrique_de_l_union_africaine_reference
@@ -54,10 +55,12 @@ oppositions:
 - federation_des_cliniques_autonomes_reference
 - frente_sertao_livre_reference
 - front_souverainiste_des_ressources_d_amerique_du_sud_reference
+- gelecek_meclisi_reference
 - geneve_lac_retreite_reference
 - great_lakes_autonomous_compact_reference
 - institut_polytechnique_de_ouagadougou_reference
 - kinshasa_accords_hydriques_reference
+- les_veilleurs_des_nappes_phreatiques_reference
 - les_veilleurs_du_fleuve_reference
 - lyon_metropole_reference
 - mouvement_racines_vivantes_reference
@@ -136,6 +139,7 @@ La tension centrale est existentielle : les modèles de production qu'ils défen
 - [[systemes_productifs_travail]]
 
 
+
 ## Relations
 **Alliés :**
 - [[agrisynth_reference]]
@@ -146,6 +150,7 @@ La tension centrale est existentielle : les modèles de production qu'ils défen
 - [[lobbies_industriels_des_etats_non_signataires_reference]]
 **Opposants :**
 - [[amara_diallo_nkosi_reference]]
+- [[assemblee_territoires_reference]]
 - [[autorites_regionales_de_regulation_hydrologique_reference]]
 - [[banque_des_communs_reference]]
 - [[commission_hydrique_de_l_union_africaine_reference]]
@@ -161,10 +166,12 @@ La tension centrale est existentielle : les modèles de production qu'ils défen
 - [[federation_des_cliniques_autonomes_reference]]
 - [[frente_sertao_livre_reference]]
 - [[front_souverainiste_des_ressources_d_amerique_du_sud_reference]]
+- [[gelecek_meclisi_reference]]
 - [[geneve_lac_retreite_reference]]
 - [[great_lakes_autonomous_compact_reference]]
 - [[institut_polytechnique_de_ouagadougou_reference]]
 - [[kinshasa_accords_hydriques_reference]]
+- [[les_veilleurs_des_nappes_phreatiques_reference]]
 - [[les_veilleurs_du_fleuve_reference]]
 - [[lyon_metropole_reference]]
 - [[mouvement_racines_vivantes_reference]]

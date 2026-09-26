@@ -47,10 +47,12 @@ alliances:
 - milices_contractuelles_des_anciens_etats_membres_breakdown
 - seigneuries_logistiques_armees_breakdown
 oppositions:
+- agence_de_regulation_des_detroits_strategiques_ards_breakdown
 - blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown
 - collectifs_de_reparation_energetique_breakdown
 - consortium_africain_de_biotechnologies_sociales_breakdown
 - consortium_amazonia_viva_breakdown
+- elias_mork_breakdown
 - etats_fragments_en_guerre_pour_les_stations_atmospheriques_breakdown
 - front_de_resistance_aux_peages_sur_les_ressources_breakdown
 - saboteurs_des_corridors_de_transit_breakdown
@@ -119,6 +121,7 @@ La contradiction centrale des Factions ABS réside dans leur refus obstiné de t
 - [[organisation_territoires]]
 
 
+
 ## Relations
 **Alliés :**
 - [[alliance_blocs_souverains_breakdown]]
@@ -129,10 +132,12 @@ La contradiction centrale des Factions ABS réside dans leur refus obstiné de t
 - [[milices_contractuelles_des_anciens_etats_membres_breakdown]]
 - [[seigneuries_logistiques_armees_breakdown]]
 **Opposants :**
+- [[agence_de_regulation_des_detroits_strategiques_ards_breakdown]]
 - [[blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown]]
 - [[collectifs_de_reparation_energetique_breakdown]]
 - [[consortium_africain_de_biotechnologies_sociales_breakdown]]
 - [[consortium_amazonia_viva_breakdown]]
+- [[elias_mork_breakdown]]
 - [[etats_fragments_en_guerre_pour_les_stations_atmospheriques_breakdown]]
 - [[front_de_resistance_aux_peages_sur_les_ressources_breakdown]]
 - [[saboteurs_des_corridors_de_transit_breakdown]]

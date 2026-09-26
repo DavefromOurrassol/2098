@@ -62,6 +62,7 @@ oppositions:
 - alliance_blocs_souverains_reference
 - bloc_des_souverainistes_climatiques_reference
 - commission_hydrique_de_l_union_africaine_reference
+- consortium_des_pecheries_autonomes_du_grand_nord_reference
 - consortium_logistique_asiatique_de_contournement_aln_reference
 - factions_d_extraction_miniere_independantes_reference
 - ligue_des_metropoles_du_sud_pour_les_infrastructures_libres_reference
@@ -163,6 +164,7 @@ La question centrale est celle du seuil : à quel moment la contestation permane
 - [[alliance_blocs_souverains_reference]]
 - [[bloc_des_souverainistes_climatiques_reference]]
 - [[commission_hydrique_de_l_union_africaine_reference]]
+- [[consortium_des_pecheries_autonomes_du_grand_nord_reference]]
 - [[consortium_logistique_asiatique_de_contournement_aln_reference]]
 - [[factions_d_extraction_miniere_independantes_reference]]
 - [[ligue_des_metropoles_du_sud_pour_les_infrastructures_libres_reference]]

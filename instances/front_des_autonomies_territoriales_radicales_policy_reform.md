@@ -40,9 +40,13 @@ alliances:
 - front_souverainiste_de_l_information_regionale_policy_reform
 - gouvernements_populistes_anti_depossession_policy_reform
 - internationale_decroissante_anti_planification_policy_reform
+- les_veilleurs_des_nappes_phreatiques_policy_reform
 - mouvement_pour_la_justice_ecologique_communautaire_policy_reform
 - mouvement_pour_la_souverainete_territoriale_absolue_policy_reform
+- reseau_des_cartographes_des_zones_grises_policy_reform
+- the_lattice_policy_reform
 oppositions:
+- agence_de_regulation_des_detroits_strategiques_ards_policy_reform
 - agence_technocratique_pour_la_resilience_biospherique_atrb_policy_reform
 - assemblee_territoires_policy_reform
 - bureau_gouvernance_algorithmique_policy_reform
@@ -50,8 +54,12 @@ oppositions:
 - conseil_regulation_algorithmique_policy_reform
 - consortium_agro_pacifique_policy_reform
 - consortium_de_geo_ingenierie_atmospherique_pacifique_policy_reform
+- ergo_wian_sovereign_holdings_policy_reform
+- gelecek_meclisi_policy_reform
 - great_lakes_autonomous_compact_policy_reform
 - grille_aria_policy_reform
+- ilse_varga_holm_policy_reform
+- institut_des_seuils_demographiques_policy_reform
 - rede_paulista_de_distribuicao_algoritmica_policy_reform
 - reseau_des_agences_sanitaires_regionales_policy_reform
 type_relation_dominante: conflit
@@ -121,6 +129,7 @@ Le Front est tiraillé entre sa radicalité fondatrice — refuser toute forme d
 - [[valeurs_culture_tempo_sociale]]
 
 
+
 ## Relations
 **Alliés :**
 - [[collectifs_de_biohackers_agro_communautaires_policy_reform]]
@@ -131,9 +140,13 @@ Le Front est tiraillé entre sa radicalité fondatrice — refuser toute forme d
 - [[front_souverainiste_de_l_information_regionale_policy_reform]]
 - [[gouvernements_populistes_anti_depossession_policy_reform]]
 - [[internationale_decroissante_anti_planification_policy_reform]]
+- [[les_veilleurs_des_nappes_phreatiques_policy_reform]]
 - [[mouvement_pour_la_justice_ecologique_communautaire_policy_reform]]
 - [[mouvement_pour_la_souverainete_territoriale_absolue_policy_reform]]
+- [[reseau_des_cartographes_des_zones_grises_policy_reform]]
+- [[the_lattice_policy_reform]]
 **Opposants :**
+- [[agence_de_regulation_des_detroits_strategiques_ards_policy_reform]]
 - [[agence_technocratique_pour_la_resilience_biospherique_atrb_policy_reform]]
 - [[assemblee_territoires_policy_reform]]
 - [[bureau_gouvernance_algorithmique_policy_reform]]
@@ -141,8 +154,12 @@ Le Front est tiraillé entre sa radicalité fondatrice — refuser toute forme d
 - [[conseil_regulation_algorithmique_policy_reform]]
 - [[consortium_agro_pacifique_policy_reform]]
 - [[consortium_de_geo_ingenierie_atmospherique_pacifique_policy_reform]]
+- [[ergo_wian_sovereign_holdings_policy_reform]]
+- [[gelecek_meclisi_policy_reform]]
 - [[great_lakes_autonomous_compact_policy_reform]]
 - [[grille_aria_policy_reform]]
+- [[ilse_varga_holm_policy_reform]]
+- [[institut_des_seuils_demographiques_policy_reform]]
 - [[rede_paulista_de_distribuicao_algoritmica_policy_reform]]
 - [[reseau_des_agences_sanitaires_regionales_policy_reform]]
 

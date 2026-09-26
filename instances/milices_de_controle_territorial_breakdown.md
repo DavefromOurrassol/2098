@@ -64,6 +64,7 @@ oppositions:
 - communes_rust_belt_zones_libres_breakdown
 - corridor_lithium_bouches_breakdown
 - corridors_eurasiens_convoyage_breakdown
+- elias_mork_breakdown
 - enclaves_corporatives_fortifiees_breakdown
 - enclaves_industrielles_du_corridor_oural_caspien_breakdown
 - etats_fragmentes_nationalisant_les_stocks_breakdown
@@ -72,6 +73,7 @@ oppositions:
 - frente_sertao_livre_breakdown
 - front_humanitaire_d_urgence_non_affilie_breakdown
 - gouvernements_regionaux_residuels_reterritorialisants_breakdown
+- hyphan_raghavan_breakdown
 - lagos_est_nexcore_breakdown
 - lagos_interieur_mnemos_breakdown
 - massif_central_cicatrices_vertes_breakdown
@@ -81,6 +83,7 @@ oppositions:
 - occitanie_racines_meres_breakdown
 - ong_de_gestion_migratoire_survivantes_breakdown
 - pirates_biologiques_open_source_breakdown
+- reseau_des_cartographes_des_zones_grises_breakdown
 - reseau_des_organisations_humanitaires_hors_cadre_onusien_breakdown
 - reseaux_de_soigneurs_traditionnels_breakdown
 - reseaux_noirs_pharmaceutiques_breakdown
@@ -148,6 +151,7 @@ La tension fondamentale de ces milices réside dans leur double nature : porteus
 - [[geopolitique_conflits]]
 
 
+
 ## Relations
 **Alliés :**
 - [[cartels_logistiques_regionaux_breakdown]]
@@ -175,6 +179,7 @@ La tension fondamentale de ces milices réside dans leur double nature : porteus
 - [[communes_rust_belt_zones_libres_breakdown]]
 - [[corridor_lithium_bouches_breakdown]]
 - [[corridors_eurasiens_convoyage_breakdown]]
+- [[elias_mork_breakdown]]
 - [[enclaves_corporatives_fortifiees_breakdown]]
 - [[enclaves_industrielles_du_corridor_oural_caspien_breakdown]]
 - [[etats_fragmentes_nationalisant_les_stocks_breakdown]]
@@ -183,6 +188,7 @@ La tension fondamentale de ces milices réside dans leur double nature : porteus
 - [[frente_sertao_livre_breakdown]]
 - [[front_humanitaire_d_urgence_non_affilie_breakdown]]
 - [[gouvernements_regionaux_residuels_reterritorialisants_breakdown]]
+- [[hyphan_raghavan_breakdown]]
 - [[lagos_est_nexcore_breakdown]]
 - [[lagos_interieur_mnemos_breakdown]]
 - [[massif_central_cicatrices_vertes_breakdown]]
@@ -192,6 +198,7 @@ La tension fondamentale de ces milices réside dans leur double nature : porteus
 - [[occitanie_racines_meres_breakdown]]
 - [[ong_de_gestion_migratoire_survivantes_breakdown]]
 - [[pirates_biologiques_open_source_breakdown]]
+- [[reseau_des_cartographes_des_zones_grises_breakdown]]
 - [[reseau_des_organisations_humanitaires_hors_cadre_onusien_breakdown]]
 - [[reseaux_de_soigneurs_traditionnels_breakdown]]
 - [[reseaux_noirs_pharmaceutiques_breakdown]]

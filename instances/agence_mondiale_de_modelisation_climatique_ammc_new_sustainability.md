@@ -35,6 +35,7 @@ zone_geographique:
 zone_systemique:
 - société
 alliances:
+- agence_de_regulation_des_detroits_strategiques_ards_new_sustainability
 - agence_globale_de_regeneration_des_bassins_versants_agrb_onu_new_sustainability
 - agence_orbitale_de_regulation_commune_aorc_new_sustainability
 - agence_stabilisation_climatique_new_sustainability
@@ -54,9 +55,11 @@ alliances:
 - consortium_des_ia_climatiques_new_sustainability
 - factions_technocratiques_de_la_delegation_ia_totale_new_sustainability
 - fonds_mondial_de_regeneration_ecologique_new_sustainability
+- gelecek_meclisi_new_sustainability
 - great_lakes_autonomous_compact_new_sustainability
 - great_lakes_compact_new_sustainability
 - institut_de_philosophie_des_systemes_hybrides_d_helsinki_new_sustainability
+- institut_des_seuils_demographiques_new_sustainability
 - oms_etendue_new_sustainability
 - oracle_des_seuils_new_sustainability
 - pacifique_sud_resilience_network_new_sustainability
@@ -139,8 +142,10 @@ L'autorité scientifique de l'AMMC est régulièrement contestée par les souver
 - [[technologie_information]]
 
 
+
 ## Relations
 **Alliés :**
+- [[agence_de_regulation_des_detroits_strategiques_ards_new_sustainability]]
 - [[agence_globale_de_regeneration_des_bassins_versants_agrb_onu_new_sustainability]]
 - [[agence_orbitale_de_regulation_commune_aorc_new_sustainability]]
 - [[agence_stabilisation_climatique_new_sustainability]]
@@ -160,9 +165,11 @@ L'autorité scientifique de l'AMMC est régulièrement contestée par les souver
 - [[consortium_des_ia_climatiques_new_sustainability]]
 - [[factions_technocratiques_de_la_delegation_ia_totale_new_sustainability]]
 - [[fonds_mondial_de_regeneration_ecologique_new_sustainability]]
+- [[gelecek_meclisi_new_sustainability]]
 - [[great_lakes_autonomous_compact_new_sustainability]]
 - [[great_lakes_compact_new_sustainability]]
 - [[institut_de_philosophie_des_systemes_hybrides_d_helsinki_new_sustainability]]
+- [[institut_des_seuils_demographiques_new_sustainability]]
 - [[oms_etendue_new_sustainability]]
 - [[oracle_des_seuils_new_sustainability]]
 - [[pacifique_sud_resilience_network_new_sustainability]]

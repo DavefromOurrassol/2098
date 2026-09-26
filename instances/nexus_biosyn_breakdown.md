@@ -44,7 +44,6 @@ alliances:
 oppositions:
 - collectifs_de_sante_communautaire_autogeree_breakdown
 - etats_fragmentes_nationalisant_les_stocks_breakdown
-- internationale_des_semenciers_agro_pirates_fortress_world
 - pirates_biologiques_open_source_breakdown
 - reseaux_de_soigneurs_traditionnels_breakdown
 type_relation_dominante: dépendance
@@ -107,6 +106,5 @@ Qui détient légitimement les brevets des semences dans un monde sans tribunal 
 **Opposants :**
 - [[collectifs_de_sante_communautaire_autogeree_breakdown]]
 - [[etats_fragmentes_nationalisant_les_stocks_breakdown]]
-- [[internationale_des_semenciers_agro_pirates_fortress_world]]
 - [[pirates_biologiques_open_source_breakdown]]
 - [[reseaux_de_soigneurs_traditionnels_breakdown]]

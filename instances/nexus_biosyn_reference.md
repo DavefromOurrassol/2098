@@ -41,11 +41,9 @@ zone_systemique:
 alliances:
 - agrisynth_reference
 - amazonie_consortium_viva_reference
-- consortium_agro_pacifique_policy_reform
 - fonds_monetaire_climatique_fmc_reference
 - reseau_hospitalier_hybride_eurasiatique_reference
 oppositions:
-- coalition_des_semences_libres_policy_reform
 - collectifs_de_biopiraterie_inversee_reference
 - conseil_de_geneve_pour_les_droits_biosociaux_reference
 - consortium_africain_de_biotechnologies_sociales_reference
@@ -107,11 +105,9 @@ La montée des mouvements OpenSeed, qui revendiquent le droit à des semences no
 **Alliés :**
 - [[agrisynth_reference]]
 - [[amazonie_consortium_viva_reference]]
-- [[consortium_agro_pacifique_policy_reform]]
 - [[fonds_monetaire_climatique_fmc_reference]]
 - [[reseau_hospitalier_hybride_eurasiatique_reference]]
 **Opposants :**
-- [[coalition_des_semences_libres_policy_reform]]
 - [[collectifs_de_biopiraterie_inversee_reference]]
 - [[conseil_de_geneve_pour_les_droits_biosociaux_reference]]
 - [[consortium_africain_de_biotechnologies_sociales_reference]]

@@ -45,10 +45,13 @@ alliances:
 - consortium_amazonia_viva_reference
 - consortium_de_maintenance_orbitale_seom_7_reference
 - consortium_des_fournisseurs_d_energie_renouvelable_distribuee_reference
+- consortium_des_pecheries_autonomes_du_grand_nord_reference
 - consortium_energetique_des_mers_du_nord_reference
 - delta_du_gange_reference
 - ecosynth_global_reference
 - fonds_d_investissement_foncier_climatique_reference
+- gelecek_meclisi_reference
+- institut_des_seuils_demographiques_reference
 - institutions_multilaterales_survivantes_reference
 - nairobi_crrc_reference
 - observatoire_climatique_des_territoires_oct_reference
@@ -58,7 +61,6 @@ alliances:
 - pacifique_sud_resilience_network_reference
 - plateformes_d_optimisation_territoriale_par_ia_reference
 - programme_onu_eau_2080_reference
-- programme_onusien_de_mobilite_climatique_new_sustainability
 - reseau_des_metropoles_cotieres_adaptees_reference
 - reseau_hospitalier_hybride_eurasiatique_reference
 - reseaux_de_gouvernance_multilaterale_survivants_reference
@@ -72,6 +74,7 @@ oppositions:
 - kalaallit_nunaat_sovereign_fund_reference
 - reseaux_de_capteurs_citoyens_reference
 - reseaux_de_financement_gris_issus_d_anciens_blocs_militaires_reference
+- the_tidewater_canon_reference
 type_relation_dominante: coopération
 
 annee_debut: 2031
@@ -132,10 +135,13 @@ La légitimité de l'AMSC s'effrite à chaque décision d'allocation : qui reço
 - [[consortium_amazonia_viva_reference]]
 - [[consortium_de_maintenance_orbitale_seom_7_reference]]
 - [[consortium_des_fournisseurs_d_energie_renouvelable_distribuee_reference]]
+- [[consortium_des_pecheries_autonomes_du_grand_nord_reference]]
 - [[consortium_energetique_des_mers_du_nord_reference]]
 - [[delta_du_gange_reference]]
 - [[ecosynth_global_reference]]
 - [[fonds_d_investissement_foncier_climatique_reference]]
+- [[gelecek_meclisi_reference]]
+- [[institut_des_seuils_demographiques_reference]]
 - [[institutions_multilaterales_survivantes_reference]]
 - [[nairobi_crrc_reference]]
 - [[observatoire_climatique_des_territoires_oct_reference]]
@@ -145,7 +151,6 @@ La légitimité de l'AMSC s'effrite à chaque décision d'allocation : qui reço
 - [[pacifique_sud_resilience_network_reference]]
 - [[plateformes_d_optimisation_territoriale_par_ia_reference]]
 - [[programme_onu_eau_2080_reference]]
-- [[programme_onusien_de_mobilite_climatique_new_sustainability]]
 - [[reseau_des_metropoles_cotieres_adaptees_reference]]
 - [[reseau_hospitalier_hybride_eurasiatique_reference]]
 - [[reseaux_de_gouvernance_multilaterale_survivants_reference]]
@@ -159,3 +164,4 @@ La légitimité de l'AMSC s'effrite à chaque décision d'allocation : qui reço
 - [[kalaallit_nunaat_sovereign_fund_reference]]
 - [[reseaux_de_capteurs_citoyens_reference]]
 - [[reseaux_de_financement_gris_issus_d_anciens_blocs_militaires_reference]]
+- [[the_tidewater_canon_reference]]

@@ -32,6 +32,7 @@ zone_geographique:
 zone_systemique:
 - société
 alliances:
+- agence_de_regulation_des_detroits_strategiques_ards_policy_reform
 - agence_stabilisation_climatique_policy_reform
 - arctic_passage_authority_policy_reform
 - assemblee_territoires_policy_reform
@@ -43,6 +44,7 @@ alliances:
 - fonds_mondial_de_resilience_infrastructurelle_policy_reform
 - fonds_mondial_pour_la_transition_ecosystemique_fmte_policy_reform
 - fonds_souverain_de_transition_verte_fstv_policy_reform
+- gelecek_meclisi_policy_reform
 - gouvernement_israel_policy_reform
 - grille_aria_policy_reform
 - kalaallit_nunaat_sovereign_fund_policy_reform
@@ -51,12 +53,14 @@ alliances:
 oppositions:
 - agence_technocratique_pour_la_resilience_biospherique_atrb_policy_reform
 - coalition_des_operateurs_energetiques_prives_anti_quotas_policy_reform
+- ergo_wian_sovereign_holdings_policy_reform
 - front_des_souverainistes_energetiques_policy_reform
 - front_souverainiste_des_blocs_non_signataires_policy_reform
 - lobbies_des_energies_fossiles_residuelles_policy_reform
 - republique_islamique_iran_policy_reform
 - reseau_des_journalistes_d_investigation_energetique_policy_reform
 - syndicats_d_extraction_privee_non_regules_policy_reform
+- terminal_kharg_data_haven_policy_reform
 type_relation_dominante: coopération
 annee_debut: 2026
 annee_fin: null
@@ -124,8 +128,10 @@ L'AIER est structurellement écartelée entre son rôle de garant des accords mu
 
 
 
+
 ## Relations
 **Alliés :**
+- [[agence_de_regulation_des_detroits_strategiques_ards_policy_reform]]
 - [[agence_stabilisation_climatique_policy_reform]]
 - [[arctic_passage_authority_policy_reform]]
 - [[assemblee_territoires_policy_reform]]
@@ -137,6 +143,7 @@ L'AIER est structurellement écartelée entre son rôle de garant des accords mu
 - [[fonds_mondial_de_resilience_infrastructurelle_policy_reform]]
 - [[fonds_mondial_pour_la_transition_ecosystemique_fmte_policy_reform]]
 - [[fonds_souverain_de_transition_verte_fstv_policy_reform]]
+- [[gelecek_meclisi_policy_reform]]
 - [[gouvernement_israel_policy_reform]]
 - [[grille_aria_policy_reform]]
 - [[kalaallit_nunaat_sovereign_fund_policy_reform]]
@@ -145,12 +152,14 @@ L'AIER est structurellement écartelée entre son rôle de garant des accords mu
 **Opposants :**
 - [[agence_technocratique_pour_la_resilience_biospherique_atrb_policy_reform]]
 - [[coalition_des_operateurs_energetiques_prives_anti_quotas_policy_reform]]
+- [[ergo_wian_sovereign_holdings_policy_reform]]
 - [[front_des_souverainistes_energetiques_policy_reform]]
 - [[front_souverainiste_des_blocs_non_signataires_policy_reform]]
 - [[lobbies_des_energies_fossiles_residuelles_policy_reform]]
 - [[republique_islamique_iran_policy_reform]]
 - [[reseau_des_journalistes_d_investigation_energetique_policy_reform]]
 - [[syndicats_d_extraction_privee_non_regules_policy_reform]]
+- [[terminal_kharg_data_haven_policy_reform]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

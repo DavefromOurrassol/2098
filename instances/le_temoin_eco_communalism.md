@@ -33,6 +33,7 @@ zone_systemique:
 alliances:
 - assemblee_territoires_eco_communalism
 - coalition_vivant_eco_communalism
+- gelecek_meclisi_eco_communalism
 oppositions: []
 type_relation_dominante: coopération
 annee_debut: 2082
@@ -89,3 +90,4 @@ Tension entre préservation de la mémoire et protection de la vie privée.
 **Alliés :**
 - [[assemblee_territoires_eco_communalism]]
 - [[coalition_vivant_eco_communalism]]
+- [[gelecek_meclisi_eco_communalism]]

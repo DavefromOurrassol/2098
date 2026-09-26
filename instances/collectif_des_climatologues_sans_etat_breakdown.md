@@ -40,6 +40,7 @@ zone_systemique:
 alliances:
 - agence_stabilisation_climatique_breakdown
 - archives_neutres_de_geneve_breakdown
+- assemblee_territoires_breakdown
 - brigades_medicales_itinerantes_breakdown
 - collectif_hackers_decroissance_infrastructure_breakdown
 - collectifs_de_gardiens_archivistes_itinerants_breakdown
@@ -50,6 +51,7 @@ alliances:
 - diaspora_tech_sahel_breakdown
 - enclaves_agro_communautaires_autonomes_breakdown
 - front_humanitaire_d_urgence_non_affilie_breakdown
+- gelecek_meclisi_breakdown
 - guilde_des_techniciens_nomades_breakdown
 - oracle_des_seuils_breakdown
 - reseau_des_organisations_humanitaires_hors_cadre_onusien_breakdown
@@ -125,10 +127,12 @@ La tension centrale du Collectif réside dans sa dépendance à une infrastructu
 - [[technologie_information]]
 
 
+
 ## Relations
 **Alliés :**
 - [[agence_stabilisation_climatique_breakdown]]
 - [[archives_neutres_de_geneve_breakdown]]
+- [[assemblee_territoires_breakdown]]
 - [[brigades_medicales_itinerantes_breakdown]]
 - [[collectif_hackers_decroissance_infrastructure_breakdown]]
 - [[collectifs_de_gardiens_archivistes_itinerants_breakdown]]
@@ -139,6 +143,7 @@ La tension centrale du Collectif réside dans sa dépendance à une infrastructu
 - [[diaspora_tech_sahel_breakdown]]
 - [[enclaves_agro_communautaires_autonomes_breakdown]]
 - [[front_humanitaire_d_urgence_non_affilie_breakdown]]
+- [[gelecek_meclisi_breakdown]]
 - [[guilde_des_techniciens_nomades_breakdown]]
 - [[oracle_des_seuils_breakdown]]
 - [[reseau_des_organisations_humanitaires_hors_cadre_onusien_breakdown]]

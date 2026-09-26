@@ -42,7 +42,9 @@ alliances:
 - front_souverainiste_des_blocs_non_signataires_policy_reform
 - gouvernements_populistes_anti_depossession_policy_reform
 - lobbies_des_energies_fossiles_residuelles_policy_reform
+- terminal_kharg_data_haven_policy_reform
 oppositions:
+- agence_de_regulation_des_detroits_strategiques_ards_policy_reform
 - agence_internationale_de_l_energie_reformatee_aier_policy_reform
 - agence_technocratique_pour_la_resilience_biospherique_atrb_policy_reform
 - arctic_passage_authority_policy_reform
@@ -53,6 +55,7 @@ oppositions:
 - consortium_des_villes_etats_durables_policy_reform
 - great_lakes_autonomous_compact_policy_reform
 - kalaallit_nunaat_sovereign_fund_policy_reform
+- les_veilleurs_des_nappes_phreatiques_policy_reform
 - observatoire_mondial_des_ressources_critiques_policy_reform
 - reseau_des_journalistes_d_investigation_energetique_policy_reform
 type_relation_dominante: conflit
@@ -122,6 +125,7 @@ La tension centrale réside dans leur dépendance paradoxale au système qu'ils 
 
 
 
+
 ## Relations
 **Alliés :**
 - [[coalition_des_operateurs_energetiques_prives_anti_quotas_policy_reform]]
@@ -131,7 +135,9 @@ La tension centrale réside dans leur dépendance paradoxale au système qu'ils 
 - [[front_souverainiste_des_blocs_non_signataires_policy_reform]]
 - [[gouvernements_populistes_anti_depossession_policy_reform]]
 - [[lobbies_des_energies_fossiles_residuelles_policy_reform]]
+- [[terminal_kharg_data_haven_policy_reform]]
 **Opposants :**
+- [[agence_de_regulation_des_detroits_strategiques_ards_policy_reform]]
 - [[agence_internationale_de_l_energie_reformatee_aier_policy_reform]]
 - [[agence_technocratique_pour_la_resilience_biospherique_atrb_policy_reform]]
 - [[arctic_passage_authority_policy_reform]]
@@ -142,6 +148,7 @@ La tension centrale réside dans leur dépendance paradoxale au système qu'ils 
 - [[consortium_des_villes_etats_durables_policy_reform]]
 - [[great_lakes_autonomous_compact_policy_reform]]
 - [[kalaallit_nunaat_sovereign_fund_policy_reform]]
+- [[les_veilleurs_des_nappes_phreatiques_policy_reform]]
 - [[observatoire_mondial_des_ressources_critiques_policy_reform]]
 - [[reseau_des_journalistes_d_investigation_energetique_policy_reform]]
 

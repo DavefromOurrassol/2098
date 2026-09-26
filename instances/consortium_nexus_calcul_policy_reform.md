@@ -42,6 +42,7 @@ alliances:
 - directive_kontinuum_policy_reform
 - front_techno_utopiste_de_la_decision_automatisee_policy_reform
 - institut_brookings_singapour_de_politique_computationnelle_policy_reform
+- nexcore_policy_reform
 oppositions:
 - coalition_des_souverainistes_numeriques_policy_reform
 - collectifs_citoyens_pour_l_audit_algorithmique_ouvert_policy_reform
@@ -117,6 +118,7 @@ Le Consortium est pris dans une contradiction structurelle : institué pour gara
 - [[energie_ressources_critiques]]
 
 
+
 ## Relations
 **Alliés :**
 - [[agence_technocratique_pour_la_resilience_biospherique_atrb_policy_reform]]
@@ -127,6 +129,7 @@ Le Consortium est pris dans une contradiction structurelle : institué pour gara
 - [[directive_kontinuum_policy_reform]]
 - [[front_techno_utopiste_de_la_decision_automatisee_policy_reform]]
 - [[institut_brookings_singapour_de_politique_computationnelle_policy_reform]]
+- [[nexcore_policy_reform]]
 **Opposants :**
 - [[coalition_des_souverainistes_numeriques_policy_reform]]
 - [[collectifs_citoyens_pour_l_audit_algorithmique_ouvert_policy_reform]]

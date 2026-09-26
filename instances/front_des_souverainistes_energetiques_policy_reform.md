@@ -43,14 +43,17 @@ alliances:
 - reseau_des_lobbyistes_techniques_onu_energie_policy_reform
 - syndicats_d_extraction_privee_non_regules_policy_reform
 oppositions:
+- agence_de_regulation_des_detroits_strategiques_ards_policy_reform
 - agence_internationale_de_l_energie_reformatee_aier_policy_reform
 - agence_technocratique_pour_la_resilience_biospherique_atrb_policy_reform
 - arctic_passage_authority_policy_reform
 - bloc_des_nations_a_economie_carbone_controlee_policy_reform
 - conseil_de_regulation_climatique_global_policy_reform
 - conseil_regulation_ressources_policy_reform
+- consortium_des_pecheries_autonomes_du_grand_nord_policy_reform
 - consortium_des_villes_etats_durables_policy_reform
 - fonds_mondial_pour_la_transition_ecosystemique_fmte_policy_reform
+- gelecek_meclisi_policy_reform
 - kalaallit_nunaat_sovereign_fund_policy_reform
 - observatoire_mondial_des_ressources_critiques_policy_reform
 type_relation_dominante: conflit
@@ -118,6 +121,7 @@ Le Front est écartelé entre sa posture anti-institutionnelle, qui lui interdit
 - [[gouvernance_institutions]]
 
 
+
 ## Relations
 **Alliés :**
 - [[coalition_des_operateurs_energetiques_prives_anti_quotas_policy_reform]]
@@ -130,14 +134,17 @@ Le Front est écartelé entre sa posture anti-institutionnelle, qui lui interdit
 - [[reseau_des_lobbyistes_techniques_onu_energie_policy_reform]]
 - [[syndicats_d_extraction_privee_non_regules_policy_reform]]
 **Opposants :**
+- [[agence_de_regulation_des_detroits_strategiques_ards_policy_reform]]
 - [[agence_internationale_de_l_energie_reformatee_aier_policy_reform]]
 - [[agence_technocratique_pour_la_resilience_biospherique_atrb_policy_reform]]
 - [[arctic_passage_authority_policy_reform]]
 - [[bloc_des_nations_a_economie_carbone_controlee_policy_reform]]
 - [[conseil_de_regulation_climatique_global_policy_reform]]
 - [[conseil_regulation_ressources_policy_reform]]
+- [[consortium_des_pecheries_autonomes_du_grand_nord_policy_reform]]
 - [[consortium_des_villes_etats_durables_policy_reform]]
 - [[fonds_mondial_pour_la_transition_ecosystemique_fmte_policy_reform]]
+- [[gelecek_meclisi_policy_reform]]
 - [[kalaallit_nunaat_sovereign_fund_policy_reform]]
 - [[observatoire_mondial_des_ressources_critiques_policy_reform]]
 

@@ -38,6 +38,7 @@ alliances:
 - consortiums_d_extraction_miniere_du_bassin_congolais_reference
 - consortiums_energetiques_des_megapoles_reference
 - consortiums_prives_d_extraction_de_ressources_critiques_reference
+- hyphan_raghavan_reference
 - lobbies_industriels_des_etats_non_signataires_reference
 - pacte_des_souverains_reference
 oppositions:
@@ -51,6 +52,7 @@ oppositions:
 - front_souverainiste_des_ressources_d_amerique_du_sud_reference
 - institutions_multilaterales_survivantes_reference
 - lyon_metropole_reference
+- maelys_okonkwo_reference
 - ong_de_tracabilite_des_ressources_critiques_reference
 - oracle_des_seuils_reference
 - reseau_hospitalier_hybride_eurasiatique_reference
@@ -127,12 +129,14 @@ La tension centrale est structurelle : ces consortiums ont besoin d'une stabilit
 - [[systeme_economique_redistribution]]
 
 
+
 ## Relations
 **Alliés :**
 - [[bloc_ressources_eurasiatique_bre_reference]]
 - [[consortiums_d_extraction_miniere_du_bassin_congolais_reference]]
 - [[consortiums_energetiques_des_megapoles_reference]]
 - [[consortiums_prives_d_extraction_de_ressources_critiques_reference]]
+- [[hyphan_raghavan_reference]]
 - [[lobbies_industriels_des_etats_non_signataires_reference]]
 - [[pacte_des_souverains_reference]]
 **Opposants :**
@@ -146,6 +150,7 @@ La tension centrale est structurelle : ces consortiums ont besoin d'une stabilit
 - [[front_souverainiste_des_ressources_d_amerique_du_sud_reference]]
 - [[institutions_multilaterales_survivantes_reference]]
 - [[lyon_metropole_reference]]
+- [[maelys_okonkwo_reference]]
 - [[ong_de_tracabilite_des_ressources_critiques_reference]]
 - [[oracle_des_seuils_reference]]
 - [[reseau_hospitalier_hybride_eurasiatique_reference]]

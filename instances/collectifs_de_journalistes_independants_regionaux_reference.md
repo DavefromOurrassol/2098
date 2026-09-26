@@ -38,6 +38,7 @@ alliances:
 - ong_de_tracabilite_des_ressources_critiques_reference
 - ong_environnementales_de_terrain_reference
 - reseau_des_administrations_locales_rurales_participatives_reference
+- reseau_des_cartographes_des_zones_grises_reference
 - reseau_des_chercheurs_en_ethique_des_systemes_distribues_reference
 - reseau_meshcommons_netsolidaire_reference
 - reseaux_de_capteurs_citoyens_reference
@@ -119,6 +120,7 @@ La tension centrale qui traverse ces collectifs est celle entre leur indépendan
 - [[organisation_territoires]]
 
 
+
 ## Relations
 **Alliés :**
 - [[collectif_nuit_jaune_reference]]
@@ -128,6 +130,7 @@ La tension centrale qui traverse ces collectifs est celle entre leur indépendan
 - [[ong_de_tracabilite_des_ressources_critiques_reference]]
 - [[ong_environnementales_de_terrain_reference]]
 - [[reseau_des_administrations_locales_rurales_participatives_reference]]
+- [[reseau_des_cartographes_des_zones_grises_reference]]
 - [[reseau_des_chercheurs_en_ethique_des_systemes_distribues_reference]]
 - [[reseau_meshcommons_netsolidaire_reference]]
 - [[reseaux_de_capteurs_citoyens_reference]]

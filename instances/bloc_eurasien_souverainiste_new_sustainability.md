@@ -50,6 +50,7 @@ alliances:
 - reseau_des_agences_climatiques_regionales_new_sustainability
 - union_des_blocs_energetiques_regionaux_new_sustainability
 oppositions:
+- agence_de_regulation_des_detroits_strategiques_ards_new_sustainability
 - agence_globale_de_regeneration_des_bassins_versants_agrb_onu_new_sustainability
 - agence_mondiale_de_modelisation_climatique_ammc_new_sustainability
 - agence_orbitale_de_regulation_commune_aorc_new_sustainability
@@ -69,6 +70,7 @@ oppositions:
 - fonds_mondial_de_regeneration_ecologique_new_sustainability
 - fonds_mondial_de_transition_ecologique_du_travail_new_sustainability
 - institut_de_philosophie_des_systemes_hybrides_d_helsinki_new_sustainability
+- institut_des_seuils_demographiques_new_sustainability
 - internationale_souverainiste_de_deconnexion_territoriale_new_sustainability
 - oms_etendue_new_sustainability
 - parlement_deliberatif_mondial_new_sustainability
@@ -147,6 +149,7 @@ La tension structurelle du Bloc reste entière : la clause de réserve nationale
 - [[reseau_des_agences_climatiques_regionales_new_sustainability]]
 - [[union_des_blocs_energetiques_regionaux_new_sustainability]]
 **Opposants :**
+- [[agence_de_regulation_des_detroits_strategiques_ards_new_sustainability]]
 - [[agence_globale_de_regeneration_des_bassins_versants_agrb_onu_new_sustainability]]
 - [[agence_mondiale_de_modelisation_climatique_ammc_new_sustainability]]
 - [[agence_orbitale_de_regulation_commune_aorc_new_sustainability]]
@@ -166,6 +169,7 @@ La tension structurelle du Bloc reste entière : la clause de réserve nationale
 - [[fonds_mondial_de_regeneration_ecologique_new_sustainability]]
 - [[fonds_mondial_de_transition_ecologique_du_travail_new_sustainability]]
 - [[institut_de_philosophie_des_systemes_hybrides_d_helsinki_new_sustainability]]
+- [[institut_des_seuils_demographiques_new_sustainability]]
 - [[internationale_souverainiste_de_deconnexion_territoriale_new_sustainability]]
 - [[oms_etendue_new_sustainability]]
 - [[parlement_deliberatif_mondial_new_sustainability]]

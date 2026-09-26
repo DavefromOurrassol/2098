@@ -35,6 +35,8 @@ alliances:
 - collectifs_de_journalisme_embarque_reference
 - collectifs_de_journalistes_independants_regionaux_reference
 - federation_des_cliniques_autonomes_reference
+- kindling_reference
+- maelys_okonkwo_reference
 - ong_de_tracabilite_des_ressources_critiques_reference
 - ong_environnementales_de_terrain_reference
 - reseau_des_chercheurs_en_ethique_des_systemes_distribues_reference
@@ -123,11 +125,14 @@ Ces réseaux sont tiraillés entre leur loyauté résiduelle envers les institut
 - [[frontieres_du_systeme]]
 
 
+
 ## Relations
 **Alliés :**
 - [[collectifs_de_journalisme_embarque_reference]]
 - [[collectifs_de_journalistes_independants_regionaux_reference]]
 - [[federation_des_cliniques_autonomes_reference]]
+- [[kindling_reference]]
+- [[maelys_okonkwo_reference]]
 - [[ong_de_tracabilite_des_ressources_critiques_reference]]
 - [[ong_environnementales_de_terrain_reference]]
 - [[reseau_des_chercheurs_en_ethique_des_systemes_distribues_reference]]

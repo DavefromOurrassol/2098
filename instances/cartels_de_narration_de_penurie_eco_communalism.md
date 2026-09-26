@@ -49,6 +49,7 @@ oppositions:
 - collectifs_de_facilitateurs_deliberatifs_itinerants_eco_communalism
 - confederation_bassins_vivants_eco_communalism
 - frente_sertao_livre_eco_communalism
+- hyphan_raghavan_eco_communalism
 - kalaallit_nunaat_bioterritoire_eco_communalism
 - mouvement_des_communes_du_rust_belt_eco_communalism
 - oracle_des_seuils_eco_communalism
@@ -123,6 +124,7 @@ Les Cartels prospèrent précisément sur les acquis démocratiques des communau
 - [[valeurs_culture_tempo_sociale]]
 
 
+
 ## Relations
 **Alliés :**
 - [[consortium_des_operateurs_d_ia_proprietaires_sur_les_trames_eco_communalism]]
@@ -139,6 +141,7 @@ Les Cartels prospèrent précisément sur les acquis démocratiques des communau
 - [[collectifs_de_facilitateurs_deliberatifs_itinerants_eco_communalism]]
 - [[confederation_bassins_vivants_eco_communalism]]
 - [[frente_sertao_livre_eco_communalism]]
+- [[hyphan_raghavan_eco_communalism]]
 - [[kalaallit_nunaat_bioterritoire_eco_communalism]]
 - [[mouvement_des_communes_du_rust_belt_eco_communalism]]
 - [[oracle_des_seuils_eco_communalism]]

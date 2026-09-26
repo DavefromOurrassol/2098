@@ -49,6 +49,7 @@ alliances:
 - fonds_mondial_de_resilience_infrastructurelle_policy_reform
 - fonds_mondial_pour_la_transition_ecosystemique_fmte_policy_reform
 - fonds_souverain_de_transition_verte_fstv_policy_reform
+- ilse_varga_holm_policy_reform
 - observatoire_mondial_des_ressources_critiques_policy_reform
 - office_integre_des_flux_migratoires_policy_reform
 - oracle_des_seuils_policy_reform
@@ -134,6 +135,7 @@ Le Conseil est écartelé entre sa mission universaliste et la réalité d'un mo
 - [[geopolitique_conflits]]
 
 
+
 ## Relations
 **Alliés :**
 - [[agence_internationale_de_l_energie_reformatee_aier_policy_reform]]
@@ -151,6 +153,7 @@ Le Conseil est écartelé entre sa mission universaliste et la réalité d'un mo
 - [[fonds_mondial_de_resilience_infrastructurelle_policy_reform]]
 - [[fonds_mondial_pour_la_transition_ecosystemique_fmte_policy_reform]]
 - [[fonds_souverain_de_transition_verte_fstv_policy_reform]]
+- [[ilse_varga_holm_policy_reform]]
 - [[observatoire_mondial_des_ressources_critiques_policy_reform]]
 - [[office_integre_des_flux_migratoires_policy_reform]]
 - [[oracle_des_seuils_policy_reform]]

@@ -41,6 +41,7 @@ alliances:
 - blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown
 - consortiums_logistiques_agro_corporatifs_breakdown
 - corporations_de_l_ere_pre_effondrement_a_droits_de_pi_breakdown
+- deepfield_institute_breakdown
 - enclaves_corporatives_fortifiees_breakdown
 - seigneuries_logistiques_armees_breakdown
 oppositions:
@@ -50,6 +51,7 @@ oppositions:
 - communes_rust_belt_breakdown
 - front_de_resistance_aux_peages_sur_les_ressources_breakdown
 - lagos_interieur_mnemos_breakdown
+- reseau_des_cartographes_des_zones_grises_breakdown
 - reseau_des_courriers_nomades_sahelo_mediterraneens_breakdown
 - reseau_des_organisations_humanitaires_hors_cadre_onusien_breakdown
 - voix_du_dehors_breakdown
@@ -113,11 +115,13 @@ La contradiction fondamentale qui les mine est celle du mécène retourné : leu
 - [[systeme_economique_redistribution]]
 
 
+
 ## Relations
 **Alliés :**
 - [[blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown]]
 - [[consortiums_logistiques_agro_corporatifs_breakdown]]
 - [[corporations_de_l_ere_pre_effondrement_a_droits_de_pi_breakdown]]
+- [[deepfield_institute_breakdown]]
 - [[enclaves_corporatives_fortifiees_breakdown]]
 - [[seigneuries_logistiques_armees_breakdown]]
 **Opposants :**
@@ -127,6 +131,7 @@ La contradiction fondamentale qui les mine est celle du mécène retourné : leu
 - [[communes_rust_belt_breakdown]]
 - [[front_de_resistance_aux_peages_sur_les_ressources_breakdown]]
 - [[lagos_interieur_mnemos_breakdown]]
+- [[reseau_des_cartographes_des_zones_grises_breakdown]]
 - [[reseau_des_courriers_nomades_sahelo_mediterraneens_breakdown]]
 - [[reseau_des_organisations_humanitaires_hors_cadre_onusien_breakdown]]
 - [[voix_du_dehors_breakdown]]

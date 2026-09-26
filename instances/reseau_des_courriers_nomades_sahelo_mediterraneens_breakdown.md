@@ -38,6 +38,7 @@ zone_systemique:
 alliances:
 - agadez_ligue_sahel_numerique_breakdown
 - archives_neutres_geneve_breakdown
+- assemblee_territoires_breakdown
 - collectifs_de_hackers_archivistes_des_interstices_reseaux_breakdown
 - consortium_africain_de_biotechnologies_sociales_breakdown
 - corridors_eurasiens_convoyage_breakdown
@@ -45,12 +46,14 @@ alliances:
 - factions_secessionnistes_agrariennes_du_desert_breakdown
 - front_humanitaire_d_urgence_non_affilie_breakdown
 - hanse_baltique_recomposee_breakdown
+- institut_des_seuils_demographiques_breakdown
 - lagos_interieur_mnemos_breakdown
 - ligue_des_cites_du_sahel_numerique_breakdown
 - massif_central_cicatrices_vertes_breakdown
 - milices_agro_defensives_locales_breakdown
 - milices_privees_documentees_terrain_breakdown
 - occitanie_racines_meres_breakdown
+- reseau_des_cartographes_des_zones_grises_breakdown
 - reseau_logistique_criminel_concurrent_breakdown
 - reseaux_de_renseignement_informels_issus_de_l_ancienne_structure_militaire_eurasienne_breakdown
 - sfax_relais_bouches_breakdown
@@ -121,10 +124,12 @@ Le réseau est convoité par des acteurs très dissemblables : NexCore cherche �
 - [[frontieres_du_systeme]]
 
 
+
 ## Relations
 **Alliés :**
 - [[agadez_ligue_sahel_numerique_breakdown]]
 - [[archives_neutres_geneve_breakdown]]
+- [[assemblee_territoires_breakdown]]
 - [[collectifs_de_hackers_archivistes_des_interstices_reseaux_breakdown]]
 - [[consortium_africain_de_biotechnologies_sociales_breakdown]]
 - [[corridors_eurasiens_convoyage_breakdown]]
@@ -132,12 +137,14 @@ Le réseau est convoité par des acteurs très dissemblables : NexCore cherche �
 - [[factions_secessionnistes_agrariennes_du_desert_breakdown]]
 - [[front_humanitaire_d_urgence_non_affilie_breakdown]]
 - [[hanse_baltique_recomposee_breakdown]]
+- [[institut_des_seuils_demographiques_breakdown]]
 - [[lagos_interieur_mnemos_breakdown]]
 - [[ligue_des_cites_du_sahel_numerique_breakdown]]
 - [[massif_central_cicatrices_vertes_breakdown]]
 - [[milices_agro_defensives_locales_breakdown]]
 - [[milices_privees_documentees_terrain_breakdown]]
 - [[occitanie_racines_meres_breakdown]]
+- [[reseau_des_cartographes_des_zones_grises_breakdown]]
 - [[reseau_logistique_criminel_concurrent_breakdown]]
 - [[reseaux_de_renseignement_informels_issus_de_l_ancienne_structure_militaire_eurasienne_breakdown]]
 - [[sfax_relais_bouches_breakdown]]

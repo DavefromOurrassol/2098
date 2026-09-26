@@ -35,6 +35,9 @@ alliances:
 - amazonie_consortium_viva_reference
 - consortium_helios_reference
 - consortium_indo_pacifique_de_l_hydrogene_reference
+- deepfield_institute_reference
+- hyphan_raghavan_reference
+- meridian_assembly_reference
 - singapour_est_nexcore_reference
 - singapour_est_reference
 - valparaiso_fct_reference
@@ -108,11 +111,15 @@ La tension fondamentale réside dans la contradiction entre la logique de rendem
 - [[gouvernance_institutions]]
 
 
+
 ## Relations
 **Alliés :**
 - [[amazonie_consortium_viva_reference]]
 - [[consortium_helios_reference]]
 - [[consortium_indo_pacifique_de_l_hydrogene_reference]]
+- [[deepfield_institute_reference]]
+- [[hyphan_raghavan_reference]]
+- [[meridian_assembly_reference]]
 - [[singapour_est_nexcore_reference]]
 - [[singapour_est_reference]]
 - [[valparaiso_fct_reference]]

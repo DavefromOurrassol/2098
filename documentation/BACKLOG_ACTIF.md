@@ -1,7 +1,8 @@
 # Backlog actif — Ourrassol 2098
 *Dernière consolidation majeure le 23 août 2026 (reconsolidé le 23
 septembre 2026 : #2, #2bis, #4 et S11 clos et archivés ; le 24 septembre :
-#1 Hyphan clos et archivé, S15/S16 ajoutés), mis à jour en continu
+#1 Hyphan clos et archivé, S15/S16 ajoutés ; le 25 septembre : #4, S13 et
+S15.1 clos et archivés, S17 « audit du lore » ajouté), mis à jour en continu
 à chaque clôture de session. Chantiers clos et leur historique complet
 dans `BACKLOG_ARCHIVE.md` (fichier séparé, à uploader seulement en cas
 de besoin de vérifier si un point a déjà été traité). Chaque chantier
@@ -117,31 +118,12 @@ confirmé par David.
 
 ---
 
-## 🟢 4. Revue des 14 chantiers `zone_suspecte` en attente
-**Ouvert le 23 septembre** (reliquat du système du 25 juillet ; le
-chantier "Doublons pays-entier" qui le portait est clos et archivé). État
-au 23 sept : 19 chantiers au total, 14 `a_traiter`, **tous
-`zone_suspecte`** (plus aucun `pays_sans_zone` avant le scan du 23 qui en a
-ajouté 2 pour Finlande/Lituanie, voir #1). Tri proposé en session, **non
-appliqué — David a choisi de traiter d'abord #2/#2bis/#3/#4** :
-- **À appliquer** : `ameriques_multipolaires`/reference — proposition
-  déjà approuvée, relire puis "✓ Appliquer ce chantier".
-- **Probablement à ignorer** (faux positif ou choix narratif) :
-  `moyen_orient_golfe`/new_sustainability (conflit Israël-Iran de 2026 =
-  histoire réelle de départ) ; `al_hima`, `espace_nordique_arctique`
-  (zones Hyphan, choix de David) ; `tuvalu_refugies_climatiques`,
-  `singapour_megapole`, `amazonie_pacte_vert` (enclaves neutres
-  plausibles en fortress_world) ; `japon_archipel_resilient`,
-  `inde_bassins_sacres` (eco_communalism, nuance plus qu'incohérence).
-- **À lire vraiment** : `peninsule_iberique_cooperative`/policy_reform
-  (seul signal structurel : "union régionale" avec Espagne seule dans
-  `origine_reelle`) ; `bloc_eurasiatique_souverainiste`/
-  new_sustainability ; `espace_eurasiatique`/policy_reform ;
-  `bloc_persique_autonome` et `pacte_des_souverains`/reference.
-
-⚠ Ne pas utiliser le bouton global "Appliquer" avec le filtre "Tous" tant
-que `ameriques_multipolaires` n'a pas été relu : il serait appliqué au
-passage.
+## ✅ 4. Revue des 14 chantiers `zone_suspecte` — CLOS le 25 septembre
+11 ignorés, `ameriques_multipolaires` marqué traité (déjà appliqué),
+`bloc_persique_autonome` appliqué (`stable`), Portugal rattaché à
+`peninsule_iberique_cooperative` (policy_reform). Aucun chantier
+`a_traiter` restant. Détail : `BACKLOG_ARCHIVE.md` et
+`HANDOFF_25_SEPTEMBRE.md`.
 
 ---
 
@@ -313,13 +295,9 @@ Commande de mesure dans `HANDOFF_23_SEPTEMBRE.md`. Pas d'urgence.
 
 ---
 
-## ⚪ S13. Affectation depuis la Carte : entrée `origine_reelle` incomplète
-**Repéré le 23 sept.** `assign_pays` (`zone_repository.py`) écrit
-`- entite: X` seul, sans `type_entite` ni `portion`, alors que les autres
-chemins d'écriture produisent l'entrée complète (13 cas sur
-`fortress_world`). Rattrapable à tout moment par `scan_geographie_complet
---run-type-entite --apply-type-entite` ; corriger la cause dans
-`zone_repository.py` à la prochaine passe sur ce fichier (à fournir).
+## ✅ S13. Affectation depuis la Carte : entrée `origine_reelle` incomplète — CLOS le 25 septembre
+Corrigé dans `zone_repository.py` (entrée complète, entrées overlay
+préservées, zone créée au schéma complet). Détail : `BACKLOG_ARCHIVE.md`.
 
 ---
 
@@ -337,9 +315,9 @@ sous-zones).
 
 ## ⚪ S15. Suites optionnelles du scénario Hyphan (fortress_world)
 **Nouveau, 24 sept.** Rien de bloquant :
-- Aligner l'instance fortress_world d'**Ergo-Wian** sur la gouvernance
-  d'Euro-Nord (Espace Nordique, NAT comme « filiale armée »), si les
-  articles ne la reflètent pas.
+- ~~Aligner Ergo-Wian sur Euro-Nord~~ — **fait le 25 sept** (Ergo-Wian
+  localisée dans l'Espace Nordique, NAT filiale armée connue de tous ;
+  voir `BACKLOG_ARCHIVE.md`).
 - **Milan** (QG du Mouvement de Reconquête européenne) et **Lyon** (son
   antenne) ne sont que des `lieu` en texte libre dans `zone_euro_sud`.
   En faire de vraies sous-zones (comme `paris_hors`) seulement si d'autres
@@ -360,6 +338,37 @@ directement. Contournement actuel : script ponctuel (cas `paris_hors`,
 `evry_hors`, `tolosa` le 24 sept) ou création N1 puis « ↗️ déplacer ».
 À construire si le besoin revient (Milan/Lyon, cf. S15) — `ZoneRepository`
 n'a qu'un `creer_zone_n1`.
+
+---
+
+## ⚪ S17. Audit du lore — suites
+**Nouveau, 25 sept.** Outil `audit_lore.py` + `lore_regles.yaml` +
+`corriger_relations_inter_scenarios.py`, intégrés au GUI (manuel §3,
+« Audit du lore »). Première passe faite sur les 6 scénarios : 0 erreur,
+0 contradiction, 24 relations à sens unique volontaires (personnages en
+réserve fortress_world), 2 inter-scénarios voulus (NAT). Reste :
+- **Tester les 2 entrées GUI** « 🔍 Audit du lore » et « 🔀 Corriger les
+  relations entre scénarios » (`gui_verified: false`) et la case
+  `--ignorer-exclus` de 🤝.
+- **Mode `--llm` jamais lancé en réel** (testé seulement avec un LLM
+  simulé) : commencer par `--estimer`, puis 1-2 fiches (`--slug`).
+- **Règles pour les 5 autres scénarios** : seul fortress_world en a.
+  `reference` en premier (Ergo-Wian gouvernement-entreprise non
+  démocratique, Hyphan successeuse désignée…) — faits à fournir par David.
+- **Routine après chaque lot d'entités** : audit `--all`, puis
+  `corriger_relations_inter_scenarios.py --all`, puis réciprocité
+  (`fix_alliances_oppositions.py --reciprocite-seule --ignorer-exclus`).
+  Le lot du 24 sept avait laissé ~990 relations à sens unique et 49
+  inter-scénarios.
+- Relation à revoir si elle gêne le récit : **Vikram allié d'Ergo-Wian**
+  (fortress_world), déclarée par le lot du 24 sept et propagée.
+- Mineur : `write_alliances_patch()` ne retire pas la section
+  « ## Relations » quand les deux listes deviennent vides (contourné dans
+  les nouveaux scripts, pas dans `fix_alliances_oppositions.py` —
+  `resolve_reciprocity_conflicts()` pourrait laisser un lien retiré dans le
+  corps d'une fiche). Il déplace aussi la section en fin de corps.
+- Transnationales localisées dans le texte (119, information) : pas
+  d'action prévue.
 
 ---
 

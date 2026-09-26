@@ -35,6 +35,7 @@ zone_systemique:
     - société
 
 alliances:
+- agence_de_regulation_des_detroits_strategiques_ards_eco_communalism
 - amazonie_pacte_viva_eco_communalism
 - assemblees_bioterritoriales_regionales_eco_communalism
 - collectifs_de_geo_observateurs_citoyens_eco_communalism
@@ -103,6 +104,7 @@ La question de la continuité entre territoires refuse de se résoudre : une com
 
 ## Relations
 **Alliés :**
+- [[agence_de_regulation_des_detroits_strategiques_ards_eco_communalism]]
 - [[amazonie_pacte_viva_eco_communalism]]
 - [[assemblees_bioterritoriales_regionales_eco_communalism]]
 - [[collectifs_de_geo_observateurs_citoyens_eco_communalism]]

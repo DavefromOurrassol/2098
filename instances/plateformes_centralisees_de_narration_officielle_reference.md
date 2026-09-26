@@ -48,14 +48,20 @@ alliances:
 - pacte_des_souverains_reference
 - plateformes_informationnelles_dominantes_et_leurs_ia_de_moderation_reference
 - services_de_contre_information_des_blocs_geopolitiques_concurrents_reference
+- the_tidewater_canon_reference
 oppositions:
+- aurelio_stahl_reference
 - collectifs_de_journalisme_embarque_reference
 - collectifs_de_journalistes_independants_regionaux_reference
 - cooperatives_ia_open_source_reference
 - federation_communs_territoriaux_reference
+- kaspar_lind_reference
+- lamplight_reference
+- maelys_okonkwo_reference
 - mouvement_pour_la_libre_circulation_des_personnes_et_des_donnees_reference
 - observatoire_climatique_des_territoires_oct_reference
 - prisme_global_reference
+- raised_hands_reference
 - reseau_des_chercheurs_en_ethique_des_systemes_distribues_reference
 - reseau_des_villes_etats_pilotes_en_gouvernance_participative_reference
 - reseau_mnemos_reference
@@ -132,6 +138,7 @@ La tension centrale réside dans leur prétention à la neutralité technique ma
 - [[valeurs_culture_tempo_sociale]]
 
 
+
 ## Relations
 **Alliés :**
 - [[bloc_des_souverainistes_climatiques_reference]]
@@ -148,14 +155,20 @@ La tension centrale réside dans leur prétention à la neutralité technique ma
 - [[pacte_des_souverains_reference]]
 - [[plateformes_informationnelles_dominantes_et_leurs_ia_de_moderation_reference]]
 - [[services_de_contre_information_des_blocs_geopolitiques_concurrents_reference]]
+- [[the_tidewater_canon_reference]]
 **Opposants :**
+- [[aurelio_stahl_reference]]
 - [[collectifs_de_journalisme_embarque_reference]]
 - [[collectifs_de_journalistes_independants_regionaux_reference]]
 - [[cooperatives_ia_open_source_reference]]
 - [[federation_communs_territoriaux_reference]]
+- [[kaspar_lind_reference]]
+- [[lamplight_reference]]
+- [[maelys_okonkwo_reference]]
 - [[mouvement_pour_la_libre_circulation_des_personnes_et_des_donnees_reference]]
 - [[observatoire_climatique_des_territoires_oct_reference]]
 - [[prisme_global_reference]]
+- [[raised_hands_reference]]
 - [[reseau_des_chercheurs_en_ethique_des_systemes_distribues_reference]]
 - [[reseau_des_villes_etats_pilotes_en_gouvernance_participative_reference]]
 - [[reseau_mnemos_reference]]

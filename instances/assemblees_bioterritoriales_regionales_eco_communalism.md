@@ -53,6 +53,8 @@ alliances:
 - fraternites_ecospiritualistes_des_anciens_survivalistes_eco_communalism
 - guildes_de_mediateurs_ecologiques_eco_communalism
 - guildes_des_semenciers_itinerants_eco_communalism
+- ilse_varga_holm_eco_communalism
+- institut_des_seuils_demographiques_eco_communalism
 - kalaallit_nunaat_bioterritoire_eco_communalism
 - kalaallit_nunaat_sovereign_fund_eco_communalism
 - les_veilleurs_du_fleuve_eco_communalism
@@ -158,6 +160,7 @@ Les Assemblées sont constamment tiraillées entre leur vocation délibérative 
 - [[climat_environnement_global]]
 
 
+
 ## Relations
 **Alliés :**
 - [[amazonie_pacte_viva_eco_communalism]]
@@ -181,6 +184,8 @@ Les Assemblées sont constamment tiraillées entre leur vocation délibérative 
 - [[fraternites_ecospiritualistes_des_anciens_survivalistes_eco_communalism]]
 - [[guildes_de_mediateurs_ecologiques_eco_communalism]]
 - [[guildes_des_semenciers_itinerants_eco_communalism]]
+- [[ilse_varga_holm_eco_communalism]]
+- [[institut_des_seuils_demographiques_eco_communalism]]
 - [[kalaallit_nunaat_bioterritoire_eco_communalism]]
 - [[kalaallit_nunaat_sovereign_fund_eco_communalism]]
 - [[les_veilleurs_du_fleuve_eco_communalism]]

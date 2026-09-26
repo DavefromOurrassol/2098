@@ -42,11 +42,14 @@ alliances:
 - cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism
 - fraternites_ecospiritualistes_des_anciens_survivalistes_eco_communalism
 - guildes_des_semenciers_itinerants_eco_communalism
+- lamplight_eco_communalism
 - mouvement_des_archives_vivantes_du_savoir_partage_eco_communalism
 - mutuelles_de_sante_territoriales_eco_communalism
+- reseau_des_cartographes_des_zones_grises_eco_communalism
 - reseaux_de_radio_communautaire_basse_consommation_eco_communalism
 - reseaux_de_reconstruction_cooperative_inter_communautes_eco_communalism
 - tampere_charte_eco_communalism
+- terminal_kharg_data_haven_eco_communalism
 - trame_mnemos_noeud_reseau_eco_communalism
 - universite_nomade_eco_communalism
 - voix_du_dehors_eco_communalism
@@ -125,6 +128,7 @@ La tension principale réside dans le choix de ce qui mérite d'être conservé 
 - [[organisation_territoires]]
 
 
+
 ## Relations
 **Alliés :**
 - [[archives_ouvertes_des_jurisprudences_communales_aojc_eco_communalism]]
@@ -140,11 +144,14 @@ La tension principale réside dans le choix de ce qui mérite d'être conservé 
 - [[cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism]]
 - [[fraternites_ecospiritualistes_des_anciens_survivalistes_eco_communalism]]
 - [[guildes_des_semenciers_itinerants_eco_communalism]]
+- [[lamplight_eco_communalism]]
 - [[mouvement_des_archives_vivantes_du_savoir_partage_eco_communalism]]
 - [[mutuelles_de_sante_territoriales_eco_communalism]]
+- [[reseau_des_cartographes_des_zones_grises_eco_communalism]]
 - [[reseaux_de_radio_communautaire_basse_consommation_eco_communalism]]
 - [[reseaux_de_reconstruction_cooperative_inter_communautes_eco_communalism]]
 - [[tampere_charte_eco_communalism]]
+- [[terminal_kharg_data_haven_eco_communalism]]
 - [[trame_mnemos_noeud_reseau_eco_communalism]]
 - [[universite_nomade_eco_communalism]]
 - [[voix_du_dehors_eco_communalism]]

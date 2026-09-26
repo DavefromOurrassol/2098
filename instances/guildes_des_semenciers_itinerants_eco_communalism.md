@@ -32,6 +32,7 @@ zone_geographique:
 zone_systemique:
 - société
 alliances:
+- agence_de_regulation_des_detroits_strategiques_ards_eco_communalism
 - assemblees_bioterritoriales_regionales_eco_communalism
 - brigades_de_restauration_ecologique_eco_communalism
 - cercles_de_mediation_territoriale_intercommunautaire_eco_communalism
@@ -125,8 +126,10 @@ La tension principale qui traverse les Guildes oppose ceux qui veulent formalise
 - [[demographie_mobilite_humaine]]
 
 
+
 ## Relations
 **Alliés :**
+- [[agence_de_regulation_des_detroits_strategiques_ards_eco_communalism]]
 - [[assemblees_bioterritoriales_regionales_eco_communalism]]
 - [[brigades_de_restauration_ecologique_eco_communalism]]
 - [[cercles_de_mediation_territoriale_intercommunautaire_eco_communalism]]

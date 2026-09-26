@@ -47,6 +47,7 @@ zone_systemique:
 - économie
 - infrastructure
 alliances:
+- agence_de_regulation_des_detroits_strategiques_ards_policy_reform
 - agence_internationale_de_l_energie_reformatee_aier_policy_reform
 - arctic_passage_authority_policy_reform
 - autorite_continentale_des_ressources_aquatiques_acra_policy_reform
@@ -55,6 +56,7 @@ alliances:
 - consortium_des_villes_etats_durables_policy_reform
 - fonds_mondial_de_stabilisation_biotechnologique_policy_reform
 - gouvernement_israel_policy_reform
+- institut_des_seuils_demographiques_policy_reform
 - kalaallit_nunaat_sovereign_fund_policy_reform
 - observatoire_mondial_des_ressources_critiques_policy_reform
 - reseau_des_auditeurs_algorithmiques_independants_raai_policy_reform
@@ -71,6 +73,7 @@ oppositions:
 - factions_technocratiques_de_la_marchandisation_hydrique_policy_reform
 - front_des_souverainistes_energetiques_policy_reform
 - front_souverainiste_des_blocs_non_signataires_policy_reform
+- hyphan_raghavan_policy_reform
 - internationale_decroissante_anti_planification_policy_reform
 - les_veilleurs_du_fleuve_policy_reform
 - mouvement_pour_la_justice_ecologique_communautaire_policy_reform
@@ -149,6 +152,7 @@ La légitimité démocratique du CRRC-ARN est contestée depuis sa réforme : qu
 
 ## Relations
 **Alliés :**
+- [[agence_de_regulation_des_detroits_strategiques_ards_policy_reform]]
 - [[agence_internationale_de_l_energie_reformatee_aier_policy_reform]]
 - [[arctic_passage_authority_policy_reform]]
 - [[autorite_continentale_des_ressources_aquatiques_acra_policy_reform]]
@@ -157,6 +161,7 @@ La légitimité démocratique du CRRC-ARN est contestée depuis sa réforme : qu
 - [[consortium_des_villes_etats_durables_policy_reform]]
 - [[fonds_mondial_de_stabilisation_biotechnologique_policy_reform]]
 - [[gouvernement_israel_policy_reform]]
+- [[institut_des_seuils_demographiques_policy_reform]]
 - [[kalaallit_nunaat_sovereign_fund_policy_reform]]
 - [[observatoire_mondial_des_ressources_critiques_policy_reform]]
 - [[reseau_des_auditeurs_algorithmiques_independants_raai_policy_reform]]
@@ -173,6 +178,7 @@ La légitimité démocratique du CRRC-ARN est contestée depuis sa réforme : qu
 - [[factions_technocratiques_de_la_marchandisation_hydrique_policy_reform]]
 - [[front_des_souverainistes_energetiques_policy_reform]]
 - [[front_souverainiste_des_blocs_non_signataires_policy_reform]]
+- [[hyphan_raghavan_policy_reform]]
 - [[internationale_decroissante_anti_planification_policy_reform]]
 - [[les_veilleurs_du_fleuve_policy_reform]]
 - [[mouvement_pour_la_justice_ecologique_communautaire_policy_reform]]

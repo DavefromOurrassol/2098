@@ -42,6 +42,7 @@ alliances:
 - syndicat_des_ingenieurs_orbitaux_policy_reform
 - syndicats_d_extraction_privee_non_regules_policy_reform
 oppositions:
+- aurelio_stahl_policy_reform
 - coalition_des_souverainistes_numeriques_policy_reform
 - collectifs_citoyens_de_deliberation_augmentee_policy_reform
 - collectifs_citoyens_pour_l_audit_algorithmique_ouvert_policy_reform
@@ -119,6 +120,7 @@ La faction est prise en étau entre sa légitimité institutionnelle au sein du 
 
 
 
+
 ## Relations
 **Alliés :**
 - [[autorite_mondiale_du_vivant_amv_policy_reform]]
@@ -131,6 +133,7 @@ La faction est prise en étau entre sa légitimité institutionnelle au sein du 
 - [[syndicat_des_ingenieurs_orbitaux_policy_reform]]
 - [[syndicats_d_extraction_privee_non_regules_policy_reform]]
 **Opposants :**
+- [[aurelio_stahl_policy_reform]]
 - [[coalition_des_souverainistes_numeriques_policy_reform]]
 - [[collectifs_citoyens_de_deliberation_augmentee_policy_reform]]
 - [[collectifs_citoyens_pour_l_audit_algorithmique_ouvert_policy_reform]]

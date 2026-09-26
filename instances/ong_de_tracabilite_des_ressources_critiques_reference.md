@@ -41,6 +41,7 @@ alliances:
 - federation_des_cliniques_autonomes_reference
 - institutions_multilaterales_survivantes_reference
 - kinshasa_accords_hydriques_reference
+- maelys_okonkwo_reference
 - observatoire_climatique_des_territoires_oct_reference
 - reseaux_de_capteurs_citoyens_reference
 - reseaux_de_gouvernance_multilaterale_survivants_reference
@@ -126,6 +127,7 @@ L'ONG navigue en permanence entre son rôle de contre-pouvoir radical et les com
 - [[climat_environnement_global]]
 
 
+
 ## Relations
 **Alliés :**
 - [[arctic_passage_authority_reference]]
@@ -135,6 +137,7 @@ L'ONG navigue en permanence entre son rôle de contre-pouvoir radical et les com
 - [[federation_des_cliniques_autonomes_reference]]
 - [[institutions_multilaterales_survivantes_reference]]
 - [[kinshasa_accords_hydriques_reference]]
+- [[maelys_okonkwo_reference]]
 - [[observatoire_climatique_des_territoires_oct_reference]]
 - [[reseaux_de_capteurs_citoyens_reference]]
 - [[reseaux_de_gouvernance_multilaterale_survivants_reference]]

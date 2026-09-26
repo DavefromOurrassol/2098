@@ -44,7 +44,7 @@ alliances:
 - milices_privees_documentees_terrain_breakdown
 - reseau_des_anciens_financeurs_devenus_censeurs_breakdown
 oppositions:
-- arctic_passage_authority_breakdown
+- agence_de_regulation_des_detroits_strategiques_ards_breakdown
 - arctic_passage_authority_breakdown
 - cargo_mombasa_crrc_breakdown
 - collectif_hackers_decroissance_infrastructure_breakdown
@@ -64,6 +64,7 @@ oppositions:
 - milices_de_controle_territorial_breakdown
 - mouvement_des_communes_du_rust_belt_breakdown
 - occitanie_racines_meres_breakdown
+- reseau_des_cartographes_des_zones_grises_breakdown
 - reseau_logistique_criminel_concurrent_breakdown
 - saboteurs_des_corridors_de_transit_breakdown
 - seigneurs_de_guerre_agro_territoriaux_breakdown
@@ -127,6 +128,7 @@ La contradiction fondamentale des Blocs est qu'en cherchant à sécuriser les re
 - [[organisation_territoires]]
 
 
+
 ## Relations
 **Alliés :**
 - [[cartels_logistiques_regionaux_breakdown]]
@@ -136,7 +138,7 @@ La contradiction fondamentale des Blocs est qu'en cherchant à sécuriser les re
 - [[milices_privees_documentees_terrain_breakdown]]
 - [[reseau_des_anciens_financeurs_devenus_censeurs_breakdown]]
 **Opposants :**
-- [[arctic_passage_authority_breakdown]]
+- [[agence_de_regulation_des_detroits_strategiques_ards_breakdown]]
 - [[arctic_passage_authority_breakdown]]
 - [[cargo_mombasa_crrc_breakdown]]
 - [[collectif_hackers_decroissance_infrastructure_breakdown]]
@@ -156,6 +158,7 @@ La contradiction fondamentale des Blocs est qu'en cherchant à sécuriser les re
 - [[milices_de_controle_territorial_breakdown]]
 - [[mouvement_des_communes_du_rust_belt_breakdown]]
 - [[occitanie_racines_meres_breakdown]]
+- [[reseau_des_cartographes_des_zones_grises_breakdown]]
 - [[reseau_logistique_criminel_concurrent_breakdown]]
 - [[saboteurs_des_corridors_de_transit_breakdown]]
 - [[seigneurs_de_guerre_agro_territoriaux_breakdown]]

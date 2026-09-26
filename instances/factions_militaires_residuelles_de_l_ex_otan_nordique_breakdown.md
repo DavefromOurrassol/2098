@@ -44,8 +44,8 @@ alliances:
 oppositions:
 - arctic_passage_authority_breakdown
 - arctique_nordark_breakdown
-- arctic_passage_authority_breakdown
 - communautes_religieuses_des_relais_physiques_breakdown
+- consortium_des_pecheries_autonomes_du_grand_nord_breakdown
 - district_mourmansk_residuel_breakdown
 - enclaves_finlandaises_breakdown
 - factions_paramilitaires_locales_neutralisees_breakdown
@@ -118,6 +118,7 @@ Leur cohérence interne est constamment menacée par les rivalités entre factio
 
 
 
+
 ## Relations
 **Alliés :**
 - [[armada_logistique_nordique_breakdown]]
@@ -129,8 +130,8 @@ Leur cohérence interne est constamment menacée par les rivalités entre factio
 **Opposants :**
 - [[arctic_passage_authority_breakdown]]
 - [[arctique_nordark_breakdown]]
-- [[arctic_passage_authority_breakdown]]
 - [[communautes_religieuses_des_relais_physiques_breakdown]]
+- [[consortium_des_pecheries_autonomes_du_grand_nord_breakdown]]
 - [[district_mourmansk_residuel_breakdown]]
 - [[enclaves_finlandaises_breakdown]]
 - [[factions_paramilitaires_locales_neutralisees_breakdown]]

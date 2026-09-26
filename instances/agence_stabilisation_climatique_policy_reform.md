@@ -36,6 +36,7 @@ zone_systemique:
     - société
 
 alliances:
+- agence_de_regulation_des_detroits_strategiques_ards_policy_reform
 - agence_internationale_de_l_energie_reformatee_aier_policy_reform
 - agence_technocratique_pour_la_resilience_biospherique_atrb_policy_reform
 - autorite_continentale_des_ressources_aquatiques_acra_policy_reform
@@ -46,8 +47,9 @@ alliances:
 - consortium_des_villes_etats_durables_policy_reform
 - consortium_technologique_des_nations_integrees_policy_reform
 - fonds_mondial_de_resilience_infrastructurelle_policy_reform
+- ilse_varga_holm_policy_reform
+- institut_des_seuils_demographiques_policy_reform
 - oracle_des_seuils_policy_reform
-- reseau_des_villes_refuge_pour_travailleurs_desaugmentes_reference
 - reseaux_academiques_prospectivistes_du_pacte_de_geneve_2081_policy_reform
 - reseaux_de_capteurs_ia_climatiques_deployes_par_les_etats_membres_policy_reform
 oppositions:
@@ -111,6 +113,7 @@ La légitimité de l'AMSC repose sur son efficacité : si une intervention géo-
 
 ## Relations
 **Alliés :**
+- [[agence_de_regulation_des_detroits_strategiques_ards_policy_reform]]
 - [[agence_internationale_de_l_energie_reformatee_aier_policy_reform]]
 - [[agence_technocratique_pour_la_resilience_biospherique_atrb_policy_reform]]
 - [[autorite_continentale_des_ressources_aquatiques_acra_policy_reform]]
@@ -121,8 +124,9 @@ La légitimité de l'AMSC repose sur son efficacité : si une intervention géo-
 - [[consortium_des_villes_etats_durables_policy_reform]]
 - [[consortium_technologique_des_nations_integrees_policy_reform]]
 - [[fonds_mondial_de_resilience_infrastructurelle_policy_reform]]
+- [[ilse_varga_holm_policy_reform]]
+- [[institut_des_seuils_demographiques_policy_reform]]
 - [[oracle_des_seuils_policy_reform]]
-- [[reseau_des_villes_refuge_pour_travailleurs_desaugmentes_reference]]
 - [[reseaux_academiques_prospectivistes_du_pacte_de_geneve_2081_policy_reform]]
 - [[reseaux_de_capteurs_ia_climatiques_deployes_par_les_etats_membres_policy_reform]]
 **Opposants :**

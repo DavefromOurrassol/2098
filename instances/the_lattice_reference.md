@@ -36,16 +36,15 @@ zone_systemique:
     - société
 
 alliances:
-    - confederation_des_megapoles_autonomes_reference
-    - agence_internationale_des_energies_renouvelables_irena_2_reference
-    - cooperatives_energetiques_decentralisees_reference
-    - mouvement_pour_la_libre_circulation_des_personnes_et_des_donnees_reference
-
+- agence_internationale_des_energies_renouvelables_irena_2_reference
+- confederation_des_megapoles_autonomes_reference
+- cooperatives_energetiques_decentralisees_reference
+- mouvement_pour_la_libre_circulation_des_personnes_et_des_donnees_reference
 oppositions:
-    - coalition_des_gouvernements_contre_les_chartes_de_destabilisation_reference
-    - bloc_des_souverainistes_climatiques_reference
-    - gouvernements_federaux_residuels_souverainistes_reference
-
+- bloc_des_souverainistes_climatiques_reference
+- coalition_des_gouvernements_contre_les_chartes_de_destabilisation_reference
+- gouvernements_federaux_residuels_souverainistes_reference
+- lamplight_reference
 type_relation_dominante: rivalité
 
 annee_debut: 2056
@@ -104,12 +103,21 @@ Gestion décentralisée des infrastructures urbaines, régulation des flux migra
 - [[demographie_mobilite_humaine]]
 - [[systeme_economique_redistribution]]
 
-## Relations
-**Alliés** : [[confederation_des_megapoles_autonomes_reference]], [[agence_internationale_des_energies_renouvelables_irena_2_reference]], [[cooperatives_energetiques_decentralisees_reference]], [[mouvement_pour_la_libre_circulation_des_personnes_et_des_donnees_reference]]
-**Opposants** : [[coalition_des_gouvernements_contre_les_chartes_de_destabilisation_reference]], [[bloc_des_souverainistes_climatiques_reference]], [[gouvernements_federaux_residuels_souverainistes_reference]]
 
 ## Description journalistique
 Depuis la crise de 2055, le Lattice est devenu le laboratoire le plus radical de gouvernance post-nationale. Ses cités-états, comme Nueva Cartago ou Puerto Soberano, rivalisent d'ingéniosité pour attirer résidents et investissements : certaines misent sur des régimes fiscaux ultra-légers, d'autres sur des écosystèmes technologiques fermés ou des droits sociaux étendus. Les « passeports Lattice » sont désormais acceptés dans une vingtaine de pays, et les flux migratoires entre cités se mesurent en temps réel via des tableaux de bord publics. Pourtant, derrière cette façade de fluidité, les tensions persistent : certaines cités deviennent des havres pour élites fuyant les régulations climatiques, tandis que d'autres peinent à retenir leurs habitants face à la concurrence.
 
 ## Tensions narratives
 1) **Stabilité vs. Fluidité** : Le Lattice repose sur la mobilité des résidents, mais cette fluidité menace la cohérence des politiques publiques (ex. : comment financer des infrastructures durables si les habitants quittent une cité dès qu'une taxe est instaurée ?). 2) **Autonomie vs. Dépendance** : Certaines cités deviennent des satellites de consortiums énergétiques ou logistiques, remettant en cause leur souveraineté. 3) **Inégalités territoriales** : Les cités les plus attractives accumulent richesses et talents, tandis que les autres sombrent dans une spirale de déclin, créant des poches de pauvreté au sein même du réseau. 4) **Légitimité externe** : Les États voisins accusent le Lattice de dumping réglementaire et menacent de fermer leurs frontières aux résidents du réseau.
+
+## Relations
+**Alliés :**
+- [[agence_internationale_des_energies_renouvelables_irena_2_reference]]
+- [[confederation_des_megapoles_autonomes_reference]]
+- [[cooperatives_energetiques_decentralisees_reference]]
+- [[mouvement_pour_la_libre_circulation_des_personnes_et_des_donnees_reference]]
+**Opposants :**
+- [[bloc_des_souverainistes_climatiques_reference]]
+- [[coalition_des_gouvernements_contre_les_chartes_de_destabilisation_reference]]
+- [[gouvernements_federaux_residuels_souverainistes_reference]]
+- [[lamplight_reference]]

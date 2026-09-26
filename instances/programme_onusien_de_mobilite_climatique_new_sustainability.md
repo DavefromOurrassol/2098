@@ -41,6 +41,7 @@ alliances:
 - agence_stabilisation_climatique_new_sustainability
 - conseil_mondial_de_la_regeneration_ecosystemique_cmre_new_sustainability
 - fonds_mondial_de_transition_ecologique_du_travail_new_sustainability
+- institut_des_seuils_demographiques_new_sustainability
 - oms_etendue_new_sustainability
 - pacifique_sud_resilience_network_new_sustainability
 - parlement_deliberatif_mondial_new_sustainability
@@ -122,12 +123,14 @@ Le POMC se trouve pris entre sa vocation universaliste et la réalité d'une gou
 - [[climat_environnement_global]]
 
 
+
 ## Relations
 **Alliés :**
 - [[agence_globale_de_regeneration_des_bassins_versants_agrb_onu_new_sustainability]]
 - [[agence_stabilisation_climatique_new_sustainability]]
 - [[conseil_mondial_de_la_regeneration_ecosystemique_cmre_new_sustainability]]
 - [[fonds_mondial_de_transition_ecologique_du_travail_new_sustainability]]
+- [[institut_des_seuils_demographiques_new_sustainability]]
 - [[oms_etendue_new_sustainability]]
 - [[pacifique_sud_resilience_network_new_sustainability]]
 - [[parlement_deliberatif_mondial_new_sustainability]]

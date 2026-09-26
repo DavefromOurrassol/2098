@@ -44,6 +44,7 @@ alliances:
 - reseau_des_communs_alimentaires_hors_grille_new_sustainability
 - reseaux_neo_democratiques_plaidant_pour_la_gouvernance_participative_directe_new_sustainability
 oppositions:
+- agence_de_regulation_des_detroits_strategiques_ards_new_sustainability
 - agence_globale_de_regeneration_des_bassins_versants_agrb_onu_new_sustainability
 - arctic_passage_authority_new_sustainability
 - bureau_gouvernance_algorithmique_new_sustainability
@@ -118,6 +119,7 @@ La tension centrale est celle d'un paradoxe historique : les communautés les pl
 - [[demographie_mobilite_humaine]]
 
 
+
 ## Relations
 **Alliés :**
 - [[coalition_anti_algorithme_des_autonomies_locales_new_sustainability]]
@@ -131,6 +133,7 @@ La tension centrale est celle d'un paradoxe historique : les communautés les pl
 - [[reseau_des_communs_alimentaires_hors_grille_new_sustainability]]
 - [[reseaux_neo_democratiques_plaidant_pour_la_gouvernance_participative_directe_new_sustainability]]
 **Opposants :**
+- [[agence_de_regulation_des_detroits_strategiques_ards_new_sustainability]]
 - [[agence_globale_de_regeneration_des_bassins_versants_agrb_onu_new_sustainability]]
 - [[arctic_passage_authority_new_sustainability]]
 - [[bureau_gouvernance_algorithmique_new_sustainability]]

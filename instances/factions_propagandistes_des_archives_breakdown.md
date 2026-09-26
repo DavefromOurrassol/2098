@@ -38,6 +38,7 @@ zone_systemique:
 - société
 alliances:
 - archives_neutres_de_geneve_breakdown
+- deepfield_institute_breakdown
 oppositions:
 - archives_neutres_geneve_breakdown
 - bureau_des_territoires_residuels_breakdown
@@ -108,9 +109,11 @@ La tension centrale réside dans leur propre fragmentation interne : les différ
 - [[valeurs_culture_tempo_sociale]]
 
 
+
 ## Relations
 **Alliés :**
 - [[archives_neutres_de_geneve_breakdown]]
+- [[deepfield_institute_breakdown]]
 **Opposants :**
 - [[archives_neutres_geneve_breakdown]]
 - [[bureau_des_territoires_residuels_breakdown]]

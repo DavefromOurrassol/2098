@@ -34,6 +34,7 @@ zone_geographique:
 zone_systemique:
 - société
 alliances:
+- assemblee_territoires_reference
 - bruxelles_nouveau_reference
 - bureau_zones_non_prioritaires_reference
 - collectifs_academiques_independants_reference
@@ -42,17 +43,20 @@ alliances:
 - consortium_africain_de_biotechnologies_sociales_reference
 - consortium_amazonia_viva_reference
 - delta_du_gange_reference
+- elias_mork_reference
 - federation_des_cliniques_autonomes_reference
 - geneve_lac_retreite_reference
 - great_lakes_autonomous_compact_reference
 - institutions_multilaterales_survivantes_reference
 - internationale_travailleurs_augmentes_reference
+- lamplight_reference
 - mouvement_pour_la_libre_circulation_des_personnes_et_des_donnees_reference
 - observatoire_climatique_des_territoires_oct_reference
 - ong_de_tracabilite_des_ressources_critiques_reference
 - ong_environnementales_de_terrain_reference
 - pacifique_sud_archipels_flottants_reference
 - pacifique_sud_resilience_network_reference
+- raised_hands_reference
 - reseau_des_chercheurs_en_ethique_des_systemes_distribues_reference
 - reseau_des_villes_etats_pilotes_en_gouvernance_participative_reference
 - reseau_des_villes_refuge_pour_travailleurs_desaugmentes_reference
@@ -65,7 +69,9 @@ oppositions:
 - bloc_eurasien_central_reference
 - consortium_augmentwork_reference
 - consortiums_prives_d_extraction_de_ressources_critiques_reference
+- deepfield_institute_reference
 - ecosynth_global_reference
+- meridian_assembly_reference
 - neuroharmonics_reference
 - nexus_biosyn_reference
 - pacte_des_souverains_reference
@@ -137,8 +143,10 @@ Le Conseil est écartelé entre sa vocation universaliste et la réalité d'un m
 - [[demographie_mobilite_humaine]]
 
 
+
 ## Relations
 **Alliés :**
+- [[assemblee_territoires_reference]]
 - [[bruxelles_nouveau_reference]]
 - [[bureau_zones_non_prioritaires_reference]]
 - [[collectifs_academiques_independants_reference]]
@@ -147,17 +155,20 @@ Le Conseil est écartelé entre sa vocation universaliste et la réalité d'un m
 - [[consortium_africain_de_biotechnologies_sociales_reference]]
 - [[consortium_amazonia_viva_reference]]
 - [[delta_du_gange_reference]]
+- [[elias_mork_reference]]
 - [[federation_des_cliniques_autonomes_reference]]
 - [[geneve_lac_retreite_reference]]
 - [[great_lakes_autonomous_compact_reference]]
 - [[institutions_multilaterales_survivantes_reference]]
 - [[internationale_travailleurs_augmentes_reference]]
+- [[lamplight_reference]]
 - [[mouvement_pour_la_libre_circulation_des_personnes_et_des_donnees_reference]]
 - [[observatoire_climatique_des_territoires_oct_reference]]
 - [[ong_de_tracabilite_des_ressources_critiques_reference]]
 - [[ong_environnementales_de_terrain_reference]]
 - [[pacifique_sud_archipels_flottants_reference]]
 - [[pacifique_sud_resilience_network_reference]]
+- [[raised_hands_reference]]
 - [[reseau_des_chercheurs_en_ethique_des_systemes_distribues_reference]]
 - [[reseau_des_villes_etats_pilotes_en_gouvernance_participative_reference]]
 - [[reseau_des_villes_refuge_pour_travailleurs_desaugmentes_reference]]
@@ -170,7 +181,9 @@ Le Conseil est écartelé entre sa vocation universaliste et la réalité d'un m
 - [[bloc_eurasien_central_reference]]
 - [[consortium_augmentwork_reference]]
 - [[consortiums_prives_d_extraction_de_ressources_critiques_reference]]
+- [[deepfield_institute_reference]]
 - [[ecosynth_global_reference]]
+- [[meridian_assembly_reference]]
 - [[neuroharmonics_reference]]
 - [[nexus_biosyn_reference]]
 - [[pacte_des_souverains_reference]]

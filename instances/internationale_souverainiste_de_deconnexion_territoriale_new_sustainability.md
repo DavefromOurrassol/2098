@@ -47,6 +47,7 @@ alliances:
 - reseaux_de_gouvernance_territoriale_distribues_new_sustainability
 - souverainistes_du_bloc_eurasien_new_sustainability
 oppositions:
+- agence_de_regulation_des_detroits_strategiques_ards_new_sustainability
 - agence_globale_de_regeneration_des_bassins_versants_agrb_onu_new_sustainability
 - agence_mondiale_de_modelisation_climatique_ammc_new_sustainability
 - agence_stabilisation_climatique_new_sustainability
@@ -65,6 +66,7 @@ oppositions:
 - great_lakes_autonomous_compact_new_sustainability
 - great_lakes_compact_new_sustainability
 - hub_nairobi_kigali_new_sustainability
+- institut_des_seuils_demographiques_new_sustainability
 - ligue_des_cites_du_sahel_numerique_new_sustainability
 - oms_etendue_new_sustainability
 - pacifique_sud_resilience_network_new_sustainability
@@ -148,6 +150,7 @@ La tension centrale de l'ISDT réside dans sa contradiction existentielle : pour
 
 
 
+
 ## Relations
 **Alliés :**
 - [[bloc_des_gouvernements_souverainistes_hydriques_new_sustainability]]
@@ -161,6 +164,7 @@ La tension centrale de l'ISDT réside dans sa contradiction existentielle : pour
 - [[reseaux_de_gouvernance_territoriale_distribues_new_sustainability]]
 - [[souverainistes_du_bloc_eurasien_new_sustainability]]
 **Opposants :**
+- [[agence_de_regulation_des_detroits_strategiques_ards_new_sustainability]]
 - [[agence_globale_de_regeneration_des_bassins_versants_agrb_onu_new_sustainability]]
 - [[agence_mondiale_de_modelisation_climatique_ammc_new_sustainability]]
 - [[agence_stabilisation_climatique_new_sustainability]]
@@ -179,6 +183,7 @@ La tension centrale de l'ISDT réside dans sa contradiction existentielle : pour
 - [[great_lakes_autonomous_compact_new_sustainability]]
 - [[great_lakes_compact_new_sustainability]]
 - [[hub_nairobi_kigali_new_sustainability]]
+- [[institut_des_seuils_demographiques_new_sustainability]]
 - [[ligue_des_cites_du_sahel_numerique_new_sustainability]]
 - [[oms_etendue_new_sustainability]]
 - [[pacifique_sud_resilience_network_new_sustainability]]

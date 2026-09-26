@@ -47,7 +47,9 @@ oppositions:
 - conseil_regulation_algorithmique_policy_reform
 - conseil_regulation_ressources_policy_reform
 - consortium_technologique_de_planification_territoriale_policy_reform
+- gelecek_meclisi_policy_reform
 - grille_aria_policy_reform
+- institut_des_seuils_demographiques_policy_reform
 - oracle_des_seuils_policy_reform
 - rede_paulista_de_distribuicao_algoritmica_policy_reform
 - reseaux_academiques_prospectivistes_du_pacte_de_geneve_2081_policy_reform
@@ -114,6 +116,7 @@ L'organisation est tiraillée entre son internationalisme affiché et son allerg
 - [[systeme_economique_redistribution]]
 
 
+
 ## Relations
 **Alliés :**
 - [[collectifs_de_biohackers_agro_communautaires_policy_reform]]
@@ -128,7 +131,9 @@ L'organisation est tiraillée entre son internationalisme affiché et son allerg
 - [[conseil_regulation_algorithmique_policy_reform]]
 - [[conseil_regulation_ressources_policy_reform]]
 - [[consortium_technologique_de_planification_territoriale_policy_reform]]
+- [[gelecek_meclisi_policy_reform]]
 - [[grille_aria_policy_reform]]
+- [[institut_des_seuils_demographiques_policy_reform]]
 - [[oracle_des_seuils_policy_reform]]
 - [[rede_paulista_de_distribuicao_algoritmica_policy_reform]]
 - [[reseaux_academiques_prospectivistes_du_pacte_de_geneve_2081_policy_reform]]

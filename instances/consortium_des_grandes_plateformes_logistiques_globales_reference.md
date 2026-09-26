@@ -35,6 +35,7 @@ zone_geographique:
 zone_systemique:
 - société
 alliances:
+- agence_de_regulation_des_detroits_strategiques_ards_reference
 - alliance_blocs_souverains_reference
 - arctic_passage_authority_reference
 - armada_logistique_nordique_reference
@@ -43,6 +44,8 @@ alliances:
 - consortiums_d_extraction_miniere_du_bassin_congolais_reference
 - consortiums_mediatiques_corporatifs_reference
 - guadalajara_nexus_reference
+- institut_des_seuils_demographiques_reference
+- meridian_assembly_reference
 - optiflow_logistics_reference
 - plateformes_d_optimisation_territoriale_par_ia_reference
 - singapour_est_nexcore_reference
@@ -124,8 +127,10 @@ Le Consortium est écartelé entre sa logique d'optimisation globale et les exig
 
 
 
+
 ## Relations
 **Alliés :**
+- [[agence_de_regulation_des_detroits_strategiques_ards_reference]]
 - [[alliance_blocs_souverains_reference]]
 - [[arctic_passage_authority_reference]]
 - [[armada_logistique_nordique_reference]]
@@ -134,6 +139,8 @@ Le Consortium est écartelé entre sa logique d'optimisation globale et les exig
 - [[consortiums_d_extraction_miniere_du_bassin_congolais_reference]]
 - [[consortiums_mediatiques_corporatifs_reference]]
 - [[guadalajara_nexus_reference]]
+- [[institut_des_seuils_demographiques_reference]]
+- [[meridian_assembly_reference]]
 - [[optiflow_logistics_reference]]
 - [[plateformes_d_optimisation_territoriale_par_ia_reference]]
 - [[singapour_est_nexcore_reference]]

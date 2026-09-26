@@ -43,6 +43,7 @@ alliances:
 - milices_concurrentes_des_droits_de_passage_reference
 - operateurs_logistiques_prives_des_zones_grises_eurasiennes_reference
 oppositions:
+- agence_de_regulation_des_detroits_strategiques_ards_reference
 - agence_internationale_des_energies_renouvelables_irena_2_reference
 - agence_stabilisation_climatique_reference
 - arctic_passage_authority_reference
@@ -54,6 +55,7 @@ oppositions:
 - fonds_monetaire_climatique_fmc_reference
 - gouvernements_du_bloc_sahelien_autonome_reference
 - institutions_multilaterales_survivantes_reference
+- les_veilleurs_des_nappes_phreatiques_reference
 - murmansk_transit_arctique_reference
 - observatoire_climatique_des_territoires_oct_reference
 - ong_de_tracabilite_des_ressources_critiques_reference
@@ -128,6 +130,7 @@ La tension centrale est existentielle : à mesure que les technologies de stocka
 - [[geopolitique_conflits]]
 
 
+
 ## Relations
 **Alliés :**
 - [[bloc_des_souverainistes_climatiques_reference]]
@@ -141,6 +144,7 @@ La tension centrale est existentielle : à mesure que les technologies de stocka
 - [[milices_concurrentes_des_droits_de_passage_reference]]
 - [[operateurs_logistiques_prives_des_zones_grises_eurasiennes_reference]]
 **Opposants :**
+- [[agence_de_regulation_des_detroits_strategiques_ards_reference]]
 - [[agence_internationale_des_energies_renouvelables_irena_2_reference]]
 - [[agence_stabilisation_climatique_reference]]
 - [[arctic_passage_authority_reference]]
@@ -152,6 +156,7 @@ La tension centrale est existentielle : à mesure que les technologies de stocka
 - [[fonds_monetaire_climatique_fmc_reference]]
 - [[gouvernements_du_bloc_sahelien_autonome_reference]]
 - [[institutions_multilaterales_survivantes_reference]]
+- [[les_veilleurs_des_nappes_phreatiques_reference]]
 - [[murmansk_transit_arctique_reference]]
 - [[observatoire_climatique_des_territoires_oct_reference]]
 - [[ong_de_tracabilite_des_ressources_critiques_reference]]

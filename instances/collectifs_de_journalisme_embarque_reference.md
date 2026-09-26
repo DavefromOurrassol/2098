@@ -40,11 +40,17 @@ alliances:
 - collectifs_academiques_independants_reference
 - federation_communs_territoriaux_reference
 - institutions_multilaterales_survivantes_reference
+- kindling_reference
+- lamplight_reference
+- les_veilleurs_des_nappes_phreatiques_reference
+- maelys_okonkwo_reference
 - observatoire_climatique_des_territoires_oct_reference
 - ong_de_tracabilite_des_ressources_critiques_reference
 - ong_environnementales_de_terrain_reference
 - prisme_global_reference
+- raised_hands_reference
 - reseau_des_administrations_locales_rurales_participatives_reference
+- reseau_des_cartographes_des_zones_grises_reference
 - reseau_des_chercheurs_en_ethique_des_systemes_distribues_reference
 - reseau_mnemos_reference
 - reseaux_de_capteurs_citoyens_reference
@@ -126,6 +132,7 @@ La tension fondamentale de ces collectifs réside dans le paradoxe de leur légi
 - [[gouvernance_institutions]]
 
 
+
 ## Relations
 **Alliés :**
 - [[agence_stabilisation_climatique_reference]]
@@ -133,11 +140,17 @@ La tension fondamentale de ces collectifs réside dans le paradoxe de leur légi
 - [[collectifs_academiques_independants_reference]]
 - [[federation_communs_territoriaux_reference]]
 - [[institutions_multilaterales_survivantes_reference]]
+- [[kindling_reference]]
+- [[lamplight_reference]]
+- [[les_veilleurs_des_nappes_phreatiques_reference]]
+- [[maelys_okonkwo_reference]]
 - [[observatoire_climatique_des_territoires_oct_reference]]
 - [[ong_de_tracabilite_des_ressources_critiques_reference]]
 - [[ong_environnementales_de_terrain_reference]]
 - [[prisme_global_reference]]
+- [[raised_hands_reference]]
 - [[reseau_des_administrations_locales_rurales_participatives_reference]]
+- [[reseau_des_cartographes_des_zones_grises_reference]]
 - [[reseau_des_chercheurs_en_ethique_des_systemes_distribues_reference]]
 - [[reseau_mnemos_reference]]
 - [[reseaux_de_capteurs_citoyens_reference]]

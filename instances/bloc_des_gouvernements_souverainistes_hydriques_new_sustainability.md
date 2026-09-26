@@ -43,7 +43,9 @@ alliances:
 - mouvement_souverainiste_de_la_ceinture_boreale_new_sustainability
 - reseaux_d_information_souverainistes_fermes_new_sustainability
 - souverainistes_du_bloc_eurasien_new_sustainability
+- terminal_kharg_data_haven_new_sustainability
 oppositions:
+- agence_de_regulation_des_detroits_strategiques_ards_new_sustainability
 - agence_globale_de_regeneration_des_bassins_versants_agrb_onu_new_sustainability
 - amara_diallo_nkosi_new_sustainability
 - centre_institutionnel_geneve_new_sustainability
@@ -52,8 +54,13 @@ oppositions:
 - conseil_technocratique_de_gouvernance_alimentaire_new_sustainability
 - consortium_amazonia_viva_new_sustainability
 - consortium_de_regeneration_planetaire_new_sustainability
+- consortium_des_pecheries_autonomes_du_grand_nord_new_sustainability
+- gelecek_meclisi_new_sustainability
 - great_lakes_autonomous_compact_new_sustainability
 - great_lakes_compact_new_sustainability
+- hyphan_raghavan_new_sustainability
+- institut_des_seuils_demographiques_new_sustainability
+- les_veilleurs_des_nappes_phreatiques_new_sustainability
 - les_veilleurs_du_fleuve_new_sustainability
 - operateurs_de_fusion_energetique_regionaux_new_sustainability
 - parlement_deliberatif_mondial_new_sustainability
@@ -133,6 +140,7 @@ Le Bloc est pris en étau entre sa raison d'être — défendre la souveraineté
 - [[energie_ressources_critiques]]
 
 
+
 ## Relations
 **Alliés :**
 - [[bloc_eurasien_souverainiste_new_sustainability]]
@@ -144,7 +152,9 @@ Le Bloc est pris en étau entre sa raison d'être — défendre la souveraineté
 - [[mouvement_souverainiste_de_la_ceinture_boreale_new_sustainability]]
 - [[reseaux_d_information_souverainistes_fermes_new_sustainability]]
 - [[souverainistes_du_bloc_eurasien_new_sustainability]]
+- [[terminal_kharg_data_haven_new_sustainability]]
 **Opposants :**
+- [[agence_de_regulation_des_detroits_strategiques_ards_new_sustainability]]
 - [[agence_globale_de_regeneration_des_bassins_versants_agrb_onu_new_sustainability]]
 - [[amara_diallo_nkosi_new_sustainability]]
 - [[centre_institutionnel_geneve_new_sustainability]]
@@ -153,8 +163,13 @@ Le Bloc est pris en étau entre sa raison d'être — défendre la souveraineté
 - [[conseil_technocratique_de_gouvernance_alimentaire_new_sustainability]]
 - [[consortium_amazonia_viva_new_sustainability]]
 - [[consortium_de_regeneration_planetaire_new_sustainability]]
+- [[consortium_des_pecheries_autonomes_du_grand_nord_new_sustainability]]
+- [[gelecek_meclisi_new_sustainability]]
 - [[great_lakes_autonomous_compact_new_sustainability]]
 - [[great_lakes_compact_new_sustainability]]
+- [[hyphan_raghavan_new_sustainability]]
+- [[institut_des_seuils_demographiques_new_sustainability]]
+- [[les_veilleurs_des_nappes_phreatiques_new_sustainability]]
 - [[les_veilleurs_du_fleuve_new_sustainability]]
 - [[operateurs_de_fusion_energetique_regionaux_new_sustainability]]
 - [[parlement_deliberatif_mondial_new_sustainability]]

@@ -40,6 +40,7 @@ alliances:
 - compagnies_de_geo_ingenierie_privees_sans_mandat_breakdown
 - consortiums_logistiques_agro_corporatifs_breakdown
 - corporations_de_l_ere_pre_effondrement_a_droits_de_pi_breakdown
+- ergo_wian_sovereign_holdings_breakdown
 - milices_privees_documentees_terrain_breakdown
 - rede_paulista_de_distribuicao_algoritmica_breakdown
 - reseau_des_anciens_financeurs_devenus_censeurs_breakdown
@@ -48,12 +49,15 @@ oppositions:
 - agadez_ligue_sahel_numerique_breakdown
 - archives_neutres_geneve_breakdown
 - arctique_nordark_breakdown
+- assemblee_territoires_breakdown
+- coalition_vivant_breakdown
 - collectif_hackers_decroissance_infrastructure_breakdown
 - collectifs_de_reparation_energetique_breakdown
 - communes_rust_belt_breakdown
 - communes_rust_belt_zones_libres_breakdown
 - consortium_africain_de_biotechnologies_sociales_breakdown
 - consortium_amazonia_viva_breakdown
+- consortium_des_pecheries_autonomes_du_grand_nord_breakdown
 - factions_para_etatiques_hydriques_breakdown
 - federation_communs_territoriaux_breakdown
 - front_de_resistance_aux_peages_sur_les_ressources_breakdown
@@ -61,6 +65,7 @@ oppositions:
 - grandes_lacs_compact_eau_breakdown
 - lagos_interieur_mnemos_breakdown
 - le_registre_du_fleuve_breakdown
+- les_veilleurs_des_nappes_phreatiques_breakdown
 - ligue_des_cites_du_sahel_numerique_breakdown
 - ligue_des_cites_littorales_en_sursis_breakdown
 - milices_de_controle_territorial_breakdown
@@ -129,12 +134,14 @@ La légitimité des enclaves repose entièrement sur leur capacité à maintenir
 - [[systeme_economique_redistribution]]
 
 
+
 ## Relations
 **Alliés :**
 - [[carthage_nord_nexcore_breakdown]]
 - [[compagnies_de_geo_ingenierie_privees_sans_mandat_breakdown]]
 - [[consortiums_logistiques_agro_corporatifs_breakdown]]
 - [[corporations_de_l_ere_pre_effondrement_a_droits_de_pi_breakdown]]
+- [[ergo_wian_sovereign_holdings_breakdown]]
 - [[milices_privees_documentees_terrain_breakdown]]
 - [[rede_paulista_de_distribuicao_algoritmica_breakdown]]
 - [[reseau_des_anciens_financeurs_devenus_censeurs_breakdown]]
@@ -143,12 +150,15 @@ La légitimité des enclaves repose entièrement sur leur capacité à maintenir
 - [[agadez_ligue_sahel_numerique_breakdown]]
 - [[archives_neutres_geneve_breakdown]]
 - [[arctique_nordark_breakdown]]
+- [[assemblee_territoires_breakdown]]
+- [[coalition_vivant_breakdown]]
 - [[collectif_hackers_decroissance_infrastructure_breakdown]]
 - [[collectifs_de_reparation_energetique_breakdown]]
 - [[communes_rust_belt_breakdown]]
 - [[communes_rust_belt_zones_libres_breakdown]]
 - [[consortium_africain_de_biotechnologies_sociales_breakdown]]
 - [[consortium_amazonia_viva_breakdown]]
+- [[consortium_des_pecheries_autonomes_du_grand_nord_breakdown]]
 - [[factions_para_etatiques_hydriques_breakdown]]
 - [[federation_communs_territoriaux_breakdown]]
 - [[front_de_resistance_aux_peages_sur_les_ressources_breakdown]]
@@ -156,6 +166,7 @@ La légitimité des enclaves repose entièrement sur leur capacité à maintenir
 - [[grandes_lacs_compact_eau_breakdown]]
 - [[lagos_interieur_mnemos_breakdown]]
 - [[le_registre_du_fleuve_breakdown]]
+- [[les_veilleurs_des_nappes_phreatiques_breakdown]]
 - [[ligue_des_cites_du_sahel_numerique_breakdown]]
 - [[ligue_des_cites_littorales_en_sursis_breakdown]]
 - [[milices_de_controle_territorial_breakdown]]

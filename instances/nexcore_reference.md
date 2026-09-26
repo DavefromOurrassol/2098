@@ -41,7 +41,6 @@ zone_systemique:
     - cyberspace
 
 alliances:
-- agence_mondiale_de_modelisation_climatique_ammc_new_sustainability
 - bloc_ressources_eurasiatique_bre_reference
 - consortium_des_fournisseurs_d_energie_renouvelable_distribuee_reference
 - consortium_des_grandes_plateformes_ia_integrees_reference
@@ -115,7 +114,6 @@ La grande question de 2098 : peut-on nationaliser ce qu'on ne comprend plus tech
 
 ## Relations
 **Alliés :**
-- [[agence_mondiale_de_modelisation_climatique_ammc_new_sustainability]]
 - [[bloc_ressources_eurasiatique_bre_reference]]
 - [[consortium_des_fournisseurs_d_energie_renouvelable_distribuee_reference]]
 - [[consortium_des_grandes_plateformes_ia_integrees_reference]]

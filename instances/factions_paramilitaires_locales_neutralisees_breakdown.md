@@ -51,6 +51,7 @@ oppositions:
 - factions_militaires_residuelles_de_l_ex_otan_nordique_breakdown
 - front_humanitaire_d_urgence_non_affilie_breakdown
 - grandes_lacs_compact_eau_breakdown
+- institut_des_seuils_demographiques_breakdown
 - milices_extractivistes_du_bassin_du_congo_breakdown
 - nexcore_breakdown
 - pirates_biologiques_open_source_breakdown
@@ -120,6 +121,7 @@ La tension centrale est celle de la prédation : chaque faction neutralisée a d
 - [[gouvernance_institutions]]
 
 
+
 ## Relations
 **Alliés :**
 - [[communautes_rurales_autonomes_breakdown]]
@@ -136,6 +138,7 @@ La tension centrale est celle de la prédation : chaque faction neutralisée a d
 - [[factions_militaires_residuelles_de_l_ex_otan_nordique_breakdown]]
 - [[front_humanitaire_d_urgence_non_affilie_breakdown]]
 - [[grandes_lacs_compact_eau_breakdown]]
+- [[institut_des_seuils_demographiques_breakdown]]
 - [[milices_extractivistes_du_bassin_du_congo_breakdown]]
 - [[nexcore_breakdown]]
 - [[pirates_biologiques_open_source_breakdown]]

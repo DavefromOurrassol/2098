@@ -40,7 +40,6 @@ alliances:
 - conseils_de_bassin_versant_eco_communalistes_eco_communalism
 - cooperatives_d_habitat_regeneratif_eco_communalism
 - frente_sertao_livre_eco_communalism
-- internationale_des_semenciers_agro_pirates_fortress_world
 oppositions:
 - consortiums_logistiques_neo_industriels_des_terres_reconstruites_eco_communalism
 - courant_techno_solutionniste_pro_re_globalisation_numerique_eco_communalism
@@ -102,7 +101,6 @@ La ligne de fracture entre ouverture fédérative et repli communautaire menace 
 - [[conseils_de_bassin_versant_eco_communalistes_eco_communalism]]
 - [[cooperatives_d_habitat_regeneratif_eco_communalism]]
 - [[frente_sertao_livre_eco_communalism]]
-- [[internationale_des_semenciers_agro_pirates_fortress_world]]
 **Opposants :**
 - [[consortiums_logistiques_neo_industriels_des_terres_reconstruites_eco_communalism]]
 - [[courant_techno_solutionniste_pro_re_globalisation_numerique_eco_communalism]]

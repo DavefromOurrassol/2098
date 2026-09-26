@@ -37,6 +37,7 @@ alliances:
 - factions_internes_pro_desaugmentation_totale_policy_reform
 - front_souverainiste_de_l_information_regionale_policy_reform
 - reseau_des_auditeurs_algorithmiques_independants_raai_policy_reform
+- reseau_des_cartographes_des_zones_grises_policy_reform
 - reseau_des_journalistes_d_investigation_energetique_policy_reform
 oppositions:
 - bureau_gouvernance_algorithmique_policy_reform
@@ -110,6 +111,7 @@ Le réseau est tiraillé entre son idéal d'indépendance absolue et la réalit�
 - [[valeurs_culture_tempo_sociale]]
 
 
+
 ## Relations
 **Alliés :**
 - [[collectifs_citoyens_pour_l_audit_algorithmique_ouvert_policy_reform]]
@@ -117,6 +119,7 @@ Le réseau est tiraillé entre son idéal d'indépendance absolue et la réalit�
 - [[factions_internes_pro_desaugmentation_totale_policy_reform]]
 - [[front_souverainiste_de_l_information_regionale_policy_reform]]
 - [[reseau_des_auditeurs_algorithmiques_independants_raai_policy_reform]]
+- [[reseau_des_cartographes_des_zones_grises_policy_reform]]
 - [[reseau_des_journalistes_d_investigation_energetique_policy_reform]]
 **Opposants :**
 - [[bureau_gouvernance_algorithmique_policy_reform]]

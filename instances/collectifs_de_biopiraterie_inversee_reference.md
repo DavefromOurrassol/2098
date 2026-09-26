@@ -41,6 +41,7 @@ alliances:
 - federation_des_cliniques_autonomes_reference
 - frente_sertao_livre_reference
 - reseaux_de_medecine_traditionnelle_augmentee_reference
+- terminal_kharg_data_haven_reference
 - zones_grises_globales_reference
 oppositions:
 - agrisynth_reference
@@ -51,6 +52,9 @@ oppositions:
 - consortiums_mediatiques_corporatifs_reference
 - consortiums_prives_d_extraction_de_ressources_critiques_reference
 - ecosynth_global_reference
+- elias_mork_reference
+- hyphan_raghavan_reference
+- ilse_varga_holm_reference
 - nexus_biosyn_reference
 - optiflow_logistics_reference
 - terrametrics_reference
@@ -117,6 +121,7 @@ Leur légitimité est constamment disputée : alliés objectifs des communautés
 - [[systeme_economique_redistribution]]
 
 
+
 ## Relations
 **Alliés :**
 - [[communs_numeriques_agroecologiques_reference]]
@@ -126,6 +131,7 @@ Leur légitimité est constamment disputée : alliés objectifs des communautés
 - [[federation_des_cliniques_autonomes_reference]]
 - [[frente_sertao_livre_reference]]
 - [[reseaux_de_medecine_traditionnelle_augmentee_reference]]
+- [[terminal_kharg_data_haven_reference]]
 - [[zones_grises_globales_reference]]
 **Opposants :**
 - [[agrisynth_reference]]
@@ -136,6 +142,9 @@ Leur légitimité est constamment disputée : alliés objectifs des communautés
 - [[consortiums_mediatiques_corporatifs_reference]]
 - [[consortiums_prives_d_extraction_de_ressources_critiques_reference]]
 - [[ecosynth_global_reference]]
+- [[elias_mork_reference]]
+- [[hyphan_raghavan_reference]]
+- [[ilse_varga_holm_reference]]
 - [[nexus_biosyn_reference]]
 - [[optiflow_logistics_reference]]
 - [[terrametrics_reference]]

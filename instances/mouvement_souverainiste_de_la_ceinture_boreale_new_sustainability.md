@@ -48,6 +48,7 @@ alliances:
 - reseaux_d_information_souverainistes_fermes_new_sustainability
 - souverainistes_du_bloc_eurasien_new_sustainability
 oppositions:
+- agence_de_regulation_des_detroits_strategiques_ards_new_sustainability
 - arctic_passage_authority_new_sustainability
 - bloc_des_architectes_d_efficience_algorithmique_new_sustainability
 - bureau_gouvernance_algorithmique_new_sustainability
@@ -57,6 +58,7 @@ oppositions:
 - conseil_regulation_ressources_new_sustainability
 - great_lakes_autonomous_compact_new_sustainability
 - great_lakes_compact_new_sustainability
+- institut_des_seuils_demographiques_new_sustainability
 - reseau_des_agences_climatiques_regionales_new_sustainability
 - union_des_blocs_energetiques_regionaux_new_sustainability
 type_relation_dominante: conflit
@@ -126,6 +128,7 @@ Le mouvement est écartelé entre ses factions conservationnistes, qui veulent g
 - [[energie_ressources_critiques]]
 
 
+
 ## Relations
 **Alliés :**
 - [[bloc_des_gouvernements_souverainistes_hydriques_new_sustainability]]
@@ -141,6 +144,7 @@ Le mouvement est écartelé entre ses factions conservationnistes, qui veulent g
 - [[reseaux_d_information_souverainistes_fermes_new_sustainability]]
 - [[souverainistes_du_bloc_eurasien_new_sustainability]]
 **Opposants :**
+- [[agence_de_regulation_des_detroits_strategiques_ards_new_sustainability]]
 - [[arctic_passage_authority_new_sustainability]]
 - [[bloc_des_architectes_d_efficience_algorithmique_new_sustainability]]
 - [[bureau_gouvernance_algorithmique_new_sustainability]]
@@ -150,6 +154,7 @@ Le mouvement est écartelé entre ses factions conservationnistes, qui veulent g
 - [[conseil_regulation_ressources_new_sustainability]]
 - [[great_lakes_autonomous_compact_new_sustainability]]
 - [[great_lakes_compact_new_sustainability]]
+- [[institut_des_seuils_demographiques_new_sustainability]]
 - [[reseau_des_agences_climatiques_regionales_new_sustainability]]
 - [[union_des_blocs_energetiques_regionaux_new_sustainability]]
 

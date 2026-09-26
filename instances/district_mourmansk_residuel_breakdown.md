@@ -39,10 +39,10 @@ zone_systemique:
 alliances:
 - arctic_passage_authority_breakdown
 - armada_logistique_nordique_breakdown
-- arctic_passage_authority_breakdown
 - consortium_energetique_oural_caspien_breakdown
 - hanse_baltique_breakdown
 oppositions:
+- agence_de_regulation_des_detroits_strategiques_ards_breakdown
 - blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown
 - conglometrat_sino_siberien_bohai_transit_breakdown
 - enclaves_industrielles_de_bergen_troms_breakdown
@@ -106,10 +106,10 @@ La question centrale est celle de l'après : qui prendra le contrôle des quais 
 **Alliés :**
 - [[arctic_passage_authority_breakdown]]
 - [[armada_logistique_nordique_breakdown]]
-- [[arctic_passage_authority_breakdown]]
 - [[consortium_energetique_oural_caspien_breakdown]]
 - [[hanse_baltique_breakdown]]
 **Opposants :**
+- [[agence_de_regulation_des_detroits_strategiques_ards_breakdown]]
 - [[blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown]]
 - [[conglometrat_sino_siberien_bohai_transit_breakdown]]
 - [[enclaves_industrielles_de_bergen_troms_breakdown]]

@@ -30,6 +30,7 @@ zone_geographique:
 zone_systemique:
 - société
 alliances:
+- agence_de_regulation_des_detroits_strategiques_ards_eco_communalism
 - assemblees_bioterritoriales_regionales_eco_communalism
 - brigades_de_restauration_ecologique_eco_communalism
 - cercles_de_mediation_territoriale_intercommunautaire_eco_communalism
@@ -41,6 +42,7 @@ alliances:
 - federation_communs_territoriaux_eco_communalism
 - guildes_de_mediateurs_ecologiques_eco_communalism
 - le_registre_du_fleuve_eco_communalism
+- les_veilleurs_des_nappes_phreatiques_eco_communalism
 - les_veilleurs_du_fleuve_eco_communalism
 - oracle_des_seuils_eco_communalism
 - rede_paulista_de_distribuicao_algoritmica_eco_communalism
@@ -123,8 +125,10 @@ La tension la plus profonde oppose la souveraineté locale revendiquée par chaq
 - [[climat_environnement_global]]
 
 
+
 ## Relations
 **Alliés :**
+- [[agence_de_regulation_des_detroits_strategiques_ards_eco_communalism]]
 - [[assemblees_bioterritoriales_regionales_eco_communalism]]
 - [[brigades_de_restauration_ecologique_eco_communalism]]
 - [[cercles_de_mediation_territoriale_intercommunautaire_eco_communalism]]
@@ -136,6 +140,7 @@ La tension la plus profonde oppose la souveraineté locale revendiquée par chaq
 - [[federation_communs_territoriaux_eco_communalism]]
 - [[guildes_de_mediateurs_ecologiques_eco_communalism]]
 - [[le_registre_du_fleuve_eco_communalism]]
+- [[les_veilleurs_des_nappes_phreatiques_eco_communalism]]
 - [[les_veilleurs_du_fleuve_eco_communalism]]
 - [[oracle_des_seuils_eco_communalism]]
 - [[rede_paulista_de_distribuicao_algoritmica_eco_communalism]]

@@ -41,6 +41,8 @@ alliances:
 - cargo_mombasa_crrc_breakdown
 - cartels_logistiques_regionaux_breakdown
 - factions_paramilitaires_locales_neutralisees_breakdown
+- hyphan_raghavan_breakdown
+- ilse_varga_holm_breakdown
 - milices_de_controle_territorial_breakdown
 - reseau_logistique_criminel_concurrent_breakdown
 - seigneurs_de_guerre_agro_territoriaux_breakdown
@@ -113,11 +115,14 @@ Le réseau est à la fois prédateur et pourvoyeur : en pillant les ruines indus
 - [[systemes_productifs_travail]]
 
 
+
 ## Relations
 **Alliés :**
 - [[cargo_mombasa_crrc_breakdown]]
 - [[cartels_logistiques_regionaux_breakdown]]
 - [[factions_paramilitaires_locales_neutralisees_breakdown]]
+- [[hyphan_raghavan_breakdown]]
+- [[ilse_varga_holm_breakdown]]
 - [[milices_de_controle_territorial_breakdown]]
 - [[reseau_logistique_criminel_concurrent_breakdown]]
 - [[seigneurs_de_guerre_agro_territoriaux_breakdown]]

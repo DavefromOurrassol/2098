@@ -44,7 +44,6 @@ alliances:
 - consortium_africain_de_biotechnologies_sociales_policy_reform
 - institut_de_modelisation_hydrologique_de_kinshasa_policy_reform
 oppositions:
-- bloc_des_gouvernements_souverainistes_hydriques_new_sustainability
 - consortiums_agro_industriels_du_bassin_fluvial_policy_reform
 - factions_technocratiques_de_la_marchandisation_hydrique_policy_reform
 type_relation_dominante: coopération
@@ -106,6 +105,5 @@ La tension centrale de son parcours est celle du mandataire pris en étau : les 
 - [[consortium_africain_de_biotechnologies_sociales_policy_reform]]
 - [[institut_de_modelisation_hydrologique_de_kinshasa_policy_reform]]
 **Opposants :**
-- [[bloc_des_gouvernements_souverainistes_hydriques_new_sustainability]]
 - [[consortiums_agro_industriels_du_bassin_fluvial_policy_reform]]
 - [[factions_technocratiques_de_la_marchandisation_hydrique_policy_reform]]

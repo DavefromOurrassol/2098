@@ -48,8 +48,10 @@ alliances:
 - lagos_interieur_mnemos_breakdown
 - le_registre_du_fleuve_breakdown
 - oracle_des_seuils_breakdown
+- reseau_des_cartographes_des_zones_grises_breakdown
 - reseau_des_courriers_nomades_sahelo_mediterraneens_breakdown
 - reseaux_de_renseignement_informels_issus_de_l_ancienne_structure_militaire_eurasienne_breakdown
+- terminal_kharg_data_haven_breakdown
 - tribunal_algorithmique_de_bruxelles_breakdown
 - voix_du_dehors_breakdown
 oppositions:
@@ -123,6 +125,7 @@ La tension fondamentale qui déchire ces collectifs est celle entre la préserva
 - [[gouvernance_institutions]]
 
 
+
 ## Relations
 **Alliés :**
 - [[archives_neutres_de_geneve_breakdown]]
@@ -135,8 +138,10 @@ La tension fondamentale qui déchire ces collectifs est celle entre la préserva
 - [[lagos_interieur_mnemos_breakdown]]
 - [[le_registre_du_fleuve_breakdown]]
 - [[oracle_des_seuils_breakdown]]
+- [[reseau_des_cartographes_des_zones_grises_breakdown]]
 - [[reseau_des_courriers_nomades_sahelo_mediterraneens_breakdown]]
 - [[reseaux_de_renseignement_informels_issus_de_l_ancienne_structure_militaire_eurasienne_breakdown]]
+- [[terminal_kharg_data_haven_breakdown]]
 - [[tribunal_algorithmique_de_bruxelles_breakdown]]
 - [[voix_du_dehors_breakdown]]
 **Opposants :**

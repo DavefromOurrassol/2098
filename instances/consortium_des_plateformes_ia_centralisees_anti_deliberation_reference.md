@@ -41,6 +41,7 @@ alliances:
 - pacte_des_souverains_reference
 - plateformes_centralisees_de_narration_officielle_reference
 oppositions:
+- aurelio_stahl_reference
 - collectifs_academiques_independants_reference
 - conseil_regulation_algorithmique_reference
 - cooperatives_ia_open_source_reference
@@ -122,6 +123,7 @@ La contradiction centrale du Consortium est d'ordre existentiel : ses membres on
 - [[systeme_economique_redistribution]]
 
 
+
 ## Relations
 **Alliés :**
 - [[consortium_des_grandes_plateformes_ia_integrees_reference]]
@@ -133,6 +135,7 @@ La contradiction centrale du Consortium est d'ordre existentiel : ses membres on
 - [[pacte_des_souverains_reference]]
 - [[plateformes_centralisees_de_narration_officielle_reference]]
 **Opposants :**
+- [[aurelio_stahl_reference]]
 - [[collectifs_academiques_independants_reference]]
 - [[conseil_regulation_algorithmique_reference]]
 - [[cooperatives_ia_open_source_reference]]

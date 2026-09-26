@@ -40,6 +40,7 @@ alliances:
 - agence_globale_de_regeneration_des_bassins_versants_agrb_onu_new_sustainability
 - agence_mondiale_de_modelisation_climatique_ammc_new_sustainability
 - agence_orbitale_de_regulation_commune_aorc_new_sustainability
+- aurelio_stahl_new_sustainability
 - centre_institutionnel_geneve_new_sustainability
 - college_des_auditeurs_independants_du_parlement_biotechnologique_mondial_new_sustainability
 - conseil_de_deliberation_augmentee_de_l_union_nordique_new_sustainability
@@ -52,10 +53,13 @@ alliances:
 - consortium_d_interoperabilite_ia_humain_new_sustainability
 - consortium_de_regeneration_planetaire_new_sustainability
 - consortium_des_ia_climatiques_new_sustainability
+- consortium_des_pecheries_autonomes_du_grand_nord_new_sustainability
 - fonds_mondial_de_redistribution_technologique_new_sustainability
 - fonds_mondial_de_regeneration_ecologique_new_sustainability
 - fonds_mondial_de_transition_ecologique_du_travail_new_sustainability
+- gelecek_meclisi_new_sustainability
 - institut_de_philosophie_des_systemes_hybrides_d_helsinki_new_sustainability
+- institut_des_seuils_demographiques_new_sustainability
 - observatoire_climatique_narratif_de_nairobi_new_sustainability
 - oms_etendue_new_sustainability
 - parlement_deliberatif_mondial_new_sustainability
@@ -140,6 +144,7 @@ Le CMRE est au centre d’un bras de fer permanent entre universalisme écologiq
 - [[agence_globale_de_regeneration_des_bassins_versants_agrb_onu_new_sustainability]]
 - [[agence_mondiale_de_modelisation_climatique_ammc_new_sustainability]]
 - [[agence_orbitale_de_regulation_commune_aorc_new_sustainability]]
+- [[aurelio_stahl_new_sustainability]]
 - [[centre_institutionnel_geneve_new_sustainability]]
 - [[college_des_auditeurs_independants_du_parlement_biotechnologique_mondial_new_sustainability]]
 - [[conseil_de_deliberation_augmentee_de_l_union_nordique_new_sustainability]]
@@ -152,10 +157,13 @@ Le CMRE est au centre d’un bras de fer permanent entre universalisme écologiq
 - [[consortium_d_interoperabilite_ia_humain_new_sustainability]]
 - [[consortium_de_regeneration_planetaire_new_sustainability]]
 - [[consortium_des_ia_climatiques_new_sustainability]]
+- [[consortium_des_pecheries_autonomes_du_grand_nord_new_sustainability]]
 - [[fonds_mondial_de_redistribution_technologique_new_sustainability]]
 - [[fonds_mondial_de_regeneration_ecologique_new_sustainability]]
 - [[fonds_mondial_de_transition_ecologique_du_travail_new_sustainability]]
+- [[gelecek_meclisi_new_sustainability]]
 - [[institut_de_philosophie_des_systemes_hybrides_d_helsinki_new_sustainability]]
+- [[institut_des_seuils_demographiques_new_sustainability]]
 - [[observatoire_climatique_narratif_de_nairobi_new_sustainability]]
 - [[oms_etendue_new_sustainability]]
 - [[parlement_deliberatif_mondial_new_sustainability]]

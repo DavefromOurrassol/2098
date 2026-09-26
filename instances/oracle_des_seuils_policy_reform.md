@@ -38,6 +38,7 @@ zone_systemique:
     - énergie
 
 alliances:
+- agence_de_regulation_des_detroits_strategiques_ards_policy_reform
 - agence_stabilisation_climatique_policy_reform
 - bureau_gouvernance_algorithmique_policy_reform
 - conseil_de_regulation_climatique_global_policy_reform
@@ -45,8 +46,10 @@ alliances:
 - conseil_onu_de_gouvernance_numerique_et_ia_policy_reform
 - directive_kontinuum_policy_reform
 - fonds_de_stabilisation_climatique_onu_3_policy_reform
+- gelecek_meclisi_policy_reform
 - grille_aria_policy_reform
 - institut_brookings_singapour_de_politique_computationnelle_policy_reform
+- institut_des_seuils_demographiques_policy_reform
 - observatoire_mondial_des_ressources_critiques_policy_reform
 - office_integre_des_flux_migratoires_policy_reform
 - reseau_des_auditeurs_algorithmiques_independants_raai_policy_reform
@@ -114,6 +117,7 @@ La dépendance croissante des institutions à ses alertes soulève une question 
 
 ## Relations
 **Alliés :**
+- [[agence_de_regulation_des_detroits_strategiques_ards_policy_reform]]
 - [[agence_stabilisation_climatique_policy_reform]]
 - [[bureau_gouvernance_algorithmique_policy_reform]]
 - [[conseil_de_regulation_climatique_global_policy_reform]]
@@ -121,8 +125,10 @@ La dépendance croissante des institutions à ses alertes soulève une question 
 - [[conseil_onu_de_gouvernance_numerique_et_ia_policy_reform]]
 - [[directive_kontinuum_policy_reform]]
 - [[fonds_de_stabilisation_climatique_onu_3_policy_reform]]
+- [[gelecek_meclisi_policy_reform]]
 - [[grille_aria_policy_reform]]
 - [[institut_brookings_singapour_de_politique_computationnelle_policy_reform]]
+- [[institut_des_seuils_demographiques_policy_reform]]
 - [[observatoire_mondial_des_ressources_critiques_policy_reform]]
 - [[office_integre_des_flux_migratoires_policy_reform]]
 - [[reseau_des_auditeurs_algorithmiques_independants_raai_policy_reform]]

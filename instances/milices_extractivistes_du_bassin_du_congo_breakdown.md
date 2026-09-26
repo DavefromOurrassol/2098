@@ -40,10 +40,12 @@ alliances:
 - milices_de_controle_territorial_breakdown
 oppositions:
 - cargo_mombasa_crrc_breakdown
+- coalition_vivant_breakdown
 - conglometrat_sino_siberien_bohai_transit_breakdown
 - conseil_regulation_ressources_breakdown
 - consortium_africain_de_biotechnologies_sociales_breakdown
 - consortium_amazonia_viva_breakdown
+- consortium_des_pecheries_autonomes_du_grand_nord_breakdown
 - factions_paramilitaires_locales_neutralisees_breakdown
 - le_registre_du_fleuve_breakdown
 - ligue_des_cites_du_sahel_numerique_breakdown
@@ -111,16 +113,19 @@ Leur fragmentation interne est leur principale faiblesse : les factions rivales 
 - [[organisation_territoires]]
 
 
+
 ## Relations
 **Alliés :**
 - [[milices_d_accaparement_hydrique_breakdown]]
 - [[milices_de_controle_territorial_breakdown]]
 **Opposants :**
 - [[cargo_mombasa_crrc_breakdown]]
+- [[coalition_vivant_breakdown]]
 - [[conglometrat_sino_siberien_bohai_transit_breakdown]]
 - [[conseil_regulation_ressources_breakdown]]
 - [[consortium_africain_de_biotechnologies_sociales_breakdown]]
 - [[consortium_amazonia_viva_breakdown]]
+- [[consortium_des_pecheries_autonomes_du_grand_nord_breakdown]]
 - [[factions_paramilitaires_locales_neutralisees_breakdown]]
 - [[le_registre_du_fleuve_breakdown]]
 - [[ligue_des_cites_du_sahel_numerique_breakdown]]

@@ -38,6 +38,7 @@ alliances:
 - centre_institutionnel_geneve_new_sustainability
 - conseil_mondial_de_la_regeneration_ecosystemique_cmre_new_sustainability
 - consortium_d_interoperabilite_ia_humain_new_sustainability
+- deepfield_institute_new_sustainability
 - leena_vainala_new_sustainability
 - parlement_deliberatif_mondial_new_sustainability
 - tribunal_algorithmique_de_bruxelles_new_sustainability
@@ -120,6 +121,7 @@ L'Institut est structurellement tiraillé entre son rôle de légitimateur des g
 - [[frontieres_du_systeme]]
 
 
+
 ## Relations
 **Alliés :**
 - [[agence_mondiale_de_modelisation_climatique_ammc_new_sustainability]]
@@ -127,6 +129,7 @@ L'Institut est structurellement tiraillé entre son rôle de légitimateur des g
 - [[centre_institutionnel_geneve_new_sustainability]]
 - [[conseil_mondial_de_la_regeneration_ecosystemique_cmre_new_sustainability]]
 - [[consortium_d_interoperabilite_ia_humain_new_sustainability]]
+- [[deepfield_institute_new_sustainability]]
 - [[leena_vainala_new_sustainability]]
 - [[parlement_deliberatif_mondial_new_sustainability]]
 - [[tribunal_algorithmique_de_bruxelles_new_sustainability]]

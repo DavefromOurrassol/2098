@@ -53,7 +53,9 @@ oppositions:
 - fonds_mondial_de_redistribution_technologique_new_sustainability
 - fonds_mondial_de_regeneration_ecologique_new_sustainability
 - hub_nairobi_kigali_new_sustainability
+- ilse_varga_holm_new_sustainability
 - institut_de_philosophie_des_systemes_hybrides_d_helsinki_new_sustainability
+- les_veilleurs_des_nappes_phreatiques_new_sustainability
 - les_veilleurs_du_fleuve_new_sustainability
 - mouvement_communautaire_des_micro_grids_energetiques_new_sustainability
 - parlement_deliberatif_mondial_new_sustainability
@@ -129,6 +131,7 @@ Dans un scénario où la gouvernance atteint un niveau d'institutionnalisation s
 - [[systemes_productifs_travail]]
 
 
+
 ## Relations
 **Alliés :**
 - [[bloc_eurasien_souverainiste_new_sustainability]]
@@ -148,7 +151,9 @@ Dans un scénario où la gouvernance atteint un niveau d'institutionnalisation s
 - [[fonds_mondial_de_redistribution_technologique_new_sustainability]]
 - [[fonds_mondial_de_regeneration_ecologique_new_sustainability]]
 - [[hub_nairobi_kigali_new_sustainability]]
+- [[ilse_varga_holm_new_sustainability]]
 - [[institut_de_philosophie_des_systemes_hybrides_d_helsinki_new_sustainability]]
+- [[les_veilleurs_des_nappes_phreatiques_new_sustainability]]
 - [[les_veilleurs_du_fleuve_new_sustainability]]
 - [[mouvement_communautaire_des_micro_grids_energetiques_new_sustainability]]
 - [[parlement_deliberatif_mondial_new_sustainability]]

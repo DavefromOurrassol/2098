@@ -44,6 +44,7 @@ alliances:
 - seigneuries_logistiques_armees_breakdown
 oppositions:
 - archives_neutres_de_geneve_breakdown
+- assemblee_territoires_breakdown
 - brigades_medicales_itinerantes_breakdown
 - collectif_des_climatologues_sans_etat_breakdown
 - compagnies_de_geo_ingenierie_privees_sans_mandat_breakdown
@@ -53,7 +54,10 @@ oppositions:
 - factions_energetiques_heritieres_des_pactes_abs_breakdown
 - federation_communs_territoriaux_breakdown
 - front_de_resistance_aux_peages_sur_les_ressources_breakdown
+- gelecek_meclisi_breakdown
 - gouvernements_regionaux_residuels_reterritorialisants_breakdown
+- institut_des_seuils_demographiques_breakdown
+- terminal_kharg_data_haven_breakdown
 - trame_bioclimatique_breakdown
 type_relation_dominante: conflit
 annee_debut: 2041
@@ -120,12 +124,14 @@ La tension fondamentale de ces États-Fragments réside dans leur paradoxe exist
 
 
 
+
 ## Relations
 **Alliés :**
 - [[milices_de_controle_territorial_breakdown]]
 - [[seigneuries_logistiques_armees_breakdown]]
 **Opposants :**
 - [[archives_neutres_de_geneve_breakdown]]
+- [[assemblee_territoires_breakdown]]
 - [[brigades_medicales_itinerantes_breakdown]]
 - [[collectif_des_climatologues_sans_etat_breakdown]]
 - [[compagnies_de_geo_ingenierie_privees_sans_mandat_breakdown]]
@@ -135,7 +141,10 @@ La tension fondamentale de ces États-Fragments réside dans leur paradoxe exist
 - [[factions_energetiques_heritieres_des_pactes_abs_breakdown]]
 - [[federation_communs_territoriaux_breakdown]]
 - [[front_de_resistance_aux_peages_sur_les_ressources_breakdown]]
+- [[gelecek_meclisi_breakdown]]
 - [[gouvernements_regionaux_residuels_reterritorialisants_breakdown]]
+- [[institut_des_seuils_demographiques_breakdown]]
+- [[terminal_kharg_data_haven_breakdown]]
 - [[trame_bioclimatique_breakdown]]
 
 ## Notes

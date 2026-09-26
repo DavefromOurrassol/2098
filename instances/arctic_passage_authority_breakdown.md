@@ -41,6 +41,7 @@ alliances:
 - armada_logistique_nordique_breakdown
 - consortiums_energetiques_samoiedes_du_yamal_breakdown
 - district_mourmansk_residuel_breakdown
+- hanse_baltique_recomposee_breakdown
 - kalaallit_nunaat_sovereign_fund_breakdown
 - noeud_nordark_tromso_breakdown
 oppositions:
@@ -48,10 +49,15 @@ oppositions:
 - blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown
 - coalition_pacifique_nord_breakdown
 - conglometrat_sino_siberien_bohai_transit_breakdown
+- enclaves_industrielles_de_bergen_troms_breakdown
+- factions_etatiques_residuelles_de_souverainete_hydrique_breakdown
 - factions_militaires_residuelles_de_l_ex_otan_nordique_breakdown
 - federation_russe_residuelle_district_de_mourmansk_breakdown
+- front_de_resistance_aux_peages_sur_les_ressources_breakdown
+- gouvernements_de_forteresse_anti_nairobi_breakdown
 - milices_separatistes_du_conseil_des_pecheries_d_islande_breakdown
 - saboteurs_des_corridors_de_transit_breakdown
+- seigneuries_logistiques_armees_breakdown
 type_relation_dominante: conflit
 
 annee_debut: 2031
@@ -109,6 +115,7 @@ La question centrale : les représentants autochtones restés dans l'institution
 - [[armada_logistique_nordique_breakdown]]
 - [[consortiums_energetiques_samoiedes_du_yamal_breakdown]]
 - [[district_mourmansk_residuel_breakdown]]
+- [[hanse_baltique_recomposee_breakdown]]
 - [[kalaallit_nunaat_sovereign_fund_breakdown]]
 - [[noeud_nordark_tromso_breakdown]]
 **Opposants :**
@@ -116,7 +123,12 @@ La question centrale : les représentants autochtones restés dans l'institution
 - [[blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown]]
 - [[coalition_pacifique_nord_breakdown]]
 - [[conglometrat_sino_siberien_bohai_transit_breakdown]]
+- [[enclaves_industrielles_de_bergen_troms_breakdown]]
+- [[factions_etatiques_residuelles_de_souverainete_hydrique_breakdown]]
 - [[factions_militaires_residuelles_de_l_ex_otan_nordique_breakdown]]
 - [[federation_russe_residuelle_district_de_mourmansk_breakdown]]
+- [[front_de_resistance_aux_peages_sur_les_ressources_breakdown]]
+- [[gouvernements_de_forteresse_anti_nairobi_breakdown]]
 - [[milices_separatistes_du_conseil_des_pecheries_d_islande_breakdown]]
 - [[saboteurs_des_corridors_de_transit_breakdown]]
+- [[seigneuries_logistiques_armees_breakdown]]

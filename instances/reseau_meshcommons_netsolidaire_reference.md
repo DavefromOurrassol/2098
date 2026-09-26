@@ -47,11 +47,14 @@ alliances:
 - ligue_des_metropoles_du_sud_pour_les_infrastructures_libres_reference
 - ligue_des_municipalites_peripheriques_sous_connectees_reference
 - mouvement_pour_la_libre_circulation_des_personnes_et_des_donnees_reference
+- nadia_ferreira_sato_reference
 - reseau_des_administrations_locales_rurales_participatives_reference
+- reseau_des_cartographes_des_zones_grises_reference
 - reseau_des_chercheurs_en_ethique_des_systemes_distribues_reference
 - reseau_des_villes_etats_pilotes_en_gouvernance_participative_reference
 - reseau_hospitalier_hybride_eurasiatique_reference
 - tbilissi_noeud_mnemos_reference
+- terminal_kharg_data_haven_reference
 oppositions:
 - bureaux_de_regulation_informationnelle_reference
 - coalition_des_gouvernements_contre_les_chartes_de_destabilisation_reference
@@ -131,6 +134,7 @@ La tension majeure réside dans l'écart croissant entre les ambitions fédérat
 - [[organisation_territoires]]
 
 
+
 ## Relations
 **Alliés :**
 - [[banque_des_communs_reference]]
@@ -148,11 +152,14 @@ La tension majeure réside dans l'écart croissant entre les ambitions fédérat
 - [[ligue_des_metropoles_du_sud_pour_les_infrastructures_libres_reference]]
 - [[ligue_des_municipalites_peripheriques_sous_connectees_reference]]
 - [[mouvement_pour_la_libre_circulation_des_personnes_et_des_donnees_reference]]
+- [[nadia_ferreira_sato_reference]]
 - [[reseau_des_administrations_locales_rurales_participatives_reference]]
+- [[reseau_des_cartographes_des_zones_grises_reference]]
 - [[reseau_des_chercheurs_en_ethique_des_systemes_distribues_reference]]
 - [[reseau_des_villes_etats_pilotes_en_gouvernance_participative_reference]]
 - [[reseau_hospitalier_hybride_eurasiatique_reference]]
 - [[tbilissi_noeud_mnemos_reference]]
+- [[terminal_kharg_data_haven_reference]]
 **Opposants :**
 - [[bureaux_de_regulation_informationnelle_reference]]
 - [[coalition_des_gouvernements_contre_les_chartes_de_destabilisation_reference]]

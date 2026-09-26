@@ -38,7 +38,9 @@ alliances:
 - fragments_d_etats_centraux_residuels_eco_communalism
 - reseau_des_marches_noirs_de_donnees_extractivistes_eco_communalism
 - reseaux_de_notables_communautaires_capturistes_eco_communalism
+- the_tidewater_canon_eco_communalism
 oppositions:
+- agence_de_regulation_des_detroits_strategiques_ards_eco_communalism
 - amazonie_pacte_viva_eco_communalism
 - assemblees_bioterritoriales_regionales_eco_communalism
 - assemblees_cooperatives_regionales_eco_communalism
@@ -51,16 +53,20 @@ oppositions:
 - confederation_communs_arc_septentrional_eco_communalism
 - conseils_de_bassin_versant_eco_communalistes_eco_communalism
 - consortium_amazonia_viva_eco_communalism
+- consortium_des_pecheries_autonomes_du_grand_nord_eco_communalism
 - cooperative_terrafond_eco_communalism
 - cooperatives_d_habitat_regeneratif_eco_communalism
 - cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism
 - fraternites_ecospiritualistes_des_anciens_survivalistes_eco_communalism
 - frente_sertao_livre_eco_communalism
+- gelecek_meclisi_eco_communalism
 - guildes_de_mediateurs_ecologiques_eco_communalism
 - guildes_des_semenciers_itinerants_eco_communalism
+- ilse_varga_holm_eco_communalism
 - kalaallit_nunaat_bioterritoire_eco_communalism
 - kalaallit_nunaat_sovereign_fund_eco_communalism
 - le_registre_du_fleuve_eco_communalism
+- les_veilleurs_des_nappes_phreatiques_eco_communalism
 - les_veilleurs_du_fleuve_eco_communalism
 - mouvement_des_communes_du_rust_belt_eco_communalism
 - mutuelles_de_sante_territoriales_eco_communalism
@@ -134,6 +140,7 @@ La contradiction centrale de ces factions est qu'elles prospèrent précisément
 - [[gouvernance_institutions]]
 
 
+
 ## Relations
 **Alliés :**
 - [[consortiums_industriels_de_l_eau_eco_communalism]]
@@ -142,7 +149,9 @@ La contradiction centrale de ces factions est qu'elles prospèrent précisément
 - [[fragments_d_etats_centraux_residuels_eco_communalism]]
 - [[reseau_des_marches_noirs_de_donnees_extractivistes_eco_communalism]]
 - [[reseaux_de_notables_communautaires_capturistes_eco_communalism]]
+- [[the_tidewater_canon_eco_communalism]]
 **Opposants :**
+- [[agence_de_regulation_des_detroits_strategiques_ards_eco_communalism]]
 - [[amazonie_pacte_viva_eco_communalism]]
 - [[assemblees_bioterritoriales_regionales_eco_communalism]]
 - [[assemblees_cooperatives_regionales_eco_communalism]]
@@ -155,16 +164,20 @@ La contradiction centrale de ces factions est qu'elles prospèrent précisément
 - [[confederation_communs_arc_septentrional_eco_communalism]]
 - [[conseils_de_bassin_versant_eco_communalistes_eco_communalism]]
 - [[consortium_amazonia_viva_eco_communalism]]
+- [[consortium_des_pecheries_autonomes_du_grand_nord_eco_communalism]]
 - [[cooperative_terrafond_eco_communalism]]
 - [[cooperatives_d_habitat_regeneratif_eco_communalism]]
 - [[cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism]]
 - [[fraternites_ecospiritualistes_des_anciens_survivalistes_eco_communalism]]
 - [[frente_sertao_livre_eco_communalism]]
+- [[gelecek_meclisi_eco_communalism]]
 - [[guildes_de_mediateurs_ecologiques_eco_communalism]]
 - [[guildes_des_semenciers_itinerants_eco_communalism]]
+- [[ilse_varga_holm_eco_communalism]]
 - [[kalaallit_nunaat_bioterritoire_eco_communalism]]
 - [[kalaallit_nunaat_sovereign_fund_eco_communalism]]
 - [[le_registre_du_fleuve_eco_communalism]]
+- [[les_veilleurs_des_nappes_phreatiques_eco_communalism]]
 - [[les_veilleurs_du_fleuve_eco_communalism]]
 - [[mouvement_des_communes_du_rust_belt_eco_communalism]]
 - [[mutuelles_de_sante_territoriales_eco_communalism]]

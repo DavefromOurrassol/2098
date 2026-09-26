@@ -41,6 +41,7 @@ alliances:
 - milices_concurrentes_des_droits_de_passage_reference
 - operateurs_de_zones_economiques_speciales_periurbaines_reference
 - reseaux_de_financement_gris_issus_d_anciens_blocs_militaires_reference
+- terminal_kharg_data_haven_reference
 - valparaiso_fct_reference
 - vasil_orentchev_reference
 - zones_grises_globales_reference
@@ -117,6 +118,7 @@ Ces réseaux prospèrent précisément là où l'ordre institutionnel s'effondre
 - [[frontieres_du_systeme]]
 
 
+
 ## Relations
 **Alliés :**
 - [[administrations_hybrides_des_cites_relais_peripheriques_reference]]
@@ -129,6 +131,7 @@ Ces réseaux prospèrent précisément là où l'ordre institutionnel s'effondre
 - [[milices_concurrentes_des_droits_de_passage_reference]]
 - [[operateurs_de_zones_economiques_speciales_periurbaines_reference]]
 - [[reseaux_de_financement_gris_issus_d_anciens_blocs_militaires_reference]]
+- [[terminal_kharg_data_haven_reference]]
 - [[valparaiso_fct_reference]]
 - [[vasil_orentchev_reference]]
 - [[zones_grises_globales_reference]]

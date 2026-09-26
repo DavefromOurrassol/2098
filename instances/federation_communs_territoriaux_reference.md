@@ -39,6 +39,7 @@ zone_systemique:
     - infrastructure
 
 alliances:
+- assemblee_territoires_reference
 - autorites_regionales_de_regulation_hydrologique_reference
 - banque_des_communs_reference
 - collectif_nuit_jaune_reference
@@ -46,12 +47,14 @@ alliances:
 - collectifs_de_journalistes_independants_regionaux_reference
 - communs_numeriques_agroecologiques_reference
 - consortium_amazonia_viva_reference
+- consortium_des_pecheries_autonomes_du_grand_nord_reference
 - cooperatives_agro_ecologiques_de_reconstruction_territoriale_reference
 - cooperatives_agro_ecologiques_du_bassin_mediterraneen_reference
 - cooperatives_ia_open_source_reference
 - frente_sertao_livre_reference
 - great_lakes_autonomous_compact_reference
 - helsinki_communs_numeriques_reference
+- les_veilleurs_des_nappes_phreatiques_reference
 - lyon_metropole_reference
 - observatoire_climatique_des_territoires_oct_reference
 - ong_environnementales_de_terrain_reference
@@ -71,8 +74,11 @@ oppositions:
 - confederation_des_megapoles_autonomes_reference
 - consortium_des_grandes_plateformes_logistiques_globales_reference
 - detroit_compact_grands_lacs_reference
+- ergo_wian_sovereign_holdings_reference
 - fonds_d_investissement_foncier_climatique_reference
 - gouvernements_federaux_residuels_souverainistes_reference
+- holdfast_reference
+- ilse_varga_holm_reference
 - lobbies_agro_industriels_a_haute_consommation_d_eau_reference
 - operateurs_de_zones_economiques_speciales_periurbaines_reference
 - operateurs_prives_d_energie_distribuee_hors_fct_reference
@@ -132,6 +138,7 @@ La FCT est tiraillée entre son idéal d'autonomie radicale et la nécessité cr
 
 ## Relations
 **Alliés :**
+- [[assemblee_territoires_reference]]
 - [[autorites_regionales_de_regulation_hydrologique_reference]]
 - [[banque_des_communs_reference]]
 - [[collectif_nuit_jaune_reference]]
@@ -139,12 +146,14 @@ La FCT est tiraillée entre son idéal d'autonomie radicale et la nécessité cr
 - [[collectifs_de_journalistes_independants_regionaux_reference]]
 - [[communs_numeriques_agroecologiques_reference]]
 - [[consortium_amazonia_viva_reference]]
+- [[consortium_des_pecheries_autonomes_du_grand_nord_reference]]
 - [[cooperatives_agro_ecologiques_de_reconstruction_territoriale_reference]]
 - [[cooperatives_agro_ecologiques_du_bassin_mediterraneen_reference]]
 - [[cooperatives_ia_open_source_reference]]
 - [[frente_sertao_livre_reference]]
 - [[great_lakes_autonomous_compact_reference]]
 - [[helsinki_communs_numeriques_reference]]
+- [[les_veilleurs_des_nappes_phreatiques_reference]]
 - [[lyon_metropole_reference]]
 - [[observatoire_climatique_des_territoires_oct_reference]]
 - [[ong_environnementales_de_terrain_reference]]
@@ -164,8 +173,11 @@ La FCT est tiraillée entre son idéal d'autonomie radicale et la nécessité cr
 - [[confederation_des_megapoles_autonomes_reference]]
 - [[consortium_des_grandes_plateformes_logistiques_globales_reference]]
 - [[detroit_compact_grands_lacs_reference]]
+- [[ergo_wian_sovereign_holdings_reference]]
 - [[fonds_d_investissement_foncier_climatique_reference]]
 - [[gouvernements_federaux_residuels_souverainistes_reference]]
+- [[holdfast_reference]]
+- [[ilse_varga_holm_reference]]
 - [[lobbies_agro_industriels_a_haute_consommation_d_eau_reference]]
 - [[operateurs_de_zones_economiques_speciales_periurbaines_reference]]
 - [[operateurs_prives_d_energie_distribuee_hors_fct_reference]]

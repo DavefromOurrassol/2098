@@ -35,6 +35,7 @@ alliances:
 - collectifs_de_journalisme_embarque_reference
 - collectifs_de_journalistes_independants_regionaux_reference
 - federation_communs_territoriaux_reference
+- kindling_reference
 - voix_du_dehors_reference
 oppositions:
 - administrations_hybrides_des_cites_relais_peripheriques_reference
@@ -112,12 +113,14 @@ Le Collectif est écartelé entre une légitimité morale forte — défendre le
 - [[organisation_territoires]]
 
 
+
 ## Relations
 **Alliés :**
 - [[collectifs_academiques_independants_reference]]
 - [[collectifs_de_journalisme_embarque_reference]]
 - [[collectifs_de_journalistes_independants_regionaux_reference]]
 - [[federation_communs_territoriaux_reference]]
+- [[kindling_reference]]
 - [[voix_du_dehors_reference]]
 **Opposants :**
 - [[administrations_hybrides_des_cites_relais_peripheriques_reference]]

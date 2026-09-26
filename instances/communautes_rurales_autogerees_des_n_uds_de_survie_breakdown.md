@@ -37,6 +37,7 @@ zone_systemique:
 alliances:
 - agadez_ligue_sahel_numerique_breakdown
 - brigades_medicales_itinerantes_breakdown
+- coalition_vivant_breakdown
 - collectif_des_climatologues_sans_etat_breakdown
 - collectifs_de_reparation_energetique_breakdown
 - collectifs_de_sante_communautaire_autogeree_breakdown
@@ -46,16 +47,19 @@ alliances:
 - corridor_lithium_bouches_breakdown
 - delta_mekong_racines_breakdown
 - diaspora_tech_sahel_breakdown
+- elias_mork_breakdown
 - enclaves_finlandaises_breakdown
 - factions_secessionnistes_agrariennes_du_desert_breakdown
 - frente_sertao_livre_breakdown
 - guilde_des_techniciens_nomades_breakdown
+- ilse_varga_holm_breakdown
 - massif_central_cicatrices_vertes_breakdown
 - milices_agro_defensives_locales_breakdown
 - mouvement_des_communes_du_rust_belt_breakdown
 - noeud_mnemos_pannonie_breakdown
 - occitanie_racines_meres_breakdown
 - pirates_biologiques_open_source_breakdown
+- reseau_des_cartographes_des_zones_grises_breakdown
 - reseau_mnemos_breakdown
 - reseaux_de_soigneurs_traditionnels_breakdown
 - reseaux_noirs_pharmaceutiques_breakdown
@@ -132,10 +136,12 @@ La tension centrale est celle de la clôture contre l'ouverture : certaines comm
 - [[energie_ressources_critiques]]
 
 
+
 ## Relations
 **Alliés :**
 - [[agadez_ligue_sahel_numerique_breakdown]]
 - [[brigades_medicales_itinerantes_breakdown]]
+- [[coalition_vivant_breakdown]]
 - [[collectif_des_climatologues_sans_etat_breakdown]]
 - [[collectifs_de_reparation_energetique_breakdown]]
 - [[collectifs_de_sante_communautaire_autogeree_breakdown]]
@@ -145,16 +151,19 @@ La tension centrale est celle de la clôture contre l'ouverture : certaines comm
 - [[corridor_lithium_bouches_breakdown]]
 - [[delta_mekong_racines_breakdown]]
 - [[diaspora_tech_sahel_breakdown]]
+- [[elias_mork_breakdown]]
 - [[enclaves_finlandaises_breakdown]]
 - [[factions_secessionnistes_agrariennes_du_desert_breakdown]]
 - [[frente_sertao_livre_breakdown]]
 - [[guilde_des_techniciens_nomades_breakdown]]
+- [[ilse_varga_holm_breakdown]]
 - [[massif_central_cicatrices_vertes_breakdown]]
 - [[milices_agro_defensives_locales_breakdown]]
 - [[mouvement_des_communes_du_rust_belt_breakdown]]
 - [[noeud_mnemos_pannonie_breakdown]]
 - [[occitanie_racines_meres_breakdown]]
 - [[pirates_biologiques_open_source_breakdown]]
+- [[reseau_des_cartographes_des_zones_grises_breakdown]]
 - [[reseau_mnemos_breakdown]]
 - [[reseaux_de_soigneurs_traditionnels_breakdown]]
 - [[reseaux_noirs_pharmaceutiques_breakdown]]

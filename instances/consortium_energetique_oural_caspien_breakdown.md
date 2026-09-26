@@ -44,6 +44,7 @@ alliances:
 - corridors_eurasiens_convoyage_breakdown
 - district_mourmansk_residuel_breakdown
 - enclaves_industrielles_du_corridor_oural_caspien_breakdown
+- ergo_wian_sovereign_holdings_breakdown
 - factions_energetiques_heritieres_des_pactes_abs_breakdown
 - federation_russe_residuelle_district_de_mourmansk_breakdown
 - front_techno_reconstructionniste_breakdown
@@ -56,10 +57,13 @@ oppositions:
 - arctique_nordark_breakdown
 - bloc_de_johannesburg_breakdown
 - blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown
+- coalition_vivant_breakdown
 - collectif_hackers_decroissance_infrastructure_breakdown
 - conseil_regulation_ressources_breakdown
+- consortium_des_pecheries_autonomes_du_grand_nord_breakdown
 - etats_fragments_en_guerre_pour_les_stations_atmospheriques_breakdown
 - front_de_resistance_aux_peages_sur_les_ressources_breakdown
+- les_veilleurs_des_nappes_phreatiques_breakdown
 - saboteurs_des_corridors_de_transit_breakdown
 type_relation_dominante: compétition
 annee_debut: 2041
@@ -122,6 +126,7 @@ Le Consortium est pris en étau entre le Bloc IV et le Bloc IX qui se disputent 
 - [[gouvernance_institutions]]
 
 
+
 ## Relations
 **Alliés :**
 - [[conglometrat_sino_siberien_bohai_transit_breakdown]]
@@ -129,6 +134,7 @@ Le Consortium est pris en étau entre le Bloc IV et le Bloc IX qui se disputent 
 - [[corridors_eurasiens_convoyage_breakdown]]
 - [[district_mourmansk_residuel_breakdown]]
 - [[enclaves_industrielles_du_corridor_oural_caspien_breakdown]]
+- [[ergo_wian_sovereign_holdings_breakdown]]
 - [[factions_energetiques_heritieres_des_pactes_abs_breakdown]]
 - [[federation_russe_residuelle_district_de_mourmansk_breakdown]]
 - [[front_techno_reconstructionniste_breakdown]]
@@ -141,10 +147,13 @@ Le Consortium est pris en étau entre le Bloc IV et le Bloc IX qui se disputent 
 - [[arctique_nordark_breakdown]]
 - [[bloc_de_johannesburg_breakdown]]
 - [[blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown]]
+- [[coalition_vivant_breakdown]]
 - [[collectif_hackers_decroissance_infrastructure_breakdown]]
 - [[conseil_regulation_ressources_breakdown]]
+- [[consortium_des_pecheries_autonomes_du_grand_nord_breakdown]]
 - [[etats_fragments_en_guerre_pour_les_stations_atmospheriques_breakdown]]
 - [[front_de_resistance_aux_peages_sur_les_ressources_breakdown]]
+- [[les_veilleurs_des_nappes_phreatiques_breakdown]]
 - [[saboteurs_des_corridors_de_transit_breakdown]]
 
 ## Notes

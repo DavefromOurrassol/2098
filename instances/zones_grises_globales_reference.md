@@ -56,6 +56,7 @@ oppositions:
 - confederation_des_megapoles_autonomes_reference
 - conseil_regulation_ressources_reference
 - consortium_des_grandes_plateformes_ia_integrees_reference
+- institut_des_seuils_demographiques_reference
 - institutions_multilaterales_survivantes_reference
 - reseau_des_metropoles_cotieres_adaptees_reference
 - reseaux_de_gouvernance_multilaterale_survivants_reference
@@ -128,6 +129,7 @@ La tension centrale est celle de la tolérance calculée : les blocs régionaux 
 - [[confederation_des_megapoles_autonomes_reference]]
 - [[conseil_regulation_ressources_reference]]
 - [[consortium_des_grandes_plateformes_ia_integrees_reference]]
+- [[institut_des_seuils_demographiques_reference]]
 - [[institutions_multilaterales_survivantes_reference]]
 - [[reseau_des_metropoles_cotieres_adaptees_reference]]
 - [[reseaux_de_gouvernance_multilaterale_survivants_reference]]

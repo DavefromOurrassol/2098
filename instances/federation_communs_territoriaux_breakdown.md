@@ -35,14 +35,15 @@ zone_systemique:
     - infrastructure
 
 alliances:
+- assemblee_territoires_breakdown
 - collectifs_de_reparation_energetique_breakdown
 - communes_rust_belt_breakdown
 - communes_rust_belt_zones_libres_breakdown
 - consortium_amazonia_viva_breakdown
 - delta_mekong_racines_breakdown
 - frente_sertao_livre_breakdown
-- internationale_des_semenciers_agro_pirates_fortress_world
 - le_registre_du_fleuve_breakdown
+- les_veilleurs_des_nappes_phreatiques_breakdown
 - les_veilleurs_du_fleuve_breakdown
 - ligue_des_cites_littorales_en_sursis_breakdown
 - massif_central_cicatrices_vertes_breakdown
@@ -54,9 +55,11 @@ alliances:
 oppositions:
 - cartels_logistiques_regionaux_breakdown
 - enclaves_corporatives_fortifiees_breakdown
+- ergo_wian_sovereign_holdings_breakdown
 - etats_fragmentes_nationalisant_les_stocks_breakdown
 - etats_fragments_en_guerre_pour_les_stations_atmospheriques_breakdown
 - flux_migratoires_non_integrables_breakdown
+- holdfast_breakdown
 - reseau_de_recuperation_industrielle_illicite_breakdown
 - seigneuries_logistiques_armees_breakdown
 type_relation_dominante: conflit
@@ -111,14 +114,15 @@ Qui détient la légitimité du nom 'CBV' quand deux bassins voisins entrent en 
 
 ## Relations
 **Alliés :**
+- [[assemblee_territoires_breakdown]]
 - [[collectifs_de_reparation_energetique_breakdown]]
 - [[communes_rust_belt_breakdown]]
 - [[communes_rust_belt_zones_libres_breakdown]]
 - [[consortium_amazonia_viva_breakdown]]
 - [[delta_mekong_racines_breakdown]]
 - [[frente_sertao_livre_breakdown]]
-- [[internationale_des_semenciers_agro_pirates_fortress_world]]
 - [[le_registre_du_fleuve_breakdown]]
+- [[les_veilleurs_des_nappes_phreatiques_breakdown]]
 - [[les_veilleurs_du_fleuve_breakdown]]
 - [[ligue_des_cites_littorales_en_sursis_breakdown]]
 - [[massif_central_cicatrices_vertes_breakdown]]
@@ -130,8 +134,10 @@ Qui détient la légitimité du nom 'CBV' quand deux bassins voisins entrent en 
 **Opposants :**
 - [[cartels_logistiques_regionaux_breakdown]]
 - [[enclaves_corporatives_fortifiees_breakdown]]
+- [[ergo_wian_sovereign_holdings_breakdown]]
 - [[etats_fragmentes_nationalisant_les_stocks_breakdown]]
 - [[etats_fragments_en_guerre_pour_les_stations_atmospheriques_breakdown]]
 - [[flux_migratoires_non_integrables_breakdown]]
+- [[holdfast_breakdown]]
 - [[reseau_de_recuperation_industrielle_illicite_breakdown]]
 - [[seigneuries_logistiques_armees_breakdown]]

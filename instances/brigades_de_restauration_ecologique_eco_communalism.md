@@ -40,6 +40,7 @@ alliances:
 - conseils_de_bassin_versant_eco_communalistes_eco_communalism
 - consortium_africain_de_biotechnologies_sociales_eco_communalism
 - consortium_amazonia_viva_eco_communalism
+- consortium_des_pecheries_autonomes_du_grand_nord_eco_communalism
 - cooperative_terrafond_eco_communalism
 - cooperatives_d_habitat_regeneratif_eco_communalism
 - cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism
@@ -47,11 +48,16 @@ alliances:
 - frente_sertao_livre_eco_communalism
 - guildes_de_mediateurs_ecologiques_eco_communalism
 - guildes_des_semenciers_itinerants_eco_communalism
+- hyphan_raghavan_eco_communalism
+- ilse_varga_holm_eco_communalism
+- institut_des_seuils_demographiques_eco_communalism
 - kalaallit_nunaat_bioterritoire_eco_communalism
 - kalaallit_nunaat_sovereign_fund_eco_communalism
 - le_registre_du_fleuve_eco_communalism
+- les_veilleurs_des_nappes_phreatiques_eco_communalism
 - mouvement_des_archives_vivantes_du_savoir_partage_eco_communalism
 - mouvement_des_communes_du_rust_belt_eco_communalism
+- reseau_des_cartographes_des_zones_grises_eco_communalism
 - reseau_terrafond_bassins_eco_communalism
 - reseaux_de_bibliotheques_archives_communautaires_eco_communalism
 - reseaux_de_reconstruction_cooperative_inter_communautes_eco_communalism
@@ -67,6 +73,7 @@ oppositions:
 - consortiums_logistiques_neo_industriels_des_terres_reconstruites_eco_communalism
 - enclaves_extractivistes_et_etats_residuels_eco_communalism
 - enclaves_extractivistes_residuelles_des_corridors_eco_communalism
+- ergo_wian_sovereign_holdings_eco_communalism
 - factions_extractivistes_des_aquiferes_communs_eco_communalism
 - factions_technophiles_de_la_geo_ingenierie_centralisee_eco_communalism
 - fragments_d_etats_centraux_residuels_eco_communalism
@@ -135,6 +142,7 @@ Les Brigades se trouvent écartelées entre l'urgence climatique qui exige des i
 - [[systemes_productifs_travail]]
 
 
+
 ## Relations
 **Alliés :**
 - [[amazonie_pacte_viva_eco_communalism]]
@@ -147,6 +155,7 @@ Les Brigades se trouvent écartelées entre l'urgence climatique qui exige des i
 - [[conseils_de_bassin_versant_eco_communalistes_eco_communalism]]
 - [[consortium_africain_de_biotechnologies_sociales_eco_communalism]]
 - [[consortium_amazonia_viva_eco_communalism]]
+- [[consortium_des_pecheries_autonomes_du_grand_nord_eco_communalism]]
 - [[cooperative_terrafond_eco_communalism]]
 - [[cooperatives_d_habitat_regeneratif_eco_communalism]]
 - [[cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism]]
@@ -154,11 +163,16 @@ Les Brigades se trouvent écartelées entre l'urgence climatique qui exige des i
 - [[frente_sertao_livre_eco_communalism]]
 - [[guildes_de_mediateurs_ecologiques_eco_communalism]]
 - [[guildes_des_semenciers_itinerants_eco_communalism]]
+- [[hyphan_raghavan_eco_communalism]]
+- [[ilse_varga_holm_eco_communalism]]
+- [[institut_des_seuils_demographiques_eco_communalism]]
 - [[kalaallit_nunaat_bioterritoire_eco_communalism]]
 - [[kalaallit_nunaat_sovereign_fund_eco_communalism]]
 - [[le_registre_du_fleuve_eco_communalism]]
+- [[les_veilleurs_des_nappes_phreatiques_eco_communalism]]
 - [[mouvement_des_archives_vivantes_du_savoir_partage_eco_communalism]]
 - [[mouvement_des_communes_du_rust_belt_eco_communalism]]
+- [[reseau_des_cartographes_des_zones_grises_eco_communalism]]
 - [[reseau_terrafond_bassins_eco_communalism]]
 - [[reseaux_de_bibliotheques_archives_communautaires_eco_communalism]]
 - [[reseaux_de_reconstruction_cooperative_inter_communautes_eco_communalism]]
@@ -174,6 +188,7 @@ Les Brigades se trouvent écartelées entre l'urgence climatique qui exige des i
 - [[consortiums_logistiques_neo_industriels_des_terres_reconstruites_eco_communalism]]
 - [[enclaves_extractivistes_et_etats_residuels_eco_communalism]]
 - [[enclaves_extractivistes_residuelles_des_corridors_eco_communalism]]
+- [[ergo_wian_sovereign_holdings_eco_communalism]]
 - [[factions_extractivistes_des_aquiferes_communs_eco_communalism]]
 - [[factions_technophiles_de_la_geo_ingenierie_centralisee_eco_communalism]]
 - [[fragments_d_etats_centraux_residuels_eco_communalism]]

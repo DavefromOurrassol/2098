@@ -31,6 +31,7 @@ zone_geographique:
 zone_systemique:
 - société
 alliances:
+- agence_de_regulation_des_detroits_strategiques_ards_eco_communalism
 - assemblees_bioterritoriales_regionales_eco_communalism
 - brigades_de_restauration_ecologique_eco_communalism
 - collectifs_de_cartographie_ecologique_participative_eco_communalism
@@ -126,8 +127,10 @@ La tension centrale des Collectifs réside dans le paradoxe de leur propre succ�
 - [[technologie_information]]
 
 
+
 ## Relations
 **Alliés :**
+- [[agence_de_regulation_des_detroits_strategiques_ards_eco_communalism]]
 - [[assemblees_bioterritoriales_regionales_eco_communalism]]
 - [[brigades_de_restauration_ecologique_eco_communalism]]
 - [[collectifs_de_cartographie_ecologique_participative_eco_communalism]]

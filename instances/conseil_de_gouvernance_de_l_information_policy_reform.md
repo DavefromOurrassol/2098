@@ -36,6 +36,7 @@ alliances:
 - conseil_onu_de_gouvernance_numerique_et_ia_policy_reform
 - conseil_regulation_algorithmique_policy_reform
 - consortium_des_ia_editoriales_certifiees_policy_reform
+- gelecek_meclisi_policy_reform
 - prisme_global_policy_reform
 - reseau_des_auditeurs_algorithmiques_independants_raai_policy_reform
 oppositions:
@@ -44,7 +45,11 @@ oppositions:
 - front_souverainiste_de_l_information_regionale_policy_reform
 - front_souverainiste_des_blocs_non_signataires_policy_reform
 - les_hors_prisme_policy_reform
+- maelys_okonkwo_policy_reform
 - rede_paulista_de_distribuicao_algoritmica_policy_reform
+- reseau_des_cartographes_des_zones_grises_policy_reform
+- terminal_kharg_data_haven_policy_reform
+- the_lattice_policy_reform
 type_relation_dominante: compétition
 annee_debut: 2033
 annee_fin: null
@@ -113,12 +118,14 @@ La légitimité du CGI est minée par l'absence des blocs souverainistes non-sig
 - [[valeurs_culture_tempo_sociale]]
 
 
+
 ## Relations
 **Alliés :**
 - [[bureau_gouvernance_algorithmique_policy_reform]]
 - [[conseil_onu_de_gouvernance_numerique_et_ia_policy_reform]]
 - [[conseil_regulation_algorithmique_policy_reform]]
 - [[consortium_des_ia_editoriales_certifiees_policy_reform]]
+- [[gelecek_meclisi_policy_reform]]
 - [[prisme_global_policy_reform]]
 - [[reseau_des_auditeurs_algorithmiques_independants_raai_policy_reform]]
 **Opposants :**
@@ -127,7 +134,11 @@ La légitimité du CGI est minée par l'absence des blocs souverainistes non-sig
 - [[front_souverainiste_de_l_information_regionale_policy_reform]]
 - [[front_souverainiste_des_blocs_non_signataires_policy_reform]]
 - [[les_hors_prisme_policy_reform]]
+- [[maelys_okonkwo_policy_reform]]
 - [[rede_paulista_de_distribuicao_algoritmica_policy_reform]]
+- [[reseau_des_cartographes_des_zones_grises_policy_reform]]
+- [[terminal_kharg_data_haven_policy_reform]]
+- [[the_lattice_policy_reform]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

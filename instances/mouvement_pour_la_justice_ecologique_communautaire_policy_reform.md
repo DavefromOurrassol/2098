@@ -38,6 +38,7 @@ zone_systemique:
 alliances:
 - coalition_des_semences_libres_policy_reform
 - coalition_des_villes_de_reconversion_policy_reform
+- coalition_vivant_policy_reform
 - collectifs_citoyens_de_deliberation_augmentee_policy_reform
 - collectifs_citoyens_pour_l_audit_algorithmique_ouvert_policy_reform
 - collectifs_de_biohackers_agro_communautaires_policy_reform
@@ -46,16 +47,21 @@ alliances:
 - collectifs_de_hackers_biospheriques_policy_reform
 - collectifs_de_resistance_aux_relocalisations_forcees_policy_reform
 - consortium_amazonia_viva_policy_reform
+- consortium_des_pecheries_autonomes_du_grand_nord_policy_reform
 - courants_post_technocratiques_de_reconquete_democratique_policy_reform
 - factions_internes_pro_desaugmentation_totale_policy_reform
 - front_des_autonomies_territoriales_radicales_policy_reform
 - front_des_communes_algorithmiques_policy_reform
 - great_lakes_autonomous_compact_policy_reform
+- hyphan_raghavan_policy_reform
 - institut_de_therapeutique_integree_de_nairobi_policy_reform
 - internationale_decroissante_anti_planification_policy_reform
+- les_veilleurs_des_nappes_phreatiques_policy_reform
 - les_veilleurs_du_fleuve_policy_reform
+- maelys_okonkwo_policy_reform
 - mouvement_pour_la_souverainete_energetique_commune_msec_policy_reform
 - pacifique_sud_resilience_network_policy_reform
+- reseau_des_cartographes_des_zones_grises_policy_reform
 - reseau_des_journalistes_d_investigation_energetique_policy_reform
 oppositions:
 - agence_stabilisation_climatique_policy_reform
@@ -137,10 +143,12 @@ Le mouvement est écartelé entre son ancrage résolument local et la nécessit�
 - [[climat_environnement_global]]
 
 
+
 ## Relations
 **Alliés :**
 - [[coalition_des_semences_libres_policy_reform]]
 - [[coalition_des_villes_de_reconversion_policy_reform]]
+- [[coalition_vivant_policy_reform]]
 - [[collectifs_citoyens_de_deliberation_augmentee_policy_reform]]
 - [[collectifs_citoyens_pour_l_audit_algorithmique_ouvert_policy_reform]]
 - [[collectifs_de_biohackers_agro_communautaires_policy_reform]]
@@ -149,16 +157,21 @@ Le mouvement est écartelé entre son ancrage résolument local et la nécessit�
 - [[collectifs_de_hackers_biospheriques_policy_reform]]
 - [[collectifs_de_resistance_aux_relocalisations_forcees_policy_reform]]
 - [[consortium_amazonia_viva_policy_reform]]
+- [[consortium_des_pecheries_autonomes_du_grand_nord_policy_reform]]
 - [[courants_post_technocratiques_de_reconquete_democratique_policy_reform]]
 - [[factions_internes_pro_desaugmentation_totale_policy_reform]]
 - [[front_des_autonomies_territoriales_radicales_policy_reform]]
 - [[front_des_communes_algorithmiques_policy_reform]]
 - [[great_lakes_autonomous_compact_policy_reform]]
+- [[hyphan_raghavan_policy_reform]]
 - [[institut_de_therapeutique_integree_de_nairobi_policy_reform]]
 - [[internationale_decroissante_anti_planification_policy_reform]]
+- [[les_veilleurs_des_nappes_phreatiques_policy_reform]]
 - [[les_veilleurs_du_fleuve_policy_reform]]
+- [[maelys_okonkwo_policy_reform]]
 - [[mouvement_pour_la_souverainete_energetique_commune_msec_policy_reform]]
 - [[pacifique_sud_resilience_network_policy_reform]]
+- [[reseau_des_cartographes_des_zones_grises_policy_reform]]
 - [[reseau_des_journalistes_d_investigation_energetique_policy_reform]]
 **Opposants :**
 - [[agence_stabilisation_climatique_policy_reform]]

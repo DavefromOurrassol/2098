@@ -58,6 +58,7 @@ oppositions:
 - corporations_d_extraction_energetique_non_signataires_reference
 - fonds_d_investissement_foncier_climatique_reference
 - gouvernements_federaux_residuels_souverainistes_reference
+- meridian_assembly_reference
 type_relation_dominante: alliance stratégique
 
 annee_debut: 2041
@@ -131,3 +132,4 @@ L'ASMPI est tiraillée entre deux visions de son avenir : celle des 'nostalgiste
 - [[corporations_d_extraction_energetique_non_signataires_reference]]
 - [[fonds_d_investissement_foncier_climatique_reference]]
 - [[gouvernements_federaux_residuels_souverainistes_reference]]
+- [[meridian_assembly_reference]]

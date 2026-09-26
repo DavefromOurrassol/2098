@@ -33,6 +33,7 @@ zone_geographique:
 zone_systemique:
 - société
 alliances:
+- agence_de_regulation_des_detroits_strategiques_ards_new_sustainability
 - agence_mondiale_de_modelisation_climatique_ammc_new_sustainability
 - agence_orbitale_de_regulation_commune_aorc_new_sustainability
 - agence_stabilisation_climatique_new_sustainability
@@ -46,9 +47,11 @@ alliances:
 - consortium_de_regeneration_planetaire_new_sustainability
 - fonds_mondial_de_redistribution_technologique_new_sustainability
 - fonds_mondial_de_regeneration_ecologique_new_sustainability
+- gelecek_meclisi_new_sustainability
 - great_lakes_autonomous_compact_new_sustainability
 - great_lakes_compact_new_sustainability
 - hub_nairobi_kigali_new_sustainability
+- institut_des_seuils_demographiques_new_sustainability
 - les_veilleurs_du_fleuve_new_sustainability
 - parlement_deliberatif_mondial_new_sustainability
 - parlement_territoires_nairobi_new_sustainability
@@ -70,8 +73,10 @@ oppositions:
 - etats_souverainistes_anti_reseau_new_sustainability
 - faction_conservatrice_pro_actif_strategique_new_sustainability
 - factions_souverainistes_des_blocs_peripheriques_new_sustainability
+- hyphan_raghavan_new_sustainability
 - internationale_souverainiste_de_deconnexion_territoriale_new_sustainability
 - les_passeurs_de_limites_new_sustainability
+- les_veilleurs_des_nappes_phreatiques_new_sustainability
 - lobbies_agro_industriels_du_bassin_du_congo_new_sustainability
 - lobbies_d_extraction_miniere_des_zones_tampons_new_sustainability
 - mouvement_pour_l_autodetermination_territoriale_new_sustainability
@@ -140,8 +145,10 @@ L'agence se trouve prise en étau entre les exigences de souveraineté des État
 - [[organisation_territoires]]
 
 
+
 ## Relations
 **Alliés :**
+- [[agence_de_regulation_des_detroits_strategiques_ards_new_sustainability]]
 - [[agence_mondiale_de_modelisation_climatique_ammc_new_sustainability]]
 - [[agence_orbitale_de_regulation_commune_aorc_new_sustainability]]
 - [[agence_stabilisation_climatique_new_sustainability]]
@@ -155,9 +162,11 @@ L'agence se trouve prise en étau entre les exigences de souveraineté des État
 - [[consortium_de_regeneration_planetaire_new_sustainability]]
 - [[fonds_mondial_de_redistribution_technologique_new_sustainability]]
 - [[fonds_mondial_de_regeneration_ecologique_new_sustainability]]
+- [[gelecek_meclisi_new_sustainability]]
 - [[great_lakes_autonomous_compact_new_sustainability]]
 - [[great_lakes_compact_new_sustainability]]
 - [[hub_nairobi_kigali_new_sustainability]]
+- [[institut_des_seuils_demographiques_new_sustainability]]
 - [[les_veilleurs_du_fleuve_new_sustainability]]
 - [[parlement_deliberatif_mondial_new_sustainability]]
 - [[parlement_territoires_nairobi_new_sustainability]]
@@ -179,8 +188,10 @@ L'agence se trouve prise en étau entre les exigences de souveraineté des État
 - [[etats_souverainistes_anti_reseau_new_sustainability]]
 - [[faction_conservatrice_pro_actif_strategique_new_sustainability]]
 - [[factions_souverainistes_des_blocs_peripheriques_new_sustainability]]
+- [[hyphan_raghavan_new_sustainability]]
 - [[internationale_souverainiste_de_deconnexion_territoriale_new_sustainability]]
 - [[les_passeurs_de_limites_new_sustainability]]
+- [[les_veilleurs_des_nappes_phreatiques_new_sustainability]]
 - [[lobbies_agro_industriels_du_bassin_du_congo_new_sustainability]]
 - [[lobbies_d_extraction_miniere_des_zones_tampons_new_sustainability]]
 - [[mouvement_pour_l_autodetermination_territoriale_new_sustainability]]

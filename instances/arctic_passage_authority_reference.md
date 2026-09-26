@@ -38,6 +38,7 @@ zone_systemique:
     - société
 
 alliances:
+- agence_de_regulation_des_detroits_strategiques_ards_reference
 - agence_stabilisation_climatique_reference
 - armada_logistique_nordique_reference
 - conseil_des_etats_nordiques_integres_reference
@@ -113,6 +114,7 @@ La question centrale qui mine l'APA en 2098 est celle du vote qualifié : les na
 
 ## Relations
 **Alliés :**
+- [[agence_de_regulation_des_detroits_strategiques_ards_reference]]
 - [[agence_stabilisation_climatique_reference]]
 - [[armada_logistique_nordique_reference]]
 - [[conseil_des_etats_nordiques_integres_reference]]

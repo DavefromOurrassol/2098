@@ -43,11 +43,14 @@ alliances:
 - collectifs_de_journalisme_embarque_reference
 - cooperatives_energetiques_decentralisees_reference
 - helsinki_communs_numeriques_reference
+- lamplight_reference
 - ligue_des_municipalites_peripheriques_sous_connectees_reference
 - ong_de_preservation_patrimoniale_numerique_reference
 - pacifique_sud_resilience_network_reference
+- reseau_des_cartographes_des_zones_grises_reference
 - reseaux_de_lanceurs_d_alerte_institutionnels_dissidents_reference
 - tbilissi_noeud_mnemos_reference
+- terminal_kharg_data_haven_reference
 oppositions:
 - bureau_des_territoires_residuels_reference
 - consortium_des_grandes_plateformes_ia_integrees_reference
@@ -112,11 +115,14 @@ La pression croissante des grandes plateformes pour intégrer Mnemos à leurs ar
 - [[collectifs_de_journalisme_embarque_reference]]
 - [[cooperatives_energetiques_decentralisees_reference]]
 - [[helsinki_communs_numeriques_reference]]
+- [[lamplight_reference]]
 - [[ligue_des_municipalites_peripheriques_sous_connectees_reference]]
 - [[ong_de_preservation_patrimoniale_numerique_reference]]
 - [[pacifique_sud_resilience_network_reference]]
+- [[reseau_des_cartographes_des_zones_grises_reference]]
 - [[reseaux_de_lanceurs_d_alerte_institutionnels_dissidents_reference]]
 - [[tbilissi_noeud_mnemos_reference]]
+- [[terminal_kharg_data_haven_reference]]
 **Opposants :**
 - [[bureau_des_territoires_residuels_reference]]
 - [[consortium_des_grandes_plateformes_ia_integrees_reference]]

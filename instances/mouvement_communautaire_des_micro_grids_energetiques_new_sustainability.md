@@ -36,8 +36,12 @@ alliances:
 - collectifs_anarcho_autonomistes_des_zones_libres_new_sustainability
 - collectifs_riverains_du_bassin_du_congo_new_sustainability
 - consortium_amazonia_viva_new_sustainability
+- consortium_des_pecheries_autonomes_du_grand_nord_new_sustainability
+- ilse_varga_holm_new_sustainability
+- les_veilleurs_des_nappes_phreatiques_new_sustainability
 - les_veilleurs_du_fleuve_new_sustainability
 - ligue_des_cites_du_sahel_numerique_new_sustainability
+- nadia_ferreira_sato_new_sustainability
 - reseau_des_bio_communs_regionaux_new_sustainability
 - reseau_des_communs_alimentaires_hors_grille_new_sustainability
 - reseau_des_communs_productifs_regeneratifs_new_sustainability
@@ -121,14 +125,19 @@ Le Mouvement est tiraillé entre son idéal d'autonomie radicale et la pression 
 - [[gouvernance_institutions]]
 
 
+
 ## Relations
 **Alliés :**
 - [[coalition_anti_algorithme_des_autonomies_locales_new_sustainability]]
 - [[collectifs_anarcho_autonomistes_des_zones_libres_new_sustainability]]
 - [[collectifs_riverains_du_bassin_du_congo_new_sustainability]]
 - [[consortium_amazonia_viva_new_sustainability]]
+- [[consortium_des_pecheries_autonomes_du_grand_nord_new_sustainability]]
+- [[ilse_varga_holm_new_sustainability]]
+- [[les_veilleurs_des_nappes_phreatiques_new_sustainability]]
 - [[les_veilleurs_du_fleuve_new_sustainability]]
 - [[ligue_des_cites_du_sahel_numerique_new_sustainability]]
+- [[nadia_ferreira_sato_new_sustainability]]
 - [[reseau_des_bio_communs_regionaux_new_sustainability]]
 - [[reseau_des_communs_alimentaires_hors_grille_new_sustainability]]
 - [[reseau_des_communs_productifs_regeneratifs_new_sustainability]]

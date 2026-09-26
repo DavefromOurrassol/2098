@@ -39,6 +39,7 @@ alliances:
 - collectifs_de_deplaces_climatiques_non_representes_new_sustainability
 - collectifs_de_desobeissance_algorithmique_new_sustainability
 - communautes_locales_exclues_des_corridors_new_sustainability
+- reseau_des_cartographes_des_zones_grises_new_sustainability
 - reseau_des_communs_alimentaires_hors_grille_new_sustainability
 - reseaux_d_information_souverainistes_fermes_new_sustainability
 - reseaux_neo_democratiques_plaidant_pour_la_gouvernance_participative_directe_new_sustainability
@@ -115,6 +116,7 @@ Leur existence même est une provocation dans un scénario où la gouvernance in
 - [[gouvernance_institutions]]
 
 
+
 ## Relations
 **Alliés :**
 - [[coalition_anti_algorithme_des_autonomies_locales_new_sustainability]]
@@ -122,6 +124,7 @@ Leur existence même est une provocation dans un scénario où la gouvernance in
 - [[collectifs_de_deplaces_climatiques_non_representes_new_sustainability]]
 - [[collectifs_de_desobeissance_algorithmique_new_sustainability]]
 - [[communautes_locales_exclues_des_corridors_new_sustainability]]
+- [[reseau_des_cartographes_des_zones_grises_new_sustainability]]
 - [[reseau_des_communs_alimentaires_hors_grille_new_sustainability]]
 - [[reseaux_d_information_souverainistes_fermes_new_sustainability]]
 - [[reseaux_neo_democratiques_plaidant_pour_la_gouvernance_participative_directe_new_sustainability]]

@@ -38,15 +38,11 @@ zone_systemique:
     - IA
 
 alliances:
-    - conseil_de_regulation_cognitive_de_l_onu_new_sustainability
-    - reseau_des_communs_productifs_regeneratifs_new_sustainability
-    - fonds_mondial_de_transition_ecologique_du_travail_new_sustainability
-
+- conseil_de_regulation_cognitive_de_l_onu_new_sustainability
+- reseau_des_communs_productifs_regeneratifs_new_sustainability
+- fonds_mondial_de_transition_ecologique_du_travail_new_sustainability
 oppositions:
-    - consortiums_d_optimisation_rh_algorithmique_policy_reform
-    - factions_internes_pro_desaugmentation_totale_policy_reform
-    - bloc_des_architectes_d_efficience_algorithmique_new_sustainability
-
+- bloc_des_architectes_d_efficience_algorithmique_new_sustainability
 type_relation_dominante: coopération
 
 annee_debut: 2031
@@ -91,12 +87,17 @@ Négocie et supervise les 'Chartes d'Augmentation Éthique' signées avec les co
 - [[valeurs_culture_tempo_sociale]]
 - [[technologie_information]]
 
-## Relations
-**Alliés** : [[conseil_de_regulation_cognitive_de_l_onu_new_sustainability]], [[reseau_des_communs_productifs_regeneratifs_new_sustainability]], [[fonds_mondial_de_transition_ecologique_du_travail_new_sustainability]]
-**Opposants** : [[consortiums_d_optimisation_rh_algorithmique_policy_reform]], [[factions_internes_pro_desaugmentation_totale_policy_reform]], [[bloc_des_architectes_d_efficience_algorithmique_new_sustainability]]
 
 ## Description journalistique
 Depuis ses bureaux modulaires de Barcelone-Hub et de Nairobi-Node, la CMTCA ressemble davantage à une agence de régulation qu'à un syndicat de combat. Ses délégués, souvent eux-mêmes interfacés, négocient en session mixte avec des IA de médiation institutionnelle les clauses des prochains accords productifs continentaux. Les anciens militantes parlent de 'victoire par absorption' : la Confédération a obtenu des droits concrets — le fameux seuil des 30% de présence humaine cognitive dans les processus critiques — mais au prix d'une intégration profonde dans l'architecture même qu'elle entendait réformer. Une nouvelle génération de membres, dits 'dissidents du confort', commence à faire entendre une voix plus acérée dans les assemblées de printemps.
 
 ## Tensions narratives
 La fracture interne entre les 'intégrateurs' — favorables à la négociation permanente dans les structures technocratiques — et les 'dissidents du confort' qui accusent la Confédération d'avoir légitimé l'optimisation en l'encadrant sans la questionner. La question du Fonds de Réversibilité, dont les demandes augmentent chaque année, révèle une souffrance augmentée que les Chartes n'ont pas résolue. Enfin, la tentation pour certains États membres de contourner la CMTCA au profit de régulations nationales plus permissives crée des brèches dans la cohérence globale durement construite.
+
+## Relations
+**Alliés :**
+- [[conseil_de_regulation_cognitive_de_l_onu_new_sustainability]]
+- [[reseau_des_communs_productifs_regeneratifs_new_sustainability]]
+- [[fonds_mondial_de_transition_ecologique_du_travail_new_sustainability]]
+**Opposants :**
+- [[bloc_des_architectes_d_efficience_algorithmique_new_sustainability]]

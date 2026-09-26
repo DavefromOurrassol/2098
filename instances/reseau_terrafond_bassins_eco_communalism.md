@@ -52,6 +52,7 @@ alliances:
 - cooperatives_d_habitat_regeneratif_eco_communalism
 - cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism
 - guildes_de_mediateurs_ecologiques_eco_communalism
+- ilse_varga_holm_eco_communalism
 - mutuelles_de_sante_territoriales_eco_communalism
 - reseau_des_assemblees_de_bassin_fennoscandien_eco_communalism
 - reseaux_de_reconstruction_cooperative_inter_communautes_eco_communalism
@@ -68,6 +69,7 @@ oppositions:
 - consortiums_logistiques_neo_industriels_des_terres_reconstruites_eco_communalism
 - courant_techno_solutionniste_pro_re_globalisation_numerique_eco_communalism
 - enclaves_extractivistes_residuelles_des_corridors_eco_communalism
+- ergo_wian_sovereign_holdings_eco_communalism
 - factions_extractivistes_des_aquiferes_communs_eco_communalism
 - reseaux_de_notables_communautaires_capturistes_eco_communalism
 type_relation_dominante: coopération
@@ -137,6 +139,7 @@ La question lancinante du Réseau Terrafond est celle-ci : jusqu'où la discipli
 - [[cooperatives_d_habitat_regeneratif_eco_communalism]]
 - [[cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism]]
 - [[guildes_de_mediateurs_ecologiques_eco_communalism]]
+- [[ilse_varga_holm_eco_communalism]]
 - [[mutuelles_de_sante_territoriales_eco_communalism]]
 - [[reseau_des_assemblees_de_bassin_fennoscandien_eco_communalism]]
 - [[reseaux_de_reconstruction_cooperative_inter_communautes_eco_communalism]]
@@ -153,5 +156,6 @@ La question lancinante du Réseau Terrafond est celle-ci : jusqu'où la discipli
 - [[consortiums_logistiques_neo_industriels_des_terres_reconstruites_eco_communalism]]
 - [[courant_techno_solutionniste_pro_re_globalisation_numerique_eco_communalism]]
 - [[enclaves_extractivistes_residuelles_des_corridors_eco_communalism]]
+- [[ergo_wian_sovereign_holdings_eco_communalism]]
 - [[factions_extractivistes_des_aquiferes_communs_eco_communalism]]
 - [[reseaux_de_notables_communautaires_capturistes_eco_communalism]]

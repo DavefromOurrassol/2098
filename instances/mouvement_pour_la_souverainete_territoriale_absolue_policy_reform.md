@@ -60,6 +60,8 @@ oppositions:
 - gouvernement_israel_policy_reform
 - great_lakes_autonomous_compact_policy_reform
 - grille_aria_policy_reform
+- ilse_varga_holm_policy_reform
+- institut_des_seuils_demographiques_policy_reform
 - office_integre_des_flux_migratoires_policy_reform
 - pacifique_sud_resilience_network_policy_reform
 - reseau_des_agences_sanitaires_regionales_policy_reform
@@ -133,6 +135,7 @@ Le mouvement est écartelé entre ses composantes les plus radicales, tentées p
 - [[frontieres_du_systeme]]
 
 
+
 ## Relations
 **Alliés :**
 - [[collectifs_de_resistance_aux_relocalisations_forcees_policy_reform]]
@@ -163,6 +166,8 @@ Le mouvement est écartelé entre ses composantes les plus radicales, tentées p
 - [[gouvernement_israel_policy_reform]]
 - [[great_lakes_autonomous_compact_policy_reform]]
 - [[grille_aria_policy_reform]]
+- [[ilse_varga_holm_policy_reform]]
+- [[institut_des_seuils_demographiques_policy_reform]]
 - [[office_integre_des_flux_migratoires_policy_reform]]
 - [[pacifique_sud_resilience_network_policy_reform]]
 - [[reseau_des_agences_sanitaires_regionales_policy_reform]]

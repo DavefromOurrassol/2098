@@ -39,22 +39,21 @@ zone_systemique:
     - société
 
 alliances:
-    - pacte_des_souverains_reference
-    - alliance_blocs_souverains_reference
-    - bloc_ressources_eurasiatique_bre_reference
-    - front_souverainiste_des_ressources_d_amerique_du_sud_reference
-    - consortiums_prives_d_extraction_de_ressources_critiques_reference
-    - plateformes_centralisees_de_narration_officielle_reference
-
+- alliance_blocs_souverains_reference
+- aurelio_stahl_reference
+- bloc_ressources_eurasiatique_bre_reference
+- consortiums_prives_d_extraction_de_ressources_critiques_reference
+- front_souverainiste_des_ressources_d_amerique_du_sud_reference
+- pacte_des_souverains_reference
+- plateformes_centralisees_de_narration_officielle_reference
 oppositions:
-    - assemblee_territoires_reference
-    - agence_internationale_des_energies_renouvelables_irena_2_reference
-    - agence_stabilisation_climatique_reference
-    - banque_mondiale_des_transitions_climatiques_reference
-    - institutions_multilaterales_survivantes_reference
-    - collectifs_academiques_independants_reference
-    - mouvement_pour_la_libre_circulation_des_personnes_et_des_donnees_reference
-
+- agence_internationale_des_energies_renouvelables_irena_2_reference
+- agence_stabilisation_climatique_reference
+- assemblee_territoires_reference
+- banque_mondiale_des_transitions_climatiques_reference
+- collectifs_academiques_independants_reference
+- institutions_multilaterales_survivantes_reference
+- mouvement_pour_la_libre_circulation_des_personnes_et_des_donnees_reference
 type_relation_dominante: alliance stratégique
 
 annee_debut: 2032
@@ -113,12 +112,27 @@ Diffuser les principes de souveraineté radicale via des programmes éducatifs, 
 - [[systeme_economique_redistribution]]
 - [[organisation_territoires]]
 
-## Relations
-**Alliés** : [[pacte_des_souverains_reference]], [[alliance_blocs_souverains_reference]], [[bloc_ressources_eurasiatique_bre_reference]], [[front_souverainiste_des_ressources_d_amerique_du_sud_reference]], [[consortiums_prives_d_extraction_de_ressources_critiques_reference]], [[plateformes_centralisees_de_narration_officielle_reference]]
-**Opposants** : [[assemblee_territoires_reference]], [[agence_internationale_des_energies_renouvelables_irena_2_reference]], [[agence_stabilisation_climatique_reference]], [[banque_mondiale_des_transitions_climatiques_reference]], [[institutions_multilaterales_survivantes_reference]], [[collectifs_academiques_independants_reference]], [[mouvement_pour_la_libre_circulation_des_personnes_et_des_donnees_reference]]
 
 ## Description journalistique
 En 2098, The Tidewater Canon est devenu bien plus qu'une doctrine : une grammaire du pouvoir. Ses manuels, imprimés sur papier résistant aux intempéries ou diffusés via des réseaux cryptés, structurent la pensée des administrateurs territoriaux depuis le Sahel jusqu'aux mégapoles autonomes. On y apprend à 'gouverner comme une entreprise', à 'quitter l'État plutôt que le réformer', et à se méfier de 'la Cathédrale' – ce terme désignant désormais tout ce qui ressemble à une institution multilatérale, des agences climatiques aux plateformes d'IA centralisées. Ses détracteurs l'accusent d'avoir transformé la souveraineté en une machine à exclure, ses partisans y voient la seule réponse viable à l'effondrement des vieux ordres.
 
 ## Tensions narratives
 La contradiction centrale du Canon – promettre l'émancipation tout en reproduisant les hiérarchies – est devenue un champ de bataille idéologique. Certains territoires l'utilisent pour justifier des régimes autoritaires, tandis que des mouvements dissidents s'en réclament pour exiger une souveraineté populaire réelle. La fracture s'accentue entre les 'puristes' du Canon, qui veulent étendre son application à tous les aspects de la vie sociale, et les 'réformistes' qui tentent de l'adapter aux défis climatiques et technologiques. Une question hante les débats : le Canon est-il un outil de libération ou le dernier avatar du capitalisme extractiviste ?
+
+## Relations
+**Alliés :**
+- [[alliance_blocs_souverains_reference]]
+- [[aurelio_stahl_reference]]
+- [[bloc_ressources_eurasiatique_bre_reference]]
+- [[consortiums_prives_d_extraction_de_ressources_critiques_reference]]
+- [[front_souverainiste_des_ressources_d_amerique_du_sud_reference]]
+- [[pacte_des_souverains_reference]]
+- [[plateformes_centralisees_de_narration_officielle_reference]]
+**Opposants :**
+- [[agence_internationale_des_energies_renouvelables_irena_2_reference]]
+- [[agence_stabilisation_climatique_reference]]
+- [[assemblee_territoires_reference]]
+- [[banque_mondiale_des_transitions_climatiques_reference]]
+- [[collectifs_academiques_independants_reference]]
+- [[institutions_multilaterales_survivantes_reference]]
+- [[mouvement_pour_la_libre_circulation_des_personnes_et_des_donnees_reference]]

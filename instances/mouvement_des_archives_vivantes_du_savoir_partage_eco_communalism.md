@@ -48,9 +48,11 @@ alliances:
 - ligue_des_cites_du_sahel_numerique_eco_communalism
 - mouvement_des_communes_du_rust_belt_eco_communalism
 - reseau_assemblees_fennoscandien_eco_communalism
+- reseau_des_cartographes_des_zones_grises_eco_communalism
 - reseaux_de_bibliotheques_archives_communautaires_eco_communalism
 - reseaux_de_radio_communautaire_basse_consommation_eco_communalism
 - reseaux_de_reconstruction_cooperative_inter_communautes_eco_communalism
+- terminal_kharg_data_haven_eco_communalism
 - trame_mnemos_noeud_reseau_eco_communalism
 - tresse_verte_corridor_eco_communalism
 - tribunal_algorithmique_de_bruxelles_eco_communalism
@@ -67,6 +69,7 @@ oppositions:
 - factions_autoritaires_de_controle_du_savoir_eco_communalism
 - factions_autoritaires_locales_identitaires_exclusionnistes_eco_communalism
 - factions_communautaires_refusant_le_partage_narratif_exterieur_eco_communalism
+- meridian_assembly_eco_communalism
 - reseau_des_marches_noirs_de_donnees_extractivistes_eco_communalism
 - reseaux_de_notables_communautaires_capturistes_eco_communalism
 type_relation_dominante: symbiose
@@ -130,6 +133,7 @@ Le Mouvement est tiraillé entre la volonté de préserver des savoirs en voie d
 - [[organisation_territoires]]
 
 
+
 ## Relations
 **Alliés :**
 - [[archives_ouvertes_des_jurisprudences_communales_aojc_eco_communalism]]
@@ -148,9 +152,11 @@ Le Mouvement est tiraillé entre la volonté de préserver des savoirs en voie d
 - [[ligue_des_cites_du_sahel_numerique_eco_communalism]]
 - [[mouvement_des_communes_du_rust_belt_eco_communalism]]
 - [[reseau_assemblees_fennoscandien_eco_communalism]]
+- [[reseau_des_cartographes_des_zones_grises_eco_communalism]]
 - [[reseaux_de_bibliotheques_archives_communautaires_eco_communalism]]
 - [[reseaux_de_radio_communautaire_basse_consommation_eco_communalism]]
 - [[reseaux_de_reconstruction_cooperative_inter_communautes_eco_communalism]]
+- [[terminal_kharg_data_haven_eco_communalism]]
 - [[trame_mnemos_noeud_reseau_eco_communalism]]
 - [[tresse_verte_corridor_eco_communalism]]
 - [[tribunal_algorithmique_de_bruxelles_eco_communalism]]
@@ -167,6 +173,7 @@ Le Mouvement est tiraillé entre la volonté de préserver des savoirs en voie d
 - [[factions_autoritaires_de_controle_du_savoir_eco_communalism]]
 - [[factions_autoritaires_locales_identitaires_exclusionnistes_eco_communalism]]
 - [[factions_communautaires_refusant_le_partage_narratif_exterieur_eco_communalism]]
+- [[meridian_assembly_eco_communalism]]
 - [[reseau_des_marches_noirs_de_donnees_extractivistes_eco_communalism]]
 - [[reseaux_de_notables_communautaires_capturistes_eco_communalism]]
 

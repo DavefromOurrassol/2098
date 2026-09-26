@@ -52,6 +52,9 @@ oppositions:
 - confederation_communs_arc_septentrional_eco_communalism
 - cooperatives_d_habitat_regeneratif_eco_communalism
 - guildes_de_mediateurs_ecologiques_eco_communalism
+- hyphan_raghavan_eco_communalism
+- ilse_varga_holm_eco_communalism
+- institut_des_seuils_demographiques_eco_communalism
 - reseau_assemblees_fennoscandien_eco_communalism
 - reseau_des_assemblees_de_bassin_fennoscandien_eco_communalism
 - reseau_terrafond_bassins_eco_communalism
@@ -121,6 +124,7 @@ Elles incarnent la contradiction fondatrice de l'éco-communalisme : comment un 
 - [[frontieres_du_systeme]]
 
 
+
 ## Relations
 **Alliés :**
 - [[collectifs_du_seuil_eco_communalism]]
@@ -143,6 +147,9 @@ Elles incarnent la contradiction fondatrice de l'éco-communalisme : comment un 
 - [[confederation_communs_arc_septentrional_eco_communalism]]
 - [[cooperatives_d_habitat_regeneratif_eco_communalism]]
 - [[guildes_de_mediateurs_ecologiques_eco_communalism]]
+- [[hyphan_raghavan_eco_communalism]]
+- [[ilse_varga_holm_eco_communalism]]
+- [[institut_des_seuils_demographiques_eco_communalism]]
 - [[reseau_assemblees_fennoscandien_eco_communalism]]
 - [[reseau_des_assemblees_de_bassin_fennoscandien_eco_communalism]]
 - [[reseau_terrafond_bassins_eco_communalism]]

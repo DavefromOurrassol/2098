@@ -36,6 +36,8 @@ zone_geographique:
 zone_systemique:
 - société
 alliances:
+- agence_de_regulation_des_detroits_strategiques_ards_breakdown
+- assemblee_territoires_breakdown
 - collectif_des_climatologues_sans_etat_breakdown
 - collectifs_de_reparation_energetique_breakdown
 - collectifs_de_sante_communautaire_autogeree_breakdown
@@ -46,6 +48,7 @@ alliances:
 - communes_rust_belt_breakdown
 - communes_rust_belt_zones_libres_breakdown
 - consortium_africain_de_biotechnologies_sociales_breakdown
+- consortium_des_pecheries_autonomes_du_grand_nord_breakdown
 - cooperative_terrafond_breakdown
 - corridors_eurasiens_convoyage_breakdown
 - diaspora_tech_sahel_breakdown
@@ -55,6 +58,7 @@ alliances:
 - front_humanitaire_d_urgence_non_affilie_breakdown
 - geneve_bunker_institutions_breakdown
 - guilde_des_techniciens_nomades_breakdown
+- institut_des_seuils_demographiques_breakdown
 - midwest_desertifie_breakdown
 - milices_agro_defensives_locales_breakdown
 - mouvement_des_communes_du_rust_belt_breakdown
@@ -65,6 +69,7 @@ alliances:
 - reseaux_de_soigneurs_traditionnels_breakdown
 - sfax_relais_bouches_breakdown
 oppositions:
+- ergo_wian_sovereign_holdings_breakdown
 - etats_fragments_en_guerre_pour_les_stations_atmospheriques_breakdown
 - factions_para_etatiques_hydriques_breakdown
 - milices_de_controle_territorial_breakdown
@@ -133,8 +138,11 @@ Les Brigades oscillent en permanence entre neutralité revendiquée et instrumen
 - [[demographie_mobilite_humaine]]
 
 
+
 ## Relations
 **Alliés :**
+- [[agence_de_regulation_des_detroits_strategiques_ards_breakdown]]
+- [[assemblee_territoires_breakdown]]
 - [[collectif_des_climatologues_sans_etat_breakdown]]
 - [[collectifs_de_reparation_energetique_breakdown]]
 - [[collectifs_de_sante_communautaire_autogeree_breakdown]]
@@ -145,6 +153,7 @@ Les Brigades oscillent en permanence entre neutralité revendiquée et instrumen
 - [[communes_rust_belt_breakdown]]
 - [[communes_rust_belt_zones_libres_breakdown]]
 - [[consortium_africain_de_biotechnologies_sociales_breakdown]]
+- [[consortium_des_pecheries_autonomes_du_grand_nord_breakdown]]
 - [[cooperative_terrafond_breakdown]]
 - [[corridors_eurasiens_convoyage_breakdown]]
 - [[diaspora_tech_sahel_breakdown]]
@@ -154,6 +163,7 @@ Les Brigades oscillent en permanence entre neutralité revendiquée et instrumen
 - [[front_humanitaire_d_urgence_non_affilie_breakdown]]
 - [[geneve_bunker_institutions_breakdown]]
 - [[guilde_des_techniciens_nomades_breakdown]]
+- [[institut_des_seuils_demographiques_breakdown]]
 - [[midwest_desertifie_breakdown]]
 - [[milices_agro_defensives_locales_breakdown]]
 - [[mouvement_des_communes_du_rust_belt_breakdown]]
@@ -164,6 +174,7 @@ Les Brigades oscillent en permanence entre neutralité revendiquée et instrumen
 - [[reseaux_de_soigneurs_traditionnels_breakdown]]
 - [[sfax_relais_bouches_breakdown]]
 **Opposants :**
+- [[ergo_wian_sovereign_holdings_breakdown]]
 - [[etats_fragments_en_guerre_pour_les_stations_atmospheriques_breakdown]]
 - [[factions_para_etatiques_hydriques_breakdown]]
 - [[milices_de_controle_territorial_breakdown]]

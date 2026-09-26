@@ -45,9 +45,11 @@ oppositions:
 - autorite_mondiale_du_vivant_amv_policy_reform
 - bureau_gouvernance_algorithmique_policy_reform
 - bureau_international_du_travail_augmente_bita_policy_reform
+- coalition_vivant_policy_reform
 - collectifs_citoyens_pour_l_audit_algorithmique_ouvert_policy_reform
 - conseil_de_regulation_climatique_global_policy_reform
 - conseil_regulation_algorithmique_policy_reform
+- consortium_des_pecheries_autonomes_du_grand_nord_policy_reform
 - faction_regulatrice_dure_au_sein_du_cei_policy_reform
 - internationale_travailleurs_augmentes_policy_reform
 - mouvement_pour_la_souverainete_energetique_commune_msec_policy_reform
@@ -122,6 +124,7 @@ La tension centrale réside dans la contradiction entre leur dépendance aux inf
 - [[gouvernance_institutions]]
 
 
+
 ## Relations
 **Alliés :**
 - [[coalition_des_souverainistes_numeriques_policy_reform]]
@@ -136,9 +139,11 @@ La tension centrale réside dans la contradiction entre leur dépendance aux inf
 - [[autorite_mondiale_du_vivant_amv_policy_reform]]
 - [[bureau_gouvernance_algorithmique_policy_reform]]
 - [[bureau_international_du_travail_augmente_bita_policy_reform]]
+- [[coalition_vivant_policy_reform]]
 - [[collectifs_citoyens_pour_l_audit_algorithmique_ouvert_policy_reform]]
 - [[conseil_de_regulation_climatique_global_policy_reform]]
 - [[conseil_regulation_algorithmique_policy_reform]]
+- [[consortium_des_pecheries_autonomes_du_grand_nord_policy_reform]]
 - [[faction_regulatrice_dure_au_sein_du_cei_policy_reform]]
 - [[internationale_travailleurs_augmentes_policy_reform]]
 - [[mouvement_pour_la_souverainete_energetique_commune_msec_policy_reform]]

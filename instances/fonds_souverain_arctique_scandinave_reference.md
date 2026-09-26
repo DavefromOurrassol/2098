@@ -42,6 +42,7 @@ alliances:
 oppositions:
 - bloc_ressources_eurasiatique_bre_reference
 - collectifs_de_peche_inuit_et_sami_reference
+- consortium_des_pecheries_autonomes_du_grand_nord_reference
 - consortiums_prives_d_extraction_de_ressources_critiques_reference
 - factions_eurasiatiques_contre_la_tarification_hydrique_reference
 - lobbies_industriels_des_etats_non_signataires_reference
@@ -116,6 +117,7 @@ Le Fonds est structurellement déchiré entre deux mandats incompatibles : maxim
 
 
 
+
 ## Relations
 **Alliés :**
 - [[arctic_passage_authority_reference]]
@@ -129,6 +131,7 @@ Le Fonds est structurellement déchiré entre deux mandats incompatibles : maxim
 **Opposants :**
 - [[bloc_ressources_eurasiatique_bre_reference]]
 - [[collectifs_de_peche_inuit_et_sami_reference]]
+- [[consortium_des_pecheries_autonomes_du_grand_nord_reference]]
 - [[consortiums_prives_d_extraction_de_ressources_critiques_reference]]
 - [[factions_eurasiatiques_contre_la_tarification_hydrique_reference]]
 - [[lobbies_industriels_des_etats_non_signataires_reference]]

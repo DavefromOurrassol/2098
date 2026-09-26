@@ -40,7 +40,9 @@ zone_systemique:
 - société
 alliances:
 - arctic_passage_authority_breakdown
+- assemblee_territoires_breakdown
 - bureau_des_territoires_residuels_breakdown
+- coalition_vivant_breakdown
 - collectif_des_climatologues_sans_etat_breakdown
 - collectifs_de_gardiens_archivistes_itinerants_breakdown
 - collectifs_de_hackers_archivistes_des_interstices_reseaux_breakdown
@@ -48,9 +50,12 @@ alliances:
 - conseil_regulation_ressources_breakdown
 - enclaves_industrielles_de_bergen_troms_breakdown
 - factions_propagandistes_des_archives_breakdown
+- gelecek_meclisi_breakdown
 - geneve_bunker_institutions_breakdown
 - gouvernements_regionaux_residuels_reterritorialisants_breakdown
+- institut_des_seuils_demographiques_breakdown
 - ligue_des_cites_littorales_en_sursis_breakdown
+- meridian_assembly_breakdown
 - milices_privees_documentees_terrain_breakdown
 - noeud_mnemos_pannonie_breakdown
 - ong_de_gestion_migratoire_survivantes_breakdown
@@ -125,10 +130,13 @@ La tension fondamentale des Archives est celle de l'archive sans autorité : ell
 - [[frontieres_du_systeme]]
 
 
+
 ## Relations
 **Alliés :**
 - [[arctic_passage_authority_breakdown]]
+- [[assemblee_territoires_breakdown]]
 - [[bureau_des_territoires_residuels_breakdown]]
+- [[coalition_vivant_breakdown]]
 - [[collectif_des_climatologues_sans_etat_breakdown]]
 - [[collectifs_de_gardiens_archivistes_itinerants_breakdown]]
 - [[collectifs_de_hackers_archivistes_des_interstices_reseaux_breakdown]]
@@ -136,9 +144,12 @@ La tension fondamentale des Archives est celle de l'archive sans autorité : ell
 - [[conseil_regulation_ressources_breakdown]]
 - [[enclaves_industrielles_de_bergen_troms_breakdown]]
 - [[factions_propagandistes_des_archives_breakdown]]
+- [[gelecek_meclisi_breakdown]]
 - [[geneve_bunker_institutions_breakdown]]
 - [[gouvernements_regionaux_residuels_reterritorialisants_breakdown]]
+- [[institut_des_seuils_demographiques_breakdown]]
 - [[ligue_des_cites_littorales_en_sursis_breakdown]]
+- [[meridian_assembly_breakdown]]
 - [[milices_privees_documentees_terrain_breakdown]]
 - [[noeud_mnemos_pannonie_breakdown]]
 - [[ong_de_gestion_migratoire_survivantes_breakdown]]

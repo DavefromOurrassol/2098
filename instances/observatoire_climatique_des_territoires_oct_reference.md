@@ -36,6 +36,7 @@ alliances:
 - agence_internationale_des_energies_renouvelables_irena_2_reference
 - agence_stabilisation_climatique_reference
 - arctic_passage_authority_reference
+- assemblee_territoires_reference
 - banque_mondiale_des_transitions_climatiques_reference
 - bureau_des_territoires_residuels_reference
 - bureau_zones_non_prioritaires_reference
@@ -51,8 +52,10 @@ alliances:
 - federation_communs_territoriaux_reference
 - fonds_d_investissement_foncier_climatique_reference
 - frente_sertao_livre_reference
+- gelecek_meclisi_reference
 - geneve_lac_retreite_reference
 - great_lakes_autonomous_compact_reference
+- institut_des_seuils_demographiques_reference
 - institutions_multilaterales_survivantes_reference
 - kinshasa_accords_hydriques_reference
 - lyon_metropole_reference
@@ -138,11 +141,13 @@ L'OCT est tiraillée entre son mandat de neutralité scientifique et les pressio
 - [[gouvernance_institutions]]
 
 
+
 ## Relations
 **Alliés :**
 - [[agence_internationale_des_energies_renouvelables_irena_2_reference]]
 - [[agence_stabilisation_climatique_reference]]
 - [[arctic_passage_authority_reference]]
+- [[assemblee_territoires_reference]]
 - [[banque_mondiale_des_transitions_climatiques_reference]]
 - [[bureau_des_territoires_residuels_reference]]
 - [[bureau_zones_non_prioritaires_reference]]
@@ -158,8 +163,10 @@ L'OCT est tiraillée entre son mandat de neutralité scientifique et les pressio
 - [[federation_communs_territoriaux_reference]]
 - [[fonds_d_investissement_foncier_climatique_reference]]
 - [[frente_sertao_livre_reference]]
+- [[gelecek_meclisi_reference]]
 - [[geneve_lac_retreite_reference]]
 - [[great_lakes_autonomous_compact_reference]]
+- [[institut_des_seuils_demographiques_reference]]
 - [[institutions_multilaterales_survivantes_reference]]
 - [[kinshasa_accords_hydriques_reference]]
 - [[lyon_metropole_reference]]

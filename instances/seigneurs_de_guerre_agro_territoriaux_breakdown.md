@@ -47,6 +47,7 @@ alliances:
 - seigneuries_foncieres_opportunistes_breakdown
 - seigneuries_logistiques_armees_breakdown
 oppositions:
+- assemblee_territoires_breakdown
 - blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown
 - brigades_medicales_itinerantes_breakdown
 - communautes_rurales_autogerees_des_n_uds_de_survie_breakdown
@@ -60,12 +61,15 @@ oppositions:
 - frente_sertao_livre_breakdown
 - front_de_resistance_aux_peages_sur_les_ressources_breakdown
 - gouvernements_regionaux_residuels_reterritorialisants_breakdown
+- hyphan_raghavan_breakdown
+- ilse_varga_holm_breakdown
 - les_veilleurs_du_fleuve_breakdown
 - ligue_des_cites_du_sahel_numerique_breakdown
 - massif_central_cicatrices_vertes_breakdown
 - midwest_desertifie_breakdown
 - milices_agro_defensives_locales_breakdown
 - mouvement_racines_vivantes_breakdown
+- nadia_ferreira_sato_breakdown
 - noeud_mnemos_pannonie_breakdown
 - occitanie_racines_meres_breakdown
 - ong_de_gestion_migratoire_survivantes_breakdown
@@ -132,6 +136,7 @@ La contradiction centrale qui ronge ces seigneurs est celle de toute féodalité
 
 
 
+
 ## Relations
 **Alliés :**
 - [[collectif_hackers_decroissance_infrastructure_breakdown]]
@@ -145,6 +150,7 @@ La contradiction centrale qui ronge ces seigneurs est celle de toute féodalité
 - [[seigneuries_foncieres_opportunistes_breakdown]]
 - [[seigneuries_logistiques_armees_breakdown]]
 **Opposants :**
+- [[assemblee_territoires_breakdown]]
 - [[blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown]]
 - [[brigades_medicales_itinerantes_breakdown]]
 - [[communautes_rurales_autogerees_des_n_uds_de_survie_breakdown]]
@@ -158,12 +164,15 @@ La contradiction centrale qui ronge ces seigneurs est celle de toute féodalité
 - [[frente_sertao_livre_breakdown]]
 - [[front_de_resistance_aux_peages_sur_les_ressources_breakdown]]
 - [[gouvernements_regionaux_residuels_reterritorialisants_breakdown]]
+- [[hyphan_raghavan_breakdown]]
+- [[ilse_varga_holm_breakdown]]
 - [[les_veilleurs_du_fleuve_breakdown]]
 - [[ligue_des_cites_du_sahel_numerique_breakdown]]
 - [[massif_central_cicatrices_vertes_breakdown]]
 - [[midwest_desertifie_breakdown]]
 - [[milices_agro_defensives_locales_breakdown]]
 - [[mouvement_racines_vivantes_breakdown]]
+- [[nadia_ferreira_sato_breakdown]]
 - [[noeud_mnemos_pannonie_breakdown]]
 - [[occitanie_racines_meres_breakdown]]
 - [[ong_de_gestion_migratoire_survivantes_breakdown]]

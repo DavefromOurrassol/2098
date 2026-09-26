@@ -1,10 +1,10 @@
 # Audit du lore — fortress_world
 
-*Généré par `audit_lore.py` le 2026-09-25 18:41 — réécrit à chaque run, ne pas éditer. Règles : `documentation/lore_regles.yaml`.*
+*Généré par `audit_lore.py` le 2026-09-25 19:16 — réécrit à chaque run, ne pas éditer. Règles : `documentation/lore_regles.yaml`.*
 
 ## Résumé
 
-- Fiches analysées : 151 (+ 16 événements) (+ 60 articles)
+- Fiches analysées : 151 (+ 16 événements)
 - Règles de lore — **erreurs : 0**, à relire : 0
 - Quarantaine (fiche active localisée en zone interdite) : 0
 - Transnationales localisées dans le texte (info) : 23

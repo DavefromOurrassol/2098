@@ -43,7 +43,10 @@ oppositions:
 - cercles_de_mediation_territoriale_intercommunautaire_eco_communalism
 - collectifs_de_cartographie_ecologique_participative_eco_communalism
 - confederation_bassins_vivants_eco_communalism
+- consortium_des_pecheries_autonomes_du_grand_nord_eco_communalism
+- ilse_varga_holm_eco_communalism
 - kalaallit_nunaat_sovereign_fund_eco_communalism
+- lamplight_eco_communalism
 - mouvement_des_archives_vivantes_du_savoir_partage_eco_communalism
 - rede_paulista_de_distribuicao_algoritmica_eco_communalism
 - reseau_terrafond_bassins_eco_communalism
@@ -117,6 +120,7 @@ La tension centrale est celle entre l'efficacité pragmatique et la trahison des
 - [[energie_ressources_critiques]]
 
 
+
 ## Relations
 **Alliés :**
 - [[consortiums_industriels_de_l_eau_eco_communalism]]
@@ -132,7 +136,10 @@ La tension centrale est celle entre l'efficacité pragmatique et la trahison des
 - [[cercles_de_mediation_territoriale_intercommunautaire_eco_communalism]]
 - [[collectifs_de_cartographie_ecologique_participative_eco_communalism]]
 - [[confederation_bassins_vivants_eco_communalism]]
+- [[consortium_des_pecheries_autonomes_du_grand_nord_eco_communalism]]
+- [[ilse_varga_holm_eco_communalism]]
 - [[kalaallit_nunaat_sovereign_fund_eco_communalism]]
+- [[lamplight_eco_communalism]]
 - [[mouvement_des_archives_vivantes_du_savoir_partage_eco_communalism]]
 - [[rede_paulista_de_distribuicao_algoritmica_eco_communalism]]
 - [[reseau_terrafond_bassins_eco_communalism]]

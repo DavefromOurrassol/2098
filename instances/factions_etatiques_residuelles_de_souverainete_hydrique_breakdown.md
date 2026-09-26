@@ -48,6 +48,7 @@ oppositions:
 - factions_secessionnistes_agrariennes_du_desert_breakdown
 - grandes_lacs_compact_eau_breakdown
 - reseau_logistique_criminel_concurrent_breakdown
+- terminal_kharg_data_haven_breakdown
 type_relation_dominante: conflit
 annee_debut: 2043
 annee_fin: null
@@ -110,6 +111,7 @@ La contradiction fondamentale de ces factions réside dans le fait qu'elles reve
 - [[energie_ressources_critiques]]
 
 
+
 ## Relations
 **Alliés :**
 - [[factions_para_etatiques_hydriques_breakdown]]
@@ -121,6 +123,7 @@ La contradiction fondamentale de ces factions réside dans le fait qu'elles reve
 - [[factions_secessionnistes_agrariennes_du_desert_breakdown]]
 - [[grandes_lacs_compact_eau_breakdown]]
 - [[reseau_logistique_criminel_concurrent_breakdown]]
+- [[terminal_kharg_data_haven_breakdown]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

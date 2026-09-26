@@ -31,6 +31,7 @@ zone_geographique:
 zone_systemique:
 - société
 alliances:
+- aurelio_stahl_reference
 - autorites_regionales_de_regulation_hydrologique_reference
 - bureau_zones_non_prioritaires_reference
 - collectif_nuit_jaune_reference
@@ -41,9 +42,13 @@ alliances:
 - conseil_de_geneve_pour_les_droits_biosociaux_reference
 - cooperatives_ia_open_source_reference
 - federation_des_cliniques_autonomes_reference
+- gelecek_meclisi_reference
 - helsinki_communs_numeriques_reference
 - institut_polytechnique_de_ouagadougou_reference
 - institutions_multilaterales_survivantes_reference
+- kaspar_lind_reference
+- lamplight_reference
+- maelys_okonkwo_reference
 - mouvement_pour_la_libre_circulation_des_personnes_et_des_donnees_reference
 - observatoire_climatique_des_territoires_oct_reference
 - ong_de_preservation_patrimoniale_numerique_reference
@@ -66,12 +71,15 @@ oppositions:
 - consortium_des_plateformes_ia_centralisees_anti_deliberation_reference
 - consortiums_mediatiques_corporatifs_reference
 - consortiums_prives_de_gestion_des_donnees_critiques_reference
+- deepfield_institute_reference
 - directive_kontinuum_reference
+- ergo_wian_sovereign_holdings_reference
 - etats_a_tendance_centraliste_numerique_reference
 - gouvernements_a_regime_de_productivite_mandatee_reference
 - neuroharmonics_reference
 - plateformes_d_optimisation_territoriale_par_ia_reference
 - plateformes_informationnelles_dominantes_et_leurs_ia_de_moderation_reference
+- the_tidewater_canon_reference
 type_relation_dominante: compétition
 annee_debut: 2031
 annee_fin: null
@@ -136,8 +144,10 @@ La tension fondamentale des CAI réside dans leur paradoxe de visibilité : plus
 - [[valeurs_culture_tempo_sociale]]
 
 
+
 ## Relations
 **Alliés :**
+- [[aurelio_stahl_reference]]
 - [[autorites_regionales_de_regulation_hydrologique_reference]]
 - [[bureau_zones_non_prioritaires_reference]]
 - [[collectif_nuit_jaune_reference]]
@@ -148,9 +158,13 @@ La tension fondamentale des CAI réside dans leur paradoxe de visibilité : plus
 - [[conseil_de_geneve_pour_les_droits_biosociaux_reference]]
 - [[cooperatives_ia_open_source_reference]]
 - [[federation_des_cliniques_autonomes_reference]]
+- [[gelecek_meclisi_reference]]
 - [[helsinki_communs_numeriques_reference]]
 - [[institut_polytechnique_de_ouagadougou_reference]]
 - [[institutions_multilaterales_survivantes_reference]]
+- [[kaspar_lind_reference]]
+- [[lamplight_reference]]
+- [[maelys_okonkwo_reference]]
 - [[mouvement_pour_la_libre_circulation_des_personnes_et_des_donnees_reference]]
 - [[observatoire_climatique_des_territoires_oct_reference]]
 - [[ong_de_preservation_patrimoniale_numerique_reference]]
@@ -173,12 +187,15 @@ La tension fondamentale des CAI réside dans leur paradoxe de visibilité : plus
 - [[consortium_des_plateformes_ia_centralisees_anti_deliberation_reference]]
 - [[consortiums_mediatiques_corporatifs_reference]]
 - [[consortiums_prives_de_gestion_des_donnees_critiques_reference]]
+- [[deepfield_institute_reference]]
 - [[directive_kontinuum_reference]]
+- [[ergo_wian_sovereign_holdings_reference]]
 - [[etats_a_tendance_centraliste_numerique_reference]]
 - [[gouvernements_a_regime_de_productivite_mandatee_reference]]
 - [[neuroharmonics_reference]]
 - [[plateformes_d_optimisation_territoriale_par_ia_reference]]
 - [[plateformes_informationnelles_dominantes_et_leurs_ia_de_moderation_reference]]
+- [[the_tidewater_canon_reference]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

@@ -57,6 +57,7 @@ oppositions:
 - milices_contractuelles_des_anciens_etats_membres_breakdown
 - milices_d_accaparement_hydrique_breakdown
 - milices_extractivistes_du_bassin_du_congo_breakdown
+- nadia_ferreira_sato_breakdown
 - reseau_logistique_criminel_concurrent_breakdown
 - seigneurs_de_guerre_agro_territoriaux_breakdown
 type_relation_dominante: conflit
@@ -120,6 +121,7 @@ La ligne entre protection communautaire et prédation est franchie quotidienneme
 - [[energie_ressources_critiques]]
 
 
+
 ## Relations
 **Alliés :**
 - [[brigades_medicales_itinerantes_breakdown]]
@@ -144,6 +146,7 @@ La ligne entre protection communautaire et prédation est franchie quotidienneme
 - [[milices_contractuelles_des_anciens_etats_membres_breakdown]]
 - [[milices_d_accaparement_hydrique_breakdown]]
 - [[milices_extractivistes_du_bassin_du_congo_breakdown]]
+- [[nadia_ferreira_sato_breakdown]]
 - [[reseau_logistique_criminel_concurrent_breakdown]]
 - [[seigneurs_de_guerre_agro_territoriaux_breakdown]]
 

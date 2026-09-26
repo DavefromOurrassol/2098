@@ -51,6 +51,8 @@ oppositions:
 - frente_sertao_livre_breakdown
 - ligue_des_cites_littorales_en_sursis_breakdown
 - massif_central_cicatrices_vertes_breakdown
+- meridian_assembly_breakdown
+- nadia_ferreira_sato_breakdown
 - noeud_mnemos_pannonie_breakdown
 - occitanie_racines_meres_breakdown
 - vallee_allier_terrafond_breakdown
@@ -113,6 +115,7 @@ La tension centrale est celle d'une entité qui a besoin de stabilité pour rent
 - [[systeme_economique_redistribution]]
 
 
+
 ## Relations
 **Alliés :**
 - [[seigneurs_de_guerre_agro_territoriaux_breakdown]]
@@ -128,6 +131,8 @@ La tension centrale est celle d'une entité qui a besoin de stabilité pour rent
 - [[frente_sertao_livre_breakdown]]
 - [[ligue_des_cites_littorales_en_sursis_breakdown]]
 - [[massif_central_cicatrices_vertes_breakdown]]
+- [[meridian_assembly_breakdown]]
+- [[nadia_ferreira_sato_breakdown]]
 - [[noeud_mnemos_pannonie_breakdown]]
 - [[occitanie_racines_meres_breakdown]]
 - [[vallee_allier_terrafond_breakdown]]

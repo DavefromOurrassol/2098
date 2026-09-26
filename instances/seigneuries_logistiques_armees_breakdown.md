@@ -43,6 +43,7 @@ alliances:
 - corridor_lithium_bouches_breakdown
 - corridors_eurasiens_convoyage_breakdown
 - enclaves_corporatives_fortifiees_breakdown
+- ergo_wian_sovereign_holdings_breakdown
 - etats_fragments_en_guerre_pour_les_stations_atmospheriques_breakdown
 - factions_energetiques_heritieres_des_pactes_abs_breakdown
 - factions_militaires_residuelles_de_l_ex_otan_nordique_breakdown
@@ -52,21 +53,27 @@ alliances:
 - reseau_des_anciens_financeurs_devenus_censeurs_breakdown
 - reseau_logistique_criminel_concurrent_breakdown
 - seigneurs_de_guerre_agro_territoriaux_breakdown
+- terminal_kharg_data_haven_breakdown
 oppositions:
 - agadez_ligue_sahel_numerique_breakdown
+- agence_de_regulation_des_detroits_strategiques_ards_breakdown
 - amara_diallo_nkosi_breakdown
 - archives_neutres_de_geneve_breakdown
 - archives_neutres_geneve_breakdown
-- arctique_nordark_breakdown
 - arctic_passage_authority_breakdown
+- arctique_nordark_breakdown
+- assemblee_territoires_breakdown
 - bloc_de_johannesburg_breakdown
+- coalition_vivant_breakdown
 - collectif_des_climatologues_sans_etat_breakdown
 - collectifs_de_reparation_energetique_breakdown
 - collectifs_de_sante_communautaire_autogeree_breakdown
 - communautes_religieuses_des_relais_physiques_breakdown
 - communes_rust_belt_breakdown
 - communes_rust_belt_zones_libres_breakdown
+- consortium_des_pecheries_autonomes_du_grand_nord_breakdown
 - district_mourmansk_residuel_breakdown
+- elias_mork_breakdown
 - enclaves_finlandaises_breakdown
 - enclaves_industrielles_du_corridor_oural_caspien_breakdown
 - factions_para_etatiques_hydriques_breakdown
@@ -75,13 +82,16 @@ oppositions:
 - flux_migratoires_non_integrables_breakdown
 - front_de_resistance_aux_peages_sur_les_ressources_breakdown
 - front_humanitaire_d_urgence_non_affilie_breakdown
+- gelecek_meclisi_breakdown
 - geneve_bunker_institutions_breakdown
 - gouvernements_regionaux_residuels_reterritorialisants_breakdown
 - guilde_des_techniciens_nomades_breakdown
 - hanse_baltique_breakdown
+- institut_des_seuils_demographiques_breakdown
 - lagos_est_nexcore_breakdown
 - lagos_interieur_mnemos_breakdown
 - le_registre_du_fleuve_breakdown
+- les_veilleurs_des_nappes_phreatiques_breakdown
 - ligue_des_cites_du_sahel_numerique_breakdown
 - massif_central_cicatrices_vertes_breakdown
 - midwest_desertifie_breakdown
@@ -91,6 +101,7 @@ oppositions:
 - occitanie_racines_meres_breakdown
 - ong_de_gestion_migratoire_survivantes_breakdown
 - pirates_biologiques_open_source_breakdown
+- reseau_des_cartographes_des_zones_grises_breakdown
 - reseau_mnemos_breakdown
 - reseaux_de_soigneurs_traditionnels_breakdown
 - saboteurs_des_corridors_de_transit_breakdown
@@ -153,6 +164,7 @@ Elles sont structurellement condamnées à étendre leur territoire pour rester 
 - [[geopolitique_conflits]]
 
 
+
 ## Relations
 **Alliés :**
 - [[cargo_mombasa_crrc_breakdown]]
@@ -163,6 +175,7 @@ Elles sont structurellement condamnées à étendre leur territoire pour rester 
 - [[corridor_lithium_bouches_breakdown]]
 - [[corridors_eurasiens_convoyage_breakdown]]
 - [[enclaves_corporatives_fortifiees_breakdown]]
+- [[ergo_wian_sovereign_holdings_breakdown]]
 - [[etats_fragments_en_guerre_pour_les_stations_atmospheriques_breakdown]]
 - [[factions_energetiques_heritieres_des_pactes_abs_breakdown]]
 - [[factions_militaires_residuelles_de_l_ex_otan_nordique_breakdown]]
@@ -172,21 +185,27 @@ Elles sont structurellement condamnées à étendre leur territoire pour rester 
 - [[reseau_des_anciens_financeurs_devenus_censeurs_breakdown]]
 - [[reseau_logistique_criminel_concurrent_breakdown]]
 - [[seigneurs_de_guerre_agro_territoriaux_breakdown]]
+- [[terminal_kharg_data_haven_breakdown]]
 **Opposants :**
 - [[agadez_ligue_sahel_numerique_breakdown]]
+- [[agence_de_regulation_des_detroits_strategiques_ards_breakdown]]
 - [[amara_diallo_nkosi_breakdown]]
 - [[archives_neutres_de_geneve_breakdown]]
 - [[archives_neutres_geneve_breakdown]]
-- [[arctique_nordark_breakdown]]
 - [[arctic_passage_authority_breakdown]]
+- [[arctique_nordark_breakdown]]
+- [[assemblee_territoires_breakdown]]
 - [[bloc_de_johannesburg_breakdown]]
+- [[coalition_vivant_breakdown]]
 - [[collectif_des_climatologues_sans_etat_breakdown]]
 - [[collectifs_de_reparation_energetique_breakdown]]
 - [[collectifs_de_sante_communautaire_autogeree_breakdown]]
 - [[communautes_religieuses_des_relais_physiques_breakdown]]
 - [[communes_rust_belt_breakdown]]
 - [[communes_rust_belt_zones_libres_breakdown]]
+- [[consortium_des_pecheries_autonomes_du_grand_nord_breakdown]]
 - [[district_mourmansk_residuel_breakdown]]
+- [[elias_mork_breakdown]]
 - [[enclaves_finlandaises_breakdown]]
 - [[enclaves_industrielles_du_corridor_oural_caspien_breakdown]]
 - [[factions_para_etatiques_hydriques_breakdown]]
@@ -195,13 +214,16 @@ Elles sont structurellement condamnées à étendre leur territoire pour rester 
 - [[flux_migratoires_non_integrables_breakdown]]
 - [[front_de_resistance_aux_peages_sur_les_ressources_breakdown]]
 - [[front_humanitaire_d_urgence_non_affilie_breakdown]]
+- [[gelecek_meclisi_breakdown]]
 - [[geneve_bunker_institutions_breakdown]]
 - [[gouvernements_regionaux_residuels_reterritorialisants_breakdown]]
 - [[guilde_des_techniciens_nomades_breakdown]]
 - [[hanse_baltique_breakdown]]
+- [[institut_des_seuils_demographiques_breakdown]]
 - [[lagos_est_nexcore_breakdown]]
 - [[lagos_interieur_mnemos_breakdown]]
 - [[le_registre_du_fleuve_breakdown]]
+- [[les_veilleurs_des_nappes_phreatiques_breakdown]]
 - [[ligue_des_cites_du_sahel_numerique_breakdown]]
 - [[massif_central_cicatrices_vertes_breakdown]]
 - [[midwest_desertifie_breakdown]]
@@ -211,6 +233,7 @@ Elles sont structurellement condamnées à étendre leur territoire pour rester 
 - [[occitanie_racines_meres_breakdown]]
 - [[ong_de_gestion_migratoire_survivantes_breakdown]]
 - [[pirates_biologiques_open_source_breakdown]]
+- [[reseau_des_cartographes_des_zones_grises_breakdown]]
 - [[reseau_mnemos_breakdown]]
 - [[reseaux_de_soigneurs_traditionnels_breakdown]]
 - [[saboteurs_des_corridors_de_transit_breakdown]]

@@ -1,6 +1,6 @@
 # Manuel utilisateur complet — Pipeline Ourrassol 2098
 *Référence à jour au 3 septembre 2026, complétée au fil des sessions
-(dernier ajout : 24 septembre 2026) — couvre `generator/` (42+ scripts
+(dernier ajout : 25 septembre 2026) — couvre `generator/` (42+ scripts
 Python) et `gui/` (Flask). Historique complet des sessions et
 chantiers (bugs trouvés, itérations, tests réels) dans
 `USER_MANUAL_HISTORIQUE.md`, à uploader seulement au besoin.*
@@ -1598,6 +1598,7 @@ Sorties : `enrich_minimal_report.md`, `needs_review_enrich.yaml` (bug de tri des
 **Complément du même jour (7 août, après-coup) — `reset_conflict_reports()`** : bug distinct trouvé après coup (David consultant le rapport `.md` via le GUI, croyant le vault plein de conflits alors qu'il était déjà à 0 — voir Bug #2, détail complet dans l'entrée `fix_alliances_oppositions.py` ci-dessous). `enrich_minimal.py` importe désormais aussi `reset_conflict_reports()`, appelée une seule fois avant la boucle sur les scénarios (inconditionnellement dès qu'un run réel de réciprocité a lieu, pas seulement quand `--resoudre-conflits` est actif — la réciprocité seule écrit déjà dans `CONFLICTS_PATH`). Jamais déclenché en `--dry-run`. Testé : `reset_conflict_reports()` appelée exactement une fois pour tout un run `--all` (pas une fois par scénario), jamais en dry-run.
 
 ### `fix_alliances_oppositions.py` — voir entrée dédiée dans la section scripts one-shot/migration plus bas, dont `enrich_minimal.py` dépend désormais pour la réciprocité automatique **et**, depuis le 7 août, la résolution automatique des conflits.
+**Ajouts du 25 septembre 2026** : le calcul de réciprocité vit dans une fonction pure `calculer_reciprocite(scenario, ignorer_exclues=False)` → `(fiches, additions, conflits)`, réutilisée en lecture seule par `audit_lore.py` ; `reciprocity_pass()` l'appelle et garde affichage/écriture à l'identique (sortie console, valeur de retour et fichiers écrits vérifiés identiques avant/après sur 4 modes). Nouvelle option **`--ignorer-exclus`** (GUI : « Ne pas propager les personnages en réserve ») : une fiche `exclure_articles: true` ne propage pas ses relations chez les autres fiches (sinon le personnage réapparaît dans le contexte des articles via leurs relations) ; les relations des autres fiches vers elle restent propagées. Voir « Audit du lore » ci-dessous.
 
 ### `extract_phantom_slugs.py` 🔁 🧩
 Lit `enrich_minimal_report.md` et/ou une sortie `validate.py --verbose`, génère les rôles manquants via le LLM (tier `volume`), alimente `entites_custom/queue.yaml` (batches de 5, dédupliqués).
@@ -1823,6 +1824,51 @@ python3 generator/set_selection_instance.py --entite ilse_varga_holm --scenario 
 **Pièges de contenu repérés le 24 sept** (le validateur les signale) : valeur inventée hors liste (`zone_geographique: planétaire` pour Alpha47 → `globale`) ; trajectoire `mythifié`/`disparu` sans `annee_fin` (Deepfield Institute, `new_sustainability` → dates 2026-2053 alignées sur son rôle). `slugify()` translittère désormais ø→o, æ→ae, ß→ss, ł→l… (cas `elias_mørk`).
 
 **Localisation sans sous-zone dédiée** : dans `localisation:`, `zone` doit être une zone existante du scénario, mais `lieu` est du texte libre — une ville sans sous-zone se note `zone: zone_euro_sud` + `lieu: Milan (QG) — antenne à Lyon`. Le générateur d'articles lit le **rôle**, pas `lieu` : mentionner aussi la ville dans `role_dans_scenario`. `extract_localisation.py` réécrit l'en-tête avec `yaml.dump` : un diff peut ne montrer que de la mise en forme (lignes vides, `>` → guillemets) — comparer le contenu YAML avant de s'inquiéter.
+
+---
+
+### Audit du lore (25 septembre 2026)
+
+**Pourquoi** : une instance est écrite une fois, à sa création, et **ne suit jamais l'évolution du lore** (zone renommée ou abandonnée, pays mis en quarantaine, consigne changée). Ce que lisent les articles et les résumés reste la version en place. On la corrige par retouche ciblée (script) ou par régénération (`generate_instances.py --consigne`, qui réécrit toute la fiche et **écrase les retouches manuelles** ainsi que `exclure_articles`). L'audit sert à trouver ce qui a dérivé.
+
+#### `audit_lore.py` 🔁 🧩 — diagnostic, écrit seulement avec `--appliquer`
+Ne refait pas ce que `validate.py` couvre (slugs d'alliés inexistants, relations en texte libre, zone de localisation inconnue, `type_lieu`, wikilinks cassés).
+
+Sans LLM (défaut, gratuit) :
+1. **Règles de lore** (`documentation/lore_regles.yaml`) sur tous les textes du frontmatter des instances et `event_instances` (+ articles avec `--avec-articles` : titre, chapo, corps). Gravité `erreur` ou `a_relire`.
+2. **Quarantaine** : instance localisée dans une zone en quarantaine (ou une sous-zone) avec une trajectoire hors `trajectoires_tolerees`.
+3. **Transnationales localisées dans le texte** (information) : `zone` vide mais le rôle/la description cite une zone du scénario — souvent légitime.
+4. **Réciprocité** (via `calculer_reciprocite()`) et **relations contradictoires** (via `find_conflicts()`).
+5. **Relations inter-scénarios** : allié/opposant d'un autre scénario (invisible pour `validate.py`, qui cherche les slugs dans tout le vault).
+
+Avec `--llm` (tier `structured_strict`) : par fiche ciblée, un appel qui confronte rôle/responsabilités/description/tensions à la zone de rattachement (et ses parents), aux relations actuelles et aux faits `erreur` du fichier de règles ; renvoie des **contradictions** (extrait + correction proposée, dans le rapport) et des **relations proposées** parmi les instances réelles du scénario (validées par `validate_targeted()` ; slugs hors liste, auto-références et relations déjà présentes filtrés ; après les reprises, les propositions invalides sont retirées plutôt que de perdre la relecture). Garde-fous : `--estimer` (aucun appel), ciblage `--slug`/`--zone`/`--limit N` (plus fort impact local+global d'abord), refus au-delà de 15 appels sans ciblage ni `--tout`, cache `state/audit_lore_cache.json` par empreinte (fiche + zone + règles + rôles des alliés + liste des instances ; `--no-cache`), une panne sur une fiche n'arrête pas les autres. **Jamais lancé en réel au 25 sept** (testé avec un LLM simulé).
+
+`--appliquer [--dry-run]` : écrit les propositions `valide: true` du fichier de propositions pour le(s) scénario(s) choisi(s), via `write_alliances_patch()`, `.bak` par fiche ; refuse une relation déjà dans l'autre liste ou qui créerait un conflit (la cible classe la fiche dans la liste opposée) ; marque `applique: date`. Propager ensuite la réciprocité.
+
+```bash
+python3 generator/audit_lore.py --scenario fortress_world [--avec-articles]
+python3 generator/audit_lore.py --all
+python3 generator/audit_lore.py --scenario fortress_world --llm --estimer --limit 10
+python3 generator/audit_lore.py --scenario fortress_world --llm --slug SLUG
+python3 generator/audit_lore.py --all --appliquer --dry-run
+```
+Sorties : `documentation/need_action/audit_lore_{scenario}.md` (par scénario), `audit_lore_dernier_lancement.md` (tous les scénarios du dernier lancement, chemin fixe pour le GUI), `audit_lore_propositions.yaml` (propositions LLM, tous scénarios, chaque entrée porte `scenario`, jamais écrasées par un nouveau run), `--json` (résumé, dernière ligne).
+
+#### `documentation/lore_regles.yaml` — éditable à la main (ou dans le GUI)
+Une section par scénario (+ `_tous`). `zones_quarantaine: [{zone, trajectoires_tolerees, message}]` et `regles: [...]`, chaque règle avec `termes` (mot entier ; casse et accents ignorés, apostrophe typographique comprise) ou `meme_phrase: [[A], [B]]` (un terme de A et un de B dans la même phrase), et options `gravite`, `sensible_casse` (seuls les termes EN MAJUSCULES, ex. NAT, respectent la casse), `sauf_zones`, `exceptions` (ex. `Brest-Litovsk` pour la règle qui cherche Brest), `ignorer_negation` (ignore « n'est pas neutre », « ni neutre »… — négation cherchée dans les ~30 caractères avant le terme), `suggestion`, `message`. Au 25 sept, seul `fortress_world` a des règles : Interzone → Zone Euro Sud ; zones abandonnées (Nordgard, Corridor d'Amsterdam, Zone de Koursk) ; quarantaine Heysham (fiche active localisée = erreur ; mention de lieu Royaume-Uni/Irlande/littoral Manche-Atlantique = à relire, souvent rappel historique légitime) ; NAT non neutre.
+
+#### `corriger_relations_inter_scenarios.py` 🔁 🧩 — générique, à relancer après chaque lot
+Relation `X_autre` sur une fiche du scénario S : remplacée par `X_S` si elle existe (et n'est ni la fiche elle-même ni déjà présente), sinon retirée. Exceptions codées : les 2 alliés `_reference` de la NAT (fortress_world) ; `--garder fiche:relation` pour d'autres. Aperçu par défaut, `--execute` pour écrire (`.bak`). Retire la section « ## Relations » d'une fiche qui n'a plus aucune relation (ce que `write_alliances_patch()` ne fait pas).
+
+#### Routine après un lot d'entités
+1. `audit_lore.py --all` ; 2. `corriger_relations_inter_scenarios.py --all` (aperçu puis `--execute`) ; 3. `fix_alliances_oppositions.py --scenario X --reciprocite-seule --ignorer-exclus` (aperçu `--dry-run` d'abord ; `--resoudre-conflits` si l'audit signale des contradictions) ; 4. `validate.py`. Le lot du 24 sept avait laissé ~990 relations à sens unique et 49 inter-scénarios sur les 6 scénarios.
+
+#### GUI (section « Nettoyage des entités », sous 🤝)
+- **🔍 Audit du lore** : Scénario/Tous, Inclure les articles, Relecture IA (+ Estimer, Une seule fiche, Une zone, Nombre max ; avancé : lancement complet, ignorer le cache), Appliquer les propositions validées (+ Simulation). Fichiers affichés : rapport du dernier lancement, propositions (éditable : `valide: true`), `lore_regles.yaml` (éditable).
+- **🔀 Corriger les relations entre scénarios** : Scénario/Tous, exception (avancé), Exécuter.
+- `gui_verified: false` pour les deux au 25 sept. Redémarrer Flask après remplacement de `scripts_config.json`.
+
+**Pièges connus** : `write_alliances_patch()` déplace la section « ## Relations » en fin de corps (ou avant « ## Notes ») et la réécrit en liste à puces ; il ne la retire pas quand les deux listes deviennent vides (voir S17).
 
 ---
 
@@ -2184,7 +2230,7 @@ python3 zoning_topdown.py --scenario NOM --pays Andorre --json   # sortie machin
 
 ### `generer_zones_topdown.py` 🔁 🧩 — **CLI batch (P24 étape C.3), migré vers chantiers.py le 25 juillet**
 `--review-topdown` : génère une proposition (via `zoning_topdown.generer_zone_topdown()`) pour chaque chantier `a_traiter` de `chantiers_geographie.yaml` (type `pays_sans_zone` et/ou `zone_suspecte`, filtrable via `--source`), l'attache à l'entrée existante (`proposition`, `date_proposition`, `proposition_issues`, `proposition_approuvee: false`). Ne régénère PAS un chantier déjà pourvu d'une proposition non approuvée, sauf `--force` explicite -- protège une relecture/édition manuelle en cours.
-`--apply-topdown` : consomme `chantiers.chantiers_prets_a_appliquer()` (statut `a_traiter` + proposition + `proposition_approuvee: true`), applique dans le vault (écriture zone complète pour `pays_sans_zone` + sync `zones_pays.json` + propagation des sous-zones orphelines via `reparenter_sous_zones_orphelines.py` ; modification en place des seuls champs révisables pour `zone_suspecte`), puis passe le chantier à `statut: traite`. **`--cible` (ajouté le 1er août 2026)** : restreint l'application à un seul chantier précis (slug de zone ou nom de pays) au lieu de tous les chantiers prêts du scénario -- utilisable uniquement avec `--scenario` (incompatible avec `--all` et `--review-topdown`, validé explicitement en CLI).
+`--apply-topdown` : consomme `chantiers.chantiers_prets_a_appliquer()` (statut `a_traiter` + proposition + `proposition_approuvee: true`), applique dans le vault (écriture zone complète pour `pays_sans_zone` + sync `zones_pays.json` + propagation des sous-zones orphelines via `reparenter_sous_zones_orphelines.py` ; modification en place des seuls champs révisables pour `zone_suspecte`), puis passe le chantier à `statut: traite`. ⚠ **Propositions `zone_suspecte` anciennes (constat du 25 septembre 2026)** : une proposition est un instantané de la zone ENTIÈRE (y compris `origine_reelle`) au moment où elle a été générée. L'application n'écrit que `description`/`type`/`statut`/`tensions_internes`/`relations` — jamais `origine_reelle` — mais **écrase ces 5 champs avec leur version d'alors**, même si la fiche a été enrichie depuis, et `relations` peut contenir des slugs de zones disparues. Toujours comparer la proposition à la fiche actuelle avant d'approuver (cas réel : la proposition Espace Nordique/fortress_world du 25 juillet ajoutait Cap-Vert et retirait 9 pays ; celle d'`ameriques_multipolaires` avait déjà été appliquée, seul le statut manquait). **`--cible` (ajouté le 1er août 2026)** : restreint l'application à un seul chantier précis (slug de zone ou nom de pays) au lieu de tous les chantiers prêts du scénario -- utilisable uniquement avec `--scenario` (incompatible avec `--all` et `--review-topdown`, validé explicitement en CLI).
 ```bash
 python3 generer_zones_topdown.py --review-topdown --scenario NOM [--source pays_sans_zone|zones_suspectes|both] [--force]
 python3 generer_zones_topdown.py --review-topdown --all
@@ -2840,8 +2886,14 @@ Six scénarios scannés au total les 13-14 sept avec `diagnostiquer_doublons_pay
 **Addendum du 23 septembre 2026 — nettoyage `app.js`, panneau "Zones à enrichir", format des affectations**.
 - **Code mort retiré** (voir plus haut) : `_ouvrirPersoPanel`, `_ouvrirSplitPanel`, `_carteImpactSplit`, `_carteSplitZone`, `openOverlaysListePanel` (~310 lignes). Le message d'erreur de création de zone qui renvoyait vers "Gérer les overlays" renvoie désormais vers le panneau "✏️ éditer" de la zone.
 - **Panneau "🧬 Zones à enrichir" — premier test réel validé** (Zone Interdite de Heysham, `fortress_world`, Mistral) : génération → relecture → application, diff limité aux trois clés de la zone. **Champs désormais modifiables avant application** : `tensions_internes` (zone de texte), `periode_transition` (ligne), `evenement_transition` (zone de texte, vide = `null`). Avant, la proposition LLM n'était qu'affichée et "✓ Appliquer" écrivait le texte brut. Cas réel qui l'a motivé : le LLM avait repris le terme "Interzone" présent dans la description de la zone. Rappel : `evenement_transition` peut revenir `null` alors qu'un déclencheur évident figure dans la description — le compléter à la main dans le panneau.
-- **Format des entrées écrites par l'affectation depuis la Carte** (constat du 23 sept, **non corrigé**) : `assign_pays` écrit `- entite: X` seul, sans `type_entite` ni `portion`, alors que les autres chemins d'écriture produisent l'entrée complète. 13 entrées de ce type sur `fortress_world` (dont Royaume-Uni → Heysham, affecté le 23 sept). Rattrapable par `scan_geographie_complet.py --run-type-entite --apply-type-entite` ; la cause reste à corriger dans `zone_repository.py`.
+- **Format des entrées écrites par l'affectation depuis la Carte** (constat du 23 sept, **corrigé le 25 sept**, voir addendum ci-dessous) : `assign_pays` écrivait `- entite: X` seul, sans `type_entite` ni `portion`. Les entrées anciennes se rattrapent toujours par `scan_geographie_complet.py --run-type-entite --apply-type-entite`.
 - **La carte colore les pays "pays entier" d'abord depuis `geographie/{scenario}.md`, et se replie sur `zones_pays.json` seulement pour un pays absent de toute fiche** (constaté le 23 sept : 42 pays de `fortress_world` désynchronisés dans `zones_pays.json`, carte pourtant juste ; précisé le 24 sept : Finlande et Lituanie, absentes de la fiche, s'affichaient quand même en Espace Nordique via `zones_pays.json` — une carte juste ne prouve donc pas que la fiche est complète, vérifier avec `check_zones_coherence`). `zones_pays.json` reste un index secondaire utilisé par d'autres outils (garde-fou bug #5, `creer_zone_n1()`, résolution de zone de certains scripts) — une dérive peut donc passer inaperçue visuellement. Contrôle rapide (depuis la racine du vault) : comparer, pour chaque scénario, les pays "pays entier" (`portion` vide) de l'`origine_reelle` des fiches aux valeurs de `zones_pays.json` — voir `HANDOFF_23_SEPTEMBRE.md` pour la commande.
+
+**Addendum du 25 septembre 2026 — `assign_pays` (S13)** (`zone_repository.py`, bouton « affecter » d'un pays sur la Carte, actions `absorber` et `creer`) :
+- **Entrée complète** : `{entite: X, type_entite: pays, portion: null}`, même format qu'`overlay_creer()`. `type_entite: pays` en dur est correct : `assign_pays` ne reçoit que des clics sur des polygones de pays. Plus besoin de `--apply-type-entite` après une affectation.
+- **Entrées overlay préservées** : avant affectation, le pays est retiré des autres zones… sauf des entrées adossées à un tracé dessiné (`_paires_overlay()`, même filtre que `retirer_doublons_pays_entier()`). Avant le correctif, affecter la France à une zone effaçait l'entrée littorale de la Zone Interdite de Heysham et laissait son tracé orphelin dans le `.geojson`.
+- **Zone créée depuis un clic** (`creer`) : schéma complet comme `creer_zone_n1()` — `type` (`autre` par défaut), `statut` (`emergent` par défaut), `tensions_internes`, `periode_transition`, `evenement_transition`, `lieux_emblematiques`, `relations`, `sources_attestees`, plus un titre `### Nom` dans le corps markdown. `type`/`statut` validés contre `ZONE_TYPES`/`ZONE_STATUTS` si le GUI les transmet.
+- Testé sur copie de `fortress_world` (6 cas) : France → Zone Euro Sud garde l'entrée Heysham ; Belgique retirée de Zone Euro Sud et ajoutée complète à Heysham ; zone créée complète, Portugal retiré d'Al-Hima.
 
 ### Choix du modèle LLM (carte + `generer_zones_topdown.py`)
 Le sélecteur de modèle du GUI ne définit un modèle **réellement utilisé** que si le toggle "Forcer ce modèle" est coché (voir plus haut) — sinon la carte et `generer_zones_topdown.py` (remplace `complete_geographie_coverage.py`, retiré du sidebar le 25 juillet 2026, voir §4/§6) suivent leur tier normal (`structured_strict`, `mistral-large-latest` par défaut).

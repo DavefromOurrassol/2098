@@ -43,10 +43,10 @@ alliances:
 - cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism
 - guildes_de_mediateurs_ecologiques_eco_communalism
 - mouvement_des_communes_du_rust_belt_eco_communalism
-- observatoire_climatique_des_territoires_oct_reference
 oppositions:
 - communs_secessionnistes_hors_coordination_eco_communalism
 - consortiums_industriels_de_l_eau_eco_communalism
+- ergo_wian_sovereign_holdings_eco_communalism
 - factions_communautaires_refusant_le_partage_narratif_exterieur_eco_communalism
 - fragments_d_etats_centraux_residuels_eco_communalism
 type_relation_dominante: coopération
@@ -107,9 +107,9 @@ La ligne de fracture la plus vive oppose les 'autonomistes durs', qui voient dan
 - [[cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism]]
 - [[guildes_de_mediateurs_ecologiques_eco_communalism]]
 - [[mouvement_des_communes_du_rust_belt_eco_communalism]]
-- [[observatoire_climatique_des_territoires_oct_reference]]
 **Opposants :**
 - [[communs_secessionnistes_hors_coordination_eco_communalism]]
 - [[consortiums_industriels_de_l_eau_eco_communalism]]
+- [[ergo_wian_sovereign_holdings_eco_communalism]]
 - [[factions_communautaires_refusant_le_partage_narratif_exterieur_eco_communalism]]
 - [[fragments_d_etats_centraux_residuels_eco_communalism]]

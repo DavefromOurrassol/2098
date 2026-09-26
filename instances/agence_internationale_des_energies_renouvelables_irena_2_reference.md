@@ -32,6 +32,8 @@ zone_geographique:
 zone_systemique:
 - société
 alliances:
+- agence_de_regulation_des_detroits_strategiques_ards_reference
+- assemblee_territoires_reference
 - banque_des_communs_reference
 - banque_mondiale_des_transitions_climatiques_reference
 - blocs_signataires_du_pacte_energetique_multilateral_reference
@@ -41,6 +43,7 @@ alliances:
 - consortium_energetique_des_mers_du_nord_reference
 - cooperatives_energetiques_decentralisees_reference
 - front_souverainiste_des_ressources_d_amerique_du_sud_reference
+- gelecek_meclisi_reference
 - gouvernements_du_bloc_sahelien_autonome_reference
 - institutions_multilaterales_survivantes_reference
 - observatoire_climatique_des_territoires_oct_reference
@@ -50,6 +53,7 @@ alliances:
 - regulateurs_de_l_union_continentale_africaine_reference
 - reseau_des_villes_etats_pilotes_en_gouvernance_participative_reference
 - reseaux_de_gouvernance_multilaterale_survivants_reference
+- the_lattice_reference
 - union_africaine_de_resilience_territoriale_reference
 oppositions:
 - bloc_ressources_eurasiatique_bre_reference
@@ -61,10 +65,12 @@ oppositions:
 - consortiums_prives_d_extraction_de_ressources_critiques_reference
 - corporations_d_extraction_energetique_non_signataires_reference
 - corridor_arctique_nordique_reference
+- hyphan_raghavan_reference
 - kalaallit_nunaat_sovereign_fund_reference
 - operateurs_prives_d_energie_distribuee_hors_fct_reference
 - pacte_des_souverains_reference
 - reseaux_de_financement_gris_issus_d_anciens_blocs_militaires_reference
+- the_tidewater_canon_reference
 type_relation_dominante: coopération
 annee_debut: 2026
 annee_fin: null
@@ -131,8 +137,11 @@ L'agence est structurellement tiraillée entre ses membres du Pacte des Souverai
 - [[geopolitique_conflits]]
 
 
+
 ## Relations
 **Alliés :**
+- [[agence_de_regulation_des_detroits_strategiques_ards_reference]]
+- [[assemblee_territoires_reference]]
 - [[banque_des_communs_reference]]
 - [[banque_mondiale_des_transitions_climatiques_reference]]
 - [[blocs_signataires_du_pacte_energetique_multilateral_reference]]
@@ -142,6 +151,7 @@ L'agence est structurellement tiraillée entre ses membres du Pacte des Souverai
 - [[consortium_energetique_des_mers_du_nord_reference]]
 - [[cooperatives_energetiques_decentralisees_reference]]
 - [[front_souverainiste_des_ressources_d_amerique_du_sud_reference]]
+- [[gelecek_meclisi_reference]]
 - [[gouvernements_du_bloc_sahelien_autonome_reference]]
 - [[institutions_multilaterales_survivantes_reference]]
 - [[observatoire_climatique_des_territoires_oct_reference]]
@@ -151,6 +161,7 @@ L'agence est structurellement tiraillée entre ses membres du Pacte des Souverai
 - [[regulateurs_de_l_union_continentale_africaine_reference]]
 - [[reseau_des_villes_etats_pilotes_en_gouvernance_participative_reference]]
 - [[reseaux_de_gouvernance_multilaterale_survivants_reference]]
+- [[the_lattice_reference]]
 - [[union_africaine_de_resilience_territoriale_reference]]
 **Opposants :**
 - [[bloc_ressources_eurasiatique_bre_reference]]
@@ -162,10 +173,12 @@ L'agence est structurellement tiraillée entre ses membres du Pacte des Souverai
 - [[consortiums_prives_d_extraction_de_ressources_critiques_reference]]
 - [[corporations_d_extraction_energetique_non_signataires_reference]]
 - [[corridor_arctique_nordique_reference]]
+- [[hyphan_raghavan_reference]]
 - [[kalaallit_nunaat_sovereign_fund_reference]]
 - [[operateurs_prives_d_energie_distribuee_hors_fct_reference]]
 - [[pacte_des_souverains_reference]]
 - [[reseaux_de_financement_gris_issus_d_anciens_blocs_militaires_reference]]
+- [[the_tidewater_canon_reference]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

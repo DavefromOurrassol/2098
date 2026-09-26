@@ -48,7 +48,8 @@ USAGE (depuis la racine du vault)
 
 SORTIES
     documentation/need_action/audit_lore_{scenario}.md               (rapport, réécrit à chaque run)
-    documentation/need_action/audit_lore_propositions_{scenario}.yaml (propositions LLM, cumulatif)
+    documentation/need_action/audit_lore_dernier_lancement.md        (rapports du dernier lancement, pour le GUI)
+    documentation/need_action/audit_lore_propositions.yaml     (propositions LLM, tous scénarios, cumulatif)
     state/audit_lore_cache.json                                       (cache LLM ; --no-cache pour ignorer)
     --json : résumé JSON sur la dernière ligne (intégration GUI)
 """
@@ -87,6 +88,8 @@ GEOGRAPHIE_DIR = VAULT_ROOT / "geographie"
 NEED_ACTION_DIR = VAULT_ROOT / "documentation" / "need_action"
 REGLES_PATH = VAULT_ROOT / "documentation" / "lore_regles.yaml"
 CACHE_PATH = VAULT_ROOT / "state" / "audit_lore_cache.json"
+PROPOSITIONS_PATH = NEED_ACTION_DIR / "audit_lore_propositions.yaml"
+DERNIER_RAPPORT_PATH = NEED_ACTION_DIR / "audit_lore_dernier_lancement.md"
 
 # Clés de frontmatter qui ne contiennent pas de texte narratif (slugs,
 # énumérations, dates) — exclues de la recherche des règles.
@@ -551,34 +554,47 @@ def lire_json(path, defaut):
         return defaut
 
 
-def chemin_propositions(scenario):
-    return NEED_ACTION_DIR / f"audit_lore_propositions_{scenario}.yaml"
+ENTETE_PROPOSITIONS = (
+    "# Propositions de relations (audit_lore.py --llm), tous scénarios.\n"
+    "# Passer `valide: true` sur celles à garder, puis (GUI « Audit du lore » ou CLI) :\n"
+    "#   python3 generator/audit_lore.py --all --appliquer --dry-run\n"
+    "#   python3 generator/audit_lore.py --all --appliquer\n"
+    "# Les entrées déjà présentes ne sont jamais écrasées par un nouveau run.\n")
+
+
+def chemin_propositions(scenario=None):
+    # Fichier unique pour tous les scénarios (chaque entrée porte `scenario`),
+    # pour un chemin fixe affichable/éditable dans le GUI.
+    return PROPOSITIONS_PATH
+
+
+def ecrire_propositions(liste):
+    NEED_ACTION_DIR.mkdir(parents=True, exist_ok=True)
+    PROPOSITIONS_PATH.write_text(ENTETE_PROPOSITIONS + yaml.safe_dump(
+        {"propositions": liste}, allow_unicode=True, sort_keys=False, width=100), encoding="utf-8")
+
+
+def lire_propositions():
+    if not PROPOSITIONS_PATH.exists():
+        return []
+    data = yaml.safe_load(PROPOSITIONS_PATH.read_text(encoding="utf-8")) or {}
+    return data.get("propositions") or []
 
 
 def fusionner_propositions(scenario, nouvelles):
     """Ajoute les nouvelles propositions sans toucher à celles déjà présentes
-    (validées, refusées ou appliquées). Clé : (slug, relation, cible)."""
-    path = chemin_propositions(scenario)
-    existant = yaml.safe_load(path.read_text(encoding="utf-8")) if path.exists() else None
-    existant = existant or {"propositions": []}
-    liste = existant.get("propositions") or []
-    cles = {(p.get("slug"), p.get("relation"), p.get("cible")) for p in liste}
+    (validées, refusées ou appliquées). Clé : (scenario, slug, relation, cible)."""
+    liste = lire_propositions()
+    cles = {(p.get("scenario"), p.get("slug"), p.get("relation"), p.get("cible")) for p in liste}
     ajoutees = 0
     for p in nouvelles:
-        cle = (p["slug"], p["relation"], p["cible"])
+        cle = (scenario, p["slug"], p["relation"], p["cible"])
         if cle not in cles:
-            liste.append(p)
+            liste.append({"scenario": scenario, **p})
             cles.add(cle)
             ajoutees += 1
     if ajoutees:
-        NEED_ACTION_DIR.mkdir(parents=True, exist_ok=True)
-        entete = ("# Propositions de relations (audit_lore.py --llm).\n"
-                  "# Passer `valide: true` sur celles à garder, puis :\n"
-                  f"#   python3 generator/audit_lore.py --scenario {scenario} --appliquer --dry-run\n"
-                  f"#   python3 generator/audit_lore.py --scenario {scenario} --appliquer\n"
-                  "# Les entrées déjà présentes ne sont jamais écrasées par un nouveau run.\n")
-        path.write_text(entete + yaml.safe_dump({"propositions": liste}, allow_unicode=True,
-                                                sort_keys=False, width=100), encoding="utf-8")
+        ecrire_propositions(liste)
     return ajoutees
 
 
@@ -655,14 +671,13 @@ def passe_llm(scenario, fiches, zones, conf, args):
 # ─────────────────────────────────────────────────────────────────────────
 
 def appliquer(scenario, dry_run):
-    path = chemin_propositions(scenario)
-    if not path.exists():
-        print(f"Aucun fichier de propositions : {path}")
+    if not PROPOSITIONS_PATH.exists():
+        print(f"Aucun fichier de propositions : {PROPOSITIONS_PATH.relative_to(VAULT_ROOT)}")
         return 0
-    data = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
-    props = data.get("propositions") or []
-    a_faire = [p for p in props if p.get("valide") is True and not p.get("applique")]
-    print(f"{len(a_faire)} proposition(s) validée(s) à appliquer"
+    props = lire_propositions()
+    a_faire = [p for p in props if p.get("scenario") == scenario
+               and p.get("valide") is True and not p.get("applique")]
+    print(f"[{scenario}] {len(a_faire)} proposition(s) validée(s) à appliquer"
           + (" (dry-run, rien écrit)" if dry_run else ""))
     fiches = charger_fiches(INSTANCES_DIR, scenario)
     par_fiche, n_ok = {}, 0
@@ -701,11 +716,8 @@ def appliquer(scenario, dry_run):
                 p["applique"] = date.today().isoformat()
         n_ok += len(faites)
     if n_ok and not dry_run:
-        shutil.copy2(path, path.with_suffix(".yaml.bak"))
-        texte = path.read_text(encoding="utf-8")
-        entete = "".join(l for l in texte.splitlines(True) if l.startswith("#"))
-        path.write_text(entete + yaml.safe_dump({"propositions": props}, allow_unicode=True,
-                                                sort_keys=False, width=100), encoding="utf-8")
+        shutil.copy2(PROPOSITIONS_PATH, PROPOSITIONS_PATH.with_suffix(".yaml.bak"))
+        ecrire_propositions(props)
         print(f"\n{n_ok} relation(s) écrite(s) (.bak de chaque fiche). Pour propager la réciprocité :")
         print(f"  python3 generator/fix_alliances_oppositions.py --scenario {scenario} --reciprocite-seule --dry-run")
     return n_ok
@@ -875,6 +887,13 @@ def main():
     if not REGLES_PATH.exists():
         print(f"[info] {REGLES_PATH.relative_to(VAULT_ROOT)} absent : contrôles de règles ignorés")
     resultats = [auditer(sc, args, regles) for sc in scenarios]
+    # Rapport consolidé à chemin fixe (affiché par le GUI) : concaténation des
+    # rapports des scénarios traités par CE lancement.
+    DERNIER_RAPPORT_PATH.write_text(
+        f"# Audit du lore — dernier lancement ({datetime.now():%Y-%m-%d %H:%M})\n\n"
+        + "Scénarios : " + ", ".join(r["scenario"] for r in resultats) + "\n\n---\n\n"
+        + "\n---\n\n".join((VAULT_ROOT / r["rapport_md"]).read_text(encoding="utf-8")
+                            for r in resultats), encoding="utf-8")
     if args.json:
         print(json.dumps({"ok": True, "scenarios": [{
             "scenario": r["scenario"], "rapport_md": r["rapport_md"],

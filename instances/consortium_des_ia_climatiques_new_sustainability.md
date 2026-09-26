@@ -38,10 +38,12 @@ alliances:
 - conseil_technocratique_de_gouvernance_alimentaire_new_sustainability
 - consortium_amazonia_viva_new_sustainability
 - consortium_d_interoperabilite_ia_humain_new_sustainability
+- ergo_wian_sovereign_holdings_new_sustainability
 - factions_technocratiques_de_la_delegation_ia_totale_new_sustainability
 - fonds_mondial_de_regeneration_ecologique_new_sustainability
 - great_lakes_compact_new_sustainability
 - oracle_des_seuils_new_sustainability
+- terminal_kharg_data_haven_new_sustainability
 - trame_bioclimatique_new_sustainability
 oppositions:
 - bloc_eurasien_souverainiste_new_sustainability
@@ -116,6 +118,7 @@ La légitimité démocratique du Consortium reste son talon d'Achille : aucun su
 - [[technologie_information]]
 
 
+
 ## Relations
 **Alliés :**
 - [[agence_mondiale_de_modelisation_climatique_ammc_new_sustainability]]
@@ -126,10 +129,12 @@ La légitimité démocratique du Consortium reste son talon d'Achille : aucun su
 - [[conseil_technocratique_de_gouvernance_alimentaire_new_sustainability]]
 - [[consortium_amazonia_viva_new_sustainability]]
 - [[consortium_d_interoperabilite_ia_humain_new_sustainability]]
+- [[ergo_wian_sovereign_holdings_new_sustainability]]
 - [[factions_technocratiques_de_la_delegation_ia_totale_new_sustainability]]
 - [[fonds_mondial_de_regeneration_ecologique_new_sustainability]]
 - [[great_lakes_compact_new_sustainability]]
 - [[oracle_des_seuils_new_sustainability]]
+- [[terminal_kharg_data_haven_new_sustainability]]
 - [[trame_bioclimatique_new_sustainability]]
 **Opposants :**
 - [[bloc_eurasien_souverainiste_new_sustainability]]

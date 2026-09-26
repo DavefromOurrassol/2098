@@ -37,13 +37,12 @@ zone_systemique:
     - infrastructure
 
 alliances:
-
+- reseau_des_cartographes_des_zones_grises_new_sustainability
 oppositions:
-    - agence_globale_de_regeneration_des_bassins_versants_agrb_onu_new_sustainability
-    - bureau_gouvernance_algorithmique_new_sustainability
-    - conseil_regulation_algorithmique_new_sustainability
-    - etats_souverainistes_anti_reseau_new_sustainability
-
+- agence_globale_de_regeneration_des_bassins_versants_agrb_onu_new_sustainability
+- bureau_gouvernance_algorithmique_new_sustainability
+- conseil_regulation_algorithmique_new_sustainability
+- etats_souverainistes_anti_reseau_new_sustainability
 type_relation_dominante: symbiose
 
 annee_debut: 2038
@@ -87,12 +86,18 @@ Faciliter les échanges de semences adaptatives, de technologies low-tech et de 
 - [[organisation_territoires]]
 - [[systemes_productifs_travail]]
 
-## Relations
-**Alliés** : _aucun défini_
-**Opposants** : [[agence_globale_de_regeneration_des_bassins_versants_agrb_onu_new_sustainability]], [[bureau_gouvernance_algorithmique_new_sustainability]], [[conseil_regulation_algorithmique_new_sustainability]], [[etats_souverainistes_anti_reseau_new_sustainability]]
 
 ## Description journalistique
 « Ils arrivent toujours par les chemins que les algorithmes ne voient pas. » C'est ainsi que les habitants des zones grises décrivent les Passeurs de Seuil, ces médiateurs itinérants qui sillonnent les interstices d'un monde où la mobilité est pourtant censée être optimisée. Vêtus de combinaisons modulaires aux couleurs des territoires traversés, ils transportent dans leurs sacs étanches des graines oubliées, des puces de données non-indexées et des récits de communautés hors-réseau. Leur légitimité ? Une connaissance intime des territoires et une capacité à négocier avec les autorités locales, souvent en échange de services rendus. Dans un monde où les corridors de mobilité sont gérés par l'IA, ils incarnent une forme de résistance pragmatique, un réseau humain qui persiste malgré tout.
 
 ## Tensions narratives
 Les Passeurs de Seuil sont au cœur d'un paradoxe : leur existence même questionne la légitimité d'un système qui se veut équitable et optimisé, mais qui laisse des millions de personnes en marge. Leur tolérance par les institutions est fragile, et certains blocs souverainistes voient en eux une menace à éradiquer. Leur avenir dépendra de leur capacité à rester invisibles tout en étant indispensables. Une question persiste : jusqu'où les institutions accepteront-elles de fermer les yeux sur leurs activités, avant de les intégrer ou de les réprimer ?
+
+## Relations
+**Alliés :**
+- [[reseau_des_cartographes_des_zones_grises_new_sustainability]]
+**Opposants :**
+- [[agence_globale_de_regeneration_des_bassins_versants_agrb_onu_new_sustainability]]
+- [[bureau_gouvernance_algorithmique_new_sustainability]]
+- [[conseil_regulation_algorithmique_new_sustainability]]
+- [[etats_souverainistes_anti_reseau_new_sustainability]]

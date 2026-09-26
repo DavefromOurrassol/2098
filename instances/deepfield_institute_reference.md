@@ -37,19 +37,18 @@ zone_systemique:
     - IA
 
 alliances:
-    - consortium_helios_reference
-    - consortium_de_maintenance_orbitale_seom_7_reference
-    - ergo_wian_sovereign_holdings_reference
-    - fonds_souverains_de_la_ceinture_financiere_pacifique_reference
-    - institut_des_seuils_demographiques_reference
-
+- consortium_de_maintenance_orbitale_seom_7_reference
+- consortium_helios_reference
+- elias_mork_reference
+- ergo_wian_sovereign_holdings_reference
+- fonds_souverains_de_la_ceinture_financiere_pacifique_reference
+- institut_des_seuils_demographiques_reference
 oppositions:
-    - conseil_de_geneve_pour_les_droits_biosociaux_reference
-    - federation_des_cliniques_autonomes_reference
-    - mouvement_pour_la_libre_circulation_des_personnes_et_des_donnees_reference
-    - collectifs_academiques_independants_reference
-    - voix_du_dehors_reference
-
+- collectifs_academiques_independants_reference
+- conseil_de_geneve_pour_les_droits_biosociaux_reference
+- federation_des_cliniques_autonomes_reference
+- mouvement_pour_la_libre_circulation_des_personnes_et_des_donnees_reference
+- voix_du_dehors_reference
 type_relation_dominante: dépendance
 
 annee_debut: 2055
@@ -107,12 +106,24 @@ Le DIHC gère des programmes de préservation génétique humaine, des colonies 
 - [[demographie_mobilite_humaine]]
 - [[gouvernance_institutions]]
 
-## Relations
-**Alliés** : [[consortium_helios_reference]], [[consortium_de_maintenance_orbitale_seom_7_reference]], [[ergo_wian_sovereign_holdings_reference]], [[fonds_souverains_de_la_ceinture_financiere_pacifique_reference]], [[institut_des_seuils_demographiques_reference]]
-**Opposants** : [[conseil_de_geneve_pour_les_droits_biosociaux_reference]], [[federation_des_cliniques_autonomes_reference]], [[mouvement_pour_la_libre_circulation_des_personnes_et_des_donnees_reference]], [[collectifs_academiques_independants_reference]], [[voix_du_dehors_reference]]
 
 ## Description journalistique
 Depuis son siège ultra-sécurisé dans les Rocheuses du Colorado, le Deepfield Institute for Human Continuity (DIHC) incarne la nouvelle aristocratie scientifique du XXIe siècle. Ses laboratoires, protégés par des protocoles de biosécurité dignes d'un roman de dystopie, abritent des embryons génétiquement optimisés et des serveurs contenant les données biométriques de millions de citoyens 'sélectionnés'. Ses rapports, publiés dans un jargon inaccessible au grand public, dictent les politiques de natalité de plusieurs États souverains. Le DIHC est devenu le symbole d'une gouvernance par l'expertise, où la survie de l'espèce justifie l'effacement des libertés individuelles. Ses détracteurs l'accusent de jouer aux apprentis sorciers avec l'avenir de l'humanité, tandis que ses partisans y voient le dernier rempart contre l'extinction.
 
 ## Tensions narratives
 Le DIHC est au cœur de plusieurs scandales récents : des fuites ont révélé l'existence de programmes de stérilisation forcée dans certaines zones périphériques, tandis que des rumeurs persistantes évoquent des expériences génétiques illégales sur des populations vulnérables. Ses opposants, regroupés au sein du mouvement 'Voix du Dehors', dénoncent une 'dictature des experts' et réclament un moratoire sur ses activités. Parallèlement, des fractures internes apparaissent entre les partisans d'une approche purement technocratique et ceux qui prônent une collaboration plus étroite avec les gouvernements souverains. La question de la légitimité démocratique du DIHC reste un sujet de débat brûlant, alors que son influence ne cesse de croître.
+
+## Relations
+**Alliés :**
+- [[consortium_de_maintenance_orbitale_seom_7_reference]]
+- [[consortium_helios_reference]]
+- [[elias_mork_reference]]
+- [[ergo_wian_sovereign_holdings_reference]]
+- [[fonds_souverains_de_la_ceinture_financiere_pacifique_reference]]
+- [[institut_des_seuils_demographiques_reference]]
+**Opposants :**
+- [[collectifs_academiques_independants_reference]]
+- [[conseil_de_geneve_pour_les_droits_biosociaux_reference]]
+- [[federation_des_cliniques_autonomes_reference]]
+- [[mouvement_pour_la_libre_circulation_des_personnes_et_des_donnees_reference]]
+- [[voix_du_dehors_reference]]

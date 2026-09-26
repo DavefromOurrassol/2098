@@ -53,8 +53,10 @@ oppositions:
 - frente_sertao_livre_eco_communalism
 - guildes_de_mediateurs_ecologiques_eco_communalism
 - guildes_des_semenciers_itinerants_eco_communalism
+- hyphan_raghavan_eco_communalism
 - le_registre_du_fleuve_eco_communalism
 - leena_vainala_eco_communalism
+- les_veilleurs_des_nappes_phreatiques_eco_communalism
 - les_veilleurs_du_fleuve_eco_communalism
 - mouvement_des_archives_vivantes_du_savoir_partage_eco_communalism
 - mouvement_des_communes_du_rust_belt_eco_communalism
@@ -138,6 +140,7 @@ La tension centrale est celle de la légitimité mimétique : ces notables parle
 - [[valeurs_culture_tempo_sociale]]
 
 
+
 ## Relations
 **Alliés :**
 - [[cartels_de_narration_de_penurie_eco_communalism]]
@@ -163,8 +166,10 @@ La tension centrale est celle de la légitimité mimétique : ces notables parle
 - [[frente_sertao_livre_eco_communalism]]
 - [[guildes_de_mediateurs_ecologiques_eco_communalism]]
 - [[guildes_des_semenciers_itinerants_eco_communalism]]
+- [[hyphan_raghavan_eco_communalism]]
 - [[le_registre_du_fleuve_eco_communalism]]
 - [[leena_vainala_eco_communalism]]
+- [[les_veilleurs_des_nappes_phreatiques_eco_communalism]]
 - [[les_veilleurs_du_fleuve_eco_communalism]]
 - [[mouvement_des_archives_vivantes_du_savoir_partage_eco_communalism]]
 - [[mouvement_des_communes_du_rust_belt_eco_communalism]]

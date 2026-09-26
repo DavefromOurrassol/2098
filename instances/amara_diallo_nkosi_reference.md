@@ -36,16 +36,13 @@ zone_systemique:
     - société
 
 alliances:
-    - commission_hydrique_de_l_union_africaine_reference
-    - reseau_des_cooperatives_agro_saheliennes_reference
-    - programme_onu_eau_2080_reference
-    - institut_polytechnique_de_ouagadougou_reference
-
+- commission_hydrique_de_l_union_africaine_reference
+- reseau_des_cooperatives_agro_saheliennes_reference
+- programme_onu_eau_2080_reference
+- institut_polytechnique_de_ouagadougou_reference
 oppositions:
-    - consortiums_d_extraction_miniere_du_bassin_congolais_reference
-    - bloc_des_gouvernements_souverainistes_hydriques_new_sustainability
-    - lobbies_agro_industriels_a_haute_consommation_d_eau_reference
-
+- consortiums_d_extraction_miniere_du_bassin_congolais_reference
+- lobbies_agro_industriels_a_haute_consommation_d_eau_reference
 type_relation_dominante: coopération
 
 annee_debut: 2061
@@ -90,12 +87,19 @@ Elle supervise la mise en œuvre technique des quotas d'allocation hydrique nég
 - [[systeme_economique_redistribution]]
 - [[gouvernance_institutions]]
 
-## Relations
-**Alliés** : [[commission_hydrique_de_l_union_africaine_reference]], [[reseau_des_cooperatives_agro_saheliennes_reference]], [[programme_onu_eau_2080_reference]], [[institut_polytechnique_de_ouagadougou_reference]]
-**Opposants** : [[consortiums_d_extraction_miniere_du_bassin_congolais_reference]], [[bloc_des_gouvernements_souverainistes_hydriques_new_sustainability]], [[lobbies_agro_industriels_a_haute_consommation_d_eau_reference]]
 
 ## Description journalistique
 À 67 ans, Amara Diallo-Nkosi arrive aux réunions de la Commission Hydrique avec deux tablettes, un carnet papier et une patience que ses adversaires ont appris à redouter. Formée à Ouagadougou et à Delft, elle est l'une des rares technocrates africaines dont le nom circule aussi bien dans les couloirs climatisés de Kinshasa que dans les assemblées villageoises du Sahel. On lui doit l'amendement dit 'de l'usage vital' dans les Accords de 2089, qui garantit un accès prioritaire aux communautés rurales avant toute allocation industrielle — une clause que trois États ont tenté de faire supprimer depuis. Elle répond aux accusations de naïveté avec des chiffres, et aux accusations de technocratie avec des noms de villages.
 
 ## Tensions narratives
 L'équilibre fragile des Accords de Kinshasa est menacé par la sécheresse exceptionnelle de 2096 qui pousse plusieurs États à invoquer des clauses d'urgence nationale — Amara doit choisir entre défendre la lettre de l'accord ou accepter des dérogations qui affaibliront le précédent pour des décennies. Par ailleurs, une fuite de données de son réseau de capteurs, exploitée par un consortium minier pour anticiper les décisions d'allocation, soulève la question de savoir si la transparence technique qu'elle défend n'arme pas ses adversaires plus qu'elle ne protège les vulnérables. Enfin, une nouvelle génération d'ingénieurs sahéliens, formés à l'IA prédictive, remet en question son refus des systèmes automatisés de décision hydrique, la accusant d'un humanisme qui ralentit l'adaptation.
+
+## Relations
+**Alliés :**
+- [[commission_hydrique_de_l_union_africaine_reference]]
+- [[reseau_des_cooperatives_agro_saheliennes_reference]]
+- [[programme_onu_eau_2080_reference]]
+- [[institut_polytechnique_de_ouagadougou_reference]]
+**Opposants :**
+- [[consortiums_d_extraction_miniere_du_bassin_congolais_reference]]
+- [[lobbies_agro_industriels_a_haute_consommation_d_eau_reference]]

@@ -33,6 +33,7 @@ zone_systemique:
 alliances:
 - collectifs_academiques_independants_reference
 - conseil_de_geneve_pour_les_droits_biosociaux_reference
+- consortium_des_pecheries_autonomes_du_grand_nord_reference
 - corridor_arctique_nordique_reference
 - institutions_multilaterales_survivantes_reference
 - kalaallit_nunaat_sovereign_fund_reference
@@ -111,10 +112,12 @@ La déglaciation qui menace leur mode de vie ouvre paradoxalement de nouvelles z
 - [[valeurs_culture_tempo_sociale]]
 
 
+
 ## Relations
 **Alliés :**
 - [[collectifs_academiques_independants_reference]]
 - [[conseil_de_geneve_pour_les_droits_biosociaux_reference]]
+- [[consortium_des_pecheries_autonomes_du_grand_nord_reference]]
 - [[corridor_arctique_nordique_reference]]
 - [[institutions_multilaterales_survivantes_reference]]
 - [[kalaallit_nunaat_sovereign_fund_reference]]

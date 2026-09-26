@@ -35,6 +35,7 @@ oppositions:
 - bureau_des_territoires_residuels_breakdown
 - oracle_des_seuils_breakdown
 - seoul_collectif_nexcore_breakdown
+- terminal_kharg_data_haven_breakdown
 type_relation_dominante: neutralité
 annee_debut: 2030
 annee_fin: 2049
@@ -93,3 +94,4 @@ réactiver. Peut-on réguler ce qu'on ne comprend plus ?
 - [[bureau_des_territoires_residuels_breakdown]]
 - [[oracle_des_seuils_breakdown]]
 - [[seoul_collectif_nexcore_breakdown]]
+- [[terminal_kharg_data_haven_breakdown]]

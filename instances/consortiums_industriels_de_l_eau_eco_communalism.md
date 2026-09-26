@@ -39,11 +39,13 @@ alliances:
 - consortiums_logistiques_neo_industriels_des_terres_reconstruites_eco_communalism
 - enclaves_extractivistes_et_etats_residuels_eco_communalism
 - enclaves_extractivistes_residuelles_des_corridors_eco_communalism
+- ergo_wian_sovereign_holdings_eco_communalism
 - factions_extractivistes_des_aquiferes_communs_eco_communalism
 - factions_technophiles_de_la_geo_ingenierie_centralisee_eco_communalism
 - fragments_d_etats_centraux_residuels_eco_communalism
 - reseau_des_marches_noirs_de_donnees_extractivistes_eco_communalism
 oppositions:
+- agence_de_regulation_des_detroits_strategiques_ards_eco_communalism
 - amazonie_pacte_viva_eco_communalism
 - assemblees_bioterritoriales_regionales_eco_communalism
 - assemblees_de_bassin_versant_eco_communalism
@@ -59,9 +61,11 @@ oppositions:
 - frente_sertao_livre_eco_communalism
 - guildes_de_mediateurs_ecologiques_eco_communalism
 - guildes_des_semenciers_itinerants_eco_communalism
+- ilse_varga_holm_eco_communalism
 - kalaallit_nunaat_bioterritoire_eco_communalism
 - kalaallit_nunaat_sovereign_fund_eco_communalism
 - le_registre_du_fleuve_eco_communalism
+- les_veilleurs_des_nappes_phreatiques_eco_communalism
 - les_veilleurs_du_fleuve_eco_communalism
 - mouvement_des_communes_du_rust_belt_eco_communalism
 - mutuelles_de_sante_territoriales_eco_communalism
@@ -145,6 +149,7 @@ La contradiction centrale des Consortiums tient à leur dépendance aux États r
 - [[organisation_territoires]]
 
 
+
 ## Relations
 **Alliés :**
 - [[agro_conglomerats_des_enclaves_technologiques_eco_communalism]]
@@ -154,11 +159,13 @@ La contradiction centrale des Consortiums tient à leur dépendance aux États r
 - [[consortiums_logistiques_neo_industriels_des_terres_reconstruites_eco_communalism]]
 - [[enclaves_extractivistes_et_etats_residuels_eco_communalism]]
 - [[enclaves_extractivistes_residuelles_des_corridors_eco_communalism]]
+- [[ergo_wian_sovereign_holdings_eco_communalism]]
 - [[factions_extractivistes_des_aquiferes_communs_eco_communalism]]
 - [[factions_technophiles_de_la_geo_ingenierie_centralisee_eco_communalism]]
 - [[fragments_d_etats_centraux_residuels_eco_communalism]]
 - [[reseau_des_marches_noirs_de_donnees_extractivistes_eco_communalism]]
 **Opposants :**
+- [[agence_de_regulation_des_detroits_strategiques_ards_eco_communalism]]
 - [[amazonie_pacte_viva_eco_communalism]]
 - [[assemblees_bioterritoriales_regionales_eco_communalism]]
 - [[assemblees_de_bassin_versant_eco_communalism]]
@@ -174,9 +181,11 @@ La contradiction centrale des Consortiums tient à leur dépendance aux États r
 - [[frente_sertao_livre_eco_communalism]]
 - [[guildes_de_mediateurs_ecologiques_eco_communalism]]
 - [[guildes_des_semenciers_itinerants_eco_communalism]]
+- [[ilse_varga_holm_eco_communalism]]
 - [[kalaallit_nunaat_bioterritoire_eco_communalism]]
 - [[kalaallit_nunaat_sovereign_fund_eco_communalism]]
 - [[le_registre_du_fleuve_eco_communalism]]
+- [[les_veilleurs_des_nappes_phreatiques_eco_communalism]]
 - [[les_veilleurs_du_fleuve_eco_communalism]]
 - [[mouvement_des_communes_du_rust_belt_eco_communalism]]
 - [[mutuelles_de_sante_territoriales_eco_communalism]]

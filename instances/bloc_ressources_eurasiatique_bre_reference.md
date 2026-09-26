@@ -49,6 +49,7 @@ alliances:
 - plateformes_centralisees_de_narration_officielle_reference
 - regulateurs_de_l_union_eurasiatique_sur_les_donnees_critiques_reference
 - reseaux_de_financement_gris_issus_d_anciens_blocs_militaires_reference
+- the_tidewater_canon_reference
 oppositions:
 - agence_internationale_des_energies_renouvelables_irena_2_reference
 - arctic_passage_authority_reference
@@ -59,6 +60,7 @@ oppositions:
 - consortium_amazonia_viva_reference
 - consortium_de_maintenance_orbitale_seom_7_reference
 - consortium_des_fournisseurs_d_energie_renouvelable_distribuee_reference
+- consortium_des_pecheries_autonomes_du_grand_nord_reference
 - consortium_energetique_baltique_reference
 - consortium_energetique_des_mers_du_nord_reference
 - delta_du_mekong_reference
@@ -142,6 +144,7 @@ Le BRE est structurellement tiraillé entre ses membres aux intérêts divergent
 
 
 
+
 ## Relations
 **Alliés :**
 - [[bloc_des_souverainistes_climatiques_reference]]
@@ -160,6 +163,7 @@ Le BRE est structurellement tiraillé entre ses membres aux intérêts divergent
 - [[plateformes_centralisees_de_narration_officielle_reference]]
 - [[regulateurs_de_l_union_eurasiatique_sur_les_donnees_critiques_reference]]
 - [[reseaux_de_financement_gris_issus_d_anciens_blocs_militaires_reference]]
+- [[the_tidewater_canon_reference]]
 **Opposants :**
 - [[agence_internationale_des_energies_renouvelables_irena_2_reference]]
 - [[arctic_passage_authority_reference]]
@@ -170,6 +174,7 @@ Le BRE est structurellement tiraillé entre ses membres aux intérêts divergent
 - [[consortium_amazonia_viva_reference]]
 - [[consortium_de_maintenance_orbitale_seom_7_reference]]
 - [[consortium_des_fournisseurs_d_energie_renouvelable_distribuee_reference]]
+- [[consortium_des_pecheries_autonomes_du_grand_nord_reference]]
 - [[consortium_energetique_baltique_reference]]
 - [[consortium_energetique_des_mers_du_nord_reference]]
 - [[delta_du_mekong_reference]]

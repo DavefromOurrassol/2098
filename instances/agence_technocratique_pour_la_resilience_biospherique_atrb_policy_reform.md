@@ -37,6 +37,7 @@ zone_systemique:
 - société
 alliances:
 - agence_stabilisation_climatique_policy_reform
+- aurelio_stahl_policy_reform
 - autorite_mondiale_du_vivant_amv_policy_reform
 - bloc_des_nations_a_economie_carbone_controlee_policy_reform
 - conseil_de_regulation_climatique_global_policy_reform
@@ -49,6 +50,8 @@ alliances:
 - fonds_mondial_de_resilience_infrastructurelle_policy_reform
 - fonds_mondial_pour_la_transition_ecosystemique_fmte_policy_reform
 - fonds_souverain_de_transition_verte_fstv_policy_reform
+- gelecek_meclisi_policy_reform
+- nexcore_policy_reform
 - observatoire_mondial_des_ressources_critiques_policy_reform
 - office_integre_des_flux_migratoires_policy_reform
 - pacifique_sud_resilience_network_policy_reform
@@ -61,6 +64,7 @@ oppositions:
 - agence_internationale_de_l_energie_reformatee_aier_policy_reform
 - coalition_des_operateurs_energetiques_prives_anti_quotas_policy_reform
 - coalition_des_semences_libres_policy_reform
+- coalition_vivant_policy_reform
 - collectifs_de_biohackers_agro_communautaires_policy_reform
 - collectifs_de_gouvernance_communautaire_decentralisee_policy_reform
 - collectifs_de_hackers_biospheriques_policy_reform
@@ -146,9 +150,11 @@ L'ATRB est prise en étau entre sa vocation réformatrice — imposer les transf
 
 
 
+
 ## Relations
 **Alliés :**
 - [[agence_stabilisation_climatique_policy_reform]]
+- [[aurelio_stahl_policy_reform]]
 - [[autorite_mondiale_du_vivant_amv_policy_reform]]
 - [[bloc_des_nations_a_economie_carbone_controlee_policy_reform]]
 - [[conseil_de_regulation_climatique_global_policy_reform]]
@@ -161,6 +167,8 @@ L'ATRB est prise en étau entre sa vocation réformatrice — imposer les transf
 - [[fonds_mondial_de_resilience_infrastructurelle_policy_reform]]
 - [[fonds_mondial_pour_la_transition_ecosystemique_fmte_policy_reform]]
 - [[fonds_souverain_de_transition_verte_fstv_policy_reform]]
+- [[gelecek_meclisi_policy_reform]]
+- [[nexcore_policy_reform]]
 - [[observatoire_mondial_des_ressources_critiques_policy_reform]]
 - [[office_integre_des_flux_migratoires_policy_reform]]
 - [[pacifique_sud_resilience_network_policy_reform]]
@@ -173,6 +181,7 @@ L'ATRB est prise en étau entre sa vocation réformatrice — imposer les transf
 - [[agence_internationale_de_l_energie_reformatee_aier_policy_reform]]
 - [[coalition_des_operateurs_energetiques_prives_anti_quotas_policy_reform]]
 - [[coalition_des_semences_libres_policy_reform]]
+- [[coalition_vivant_policy_reform]]
 - [[collectifs_de_biohackers_agro_communautaires_policy_reform]]
 - [[collectifs_de_gouvernance_communautaire_decentralisee_policy_reform]]
 - [[collectifs_de_hackers_biospheriques_policy_reform]]

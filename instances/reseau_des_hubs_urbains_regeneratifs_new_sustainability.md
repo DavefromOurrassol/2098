@@ -37,7 +37,9 @@ alliances:
 - agence_globale_de_regeneration_des_bassins_versants_agrb_onu_new_sustainability
 - coalition_vivant_new_sustainability
 - conseil_mondial_de_la_regeneration_ecosystemique_cmre_new_sustainability
+- ergo_wian_sovereign_holdings_new_sustainability
 - fonds_mondial_de_regeneration_ecologique_new_sustainability
+- gelecek_meclisi_new_sustainability
 - great_lakes_autonomous_compact_new_sustainability
 - hub_nairobi_kigali_new_sustainability
 - mouvement_communautaire_des_micro_grids_energetiques_new_sustainability
@@ -119,12 +121,15 @@ Le réseau se trouve pris en étau entre son aspiration à rester un espace d'ex
 - [[systemes_productifs_travail]]
 
 
+
 ## Relations
 **Alliés :**
 - [[agence_globale_de_regeneration_des_bassins_versants_agrb_onu_new_sustainability]]
 - [[coalition_vivant_new_sustainability]]
 - [[conseil_mondial_de_la_regeneration_ecosystemique_cmre_new_sustainability]]
+- [[ergo_wian_sovereign_holdings_new_sustainability]]
 - [[fonds_mondial_de_regeneration_ecologique_new_sustainability]]
+- [[gelecek_meclisi_new_sustainability]]
 - [[great_lakes_autonomous_compact_new_sustainability]]
 - [[hub_nairobi_kigali_new_sustainability]]
 - [[mouvement_communautaire_des_micro_grids_energetiques_new_sustainability]]

@@ -38,12 +38,10 @@ zone_systemique:
     - infrastructure
 
 alliances:
-- conseil_energetique_intercontinental_new_sustainability
 - fonds_souverain_de_transition_verte_fstv_policy_reform
 - reseau_des_lobbyistes_techniques_onu_energie_policy_reform
 oppositions:
 - faction_regulatrice_dure_au_sein_du_cei_policy_reform
-- mouvement_communautaire_des_micro_grids_energetiques_new_sustainability
 - mouvement_pour_la_souverainete_energetique_commune_msec_policy_reform
 - reseau_des_journalistes_d_investigation_energetique_policy_reform
 - syndicat_des_ingenieurs_orbitaux_policy_reform
@@ -100,12 +98,10 @@ La tension centrale réside dans la contradiction structurelle entre la légitim
 
 ## Relations
 **Alliés :**
-- [[conseil_energetique_intercontinental_new_sustainability]]
 - [[fonds_souverain_de_transition_verte_fstv_policy_reform]]
 - [[reseau_des_lobbyistes_techniques_onu_energie_policy_reform]]
 **Opposants :**
 - [[faction_regulatrice_dure_au_sein_du_cei_policy_reform]]
-- [[mouvement_communautaire_des_micro_grids_energetiques_new_sustainability]]
 - [[mouvement_pour_la_souverainete_energetique_commune_msec_policy_reform]]
 - [[reseau_des_journalistes_d_investigation_energetique_policy_reform]]
 - [[syndicat_des_ingenieurs_orbitaux_policy_reform]]

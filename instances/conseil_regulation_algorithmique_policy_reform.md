@@ -43,6 +43,7 @@ alliances:
 - courant_autoritaire_recuperateur_du_vocabulaire_communautaire_policy_reform
 - directive_kontinuum_policy_reform
 - faction_regulatrice_dure_au_sein_du_cei_policy_reform
+- gelecek_meclisi_policy_reform
 - institut_brookings_singapour_de_politique_computationnelle_policy_reform
 - office_integre_des_flux_migratoires_policy_reform
 - reseau_des_agences_sanitaires_regionales_policy_reform
@@ -64,6 +65,7 @@ oppositions:
 - front_techno_utopiste_de_la_decision_automatisee_policy_reform
 - gouvernements_populistes_anti_depossession_policy_reform
 - internationale_decroissante_anti_planification_policy_reform
+- kaspar_lind_policy_reform
 - le_temoin_policy_reform
 - les_hors_prisme_policy_reform
 - mouvement_pour_la_souverainete_territoriale_absolue_policy_reform
@@ -134,6 +136,7 @@ Débat sur l'extension de sa compétence au secteur privé.
 - [[courant_autoritaire_recuperateur_du_vocabulaire_communautaire_policy_reform]]
 - [[directive_kontinuum_policy_reform]]
 - [[faction_regulatrice_dure_au_sein_du_cei_policy_reform]]
+- [[gelecek_meclisi_policy_reform]]
 - [[institut_brookings_singapour_de_politique_computationnelle_policy_reform]]
 - [[office_integre_des_flux_migratoires_policy_reform]]
 - [[reseau_des_agences_sanitaires_regionales_policy_reform]]
@@ -155,6 +158,7 @@ Débat sur l'extension de sa compétence au secteur privé.
 - [[front_techno_utopiste_de_la_decision_automatisee_policy_reform]]
 - [[gouvernements_populistes_anti_depossession_policy_reform]]
 - [[internationale_decroissante_anti_planification_policy_reform]]
+- [[kaspar_lind_policy_reform]]
 - [[le_temoin_policy_reform]]
 - [[les_hors_prisme_policy_reform]]
 - [[mouvement_pour_la_souverainete_territoriale_absolue_policy_reform]]

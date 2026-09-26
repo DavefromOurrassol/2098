@@ -36,6 +36,7 @@ alliances:
 - conseil_onu_de_gouvernance_numerique_et_ia_policy_reform
 - conseil_regulation_algorithmique_policy_reform
 - internationale_travailleurs_augmentes_policy_reform
+- nexcore_policy_reform
 - reseau_des_auditeurs_algorithmiques_independants_raai_policy_reform
 - syndicat_des_ingenieurs_orbitaux_policy_reform
 oppositions:
@@ -111,12 +112,14 @@ Le BITA est écartelé entre les blocs souverainistes qui refusent toute supervi
 - [[systeme_economique_redistribution]]
 
 
+
 ## Relations
 **Alliés :**
 - [[collectifs_citoyens_pour_l_audit_algorithmique_ouvert_policy_reform]]
 - [[conseil_onu_de_gouvernance_numerique_et_ia_policy_reform]]
 - [[conseil_regulation_algorithmique_policy_reform]]
 - [[internationale_travailleurs_augmentes_policy_reform]]
+- [[nexcore_policy_reform]]
 - [[reseau_des_auditeurs_algorithmiques_independants_raai_policy_reform]]
 - [[syndicat_des_ingenieurs_orbitaux_policy_reform]]
 **Opposants :**

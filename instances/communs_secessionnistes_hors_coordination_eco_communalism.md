@@ -38,6 +38,7 @@ alliances:
 - factions_communautaires_refusant_le_partage_narratif_exterieur_eco_communalism
 - fraternites_ecospiritualistes_des_anciens_survivalistes_eco_communalism
 oppositions:
+- agence_de_regulation_des_detroits_strategiques_ards_eco_communalism
 - amazonie_pacte_viva_eco_communalism
 - archives_ouvertes_des_jurisprudences_communales_aojc_eco_communalism
 - assemblees_bioterritoriales_regionales_eco_communalism
@@ -121,6 +122,7 @@ La tension centrale réside dans la contradiction performative du réseau lui-m�
 - [[frontieres_du_systeme]]
 
 
+
 ## Relations
 **Alliés :**
 - [[communautes_isolationnistes_refusant_la_continuite_ecologique_eco_communalism]]
@@ -129,6 +131,7 @@ La tension centrale réside dans la contradiction performative du réseau lui-m�
 - [[factions_communautaires_refusant_le_partage_narratif_exterieur_eco_communalism]]
 - [[fraternites_ecospiritualistes_des_anciens_survivalistes_eco_communalism]]
 **Opposants :**
+- [[agence_de_regulation_des_detroits_strategiques_ards_eco_communalism]]
 - [[amazonie_pacte_viva_eco_communalism]]
 - [[archives_ouvertes_des_jurisprudences_communales_aojc_eco_communalism]]
 - [[assemblees_bioterritoriales_regionales_eco_communalism]]

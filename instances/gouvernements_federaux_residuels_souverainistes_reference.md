@@ -40,6 +40,7 @@ alliances:
 - pacte_des_souverains_reference
 - reseaux_de_financement_gris_issus_d_anciens_blocs_militaires_reference
 oppositions:
+- assemblee_territoires_reference
 - autorites_regionales_de_regulation_hydrologique_reference
 - bruxelles_nouveau_reference
 - consortium_amazonia_viva_reference
@@ -52,6 +53,7 @@ oppositions:
 - nairobi_crrc_reference
 - pacifique_sud_resilience_network_reference
 - singapour_est_reference
+- the_lattice_reference
 - valparaiso_fct_reference
 type_relation_dominante: compétition
 annee_debut: 2033
@@ -122,6 +124,7 @@ Leur contradiction fondamentale réside dans le fait qu'ils invoquent une souver
 
 
 
+
 ## Relations
 **Alliés :**
 - [[bloc_des_souverainistes_climatiques_reference]]
@@ -132,6 +135,7 @@ Leur contradiction fondamentale réside dans le fait qu'ils invoquent une souver
 - [[pacte_des_souverains_reference]]
 - [[reseaux_de_financement_gris_issus_d_anciens_blocs_militaires_reference]]
 **Opposants :**
+- [[assemblee_territoires_reference]]
 - [[autorites_regionales_de_regulation_hydrologique_reference]]
 - [[bruxelles_nouveau_reference]]
 - [[consortium_amazonia_viva_reference]]
@@ -144,6 +148,7 @@ Leur contradiction fondamentale réside dans le fait qu'ils invoquent une souver
 - [[nairobi_crrc_reference]]
 - [[pacifique_sud_resilience_network_reference]]
 - [[singapour_est_reference]]
+- [[the_lattice_reference]]
 - [[valparaiso_fct_reference]]
 
 ## Notes

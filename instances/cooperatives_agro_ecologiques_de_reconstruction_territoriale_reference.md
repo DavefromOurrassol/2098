@@ -37,6 +37,7 @@ zone_systemique:
 - société
 alliances:
 - administrations_hybrides_des_cites_relais_peripheriques_reference
+- assemblee_territoires_reference
 - banque_des_communs_reference
 - collectifs_de_journalistes_independants_regionaux_reference
 - communs_numeriques_agroecologiques_reference
@@ -48,6 +49,7 @@ alliances:
 - federation_des_cliniques_autonomes_reference
 - frente_sertao_livre_reference
 - institutions_multilaterales_survivantes_reference
+- les_veilleurs_des_nappes_phreatiques_reference
 - mouvement_racines_vivantes_reference
 - ong_environnementales_de_terrain_reference
 - reseau_des_administrations_locales_rurales_participatives_reference
@@ -129,9 +131,11 @@ Les coopératives sont prises en étau entre leur vocation d'autonomie locale et
 - [[climat_environnement_global]]
 
 
+
 ## Relations
 **Alliés :**
 - [[administrations_hybrides_des_cites_relais_peripheriques_reference]]
+- [[assemblee_territoires_reference]]
 - [[banque_des_communs_reference]]
 - [[collectifs_de_journalistes_independants_regionaux_reference]]
 - [[communs_numeriques_agroecologiques_reference]]
@@ -143,6 +147,7 @@ Les coopératives sont prises en étau entre leur vocation d'autonomie locale et
 - [[federation_des_cliniques_autonomes_reference]]
 - [[frente_sertao_livre_reference]]
 - [[institutions_multilaterales_survivantes_reference]]
+- [[les_veilleurs_des_nappes_phreatiques_reference]]
 - [[mouvement_racines_vivantes_reference]]
 - [[ong_environnementales_de_terrain_reference]]
 - [[reseau_des_administrations_locales_rurales_participatives_reference]]

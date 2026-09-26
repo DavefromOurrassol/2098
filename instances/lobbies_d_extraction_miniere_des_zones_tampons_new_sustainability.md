@@ -57,6 +57,7 @@ oppositions:
 - fonds_mondial_de_regeneration_ecologique_new_sustainability
 - great_lakes_autonomous_compact_new_sustainability
 - hub_nairobi_kigali_new_sustainability
+- hyphan_raghavan_new_sustainability
 - institut_de_philosophie_des_systemes_hybrides_d_helsinki_new_sustainability
 - kalaallit_nunaat_sovereign_fund_new_sustainability
 - les_veilleurs_du_fleuve_new_sustainability
@@ -138,6 +139,7 @@ La tension centrale de ces lobbies est structurelle : la transition énergétiqu
 - [[gouvernance_institutions]]
 
 
+
 ## Relations
 **Alliés :**
 - [[bloc_eurasien_souverainiste_new_sustainability]]
@@ -160,6 +162,7 @@ La tension centrale de ces lobbies est structurelle : la transition énergétiqu
 - [[fonds_mondial_de_regeneration_ecologique_new_sustainability]]
 - [[great_lakes_autonomous_compact_new_sustainability]]
 - [[hub_nairobi_kigali_new_sustainability]]
+- [[hyphan_raghavan_new_sustainability]]
 - [[institut_de_philosophie_des_systemes_hybrides_d_helsinki_new_sustainability]]
 - [[kalaallit_nunaat_sovereign_fund_new_sustainability]]
 - [[les_veilleurs_du_fleuve_new_sustainability]]

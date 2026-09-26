@@ -31,6 +31,7 @@ zone_geographique:
 zone_systemique:
 - société
 alliances:
+- agence_de_regulation_des_detroits_strategiques_ards_reference
 - agence_internationale_des_energies_renouvelables_irena_2_reference
 - agence_stabilisation_climatique_reference
 - agrisynth_reference
@@ -45,6 +46,7 @@ alliances:
 - fonds_d_investissement_foncier_climatique_reference
 - fonds_monetaire_climatique_fmc_reference
 - geneve_lac_retreite_reference
+- institut_des_seuils_demographiques_reference
 - institutions_multilaterales_survivantes_reference
 - kinshasa_accords_hydriques_reference
 - observatoire_climatique_des_territoires_oct_reference
@@ -60,9 +62,11 @@ oppositions:
 - consortiums_prives_d_extraction_de_ressources_critiques_reference
 - corporations_d_extraction_energetique_non_signataires_reference
 - factions_eurasiatiques_contre_la_tarification_hydrique_reference
+- hyphan_raghavan_reference
 - lobbies_industriels_des_etats_non_signataires_reference
 - pacte_des_souverains_reference
 - reseaux_de_financement_gris_issus_d_anciens_blocs_militaires_reference
+- the_tidewater_canon_reference
 type_relation_dominante: coopération
 annee_debut: 2026
 annee_fin: null
@@ -131,8 +135,10 @@ La BMTC est structurellement tiraillée entre sa vocation redistributive envers 
 
 
 
+
 ## Relations
 **Alliés :**
+- [[agence_de_regulation_des_detroits_strategiques_ards_reference]]
 - [[agence_internationale_des_energies_renouvelables_irena_2_reference]]
 - [[agence_stabilisation_climatique_reference]]
 - [[agrisynth_reference]]
@@ -147,6 +153,7 @@ La BMTC est structurellement tiraillée entre sa vocation redistributive envers 
 - [[fonds_d_investissement_foncier_climatique_reference]]
 - [[fonds_monetaire_climatique_fmc_reference]]
 - [[geneve_lac_retreite_reference]]
+- [[institut_des_seuils_demographiques_reference]]
 - [[institutions_multilaterales_survivantes_reference]]
 - [[kinshasa_accords_hydriques_reference]]
 - [[observatoire_climatique_des_territoires_oct_reference]]
@@ -162,9 +169,11 @@ La BMTC est structurellement tiraillée entre sa vocation redistributive envers 
 - [[consortiums_prives_d_extraction_de_ressources_critiques_reference]]
 - [[corporations_d_extraction_energetique_non_signataires_reference]]
 - [[factions_eurasiatiques_contre_la_tarification_hydrique_reference]]
+- [[hyphan_raghavan_reference]]
 - [[lobbies_industriels_des_etats_non_signataires_reference]]
 - [[pacte_des_souverains_reference]]
 - [[reseaux_de_financement_gris_issus_d_anciens_blocs_militaires_reference]]
+- [[the_tidewater_canon_reference]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

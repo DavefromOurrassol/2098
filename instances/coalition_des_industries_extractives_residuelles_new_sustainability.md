@@ -53,6 +53,7 @@ oppositions:
 - consortium_amazonia_viva_new_sustainability
 - consortium_d_audit_algorithmique_ouvert_new_sustainability
 - consortium_de_regeneration_planetaire_new_sustainability
+- consortium_des_pecheries_autonomes_du_grand_nord_new_sustainability
 - fonds_mondial_de_regeneration_ecologique_new_sustainability
 - fonds_mondial_de_transition_ecologique_du_travail_new_sustainability
 - great_lakes_autonomous_compact_new_sustainability
@@ -60,6 +61,7 @@ oppositions:
 - hub_nairobi_kigali_new_sustainability
 - institut_de_philosophie_des_systemes_hybrides_d_helsinki_new_sustainability
 - kalaallit_nunaat_sovereign_fund_new_sustainability
+- les_veilleurs_des_nappes_phreatiques_new_sustainability
 - ligue_des_cites_du_sahel_numerique_new_sustainability
 - mouvement_communautaire_des_micro_grids_energetiques_new_sustainability
 - observatoire_anti_monopole_de_geneve_new_sustainability
@@ -138,6 +140,7 @@ La Coalition est prise en étau entre sa base historique — industries fossiles
 
 
 
+
 ## Relations
 **Alliés :**
 - [[coalition_anti_fiscalite_universelle_new_sustainability]]
@@ -160,6 +163,7 @@ La Coalition est prise en étau entre sa base historique — industries fossiles
 - [[consortium_amazonia_viva_new_sustainability]]
 - [[consortium_d_audit_algorithmique_ouvert_new_sustainability]]
 - [[consortium_de_regeneration_planetaire_new_sustainability]]
+- [[consortium_des_pecheries_autonomes_du_grand_nord_new_sustainability]]
 - [[fonds_mondial_de_regeneration_ecologique_new_sustainability]]
 - [[fonds_mondial_de_transition_ecologique_du_travail_new_sustainability]]
 - [[great_lakes_autonomous_compact_new_sustainability]]
@@ -167,6 +171,7 @@ La Coalition est prise en étau entre sa base historique — industries fossiles
 - [[hub_nairobi_kigali_new_sustainability]]
 - [[institut_de_philosophie_des_systemes_hybrides_d_helsinki_new_sustainability]]
 - [[kalaallit_nunaat_sovereign_fund_new_sustainability]]
+- [[les_veilleurs_des_nappes_phreatiques_new_sustainability]]
 - [[ligue_des_cites_du_sahel_numerique_new_sustainability]]
 - [[mouvement_communautaire_des_micro_grids_energetiques_new_sustainability]]
 - [[observatoire_anti_monopole_de_geneve_new_sustainability]]

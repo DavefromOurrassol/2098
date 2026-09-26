@@ -45,6 +45,7 @@ alliances:
 - milices_de_controle_territorial_breakdown
 - reseau_de_recuperation_industrielle_illicite_breakdown
 - seigneuries_logistiques_armees_breakdown
+- terminal_kharg_data_haven_breakdown
 oppositions:
 - communautes_rurales_autogerees_des_n_uds_de_survie_breakdown
 - communes_rust_belt_breakdown
@@ -127,6 +128,7 @@ Les Cartels sont condamnés à une contradiction structurelle : leur pouvoir rep
 - [[gouvernance_institutions]]
 
 
+
 ## Relations
 **Alliés :**
 - [[blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown]]
@@ -138,6 +140,7 @@ Les Cartels sont condamnés à une contradiction structurelle : leur pouvoir rep
 - [[milices_de_controle_territorial_breakdown]]
 - [[reseau_de_recuperation_industrielle_illicite_breakdown]]
 - [[seigneuries_logistiques_armees_breakdown]]
+- [[terminal_kharg_data_haven_breakdown]]
 **Opposants :**
 - [[communautes_rurales_autogerees_des_n_uds_de_survie_breakdown]]
 - [[communes_rust_belt_breakdown]]

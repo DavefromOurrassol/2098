@@ -37,7 +37,10 @@ alliances:
 - bureau_des_territoires_residuels_reference
 - consortium_des_grandes_plateformes_ia_integrees_reference
 - consortium_des_grandes_plateformes_logistiques_globales_reference
+- ergo_wian_sovereign_holdings_reference
+- gelecek_meclisi_reference
 - gouvernements_a_regime_de_productivite_mandatee_reference
+- institut_des_seuils_demographiques_reference
 - lyon_metropole_reference
 - neuroharmonics_reference
 - observatoire_climatique_des_territoires_oct_reference
@@ -122,6 +125,7 @@ La tension centrale oppose l'efficacité mesurable de ces systèmes — réducti
 - [[technologie_information]]
 
 
+
 ## Relations
 **Alliés :**
 - [[agence_stabilisation_climatique_reference]]
@@ -129,7 +133,10 @@ La tension centrale oppose l'efficacité mesurable de ces systèmes — réducti
 - [[bureau_des_territoires_residuels_reference]]
 - [[consortium_des_grandes_plateformes_ia_integrees_reference]]
 - [[consortium_des_grandes_plateformes_logistiques_globales_reference]]
+- [[ergo_wian_sovereign_holdings_reference]]
+- [[gelecek_meclisi_reference]]
 - [[gouvernements_a_regime_de_productivite_mandatee_reference]]
+- [[institut_des_seuils_demographiques_reference]]
 - [[lyon_metropole_reference]]
 - [[neuroharmonics_reference]]
 - [[observatoire_climatique_des_territoires_oct_reference]]

@@ -61,8 +61,11 @@ oppositions:
 - collectif_nuit_jaune_reference
 - consortiums_prives_d_extraction_de_ressources_critiques_reference
 - etats_a_tendance_centraliste_numerique_reference
+- kaspar_lind_reference
+- nadia_ferreira_sato_reference
 - operateurs_de_zones_economiques_speciales_periurbaines_reference
 - plateformes_d_optimisation_territoriale_par_ia_reference
+- raised_hands_reference
 type_relation_dominante: dépendance
 annee_debut: 2033
 annee_fin: null
@@ -129,6 +132,7 @@ La tension fondamentale qui les traverse oppose la logique de standardisation po
 - [[demographie_mobilite_humaine]]
 
 
+
 ## Relations
 **Alliés :**
 - [[autorites_regionales_de_regulation_hydrologique_reference]]
@@ -157,8 +161,11 @@ La tension fondamentale qui les traverse oppose la logique de standardisation po
 - [[collectif_nuit_jaune_reference]]
 - [[consortiums_prives_d_extraction_de_ressources_critiques_reference]]
 - [[etats_a_tendance_centraliste_numerique_reference]]
+- [[kaspar_lind_reference]]
+- [[nadia_ferreira_sato_reference]]
 - [[operateurs_de_zones_economiques_speciales_periurbaines_reference]]
 - [[plateformes_d_optimisation_territoriale_par_ia_reference]]
+- [[raised_hands_reference]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

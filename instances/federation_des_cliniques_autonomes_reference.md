@@ -38,12 +38,15 @@ alliances:
 - consortium_africain_de_biotechnologies_sociales_reference
 - cooperatives_agro_ecologiques_de_reconstruction_territoriale_reference
 - cooperatives_agro_ecologiques_du_bassin_mediterraneen_reference
+- elias_mork_reference
 - institutions_multilaterales_survivantes_reference
 - internationale_travailleurs_augmentes_reference
 - les_veilleurs_du_fleuve_reference
+- nadia_ferreira_sato_reference
 - ong_de_tracabilite_des_ressources_critiques_reference
 - ong_environnementales_de_terrain_reference
 - reseau_des_administrations_locales_rurales_participatives_reference
+- reseau_des_cartographes_des_zones_grises_reference
 - reseau_des_cooperatives_agro_saheliennes_reference
 - reseau_des_villes_refuge_pour_travailleurs_desaugmentes_reference
 - reseau_hospitalier_hybride_eurasiatique_reference
@@ -57,6 +60,7 @@ oppositions:
 - consortium_augmentwork_reference
 - consortiums_energetiques_opaques_reference
 - consortiums_prives_de_gestion_des_donnees_critiques_reference
+- deepfield_institute_reference
 - etats_a_tendance_centraliste_numerique_reference
 - gouvernements_a_regime_de_productivite_mandatee_reference
 - lobbies_agro_industriels_a_haute_consommation_d_eau_reference
@@ -129,6 +133,7 @@ La Fédération est tiraillée entre son idéal d'autonomie radicale et la tenta
 - [[organisation_territoires]]
 
 
+
 ## Relations
 **Alliés :**
 - [[collectifs_academiques_independants_reference]]
@@ -137,12 +142,15 @@ La Fédération est tiraillée entre son idéal d'autonomie radicale et la tenta
 - [[consortium_africain_de_biotechnologies_sociales_reference]]
 - [[cooperatives_agro_ecologiques_de_reconstruction_territoriale_reference]]
 - [[cooperatives_agro_ecologiques_du_bassin_mediterraneen_reference]]
+- [[elias_mork_reference]]
 - [[institutions_multilaterales_survivantes_reference]]
 - [[internationale_travailleurs_augmentes_reference]]
 - [[les_veilleurs_du_fleuve_reference]]
+- [[nadia_ferreira_sato_reference]]
 - [[ong_de_tracabilite_des_ressources_critiques_reference]]
 - [[ong_environnementales_de_terrain_reference]]
 - [[reseau_des_administrations_locales_rurales_participatives_reference]]
+- [[reseau_des_cartographes_des_zones_grises_reference]]
 - [[reseau_des_cooperatives_agro_saheliennes_reference]]
 - [[reseau_des_villes_refuge_pour_travailleurs_desaugmentes_reference]]
 - [[reseau_hospitalier_hybride_eurasiatique_reference]]
@@ -156,6 +164,7 @@ La Fédération est tiraillée entre son idéal d'autonomie radicale et la tenta
 - [[consortium_augmentwork_reference]]
 - [[consortiums_energetiques_opaques_reference]]
 - [[consortiums_prives_de_gestion_des_donnees_critiques_reference]]
+- [[deepfield_institute_reference]]
 - [[etats_a_tendance_centraliste_numerique_reference]]
 - [[gouvernements_a_regime_de_productivite_mandatee_reference]]
 - [[lobbies_agro_industriels_a_haute_consommation_d_eau_reference]]

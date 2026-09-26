@@ -32,10 +32,12 @@ zone_systemique:
   - infrastructure
 alliances:
 - carthage_nord_nexcore_breakdown
+- ergo_wian_sovereign_holdings_breakdown
 - front_techno_reconstructionniste_breakdown
 - milices_contractuelles_des_anciens_etats_membres_breakdown
 - seigneurs_de_guerre_agro_territoriaux_breakdown
 - seoul_collectif_nexcore_breakdown
+- terminal_kharg_data_haven_breakdown
 oppositions:
 - brigades_medicales_itinerantes_breakdown
 - collectifs_de_hackers_archivistes_des_interstices_reseaux_breakdown
@@ -109,10 +111,12 @@ que la fragmentation est une protection.
 ## Relations
 **Alliés :**
 - [[carthage_nord_nexcore_breakdown]]
+- [[ergo_wian_sovereign_holdings_breakdown]]
 - [[front_techno_reconstructionniste_breakdown]]
 - [[milices_contractuelles_des_anciens_etats_membres_breakdown]]
 - [[seigneurs_de_guerre_agro_territoriaux_breakdown]]
 - [[seoul_collectif_nexcore_breakdown]]
+- [[terminal_kharg_data_haven_breakdown]]
 **Opposants :**
 - [[brigades_medicales_itinerantes_breakdown]]
 - [[collectifs_de_hackers_archivistes_des_interstices_reseaux_breakdown]]

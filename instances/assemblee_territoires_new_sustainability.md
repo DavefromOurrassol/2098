@@ -38,6 +38,7 @@ alliances:
 - coalition_vivant_new_sustainability
 - commission_territoriale_ourrassol_new_sustainability
 - conseil_regulation_algorithmique_new_sustainability
+- gelecek_meclisi_new_sustainability
 - nexcore_new_sustainability
 - parlement_deliberatif_mondial_new_sustainability
 - parlement_territoires_nairobi_new_sustainability
@@ -104,6 +105,7 @@ sur la pondération des votes.
 - [[coalition_vivant_new_sustainability]]
 - [[commission_territoriale_ourrassol_new_sustainability]]
 - [[conseil_regulation_algorithmique_new_sustainability]]
+- [[gelecek_meclisi_new_sustainability]]
 - [[nexcore_new_sustainability]]
 - [[parlement_deliberatif_mondial_new_sustainability]]
 - [[parlement_territoires_nairobi_new_sustainability]]

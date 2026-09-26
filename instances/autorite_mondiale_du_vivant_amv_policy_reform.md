@@ -30,8 +30,10 @@ zone_geographique:
 zone_systemique:
 - société
 alliances:
+- agence_de_regulation_des_detroits_strategiques_ards_policy_reform
 - agence_technocratique_pour_la_resilience_biospherique_atrb_policy_reform
 - autorite_continentale_des_ressources_aquatiques_acra_policy_reform
+- coalition_vivant_policy_reform
 - conseil_de_regulation_climatique_global_policy_reform
 - conseil_intergouvernemental_de_regulation_technologique_policy_reform
 - conseil_regulation_ressources_policy_reform
@@ -43,6 +45,7 @@ alliances:
 - fonds_mondial_de_stabilisation_biotechnologique_policy_reform
 - fonds_mondial_pour_la_transition_ecosystemique_fmte_policy_reform
 - fonds_souverain_de_transition_verte_fstv_policy_reform
+- gelecek_meclisi_policy_reform
 - nexus_biosyn_policy_reform
 - observatoire_mondial_des_ressources_critiques_policy_reform
 - office_integre_des_flux_migratoires_policy_reform
@@ -56,6 +59,7 @@ oppositions:
 - collectifs_de_hackers_biospheriques_policy_reform
 - conglomerats_d_automatisation_industrielle_integrale_policy_reform
 - consortiums_agro_industriels_du_bassin_fluvial_policy_reform
+- ergo_wian_sovereign_holdings_policy_reform
 - etats_dissidents_du_bloc_austral_policy_reform
 - factions_internes_dissidentes_des_contributeurs_historiques_policy_reform
 - factions_internes_pro_desaugmentation_totale_policy_reform
@@ -66,7 +70,9 @@ oppositions:
 - mouvement_pour_la_justice_ecologique_communautaire_policy_reform
 - mouvement_pour_la_souverainete_territoriale_absolue_policy_reform
 - republique_islamique_iran_policy_reform
+- reseau_des_cartographes_des_zones_grises_policy_reform
 - syndicats_d_extraction_privee_non_regules_policy_reform
+- terminal_kharg_data_haven_policy_reform
 type_relation_dominante: coopération
 annee_debut: 2035
 annee_fin: null
@@ -131,10 +137,13 @@ L'AMV est écartelée entre les blocs industriels qui financent son fonctionneme
 
 
 
+
 ## Relations
 **Alliés :**
+- [[agence_de_regulation_des_detroits_strategiques_ards_policy_reform]]
 - [[agence_technocratique_pour_la_resilience_biospherique_atrb_policy_reform]]
 - [[autorite_continentale_des_ressources_aquatiques_acra_policy_reform]]
+- [[coalition_vivant_policy_reform]]
 - [[conseil_de_regulation_climatique_global_policy_reform]]
 - [[conseil_intergouvernemental_de_regulation_technologique_policy_reform]]
 - [[conseil_regulation_ressources_policy_reform]]
@@ -146,6 +155,7 @@ L'AMV est écartelée entre les blocs industriels qui financent son fonctionneme
 - [[fonds_mondial_de_stabilisation_biotechnologique_policy_reform]]
 - [[fonds_mondial_pour_la_transition_ecosystemique_fmte_policy_reform]]
 - [[fonds_souverain_de_transition_verte_fstv_policy_reform]]
+- [[gelecek_meclisi_policy_reform]]
 - [[nexus_biosyn_policy_reform]]
 - [[observatoire_mondial_des_ressources_critiques_policy_reform]]
 - [[office_integre_des_flux_migratoires_policy_reform]]
@@ -159,6 +169,7 @@ L'AMV est écartelée entre les blocs industriels qui financent son fonctionneme
 - [[collectifs_de_hackers_biospheriques_policy_reform]]
 - [[conglomerats_d_automatisation_industrielle_integrale_policy_reform]]
 - [[consortiums_agro_industriels_du_bassin_fluvial_policy_reform]]
+- [[ergo_wian_sovereign_holdings_policy_reform]]
 - [[etats_dissidents_du_bloc_austral_policy_reform]]
 - [[factions_internes_dissidentes_des_contributeurs_historiques_policy_reform]]
 - [[factions_internes_pro_desaugmentation_totale_policy_reform]]
@@ -169,7 +180,9 @@ L'AMV est écartelée entre les blocs industriels qui financent son fonctionneme
 - [[mouvement_pour_la_justice_ecologique_communautaire_policy_reform]]
 - [[mouvement_pour_la_souverainete_territoriale_absolue_policy_reform]]
 - [[republique_islamique_iran_policy_reform]]
+- [[reseau_des_cartographes_des_zones_grises_policy_reform]]
 - [[syndicats_d_extraction_privee_non_regules_policy_reform]]
+- [[terminal_kharg_data_haven_policy_reform]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

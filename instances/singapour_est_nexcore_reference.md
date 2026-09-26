@@ -41,6 +41,7 @@ alliances:
 - consortium_des_grandes_plateformes_logistiques_globales_reference
 - consortium_indo_pacifique_de_l_hydrogene_reference
 - fonds_souverains_de_la_ceinture_financiere_pacifique_reference
+- meridian_assembly_reference
 - neuroharmonics_reference
 - nexcore_reference
 - operateurs_de_zones_economiques_speciales_periurbaines_reference
@@ -108,6 +109,7 @@ La tension centrale de Singapour Est Nexcore tient à ce paradoxe : plus elle é
 - [[consortium_des_grandes_plateformes_logistiques_globales_reference]]
 - [[consortium_indo_pacifique_de_l_hydrogene_reference]]
 - [[fonds_souverains_de_la_ceinture_financiere_pacifique_reference]]
+- [[meridian_assembly_reference]]
 - [[neuroharmonics_reference]]
 - [[nexcore_reference]]
 - [[operateurs_de_zones_economiques_speciales_periurbaines_reference]]

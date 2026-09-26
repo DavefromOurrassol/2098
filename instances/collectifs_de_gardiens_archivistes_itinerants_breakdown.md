@@ -42,18 +42,24 @@ alliances:
 - archives_neutres_de_geneve_breakdown
 - archives_neutres_geneve_breakdown
 - bureau_des_territoires_residuels_breakdown
+- coalition_vivant_breakdown
 - collectif_des_climatologues_sans_etat_breakdown
 - collectifs_de_hackers_archivistes_des_interstices_reseaux_breakdown
 - communautes_religieuses_des_relais_physiques_breakdown
 - communes_rust_belt_breakdown
 - delta_mekong_racines_breakdown
+- gelecek_meclisi_breakdown
+- institut_des_seuils_demographiques_breakdown
 - lagos_interieur_mnemos_breakdown
 - le_registre_du_fleuve_breakdown
+- les_veilleurs_des_nappes_phreatiques_breakdown
 - les_veilleurs_du_fleuve_breakdown
 - ligue_des_cites_littorales_en_sursis_breakdown
 - noeud_mnemos_pannonie_breakdown
 - occitanie_racines_meres_breakdown
 - pirates_biologiques_open_source_breakdown
+- raised_hands_breakdown
+- reseau_des_cartographes_des_zones_grises_breakdown
 - reseau_mnemos_breakdown
 oppositions:
 - carthage_nord_nexcore_breakdown
@@ -122,24 +128,31 @@ La tension centrale qui travaille ces collectifs est celle entre la conservation
 - [[demographie_mobilite_humaine]]
 
 
+
 ## Relations
 **Alliés :**
 - [[agadez_ligue_sahel_numerique_breakdown]]
 - [[archives_neutres_de_geneve_breakdown]]
 - [[archives_neutres_geneve_breakdown]]
 - [[bureau_des_territoires_residuels_breakdown]]
+- [[coalition_vivant_breakdown]]
 - [[collectif_des_climatologues_sans_etat_breakdown]]
 - [[collectifs_de_hackers_archivistes_des_interstices_reseaux_breakdown]]
 - [[communautes_religieuses_des_relais_physiques_breakdown]]
 - [[communes_rust_belt_breakdown]]
 - [[delta_mekong_racines_breakdown]]
+- [[gelecek_meclisi_breakdown]]
+- [[institut_des_seuils_demographiques_breakdown]]
 - [[lagos_interieur_mnemos_breakdown]]
 - [[le_registre_du_fleuve_breakdown]]
+- [[les_veilleurs_des_nappes_phreatiques_breakdown]]
 - [[les_veilleurs_du_fleuve_breakdown]]
 - [[ligue_des_cites_littorales_en_sursis_breakdown]]
 - [[noeud_mnemos_pannonie_breakdown]]
 - [[occitanie_racines_meres_breakdown]]
 - [[pirates_biologiques_open_source_breakdown]]
+- [[raised_hands_breakdown]]
+- [[reseau_des_cartographes_des_zones_grises_breakdown]]
 - [[reseau_mnemos_breakdown]]
 **Opposants :**
 - [[carthage_nord_nexcore_breakdown]]

@@ -34,6 +34,7 @@ zone_geographique:
 zone_systemique:
 - société
 alliances:
+- agence_de_regulation_des_detroits_strategiques_ards_policy_reform
 - agence_internationale_de_l_energie_reformatee_aier_policy_reform
 - agence_technocratique_pour_la_resilience_biospherique_atrb_policy_reform
 - arctic_passage_authority_policy_reform
@@ -122,8 +123,10 @@ L'OMRC est pris en étau entre sa mission de neutralité scientifique et la réa
 - [[geopolitique_conflits]]
 
 
+
 ## Relations
 **Alliés :**
+- [[agence_de_regulation_des_detroits_strategiques_ards_policy_reform]]
 - [[agence_internationale_de_l_energie_reformatee_aier_policy_reform]]
 - [[agence_technocratique_pour_la_resilience_biospherique_atrb_policy_reform]]
 - [[arctic_passage_authority_policy_reform]]

@@ -41,10 +41,14 @@ alliances:
 oppositions:
 - administrations_hybrides_des_cites_relais_peripheriques_reference
 - guadalajara_nexus_reference
+- kaspar_lind_reference
+- kindling_reference
 - milices_concurrentes_des_droits_de_passage_reference
+- nadia_ferreira_sato_reference
 - operateurs_logistiques_prives_des_zones_grises_eurasiennes_reference
 - pacifique_sud_archipels_flottants_reference
 - pacte_des_souverains_reference
+- reseau_des_cartographes_des_zones_grises_reference
 - vasil_orentchev_reference
 - zones_grises_globales_reference
 type_relation_dominante: dépendance
@@ -112,6 +116,7 @@ Leur existence même repose sur une contradiction fondamentale : mandatées pour
 - [[frontieres_du_systeme]]
 
 
+
 ## Relations
 **Alliés :**
 - [[bureau_des_territoires_residuels_reference]]
@@ -124,10 +129,14 @@ Leur existence même repose sur une contradiction fondamentale : mandatées pour
 **Opposants :**
 - [[administrations_hybrides_des_cites_relais_peripheriques_reference]]
 - [[guadalajara_nexus_reference]]
+- [[kaspar_lind_reference]]
+- [[kindling_reference]]
 - [[milices_concurrentes_des_droits_de_passage_reference]]
+- [[nadia_ferreira_sato_reference]]
 - [[operateurs_logistiques_prives_des_zones_grises_eurasiennes_reference]]
 - [[pacifique_sud_archipels_flottants_reference]]
 - [[pacte_des_souverains_reference]]
+- [[reseau_des_cartographes_des_zones_grises_reference]]
 - [[vasil_orentchev_reference]]
 - [[zones_grises_globales_reference]]
 

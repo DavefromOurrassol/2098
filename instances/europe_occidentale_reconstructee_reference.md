@@ -59,6 +59,7 @@ oppositions:
 - courant_nationaliste_instrumentalisateur_du_discours_des_racines_reference
 - factions_eurasiatiques_contre_la_tarification_hydrique_reference
 - gouvernements_federaux_residuels_souverainistes_reference
+- kindling_reference
 - pacte_des_souverains_reference
 type_relation_dominante: dépendance
 
@@ -134,4 +135,5 @@ L'UOC est prise en étau entre des États membres qui lui délèguent leurs prob
 - [[courant_nationaliste_instrumentalisateur_du_discours_des_racines_reference]]
 - [[factions_eurasiatiques_contre_la_tarification_hydrique_reference]]
 - [[gouvernements_federaux_residuels_souverainistes_reference]]
+- [[kindling_reference]]
 - [[pacte_des_souverains_reference]]

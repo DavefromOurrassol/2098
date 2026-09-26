@@ -35,6 +35,7 @@ alliances:
 - assemblee_territoires_new_sustainability
 - bloc_des_architectes_d_efficience_algorithmique_new_sustainability
 - consortium_d_interoperabilite_ia_humain_new_sustainability
+- ergo_wian_sovereign_holdings_new_sustainability
 - nexcore_new_sustainability
 - oracle_des_seuils_new_sustainability
 - rede_paulista_de_distribuicao_algoritmica_new_sustainability
@@ -43,9 +44,11 @@ alliances:
 oppositions:
 - coalition_anti_algorithme_des_autonomies_locales_new_sustainability
 - coalition_anti_fiscalite_universelle_new_sustainability
-- conseil_regulation_algorithmique_fortress_world
 - les_passeurs_de_limites_new_sustainability
+- nadia_ferreira_sato_new_sustainability
+- reseau_des_cartographes_des_zones_grises_new_sustainability
 - reseaux_d_information_souverainistes_fermes_new_sustainability
+- terminal_kharg_data_haven_new_sustainability
 type_relation_dominante: coopération
 annee_debut: 2040
 annee_fin:
@@ -104,6 +107,7 @@ Débat interne sur la limite entre régulation et censure algorithmique.
 - [[assemblee_territoires_new_sustainability]]
 - [[bloc_des_architectes_d_efficience_algorithmique_new_sustainability]]
 - [[consortium_d_interoperabilite_ia_humain_new_sustainability]]
+- [[ergo_wian_sovereign_holdings_new_sustainability]]
 - [[nexcore_new_sustainability]]
 - [[oracle_des_seuils_new_sustainability]]
 - [[rede_paulista_de_distribuicao_algoritmica_new_sustainability]]
@@ -112,6 +116,8 @@ Débat interne sur la limite entre régulation et censure algorithmique.
 **Opposants :**
 - [[coalition_anti_algorithme_des_autonomies_locales_new_sustainability]]
 - [[coalition_anti_fiscalite_universelle_new_sustainability]]
-- [[conseil_regulation_algorithmique_fortress_world]]
 - [[les_passeurs_de_limites_new_sustainability]]
+- [[nadia_ferreira_sato_new_sustainability]]
+- [[reseau_des_cartographes_des_zones_grises_new_sustainability]]
 - [[reseaux_d_information_souverainistes_fermes_new_sustainability]]
+- [[terminal_kharg_data_haven_new_sustainability]]

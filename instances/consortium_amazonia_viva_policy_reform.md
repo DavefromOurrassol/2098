@@ -44,6 +44,7 @@ alliances:
 - autorite_mondiale_du_vivant_amv_policy_reform
 - bloc_des_nations_a_economie_carbone_controlee_policy_reform
 - coalition_des_semences_libres_policy_reform
+- coalition_vivant_policy_reform
 - collectifs_de_gouvernance_communautaire_decentralisee_policy_reform
 - conseil_de_regulation_climatique_global_policy_reform
 - consortium_des_villes_etats_durables_policy_reform
@@ -121,6 +122,7 @@ Le Consortium est pris en étau entre deux risques symétriques : être coopté 
 - [[autorite_mondiale_du_vivant_amv_policy_reform]]
 - [[bloc_des_nations_a_economie_carbone_controlee_policy_reform]]
 - [[coalition_des_semences_libres_policy_reform]]
+- [[coalition_vivant_policy_reform]]
 - [[collectifs_de_gouvernance_communautaire_decentralisee_policy_reform]]
 - [[conseil_de_regulation_climatique_global_policy_reform]]
 - [[consortium_des_villes_etats_durables_policy_reform]]

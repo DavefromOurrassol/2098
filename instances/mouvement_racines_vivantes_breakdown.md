@@ -35,20 +35,20 @@ zone_systemique:
     - infrastructure
 
 alliances:
+- coalition_vivant_breakdown
 - communautes_paysannes_refugiees_breakdown
 - communautes_rurales_autonomes_breakdown
 - consortium_amazonia_viva_breakdown
 - delta_mekong_racines_breakdown
 - frente_sertao_livre_breakdown
-- internationale_des_semenciers_agro_pirates_fortress_world
 - massif_central_cicatrices_vertes_breakdown
 - occitanie_racines_meres_breakdown
 - reseaux_de_soigneurs_traditionnels_breakdown
 - vallee_allier_terrafond_breakdown
 oppositions:
 - consortiums_logistiques_agro_corporatifs_breakdown
+- deepfield_institute_breakdown
 - front_techno_reconstructionniste_breakdown
-- front_techno_utopiste_de_la_decision_automatisee_policy_reform
 - milices_d_accaparement_hydrique_breakdown
 - seigneurs_de_guerre_agro_territoriaux_breakdown
 type_relation_dominante: conflit
@@ -103,19 +103,19 @@ La fracture entre les branches 'ouvertes' — accueillantes, échangistes, fond�
 
 ## Relations
 **Alliés :**
+- [[coalition_vivant_breakdown]]
 - [[communautes_paysannes_refugiees_breakdown]]
 - [[communautes_rurales_autonomes_breakdown]]
 - [[consortium_amazonia_viva_breakdown]]
 - [[delta_mekong_racines_breakdown]]
 - [[frente_sertao_livre_breakdown]]
-- [[internationale_des_semenciers_agro_pirates_fortress_world]]
 - [[massif_central_cicatrices_vertes_breakdown]]
 - [[occitanie_racines_meres_breakdown]]
 - [[reseaux_de_soigneurs_traditionnels_breakdown]]
 - [[vallee_allier_terrafond_breakdown]]
 **Opposants :**
 - [[consortiums_logistiques_agro_corporatifs_breakdown]]
+- [[deepfield_institute_breakdown]]
 - [[front_techno_reconstructionniste_breakdown]]
-- [[front_techno_utopiste_de_la_decision_automatisee_policy_reform]]
 - [[milices_d_accaparement_hydrique_breakdown]]
 - [[seigneurs_de_guerre_agro_territoriaux_breakdown]]

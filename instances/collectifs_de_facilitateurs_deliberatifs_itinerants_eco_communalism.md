@@ -40,7 +40,9 @@ alliances:
 - collectifs_de_geo_observateurs_citoyens_eco_communalism
 - confederation_bassins_vivants_eco_communalism
 - cooperatives_d_habitat_regeneratif_eco_communalism
+- gelecek_meclisi_eco_communalism
 - guildes_de_mediateurs_ecologiques_eco_communalism
+- hyphan_raghavan_eco_communalism
 - leena_vainala_eco_communalism
 - mouvement_des_archives_vivantes_du_savoir_partage_eco_communalism
 - reseau_assemblees_fennoscandien_eco_communalism
@@ -128,6 +130,7 @@ La tension fondamentale des Collectifs réside dans la contradiction entre leur 
 - [[valeurs_culture_tempo_sociale]]
 
 
+
 ## Relations
 **Alliés :**
 - [[archives_ouvertes_des_jurisprudences_communales_aojc_eco_communalism]]
@@ -139,7 +142,9 @@ La tension fondamentale des Collectifs réside dans la contradiction entre leur 
 - [[collectifs_de_geo_observateurs_citoyens_eco_communalism]]
 - [[confederation_bassins_vivants_eco_communalism]]
 - [[cooperatives_d_habitat_regeneratif_eco_communalism]]
+- [[gelecek_meclisi_eco_communalism]]
 - [[guildes_de_mediateurs_ecologiques_eco_communalism]]
+- [[hyphan_raghavan_eco_communalism]]
 - [[leena_vainala_eco_communalism]]
 - [[mouvement_des_archives_vivantes_du_savoir_partage_eco_communalism]]
 - [[reseau_assemblees_fennoscandien_eco_communalism]]

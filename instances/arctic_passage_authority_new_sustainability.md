@@ -39,10 +39,12 @@ zone_systemique:
     - société
 
 alliances:
+- agence_de_regulation_des_detroits_strategiques_ards_new_sustainability
 - agence_stabilisation_climatique_new_sustainability
 - bureau_gouvernance_algorithmique_new_sustainability
 - conseil_de_deliberation_augmentee_de_l_union_nordique_new_sustainability
 - conseil_energetique_intercontinental_new_sustainability
+- consortium_des_pecheries_autonomes_du_grand_nord_new_sustainability
 - fonds_mondial_de_regeneration_ecologique_new_sustainability
 - great_lakes_compact_new_sustainability
 - kalaallit_nunaat_sovereign_fund_new_sustainability
@@ -112,10 +114,12 @@ La tension centrale reste intacte malgré la maturité institutionnelle : l'incl
 
 ## Relations
 **Alliés :**
+- [[agence_de_regulation_des_detroits_strategiques_ards_new_sustainability]]
 - [[agence_stabilisation_climatique_new_sustainability]]
 - [[bureau_gouvernance_algorithmique_new_sustainability]]
 - [[conseil_de_deliberation_augmentee_de_l_union_nordique_new_sustainability]]
 - [[conseil_energetique_intercontinental_new_sustainability]]
+- [[consortium_des_pecheries_autonomes_du_grand_nord_new_sustainability]]
 - [[fonds_mondial_de_regeneration_ecologique_new_sustainability]]
 - [[great_lakes_compact_new_sustainability]]
 - [[kalaallit_nunaat_sovereign_fund_new_sustainability]]

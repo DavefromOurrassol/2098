@@ -45,6 +45,7 @@ alliances:
 - seoul_collectif_nexcore_breakdown
 oppositions:
 - agadez_ligue_sahel_numerique_breakdown
+- agence_de_regulation_des_detroits_strategiques_ards_breakdown
 - collectif_hackers_decroissance_infrastructure_breakdown
 - collectifs_de_gardiens_archivistes_itinerants_breakdown
 - communautes_rurales_autogerees_des_n_uds_de_survie_breakdown
@@ -115,6 +116,7 @@ La Nexcore maintient un ordre réel mais construit sur la peur et l'exclusion : 
 - [[seoul_collectif_nexcore_breakdown]]
 **Opposants :**
 - [[agadez_ligue_sahel_numerique_breakdown]]
+- [[agence_de_regulation_des_detroits_strategiques_ards_breakdown]]
 - [[collectif_hackers_decroissance_infrastructure_breakdown]]
 - [[collectifs_de_gardiens_archivistes_itinerants_breakdown]]
 - [[communautes_rurales_autogerees_des_n_uds_de_survie_breakdown]]

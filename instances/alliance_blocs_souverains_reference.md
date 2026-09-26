@@ -38,13 +38,15 @@ zone_systemique:
     - économie
 
 alliances:
-- appareils_d_etat_des_blocs_fermes_fortress_world
 - bloc_des_souverainistes_climatiques_reference
 - blocs_signataires_du_pacte_energetique_multilateral_reference
 - consortium_des_grandes_plateformes_logistiques_globales_reference
 - consortiums_prives_d_extraction_de_ressources_critiques_reference
 - front_souverainiste_des_ressources_d_amerique_du_sud_reference
+- hyphan_raghavan_reference
+- the_tidewater_canon_reference
 oppositions:
+- assemblee_territoires_reference
 - bloc_eurasien_central_reference
 - bruxelles_nouveau_reference
 - bureau_zones_non_prioritaires_reference
@@ -54,9 +56,11 @@ oppositions:
 - corridor_arctique_nordique_reference
 - delta_du_gange_reference
 - europe_occidentale_reconstructee_reference
+- gelecek_meclisi_reference
 - great_lakes_autonomous_compact_reference
 - guadalajara_nexus_reference
 - institutions_multilaterales_survivantes_reference
+- meridian_assembly_reference
 - mouvement_pour_la_libre_circulation_des_personnes_et_des_donnees_reference
 - oracle_des_seuils_reference
 - ouagadougou_polytechnique_reference
@@ -119,13 +123,15 @@ La Charte de Réciprocité Stricte commence à montrer ses limites : plusieurs �
 
 ## Relations
 **Alliés :**
-- [[appareils_d_etat_des_blocs_fermes_fortress_world]]
 - [[bloc_des_souverainistes_climatiques_reference]]
 - [[blocs_signataires_du_pacte_energetique_multilateral_reference]]
 - [[consortium_des_grandes_plateformes_logistiques_globales_reference]]
 - [[consortiums_prives_d_extraction_de_ressources_critiques_reference]]
 - [[front_souverainiste_des_ressources_d_amerique_du_sud_reference]]
+- [[hyphan_raghavan_reference]]
+- [[the_tidewater_canon_reference]]
 **Opposants :**
+- [[assemblee_territoires_reference]]
 - [[bloc_eurasien_central_reference]]
 - [[bruxelles_nouveau_reference]]
 - [[bureau_zones_non_prioritaires_reference]]
@@ -135,9 +141,11 @@ La Charte de Réciprocité Stricte commence à montrer ses limites : plusieurs �
 - [[corridor_arctique_nordique_reference]]
 - [[delta_du_gange_reference]]
 - [[europe_occidentale_reconstructee_reference]]
+- [[gelecek_meclisi_reference]]
 - [[great_lakes_autonomous_compact_reference]]
 - [[guadalajara_nexus_reference]]
 - [[institutions_multilaterales_survivantes_reference]]
+- [[meridian_assembly_reference]]
 - [[mouvement_pour_la_libre_circulation_des_personnes_et_des_donnees_reference]]
 - [[oracle_des_seuils_reference]]
 - [[ouagadougou_polytechnique_reference]]

@@ -35,9 +35,12 @@ zone_systemique:
     - IA
 
 alliances:
-- conseil_intergouvernemental_de_regulation_technologique_policy_reform
+- aurelio_stahl_new_sustainability
 - consortium_d_interoperabilite_ia_humain_new_sustainability
+- hyphan_raghavan_new_sustainability
+- reseau_des_cartographes_des_zones_grises_new_sustainability
 - reseau_des_hubs_urbains_regeneratifs_new_sustainability
+- terminal_kharg_data_haven_new_sustainability
 oppositions:
 - directive_kontinuum_new_sustainability
 - enclaves_de_donnees_proprietaires_des_megacorporations_new_sustainability
@@ -94,9 +97,12 @@ Si Mnemos incarne la stabilité cognitive du monde de 2098, des fissures commenc
 
 ## Relations
 **Alliés :**
-- [[conseil_intergouvernemental_de_regulation_technologique_policy_reform]]
+- [[aurelio_stahl_new_sustainability]]
 - [[consortium_d_interoperabilite_ia_humain_new_sustainability]]
+- [[hyphan_raghavan_new_sustainability]]
+- [[reseau_des_cartographes_des_zones_grises_new_sustainability]]
 - [[reseau_des_hubs_urbains_regeneratifs_new_sustainability]]
+- [[terminal_kharg_data_haven_new_sustainability]]
 **Opposants :**
 - [[directive_kontinuum_new_sustainability]]
 - [[enclaves_de_donnees_proprietaires_des_megacorporations_new_sustainability]]

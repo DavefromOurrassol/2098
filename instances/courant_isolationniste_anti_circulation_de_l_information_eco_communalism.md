@@ -49,13 +49,16 @@ oppositions:
 - courant_techno_solutionniste_pro_re_globalisation_numerique_eco_communalism
 - factions_algorithmiques_pro_gouvernance_ia_legere_eco_communalism
 - guildes_des_semenciers_itinerants_eco_communalism
+- lamplight_eco_communalism
 - ligue_des_cites_du_sahel_numerique_eco_communalism
 - mouvement_des_archives_vivantes_du_savoir_partage_eco_communalism
 - oracle_des_seuils_eco_communalism
 - plateformes_centralisees_de_reagregation_globale_eco_communalism
+- reseau_des_cartographes_des_zones_grises_eco_communalism
 - reseaux_de_bibliotheques_archives_communautaires_eco_communalism
 - reseaux_de_radio_communautaire_basse_consommation_eco_communalism
 - reseaux_de_reconstruction_cooperative_inter_communautes_eco_communalism
+- terminal_kharg_data_haven_eco_communalism
 - trame_mnemos_noeud_reseau_eco_communalism
 - universite_nomade_eco_communalism
 - voix_du_dehors_eco_communalism
@@ -128,6 +131,7 @@ Le paradoxe central du courant réside dans son instrumentalisation de la rhéto
 - [[valeurs_culture_tempo_sociale]]
 
 
+
 ## Relations
 **Alliés :**
 - [[communautes_isolationnistes_refusant_la_continuite_ecologique_eco_communalism]]
@@ -147,13 +151,16 @@ Le paradoxe central du courant réside dans son instrumentalisation de la rhéto
 - [[courant_techno_solutionniste_pro_re_globalisation_numerique_eco_communalism]]
 - [[factions_algorithmiques_pro_gouvernance_ia_legere_eco_communalism]]
 - [[guildes_des_semenciers_itinerants_eco_communalism]]
+- [[lamplight_eco_communalism]]
 - [[ligue_des_cites_du_sahel_numerique_eco_communalism]]
 - [[mouvement_des_archives_vivantes_du_savoir_partage_eco_communalism]]
 - [[oracle_des_seuils_eco_communalism]]
 - [[plateformes_centralisees_de_reagregation_globale_eco_communalism]]
+- [[reseau_des_cartographes_des_zones_grises_eco_communalism]]
 - [[reseaux_de_bibliotheques_archives_communautaires_eco_communalism]]
 - [[reseaux_de_radio_communautaire_basse_consommation_eco_communalism]]
 - [[reseaux_de_reconstruction_cooperative_inter_communautes_eco_communalism]]
+- [[terminal_kharg_data_haven_eco_communalism]]
 - [[trame_mnemos_noeud_reseau_eco_communalism]]
 - [[universite_nomade_eco_communalism]]
 - [[voix_du_dehors_eco_communalism]]

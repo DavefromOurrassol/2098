@@ -33,6 +33,7 @@ zone_systemique:
 alliances:
 - agence_stabilisation_climatique_reference
 - consortium_helios_reference
+- deepfield_institute_reference
 - institutions_multilaterales_survivantes_reference
 - observatoire_climatique_des_territoires_oct_reference
 - programme_onu_eau_2080_reference
@@ -109,10 +110,12 @@ La neutralité affichée du SEOM-7 masque une dépendance structurelle aux finan
 - [[gouvernance_institutions]]
 
 
+
 ## Relations
 **Alliés :**
 - [[agence_stabilisation_climatique_reference]]
 - [[consortium_helios_reference]]
+- [[deepfield_institute_reference]]
 - [[institutions_multilaterales_survivantes_reference]]
 - [[observatoire_climatique_des_territoires_oct_reference]]
 - [[programme_onu_eau_2080_reference]]

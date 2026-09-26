@@ -42,11 +42,13 @@ alliances:
 - reseau_des_lobbyistes_techniques_onu_energie_policy_reform
 - syndicats_d_extraction_privee_non_regules_policy_reform
 oppositions:
+- agence_de_regulation_des_detroits_strategiques_ards_policy_reform
 - agence_internationale_de_l_energie_reformatee_aier_policy_reform
 - agence_stabilisation_climatique_policy_reform
 - agence_technocratique_pour_la_resilience_biospherique_atrb_policy_reform
 - bloc_des_nations_a_economie_carbone_controlee_policy_reform
 - coalition_des_villes_de_reconversion_policy_reform
+- coalition_vivant_policy_reform
 - conseil_de_regulation_climatique_global_policy_reform
 - consortium_des_villes_etats_durables_policy_reform
 - federation_des_mutuelles_biotech_policy_reform
@@ -127,6 +129,7 @@ Pris entre l'inexorabilité de leur déclin industriel et la nécessité de pré
 - [[climat_environnement_global]]
 
 
+
 ## Relations
 **Alliés :**
 - [[coalition_des_operateurs_energetiques_prives_anti_quotas_policy_reform]]
@@ -138,11 +141,13 @@ Pris entre l'inexorabilité de leur déclin industriel et la nécessité de pré
 - [[reseau_des_lobbyistes_techniques_onu_energie_policy_reform]]
 - [[syndicats_d_extraction_privee_non_regules_policy_reform]]
 **Opposants :**
+- [[agence_de_regulation_des_detroits_strategiques_ards_policy_reform]]
 - [[agence_internationale_de_l_energie_reformatee_aier_policy_reform]]
 - [[agence_stabilisation_climatique_policy_reform]]
 - [[agence_technocratique_pour_la_resilience_biospherique_atrb_policy_reform]]
 - [[bloc_des_nations_a_economie_carbone_controlee_policy_reform]]
 - [[coalition_des_villes_de_reconversion_policy_reform]]
+- [[coalition_vivant_policy_reform]]
 - [[conseil_de_regulation_climatique_global_policy_reform]]
 - [[consortium_des_villes_etats_durables_policy_reform]]
 - [[federation_des_mutuelles_biotech_policy_reform]]

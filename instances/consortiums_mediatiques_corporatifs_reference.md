@@ -50,6 +50,7 @@ oppositions:
 - collectifs_de_biopiraterie_inversee_reference
 - collectifs_de_journalisme_embarque_reference
 - collectifs_de_journalistes_independants_regionaux_reference
+- lamplight_reference
 - prisme_global_reference
 - reseaux_de_lanceurs_d_alerte_institutionnels_dissidents_reference
 - voix_du_dehors_reference
@@ -119,6 +120,7 @@ La légitimité des consortiums est rongée par la défiance informationnelle g�
 - [[systeme_economique_redistribution]]
 
 
+
 ## Relations
 **Alliés :**
 - [[consortium_des_grandes_plateformes_ia_integrees_reference]]
@@ -136,6 +138,7 @@ La légitimité des consortiums est rongée par la défiance informationnelle g�
 - [[collectifs_de_biopiraterie_inversee_reference]]
 - [[collectifs_de_journalisme_embarque_reference]]
 - [[collectifs_de_journalistes_independants_regionaux_reference]]
+- [[lamplight_reference]]
 - [[prisme_global_reference]]
 - [[reseaux_de_lanceurs_d_alerte_institutionnels_dissidents_reference]]
 - [[voix_du_dehors_reference]]

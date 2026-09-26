@@ -53,7 +53,10 @@ oppositions:
 - consortiums_prives_de_gestion_des_donnees_critiques_reference
 - datasovereign_reference
 - directive_kontinuum_reference
+- elias_mork_reference
 - etats_a_tendance_centraliste_numerique_reference
+- ilse_varga_holm_reference
+- meridian_assembly_reference
 - nexcore_reference
 - observatoire_climatique_des_territoires_oct_reference
 - ong_de_preservation_patrimoniale_numerique_reference
@@ -61,6 +64,7 @@ oppositions:
 - plateformes_informationnelles_dominantes_et_leurs_ia_de_moderation_reference
 - regulateurs_de_l_union_continentale_africaine_reference
 - singapour_est_nexcore_reference
+- terminal_kharg_data_haven_reference
 - valparaiso_fct_reference
 type_relation_dominante: conflit
 annee_debut: 2026
@@ -128,6 +132,7 @@ La tension centrale du Bloc réside dans la contradiction entre son ambition de 
 - [[gouvernance_institutions]]
 
 
+
 ## Relations
 **Alliés :**
 - [[coalition_pour_la_souverainete_numerique_nationale_reference]]
@@ -150,7 +155,10 @@ La tension centrale du Bloc réside dans la contradiction entre son ambition de 
 - [[consortiums_prives_de_gestion_des_donnees_critiques_reference]]
 - [[datasovereign_reference]]
 - [[directive_kontinuum_reference]]
+- [[elias_mork_reference]]
 - [[etats_a_tendance_centraliste_numerique_reference]]
+- [[ilse_varga_holm_reference]]
+- [[meridian_assembly_reference]]
 - [[nexcore_reference]]
 - [[observatoire_climatique_des_territoires_oct_reference]]
 - [[ong_de_preservation_patrimoniale_numerique_reference]]
@@ -158,6 +166,7 @@ La tension centrale du Bloc réside dans la contradiction entre son ambition de 
 - [[plateformes_informationnelles_dominantes_et_leurs_ia_de_moderation_reference]]
 - [[regulateurs_de_l_union_continentale_africaine_reference]]
 - [[singapour_est_nexcore_reference]]
+- [[terminal_kharg_data_haven_reference]]
 - [[valparaiso_fct_reference]]
 
 ## Notes

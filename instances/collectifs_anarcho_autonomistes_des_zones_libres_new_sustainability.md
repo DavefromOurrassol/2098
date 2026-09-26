@@ -37,13 +37,18 @@ alliances:
 - collectifs_de_narration_sauvage_hors_protocole_new_sustainability
 - collectifs_riverains_du_bassin_du_congo_new_sustainability
 - communautes_locales_exclues_des_corridors_new_sustainability
+- les_veilleurs_des_nappes_phreatiques_new_sustainability
 - mouvement_communautaire_des_micro_grids_energetiques_new_sustainability
 - mouvement_pour_l_autodetermination_territoriale_new_sustainability
+- nadia_ferreira_sato_new_sustainability
+- reseau_des_cartographes_des_zones_grises_new_sustainability
 - reseau_des_communs_alimentaires_hors_grille_new_sustainability
 - reseau_des_communs_numeriques_globaux_new_sustainability
 - reseau_des_communs_productifs_regeneratifs_new_sustainability
 - reseaux_neo_democratiques_plaidant_pour_la_gouvernance_participative_directe_new_sustainability
+- terminal_kharg_data_haven_new_sustainability
 oppositions:
+- agence_de_regulation_des_detroits_strategiques_ards_new_sustainability
 - bureau_gouvernance_algorithmique_new_sustainability
 - centre_institutionnel_geneve_new_sustainability
 - commission_territoriale_ourrassol_new_sustainability
@@ -51,6 +56,7 @@ oppositions:
 - conseil_regulation_ressources_new_sustainability
 - conseil_technocratique_de_coordination_regionale_new_sustainability
 - conseil_technocratique_de_gouvernance_alimentaire_new_sustainability
+- gelecek_meclisi_new_sustainability
 - operateurs_de_fusion_energetique_regionaux_new_sustainability
 - parlement_territoires_nairobi_new_sustainability
 - rede_paulista_de_distribuicao_algoritmica_new_sustainability
@@ -122,6 +128,7 @@ La tension centrale est celle d'une alternative crédible qui devient malgré el
 - [[systeme_economique_redistribution]]
 
 
+
 ## Relations
 **Alliés :**
 - [[coalition_anti_algorithme_des_autonomies_locales_new_sustainability]]
@@ -130,13 +137,18 @@ La tension centrale est celle d'une alternative crédible qui devient malgré el
 - [[collectifs_de_narration_sauvage_hors_protocole_new_sustainability]]
 - [[collectifs_riverains_du_bassin_du_congo_new_sustainability]]
 - [[communautes_locales_exclues_des_corridors_new_sustainability]]
+- [[les_veilleurs_des_nappes_phreatiques_new_sustainability]]
 - [[mouvement_communautaire_des_micro_grids_energetiques_new_sustainability]]
 - [[mouvement_pour_l_autodetermination_territoriale_new_sustainability]]
+- [[nadia_ferreira_sato_new_sustainability]]
+- [[reseau_des_cartographes_des_zones_grises_new_sustainability]]
 - [[reseau_des_communs_alimentaires_hors_grille_new_sustainability]]
 - [[reseau_des_communs_numeriques_globaux_new_sustainability]]
 - [[reseau_des_communs_productifs_regeneratifs_new_sustainability]]
 - [[reseaux_neo_democratiques_plaidant_pour_la_gouvernance_participative_directe_new_sustainability]]
+- [[terminal_kharg_data_haven_new_sustainability]]
 **Opposants :**
+- [[agence_de_regulation_des_detroits_strategiques_ards_new_sustainability]]
 - [[bureau_gouvernance_algorithmique_new_sustainability]]
 - [[centre_institutionnel_geneve_new_sustainability]]
 - [[commission_territoriale_ourrassol_new_sustainability]]
@@ -144,6 +156,7 @@ La tension centrale est celle d'une alternative crédible qui devient malgré el
 - [[conseil_regulation_ressources_new_sustainability]]
 - [[conseil_technocratique_de_coordination_regionale_new_sustainability]]
 - [[conseil_technocratique_de_gouvernance_alimentaire_new_sustainability]]
+- [[gelecek_meclisi_new_sustainability]]
 - [[operateurs_de_fusion_energetique_regionaux_new_sustainability]]
 - [[parlement_territoires_nairobi_new_sustainability]]
 - [[rede_paulista_de_distribuicao_algoritmica_new_sustainability]]

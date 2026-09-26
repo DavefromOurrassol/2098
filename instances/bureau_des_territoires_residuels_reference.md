@@ -54,6 +54,7 @@ oppositions:
 - lyon_metropole_reference
 - optiflow_logistics_reference
 - reseau_des_administrations_locales_rurales_participatives_reference
+- reseau_des_cartographes_des_zones_grises_reference
 - reseau_des_villes_etats_pilotes_en_gouvernance_participative_reference
 - reseau_mnemos_reference
 - singapour_est_reference
@@ -126,6 +127,7 @@ La DZNP détient les seules archives consolidées prouvant que des territoires h
 - [[lyon_metropole_reference]]
 - [[optiflow_logistics_reference]]
 - [[reseau_des_administrations_locales_rurales_participatives_reference]]
+- [[reseau_des_cartographes_des_zones_grises_reference]]
 - [[reseau_des_villes_etats_pilotes_en_gouvernance_participative_reference]]
 - [[reseau_mnemos_reference]]
 - [[singapour_est_reference]]

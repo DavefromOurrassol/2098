@@ -34,6 +34,7 @@ zone_geographique:
 zone_systemique:
 - société
 alliances:
+- agence_de_regulation_des_detroits_strategiques_ards_policy_reform
 - agence_stabilisation_climatique_policy_reform
 - amara_diallo_nkosi_policy_reform
 - autorite_mondiale_du_vivant_amv_policy_reform
@@ -47,6 +48,8 @@ oppositions:
 - consortiums_agro_industriels_du_bassin_fluvial_policy_reform
 - factions_technocratiques_de_la_marchandisation_hydrique_policy_reform
 - front_souverainiste_des_blocs_non_signataires_policy_reform
+- hyphan_raghavan_policy_reform
+- les_veilleurs_des_nappes_phreatiques_policy_reform
 - les_veilleurs_du_fleuve_policy_reform
 - mouvement_pour_la_souverainete_territoriale_absolue_policy_reform
 type_relation_dominante: coopération
@@ -112,8 +115,10 @@ L'ACRA est déchirée entre sa vocation supranationale — imposer des quotas au
 - [[energie_ressources_critiques]]
 
 
+
 ## Relations
 **Alliés :**
+- [[agence_de_regulation_des_detroits_strategiques_ards_policy_reform]]
 - [[agence_stabilisation_climatique_policy_reform]]
 - [[amara_diallo_nkosi_policy_reform]]
 - [[autorite_mondiale_du_vivant_amv_policy_reform]]
@@ -127,6 +132,8 @@ L'ACRA est déchirée entre sa vocation supranationale — imposer des quotas au
 - [[consortiums_agro_industriels_du_bassin_fluvial_policy_reform]]
 - [[factions_technocratiques_de_la_marchandisation_hydrique_policy_reform]]
 - [[front_souverainiste_des_blocs_non_signataires_policy_reform]]
+- [[hyphan_raghavan_policy_reform]]
+- [[les_veilleurs_des_nappes_phreatiques_policy_reform]]
 - [[les_veilleurs_du_fleuve_policy_reform]]
 - [[mouvement_pour_la_souverainete_territoriale_absolue_policy_reform]]
 

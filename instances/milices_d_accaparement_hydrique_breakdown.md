@@ -41,6 +41,7 @@ alliances:
 - seigneuries_logistiques_armees_breakdown
 - seigneurs_de_guerre_agro_territoriaux_breakdown
 oppositions:
+- assemblee_territoires_breakdown
 - collectif_des_climatologues_sans_etat_breakdown
 - collectifs_de_reparation_energetique_breakdown
 - cooperative_terrafond_breakdown
@@ -49,8 +50,12 @@ oppositions:
 - flux_migratoires_non_integrables_breakdown
 - frente_sertao_livre_breakdown
 - front_de_resistance_aux_peages_sur_les_ressources_breakdown
+- gelecek_meclisi_breakdown
 - grandes_lacs_compact_eau_breakdown
 - guilde_des_techniciens_nomades_breakdown
+- ilse_varga_holm_breakdown
+- institut_des_seuils_demographiques_breakdown
+- les_veilleurs_des_nappes_phreatiques_breakdown
 - les_veilleurs_du_fleuve_breakdown
 - ligue_des_cites_littorales_en_sursis_breakdown
 - midwest_desertifie_breakdown
@@ -117,6 +122,7 @@ Ces milices sont déchirées entre leur logique prédatrice à court terme et la
 - [[geopolitique_conflits]]
 
 
+
 ## Relations
 **Alliés :**
 - [[factions_para_etatiques_hydriques_breakdown]]
@@ -125,6 +131,7 @@ Ces milices sont déchirées entre leur logique prédatrice à court terme et la
 - [[seigneuries_logistiques_armees_breakdown]]
 - [[seigneurs_de_guerre_agro_territoriaux_breakdown]]
 **Opposants :**
+- [[assemblee_territoires_breakdown]]
 - [[collectif_des_climatologues_sans_etat_breakdown]]
 - [[collectifs_de_reparation_energetique_breakdown]]
 - [[cooperative_terrafond_breakdown]]
@@ -133,8 +140,12 @@ Ces milices sont déchirées entre leur logique prédatrice à court terme et la
 - [[flux_migratoires_non_integrables_breakdown]]
 - [[frente_sertao_livre_breakdown]]
 - [[front_de_resistance_aux_peages_sur_les_ressources_breakdown]]
+- [[gelecek_meclisi_breakdown]]
 - [[grandes_lacs_compact_eau_breakdown]]
 - [[guilde_des_techniciens_nomades_breakdown]]
+- [[ilse_varga_holm_breakdown]]
+- [[institut_des_seuils_demographiques_breakdown]]
+- [[les_veilleurs_des_nappes_phreatiques_breakdown]]
 - [[les_veilleurs_du_fleuve_breakdown]]
 - [[ligue_des_cites_littorales_en_sursis_breakdown]]
 - [[midwest_desertifie_breakdown]]

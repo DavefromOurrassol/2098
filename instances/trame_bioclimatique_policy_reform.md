@@ -50,7 +50,6 @@ oppositions:
 - collectifs_de_defense_hydrique_saheliens_policy_reform
 - collectifs_de_hackers_biospheriques_policy_reform
 - front_souverainiste_des_blocs_non_signataires_policy_reform
-- lobbies_d_extraction_miniere_des_zones_tampons_new_sustainability
 - mouvement_pour_la_justice_ecologique_communautaire_policy_reform
 type_relation_dominante: dépendance
 
@@ -117,5 +116,4 @@ La question centrale non résolue : à qui appartient un écosystème restauré 
 - [[collectifs_de_defense_hydrique_saheliens_policy_reform]]
 - [[collectifs_de_hackers_biospheriques_policy_reform]]
 - [[front_souverainiste_des_blocs_non_signataires_policy_reform]]
-- [[lobbies_d_extraction_miniere_des_zones_tampons_new_sustainability]]
 - [[mouvement_pour_la_justice_ecologique_communautaire_policy_reform]]

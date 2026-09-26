@@ -30,6 +30,7 @@ zone_geographique:
 zone_systemique:
 - société
 alliances:
+- agence_de_regulation_des_detroits_strategiques_ards_eco_communalism
 - amazonie_pacte_viva_eco_communalism
 - archives_ouvertes_des_jurisprudences_communales_aojc_eco_communalism
 - assemblees_bioterritoriales_regionales_eco_communalism
@@ -42,6 +43,9 @@ alliances:
 - fraternites_ecospiritualistes_des_anciens_survivalistes_eco_communalism
 - guildes_de_mediateurs_ecologiques_eco_communalism
 - guildes_des_semenciers_itinerants_eco_communalism
+- hyphan_raghavan_eco_communalism
+- institut_des_seuils_demographiques_eco_communalism
+- lamplight_eco_communalism
 - mouvement_des_archives_vivantes_du_savoir_partage_eco_communalism
 - prisme_global_eco_communalism
 - reseau_assemblees_fennoscandien_eco_communalism
@@ -123,8 +127,10 @@ La tension centrale des Cercles réside dans leur absence d'autorité coercitive
 - [[geopolitique_conflits]]
 
 
+
 ## Relations
 **Alliés :**
+- [[agence_de_regulation_des_detroits_strategiques_ards_eco_communalism]]
 - [[amazonie_pacte_viva_eco_communalism]]
 - [[archives_ouvertes_des_jurisprudences_communales_aojc_eco_communalism]]
 - [[assemblees_bioterritoriales_regionales_eco_communalism]]
@@ -137,6 +143,9 @@ La tension centrale des Cercles réside dans leur absence d'autorité coercitive
 - [[fraternites_ecospiritualistes_des_anciens_survivalistes_eco_communalism]]
 - [[guildes_de_mediateurs_ecologiques_eco_communalism]]
 - [[guildes_des_semenciers_itinerants_eco_communalism]]
+- [[hyphan_raghavan_eco_communalism]]
+- [[institut_des_seuils_demographiques_eco_communalism]]
+- [[lamplight_eco_communalism]]
 - [[mouvement_des_archives_vivantes_du_savoir_partage_eco_communalism]]
 - [[prisme_global_eco_communalism]]
 - [[reseau_assemblees_fennoscandien_eco_communalism]]

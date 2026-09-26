@@ -31,9 +31,11 @@ zone_systemique:
 alliances:
 - bruxelles_nouveau_reference
 - detroit_compact_grands_lacs_reference
+- gelecek_meclisi_reference
 - great_lakes_autonomous_compact_reference
 - guadalajara_nexus_reference
 - helsinki_communs_numeriques_reference
+- institut_des_seuils_demographiques_reference
 - lyon_metropole_reference
 - optiflow_logistics_reference
 - rede_paulista_de_distribuicao_algoritmica_reference
@@ -41,6 +43,7 @@ alliances:
 - sao_paulo_ita_reference
 - singapour_est_nexcore_reference
 - singapour_est_reference
+- the_lattice_reference
 oppositions:
 - alliance_blocs_souverains_reference
 - bloc_eurasien_central_reference
@@ -117,13 +120,16 @@ La Confédération est déchirée entre la solidarité mégapolitaine affichée 
 - [[geopolitique_conflits]]
 
 
+
 ## Relations
 **Alliés :**
 - [[bruxelles_nouveau_reference]]
 - [[detroit_compact_grands_lacs_reference]]
+- [[gelecek_meclisi_reference]]
 - [[great_lakes_autonomous_compact_reference]]
 - [[guadalajara_nexus_reference]]
 - [[helsinki_communs_numeriques_reference]]
+- [[institut_des_seuils_demographiques_reference]]
 - [[lyon_metropole_reference]]
 - [[optiflow_logistics_reference]]
 - [[rede_paulista_de_distribuicao_algoritmica_reference]]
@@ -131,6 +137,7 @@ La Confédération est déchirée entre la solidarité mégapolitaine affichée 
 - [[sao_paulo_ita_reference]]
 - [[singapour_est_nexcore_reference]]
 - [[singapour_est_reference]]
+- [[the_lattice_reference]]
 **Opposants :**
 - [[alliance_blocs_souverains_reference]]
 - [[bloc_eurasien_central_reference]]

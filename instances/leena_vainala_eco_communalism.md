@@ -43,7 +43,6 @@ alliances:
 - tampere_charte_eco_communalism
 oppositions:
 - factions_algorithmiques_pro_gouvernance_ia_legere_eco_communalism
-- front_techno_utopiste_de_la_decision_automatisee_policy_reform
 - reseaux_de_notables_communautaires_capturistes_eco_communalism
 type_relation_dominante: coopération
 
@@ -106,5 +105,4 @@ La tension centrale de son parcours dans ce monde est la suivante : ses outils c
 - [[tampere_charte_eco_communalism]]
 **Opposants :**
 - [[factions_algorithmiques_pro_gouvernance_ia_legere_eco_communalism]]
-- [[front_techno_utopiste_de_la_decision_automatisee_policy_reform]]
 - [[reseaux_de_notables_communautaires_capturistes_eco_communalism]]

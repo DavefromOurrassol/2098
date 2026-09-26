@@ -35,6 +35,7 @@ zone_geographique:
 zone_systemique:
 - société
 alliances:
+- agence_de_regulation_des_detroits_strategiques_ards_policy_reform
 - agence_internationale_de_l_energie_reformatee_aier_policy_reform
 - agence_stabilisation_climatique_policy_reform
 - agence_technocratique_pour_la_resilience_biospherique_atrb_policy_reform
@@ -44,6 +45,8 @@ alliances:
 - fonds_mondial_pour_la_transition_ecosystemique_fmte_policy_reform
 - gouvernement_israel_policy_reform
 - great_lakes_autonomous_compact_policy_reform
+- ilse_varga_holm_policy_reform
+- nexcore_policy_reform
 - pacifique_sud_resilience_network_policy_reform
 - reseaux_academiques_prospectivistes_du_pacte_de_geneve_2081_policy_reform
 oppositions:
@@ -117,8 +120,10 @@ Le Fonds se trouve écartelé entre sa mission redistributive — aider les éco
 - [[energie_ressources_critiques]]
 
 
+
 ## Relations
 **Alliés :**
+- [[agence_de_regulation_des_detroits_strategiques_ards_policy_reform]]
 - [[agence_internationale_de_l_energie_reformatee_aier_policy_reform]]
 - [[agence_stabilisation_climatique_policy_reform]]
 - [[agence_technocratique_pour_la_resilience_biospherique_atrb_policy_reform]]
@@ -128,6 +133,8 @@ Le Fonds se trouve écartelé entre sa mission redistributive — aider les éco
 - [[fonds_mondial_pour_la_transition_ecosystemique_fmte_policy_reform]]
 - [[gouvernement_israel_policy_reform]]
 - [[great_lakes_autonomous_compact_policy_reform]]
+- [[ilse_varga_holm_policy_reform]]
+- [[nexcore_policy_reform]]
 - [[pacifique_sud_resilience_network_policy_reform]]
 - [[reseaux_academiques_prospectivistes_du_pacte_de_geneve_2081_policy_reform]]
 **Opposants :**

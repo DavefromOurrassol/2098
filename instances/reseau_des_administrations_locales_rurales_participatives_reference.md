@@ -33,6 +33,7 @@ zone_systemique:
 - société
 alliances:
 - administrations_hybrides_des_cites_relais_peripheriques_reference
+- assemblee_territoires_reference
 - autorites_regionales_de_regulation_hydrologique_reference
 - banque_des_communs_reference
 - collectifs_de_journalisme_embarque_reference
@@ -45,6 +46,7 @@ alliances:
 - federation_communs_territoriaux_reference
 - federation_des_cliniques_autonomes_reference
 - frente_sertao_livre_reference
+- les_veilleurs_des_nappes_phreatiques_reference
 - les_veilleurs_du_fleuve_reference
 - ligue_des_municipalites_peripheriques_sous_connectees_reference
 - mouvement_racines_vivantes_reference
@@ -125,9 +127,11 @@ La tension centrale du Réseau réside dans la contradiction entre sa vocation d
 - [[demographie_mobilite_humaine]]
 
 
+
 ## Relations
 **Alliés :**
 - [[administrations_hybrides_des_cites_relais_peripheriques_reference]]
+- [[assemblee_territoires_reference]]
 - [[autorites_regionales_de_regulation_hydrologique_reference]]
 - [[banque_des_communs_reference]]
 - [[collectifs_de_journalisme_embarque_reference]]
@@ -140,6 +144,7 @@ La tension centrale du Réseau réside dans la contradiction entre sa vocation d
 - [[federation_communs_territoriaux_reference]]
 - [[federation_des_cliniques_autonomes_reference]]
 - [[frente_sertao_livre_reference]]
+- [[les_veilleurs_des_nappes_phreatiques_reference]]
 - [[les_veilleurs_du_fleuve_reference]]
 - [[ligue_des_municipalites_peripheriques_sous_connectees_reference]]
 - [[mouvement_racines_vivantes_reference]]

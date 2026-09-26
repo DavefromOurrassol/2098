@@ -40,6 +40,7 @@ alliances:
 - reseaux_de_financement_gris_issus_d_anciens_blocs_militaires_reference
 - zones_grises_globales_reference
 oppositions:
+- agence_de_regulation_des_detroits_strategiques_ards_reference
 - agences_de_securite_regionales_de_normalisation_des_zones_grises_reference
 - arctic_passage_authority_reference
 - bloc_eurasien_central_reference
@@ -47,6 +48,7 @@ oppositions:
 - commission_hydrique_de_l_union_africaine_reference
 - consortium_de_maintenance_orbitale_seom_7_reference
 - consortium_des_grandes_plateformes_logistiques_globales_reference
+- consortium_des_pecheries_autonomes_du_grand_nord_reference
 - consortium_energetique_baltique_reference
 - consortium_energetique_des_mers_du_nord_reference
 - consortium_indo_pacifique_de_l_hydrogene_reference
@@ -54,6 +56,7 @@ oppositions:
 - consortiums_bancaires_financiarises_reference
 - consortiums_d_extraction_miniere_du_bassin_congolais_reference
 - corridor_arctique_nordique_reference
+- gelecek_meclisi_reference
 - gouvernements_du_bloc_sahelien_autonome_reference
 - guadalajara_nexus_reference
 - murmansk_transit_arctique_reference
@@ -62,6 +65,7 @@ oppositions:
 - pacte_des_souverains_reference
 - sao_paulo_ita_reference
 - singapour_est_nexcore_reference
+- terminal_kharg_data_haven_reference
 - union_africaine_resilience_reference
 - vasil_orentchev_reference
 type_relation_dominante: compétition
@@ -133,6 +137,7 @@ La tension centrale réside dans leur paradoxe fonctionnel : en assurant une cer
 
 
 
+
 ## Relations
 **Alliés :**
 - [[administrations_hybrides_des_cites_relais_peripheriques_reference]]
@@ -143,6 +148,7 @@ La tension centrale réside dans leur paradoxe fonctionnel : en assurant une cer
 - [[reseaux_de_financement_gris_issus_d_anciens_blocs_militaires_reference]]
 - [[zones_grises_globales_reference]]
 **Opposants :**
+- [[agence_de_regulation_des_detroits_strategiques_ards_reference]]
 - [[agences_de_securite_regionales_de_normalisation_des_zones_grises_reference]]
 - [[arctic_passage_authority_reference]]
 - [[bloc_eurasien_central_reference]]
@@ -150,6 +156,7 @@ La tension centrale réside dans leur paradoxe fonctionnel : en assurant une cer
 - [[commission_hydrique_de_l_union_africaine_reference]]
 - [[consortium_de_maintenance_orbitale_seom_7_reference]]
 - [[consortium_des_grandes_plateformes_logistiques_globales_reference]]
+- [[consortium_des_pecheries_autonomes_du_grand_nord_reference]]
 - [[consortium_energetique_baltique_reference]]
 - [[consortium_energetique_des_mers_du_nord_reference]]
 - [[consortium_indo_pacifique_de_l_hydrogene_reference]]
@@ -157,6 +164,7 @@ La tension centrale réside dans leur paradoxe fonctionnel : en assurant une cer
 - [[consortiums_bancaires_financiarises_reference]]
 - [[consortiums_d_extraction_miniere_du_bassin_congolais_reference]]
 - [[corridor_arctique_nordique_reference]]
+- [[gelecek_meclisi_reference]]
 - [[gouvernements_du_bloc_sahelien_autonome_reference]]
 - [[guadalajara_nexus_reference]]
 - [[murmansk_transit_arctique_reference]]
@@ -165,6 +173,7 @@ La tension centrale réside dans leur paradoxe fonctionnel : en assurant une cer
 - [[pacte_des_souverains_reference]]
 - [[sao_paulo_ita_reference]]
 - [[singapour_est_nexcore_reference]]
+- [[terminal_kharg_data_haven_reference]]
 - [[union_africaine_resilience_reference]]
 - [[vasil_orentchev_reference]]
 

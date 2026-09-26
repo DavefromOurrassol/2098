@@ -39,20 +39,20 @@ zone_systemique:
     - société
 
 alliances:
-    - federation_communs_territoriaux_reference
-    - cooperatives_agro_ecologiques_de_reconstruction_territoriale_reference
-    - reseau_des_administrations_locales_rurales_participatives_reference
-    - conseil_de_geneve_pour_les_droits_biosociaux_reference
-    - observatoire_climatique_des_territoires_oct_reference
-    - agence_internationale_des_energies_renouvelables_irena_2_reference
-
+- agence_internationale_des_energies_renouvelables_irena_2_reference
+- conseil_de_geneve_pour_les_droits_biosociaux_reference
+- cooperatives_agro_ecologiques_de_reconstruction_territoriale_reference
+- federation_communs_territoriaux_reference
+- observatoire_climatique_des_territoires_oct_reference
+- reseau_des_administrations_locales_rurales_participatives_reference
 oppositions:
-    - alliance_blocs_souverains_reference
-    - bloc_des_souverainistes_climatiques_reference
-    - gouvernements_federaux_residuels_souverainistes_reference
-    - consortiums_prives_d_extraction_de_ressources_critiques_reference
-    - lobbies_agro_industriels_a_haute_consommation_d_eau_reference
-
+- alliance_blocs_souverains_reference
+- bloc_des_souverainistes_climatiques_reference
+- consortiums_prives_d_extraction_de_ressources_critiques_reference
+- gouvernements_federaux_residuels_souverainistes_reference
+- holdfast_reference
+- lobbies_agro_industriels_a_haute_consommation_d_eau_reference
+- the_tidewater_canon_reference
 type_relation_dominante: rivalité
 
 annee_debut: 2047
@@ -96,12 +96,26 @@ Instance de gouvernance hybride née de la crise des mégapoles et de la fragmen
 - [[demographie_mobilite_humaine]]
 - [[systeme_economique_redistribution]]
 
-## Relations
-**Alliés** : [[federation_communs_territoriaux_reference]], [[cooperatives_agro_ecologiques_de_reconstruction_territoriale_reference]], [[reseau_des_administrations_locales_rurales_participatives_reference]], [[conseil_de_geneve_pour_les_droits_biosociaux_reference]], [[observatoire_climatique_des_territoires_oct_reference]], [[agence_internationale_des_energies_renouvelables_irena_2_reference]]
-**Opposants** : [[alliance_blocs_souverains_reference]], [[bloc_des_souverainistes_climatiques_reference]], [[gouvernements_federaux_residuels_souverainistes_reference]], [[consortiums_prives_d_extraction_de_ressources_critiques_reference]], [[lobbies_agro_industriels_a_haute_consommation_d_eau_reference]]
 
 ## Description journalistique
 En 2098, l'Assemblée des Territoires Fédérés (ATF) est devenue le visage d'une gouvernance post-nationale, née des cendres des États centralisés incapables de gérer les crises du milieu du siècle. Imaginez un mélange entre l'ONU des années 2020, les communes autonomes médiévales et les plateformes de gouvernance algorithmique : des 'Assemblées Citoyennes Algorithmiques' (ACA) où des IA modèrent des débats en temps réel entre représentants de mégapoles, de coopératives rurales et de zones grises, le tout retransmis en direct sur des réseaux décentralisés. Son siège, une structure flottante entre Genève et Lyon, symbolise cette mobilité : l'ATF n'a pas de capitale fixe, mais se déplace là où les crises éclatent. Ses détracteurs l'accusent d'être un 'gouvernement fantôme', ses partisans y voient la seule réponse viable à l'effondrement des frontières traditionnelles.
 
 ## Tensions narratives
 1) **Guerre des échelles** : L'ATF est tiraillée entre son ambition de représenter les territoires à leur échelle la plus pertinente (du quartier à la région) et la résistance des mégapoles, qui voient en elle une menace pour leur autonomie. Les 'Assemblées Citoyennes Algorithmiques' (ACA) sont particulièrement contestées : certains y voient une avancée démocratique, d'autres une manipulation par des IA opaques. 2) **Conflit avec les souverainistes** : Le 'Pacte des Souverains' et le 'Bloc des Souverainistes Climatiques' accusent l'ATF de saper la légitimité des États-nations en favorisant les 'Communs Territoriaux', qu'ils qualifient de 'zones de non-droit'. Des affrontements ont éclaté en 2089 au Brésil, où l'ATF a soutenu la 'Frente Sertão Livre' contre le 'Front Souverainiste des Ressources'. 3) **Dépendance technologique** : L'ATF repose sur des plateformes d'IA pour coordonner ses actions, mais ces outils sont souvent contrôlés par des consortiums privés (comme 'NexCore' ou 'Prisme Global'), ce qui soulève des questions sur son indépendance réelle. 4) **Légitimité en question** : En 2095, une enquête du 'Collectif Nuit Jaune' a révélé que 30 % des 'Communs Territoriaux' certifiés par l'ATF étaient en réalité des coquilles vides, contrôlées par des milices ou des corporations. Ce scandale a ébranlé sa crédibilité et relancé le débat sur la nécessité d'une gouvernance mondiale plus transparente.
+
+## Relations
+**Alliés :**
+- [[agence_internationale_des_energies_renouvelables_irena_2_reference]]
+- [[conseil_de_geneve_pour_les_droits_biosociaux_reference]]
+- [[cooperatives_agro_ecologiques_de_reconstruction_territoriale_reference]]
+- [[federation_communs_territoriaux_reference]]
+- [[observatoire_climatique_des_territoires_oct_reference]]
+- [[reseau_des_administrations_locales_rurales_participatives_reference]]
+**Opposants :**
+- [[alliance_blocs_souverains_reference]]
+- [[bloc_des_souverainistes_climatiques_reference]]
+- [[consortiums_prives_d_extraction_de_ressources_critiques_reference]]
+- [[gouvernements_federaux_residuels_souverainistes_reference]]
+- [[holdfast_reference]]
+- [[lobbies_agro_industriels_a_haute_consommation_d_eau_reference]]
+- [[the_tidewater_canon_reference]]

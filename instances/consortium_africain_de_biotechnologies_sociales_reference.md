@@ -39,6 +39,7 @@ alliances:
 - collectifs_de_biopiraterie_inversee_reference
 - commission_hydrique_de_l_union_africaine_reference
 - conseil_de_geneve_pour_les_droits_biosociaux_reference
+- elias_mork_reference
 - federation_des_cliniques_autonomes_reference
 - gouvernements_du_bloc_sahelien_autonome_reference
 - institut_polytechnique_de_ouagadougou_reference
@@ -112,6 +113,7 @@ La tension centrale du CABS tient à la nature même de son instrument : le bior
 - [[collectifs_de_biopiraterie_inversee_reference]]
 - [[commission_hydrique_de_l_union_africaine_reference]]
 - [[conseil_de_geneve_pour_les_droits_biosociaux_reference]]
+- [[elias_mork_reference]]
 - [[federation_des_cliniques_autonomes_reference]]
 - [[gouvernements_du_bloc_sahelien_autonome_reference]]
 - [[institut_polytechnique_de_ouagadougou_reference]]

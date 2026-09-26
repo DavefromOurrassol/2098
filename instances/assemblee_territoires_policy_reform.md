@@ -42,6 +42,7 @@ alliances:
 - conseil_regulation_algorithmique_policy_reform
 - consortium_technologique_de_planification_territoriale_policy_reform
 - great_lakes_autonomous_compact_policy_reform
+- institut_des_seuils_demographiques_policy_reform
 - office_integre_des_flux_migratoires_policy_reform
 - pacifique_sud_resilience_network_policy_reform
 - reseau_des_metropoles_n_uds_policy_reform
@@ -49,6 +50,7 @@ oppositions:
 - collectifs_de_gouvernance_communautaire_decentralisee_policy_reform
 - front_des_autonomies_territoriales_radicales_policy_reform
 - front_souverainiste_des_blocs_non_signataires_policy_reform
+- the_lattice_policy_reform
 type_relation_dominante: coopération
 
 annee_debut: 2041
@@ -107,6 +109,7 @@ La légitimité démocratique du CRTI est contestée en profondeur : ses mécani
 - [[conseil_regulation_algorithmique_policy_reform]]
 - [[consortium_technologique_de_planification_territoriale_policy_reform]]
 - [[great_lakes_autonomous_compact_policy_reform]]
+- [[institut_des_seuils_demographiques_policy_reform]]
 - [[office_integre_des_flux_migratoires_policy_reform]]
 - [[pacifique_sud_resilience_network_policy_reform]]
 - [[reseau_des_metropoles_n_uds_policy_reform]]
@@ -114,3 +117,4 @@ La légitimité démocratique du CRTI est contestée en profondeur : ses mécani
 - [[collectifs_de_gouvernance_communautaire_decentralisee_policy_reform]]
 - [[front_des_autonomies_territoriales_radicales_policy_reform]]
 - [[front_souverainiste_des_blocs_non_signataires_policy_reform]]
+- [[the_lattice_policy_reform]]

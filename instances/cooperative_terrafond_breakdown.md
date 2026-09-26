@@ -35,7 +35,6 @@ zone_systemique:
 
 alliances:
 - brigades_medicales_itinerantes_breakdown
-- internationale_des_semenciers_agro_pirates_fortress_world
 oppositions:
 - cartels_logistiques_regionaux_breakdown
 - communautes_paysannes_refugiees_breakdown
@@ -95,7 +94,6 @@ La question déchirante : jusqu'où négocier avec les factions armées pour sur
 ## Relations
 **Alliés :**
 - [[brigades_medicales_itinerantes_breakdown]]
-- [[internationale_des_semenciers_agro_pirates_fortress_world]]
 **Opposants :**
 - [[cartels_logistiques_regionaux_breakdown]]
 - [[communautes_paysannes_refugiees_breakdown]]

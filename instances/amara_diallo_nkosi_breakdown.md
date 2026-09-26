@@ -35,15 +35,11 @@ zone_systemique:
     - société
 
 alliances:
-    - diaspora_tech_sahel_breakdown
-    - collectifs_riverains_du_bassin_du_congo_new_sustainability
-    - reseau_des_organisations_humanitaires_hors_cadre_onusien_breakdown
-
+- diaspora_tech_sahel_breakdown
+- reseau_des_organisations_humanitaires_hors_cadre_onusien_breakdown
 oppositions:
-    - seigneuries_logistiques_armees_breakdown
-    - consortiums_industriels_de_l_eau_eco_communalism
-    - factions_etatiques_residuelles_de_souverainete_hydrique_breakdown
-
+- seigneuries_logistiques_armees_breakdown
+- factions_etatiques_residuelles_de_souverainete_hydrique_breakdown
 type_relation_dominante: conflit
 
 annee_debut: 2041
@@ -88,12 +84,17 @@ Elle négocie des trêves techniques autour des points d'eau critiques entre fac
 - [[organisation_territoires]]
 - [[climat_environnement_global]]
 
-## Relations
-**Alliés** : [[diaspora_tech_sahel_breakdown]], [[collectifs_riverains_du_bassin_du_congo_new_sustainability]], [[reseau_des_organisations_humanitaires_hors_cadre_onusien_breakdown]]
-**Opposants** : [[seigneuries_logistiques_armees_breakdown]], [[consortiums_industriels_de_l_eau_eco_communalism]], [[factions_etatiques_residuelles_de_souverainete_hydrique_breakdown]]
 
 ## Description journalistique
 On la reconnaît aux cartes plastifiées qu'elle porte roulées dans son sac à dos — des cartes que plus personne d'autre ne sait lire. Amara Diallo-Nkosi, 61 ans, se déplace entre Brazzaville-Nord et les avant-postes du Kivu disputé avec la régularité d'une hydrologue qui connaît les crues mieux que les lignes de front. Ses accords de 2067, salués comme le triomphe de la diplomatie de l'eau, sont aujourd'hui des textes fantômes : les signataires sont morts, exilés ou renégats. Ce qu'il reste, c'est elle — et la certitude que si elle disparaît, trois millions de personnes perdent leur accès à une eau potable à peu près fiable. Certains la protègent pour cette raison. D'autres la cherchent pour la même.
 
 ## Tensions narratives
 Sa compétence est son bouclier et sa malédiction : chaque faction veut la capturer plutôt que la tuer, ce qui l'enferme dans une neutralité imposée qu'elle ne choisit plus. Elle doit choisir entre servir tout le monde — et donc ne protéger personne en priorité — ou choisir un camp et transformer son expertise en arme géopolitique. Une trahison passée la hante : un accord qu'elle a facilité en 2081 a indirectement permis à une milice d'assécher une vallée peuplée. La question de sa responsabilité morale dans un système qu'elle n'a jamais pleinement contrôlé est ouverte.
+
+## Relations
+**Alliés :**
+- [[diaspora_tech_sahel_breakdown]]
+- [[reseau_des_organisations_humanitaires_hors_cadre_onusien_breakdown]]
+**Opposants :**
+- [[seigneuries_logistiques_armees_breakdown]]
+- [[factions_etatiques_residuelles_de_souverainete_hydrique_breakdown]]

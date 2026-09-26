@@ -59,6 +59,7 @@ oppositions:
 - internationale_souverainiste_de_deconnexion_territoriale_new_sustainability
 - lobbies_des_plateformes_de_consensus_automatise_new_sustainability
 - souverainistes_du_bloc_eurasien_new_sustainability
+- terminal_kharg_data_haven_new_sustainability
 type_relation_dominante: rivalité
 
 annee_debut: 2041
@@ -133,3 +134,4 @@ La question de l'exécution effective de ses décisions reste entière : sans fo
 - [[internationale_souverainiste_de_deconnexion_territoriale_new_sustainability]]
 - [[lobbies_des_plateformes_de_consensus_automatise_new_sustainability]]
 - [[souverainistes_du_bloc_eurasien_new_sustainability]]
+- [[terminal_kharg_data_haven_new_sustainability]]

@@ -58,6 +58,7 @@ oppositions:
 - conseil_mondial_de_la_regeneration_ecosystemique_cmre_new_sustainability
 - conseil_technocratique_de_coordination_regionale_new_sustainability
 - consortium_des_ia_climatiques_new_sustainability
+- ergo_wian_sovereign_holdings_new_sustainability
 - programme_onu_de_restauration_des_sols_new_sustainability
 - programme_onusien_de_mobilite_climatique_new_sustainability
 - trame_bioclimatique_new_sustainability
@@ -128,6 +129,7 @@ Le Mouvement est pris dans une contradiction fondamentale : en défendant la sou
 - [[frontieres_du_systeme]]
 
 
+
 ## Relations
 **Alliés :**
 - [[bloc_des_gouvernements_souverainistes_hydriques_new_sustainability]]
@@ -153,6 +155,7 @@ Le Mouvement est pris dans une contradiction fondamentale : en défendant la sou
 - [[conseil_mondial_de_la_regeneration_ecosystemique_cmre_new_sustainability]]
 - [[conseil_technocratique_de_coordination_regionale_new_sustainability]]
 - [[consortium_des_ia_climatiques_new_sustainability]]
+- [[ergo_wian_sovereign_holdings_new_sustainability]]
 - [[programme_onu_de_restauration_des_sols_new_sustainability]]
 - [[programme_onusien_de_mobilite_climatique_new_sustainability]]
 - [[trame_bioclimatique_new_sustainability]]

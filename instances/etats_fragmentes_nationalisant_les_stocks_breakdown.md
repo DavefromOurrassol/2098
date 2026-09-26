@@ -52,6 +52,7 @@ oppositions:
 - flux_migratoires_non_integrables_breakdown
 - front_de_resistance_aux_peages_sur_les_ressources_breakdown
 - gouvernements_de_forteresse_anti_nairobi_breakdown
+- meridian_assembly_breakdown
 - milices_de_controle_territorial_breakdown
 - mouvement_des_communes_du_rust_belt_breakdown
 - nairobi_crrc_breakdown
@@ -119,6 +120,7 @@ La contradiction fondamentale de ces États est d'utiliser l'outil souverain —
 - [[geopolitique_conflits]]
 
 
+
 ## Relations
 **Alliés :**
 - [[front_des_blocs_regionaux_du_recit_des_conflits_ressources_breakdown]]
@@ -137,6 +139,7 @@ La contradiction fondamentale de ces États est d'utiliser l'outil souverain —
 - [[flux_migratoires_non_integrables_breakdown]]
 - [[front_de_resistance_aux_peages_sur_les_ressources_breakdown]]
 - [[gouvernements_de_forteresse_anti_nairobi_breakdown]]
+- [[meridian_assembly_breakdown]]
 - [[milices_de_controle_territorial_breakdown]]
 - [[mouvement_des_communes_du_rust_belt_breakdown]]
 - [[nairobi_crrc_breakdown]]

@@ -42,12 +42,15 @@ alliances:
 - fraternites_ecospiritualistes_des_anciens_survivalistes_eco_communalism
 - frente_sertao_livre_eco_communalism
 - guildes_de_mediateurs_ecologiques_eco_communalism
+- lamplight_eco_communalism
 - le_registre_du_fleuve_eco_communalism
+- les_veilleurs_des_nappes_phreatiques_eco_communalism
 - les_veilleurs_du_fleuve_eco_communalism
 - ligue_des_cites_du_sahel_numerique_eco_communalism
 - mouvement_des_archives_vivantes_du_savoir_partage_eco_communalism
 - prisme_global_eco_communalism
 - reseau_assemblees_fennoscandien_eco_communalism
+- reseau_des_cartographes_des_zones_grises_eco_communalism
 - reseaux_de_bibliotheques_archives_communautaires_eco_communalism
 - reseaux_de_reconstruction_cooperative_inter_communautes_eco_communalism
 - universite_nomade_eco_communalism
@@ -125,6 +128,7 @@ La portée limitée de chaque émetteur crée des zones d'ombre structurelles, o
 - [[energie_ressources_critiques]]
 
 
+
 ## Relations
 **Alliés :**
 - [[assemblees_bioterritoriales_regionales_eco_communalism]]
@@ -137,12 +141,15 @@ La portée limitée de chaque émetteur crée des zones d'ombre structurelles, o
 - [[fraternites_ecospiritualistes_des_anciens_survivalistes_eco_communalism]]
 - [[frente_sertao_livre_eco_communalism]]
 - [[guildes_de_mediateurs_ecologiques_eco_communalism]]
+- [[lamplight_eco_communalism]]
 - [[le_registre_du_fleuve_eco_communalism]]
+- [[les_veilleurs_des_nappes_phreatiques_eco_communalism]]
 - [[les_veilleurs_du_fleuve_eco_communalism]]
 - [[ligue_des_cites_du_sahel_numerique_eco_communalism]]
 - [[mouvement_des_archives_vivantes_du_savoir_partage_eco_communalism]]
 - [[prisme_global_eco_communalism]]
 - [[reseau_assemblees_fennoscandien_eco_communalism]]
+- [[reseau_des_cartographes_des_zones_grises_eco_communalism]]
 - [[reseaux_de_bibliotheques_archives_communautaires_eco_communalism]]
 - [[reseaux_de_reconstruction_cooperative_inter_communautes_eco_communalism]]
 - [[universite_nomade_eco_communalism]]

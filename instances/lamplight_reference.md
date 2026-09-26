@@ -35,19 +35,18 @@ zone_systemique:
     - économie
 
 alliances:
-    - collectifs_academiques_independants_reference
-    - reseau_des_chercheurs_en_ethique_des_systemes_distribues_reference
-    - reseau_mnemos_reference
-    - conseil_de_geneve_pour_les_droits_biosociaux_reference
-    - collectifs_de_journalisme_embarque_reference
-
+- collectifs_academiques_independants_reference
+- collectifs_de_journalisme_embarque_reference
+- conseil_de_geneve_pour_les_droits_biosociaux_reference
+- maelys_okonkwo_reference
+- reseau_des_chercheurs_en_ethique_des_systemes_distribues_reference
+- reseau_mnemos_reference
 oppositions:
-    - consortiums_mediatiques_corporatifs_reference
-    - plateformes_centralisees_de_narration_officielle_reference
-    - ergo_wian_sovereign_holdings_reference
-    - the_lattice_reference
-    - consortiums_prives_de_gestion_des_donnees_critiques_reference
-
+- consortiums_mediatiques_corporatifs_reference
+- consortiums_prives_de_gestion_des_donnees_critiques_reference
+- ergo_wian_sovereign_holdings_reference
+- plateformes_centralisees_de_narration_officielle_reference
+- the_lattice_reference
 type_relation_dominante: rivalité
 
 annee_debut: 2032
@@ -105,12 +104,24 @@ Lamplight Collective produit des enquêtes approfondies sur les flux financiers 
 - [[gouvernance_institutions]]
 - [[systeme_economique_redistribution]]
 
-## Relations
-**Alliés** : [[collectifs_academiques_independants_reference]], [[reseau_des_chercheurs_en_ethique_des_systemes_distribues_reference]], [[reseau_mnemos_reference]], [[conseil_de_geneve_pour_les_droits_biosociaux_reference]], [[collectifs_de_journalisme_embarque_reference]]
-**Opposants** : [[consortiums_mediatiques_corporatifs_reference]], [[plateformes_centralisees_de_narration_officielle_reference]], [[ergo_wian_sovereign_holdings_reference]], [[the_lattice_reference]], [[consortiums_prives_de_gestion_des_donnees_critiques_reference]]
 
 ## Description journalistique
 Depuis son QG genevois, une ancienne tour de bureaux reconvertie en hub médiatique, le Lamplight Collective est devenu la bête noire des puissances opaques de 2098. Ses enquêtes, publiées simultanément en six langues sur des plateformes décentralisées, ont révélé les liens entre Ergo-Wian et les milices des détroits stratégiques, les financements occultes du Kindling par des fonds souverains arctiques, ou encore les algorithmes de The Lattice conçus pour étouffer les voix des territoires résiduels. Ses journalistes, souvent issus de zones grises ou de mégapoles autonomes, opèrent sous pseudonyme et utilisent des outils de cryptographie quantique pour protéger leurs sources. Leur dernier coup d'éclat ? La fuite des 'Lattice Papers', des milliers de documents prouvant la collusion entre les plateformes IA et les régimes post-démocratiques pour manipuler l'opinion publique.
 
 ## Tensions narratives
 Lamplight Collective est pris en étau entre son ambition de devenir un acteur systémique incontournable et les pressions croissantes des acteurs qu'il expose. Ses enquêtes sur les consortiums énergétiques opaques ont déclenché des cyberattaques massives, tandis que ses révélations sur les financements du Kindling lui ont valu des poursuites judiciaires dans plusieurs juridictions. Certains de ses membres, menacés physiquement, ont dû être exfiltrés vers des villes-refuge comme Helsinki Communs Numériques. Par ailleurs, le collectif est critiqué pour son manque de diversité géographique, avec une surreprésentation de journalistes occidentaux, ce qui limite sa légitimité dans les territoires du Sud global. Sa trajectoire future dépendra de sa capacité à élargir son réseau tout en résistant aux tentatives de récupération par des blocs géopolitiques concurrents.
+
+## Relations
+**Alliés :**
+- [[collectifs_academiques_independants_reference]]
+- [[collectifs_de_journalisme_embarque_reference]]
+- [[conseil_de_geneve_pour_les_droits_biosociaux_reference]]
+- [[maelys_okonkwo_reference]]
+- [[reseau_des_chercheurs_en_ethique_des_systemes_distribues_reference]]
+- [[reseau_mnemos_reference]]
+**Opposants :**
+- [[consortiums_mediatiques_corporatifs_reference]]
+- [[consortiums_prives_de_gestion_des_donnees_critiques_reference]]
+- [[ergo_wian_sovereign_holdings_reference]]
+- [[plateformes_centralisees_de_narration_officielle_reference]]
+- [[the_lattice_reference]]

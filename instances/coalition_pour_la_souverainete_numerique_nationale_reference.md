@@ -57,6 +57,7 @@ oppositions:
 - nexcore_reference
 - plateformes_informationnelles_dominantes_et_leurs_ia_de_moderation_reference
 - singapour_est_nexcore_reference
+- terminal_kharg_data_haven_reference
 - valparaiso_fct_reference
 type_relation_dominante: compétition
 annee_debut: 2033
@@ -125,6 +126,7 @@ La Coalition est prise en étau entre les États souverainistes qui l'instrument
 - [[geopolitique_conflits]]
 
 
+
 ## Relations
 **Alliés :**
 - [[bloc_des_etats_du_sud_global_contre_la_cession_de_donnees_reference]]
@@ -152,6 +154,7 @@ La Coalition est prise en étau entre les États souverainistes qui l'instrument
 - [[nexcore_reference]]
 - [[plateformes_informationnelles_dominantes_et_leurs_ia_de_moderation_reference]]
 - [[singapour_est_nexcore_reference]]
+- [[terminal_kharg_data_haven_reference]]
 - [[valparaiso_fct_reference]]
 
 ## Notes

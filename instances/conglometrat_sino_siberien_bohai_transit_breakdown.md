@@ -37,7 +37,6 @@ zone_geographique:
 zone_systemique:
 - société
 alliances:
-- arctic_passage_authority_breakdown
 - consortium_energetique_oural_caspien_breakdown
 - consortiums_energetiques_samoiedes_du_yamal_breakdown
 - corridors_eurasiens_convoyage_breakdown
@@ -120,9 +119,9 @@ Bohai Transit est prise en étau entre ses actionnaires sino-mandchous qui exige
 - [[geopolitique_conflits]]
 
 
+
 ## Relations
 **Alliés :**
-- [[arctic_passage_authority_breakdown]]
 - [[consortium_energetique_oural_caspien_breakdown]]
 - [[consortiums_energetiques_samoiedes_du_yamal_breakdown]]
 - [[corridors_eurasiens_convoyage_breakdown]]

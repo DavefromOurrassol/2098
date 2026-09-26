@@ -39,6 +39,7 @@ alliances:
 oppositions:
 - agadez_ligue_sahel_numerique_breakdown
 - agence_stabilisation_climatique_breakdown
+- deepfield_institute_breakdown
 - directive_kontinuum_breakdown
 - front_techno_reconstructionniste_breakdown
 - geneve_bunker_institutions_breakdown
@@ -108,12 +109,14 @@ La contradiction fondamentale qui ronge les Fronts est leur dépendance aux rés
 - [[organisation_territoires]]
 
 
+
 ## Relations
 **Alliés :**
 - [[communes_rust_belt_zones_libres_breakdown]]
 **Opposants :**
 - [[agadez_ligue_sahel_numerique_breakdown]]
 - [[agence_stabilisation_climatique_breakdown]]
+- [[deepfield_institute_breakdown]]
 - [[directive_kontinuum_breakdown]]
 - [[front_techno_reconstructionniste_breakdown]]
 - [[geneve_bunker_institutions_breakdown]]

@@ -36,20 +36,23 @@ zone_systemique:
     - infrastructure
 
 alliances:
-    - collectifs_de_gardiens_archivistes_itinerants_breakdown
-    - collectifs_de_hackers_archivistes_des_interstices_reseaux_breakdown
-    - reseau_des_courriers_nomades_sahelo_mediterraneens_breakdown
-    - communautes_rurales_autogerees_des_n_uds_de_survie_breakdown
-    - ligue_des_cites_du_sahel_numerique_breakdown
-    - front_de_resistance_aux_peages_sur_les_ressources_breakdown
-
+- agence_de_regulation_des_detroits_strategiques_ards_breakdown
+- assemblee_territoires_breakdown
+- collectifs_de_gardiens_archivistes_itinerants_breakdown
+- collectifs_de_hackers_archivistes_des_interstices_reseaux_breakdown
+- communautes_rurales_autogerees_des_n_uds_de_survie_breakdown
+- elias_mork_breakdown
+- front_de_resistance_aux_peages_sur_les_ressources_breakdown
+- gelecek_meclisi_breakdown
+- les_veilleurs_des_nappes_phreatiques_breakdown
+- ligue_des_cites_du_sahel_numerique_breakdown
+- reseau_des_courriers_nomades_sahelo_mediterraneens_breakdown
 oppositions:
-    - seigneuries_logistiques_armees_breakdown
-    - milices_de_controle_territorial_breakdown
-    - factions_para_etatiques_hydriques_breakdown
-    - blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown
-    - reseau_des_anciens_financeurs_devenus_censeurs_breakdown
-
+- blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown
+- factions_para_etatiques_hydriques_breakdown
+- milices_de_controle_territorial_breakdown
+- reseau_des_anciens_financeurs_devenus_censeurs_breakdown
+- seigneuries_logistiques_armees_breakdown
 type_relation_dominante: symbiose
 
 annee_debut: 2051
@@ -92,12 +95,29 @@ Dans un monde où les frontières se sont effondrées sous les coups des conflit
 - [[organisation_territoires]]
 - [[geopolitique_conflits]]
 
-## Relations
-**Alliés** : [[collectifs_de_gardiens_archivistes_itinerants_breakdown]], [[collectifs_de_hackers_archivistes_des_interstices_reseaux_breakdown]], [[reseau_des_courriers_nomades_sahelo_mediterraneens_breakdown]], [[communautes_rurales_autogerees_des_n_uds_de_survie_breakdown]], [[ligue_des_cites_du_sahel_numerique_breakdown]], [[front_de_resistance_aux_peages_sur_les_ressources_breakdown]]
-**Opposants** : [[seigneuries_logistiques_armees_breakdown]], [[milices_de_controle_territorial_breakdown]], [[factions_para_etatiques_hydriques_breakdown]], [[blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown]], [[reseau_des_anciens_financeurs_devenus_censeurs_breakdown]]
 
 ## Description journalistique
 « Ils savent où l'on peut encore passer. » C'est la phrase que l'on entend le plus souvent quand on évoque les Veilleurs des Brumes, ce réseau clandestin de cartographes qui a émergé des ruines des années 2050. À une époque où les satellites sont devenus des cibles et où les données officielles ne valent plus grand-chose, leurs cartes — tracées à la main, mises à jour par des relais humains, protégées par des algorithmes de chiffrement low-tech — sont devenues une monnaie d'échange aussi précieuse que les munitions ou les graines. On les trouve dans les souks numériques du Sahel, les enclaves agro-communautaires d'Europe de l'Est, ou même dans les bunkers des milices hydriques du Moyen-Orient. Leur symbole, une boussole brisée entourée de brume, est à la fois un avertissement et une promesse : dans un monde où plus personne ne sait vraiment où il va, eux, au moins, savent où l'on peut encore marcher.
 
 ## Tensions narratives
 - **La connaissance comme arme** : Les Veilleurs des Brumes doivent constamment naviguer entre leur idéal de savoir partagé et le risque que leurs cartes soient utilisées pour des raids, des accaparements de ressources ou des nettoyages ethniques. Certains nœuds locaux ont déjà été accusés de collaborer avec des milices, ce qui menace la cohésion du réseau.  - **La guerre des archives** : Des factions comme les *Factions Propagandistes des Archives* ou les *Seigneuries Logistiques Armées* cherchent à infiltrer ou détruire le réseau, voyant en lui une menace pour leur contrôle sur les territoires.  - **L'IA contre la main humaine** : Alors que des enclaves technologiques survivantes développent des IA capables de cartographier automatiquement les zones grises, les Veilleurs des Brumes défendent une approche artisanale, arguant que seule la mémoire humaine peut capturer la complexité des territoires en constante mutation.  - **Le dilemme de la visibilité** : Plus ils deviennent indispensables, plus ils risquent d'être ciblés. Certains plaident pour une dissolution partielle du réseau, tandis que d'autres veulent le rendre encore plus robuste, quitte à perdre en clandestinité.
+
+## Relations
+**Alliés :**
+- [[agence_de_regulation_des_detroits_strategiques_ards_breakdown]]
+- [[assemblee_territoires_breakdown]]
+- [[collectifs_de_gardiens_archivistes_itinerants_breakdown]]
+- [[collectifs_de_hackers_archivistes_des_interstices_reseaux_breakdown]]
+- [[communautes_rurales_autogerees_des_n_uds_de_survie_breakdown]]
+- [[elias_mork_breakdown]]
+- [[front_de_resistance_aux_peages_sur_les_ressources_breakdown]]
+- [[gelecek_meclisi_breakdown]]
+- [[les_veilleurs_des_nappes_phreatiques_breakdown]]
+- [[ligue_des_cites_du_sahel_numerique_breakdown]]
+- [[reseau_des_courriers_nomades_sahelo_mediterraneens_breakdown]]
+**Opposants :**
+- [[blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown]]
+- [[factions_para_etatiques_hydriques_breakdown]]
+- [[milices_de_controle_territorial_breakdown]]
+- [[reseau_des_anciens_financeurs_devenus_censeurs_breakdown]]
+- [[seigneuries_logistiques_armees_breakdown]]

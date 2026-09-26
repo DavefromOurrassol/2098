@@ -29,17 +29,18 @@ zone_systemique:
   - économie
   - sécurité
 alliances:
-  - front_souverainiste_de_l_information_regionale_policy_reform
-  - collectifs_de_biohackers_agro_communautaires_policy_reform
-  - syndicats_d_extraction_privee_non_regules_policy_reform
-  - coalition_des_souverainistes_numeriques_policy_reform
-  - reseau_des_cartographes_des_zones_grises_policy_reform
+- coalition_des_souverainistes_numeriques_policy_reform
+- collectifs_de_biohackers_agro_communautaires_policy_reform
+- front_souverainiste_de_l_information_regionale_policy_reform
+- reseau_des_cartographes_des_zones_grises_policy_reform
+- syndicats_d_extraction_privee_non_regules_policy_reform
 oppositions:
-  - conseil_de_gouvernance_de_l_information_policy_reform
-  - bureau_gouvernance_algorithmique_policy_reform
-  - agence_internationale_de_l_energie_reformatee_aier_policy_reform
-  - autorite_mondiale_du_vivant_amv_policy_reform
-  - reseau_des_auditeurs_algorithmiques_independants_raai_policy_reform
+- agence_internationale_de_l_energie_reformatee_aier_policy_reform
+- autorite_mondiale_du_vivant_amv_policy_reform
+- bureau_gouvernance_algorithmique_policy_reform
+- conseil_de_gouvernance_de_l_information_policy_reform
+- nexcore_policy_reform
+- reseau_des_auditeurs_algorithmiques_independants_raai_policy_reform
 type_relation_dominante: infiltration
 annee_debut: 2041
 annee_fin:
@@ -75,12 +76,24 @@ Infrastructure offshore ancrée dans les eaux contestées du détroit d'Ormuz, K
 - [[frontieres_du_systeme]]
 - [[systeme_economique_redistribution]]
 
-## Relations
-**Alliés** : [[front_souverainiste_de_l_information_regionale_policy_reform]], [[collectifs_de_biohackers_agro_communautaires_policy_reform]], [[syndicats_d_extraction_privee_non_regules_policy_reform]], [[coalition_des_souverainistes_numeriques_policy_reform]], [[reseau_des_cartographes_des_zones_grises_policy_reform]]
-**Opposants** : [[conseil_de_gouvernance_de_l_information_policy_reform]], [[bureau_gouvernance_algorithmique_policy_reform]], [[agence_internationale_de_l_energie_reformatee_aier_policy_reform]], [[autorite_mondiale_du_vivant_amv_policy_reform]], [[reseau_des_auditeurs_algorithmiques_independants_raai_policy_reform]]
 
 ## Description journalistique
 Depuis son inauguration discrète en 2041, Kharg-9 Data Nexus est devenu le symbole d'une gouvernance mondiale à deux vitesses. Perchée sur une plateforme modulaire ancrée à 12 milles nautiques des côtes iraniennes, cette forteresse de données abrite des serveurs refroidis par les eaux du golfe Persique et alimentés par des réacteurs à sels fondus. Les journalistes d'investigation l'appellent 'le casino des données' : on y mise des algorithmes de prédiction climatique contre des cartes des nappes phréatiques sahéliennes, ou des brevets de fusion nucléaire contre des archives génétiques de semences disparues. Ses clients ? Des États dissidents, des fonds souverains en quête de leviers géopolitiques, et une nouvelle classe de 'data brokers' qui spéculent sur l'information comme on spéculait autrefois sur le pétrole. En 2098, Kharg-9 reste le dernier bastion d'un internet non-régulé, où la neutralité des données se paie en cryptomonnaies anonymisées et en faveurs stratégiques.
 
 ## Tensions narratives
 1) **Guerre des protocoles** : Kharg-9 est au cœur d'une bataille entre le Conseil de Gouvernance de l'Information (qui veut imposer un protocole de traçabilité des données) et les Souverainistes Numériques (qui défendent le droit à l'opacité). En 2095, une cyberattaque attribuée à l'ACRA a brièvement paralysé ses serveurs, révélant sa vulnérabilité. 2) **Équilibre précaire** : Son statut de neutralité est menacé par les tensions régionales (conflit Iran-USA, blocage du détroit d'Ormuz) et par la montée des régulations climatiques (quotas sur les données liées aux ressources critiques). 3) **Dépendance énergétique** : Son approvisionnement en énergie (réacteurs à sels fondus) dépend de la Coalition des Opérateurs Énergétiques Privés Anti-Quotas, ce qui en fait une cible potentielle pour les Factions Technocratiques de la Marchandisation Hydrique. 4) **Légitimité contestée** : Les Collectifs Citoyens de Délibération Augmentée accusent Kharg-9 de 'colonisation algorithmique', tandis que les États dissidents y voient un rempart contre l'hégémonie des institutions globales.
+
+## Relations
+**Alliés :**
+- [[coalition_des_souverainistes_numeriques_policy_reform]]
+- [[collectifs_de_biohackers_agro_communautaires_policy_reform]]
+- [[front_souverainiste_de_l_information_regionale_policy_reform]]
+- [[reseau_des_cartographes_des_zones_grises_policy_reform]]
+- [[syndicats_d_extraction_privee_non_regules_policy_reform]]
+**Opposants :**
+- [[agence_internationale_de_l_energie_reformatee_aier_policy_reform]]
+- [[autorite_mondiale_du_vivant_amv_policy_reform]]
+- [[bureau_gouvernance_algorithmique_policy_reform]]
+- [[conseil_de_gouvernance_de_l_information_policy_reform]]
+- [[nexcore_policy_reform]]
+- [[reseau_des_auditeurs_algorithmiques_independants_raai_policy_reform]]

@@ -49,6 +49,7 @@ alliances:
 - plateformes_centralisees_de_reagregation_globale_eco_communalism
 - reseau_des_marches_noirs_de_donnees_extractivistes_eco_communalism
 oppositions:
+- agence_de_regulation_des_detroits_strategiques_ards_eco_communalism
 - amazonie_pacte_viva_eco_communalism
 - assemblee_territoires_eco_communalism
 - assemblees_bioterritoriales_regionales_eco_communalism
@@ -63,8 +64,11 @@ oppositions:
 - conseils_de_bassin_versant_eco_communalistes_eco_communalism
 - enclaves_extractivistes_residuelles_des_corridors_eco_communalism
 - frente_sertao_livre_eco_communalism
+- gelecek_meclisi_eco_communalism
 - guildes_de_mediateurs_ecologiques_eco_communalism
+- institut_des_seuils_demographiques_eco_communalism
 - reseaux_de_bibliotheques_archives_communautaires_eco_communalism
+- terminal_kharg_data_haven_eco_communalism
 - trame_bioclimatique_eco_communalism
 - tresse_verte_corridor_eco_communalism
 - zones_extractivistes_corridors_eco_communalism
@@ -130,6 +134,7 @@ La contradiction centrale — être moralement condamné et fonctionnellement n�
 - [[plateformes_centralisees_de_reagregation_globale_eco_communalism]]
 - [[reseau_des_marches_noirs_de_donnees_extractivistes_eco_communalism]]
 **Opposants :**
+- [[agence_de_regulation_des_detroits_strategiques_ards_eco_communalism]]
 - [[amazonie_pacte_viva_eco_communalism]]
 - [[assemblee_territoires_eco_communalism]]
 - [[assemblees_bioterritoriales_regionales_eco_communalism]]
@@ -144,8 +149,11 @@ La contradiction centrale — être moralement condamné et fonctionnellement n�
 - [[conseils_de_bassin_versant_eco_communalistes_eco_communalism]]
 - [[enclaves_extractivistes_residuelles_des_corridors_eco_communalism]]
 - [[frente_sertao_livre_eco_communalism]]
+- [[gelecek_meclisi_eco_communalism]]
 - [[guildes_de_mediateurs_ecologiques_eco_communalism]]
+- [[institut_des_seuils_demographiques_eco_communalism]]
 - [[reseaux_de_bibliotheques_archives_communautaires_eco_communalism]]
+- [[terminal_kharg_data_haven_eco_communalism]]
 - [[trame_bioclimatique_eco_communalism]]
 - [[tresse_verte_corridor_eco_communalism]]
 - [[zones_extractivistes_corridors_eco_communalism]]

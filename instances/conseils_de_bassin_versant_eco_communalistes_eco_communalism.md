@@ -54,6 +54,7 @@ oppositions:
 - collectifs_du_seuil_eco_communalism
 - enclaves_extractivistes_et_etats_residuels_eco_communalism
 - factions_extractivistes_des_aquiferes_communs_eco_communalism
+- meridian_assembly_eco_communalism
 - zones_extractivistes_corridors_eco_communalism
 type_relation_dominante: symbiose
 annee_debut: 2038
@@ -121,6 +122,7 @@ La tension centrale qui traverse ces conseils oppose la logique des bassins vers
 - [[climat_environnement_global]]
 
 
+
 ## Relations
 **Alliés :**
 - [[amazonie_pacte_viva_eco_communalism]]
@@ -145,6 +147,7 @@ La tension centrale qui traverse ces conseils oppose la logique des bassins vers
 - [[collectifs_du_seuil_eco_communalism]]
 - [[enclaves_extractivistes_et_etats_residuels_eco_communalism]]
 - [[factions_extractivistes_des_aquiferes_communs_eco_communalism]]
+- [[meridian_assembly_eco_communalism]]
 - [[zones_extractivistes_corridors_eco_communalism]]
 
 ## Notes

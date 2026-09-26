@@ -44,6 +44,7 @@ alliances:
 - directive_kontinuum_new_sustainability
 - fonds_mondial_de_redistribution_technologique_new_sustainability
 - institut_de_philosophie_des_systemes_hybrides_d_helsinki_new_sustainability
+- institut_des_seuils_demographiques_new_sustainability
 - oracle_des_seuils_new_sustainability
 - parlement_deliberatif_mondial_new_sustainability
 - rede_paulista_de_distribuicao_algoritmica_new_sustainability
@@ -59,10 +60,13 @@ oppositions:
 - collectifs_riverains_du_bassin_du_congo_new_sustainability
 - communautes_locales_exclues_des_corridors_new_sustainability
 - factions_technocratiques_de_la_delegation_ia_totale_new_sustainability
+- ilse_varga_holm_new_sustainability
 - internationale_souverainiste_de_deconnexion_territoriale_new_sustainability
 - les_passeurs_de_limites_new_sustainability
 - mouvement_souverainiste_de_la_ceinture_boreale_new_sustainability
+- nadia_ferreira_sato_new_sustainability
 - reseau_des_bio_communs_regionaux_new_sustainability
+- reseau_des_cartographes_des_zones_grises_new_sustainability
 - reseau_des_communs_numeriques_globaux_new_sustainability
 - reseau_des_ingenieurs_climatiques_du_sud_global_new_sustainability
 - reseaux_d_information_souverainistes_fermes_new_sustainability
@@ -127,6 +131,7 @@ La légitimité performative du CGAI repose sur ses succès passés — mais que
 - [[directive_kontinuum_new_sustainability]]
 - [[fonds_mondial_de_redistribution_technologique_new_sustainability]]
 - [[institut_de_philosophie_des_systemes_hybrides_d_helsinki_new_sustainability]]
+- [[institut_des_seuils_demographiques_new_sustainability]]
 - [[oracle_des_seuils_new_sustainability]]
 - [[parlement_deliberatif_mondial_new_sustainability]]
 - [[rede_paulista_de_distribuicao_algoritmica_new_sustainability]]
@@ -142,10 +147,13 @@ La légitimité performative du CGAI repose sur ses succès passés — mais que
 - [[collectifs_riverains_du_bassin_du_congo_new_sustainability]]
 - [[communautes_locales_exclues_des_corridors_new_sustainability]]
 - [[factions_technocratiques_de_la_delegation_ia_totale_new_sustainability]]
+- [[ilse_varga_holm_new_sustainability]]
 - [[internationale_souverainiste_de_deconnexion_territoriale_new_sustainability]]
 - [[les_passeurs_de_limites_new_sustainability]]
 - [[mouvement_souverainiste_de_la_ceinture_boreale_new_sustainability]]
+- [[nadia_ferreira_sato_new_sustainability]]
 - [[reseau_des_bio_communs_regionaux_new_sustainability]]
+- [[reseau_des_cartographes_des_zones_grises_new_sustainability]]
 - [[reseau_des_communs_numeriques_globaux_new_sustainability]]
 - [[reseau_des_ingenieurs_climatiques_du_sud_global_new_sustainability]]
 - [[reseaux_d_information_souverainistes_fermes_new_sustainability]]

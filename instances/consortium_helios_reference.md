@@ -39,13 +39,13 @@ zone_systemique:
 alliances:
 - blocs_signataires_du_pacte_energetique_multilateral_reference
 - consortium_de_maintenance_orbitale_seom_7_reference
+- deepfield_institute_reference
 - fonds_souverains_de_la_ceinture_financiere_pacifique_reference
 - terrametrics_reference
 oppositions:
 - bloc_des_souverainistes_climatiques_reference
 - factions_eurasiatiques_contre_la_tarification_hydrique_reference
 - ligue_des_metropoles_du_sud_pour_les_infrastructures_libres_reference
-- mouvement_pour_la_souverainete_energetique_commune_msec_policy_reform
 type_relation_dominante: dépendance
 
 annee_debut: 2032
@@ -101,10 +101,10 @@ La pression des métropoles du Sud Global pour renégocier les contrats hérité
 **Alliés :**
 - [[blocs_signataires_du_pacte_energetique_multilateral_reference]]
 - [[consortium_de_maintenance_orbitale_seom_7_reference]]
+- [[deepfield_institute_reference]]
 - [[fonds_souverains_de_la_ceinture_financiere_pacifique_reference]]
 - [[terrametrics_reference]]
 **Opposants :**
 - [[bloc_des_souverainistes_climatiques_reference]]
 - [[factions_eurasiatiques_contre_la_tarification_hydrique_reference]]
 - [[ligue_des_metropoles_du_sud_pour_les_infrastructures_libres_reference]]
-- [[mouvement_pour_la_souverainete_energetique_commune_msec_policy_reform]]

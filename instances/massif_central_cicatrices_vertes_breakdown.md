@@ -42,6 +42,7 @@ alliances:
 - federation_communs_territoriaux_breakdown
 - milices_agro_defensives_locales_breakdown
 - mouvement_racines_vivantes_breakdown
+- nadia_ferreira_sato_breakdown
 - occitanie_racines_meres_breakdown
 - reseau_des_courriers_nomades_sahelo_mediterraneens_breakdown
 - reseaux_de_solidarite_horizontale_post_effondrement_breakdown
@@ -112,6 +113,7 @@ La tension centrale est celle du commun menacé : les communautés ont bâti des
 - [[federation_communs_territoriaux_breakdown]]
 - [[milices_agro_defensives_locales_breakdown]]
 - [[mouvement_racines_vivantes_breakdown]]
+- [[nadia_ferreira_sato_breakdown]]
 - [[occitanie_racines_meres_breakdown]]
 - [[reseau_des_courriers_nomades_sahelo_mediterraneens_breakdown]]
 - [[reseaux_de_solidarite_horizontale_post_effondrement_breakdown]]

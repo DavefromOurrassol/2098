@@ -37,9 +37,11 @@ zone_systemique:
 - société
 alliances:
 - agence_mondiale_de_modelisation_climatique_ammc_new_sustainability
+- aurelio_stahl_new_sustainability
 - college_des_auditeurs_independants_du_parlement_biotechnologique_mondial_new_sustainability
 - conseil_de_regulation_cognitive_de_l_onu_new_sustainability
 - consortium_d_interoperabilite_ia_humain_new_sustainability
+- gelecek_meclisi_new_sustainability
 - leena_vainala_new_sustainability
 - observatoire_climatique_narratif_de_nairobi_new_sustainability
 - parlement_deliberatif_mondial_new_sustainability
@@ -117,12 +119,15 @@ Le Collectif est pris en tenaille entre sa vocation de neutralité et les pressi
 - [[technologie_information]]
 
 
+
 ## Relations
 **Alliés :**
 - [[agence_mondiale_de_modelisation_climatique_ammc_new_sustainability]]
+- [[aurelio_stahl_new_sustainability]]
 - [[college_des_auditeurs_independants_du_parlement_biotechnologique_mondial_new_sustainability]]
 - [[conseil_de_regulation_cognitive_de_l_onu_new_sustainability]]
 - [[consortium_d_interoperabilite_ia_humain_new_sustainability]]
+- [[gelecek_meclisi_new_sustainability]]
 - [[leena_vainala_new_sustainability]]
 - [[observatoire_climatique_narratif_de_nairobi_new_sustainability]]
 - [[parlement_deliberatif_mondial_new_sustainability]]

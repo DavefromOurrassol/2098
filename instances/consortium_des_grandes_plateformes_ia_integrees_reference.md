@@ -43,6 +43,8 @@ alliances:
 - consortiums_prives_de_gestion_des_donnees_critiques_reference
 - datasovereign_reference
 - directive_kontinuum_reference
+- ergo_wian_sovereign_holdings_reference
+- meridian_assembly_reference
 - neuroharmonics_reference
 - nexcore_reference
 - optiflow_logistics_reference
@@ -52,6 +54,7 @@ alliances:
 - rede_paulista_de_distribuicao_algoritmica_reference
 oppositions:
 - agence_internationale_des_energies_renouvelables_irena_2_reference
+- aurelio_stahl_reference
 - bloc_des_etats_du_sud_global_contre_la_cession_de_donnees_reference
 - bloc_eurasien_central_reference
 - bureaux_de_regulation_informationnelle_reference
@@ -63,11 +66,13 @@ oppositions:
 - conseil_regulation_algorithmique_reference
 - cooperatives_ia_open_source_reference
 - europe_occidentale_reconstructee_reference
+- gelecek_meclisi_reference
 - helsinki_communs_numeriques_reference
 - institut_polytechnique_de_ouagadougou_reference
 - ong_environnementales_de_terrain_reference
 - pacte_des_souverains_reference
 - regulateurs_de_l_union_eurasiatique_sur_les_donnees_critiques_reference
+- reseau_des_cartographes_des_zones_grises_reference
 - reseau_des_chercheurs_en_ethique_des_systemes_distribues_reference
 - reseau_des_villes_etats_pilotes_en_gouvernance_participative_reference
 - reseau_meshcommons_netsolidaire_reference
@@ -141,6 +146,7 @@ Le Consortium est pris en étau entre sa logique d'expansion algorithmique et un
 - [[systeme_economique_redistribution]]
 
 
+
 ## Relations
 **Alliés :**
 - [[agrisynth_reference]]
@@ -154,6 +160,8 @@ Le Consortium est pris en étau entre sa logique d'expansion algorithmique et un
 - [[consortiums_prives_de_gestion_des_donnees_critiques_reference]]
 - [[datasovereign_reference]]
 - [[directive_kontinuum_reference]]
+- [[ergo_wian_sovereign_holdings_reference]]
+- [[meridian_assembly_reference]]
 - [[neuroharmonics_reference]]
 - [[nexcore_reference]]
 - [[optiflow_logistics_reference]]
@@ -163,6 +171,7 @@ Le Consortium est pris en étau entre sa logique d'expansion algorithmique et un
 - [[rede_paulista_de_distribuicao_algoritmica_reference]]
 **Opposants :**
 - [[agence_internationale_des_energies_renouvelables_irena_2_reference]]
+- [[aurelio_stahl_reference]]
 - [[bloc_des_etats_du_sud_global_contre_la_cession_de_donnees_reference]]
 - [[bloc_eurasien_central_reference]]
 - [[bureaux_de_regulation_informationnelle_reference]]
@@ -174,11 +183,13 @@ Le Consortium est pris en étau entre sa logique d'expansion algorithmique et un
 - [[conseil_regulation_algorithmique_reference]]
 - [[cooperatives_ia_open_source_reference]]
 - [[europe_occidentale_reconstructee_reference]]
+- [[gelecek_meclisi_reference]]
 - [[helsinki_communs_numeriques_reference]]
 - [[institut_polytechnique_de_ouagadougou_reference]]
 - [[ong_environnementales_de_terrain_reference]]
 - [[pacte_des_souverains_reference]]
 - [[regulateurs_de_l_union_eurasiatique_sur_les_donnees_critiques_reference]]
+- [[reseau_des_cartographes_des_zones_grises_reference]]
 - [[reseau_des_chercheurs_en_ethique_des_systemes_distribues_reference]]
 - [[reseau_des_villes_etats_pilotes_en_gouvernance_participative_reference]]
 - [[reseau_meshcommons_netsolidaire_reference]]

@@ -38,20 +38,22 @@ zone_systemique:
     - infrastructure
 
 alliances:
-    - pacte_des_souverains_reference
-    - consortiums_bancaires_financiarises_reference
-    - consortium_des_grandes_plateformes_ia_integrees_reference
-    - consortiums_prives_de_gestion_des_donnees_critiques_reference
-    - plateformes_d_optimisation_territoriale_par_ia_reference
-
+- consortium_des_grandes_plateformes_ia_integrees_reference
+- consortiums_bancaires_financiarises_reference
+- consortiums_prives_de_gestion_des_donnees_critiques_reference
+- deepfield_institute_reference
+- holdfast_reference
+- ilse_varga_holm_reference
+- pacte_des_souverains_reference
+- plateformes_d_optimisation_territoriale_par_ia_reference
 oppositions:
-    - federation_communs_territoriaux_reference
-    - banque_des_communs_reference
-    - cooperatives_energetiques_decentralisees_reference
-    - collectifs_academiques_independants_reference
-    - reseau_des_villes_etats_pilotes_en_gouvernance_participative_reference
-    - mouvement_pour_la_libre_circulation_des_personnes_et_des_donnees_reference
-
+- banque_des_communs_reference
+- collectifs_academiques_independants_reference
+- cooperatives_energetiques_decentralisees_reference
+- federation_communs_territoriaux_reference
+- lamplight_reference
+- mouvement_pour_la_libre_circulation_des_personnes_et_des_donnees_reference
+- reseau_des_villes_etats_pilotes_en_gouvernance_participative_reference
 type_relation_dominante: dépendance
 
 annee_debut: 2047
@@ -110,12 +112,28 @@ Ergo-Wian détient et gère en monopole l'eau, l'énergie, les réseaux de donn�
 - [[organisation_territoires]]
 - [[technologie_information]]
 
-## Relations
-**Alliés** : [[pacte_des_souverains_reference]], [[consortiums_bancaires_financiarises_reference]], [[consortium_des_grandes_plateformes_ia_integrees_reference]], [[consortiums_prives_de_gestion_des_donnees_critiques_reference]], [[plateformes_d_optimisation_territoriale_par_ia_reference]]
-**Opposants** : [[federation_communs_territoriaux_reference]], [[banque_des_communs_reference]], [[cooperatives_energetiques_decentralisees_reference]], [[collectifs_academiques_independants_reference]], [[reseau_des_villes_etats_pilotes_en_gouvernance_participative_reference]], [[mouvement_pour_la_libre_circulation_des_personnes_et_des_donnees_reference]]
 
 ## Description journalistique
 Depuis son siège social flottant au-dessus de l'ancienne ville de Rotterdam, Ergo-Wian Sovereign Holdings règne sur un archipel de territoires où la démocratie a été remplacée par des contrats à durée déterminée. Ses résidents, rebaptisés 'clients-contractants', paient pour l'air conditionné de leurs logements modulaires, pour l'accès à l'eau dessalée, et même pour le droit de respirer un air filtré des particules fines. Les expulsions pour 'non-respect des clauses de productivité' se comptent par milliers chaque année, gérées par des algorithmes qui évaluent en temps réel la 'valeur sociale' de chaque individu. Son modèle, exporté via des partenariats avec des États en faillite, a fait d'Ergo-Wian le premier 'gouvernement-entreprise' coté en Bourse, où les actionnaires votent les lois comme on vote des dividendes.
 
 ## Tensions narratives
 Ergo-Wian est au cœur d'une bataille juridique mondiale sur la définition même de la souveraineté : ses détracteurs l'accusent d'être une 'dictature actionnariale', tandis que ses défenseurs y voient l'aboutissement logique d'un monde où l'efficacité économique prime sur les idéaux politiques. Son expansion menace les derniers bastions de gouvernance participative, et son modèle de 'résiliation unilatérale des contrats de résidence' est contesté par des mouvements de résidents qui réclament le droit de vote. Par ailleurs, ses algorithmes de gestion sociale, de plus en plus opaques, sont soupçonnés de discriminations systémiques, alimentant une crise de légitimité qui pourrait faire vaciller son empire.
+
+## Relations
+**Alliés :**
+- [[consortium_des_grandes_plateformes_ia_integrees_reference]]
+- [[consortiums_bancaires_financiarises_reference]]
+- [[consortiums_prives_de_gestion_des_donnees_critiques_reference]]
+- [[deepfield_institute_reference]]
+- [[holdfast_reference]]
+- [[ilse_varga_holm_reference]]
+- [[pacte_des_souverains_reference]]
+- [[plateformes_d_optimisation_territoriale_par_ia_reference]]
+**Opposants :**
+- [[banque_des_communs_reference]]
+- [[collectifs_academiques_independants_reference]]
+- [[cooperatives_energetiques_decentralisees_reference]]
+- [[federation_communs_territoriaux_reference]]
+- [[lamplight_reference]]
+- [[mouvement_pour_la_libre_circulation_des_personnes_et_des_donnees_reference]]
+- [[reseau_des_villes_etats_pilotes_en_gouvernance_participative_reference]]

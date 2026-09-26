@@ -41,6 +41,7 @@ alliances:
 - fonds_mondial_de_regeneration_ecologique_new_sustainability
 - programme_onu_de_restauration_des_sols_new_sustainability
 - reseau_des_agences_climatiques_regionales_new_sustainability
+- terminal_kharg_data_haven_new_sustainability
 - trame_bioclimatique_new_sustainability
 oppositions:
 - bloc_eurasien_souverainiste_new_sustainability
@@ -48,6 +49,7 @@ oppositions:
 - collectifs_de_narration_sauvage_hors_protocole_new_sustainability
 - etats_souverainistes_anti_reseau_new_sustainability
 - factions_souverainistes_des_blocs_peripheriques_new_sustainability
+- reseau_des_cartographes_des_zones_grises_new_sustainability
 - souverainistes_du_bloc_eurasien_new_sustainability
 type_relation_dominante: coopération
 annee_debut: 2039
@@ -117,6 +119,7 @@ L'AORC est tiraillée entre sa mission de bien commun orbital et la pression des
 - [[geopolitique_conflits]]
 
 
+
 ## Relations
 **Alliés :**
 - [[agence_globale_de_regeneration_des_bassins_versants_agrb_onu_new_sustainability]]
@@ -127,6 +130,7 @@ L'AORC est tiraillée entre sa mission de bien commun orbital et la pression des
 - [[fonds_mondial_de_regeneration_ecologique_new_sustainability]]
 - [[programme_onu_de_restauration_des_sols_new_sustainability]]
 - [[reseau_des_agences_climatiques_regionales_new_sustainability]]
+- [[terminal_kharg_data_haven_new_sustainability]]
 - [[trame_bioclimatique_new_sustainability]]
 **Opposants :**
 - [[bloc_eurasien_souverainiste_new_sustainability]]
@@ -134,6 +138,7 @@ L'AORC est tiraillée entre sa mission de bien commun orbital et la pression des
 - [[collectifs_de_narration_sauvage_hors_protocole_new_sustainability]]
 - [[etats_souverainistes_anti_reseau_new_sustainability]]
 - [[factions_souverainistes_des_blocs_peripheriques_new_sustainability]]
+- [[reseau_des_cartographes_des_zones_grises_new_sustainability]]
 - [[souverainistes_du_bloc_eurasien_new_sustainability]]
 
 ## Notes

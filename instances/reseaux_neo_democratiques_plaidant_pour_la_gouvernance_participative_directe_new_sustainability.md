@@ -60,6 +60,7 @@ oppositions:
 - conseil_technocratique_de_coordination_regionale_new_sustainability
 - conseil_technocratique_de_gouvernance_alimentaire_new_sustainability
 - directive_kontinuum_new_sustainability
+- ergo_wian_sovereign_holdings_new_sustainability
 - factions_internes_pro_opacite_des_parametres_new_sustainability
 - factions_technocratiques_de_la_delegation_ia_totale_new_sustainability
 - factions_technocratiques_du_conseil_de_regulation_informationnelle_global_new_sustainability
@@ -136,6 +137,7 @@ La tension centrale de ces réseaux réside dans leur propre outillage : en util
 - [[organisation_territoires]]
 
 
+
 ## Relations
 **Alliés :**
 - [[coalition_anti_algorithme_des_autonomies_locales_new_sustainability]]
@@ -161,6 +163,7 @@ La tension centrale de ces réseaux réside dans leur propre outillage : en util
 - [[conseil_technocratique_de_coordination_regionale_new_sustainability]]
 - [[conseil_technocratique_de_gouvernance_alimentaire_new_sustainability]]
 - [[directive_kontinuum_new_sustainability]]
+- [[ergo_wian_sovereign_holdings_new_sustainability]]
 - [[factions_internes_pro_opacite_des_parametres_new_sustainability]]
 - [[factions_technocratiques_de_la_delegation_ia_totale_new_sustainability]]
 - [[factions_technocratiques_du_conseil_de_regulation_informationnelle_global_new_sustainability]]

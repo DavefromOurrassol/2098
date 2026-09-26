@@ -35,6 +35,7 @@ zone_systemique:
 alliances:
 - front_souverainiste_des_blocs_non_signataires_policy_reform
 oppositions:
+- agence_de_regulation_des_detroits_strategiques_ards_policy_reform
 - agence_technocratique_pour_la_resilience_biospherique_atrb_policy_reform
 - arctic_passage_authority_policy_reform
 - autorite_mondiale_du_vivant_amv_policy_reform
@@ -111,10 +112,12 @@ Le Front se trouve écartelé entre les États eurasiatiques qui adhèrent à l'
 - [[geopolitique_conflits]]
 - [[gouvernance_institutions]]
 
+
 ## Relations
 **Alliés :**
 - [[front_souverainiste_des_blocs_non_signataires_policy_reform]]
 **Opposants :**
+- [[agence_de_regulation_des_detroits_strategiques_ards_policy_reform]]
 - [[agence_technocratique_pour_la_resilience_biospherique_atrb_policy_reform]]
 - [[arctic_passage_authority_policy_reform]]
 - [[autorite_mondiale_du_vivant_amv_policy_reform]]

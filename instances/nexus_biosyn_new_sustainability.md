@@ -45,7 +45,6 @@ alliances:
 - oms_etendue_new_sustainability
 - reseau_global_de_cliniques_regeneratives_new_sustainability
 oppositions:
-- coalition_des_semences_libres_policy_reform
 - college_des_auditeurs_independants_du_parlement_biotechnologique_mondial_new_sustainability
 - consortium_africain_de_biotechnologies_sociales_new_sustainability
 - reseau_des_bio_communs_regionaux_new_sustainability
@@ -108,7 +107,6 @@ La question non résolue reste explosive : qui contrôle vraiment les semences q
 - [[oms_etendue_new_sustainability]]
 - [[reseau_global_de_cliniques_regeneratives_new_sustainability]]
 **Opposants :**
-- [[coalition_des_semences_libres_policy_reform]]
 - [[college_des_auditeurs_independants_du_parlement_biotechnologique_mondial_new_sustainability]]
 - [[consortium_africain_de_biotechnologies_sociales_new_sustainability]]
 - [[reseau_des_bio_communs_regionaux_new_sustainability]]

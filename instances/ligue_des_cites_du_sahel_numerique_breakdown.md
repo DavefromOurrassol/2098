@@ -43,6 +43,7 @@ alliances:
 - enclaves_agro_communautaires_autonomes_breakdown
 - factions_secessionnistes_agrariennes_du_desert_breakdown
 - guilde_des_techniciens_nomades_breakdown
+- reseau_des_cartographes_des_zones_grises_breakdown
 - reseau_des_courriers_nomades_sahelo_mediterraneens_breakdown
 oppositions:
 - blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown
@@ -110,6 +111,7 @@ La tension centrale est celle de l'héritage fracturé : qui a le droit de parle
 - [[enclaves_agro_communautaires_autonomes_breakdown]]
 - [[factions_secessionnistes_agrariennes_du_desert_breakdown]]
 - [[guilde_des_techniciens_nomades_breakdown]]
+- [[reseau_des_cartographes_des_zones_grises_breakdown]]
 - [[reseau_des_courriers_nomades_sahelo_mediterraneens_breakdown]]
 **Opposants :**
 - [[blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown]]

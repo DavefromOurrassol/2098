@@ -38,21 +38,20 @@ zone_systemique:
     - sécurité
 
 alliances:
-    - agence_globale_de_regeneration_des_bassins_versants_agrb_onu_new_sustainability
-    - agence_mondiale_de_modelisation_climatique_ammc_new_sustainability
-    - arctic_passage_authority_new_sustainability
-    - conseil_regulation_ressources_new_sustainability
-    - nexcore_new_sustainability
-    - oracle_des_seuils_new_sustainability
-
+- agence_globale_de_regeneration_des_bassins_versants_agrb_onu_new_sustainability
+- agence_mondiale_de_modelisation_climatique_ammc_new_sustainability
+- arctic_passage_authority_new_sustainability
+- conseil_regulation_ressources_new_sustainability
+- nexcore_new_sustainability
+- oracle_des_seuils_new_sustainability
 oppositions:
-    - bloc_des_gouvernements_souverainistes_hydriques_new_sustainability
-    - bloc_eurasien_souverainiste_new_sustainability
-    - collectifs_anarcho_autonomistes_des_zones_libres_new_sustainability
-    - communautes_locales_exclues_des_corridors_new_sustainability
-    - internationale_souverainiste_de_deconnexion_territoriale_new_sustainability
-    - mouvement_souverainiste_de_la_ceinture_boreale_new_sustainability
-
+- bloc_des_gouvernements_souverainistes_hydriques_new_sustainability
+- bloc_eurasien_souverainiste_new_sustainability
+- collectifs_anarcho_autonomistes_des_zones_libres_new_sustainability
+- communautes_locales_exclues_des_corridors_new_sustainability
+- internationale_souverainiste_de_deconnexion_territoriale_new_sustainability
+- mouvement_souverainiste_de_la_ceinture_boreale_new_sustainability
+- terminal_kharg_data_haven_new_sustainability
 type_relation_dominante: rivalité
 
 annee_debut: 2041
@@ -96,12 +95,26 @@ L'APSU gère les droits de passage dans les détroits stratégiques (Ormuz, Mala
 - [[gouvernance_institutions]]
 - [[organisation_territoires]]
 
-## Relations
-**Alliés** : [[agence_globale_de_regeneration_des_bassins_versants_agrb_onu_new_sustainability]], [[agence_mondiale_de_modelisation_climatique_ammc_new_sustainability]], [[arctic_passage_authority_new_sustainability]], [[conseil_regulation_ressources_new_sustainability]], [[nexcore_new_sustainability]], [[oracle_des_seuils_new_sustainability]]
-**Opposants** : [[bloc_des_gouvernements_souverainistes_hydriques_new_sustainability]], [[bloc_eurasien_souverainiste_new_sustainability]], [[collectifs_anarcho_autonomistes_des_zones_libres_new_sustainability]], [[communautes_locales_exclues_des_corridors_new_sustainability]], [[internationale_souverainiste_de_deconnexion_territoriale_new_sustainability]], [[mouvement_souverainiste_de_la_ceinture_boreale_new_sustainability]]
 
 ## Description journalistique
 En 2098, l'APSU est devenue l'une des institutions les plus puissantes et les plus contestées de la gouvernance mondiale. Née en 2041 d'un compromis entre les grandes puissances et les mégacorporations énergétiques, elle a progressivement étendu son emprise sur les corridors critiques du globe, des détroits du Moyen-Orient aux routes arctiques en passant par les hubs logistiques africains. Ses algorithmes, nourris par les données des IA climatiques, décident en temps réel des quotas de passage, des taxes carbone et des compensations écologiques, suscitant à la fois admiration et colère. Les souverainistes la qualifient de 'gendarme technocratique', tandis que ses défenseurs y voient le dernier rempart contre le chaos des pénuries. Son siège, un complexe flottant ancré en mer de Chine méridionale, symbolise cette gouvernance mobile et adaptative.
 
 ## Tensions narratives
 L'APSU est au cœur de plusieurs conflits narratifs majeurs. D'un côté, les blocs souverainistes et les collectifs autonomistes remettent en cause sa légitimité, accusant ses algorithmes de favoriser les mégacorporations et de marginaliser les communautés locales. De l'autre, son rôle dans la prévention des pénuries et des conflits géopolitiques en fait un acteur incontournable, mais aussi une cible pour les cyberattaques et les sabotages. La question de son avenir se pose : restera-t-elle un outil de stabilité, ou deviendra-t-elle le symbole d'une gouvernance technocratique déconnectée des réalités territoriales ? Les prochaines années pourraient voir émerger des alternatives, comme des corridors autogérés par les communautés locales ou des réseaux de contrebande high-tech.
+
+## Relations
+**Alliés :**
+- [[agence_globale_de_regeneration_des_bassins_versants_agrb_onu_new_sustainability]]
+- [[agence_mondiale_de_modelisation_climatique_ammc_new_sustainability]]
+- [[arctic_passage_authority_new_sustainability]]
+- [[conseil_regulation_ressources_new_sustainability]]
+- [[nexcore_new_sustainability]]
+- [[oracle_des_seuils_new_sustainability]]
+**Opposants :**
+- [[bloc_des_gouvernements_souverainistes_hydriques_new_sustainability]]
+- [[bloc_eurasien_souverainiste_new_sustainability]]
+- [[collectifs_anarcho_autonomistes_des_zones_libres_new_sustainability]]
+- [[communautes_locales_exclues_des_corridors_new_sustainability]]
+- [[internationale_souverainiste_de_deconnexion_territoriale_new_sustainability]]
+- [[mouvement_souverainiste_de_la_ceinture_boreale_new_sustainability]]
+- [[terminal_kharg_data_haven_new_sustainability]]

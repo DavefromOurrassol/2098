@@ -33,13 +33,18 @@ zone_systemique:
 - société
 alliances:
 - coalition_des_semences_libres_policy_reform
+- coalition_vivant_policy_reform
 - collectifs_de_defense_hydrique_saheliens_policy_reform
 - collectifs_de_gouvernance_communautaire_decentralisee_policy_reform
 - collectifs_de_hackers_biospheriques_policy_reform
 - front_des_autonomies_territoriales_radicales_policy_reform
+- hyphan_raghavan_policy_reform
 - internationale_decroissante_anti_planification_policy_reform
+- kaspar_lind_policy_reform
 - les_veilleurs_du_fleuve_policy_reform
+- maelys_okonkwo_policy_reform
 - mouvement_pour_la_justice_ecologique_communautaire_policy_reform
+- terminal_kharg_data_haven_policy_reform
 oppositions:
 - agence_technocratique_pour_la_resilience_biospherique_atrb_policy_reform
 - autorite_mondiale_du_vivant_amv_policy_reform
@@ -112,16 +117,22 @@ Le paradoxe central qui les déchire est d'ordre existentiel : plus ils réussis
 
 
 
+
 ## Relations
 **Alliés :**
 - [[coalition_des_semences_libres_policy_reform]]
+- [[coalition_vivant_policy_reform]]
 - [[collectifs_de_defense_hydrique_saheliens_policy_reform]]
 - [[collectifs_de_gouvernance_communautaire_decentralisee_policy_reform]]
 - [[collectifs_de_hackers_biospheriques_policy_reform]]
 - [[front_des_autonomies_territoriales_radicales_policy_reform]]
+- [[hyphan_raghavan_policy_reform]]
 - [[internationale_decroissante_anti_planification_policy_reform]]
+- [[kaspar_lind_policy_reform]]
 - [[les_veilleurs_du_fleuve_policy_reform]]
+- [[maelys_okonkwo_policy_reform]]
 - [[mouvement_pour_la_justice_ecologique_communautaire_policy_reform]]
+- [[terminal_kharg_data_haven_policy_reform]]
 **Opposants :**
 - [[agence_technocratique_pour_la_resilience_biospherique_atrb_policy_reform]]
 - [[autorite_mondiale_du_vivant_amv_policy_reform]]

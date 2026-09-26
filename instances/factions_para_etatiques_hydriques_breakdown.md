@@ -58,11 +58,16 @@ oppositions:
 - grandes_lacs_compact_eau_breakdown
 - guilde_des_techniciens_nomades_breakdown
 - hanse_baltique_recomposee_breakdown
+- hyphan_raghavan_breakdown
+- ilse_varga_holm_breakdown
 - le_registre_du_fleuve_breakdown
+- les_veilleurs_des_nappes_phreatiques_breakdown
 - les_veilleurs_du_fleuve_breakdown
+- meridian_assembly_breakdown
 - midwest_desertifie_breakdown
 - nairobi_crrc_breakdown
 - ong_de_gestion_migratoire_survivantes_breakdown
+- reseau_des_cartographes_des_zones_grises_breakdown
 - reseaux_de_soigneurs_traditionnels_breakdown
 - seigneuries_logistiques_armees_breakdown
 - seigneurs_de_guerre_agro_territoriaux_breakdown
@@ -131,6 +136,7 @@ La tension principale est celle entre la logique prédatrice à court terme — 
 
 
 
+
 ## Relations
 **Alliés :**
 - [[consortiums_logistiques_agro_corporatifs_breakdown]]
@@ -154,11 +160,16 @@ La tension principale est celle entre la logique prédatrice à court terme — 
 - [[grandes_lacs_compact_eau_breakdown]]
 - [[guilde_des_techniciens_nomades_breakdown]]
 - [[hanse_baltique_recomposee_breakdown]]
+- [[hyphan_raghavan_breakdown]]
+- [[ilse_varga_holm_breakdown]]
 - [[le_registre_du_fleuve_breakdown]]
+- [[les_veilleurs_des_nappes_phreatiques_breakdown]]
 - [[les_veilleurs_du_fleuve_breakdown]]
+- [[meridian_assembly_breakdown]]
 - [[midwest_desertifie_breakdown]]
 - [[nairobi_crrc_breakdown]]
 - [[ong_de_gestion_migratoire_survivantes_breakdown]]
+- [[reseau_des_cartographes_des_zones_grises_breakdown]]
 - [[reseaux_de_soigneurs_traditionnels_breakdown]]
 - [[seigneuries_logistiques_armees_breakdown]]
 - [[seigneurs_de_guerre_agro_territoriaux_breakdown]]

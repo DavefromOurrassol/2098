@@ -42,7 +42,9 @@ oppositions:
 - cites_etats_secessionistes_breakdown
 - front_des_blocs_regionaux_du_recit_des_conflits_ressources_breakdown
 - front_humanitaire_d_urgence_non_affilie_breakdown
+- gelecek_meclisi_breakdown
 - reseaux_de_solidarite_horizontale_post_effondrement_breakdown
+- terminal_kharg_data_haven_breakdown
 type_relation_dominante: conflit
 
 annee_debut: 2041
@@ -101,4 +103,6 @@ Qui détient la légitimité d'invoquer les traités ABS — et à quelles fins 
 - [[cites_etats_secessionistes_breakdown]]
 - [[front_des_blocs_regionaux_du_recit_des_conflits_ressources_breakdown]]
 - [[front_humanitaire_d_urgence_non_affilie_breakdown]]
+- [[gelecek_meclisi_breakdown]]
 - [[reseaux_de_solidarite_horizontale_post_effondrement_breakdown]]
+- [[terminal_kharg_data_haven_breakdown]]

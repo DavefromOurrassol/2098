@@ -36,21 +36,20 @@ zone_systemique:
     - infrastructure
 
 alliances:
-    - agence_de_regulation_des_detroits_strategiques_ards_reference
-    - agence_stabilisation_climatique_reference
-    - banque_mondiale_des_transitions_climatiques_reference
-    - confederation_des_megapoles_autonomes_reference
-    - consortium_des_grandes_plateformes_logistiques_globales_reference
-    - observatoire_climatique_des_territoires_oct_reference
-    - plateformes_d_optimisation_territoriale_par_ia_reference
-
+- agence_de_regulation_des_detroits_strategiques_ards_reference
+- agence_stabilisation_climatique_reference
+- banque_mondiale_des_transitions_climatiques_reference
+- confederation_des_megapoles_autonomes_reference
+- consortium_des_grandes_plateformes_logistiques_globales_reference
+- deepfield_institute_reference
+- observatoire_climatique_des_territoires_oct_reference
+- plateformes_d_optimisation_territoriale_par_ia_reference
 oppositions:
-    - bloc_des_souverainistes_climatiques_reference
-    - front_souverainiste_des_ressources_d_amerique_du_sud_reference
-    - mouvement_pour_la_libre_circulation_des_personnes_et_des_donnees_reference
-    - voix_du_dehors_reference
-    - zones_grises_globales_reference
-
+- bloc_des_souverainistes_climatiques_reference
+- front_souverainiste_des_ressources_d_amerique_du_sud_reference
+- mouvement_pour_la_libre_circulation_des_personnes_et_des_donnees_reference
+- voix_du_dehors_reference
+- zones_grises_globales_reference
 type_relation_dominante: dépendance
 
 annee_debut: 2044
@@ -93,12 +92,26 @@ Organisme hybride né de la fusion entre expertise scientifique et régulation g
 - [[organisation_territoires]]
 - [[gouvernance_institutions]]
 
-## Relations
-**Alliés** : [[agence_de_regulation_des_detroits_strategiques_ards_reference]], [[agence_stabilisation_climatique_reference]], [[banque_mondiale_des_transitions_climatiques_reference]], [[confederation_des_megapoles_autonomes_reference]], [[consortium_des_grandes_plateformes_logistiques_globales_reference]], [[observatoire_climatique_des_territoires_oct_reference]], [[plateformes_d_optimisation_territoriale_par_ia_reference]]
-**Opposants** : [[bloc_des_souverainistes_climatiques_reference]], [[front_souverainiste_des_ressources_d_amerique_du_sud_reference]], [[mouvement_pour_la_libre_circulation_des_personnes_et_des_donnees_reference]], [[voix_du_dehors_reference]], [[zones_grises_globales_reference]]
 
 ## Description journalistique
 Imaginez un croisement entre le GIEC, Frontex et une agence de notation territoriale : voilà l'ISD-2098. Créé dans l'urgence après l'exode massif du Midwest en 2044, cet institut est devenu le *thermostat* des flux humains du XXIe siècle. Ses rapports, publiés dans un format sobre et technique, dictent qui peut s'installer où — et à quel prix. Les quotas migratoires qu'il fixe sont affichés en temps réel sur les écrans des gares et des ports, comme des cours de bourse. Ses algorithmes, nourris de données climatiques et économiques, ont sauvé des millions de vies... mais aussi créé une nouvelle forme d'apartheid territorial, où les « inutiles démographiques » sont relégués dans les zones grises. Aujourd'hui, l'ISD-2098 est à la fois craint et indispensable : sans lui, le système mondial s'effondrerait sous le poids des migrations incontrôlées.
 
 ## Tensions narratives
 1) **L'algorithme de la discorde** : Les critères de priorisation de l'ISD-2098 (urgence climatique vs compétences critiques) sont régulièrement contestés, accusés de favoriser les élites économiques au détriment des populations les plus vulnérables. 2) **Guerre des seuils** : Certains blocs, comme le Front Souverainiste des Ressources d'Amérique du Sud, refusent d'appliquer les quotas de l'ISD-2098, créant des tensions géopolitiques majeures. 3) **L'ombre des zones grises** : L'institut est soupçonné de sous-estimer volontairement la capacité d'accueil des mégapoles pour justifier l'exclusion des populations indésirables, qui finissent par s'entasser dans les marges du système. 4) **Vers une privatisation ?** : Des rumeurs persistantes évoquent un rachat partiel de l'ISD-2098 par des consortiums logistiques privés, qui chercheraient à monétiser les flux migratoires.
+
+## Relations
+**Alliés :**
+- [[agence_de_regulation_des_detroits_strategiques_ards_reference]]
+- [[agence_stabilisation_climatique_reference]]
+- [[banque_mondiale_des_transitions_climatiques_reference]]
+- [[confederation_des_megapoles_autonomes_reference]]
+- [[consortium_des_grandes_plateformes_logistiques_globales_reference]]
+- [[deepfield_institute_reference]]
+- [[observatoire_climatique_des_territoires_oct_reference]]
+- [[plateformes_d_optimisation_territoriale_par_ia_reference]]
+**Opposants :**
+- [[bloc_des_souverainistes_climatiques_reference]]
+- [[front_souverainiste_des_ressources_d_amerique_du_sud_reference]]
+- [[mouvement_pour_la_libre_circulation_des_personnes_et_des_donnees_reference]]
+- [[voix_du_dehors_reference]]
+- [[zones_grises_globales_reference]]

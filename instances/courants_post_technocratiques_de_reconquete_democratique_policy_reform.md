@@ -34,6 +34,7 @@ zone_geographique:
 zone_systemique:
 - société
 alliances:
+- aurelio_stahl_policy_reform
 - collectifs_citoyens_de_deliberation_augmentee_policy_reform
 - collectifs_citoyens_pour_l_audit_algorithmique_ouvert_policy_reform
 - collectifs_de_gouvernance_communautaire_decentralisee_policy_reform
@@ -123,8 +124,10 @@ Leur contradiction interne majeure est abyssale : pour dénoncer efficacement la
 
 
 
+
 ## Relations
 **Alliés :**
+- [[aurelio_stahl_policy_reform]]
 - [[collectifs_citoyens_de_deliberation_augmentee_policy_reform]]
 - [[collectifs_citoyens_pour_l_audit_algorithmique_ouvert_policy_reform]]
 - [[collectifs_de_gouvernance_communautaire_decentralisee_policy_reform]]

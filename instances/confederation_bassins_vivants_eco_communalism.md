@@ -55,6 +55,8 @@ alliances:
 - cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism
 - factions_algorithmiques_pro_gouvernance_ia_legere_eco_communalism
 - guildes_de_mediateurs_ecologiques_eco_communalism
+- ilse_varga_holm_eco_communalism
+- institut_des_seuils_demographiques_eco_communalism
 - kalaallit_nunaat_bioterritoire_eco_communalism
 - le_registre_du_fleuve_eco_communalism
 - les_veilleurs_du_fleuve_eco_communalism
@@ -156,6 +158,8 @@ La tension principale traverse la question de l'exclusion : que faire d'une comm
 - [[cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism]]
 - [[factions_algorithmiques_pro_gouvernance_ia_legere_eco_communalism]]
 - [[guildes_de_mediateurs_ecologiques_eco_communalism]]
+- [[ilse_varga_holm_eco_communalism]]
+- [[institut_des_seuils_demographiques_eco_communalism]]
 - [[kalaallit_nunaat_bioterritoire_eco_communalism]]
 - [[le_registre_du_fleuve_eco_communalism]]
 - [[les_veilleurs_du_fleuve_eco_communalism]]

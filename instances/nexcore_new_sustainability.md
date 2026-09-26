@@ -34,15 +34,16 @@ zone_systemique:
   - infrastructure
   - économie
 alliances:
+- agence_de_regulation_des_detroits_strategiques_ards_new_sustainability
 - assemblee_territoires_new_sustainability
 - coalition_vivant_new_sustainability
 - conseil_regulation_algorithmique_new_sustainability
 - factions_technocratiques_de_la_delegation_ia_totale_new_sustainability
+- gelecek_meclisi_new_sustainability
 - le_temoin_new_sustainability
 oppositions:
 - etats_souverainistes_anti_reseau_new_sustainability
 - fonds_mondial_de_redistribution_technologique_new_sustainability
-- nexcore_fortress_world
 - reseau_des_communs_numeriques_globaux_new_sustainability
 - reseaux_d_information_souverainistes_fermes_new_sustainability
 - reseaux_neo_democratiques_plaidant_pour_la_gouvernance_participative_directe_new_sustainability
@@ -101,15 +102,16 @@ la gouvernance — trop grande pour être vraiment démocratique ?
 
 ## Relations
 **Alliés :**
+- [[agence_de_regulation_des_detroits_strategiques_ards_new_sustainability]]
 - [[assemblee_territoires_new_sustainability]]
 - [[coalition_vivant_new_sustainability]]
 - [[conseil_regulation_algorithmique_new_sustainability]]
 - [[factions_technocratiques_de_la_delegation_ia_totale_new_sustainability]]
+- [[gelecek_meclisi_new_sustainability]]
 - [[le_temoin_new_sustainability]]
 **Opposants :**
 - [[etats_souverainistes_anti_reseau_new_sustainability]]
 - [[fonds_mondial_de_redistribution_technologique_new_sustainability]]
-- [[nexcore_fortress_world]]
 - [[reseau_des_communs_numeriques_globaux_new_sustainability]]
 - [[reseaux_d_information_souverainistes_fermes_new_sustainability]]
 - [[reseaux_neo_democratiques_plaidant_pour_la_gouvernance_participative_directe_new_sustainability]]

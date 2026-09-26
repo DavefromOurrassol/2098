@@ -46,6 +46,7 @@ oppositions:
 - collectifs_de_deplaces_climatiques_non_representes_new_sustainability
 - collectifs_de_desobeissance_algorithmique_new_sustainability
 - factions_internes_contestataires_du_bureau_de_moderation_new_sustainability
+- ilse_varga_holm_new_sustainability
 - internationale_travailleurs_augmentes_new_sustainability
 - leena_vainala_new_sustainability
 - ligue_des_cites_du_sahel_numerique_new_sustainability
@@ -124,6 +125,7 @@ Le Bloc est pris en tenaille entre son discours d'efficience écologique — sé
 - [[systemes_productifs_travail]]
 
 
+
 ## Relations
 **Alliés :**
 - [[agence_mondiale_de_modelisation_climatique_ammc_new_sustainability]]
@@ -136,6 +138,7 @@ Le Bloc est pris en tenaille entre son discours d'efficience écologique — sé
 - [[collectifs_de_deplaces_climatiques_non_representes_new_sustainability]]
 - [[collectifs_de_desobeissance_algorithmique_new_sustainability]]
 - [[factions_internes_contestataires_du_bureau_de_moderation_new_sustainability]]
+- [[ilse_varga_holm_new_sustainability]]
 - [[internationale_travailleurs_augmentes_new_sustainability]]
 - [[leena_vainala_new_sustainability]]
 - [[ligue_des_cites_du_sahel_numerique_new_sustainability]]

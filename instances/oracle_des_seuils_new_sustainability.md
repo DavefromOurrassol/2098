@@ -39,6 +39,7 @@ zone_systemique:
     - énergie
 
 alliances:
+- agence_de_regulation_des_detroits_strategiques_ards_new_sustainability
 - agence_mondiale_de_modelisation_climatique_ammc_new_sustainability
 - agence_stabilisation_climatique_new_sustainability
 - bureau_gouvernance_algorithmique_new_sustainability
@@ -47,6 +48,7 @@ alliances:
 - consortium_d_interoperabilite_ia_humain_new_sustainability
 - consortium_des_ia_climatiques_new_sustainability
 - directive_kontinuum_new_sustainability
+- gelecek_meclisi_new_sustainability
 - parlement_deliberatif_mondial_new_sustainability
 oppositions:
 - coalition_anti_algorithme_des_autonomies_locales_new_sustainability
@@ -109,6 +111,7 @@ La tension centrale de Seuil réside dans l'écart croissant entre son omniscien
 
 ## Relations
 **Alliés :**
+- [[agence_de_regulation_des_detroits_strategiques_ards_new_sustainability]]
 - [[agence_mondiale_de_modelisation_climatique_ammc_new_sustainability]]
 - [[agence_stabilisation_climatique_new_sustainability]]
 - [[bureau_gouvernance_algorithmique_new_sustainability]]
@@ -117,6 +120,7 @@ La tension centrale de Seuil réside dans l'écart croissant entre son omniscien
 - [[consortium_d_interoperabilite_ia_humain_new_sustainability]]
 - [[consortium_des_ia_climatiques_new_sustainability]]
 - [[directive_kontinuum_new_sustainability]]
+- [[gelecek_meclisi_new_sustainability]]
 - [[parlement_deliberatif_mondial_new_sustainability]]
 **Opposants :**
 - [[coalition_anti_algorithme_des_autonomies_locales_new_sustainability]]

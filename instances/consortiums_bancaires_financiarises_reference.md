@@ -41,7 +41,9 @@ alliances:
 - consortiums_energetiques_des_megapoles_reference
 - consortiums_mediatiques_corporatifs_reference
 - consortiums_prives_d_extraction_de_ressources_critiques_reference
+- ergo_wian_sovereign_holdings_reference
 - fonds_monetaire_climatique_fmc_reference
+- ilse_varga_holm_reference
 - institutions_multilaterales_survivantes_reference
 - nexcore_reference
 oppositions:
@@ -120,6 +122,7 @@ La tension centrale des Consortiums réside dans leur paradoxe existentiel : plu
 - [[technologie_information]]
 
 
+
 ## Relations
 **Alliés :**
 - [[algorithmic_labor_exchange_reference]]
@@ -131,7 +134,9 @@ La tension centrale des Consortiums réside dans leur paradoxe existentiel : plu
 - [[consortiums_energetiques_des_megapoles_reference]]
 - [[consortiums_mediatiques_corporatifs_reference]]
 - [[consortiums_prives_d_extraction_de_ressources_critiques_reference]]
+- [[ergo_wian_sovereign_holdings_reference]]
 - [[fonds_monetaire_climatique_fmc_reference]]
+- [[ilse_varga_holm_reference]]
 - [[institutions_multilaterales_survivantes_reference]]
 - [[nexcore_reference]]
 **Opposants :**

@@ -59,7 +59,9 @@ oppositions:
 - bloc_des_souverainistes_climatiques_reference
 - consortiums_bancaires_financiarises_reference
 - consortiums_prives_d_extraction_de_ressources_critiques_reference
+- ergo_wian_sovereign_holdings_reference
 - etats_a_tendance_centraliste_numerique_reference
+- holdfast_reference
 - lobbies_agro_industriels_a_haute_consommation_d_eau_reference
 type_relation_dominante: coopération
 annee_debut: 2032
@@ -127,6 +129,7 @@ Sa légitimité reste contestée par les institutions financières conventionnel
 - [[organisation_territoires]]
 
 
+
 ## Relations
 **Alliés :**
 - [[agence_internationale_des_energies_renouvelables_irena_2_reference]]
@@ -153,7 +156,9 @@ Sa légitimité reste contestée par les institutions financières conventionnel
 - [[bloc_des_souverainistes_climatiques_reference]]
 - [[consortiums_bancaires_financiarises_reference]]
 - [[consortiums_prives_d_extraction_de_ressources_critiques_reference]]
+- [[ergo_wian_sovereign_holdings_reference]]
 - [[etats_a_tendance_centraliste_numerique_reference]]
+- [[holdfast_reference]]
 - [[lobbies_agro_industriels_a_haute_consommation_d_eau_reference]]
 
 ## Notes

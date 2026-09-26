@@ -37,26 +37,33 @@ zone_systemique:
 - société
 alliances:
 - agadez_ligue_sahel_numerique_breakdown
+- agence_de_regulation_des_detroits_strategiques_ards_breakdown
 - brigades_medicales_itinerantes_breakdown
 - collectifs_de_sante_communautaire_autogeree_breakdown
 - communautes_paysannes_refugiees_breakdown
 - communautes_rurales_autogerees_des_n_uds_de_survie_breakdown
 - communes_rust_belt_breakdown
 - communes_rust_belt_zones_libres_breakdown
+- consortium_des_pecheries_autonomes_du_grand_nord_breakdown
+- elias_mork_breakdown
 - enclaves_finlandaises_breakdown
 - enclaves_industrielles_du_corridor_oural_caspien_breakdown
 - federation_communs_territoriaux_breakdown
 - front_humanitaire_d_urgence_non_affilie_breakdown
 - guilde_des_techniciens_nomades_breakdown
+- hyphan_raghavan_breakdown
+- ilse_varga_holm_breakdown
 - lagos_est_nexcore_breakdown
 - ligue_des_cites_du_sahel_numerique_breakdown
 - mouvement_des_communes_du_rust_belt_breakdown
+- nadia_ferreira_sato_breakdown
 - nairobi_crrc_breakdown
 - noeud_nordark_tromso_breakdown
 - reseaux_de_solidarite_horizontale_post_effondrement_breakdown
 - seoul_collectif_nexcore_breakdown
 oppositions:
 - enclaves_corporatives_fortifiees_breakdown
+- ergo_wian_sovereign_holdings_breakdown
 - factions_energetiques_heritieres_des_pactes_abs_breakdown
 - milices_d_accaparement_hydrique_breakdown
 - milices_de_controle_territorial_breakdown
@@ -125,29 +132,37 @@ Leur neutralité affichée est constamment mise à l'épreuve : les milices terr
 - [[systemes_productifs_travail]]
 
 
+
 ## Relations
 **Alliés :**
 - [[agadez_ligue_sahel_numerique_breakdown]]
+- [[agence_de_regulation_des_detroits_strategiques_ards_breakdown]]
 - [[brigades_medicales_itinerantes_breakdown]]
 - [[collectifs_de_sante_communautaire_autogeree_breakdown]]
 - [[communautes_paysannes_refugiees_breakdown]]
 - [[communautes_rurales_autogerees_des_n_uds_de_survie_breakdown]]
 - [[communes_rust_belt_breakdown]]
 - [[communes_rust_belt_zones_libres_breakdown]]
+- [[consortium_des_pecheries_autonomes_du_grand_nord_breakdown]]
+- [[elias_mork_breakdown]]
 - [[enclaves_finlandaises_breakdown]]
 - [[enclaves_industrielles_du_corridor_oural_caspien_breakdown]]
 - [[federation_communs_territoriaux_breakdown]]
 - [[front_humanitaire_d_urgence_non_affilie_breakdown]]
 - [[guilde_des_techniciens_nomades_breakdown]]
+- [[hyphan_raghavan_breakdown]]
+- [[ilse_varga_holm_breakdown]]
 - [[lagos_est_nexcore_breakdown]]
 - [[ligue_des_cites_du_sahel_numerique_breakdown]]
 - [[mouvement_des_communes_du_rust_belt_breakdown]]
+- [[nadia_ferreira_sato_breakdown]]
 - [[nairobi_crrc_breakdown]]
 - [[noeud_nordark_tromso_breakdown]]
 - [[reseaux_de_solidarite_horizontale_post_effondrement_breakdown]]
 - [[seoul_collectif_nexcore_breakdown]]
 **Opposants :**
 - [[enclaves_corporatives_fortifiees_breakdown]]
+- [[ergo_wian_sovereign_holdings_breakdown]]
 - [[factions_energetiques_heritieres_des_pactes_abs_breakdown]]
 - [[milices_d_accaparement_hydrique_breakdown]]
 - [[milices_de_controle_territorial_breakdown]]

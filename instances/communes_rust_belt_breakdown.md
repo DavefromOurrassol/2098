@@ -59,6 +59,7 @@ oppositions:
 - enclaves_corporatives_fortifiees_breakdown
 - enclaves_technologiques_survivantes_breakdown
 - factions_etatiques_residuelles_de_souverainete_hydrique_breakdown
+- holdfast_breakdown
 - midwest_desertifie_breakdown
 - milices_de_controle_territorial_breakdown
 - reseau_de_recuperation_industrielle_illicite_breakdown
@@ -140,6 +141,7 @@ La question non résolue qui ronge les Communes : s'ouvrir pour se fédérer ris
 - [[enclaves_corporatives_fortifiees_breakdown]]
 - [[enclaves_technologiques_survivantes_breakdown]]
 - [[factions_etatiques_residuelles_de_souverainete_hydrique_breakdown]]
+- [[holdfast_breakdown]]
 - [[midwest_desertifie_breakdown]]
 - [[milices_de_controle_territorial_breakdown]]
 - [[reseau_de_recuperation_industrielle_illicite_breakdown]]

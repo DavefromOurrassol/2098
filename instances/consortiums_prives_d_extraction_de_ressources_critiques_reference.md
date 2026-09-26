@@ -39,12 +39,16 @@ alliances:
 - consortiums_energetiques_opaques_reference
 - consortiums_mediatiques_corporatifs_reference
 - corporations_d_extraction_energetique_non_signataires_reference
+- holdfast_reference
+- hyphan_raghavan_reference
 - nexcore_reference
 - reseaux_de_financement_gris_issus_d_anciens_blocs_militaires_reference
+- the_tidewater_canon_reference
 oppositions:
 - administrations_hybrides_des_cites_relais_peripheriques_reference
 - agence_internationale_des_energies_renouvelables_irena_2_reference
 - arctic_passage_authority_reference
+- assemblee_territoires_reference
 - autorites_regionales_de_regulation_hydrologique_reference
 - banque_des_communs_reference
 - banque_mondiale_des_transitions_climatiques_reference
@@ -57,6 +61,7 @@ oppositions:
 - consortium_amazonia_viva_reference
 - consortium_de_maintenance_orbitale_seom_7_reference
 - consortium_des_fournisseurs_d_energie_renouvelable_distribuee_reference
+- consortium_des_pecheries_autonomes_du_grand_nord_reference
 - cooperatives_agro_ecologiques_de_reconstruction_territoriale_reference
 - cooperatives_agro_ecologiques_du_bassin_mediterraneen_reference
 - delta_du_mekong_reference
@@ -68,6 +73,7 @@ oppositions:
 - institutions_multilaterales_survivantes_reference
 - kalaallit_nunaat_sovereign_fund_reference
 - kinshasa_accords_hydriques_reference
+- les_veilleurs_des_nappes_phreatiques_reference
 - les_veilleurs_du_fleuve_reference
 - nairobi_crrc_reference
 - ong_de_tracabilite_des_ressources_critiques_reference
@@ -148,6 +154,7 @@ La tension centrale qui les traverse est celle entre leur dépendance aux cadres
 - [[gouvernance_institutions]]
 
 
+
 ## Relations
 **Alliés :**
 - [[alliance_blocs_souverains_reference]]
@@ -158,12 +165,16 @@ La tension centrale qui les traverse est celle entre leur dépendance aux cadres
 - [[consortiums_energetiques_opaques_reference]]
 - [[consortiums_mediatiques_corporatifs_reference]]
 - [[corporations_d_extraction_energetique_non_signataires_reference]]
+- [[holdfast_reference]]
+- [[hyphan_raghavan_reference]]
 - [[nexcore_reference]]
 - [[reseaux_de_financement_gris_issus_d_anciens_blocs_militaires_reference]]
+- [[the_tidewater_canon_reference]]
 **Opposants :**
 - [[administrations_hybrides_des_cites_relais_peripheriques_reference]]
 - [[agence_internationale_des_energies_renouvelables_irena_2_reference]]
 - [[arctic_passage_authority_reference]]
+- [[assemblee_territoires_reference]]
 - [[autorites_regionales_de_regulation_hydrologique_reference]]
 - [[banque_des_communs_reference]]
 - [[banque_mondiale_des_transitions_climatiques_reference]]
@@ -176,6 +187,7 @@ La tension centrale qui les traverse est celle entre leur dépendance aux cadres
 - [[consortium_amazonia_viva_reference]]
 - [[consortium_de_maintenance_orbitale_seom_7_reference]]
 - [[consortium_des_fournisseurs_d_energie_renouvelable_distribuee_reference]]
+- [[consortium_des_pecheries_autonomes_du_grand_nord_reference]]
 - [[cooperatives_agro_ecologiques_de_reconstruction_territoriale_reference]]
 - [[cooperatives_agro_ecologiques_du_bassin_mediterraneen_reference]]
 - [[delta_du_mekong_reference]]
@@ -187,6 +199,7 @@ La tension centrale qui les traverse est celle entre leur dépendance aux cadres
 - [[institutions_multilaterales_survivantes_reference]]
 - [[kalaallit_nunaat_sovereign_fund_reference]]
 - [[kinshasa_accords_hydriques_reference]]
+- [[les_veilleurs_des_nappes_phreatiques_reference]]
 - [[les_veilleurs_du_fleuve_reference]]
 - [[nairobi_crrc_reference]]
 - [[ong_de_tracabilite_des_ressources_critiques_reference]]

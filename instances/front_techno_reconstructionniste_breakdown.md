@@ -50,6 +50,7 @@ oppositions:
 - fronts_populistes_anti_technocratiques_breakdown
 - mouvement_racines_vivantes_breakdown
 - reseau_de_recuperation_industrielle_illicite_breakdown
+- terminal_kharg_data_haven_breakdown
 type_relation_dominante: compétition
 annee_debut: 2041
 annee_fin: null
@@ -111,6 +112,7 @@ Le FTR est structurellement dépendant des ressources énergétiques critiques d
 - [[valeurs_culture_tempo_sociale]]
 
 
+
 ## Relations
 **Alliés :**
 - [[consortium_energetique_oural_caspien_breakdown]]
@@ -128,6 +130,7 @@ Le FTR est structurellement dépendant des ressources énergétiques critiques d
 - [[fronts_populistes_anti_technocratiques_breakdown]]
 - [[mouvement_racines_vivantes_breakdown]]
 - [[reseau_de_recuperation_industrielle_illicite_breakdown]]
+- [[terminal_kharg_data_haven_breakdown]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

@@ -36,20 +36,25 @@ zone_systemique:
     - énergie
 
 alliances:
+- aurelio_stahl_reference
 - bloc_des_etats_du_sud_global_contre_la_cession_de_donnees_reference
 - coalition_des_gouvernements_contre_les_chartes_de_destabilisation_reference
 - coalition_pour_la_souverainete_numerique_nationale_reference
 - consortium_des_plateformes_ia_centralisees_anti_deliberation_reference
 - consortiums_energetiques_opaques_reference
 - courant_nationaliste_instrumentalisateur_du_discours_des_racines_reference
+- ergo_wian_sovereign_holdings_reference
 - etats_a_tendance_centraliste_numerique_reference
 - factions_eurasiatiques_contre_la_tarification_hydrique_reference
 - front_souverainiste_des_ressources_d_amerique_du_sud_reference
 - gouvernements_du_bloc_sahelien_autonome_reference
 - gouvernements_federaux_residuels_souverainistes_reference
+- ilse_varga_holm_reference
 - lobbies_industriels_des_etats_non_signataires_reference
 - plateformes_centralisees_de_narration_officielle_reference
+- the_tidewater_canon_reference
 oppositions:
+- agence_de_regulation_des_detroits_strategiques_ards_reference
 - agence_internationale_des_energies_renouvelables_irena_2_reference
 - agences_de_securite_regionales_de_normalisation_des_zones_grises_reference
 - banque_mondiale_des_transitions_climatiques_reference
@@ -65,7 +70,9 @@ oppositions:
 - directive_kontinuum_reference
 - europe_occidentale_reconstructee_reference
 - fonds_monetaire_climatique_fmc_reference
+- kindling_reference
 - ligue_des_metropoles_du_sud_pour_les_infrastructures_libres_reference
+- maelys_okonkwo_reference
 - milices_concurrentes_des_droits_de_passage_reference
 - ong_de_preservation_patrimoniale_numerique_reference
 - plateformes_informationnelles_dominantes_et_leurs_ia_de_moderation_reference
@@ -126,20 +133,25 @@ La tension centrale de l'ABS est celle de sa propre contradiction : protéger la
 
 ## Relations
 **Alliés :**
+- [[aurelio_stahl_reference]]
 - [[bloc_des_etats_du_sud_global_contre_la_cession_de_donnees_reference]]
 - [[coalition_des_gouvernements_contre_les_chartes_de_destabilisation_reference]]
 - [[coalition_pour_la_souverainete_numerique_nationale_reference]]
 - [[consortium_des_plateformes_ia_centralisees_anti_deliberation_reference]]
 - [[consortiums_energetiques_opaques_reference]]
 - [[courant_nationaliste_instrumentalisateur_du_discours_des_racines_reference]]
+- [[ergo_wian_sovereign_holdings_reference]]
 - [[etats_a_tendance_centraliste_numerique_reference]]
 - [[factions_eurasiatiques_contre_la_tarification_hydrique_reference]]
 - [[front_souverainiste_des_ressources_d_amerique_du_sud_reference]]
 - [[gouvernements_du_bloc_sahelien_autonome_reference]]
 - [[gouvernements_federaux_residuels_souverainistes_reference]]
+- [[ilse_varga_holm_reference]]
 - [[lobbies_industriels_des_etats_non_signataires_reference]]
 - [[plateformes_centralisees_de_narration_officielle_reference]]
+- [[the_tidewater_canon_reference]]
 **Opposants :**
+- [[agence_de_regulation_des_detroits_strategiques_ards_reference]]
 - [[agence_internationale_des_energies_renouvelables_irena_2_reference]]
 - [[agences_de_securite_regionales_de_normalisation_des_zones_grises_reference]]
 - [[banque_mondiale_des_transitions_climatiques_reference]]
@@ -155,7 +167,9 @@ La tension centrale de l'ABS est celle de sa propre contradiction : protéger la
 - [[directive_kontinuum_reference]]
 - [[europe_occidentale_reconstructee_reference]]
 - [[fonds_monetaire_climatique_fmc_reference]]
+- [[kindling_reference]]
 - [[ligue_des_metropoles_du_sud_pour_les_infrastructures_libres_reference]]
+- [[maelys_okonkwo_reference]]
 - [[milices_concurrentes_des_droits_de_passage_reference]]
 - [[ong_de_preservation_patrimoniale_numerique_reference]]
 - [[plateformes_informationnelles_dominantes_et_leurs_ia_de_moderation_reference]]

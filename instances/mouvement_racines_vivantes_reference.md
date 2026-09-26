@@ -41,12 +41,12 @@ alliances:
 - reseau_des_administrations_locales_rurales_participatives_reference
 - reseaux_de_medecine_traditionnelle_augmentee_reference
 oppositions:
-- agro_conglomerats_des_enclaves_technologiques_eco_communalism
 - amazonie_consortium_viva_reference
 - consortiums_d_agriculture_verticale_algorithmique_reference
 - courant_nationaliste_instrumentalisateur_du_discours_des_racines_reference
 - detroit_compact_grands_lacs_reference
 - ecosynth_global_reference
+- elias_mork_reference
 - lobbies_agro_industriels_a_haute_consommation_d_eau_reference
 - plateformes_d_optimisation_territoriale_par_ia_reference
 - terrametrics_reference
@@ -109,12 +109,12 @@ La ligne de fracture interne la plus vive oppose les 'transmetteurs ouverts', fa
 - [[reseau_des_administrations_locales_rurales_participatives_reference]]
 - [[reseaux_de_medecine_traditionnelle_augmentee_reference]]
 **Opposants :**
-- [[agro_conglomerats_des_enclaves_technologiques_eco_communalism]]
 - [[amazonie_consortium_viva_reference]]
 - [[consortiums_d_agriculture_verticale_algorithmique_reference]]
 - [[courant_nationaliste_instrumentalisateur_du_discours_des_racines_reference]]
 - [[detroit_compact_grands_lacs_reference]]
 - [[ecosynth_global_reference]]
+- [[elias_mork_reference]]
 - [[lobbies_agro_industriels_a_haute_consommation_d_eau_reference]]
 - [[plateformes_d_optimisation_territoriale_par_ia_reference]]
 - [[terrametrics_reference]]

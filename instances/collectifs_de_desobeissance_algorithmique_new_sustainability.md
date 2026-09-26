@@ -38,8 +38,11 @@ alliances:
 - collectifs_de_narration_sauvage_hors_protocole_new_sustainability
 - communautes_locales_exclues_des_corridors_new_sustainability
 - factions_internes_contestataires_du_bureau_de_moderation_new_sustainability
+- hyphan_raghavan_new_sustainability
 - mouvement_pour_l_autodetermination_territoriale_new_sustainability
+- nadia_ferreira_sato_new_sustainability
 - reseau_des_bio_communs_regionaux_new_sustainability
+- reseau_des_cartographes_des_zones_grises_new_sustainability
 - reseau_des_communs_alimentaires_hors_grille_new_sustainability
 - reseau_des_communs_numeriques_globaux_new_sustainability
 - reseaux_neo_democratiques_plaidant_pour_la_gouvernance_participative_directe_new_sustainability
@@ -53,7 +56,9 @@ oppositions:
 - consortium_d_audit_algorithmique_ouvert_new_sustainability
 - consortium_d_interoperabilite_ia_humain_new_sustainability
 - consortium_des_ia_climatiques_new_sustainability
+- deepfield_institute_new_sustainability
 - directive_kontinuum_new_sustainability
+- ergo_wian_sovereign_holdings_new_sustainability
 - factions_internes_pro_opacite_des_parametres_new_sustainability
 - factions_technocratiques_de_la_delegation_ia_totale_new_sustainability
 - factions_technocratiques_du_conseil_de_regulation_informationnelle_global_new_sustainability
@@ -128,6 +133,7 @@ Leur légitimité est constamment fragilisée par la stabilité apparente du sys
 - [[gouvernance_institutions]]
 
 
+
 ## Relations
 **Alliés :**
 - [[coalition_anti_algorithme_des_autonomies_locales_new_sustainability]]
@@ -136,8 +142,11 @@ Leur légitimité est constamment fragilisée par la stabilité apparente du sys
 - [[collectifs_de_narration_sauvage_hors_protocole_new_sustainability]]
 - [[communautes_locales_exclues_des_corridors_new_sustainability]]
 - [[factions_internes_contestataires_du_bureau_de_moderation_new_sustainability]]
+- [[hyphan_raghavan_new_sustainability]]
 - [[mouvement_pour_l_autodetermination_territoriale_new_sustainability]]
+- [[nadia_ferreira_sato_new_sustainability]]
 - [[reseau_des_bio_communs_regionaux_new_sustainability]]
+- [[reseau_des_cartographes_des_zones_grises_new_sustainability]]
 - [[reseau_des_communs_alimentaires_hors_grille_new_sustainability]]
 - [[reseau_des_communs_numeriques_globaux_new_sustainability]]
 - [[reseaux_neo_democratiques_plaidant_pour_la_gouvernance_participative_directe_new_sustainability]]
@@ -151,7 +160,9 @@ Leur légitimité est constamment fragilisée par la stabilité apparente du sys
 - [[consortium_d_audit_algorithmique_ouvert_new_sustainability]]
 - [[consortium_d_interoperabilite_ia_humain_new_sustainability]]
 - [[consortium_des_ia_climatiques_new_sustainability]]
+- [[deepfield_institute_new_sustainability]]
 - [[directive_kontinuum_new_sustainability]]
+- [[ergo_wian_sovereign_holdings_new_sustainability]]
 - [[factions_internes_pro_opacite_des_parametres_new_sustainability]]
 - [[factions_technocratiques_de_la_delegation_ia_totale_new_sustainability]]
 - [[factions_technocratiques_du_conseil_de_regulation_informationnelle_global_new_sustainability]]

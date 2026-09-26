@@ -87,6 +87,7 @@ oppositions:
 - ligue_des_metropoles_du_sud_pour_les_infrastructures_libres_reference
 - lobbies_industriels_des_etats_non_signataires_reference
 - siberie_federale_reference
+- the_tidewater_canon_reference
 - union_africaine_de_resilience_territoriale_reference
 - zones_grises_globales_reference
 type_relation_dominante: neutralité
@@ -191,5 +192,6 @@ Le RGMS est pris en étau entre deux logiques qui se renforcent mutuellement : p
 - [[ligue_des_metropoles_du_sud_pour_les_infrastructures_libres_reference]]
 - [[lobbies_industriels_des_etats_non_signataires_reference]]
 - [[siberie_federale_reference]]
+- [[the_tidewater_canon_reference]]
 - [[union_africaine_de_resilience_territoriale_reference]]
 - [[zones_grises_globales_reference]]

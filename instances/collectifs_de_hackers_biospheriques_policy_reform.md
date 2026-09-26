@@ -40,6 +40,7 @@ alliances:
 - courants_post_technocratiques_de_reconquete_democratique_policy_reform
 - mouvement_pour_la_justice_ecologique_communautaire_policy_reform
 - reseau_des_auditeurs_algorithmiques_independants_raai_policy_reform
+- reseau_des_cartographes_des_zones_grises_policy_reform
 oppositions:
 - agence_technocratique_pour_la_resilience_biospherique_atrb_policy_reform
 - autorite_mondiale_du_vivant_amv_policy_reform
@@ -114,6 +115,7 @@ Les Collectifs se trouvent dans une contradiction structurelle : pour contester 
 - [[gouvernance_institutions]]
 
 
+
 ## Relations
 **Alliés :**
 - [[coalition_des_semences_libres_policy_reform]]
@@ -124,6 +126,7 @@ Les Collectifs se trouvent dans une contradiction structurelle : pour contester 
 - [[courants_post_technocratiques_de_reconquete_democratique_policy_reform]]
 - [[mouvement_pour_la_justice_ecologique_communautaire_policy_reform]]
 - [[reseau_des_auditeurs_algorithmiques_independants_raai_policy_reform]]
+- [[reseau_des_cartographes_des_zones_grises_policy_reform]]
 **Opposants :**
 - [[agence_technocratique_pour_la_resilience_biospherique_atrb_policy_reform]]
 - [[autorite_mondiale_du_vivant_amv_policy_reform]]

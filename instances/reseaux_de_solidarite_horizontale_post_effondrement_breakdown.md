@@ -43,10 +43,13 @@ alliances:
 - communes_rust_belt_zones_libres_breakdown
 - delta_mekong_racines_breakdown
 - factions_paramilitaires_locales_neutralisees_breakdown
+- hyphan_raghavan_breakdown
 - massif_central_cicatrices_vertes_breakdown
 - mouvement_des_communes_du_rust_belt_breakdown
+- nadia_ferreira_sato_breakdown
 - nairobi_crrc_breakdown
 - occitanie_racines_meres_breakdown
+- raised_hands_breakdown
 - reseaux_de_soigneurs_traditionnels_breakdown
 - saboteurs_des_corridors_de_transit_breakdown
 - seoul_collectif_nexcore_breakdown
@@ -115,6 +118,7 @@ La tension fondamentale qui ronge ces réseaux est celle entre l'horizontalité 
 - [[valeurs_culture_tempo_sociale]]
 
 
+
 ## Relations
 **Alliés :**
 - [[collectifs_de_reparation_energetique_breakdown]]
@@ -124,10 +128,13 @@ La tension fondamentale qui ronge ces réseaux est celle entre l'horizontalité 
 - [[communes_rust_belt_zones_libres_breakdown]]
 - [[delta_mekong_racines_breakdown]]
 - [[factions_paramilitaires_locales_neutralisees_breakdown]]
+- [[hyphan_raghavan_breakdown]]
 - [[massif_central_cicatrices_vertes_breakdown]]
 - [[mouvement_des_communes_du_rust_belt_breakdown]]
+- [[nadia_ferreira_sato_breakdown]]
 - [[nairobi_crrc_breakdown]]
 - [[occitanie_racines_meres_breakdown]]
+- [[raised_hands_breakdown]]
 - [[reseaux_de_soigneurs_traditionnels_breakdown]]
 - [[saboteurs_des_corridors_de_transit_breakdown]]
 - [[seoul_collectif_nexcore_breakdown]]

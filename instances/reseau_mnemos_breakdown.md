@@ -39,9 +39,10 @@ alliances:
 - collectifs_de_gardiens_archivistes_itinerants_breakdown
 - communautes_rurales_autogerees_des_n_uds_de_survie_breakdown
 - lagos_interieur_mnemos_breakdown
+- meridian_assembly_breakdown
 - noeud_mnemos_pannonie_breakdown
 - oracle_des_seuils_breakdown
-- reseaux_de_medecine_traditionnelle_augmentee_reference
+- terminal_kharg_data_haven_breakdown
 - tribunal_algorithmique_de_bruxelles_breakdown
 oppositions:
 - collectifs_de_hackers_archivistes_des_interstices_reseaux_breakdown
@@ -106,9 +107,10 @@ La question centrale est de savoir si les Fragments peuvent un jour se resynchro
 - [[collectifs_de_gardiens_archivistes_itinerants_breakdown]]
 - [[communautes_rurales_autogerees_des_n_uds_de_survie_breakdown]]
 - [[lagos_interieur_mnemos_breakdown]]
+- [[meridian_assembly_breakdown]]
 - [[noeud_mnemos_pannonie_breakdown]]
 - [[oracle_des_seuils_breakdown]]
-- [[reseaux_de_medecine_traditionnelle_augmentee_reference]]
+- [[terminal_kharg_data_haven_breakdown]]
 - [[tribunal_algorithmique_de_bruxelles_breakdown]]
 **Opposants :**
 - [[collectifs_de_hackers_archivistes_des_interstices_reseaux_breakdown]]

@@ -42,6 +42,7 @@ alliances:
 - consortiums_prives_d_extraction_de_ressources_critiques_reference
 - consortiums_prives_de_gestion_des_donnees_critiques_reference
 - fonds_d_investissement_foncier_climatique_reference
+- ilse_varga_holm_reference
 - lobbies_agro_industriels_a_haute_consommation_d_eau_reference
 - operateurs_de_zones_economiques_speciales_periurbaines_reference
 - rede_paulista_de_distribuicao_algoritmica_reference
@@ -56,6 +57,7 @@ oppositions:
 - institutions_multilaterales_survivantes_reference
 - ligue_des_metropoles_du_sud_pour_les_infrastructures_libres_reference
 - lyon_metropole_reference
+- nadia_ferreira_sato_reference
 - reseau_des_administrations_locales_rurales_participatives_reference
 - sao_paulo_ita_reference
 - vasil_orentchev_reference
@@ -126,6 +128,7 @@ Les Consortiums se trouvent pris en étau entre leur logique d'expansion privée
 - [[gouvernance_institutions]]
 
 
+
 ## Relations
 **Alliés :**
 - [[consortium_energetique_baltique_reference]]
@@ -138,6 +141,7 @@ Les Consortiums se trouvent pris en étau entre leur logique d'expansion privée
 - [[consortiums_prives_d_extraction_de_ressources_critiques_reference]]
 - [[consortiums_prives_de_gestion_des_donnees_critiques_reference]]
 - [[fonds_d_investissement_foncier_climatique_reference]]
+- [[ilse_varga_holm_reference]]
 - [[lobbies_agro_industriels_a_haute_consommation_d_eau_reference]]
 - [[operateurs_de_zones_economiques_speciales_periurbaines_reference]]
 - [[rede_paulista_de_distribuicao_algoritmica_reference]]
@@ -152,6 +156,7 @@ Les Consortiums se trouvent pris en étau entre leur logique d'expansion privée
 - [[institutions_multilaterales_survivantes_reference]]
 - [[ligue_des_metropoles_du_sud_pour_les_infrastructures_libres_reference]]
 - [[lyon_metropole_reference]]
+- [[nadia_ferreira_sato_reference]]
 - [[reseau_des_administrations_locales_rurales_participatives_reference]]
 - [[sao_paulo_ita_reference]]
 - [[vasil_orentchev_reference]]

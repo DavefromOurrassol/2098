@@ -38,6 +38,7 @@ alliances:
 - courant_isolationniste_anti_circulation_de_l_information_eco_communalism
 - factions_autoritaires_locales_identitaires_exclusionnistes_eco_communalism
 - factions_communautaires_refusant_le_partage_narratif_exterieur_eco_communalism
+- the_tidewater_canon_eco_communalism
 oppositions:
 - archives_ouvertes_des_jurisprudences_communales_aojc_eco_communalism
 - assemblees_de_bassin_versant_eco_communalism
@@ -49,6 +50,7 @@ oppositions:
 - cooperatives_d_habitat_regeneratif_eco_communalism
 - fraternites_ecospiritualistes_des_anciens_survivalistes_eco_communalism
 - guildes_des_semenciers_itinerants_eco_communalism
+- institut_des_seuils_demographiques_eco_communalism
 - mouvement_des_archives_vivantes_du_savoir_partage_eco_communalism
 - oracle_des_seuils_eco_communalism
 - reseau_assemblees_fennoscandien_eco_communalism
@@ -123,6 +125,7 @@ La contradiction centrale de ces communautés est vertigineuse : profondément a
 - [[gouvernance_institutions]]
 
 
+
 ## Relations
 **Alliés :**
 - [[communautes_rurales_dissidentes_anti_cooperation_regionale_eco_communalism]]
@@ -130,6 +133,7 @@ La contradiction centrale de ces communautés est vertigineuse : profondément a
 - [[courant_isolationniste_anti_circulation_de_l_information_eco_communalism]]
 - [[factions_autoritaires_locales_identitaires_exclusionnistes_eco_communalism]]
 - [[factions_communautaires_refusant_le_partage_narratif_exterieur_eco_communalism]]
+- [[the_tidewater_canon_eco_communalism]]
 **Opposants :**
 - [[archives_ouvertes_des_jurisprudences_communales_aojc_eco_communalism]]
 - [[assemblees_de_bassin_versant_eco_communalism]]
@@ -141,6 +145,7 @@ La contradiction centrale de ces communautés est vertigineuse : profondément a
 - [[cooperatives_d_habitat_regeneratif_eco_communalism]]
 - [[fraternites_ecospiritualistes_des_anciens_survivalistes_eco_communalism]]
 - [[guildes_des_semenciers_itinerants_eco_communalism]]
+- [[institut_des_seuils_demographiques_eco_communalism]]
 - [[mouvement_des_archives_vivantes_du_savoir_partage_eco_communalism]]
 - [[oracle_des_seuils_eco_communalism]]
 - [[reseau_assemblees_fennoscandien_eco_communalism]]

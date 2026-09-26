@@ -46,6 +46,8 @@ alliances:
 - conseil_intergouvernemental_de_regulation_technologique_policy_reform
 - directive_kontinuum_policy_reform
 - fonds_de_stabilisation_climatique_onu_3_policy_reform
+- institut_des_seuils_demographiques_policy_reform
+- nexcore_policy_reform
 - observatoire_mondial_des_ressources_critiques_policy_reform
 - oracle_des_seuils_policy_reform
 - rede_paulista_de_distribuicao_algoritmica_policy_reform
@@ -125,6 +127,8 @@ La réforme de gouvernance de 2094 a accordé aux Conseils Régionaux un droit d
 - [[conseil_intergouvernemental_de_regulation_technologique_policy_reform]]
 - [[directive_kontinuum_policy_reform]]
 - [[fonds_de_stabilisation_climatique_onu_3_policy_reform]]
+- [[institut_des_seuils_demographiques_policy_reform]]
+- [[nexcore_policy_reform]]
 - [[observatoire_mondial_des_ressources_critiques_policy_reform]]
 - [[oracle_des_seuils_policy_reform]]
 - [[rede_paulista_de_distribuicao_algoritmica_policy_reform]]

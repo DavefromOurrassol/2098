@@ -36,6 +36,7 @@ alliances:
 - pacte_des_souverains_reference
 oppositions:
 - consortium_africain_de_biotechnologies_sociales_reference
+- elias_mork_reference
 - europe_occidentale_reconstructee_reference
 - frente_sertao_livre_reference
 - mouvement_racines_vivantes_reference
@@ -106,11 +107,13 @@ Sa contradiction centrale est d'utiliser les technologies de l'information les p
 - [[gouvernance_institutions]]
 
 
+
 ## Relations
 **Alliés :**
 - [[pacte_des_souverains_reference]]
 **Opposants :**
 - [[consortium_africain_de_biotechnologies_sociales_reference]]
+- [[elias_mork_reference]]
 - [[europe_occidentale_reconstructee_reference]]
 - [[frente_sertao_livre_reference]]
 - [[mouvement_racines_vivantes_reference]]

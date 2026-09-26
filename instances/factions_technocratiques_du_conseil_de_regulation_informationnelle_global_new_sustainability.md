@@ -36,6 +36,7 @@ zone_systemique:
 alliances:
 - conseil_technocratique_de_coordination_regionale_new_sustainability
 - conseil_technocratique_de_gouvernance_alimentaire_new_sustainability
+- deepfield_institute_new_sustainability
 - directive_kontinuum_new_sustainability
 - enclaves_de_donnees_proprietaires_des_megacorporations_new_sustainability
 - factions_internes_pro_opacite_des_parametres_new_sustainability
@@ -117,10 +118,12 @@ La contradiction centrale de ces factions réside dans leur position paradoxale 
 - [[geopolitique_conflits]]
 
 
+
 ## Relations
 **Alliés :**
 - [[conseil_technocratique_de_coordination_regionale_new_sustainability]]
 - [[conseil_technocratique_de_gouvernance_alimentaire_new_sustainability]]
+- [[deepfield_institute_new_sustainability]]
 - [[directive_kontinuum_new_sustainability]]
 - [[enclaves_de_donnees_proprietaires_des_megacorporations_new_sustainability]]
 - [[factions_internes_pro_opacite_des_parametres_new_sustainability]]

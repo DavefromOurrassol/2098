@@ -38,10 +38,13 @@ alliances:
 - helsinki_communs_numeriques_reference
 - pacifique_sud_archipels_flottants_reference
 - pacifique_sud_resilience_network_reference
+- raised_hands_reference
+- reseau_des_cartographes_des_zones_grises_reference
 - reseau_des_chercheurs_en_ethique_des_systemes_distribues_reference
 - reseau_des_villes_refuge_pour_travailleurs_desaugmentes_reference
 - reseau_meshcommons_netsolidaire_reference
 - tbilissi_noeud_mnemos_reference
+- the_lattice_reference
 - tribunal_algorithmique_de_bruxelles_reference
 oppositions:
 - alliance_blocs_souverains_reference
@@ -50,15 +53,21 @@ oppositions:
 - coalition_des_gouvernements_contre_les_chartes_de_destabilisation_reference
 - coalition_pour_la_souverainete_numerique_nationale_reference
 - datasovereign_reference
+- deepfield_institute_reference
 - directive_kontinuum_reference
+- ergo_wian_sovereign_holdings_reference
 - etats_a_tendance_centraliste_numerique_reference
 - gouvernements_a_regime_de_productivite_mandatee_reference
+- hyphan_raghavan_reference
+- ilse_varga_holm_reference
+- institut_des_seuils_demographiques_reference
 - neuroharmonics_reference
 - operateurs_de_zones_economiques_speciales_periurbaines_reference
 - optiflow_logistics_reference
 - plateformes_centralisees_de_narration_officielle_reference
 - plateformes_d_optimisation_territoriale_par_ia_reference
 - singapour_est_nexcore_reference
+- the_tidewater_canon_reference
 type_relation_dominante: conflit
 annee_debut: 2030
 annee_fin: null
@@ -126,6 +135,7 @@ Le Mouvement est écartelé entre son idéal universaliste de libre circulation 
 - [[technologie_information]]
 
 
+
 ## Relations
 **Alliés :**
 - [[collectifs_academiques_independants_reference]]
@@ -134,10 +144,13 @@ Le Mouvement est écartelé entre son idéal universaliste de libre circulation 
 - [[helsinki_communs_numeriques_reference]]
 - [[pacifique_sud_archipels_flottants_reference]]
 - [[pacifique_sud_resilience_network_reference]]
+- [[raised_hands_reference]]
+- [[reseau_des_cartographes_des_zones_grises_reference]]
 - [[reseau_des_chercheurs_en_ethique_des_systemes_distribues_reference]]
 - [[reseau_des_villes_refuge_pour_travailleurs_desaugmentes_reference]]
 - [[reseau_meshcommons_netsolidaire_reference]]
 - [[tbilissi_noeud_mnemos_reference]]
+- [[the_lattice_reference]]
 - [[tribunal_algorithmique_de_bruxelles_reference]]
 **Opposants :**
 - [[alliance_blocs_souverains_reference]]
@@ -146,15 +159,21 @@ Le Mouvement est écartelé entre son idéal universaliste de libre circulation 
 - [[coalition_des_gouvernements_contre_les_chartes_de_destabilisation_reference]]
 - [[coalition_pour_la_souverainete_numerique_nationale_reference]]
 - [[datasovereign_reference]]
+- [[deepfield_institute_reference]]
 - [[directive_kontinuum_reference]]
+- [[ergo_wian_sovereign_holdings_reference]]
 - [[etats_a_tendance_centraliste_numerique_reference]]
 - [[gouvernements_a_regime_de_productivite_mandatee_reference]]
+- [[hyphan_raghavan_reference]]
+- [[ilse_varga_holm_reference]]
+- [[institut_des_seuils_demographiques_reference]]
 - [[neuroharmonics_reference]]
 - [[operateurs_de_zones_economiques_speciales_periurbaines_reference]]
 - [[optiflow_logistics_reference]]
 - [[plateformes_centralisees_de_narration_officielle_reference]]
 - [[plateformes_d_optimisation_territoriale_par_ia_reference]]
 - [[singapour_est_nexcore_reference]]
+- [[the_tidewater_canon_reference]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

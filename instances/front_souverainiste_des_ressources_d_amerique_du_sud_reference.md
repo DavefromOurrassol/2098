@@ -40,6 +40,7 @@ alliances:
 - bloc_eurasien_central_reference
 - institutions_multilaterales_survivantes_reference
 - pacte_des_souverains_reference
+- the_tidewater_canon_reference
 oppositions:
 - amazonie_consortium_viva_reference
 - conseil_regulation_ressources_reference
@@ -48,6 +49,7 @@ oppositions:
 - consortiums_d_extraction_miniere_du_bassin_congolais_reference
 - consortiums_energetiques_opaques_reference
 - consortiums_prives_d_extraction_de_ressources_critiques_reference
+- institut_des_seuils_demographiques_reference
 - lobbies_agro_industriels_a_haute_consommation_d_eau_reference
 - programme_onu_eau_2080_reference
 - valparaiso_fct_reference
@@ -115,6 +117,7 @@ Le Front est tiraillé entre ses membres étatiques — tentés par des accords 
 - [[gouvernance_institutions]]
 
 
+
 ## Relations
 **Alliés :**
 - [[agence_internationale_des_energies_renouvelables_irena_2_reference]]
@@ -124,6 +127,7 @@ Le Front est tiraillé entre ses membres étatiques — tentés par des accords 
 - [[bloc_eurasien_central_reference]]
 - [[institutions_multilaterales_survivantes_reference]]
 - [[pacte_des_souverains_reference]]
+- [[the_tidewater_canon_reference]]
 **Opposants :**
 - [[amazonie_consortium_viva_reference]]
 - [[conseil_regulation_ressources_reference]]
@@ -132,6 +136,7 @@ Le Front est tiraillé entre ses membres étatiques — tentés par des accords 
 - [[consortiums_d_extraction_miniere_du_bassin_congolais_reference]]
 - [[consortiums_energetiques_opaques_reference]]
 - [[consortiums_prives_d_extraction_de_ressources_critiques_reference]]
+- [[institut_des_seuils_demographiques_reference]]
 - [[lobbies_agro_industriels_a_haute_consommation_d_eau_reference]]
 - [[programme_onu_eau_2080_reference]]
 - [[valparaiso_fct_reference]]

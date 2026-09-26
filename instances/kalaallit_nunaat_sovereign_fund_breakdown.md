@@ -42,8 +42,8 @@ alliances:
 - arctic_passage_authority_breakdown
 - arctique_nordark_breakdown
 - armada_logistique_nordique_breakdown
-- arctic_passage_authority_breakdown
 - coalition_pacifique_nord_breakdown
+- consortium_des_pecheries_autonomes_du_grand_nord_breakdown
 - consortium_energetique_oural_caspien_breakdown
 - enclaves_industrielles_de_bergen_troms_breakdown
 - hanse_baltique_breakdown
@@ -114,8 +114,8 @@ Le Fonds est déchiré entre une faction 'souverainiste radicale' qui veut conve
 - [[arctic_passage_authority_breakdown]]
 - [[arctique_nordark_breakdown]]
 - [[armada_logistique_nordique_breakdown]]
-- [[arctic_passage_authority_breakdown]]
 - [[coalition_pacifique_nord_breakdown]]
+- [[consortium_des_pecheries_autonomes_du_grand_nord_breakdown]]
 - [[consortium_energetique_oural_caspien_breakdown]]
 - [[enclaves_industrielles_de_bergen_troms_breakdown]]
 - [[hanse_baltique_breakdown]]

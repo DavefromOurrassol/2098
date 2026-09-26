@@ -39,6 +39,7 @@ alliances:
 - factions_technocratiques_du_conseil_de_regulation_informationnelle_global_new_sustainability
 - lobbies_des_plateformes_de_consensus_automatise_new_sustainability
 oppositions:
+- aurelio_stahl_new_sustainability
 - collectifs_de_desobeissance_algorithmique_new_sustainability
 - college_des_auditeurs_independants_du_parlement_biotechnologique_mondial_new_sustainability
 - consortium_africain_de_biotechnologies_sociales_new_sustainability
@@ -118,6 +119,7 @@ La tension majeure réside dans le paradoxe fondateur du scénario new_sustainab
 - [[frontieres_du_systeme]]
 
 
+
 ## Relations
 **Alliés :**
 - [[directive_kontinuum_new_sustainability]]
@@ -127,6 +129,7 @@ La tension majeure réside dans le paradoxe fondateur du scénario new_sustainab
 - [[factions_technocratiques_du_conseil_de_regulation_informationnelle_global_new_sustainability]]
 - [[lobbies_des_plateformes_de_consensus_automatise_new_sustainability]]
 **Opposants :**
+- [[aurelio_stahl_new_sustainability]]
 - [[collectifs_de_desobeissance_algorithmique_new_sustainability]]
 - [[college_des_auditeurs_independants_du_parlement_biotechnologique_mondial_new_sustainability]]
 - [[consortium_africain_de_biotechnologies_sociales_new_sustainability]]

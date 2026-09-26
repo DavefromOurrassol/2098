@@ -38,10 +38,12 @@ alliances:
 - agence_internationale_des_energies_renouvelables_irena_2_reference
 - banque_des_communs_reference
 - consortium_des_fournisseurs_d_energie_renouvelable_distribuee_reference
+- consortium_des_pecheries_autonomes_du_grand_nord_reference
 - cooperatives_agro_ecologiques_de_reconstruction_territoriale_reference
 - cooperatives_agro_ecologiques_du_bassin_mediterraneen_reference
 - frente_sertao_livre_reference
 - lyon_metropole_reference
+- nadia_ferreira_sato_reference
 - ong_environnementales_de_terrain_reference
 - pacifique_sud_archipels_flottants_reference
 - reseau_des_administrations_locales_rurales_participatives_reference
@@ -49,12 +51,14 @@ alliances:
 - reseau_meshcommons_netsolidaire_reference
 - reseau_mnemos_reference
 - syndicats_de_travailleurs_de_la_transition_energetique_reference
+- the_lattice_reference
 oppositions:
 - bloc_des_souverainistes_climatiques_reference
 - consortium_indo_pacifique_de_l_hydrogene_reference
 - consortiums_energetiques_des_megapoles_reference
 - consortiums_energetiques_opaques_reference
 - corporations_d_extraction_energetique_non_signataires_reference
+- ergo_wian_sovereign_holdings_reference
 - etats_a_tendance_centraliste_numerique_reference
 - lobbies_industriels_des_etats_non_signataires_reference
 - operateurs_prives_d_energie_distribuee_hors_fct_reference
@@ -123,16 +127,19 @@ Les coopératives se trouvent prises en étau entre la tentation de croître —
 - [[systeme_economique_redistribution]]
 
 
+
 ## Relations
 **Alliés :**
 - [[administrations_hybrides_des_cites_relais_peripheriques_reference]]
 - [[agence_internationale_des_energies_renouvelables_irena_2_reference]]
 - [[banque_des_communs_reference]]
 - [[consortium_des_fournisseurs_d_energie_renouvelable_distribuee_reference]]
+- [[consortium_des_pecheries_autonomes_du_grand_nord_reference]]
 - [[cooperatives_agro_ecologiques_de_reconstruction_territoriale_reference]]
 - [[cooperatives_agro_ecologiques_du_bassin_mediterraneen_reference]]
 - [[frente_sertao_livre_reference]]
 - [[lyon_metropole_reference]]
+- [[nadia_ferreira_sato_reference]]
 - [[ong_environnementales_de_terrain_reference]]
 - [[pacifique_sud_archipels_flottants_reference]]
 - [[reseau_des_administrations_locales_rurales_participatives_reference]]
@@ -140,12 +147,14 @@ Les coopératives se trouvent prises en étau entre la tentation de croître —
 - [[reseau_meshcommons_netsolidaire_reference]]
 - [[reseau_mnemos_reference]]
 - [[syndicats_de_travailleurs_de_la_transition_energetique_reference]]
+- [[the_lattice_reference]]
 **Opposants :**
 - [[bloc_des_souverainistes_climatiques_reference]]
 - [[consortium_indo_pacifique_de_l_hydrogene_reference]]
 - [[consortiums_energetiques_des_megapoles_reference]]
 - [[consortiums_energetiques_opaques_reference]]
 - [[corporations_d_extraction_energetique_non_signataires_reference]]
+- [[ergo_wian_sovereign_holdings_reference]]
 - [[etats_a_tendance_centraliste_numerique_reference]]
 - [[lobbies_industriels_des_etats_non_signataires_reference]]
 - [[operateurs_prives_d_energie_distribuee_hors_fct_reference]]

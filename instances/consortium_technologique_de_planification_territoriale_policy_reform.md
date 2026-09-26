@@ -44,6 +44,7 @@ alliances:
 - consortium_agro_pacifique_policy_reform
 - consortium_technologique_des_nations_integrees_policy_reform
 - fonds_mondial_de_resilience_infrastructurelle_policy_reform
+- institut_des_seuils_demographiques_policy_reform
 - reseau_des_metropoles_n_uds_policy_reform
 - reseau_des_regulateurs_numeriques_souverains_rrns_policy_reform
 - union_technocratique_eurasiatique_policy_reform
@@ -54,6 +55,7 @@ oppositions:
 - front_souverainiste_de_l_information_regionale_policy_reform
 - internationale_decroissante_anti_planification_policy_reform
 - mouvement_pour_la_souverainete_territoriale_absolue_policy_reform
+- reseau_des_cartographes_des_zones_grises_policy_reform
 type_relation_dominante: dépendance
 annee_debut: 2036
 annee_fin: null
@@ -122,6 +124,7 @@ La tension centrale du Consortium réside dans la contradiction entre son positi
 - [[technologie_information]]
 
 
+
 ## Relations
 **Alliés :**
 - [[assemblee_territoires_policy_reform]]
@@ -131,6 +134,7 @@ La tension centrale du Consortium réside dans la contradiction entre son positi
 - [[consortium_agro_pacifique_policy_reform]]
 - [[consortium_technologique_des_nations_integrees_policy_reform]]
 - [[fonds_mondial_de_resilience_infrastructurelle_policy_reform]]
+- [[institut_des_seuils_demographiques_policy_reform]]
 - [[reseau_des_metropoles_n_uds_policy_reform]]
 - [[reseau_des_regulateurs_numeriques_souverains_rrns_policy_reform]]
 - [[union_technocratique_eurasiatique_policy_reform]]
@@ -141,6 +145,7 @@ La tension centrale du Consortium réside dans la contradiction entre son positi
 - [[front_souverainiste_de_l_information_regionale_policy_reform]]
 - [[internationale_decroissante_anti_planification_policy_reform]]
 - [[mouvement_pour_la_souverainete_territoriale_absolue_policy_reform]]
+- [[reseau_des_cartographes_des_zones_grises_policy_reform]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

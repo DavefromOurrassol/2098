@@ -39,7 +39,9 @@ alliances:
 - front_souverainiste_des_blocs_non_signataires_policy_reform
 - gouvernements_populistes_anti_depossession_policy_reform
 - les_hors_prisme_policy_reform
+- terminal_kharg_data_haven_policy_reform
 oppositions:
+- agence_de_regulation_des_detroits_strategiques_ards_policy_reform
 - bureau_gouvernance_algorithmique_policy_reform
 - bureau_international_du_travail_augmente_bita_policy_reform
 - collectifs_citoyens_de_deliberation_augmentee_policy_reform
@@ -50,6 +52,7 @@ oppositions:
 - consortium_technologique_de_planification_territoriale_policy_reform
 - consortiums_prives_de_gouvernance_algorithmique_policy_reform
 - directive_kontinuum_policy_reform
+- nexcore_policy_reform
 - oracle_des_seuils_policy_reform
 - prisme_global_policy_reform
 - reseau_des_regulateurs_numeriques_souverains_rrns_policy_reform
@@ -120,6 +123,7 @@ Le Front est tiraillé entre une légitimité populaire régionale et la nécess
 
 
 
+
 ## Relations
 **Alliés :**
 - [[coalition_des_souverainistes_numeriques_policy_reform]]
@@ -129,7 +133,9 @@ Le Front est tiraillé entre une légitimité populaire régionale et la nécess
 - [[front_souverainiste_des_blocs_non_signataires_policy_reform]]
 - [[gouvernements_populistes_anti_depossession_policy_reform]]
 - [[les_hors_prisme_policy_reform]]
+- [[terminal_kharg_data_haven_policy_reform]]
 **Opposants :**
+- [[agence_de_regulation_des_detroits_strategiques_ards_policy_reform]]
 - [[bureau_gouvernance_algorithmique_policy_reform]]
 - [[bureau_international_du_travail_augmente_bita_policy_reform]]
 - [[collectifs_citoyens_de_deliberation_augmentee_policy_reform]]
@@ -140,6 +146,7 @@ Le Front est tiraillé entre une légitimité populaire régionale et la nécess
 - [[consortium_technologique_de_planification_territoriale_policy_reform]]
 - [[consortiums_prives_de_gouvernance_algorithmique_policy_reform]]
 - [[directive_kontinuum_policy_reform]]
+- [[nexcore_policy_reform]]
 - [[oracle_des_seuils_policy_reform]]
 - [[prisme_global_policy_reform]]
 - [[reseau_des_regulateurs_numeriques_souverains_rrns_policy_reform]]

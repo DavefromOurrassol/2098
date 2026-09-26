@@ -35,6 +35,7 @@ zone_systemique:
     - infrastructure
 
 alliances:
+- agence_de_regulation_des_detroits_strategiques_ards_new_sustainability
 - agence_globale_de_regeneration_des_bassins_versants_agrb_onu_new_sustainability
 - agence_mondiale_de_modelisation_climatique_ammc_new_sustainability
 - bloc_eurasien_souverainiste_new_sustainability
@@ -55,8 +56,8 @@ oppositions:
 - etats_souverainistes_anti_reseau_new_sustainability
 - factions_souverainistes_des_blocs_peripheriques_new_sustainability
 - internationale_souverainiste_de_deconnexion_territoriale_new_sustainability
+- les_veilleurs_des_nappes_phreatiques_new_sustainability
 - lobbies_d_extraction_miniere_des_zones_tampons_new_sustainability
-- lobbies_des_energies_fossiles_residuelles_policy_reform
 - mouvement_souverainiste_de_la_ceinture_boreale_new_sustainability
 - souverainistes_du_bloc_eurasien_new_sustainability
 type_relation_dominante: coopération
@@ -111,6 +112,7 @@ La question lancinante de 2098 : l'AMRRT est-elle encore un organe de régulatio
 
 ## Relations
 **Alliés :**
+- [[agence_de_regulation_des_detroits_strategiques_ards_new_sustainability]]
 - [[agence_globale_de_regeneration_des_bassins_versants_agrb_onu_new_sustainability]]
 - [[agence_mondiale_de_modelisation_climatique_ammc_new_sustainability]]
 - [[bloc_eurasien_souverainiste_new_sustainability]]
@@ -131,7 +133,7 @@ La question lancinante de 2098 : l'AMRRT est-elle encore un organe de régulatio
 - [[etats_souverainistes_anti_reseau_new_sustainability]]
 - [[factions_souverainistes_des_blocs_peripheriques_new_sustainability]]
 - [[internationale_souverainiste_de_deconnexion_territoriale_new_sustainability]]
+- [[les_veilleurs_des_nappes_phreatiques_new_sustainability]]
 - [[lobbies_d_extraction_miniere_des_zones_tampons_new_sustainability]]
-- [[lobbies_des_energies_fossiles_residuelles_policy_reform]]
 - [[mouvement_souverainiste_de_la_ceinture_boreale_new_sustainability]]
 - [[souverainistes_du_bloc_eurasien_new_sustainability]]

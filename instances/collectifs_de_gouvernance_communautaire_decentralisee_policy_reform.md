@@ -46,16 +46,19 @@ alliances:
 - collectifs_de_resistance_aux_relocalisations_forcees_policy_reform
 - consortium_africain_de_biotechnologies_sociales_policy_reform
 - consortium_amazonia_viva_policy_reform
+- consortium_des_pecheries_autonomes_du_grand_nord_policy_reform
 - consortium_des_villes_etats_durables_policy_reform
 - courants_post_technocratiques_de_reconquete_democratique_policy_reform
 - factions_internes_pro_desaugmentation_totale_policy_reform
 - front_des_autonomies_territoriales_radicales_policy_reform
 - great_lakes_autonomous_compact_policy_reform
 - internationale_decroissante_anti_planification_policy_reform
+- les_veilleurs_des_nappes_phreatiques_policy_reform
 - les_veilleurs_du_fleuve_policy_reform
 - mouvement_pour_la_justice_ecologique_communautaire_policy_reform
 - mouvement_pour_la_souverainete_energetique_commune_msec_policy_reform
 - reseau_des_auditeurs_algorithmiques_independants_raai_policy_reform
+- the_lattice_policy_reform
 oppositions:
 - agence_technocratique_pour_la_resilience_biospherique_atrb_policy_reform
 - assemblee_territoires_policy_reform
@@ -135,6 +138,7 @@ Ces collectifs sont tiraillés entre leur vocation radicalement locale et la né
 - [[valeurs_culture_tempo_sociale]]
 
 
+
 ## Relations
 **Alliés :**
 - [[coalition_des_semences_libres_policy_reform]]
@@ -147,16 +151,19 @@ Ces collectifs sont tiraillés entre leur vocation radicalement locale et la né
 - [[collectifs_de_resistance_aux_relocalisations_forcees_policy_reform]]
 - [[consortium_africain_de_biotechnologies_sociales_policy_reform]]
 - [[consortium_amazonia_viva_policy_reform]]
+- [[consortium_des_pecheries_autonomes_du_grand_nord_policy_reform]]
 - [[consortium_des_villes_etats_durables_policy_reform]]
 - [[courants_post_technocratiques_de_reconquete_democratique_policy_reform]]
 - [[factions_internes_pro_desaugmentation_totale_policy_reform]]
 - [[front_des_autonomies_territoriales_radicales_policy_reform]]
 - [[great_lakes_autonomous_compact_policy_reform]]
 - [[internationale_decroissante_anti_planification_policy_reform]]
+- [[les_veilleurs_des_nappes_phreatiques_policy_reform]]
 - [[les_veilleurs_du_fleuve_policy_reform]]
 - [[mouvement_pour_la_justice_ecologique_communautaire_policy_reform]]
 - [[mouvement_pour_la_souverainete_energetique_commune_msec_policy_reform]]
 - [[reseau_des_auditeurs_algorithmiques_independants_raai_policy_reform]]
+- [[the_lattice_policy_reform]]
 **Opposants :**
 - [[agence_technocratique_pour_la_resilience_biospherique_atrb_policy_reform]]
 - [[assemblee_territoires_policy_reform]]

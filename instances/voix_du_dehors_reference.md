@@ -41,8 +41,12 @@ zone_systemique:
 alliances:
 - collectif_nuit_jaune_reference
 - collectifs_de_journalistes_independants_regionaux_reference
+- kaspar_lind_reference
+- les_veilleurs_des_nappes_phreatiques_reference
+- nadia_ferreira_sato_reference
 - ong_de_tracabilite_des_ressources_critiques_reference
 - ong_environnementales_de_terrain_reference
+- raised_hands_reference
 - reseaux_de_capteurs_citoyens_reference
 - reseaux_de_lanceurs_d_alerte_institutionnels_dissidents_reference
 - universites_et_think_tanks_en_zones_de_liberte_academique_reference
@@ -51,8 +55,9 @@ oppositions:
 - coalition_des_gouvernements_contre_les_chartes_de_destabilisation_reference
 - consortiums_energetiques_opaques_reference
 - consortiums_mediatiques_corporatifs_reference
+- deepfield_institute_reference
 - directive_kontinuum_reference
-- dispositifs_de_surveillance_numerique_souveraine_fortress_world
+- institut_des_seuils_demographiques_reference
 - plateformes_centralisees_de_narration_officielle_reference
 - plateformes_informationnelles_dominantes_et_leurs_ia_de_moderation_reference
 - services_de_contre_information_des_blocs_geopolitiques_concurrents_reference
@@ -111,8 +116,12 @@ La tension centrale reste irrésolue : plusieurs enquêtes internes ont identifi
 **Alliés :**
 - [[collectif_nuit_jaune_reference]]
 - [[collectifs_de_journalistes_independants_regionaux_reference]]
+- [[kaspar_lind_reference]]
+- [[les_veilleurs_des_nappes_phreatiques_reference]]
+- [[nadia_ferreira_sato_reference]]
 - [[ong_de_tracabilite_des_ressources_critiques_reference]]
 - [[ong_environnementales_de_terrain_reference]]
+- [[raised_hands_reference]]
 - [[reseaux_de_capteurs_citoyens_reference]]
 - [[reseaux_de_lanceurs_d_alerte_institutionnels_dissidents_reference]]
 - [[universites_et_think_tanks_en_zones_de_liberte_academique_reference]]
@@ -121,8 +130,9 @@ La tension centrale reste irrésolue : plusieurs enquêtes internes ont identifi
 - [[coalition_des_gouvernements_contre_les_chartes_de_destabilisation_reference]]
 - [[consortiums_energetiques_opaques_reference]]
 - [[consortiums_mediatiques_corporatifs_reference]]
+- [[deepfield_institute_reference]]
 - [[directive_kontinuum_reference]]
-- [[dispositifs_de_surveillance_numerique_souveraine_fortress_world]]
+- [[institut_des_seuils_demographiques_reference]]
 - [[plateformes_centralisees_de_narration_officielle_reference]]
 - [[plateformes_informationnelles_dominantes_et_leurs_ia_de_moderation_reference]]
 - [[services_de_contre_information_des_blocs_geopolitiques_concurrents_reference]]

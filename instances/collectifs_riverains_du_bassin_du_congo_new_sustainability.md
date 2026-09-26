@@ -41,6 +41,9 @@ alliances:
 - consortium_amazonia_viva_new_sustainability
 - great_lakes_autonomous_compact_new_sustainability
 - hub_nairobi_kigali_new_sustainability
+- hyphan_raghavan_new_sustainability
+- ilse_varga_holm_new_sustainability
+- les_veilleurs_des_nappes_phreatiques_new_sustainability
 - les_veilleurs_du_fleuve_new_sustainability
 - mouvement_communautaire_des_micro_grids_energetiques_new_sustainability
 - mouvement_pour_l_autodetermination_territoriale_new_sustainability
@@ -126,6 +129,7 @@ Les Collectifs sont pris en étau entre deux légitimités concurrentes : celle 
 - [[gouvernance_institutions]]
 
 
+
 ## Relations
 **Alliés :**
 - [[amara_diallo_nkosi_new_sustainability]]
@@ -136,6 +140,9 @@ Les Collectifs sont pris en étau entre deux légitimités concurrentes : celle 
 - [[consortium_amazonia_viva_new_sustainability]]
 - [[great_lakes_autonomous_compact_new_sustainability]]
 - [[hub_nairobi_kigali_new_sustainability]]
+- [[hyphan_raghavan_new_sustainability]]
+- [[ilse_varga_holm_new_sustainability]]
+- [[les_veilleurs_des_nappes_phreatiques_new_sustainability]]
 - [[les_veilleurs_du_fleuve_new_sustainability]]
 - [[mouvement_communautaire_des_micro_grids_energetiques_new_sustainability]]
 - [[mouvement_pour_l_autodetermination_territoriale_new_sustainability]]
