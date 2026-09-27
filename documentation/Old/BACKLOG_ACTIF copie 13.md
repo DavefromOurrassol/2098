@@ -2,8 +2,7 @@
 *Dernière consolidation majeure le 23 août 2026 (reconsolidé le 23
 septembre 2026 : #2, #2bis, #4 et S11 clos et archivés ; le 24 septembre :
 #1 Hyphan clos et archivé, S15/S16 ajoutés ; le 25 septembre : #4, S13 et
-S15.1 clos et archivés, S17 « audit du lore » ajouté ; le 26 septembre :
-S12, S16 et S17 clos et archivés, S15 réduit, S18 ajouté), mis à jour en continu
+S15.1 clos et archivés, S17 « audit du lore » ajouté), mis à jour en continu
 à chaque clôture de session. Chantiers clos et leur historique complet
 dans `BACKLOG_ARCHIVE.md` (fichier séparé, à uploader seulement en cas
 de besoin de vérifier si un point a déjà été traité). Chaque chantier
@@ -115,11 +114,6 @@ aucune whitelist figée à mettre à jour) — juste le piège de redémarrage
 déjà documenté plusieurs fois par le passé (15 août notamment),
 reconfirmé ici sur un nouveau cas concret. Résolu après redémarrage,
 confirmé par David.
-
-**À faire au branchement (26 sept)** : régénérer l'image de l'article
-fortress_world du 23 août (`20260823_080632_…_18octobre2098.md`) — son
-`image_prompt` a été corrigé (Halifax-Haute au lieu de Bruxelles-Forteresse),
-mais une image déjà produite montrerait encore Bruxelles.
 
 
 ---
@@ -283,10 +277,21 @@ directement et excluent explicitement les fichiers `_index.md`.
 
 ---
 
-## ✅ S12. Dérive `zones_pays.json` — CLOS le 26 septembre
-Mesure avec la même règle que la Carte (`_entite_references_pays`) : 0 écart
-sur les 6 scénarios après réaffectation de l'Italie (reference) et retrait
-de 2 entrées parasites. Détail : `BACKLOG_ARCHIVE.md`.
+## ⚪ S12. Dérive ancienne `zones_pays.json` (hors fortress_world)
+**Connue depuis le 8 sept, remesurée le 23 sept** après restauration de
+`zones_pays.json` (voir handoff) : `breakdown` (Arctique, Groenland),
+`new_sustainability` (Norvège), `reference` (Afghanistan, Italie, Kenya,
+Kirghizistan, Tadjikistan — Kenya est un rattachement volontaire).
+`fortress_world`, `eco_communalism`, `policy_reform` : 0. **Précision du
+24 sept** : la carte colore d'abord depuis les fiches `.md`, mais **se
+replie sur `zones_pays.json` pour un pays absent de toute fiche** (cas
+réel : Finlande/Lituanie visibles en Espace Nordique alors qu'absentes de
+`fortress_world.md`). Une dérive peut donc être invisible (pays présent
+dans la fiche) ou au contraire masquer un trou de la fiche. Côté
+`reference`, `check_zones_coherence` confirme la cause : Afghanistan,
+Italie, Kirghizistan, Tadjikistan ne sont rattachés qu'à des sous-zones
+niveau 2, aucune zone N1.
+Commande de mesure dans `HANDOFF_23_SEPTEMBRE.md`. Pas d'urgence.
 
 ---
 
@@ -309,49 +314,61 @@ sous-zones).
 ---
 
 ## ⚪ S15. Suites optionnelles du scénario Hyphan (fortress_world)
-**Nouveau, 24 sept ; réduit le 26 sept** (Ergo-Wian/NAT faits le 25, texte
-des géographies le 26 — voir `BACKLOG_ARCHIVE.md`). Reste, en attente d'un
-besoin :
+**Nouveau, 24 sept.** Rien de bloquant :
+- ~~Aligner Ergo-Wian sur Euro-Nord~~ — **fait le 25 sept** (Ergo-Wian
+  localisée dans l'Espace Nordique, NAT filiale armée connue de tous ;
+  voir `BACKLOG_ARCHIVE.md`).
 - **Milan** (QG du Mouvement de Reconquête européenne) et **Lyon** (son
-  antenne) ne sont que des `lieu` en texte libre dans `zone_euro_sud`. En
-  faire de vraies sous-zones si d'autres entités doivent y être placées —
-  désormais en deux clics (Carte → ➕ sous-zone, S16).
+  antenne) ne sont que des `lieu` en texte libre dans `zone_euro_sud`.
+  En faire de vraies sous-zones (comme `paris_hors`) seulement si d'autres
+  entités doivent y être placées.
+- Corps markdown de `fortress_world.md` globalement périmé par rapport au
+  frontmatter (ex. « Origine réelle (2026) : … pays baltes ») — rien ne le
+  relit, ménage de texte libre à faire un jour.
 - Personnages en réserve (exclus des articles) : Malo, Anton Vasko,
   Raimon, et Hyphan elle-même — à ré-autoriser via 🎯 quand le récit
   les fera apparaître.
 
 ---
 
-## ✅ S16. Création directe de sous-zone dans le GUI — CLOS le 26 septembre
-Carte → arbre d'une zone → « ➕ sous-zone » (aperçu puis création,
-`ZoneRepository.creer_sous_zone`). Détail : `BACKLOG_ARCHIVE.md`.
+## ⚪ S16. Pas de création directe de sous-zone (niveau 2/3) dans le GUI
+**Nouveau, 24 sept.** La Carte crée des zones niveau 1 (dessin) et
+déplace/renomme des sous-zones, mais ne sait pas créer une sous-zone
+directement. Contournement actuel : script ponctuel (cas `paris_hors`,
+`evry_hors`, `tolosa` le 24 sept) ou création N1 puis « ↗️ déplacer ».
+À construire si le besoin revient (Milan/Lyon, cf. S15) — `ZoneRepository`
+n'a qu'un `creer_zone_n1`.
 
 ---
 
-## ✅ S17. Audit du lore — suites — CLOS le 26 septembre
-Section sidebar « Relations & lore — étapes 1 → 5 » testée de bout en bout,
-premier passage `--llm` réel, consignes IA durcies, règles `reference`,
-correctif `write_alliances_patch()`, exceptions NAT supprimées. Détail :
-`BACKLOG_ARCHIVE.md` et `HANDOFF_26_SEPTEMBRE.md`.
-
----
-
-## ⚪ S18. Audit du lore — usage courant
-**Nouveau, 26 sept.** Rien de bloquant :
-- **Règles de lore des 4 autres scénarios** (breakdown, new_sustainability,
-  eco_communalism, policy_reform) — seuls fortress_world et reference en
-  ont. Faits établis à fournir par David quand le besoin se présente.
-- **Relectures IA ciblées** au fil de l'eau (étape 4, `--limit 10` par
-  scénario ≈ 5 centimes). Une passe complète (826 fiches) coûterait
-  ~4-6 $ et produirait des milliers de propositions à trier.
-- **Routine après chaque lot d'entités** : étapes 1 → 2 → 3 → `validate.py`.
-- Pièges connus de slugs ≠ noms (l'IA s'y trompe) :
-  `les_veilleurs_des_nappes_phreatiques` = Sentinelles des Aquifères
-  Oubliés ; `conseil_regulation_algorithmique` = Autorité Numérique du Bloc
-  Atlantique (à ne pas confondre avec `anba_siege_atlantique`, entreprise
-  maritime). Renommage possible un jour, pas urgent.
-- `_a_supprimer/` : article du 24 sept (Hyphan en Asie centrale) à
-  supprimer définitivement quand David le décide.
+## ⚪ S17. Audit du lore — suites
+**Nouveau, 25 sept.** Outil `audit_lore.py` + `lore_regles.yaml` +
+`corriger_relations_inter_scenarios.py`, intégrés au GUI (manuel §3,
+« Audit du lore »). Première passe faite sur les 6 scénarios : 0 erreur,
+0 contradiction, 24 relations à sens unique volontaires (personnages en
+réserve fortress_world), 2 inter-scénarios voulus (NAT). Reste :
+- **Tester les 2 entrées GUI** « 🔍 Audit du lore » et « 🔀 Corriger les
+  relations entre scénarios » (`gui_verified: false`) et la case
+  `--ignorer-exclus` de 🤝.
+- **Mode `--llm` jamais lancé en réel** (testé seulement avec un LLM
+  simulé) : commencer par `--estimer`, puis 1-2 fiches (`--slug`).
+- **Règles pour les 5 autres scénarios** : seul fortress_world en a.
+  `reference` en premier (Ergo-Wian gouvernement-entreprise non
+  démocratique, Hyphan successeuse désignée…) — faits à fournir par David.
+- **Routine après chaque lot d'entités** : audit `--all`, puis
+  `corriger_relations_inter_scenarios.py --all`, puis réciprocité
+  (`fix_alliances_oppositions.py --reciprocite-seule --ignorer-exclus`).
+  Le lot du 24 sept avait laissé ~990 relations à sens unique et 49
+  inter-scénarios.
+- Relation à revoir si elle gêne le récit : **Vikram allié d'Ergo-Wian**
+  (fortress_world), déclarée par le lot du 24 sept et propagée.
+- Mineur : `write_alliances_patch()` ne retire pas la section
+  « ## Relations » quand les deux listes deviennent vides (contourné dans
+  les nouveaux scripts, pas dans `fix_alliances_oppositions.py` —
+  `resolve_reciprocity_conflicts()` pourrait laisser un lien retiré dans le
+  corps d'une fiche). Il déplace aussi la section en fin de corps.
+- Transnationales localisées dans le texte (119, information) : pas
+  d'action prévue.
 
 ---
 

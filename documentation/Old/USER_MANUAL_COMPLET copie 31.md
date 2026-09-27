@@ -1,6 +1,6 @@
 # Manuel utilisateur complet — Pipeline Ourrassol 2098
 *Référence à jour au 3 septembre 2026, complétée au fil des sessions
-(dernier ajout : 26 septembre 2026) — couvre `generator/` (42+ scripts
+(dernier ajout : 25 septembre 2026) — couvre `generator/` (42+ scripts
 Python) et `gui/` (Flask). Historique complet des sessions et
 chantiers (bugs trouvés, itérations, tests réels) dans
 `USER_MANUAL_HISTORIQUE.md`, à uploader seulement au besoin.*
@@ -1598,7 +1598,7 @@ Sorties : `enrich_minimal_report.md`, `needs_review_enrich.yaml` (bug de tri des
 **Complément du même jour (7 août, après-coup) — `reset_conflict_reports()`** : bug distinct trouvé après coup (David consultant le rapport `.md` via le GUI, croyant le vault plein de conflits alors qu'il était déjà à 0 — voir Bug #2, détail complet dans l'entrée `fix_alliances_oppositions.py` ci-dessous). `enrich_minimal.py` importe désormais aussi `reset_conflict_reports()`, appelée une seule fois avant la boucle sur les scénarios (inconditionnellement dès qu'un run réel de réciprocité a lieu, pas seulement quand `--resoudre-conflits` est actif — la réciprocité seule écrit déjà dans `CONFLICTS_PATH`). Jamais déclenché en `--dry-run`. Testé : `reset_conflict_reports()` appelée exactement une fois pour tout un run `--all` (pas une fois par scénario), jamais en dry-run.
 
 ### `fix_alliances_oppositions.py` — voir entrée dédiée dans la section scripts one-shot/migration plus bas, dont `enrich_minimal.py` dépend désormais pour la réciprocité automatique **et**, depuis le 7 août, la résolution automatique des conflits.
-**Ajouts du 25 septembre 2026** : le calcul de réciprocité vit dans une fonction pure `calculer_reciprocite(scenario, ignorer_exclues=False)` → `(fiches, additions, conflits)`, réutilisée en lecture seule par `audit_lore.py` ; `reciprocity_pass()` l'appelle et garde affichage/écriture à l'identique (sortie console, valeur de retour et fichiers écrits vérifiés identiques avant/après sur 4 modes). Nouvelle option **`--ignorer-exclus`** (GUI : « Ne pas propager les personnages en réserve ») : une fiche `exclure_articles: true` ne propage pas ses relations chez les autres fiches (sinon le personnage réapparaît dans le contexte des articles via leurs relations) ; les relations des autres fiches vers elle restent propagées. Voir « Relations & lore » ci-dessous. **26 sept** : `write_alliances_patch()` remplace la section « ## Relations » à sa place et la retire quand les deux listes sont vides.
+**Ajouts du 25 septembre 2026** : le calcul de réciprocité vit dans une fonction pure `calculer_reciprocite(scenario, ignorer_exclues=False)` → `(fiches, additions, conflits)`, réutilisée en lecture seule par `audit_lore.py` ; `reciprocity_pass()` l'appelle et garde affichage/écriture à l'identique (sortie console, valeur de retour et fichiers écrits vérifiés identiques avant/après sur 4 modes). Nouvelle option **`--ignorer-exclus`** (GUI : « Ne pas propager les personnages en réserve ») : une fiche `exclure_articles: true` ne propage pas ses relations chez les autres fiches (sinon le personnage réapparaît dans le contexte des articles via leurs relations) ; les relations des autres fiches vers elle restent propagées. Voir « Audit du lore » ci-dessous.
 
 ### `extract_phantom_slugs.py` 🔁 🧩
 Lit `enrich_minimal_report.md` et/ou une sortie `validate.py --verbose`, génère les rôles manquants via le LLM (tier `volume`), alimente `entites_custom/queue.yaml` (batches de 5, dédupliqués).
@@ -1827,72 +1827,48 @@ python3 generator/set_selection_instance.py --entite ilse_varga_holm --scenario 
 
 ---
 
-### Relations & lore — étapes 1 → 5 (25-26 septembre 2026)
+### Audit du lore (25 septembre 2026)
 
-**Pourquoi** : une instance est écrite une fois, à sa création, et **ne suit jamais l'évolution du lore** (zone renommée ou abandonnée, pays mis en quarantaine, consigne changée). Ce que lisent les articles et les résumés reste la version en place. On la corrige par retouche ciblée (script, ou étape 5 ci-dessous) ou par régénération (`generate_instances.py --consigne`, qui réécrit toute la fiche et **écrase les retouches manuelles** ainsi que `exclure_articles`). Ces outils servent à trouver et corriger ce qui a dérivé.
+**Pourquoi** : une instance est écrite une fois, à sa création, et **ne suit jamais l'évolution du lore** (zone renommée ou abandonnée, pays mis en quarantaine, consigne changée). Ce que lisent les articles et les résumés reste la version en place. On la corrige par retouche ciblée (script) ou par régénération (`generate_instances.py --consigne`, qui réécrit toute la fiche et **écrase les retouches manuelles** ainsi que `exclure_articles`). L'audit sert à trouver ce qui a dérivé.
 
-**Section sidebar « Relations & lore — étapes 1 → 5 »** (26 sept, remplace les 3 entrées du 25 sept), à suivre dans l'ordre :
+#### `audit_lore.py` 🔁 🧩 — diagnostic, écrit seulement avec `--appliquer`
+Ne refait pas ce que `validate.py` couvre (slugs d'alliés inexistants, relations en texte libre, zone de localisation inconnue, `type_lieu`, wikilinks cassés).
 
-| Étape | Entrée | Script (arguments fixes) | Coût | Écrit ? |
-|---|---|---|---|---|
-| 1 | 🔍 Vérifier le lore | `audit_lore.py` | gratuit | rapports seulement |
-| 2 | 🤝 Rendre les relations réciproques | `fix_alliances_oppositions.py` (`--reciprocite-seule`) | gratuit | oui (Simulation cochée par défaut) |
-| 3 | 🔀 Retirer les relations vers un autre scénario | `corriger_relations_inter_scenarios.py` | gratuit | oui (`--execute`) |
-| 4 | 🤖 Relecture IA du lore | `audit_lore.py` (`--llm`) | ~0,5 centime/fiche | propositions seulement (Estimer coché par défaut) |
-| 5 | ✅ Valider les propositions de l'IA | onglet (routes `/api/lore/*`) | gratuit | oui, après Simulation |
-
-**Routine après un lot d'entités** : 1 → 2 → 3 → `validate.py` (4 et 5 au besoin). Le lot du 24 sept avait laissé ~990 relations à sens unique et 49 inter-scénarios.
-
-#### Étape 1 — `audit_lore.py` 🔁 🧩 — diagnostic
-Ne refait pas ce que `validate.py` couvre (slugs d'alliés inexistants, relations en texte libre, zone de localisation inconnue, `type_lieu`, wikilinks cassés). Sans LLM :
+Sans LLM (défaut, gratuit) :
 1. **Règles de lore** (`documentation/lore_regles.yaml`) sur tous les textes du frontmatter des instances et `event_instances` (+ articles avec `--avec-articles` : titre, chapo, corps). Gravité `erreur` ou `a_relire`.
 2. **Quarantaine** : instance localisée dans une zone en quarantaine (ou une sous-zone) avec une trajectoire hors `trajectoires_tolerees`.
-3. **Transnationales localisées dans le texte** (information, souvent légitime ; 142 au total au 26 sept).
-4. **Réciprocité** (via `calculer_reciprocite()`) et **relations contradictoires** (via `find_conflicts()`). Les relations à sens unique qui partent d'un **personnage en réserve** (`exclure_articles: true`) sont comptées à part (« + N volontaires ») : l'étape 2 ne les propage jamais.
-5. **Relations inter-scénarios** : toujours des **erreurs** (les scénarios sont des mondes parallèles, décision du 26 sept) — invisibles pour `validate.py`.
+3. **Transnationales localisées dans le texte** (information) : `zone` vide mais le rôle/la description cite une zone du scénario — souvent légitime.
+4. **Réciprocité** (via `calculer_reciprocite()`) et **relations contradictoires** (via `find_conflicts()`).
+5. **Relations inter-scénarios** : allié/opposant d'un autre scénario (invisible pour `validate.py`, qui cherche les slugs dans tout le vault).
 
-En fin de sortie, **« À faire ensuite »** indique l'étape à lancer pour chaque problème (le rapport `.md` aussi, section par section).
+Avec `--llm` (tier `structured_strict`) : par fiche ciblée, un appel qui confronte rôle/responsabilités/description/tensions à la zone de rattachement (et ses parents), aux relations actuelles et aux faits `erreur` du fichier de règles ; renvoie des **contradictions** (extrait + correction proposée, dans le rapport) et des **relations proposées** parmi les instances réelles du scénario (validées par `validate_targeted()` ; slugs hors liste, auto-références et relations déjà présentes filtrés ; après les reprises, les propositions invalides sont retirées plutôt que de perdre la relecture). Garde-fous : `--estimer` (aucun appel), ciblage `--slug`/`--zone`/`--limit N` (plus fort impact local+global d'abord), refus au-delà de 15 appels sans ciblage ni `--tout`, cache `state/audit_lore_cache.json` par empreinte (fiche + zone + règles + rôles des alliés + liste des instances ; `--no-cache`), une panne sur une fiche n'arrête pas les autres. **Jamais lancé en réel au 25 sept** (testé avec un LLM simulé).
+
+`--appliquer [--dry-run]` : écrit les propositions `valide: true` du fichier de propositions pour le(s) scénario(s) choisi(s), via `write_alliances_patch()`, `.bak` par fiche ; refuse une relation déjà dans l'autre liste ou qui créerait un conflit (la cible classe la fiche dans la liste opposée) ; marque `applique: date`. Propager ensuite la réciprocité.
+
 ```bash
 python3 generator/audit_lore.py --scenario fortress_world [--avec-articles]
 python3 generator/audit_lore.py --all
-```
-Sorties : `documentation/need_action/audit_lore_{scenario}.md`, `audit_lore_dernier_lancement.md` (chemin fixe pour le GUI), `--json` (résumé, dernière ligne).
-
-#### Étape 2 — réciprocité (`fix_alliances_oppositions.py --reciprocite-seule`)
-Si A cite B, B cite A. `--ignorer-exclus` (coché par défaut dans le GUI) : les personnages en réserve ne sont pas inscrits chez les autres fiches. `--resoudre-conflits` (+ `--bascule-en-opposition` avancé) pour les relations contradictoires (l'opposition l'emporte). **`write_alliances_patch()` corrigé le 26 sept** : la section « ## Relations » du corps est remplacée **à sa place** (plus déplacée en fin de corps) et **retirée** quand les deux listes deviennent vides.
-
-#### Étape 3 — `corriger_relations_inter_scenarios.py` 🔁 🧩
-Relation `X_autre` sur une fiche du scénario S : remplacée par `X_S` si elle existe (et n'est ni la fiche elle-même ni déjà présente), sinon retirée. **Aucune exception** depuis le 26 sept (les 2 alliés `_reference` de la NAT ont été retirés ; option `--garder` supprimée). Aperçu par défaut, `--execute` pour écrire (`.bak`).
-
-#### Étape 4 — relecture IA (`audit_lore.py --llm`)
-Tier `structured_strict`. Par fiche ciblée, un appel qui confronte rôle/responsabilités/description/tensions à la zone de rattachement (et ses parents), aux relations actuelles et aux **faits du fichier de règles** (messages de toutes les règles, `erreur` et `a_relire`, depuis le 26 sept). Renvoie des **contradictions** (extrait exact + correction proposée) et des **relations proposées** parmi les instances réelles du scénario.
-
-**Consignes v2 (26 sept)** : relations **certaines et durables** seulement (pas de conditionnel, pas d'alternative « allié ou rival », pas de simple coexistence), chacune avec une **`preuve`** (citation exacte) ; contradictions limitées aux **faits incompatibles** (nom propre erroné, localisation fausse, relation inversée — pas une formulation différente ni un nom générique). Filet de sécurité : une proposition sans preuve ou au conditionnel est **écartée** (« ⊘ » dans le rapport, compteur « écartée(s) » en console) plutôt que de relancer un appel payant. `VERSION_PROMPT` fait partie de l'empreinte du cache : changer les consignes fait relire les fiches.
-
-Garde-fous : `--estimer` (aucun appel ; coché par défaut dans le GUI), ciblage `--slug`/`--zone`/`--limit N` (plus fort impact d'abord), refus au-delà de 15 appels sans ciblage ni `--tout`, cache `state/audit_lore_cache.json` (`--no-cache`), une panne sur une fiche n'arrête pas les autres. **Coût mesuré** (Mistral large, 26 sept) : ~8-10k jetons d'entrée/fiche, une reprise possible ; une passe complète (826 fiches) ≈ 4-6 $ mais des milliers de propositions à trier — cibler.
-```bash
 python3 generator/audit_lore.py --scenario fortress_world --llm --estimer --limit 10
 python3 generator/audit_lore.py --scenario fortress_world --llm --slug SLUG
+python3 generator/audit_lore.py --all --appliquer --dry-run
 ```
-Les propositions vont dans `documentation/need_action/audit_lore_propositions.yaml` (tous scénarios, chaque entrée porte `scenario` et `preuve` ; jamais écrasées ; **jamais reproposées si rejetées**, voir étape 5).
+Sorties : `documentation/need_action/audit_lore_{scenario}.md` (par scénario), `audit_lore_dernier_lancement.md` (tous les scénarios du dernier lancement, chemin fixe pour le GUI), `audit_lore_propositions.yaml` (propositions LLM, tous scénarios, chaque entrée porte `scenario`, jamais écrasées par un nouveau run), `--json` (résumé, dernière ligne).
 
-#### Étape 5 — onglet ✅ Valider les propositions de l'IA
-Fiche par fiche (groupées par scénario), filtres : scénario, « relations déjà écrites », « contradictions traitées ».
-- **Relations proposées** : type, **nom lisible** et rôle de la cible, raison, extrait cité ; **Garder** (`valide: true`) / **À trier** / **Rejeter** (supprimée du fichier et inscrite dans `state/audit_lore_rejets.json` : `audit_lore.py` ne la reproposera jamais). Chaque clic est enregistré tout de suite (`.yaml.bak`). Une proposition déjà écrite n'est plus modifiable (retirer la relation à la main).
-- **« 1. Simuler l'écriture »** puis **« 2. Écrire dans les fiches »** (actif seulement après une simulation à jour) : lance `audit_lore.py --scenario X --appliquer`, puis la réciprocité (`--reciprocite-seule --ignorer-exclus`) pour inscrire la relation chez la fiche cible. `--appliquer` refuse une relation déjà dans l'autre liste ou qui créerait un conflit ; `.bak` par fiche ; marque `applique: date`.
-- **Contradictions** : extrait, problème, correction proposée, indice « extrait toujours présent / introuvable dans la fiche » (l'IA ne cite pas toujours mot pour mot). **Marquer comme traitée** (masque, ne modifie rien). Si l'extrait est retrouvé : encadré **correction depuis le GUI** — texte de remplacement pré-rempli (modifiable), **Aperçu** (occurrences en-tête/corps, avant/après), **Appliquer dans la fiche** (`.bak_correction`, extrait retrouvé même coupé sur plusieurs lignes, apostrophes doublées automatiquement dans un scalaire YAML entre apostrophes, refus si le frontmatter ne se lirait plus), puis contradiction marquée traitée.
-- Routes : `GET /api/lore/propositions`, `POST /api/lore/propositions/decider`, `/api/lore/propositions/appliquer`, `/api/lore/contradictions/marquer`, `/api/lore/contradictions/corriger`.
+#### `documentation/lore_regles.yaml` — éditable à la main (ou dans le GUI)
+Une section par scénario (+ `_tous`). `zones_quarantaine: [{zone, trajectoires_tolerees, message}]` et `regles: [...]`, chaque règle avec `termes` (mot entier ; casse et accents ignorés, apostrophe typographique comprise) ou `meme_phrase: [[A], [B]]` (un terme de A et un de B dans la même phrase), et options `gravite`, `sensible_casse` (seuls les termes EN MAJUSCULES, ex. NAT, respectent la casse), `sauf_zones`, `exceptions` (ex. `Brest-Litovsk` pour la règle qui cherche Brest), `ignorer_negation` (ignore « n'est pas neutre », « ni neutre »… — négation cherchée dans les ~30 caractères avant le terme), `suggestion`, `message`. Au 25 sept, seul `fortress_world` a des règles : Interzone → Zone Euro Sud ; zones abandonnées (Nordgard, Corridor d'Amsterdam, Zone de Koursk) ; quarantaine Heysham (fiche active localisée = erreur ; mention de lieu Royaume-Uni/Irlande/littoral Manche-Atlantique = à relire, souvent rappel historique légitime) ; NAT non neutre.
 
-#### `documentation/lore_regles.yaml` — éditable à la main (ou depuis l'étape 1)
-Une section par scénario (+ `_tous`). `zones_quarantaine: [{zone, trajectoires_tolerees, message}]` et `regles: [...]`, chaque règle avec `termes` (mot entier ; casse et accents ignorés, apostrophe typographique comprise) ou `meme_phrase: [[A], [B]]` (un terme de A et un de B dans la même phrase), et options `gravite`, `sensible_casse` (seuls les termes EN MAJUSCULES, ex. NAT, respectent la casse), `sauf_zones`, `exceptions` (ex. `Brest-Litovsk` pour Brest — ne s'applique qu'à `termes`, pas à `meme_phrase`), `ignorer_negation` (négation cherchée dans les ~30 caractères avant le terme de B), `suggestion`, `message` (transmis à l'IA de l'étape 4).
-- **fortress_world** : Interzone → Zone Euro Sud ; zones abandonnées (Nordgard, Corridor d'Amsterdam, Zone de Koursk) ; quarantaine Heysham ; NAT non neutre ; **`bruxelles_pas_un_centre`** (à relire : Bruxelles + capitale/siège/cœur politique/gouverne… ; Halifax-Haute seul centre du Bloc Atlantique, Bruxelles-Forteresse = vestiges gouvernés par Ergo-Wian).
-- **reference** (26 sept) : Ergo-Wian non démocratique ; succession d'Ergo-Wian = Hyphan (signale aussi les phrases justes — à relire d'un coup d'œil) ; la démocratie n'est plus la norme (enclaves technofascistes, techno-monarchies à CEO).
-- Autres scénarios : aucune règle (backlog S18).
+#### `corriger_relations_inter_scenarios.py` 🔁 🧩 — générique, à relancer après chaque lot
+Relation `X_autre` sur une fiche du scénario S : remplacée par `X_S` si elle existe (et n'est ni la fiche elle-même ni déjà présente), sinon retirée. Exceptions codées : les 2 alliés `_reference` de la NAT (fortress_world) ; `--garder fiche:relation` pour d'autres. Aperçu par défaut, `--execute` pour écrire (`.bak`). Retire la section « ## Relations » d'une fiche qui n'a plus aucune relation (ce que `write_alliances_patch()` ne fait pas).
 
-#### Autres entrées liées
-- **« Compléter les relations avec l'IA »** (section Entités — création) : l'ancien 🤝, remplissage des alliances/oppositions vides par l'IA puis réciprocité ; payant.
+#### Routine après un lot d'entités
+1. `audit_lore.py --all` ; 2. `corriger_relations_inter_scenarios.py --all` (aperçu puis `--execute`) ; 3. `fix_alliances_oppositions.py --scenario X --reciprocite-seule --ignorer-exclus` (aperçu `--dry-run` d'abord ; `--resoudre-conflits` si l'audit signale des contradictions) ; 4. `validate.py`. Le lot du 24 sept avait laissé ~990 relations à sens unique et 49 inter-scénarios sur les 6 scénarios.
 
-**Pièges connus** : une alliance **secrète** ne doit pas aller dans `alliances` (lues par le générateur d'articles) — l'écrire dans le texte de la fiche comme secrète (cas Vikram/Ergo-Wian, 26 sept). Slugs ≠ noms qui trompent l'IA : `les_veilleurs_des_nappes_phreatiques` = Sentinelles des Aquifères Oubliés ; `conseil_regulation_algorithmique` = Autorité Numérique du Bloc Atlantique (≠ `anba_siege_atlantique`, entreprise maritime).
+#### GUI (section « Nettoyage des entités », sous 🤝)
+- **🔍 Audit du lore** : Scénario/Tous, Inclure les articles, Relecture IA (+ Estimer, Une seule fiche, Une zone, Nombre max ; avancé : lancement complet, ignorer le cache), Appliquer les propositions validées (+ Simulation). Fichiers affichés : rapport du dernier lancement, propositions (éditable : `valide: true`), `lore_regles.yaml` (éditable).
+- **🔀 Corriger les relations entre scénarios** : Scénario/Tous, exception (avancé), Exécuter.
+- `gui_verified: false` pour les deux au 25 sept. Redémarrer Flask après remplacement de `scripts_config.json`.
+
+**Pièges connus** : `write_alliances_patch()` déplace la section « ## Relations » en fin de corps (ou avant « ## Notes ») et la réécrit en liste à puces ; il ne la retire pas quand les deux listes deviennent vides (voir S17).
 
 ---
 
@@ -2349,14 +2325,6 @@ Testé en conditions réelles le 25 juillet sur les 6 scénarios (`--all --write
 python3 scan_geographie_complet.py --all --check-overlays
 ```
 
-### `regenerer_corps_geographie.py` 🔁 🧩 — texte des géographies (26 septembre 2026)
-Chaque `geographie/{scenario}.md` a deux parties : le **frontmatter** (`zones:`), seule référence lue par la Carte et les scripts, et le **corps** markdown (« ## Vue d'ensemble », « ## Zones », « ## Notes »), texte lisible dans Obsidian que **aucun script ne lit** (`enrich_geographie_recursive.py` lit seulement la Vue d'ensemble). Le corps ne suivait pas les modifications du frontmatter (au 26 sept : jusqu'à 29 zones manquantes, origines réelles périmées). Ce script, **sans IA**, reconstruit la section « ## Zones » depuis le frontmatter, en arbre (`###` niveau 1, `####` niveau 2… avec « — sous [[parent]] »), et laisse intacts le frontmatter (octet pour octet), la Vue d'ensemble et les Notes. Même démarche que `fix_lieux_residuels.py` (qui modifie aussi le YAML). Aperçu par défaut, `--execute` écrit (`.bak_corps`) ; « (déjà à jour) » si rien à faire.
-```bash
-python3 generator/regenerer_corps_geographie.py --scenario fortress_world [--execute]
-python3 generator/regenerer_corps_geographie.py --all [--execute]
-```
-**Tenu à jour automatiquement** : toute écriture de la Carte passe par `ZoneRepository._save_geo()`, qui appelle `corps_regenere()` de ce script (importé, pas dupliqué ; en cas d'échec, le frontmatter est écrit quand même). **GUI** : « 📝 Mettre à jour le texte des géographies » (section Géographie — construction), pour les modifications faites par un script ou à la main. **Contrôle** : `validate.py` étape 11/11 (avertissement si le texte est en retard ; `--fix` le réécrit).
-
 ### Restructuration de zones — P7, dans l'onglet Carte (pas un script séparé)
 **Correction d'une confusion documentaire** : ce manuel décrivait auparavant `restructure_zones.py` comme un script `generator/` "planifié, pas encore codé". C'est inexact depuis le 13 juillet — P7 a été construit directement dans l'onglet Carte du GUI (`gui/app.py`/`app.js`), pas comme script séparé. **L'entrée fantôme correspondante dans `scripts_config.json` a été retirée** (confirmé le 2 août 2026 — le panneau compte 18 entrées, aucune trace de `restructure_zones`). Détail complet du workflow en §7 (rename, reparent, split).
 
@@ -2367,7 +2335,7 @@ python3 generator/regenerer_corps_geographie.py --all [--execute]
 ## 5. Validation
 
 ### `validate.py` 🔁 🧩 — **à lancer avant toute génération**
-Vérifie la cohérence complète de la base (10 sections depuis le 16 août 2026, **11 depuis le 26 septembre** : étape 11 « Texte des géographies », avertissement si la section « ## Zones » d'une géographie est en retard sur son frontmatter, corrigé par `--fix` — voir `regenerer_corps_geographie.py` §4) : nomenclature, cohérence systémique (levels/états/trajectoires), cohérence entités/instances, cohérence thématique, wikilinks cassés, matrice d'influence, événements, section 9 — **signaux faibles** (cohérence section 7 ↔ section 12 des fiches variables, ajoutée le 16 août — croise annotations section 7, blocs `signal_to_state` section 12, et `variables_cibles` des fiches d'audit `signaux_custom/*.md` ; ne s'applique qu'aux signaux prouvés custom, ignore le socle initial de juin 2026 qui utilise un format d'annotation antérieur et différent, distinction trouvée après un faux positif massif au premier test réel), et section 10 — **cohérence narrative** (acteurs actifs vs suffixe scénario, delta overflow [-20,130], cohérence des dates d'instances).
+Vérifie la cohérence complète de la base (10 sections depuis le 16 août 2026) : nomenclature, cohérence systémique (levels/états/trajectoires), cohérence entités/instances, cohérence thématique, wikilinks cassés, matrice d'influence, événements, section 9 — **signaux faibles** (cohérence section 7 ↔ section 12 des fiches variables, ajoutée le 16 août — croise annotations section 7, blocs `signal_to_state` section 12, et `variables_cibles` des fiches d'audit `signaux_custom/*.md` ; ne s'applique qu'aux signaux prouvés custom, ignore le socle initial de juin 2026 qui utilise un format d'annotation antérieur et différent, distinction trouvée après un faux positif massif au premier test réel), et section 10 — **cohérence narrative** (acteurs actifs vs suffixe scénario, delta overflow [-20,130], cohérence des dates d'instances).
 ```bash
 python3 validate.py                 # validation complète
 python3 validate.py --verbose / -v  # détail terminal
@@ -2600,11 +2568,7 @@ Chaque entrée définit ses options (checkbox/select/number/slug_select/multi_se
 
 ⚠️ Description "Section génération/entités/maintenance" ci-dessus **périmée** depuis la réorganisation du 12 juillet (8 sections nommées, voir mémoire de session) — à corriger dans une prochaine passe de mise à jour du manuel (dette documentaire connue).
 
-#### `fixed_args` — plusieurs entrées pour un même script (26 septembre 2026)
-Une entrée peut déclarer `"fixed_args": ["--llm"]` : ces arguments sont **toujours** ajoutés à la commande par `app.py` (`/api/run`), avant ceux du formulaire, et n'apparaissent pas dans le formulaire. Permet de donner à un même script plusieurs entrées au rôle distinct (ex. `audit_lore.py` = étape 1 sans `--llm` et étape 4 avec ; `fix_alliances_oppositions.py` = étape 2 avec `--reciprocite-seule`). Section **Relations & lore** (entre Entités — création et Entités — nettoyage) : voir §3 « Relations & lore ». L'onglet ✅ (étape 5) est ajouté par `buildNav()` après les entrées de cette section.
-
 #### `fix_alliances_oppositions.py` — intégré au panneau le 7 août 2026
-*(26 sept : l'entrée d'origine est devenue « Compléter les relations avec l'IA », section Entités — création, sans `--reciprocite-seule` ; la réciprocité seule est l'étape 2 de Relations & lore.)*
 Jusqu'au 5 août, en CLI-only (backlog historique §1.2) — jamais enregistré dans `scripts_config.json`, alors qu'il était déjà devenu une dépendance de production (import direct de `reciprocity_pass()` par `enrich_minimal.py`). **Intégré réellement le 7 août**, cette fois-ci contre le vrai `scripts_config.json` (upload obtenu, schéma vérifié plutôt que deviné) :
 
 - **Nouvelle entrée `fix_alliances_oppositions`** ajoutée section `entites_nettoyage`, juste après `enrich_minimal`. 9 options (`--all`/`--scenario` en exclusion mutuelle avec `required_one_of`, `--slug`, `--limit`, `--dry-run`, `--reciprocite-seule`, `--skip-reciprocite`, `--resoudre-conflits`, `--bascule-en-opposition`). `--bascule-en-opposition` en `depends_on: "--resoudre-conflits"` + `advanced: true` (repliée sous "Options avancées"), même pattern que le "niveau 2" du 26 juillet (correction implique diagnostic parent). Interaction `--resoudre-conflits`/`--skip-reciprocite` documentée en texte dans la description (pas de mécanisme GUI natif pour une dépendance "sauf si l'autre est cochée").
@@ -2963,12 +2927,7 @@ LLM_PROVIDER=claude LLM_MODEL=claude-sonnet-5 python3 generate.py
 ```
 
 ### Renommer une sous-zone depuis l'arbre (24 septembre 2026)
-Les zones niveau 2/3 ont désormais un bouton **✏️ renommer** dans l'arborescence de la Carte (à côté de « ↗️ déplacer ») : petit formulaire slug + nom sous le nœud, **🔍 Évaluer l'impact** puis **✓ Confirmer**, puis l'arbre se recharge avec le nouveau slug. Mêmes routes que le niveau 1 (`/api/carte/impact_renommage_zone`, `/api/carte/renommer_zone`) : `ZoneRepository.rename()` gère tous les niveaux et propage aux enfants, relations allies/rivaux, wikilinks, instances/event_instances, `zones_pays.json` et overlays (avec `.bak`). Couleur/motif/pays restent réservés au niveau 1 (« ✏️ éditer »). Premier usage : `tolosa_saint_sernin_du_desert` → `tolosa` (le LLM de localisation déformait le slug long). L'outil sidebar provisoire `renommer_slug_zone` (remplacement textuel sans `.bak`) a été retiré le même jour. **Limites vues le 26 sept** : l'affichage ne se rafraîchit pas toujours après confirmation (recharger la page) ; le renommage d'une zone ne touche pas une **entité/instance** qui porte le même mot dans son slug (cas `europe_occidentale_reconstructee_reference`, renommée à part par outil ponctuel, `entites/_entities_list.json` compris).
-
-### Créer une sous-zone depuis l'arbre (26 septembre 2026, S16)
-Chaque nœud de l'arbre a un bouton **➕ sous-zone** : formulaire sous le nœud (nom — slug rempli automatiquement —, type, statut, lieu réel d'origine optionnel, description), **🔍 Aperçu** (niveau déduit = parent + 1, rien écrit), puis **Créer la sous-zone** ; l'arbre se recharge. `ZoneRepository.creer_sous_zone()` / `POST /api/carte/creer_sous_zone` (`dry_run` par défaut) : refuse un slug existant ou un parent introuvable ; pas de ménage de pays ni de `zones_pays.json` (une sous-zone ne « possède » pas de pays sur la carte) ; insérée après le dernier descendant du parent ; `.bak` de la géographie, texte « ## Zones » mis à jour automatiquement. Remplace les scripts ponctuels du 24 sept (Paris-Hors, Évry, Tolosa).
-
-**Arbre des zones (26 sept)** : tous les boutons (déplacer, renommer, réviser, éditer, sous-zone) regroupés à droite de la ligne dans un format unique (`.arbre-zone-actions`) ; **panneau latéral de la Carte redimensionnable** (poignée entre carte et panneau, 280-900 px, largeur mémorisée, double-clic = défaut ; la carte se recalcule).
+Les zones niveau 2/3 ont désormais un bouton **✏️ renommer** dans l'arborescence de la Carte (à côté de « ↗️ déplacer ») : petit formulaire slug + nom sous le nœud, **🔍 Évaluer l'impact** puis **✓ Confirmer**, puis l'arbre se recharge avec le nouveau slug. Mêmes routes que le niveau 1 (`/api/carte/impact_renommage_zone`, `/api/carte/renommer_zone`) : `ZoneRepository.rename()` gère tous les niveaux et propage aux enfants, relations allies/rivaux, wikilinks, instances/event_instances, `zones_pays.json` et overlays (avec `.bak`). Couleur/motif/pays restent réservés au niveau 1 (« ✏️ éditer »). Premier usage : `tolosa_saint_sernin_du_desert` → `tolosa` (le LLM de localisation déformait le slug long). L'outil sidebar provisoire `renommer_slug_zone` (remplacement textuel sans `.bak`) a été retiré le même jour. Pas de création directe de sous-zone dans le GUI (S16 du backlog).
 
 ### ⚠ Précaution git — incident du 23 septembre 2026
 **Ne jamais lancer `git checkout -- FICHIER` (ni `git restore`) sur un fichier du vault sans avoir d'abord vérifié `git status`/`git diff FICHIER`.** Le vault accumule couramment plusieurs semaines de modifications non committées : un checkout ramène le fichier au dernier commit et efface silencieusement tout ce travail. Cas réel : après un test, `git checkout` de `geographie/breakdown.md` et `gui/zones_pays.json` a effacé un nettoyage du 13 sept (Sénégal) et ~2 mois d'affectations dans `zones_pays.json` (dernier commit de ce fichier : fin juillet). Récupéré grâce aux `.bak` (écrits avant chaque écriture par le GUI) et à leur présence dans un commit intermédiaire (`git show COMMIT:gui/zones_pays.json.bak`). Réflexe : **commiter avant tout test**, et restaurer après test depuis ce commit-là.
