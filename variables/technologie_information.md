@@ -77,6 +77,10 @@ simulation:
   systemic_criticality: 5
   resilience: 3
   adaptability: 5
+echelle:
+  type: intensite
+  zero: "réseaux sobres et fiables, faible dépendance aux plateformes"
+  cent: "fragmentation des réseaux, désinformation, rupture des IA interconnectées"
 states:
 
   fortress_world:
@@ -380,6 +384,7 @@ _extended_
 
 **custom (signaux d'actualité)**
 - adoption massive d'agents IA autonomes dans les systèmes administratifs (→ signal_custom: ia_agents_administratifs_autonomes, source: actualite)
+- émergence des prompteurs puis bergers/dresseurs d'IA comme caste de traducteurs investie d'une autorité quasi religieuse (→ signal_custom: clerge_prompteurs_ia, source: idee_david_2026-09)
 
 ## 8. États par scénario
 ### [[fortress_world]]
@@ -728,4 +733,31 @@ signal_to_state:
         evolution: généralisation progressive des agents IA dans les administrations
         date_bascule: 2025-2040
         evenement_cle: premier déploiement massif d'agents IA administratifs en UE 2032
+
+  - signal: clerge_prompteurs_ia
+    scenarios:
+      breakdown:
+        evolution: caste des dresseurs d'IA devient secte survivaliste post-effondrement
+        date_bascule: 2045-2062
+        evenement_cle: schisme des prompteurs de Detroit-Sud 2054
+      fortress_world:
+        evolution: bergers d'IA forment clergé souverain des blocs géopolitiques
+        date_bascule: 2038-2054
+        evenement_cle: Bloc Sibérien instaure son Collège des Traducteurs Sacrés 2047
+      new_sustainability:
+        evolution: prompteurs certifiés deviennent médiateurs IA-humain régulés mondialement
+        date_bascule: 2033-2048
+        evenement_cle: Accord de Séoul sur la certification des interfaces IA 2041
+      eco_communalism:
+        evolution: savoir-faire des prompteurs préservé dans les assemblées bioterritoriales
+        date_bascule: 2040-2057
+        evenement_cle: charte bioterritoriale des gardiens de langage IA
+      policy_reform:
+        evolution: régulation des prompteurs comme profession clé de transparence algorithmique
+        date_bascule: 2029-2044
+        evenement_cle: UE adopte la norme d'auditabilité des requêtes IA 2036
+      reference:
+        evolution: prompteurs professionnels dominent l'interface avec les IA opaques
+        date_bascule: 2027-2042
+        evenement_cle: premier syndicat mondial des prompteurs IA reconnu 2035
 ```

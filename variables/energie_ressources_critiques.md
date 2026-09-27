@@ -58,6 +58,10 @@ simulation:
   systemic_criticality: 5
   resilience: 2
   adaptability: 3
+echelle:
+  type: intensite
+  zero: "abondance énergétique, aucune contrainte d'accès aux ressources"
+  cent: "pénurie systémique, conflits généralisés pour les ressources"
 states:
 
   fortress_world:

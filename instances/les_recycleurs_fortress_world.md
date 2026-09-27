@@ -74,7 +74,7 @@ injection:
   - variable: organisation_territoires
     delta_level: 12
     duree: 25
-    polarite: -1
+    polarite: 1
   propagation:
     via_matrice: true
 

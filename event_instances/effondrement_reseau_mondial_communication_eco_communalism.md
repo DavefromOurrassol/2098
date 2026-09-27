@@ -38,11 +38,11 @@ impact_sur_variables:
   - variable: organisation_territoires
     delta_level: 8
     duree: 50
-    polarite: 1
+    polarite: -1
   - variable: valeurs_culture_tempo_sociale
     delta_level: 6
     duree: 45
-    polarite: 1
+    polarite: -1
 propagation:
   via_matrice: false
 acteurs_impliques: []
@@ -71,8 +71,8 @@ principe de sobriété numérique.
 
 ## Impact sur les variables
 - **technologie_information** : delta -10 sur 15 ans (impact initial)
-- **organisation_territoires** : delta +8 sur 50 ans
-- **valeurs_culture_tempo_sociale** : delta +6 sur 45 ans
+- **organisation_territoires** : delta -8 sur 50 ans
+- **valeurs_culture_tempo_sociale** : delta -6 sur 45 ans
 
 ## Note de cohérence
 Impact négatif initial modéré puis fort impact positif sur les dynamiques

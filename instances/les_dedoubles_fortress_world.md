@@ -66,15 +66,15 @@ injection:
   - variable: technologie_information
     delta_level: 8
     duree: 15
-    polarite: 1
+    polarite: -1
   - variable: geopolitique_conflits
-    delta_level: -5
+    delta_level: 5
     duree: 10
-    polarite: -1
+    polarite: 1
   - variable: gouvernance_institutions
-    delta_level: -6
+    delta_level: 6
     duree: 20
-    polarite: -1
+    polarite: 1
   propagation:
     via_matrice: false
 

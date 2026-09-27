@@ -27,8 +27,8 @@ variable_states:
     level: 65
     trend: stable
   gouvernance_institutions:
-    level: 80
-    trend: up
+    level: 10
+    trend: down
   geopolitique_conflits:
     level: 30
     trend: down
@@ -36,29 +36,29 @@ variable_states:
     level: 55
     trend: stable
   organisation_territoires:
-    level: 60
+    level: 35
     trend: up
   sante_biotechnologies:
-    level: 75
-    trend: up
+    level: 30
+    trend: down
   frontieres_du_systeme:
-    level: 55
+    level: 20
     trend: up
   technologie_information:
-    level: 95
-    trend: up
+    level: 70
+    trend: down
   climat_environnement_global:
-    level: 75
-    trend: up
+    level: 35
+    trend: down
   energie_ressources_critiques:
-    level: 85
-    trend: up
+    level: 38
+    trend: down
   demographie_mobilite_humaine:
-    level: 60
-    trend: up
+    level: 45
+    trend: down
   systemes_productifs_travail:
-    level: 80
-    trend: up
+    level: 50
+    trend: down
 triggers:
   - accords climatiques globaux
   - percées IA majeures
@@ -79,6 +79,7 @@ system_effects:
   environment:
     - stabilisation progressive des écosystèmes
     - réduction des pressions climatiques et environnementales
+convention_echelle: intensite_2026-09-27
 ---
 
 # new_sustainability
@@ -134,17 +135,17 @@ system_effects:
 | Variable | Level | Trend |
 |---|---|---|
 | [[systeme_economique_redistribution]] | 65 | stable |
-| [[gouvernance_institutions]] | 80 | up |
+| [[gouvernance_institutions]] | 10 | down |
 | [[geopolitique_conflits]] | 30 | down |
 | [[valeurs_culture_tempo_sociale]] | 55 | stable |
-| [[organisation_territoires]] | 60 | up |
-| [[sante_biotechnologies]] | 75 | up |
-| [[frontieres_du_systeme]] | 55 | up |
-| [[technologie_information]] | 95 | up |
-| [[climat_environnement_global]] | 75 | up |
-| [[energie_ressources_critiques]] | 85 | up |
-| [[demographie_mobilite_humaine]] | 60 | up |
-| [[systemes_productifs_travail]] | 80 | up |
+| [[organisation_territoires]] | 35 | up |
+| [[sante_biotechnologies]] | 30 | down |
+| [[frontieres_du_systeme]] | 20 | up |
+| [[technologie_information]] | 70 | down |
+| [[climat_environnement_global]] | 35 | down |
+| [[energie_ressources_critiques]] | 38 | down |
+| [[demographie_mobilite_humaine]] | 45 | down |
+| [[systemes_productifs_travail]] | 50 | down |
 
 ## 5. Forces dominantes
 - régénération écologique globale

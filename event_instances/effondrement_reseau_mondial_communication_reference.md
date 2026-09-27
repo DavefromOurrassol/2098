@@ -36,11 +36,11 @@ impact_sur_variables:
   - variable: technologie_information
     delta_level: 15
     duree: 30
-    polarite: -1
+    polarite: 1
   - variable: gouvernance_institutions
     delta_level: 6
     duree: 20
-    polarite: -1
+    polarite: 1
   - variable: geopolitique_conflits
     delta_level: 8
     duree: 30
@@ -73,8 +73,8 @@ souverainistes numériques. Conscience accrue de la fragilité sans
 transformation structurelle réelle.
 
 ## Impact sur les variables
-- **technologie_information** : delta -15 sur 30 ans
-- **gouvernance_institutions** : delta -6 sur 20 ans
+- **technologie_information** : delta +15 sur 30 ans
+- **gouvernance_institutions** : delta +6 sur 20 ans
 - **geopolitique_conflits** : delta +8 sur 30 ans
 
 ## Note de cohérence

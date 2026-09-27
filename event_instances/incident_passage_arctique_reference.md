@@ -50,15 +50,15 @@ impact_sur_variables:
 - variable: geopolitique_conflits
   delta_level: 12
   duree: 15
-  polarite: -1
+  polarite: 1
 - variable: frontieres_du_systeme
   delta_level: 10
   duree: 20
-  polarite: -1
+  polarite: 1
 - variable: energie_ressources_critiques
-  delta_level: -8
+  delta_level: 8
   duree: 10
-  polarite: -1
+  polarite: 1
 propagation:
   via_matrice: true
 acteurs_impliques:
@@ -93,8 +93,8 @@ Les eaux grises du Passage Nord-Ouest, déglaciées depuis deux décennies, sont
 L'incident cristallise la fracture de gouvernance arctique en forçant les blocs signataires du Pacte Énergétique Multilatéral à prendre position sur le statut juridique des opérateurs para-étatiques dans les corridors maritimes. À moyen terme, la procédure devant le Tribunal International de la Mer pourrait aboutir à un précédent normatif redéfinissant les droits de transit arctiques — mais risque également de s'enliser dans une impasse institutionnelle si l'ALN refuse sa juridiction, renforçant la logique de milices concurrentes des droits de passage dans l'ensemble de la région.
 
 ## Impact sur les variables
-- **geopolitique_conflits** : delta -12 sur 15 ans
-- **frontieres_du_systeme** : delta -10 sur 20 ans
+- **geopolitique_conflits** : delta +12 sur 15 ans
+- **frontieres_du_systeme** : delta +10 sur 20 ans
 - **energie_ressources_critiques** : delta +8 sur 10 ans
 
 ## Acteurs impliqués

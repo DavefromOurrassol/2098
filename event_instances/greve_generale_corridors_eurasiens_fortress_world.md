@@ -24,7 +24,7 @@ impact_sur_variables:
   - variable: systemes_productifs_travail
     delta_level: 20
     duree: 15
-    polarite: -1
+    polarite: 1
   - variable: geopolitique_conflits
     delta_level: 15
     duree: 10
@@ -36,7 +36,7 @@ impact_sur_variables:
   - variable: gouvernance_institutions
     delta_level: 12
     duree: 12
-    polarite: -1
+    polarite: 1
 propagation:
   via_matrice: true
 acteurs_impliques:
@@ -68,10 +68,10 @@ Le 12 octobre 2039, les travailleurs des corridors eurasiens déclenchent une gr
 La grève accélère la balkanisation des corridors eurasiens : les Régimes Autoritaires du Bloc Eurasiatique Occidental renforcent leur contrôle militaire sur les axes stratégiques, tandis que les zones grises se multiplient, abritant désormais des économies parallèles de contrebande énergétique et de réparation d'infrastructures critiques. Les revendications des grévistes — reconnaissance du statut de 'travailleurs critiques' et accès aux thérapies géniques anti-pollution — deviennent un symbole de résistance dans les marges des blocs, inspirant des mouvements similaires dans les Ceintures Productives d'autres forteresses. Le Pacte des Forteresses Souveraines, déjà fragile, se fracture davantage sur la question des droits des travailleurs mobiles.
 
 ## Impact sur les variables
-- **systemes_productifs_travail** : delta -20 sur 15 ans
+- **systemes_productifs_travail** : delta +20 sur 15 ans
 - **geopolitique_conflits** : delta +15 sur 10 ans
 - **sante_biotechnologies** : delta +10 sur 8 ans
-- **gouvernance_institutions** : delta -12 sur 12 ans
+- **gouvernance_institutions** : delta +12 sur 12 ans
 
 ## Acteurs impliqués
 - [[regimes_autoritaires_du_bloc_eurasiatique_occidental_fortress_world]]

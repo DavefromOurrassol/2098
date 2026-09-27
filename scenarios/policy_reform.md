@@ -23,41 +23,41 @@ constrained_variables:
   - [[valeurs_culture_tempo_sociale]]
 variable_states:
   systeme_economique_redistribution:
-    level: 60
+    level: 55
     trend: stable
   gouvernance_institutions:
-    level: 85
-    trend: up
+    level: 20
+    trend: down
   geopolitique_conflits:
-    level: 35
+    level: 45
     trend: down
   valeurs_culture_tempo_sociale:
-    level: 45
+    level: 50
     trend: stable
   organisation_territoires:
     level: 50
     trend: stable
   sante_biotechnologies:
-    level: 70
-    trend: up
+    level: 45
+    trend: down
   frontieres_du_systeme:
     level: 55
     trend: up
   technologie_information:
-    level: 90
-    trend: up
-  climat_environnement_global:
-    level: 55
-    trend: up
-  energie_ressources_critiques:
     level: 65
-    trend: up
+    trend: down
+  climat_environnement_global:
+    level: 45
+    trend: down
+  energie_ressources_critiques:
+    level: 58
+    trend: down
   demographie_mobilite_humaine:
     level: 50
-    trend: down
-  systemes_productifs_travail:
-    level: 75
     trend: up
+  systemes_productifs_travail:
+    level: 60
+    trend: down
 triggers:
   - choc climatique global
   - crise énergétique systémique
@@ -78,6 +78,7 @@ system_effects:
   environment:
     - stabilisation partielle des écosystèmes
     - mise en œuvre coordonnée de politiques climatiques
+convention_echelle: intensite_2026-09-27
 ---
 
 # policy_reform
@@ -131,18 +132,18 @@ Monde caractérisé par un renforcement majeur des institutions globales et des 
 ## 4A. États des variables
 | Variable | Level | Trend |
 |---|---|---|
-| [[systeme_economique_redistribution]] | 60 | stable |
-| [[gouvernance_institutions]] | 85 | up |
-| [[geopolitique_conflits]] | 35 | down |
-| [[valeurs_culture_tempo_sociale]] | 45 | stable |
+| [[systeme_economique_redistribution]] | 55 | stable |
+| [[gouvernance_institutions]] | 20 | down |
+| [[geopolitique_conflits]] | 45 | down |
+| [[valeurs_culture_tempo_sociale]] | 50 | stable |
 | [[organisation_territoires]] | 50 | stable |
-| [[sante_biotechnologies]] | 70 | up |
+| [[sante_biotechnologies]] | 45 | down |
 | [[frontieres_du_systeme]] | 55 | up |
-| [[technologie_information]] | 90 | up |
-| [[climat_environnement_global]] | 55 | up |
-| [[energie_ressources_critiques]] | 65 | up |
-| [[demographie_mobilite_humaine]] | 50 | down |
-| [[systemes_productifs_travail]] | 75 | up |
+| [[technologie_information]] | 65 | down |
+| [[climat_environnement_global]] | 45 | down |
+| [[energie_ressources_critiques]] | 58 | down |
+| [[demographie_mobilite_humaine]] | 50 | up |
+| [[systemes_productifs_travail]] | 60 | down |
 
 ## 5. Forces dominantes
 - centralisation des décisions globales

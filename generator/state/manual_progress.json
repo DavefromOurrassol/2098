@@ -21,27 +21,52 @@
       ],
       "filepath": null,
       "status": "previewed"
+    },
+    {
+      "thematique": "societe",
+      "date_fictive": "17 janvier 2098",
+      "scenario": "policy_reform",
+      "ligne_editoriale": "opposition",
+      "metadata": {
+        "scenario": "policy_reform",
+        "thematique": "societe",
+        "format": "reportage",
+        "longueur": "700 à 1000 mots",
+        "ligne_editoriale": "opposition"
+      },
+      "state_of_system": "stable",
+      "tension_level": 4,
+      "pilot_variables": [
+        "gouvernance_institutions",
+        "technologie_information",
+        "energie_ressources_critiques",
+        "climat_environnement_global"
+      ],
+      "filepath": null,
+      "status": "previewed"
     }
   ],
   "pending": {
-    "thematique": "societe",
-    "date_fictive": "17 janvier 2098",
-    "scenario": "policy_reform",
+    "thematique": "religion_spiritualite",
+    "date_fictive": "7 août 2098",
+    "scenario": "fortress_world",
     "ligne_editoriale": "opposition",
     "metadata": {
-      "scenario": "policy_reform",
-      "thematique": "societe",
-      "format": "reportage",
-      "longueur": "700 à 1000 mots",
-      "ligne_editoriale": "opposition"
+      "scenario": "fortress_world",
+      "thematique": "religion_spiritualite",
+      "format": "chronique",
+      "longueur": "400 à 700 mots",
+      "ligne_editoriale": "opposition",
+      "type_diffusion": "ecrit",
+      "journaliste": "Danylo Kovalenko"
     },
-    "state_of_system": "stable",
-    "tension_level": 4,
+    "state_of_system": "instable",
+    "tension_level": 5,
     "pilot_variables": [
-      "gouvernance_institutions",
-      "technologie_information",
+      "geopolitique_conflits",
       "energie_ressources_critiques",
-      "climat_environnement_global"
+      "gouvernance_institutions",
+      "organisation_territoires"
     ]
   }
 }

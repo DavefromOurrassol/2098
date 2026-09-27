@@ -32,11 +32,11 @@ impact_sur_variables:
   - variable: energie_ressources_critiques
     delta_level: 12
     duree: 12
-    polarite: -1
+    polarite: 1
   - variable: organisation_territoires
     delta_level: 8
     duree: 8
-    polarite: -1
+    polarite: 1
 propagation:
   via_matrice: true
 acteurs_impliques:
@@ -64,8 +64,8 @@ Le conflit accélère la régionalisation forcée des échanges, avec l'émergen
 ## Impact sur les variables
 - **geopolitique_conflits** : delta +15 sur 15 ans
 - **demographie_mobilite_humaine** : delta +10 sur 10 ans
-- **energie_ressources_critiques** : delta -12 sur 12 ans
-- **organisation_territoires** : delta -8 sur 8 ans
+- **energie_ressources_critiques** : delta +12 sur 12 ans
+- **organisation_territoires** : delta +8 sur 8 ans
 
 ## Acteurs impliqués
 - [[agence_de_regulation_des_detroits_strategiques_ards_breakdown]]

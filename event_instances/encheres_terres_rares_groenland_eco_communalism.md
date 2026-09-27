@@ -22,21 +22,21 @@ realisation: >
   Le Fonds des Terres Émergées du Kalaallit Nunaat organise effectivement les enchères, mais dans un monde où les blocs géopolitiques classiques sont déjà partiellement désintégrés, les offres proviennent autant de consortiums néo-industriels résiduels que de coalitions de communs septentrionaux cherchant à bloquer l'extraction. La Confédération des Communs de l'Arc Septentrional tente de se porter candidate au nom d'une 'gestion bioterritoriale partagée', sans disposer des masses financières des opérateurs extractivistes. Les 72 heures d'enchères se transforment en crise de légitimité : plusieurs assemblées bioterritoriales régionales refusent de reconnaître la légalité de la vente, tandis que les Gardiens du Territoire publient un manifeste commun avec des communautés inuit dissidentes contestant le droit du Fonds à aliéner des ressources souterraines au nom de populations vivantes.
 impact_sur_variables:
   - variable: energie_ressources_critiques
-    delta_level: -8
+    delta_level: 8
     duree: 15
-    polarite: -1
+    polarite: 1
   - variable: geopolitique_conflits
     delta_level: 10
     duree: 10
-    polarite: -1
+    polarite: 1
   - variable: gouvernance_institutions
-    delta_level: -7
+    delta_level: 7
     duree: 12
-    polarite: -1
+    polarite: 1
   - variable: organisation_territoires
     delta_level: 6
     duree: 18
-    polarite: 1
+    polarite: -1
 propagation:
   via_matrice: true
 acteurs_impliques:
@@ -67,9 +67,9 @@ La vente partielle se conclut dans l'ambiguïté : deux lots sont attribués à 
 
 ## Impact sur les variables
 - **energie_ressources_critiques** : delta +8 sur 15 ans
-- **geopolitique_conflits** : delta -10 sur 10 ans
+- **geopolitique_conflits** : delta +10 sur 10 ans
 - **gouvernance_institutions** : delta +7 sur 12 ans
-- **organisation_territoires** : delta +6 sur 18 ans
+- **organisation_territoires** : delta -6 sur 18 ans
 
 ## Acteurs impliqués
 - [[kalaallit_nunaat_sovereign_fund_eco_communalism]]

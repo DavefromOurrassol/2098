@@ -25,15 +25,15 @@ impact_sur_variables:
   - variable: technologie_information
     delta_level: 8
     duree: 20
-    polarite: 1
+    polarite: -1
   - variable: gouvernance_institutions
     delta_level: 6
     duree: 25
-    polarite: 1
+    polarite: -1
   - variable: organisation_territoires
     delta_level: 12
     duree: 20
-    polarite: 1
+    polarite: -1
 propagation:
   via_matrice: true
 acteurs_impliques:
@@ -64,9 +64,9 @@ Agadez, octobre 2062 — La ville-carrefour, jadis symbole de la fragilité sah�
 La Charte d'Agadez ouvre une fracture productive au sein de la gouvernance technocratique mondiale : elle contraint le Bureau de Gouvernance Algorithmique et le Parlement des Territoires à intégrer un troisième niveau de souveraineté numérique, ni étatique ni corporatif, ancré dans les communautés hors-grille. À moyen terme, elle accélère la diffusion du modèle sahélien vers l'Afrique subsaharienne, l'Asie du Sud-Est insulaire et l'Amazonie, renforçant le Réseau des Communs Numériques Globaux comme contre-poids légitime aux enclaves de données propriétaires des mégacorporations.
 
 ## Impact sur les variables
-- **technologie_information** : delta +8 sur 20 ans
-- **gouvernance_institutions** : delta +6 sur 25 ans
-- **organisation_territoires** : delta +12 sur 20 ans
+- **technologie_information** : delta -8 sur 20 ans
+- **gouvernance_institutions** : delta -6 sur 25 ans
+- **organisation_territoires** : delta -12 sur 20 ans
 
 ## Acteurs impliqués
 - [[ligue_des_cites_du_sahel_numerique_new_sustainability]]

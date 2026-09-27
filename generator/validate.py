@@ -1195,7 +1195,9 @@ def validate_events(result):
                 # Cohérence delta ↔ level
                 delta    = imp.get("delta_level", 0)
                 polarite = imp.get("polarite", 1)
-                delta_reel = delta * polarite
+                # Convention de signe (27 septembre 2026) : alignée sur snapshot.py --
+                # polarite porte seule le sens, delta_level seulement la force.
+                delta_reel = abs(delta) * polarite
 
                 if sc and var and sc in var_levels and var in var_levels[sc]:
                     level = float(var_levels[sc].get(var, 50) or 50)
@@ -1495,7 +1497,9 @@ def validate_narrative_coherence(result, force=False):
                 continue
             delta    = imp.get("delta_level", 0) or 0
             polarite = imp.get("polarite", 1) or 1
-            delta_reel = delta * polarite
+            # Convention de signe (27 septembre 2026) : alignée sur snapshot.py --
+            # polarite porte seule le sens, delta_level seulement la force.
+            delta_reel = abs(delta) * polarite
 
             if sc in var_levels and var in var_levels[sc]:
                 level = float(var_levels[sc].get(var, 50) or 50)

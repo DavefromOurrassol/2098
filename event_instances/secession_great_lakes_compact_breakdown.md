@@ -24,19 +24,19 @@ impact_sur_variables:
   - variable: organisation_territoires
     delta_level: 8
     duree: 25
-    polarite: -1
+    polarite: 1
   - variable: gouvernance_institutions
-    delta_level: -10
+    delta_level: 10
     duree: 30
-    polarite: -1
+    polarite: 1
   - variable: geopolitique_conflits
     delta_level: 12
     duree: 20
-    polarite: -1
+    polarite: 1
   - variable: energie_ressources_critiques
     delta_level: 10
     duree: 25
-    polarite: -1
+    polarite: 1
   - variable: climat_environnement_global
     delta_level: 4
     duree: 15
@@ -68,10 +68,10 @@ L'été 2053, Chicago-Lacustre est pavoisée de drapeaux bleus à onde blanche. 
 Le Compact des Grands Lacs devient immédiatement une cible géopolitique de premier ordre : l'eau douce qu'il contrôle est une ressource que les factions étatiques résiduelles du Midwest et du Sud-Est américain réclament par la force ou la négociation. Les milices d'accaparement hydrique prolifèrent aux marges du territoire revendiqué, tandis que les nations autochtones membres du Compact tentent de consolider un modèle de gouvernance par les communs que nul État voisin ne reconnaît — et que plusieurs cherchent activement à démanteler. Le précédent inspire une douzaine d'autres entités régionales sur le continent, accélérant la désintégration du cadre fédéral américain au-delà de tout seuil de récupération.
 
 ## Impact sur les variables
-- **organisation_territoires** : delta -8 sur 25 ans
+- **organisation_territoires** : delta +8 sur 25 ans
 - **gouvernance_institutions** : delta +10 sur 30 ans
-- **geopolitique_conflits** : delta -12 sur 20 ans
-- **energie_ressources_critiques** : delta -10 sur 25 ans
+- **geopolitique_conflits** : delta +12 sur 20 ans
+- **energie_ressources_critiques** : delta +10 sur 25 ans
 - **climat_environnement_global** : delta +4 sur 15 ans
 
 ## Acteurs impliqués

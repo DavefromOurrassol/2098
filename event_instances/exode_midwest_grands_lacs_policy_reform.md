@@ -24,19 +24,19 @@ impact_sur_variables:
   - variable: demographie_mobilite_humaine
     delta_level: 12
     duree: 25
-    polarite: -1
+    polarite: 1
   - variable: organisation_territoires
-    delta_level: -10
+    delta_level: 10
     duree: 20
-    polarite: -1
+    polarite: 1
   - variable: gouvernance_institutions
     delta_level: 8
     duree: 15
     polarite: 1
   - variable: climat_environnement_global
-    delta_level: -8
+    delta_level: 8
     duree: 30
-    polarite: -1
+    polarite: 1
 propagation:
   via_matrice: true
 acteurs_impliques:
@@ -65,7 +65,7 @@ L'été 2044 entre dans les annales comme celui de la Grande Canicule du Midwest
 L'exode du Midwest amorce une recomposition territoriale durable de l'Amérique du Nord : les zones lacustres deviennent les nouveaux centres démographiques et politiques du continent, forçant une révision profonde des cadres de gouvernance territoriale et de la fiscalité fédérale. Le CGLAGHI sort renforcé comme modèle de gouvernance infranationale résiliente, mais les tensions entre populations autochtones, résidents historiques et nouveaux arrivants alimentent un mouvement de résistance aux relocalisations forcées qui contestera durablement l'autorité des institutions technocratiques. À l'échelle globale, l'événement sert de cas de référence aux débats sur les droits des migrants climatiques internes et pousse à une réforme du droit international de la mobilité humaine.
 
 ## Impact sur les variables
-- **demographie_mobilite_humaine** : delta -12 sur 25 ans
+- **demographie_mobilite_humaine** : delta +12 sur 25 ans
 - **organisation_territoires** : delta +10 sur 20 ans
 - **gouvernance_institutions** : delta +8 sur 15 ans
 - **climat_environnement_global** : delta +8 sur 30 ans

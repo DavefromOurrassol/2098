@@ -61,13 +61,13 @@ injection:
     Le RCSP a accéléré la fragmentation territoriale en normalisant l'idée de zones souveraines privées, tout en affaiblissant les institutions publiques par son exemple de gouvernance parallèle. Son impact économique est négatif car il a concentré des ressources critiques (eau, énergie, données) entre les mains d'une minorité, mais il a aussi créé un précédent pour des modèles d'autogestion locale dans les zones abandonnées par les États.
   impact_sur_variables:
   - variable: systeme_economique_redistribution
-    delta_level: -8
+    delta_level: 8
     duree: 25
-    polarite: -1
+    polarite: 1
   - variable: gouvernance_institutions
-    delta_level: -5
+    delta_level: 5
     duree: 20
-    polarite: -1
+    polarite: 1
   - variable: organisation_territoires
     delta_level: 6
     duree: 15

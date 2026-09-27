@@ -1,6 +1,6 @@
 # Manuel utilisateur complet — Pipeline Ourrassol 2098
 *Référence à jour au 3 septembre 2026, complétée au fil des sessions
-(dernier ajout : 26 septembre 2026) — couvre `generator/` (42+ scripts
+(dernier ajout : 27 septembre 2026) — couvre `generator/` (42+ scripts
 Python) et `gui/` (Flask). Historique complet des sessions et
 chantiers (bugs trouvés, itérations, tests réels) dans
 `USER_MANUAL_HISTORIQUE.md`, à uploader seulement au besoin.*
@@ -85,6 +85,8 @@ Ces fichiers sont importés par les scripts exécutables ; ils n'ont pas de `__m
 | `llm_client.py` | Abstraction unifiée Mistral/Claude/OpenAI. `LLM_PROVIDER`/`LLM_MODEL` (env, override manuel prioritaire). `TASK_TIER_DEFAULTS` + `resolve_for_tier(task_tier)` pour le routing par défaut. Exporte `call_llm(..., task_tier=...)`. |
 | `extract_state_logic.py` *(14 juillet)* | Parseur générique `variables/{variable}.md → states.{scenario}.state_logic`. Sanitise les clés wikilink Obsidian (`[[xxx]]`) des blocs `coupling_intensity` avant `yaml.safe_load` (sinon `unhashable key`). Utilisable en CLI (`--json`, `--scenario`) ou en import (`extract_state_logic(path)`). |
 | `patrons_spatiaux.py` *(14 juillet)* | Source de vérité du patron spatial par scénario, pour P24 (générateur top-down) et P22 signal 2 (garde-fou étendu). `state_logic`/`state_logic_complementaire` chargés dynamiquement depuis le vault à chaque import via `extract_state_logic.py` (jamais figés en dur) ; `patron_a_respecter`/`a_eviter` écrits à la main dans `_ANALYSE`, à revalider si un scénario change en profondeur. Config : `OURRASSOL_VAULT_ROOT` (env), sinon déduit de l'emplacement du fichier. **Consommé depuis le 15 juillet par `complete_geographie_coverage.py`** (P24 étape B, voir §4) via `patron_spatial_prompt_block()`. |
+| `echelles.py` *(27 septembre 2026)* | Échelle de chaque variable (bloc `echelle:` des fiches `variables/`) et convention d'intensité. `charger_echelles()`, `texte_echelle(slug)`, `CONVENTION_NIVEAUX`, `CONSIGNE_IMPACT` (texte injecté dans les prompts d'injection), `verifier_impact(delta_level, polarite)` (contrôle d'un impact produit par l'IA). Voir §3ter. |
+| `dynamique.py` *(27 septembre 2026)* | Moteur de propagation dynamique, pur calcul, sans IA ni écriture : `simuler()`, `chocs_depuis_donnees()`, `couplages()`, `k_effectif()`, `niveau_sature()`, et depuis l'après-midi du 27 septembre la **persistance** des chocs (`PERSISTANCE`, `DEMI_VIE_PAR_TYPE`, `normaliser_persistance()`, `demi_vie_choc()`, `persistance_instance()`). Appelé par `snapshot.py` (`appliquer_dynamique`), `trace_injection.py` et `banc_calibration.py`. Voir §3ter. |
 | `instance_generation_common.py` *(nouveau, 9 août 2026 ; enrichi le 13 août 2026)* | Module partagé factorisant la logique de génération d'UNE instance (construction du prompt, appel LLM, validation, écriture fichier), jusqu'ici dupliquée entre `generate_instances.py` et `create_entities_and_instances.py` — **~20 fonctions dupliquées, dont plusieurs avaient déjà divergé silencieusement** avant la factorisation : `call_claude_json()` (le correctif du 11 juillet sur le NameError `resp` n'existait que dans `create_entities_and_instances.py`), `validate_instance()` (contrôle de plage [0-5] sur les scores d'impact absent côté `generate_instances.py`), `MAX_TOKENS` (`generate_instances.py` resté à 2000, jugé insuffisant, `create_entities_and_instances.py` déjà relevé à 4000 — unifié à 4000). Contient aussi toute la logique du chantier `trajectoire` (voir §3bis) : `VALID_TRAJECTOIRE`, `TRAJECTOIRE_INACTIVES`, construction du prompt avec consigne dédiée à l'axe narratif unique. `process_entity_scenario()` gère le `hard_constraint` (rôle + trajectoire + `est_clandestin` optionnel) pour le mode custom. Les deux scripts appelants gardent leur logique propre (argparse, boucle principale, mode interactif de création côté `create_entities_and_instances.py`) — seule la mécanique partagée vit ici. Trois erreurs de transcription trouvées et corrigées en session lors de la construction de ce module (parsing de wikilinks dans `parse_md()`, algorithme de `_est_ligne_separateur()`/`_parse_registre_table()`, champ lu par `load_variables_states()`) — toutes détectées par diff systématique contre le code source réel avant livraison, aucune n'a atteint le vault. **Ajout du 13 août 2026 (chantier "dimension temporelle", voir §2)** : `TEMPORAL_BANDS` (3 bandes larges — proche 2026-2035, moyen 2036-2060, lointain 2061-2098), `compute_temporal_distribution(year_counts)` (regroupe par bande + détecte les concentrations par année exacte, seuil 12% du total si l'échantillon atteint 15), `format_temporal_summary()`/`format_concentration_warnings()` (lignes de résumé prêtes à insérer dans un prompt LLM). Utilisées symétriquement par `create_entities_and_instances.py` (`annee_debut`) et `inject_custom_events.py` (`date`). Aussi ajouté : `load_registre_text()`, alias public de `_read_registre_text()` pour un accès externe au texte brut du registre. |
 
 ---
@@ -317,6 +319,9 @@ cascade (même mécanisme que `undo_custom`), route `/api/trace/<slug>`
 dans `app.py` (subprocess + JSON, même pattern que les autres appels
 `--json` du pipeline). Testé en conditions réelles par David sur
 plusieurs slugs.
+
+**Depuis le 27 septembre 2026** : section « Effet sur le monde » (moteur
+dynamique), récit IA vérifié et graphique GUI — voir §3ter.
 
 **Mis à jour le 10 août 2026** : scan de `articles/` rendu récursif
 (`glob("**/*.md")` au lieu de `glob("*.md")`) — sinon les articles
@@ -1516,6 +1521,13 @@ pour le détail : écrase `date`/`date_label` par le mois de parution
 actif, pour capturer un sujet de l'édition en cours sans laisser le LLM
 deviner un mois.
 
+**Champ `persistance` (27 septembre 2026)** — `ephemere | normale | durable |
+permanente` (défaut `normale`), durée de l'effet chiffré après sa montée
+(voir §3ter). À ne pas confondre avec `intensite`, qui oriente la FORCE.
+Vérifié avant tout appel LLM (valeur inconnue → `needs_review`), écrit dans
+l'archétype et dans chaque instance ; en mode `auto`, une valeur inventée
+par le LLM est ramenée à `normale`. Formulaire GUI : menu « Persistance ».
+
 **Mode `--idea` (3 septembre 2026)** — voir §2quinquies, section
 "Promouvoir un événement" : injecte une idée unique fournie en JSON
 sans passer par `queue.yaml`, pour l'écran GUI du même nom.
@@ -1555,7 +1567,7 @@ python3 inject_custom_signals.py --dry-run
 - **Reconçu en champ texte libre pour un lieu réel de 2026** (pays, région, ville — ex. "Norvège") plutôt qu'un slug de zone 2098 : un pays réel existe à l'identique dans les 6 scénarios, seule son appartenance à tel ou tel bloc change. Le prompt demande désormais au LLM d'identifier lui-même, pour chaque scénario (via la section 8, `state_logic`), à quelle zone/bloc ce lieu correspond — la correspondance peut légitimement différer d'un scénario à l'autre.
 - Consigne de cohérence conservée : si l'idée source mentionne elle-même un lieu différent du `zone_hint` choisi, le lieu de l'idée source reste prioritaire.
 - **Limite acceptée telle quelle** : reste une consigne de prompt, jamais une vérification mécanique — la relecture humaine de la fiche générée reste la seule protection réelle.
-- **Pas de champ "intensité"** (décision explicite, 26 juillet) : contrairement à un événement (un seul niveau d'intensité global), un signal décrit une évolution *par scénario* — pas d'équivalent structurel à ajouter.
+- **Pas de champ "intensité"** (décision explicite, 26 juillet) : contrairement à un événement (un seul niveau d'intensité global), un signal décrit une évolution *par scénario* — pas d'équivalent structurel à ajouter. (La DURÉE de l'effet, elle, se règle depuis le 27 septembre avec `persistance`.)
 
 **Bugs GUI associés, côté formulaire d'ajout à la queue** (`app.js`, tous scripts à file d'attente confondus — voir §7) : validation de champs requis absente (`_appendYamlQueue()`), et mode "Édition brute" qui affichait un instantané périmé du fichier. Voir détail dans "Bugs GUI corrigés le 26 juillet 2026" (§7).
 
@@ -1565,6 +1577,84 @@ python3 inject_custom_signals.py --dry-run
 - **`section7_annotation` sans le texte "signal_custom:"** : le LLM a une fois écrit `(→ {slug}, source: ...)` en sautant le préfixe `signal_custom: ` attendu — résultat : la ligne d'annotation devenait invisible à `undo_custom.py --type signal`, qui la cherche via ce préfixe exact (voir plus bas). Corrigé côté prompt (consigne renforcée, "MOT POUR MOT") et côté `undo_custom.py` (détection tolérante aux deux formats).
 
 **Injection matricielle — impact chiffré sur les variables (16 août 2026) :** le LLM produit désormais en plus, dans la même réponse JSON que `signal_to_state_yaml`, un `delta_level`/`polarite`/`propagation_via_matrice`/`contexte_injection` pour la variable cible de cet appel. Architecture différente des instances/événements : un signal ne cible qu'**une seule** variable par appel (pas de liste), et chaque scénario a déjà sa propre fenêtre `date_bascule` — `annee_injection`/`duree` en sont donc dérivés automatiquement (début/fin de fenêtre) plutôt que redemandés au LLM. **Plafond fixe `MAX_DELTA_SIGNAL = 10`** (pas dérivé d'un score comme les instances, aucun champ `impact_*` équivalent sur un signal) — délibérément bas, cohérent avec la sémantique "signal faible" ; `propagation_via_matrice` recommandé à `false` par défaut dans le prompt. **Stockage** : nouveau bloc `impact_sur_variables` dans le corps markdown de la fiche d'audit `signaux_custom/{slug}.md` (section "## Impact chiffré", séparée du bloc `signal_to_state`) — `contexte_injection` écrit d'emblée en bloc replié `>`, leçon tirée directement du bug YAML rencontré le même jour sur les instances, jamais reproduit ici. Consommé par deux nouvelles fonctions : `loader.load_custom_signals()` (lit le bloc dans le corps markdown, pas le frontmatter) et `snapshot.apply_custom_signals()` (même mécanique que `apply_custom_injections()`/`apply_custom_events()`, avec une différence structurelle : le scénario compte, un signal peut ne couvrir que certains scénarios sur les 6 — vérifié explicitement qu'aucune modification n'a lieu sur un scénario non couvert par ce signal). **Validé en conditions réelles sans aucun bug supplémentaire trouvé** (contrairement aux instances le même jour) : signal réel injecté (`decodage_langage_animaux_ia`), YAML propre, plafond respecté sur les 6 scénarios, chargement/application confirmés. Reste non testé en conditions réelles : la propagation via matrice sur un signal (`via_matrice: true`) — testée en synthétique seulement à ce stade.
+
+**Mise à jour du 27 septembre 2026 (testée en conditions réelles, idée « prêtres de l'IA » → `clerge_prompteurs_ia`)** :
+- **Polarité par scénario** : le LLM renvoie `delta_level` (UNE force,
+  entier 1-10) et `polarite` = dictionnaire des 6 scénarios à +1/−1, déduit
+  de l'`evolution` écrite pour chacun. Auparavant une seule polarité était
+  recopiée dans les 6 scénarios (seul `reevaluer_polarites.py` corrigeait
+  après coup). `normaliser_polarites()` refuse un entier unique, une valeur
+  0, un scénario manquant ou une clé inconnue (→ relance). L'exemple JSON du
+  prompt porte des emplacements (`"<+1 ou -1>"`) : avec un motif chiffré,
+  Mistral le recopiait tel quel.
+- **`delta_level` ≥ 1 exigé** : un 0 passait la validation puis était
+  écarté en silence par le moteur (aucun effet chiffré, aucun message).
+- **`persistance`** (queue, voir §3ter) : vérifiée avant tout appel LLM,
+  écrite dans la fiche d'audit.
+- **`annee_apparition`** (queue, optionnel, 2025-2097) : année où le signal
+  APPARAÎT, la même dans les 6 scénarios. Le prompt interdit toute fenêtre
+  `date_bascule` ou tout `evenement_cle` antérieurs, et la validation le
+  vérifie (→ relance). La bascule peut venir plus tard et différer selon le
+  scénario ; le choc chiffré démarre toujours au début de la bascule.
+  Écrite dans le frontmatter de la fiche d'audit.
+- **Année de `evenement_cle` acceptée n'importe où dans la phrase** (la
+  dernière citée fait foi) — même correctif que les événements le 13 août ;
+  le prompt la demande « de préférence à la fin ».
+- **Injection partielle** : si des variables échouent, `needs_review.yaml`
+  contient une entrée `idee_a_remettre_en_queue` (variables en échec
+  seulement + bloc `reprise` : slug et catégorie du signal déjà créé).
+  Recopiée telle quelle dans `queue.yaml`, elle COMPLÈTE le même signal
+  (pas de sélection LLM, fiche d'audit enrichie avec `.bak`). Garde-fou :
+  une variable qui contient déjà `- signal: {slug}` en section 12 est
+  ignorée sans appel LLM. `variables_cibles` ne liste plus que les
+  variables réellement injectées. Testé en synthétique seulement (cas
+  difficile à provoquer).
+- **Slug déjà pris par un autre signal** : suffixe `_2` (la fiche d'audit de
+  l'autre signal était auparavant écrasée sans prévenir).
+
+### `idees_vers_queue.py` 🔁 — idées en texte libre → entrées de queue (27 septembre 2026)
+Transforme un texte libre (une ou plusieurs idées) en entrées de queue
+formatées, pour les signaux (`--type signal`) ou les événements (`--type
+evenement`). **N'écrit jamais dans la queue** : il propose seulement ; l'écriture
+passe par le formulaire GUI « Ajouter à la queue » (un seul chemin
+d'écriture) ou un copier-coller du YAML affiché.
+```bash
+python3 idees_vers_queue.py --type signal --texte "des prompteurs apparaissent en 2027..."
+python3 idees_vers_queue.py --type evenement --fichier idees.txt
+pbpaste | python3 idees_vers_queue.py --type signal
+python3 idees_vers_queue.py --type signal --texte "..." --json    # utilisé par le GUI
+```
+- Un appel LLM (`structured_strict`) : découpe en idées, description
+  reformulée (fidèle, point d'arrivée conservé), `id`, variables (1-4),
+  persistance (critère : le point d'arrivée), justification ; pour un
+  signal `zone_hint` (seulement si un lieu est cité) et `annee_apparition` ;
+  pour un événement `portee`, `date_approximative`, `intensite`,
+  `scenarios`.
+- Contrôle mécanique, chaque correction signalée par un ⚠ : variables
+  existantes, `id` unique (queue + processed + needs_review), persistance,
+  bornes. Année d'apparition : si le LLM la laisse vide, la plus ancienne
+  année 2025-2097 écrite dans la description est reprise (⚠ « à vérifier »).
+- ⚠ « ressemble plutôt à un ÉVÉNEMENT » : avis du LLM (`plutot_evenement`),
+  jamais bloquant, non écrit dans la queue.
+- Limite connue, acceptée : sur un texte très court, la description
+  reformulée peut s'étoffer au-delà de l'idée (relire, ou « ↶ Rétablir mon
+  texte »).
+
+**GUI — bouton « ✨ Compléter les autres champs »** (formulaires de queue
+« Injecter des signaux faibles » et « Injecter des événements », clé
+`assistant_texte_libre` dans `scripts_config.json`) : placé sous le champ
+Description. On écrit l'idée librement dans Description, un clic appelle
+`POST /api/idees/proposer` (`app.py`, texte passé sur l'entrée standard du
+script, timeout 180 s) : une idée → champs remplis directement (description
+remplacée par sa version reformulée, justification et ⚠ affichés) ;
+plusieurs idées → une carte par idée avec « Charger dans le formulaire ».
+« ↶ Rétablir mon texte » remet la description d'origine. Rien n'est ajouté
+à la queue avant « Ajouter à la queue ». Un appel IA réel par clic.
+Autres changements du formulaire signaux : « Thèmes à privilégier »
+devient une sélection multiple (boutons à cocher avec libellés lisibles —
+les `multi_select` acceptent désormais des choix `{value, label}`), et deux
+champs « Année d'apparition » et « Persistance ». Testé par David en
+conditions réelles.
 
 **✅ Validé de bout en bout le 27 juillet** — après cette série de correctifs, un test complet sur une idée réelle (irrigation solaire + tensions hydriques, `zone_hint: Sahel`) est allé jusqu'au bout sur 2 variables, `status: injected` dans `processed.yaml`, sans passer par `needs_review.yaml`. Confirmation qualitative en plus de la confirmation mécanique : les 6 scénarios du signal généré incarnent bien le Sahel différemment selon la logique de chaque scénario (effondrement en `breakdown`, contrôle militarisé en `fortress_world`, gestion technocratique en `new_sustainability`, autogestion en `eco_communalism`, régulation institutionnelle en `policy_reform`, tension interétatique classique en `reference`) plutôt que de répéter le même contexte générique six fois — c'était l'objectif initial du `zone_hint` reconçu, confirmé atteint.
 
@@ -1893,6 +1983,166 @@ Une section par scénario (+ `_tous`). `zones_quarantaine: [{zone, trajectoires_
 - **« Compléter les relations avec l'IA »** (section Entités — création) : l'ancien 🤝, remplissage des alliances/oppositions vides par l'IA puis réciprocité ; payant.
 
 **Pièges connus** : une alliance **secrète** ne doit pas aller dans `alliances` (lues par le générateur d'articles) — l'écrire dans le texte de la fiche comme secrète (cas Vikram/Ergo-Wian, 26 sept). Slugs ≠ noms qui trompent l'IA : `les_veilleurs_des_nappes_phreatiques` = Sentinelles des Aquifères Oubliés ; `conseil_regulation_algorithmique` = Autorité Numérique du Bloc Atlantique (≠ `anba_siege_atlantique`, entreprise maritime).
+
+---
+
+## 3ter. Injection et propagation dynamique (27 septembre 2026)
+
+Comment un événement, une instance ou un signal faible injecté modifie le
+monde jusqu'en 2098. Détail du chantier : `HANDOFF_27_SEPTEMBRE.md` et
+`USER_MANUAL_HISTORIQUE.md`.
+
+### Convention unique d'intensité
+- Pour les **12 variables** : **0 = calme, 100 = crise maximale**. Chaque
+  fiche `variables/*.md` porte un bloc `echelle:` (`type: intensite`,
+  `zero:` et `cent:` en clair). `gouvernance_institutions` et
+  `frontieres_du_systeme` sont lues dans le sens fragilité/désordre
+  (inversées le 27 sept).
+- Un impact (`impact_sur_variables`) = `delta_level` (**force, toujours ≥
+  0**) + `polarite` (**+1 aggrave, −1 apaise**) + `duree` + `annee_injection`
+  + `propagation_via_matrice`. L'effet vaut `abs(delta) × facteur ×
+  polarite` (le `abs` protège des anciennes fiches).
+- Les prompts d'injection (`inject_custom_events.py`,
+  `inject_custom_signals.py`, `create_entities_and_instances.py` via
+  `instance_generation_common.py`, `enrich_minimal.py`) reçoivent l'échelle
+  de chaque variable et la consigne (`echelles.py`). `verifier_impact()`
+  signale un delta négatif ou une polarité invalide.
+- Matrice d'influence (`influence_matrix.md`) : 129 liens en +1 (« la crise
+  de A aggrave B ») et **3 amortisseurs en −1** (économie→climat,
+  production→climat, production→énergie). Marqueurs
+  `convention_echelle` / `convention_polarite` dans le frontmatter.
+
+### Moteur dynamique (`dynamique.py`)
+Chaque variable est traitée comme un ressort amorti qui revient vers son
+niveau de référence du scénario, poussé par les chocs injectés et par les
+autres variables via la matrice :
+`x'' + 2ζω x' + ω² x = ω² [u + K Σ c·x_j(t − τ)]`, avec un pas mensuel
+depuis 2025.
+
+| Paramètre | Vient de | Valeurs |
+|---|---|---|
+| amortissement ζ | `simulation.volatility` de la variable | low 1,0 · medium 0,7 · high 0,45 · very_high 0,3 |
+| période T (ω = 2π/T) | `simulation.resilience` | 1→40 ans … 5→10 ans |
+| couplage c | matrice | poids × polarité × poids temporel × criticité de la source (0,7 → 1,6) |
+| retard τ | `lag` de la matrice | lag × 5 ans (`ANNEES_PAR_CYCLE`) |
+| choc u | impacts injectés | rampe sur `duree`, puis décroissance (demi-vie selon la **persistance**, 20 ans par défaut — voir plus bas) × `GAIN_CHOCS` = 0,25 |
+| K | `K_COUPLAGE` | 0,05 |
+
+- Un choc `propagation_via_matrice: false` agit sur sa variable seule (il
+  n'entraîne pas les autres). C'est le cas par défaut des signaux faibles
+  (voir backlog S19).
+- **Stabilité garantie** : `k_effectif()` réduit K automatiquement si le pic
+  de résonance × ρ(|K·C|) dépasse 0,9 (mesuré 0,74). Ajouter des événements
+  déplace les niveaux, sans jamais faire diverger le système.
+- **Sortie bornée** : `niveau = ref + marge·tanh(écart/marge)`, marge ≤ 15
+  points et ≤ distance à 0/100.
+- `snapshot.py` (`MOTEUR_DYNAMIQUE = True`) : `appliquer_dynamique()`
+  produit une modification par variable dont l'écart ≥ 0,5, avec ses 3
+  principaux contributeurs. Les tensions (`check_coherence` : crise
+  mutuelle, amortissement, cascade critique) et les tensions thématiques
+  sont calculées **après**. Le prompt article affiche « ref → nouveau
+  (±x) — surtout : … » et l'échelle de chaque variable détaillée. Repasser
+  `MOTEUR_DYNAMIQUE = False` revient aux anciennes fonctions additives
+  (gardées pour retour arrière).
+
+- **Contributeurs affichés (« — surtout : … »)** : correctif du 27 sept
+  (après-midi). `appliquer_dynamique()` multipliait une seconde fois la
+  force par `GAIN_CHOCS`, déjà appliqué dans `forcage()` : la force
+  retenue était ÷4 et la plupart des contributeurs tombaient sous le seuil
+  de 0,2 point (« — propagation » affiché à tort). Les niveaux calculés
+  n'étaient pas touchés, seule la liste lue par le prompt article l'était.
+
+### Persistance des chocs (27 septembre 2026, après-midi)
+Combien de temps l'effet chiffré d'un choc dure après sa montée. Réglable à
+deux niveaux, tout en tête de `dynamique.py` :
+
+| Niveau (`persistance`) | Demi-vie | Usage |
+|---|---|---|
+| `ephemere` | 10 ans | mode, buzz, crise vite oubliée |
+| `normale` (défaut) | celle du type (`DEMI_VIE_PAR_TYPE`, `None` = `DEMI_VIE` = 20 ans) | cas courant |
+| `durable` | 40 ans | transformation qui marque plusieurs générations |
+| `permanente` | aucune décroissance | institution, classe sociale, structure de pouvoir encore là en 2098 |
+
+- Table `PERSISTANCE` : changer une durée y change tous les chocs de ce
+  niveau. `DEMI_VIE_PAR_TYPE` (`entite`/`evenement`/`signal`) règle la
+  valeur « normale » par type ; laissée à `None`, elle suit `DEMI_VIE`, donc
+  `banc_calibration.py --demi-vie` continue de tout régler d'un coup.
+- Saisie tolérante (casse, accents, « permanent ») ; valeur inconnue dans
+  une fiche → avertissement du loader, traitée comme `normale`.
+- **Signaux** : champ `persistance` de la queue, recopié dans la fiche
+  d'audit (bloc « Impact chiffré », une ligne par variable) — modifiable
+  ensuite à la main, sans réinjecter.
+- **Événements** : champ `persistance` de la queue (à côté d'`intensite`,
+  qui règle la FORCE), écrit dans l'archétype et dans chaque
+  `event_instances/*.md` (modifiable scénario par scénario).
+- **Instances d'entités** : déduite de la trajectoire — « l'effet dure tant
+  que l'entité existe » :
+  - trajectoire active (`émergent` … `transformé`) →
+    `PERSISTANCE_INSTANCE_ACTIVE` (`permanente` ; repli possible
+    `durable`) ;
+  - `disparu`/`historique`/`mythifié` avec `annee_fin` → pleine force
+    jusqu'à `annee_fin`, puis décroissance normale (si `annee_fin` tombe
+    pendant la montée, elle s'arrête là) ;
+  - terminée sans `annee_fin` → normale.
+  Un champ `persistance` explicite dans le bloc `injection` d'une instance
+  (conservé par `loader.py`) reste prioritaire.
+  `PERSISTANCE_INSTANCES_PAR_TRAJECTOIRE = False` revient exactement au
+  comportement d'avant. Mesuré à la mise en service : écarts ≤ 4,3 points,
+  dans le sens de la logique de chaque scénario (58/72 niveaux bougent de
+  ≥ 0,1).
+
+### `mesure_niveaux.py` 🔁 — photo avant/après (lecture seule)
+Reconstruit les 6 snapshots (dry-run) et enregistre les 12 niveaux de 2098
+par scénario, puis compare deux photos. Pour tout changement de
+calibration.
+```bash
+python3 mesure_niveaux.py --sauver avant.json
+python3 mesure_niveaux.py --comparer avant.json [--seuil 0.5]
+```
+
+### `banc_calibration.py` 🔁 — réglage du moteur (lecture seule)
+Simule 2025 → 2098 et affiche, par scénario : référence, niveau final,
+écart, écart max et son année, rayon spectral. Écrit un CSV (ou un PNG si
+`matplotlib` est installé) dans `documentation/need_action/calibration/`.
+Aucune écriture dans le vault, aucune IA.
+```bash
+python3 banc_calibration.py                                # breakdown + new_sustainability
+python3 banc_calibration.py --scenarios all
+python3 banc_calibration.py --gain 0.3 --demi-vie 15       # tester un réglage sans rien modifier
+python3 banc_calibration.py --scenarios all --balayage-k 0.05   # contrôle après un gros lot d'injections
+```
+Options : `--k`, `--gain`, `--demi-vie`, `--plafond`, `--cycle`, `--fin`.
+Pour adopter un réglage, modifier la constante en tête de `dynamique.py`.
+
+### `trace_injection.py` — section « Effet sur le monde » et récit
+En plus des sections historiques (origine, propagation, variables, réseau,
+articles — voir §2) :
+- **Section 4 « Effet sur le monde (moteur dynamique) »** : pour chaque
+  scénario, **effet net attribuable** = simulation avec l'élément moins
+  simulation sans (propagation comprise), de son apparition à la date de
+  référence : jalons, variables les plus touchées. Les articles passent en
+  section 5.
+- **Récit pour l'utilisateur** rédigé par l'IA (tier `creative_souple`,
+  ~1 appel par scénario), **vérifié** : chaque chiffre et chaque année doit
+  correspondre aux jalons calculés, et au moins une ampleur doit être
+  citée. Sinon, un récit modèle sans IA le remplace.
+- Écrit `generator/state/derniere_trace.json`, lu par le graphique GUI.
+```bash
+python3 trace_injection.py --slug <slug> --type evenement --scenario breakdown
+python3 trace_injection.py --slug <slug> --type signal --date 2070 --sans-recit   # gratuit
+python3 trace_injection.py --slug <slug> --type instance --skip-effet             # ancien comportement
+```
+**GUI** : après un lancement réussi, un **graphique** (Chart.js) s'affiche
+sous le journal. Il a deux vues : « effet » (écart attribuable par
+variable) et « niveaux avec/sans » (en pointillés, sans l'élément), avec un
+marqueur à l'apparition. Route `GET /api/trace/derniere`.
+
+### Outils ponctuels du 27 septembre (déjà appliqués, ne pas relancer)
+Voir §6 : `migrer_echelles.py`, `polarites_matrice.py`,
+`reevaluer_polarites.py`, `synchroniser_scenarios.py`, `audit_polarite.py`,
+`extraire_echelles.py`. Tous sont idempotents (marqueurs) et gardent des
+sauvegardes `.bak`, `.bak_etape5`, `.bak_etape6` et `.bak_etape8`, écrites
+une seule fois.
 
 ---
 
@@ -2378,6 +2628,8 @@ python3 validate.py --narrative / -n # force le scan narratif même si event_ins
 Le scan narratif (section 9) est conditionnel par défaut (déclenché seulement si `event_instances/` a changé depuis `state/last_validated.json` — utiliser `-n` pour forcer). Rapport localisé : `documentation/need_action/narrative_issues.yaml`.
 Filtrage narratif seul : `python3 validate.py --verbose 2>&1 | grep "narrative"`.
 
+**Convention d'intensité (27 septembre 2026)** : les contrôles d'impact utilisent `abs(delta_level) × polarite` (voir §3ter).
+
 **Entrée `validate` du panneau GUI testée le 2 août 2026** — RAS. C'était la dernière des 18 entrées du panneau sidebar encore non validée en conditions réelles ; les 18 sont maintenant toutes confirmées.
 
 ### Chantier `annee_fin` (9 août 2026) — clos
@@ -2535,6 +2787,12 @@ Ces scripts ont rempli leur rôle ponctuel ou ont été remplacés — à ne rel
 | `fix_annee_debut_placeholder.py` | **8 août 2026** *(rangement de gap — ce script existait déjà et était en usage réel, jamais ajouté à ce tableau avant le 9 août)*. Corrige rétroactivement `annee_debut` sur les fiches `officialise_enrichi` bloquées au placeholder 2026 (chantier `annee_debut`, clos le 8 août — voir `BACKLOG_MASTER_9_AOUT.md` Partie 4). Ancrage sur `registre_evenements.md` (chronologie fictive du scénario) ET `etat_du_monde_reel.md` (référence factuelle réelle), avec bande de traçabilité graduée (`ancrage_reel`, obligatoire si `annee_debut < 2036`). Marqueur `annee_debut_verifiee: true` pour l'idempotence. Modèle repris pour `migrate_trajectoire.py` et `fix_annee_fin_manquant.py` ci-dessous. **Mise à jour du 11 août 2026** : descriptif GUI reformulé en langage moins technique (jargon interne retiré — `officialise_enrichi`, `ancrage_reel`, `annee_debut_verifiee` ne sont plus mentionnés dans le texte affiché à l'utilisateur, tout en gardant l'essentiel : ce que ça fait, et la garantie que c'est sans risque à relancer). Validée par David dans le navigateur, marquée `gui_verified: true`. | 🪦 One-shot, chantier clos — ne relancer que si de nouvelles fiches réapparaissent au placeholder 2026 |
 | `migrate_trajectoire.py` | **Nouveau, 9 août 2026.** Migre les fiches instances de l'ancien schéma (`etat_temporel`+`age_historique`) vers `trajectoire`+`est_clandestin` (voir §3bis). Purement mécanique, **aucun appel LLM** (contrairement à `fix_annee_debut_placeholder.py`) — les règles de mapping sont entièrement déterministes. Idempotent (skip toute fiche ayant déjà la clé `trajectoire`). | 🪦 One-shot, déjà exécuté sur les 710 fiches du vault — **ne devrait plus jamais être relancé en usage normal**, voir §3bis pour le détail. Pas au GUI, volontairement. |
 | `fix_annee_fin_manquant.py` | **Nouveau, 9 août 2026.** Corrige rétroactivement `annee_fin` sur les fiches à `trajectoire` terminale sans date de fin (chantier `annee_fin`, clos le 9 août — voir §5). Modèle repris de `fix_annee_debut_placeholder.py`, sans ancrage sur `etat_du_monde_reel.md`. Filet de sécurité de plafonnement automatique à 2098 en cas de dépassement persistant après épuisement des tentatives LLM. | 🪦 One-shot, chantier clos — ne relancer que si de nouvelles fiches à trajectoire terminale sans `annee_fin` réapparaissent |
+| `audit_polarite.py` | **27 sept 2026**, lecture seule. Classe les impacts stockés (doubles négations, etc.) avant la convention d'intensité. Diagnostic historique. | 🗄️ One-shot fait |
+| `extraire_echelles.py` | **27 sept 2026**, lecture seule. Liste niveaux et `state_logic` par scénario (préparation des échelles). | 🗄️ One-shot fait |
+| `migrer_echelles.py` | **27 sept 2026**, étapes 1+2 : blocs `echelle:`, inversion gouvernance/frontières, santé, texte section 8, 40 liens de matrice. Idempotent (marqueur), `.bak` unique. | ✅ Appliqué |
+| `polarites_matrice.py` | **27 sept 2026**, étape 5 : matrice en +1, 3 amortisseurs à −1. `.bak_etape5`. | ✅ Appliqué |
+| `reevaluer_polarites.py` | **27 sept 2026**, étape 6 : l'IA réévalue le sens de chaque impact stocké (cache `state/reevaluation_polarites.json`, rapport `need_action/reevaluation_polarites.md`, `--appliquer`, `.bak_etape6`). Réutilisable si d'anciennes fiches réapparaissent. | ✅ Appliqué (153 fiches) |
+| `synchroniser_scenarios.py` | **27 sept 2026**, étape 8 : aligne `variable_states` et le tableau 4A des fiches `scenarios/` sur les fiches variables (tendances inversées pour 9 variables). `.bak_etape8`, marqueur. Relançable sans risque pour resynchroniser les niveaux. | ✅ Appliqué |
 
 **Audit du panneau GUI (25 juillet 2026)** — deux autres scripts avaient été
 soupçonnés de faire doublon avec `generer_zones_topdown.py`/`zoning_topdown.py`

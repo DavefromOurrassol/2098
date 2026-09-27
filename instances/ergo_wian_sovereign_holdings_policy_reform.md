@@ -63,13 +63,13 @@ injection:
     L'EWST agit comme un *catalyseur de fragmentation* dans un système en quête de stabilité : en optimisant des territoires ou des infrastructures pour des acteurs privés, elle affaiblit la cohérence des institutions globales (delta négatif sur gouvernance_institutions) et creuse les inégalités économiques (delta négatif sur systeme_economique_redistribution) en favorisant une logique de rentabilité plutôt que de redistribution. En revanche, son expertise en gestion algorithmique des flux permet une organisation territoriale plus efficace à court terme (delta positif sur organisation_territoires), bien que cette efficacité soit souvent obtenue au prix d'une exclusion des populations non rentables.
   impact_sur_variables:
   - variable: gouvernance_institutions
-    delta_level: -5
+    delta_level: 5
     duree: 15
-    polarite: -1
+    polarite: 1
   - variable: systeme_economique_redistribution
-    delta_level: -8
+    delta_level: 8
     duree: 20
-    polarite: -1
+    polarite: 1
   - variable: organisation_territoires
     delta_level: 6
     duree: 10

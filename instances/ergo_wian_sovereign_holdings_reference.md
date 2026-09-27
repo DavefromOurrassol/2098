@@ -84,13 +84,13 @@ injection:
     '
   impact_sur_variables:
   - variable: gouvernance_institutions
-    delta_level: -15
+    delta_level: 15
     duree: 20
-    polarite: -1
+    polarite: 1
   - variable: systeme_economique_redistribution
-    delta_level: -12
+    delta_level: 12
     duree: 15
-    polarite: -1
+    polarite: 1
   - variable: organisation_territoires
     delta_level: 10
     duree: 25

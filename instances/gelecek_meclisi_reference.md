@@ -57,11 +57,11 @@ injection:
     - variable: gouvernance_institutions
       delta_level: 15
       duree: 20
-      polarite: 1
+      polarite: -1
     - variable: valeurs_culture_tempo_sociale
       delta_level: 10
       duree: 15
-      polarite: 1
+      polarite: -1
     - variable: technologie_information
       delta_level: 8
       duree: 10

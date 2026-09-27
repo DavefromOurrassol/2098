@@ -76,6 +76,10 @@ simulation:
   systemic_criticality: 5
   resilience: 2
   adaptability: 2
+echelle:
+  type: intensite
+  zero: "paix structurelle, coopération internationale forte"
+  cent: "guerres multiples, effondrement de l'ordre international"
 states:
 
   fortress_world:

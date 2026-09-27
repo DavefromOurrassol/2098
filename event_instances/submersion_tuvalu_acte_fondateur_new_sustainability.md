@@ -22,21 +22,21 @@ realisation: >
   En septembre 2039, la submersion complète de Funafuti — île principale de Tuvalu — se produit lors d'une conjonction de marées hautes et d'une dépression tropicale amplifiée par le réchauffement résiduel. Contrairement aux effondrements chaotiques d'autres lignes temporelles, le monde de la New Sustainability avait anticipé l'événement : les populations avaient été relocalisées depuis 2034 dans le cadre du Programme Onusien de Mobilité Climatique, et les gouvernements insulaires avaient préparé juridiquement le transfert de souveraineté vers la plateforme flottante 'Nuku Common Ground'. Le dernier conseil physique des États membres se tient en mer, sur des embarcations ancrées au-dessus de l'archipel englouti, en présence d'observateurs du Parlement des Territoires et de l'Autorité Planétaire pour la Régénération Climatique. L'acte de fondation du Pacifique Sud Resilience Network — Confédération Maritime du Pacifique Austral — est signé numériquement et physiquement, instituant la première souveraineté post-territoriale reconnue par le droit international.
 impact_sur_variables:
   - variable: climat_environnement_global
-    delta_level: -3
+    delta_level: 3
     duree: 15
-    polarite: -1
+    polarite: 1
   - variable: gouvernance_institutions
     delta_level: 8
     duree: 30
-    polarite: 1
+    polarite: -1
   - variable: organisation_territoires
     delta_level: 10
     duree: 40
-    polarite: 1
+    polarite: -1
   - variable: frontieres_du_systeme
     delta_level: 12
     duree: 40
-    polarite: 1
+    polarite: -1
 propagation:
   via_matrice: true
 acteurs_impliques:
@@ -67,9 +67,9 @@ L'Acte de Nuku devient la pierre angulaire du droit post-territorial internation
 
 ## Impact sur les variables
 - **climat_environnement_global** : delta +3 sur 15 ans
-- **gouvernance_institutions** : delta +8 sur 30 ans
-- **organisation_territoires** : delta +10 sur 40 ans
-- **frontieres_du_systeme** : delta +12 sur 40 ans
+- **gouvernance_institutions** : delta -8 sur 30 ans
+- **organisation_territoires** : delta -10 sur 40 ans
+- **frontieres_du_systeme** : delta -12 sur 40 ans
 
 ## Acteurs impliqués
 - [[pacifique_sud_resilience_network_new_sustainability]]

@@ -65,7 +65,7 @@ injection:
   - variable: systeme_economique_redistribution
     delta_level: 8
     duree: 15
-    polarite: 1
+    polarite: -1
   - variable: technologie_information
     delta_level: 6
     duree: 10
@@ -73,7 +73,7 @@ injection:
   - variable: gouvernance_institutions
     delta_level: 5
     duree: 20
-    polarite: -1
+    polarite: 1
   propagation:
     via_matrice: false
 

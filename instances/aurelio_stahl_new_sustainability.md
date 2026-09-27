@@ -64,11 +64,11 @@ injection:
   - variable: valeurs_culture_tempo_sociale
     delta_level: 8
     duree: 15
-    polarite: 1
+    polarite: -1
   - variable: gouvernance_institutions
     delta_level: 5
     duree: 20
-    polarite: 1
+    polarite: -1
   propagation:
     via_matrice: false
 

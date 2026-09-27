@@ -28,15 +28,15 @@ impact_sur_variables:
   - variable: gouvernance_institutions
     delta_level: 14
     duree: 40
-    polarite: 1
-  - variable: organisation_territoires
-    delta_level: -10
-    duree: 35
     polarite: -1
+  - variable: organisation_territoires
+    delta_level: 10
+    duree: 35
+    polarite: 1
   - variable: frontieres_du_systeme
     delta_level: 12
     duree: 40
-    polarite: 1
+    polarite: -1
 propagation:
   via_matrice: true
 acteurs_impliques:
@@ -68,9 +68,9 @@ Le Protocole de Funafuti devient le socle du droit international post-territoria
 
 ## Impact sur les variables
 - **climat_environnement_global** : delta +6 sur 30 ans
-- **gouvernance_institutions** : delta +14 sur 40 ans
+- **gouvernance_institutions** : delta -14 sur 40 ans
 - **organisation_territoires** : delta +10 sur 35 ans
-- **frontieres_du_systeme** : delta +12 sur 40 ans
+- **frontieres_du_systeme** : delta -12 sur 40 ans
 
 ## Acteurs impliqués
 - [[pacifique_sud_resilience_network_policy_reform]]

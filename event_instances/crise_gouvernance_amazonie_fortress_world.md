@@ -22,21 +22,21 @@ realisation: >
   Le Pacte Vert Amazônia proclame un état d'urgence écologique sur 40% du bassin amazonien après la détection de déforestations industrielles orchestrées par des opérateurs liés aux consortiums énergétiques des blocs atlantique et eurasien. Belém devient le théâtre d'une confrontation armée entre les gardiens autochtones et les milices corporatives privées mandatées par ces consortiums. L'ONU-Éclat, simple coquille procédurale, saisie formellement, se révèle incapable de toute intervention — ses archives servent davantage à légitimer les blocs rivaux qu'à protéger le bassin. La Chambre de Sécurité Territoriale arbitre à distance, refusant d'engager ses forces dans une zone disputée entre blocs concurrents.
 impact_sur_variables:
   - variable: climat_environnement_global
-    delta_level: -18
+    delta_level: 18
     duree: 30
-    polarite: -1
+    polarite: 1
   - variable: geopolitique_conflits
     delta_level: 8
     duree: 20
-    polarite: -1
+    polarite: 1
   - variable: gouvernance_institutions
-    delta_level: -12
+    delta_level: 12
     duree: 25
-    polarite: -1
+    polarite: 1
   - variable: organisation_territoires
-    delta_level: -10
+    delta_level: 10
     duree: 25
-    polarite: -1
+    polarite: 1
 propagation:
   via_matrice: true
 acteurs_impliques:
@@ -67,7 +67,7 @@ L'échec du bassin amazonie à s'imposer comme acteur géopolitique autonome ouv
 
 ## Impact sur les variables
 - **climat_environnement_global** : delta +18 sur 30 ans
-- **geopolitique_conflits** : delta -8 sur 20 ans
+- **geopolitique_conflits** : delta +8 sur 20 ans
 - **gouvernance_institutions** : delta +12 sur 25 ans
 - **organisation_territoires** : delta +10 sur 25 ans
 

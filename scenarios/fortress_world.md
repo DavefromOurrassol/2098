@@ -24,40 +24,40 @@ constrained_variables:
   - [[technologie_information]]
 variable_states:
   systeme_economique_redistribution:
-    level: 45
-    trend: down
-  gouvernance_institutions:
-    level: 90
+    level: 60
     trend: up
+  gouvernance_institutions:
+    level: 50
+    trend: down
   geopolitique_conflits:
     level: 85
     trend: up
   valeurs_culture_tempo_sociale:
-    level: 40
-    trend: down
-  organisation_territoires:
-    level: 85
-    trend: up
-  sante_biotechnologies:
-    level: 60
-    trend: stable
-  frontieres_du_systeme:
-    level: 90
-    trend: up
-  technologie_information:
     level: 80
     trend: up
-  climat_environnement_global:
-    level: 35
+  organisation_territoires:
+    level: 80
+    trend: up
+  sante_biotechnologies:
+    level: 65
+    trend: stable
+  frontieres_du_systeme:
+    level: 70
+    trend: up
+  technologie_information:
+    level: 85
     trend: down
-  energie_ressources_critiques:
+  climat_environnement_global:
     level: 75
     trend: up
-  demographie_mobilite_humaine:
-    level: 30
+  energie_ressources_critiques:
+    level: 82
     trend: down
+  demographie_mobilite_humaine:
+    level: 75
+    trend: up
   systemes_productifs_travail:
-    level: 65
+    level: 85
     trend: stable
 triggers:
   - crise énergétique majeure
@@ -79,6 +79,7 @@ system_effects:
   environment:
     - exploitation intensive des ressources locales
     - priorité donnée à la sécurité plutôt qu'à la durabilité
+convention_echelle: intensite_2026-09-27
 ---
 
 # fortress_world
@@ -133,18 +134,18 @@ Monde structuré en blocs géopolitiques fermés cherchant à sécuriser leurs r
 ## 4A. États des variables
 | Variable | Level | Trend |
 |---|---|---|
-| [[systeme_economique_redistribution]] | 45 | down |
-| [[gouvernance_institutions]] | 90 | up |
+| [[systeme_economique_redistribution]] | 60 | up |
+| [[gouvernance_institutions]] | 50 | down |
 | [[geopolitique_conflits]] | 85 | up |
-| [[valeurs_culture_tempo_sociale]] | 40 | down |
-| [[organisation_territoires]] | 85 | up |
-| [[sante_biotechnologies]] | 60 | stable |
-| [[frontieres_du_systeme]] | 90 | up |
-| [[technologie_information]] | 80 | up |
-| [[climat_environnement_global]] | 35 | down |
-| [[energie_ressources_critiques]] | 75 | up |
-| [[demographie_mobilite_humaine]] | 30 | down |
-| [[systemes_productifs_travail]] | 65 | stable |
+| [[valeurs_culture_tempo_sociale]] | 80 | up |
+| [[organisation_territoires]] | 80 | up |
+| [[sante_biotechnologies]] | 65 | stable |
+| [[frontieres_du_systeme]] | 70 | up |
+| [[technologie_information]] | 85 | down |
+| [[climat_environnement_global]] | 75 | up |
+| [[energie_ressources_critiques]] | 82 | down |
+| [[demographie_mobilite_humaine]] | 75 | up |
+| [[systemes_productifs_travail]] | 85 | stable |
 
 ## 5. Forces dominantes
 - sécurisation des ressources

@@ -71,10 +71,14 @@ simulation:
   systemic_criticality: 5
   resilience: 1
   adaptability: 2
+echelle:
+  type: intensite
+  zero: "espace coopératif et intégré, expansion ordonnée"
+  cent: "espace chaotique, orbites saturées et militarisées, conflits orbitaux"
 states:
 
   fortress_world:
-    level: 30
+    level: 70
     volatility: 60
     state_logic: >
       L’espace devient un domaine stratégique contrôlé par des blocs géopolitiques fermés. Les infrastructures orbitales sont militarisées et utilisées pour la surveillance et la sécurité des systèmes terrestres.
@@ -92,7 +96,7 @@ states:
       [[organisation_territoires]]: 70
 
   new_sustainability:
-    level: 80
+    level: 20
     volatility: 25
     state_logic: >
       Civilisation multi-orbitale avancée avec industrialisation du système solaire proche, exploitation coordonnée des ressources spatiales et intégration complète de l’espace dans le système économique global.
@@ -110,7 +114,7 @@ states:
       [[gouvernance_institutions]]: 75
 
   breakdown:
-    level: 15
+    level: 85
     volatility: 90
     state_logic: >
       Fragmentation et militarisation de l’espace proche avec saturation des orbites, conflits orbitaux et effondrement de la coopération internationale. L’expansion spatiale devient chaotique et instable.
@@ -146,7 +150,7 @@ states:
       [[systeme_economique_redistribution]]: 35
 
   policy_reform:
-    level: 45
+    level: 55
     volatility: 35
     state_logic: >
       Développement coordonné de l’économie spatiale sous gouvernance internationale, avec régulation des orbites, mutualisation des coûts et coopération scientifique renforcée.
@@ -164,7 +168,7 @@ states:
       [[systeme_economique_redistribution]]: 55
 
   reference:
-    level: 25
+    level: 55
     volatility: 40
     state_logic: >
       Expansion spatiale limitée à l’orbite terrestre et aux missions robotiques exploratoires. Le système reste fondamentalement terrestre, avec une dépendance totale aux infrastructures et ressources de la Terre.
@@ -377,7 +381,7 @@ _extended_
 
 ## 8. États par scénario
 ### [[fortress_world]]
-- **level** : 30 | **volatility** : 60
+- **level** : 70 | **volatility** : 60
 
 L’espace devient un domaine stratégique contrôlé par des blocs géopolitiques fermés. Les infrastructures orbitales sont militarisées et utilisées pour la surveillance et la sécurité des systèmes terrestres.
 
@@ -397,7 +401,7 @@ L’espace devient un domaine stratégique contrôlé par des blocs géopolitiqu
 - [[organisation_territoires]] : 70
 
 ### [[new_sustainability]]
-- **level** : 80 | **volatility** : 25
+- **level** : 20 | **volatility** : 25
 
 Civilisation multi-orbitale avancée avec industrialisation du système solaire proche, exploitation coordonnée des ressources spatiales et intégration complète de l’espace dans le système économique global.
 
@@ -417,7 +421,7 @@ Civilisation multi-orbitale avancée avec industrialisation du système solaire 
 - [[gouvernance_institutions]] : 75
 
 ### [[breakdown]]
-- **level** : 15 | **volatility** : 90
+- **level** : 85 | **volatility** : 90
 
 Fragmentation et militarisation de l’espace proche avec saturation des orbites, conflits orbitaux et effondrement de la coopération internationale. L’expansion spatiale devient chaotique et instable.
 
@@ -457,7 +461,7 @@ L’expansion spatiale est principalement scientifique, coopérative et orienté
 - [[systeme_economique_redistribution]] : 35
 
 ### [[policy_reform]]
-- **level** : 45 | **volatility** : 35
+- **level** : 55 | **volatility** : 35
 
 Développement coordonné de l’économie spatiale sous gouvernance internationale, avec régulation des orbites, mutualisation des coûts et coopération scientifique renforcée.
 
@@ -477,7 +481,7 @@ Développement coordonné de l’économie spatiale sous gouvernance internation
 - [[systeme_economique_redistribution]] : 55
 
 ### [[reference]]
-- **level** : 25 | **volatility** : 40
+- **level** : 55 | **volatility** : 40
 
 Expansion spatiale limitée à l’orbite terrestre et aux missions robotiques exploratoires. Le système reste fondamentalement terrestre, avec une dépendance totale aux infrastructures et ressources de la Terre.
 

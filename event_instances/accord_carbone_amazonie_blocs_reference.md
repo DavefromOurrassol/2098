@@ -24,19 +24,19 @@ impact_sur_variables:
   - variable: climat_environnement_global
     delta_level: 8
     duree: 30
-    polarite: 1
+    polarite: -1
   - variable: gouvernance_institutions
     delta_level: 6
     duree: 20
-    polarite: 1
+    polarite: -1
   - variable: geopolitique_conflits
-    delta_level: -7
+    delta_level: 7
     duree: 15
-    polarite: -1
+    polarite: 1
   - variable: energie_ressources_critiques
-    delta_level: -4
+    delta_level: 4
     duree: 15
-    polarite: -1
+    polarite: 1
 propagation:
   via_matrice: true
 acteurs_impliques:
@@ -67,8 +67,8 @@ Le 14 novembre 2055, sous une chaleur tropicale alourdie par dix ans de séchere
 Le traité institue un précédent juridique fragile mais réel : pour la première fois, une entité autochtone dispose d'un droit de veto international reconnu sur des projets industriels. À long terme, cela renforce le Consortium Amazônia Viva comme acteur de gouvernance globale tout en creusant la fracture entre blocs signataires et non-signataires, alimentant une guérilla diplomatique permanente sur les projets d'infrastructure en zone tampon. La redevance carbone, redistributive sur le papier, reste sous-alimentée faute d'adhésion universelle, mais devient un modèle revendiqué par d'autres peuples autochtones à travers le monde.
 
 ## Impact sur les variables
-- **climat_environnement_global** : delta +8 sur 30 ans
-- **gouvernance_institutions** : delta +6 sur 20 ans
+- **climat_environnement_global** : delta -8 sur 30 ans
+- **gouvernance_institutions** : delta -6 sur 20 ans
 - **geopolitique_conflits** : delta +7 sur 15 ans
 - **energie_ressources_critiques** : delta +4 sur 15 ans
 

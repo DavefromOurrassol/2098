@@ -63,15 +63,15 @@ injection:
   - variable: climat_environnement_global
     delta_level: 5
     duree: 15
-    polarite: 1
-  - variable: gouvernance_institutions
-    delta_level: -3
-    duree: 10
     polarite: -1
+  - variable: gouvernance_institutions
+    delta_level: 3
+    duree: 10
+    polarite: 1
   - variable: systeme_economique_redistribution
     delta_level: 4
     duree: 20
-    polarite: 1
+    polarite: -1
   propagation:
     via_matrice: false
 

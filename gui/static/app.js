@@ -1629,6 +1629,7 @@ function startSSE(runId, scriptId) {
       setRunning(false, rc === 0 ? 'ok' : 'error');
       State.sessionRan.add(scriptId);
       es.close();
+      if (scriptId === 'trace_injection' && rc === 0) afficherTraceVisuelle();
       return;
     }
 
@@ -1667,6 +1668,129 @@ function appendLog(text, cls = 'default') {
 function clearLog() {
   const out = document.getElementById('log-output');
   out.innerHTML = '<span class="cursor-blink" id="log-cursor"></span>';
+  masquerTraceVisuelle();
+}
+
+// ── Outil « Tracer » : récit + graphique d'évolution (27 septembre 2026) ──
+// Lit la dernière trace écrite par trace_injection.py (/api/trace/derniere)
+// et affiche, pour chaque scénario, le récit rédigé et l'évolution de
+// l'effet de l'élément depuis son apparition (Chart.js).
+
+const TRACE_LIBELLES = {
+  systeme_economique_redistribution: 'Économie', gouvernance_institutions: 'Gouvernance (fragilité)',
+  geopolitique_conflits: 'Géopolitique', valeurs_culture_tempo_sociale: 'Valeurs et culture',
+  organisation_territoires: 'Territoires', sante_biotechnologies: 'Santé',
+  frontieres_du_systeme: 'Espace', technologie_information: 'Technologie',
+  climat_environnement_global: 'Climat', energie_ressources_critiques: 'Énergie',
+  demographie_mobilite_humaine: 'Démographie', systemes_productifs_travail: 'Production',
+};
+const TRACE_COULEURS = ['#4e9af1', '#f0a500', '#e0565b', '#5cc28a'];
+const traceGraphes = [];
+
+function masquerTraceVisuelle() {
+  traceGraphes.splice(0).forEach(g => g.destroy());
+  const zone = document.getElementById('trace-visu');
+  if (zone) { zone.innerHTML = ''; zone.style.display = 'none'; }
+}
+
+function _traceEchapper(t) {
+  const d = document.createElement('div'); d.textContent = t == null ? '' : String(t); return d.innerHTML;
+}
+
+async function afficherTraceVisuelle() {
+  const zone = document.getElementById('trace-visu');
+  if (!zone) return;
+  masquerTraceVisuelle();
+  let trace;
+  try {
+    const res = await fetch('/api/trace/derniere');
+    trace = await res.json();
+    if (!res.ok) throw new Error(trace.error || res.status);
+  } catch (e) {
+    return; // pas de trace exploitable : on laisse le journal texte seul
+  }
+  const eff = trace.effet_sur_le_monde || {};
+  const chronos = eff.chronologies || {};
+  const scenarios = Object.keys(chronos);
+  zone.style.display = 'block';
+  if (!scenarios.length) {
+    zone.innerHTML = `<div style="color:var(--text-muted);font-size:12px">${eff.erreur
+      ? 'Calcul impossible : ' + _traceEchapper(eff.erreur)
+      : 'Aucun impact chiffré : cet élément agit sur le récit, pas sur les niveaux des variables.'}</div>`;
+    return;
+  }
+  const couleurTexte = getComputedStyle(document.documentElement).getPropertyValue('--text').trim() || '#ccc';
+  zone.innerHTML = `<div style="font-weight:600;margin-bottom:8px">📈 ${_traceEchapper(trace.nom || trace.slug)} — évolution de son influence</div>`;
+
+  scenarios.forEach(sc => {
+    const c = chronos[sc];
+    const carte = document.createElement('div');
+    carte.style.cssText = 'margin-bottom:18px';
+    const source = (c.recit_source || '').startsWith('modele')
+      ? `<div style="color:var(--text-muted);font-size:11px;margin-top:4px">Récit construit par le script (${_traceEchapper(c.recit_source)}).</div>` : '';
+    carte.innerHTML = `
+      <div style="font-weight:600;margin:6px 0">${_traceEchapper(sc)} — apparu en ${Math.floor(c.apparition)}</div>
+      <p style="line-height:1.5;margin:0 0 6px 0">${_traceEchapper(c.recit || '')}</p>${source}
+      <div style="margin:8px 0;font-size:12px">
+        <label style="margin-right:12px"><input type="radio" name="vue-${sc}" value="effet" checked> Effet de l'élément</label>
+        <label><input type="radio" name="vue-${sc}" value="niveaux"> Niveaux avec / sans l'élément</label>
+      </div>
+      <div style="position:relative;height:260px"><canvas></canvas></div>`;
+    zone.appendChild(carte);
+    const canvas = carte.querySelector('canvas');
+    let graphe = _traceGraphe(canvas, c, 'effet', couleurTexte);
+    traceGraphes.push(graphe);
+    carte.querySelectorAll(`input[name="vue-${sc}"]`).forEach(r => r.addEventListener('change', () => {
+      const i = traceGraphes.indexOf(graphe);
+      graphe.destroy();
+      graphe = _traceGraphe(canvas, c, r.value, couleurTexte);
+      if (i >= 0) traceGraphes[i] = graphe; else traceGraphes.push(graphe);
+    }));
+  });
+}
+
+function _traceGraphe(canvas, c, vue, couleurTexte) {
+  const vars = Object.keys(c.series || {});
+  const datasets = [];
+  vars.forEach((v, i) => {
+    const coul = TRACE_COULEURS[i % TRACE_COULEURS.length];
+    const nom = TRACE_LIBELLES[v] || v;
+    if (vue === 'effet') {
+      datasets.push({ label: nom, data: c.series[v].map(([x, y]) => ({ x, y })),
+                      borderColor: coul, backgroundColor: coul, pointRadius: 0, borderWidth: 2, tension: 0.2 });
+    } else {
+      const n = (c.niveaux || {})[v] || {};
+      datasets.push({ label: nom + ' — avec', data: (n.avec || []).map(([x, y]) => ({ x, y })),
+                      borderColor: coul, backgroundColor: coul, pointRadius: 0, borderWidth: 2, tension: 0.2 });
+      datasets.push({ label: nom + ' — sans', data: (n.sans || []).map(([x, y]) => ({ x, y })),
+                      borderColor: coul, backgroundColor: coul, pointRadius: 0, borderWidth: 1.5,
+                      borderDash: [5, 4], tension: 0.2 });
+    }
+  });
+  // Repère vertical : apparition de l'élément
+  const ys = datasets.flatMap(d => d.data.map(p => p.y));
+  const ymin = Math.min(0, ...ys), ymax = Math.max(0, ...ys);
+  datasets.push({ label: 'Apparition', data: [{ x: c.apparition, y: ymin }, { x: c.apparition, y: ymax }],
+                  borderColor: 'rgba(160,160,160,.8)', borderDash: [2, 3], borderWidth: 1, pointRadius: 0 });
+  return new Chart(canvas, {
+    type: 'line',
+    data: { datasets },
+    options: {
+      responsive: true, maintainAspectRatio: false, animation: false, parsing: false,
+      interaction: { mode: 'nearest', axis: 'x', intersect: false },
+      plugins: {
+        legend: { labels: { color: couleurTexte, boxWidth: 12, filter: it => it.text !== 'Apparition' } },
+        tooltip: { callbacks: { label: ctx => `${ctx.dataset.label} : ${ctx.parsed.y >= 0 && vue === 'effet' ? '+' : ''}${ctx.parsed.y.toFixed(1)}${vue === 'effet' ? ' pt' : ''}`,
+                                title: it => it.length ? `Année ${Math.round(it[0].parsed.x * 2) / 2}` : '' } },
+      },
+      scales: {
+        x: { type: 'linear', ticks: { color: couleurTexte, callback: v => Math.round(v) }, grid: { color: 'rgba(128,128,128,.15)' } },
+        y: { ticks: { color: couleurTexte }, grid: { color: 'rgba(128,128,128,.15)' },
+             title: { display: true, color: couleurTexte,
+                      text: vue === 'effet' ? 'Écart dû à l\'élément (points)' : 'Niveau (100 = crise max)' } },
+      },
+    },
+  });
 }
 
 document.getElementById('log-clear').addEventListener('click', (e) => {
@@ -2316,6 +2440,24 @@ async function buildYamlFormPanel(yf, configFields, script) {
     formZone.appendChild(group);
   }
 
+  // ── Assistant "Depuis un texte libre" (27 septembre 2026) ──
+  // Propose des entrées de queue à partir d'un texte libre
+  // (idees_vers_queue.py via /api/idees/proposer) et PRÉ-REMPLIT ce
+  // formulaire : l'écriture passe toujours par "Ajouter à la queue"
+  // (_appendYamlQueue), seul chemin d'écriture vers queue.yaml.
+  // Placé SOUS le champ Description (pas de zone de saisie séparée, qui
+  // faisait doublon avec lui) : on écrit l'idée dans Description, un clic
+  // complète les autres champs.
+  const groupeDescription = formZone.querySelector('.yaml-form-field[data-yaml-key="description"]');
+  if (isQueueMode && script && script.assistant_texte_libre && groupeDescription) {
+    const champDescription = groupeDescription.querySelector('[data-form-key="description"]');
+    groupeDescription.appendChild(_buildAssistantTexteLibre(
+      script.assistant_texte_libre,
+      champDescription,
+      (entree) => _remplirYamlForm(wrapper, entree),
+    ));
+  }
+
   wrapper.appendChild(formZone);
 
   // ── Zone édition brute (cachée par défaut) ──
@@ -2481,11 +2623,15 @@ async function _buildFormField(field, currentValues, script) {
     const activeValues = new Set(Array.isArray(currentVal) ? currentVal : []);
     const choices = field.choices || THEMATIQUES;
 
-    choices.forEach(val => {
+    choices.forEach(c => {
+      // 27 septembre 2026 : un choix peut être une chaîne (valeur = libellé,
+      // comportement historique) ou un objet {value, label} -- libellé lisible
+      // affiché, slug écrit dans le YAML (thèmes des signaux faibles).
+      const val = (c && typeof c === 'object') ? c.value : c;
       const chip = document.createElement('button');
       chip.type = 'button';
       chip.className = 'yaml-chip' + (activeValues.has(val) ? ' active' : '');
-      chip.textContent = val;
+      chip.textContent = (c && typeof c === 'object') ? (c.label || c.value) : c;
       chip.dataset.value = val;
       chip.addEventListener('click', () => chip.classList.toggle('active'));
       chips.appendChild(chip);
@@ -2746,6 +2892,202 @@ async function _loadZoneSelect(sel, slugType, scenario, currentVal) {
 }
 
 /** Appende une nouvelle entrée dans une queue YAML via /api/yaml/append. */
+/**
+ * Assistant "✨ Compléter les autres champs" (27 septembre 2026), placé sous
+ * le champ Description : envoie le texte de ce champ à /api/idees/proposer
+ * (idees_vers_queue.py) et remplit le formulaire avec la proposition.
+ * - une seule idée détectée : remplissage direct, carte affichée pour la
+ *   justification et les avertissements ;
+ * - plusieurs idées : une carte par idée, l'utilisateur choisit laquelle
+ *   charger (les autres restent affichées pour les ajouter ensuite).
+ * Le texte d'origine est conservé et peut être rétabli. Tout le texte venant
+ * du LLM est inséré via textContent (jamais innerHTML). Rien n'est écrit dans
+ * la queue ici : l'ajout passe par « Ajouter à la queue » (_appendYamlQueue).
+ */
+function _buildAssistantTexteLibre(typeEntree, champDescription, onRemplir) {
+  const zone = document.createElement('div');
+  zone.className = 'yaml-assistant-zone';
+  zone.style.marginTop = '6px';
+
+  const btn = document.createElement('button');
+  btn.type = 'button';
+  btn.className = 'yaml-btn';
+  btn.textContent = '✨ Compléter les autres champs';
+  btn.title = "Écris ton idée librement dans Description (dates, lieux, point d'arrivée…) : "
+    + "l'IA la reformule et remplit les autres champs. Un appel IA réel par clic.";
+  zone.appendChild(btn);
+
+  const btnRetablir = document.createElement('button');
+  btnRetablir.type = 'button';
+  btnRetablir.className = 'yaml-btn';
+  btnRetablir.textContent = '↶ Rétablir mon texte';
+  btnRetablir.style.cssText = 'margin-left:6px;display:none;';
+  zone.appendChild(btnRetablir);
+
+  const etat = document.createElement('div');
+  etat.className = 'option-desc';
+  zone.appendChild(etat);
+
+  const resultats = document.createElement('div');
+  zone.appendChild(resultats);
+
+  let texteOriginal = null;
+  btnRetablir.addEventListener('click', () => {
+    if (texteOriginal !== null) champDescription.value = texteOriginal;
+  });
+
+  btn.addEventListener('click', async () => {
+    const texte = (champDescription.value || '').trim();
+    if (!texte) { etat.textContent = "Écris d'abord ton idée dans Description."; return; }
+    if (btn.disabled) return;
+    btn.disabled = true;
+    etat.textContent = 'Appel IA en cours…';
+    resultats.innerHTML = '';
+    try {
+      const res = await fetch('/api/idees/proposer', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ type: typeEntree, texte }),
+      });
+      const data = await res.json();
+      if (!res.ok || !data.ok) {
+        etat.textContent = `Erreur : ${data.error || res.status}`;
+        return;
+      }
+      texteOriginal = texte;
+      btnRetablir.style.display = '';
+      const idees = data.idees || [];
+      if (idees.length === 1) {
+        onRemplir(idees[0].entree || {});
+        etat.textContent = 'Champs remplis — relis/corrige, puis « Ajouter à la queue ».';
+        resultats.appendChild(_carteProposition(idees[0], null));
+      } else {
+        etat.textContent = `${idees.length} idées distinctes détectées — charge-les une par une `
+          + '(« Ajouter à la queue » entre chaque).';
+        idees.forEach(p => resultats.appendChild(_carteProposition(p, onRemplir)));
+      }
+    } catch (e) {
+      etat.textContent = `Erreur réseau : ${e.message}`;
+    } finally {
+      btn.disabled = false;
+    }
+  });
+
+  return zone;
+}
+
+/**
+ * Une carte de proposition. Avec `onRemplir` (plusieurs idées) : id,
+ * description, champs clés, justification, avertissements et bouton de
+ * chargement. Sans (une seule idée, déjà chargée dans le formulaire) :
+ * seulement la justification et les avertissements -- le reste est déjà
+ * visible dans le formulaire, inutile de l'afficher deux fois.
+ */
+function _carteProposition(p, onRemplir) {
+  const e = p.entree || {};
+  const carte = document.createElement('div');
+  carte.style.cssText = 'border:1px solid #ccc;border-radius:6px;padding:8px;margin-top:8px;';
+  if (!onRemplir) {
+    if (!p.justification && !(p.avertissements || []).length) return document.createElement('span');
+    carte.style.cssText = 'margin-top:4px;';
+  }
+
+  if (onRemplir) {
+    const titre = document.createElement('div');
+    titre.style.cssText = 'font-weight:600;font-family:"JetBrains Mono",monospace;font-size:12px;';
+    titre.textContent = e.id || '(sans id)';
+    carte.appendChild(titre);
+  
+    const desc = document.createElement('div');
+    desc.style.cssText = 'margin:4px 0;font-size:13px;';
+    desc.textContent = e.description || '';
+    carte.appendChild(desc);
+  
+    const vars = e.variable_hint || e.variables_hint || [];
+    const champs = [
+      vars.length ? `variables : ${vars.join(', ')}` : 'variables : l’IA choisira',
+      `persistance : ${e.persistance || 'normale'}`,
+      e.annee_apparition ? `apparition : ${e.annee_apparition}` : null,
+      e.zone_hint ? `lieu : ${e.zone_hint}` : null,
+      e.portee ? `portée : ${e.portee}` : null,
+      e.date_approximative ? `date : ${e.date_approximative}` : null,
+      e.intensite ? `intensité : ${e.intensite}` : null,
+    ].filter(Boolean);
+    const resume = document.createElement('div');
+    resume.className = 'option-desc';
+    resume.textContent = champs.join(' · ');
+    carte.appendChild(resume);
+  }
+
+  if (p.justification) {
+    const j = document.createElement('div');
+    j.className = 'option-desc';
+    j.style.fontStyle = 'italic';
+    j.textContent = `Pourquoi : ${p.justification}`;
+    carte.appendChild(j);
+  }
+  (p.avertissements || []).forEach(a => {
+    const w = document.createElement('div');
+    w.className = 'option-desc';
+    w.style.color = '#c77700';
+    w.textContent = `⚠ ${a}`;
+    carte.appendChild(w);
+  });
+
+  if (!onRemplir) return carte;
+  const btn = document.createElement('button');
+  btn.type = 'button';
+  btn.className = 'yaml-btn';
+  btn.style.marginTop = '6px';
+  btn.textContent = 'Charger dans le formulaire';
+  btn.addEventListener('click', () => {
+    onRemplir(e);
+    btn.textContent = '✓ Chargée (tu peux re-cliquer)';
+  });
+  carte.appendChild(btn);
+  return carte;
+}
+
+/**
+ * Pré-remplit un formulaire guidé à partir d'une entrée de queue (27 septembre
+ * 2026, assistant texte libre). Vide d'abord tous les champs (même remise à
+ * zéro que _appendYamlQueue après un ajout), puis pose chaque valeur connue.
+ * Une valeur absente d'une liste de choix est signalée en console et laissée
+ * vide plutôt qu'inventée.
+ */
+function _remplirYamlForm(wrapper, entree) {
+  wrapper.querySelectorAll('.yaml-form-zone [data-form-key]').forEach(el => {
+    if (el.classList.contains('yaml-chips')) {
+      el.querySelectorAll('.yaml-chip').forEach(c => c.classList.remove('active'));
+    } else if (el.classList.contains('yaml-per-scenario')) {
+      el.querySelectorAll('textarea[data-scenario]').forEach(t => { t.value = ''; });
+    } else if (el.tagName === 'SELECT') {
+      el.selectedIndex = 0;
+    } else if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+      el.value = '';
+    }
+  });
+
+  Object.entries(entree || {}).forEach(([cle, valeur]) => {
+    const el = wrapper.querySelector(`.yaml-form-zone [data-form-key="${cle}"]`);
+    if (!el || valeur === null || valeur === undefined) return;
+    if (el.classList.contains('yaml-chips')) {
+      const valeurs = Array.isArray(valeur) ? valeur : [valeur];
+      valeurs.forEach(v => {
+        const chip = el.querySelector(`.yaml-chip[data-value="${CSS.escape(String(v))}"]`);
+        if (chip) chip.classList.add('active');
+        else console.warn(`[assistant] valeur ${v} absente des choix de ${cle}`);
+      });
+    } else if (el.tagName === 'SELECT') {
+      const opt = [...el.options].find(o => o.value === String(valeur));
+      if (opt) el.value = opt.value;
+      else console.warn(`[assistant] valeur ${valeur} absente des choix de ${cle}`);
+    } else if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+      el.value = Array.isArray(valeur) ? valeur.join(', ') : String(valeur);
+    }
+  });
+}
+
 async function _appendYamlQueue(wrapper, yamlPath, statusEl) {
   const entry = {};
 

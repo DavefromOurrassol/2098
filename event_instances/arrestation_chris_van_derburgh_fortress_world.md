@@ -35,11 +35,11 @@ impact_sur_variables:
   - variable: valeurs_culture_tempo_sociale
     delta_level: 2
     duree: 10
-    polarite: -1
+    polarite: 1
   - variable: gouvernance_institutions
     delta_level: 1
     duree: 5
-    polarite: -1
+    polarite: 1
 propagation:
   via_matrice: false
 acteurs_impliques:
@@ -71,8 +71,8 @@ dans ses publications mesh. Van Derburgh est condamné à 18 mois de
 rééducation numérique.
 
 ## Impact sur les variables
-- **valeurs_culture_tempo_sociale** : delta -2 sur 10 ans
-- **gouvernance_institutions** : delta -1 sur 5 ans
+- **valeurs_culture_tempo_sociale** : delta +2 sur 10 ans
+- **gouvernance_institutions** : delta +1 sur 5 ans
 
 ## Acteurs impliqués
 - [[le_temoin_fortress_world]]

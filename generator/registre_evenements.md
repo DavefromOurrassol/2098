@@ -10,7 +10,7 @@ RÈGLE DE LECTURE DE LA COLONNE "date" :
   - type=signal    -> fenêtre "AAAA-AAAA" (date_bascule du signal_to_state)
   - type=evenement -> année unique "AAAA" (date précise de l'instance)
 
-Total : 528 entrées (77 signaux uniques × 6 scénarios + 66 entrées d'événements custom).
+Total : 543 entrées (80 signaux uniques × 6 scénarios + 63 entrées d'événements custom).
 
 ## breakdown
 
@@ -94,6 +94,9 @@ Total : 528 entrées (77 signaux uniques × 6 scénarios + 66 entrées d'événe
 | signal | 2045-2065 | saturation_orbitale | frontieres_du_systeme | non | catastrophe orbitale de 2057 bloquant l'accès spatial |
 | signal | 2045-2064 | nouvelles_communautes_orbitales | frontieres_du_systeme | non | rupture de communication avec une station orbitale habitée 2058 |
 | signal | 2045-2063 | decodage_langage_animaux_ia | valeurs_culture_tempo_sociale | non | premiers rituels collectifs de communication avec les corbeaux 2056 |
+| signal | 2045-2062 | clerge_prompteurs_ia | technologie_information | non | schisme des prompteurs de Detroit-Sud 2054 |
+| signal | 2045-2063 | clerge_prompteurs_ia | gouvernance_institutions | non | Lagos-Est proclame son Collège des Interprètes Divins 2056 |
+| signal | 2045-2063 | clerge_prompteurs_ia | valeurs_culture_tempo_sociale | non | Detroit-Sud érige ses Bergers en guides spirituels de l'effondrement 2054 |
 | evenement | 2047 | crise_gouvernance_amazonie | climat_environnement_global, geopolitique_conflits, gouvernance_institutions, organisation_territoires | — | Belém en flammes, le bassin amazonien se fragmente, 2047 |
 | signal | 2048-2062 | dedollarisation_progressive | systeme_economique_redistribution | non | abandon du dollar comme devise de réserve globale |
 | signal | 2048-2068 | course_biotech_internationale | sante_biotechnologies | non | fuite de souches modifiées du complexe clandestin de Karaganda 2061 |
@@ -102,7 +105,6 @@ Total : 528 entrées (77 signaux uniques × 6 scénarios + 66 entrées d'événe
 | evenement | 2053 | secession_great_lakes_compact | organisation_territoires, gouvernance_institutions, geopolitique_conflits | — | Chicago-Lacustre proclame le Compact souverain des eaux, 2053 |
 | evenement | 2057 | incident_passage_arctique | geopolitique_conflits, frontieres_du_systeme, energie_ressources_critiques | — | Unités nordiques saisissent convoi arctique, 2057 |
 | evenement | 2061 | communes_rust_belt_zones_libres | geopolitique_conflits, valeurs_culture_tempo_sociale, gouvernance_institutions, organisation_territoires | — | Rust Belt proclame zones libres algorithme, 2061 |
-| evenement | 2061 | insurrection_rust_belt | geopolitique_conflits, valeurs_culture_tempo_sociale, gouvernance_institutions, technologie_information | — | Communes du Rust Belt proclament zones libres de l'algorithme, 2061 |
 | evenement | 2061 | grand_forum_sahel_numerique | technologie_information, gouvernance_institutions, organisation_territoires | — | Forum d'Agadez fracturé, Charte disputée par les éclats, 2061 |
 | evenement | 2073 | emeutes_algorithme_sao_paulo | gouvernance_institutions, technologie_information, organisation_territoires | — | São Paulo brise l'algorithme fantôme, 2073 |
 | evenement | 2098 | ils_ont_noye_les_archives_a_milwaukee_basse_le_reg | technologie_information, geopolitique_conflits | — | 2098, Milwaukee-Basse noie les archives du Registre |
@@ -176,6 +178,8 @@ Total : 528 entrées (77 signaux uniques × 6 scénarios + 66 entrées d'événe
 | signal | 2038-2053 | decodage_langage_animaux_ia | valeurs_culture_tempo_sociale | non | Bloc Sibérien déploie des perroquets espions dans les zones frontalières 2047 |
 | signal | 2038-2053 | ia_agents_administratifs_autonomes | gouvernance_institutions | non | Bloc Atlantique impose ses agents IA comme uniques interfaces administratives 2047 |
 | evenement | 2038 | guerre_indo_arabe_2038 | geopolitique_conflits, demographie_mobilite_humaine | — | 2038 : l'Inde attaque les détroits arabes |
+| signal | 2038-2054 | clerge_prompteurs_ia | technologie_information | non | Bloc Sibérien instaure son Collège des Traducteurs Sacrés 2047 |
+| signal | 2038-2053 | clerge_prompteurs_ia | valeurs_culture_tempo_sociale | non | Bloc Eurasiatique impose son Collège des Scribes Sacrés 2048 |
 | signal | 2039-2055 | megapoles_sous_pression | organisation_territoires | oui | création des zones urbaines protégées des blocs 2050 |
 | signal | 2039-2056 | captation_carbone_industrielle | climat_environnement_global | oui | programme de capture carbone du Bloc Atlantique 2052 |
 | signal | 2039-2056 | acceptation_transition_contrainte | energie_ressources_critiques | oui | discours unificateur sur l'autosuffisance énergétique des blocs 2049 |
@@ -183,6 +187,7 @@ Total : 528 entrées (77 signaux uniques × 6 scénarios + 66 entrées d'événe
 | signal | 2039-2055 | automatisation_decisionnelle | technologie_information | non | déploiement des systèmes décisionnels automatisés des blocs 2049 |
 | signal | 2039-2054 | acceleration_rythmes_vie_urbains | valeurs_culture_tempo_sociale | non | instauration des cycles de vie optimisés dans les blocs 2049 |
 | evenement | 2039 | greve_generale_corridors_eurasiens | systemes_productifs_travail, geopolitique_conflits, sante_biotechnologies | — | grève lithium eurasiatique paralyse blocs 2039 |
+| signal | 2039-2055 | clerge_prompteurs_ia | gouvernance_institutions | non | Bloc Atlantique intronise ses Traducteurs Royaux 2050 |
 | signal | 2040-2060 | medecine_predictive_ia | sante_biotechnologies | non | Score de Priorité Sanitaire du Bloc Atlantique 2047 |
 | signal | 2040-2058 | acceptation_homme_augmente | sante_biotechnologies | non | cérémonies officielles d'augmentation des cadres du Bloc Atlantique 2050 |
 | signal | 2040-2058 | saturation_orbitale | frontieres_du_systeme | non | programme de nettoyage orbital militarisé des blocs |
@@ -197,7 +202,6 @@ Total : 528 entrées (77 signaux uniques × 6 scénarios + 66 entrées d'événe
 | evenement | 2051 | secession_great_lakes_compact | organisation_territoires, gouvernance_institutions, geopolitique_conflits | — | Compact des Grands Lacs proclame souveraineté sur les eaux 2051 |
 | evenement | 2059 | incident_passage_arctique | geopolitique_conflits, frontieres_du_systeme, energie_ressources_critiques | — | NAT saisit convoi arctique, Groenland saisit tribunal 2059 |
 | evenement | 2063 | communes_rust_belt_zones_libres | geopolitique_conflits, valeurs_culture_tempo_sociale, gouvernance_institutions, organisation_territoires | — | Communes du Rust Belt proclament zones libres 2063 |
-| evenement | 2063 | insurrection_rust_belt | geopolitique_conflits, valeurs_culture_tempo_sociale, gouvernance_institutions, technologie_information | — | Rust Belt occupe friches industrielles contre l'algorithme 2063 |
 | evenement | 2073 | emeutes_algorithme_sao_paulo | gouvernance_institutions, technologie_information, organisation_territoires | — | favelas numériques exposent algorithmes du SPAS 2073 |
 | evenement | 2098.08 | helios_bse_active_le_protocole_ombre_les_coupures_ | energie_ressources_critiques, geopolitique_conflits | — | Helios plonge l'Eurasie occidentale dans le noir en 2098 |
 | evenement | 2098.03 | le_marathon_des_seuils_quand_le_sport_defie_les_fr | frontieres_du_systeme, valeurs_culture_tempo_sociale | — | 2098 : le Marathon des Seuils défie les watts souverains |
@@ -266,6 +270,8 @@ Total : 528 entrées (77 signaux uniques × 6 scénarios + 66 entrées d'événe
 | signal | 2033-2048 | crise_verite_informationnelle | technologie_information | non | lancement du système mondial de certification de la réalité 2041 |
 | signal | 2033-2049 | irrigation_solaire_tensions_eau | systemes_productifs_travail | oui | réseau mondial de gestion hydrique automatisée déployé 2042 |
 | signal | 2033-2048 | decodage_langage_animaux_ia | valeurs_culture_tempo_sociale | non | Charte mondiale des droits cognitifs animaux adoptée à Nairobi 2042 |
+| signal | 2033-2048 | clerge_prompteurs_ia | technologie_information | non | Accord de Séoul sur la certification des interfaces IA 2041 |
+| signal | 2033-2048 | clerge_prompteurs_ia | valeurs_culture_tempo_sociale | non | Alliance Pacifique adopte la Charte des Interfaces Éthiques 2043 |
 | signal | 2034-2050 | captation_carbone_industrielle | climat_environnement_global | oui | mise en service du réseau mondial de capture carbone 2043 |
 | signal | 2034-2051 | minage_asteroides | frontieres_du_systeme | non | lancement du programme international de minage d'astéroïdes 2043 |
 | signal | 2034-2050 | gouvernance_environnementale_multiniveaux | gouvernance_institutions | non | adoption par le Conseil Climatique Mondial du cadre multi-niveaux 2043 |
@@ -281,6 +287,7 @@ Total : 528 entrées (77 signaux uniques × 6 scénarios + 66 entrées d'événe
 | signal | 2035-2052 | acceptation_homme_augmente | sante_biotechnologies | non | premier Sommet mondial sur l'humain augmenté éthique 2046 |
 | signal | 2035-2052 | relocalisation_cotiere | climat_environnement_global | oui | lancement du programme mondial de villes-refuges côtières 2044 |
 | signal | 2035-2050 | retour_spiritualites_hybrides | valeurs_culture_tempo_sociale | non | lancement du mouvement spirituel mondial de la régénération 2043 |
+| signal | 2035-2050 | clerge_prompteurs_ia | gouvernance_institutions | non | Jakarta-Mumbai-Lagos adoptent la Charte des Dialoguistes 2044 |
 | evenement | 2039 | submersion_tuvalu_acte_fondateur | climat_environnement_global, gouvernance_institutions, organisation_territoires, frontieres_du_systeme | — | Tuvalu submergée, Pacifique Sud fonde le droit post-territorial 2039 |
 | signal | 2040-2055 | dedollarisation_progressive | systeme_economique_redistribution | non | création du Droit de Tirage Universel 2.0 |
 | signal | 2040-2060 | vieillissement_demographique | demographie_mobilite_humaine | non | allongement de l'espérance de vie active à 90 ans |
@@ -357,6 +364,8 @@ Total : 528 entrées (77 signaux uniques × 6 scénarios + 66 entrées d'événe
 | signal | 2040-2059 | transformation_attentes_democratiques | gouvernance_institutions | non | généralisation des assemblées délibératives locales comme norme démocratique |
 | signal | 2040-2059 | automatisation_agricole_massive | systemes_productifs_travail | oui | mouvement de retour aux pratiques agricoles low-tech bioterritoriales |
 | signal | 2040-2058 | decodage_langage_animaux_ia | valeurs_culture_tempo_sociale | non | charte bioterritoriale de Carthage-Nord reconnaît la personnalité juridique des dauphins 2051 |
+| signal | 2040-2057 | clerge_prompteurs_ia | technologie_information | non | charte bioterritoriale des gardiens de langage IA |
+| signal | 2040-2058 | clerge_prompteurs_ia | valeurs_culture_tempo_sociale | non | Réseau des Assemblées Bioterritoriales bannit les interfaces IA centralisées 2052 |
 | signal | 2041-2060 | megapoles_sous_pression | organisation_territoires | oui | mouvement de décroissance urbaine volontaire |
 | signal | 2041-2060 | concentration_informationnelle | technologie_information | non | déploiement mondial des réseaux mesh communautaires |
 | signal | 2041-2059 | relocalisation_cotiere | climat_environnement_global | oui | mouvement de retour vers les terres hautes bioterritoriales |
@@ -372,6 +381,7 @@ Total : 528 entrées (77 signaux uniques × 6 scénarios + 66 entrées d'événe
 | signal | 2042-2060 | surveillance_sanitaire_continue | sante_biotechnologies | non | charte des maisons de santé sur le consentement sanitaire 2047 |
 | signal | 2042-2060 | acceptation_homme_augmente | sante_biotechnologies | non | charte communautaire pour des corps non augmentés 2044 |
 | signal | 2042-2061 | automatisation_decisionnelle | technologie_information | non | démantèlement communautaire des systèmes décisionnels automatisés |
+| signal | 2042-2061 | clerge_prompteurs_ia | gouvernance_institutions | non | Carthage-Nord dissout son Ordre des Médiateurs IA 2053 |
 | signal | 2043-2062 | gouvernance_algorithmique_emergente | gouvernance_institutions | non | mouvement de déconnexion algorithmique communautaire |
 | signal | 2043-2061 | retour_spiritualites_hybrides | valeurs_culture_tempo_sociale | non | fondation des premières communautés spirituelles bioterritoriales |
 | evenement | 2044 | exode_midwest_grands_lacs | demographie_mobilite_humaine, organisation_territoires, gouvernance_institutions, climat_environnement_global | — | 18 millions de déracinés déferlent vers les Grands Lacs 2044 |
@@ -381,7 +391,6 @@ Total : 528 entrées (77 signaux uniques × 6 scénarios + 66 entrées d'événe
 | evenement | 2047 | revolution_travail_sahel_numerique | systemes_productifs_travail, technologie_information, energie_ressources_critiques | — | Sahel Numérique adopte le crédit-travail régénératif 2047 |
 | evenement | 2062 | grand_forum_sahel_numerique | technologie_information, gouvernance_institutions, organisation_territoires | — | Charte d'Agadez consacre les périphéries numériques souveraines 2062 |
 | evenement | 2063 | communes_rust_belt_zones_libres | geopolitique_conflits, valeurs_culture_tempo_sociale, gouvernance_institutions, organisation_territoires | — | Friches du Rust Belt proclament zones libres algorithme 2063 |
-| evenement | 2063 | insurrection_rust_belt | geopolitique_conflits, valeurs_culture_tempo_sociale, gouvernance_institutions, technologie_information | — | Communes du Rust Belt bannissent gouvernance algorithmique 2063 |
 | evenement | 2096 | crue_exceptionnelle_congo | organisation_territoires, climat_environnement_global, demographie_mobilite_humaine, systeme_economique_redistribution | — | Le Congo engloutit les communs fluviaux 2096 |
 
 ## policy_reform
@@ -440,6 +449,7 @@ Total : 528 entrées (77 signaux uniques × 6 scénarios + 66 entrées d'événe
 | signal | 2029-2045 | automatisation_agricole_massive | systemes_productifs_travail | oui | adoption de la directive sur l'automatisation agricole responsable 2035 |
 | signal | 2029-2045 | irrigation_solaire_tensions_eau | systemes_productifs_travail | oui | traité de Niamey sur le partage des nappes phréatiques 2038 |
 | signal | 2029-2044 | irrigation_solaire_tensions_eau | energie_ressources_critiques | oui | traité de Ouagadougou sur les quotas hydriques solaires 2037 |
+| signal | 2029-2044 | clerge_prompteurs_ia | technologie_information | non | UE adopte la norme d'auditabilité des requêtes IA 2036 |
 | signal | 2030-2045 | gouvernance_algorithmique_emergente | gouvernance_institutions | non | directive mondiale sur l'IA dans les services publics 2037 |
 | signal | 2030-2046 | fragmentation_institutionnelle_regionale | gouvernance_institutions | non | traité de réforme des institutions de Bretton Woods 2037 |
 | signal | 2030-2046 | megapoles_sous_pression | organisation_territoires | oui | programme ONU-Habitat de résilience des mégapoles 2037 |
@@ -453,6 +463,7 @@ Total : 528 entrées (77 signaux uniques × 6 scénarios + 66 entrées d'événe
 | signal | 2030-2045 | automatisation_decisionnelle | technologie_information | non | adoption de la norme sur la supervision des décisions automatisées 2037 |
 | signal | 2030-2045 | retour_spiritualites_hybrides | valeurs_culture_tempo_sociale | non | adoption du cadre légal de reconnaissance des spiritualités hybrides 2037 |
 | signal | 2030-2045 | decodage_langage_animaux_ia | valeurs_culture_tempo_sociale | non | traité de Genève sur les droits cognitifs des espèces communicantes 2038 |
+| signal | 2030-2045 | clerge_prompteurs_ia | valeurs_culture_tempo_sociale | non | UE adopte la Directive sur la Transparence des Requêtes IA 2039 |
 | signal | 2031-2046 | militarisation_du_cyberespace | geopolitique_conflits | oui | traité sur la limitation des cyberarmes 2038 |
 | signal | 2031-2046 | fatigue_civilisationnelle | valeurs_culture_tempo_sociale | non | programme UNESCO de recomposition culturelle post-crise |
 | signal | 2031-2047 | stress_territorial_climatique | organisation_territoires | oui | directive internationale d'adaptation territoriale 2038 |
@@ -461,6 +472,7 @@ Total : 528 entrées (77 signaux uniques × 6 scénarios + 66 entrées d'événe
 | signal | 2032-2048 | inegalites_acces_soins | sante_biotechnologies | non | directive OMS sur l'accès équitable aux médicaments essentiels |
 | signal | 2032-2048 | course_biotech_internationale | sante_biotechnologies | non | ratification du Traité de Brasília sur la biotech responsable 2043 |
 | signal | 2032-2050 | acceptation_homme_augmente | sante_biotechnologies | non | premières assises citoyennes sur l'humain augmenté 2040 |
+| signal | 2032-2048 | clerge_prompteurs_ia | gouvernance_institutions | non | Accord de Genève sur le statut des interfaces IA 2041 |
 | signal | 2033-2047 | automatisation_financière_algorithmique | systeme_economique_redistribution | non | traité international sur les marchés algorithmiques |
 | signal | 2033-2048 | tensions_sur_terres_rares | geopolitique_conflits | oui | accord OCDE sur la traçabilité des ressources critiques |
 | signal | 2034-2048 | medecine_predictive_ia | sante_biotechnologies | non | adoption de la Charte Internationale de la Médecine Prédictive Équitable 2041 |
@@ -548,6 +560,8 @@ Total : 528 entrées (77 signaux uniques × 6 scénarios + 66 entrées d'événe
 | signal | 2027-2042 | normalisation_post_travail | systemes_productifs_travail | oui | premier débat médiatique mondial sur la fin du travail 2030 |
 | signal | 2027-2042 | automatisation_decisionnelle | technologie_information | non | premier scandale judiciaire lié à une décision automatisée 2033 |
 | signal | 2027-2042 | irrigation_solaire_tensions_eau | systemes_productifs_travail | oui | Mali et Niger s'affrontent pour le fleuve Niger 2039 |
+| signal | 2027-2042 | clerge_prompteurs_ia | technologie_information | non | premier syndicat mondial des prompteurs IA reconnu 2035 |
+| signal | 2027-2042 | clerge_prompteurs_ia | valeurs_culture_tempo_sociale | non | premier syndicat international des prompteurs reconnu à Genève 2036 |
 | signal | 2028-2042 | gouvernance_algorithmique_emergente | gouvernance_institutions | non | premiers scandales de biais algorithmiques systémiques 2034 |
 | signal | 2028-2043 | tensions_sur_terres_rares | geopolitique_conflits | oui | crise des terres rares asiatiques 2038 |
 | signal | 2028-2042 | emergence_pathogenes_nouveaux | sante_biotechnologies | non | crise sanitaire régionale non résolue de 2037 |
@@ -557,6 +571,7 @@ Total : 528 entrées (77 signaux uniques × 6 scénarios + 66 entrées d'événe
 | signal | 2029-2043 | ia_agents_administratifs_autonomes | gouvernance_institutions | non | Carthage-Nord expérimente des agents IA concurrents dans ses administrations 2036 |
 | signal | 2030-2045 | automatisation_financière_algorithmique | systeme_economique_redistribution | non | crise flash-crash globale de 2039 |
 | signal | 2030-2050 | medecine_predictive_ia | sante_biotechnologies | non | lancement commercial des premiers bilans prédictifs IA 2036 |
+| signal | 2030-2046 | clerge_prompteurs_ia | gouvernance_institutions | non | premier congrès mondial des prompteurs à Davos 2038 |
 | signal | 2035-2050 | dedollarisation_progressive | systeme_economique_redistribution | non | crise de la dette souveraine de 2041 |
 | signal | 2035-2055 | fusion_experimentale | energie_ressources_critiques | oui | premier réacteur à fusion pilote commercial 2052 |
 | evenement | 2038 | conflit_indo_arabe_2038 | geopolitique_conflits, demographie_mobilite_humaine | — | 2038, l'Inde bloque les détroits arabes |

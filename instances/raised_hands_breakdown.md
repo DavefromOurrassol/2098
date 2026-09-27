@@ -56,13 +56,13 @@ injection:
     Son impact sur *gouvernance_institutions* est négatif car son échec historique (répression, fragmentation) a contribué à saper la confiance dans les structures démocratiques traditionnelles, accélérant leur effondrement. En revanche, son héritage culturel (*valeurs_culture_tempo_sociale*) persiste comme une référence morale pour les mouvements post-effondrement, maintenant vivante l’idée d’une inclusion politique malgré la fragmentation.
   impact_sur_variables:
   - variable: gouvernance_institutions
-    delta_level: -3
+    delta_level: 3
     duree: 20
-    polarite: -1
+    polarite: 1
   - variable: valeurs_culture_tempo_sociale
     delta_level: 5
     duree: 30
-    polarite: 1
+    polarite: -1
   propagation:
     via_matrice: false
 

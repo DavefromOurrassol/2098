@@ -50,6 +50,10 @@ simulation:
   systemic_criticality: 4
   resilience: 3
   adaptability: 4
+echelle:
+  type: intensite
+  zero: "territoires équilibrés, distribués et résilients"
+  cent: "effondrement des mégapoles, espaces humains fragmentés"
 states:
 
   fortress_world:

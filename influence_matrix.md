@@ -157,7 +157,7 @@ edges:
   - source: [[systeme_economique_redistribution]]
     target: [[energie_ressources_critiques]]
     weight: 0.85
-    polarity: -1
+    polarity: 1
     lag: 1
     nonlinearity: high
     temporal_weight: 1.0
@@ -193,7 +193,7 @@ edges:
   - source: [[gouvernance_institutions]]
     target: [[geopolitique_conflits]]
     weight: 0.9
-    polarity: -1
+    polarity: 1
     lag: 1
     nonlinearity: high
     temporal_weight: 1.0
@@ -283,7 +283,7 @@ edges:
   - source: [[geopolitique_conflits]]
     target: [[systeme_economique_redistribution]]
     weight: 0.75
-    polarity: -1
+    polarity: 1
     lag: 2
     nonlinearity: high
     temporal_weight: 0.8
@@ -292,7 +292,7 @@ edges:
   - source: [[geopolitique_conflits]]
     target: [[gouvernance_institutions]]
     weight: 0.9
-    polarity: -1
+    polarity: 1
     lag: 1
     nonlinearity: high
     temporal_weight: 1.0
@@ -310,7 +310,7 @@ edges:
   - source: [[geopolitique_conflits]]
     target: [[organisation_territoires]]
     weight: 0.85
-    polarity: -1
+    polarity: 1
     lag: 1
     nonlinearity: high
     temporal_weight: 0.9
@@ -319,7 +319,7 @@ edges:
   - source: [[geopolitique_conflits]]
     target: [[sante_biotechnologies]]
     weight: 0.5
-    polarity: -1
+    polarity: 1
     lag: 3
     nonlinearity: medium
     temporal_weight: 0.5
@@ -328,7 +328,7 @@ edges:
   - source: [[geopolitique_conflits]]
     target: [[frontieres_du_systeme]]
     weight: 0.8
-    polarity: -1
+    polarity: 1
     lag: 2
     nonlinearity: high
     temporal_weight: 0.9
@@ -346,7 +346,7 @@ edges:
   - source: [[geopolitique_conflits]]
     target: [[climat_environnement_global]]
     weight: 0.65
-    polarity: -1
+    polarity: 1
     lag: 4
     nonlinearity: high
     temporal_weight: 0.7
@@ -355,7 +355,7 @@ edges:
   - source: [[geopolitique_conflits]]
     target: [[energie_ressources_critiques]]
     weight: 0.95
-    polarity: -1
+    polarity: 1
     lag: 1
     nonlinearity: high
     temporal_weight: 1.0
@@ -364,7 +364,7 @@ edges:
   - source: [[geopolitique_conflits]]
     target: [[demographie_mobilite_humaine]]
     weight: 0.75
-    polarity: -1
+    polarity: 1
     lag: 2
     nonlinearity: high
     temporal_weight: 0.8
@@ -373,7 +373,7 @@ edges:
   - source: [[geopolitique_conflits]]
     target: [[systemes_productifs_travail]]
     weight: 0.7
-    polarity: -1
+    polarity: 1
     lag: 2
     nonlinearity: medium
     temporal_weight: 0.7
@@ -499,7 +499,7 @@ edges:
   - source: [[organisation_territoires]]
     target: [[geopolitique_conflits]]
     weight: 0.85
-    polarity: -1
+    polarity: 1
     lag: 1
     nonlinearity: high
     temporal_weight: 0.9
@@ -526,7 +526,7 @@ edges:
   - source: [[organisation_territoires]]
     target: [[frontieres_du_systeme]]
     weight: 0.6
-    polarity: -1
+    polarity: 1
     lag: 2
     nonlinearity: high
     temporal_weight: 0.8
@@ -544,7 +544,7 @@ edges:
   - source: [[organisation_territoires]]
     target: [[climat_environnement_global]]
     weight: 0.7
-    polarity: -1
+    polarity: 1
     lag: 4
     nonlinearity: high
     temporal_weight: 0.8
@@ -553,7 +553,7 @@ edges:
   - source: [[organisation_territoires]]
     target: [[energie_ressources_critiques]]
     weight: 0.7
-    polarity: -1
+    polarity: 1
     lag: 2
     nonlinearity: high
     temporal_weight: 0.8
@@ -598,7 +598,7 @@ edges:
   - source: [[sante_biotechnologies]]
     target: [[geopolitique_conflits]]
     weight: 0.5
-    polarity: -1
+    polarity: 1
     lag: 3
     nonlinearity: medium
     temporal_weight: 0.5
@@ -697,7 +697,7 @@ edges:
   - source: [[frontieres_du_systeme]]
     target: [[geopolitique_conflits]]
     weight: 0.8
-    polarity: -1
+    polarity: 1
     lag: 2
     nonlinearity: high
     temporal_weight: 0.9
@@ -715,7 +715,7 @@ edges:
   - source: [[frontieres_du_systeme]]
     target: [[organisation_territoires]]
     weight: 0.6
-    polarity: -1
+    polarity: 1
     lag: 2
     nonlinearity: high
     temporal_weight: 0.8
@@ -742,7 +742,7 @@ edges:
   - source: [[frontieres_du_systeme]]
     target: [[climat_environnement_global]]
     weight: 0.75
-    polarity: -1
+    polarity: 1
     lag: 4
     nonlinearity: high
     temporal_weight: 0.8
@@ -751,7 +751,7 @@ edges:
   - source: [[frontieres_du_systeme]]
     target: [[energie_ressources_critiques]]
     weight: 0.7
-    polarity: -1
+    polarity: 1
     lag: 2
     nonlinearity: high
     temporal_weight: 0.9
@@ -877,7 +877,7 @@ edges:
   - source: [[climat_environnement_global]]
     target: [[systeme_economique_redistribution]]
     weight: 0.6
-    polarity: -1
+    polarity: 1
     lag: 4
     nonlinearity: high
     temporal_weight: 0.7
@@ -895,7 +895,7 @@ edges:
   - source: [[climat_environnement_global]]
     target: [[geopolitique_conflits]]
     weight: 0.65
-    polarity: -1
+    polarity: 1
     lag: 4
     nonlinearity: high
     temporal_weight: 0.8
@@ -913,7 +913,7 @@ edges:
   - source: [[climat_environnement_global]]
     target: [[organisation_territoires]]
     weight: 0.7
-    polarity: -1
+    polarity: 1
     lag: 4
     nonlinearity: high
     temporal_weight: 0.8
@@ -922,7 +922,7 @@ edges:
   - source: [[climat_environnement_global]]
     target: [[sante_biotechnologies]]
     weight: 0.5
-    polarity: -1
+    polarity: 1
     lag: 4
     nonlinearity: medium
     temporal_weight: 0.6
@@ -931,7 +931,7 @@ edges:
   - source: [[climat_environnement_global]]
     target: [[frontieres_du_systeme]]
     weight: 0.75
-    polarity: -1
+    polarity: 1
     lag: 4
     nonlinearity: high
     temporal_weight: 0.8
@@ -949,7 +949,7 @@ edges:
   - source: [[climat_environnement_global]]
     target: [[energie_ressources_critiques]]
     weight: 0.6
-    polarity: -1
+    polarity: 1
     lag: 2
     nonlinearity: high
     temporal_weight: 0.9
@@ -958,7 +958,7 @@ edges:
   - source: [[climat_environnement_global]]
     target: [[demographie_mobilite_humaine]]
     weight: 0.8
-    polarity: -1
+    polarity: 1
     lag: 3
     nonlinearity: high
     temporal_weight: 0.8
@@ -967,7 +967,7 @@ edges:
   - source: [[climat_environnement_global]]
     target: [[systemes_productifs_travail]]
     weight: 0.75
-    polarity: -1
+    polarity: 1
     lag: 2
     nonlinearity: high
     temporal_weight: 0.8
@@ -976,7 +976,7 @@ edges:
   - source: [[energie_ressources_critiques]]
     target: [[systeme_economique_redistribution]]
     weight: 0.85
-    polarity: -1
+    polarity: 1
     lag: 1
     nonlinearity: high
     temporal_weight: 1.0
@@ -994,7 +994,7 @@ edges:
   - source: [[energie_ressources_critiques]]
     target: [[geopolitique_conflits]]
     weight: 0.95
-    polarity: -1
+    polarity: 1
     lag: 1
     nonlinearity: high
     temporal_weight: 1.0
@@ -1012,7 +1012,7 @@ edges:
   - source: [[energie_ressources_critiques]]
     target: [[organisation_territoires]]
     weight: 0.7
-    polarity: -1
+    polarity: 1
     lag: 2
     nonlinearity: high
     temporal_weight: 0.8
@@ -1030,7 +1030,7 @@ edges:
   - source: [[energie_ressources_critiques]]
     target: [[frontieres_du_systeme]]
     weight: 0.7
-    polarity: -1
+    polarity: 1
     lag: 2
     nonlinearity: high
     temporal_weight: 0.9
@@ -1048,7 +1048,7 @@ edges:
   - source: [[energie_ressources_critiques]]
     target: [[climat_environnement_global]]
     weight: 0.6
-    polarity: -1
+    polarity: 1
     lag: 2
     nonlinearity: high
     temporal_weight: 0.9
@@ -1057,7 +1057,7 @@ edges:
   - source: [[energie_ressources_critiques]]
     target: [[demographie_mobilite_humaine]]
     weight: 0.7
-    polarity: -1
+    polarity: 1
     lag: 2
     nonlinearity: high
     temporal_weight: 0.8
@@ -1066,7 +1066,7 @@ edges:
   - source: [[energie_ressources_critiques]]
     target: [[systemes_productifs_travail]]
     weight: 0.85
-    polarity: -1
+    polarity: 1
     lag: 1
     nonlinearity: high
     temporal_weight: 0.9
@@ -1093,7 +1093,7 @@ edges:
   - source: [[demographie_mobilite_humaine]]
     target: [[geopolitique_conflits]]
     weight: 0.75
-    polarity: -1
+    polarity: 1
     lag: 2
     nonlinearity: high
     temporal_weight: 0.8
@@ -1147,7 +1147,7 @@ edges:
   - source: [[demographie_mobilite_humaine]]
     target: [[climat_environnement_global]]
     weight: 0.8
-    polarity: -1
+    polarity: 1
     lag: 3
     nonlinearity: high
     temporal_weight: 0.8
@@ -1156,7 +1156,7 @@ edges:
   - source: [[demographie_mobilite_humaine]]
     target: [[energie_ressources_critiques]]
     weight: 0.7
-    polarity: -1
+    polarity: 1
     lag: 2
     nonlinearity: high
     temporal_weight: 0.8
@@ -1192,7 +1192,7 @@ edges:
   - source: [[systemes_productifs_travail]]
     target: [[geopolitique_conflits]]
     weight: 0.7
-    polarity: -1
+    polarity: 1
     lag: 2
     nonlinearity: medium
     temporal_weight: 0.7
@@ -1269,7 +1269,8 @@ edges:
     nonlinearity: medium
     temporal_weight: 0.7
     feedback_role: reinforcing
-
+convention_echelle: intensite_2026-09-27
+convention_polarite: intensite_2026-09-27
 ---
 
 # Matrice d'influence
@@ -1297,30 +1298,30 @@ edges:
 
 | Source | Target | Weight | Polarity | Lag | Role |
 |---|---|---|---|---|---|
-| [[geopolitique_conflits]] | [[energie_ressources_critiques]] | 0.95 | − | 1 | cascade |
-| [[energie_ressources_critiques]] | [[geopolitique_conflits]] | 0.95 | − | 1 | cascade |
+| [[geopolitique_conflits]] | [[energie_ressources_critiques]] | 0.95 | + | 1 | cascade |
+| [[energie_ressources_critiques]] | [[geopolitique_conflits]] | 0.95 | + | 1 | cascade |
 | [[systeme_economique_redistribution]] | [[systemes_productifs_travail]] | 0.9 | + | 1 | reinforcing |
-| [[gouvernance_institutions]] | [[geopolitique_conflits]] | 0.9 | − | 1 | cascade |
+| [[gouvernance_institutions]] | [[geopolitique_conflits]] | 0.9 | + | 1 | cascade |
 | [[gouvernance_institutions]] | [[technologie_information]] | 0.9 | + | 1 | reinforcing |
-| [[geopolitique_conflits]] | [[gouvernance_institutions]] | 0.9 | − | 1 | reinforcing |
+| [[geopolitique_conflits]] | [[gouvernance_institutions]] | 0.9 | + | 1 | reinforcing |
 | [[technologie_information]] | [[gouvernance_institutions]] | 0.9 | + | 1 | reinforcing |
 | [[technologie_information]] | [[systemes_productifs_travail]] | 0.9 | + | 1 | reinforcing |
 | [[systemes_productifs_travail]] | [[systeme_economique_redistribution]] | 0.9 | + | 1 | reinforcing |
 | [[systemes_productifs_travail]] | [[technologie_information]] | 0.9 | + | 1 | reinforcing |
 | [[systeme_economique_redistribution]] | [[technologie_information]] | 0.85 | + | 1 | reinforcing |
-| [[systeme_economique_redistribution]] | [[energie_ressources_critiques]] | 0.85 | − | 1 | cascade |
-| [[geopolitique_conflits]] | [[organisation_territoires]] | 0.85 | − | 1 | cascade |
+| [[systeme_economique_redistribution]] | [[energie_ressources_critiques]] | 0.85 | + | 1 | cascade |
+| [[geopolitique_conflits]] | [[organisation_territoires]] | 0.85 | + | 1 | cascade |
 | [[geopolitique_conflits]] | [[technologie_information]] | 0.85 | + | 1 | reinforcing |
-| [[organisation_territoires]] | [[geopolitique_conflits]] | 0.85 | − | 1 | cascade |
+| [[organisation_territoires]] | [[geopolitique_conflits]] | 0.85 | + | 1 | cascade |
 | [[technologie_information]] | [[systeme_economique_redistribution]] | 0.85 | + | 1 | reinforcing |
 | [[technologie_information]] | [[geopolitique_conflits]] | 0.85 | + | 1 | reinforcing |
-| [[energie_ressources_critiques]] | [[systeme_economique_redistribution]] | 0.85 | − | 1 | cascade |
-| [[energie_ressources_critiques]] | [[systemes_productifs_travail]] | 0.85 | − | 1 | cascade |
+| [[energie_ressources_critiques]] | [[systeme_economique_redistribution]] | 0.85 | + | 1 | cascade |
+| [[energie_ressources_critiques]] | [[systemes_productifs_travail]] | 0.85 | + | 1 | cascade |
 | [[systemes_productifs_travail]] | [[energie_ressources_critiques]] | 0.85 | − | 1 | cascade |
-| [[geopolitique_conflits]] | [[frontieres_du_systeme]] | 0.8 | − | 2 | cascade |
-| [[frontieres_du_systeme]] | [[geopolitique_conflits]] | 0.8 | − | 2 | cascade |
-| [[climat_environnement_global]] | [[demographie_mobilite_humaine]] | 0.8 | − | 3 | cascade |
-| [[demographie_mobilite_humaine]] | [[climat_environnement_global]] | 0.8 | − | 3 | cascade |
+| [[geopolitique_conflits]] | [[frontieres_du_systeme]] | 0.8 | + | 2 | cascade |
+| [[frontieres_du_systeme]] | [[geopolitique_conflits]] | 0.8 | + | 2 | cascade |
+| [[climat_environnement_global]] | [[demographie_mobilite_humaine]] | 0.8 | + | 3 | cascade |
+| [[demographie_mobilite_humaine]] | [[climat_environnement_global]] | 0.8 | + | 3 | cascade |
 
 ## Détail des edges par variable
 
@@ -1330,7 +1331,7 @@ edges:
 |---|---|---|---|---|---|---|
 | [[systemes_productifs_travail]] | 0.9 | + | 1 | high | 0.9 | reinforcing |
 | [[technologie_information]] | 0.85 | + | 1 | high | 1.0 | reinforcing |
-| [[energie_ressources_critiques]] | 0.85 | − | 1 | high | 1.0 | cascade |
+| [[energie_ressources_critiques]] | 0.85 | + | 1 | high | 1.0 | cascade |
 | [[gouvernance_institutions]] | 0.8 | + | 2 | medium | 0.7 | reinforcing |
 | [[geopolitique_conflits]] | 0.75 | + | 1 | high | 0.9 | cascade |
 | [[organisation_territoires]] | 0.65 | + | 2 | medium | 0.6 | reinforcing |
@@ -1344,7 +1345,7 @@ edges:
 
 | Target | Weight | Polarity | Lag | Nonlinearity | Temporal | Role |
 |---|---|---|---|---|---|---|
-| [[geopolitique_conflits]] | 0.9 | − | 1 | high | 1.0 | cascade |
+| [[geopolitique_conflits]] | 0.9 | + | 1 | high | 1.0 | cascade |
 | [[technologie_information]] | 0.9 | + | 1 | high | 1.0 | reinforcing |
 | [[systeme_economique_redistribution]] | 0.8 | + | 2 | medium | 0.7 | reinforcing |
 | [[organisation_territoires]] | 0.7 | + | 2 | medium | 0.6 | reinforcing |
@@ -1360,17 +1361,17 @@ edges:
 
 | Target | Weight | Polarity | Lag | Nonlinearity | Temporal | Role |
 |---|---|---|---|---|---|---|
-| [[energie_ressources_critiques]] | 0.95 | − | 1 | high | 1.0 | cascade |
-| [[gouvernance_institutions]] | 0.9 | − | 1 | high | 1.0 | reinforcing |
-| [[organisation_territoires]] | 0.85 | − | 1 | high | 0.9 | cascade |
+| [[energie_ressources_critiques]] | 0.95 | + | 1 | high | 1.0 | cascade |
+| [[gouvernance_institutions]] | 0.9 | + | 1 | high | 1.0 | reinforcing |
+| [[organisation_territoires]] | 0.85 | + | 1 | high | 0.9 | cascade |
 | [[technologie_information]] | 0.85 | + | 1 | high | 1.0 | reinforcing |
-| [[frontieres_du_systeme]] | 0.8 | − | 2 | high | 0.9 | cascade |
-| [[systeme_economique_redistribution]] | 0.75 | − | 2 | high | 0.8 | cascade |
-| [[demographie_mobilite_humaine]] | 0.75 | − | 2 | high | 0.8 | cascade |
-| [[systemes_productifs_travail]] | 0.7 | − | 2 | medium | 0.7 | reinforcing |
+| [[frontieres_du_systeme]] | 0.8 | + | 2 | high | 0.9 | cascade |
+| [[systeme_economique_redistribution]] | 0.75 | + | 2 | high | 0.8 | cascade |
+| [[demographie_mobilite_humaine]] | 0.75 | + | 2 | high | 0.8 | cascade |
+| [[systemes_productifs_travail]] | 0.7 | + | 2 | medium | 0.7 | reinforcing |
 | [[valeurs_culture_tempo_sociale]] | 0.65 | + | 3 | medium | 0.5 | reinforcing |
-| [[climat_environnement_global]] | 0.65 | − | 4 | high | 0.7 | cascade |
-| [[sante_biotechnologies]] | 0.5 | − | 3 | medium | 0.5 | delayed |
+| [[climat_environnement_global]] | 0.65 | + | 4 | high | 0.7 | cascade |
+| [[sante_biotechnologies]] | 0.5 | + | 3 | medium | 0.5 | delayed |
 
 ### [[valeurs_culture_tempo_sociale]]
 
@@ -1392,16 +1393,16 @@ edges:
 
 | Target | Weight | Polarity | Lag | Nonlinearity | Temporal | Role |
 |---|---|---|---|---|---|---|
-| [[geopolitique_conflits]] | 0.85 | − | 1 | high | 0.9 | cascade |
+| [[geopolitique_conflits]] | 0.85 | + | 1 | high | 0.9 | cascade |
 | [[systemes_productifs_travail]] | 0.8 | + | 1 | medium | 0.7 | reinforcing |
 | [[technologie_information]] | 0.75 | + | 1 | high | 1.0 | reinforcing |
 | [[demographie_mobilite_humaine]] | 0.75 | + | 2 | medium | 0.6 | reinforcing |
 | [[gouvernance_institutions]] | 0.7 | + | 2 | medium | 0.6 | reinforcing |
-| [[climat_environnement_global]] | 0.7 | − | 4 | high | 0.8 | cascade |
-| [[energie_ressources_critiques]] | 0.7 | − | 2 | high | 0.8 | cascade |
+| [[climat_environnement_global]] | 0.7 | + | 4 | high | 0.8 | cascade |
+| [[energie_ressources_critiques]] | 0.7 | + | 2 | high | 0.8 | cascade |
 | [[systeme_economique_redistribution]] | 0.65 | + | 2 | medium | 0.6 | reinforcing |
 | [[sante_biotechnologies]] | 0.6 | + | 2 | medium | 0.5 | reinforcing |
-| [[frontieres_du_systeme]] | 0.6 | − | 2 | high | 0.8 | balancing |
+| [[frontieres_du_systeme]] | 0.6 | + | 2 | high | 0.8 | balancing |
 | [[valeurs_culture_tempo_sociale]] | 0.55 | + | 2 | medium | 0.6 | reinforcing |
 
 ### [[sante_biotechnologies]]
@@ -1413,7 +1414,7 @@ edges:
 | [[organisation_territoires]] | 0.6 | + | 2 | medium | 0.5 | reinforcing |
 | [[systemes_productifs_travail]] | 0.6 | + | 2 | medium | 0.6 | reinforcing |
 | [[gouvernance_institutions]] | 0.55 | + | 2 | medium | 0.5 | reinforcing |
-| [[geopolitique_conflits]] | 0.5 | − | 3 | medium | 0.5 | delayed |
+| [[geopolitique_conflits]] | 0.5 | + | 3 | medium | 0.5 | delayed |
 | [[valeurs_culture_tempo_sociale]] | 0.5 | + | 3 | low | 0.4 | delayed |
 | [[frontieres_du_systeme]] | 0.5 | + | 3 | high | 0.7 | balancing |
 | [[climat_environnement_global]] | 0.5 | + | 4 | medium | 0.6 | delayed |
@@ -1424,11 +1425,11 @@ edges:
 
 | Target | Weight | Polarity | Lag | Nonlinearity | Temporal | Role |
 |---|---|---|---|---|---|---|
-| [[geopolitique_conflits]] | 0.8 | − | 2 | high | 0.9 | cascade |
-| [[climat_environnement_global]] | 0.75 | − | 4 | high | 0.8 | cascade |
-| [[energie_ressources_critiques]] | 0.7 | − | 2 | high | 0.9 | cascade |
+| [[geopolitique_conflits]] | 0.8 | + | 2 | high | 0.9 | cascade |
+| [[climat_environnement_global]] | 0.75 | + | 4 | high | 0.8 | cascade |
+| [[energie_ressources_critiques]] | 0.7 | + | 2 | high | 0.9 | cascade |
 | [[systemes_productifs_travail]] | 0.65 | + | 2 | medium | 0.7 | reinforcing |
-| [[organisation_territoires]] | 0.6 | − | 2 | high | 0.8 | balancing |
+| [[organisation_territoires]] | 0.6 | + | 2 | high | 0.8 | balancing |
 | [[technologie_information]] | 0.6 | + | 2 | high | 0.9 | reinforcing |
 | [[demographie_mobilite_humaine]] | 0.55 | + | 3 | medium | 0.6 | balancing |
 | [[systeme_economique_redistribution]] | 0.5 | + | 2 | high | 0.7 | balancing |
@@ -1456,30 +1457,30 @@ edges:
 
 | Target | Weight | Polarity | Lag | Nonlinearity | Temporal | Role |
 |---|---|---|---|---|---|---|
-| [[demographie_mobilite_humaine]] | 0.8 | − | 3 | high | 0.8 | cascade |
-| [[frontieres_du_systeme]] | 0.75 | − | 4 | high | 0.8 | cascade |
-| [[systemes_productifs_travail]] | 0.75 | − | 2 | high | 0.8 | cascade |
-| [[organisation_territoires]] | 0.7 | − | 4 | high | 0.8 | cascade |
-| [[geopolitique_conflits]] | 0.65 | − | 4 | high | 0.8 | cascade |
-| [[systeme_economique_redistribution]] | 0.6 | − | 4 | high | 0.7 | cascade |
-| [[energie_ressources_critiques]] | 0.6 | − | 2 | high | 0.9 | cascade |
+| [[demographie_mobilite_humaine]] | 0.8 | + | 3 | high | 0.8 | cascade |
+| [[frontieres_du_systeme]] | 0.75 | + | 4 | high | 0.8 | cascade |
+| [[systemes_productifs_travail]] | 0.75 | + | 2 | high | 0.8 | cascade |
+| [[organisation_territoires]] | 0.7 | + | 4 | high | 0.8 | cascade |
+| [[geopolitique_conflits]] | 0.65 | + | 4 | high | 0.8 | cascade |
+| [[systeme_economique_redistribution]] | 0.6 | + | 4 | high | 0.7 | cascade |
+| [[energie_ressources_critiques]] | 0.6 | + | 2 | high | 0.9 | cascade |
 | [[technologie_information]] | 0.55 | + | 3 | high | 0.8 | reinforcing |
 | [[gouvernance_institutions]] | 0.5 | + | 4 | medium | 0.6 | delayed |
-| [[sante_biotechnologies]] | 0.5 | − | 4 | medium | 0.6 | cascade |
+| [[sante_biotechnologies]] | 0.5 | + | 4 | medium | 0.6 | cascade |
 | [[valeurs_culture_tempo_sociale]] | 0.4 | + | 4 | medium | 0.6 | delayed |
 
 ### [[energie_ressources_critiques]]
 
 | Target | Weight | Polarity | Lag | Nonlinearity | Temporal | Role |
 |---|---|---|---|---|---|---|
-| [[geopolitique_conflits]] | 0.95 | − | 1 | high | 1.0 | cascade |
-| [[systeme_economique_redistribution]] | 0.85 | − | 1 | high | 1.0 | cascade |
-| [[systemes_productifs_travail]] | 0.85 | − | 1 | high | 0.9 | cascade |
-| [[organisation_territoires]] | 0.7 | − | 2 | high | 0.8 | cascade |
-| [[frontieres_du_systeme]] | 0.7 | − | 2 | high | 0.9 | cascade |
+| [[geopolitique_conflits]] | 0.95 | + | 1 | high | 1.0 | cascade |
+| [[systeme_economique_redistribution]] | 0.85 | + | 1 | high | 1.0 | cascade |
+| [[systemes_productifs_travail]] | 0.85 | + | 1 | high | 0.9 | cascade |
+| [[organisation_territoires]] | 0.7 | + | 2 | high | 0.8 | cascade |
+| [[frontieres_du_systeme]] | 0.7 | + | 2 | high | 0.9 | cascade |
 | [[technologie_information]] | 0.7 | + | 2 | high | 0.9 | reinforcing |
-| [[demographie_mobilite_humaine]] | 0.7 | − | 2 | high | 0.8 | cascade |
-| [[climat_environnement_global]] | 0.6 | − | 2 | high | 0.9 | cascade |
+| [[demographie_mobilite_humaine]] | 0.7 | + | 2 | high | 0.8 | cascade |
+| [[climat_environnement_global]] | 0.6 | + | 2 | high | 0.9 | cascade |
 | [[gouvernance_institutions]] | 0.55 | + | 2 | medium | 0.6 | reinforcing |
 | [[sante_biotechnologies]] | 0.45 | + | 3 | medium | 0.5 | balancing |
 | [[valeurs_culture_tempo_sociale]] | 0.4 | + | 3 | medium | 0.5 | balancing |
@@ -1488,14 +1489,14 @@ edges:
 
 | Target | Weight | Polarity | Lag | Nonlinearity | Temporal | Role |
 |---|---|---|---|---|---|---|
-| [[climat_environnement_global]] | 0.8 | − | 3 | high | 0.8 | cascade |
+| [[climat_environnement_global]] | 0.8 | + | 3 | high | 0.8 | cascade |
 | [[systemes_productifs_travail]] | 0.8 | + | 2 | medium | 0.7 | reinforcing |
-| [[geopolitique_conflits]] | 0.75 | − | 2 | high | 0.8 | cascade |
+| [[geopolitique_conflits]] | 0.75 | + | 2 | high | 0.8 | cascade |
 | [[organisation_territoires]] | 0.75 | + | 2 | medium | 0.6 | reinforcing |
 | [[gouvernance_institutions]] | 0.7 | + | 2 | medium | 0.6 | reinforcing |
 | [[valeurs_culture_tempo_sociale]] | 0.7 | + | 2 | medium | 0.6 | reinforcing |
 | [[sante_biotechnologies]] | 0.7 | + | 2 | medium | 0.6 | reinforcing |
-| [[energie_ressources_critiques]] | 0.7 | − | 2 | high | 0.8 | cascade |
+| [[energie_ressources_critiques]] | 0.7 | + | 2 | high | 0.8 | cascade |
 | [[systeme_economique_redistribution]] | 0.65 | + | 3 | medium | 0.6 | reinforcing |
 | [[technologie_information]] | 0.65 | + | 2 | medium | 0.6 | reinforcing |
 | [[frontieres_du_systeme]] | 0.55 | + | 3 | medium | 0.6 | balancing |
@@ -1510,7 +1511,7 @@ edges:
 | [[organisation_territoires]]          | 0.8    | +        | 1   | medium       | 0.7      | reinforcing |
 | [[demographie_mobilite_humaine]]      | 0.8    | +        | 2   | medium       | 0.7      | reinforcing |
 | [[climat_environnement_global]]       | 0.75   | −        | 2   | high         | 0.8      | cascade     |
-| [[geopolitique_conflits]]             | 0.7    | −        | 2   | medium       | 0.7      | cascade     |
+| [[geopolitique_conflits]]             | 0.7    | +        | 2   | medium       | 0.7      | cascade     |
 | [[gouvernance_institutions]]          | 0.65   | +        | 2   | medium       | 0.6      | reinforcing |
 | [[frontieres_du_systeme]]             | 0.65   | +        | 2   | medium       | 0.7      | reinforcing |
 | [[valeurs_culture_tempo_sociale]]     | 0.6    | +        | 2   | medium       | 0.6      | reinforcing |

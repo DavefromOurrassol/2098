@@ -24,19 +24,19 @@ impact_sur_variables:
   - variable: systemes_productifs_travail
     delta_level: 15
     duree: 25
-    polarite: 1
+    polarite: -1
   - variable: technologie_information
     delta_level: 10
     duree: 20
-    polarite: 1
+    polarite: -1
   - variable: energie_ressources_critiques
     delta_level: 12
     duree: 20
-    polarite: 1
+    polarite: -1
   - variable: organisation_territoires
     delta_level: 8
     duree: 15
-    polarite: 1
+    polarite: -1
 propagation:
   via_matrice: true
 acteurs_impliques:
@@ -65,10 +65,10 @@ Sous un soleil de plomb, les paysans de la région de Niamey et d'Agadez se pres
 Ce modèle de 'travail régénératif' se diffuse rapidement dans les zones arides du Sahel, inspirant d'autres régions à adopter des systèmes similaires. Les coopératives agricoles gagnent en autonomie, réduisant leur dépendance aux consortiums industriels de l'eau et aux agro-conglomérats. Les data centers solaires deviennent des symboles de résilience, attirant des investissements locaux et renforçant la souveraineté numérique des communautés. À long terme, cette initiative contribue à stabiliser les populations rurales et à freiner l'exode vers les mégapoles surpeuplées.
 
 ## Impact sur les variables
-- **systemes_productifs_travail** : delta +15 sur 25 ans
-- **technologie_information** : delta +10 sur 20 ans
-- **energie_ressources_critiques** : delta +12 sur 20 ans
-- **organisation_territoires** : delta +8 sur 15 ans
+- **systemes_productifs_travail** : delta -15 sur 25 ans
+- **technologie_information** : delta -10 sur 20 ans
+- **energie_ressources_critiques** : delta -12 sur 20 ans
+- **organisation_territoires** : delta -8 sur 15 ans
 
 ## Acteurs impliqués
 - [[assemblees_cooperatives_regionales_eco_communalism]]

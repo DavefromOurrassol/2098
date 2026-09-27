@@ -24,19 +24,19 @@ impact_sur_variables:
   - variable: energie_ressources_critiques
     delta_level: 8
     duree: 25
-    polarite: -1
+    polarite: 1
   - variable: geopolitique_conflits
     delta_level: 10
     duree: 20
-    polarite: -1
+    polarite: 1
   - variable: gouvernance_institutions
-    delta_level: -12
+    delta_level: 12
     duree: 30
-    polarite: -1
+    polarite: 1
   - variable: organisation_territoires
     delta_level: 7
     duree: 20
-    polarite: -1
+    polarite: 1
 propagation:
   via_matrice: true
 acteurs_impliques:
@@ -67,10 +67,10 @@ Nuuk, 14 octobre 2041. Les serveurs de Nuna Capital encaissent en moins d'une he
 Le précédent groenlandais fracture définitivement les dernières illusions d'une gouvernance commune des ressources arctiques : la CARS (Chambre d'Arbitrage des Ressources Souveraines) est contournée et discréditée, confirmant que les blocs se substituent au droit international par la puissance brute. À moyen terme, les gisements attribués deviennent des enclaves d'extraction militarisées, jalonnant l'Arctique de points de friction permanents qui alimentent la course aux armements navals des blocs.
 
 ## Impact sur les variables
-- **energie_ressources_critiques** : delta -8 sur 25 ans
-- **geopolitique_conflits** : delta -10 sur 20 ans
+- **energie_ressources_critiques** : delta +8 sur 25 ans
+- **geopolitique_conflits** : delta +10 sur 20 ans
 - **gouvernance_institutions** : delta +12 sur 30 ans
-- **organisation_territoires** : delta -7 sur 20 ans
+- **organisation_territoires** : delta +7 sur 20 ans
 
 ## Acteurs impliqués
 - [[kalaallit_nunaat_sovereign_fund_fortress_world]]

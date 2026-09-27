@@ -64,13 +64,13 @@ injection:
     Les EWS incarnent une résistance à la décentralisation éco-communaliste en maintenant des îlots de gouvernance algorithmique et de propriété privée. Leur impact négatif sur la gouvernance et la redistribution reflète leur rôle de frein à la souveraineté locale, tandis que leur maîtrise des technologies de l'information leur permet de conserver une influence disproportionnée sur les infrastructures critiques.
   impact_sur_variables:
   - variable: gouvernance_institutions
-    delta_level: -8
+    delta_level: 8
     duree: 20
-    polarite: -1
+    polarite: 1
   - variable: systeme_economique_redistribution
-    delta_level: -5
+    delta_level: 5
     duree: 15
-    polarite: -1
+    polarite: 1
   - variable: technologie_information
     delta_level: 5
     duree: 10

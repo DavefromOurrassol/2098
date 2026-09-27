@@ -72,7 +72,7 @@ injection:
   - variable: demographie_mobilite_humaine
     delta_level: 8
     duree: 10
-    polarite: 1
+    polarite: -1
   propagation:
     via_matrice: true
 

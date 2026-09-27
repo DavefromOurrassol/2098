@@ -72,11 +72,11 @@ injection:
   - variable: organisation_territoires
     delta_level: 10
     duree: 25
-    polarite: 1
+    polarite: -1
   - variable: valeurs_culture_tempo_sociale
     delta_level: 7
     duree: 15
-    polarite: 1
+    polarite: -1
   propagation:
     via_matrice: false
 description_journalistique: 'Depuis près d''un demi-siècle, la Confédération des Cinq

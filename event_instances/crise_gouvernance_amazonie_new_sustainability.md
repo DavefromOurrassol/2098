@@ -22,21 +22,21 @@ realisation: >
   Dans le monde new_sustainability, la crise éclate mais les institutions tiennent. Le Consortium Amazônia Viva déclenche l'état d'urgence écologique sur 38% du bassin après la détection par les capteurs du Réseau Vivant Continental de déforestations illégales orchestrées par des opérateurs liés aux blocs énergétiques résiduels. Contrairement à un scénario d'effondrement, l'AGRB-ONU et le Parlement des Territoires réagissent en moins de 72 heures, déployant des équipes d'audit algorithmique. La confrontation à Belém reste tendue mais contenue : les milices corporatives se heurtent à une coalition de médiateurs cognitifs et à la pression des réseaux de bio-communs régionaux. L'épisode révèle les limites de la gouvernance technocratique face à des acteurs privés agissant dans les angles morts réglementaires.
 impact_sur_variables:
   - variable: climat_environnement_global
-    delta_level: -4
+    delta_level: 4
     duree: 8
     polarite: -1
   - variable: geopolitique_conflits
     delta_level: 6
     duree: 5
-    polarite: -1
+    polarite: 1
   - variable: gouvernance_institutions
     delta_level: 5
     duree: 15
-    polarite: 1
+    polarite: -1
   - variable: organisation_territoires
     delta_level: 7
     duree: 20
-    polarite: 1
+    polarite: -1
 propagation:
   via_matrice: true
 acteurs_impliques:
@@ -66,10 +66,10 @@ Octobre 2047 : les écrans du monde entier diffusent les images de Belém sous t
 La crise accélère la codification du droit de souveraineté écologique des bassins versants au sein du corpus institutionnel mondial, consacrant le Consortium Amazônia Viva comme acteur géopolitique reconnu. Elle entraîne un renforcement des mécanismes de surveillance algorithmique des zones tampons et une révision profonde des licences accordées aux opérateurs énergétiques privés dans les zones protégées. En creux, elle expose la fragilité résiduelle du système : même dans un monde de régénération stabilisée, des acteurs extractifs peuvent opérer impunément si les angles morts institutionnels ne sont pas comblés.
 
 ## Impact sur les variables
-- **climat_environnement_global** : delta +4 sur 8 ans
-- **geopolitique_conflits** : delta -6 sur 5 ans
-- **gouvernance_institutions** : delta +5 sur 15 ans
-- **organisation_territoires** : delta +7 sur 20 ans
+- **climat_environnement_global** : delta -4 sur 8 ans
+- **geopolitique_conflits** : delta +6 sur 5 ans
+- **gouvernance_institutions** : delta -5 sur 15 ans
+- **organisation_territoires** : delta -7 sur 20 ans
 
 ## Acteurs impliqués
 - [[consortium_amazonia_viva_new_sustainability]]

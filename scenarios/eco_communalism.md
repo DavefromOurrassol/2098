@@ -23,41 +23,41 @@ constrained_variables:
   - [[systeme_economique_redistribution]]
 variable_states:
   systeme_economique_redistribution:
-    level: 50
-    trend: down
+    level: 35
+    trend: up
   gouvernance_institutions:
-    level: 55
-    trend: down
+    level: 25
+    trend: up
   geopolitique_conflits:
-    level: 45
+    level: 35
     trend: down
   valeurs_culture_tempo_sociale:
-    level: 60
+    level: 40
     trend: stable
   organisation_territoires:
-    level: 85
+    level: 40
     trend: up
   sante_biotechnologies:
-    level: 60
+    level: 40
     trend: stable
   frontieres_du_systeme:
-    level: 60
+    level: 50
     trend: up
   technologie_information:
-    level: 65
-    trend: down
-  climat_environnement_global:
-    level: 60
+    level: 45
     trend: up
-  energie_ressources_critiques:
+  climat_environnement_global:
     level: 55
     trend: down
+  energie_ressources_critiques:
+    level: 50
+    trend: up
   demographie_mobilite_humaine:
     level: 40
-    trend: down
+    trend: up
   systemes_productifs_travail:
-    level: 65
-    trend: down
+    level: 45
+    trend: up
 triggers:
   - crise énergétique prolongée
   - choc climatique majeur
@@ -78,6 +78,7 @@ system_effects:
   environment:
     - régénération partielle des écosystèmes
     - réduction des pressions extractives globales
+convention_echelle: intensite_2026-09-27
 ---
 
 # eco_communalism
@@ -131,18 +132,18 @@ Système mondial fragmenté en unités locales relativement autonomes après une
 ## 4A. États des variables
 | Variable | Level | Trend |
 |---|---|---|
-| [[systeme_economique_redistribution]] | 50 | down |
-| [[gouvernance_institutions]] | 55 | down |
-| [[geopolitique_conflits]] | 45 | down |
-| [[valeurs_culture_tempo_sociale]] | 60 | stable |
-| [[organisation_territoires]] | 85 | up |
-| [[sante_biotechnologies]] | 60 | stable |
-| [[frontieres_du_systeme]] | 60 | up |
-| [[technologie_information]] | 65 | down |
-| [[climat_environnement_global]] | 60 | up |
-| [[energie_ressources_critiques]] | 55 | down |
-| [[demographie_mobilite_humaine]] | 40 | down |
-| [[systemes_productifs_travail]] | 65 | down |
+| [[systeme_economique_redistribution]] | 35 | up |
+| [[gouvernance_institutions]] | 25 | up |
+| [[geopolitique_conflits]] | 35 | down |
+| [[valeurs_culture_tempo_sociale]] | 40 | stable |
+| [[organisation_territoires]] | 40 | up |
+| [[sante_biotechnologies]] | 40 | stable |
+| [[frontieres_du_systeme]] | 50 | up |
+| [[technologie_information]] | 45 | up |
+| [[climat_environnement_global]] | 55 | down |
+| [[energie_ressources_critiques]] | 50 | up |
+| [[demographie_mobilite_humaine]] | 40 | up |
+| [[systemes_productifs_travail]] | 45 | up |
 
 ## 5. Forces dominantes
 - relocalisation des systèmes productifs

@@ -62,13 +62,13 @@ injection:
     Le RBR agit comme un contre-pouvoir informel qui érode la légitimité des institutions hybrides en démontrant que des alternatives locales et autonomes peuvent fonctionner en dehors des cadres algorithmiques. Son impact sur la gouvernance est négatif car il révèle les limites des systèmes de régulation centralisés, mais positif sur la redistribution économique en créant des poches de résilience hors des mécanismes officiels. Enfin, il influence les valeurs culturelles en réhabilitant des pratiques de solidarité et d'autonomie qui avaient été marginalisées par la technocratie.
   impact_sur_variables:
   - variable: gouvernance_institutions
-    delta_level: -5
+    delta_level: 5
     duree: 15
-    polarite: -1
+    polarite: 1
   - variable: systeme_economique_redistribution
     delta_level: 3
     duree: 10
-    polarite: 1
+    polarite: -1
   - variable: valeurs_culture_tempo_sociale
     delta_level: 5
     duree: 20

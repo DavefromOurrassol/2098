@@ -68,13 +68,13 @@ injection:
     '
   impact_sur_variables:
   - variable: gouvernance_institutions
-    delta_level: -5
+    delta_level: 5
     duree: 15
-    polarite: -1
+    polarite: 1
   - variable: technologie_information
-    delta_level: -3
+    delta_level: 3
     duree: 10
-    polarite: -1
+    polarite: 1
   propagation:
     via_matrice: false
 description_journalistique: 'Kaspar Lind, figure insaisissable du paysage souterrain

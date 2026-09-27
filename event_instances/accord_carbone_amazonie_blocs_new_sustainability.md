@@ -24,15 +24,15 @@ impact_sur_variables:
   - variable: climat_environnement_global
     delta_level: 8
     duree: 30
-    polarite: 1
+    polarite: -1
   - variable: gouvernance_institutions
     delta_level: 5
     duree: 25
-    polarite: 1
-  - variable: geopolitique_conflits
-    delta_level: -6
-    duree: 15
     polarite: -1
+  - variable: geopolitique_conflits
+    delta_level: 6
+    duree: 15
+    polarite: 1
   - variable: energie_ressources_critiques
     delta_level: 4
     duree: 20
@@ -66,8 +66,8 @@ Belém, été 2053 : sous les projecteurs d'une diplomatie mondiale rodée aux c
 Le traité institue un précédent juridique mondial : les écosystèmes critiques peuvent désormais exercer une souveraineté de veto sur les projets industriels périphériques, ouvrant la voie à des mécanismes similaires pour le bassin du Congo et les tourbières boréales. La fracture entre blocs signataires et non-signataires alimente une asymétrie carbone dans les marchés régénératifs, poussant progressivement le bloc récalcitrant à renégocier sous pression économique d'ici 2062. Les peuples autochtones amazoniens deviennent des acteurs institutionnels reconnus du système de gouvernance climatique mondiale.
 
 ## Impact sur les variables
-- **climat_environnement_global** : delta +8 sur 30 ans
-- **gouvernance_institutions** : delta +5 sur 25 ans
+- **climat_environnement_global** : delta -8 sur 30 ans
+- **gouvernance_institutions** : delta -5 sur 25 ans
 - **geopolitique_conflits** : delta +6 sur 15 ans
 - **energie_ressources_critiques** : delta +4 sur 20 ans
 

@@ -24,15 +24,15 @@ impact_sur_variables:
   - variable: geopolitique_conflits
     delta_level: 12
     duree: 15
-    polarite: -1
+    polarite: 1
   - variable: frontieres_du_systeme
     delta_level: 10
     duree: 20
-    polarite: -1
+    polarite: 1
   - variable: energie_ressources_critiques
-    delta_level: -8
+    delta_level: 8
     duree: 12
-    polarite: -1
+    polarite: 1
 propagation:
   via_matrice: true
 acteurs_impliques:
@@ -59,8 +59,8 @@ Dans l'Arctique de 2059, la fonte accélérée des glaces a transformé le Passa
 L'incident force une clarification institutionnelle longtemps différée sur la juridiction arctique, aboutissant en 2062 à la négociation d'un Protocole Polaire intégré sous l'égide du CRRC-ARN, qui reconnaît la primauté de l'APA sur les eaux du Passage du Nord-Ouest contre des mécanismes de partage des revenus de transit. À court terme, il fragilise la confiance dans la capacité des institutions technocratiques à prévenir les confrontations armées sur les ressources critiques, alimentant les discours souverainistes au sein du Front des Souverainistes Énergétiques.
 
 ## Impact sur les variables
-- **geopolitique_conflits** : delta -12 sur 15 ans
-- **frontieres_du_systeme** : delta -10 sur 20 ans
+- **geopolitique_conflits** : delta +12 sur 15 ans
+- **frontieres_du_systeme** : delta +10 sur 20 ans
 - **energie_ressources_critiques** : delta +8 sur 12 ans
 
 ## Acteurs impliqués

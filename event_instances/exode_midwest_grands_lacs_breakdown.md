@@ -24,27 +24,27 @@ impact_sur_variables:
   - variable: demographie_mobilite_humaine
     delta_level: 8
     duree: 25
-    polarite: -1
+    polarite: 1
   - variable: organisation_territoires
-    delta_level: -15
+    delta_level: 15
     duree: 30
-    polarite: -1
+    polarite: 1
   - variable: gouvernance_institutions
-    delta_level: -12
+    delta_level: 12
     duree: 20
-    polarite: -1
+    polarite: 1
   - variable: climat_environnement_global
     delta_level: 5
     duree: 40
-    polarite: -1
+    polarite: 1
   - variable: geopolitique_conflits
     delta_level: 12
     duree: 20
-    polarite: -1
+    polarite: 1
   - variable: energie_ressources_critiques
-    delta_level: -10
+    delta_level: 10
     duree: 15
-    polarite: -1
+    polarite: 1
 propagation:
   via_matrice: true
 acteurs_impliques:
@@ -75,11 +75,11 @@ L'été 2044 marque la fin du Midwest habitable. Des colonnes humaines s'étiren
 Les zones lacustres deviennent des territoires de friction permanente entre populations déplacées, milices locales et factions para-étatiques, accélérant la sécession de fait des cités-états du Nord industriel. Le Midwest est officiellement classifié zone non récupérable dans les registres résiduels, mais aucune institution n'a l'autorité pour faire appliquer quoi que ce soit. Cette migration fonde un précédent : la notion même de citoyenneté américaine se dissout au profit de l'allégeance territoriale locale, et les flux migratoires deviennent structurellement non intégrables pour une génération.
 
 ## Impact sur les variables
-- **demographie_mobilite_humaine** : delta -8 sur 25 ans
+- **demographie_mobilite_humaine** : delta +8 sur 25 ans
 - **organisation_territoires** : delta +15 sur 30 ans
 - **gouvernance_institutions** : delta +12 sur 20 ans
-- **climat_environnement_global** : delta -5 sur 40 ans
-- **geopolitique_conflits** : delta -12 sur 20 ans
+- **climat_environnement_global** : delta +5 sur 40 ans
+- **geopolitique_conflits** : delta +12 sur 20 ans
 - **energie_ressources_critiques** : delta +10 sur 15 ans
 
 ## Acteurs impliqués

@@ -24,15 +24,15 @@ impact_sur_variables:
   - variable: geopolitique_conflits
     delta_level: 8
     duree: 15
-    polarite: -1
+    polarite: 1
   - variable: energie_ressources_critiques
     delta_level: 10
     duree: 20
-    polarite: -1
+    polarite: 1
   - variable: frontieres_du_systeme
     delta_level: 12
     duree: 25
-    polarite: -1
+    polarite: 1
 propagation:
   via_matrice: true
 acteurs_impliques:
@@ -60,9 +60,9 @@ Les images des trois navires encerclés dans la banquise par les drones de la NA
 L'incident entérine la fragmentation définitive des routes arctiques en corridors souverains incompatibles, chaque bloc déployant ses propres protocoles d'escorte armée. La saisine du Tribunal International de la Mer, ignorée par les grandes puissances, démontre l'impuissance des institutions multilatérales résiduelles face aux rapports de force entre blocs. À terme, Nuna Capital se trouve contraint de négocier des accords de protection militaire bilatéraux avec chacun des blocs pour sécuriser ses exportations, renforçant la logique forteresse au détriment de toute gouvernance partagée de l'Arctique.
 
 ## Impact sur les variables
-- **geopolitique_conflits** : delta -8 sur 15 ans
-- **energie_ressources_critiques** : delta -10 sur 20 ans
-- **frontieres_du_systeme** : delta -12 sur 25 ans
+- **geopolitique_conflits** : delta +8 sur 15 ans
+- **energie_ressources_critiques** : delta +10 sur 20 ans
+- **frontieres_du_systeme** : delta +12 sur 25 ans
 
 ## Acteurs impliqués
 - [[armada_logistique_nordique_fortress_world]]

@@ -56,9 +56,9 @@ injection:
     duree: 20
     polarite: 1
   - variable: demographie_mobilite_humaine
-    delta_level: -10
+    delta_level: 10
     duree: 15
-    polarite: -1
+    polarite: 1
   - variable: valeurs_culture_tempo_sociale
     delta_level: 12
     duree: 25

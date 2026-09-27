@@ -64,15 +64,15 @@ injection:
   - variable: sante_biotechnologies
     delta_level: 8
     duree: 20
-    polarite: 1
+    polarite: -1
   - variable: valeurs_culture_tempo_sociale
     delta_level: 10
     duree: 25
-    polarite: 1
-  - variable: geopolitique_conflits
-    delta_level: -5
-    duree: 15
     polarite: -1
+  - variable: geopolitique_conflits
+    delta_level: 5
+    duree: 15
+    polarite: 1
   propagation:
     via_matrice: false
 

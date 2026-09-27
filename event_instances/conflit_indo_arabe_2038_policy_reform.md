@@ -25,19 +25,19 @@ impact_sur_variables:
   - variable: geopolitique_conflits
     delta_level: 20
     duree: 15
-    polarite: -1
+    polarite: 1
   - variable: demographie_mobilite_humaine
     delta_level: 15
     duree: 10
-    polarite: -1
+    polarite: 1
   - variable: energie_ressources_critiques
     delta_level: 10
     duree: 8
-    polarite: -1
+    polarite: 1
   - variable: gouvernance_institutions
     delta_level: 5
     duree: 5
-    polarite: 1
+    polarite: -1
 propagation:
   via_matrice: true
 acteurs_impliques:
@@ -64,10 +64,10 @@ L'été 2038 voit une escalade rapide des tensions entre l'Inde et une coalition
 Ce conflit renforce la fragmentation des alliances géopolitiques et accélère la militarisation des corridors maritimes, tout en légitimant le rôle des institutions technocratiques comme l'ARDS et l'AIER dans la gestion des crises. À long terme, il pousse les États à diversifier leurs routes d'approvisionnement et à investir dans des infrastructures résilientes, tout en exacerbant les inégalités régionales et les pressions migratoires.
 
 ## Impact sur les variables
-- **geopolitique_conflits** : delta -20 sur 15 ans
-- **demographie_mobilite_humaine** : delta -15 sur 10 ans
-- **energie_ressources_critiques** : delta -10 sur 8 ans
-- **gouvernance_institutions** : delta +5 sur 5 ans
+- **geopolitique_conflits** : delta +20 sur 15 ans
+- **demographie_mobilite_humaine** : delta +15 sur 10 ans
+- **energie_ressources_critiques** : delta +10 sur 8 ans
+- **gouvernance_institutions** : delta -5 sur 5 ans
 
 ## Acteurs impliqués
 - [[agence_de_regulation_des_detroits_strategiques_ards_policy_reform]]

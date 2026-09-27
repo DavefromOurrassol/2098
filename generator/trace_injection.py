@@ -30,6 +30,8 @@ USAGE
     python3 trace_injection.py --slug <slug> --json                # stdout JSON seul
     python3 trace_injection.py --slug <slug> --report               # écrit aussi un .md
     python3 trace_injection.py --slug <slug> --skip-articles         # saute le scan aval (plus rapide)
+    python3 trace_injection.py --slug <slug> --skip-effet            # saute la simulation (section 4)
+    python3 trace_injection.py --slug <slug> --date 2070             # effet à une autre date (défaut 2098)
     python3 trace_injection.py --list                                # liste les slugs disponibles
     python3 trace_injection.py --list --type evenement                # ... filtrés par type
 """
@@ -299,6 +301,7 @@ def tracer_instance(slug: str) -> dict:
             "variables_influencees": fm.get("variables_influencees") or [],
             "alliances": fm.get("alliances") or [],
             "oppositions": fm.get("oppositions") or [],
+            "injection": fm.get("injection") if isinstance(fm.get("injection"), dict) else None,
         })
 
     return {
@@ -397,6 +400,14 @@ def tracer_signal(slug: str) -> dict:
         except yaml.YAMLError:
             pass
 
+    impact_chiffre = []
+    m_imp = re.search(r"```yaml\s*\nimpact_sur_variables:\s*\n(.*?)```", audit_body, re.DOTALL)
+    if m_imp:
+        try:
+            impact_chiffre = (yaml.safe_load("impact_sur_variables:\n" + m_imp.group(1)) or {}).get("impact_sur_variables") or []
+        except yaml.YAMLError:
+            impact_chiffre = []
+
     trace_par_variable = []
     for var in variables_cibles:
         var_path = VARIABLES_DIR / f"{var}.md"
@@ -430,9 +441,322 @@ def tracer_signal(slug: str) -> dict:
         "evolution_par_scenario": evolution_par_scenario,
         "scenarios_presents": sorted(evolution_par_scenario.keys()),
         "trace_par_variable": trace_par_variable,
+        "impact_chiffre": impact_chiffre,
         "mentionne_dans_registre_evenements": registre_mention,
         "audit_fichier": str(SIGNAUX_CUSTOM_DIR / f"{slug}.md"),
     }
+
+
+# ---------------------------------------------------------------------------
+# Effet sur le monde : simulation contrefactuelle (ajouté le 27 septembre 2026)
+# ---------------------------------------------------------------------------
+
+def _impacts_declares(trace: dict) -> dict:
+    """{scenario: [{variable, force, sens, duree, via_matrice}]} tels qu'écrits
+    dans les fiches (convention : force = |delta_level|, sens = polarite)."""
+    out = {}
+
+    def ligne(imp, via):
+        try:
+            force = abs(float(imp.get("delta_level") or 0))
+        except (TypeError, ValueError):
+            force = 0.0
+        return {"variable": imp.get("variable"), "force": force,
+                "sens": 1 if int(imp.get("polarite") or 1) >= 0 else -1,
+                "duree": imp.get("duree"), "via_matrice": bool(via)}
+
+    if trace["type"] == "evenement":
+        for i in trace["instances"]:
+            if i.get("impossible_dans_scenario"):
+                continue
+            out[i["scenario"]] = [ligne(imp, i.get("propagation_via_matrice"))
+                                  for imp in i.get("impact_sur_variables") or [] if isinstance(imp, dict)]
+    elif trace["type"] == "instance":
+        for i in trace["instances"]:
+            inj = i.get("injection") or {}
+            if inj.get("type") != "custom":
+                continue
+            via = (inj.get("propagation") or {}).get("via_matrice")
+            out[i["scenario"]] = [ligne(imp, via) for imp in inj.get("impact_sur_variables") or [] if isinstance(imp, dict)]
+    else:
+        for bloc in trace.get("impact_chiffre") or []:
+            if not isinstance(bloc, dict):
+                continue
+            for sc, d in (bloc.get("scenarios") or {}).items():
+                if isinstance(d, dict):
+                    l = ligne(dict(d, variable=bloc.get("variable")), bloc.get("propagation_via_matrice"))
+                    out.setdefault(sc, []).append(l)
+    return {sc: l for sc, l in out.items() if l}
+
+
+PAS_CHRONO = 0.5            # pas d'échantillonnage de la chronologie (années)
+SEUIL_EFFET = 0.1           # en dessous : effet négligeable (points de level)
+MAX_VARIABLES_GRAPHE = 4
+
+
+def _donnees_scenario(sc):
+    """Charge une fois par scénario ce dont le moteur a besoin."""
+    import dynamique as dyn
+    from loader import (load_all_variables, load_influence_matrix, load_events_for_scenario,
+                        load_instances_for_scenario, VALID_VARS)
+    all_vars = load_all_variables()
+    matrix = load_influence_matrix()
+    ref, params = {}, {}
+    for v in VALID_VARS:
+        try:
+            ref[v] = float(((all_vars[v].get("states") or {}).get(sc) or {}).get("level"))
+        except (TypeError, ValueError):
+            ref[v] = 50.0
+        params[v] = dyn.parametres_variable(all_vars[v].get("simulation"))
+    liens = dyn.couplages(VALID_VARS, matrix["edges"], params)
+    k, _, _ = dyn.k_effectif(VALID_VARS, liens, params)
+    instances = [i for i in load_instances_for_scenario(sc)
+                 if (i.get("injection") or {}).get("type") == "custom"]
+    events = load_events_for_scenario(sc)
+    return VALID_VARS, ref, params, liens, k, instances, events
+
+
+def _chronologie(effets_traj, t_debut, variables_directes):
+    """Repères lisibles à partir de la trajectoire de l'effet
+    [(t, {var: effet})] : pic, début de réaction, valeur finale, contrecoup."""
+    reperes = []
+    if not effets_traj:
+        return reperes
+    t_fin = effets_traj[-1][0]
+    for v in effets_traj[0][1]:
+        serie = [(t, e[v]) for t, e in effets_traj if t >= t_debut - 1e-9]
+        if not serie:
+            continue
+        t_pic, pic = max(serie, key=lambda p: abs(p[1]))
+        if abs(pic) < SEUIL_EFFET:
+            continue
+        seuil_debut = max(SEUIL_EFFET, 0.1 * abs(pic))
+        t_reaction = next((t for t, x in serie if abs(x) >= seuil_debut), None)
+        rebond = [p for p in serie if p[0] > t_pic and p[1] * pic < 0 and abs(p[1]) >= 0.2]
+        t_rebond, val_rebond = (min(rebond, key=lambda p: p[1] * (1 if pic < 0 else -1))
+                                if rebond else (None, None))
+        reperes.append({
+            "variable": v,
+            "mode": "direct" if v in variables_directes else "propagé",
+            "debut_reaction": t_reaction,
+            "retard": round(t_reaction - t_debut, 1) if t_reaction is not None else None,
+            "annee_pic": t_pic, "pic": round(pic, 1),
+            "final": round(serie[-1][1], 1), "annee_finale": t_fin,
+            "annee_contrecoup": t_rebond, "contrecoup": round(val_rebond, 1) if val_rebond is not None else None,
+        })
+    reperes.sort(key=lambda r: -abs(r["pic"]))
+    return reperes
+
+
+def calculer_effet(trace: dict, date_fin: float, scenario: str = None) -> dict:
+    """Pour chaque scénario (ou seulement `scenario`) où l'élément porte un
+    impact chiffré : simule le monde AVEC toutes les injections puis SANS
+    cet élément (même moteur et mêmes paramètres que snapshot.py), sur toute
+    la période, et retourne :
+      - par_scenario : effet net par variable à date_fin (tableau) ;
+      - chronologies : trajectoire de l'effet depuis l'apparition de
+        l'élément (pour le graphique du GUI) + repères (pic, retard de
+        propagation, contrecoup, valeur finale) pour le récit.
+    Lecture seule, aucune écriture."""
+    import dynamique as dyn
+    from loader import load_custom_signals
+
+    declares = _impacts_declares(trace)
+    if scenario:
+        declares = {sc: d for sc, d in declares.items() if sc == scenario}
+    if not declares:
+        return {"declares": {}, "par_scenario": {}, "chronologies": {}, "date": date_fin}
+    signals = load_custom_signals()
+    slug = trace["slug"]
+
+    par_scenario, chronologies = {}, {}
+    for sc in declares:
+        variables, ref, params, liens, k, instances, events = _donnees_scenario(sc)
+        if trace["type"] == "instance":
+            inst_sans = [i for i in instances if i.get("slug") != f"{slug}_{sc}"]
+            ev_sans, sig_sans = events, signals
+        elif trace["type"] == "evenement":
+            ev_sans = [e for e in events if e.get("slug") != f"{slug}_{sc}"]
+            inst_sans, sig_sans = instances, signals
+        else:
+            sig_sans = [g for g in signals
+                        if str(g.get("source_fiche", "")).replace(".md", "") != slug]
+            inst_sans, ev_sans = instances, events
+
+        chocs_avec = dyn.chocs_depuis_donnees(sc, instances, events, signals)
+        chocs_sans = dyn.chocs_depuis_donnees(sc, inst_sans, ev_sans, sig_sans)
+        avec = dyn.simuler(variables, ref, params, liens, chocs_avec, date_fin, echantillonner=PAS_CHRONO, k=k)
+        sans = dyn.simuler(variables, ref, params, liens, chocs_sans, date_fin, echantillonner=PAS_CHRONO, k=k)
+
+        # Chocs propres à l'élément = ceux qui disparaissent de la liste "sans"
+        cles_sans = {(c["nom"], c["variable"], c["t0"]) for c in chocs_sans}
+        propres = [c for c in chocs_avec if (c["nom"], c["variable"], c["t0"]) not in cles_sans]
+        t_debut = min((c["t0"] for c in propres), default=dyn.ANNEE_DEPART)
+        directes = {d["variable"] for d in declares[sc]}
+
+        effets = []
+        for v in variables:
+            diff = round(avec["niveaux"][v] - sans["niveaux"][v], 1)
+            if abs(diff) >= SEUIL_EFFET:
+                effets.append({"variable": v, "avec": avec["niveaux"][v], "sans": sans["niveaux"][v],
+                               "effet": diff, "mode": "direct" if v in directes else "propagé"})
+        effets.sort(key=lambda e: -abs(e["effet"]))
+        par_scenario[sc] = effets
+
+        effets_traj = [(ta, {v: round(na[v] - ns[v], 2) for v in variables})
+                       for (ta, na), (_, ns) in zip(avec["trajectoire"], sans["trajectoire"])]
+        reperes = _chronologie(effets_traj, t_debut, directes)
+        retenues = [r["variable"] for r in reperes[:MAX_VARIABLES_GRAPHE]]
+        chronologies[sc] = {
+            "apparition": t_debut,
+            "date_fin": date_fin,
+            "reperes": reperes,
+            "series": {v: [[t, e[v]] for t, e in effets_traj if t >= t_debut - 1] for v in retenues},
+            "niveaux": {v: {"avec": [[t, n[v]] for t, n in avec["trajectoire"] if t >= t_debut - 1],
+                            "sans": [[t, n[v]] for t, n in sans["trajectoire"] if t >= t_debut - 1],
+                            "reference": ref[v]} for v in retenues},
+        }
+    return {"declares": declares, "par_scenario": par_scenario, "chronologies": chronologies, "date": date_fin}
+
+
+# ---------------------------------------------------------------------------
+# Récit rédigé pour l'utilisateur (ajouté le 27 septembre 2026)
+# ---------------------------------------------------------------------------
+
+def _libelle_var(v):
+    return v.replace("_", " ")
+
+
+def recit_modele(nom, sc, chrono) -> str:
+    """Récit construit sans LLM (repli) à partir des repères."""
+    reps = chrono.get("reperes") or []
+    if not reps:
+        return (f"Dans le scénario {sc}, {nom} n'a pas d'effet mesurable sur les variables du monde "
+                f"(choc absorbé ou variables déjà à leur plafond).")
+    phrases = [f"Apparu en {chrono['apparition']:.0f} dans le scénario {sc}, {nom} agit d'abord sur "
+               + ", ".join(_libelle_var(r["variable"]) for r in reps if r["mode"] == "direct")[:200] + "."]
+    p = reps[0]
+    sens = "aggrave" if p["pic"] > 0 else "apaise"
+    phrases.append(f"Son effet le plus fort {sens} {_libelle_var(p['variable'])}, avec un écart maximal de "
+                   f"{p['pic']:+.1f} points vers {p['annee_pic']:.0f}.")
+    prop = [r for r in reps if r["mode"] == "propagé" and r["retard"] is not None]
+    if prop:
+        r = min(prop, key=lambda x: x["retard"])
+        phrases.append(f"Par propagation, {_libelle_var(r['variable'])} réagit à son tour environ "
+                       f"{r['retard']:.0f} ans après l'apparition ({r['pic']:+.1f} points au plus fort).")
+    reb = [r for r in reps if r["contrecoup"] is not None]
+    if reb:
+        r = reb[0]
+        phrases.append(f"Un contrecoup apparaît ensuite sur {_libelle_var(r['variable'])} "
+                       f"({r['contrecoup']:+.1f} points vers {r['annee_contrecoup']:.0f}).")
+    phrases.append(f"En {chrono['date_fin']:.0f}, il en subsiste {p['final']:+.1f} points sur "
+                   f"{_libelle_var(p['variable'])}.")
+    return re.sub(r"(\d)\.(\d)", r"\1,\2", " ".join(phrases))
+
+
+def _nombres_cites(texte):
+    return [float(x.replace(",", ".")) for x in re.findall(r"[+-−]?\d+(?:[.,]\d+)?", texte.replace("−", "-"))]
+
+
+def _recit_verifie(texte, chrono) -> bool:
+    """Chaque nombre du récit doit être une année plausible de la période ou
+    une valeur proche (±0,6) d'un repère calculé -- le LLM ne doit rien
+    inventer de chiffré."""
+    annees = [chrono["apparition"], chrono["date_fin"]]
+    valeurs = []
+    for r in chrono.get("reperes") or []:
+        for cle in ("annee_pic", "debut_reaction", "annee_contrecoup"):
+            if r.get(cle) is not None:
+                annees.append(r[cle])
+        for cle in ("pic", "final", "contrecoup", "retard"):
+            if r.get(cle) is not None:
+                valeurs.append(abs(r[cle]))
+    ampleur_citee = False
+    for n in _nombres_cites(texte):
+        if 2000 <= abs(n) <= 2200:
+            if not any(abs(abs(n) - a) <= 1.0 for a in annees):
+                return False
+            continue
+        if not any(abs(abs(n) - v) <= 0.15 for v in valeurs):
+            return False
+        ampleur_citee = True
+    return ampleur_citee
+
+
+def recit_llm(trace, sc, chrono, declares) -> tuple:
+    """Récit rédigé par le LLM à partir des repères chiffrés. Retourne
+    (texte, source) ; repli sur recit_modele() si le LLM échoue ou cite un
+    chiffre absent des repères."""
+    nom = trace.get("nom") or trace["slug"]
+    reps = chrono.get("reperes") or []
+    if not reps:
+        return recit_modele(nom, sc, chrono), "modele"
+    try:
+        from llm_client import call_llm
+        from echelles import texte_echelle
+    except Exception:
+        return recit_modele(nom, sc, chrono), "modele"
+    desc = ""
+    for i in trace.get("instances") or []:
+        if i.get("scenario") == sc:
+            desc = i.get("description_journalistique") or i.get("realisation") or i.get("role_dans_scenario") or ""
+    if not desc:
+        desc = trace.get("description") or ""
+    def ampleur(x):
+        x = abs(x)
+        return "forte" if x >= 2 else ("modérée" if x >= 0.5 else "faible")
+    notables = [r for r in reps if abs(r["pic"]) >= 0.3][:6]
+    marginaux = [r["variable"] for r in reps if abs(r["pic"]) < 0.3]
+    lignes = []
+    for r in notables:
+        l = f"- {r['variable']} ({r['mode']}, ampleur {ampleur(r['pic'])}) : réagit dès {r['debut_reaction']:.0f}"
+        if r["mode"] == "propagé" and r["retard"] is not None:
+            l += f" (retard {r['retard']:.0f} ans)"
+        l += f", pic {r['pic']:+.1f} vers {r['annee_pic']:.0f}"
+        if r["contrecoup"] is not None:
+            l += f", contrecoup {r['contrecoup']:+.1f} vers {r['annee_contrecoup']:.0f}"
+        l += f", reste {r['final']:+.1f} en {chrono['date_fin']:.0f} — échelle : {texte_echelle(r['variable'])}"
+        lignes.append(l)
+    if marginaux:
+        lignes.append("- effets marginaux (moins de 0,3 point, à évoquer au plus en une demi-phrase, "
+                      "sans les détailler) : " + ", ".join(marginaux))
+    lignes_rep = "\n".join(lignes)
+    desc_court = re.sub(r"\s+", " ", str(desc))[:700]
+    user = f"""Rédige en français, pour le concepteur du monde Ourrassol 2098, un court récit (4 à 6 phrases,
+un seul paragraphe, ton de chroniqueur sobre) de l'influence de cet élément sur le monde, depuis son
+apparition jusqu'en {chrono['date_fin']:.0f}, dans le scénario {sc}.
+
+ÉLÉMENT : {nom} ({trace['type']}), apparu en {chrono['apparition']:.0f}
+DESCRIPTION : {desc_court}
+
+REPÈRES CALCULÉS PAR LE SIMULATEUR (écart de niveau attribuable à cet élément, en points ;
+niveau 100 = crise maximale, donc + = aggrave, − = apaise) :
+{lignes_rep}
+
+RÈGLES :
+- Utilise UNIQUEMENT ces chiffres et ces années, n'en invente aucun. Cite au moins le pic et la valeur
+  finale de l'effet principal, en points (ex. « +2,2 points »).
+- PROPORTIONNE le vocabulaire à l'ampleur : un effet faible (moins de 0,5 point) est une nuance, jamais
+  un bouleversement ; ne prête pas à l'élément des conséquences plus grandes que les chiffres. Les
+  variables qu'il touche sont déjà décrites par le scénario : dis ce que l'élément AJOUTE, pas l'état du monde.
+- Le verbe doit suivre le SIGNE : un écart + aggrave, accentue, alourdit (jamais « modère », « atténue ») ;
+  un écart − apaise, atténue, résorbe. Le rythme doit suivre les années : une montée étalée sur
+  plusieurs années est progressive, jamais « brutale ».
+- Traduis chaque variable en langage courant grâce à son échelle (ex. « la fragmentation culturelle s'accentue »),
+  sans jamais écrire le nom technique avec des underscores.
+- Raconte la chronologie : effet direct, propagation éventuelle (avec son retard), pic, contrecoup s'il existe,
+  ce qui subsiste à la fin.
+- Pas de titre, pas de liste, pas de conclusion morale."""
+    for _ in range(2):
+        try:
+            texte = call_llm(system_prompt="Tu es un chroniqueur précis du monde fictif Ourrassol 2098.",
+                             user_prompt=user, max_tokens=600, temperature=0.3,
+                             task_tier="creative_souple").strip()
+        except Exception:
+            break
+        if texte and _recit_verifie(texte, chrono):
+            return texte, "llm"
+    return recit_modele(nom, sc, chrono), "modele (repli : récit LLM indisponible ou chiffres non conformes)"
 
 
 # ---------------------------------------------------------------------------
@@ -663,8 +987,42 @@ def _rendre_markdown(trace: dict) -> str:
         else:
             lines.append("_Bloc `signal_to_state` non trouvé ou non parsable dans la fiche d'audit -- évolution par scénario indisponible._")
 
+    if "effet_sur_le_monde" in trace:
+        eff = trace["effet_sur_le_monde"]
+        lines += ["", "## 4. Effet sur le monde (moteur dynamique)", ""]
+        if eff.get("erreur"):
+            lines.append(f"_Calcul impossible : {eff['erreur']}_")
+        elif not eff.get("declares"):
+            lines.append("_Aucun impact chiffré déclaré : cet élément n'agit que sur le récit, pas sur les niveaux des variables._")
+        else:
+            lines.append(f"Effet net en {eff['date']:g} = niveau simulé **avec** cet élément − niveau simulé **sans** lui, "
+                         "toutes les autres injections du scénario restant en place. Rappel : niveau 100 = crise maximale ; "
+                         "le moteur n'injecte qu'une fraction de la force déclarée, l'effet s'atténue avec le temps "
+                         "et se propage avec retard aux autres variables.")
+            for sc in SCENARIOS:
+                if sc not in eff["declares"]:
+                    continue
+                lines += ["", f"### {sc}", ""]
+                chrono = (eff.get("chronologies") or {}).get(sc) or {}
+                if chrono.get("recit"):
+                    lines += [chrono["recit"], ""]
+                    if chrono.get("recit_source", "").startswith("modele"):
+                        lines += [f"_(récit construit par le script — {chrono['recit_source']})_", ""]
+                for d in eff["declares"][sc]:
+                    sens = "aggrave ↑" if d["sens"] > 0 else "apaise ↓"
+                    lines.append(f"- Déclaré : **{d['variable']}** — force {d['force']:g}, {sens}, "
+                                 f"sur {d.get('duree') or '?'} ans"
+                                 f"{', propagé par la matrice' if d['via_matrice'] else ', sans propagation'}")
+                effets = eff["par_scenario"].get(sc) or []
+                if not effets:
+                    lines.append("- Effet net en fin de période : négligeable (< 0,1 point, choc absorbé).")
+                    continue
+                lines += ["", "| Variable | Avec | Sans | Effet net | |", "|---|---|---|---|---|"]
+                for e in effets:
+                    lines.append(f"| {e['variable']} | {e['avec']:g} | {e['sans']:g} | {e['effet']:+g} | {e['mode']} |")
+
     if "articles_mentionnant" in trace:
-        lines += ["", "## 4. Usage dans les articles déjà publiés", ""]
+        lines += ["", "## 5. Usage dans les articles déjà publiés", ""]
         articles = trace["articles_mentionnant"]
         if not articles:
             lines.append("_Aucune mention trouvée dans `articles/*.md` (scan texte brut, best-effort — un article peut mentionner l'entité sous une formulation différente sans que ce scan la détecte)._")
@@ -691,6 +1049,11 @@ def main():
     parser.add_argument("--json", action="store_true", help="N'affiche que le JSON sur stdout.")
     parser.add_argument("--report", action="store_true", help="Écrit aussi un rapport .md dans documentation/need_action/trace_<slug>.md")
     parser.add_argument("--skip-articles", action="store_true", help="Saute le scan des articles (plus rapide).")
+    parser.add_argument("--skip-effet", action="store_true", help="Saute la simulation de l'effet sur le monde.")
+    parser.add_argument("--date", type=float, default=2098.0, help="Date de calcul de l'effet (défaut 2098).")
+    parser.add_argument("--scenario", default=None, help="Limite l'effet et le récit à un scénario.")
+    parser.add_argument("--sans-recit", action="store_true",
+                        help="Récit construit par le script au lieu du LLM (aucun appel API).")
     parser.add_argument("--list", action="store_true", help="Liste les slugs disponibles (par type si --type est précisé) au lieu de tracer.")
     args = parser.parse_args()
 
@@ -752,8 +1115,33 @@ def main():
         trace["note_resolution"] = (f"Le slug fourni ({args.slug!r}) était un slug d'instance/event_instance -- "
                                      f"résolu automatiquement vers le slug d'entité/archétype {slug_resolu!r}.")
 
+    if not args.skip_effet:
+        try:
+            if args.scenario in ("", "undefined", "null"):
+                args.scenario = None
+            eff = calculer_effet(trace, args.date, scenario=args.scenario)
+            nom = trace.get("nom") or trace["slug"]
+            for sc, chrono in (eff.get("chronologies") or {}).items():
+                if args.sans_recit:
+                    chrono["recit"], chrono["recit_source"] = recit_modele(nom, sc, chrono), "modele"
+                else:
+                    chrono["recit"], chrono["recit_source"] = recit_llm(trace, sc, chrono, eff["declares"].get(sc))
+            trace["effet_sur_le_monde"] = eff
+        except Exception as e:  # diagnostic : ne jamais planter pour ça
+            trace["effet_sur_le_monde"] = {"erreur": f"{type(e).__name__}: {e}"}
+
     if not args.skip_articles:
         trace["articles_mentionnant"] = _scan_articles(slug_resolu, trace.get("nom"))
+
+    # Dernière trace, lue par le GUI pour le récit et le graphique
+    # (/api/trace/derniere, ajouté le 27 septembre 2026).
+    try:
+        etat = SCRIPT_DIR / "state"
+        etat.mkdir(parents=True, exist_ok=True)
+        (etat / "derniere_trace.json").write_text(
+            json.dumps(trace, ensure_ascii=False, default=str), encoding="utf-8")
+    except OSError:
+        pass
 
     if args.json:
         print(json.dumps(trace, ensure_ascii=False, indent=2, default=str))

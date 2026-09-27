@@ -24,19 +24,19 @@ impact_sur_variables:
   - variable: energie_ressources_critiques
     delta_level: 8
     duree: 15
-    polarite: 1
+    polarite: -1
   - variable: gouvernance_institutions
     delta_level: 6
     duree: 20
-    polarite: 1
+    polarite: -1
   - variable: geopolitique_conflits
     delta_level: 5
     duree: 10
-    polarite: -1
+    polarite: 1
   - variable: organisation_territoires
     delta_level: 4
     duree: 12
-    polarite: 1
+    polarite: -1
 propagation:
   via_matrice: true
 acteurs_impliques:
@@ -66,10 +66,10 @@ En soixante-douze heures de délibérations à Nuuk, le Fonds Souverain Kalaalli
 L'enchère de Nuuk établit un précédent normatif mondial : toute concession sur des ressources critiques dans des zones de dégel est désormais soumise à un cadre de conditionnalité écologique international. Elle renforce la légitimité de l'AMRRT et du Parlement des Territoires comme arbitres de la transition minière, tout en alimentant des tensions persistantes entre les factions souverainistes des blocs et le nouveau droit minier post-national. Le modèle Kalaallit est copié ou contesté par une douzaine d'autres territoires arctiques et de haute altitude dans la décennie suivante.
 
 ## Impact sur les variables
-- **energie_ressources_critiques** : delta +8 sur 15 ans
-- **gouvernance_institutions** : delta +6 sur 20 ans
-- **geopolitique_conflits** : delta -5 sur 10 ans
-- **organisation_territoires** : delta +4 sur 12 ans
+- **energie_ressources_critiques** : delta -8 sur 15 ans
+- **gouvernance_institutions** : delta -6 sur 20 ans
+- **geopolitique_conflits** : delta +5 sur 10 ans
+- **organisation_territoires** : delta -4 sur 12 ans
 
 ## Acteurs impliqués
 - [[kalaallit_nunaat_sovereign_fund_new_sustainability]]

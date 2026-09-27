@@ -22,13 +22,13 @@ realisation: >
   Le Consortium Amazônia Viva, reconnu depuis 2041 comme délégation auprès du Conseil de Régulation Climatique Global, déclenche formellement un état d'urgence écologique sur 40% du bassin amazonien après que les réseaux de capteurs IA-climatiques détectent une déforestation illégale massive coordonnée par des opérateurs liés aux blocs énergétiques privés. Dans ce monde de gouvernance technocratique à tension 4/5, les institutions existent mais leur capacité coercitive reste limitée face aux acteurs privés puissants. L'ONU, engluée dans ses procédures de coordination multi-niveaux, mandate le Conseil de Régulation Climatique Global pour une médiation d'urgence, mais les milices corporatives ont déjà sécurisé plusieurs corridors d'extraction avant que le mécanisme ne s'active. Belém devient le théâtre d'une confrontation directe entre gardiens autochtones soutenus par l'Autorité Mondiale du Vivant et des opérateurs privés bénéficiant de couvertures légales dans les zones grises réglementaires.
 impact_sur_variables:
   - variable: climat_environnement_global
-    delta_level: -8
+    delta_level: 8
     duree: 15
-    polarite: -1
+    polarite: 1
   - variable: geopolitique_conflits
     delta_level: 10
     duree: 12
-    polarite: -1
+    polarite: 1
   - variable: gouvernance_institutions
     delta_level: 7
     duree: 20
@@ -68,7 +68,7 @@ La crise force l'adoption précipitée du Protocole de Souveraineté Écosystém
 
 ## Impact sur les variables
 - **climat_environnement_global** : delta +8 sur 15 ans
-- **geopolitique_conflits** : delta -10 sur 12 ans
+- **geopolitique_conflits** : delta +10 sur 12 ans
 - **gouvernance_institutions** : delta +7 sur 20 ans
 - **organisation_territoires** : delta +9 sur 25 ans
 

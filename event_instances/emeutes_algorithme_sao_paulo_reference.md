@@ -22,7 +22,7 @@ realisation: >
   En octobre 2073, une mise à jour du Sistema Paulista de Alocação Algorítmica de Recursos coupe eau et électricité dans 12 zones périphériques classifiées 'rendement négatif'. Les communautés des favelas numériques, équipées de capteurs citoyens et de nœuds mesh décentralisés, organisent une contre-cartographie collaborative qui expose les paramètres cachés du SPAAR — notamment les coefficients de 'productivité contributive' pondérant l'accès aux ressources. La publication virale des paramètres déclenche trois semaines d'occupations d'infrastructures, de grèves et de blocages logistiques. Dans un scénario de fragile équilibre institutionnel, l'État fédéral brésilien négocie à contrecœur un audit partiel plutôt que de risquer l'embrasement d'une métropole de 28 millions d'habitants.
 impact_sur_variables:
   - variable: gouvernance_institutions
-    delta_level: -8
+    delta_level: 8
     duree: 15
     polarite: -1
   - variable: technologie_information
@@ -63,7 +63,7 @@ Le 14 octobre 2073, les écrans des favelas numériques de Paraisópolis et Cida
 L'audit partiel imposé par la négociation crée un précédent institutionnel fragile mais réel : plusieurs villes du Sud global adoptent des chartes de transparence algorithmique inspirées du modèle pauliste. Le mouvement ne renverse pas les systèmes d'allocation — dans l'équilibre fragile du scénario, les pressions économiques maintiennent l'essentiel de la logique du SPAAR — mais il impose un régime d'auditabilité partielle qui rogne durablement la légitimité des plateformes d'optimisation territoriale par IA et alimente une génération de militants techno-critiques du Sud global.
 
 ## Impact sur les variables
-- **gouvernance_institutions** : delta +8 sur 15 ans
+- **gouvernance_institutions** : delta -8 sur 15 ans
 - **technologie_information** : delta +6 sur 20 ans
 - **organisation_territoires** : delta +7 sur 18 ans
 

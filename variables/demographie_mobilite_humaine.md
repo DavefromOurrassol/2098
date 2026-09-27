@@ -80,6 +80,10 @@ simulation:
   systemic_criticality: 4
   resilience: 2
   adaptability: 3
+echelle:
+  type: intensite
+  zero: "populations stables, mobilité choisie et locale"
+  cent: "déplacements forcés massifs, crises migratoires généralisées"
 states:
 
   fortress_world:

@@ -71,9 +71,9 @@ injection:
   - variable: demographie_mobilite_humaine
     delta_level: 8
     duree: 15
-    polarite: 1
+    polarite: -1
   - variable: organisation_territoires
-    delta_level: -5
+    delta_level: 5
     duree: 20
     polarite: -1
   propagation:

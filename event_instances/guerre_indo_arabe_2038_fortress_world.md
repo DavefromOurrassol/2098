@@ -31,11 +31,11 @@ impact_sur_variables:
   - variable: energie_ressources_critiques
     delta_level: 15
     duree: 20
-    polarite: -1
+    polarite: 1
   - variable: gouvernance_institutions
     delta_level: 10
     duree: 15
-    polarite: -1
+    polarite: 1
 propagation:
   via_matrice: true
 acteurs_impliques:
@@ -61,8 +61,8 @@ La guerre accélère la fragmentation géopolitique du monde, renforçant l'isol
 ## Impact sur les variables
 - **geopolitique_conflits** : delta +20 sur 30 ans
 - **demographie_mobilite_humaine** : delta +25 sur 25 ans
-- **energie_ressources_critiques** : delta -15 sur 20 ans
-- **gouvernance_institutions** : delta -10 sur 15 ans
+- **energie_ressources_critiques** : delta +15 sur 20 ans
+- **gouvernance_institutions** : delta +10 sur 15 ans
 
 ## Acteurs impliqués
 - [[bloc_eurasiatique_occidental_fortress_world]]

@@ -50,6 +50,7 @@ from pathlib import Path
 import yaml
 
 from llm_client import call_llm
+from echelles import CONVENTION_NIVEAUX, texte_echelle  # convention d'échelle, 27 septembre 2026
 
 # Réutilise la passe de réciprocité de fix_alliances_oppositions.py (aucun
 # appel LLM, purement locale) — lancée automatiquement en fin de run pour
@@ -440,8 +441,8 @@ political_regime: {scenario_ctx.get("political_regime", "")}
 dominant_variables: {scenario_ctx.get("dominant_variables", [])}
 Résumé: {scenario_ctx.get("summary", "")}
 
-Niveaux variables (0-100) :
-{chr(10).join(f"  {v}: {lvl}" for v, lvl in var_levels.items())}
+Niveaux variables (0-100) — {CONVENTION_NIVEAUX}
+{chr(10).join(f"  {v}: {lvl}  ({texte_echelle(v)})" for v, lvl in var_levels.items())}
 
 ═══════════════════════════════════════════════════
 GÉOGRAPHIE DU SCÉNARIO (slugs valides)

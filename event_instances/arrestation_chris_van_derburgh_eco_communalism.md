@@ -41,7 +41,7 @@ impact_sur_variables:
   - variable: gouvernance_institutions
     delta_level: 1
     duree: 10
-    polarite: 1
+    polarite: -1
 propagation:
   via_matrice: false
 acteurs_impliques:
@@ -73,7 +73,7 @@ sur les communs de la mémoire.
 
 ## Impact sur les variables
 - **valeurs_culture_tempo_sociale** : delta +2 sur 15 ans
-- **gouvernance_institutions** : delta +1 sur 10 ans
+- **gouvernance_institutions** : delta -1 sur 10 ans
 
 ## Acteurs impliqués
 - [[le_temoin_eco_communalism]]

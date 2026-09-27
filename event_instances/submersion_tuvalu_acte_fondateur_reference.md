@@ -24,19 +24,19 @@ impact_sur_variables:
   - variable: climat_environnement_global
     delta_level: 6
     duree: 25
-    polarite: -1
+    polarite: 1
   - variable: gouvernance_institutions
     delta_level: 8
     duree: 30
-    polarite: 1
+    polarite: -1
   - variable: organisation_territoires
     delta_level: 10
     duree: 35
-    polarite: -1
+    polarite: 1
   - variable: frontieres_du_systeme
     delta_level: 7
     duree: 30
-    polarite: -1
+    polarite: 1
 propagation:
   via_matrice: true
 acteurs_impliques:
@@ -66,10 +66,10 @@ Depuis la plateforme ancrée à 40 milles nautiques au nord de l'atoll englouti,
 Le Protocole de Souveraineté Flottante ouvre une brèche dans le droit international territorial classique, forçant progressivement les institutions multilatérales survivantes à négocier un cadre post-territorial partiel — reconnu sous réserves dans les enceintes de l'ONU d'ici 2048. L'événement légitime durablement les revendications des États côtiers en danger et accélère la constitution de précédents juridiques que la Confédération des Mégapoles Autonomes et d'autres acteurs non-étatiques s'empressent de récupérer à leur avantage.
 
 ## Impact sur les variables
-- **climat_environnement_global** : delta -6 sur 25 ans
-- **gouvernance_institutions** : delta +8 sur 30 ans
-- **organisation_territoires** : delta -10 sur 35 ans
-- **frontieres_du_systeme** : delta -7 sur 30 ans
+- **climat_environnement_global** : delta +6 sur 25 ans
+- **gouvernance_institutions** : delta -8 sur 30 ans
+- **organisation_territoires** : delta +10 sur 35 ans
+- **frontieres_du_systeme** : delta +7 sur 30 ans
 
 ## Acteurs impliqués
 - [[pacifique_sud_resilience_network_reference]]

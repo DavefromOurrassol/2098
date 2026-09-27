@@ -24,19 +24,19 @@ impact_sur_variables:
   - variable: organisation_territoires
     delta_level: 12
     duree: 25
-    polarite: -1
+    polarite: 1
   - variable: gouvernance_institutions
-    delta_level: -14
+    delta_level: 14
     duree: 20
-    polarite: -1
+    polarite: 1
   - variable: geopolitique_conflits
     delta_level: 10
     duree: 18
-    polarite: -1
+    polarite: 1
   - variable: energie_ressources_critiques
     delta_level: 8
     duree: 30
-    polarite: -1
+    polarite: 1
 propagation:
   via_matrice: true
 acteurs_impliques:
@@ -66,10 +66,10 @@ Octobre 2051, Chicago-Lacustre : sous la coupole de verre de l'ancien Navy Pier 
 La Confédération lacustre devient une forteresse hydrique disputée : ses 21 % de l'eau douce de surface mondiale en font immédiatement une cible de pression du Bloc Pacifique Nord et des cartels énergétiques cherchant à monétiser la ressource. La rupture inspire d'autres mouvements sécessionnistes régionaux — notamment la Fédération du Rust Belt, qui s'en revendique dix ans plus tard — mais elle accélère aussi la militarisation des frontières intérieures américaines et la logique de bloc-dans-le-bloc qui caractérise le monde fortress_world de 2098. Le gouvernement fédéral américain sort durablement affaibli, incapable de se projeter comme acteur continental cohérent.
 
 ## Impact sur les variables
-- **organisation_territoires** : delta -12 sur 25 ans
+- **organisation_territoires** : delta +12 sur 25 ans
 - **gouvernance_institutions** : delta +14 sur 20 ans
-- **geopolitique_conflits** : delta -10 sur 18 ans
-- **energie_ressources_critiques** : delta -8 sur 30 ans
+- **geopolitique_conflits** : delta +10 sur 18 ans
+- **energie_ressources_critiques** : delta +8 sur 30 ans
 
 ## Acteurs impliqués
 - [[appareils_d_etat_des_blocs_fermes_fortress_world]]

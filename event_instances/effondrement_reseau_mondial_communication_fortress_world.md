@@ -35,11 +35,11 @@ impact_sur_variables:
   - variable: technologie_information
     delta_level: 20
     duree: 58
-    polarite: -1
+    polarite: 1
   - variable: gouvernance_institutions
     delta_level: 10
     duree: 30
-    polarite: -1
+    polarite: 1
   - variable: geopolitique_conflits
     delta_level: 15
     duree: 40
@@ -72,8 +72,8 @@ mondial unifié. L'attentat est rétrospectivement considéré comme le moment
 fondateur du fortress_world numérique.
 
 ## Impact sur les variables
-- **technologie_information** : delta -20 sur 58 ans
-- **gouvernance_institutions** : delta -10 sur 30 ans
+- **technologie_information** : delta +20 sur 58 ans
+- **gouvernance_institutions** : delta +10 sur 30 ans
 - **geopolitique_conflits** : delta +15 sur 40 ans
 
 ## Acteurs impliqués

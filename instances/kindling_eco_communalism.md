@@ -58,13 +58,13 @@ injection:
     Les Cendres de Kindling ont accéléré la méfiance envers les institutions centralisées (delta négatif sur gouvernance_institutions) en sabotant leurs infrastructures, tout en forçant une décentralisation des technologies de l'information (delta négatif). Leur héritage mythifié a aussi ancré une culture de la résilience locale et de la sobriété (delta positif sur valeurs_culture_tempo_sociale), en faisant un symbole de la rupture avec l’ancien monde.
   impact_sur_variables:
   - variable: gouvernance_institutions
-    delta_level: -5
+    delta_level: 5
     duree: 20
-    polarite: -1
+    polarite: 1
   - variable: technologie_information
-    delta_level: -3
+    delta_level: 3
     duree: 15
-    polarite: -1
+    polarite: 1
   - variable: valeurs_culture_tempo_sociale
     delta_level: 4
     duree: 30

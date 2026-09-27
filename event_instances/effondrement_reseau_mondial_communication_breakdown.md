@@ -35,15 +35,15 @@ impact_sur_variables:
   - variable: technologie_information
     delta_level: 25
     duree: 58
-    polarite: -1
+    polarite: 1
   - variable: gouvernance_institutions
     delta_level: 12
     duree: 40
-    polarite: -1
+    polarite: 1
   - variable: systeme_economique_redistribution
     delta_level: 10
     duree: 35
-    polarite: -1
+    polarite: 1
 propagation:
   via_matrice: true
 acteurs_impliques:
@@ -72,9 +72,9 @@ Début de la fragmentation informationnelle irréversible. Les réseaux mesh
 émergent comme alternative de survie dès 2041.
 
 ## Impact sur les variables
-- **technologie_information** : delta -25 sur 58 ans
-- **gouvernance_institutions** : delta -12 sur 40 ans
-- **systeme_economique_redistribution** : delta -10 sur 35 ans
+- **technologie_information** : delta +25 sur 58 ans
+- **gouvernance_institutions** : delta +12 sur 40 ans
+- **systeme_economique_redistribution** : delta +10 sur 35 ans
 
 ## Acteurs impliqués
 - [[nexcore_breakdown]]

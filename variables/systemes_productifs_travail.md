@@ -70,6 +70,10 @@ simulation:
   systemic_criticality: 4
   resilience: 3
   adaptability: 4
+echelle:
+  type: intensite
+  zero: "production stable, travail humain préservé"
+  cent: "effondrement des chaînes productives, disparition du travail structuré"
 states:
 
   fortress_world:

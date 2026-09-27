@@ -58,13 +58,13 @@ injection:
     Les Holdfast ont accéléré la fragmentation territoriale en normalisant l’idée d’enclaves souveraines privées, affaiblissant la légitimité des États et préparant le terrain pour les blocs fermés. Leur modèle a aussi sapé la confiance dans les institutions publiques, en montrant que la sécurité pouvait être privatisée au détriment du bien commun.
   impact_sur_variables:
   - variable: organisation_territoires
-    delta_level: -5
+    delta_level: 5
     duree: 20
-    polarite: -1
+    polarite: 1
   - variable: gouvernance_institutions
-    delta_level: -3
+    delta_level: 3
     duree: 15
-    polarite: -1
+    polarite: 1
   propagation:
     via_matrice: false
 

@@ -69,17 +69,17 @@ impact_sur_variables:
         annee_injection: 2033
         duree: 15
         delta_level: 5
-        polarite: 1
+        polarite: -1
       eco_communalism:
         annee_injection: 2040
         duree: 18
         delta_level: 5
-        polarite: 1
+        polarite: -1
       policy_reform:
         annee_injection: 2030
         duree: 15
         delta_level: 5
-        polarite: 1
+        polarite: -1
       reference:
         annee_injection: 2028
         duree: 15

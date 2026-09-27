@@ -24,19 +24,19 @@ impact_sur_variables:
   - variable: geopolitique_conflits
     delta_level: 12
     duree: 18
-    polarite: -1
+    polarite: 1
   - variable: energie_ressources_critiques
-    delta_level: -14
+    delta_level: 14
     duree: 22
-    polarite: -1
+    polarite: 1
   - variable: gouvernance_institutions
-    delta_level: -8
+    delta_level: 8
     duree: 15
-    polarite: -1
+    polarite: 1
   - variable: demographie_mobilite_humaine
-    delta_level: -11
+    delta_level: 11
     duree: 20
-    polarite: -1
+    polarite: 1
 propagation:
   via_matrice: true
 acteurs_impliques:
@@ -63,7 +63,7 @@ Le ciel de Kharg Island s'est embrasé le 14 juillet 2027 : les drones de combat
 Le conflit accélère la balkanisation énergétique mondiale : chaque bloc se replie sur ses propres réserves et accélère les programmes de souveraineté pétrolière et gazière, marginalisant définitivement les derniers mécanismes d'arbitrage international comme la CARS. La région du Golfe devient une zone-tampon disputée, administrée de facto par des accords secrets entre le Pacte des Forteresses Souveraines et les seigneurs de guerre logistiques qui contrôlent les routes de contournement d'Ormuz. Le flux de réfugiés du Moyen-Orient — estimé à 12 millions de personnes en deux ans — se heurte aux murs des blocs et alimente une économie grise des passages clandestins dont Vasil Orentchev et ses réseaux sont les principaux bénéficiaires.
 
 ## Impact sur les variables
-- **geopolitique_conflits** : delta -12 sur 18 ans
+- **geopolitique_conflits** : delta +12 sur 18 ans
 - **energie_ressources_critiques** : delta +14 sur 22 ans
 - **gouvernance_institutions** : delta +8 sur 15 ans
 - **demographie_mobilite_humaine** : delta +11 sur 20 ans

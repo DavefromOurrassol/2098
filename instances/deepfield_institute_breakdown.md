@@ -60,17 +60,17 @@ injection:
     Les protocoles et algorithmes de Deepfield, conçus pour une gestion technocratique des crises, ont accéléré la fragmentation des institutions en légitimant des mesures autoritaires sous couvert de 'survie collective'. Leur héritage persistant dans les systèmes de gouvernance post-effondrement a sapé la confiance dans les structures démocratiques et favorisé l'émergence de seigneurs de guerre et de milices. En santé, leurs modèles de rationnement des soins ont contribué à la saturation des systèmes biotechnologiques, tandis que leurs politiques migratoires restrictives ont exacerbé les crises de mobilité humaine.
   impact_sur_variables:
   - variable: gouvernance_institutions
-    delta_level: -10
+    delta_level: 10
     duree: 25
-    polarite: -1
+    polarite: 1
   - variable: sante_biotechnologies
-    delta_level: -5
+    delta_level: 5
     duree: 20
-    polarite: -1
+    polarite: 1
   - variable: demographie_mobilite_humaine
-    delta_level: -8
+    delta_level: 8
     duree: 30
-    polarite: -1
+    polarite: 1
   propagation:
     via_matrice: false
 

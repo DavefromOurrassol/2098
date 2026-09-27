@@ -28,15 +28,15 @@ impact_sur_variables:
   - variable: geopolitique_conflits
     delta_level: 10
     duree: 12
-    polarite: -1
+    polarite: 1
   - variable: gouvernance_institutions
     delta_level: 6
     duree: 10
-    polarite: 1
+    polarite: -1
   - variable: organisation_territoires
     delta_level: 7
     duree: 18
-    polarite: 1
+    polarite: -1
 propagation:
   via_matrice: true
 acteurs_impliques:
@@ -69,9 +69,9 @@ L'événement établit un précédent géopolitique majeur : d'autres territoire
 
 ## Impact sur les variables
 - **energie_ressources_critiques** : delta +8 sur 15 ans
-- **geopolitique_conflits** : delta -10 sur 12 ans
-- **gouvernance_institutions** : delta +6 sur 10 ans
-- **organisation_territoires** : delta +7 sur 18 ans
+- **geopolitique_conflits** : delta +10 sur 12 ans
+- **gouvernance_institutions** : delta -6 sur 10 ans
+- **organisation_territoires** : delta -7 sur 18 ans
 
 ## Acteurs impliqués
 - [[kalaallit_nunaat_sovereign_fund_reference]]

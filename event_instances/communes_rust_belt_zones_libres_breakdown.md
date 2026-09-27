@@ -24,19 +24,19 @@ impact_sur_variables:
   - variable: geopolitique_conflits
     delta_level: 8
     duree: 15
-    polarite: -1
+    polarite: 1
   - variable: valeurs_culture_tempo_sociale
     delta_level: 12
     duree: 25
     polarite: 1
   - variable: gouvernance_institutions
-    delta_level: -7
+    delta_level: 7
     duree: 20
-    polarite: -1
+    polarite: 1
   - variable: organisation_territoires
     delta_level: 10
     duree: 30
-    polarite: -1
+    polarite: 1
 propagation:
   via_matrice: true
 acteurs_impliques:
@@ -65,10 +65,10 @@ Automne 2061. Dans les carcasses rouillées des aciéries de Pittsburgh et des u
 Les Zones Libres deviennent un modèle de référence ambigu pour les communautés post-industrielles de l'arc nord-américain — ni victoire ni défaite, mais un précédent de sécession organisationnelle qui essaime dans d'autres territoires abandonnés. À long terme, leur survie dépend de la capacité à maintenir des flux énergétiques autonomes et à négocier des corridors d'approvisionnement avec les cartels logistiques régionaux, transformant l'idéal anti-algorithme en pragmatisme de survie. L'absence de réponse coercitive coordonnée confirme et accélère la fragmentation de la gouvernance nord-américaine.
 
 ## Impact sur les variables
-- **geopolitique_conflits** : delta -8 sur 15 ans
+- **geopolitique_conflits** : delta +8 sur 15 ans
 - **valeurs_culture_tempo_sociale** : delta +12 sur 25 ans
 - **gouvernance_institutions** : delta +7 sur 20 ans
-- **organisation_territoires** : delta -10 sur 30 ans
+- **organisation_territoires** : delta +10 sur 30 ans
 
 ## Acteurs impliqués
 - [[mouvement_des_communes_du_rust_belt_breakdown]]

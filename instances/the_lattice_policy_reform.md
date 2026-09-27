@@ -61,9 +61,9 @@ injection:
     The Lattice Remnant Archives agissent comme un contre-modèle culturel et juridique aux institutions technocratiques, affaiblissant leur légitimité perçue (gouvernance_institutions) tout en inspirant des alternatives décentralisées (organisation_territoires). Leur héritage renforce les valeurs de fluidité territoriale et de choix individuel (valeurs_culture_tempo_sociale), même si leur impact systémique reste limité par leur statut de vestige.
   impact_sur_variables:
   - variable: gouvernance_institutions
-    delta_level: -5
+    delta_level: 5
     duree: 30
-    polarite: -1
+    polarite: 1
   - variable: organisation_territoires
     delta_level: 3
     duree: 25

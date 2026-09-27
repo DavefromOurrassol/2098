@@ -22,21 +22,21 @@ realisation: >
   En 2026-2027, Israël lance des frappes ciblées sur les sites d'enrichissement iraniens, déclenchant des représailles sur les infrastructures pétrolières du Golfe. Mais contrairement aux scénarios d'escalade totale, les institutions de gouvernance mondiale — appuyées par le Conseil de Régulation des Ressources Critiques — activent en urgence un mécanisme de désescalade économique, menaçant les deux parties de sanctions sur leurs flux énergétiques régulés. Le conflit reste intense mais court : contenu en moins de quatre mois par une pression institutionnelle coordonnée sans précédent. Un cessez-le-feu technique est signé à La Haye fin 2027, sous supervision de l'ACRA pour le suivi des communications de commandement.
 impact_sur_variables:
   - variable: geopolitique_conflits
-    delta_level: -8
+    delta_level: 8
     duree: 12
     polarite: -1
   - variable: energie_ressources_critiques
-    delta_level: -10
+    delta_level: 10
     duree: 5
-    polarite: -1
+    polarite: 1
   - variable: gouvernance_institutions
     delta_level: 12
     duree: 20
-    polarite: 1
-  - variable: demographie_mobilite_humaine
-    delta_level: -5
-    duree: 8
     polarite: -1
+  - variable: demographie_mobilite_humaine
+    delta_level: 5
+    duree: 8
+    polarite: 1
 propagation:
   via_matrice: true
 acteurs_impliques:
@@ -62,9 +62,9 @@ Les colonnes de fumée sur Kharg Island et les sirènes de Tel-Aviv s'éteignent
 Le conflit accélère paradoxalement la consolidation des institutions de gouvernance mondiale : leur capacité à stopper une guerre majeure légitime leur autorité et renforce les Protocoles de Sécurité Énergétique Régionale adoptés en 2029. Toutefois, la disruption temporaire des flux pétroliers du Golfe précipite les investissements dans les alternatives énergétiques régulées, consolidant le niveau élevé de la variable énergie. La région reste sous surveillance institutionnelle renforcée pendant deux décennies, créant un précédent de tutelle technocratique sur les conflits armés souverains.
 
 ## Impact sur les variables
-- **geopolitique_conflits** : delta +8 sur 12 ans
+- **geopolitique_conflits** : delta -8 sur 12 ans
 - **energie_ressources_critiques** : delta +10 sur 5 ans
-- **gouvernance_institutions** : delta +12 sur 20 ans
+- **gouvernance_institutions** : delta -12 sur 20 ans
 - **demographie_mobilite_humaine** : delta +5 sur 8 ans
 
 ## Acteurs impliqués

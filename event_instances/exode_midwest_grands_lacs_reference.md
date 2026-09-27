@@ -22,21 +22,21 @@ realisation: >
   Après trois étés consécutifs frôlant ou dépassant les 55°C dans les plaines du Midwest américain, la zone devient physiologiquement inhabitable pendant cinq mois par an. Entre juin 2044 et décembre 2045, environ 18 millions de personnes convergent vers les rives des Grands Lacs et les corridors urbains de Chicago, Detroit et Cleveland. La Direction des Zones Non Prioritaires (DZNP), chroniquement sous-financée dans ce système hybride fragmenté, tente de coordonner les flux avec les administrations locales des cités-relais périphériques, mais les capacités d'absorption sont dépassées en moins de six mois. Le Compact des Grands Lacs — encore embryonnaire en 2044, sept ans avant sa proclamation de souveraineté — commence à poser les bases de sa légitimité populaire en gérant de facto l'accueil là où l'État fédéral faillit.
 impact_sur_variables:
   - variable: demographie_mobilite_humaine
-    delta_level: -12
+    delta_level: 12
     duree: 25
-    polarite: -1
+    polarite: 1
   - variable: organisation_territoires
-    delta_level: -10
+    delta_level: 10
     duree: 20
-    polarite: -1
+    polarite: 1
   - variable: gouvernance_institutions
-    delta_level: -8
+    delta_level: 8
     duree: 15
-    polarite: -1
+    polarite: 1
   - variable: climat_environnement_global
-    delta_level: -5
+    delta_level: 5
     duree: 30
-    polarite: -1
+    polarite: 1
 propagation:
   via_matrice: true
 acteurs_impliques:

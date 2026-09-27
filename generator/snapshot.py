@@ -295,9 +295,11 @@ def get_variable_state(variable, scenario_slug):
 def check_coherence(variable_states, matrix, all_variables):
     """
     Vérifie la cohérence des états via la matrice d'influence.
-    Pour chaque paire (source, target) avec weight fort :
-      - Si polarity -1 et les deux variables ont level élevé → tension détectée
-      - Si polarity +1 et écart de level > 40 → incohérence potentielle
+    Pour chaque paire (source, target) avec weight fort (convention
+    d'intensité du 27 septembre 2026, level 100 = crise) :
+      - polarity +1 et les deux variables en crise   → crise_mutuelle
+      - polarity -1 (amortisseur) et source en crise → amortissement
+      - lien cascade +1, lag court, source > 70      → cascade_critique
 
     Seuils de base 60 (tension_negative) / 70 (cascade_critique), abaissés
     par variable selon son `simulation.tipping_point_risk` (P22, 20 août
@@ -342,28 +344,54 @@ def check_coherence(variable_states, matrix, all_variables):
                 TIPPING_THRESHOLD_ADJUST, TIPPING_THRESHOLD_ADJUST_DEFAULT
             )
 
-            # Tension : lien négatif fort entre deux variables à niveau élevé
+            # Convention d'intensité (27 septembre 2026) : level 100 = crise
+            # maximale pour les 12 variables, polarity +1 = la crise de la
+            # source aggrave la cible, -1 = amortisseur (3 liens seulement,
+            # décroissance forcée). Les anciennes règles testaient
+            # polarity -1 : avec la nouvelle matrice elles ne détecteraient
+            # plus rien, d'où la réécriture ci-dessous.
             tension_seuil_source = 60 - source_adjust
             tension_seuil_target = 60 - target_adjust
-            if (edge["polarity"] == -1
+
+            # Crise mutuelle : lien aggravant fort entre deux variables
+            # déjà en crise -- elles s'entretiennent l'une l'autre.
+            if (edge["polarity"] == 1
                     and s_level > tension_seuil_source
                     and t_level > tension_seuil_target):
                 tensions.append({
-                    "type":          "tension_negative",
+                    "type":          "crise_mutuelle",
                     "source":        source_slug,
                     "target":        target_slug,
                     "weight":        edge["weight"],
                     "feedback_role": edge["feedback_role"],
                     "lag":           edge["lag"],
-                    "description":   "{} (level {}) exerce une pression négative forte sur {} (level {})".format(
+                    "polarity":      edge["polarity"],
+                    "description":   "{} (level {}) aggrave une crise déjà forte de {} (level {})".format(
                         source_slug, int(s_level), target_slug, int(t_level)
                     ),
                 })
 
-            # Cascade critique : lien cascade + polarity -1 + lag court
+            # Amortissement : un amortisseur (-1) activé par une source en
+            # crise -- ex. effondrement productif qui soulage le climat.
+            if edge["polarity"] == -1 and s_level > tension_seuil_source:
+                tensions.append({
+                    "type":          "amortissement",
+                    "source":        source_slug,
+                    "target":        target_slug,
+                    "weight":        edge["weight"],
+                    "feedback_role": edge["feedback_role"],
+                    "lag":           edge["lag"],
+                    "polarity":      edge["polarity"],
+                    "description":   "{} (level {}) en crise atténue la pression sur {} (level {})".format(
+                        source_slug, int(s_level), target_slug, int(t_level)
+                    ),
+                })
+
+            # Cascade critique : lien cascade aggravant + lag court + source
+            # en crise forte
             cascade_seuil = 70 - source_adjust
             if (edge["feedback_role"] == "cascade"
-                    and edge["polarity"] == -1
+                    and edge["polarity"] == 1
                     and edge["lag"] <= 2
                     and s_level > cascade_seuil):
                 tensions.append({
@@ -373,6 +401,7 @@ def check_coherence(variable_states, matrix, all_variables):
                     "weight":        edge["weight"],
                     "feedback_role": "cascade",
                     "lag":           edge["lag"],
+                    "polarity":      edge["polarity"],
                     "description":   "CASCADE CRITIQUE : {} déclenche une cascade rapide sur {}".format(
                         source_slug, target_slug
                     ),
@@ -611,7 +640,11 @@ def apply_custom_injections(variable_states, instances, matrix, all_variables, d
 
             # Pondération temporelle
             facteur        = min(duree_effet, duree_dec) / max(duree_dec, 1)
-            delta_applique = round(delta * facteur * polarite, 1)
+            # Convention de signe (27 septembre 2026, audit_polarite.py) : polarite
+            # porte seule le SENS, delta_level seulement la FORCE -- abs() neutralise
+            # le double négatif (delta<0 ET polarite=-1) écrit par le LLM sur 141
+            # entrées sur 511, qui s'appliquaient jusqu'ici dans le mauvais sens.
+            delta_applique = round(abs(delta) * facteur * polarite, 1)
 
             old_level = states[var].get("level", 50)
             if old_level == "" or old_level is None:
@@ -713,7 +746,11 @@ def apply_custom_events(variable_states, events, matrix, all_variables, date_ref
                 continue
 
             facteur        = min(duree_effet, duree_dec) / max(duree_dec, 1)
-            delta_applique = round(delta * facteur * polarite, 1)
+            # Convention de signe (27 septembre 2026, audit_polarite.py) : polarite
+            # porte seule le SENS, delta_level seulement la FORCE -- abs() neutralise
+            # le double négatif (delta<0 ET polarite=-1) écrit par le LLM sur 141
+            # entrées sur 511, qui s'appliquaient jusqu'ici dans le mauvais sens.
+            delta_applique = round(abs(delta) * facteur * polarite, 1)
 
             old_level = states[var].get("level", 50)
             if old_level == "" or old_level is None:
@@ -823,7 +860,11 @@ def apply_custom_signals(variable_states, signals, matrix, scenario_slug, all_va
         ))
 
         facteur        = min(duree_effet, duree_dec) / max(duree_dec, 1)
-        delta_applique = round(delta * facteur * polarite, 1)
+        # Convention de signe (27 septembre 2026, audit_polarite.py) : polarite
+        # porte seule le SENS, delta_level seulement la FORCE -- abs() neutralise
+        # le double négatif (delta<0 ET polarite=-1) écrit par le LLM sur 141
+        # entrées sur 511, qui s'appliquaient jusqu'ici dans le mauvais sens.
+        delta_applique = round(abs(delta) * facteur * polarite, 1)
 
         old_level = states[var].get("level", 50)
         if old_level == "" or old_level is None:
@@ -882,6 +923,75 @@ def apply_custom_signals(variable_states, signals, matrix, scenario_slug, all_va
                     "new_level": new_t,
                 })
 
+    return states, modifications
+
+
+# ─────────────────────────────────────────
+# ÉTAPE 6 (moteur dynamique, 27 septembre 2026)
+# ─────────────────────────────────────────
+
+# True = moteur dynamique (dynamique.py : second ordre amorti, retards,
+# propagation multi-sauts, atténuation, plafond doux). False = anciennes
+# fonctions apply_custom_* (conservées telles quelles pour retour arrière).
+MOTEUR_DYNAMIQUE = True
+
+
+def appliquer_dynamique(variable_states, scenario_slug, instances, events, signals,
+                        matrix, all_variables, date_reference):
+    """Remplace apply_custom_injections/events/signals : tous les chocs
+    custom sont simulés ENSEMBLE de 2025 à date_reference (voir
+    dynamique.py). Retourne (variable_states modifiés, modifications) --
+    une entrée de modifications par variable qui a bougé d'au moins
+    0,5 point, avec ses 3 principaux chocs directs à cette date (liste
+    bornée à 12 lignes, contrairement à l'ancien journal)."""
+    import dynamique as dyn
+
+    variables = [v for v in VALID_VARS if v in variable_states]
+    ref = {}
+    for v in variables:
+        try:
+            ref[v] = float(variable_states[v].get("level"))
+        except (TypeError, ValueError):
+            ref[v] = 50.0
+    params = {v: dyn.parametres_variable((all_variables.get(v) or {}).get("simulation")) for v in variables}
+    liens = dyn.couplages(variables, matrix["edges"], params)
+    k, indicateur, reduit = dyn.k_effectif(variables, liens, params)
+    if reduit:
+        print("[snapshot] ⚠ Stabilité : couplage réduit automatiquement de {} à {:.3f} "
+              "(critère petit gain {:.2f})".format(dyn.K_COUPLAGE, k, indicateur))
+    chocs = dyn.chocs_depuis_donnees(scenario_slug, instances, events, signals)
+    res = dyn.simuler(variables, ref, params, liens, chocs, date_reference, k=k)
+    print("[snapshot] Moteur dynamique : {} chocs ({} propagés), K={:.3f}, petit gain={:.2f}".format(
+        len(chocs), sum(1 for c in chocs if c["via_matrice"]), k, indicateur))
+
+    states = {n: dict(s) for n, s in variable_states.items()}
+    modifications = []
+    for v in variables:
+        nouveau = res["niveaux"][v]
+        ecart = round(nouveau - ref[v], 1)
+        if abs(ecart) < 0.5:
+            continue
+        # 27 septembre 2026 : dyn.forcage() applique déjà GAIN_CHOCS -- le
+        # re-multiplier ici (ancienne version) réduisait la force affichée
+        # d'un facteur 4 et masquait la plupart des contributeurs sous le
+        # seuil de 0,2 point.
+        directs = sorted(
+            ((c["nom"], dyn.forcage(c, date_reference))
+             for c in chocs if c["variable"] == v),
+            key=lambda x: -abs(x[1]))
+        contributeurs = [n for n, f in directs if abs(f) >= 0.2][:3]
+        states[v]["level"] = nouveau
+        states[v]["custom_perturbation"] = True
+        states[v]["perturbation_source"] = "dynamique"
+        modifications.append({
+            "event": "dynamique", "variable": v, "delta": ecart,
+            "old_level": ref[v], "new_level": nouveau,
+            "contributeurs": contributeurs,
+        })
+        print("  → {} : {} → {} (écart {:+}){}".format(
+            v, ref[v], nouveau, ecart,
+            " — " + " ; ".join(c[:70] for c in contributeurs) if contributeurs else " — propagation"))
+    modifications.sort(key=lambda m: -abs(m["delta"]))
     return states, modifications
 
 
@@ -998,12 +1108,9 @@ def build_snapshot(scenario_slug, thematique=None, dry_run=True, forcer_config=N
     defined = sum(1 for s in variable_states.values() if s["source"] != "undefined")
     print("[snapshot] États définis : {}/{}".format(defined, len(VALID_VARS)))
 
-    # ── Étape 3 : cohérence
-    coherence = check_coherence(variable_states, matrix, all_variables)
-    print("[snapshot] Tensions détectées : {} | Cohérence : {}".format(
-        len(coherence["tensions"]),
-        "OK" if coherence["coherence_ok"] else "ATTENTION"
-    ))
+    # ── Étape 3 (cohérence) : déplacée APRÈS les injections (27 septembre
+    # 2026) -- auparavant calculée sur les niveaux de référence, elle
+    # décrivait un monde sans ses perturbations. Voir plus bas.
 
     # ── Étape 4 : trajectoire ruptures (jalons génériques)
     trajectory = build_trajectory(all_variables, scenario_slug, pilots)
@@ -1019,11 +1126,8 @@ def build_snapshot(scenario_slug, thematique=None, dry_run=True, forcer_config=N
         len(signal_events), len(signal_majors)
     ))
 
-    # ── Étape 5 : tensions thématiques (si thématique fournie)
-    thematic_tensions = []
-    if thematique:
-        thematic_tensions = get_thematic_tensions(thematique, matrix, variable_states)
-        print("[snapshot] Tensions thématiques : {}".format(len(thematic_tensions)))
+    # ── Étape 5 (tensions thématiques) : déplacée APRÈS les injections,
+    # même raison que l'étape 3.
 
     # ── Étape 6 : instances (entités dans ce scénario)
     all_instances = load_instances_for_scenario(scenario_slug)
@@ -1047,7 +1151,17 @@ def build_snapshot(scenario_slug, thematique=None, dry_run=True, forcer_config=N
     # ── Étape 6B : appliquer les injections custom sur les variables
     custom_instances = [i for i in all_instances
                         if i.get("injection", {}).get("type") == "custom"]
-    if custom_instances:
+    custom_events = load_events_for_scenario(scenario_slug)
+    custom_signals = load_custom_signals()
+    event_modifications = []
+    signal_modifications = []
+
+    if MOTEUR_DYNAMIQUE:
+        variable_states, modifications = appliquer_dynamique(
+            variable_states, scenario_slug, custom_instances, custom_events, custom_signals,
+            matrix, all_variables, date_reference
+        )
+    elif custom_instances:
         variable_states, modifications = apply_custom_injections(
             variable_states, custom_instances, matrix, all_variables, date_reference=date_reference
         )
@@ -1057,25 +1171,21 @@ def build_snapshot(scenario_slug, thematique=None, dry_run=True, forcer_config=N
     else:
         modifications = []
 
-    # ── Étape 6C : charger et appliquer les événements custom
-    custom_events = load_events_for_scenario(scenario_slug)
-    event_modifications = []
-    if custom_events:
+    # ── Étape 6C : événements custom (ancien moteur uniquement)
+    if not MOTEUR_DYNAMIQUE and custom_events:
         variable_states, event_modifications = apply_custom_events(
             variable_states, custom_events, matrix, all_variables, date_reference=date_reference
         )
         print("[snapshot] Événements custom : {} | {} variables affectées".format(
             len(custom_events), len(event_modifications)
         ))
-    else:
+    elif not MOTEUR_DYNAMIQUE:
         print("[snapshot] Événements custom : aucun")
 
     # ── Étape 6D2 : charger et appliquer les signaux faibles custom
     # (chantier injection matricielle, 16 août 2026 — troisième et dernier
     # type d'injection après entités/instances et événements)
-    custom_signals = load_custom_signals()
-    signal_modifications = []
-    if custom_signals:
+    if not MOTEUR_DYNAMIQUE and custom_signals:
         variable_states, signal_modifications = apply_custom_signals(
             variable_states, custom_signals, matrix, scenario_slug, all_variables, date_reference=date_reference
         )
@@ -1083,6 +1193,17 @@ def build_snapshot(scenario_slug, thematique=None, dry_run=True, forcer_config=N
             len(custom_signals), len(signal_modifications)
         ))
     modifications = modifications + event_modifications + signal_modifications
+
+    # ── Étapes 3 et 5, maintenant sur les niveaux PERTURBÉS
+    coherence = check_coherence(variable_states, matrix, all_variables)
+    print("[snapshot] Tensions détectées : {} | Cohérence : {}".format(
+        len(coherence["tensions"]),
+        "OK" if coherence["coherence_ok"] else "ATTENTION"
+    ))
+    thematic_tensions = []
+    if thematique:
+        thematic_tensions = get_thematic_tensions(thematique, matrix, variable_states)
+        print("[snapshot] Tensions thématiques : {}".format(len(thematic_tensions)))
 
     # ── Étape 6D : forçage d'un élément (ajouté le 2 août 2026)
     forcer_resolu = resolve_forced_element(forcer_config, scenario_slug)
@@ -1308,10 +1429,12 @@ def print_snapshot_summary(snapshot):
     if snapshot.get("filtered_instances"):
         print("\n--- Entités actives dans ce monde ---")
         for inst in snapshot["filtered_instances"]:
+            # .get() (27 septembre 2026) : certaines instances n'ont plus
+            # etat_temporel (remplacé par trajectoire, chantier du 9 août).
             print("  [{}] {} — {}".format(
-                inst["etat_temporel"][:3].upper(),
-                inst["name"][:35],
-                inst["role_dans_scenario"][:60] + "..."
+                str(inst.get("trajectoire") or inst.get("etat_temporel") or "?")[:3].upper(),
+                str(inst.get("name", inst.get("slug", "?")))[:35],
+                str(inst.get("role_dans_scenario", ""))[:60] + "..."
             ))
 
     print("\n" + "="*60)

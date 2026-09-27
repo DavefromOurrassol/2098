@@ -44,6 +44,7 @@ from datetime import datetime
 from pathlib import Path
 
 from llm_client import call_llm  # tier structured_strict — canonique/référencé
+from echelles import CONVENTION_NIVEAUX, CONSIGNE_IMPACT, texte_echelle, verifier_impact  # 27 septembre 2026
 
 # ---------------------------------------------------------------------------
 # Configuration partagée
@@ -524,6 +525,9 @@ def build_instance_prompt(entity_fm, scenario, hard_constraint=None, exclude_slu
     for var in entity_fm.get("variables_potentielles", []) or []:
         if var in var_states:
             vars_context += f"\n- **{var}** dans {scenario} : {var_states[var]}"
+            echelle_txt = texte_echelle(var)
+            if echelle_txt:
+                vars_context += f" (échelle : {echelle_txt})"
 
     if available_instances:
         instances_list = "\n".join(
@@ -582,10 +586,11 @@ les mentionner dans variables_influencees.
 Choisis 1 à 3 variables parmi celles de "variables_influencees"
 ci-dessus les plus directement affectées par l'existence de cette
 instance, et pour chacune un impact cohérent avec son rôle et son
-état actuel (pas de delta positif massif sur une variable déjà en
-effondrement, pas de delta négatif massif sur une variable déjà au
-maximum).
-PLAFOND STRICT : |delta_level| ne doit JAMAIS dépasser
+état actuel (pas d'impact qui pousserait une variable déjà proche de 0
+ou de 100 au-delà de ses bornes).
+{CONVENTION_NIVEAUX}
+{CONSIGNE_IMPACT}
+PLAFOND STRICT : delta_level ne doit JAMAIS dépasser
 impact_systemique_global × {MAX_DELTA_PER_IMPACT_POINT} — c'est-à-dire
 que le plafond dépend de la valeur que TU choisis toi-même pour
 impact_systemique_global ci-dessus (0 → aucun impact possible,
@@ -977,6 +982,8 @@ def validate_instance(data, hard_constraint=None, injection_custom=False):
                 except (TypeError, ValueError):
                     issues.append(f"[{var}] delta_level non numérique : {delta!r}")
                     continue
+                # Convention de signe (27 septembre 2026, echelles.py)
+                issues.extend(verifier_impact(delta_val, imp.get("polarite", 1), prefixe=f"[{var}] "))
                 if abs(delta_val) > plafond:
                     issues.append(
                         f"[{var}] delta_level={delta_val} dépasse le plafond "

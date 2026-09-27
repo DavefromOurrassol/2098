@@ -24,13 +24,13 @@ impact_sur_variables:
   - variable: organisation_territoires
     delta_level: 12
     duree: 25
-    polarite: 1
+    polarite: -1
   - variable: gouvernance_institutions
     delta_level: 6
     duree: 20
-    polarite: 1
+    polarite: -1
   - variable: geopolitique_conflits
-    delta_level: -5
+    delta_level: 5
     duree: 15
     polarite: -1
 propagation:
@@ -60,9 +60,9 @@ En ce mois d'octobre 2051, les drapeaux bleu-vert du Great Lakes Autonomous Comp
 Le Pacte Lacustre s'impose immédiatement comme jurisprudence mondiale pour les régions détenant des ressources hydriques critiques, renforçant les revendications des blocs souverainistes hydriques sur tous les continents. À moyen terme, il consolide le modèle de gouvernance multi-niveaux de Nairobi tout en fragilisant la souveraineté exclusive des États-nations sur leurs ressources intérieures, ouvrant un précédent que d'autres régions — bassins amazoniens, Sahel, Sibérie — s'empresseront d'invoquer.
 
 ## Impact sur les variables
-- **organisation_territoires** : delta +12 sur 25 ans
-- **gouvernance_institutions** : delta +6 sur 20 ans
-- **geopolitique_conflits** : delta +5 sur 15 ans
+- **organisation_territoires** : delta -12 sur 25 ans
+- **gouvernance_institutions** : delta -6 sur 20 ans
+- **geopolitique_conflits** : delta -5 sur 15 ans
 
 ## Acteurs impliqués
 - [[great_lakes_autonomous_compact_new_sustainability]]

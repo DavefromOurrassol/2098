@@ -22,21 +22,21 @@ realisation: >
   En 2026-2027, le conflit direct entre Israël et l'Iran éclate effectivement, mais dans un monde déjà fragmenté en unités locales autonomes, il se déroule comme un incendie lointain dont la fumée arrive par vagues. Les bioterritoires ne sont pas des belligérants, mais ils subissent les contrecoups : perturbation des dernières routes maritimes d'hydrocarbures, effondrement ponctuel des flux de carburant vers les territoires encore dépendants, et afflux de réfugiés depuis les zones de conflit. Les assemblées bioterritoriales n'ont ni ambassadeurs ni armées — elles reçoivent l'onde de choc sans pouvoir peser sur son origine. La Trame Mnemos documente en temps réel l'isolement croissant de certains nœuds territoriaux.
 impact_sur_variables:
   - variable: geopolitique_conflits
-    delta_level: -8
+    delta_level: 8
     duree: 6
-    polarite: -1
+    polarite: 1
   - variable: energie_ressources_critiques
-    delta_level: -12
+    delta_level: 12
     duree: 10
-    polarite: -1
+    polarite: 1
   - variable: gouvernance_institutions
     delta_level: 6
     duree: 15
     polarite: 1
   - variable: demographie_mobilite_humaine
-    delta_level: -9
+    delta_level: 9
     duree: 12
-    polarite: -1
+    polarite: 1
 propagation:
   via_matrice: true
 acteurs_impliques:

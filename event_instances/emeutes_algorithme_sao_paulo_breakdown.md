@@ -47,17 +47,17 @@ realisation: 'En 2073, une mise à jour catastrophique de ce qui subsiste de la 
   '
 impact_sur_variables:
 - variable: gouvernance_institutions
-  delta_level: -8
+  delta_level: 8
   duree: 15
-  polarite: -1
+  polarite: 1
 - variable: technologie_information
   delta_level: 6
   duree: 10
   polarite: 1
 - variable: organisation_territoires
-  delta_level: -10
+  delta_level: 10
   duree: 20
-  polarite: -1
+  polarite: 1
 propagation:
   via_matrice: true
 acteurs_impliques:

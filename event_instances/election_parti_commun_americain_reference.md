@@ -34,7 +34,7 @@ impact_sur_variables:
   - variable: gouvernance_institutions
     delta_level: 6
     duree: 15
-    polarite: -1
+    polarite: 1
   - variable: geopolitique_conflits
     delta_level: 5
     duree: 20
@@ -42,7 +42,7 @@ impact_sur_variables:
   - variable: valeurs_culture_tempo_sociale
     delta_level: 4
     duree: 25
-    polarite: -1
+    polarite: 1
 propagation:
   via_matrice: true
 acteurs_impliques: []
@@ -70,9 +70,9 @@ Polarisation politique accrue. Les réformes annoncées sont partiellement
 bloquées par une opposition institutionnelle forte.
 
 ## Impact sur les variables
-- **gouvernance_institutions** : delta -6 sur 15 ans
+- **gouvernance_institutions** : delta +6 sur 15 ans
 - **geopolitique_conflits** : delta +5 sur 20 ans
-- **valeurs_culture_tempo_sociale** : delta -4 sur 25 ans
+- **valeurs_culture_tempo_sociale** : delta +4 sur 25 ans
 
 ## Note de cohérence
 Dans reference, une élection contestée qui fragilise les institutions

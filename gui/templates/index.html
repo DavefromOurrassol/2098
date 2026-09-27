@@ -614,6 +614,8 @@
             <a href="#" id="log-clear">Effacer</a>
           </div>
           <pre id="log-output"><span class="cursor-blink" id="log-cursor" style="display:none"></span># Lance un script pour voir les logs ici</pre>
+          <!-- Récit + graphique de l'outil « Tracer » (27 septembre 2026) -->
+          <div id="trace-visu" style="display:none;max-height:65%;overflow:auto;border-top:1px solid rgba(128,128,128,.35);padding:12px 16px"></div>
         </div>
 
       </div>
@@ -1159,6 +1161,7 @@
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script src="https://unpkg.com/leaflet-draw@1.0.4/dist/leaflet.draw.js"></script>
 <script src="https://unpkg.com/@turf/turf@6/turf.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
 <script>
   // Injectée par app.py depuis la variable d'environnement CARTO_API_KEY
   // (30 août 2026) -- jamais en dur dans app.js, jamais commitée. Chaîne

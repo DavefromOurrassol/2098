@@ -73,9 +73,9 @@ injection:
     duree: 15
     polarite: 1
   - variable: technologie_information
-    delta_level: -10
+    delta_level: 10
     duree: 10
-    polarite: -1
+    polarite: 1
   propagation:
     via_matrice: true
 

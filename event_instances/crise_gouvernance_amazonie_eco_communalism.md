@@ -22,13 +22,13 @@ realisation: >
   Dans un monde déjà fragmenté en communs bioterritoriaux, le Pacte Amazônia Viva n'est plus un consortium institutionnel mais une confédération souple de bassins versants amazoniens. Face à la détection par les Collectifs de Géo-Observateurs Citoyens de déforestations massives orchestrées par des Enclaves Extractivistes Résiduelles liées à des opérateurs énergétiques hors-communs, le Pacte convoque en urgence une grande assemblée à Belém. L'ONU résiduelle, dépourvue de moyens d'intervention dans un monde déshiérarchisé, envoie un message de soutien symbolique sans effet. La confrontation oppose les Gardiens du Territoire — mobilisés spirituellement et physiquement — aux milices de protection des corridors d'extraction privés. L'événement force le Réseau des Assemblées Bioterritoriales à émettre sa première 'déclaration de souveraineté écologique d'urgence' collective, test sans précédent de la capacité des communs à défendre leur territoire sans État central.
 impact_sur_variables:
   - variable: climat_environnement_global
-    delta_level: -8
+    delta_level: 8
     duree: 15
-    polarite: -1
+    polarite: 1
   - variable: geopolitique_conflits
     delta_level: 12
     duree: 10
-    polarite: -1
+    polarite: 1
   - variable: gouvernance_institutions
     delta_level: 10
     duree: 20
@@ -69,7 +69,7 @@ L'événement cristallise la tension fondamentale du modèle éco-communaliste :
 
 ## Impact sur les variables
 - **climat_environnement_global** : delta +8 sur 15 ans
-- **geopolitique_conflits** : delta -12 sur 10 ans
+- **geopolitique_conflits** : delta +12 sur 10 ans
 - **gouvernance_institutions** : delta +10 sur 20 ans
 - **organisation_territoires** : delta +8 sur 18 ans
 

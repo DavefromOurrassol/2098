@@ -23,41 +23,41 @@ constrained_variables:
   - [[sante_biotechnologies]]
 variable_states:
   systeme_economique_redistribution:
-    level: 55
+    level: 70
     trend: stable
   gouvernance_institutions:
-    level: 60
+    level: 40
     trend: stable
   geopolitique_conflits:
-    level: 60
+    level: 75
     trend: stable
   valeurs_culture_tempo_sociale:
-    level: 50
+    level: 60
     trend: stable
   organisation_territoires:
-    level: 45
+    level: 65
     trend: stable
   sante_biotechnologies:
-    level: 65
-    trend: up
+    level: 55
+    trend: down
   frontieres_du_systeme:
-    level: 50
+    level: 55
     trend: stable
   technologie_information:
     level: 80
-    trend: up
-  climat_environnement_global:
-    level: 40
     trend: down
+  climat_environnement_global:
+    level: 65
+    trend: up
   energie_ressources_critiques:
-    level: 50
+    level: 72
     trend: stable
   demographie_mobilite_humaine:
     level: 55
     trend: stable
   systemes_productifs_travail:
     level: 70
-    trend: up
+    trend: down
 triggers:
   - crise climatique récurrente
   - tension énergétique mondiale
@@ -78,6 +78,7 @@ system_effects:
   environment:
     - dégradation continue mais partiellement contenue
     - tentatives d’atténuation des impacts climatiques
+convention_echelle: intensite_2026-09-27
 ---
 
 # reference
@@ -131,18 +132,18 @@ Scénario de référence correspondant à un système mondial en équilibre frag
 ## 4A. États des variables
 | Variable | Level | Trend |
 |---|---|---|
-| [[systeme_economique_redistribution]] | 55 | stable |
-| [[gouvernance_institutions]] | 60 | stable |
-| [[geopolitique_conflits]] | 60 | stable |
-| [[valeurs_culture_tempo_sociale]] | 50 | stable |
-| [[organisation_territoires]] | 45 | stable |
-| [[sante_biotechnologies]] | 65 | up |
-| [[frontieres_du_systeme]] | 50 | stable |
-| [[technologie_information]] | 80 | up |
-| [[climat_environnement_global]] | 40 | down |
-| [[energie_ressources_critiques]] | 50 | stable |
+| [[systeme_economique_redistribution]] | 70 | stable |
+| [[gouvernance_institutions]] | 40 | stable |
+| [[geopolitique_conflits]] | 75 | stable |
+| [[valeurs_culture_tempo_sociale]] | 60 | stable |
+| [[organisation_territoires]] | 65 | stable |
+| [[sante_biotechnologies]] | 55 | down |
+| [[frontieres_du_systeme]] | 55 | stable |
+| [[technologie_information]] | 80 | down |
+| [[climat_environnement_global]] | 65 | up |
+| [[energie_ressources_critiques]] | 72 | stable |
 | [[demographie_mobilite_humaine]] | 55 | stable |
-| [[systemes_productifs_travail]] | 70 | up |
+| [[systemes_productifs_travail]] | 70 | down |
 
 ## 5. Forces dominantes
 - maintien de la mondialisation sous tension

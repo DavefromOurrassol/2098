@@ -3,7 +3,11 @@
 septembre 2026 : #2, #2bis, #4 et S11 clos et archivés ; le 24 septembre :
 #1 Hyphan clos et archivé, S15/S16 ajoutés ; le 25 septembre : #4, S13 et
 S15.1 clos et archivés, S17 « audit du lore » ajouté ; le 26 septembre :
-S12, S16 et S17 clos et archivés, S15 réduit, S18 ajouté), mis à jour en continu
+S12, S16 et S17 clos et archivés, S15 réduit, S18 ajouté ; le 27 septembre :
+chantier « Injection et propagation » ouvert et clos dans la session,
+archivé, S19 ajouté ; le 27 septembre après-midi : chantier « Signaux
+faibles — polarité, persistance, idées en texte libre » ouvert et clos,
+archivé, S19 mis à jour, S20 ajouté), mis à jour en continu
 à chaque clôture de session. Chantiers clos et leur historique complet
 dans `BACKLOG_ARCHIVE.md` (fichier séparé, à uploader seulement en cas
 de besoin de vérifier si un point a déjà été traité). Chaque chantier
@@ -352,6 +356,81 @@ correctif `write_alliances_patch()`, exceptions NAT supprimées. Détail :
   maritime). Renommage possible un jour, pas urgent.
 - `_a_supprimer/` : article du 24 sept (Hyphan en Asie centrale) à
   supprimer définitivement quand David le décide.
+
+---
+
+## ⚪ S19. Propagation dynamique — surveillance et réglages
+**Nouveau, 27 sept.** Moteur `dynamique.py` en service (voir manuel §3ter).
+Rien de bloquant :
+- ~~`gui_verified: true` à remettre sur `trace_injection`~~ — fait (vérifié
+  dans `scripts_config.json` le 27 sept après-midi).
+- **Signaux faibles non propagés** : un signal avec `propagation_via_matrice:
+  false` (le cas par défaut) agit sur sa variable cible, dans le calcul et
+  donc dans les articles, mais ne se propage pas aux autres variables.
+  Options non tranchées : **a)** passer certains signaux à `true` à la
+  main ; **b)** changer la consigne du prompt `inject_custom_signals.py` ;
+  **c)** propager tous les signaux à ~30 % de leur force. *Depuis le 27
+  sept après-midi*, un signal `durable`/`permanente` pèse enfin en 2098
+  sur sa variable (avant : ≈ 0,4 point résiduel, sous le seuil
+  d'affichage) — la question de sa propagation aux autres variables reste
+  entière.
+- **Après un gros lot d'injections** : relancer `python3
+  banc_calibration.py --scenarios all --balayage-k 0.05` et vérifier que
+  les écarts restent lisibles. La stabilité est garantie par la garde
+  `k_effectif`, pas la lisibilité.
+- **Dérive de `reference` vers fortress_world** (géopolitique 75 → 86 en
+  2098) : à surveiller, c'est peut-être voulu par le lore.
+- **GAIN_CHOCS (0,25) et DEMI_VIE (20 ans)** relèvent du goût narratif :
+  ils règlent la force des événements et la durée de leur trace, et
+  peuvent être ajustés au banc sans toucher au reste. Depuis le 27 sept
+  après-midi, la durée se règle aussi **par type** (`DEMI_VIE_PAR_TYPE`) et
+  **par choc** (`persistance` : table `PERSISTANCE`) ; les instances
+  actives sont `permanente` (`PERSISTANCE_INSTANCE_ACTIVE`, repli
+  `durable` si l'effet paraît trop fort) — mesurer avec
+  `mesure_niveaux.py` avant/après tout réglage.
+- **Saturation près des bornes** : dans breakdown, 8 variables finissent
+  entre 99 et 100 (référence déjà à 90-96) ; en new_sustainability,
+  `gouvernance_institutions` descend à 0,3 (référence 10). Tout nouveau choc
+  y est presque sans effet chiffré. Voulu par le plafond doux ; à revoir
+  seulement si des articles en pâtissent (piste : référence moins
+  extrême, ou marge du plafond).
+- `undo_custom.py` ne recalcule pas la ligne « Total » du registre des
+  événements (mineur, cosmétique).
+- `matplotlib` absent : le banc écrit des CSV au lieu de graphiques
+  (`pip3 install matplotlib` si besoin).
+- Tendances (`trend`) des fiches scénario : affichage seulement, aucun
+  calcul ne les lit.
+
+---
+
+## ⚪ S20. Signaux faibles et idées en texte libre — suites possibles
+**Nouveau, 27 sept (après-midi).** Rien de bloquant, pistes écartées ou
+reportées explicitement :
+- **Bouton « Proposer en événement »** dans la carte de l'assistant ✨
+  quand le ⚠ « ressemble plutôt à un événement » apparaît — mis de côté
+  par David (« voir à l'usage »).
+- **Doublons d'idées** : le contrôle d'`id` de `idees_vers_queue.py` ne
+  voit pas une idée déjà injectée sous un autre nom (cas réel : les
+  prompteurs, déjà `clerge_prompteurs_ia`). Piste : comparer aux slugs de
+  `signaux_custom/` (ne détecterait que des noms proches). Mis de côté.
+- **Descriptions étoffées sur texte très court** (« chine 2049 champion
+  économique » → 5 phrases et 4 variables) : David a choisi de ne pas
+  ajouter de règle de longueur ; relire, ou « ↶ Rétablir mon texte ».
+- **Reprise d'injection partielle** (`idee_a_remettre_en_queue`) : testée en
+  synthétique seulement — à observer au premier cas réel.
+- **Portée narrative d'un signal** : un jalon de signal custom n'est
+  jamais « structurant » dans `build_signal_trajectory()` (un
+  `evenement_cle` par variable, jamais partagé) — « majeur » si sa
+  variable est pilote du scénario, sinon « local » et rarement cité. Le
+  multi-variables n'augmente pas son poids narratif. Constat, pas de
+  décision.
+- `/api/yaml/append` réécrit `queue.yaml` avec `yaml.dump` : l'en-tête
+  modèle (`QUEUE_TEMPLATE`) disparaît jusqu'au prochain run du script
+  d'injection, qui le remet. Cosmétique, préexistant.
+- Entités : pas de champ `persistance` dans la queue de
+  `create_entities_and_instances.py` (la persistance d'une instance se
+  déduit de sa trajectoire ; forçage possible à la main dans le bloc
+  `injection`). À ajouter seulement si le besoin se présente.
 
 ---
 

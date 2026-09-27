@@ -61,13 +61,13 @@ injection:
     L’échec de la Meridian Assembly a accéléré la défiance envers les institutions hybrides et les modèles de gouvernance fluide, renforçant la fragmentation des structures de pouvoir. Son héritage technologique (protocoles de citoyenneté algorithmique, réseaux déterritorialisés) a été récupéré de manière chaotique, contribuant à la perte de fiabilité des données et à la prolifération de désinformation dans les années post-effondrement.
   impact_sur_variables:
   - variable: gouvernance_institutions
-    delta_level: -5
+    delta_level: 5
     duree: 20
-    polarite: -1
+    polarite: 1
   - variable: technologie_information
-    delta_level: -3
+    delta_level: 3
     duree: 15
-    polarite: -1
+    polarite: 1
   propagation:
     via_matrice: false
 

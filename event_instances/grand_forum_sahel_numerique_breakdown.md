@@ -26,13 +26,13 @@ impact_sur_variables:
     duree: 12
     polarite: 1
   - variable: gouvernance_institutions
-    delta_level: -8
+    delta_level: 8
     duree: 20
-    polarite: -1
+    polarite: 1
   - variable: organisation_territoires
-    delta_level: -6
+    delta_level: 6
     duree: 18
-    polarite: -1
+    polarite: 1
 propagation:
   via_matrice: true
 acteurs_impliques:

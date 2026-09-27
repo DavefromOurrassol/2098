@@ -50,6 +50,10 @@ simulation:
   systemic_criticality: 5
   resilience: 3
   adaptability: 3
+echelle:
+  type: intensite
+  zero: "coordination globale robuste et adaptative, légitimité institutionnelle forte"
+  cent: "effondrement de la légitimité, États fragmentés, aucune coordination"
 states:
 
   fortress_world:
@@ -71,7 +75,7 @@ states:
       [[technologie_information]]: 85
 
   new_sustainability:
-    level: 90
+    level: 10
     volatility: 20
     state_logic: >
       Gouvernance hybride globale combinant institutions humaines, coordination internationale robuste et systèmes d’IA décisionnels assurant une régulation systémique avancée et adaptative.
@@ -89,7 +93,7 @@ states:
       [[energie_ressources_critiques]]: 70
 
   breakdown:
-    level: 20
+    level: 80
     volatility: 95
     state_logic: >
       Effondrement de la légitimité institutionnelle, fragmentation des États et incapacité des structures de gouvernance à coordonner les crises systémiques globales.
@@ -107,7 +111,7 @@ states:
       [[energie_ressources_critiques]]: 70
 
   eco_communalism:
-    level: 75
+    level: 25
     volatility: 25
     state_logic: >
       Gouvernance décentralisée, participative et fortement localisée, reposant sur des structures coopératives et des réseaux régionaux de coordination souple.
@@ -125,7 +129,7 @@ states:
       [[organisation_territoires]]: 75
 
   policy_reform:
-    level: 80
+    level: 20
     volatility: 30
     state_logic: >
       Gouvernance multi-niveaux intégrée et coordination internationale renforcée permettant une régulation efficace des crises globales et une meilleure synchronisation des politiques publiques.
@@ -143,7 +147,7 @@ states:
       [[energie_ressources_critiques]]: 65
 
   reference:
-    level: 60
+    level: 40
     volatility: 50
     state_logic: >
       Systèmes étatiques traditionnels partiellement digitalisés avec montée de la complexité administrative et coordination internationale limitée mais persistante. Les institutions restent fonctionnelles mais sous tension.
@@ -320,6 +324,7 @@ _extended_
 
 **custom (signaux d'actualité)**
 - adoption massive d'agents IA autonomes dans les administrations (→ signal_custom: ia_agents_administratifs_autonomes, source: actualite)
+- émergence d'une caste de prompteurs puis bergers d'IA, devenant une autorité quasi religieuse et dirigeante dans certaines zones (→ signal_custom: clerge_prompteurs_ia, source: idee_david_2026-09)
 
 ## 8. États par scénario
 ### [[fortress_world]]
@@ -343,7 +348,7 @@ Blocs politiques fermés avec gouvernance autoritaire et technologique, forte su
 - [[technologie_information]] : 85
 
 ### [[new_sustainability]]
-- **level** : 90 | **volatility** : 20
+- **level** : 10 | **volatility** : 20
 
 Gouvernance hybride globale combinant institutions humaines, coordination internationale robuste et systèmes d’IA décisionnels assurant une régulation systémique avancée et adaptative.
 
@@ -363,7 +368,7 @@ Gouvernance hybride globale combinant institutions humaines, coordination intern
 - [[energie_ressources_critiques]] : 70
 
 ### [[breakdown]]
-- **level** : 20 | **volatility** : 95
+- **level** : 80 | **volatility** : 95
 
 Effondrement de la légitimité institutionnelle, fragmentation des États et incapacité des structures de gouvernance à coordonner les crises systémiques globales.
 
@@ -383,7 +388,7 @@ Effondrement de la légitimité institutionnelle, fragmentation des États et in
 - [[energie_ressources_critiques]] : 70
 
 ### [[eco_communalism]]
-- **level** : 75 | **volatility** : 25
+- **level** : 25 | **volatility** : 25
 
 Gouvernance décentralisée, participative et fortement localisée, reposant sur des structures coopératives et des réseaux régionaux de coordination souple.
 
@@ -403,7 +408,7 @@ Gouvernance décentralisée, participative et fortement localisée, reposant sur
 - [[organisation_territoires]] : 75
 
 ### [[policy_reform]]
-- **level** : 80 | **volatility** : 30
+- **level** : 20 | **volatility** : 30
 
 Gouvernance multi-niveaux intégrée et coordination internationale renforcée permettant une régulation efficace des crises globales et une meilleure synchronisation des politiques publiques.
 
@@ -423,7 +428,7 @@ Gouvernance multi-niveaux intégrée et coordination internationale renforcée p
 - [[energie_ressources_critiques]] : 65
 
 ### [[reference]]
-- **level** : 60 | **volatility** : 50
+- **level** : 40 | **volatility** : 50
 
 Systèmes étatiques traditionnels partiellement digitalisés avec montée de la complexité administrative et coordination internationale limitée mais persistante. Les institutions restent fonctionnelles mais sous tension.
 
@@ -670,4 +675,31 @@ signal_to_state:
         evolution: déploiement chaotique des agents IA sans cadre unifié
         date_bascule: 2029-2043
         evenement_cle: Carthage-Nord expérimente des agents IA concurrents dans ses administrations 2036
+
+  - signal: clerge_prompteurs_ia
+    scenarios:
+      breakdown:
+        evolution: caste des dresseurs d'IA devient pouvoir parallèle incontrôlé
+        date_bascule: 2045-2063
+        evenement_cle: Lagos-Est proclame son Collège des Interprètes Divins 2056
+      fortress_world:
+        evolution: bergers d'IA sanctifiés comme clergé d'État des blocs
+        date_bascule: 2039-2055
+        evenement_cle: Bloc Atlantique intronise ses Traducteurs Royaux 2050
+      new_sustainability:
+        evolution: prompteurs certifiés deviennent interface officielle gouvernance hybride
+        date_bascule: 2035-2050
+        evenement_cle: Jakarta-Mumbai-Lagos adoptent la Charte des Dialoguistes 2044
+      eco_communalism:
+        evolution: gardiens de langage IA contestés par assemblées locales
+        date_bascule: 2042-2061
+        evenement_cle: Carthage-Nord dissout son Ordre des Médiateurs IA 2053
+      policy_reform:
+        evolution: cadre réglementaire encadre les prompteurs comme profession clé
+        date_bascule: 2032-2048
+        evenement_cle: Accord de Genève sur le statut des interfaces IA 2041
+      reference:
+        evolution: prompteurs émergent comme lobby informel des institutions
+        date_bascule: 2030-2046
+        evenement_cle: premier congrès mondial des prompteurs à Davos 2038
 ```

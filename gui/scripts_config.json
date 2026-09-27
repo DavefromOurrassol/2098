@@ -1183,7 +1183,8 @@
         "key": "description",
         "type": "textarea",
         "label": "Description",
-        "placeholder": "Décris l'événement en langage naturel (quelques phrases)"
+        "placeholder": "Décris l'événement en langage naturel (quelques phrases)",
+        "description": "Écris ton idée librement (dates, lieux, point d'arrivée…), puis « ✨ Compléter les autres champs » : l'IA la reformule et remplit le reste. Ou remplis tout à la main, comme avant."
       },
       {
         "key": "portee",
@@ -1238,6 +1239,32 @@
             "label": "majeure"
           }
         ]
+      },
+      {
+        "key": "persistance",
+        "type": "select",
+        "label": "Persistance de l'effet chiffré",
+        "optional": true,
+        "default": "normale",
+        "choices": [
+          {
+            "value": "normale",
+            "label": "normale (défaut)"
+          },
+          {
+            "value": "ephemere",
+            "label": "éphémère — s'estompe vite (mode, buzz)"
+          },
+          {
+            "value": "durable",
+            "label": "durable — marque plusieurs générations"
+          },
+          {
+            "value": "permanente",
+            "label": "permanente — ne s'estompe jamais (institution, classe sociale…)"
+          }
+        ],
+        "description": "Combien de temps l'effet chiffré dure après sa montée. Durées réglables dans dynamique.py (table PERSISTANCE). Modifiable après coup dans la fiche, sans réinjecter."
       },
       {
         "key": "scenarios",
@@ -1300,7 +1327,8 @@
       }
     ],
     "config_fields_mode": "custom",
-    "gui_verified": true
+    "gui_verified": true,
+    "assistant_texte_libre": "evenement"
   },
   {
     "id": "inject_signals",
@@ -1339,17 +1367,15 @@
         "key": "description",
         "type": "textarea",
         "label": "Description de l'idée",
-        "placeholder": "Décris l'observation d'actualité ou l'idée narrative"
+        "placeholder": "Décris l'observation d'actualité ou l'idée narrative",
+        "description": "Écris ton idée librement (dates, lieux, point d'arrivée…), puis « ✨ Compléter les autres champs » : l'IA la reformule et remplit le reste. Ou remplis tout à la main, comme avant."
       },
       {
         "key": "variable_hint",
-        "type": "select",
-        "label": "Thème à privilégier",
+        "type": "multi_select",
+        "label": "Thèmes à privilégier",
+        "optional": true,
         "choices": [
-          {
-            "value": "",
-            "label": "— L'IA choisit —"
-          },
           {
             "value": "systeme_economique_redistribution",
             "label": "Économie et redistribution"
@@ -1399,8 +1425,7 @@
             "label": "Systèmes productifs et travail"
           }
         ],
-        "optional": true,
-        "description": "Impose le thème du vault que ce signal doit affecter. Laisser sur \"— L'IA choisit —\" pour que l'IA décide elle-même du thème le plus pertinent pour ton idée."
+        "description": "Impose un ou plusieurs thèmes du vault que ce signal doit affecter (l'IA peut en ajouter d'autres, dans la limite du nombre max ci-dessous). Aucun coché = l'IA choisit elle-même."
       },
       {
         "key": "variable_hint_count",
@@ -1410,7 +1435,7 @@
         "max": 4,
         "default": 2,
         "optional": true,
-        "description": "Si ton idée touche plusieurs thèmes à la fois, combien l'IA peut-elle en couvrir au maximum (entre 1 et 4)."
+        "description": "Nombre total de thèmes que l'IA peut couvrir (entre 1 et 4), thèmes cochés ci-dessus inclus -- mets au moins autant que de thèmes cochés."
       },
       {
         "key": "zone_hint",
@@ -1421,6 +1446,41 @@
         "description": "Un lieu réel de 2026 (pays, région, ville) -- pas une zone du monde 2098. L'IA retrouve elle-même la zone correspondante dans chacun des 6 scénarios (qui peut différer d'un scénario à l'autre). Si l'idée mentionne déjà un lieu, celui-ci reste prioritaire en cas de conflit avec ce champ."
       },
       {
+        "key": "annee_apparition",
+        "type": "number",
+        "label": "Année d'apparition",
+        "optional": true,
+        "min": 2025,
+        "max": 2097,
+        "description": "Année où le signal APPARAÎT, la même dans les 6 scénarios. Aucune bascule ne pourra être placée avant (vérifié automatiquement) ; elle peut venir plus tard et différer selon le scénario. Vide = l'IA choisit librement."
+      },
+      {
+        "key": "persistance",
+        "type": "select",
+        "label": "Persistance de l'effet chiffré",
+        "optional": true,
+        "default": "normale",
+        "choices": [
+          {
+            "value": "normale",
+            "label": "normale (défaut)"
+          },
+          {
+            "value": "ephemere",
+            "label": "éphémère — s'estompe vite (mode, buzz)"
+          },
+          {
+            "value": "durable",
+            "label": "durable — marque plusieurs générations"
+          },
+          {
+            "value": "permanente",
+            "label": "permanente — ne s'estompe jamais (institution, classe sociale…)"
+          }
+        ],
+        "description": "Combien de temps l'effet chiffré dure après sa montée. Durées réglables dans dynamique.py (table PERSISTANCE). Modifiable après coup dans la fiche, sans réinjecter."
+      },
+      {
         "key": "source",
         "type": "text",
         "label": "Origine de l'idée",
@@ -1429,7 +1489,8 @@
         "description": "Note libre pour te souvenir d'où vient l'idée (article, discussion...) -- apparaît dans la fiche d'audit, sans effet sur le résultat."
       }
     ],
-    "gui_verified": true
+    "gui_verified": true,
+    "assistant_texte_libre": "signal"
   },
   {
     "id": "enrich_minimal",
@@ -2604,7 +2665,7 @@
     "icon": "🔍",
     "section": "entites_nettoyage",
     "script": "trace_injection.py",
-    "description": "Retrace l'histoire complète d'un personnage, événement ou signal : d'où il vient, dans quels scénarios et quelles zones il apparaît, quel effet il a sur le monde, et dans quels articles déjà publiés il a été utilisé. Ne modifie rien, gratuit (pas d'appel à l'IA).",
+    "description": "Retrace l'histoire d'un personnage, événement ou signal : d'où il vient, dans quels scénarios et zones il apparaît, dans quels articles il a été utilisé, et surtout comment son influence a évolué depuis son apparition jusqu'à la date choisie — récit rédigé et graphique sous la sortie. Ne modifie rien. ⚠️ Le récit est rédigé par l'IA (un appel par scénario tracé) sauf si « Récit sans IA » est coché.",
     "options": [
       {
         "flag": "--type",
@@ -2641,6 +2702,39 @@
           "*": "entities"
         },
         "description": "Liste filtrée selon le type choisi ci-dessus."
+      },
+      {
+        "flag": "--scenario",
+        "type": "select",
+        "label": "Scénario",
+        "source": "config_scenarios",
+        "default": "",
+        "optional": true,
+        "description": "Limite le récit et le graphique à ce scénario. Laisser vide = tous les scénarios où l'élément a un impact chiffré (un appel IA par scénario)."
+      },
+      {
+        "flag": "--date",
+        "type": "number",
+        "label": "Date de référence",
+        "min": 2026,
+        "max": 2098,
+        "default": 2098,
+        "description": "Jusqu'à quelle année suivre l'évolution de l'influence (2098 par défaut)."
+      },
+      {
+        "flag": "--sans-recit",
+        "type": "checkbox",
+        "label": "Récit sans IA (gratuit)",
+        "default": false,
+        "description": "Récit construit automatiquement à partir des chiffres, sans appel à l'IA — plus sec, mais gratuit et instantané."
+      },
+      {
+        "flag": "--skip-effet",
+        "type": "checkbox",
+        "label": "Sans calcul d'influence",
+        "default": false,
+        "advanced": true,
+        "description": "Saute la simulation (pas de récit ni de graphique) — retour au rapport de traçabilité seul."
       },
       {
         "flag": "--skip-articles",

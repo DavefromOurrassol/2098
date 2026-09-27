@@ -24,15 +24,15 @@ impact_sur_variables:
   - variable: technologie_information
     delta_level: 8
     duree: 15
-    polarite: 1
+    polarite: -1
   - variable: gouvernance_institutions
     delta_level: 10
     duree: 20
-    polarite: 1
+    polarite: -1
   - variable: organisation_territoires
     delta_level: 7
     duree: 18
-    polarite: 1
+    polarite: -1
 propagation:
   via_matrice: true
 acteurs_impliques:
@@ -61,9 +61,9 @@ Agadez, novembre 2062 — Sous les voûtes d'un caravansérail reconverti en esp
 La Charte d'Agadez devient la référence juridique et technique pour les communs territoriaux cherchant à formaliser leur autonomie numérique, affaiblissant durablement la prise des opérateurs d'IA propriétaires sur les trames communautaires sahéliennes et ouvrant une jurisprudence reprise par les Archives Ouvertes des Jurisprudences Communales. Le modèle du Sahel numérique essaime vers l'Afrique subsaharienne, consolidant un arc de souveraineté informationnelle distribuée qui renforce la trajectoire de régénération du scénario éco-communaliste, tout en accentuant les tensions avec les plateformes centralisées de réagrégation globale.
 
 ## Impact sur les variables
-- **technologie_information** : delta +8 sur 15 ans
-- **gouvernance_institutions** : delta +10 sur 20 ans
-- **organisation_territoires** : delta +7 sur 18 ans
+- **technologie_information** : delta -8 sur 15 ans
+- **gouvernance_institutions** : delta -10 sur 20 ans
+- **organisation_territoires** : delta -7 sur 18 ans
 
 ## Acteurs impliqués
 - [[ligue_des_cites_du_sahel_numerique_eco_communalism]]

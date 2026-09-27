@@ -24,23 +24,23 @@ impact_sur_variables:
   - variable: demographie_mobilite_humaine
     delta_level: 18
     duree: 25
-    polarite: -1
+    polarite: 1
   - variable: organisation_territoires
     delta_level: 15
     duree: 20
-    polarite: -1
+    polarite: 1
   - variable: gouvernance_institutions
-    delta_level: -12
+    delta_level: 12
     duree: 15
-    polarite: -1
+    polarite: 1
   - variable: climat_environnement_global
-    delta_level: -8
+    delta_level: 8
     duree: 30
-    polarite: -1
+    polarite: 1
   - variable: energie_ressources_critiques
-    delta_level: -10
+    delta_level: 10
     duree: 18
-    polarite: -1
+    polarite: 1
 propagation:
   via_matrice: true
 acteurs_impliques:
@@ -73,8 +73,8 @@ L'été 2044 restera gravé comme l'été de la Fonte Humaine. Des colonnes inte
 L'afflux massif redessine durablement la géographie des communs lacustres : de nouvelles assemblées de bassin versant émergent, intégrant les compétences agronomiques et énergétiques des migrants du Midwest, mais créant aussi des conflits de ressources hydriques inédits. Les factions isolationnistes se renforcent dans plusieurs bioterritoires, tandis que la Confédération des Friches Vivantes devient paradoxalement plus influente en portant un modèle d'intégration par le travail de régénération écologique. La démographie des communs lacustres est profondément recomposée, accelerant la pression sur les écosystèmes lacustres et forçant une révision des chartes territoriales.
 
 ## Impact sur les variables
-- **demographie_mobilite_humaine** : delta -18 sur 25 ans
-- **organisation_territoires** : delta -15 sur 20 ans
+- **demographie_mobilite_humaine** : delta +18 sur 25 ans
+- **organisation_territoires** : delta +15 sur 20 ans
 - **gouvernance_institutions** : delta +12 sur 15 ans
 - **climat_environnement_global** : delta +8 sur 30 ans
 - **energie_ressources_critiques** : delta +10 sur 18 ans

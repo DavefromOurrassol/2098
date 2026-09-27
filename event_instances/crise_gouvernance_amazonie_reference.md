@@ -22,21 +22,21 @@ realisation: >
   Le Consortium Amazônia Viva, appuyé sur une légitimité hybride mêlant gouvernance autochtone et accréditation onusienne fragile, déclare l'état d'urgence écologique sur 42% du bassin amazonien après que des capteurs citoyens et des ONG de terrain ont documenté des vagues massives de déforestation orchestrées par des opérateurs privés liés aux blocs énergétiques du BRE. La réponse institutionnelle est laborieuse : le système multilatéral survivant parvient à convoquer une session extraordinaire mais échoue à mandater une intervention directe, faute de consensus entre blocs signataires du Pacte Énergétique. À Belém, les milices corporatives affrontent physiquement les gardiens autochtones mobilisés par la Frente Sertão Livre, dans une confrontation de trois semaines qui expose la limite réelle du droit international en territoire contesté.
 impact_sur_variables:
   - variable: climat_environnement_global
-    delta_level: -8
+    delta_level: 8
     duree: 15
-    polarite: -1
+    polarite: 1
   - variable: geopolitique_conflits
     delta_level: 10
     duree: 12
-    polarite: -1
+    polarite: 1
   - variable: gouvernance_institutions
-    delta_level: -7
+    delta_level: 7
     duree: 10
-    polarite: -1
+    polarite: 1
   - variable: organisation_territoires
-    delta_level: -6
+    delta_level: 6
     duree: 12
-    polarite: -1
+    polarite: 1
 propagation:
   via_matrice: true
 acteurs_impliques:
@@ -70,7 +70,7 @@ L'épreuve de Belém cristallise le statut ambigu mais irréversible du bassin a
 
 ## Impact sur les variables
 - **climat_environnement_global** : delta +8 sur 15 ans
-- **geopolitique_conflits** : delta -10 sur 12 ans
+- **geopolitique_conflits** : delta +10 sur 12 ans
 - **gouvernance_institutions** : delta +7 sur 10 ans
 - **organisation_territoires** : delta +6 sur 12 ans
 

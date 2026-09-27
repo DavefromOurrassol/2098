@@ -67,11 +67,11 @@ injection:
   - variable: geopolitique_conflits
     delta_level: 15
     duree: 20
-    polarite: -1
+    polarite: 1
   - variable: gouvernance_institutions
     delta_level: 18
     duree: 25
-    polarite: 1
+    polarite: -1
   - variable: demographie_mobilite_humaine
     delta_level: 12
     duree: 15

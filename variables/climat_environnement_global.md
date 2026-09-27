@@ -71,6 +71,10 @@ simulation:
   systemic_criticality: 5
   resilience: 1
   adaptability: 2
+echelle:
+  type: intensite
+  zero: "climat stabilisé, écosystèmes régénérés"
+  cent: "emballement climatique, basculements écologiques irréversibles"
 states:
 
   fortress_world:

@@ -33,11 +33,11 @@ impact_sur_variables:
   - variable: gouvernance_institutions
     delta_level: 5
     duree: 15
-    polarite: -1
+    polarite: 1
   - variable: valeurs_culture_tempo_sociale
     delta_level: 8
     duree: 25
-    polarite: -1
+    polarite: 1
   - variable: geopolitique_conflits
     delta_level: 5
     duree: 10
@@ -72,8 +72,8 @@ clandestines dans les zones abandonnées du Midwest. Le nom "Mouvement Commun"
 devient un symbole de résistance dans les réseaux non certifiés.
 
 ## Impact sur les variables
-- **gouvernance_institutions** : delta -5 sur 15 ans
-- **valeurs_culture_tempo_sociale** : delta -8 sur 25 ans
+- **gouvernance_institutions** : delta +5 sur 15 ans
+- **valeurs_culture_tempo_sociale** : delta +8 sur 25 ans
 - **geopolitique_conflits** : delta +5 sur 10 ans
 
 ## Acteurs impliqués

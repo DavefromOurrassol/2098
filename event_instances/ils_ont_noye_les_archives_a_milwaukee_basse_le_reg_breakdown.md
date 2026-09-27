@@ -22,17 +22,17 @@ realisation: >
   Dans un contexte de fragmentation territoriale et de conflits hydriques exacerbés, le Compact des Grands Lacs, sous la pression des milices locales et des seigneurs de guerre agro-territoriaux, ordonne la destruction physique des archives du Registre des Zones Non Récupérables à Milwaukee-Basse. Les données, stockées sur des serveurs obsolètes et des supports analogiques, sont méthodiquement noyées sous les eaux montantes du lac Michigan, effaçant les preuves des sacrifices climatiques et des refoulements migratoires des décennies passées. Les collectifs de gardiens-archivistes itinérants et les réseaux humanitaires clandestins tentent une opération de sauvetage désespérée, mais ne parviennent à extraire qu’une fraction des données avant l’inondation.
 impact_sur_variables:
   - variable: technologie_information
-    delta_level: -20
+    delta_level: 20
     duree: 30
-    polarite: -1
+    polarite: 1
   - variable: geopolitique_conflits
     delta_level: 15
     duree: 25
-    polarite: -1
+    polarite: 1
   - variable: organisation_territoires
     delta_level: 10
     duree: 20
-    polarite: -1
+    polarite: 1
 propagation:
   via_matrice: true
 acteurs_impliques:
@@ -60,8 +60,8 @@ L’effacement des archives du Registre plonge les communautés des Grands Lacs 
 
 ## Impact sur les variables
 - **technologie_information** : delta +20 sur 30 ans
-- **geopolitique_conflits** : delta -15 sur 25 ans
-- **organisation_territoires** : delta -10 sur 20 ans
+- **geopolitique_conflits** : delta +15 sur 25 ans
+- **organisation_territoires** : delta +10 sur 20 ans
 
 ## Acteurs impliqués
 - [[grandes_lacs_compact_eau_breakdown]]

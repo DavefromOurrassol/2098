@@ -71,17 +71,17 @@ injection:
     The Tidewater Canon agit comme un accélérateur de fragmentation institutionnelle et économique, tout en renforçant la résilience territoriale des blocs souverains. Son influence systémique se propage via les alliances du Pacte des Souverains, affectant directement les variables de gouvernance et de redistribution.
   impact_sur_variables:
   - variable: gouvernance_institutions
-    delta_level: -15
+    delta_level: 15
     duree: 25
-    polarite: -1
+    polarite: 1
   - variable: systeme_economique_redistribution
-    delta_level: -12
+    delta_level: 12
     duree: 20
-    polarite: -1
+    polarite: 1
   - variable: organisation_territoires
     delta_level: 10
     duree: 15
-    polarite: 1
+    polarite: -1
   propagation:
     via_matrice: true
 

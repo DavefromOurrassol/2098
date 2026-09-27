@@ -24,19 +24,19 @@ impact_sur_variables:
   - variable: energie_ressources_critiques
     delta_level: 12
     duree: 15
-    polarite: -1
+    polarite: 1
   - variable: geopolitique_conflits
     delta_level: 18
     duree: 25
-    polarite: -1
+    polarite: 1
   - variable: gouvernance_institutions
     delta_level: 10
     duree: 20
-    polarite: -1
+    polarite: 1
   - variable: organisation_territoires
     delta_level: 15
     duree: 30
-    polarite: -1
+    polarite: 1
 propagation:
   via_matrice: true
 acteurs_impliques:
@@ -62,10 +62,10 @@ Dans les franges glacées de l’hiver 2098, les écrans de contrôle des zones 
 Le Protocole Ombre marque un tournant dans la fragmentation du Bloc Eurasiatique : les zones tampons, déjà marginalisées, deviennent des territoires de non-droit énergétique, où les réseaux de contrebande et les milices locales prennent le relais des infrastructures défaillantes. Les Régimes Autoritaires du Bloc renforcent leur emprise en instrumentalisant ces coupures comme outil de répression, tandis que les Factions Dissidentes du Consortium Helios, basées dans les Corridors Gris d'Asie Centrale, gagnent en influence en proposant des alternatives énergétiques illégales. À long terme, cette stratégie accélère la désintégration des interdépendances résiduelles entre les blocs, transformant l’énergie en une arme de fragmentation territoriale permanente.
 
 ## Impact sur les variables
-- **energie_ressources_critiques** : delta -12 sur 15 ans
-- **geopolitique_conflits** : delta -18 sur 25 ans
-- **gouvernance_institutions** : delta -10 sur 20 ans
-- **organisation_territoires** : delta -15 sur 30 ans
+- **energie_ressources_critiques** : delta +12 sur 15 ans
+- **geopolitique_conflits** : delta +18 sur 25 ans
+- **gouvernance_institutions** : delta +10 sur 20 ans
+- **organisation_territoires** : delta +15 sur 30 ans
 
 ## Acteurs impliqués
 - [[consortium_helios_fortress_world]]

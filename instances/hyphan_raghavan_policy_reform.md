@@ -70,11 +70,11 @@ injection:
   - variable: energie_ressources_critiques
     delta_level: 6
     duree: 15
-    polarite: 1
+    polarite: -1
   - variable: valeurs_culture_tempo_sociale
     delta_level: 7
     duree: 25
-    polarite: 1
+    polarite: -1
   propagation:
     via_matrice: false
 

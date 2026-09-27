@@ -24,19 +24,19 @@ impact_sur_variables:
   - variable: geopolitique_conflits
     delta_level: 8
     duree: 12
-    polarite: -1
+    polarite: 1
   - variable: valeurs_culture_tempo_sociale
     delta_level: 12
     duree: 20
-    polarite: 1
-  - variable: gouvernance_institutions
-    delta_level: -10
-    duree: 15
     polarite: -1
+  - variable: gouvernance_institutions
+    delta_level: 10
+    duree: 15
+    polarite: 1
   - variable: organisation_territoires
     delta_level: 14
     duree: 25
-    polarite: 1
+    polarite: -1
 propagation:
   via_matrice: true
 acteurs_impliques:
@@ -66,10 +66,10 @@ Dans un contexte de fragmentation avancée des structures fédérales nord-amér
 L'événement devient le catalyseur d'une vague d'occupations similaires en Amérique du Nord et en Europe industrielle déclinante, accélérant la reconnaissance de facto des zones de souveraineté commune comme forme légitime d'organisation territoriale. Il fragilise durablement la prétention des Fragments d'États Centraux Résiduels à exercer une tutelle sur les territoires post-industriels, tout en exposant les communes à une pression accrue des Consortiums Logistiques Néo-Industriels cherchant à récupérer ces fonciers stratégiques. La Trame Mnemos intègre les jurisprudences nées dans ces friches comme modèles de référence pour les assemblées communalistes du monde entier.
 
 ## Impact sur les variables
-- **geopolitique_conflits** : delta -8 sur 12 ans
-- **valeurs_culture_tempo_sociale** : delta +12 sur 20 ans
+- **geopolitique_conflits** : delta +8 sur 12 ans
+- **valeurs_culture_tempo_sociale** : delta -12 sur 20 ans
 - **gouvernance_institutions** : delta +10 sur 15 ans
-- **organisation_territoires** : delta +14 sur 25 ans
+- **organisation_territoires** : delta -14 sur 25 ans
 
 ## Acteurs impliqués
 - [[mouvement_des_communes_du_rust_belt_eco_communalism]]

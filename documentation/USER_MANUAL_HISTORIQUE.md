@@ -2192,3 +2192,22 @@ prochaine session.
 **Texte des géographies.** Le script historique `build_geographie_monde.py` régénère tout par IA (frontmatter compris) : inutilisable. Vérification demandée par David avant d'écrire : `fix_lieux_residuels.py` faisait déjà la même régénération de « ## Zones », aucun script ne lit ce texte. Outil sans IA écrit, puis rendu automatique dans la Carte, bouton GUI et contrôle `validate.py` à la demande de David (options 1+2 puis 3).
 
 **Sous-zones, S12, renommage.** S16 codé et testé (aperçu N3 sous une N2). Carte : boutons unifiés, panneau redimensionnable (demande de David). S12 : la première mesure (noms exacts) donnait 11 écarts, la mesure avec la règle de la Carte 3 (Italie, « Arctique » sans polygone, « GAFAM » parasite). En passant sur l'Italie, David a relevé la faute `reconstructee` : zone renommée par la Carte (propagation complète, affichage non rafraîchi), puis entité/instance/22 relations par outil ponctuel ; `entites/_entities_list.json` attrapé par le contrôle final.
+
+---
+
+### Addendum — Injection et propagation : convention d'intensité, moteur dynamique, Tracer (27 septembre 2026)
+
+**Point de départ.** Question de David : comment l'influence d'un événement ou d'un signal injecté se propage-t-elle jusqu'en 2098 ? Exemple étudié : `valeurs_culture_tempo_sociale` qui passe de 55 à 60 — rôle de `polarite` ? La lecture de `snapshot.py` a montré un calcul additif `delta_level × facteur × polarite`, avec des deltas négatifs combinés à des polarités −1 (141 doubles négations selon `audit_polarite.py`, 0 cas ambigu). Les échelles mêlaient capacité (haut = bon) et intensité (haut = crise) selon la variable, ce qui rendait le sens des liens de matrice illisible.
+
+**Choix de la convention.** David a d'abord demandé si le niveau représentait une capacité ou une intensité selon la variable, puis a jugé qu'une seule convention serait plus propre. Choix : intensité pour les 12 variables. Inversions gouvernance/frontières validées variable par variable (santé new_sustainability recalée à 30 ; valeur 55 choisie pour frontières `reference`). Matrice : option b (+1 partout, 3 amortisseurs), préférée à un recodage lien par lien.
+
+**Réévaluation IA.** Le sens des impacts déjà stockés ne pouvait pas se déduire mécaniquement (le signe dépendait de l'ancienne échelle de chaque variable). `reevaluer_polarites.py` a demandé le sens à l'IA avec l'échelle, et par scénario pour les signaux ; rapport relu par David avant `--appliquer` (153 fiches).
+
+**Moteur dynamique.** Question de David : utilise-t-on des lags, des amortissements, des comportements du second ordre ? Non, l'ancien calcul était une somme instantanée. Option c (moteur dynamique complet) retenue après estimation de l'ampleur. Premier réglage trop fort (K 0,1, ρ 0,85, amplification ×6,5 ; somme brute des chocs +60 à +80) : recalibré au banc, K 0,05 et gain 0,25. Question de stabilité de David (« si j'ajoute des événements, le système reste-t-il stable ? ») : réponse par la garde petit gain `k_effectif`, qui borne la boucle quelle que soit la charge ; la saturation `tanh` borne la sortie. Bug de masquage `k` (tout à ±15) trouvé au banc.
+
+**Doublon Rust Belt.** Deux entrées pour la même insurrection ; l'événement `insurrection_rust_belt` a été supprimé (`undo_custom.py --execute`), l'instance `communes_rust_belt_zones_libres` gardée (citée dans un article). validate 0 erreur.
+
+**Fiches scénario.** Leur copie des niveaux (`variable_states`, tableau 4A) n'était lue par aucun calcul et divergeait déjà avant la migration. Synchronisées (étape 8) ; tendances inversées pour les 9 variables dont la corrélation avec les nouveaux niveaux était négative. validate 0/0/0.
+
+**Tracer.** David voulait un outil qui raconte, pour un élément et un scénario, l'évolution depuis son apparition jusqu'à la date de référence, si possible en graphique. Choix b (récit IA) + B (Chart.js dans le GUI). Premier récit réel : il exagérait des effets de quelques dixièmes et ne citait aucun chiffre. Consignes durcies (proportionnalité, ce que l'élément AJOUTE, verbe selon le signe, rythme selon les années) et contrôle automatique des chiffres et années, avec repli sur un récit modèle. Graphique testé par David (capture). Question finale de David sur `propagation_via_matrice: false` pour les signaux : l'effet reste local à la variable ; options a/b/c laissées ouvertes (backlog S19).
+

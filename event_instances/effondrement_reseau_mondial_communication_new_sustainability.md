@@ -38,11 +38,11 @@ impact_sur_variables:
   - variable: gouvernance_institutions
     delta_level: 10
     duree: 50
-    polarite: 1
+    polarite: -1
   - variable: systeme_economique_redistribution
     delta_level: 8
     duree: 45
-    polarite: 1
+    polarite: -1
 propagation:
   via_matrice: true
 acteurs_impliques:
@@ -73,8 +73,8 @@ plus résilient et équitable.
 
 ## Impact sur les variables
 - **technologie_information** : delta -15 sur 20 ans (impact initial)
-- **gouvernance_institutions** : delta +10 sur 50 ans
-- **systeme_economique_redistribution** : delta +8 sur 45 ans
+- **gouvernance_institutions** : delta -10 sur 50 ans
+- **systeme_economique_redistribution** : delta -8 sur 45 ans
 
 ## Acteurs impliqués
 - [[nexcore_new_sustainability]]

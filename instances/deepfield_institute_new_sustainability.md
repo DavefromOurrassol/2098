@@ -58,13 +58,13 @@ injection:
     Le Deepfield Legacy Archives agit comme un contre-modèle historique qui limite les excès de délégation algorithmique (impact négatif sur gouvernance_institutions) tout en alimentant les réflexions sur les garde-fous technologiques (impact positif marginal sur technologie_information). Son influence est indirecte mais persistante, via la mémoire des erreurs passées.
   impact_sur_variables:
   - variable: gouvernance_institutions
-    delta_level: -5
+    delta_level: 5
     duree: 20
-    polarite: -1
+    polarite: 1
   - variable: technologie_information
     delta_level: 3
     duree: 15
-    polarite: 1
+    polarite: -1
   propagation:
     via_matrice: false
 

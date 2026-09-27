@@ -207,6 +207,8 @@ def load_variable(variable_slug):
         "ruptures":               _extract_ruptures_from_body(parsed["body"]),
         "signal_to_state":        _extract_signal_to_state_from_body(parsed["body"]),
         "simulation":             fm.get("simulation", {}) or {},
+        # Échelle 0/100 de la variable (27 septembre 2026, voir echelles.py)
+        "echelle":                fm.get("echelle", {}) or {},
         "sub_variables":          _clean_sub_variables(fm.get("sub_variables", []) or []),
         "indicateurs":            _extract_indicateurs_from_body(parsed["body"]),
         "forces_attractives":     forces["forces_attractives"],
@@ -391,6 +393,25 @@ def load_influence_matrix():
     }
 
 
+def _persistance_verifiee(valeur, source):
+    """
+    Champ `persistance` d'une fiche (signal custom ou instance d'événement,
+    27 septembre 2026) : ephemere | normale | durable | permanente, absent =
+    normale. Retourne la valeur telle quelle (dynamique.py la normalise au
+    calcul) ; une valeur inconnue -- faute de frappe dans une fiche éditée à
+    la main -- est seulement SIGNALÉE ici, puis traitée comme "normale" par
+    dynamique.demi_vie_choc().
+    """
+    if valeur is None:
+        return None
+    import dynamique as _dyn
+    niveau = _dyn.normaliser_persistance(valeur)
+    if niveau is not None and niveau not in _dyn.PERSISTANCE:
+        print("  Avertissement : persistance {!r} inconnue dans {} -- traitée comme "
+              "'normale' (valeurs : {})".format(valeur, source, ", ".join(_dyn.PERSISTANCE)))
+    return valeur
+
+
 def load_custom_signals():
     """
     Charge les fiches d'audit signaux_custom/*.md et en extrait le bloc
@@ -405,8 +426,8 @@ def load_custom_signals():
     (dernier bloc ```yaml``` pertinent), pas parse_md_file seul.
 
     Retourne une liste de dicts {variable, propagation_via_matrice,
-    contexte_injection, scenarios: {scen: {annee_injection, duree,
-    delta_level, polarite}}} -- un par (signal, variable) injecté.
+    persistance, contexte_injection, scenarios: {scen: {annee_injection,
+    duree, delta_level, polarite}}} -- un par (signal, variable) injecté.
     """
     directory = PATHS.get("signaux_custom")
     if not directory or not os.path.isdir(directory):
@@ -438,9 +459,12 @@ def load_custom_signals():
             variable = entry.get("variable")
             if variable not in VALID_VARS:
                 continue
+            # Persistance du choc (27 septembre 2026), voir _persistance_verifiee().
+            persistance = _persistance_verifiee(entry.get("persistance"), filename)
             impacts.append({
                 "variable":                variable,
                 "propagation_via_matrice": bool(entry.get("propagation_via_matrice", False)),
+                "persistance":             persistance,
                 "contexte_injection":      entry.get("contexte_injection", ""),
                 "scenarios":               entry.get("scenarios") or {},
                 "source_fiche":            filename,
@@ -826,6 +850,10 @@ def load_instance(instance_slug):
         "contexte_injection": str(injection_raw.get("contexte_injection", "") or "").strip(),
         "impact_sur_variables": injection_raw.get("impact_sur_variables", []) or [],
         "propagation":        injection_raw.get("propagation", {}) or {},
+        # persistance (27 septembre 2026) : forçage explicite, prioritaire sur
+        # la règle par trajectoire de dynamique.py -- à ajouter ICI sinon
+        # perdu au chargement (même piège que priorite_forcee le 23 août).
+        "persistance":        injection_raw.get("persistance"),
         # 23 août 2026 : load_instance() reconstruit ce dict avec une
         # liste blanche de clés connues -- garantie_selection (22-23
         # août, découplage garantie de présence / propagation d'impact,
@@ -979,6 +1007,10 @@ def load_event_instances_for_scenario(scenario_slug):
             "acteurs":      acteurs,
             "via_matrice":  fm.get("propagation", {}).get("via_matrice", True)
                             if isinstance(fm.get("propagation"), dict) else True,
+            # Persistance du choc chiffré (27 septembre 2026) : ephemere |
+            # normale | durable | permanente, absente = normale (instances
+            # écrites avant ce chantier). Lue par dynamique.chocs_depuis_donnees().
+            "persistance":  _persistance_verifiee(fm.get("persistance"), fname),
             "custom":       True,
             # Ajouté le 2 août 2026 -- manquait, nécessaire pour restreindre
             # la liste de zones proposées lors du forçage d'un événement.

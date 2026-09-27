@@ -67,11 +67,11 @@ injection:
   - variable: energie_ressources_critiques
     delta_level: 10
     duree: 20
-    polarite: 1
-  - variable: systemes_productifs_travail
-    delta_level: -8
-    duree: 15
     polarite: -1
+  - variable: systemes_productifs_travail
+    delta_level: 8
+    duree: 15
+    polarite: 1
   - variable: geopolitique_conflits
     delta_level: 5
     duree: 10

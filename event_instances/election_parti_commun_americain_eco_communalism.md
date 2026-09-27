@@ -38,11 +38,11 @@ impact_sur_variables:
   - variable: valeurs_culture_tempo_sociale
     delta_level: 8
     duree: 40
-    polarite: 1
+    polarite: -1
   - variable: organisation_territoires
     delta_level: 6
     duree: 35
-    polarite: 1
+    polarite: -1
 propagation:
   via_matrice: false
 acteurs_impliques: []
@@ -73,8 +73,8 @@ des bioterritoires.
 
 ## Impact sur les variables
 - **gouvernance_institutions** : delta +5 sur 30 ans
-- **valeurs_culture_tempo_sociale** : delta +8 sur 40 ans
-- **organisation_territoires** : delta +6 sur 35 ans
+- **valeurs_culture_tempo_sociale** : delta -8 sur 40 ans
+- **organisation_territoires** : delta -6 sur 35 ans
 
 ## Note de cohérence
 Dans eco_communalism, la dissolution d'un parti national au profit des

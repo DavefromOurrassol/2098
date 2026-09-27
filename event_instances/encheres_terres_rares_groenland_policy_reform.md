@@ -24,19 +24,19 @@ impact_sur_variables:
   - variable: energie_ressources_critiques
     delta_level: 12
     duree: 18
-    polarite: 1
+    polarite: -1
   - variable: gouvernance_institutions
     delta_level: 10
     duree: 25
-    polarite: 1
+    polarite: -1
   - variable: geopolitique_conflits
-    delta_level: -8
+    delta_level: 8
     duree: 12
     polarite: -1
   - variable: organisation_territoires
     delta_level: 7
     duree: 20
-    polarite: 1
+    polarite: -1
 propagation:
   via_matrice: true
 acteurs_impliques:
@@ -68,10 +68,10 @@ Nuuk, automne 2041 : pour la première fois dans l'histoire de la diplomatie des
 L'événement consolide le modèle de gouvernance technocratique des ressources critiques : les blocs dissidents perdent leur argument selon lequel la régulation multilatérale est inapplicable aux situations de compétition aiguë. Le KNSF-AGRC devient un modèle institutionnel pour d'autres territoires arctiques et sub-arctiques, tandis que le CRRC-ARN gagne une légitimité opérationnelle sans précédent. En revanche, les syndicats d'extraction privée non régulés et les souverainistes énergétiques s'unissent dans une coalition de contestation qui pèsera sur les négociations des années suivantes.
 
 ## Impact sur les variables
-- **energie_ressources_critiques** : delta +12 sur 18 ans
-- **gouvernance_institutions** : delta +10 sur 25 ans
-- **geopolitique_conflits** : delta +8 sur 12 ans
-- **organisation_territoires** : delta +7 sur 20 ans
+- **energie_ressources_critiques** : delta -12 sur 18 ans
+- **gouvernance_institutions** : delta -10 sur 25 ans
+- **geopolitique_conflits** : delta -8 sur 12 ans
+- **organisation_territoires** : delta -7 sur 20 ans
 
 ## Acteurs impliqués
 - [[kalaallit_nunaat_sovereign_fund_policy_reform]]

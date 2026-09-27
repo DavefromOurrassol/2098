@@ -24,19 +24,19 @@ impact_sur_variables:
   - variable: geopolitique_conflits
     delta_level: 4
     duree: 25
-    polarite: -1
+    polarite: 1
   - variable: energie_ressources_critiques
-    delta_level: -8
+    delta_level: 8
     duree: 30
-    polarite: -1
+    polarite: 1
   - variable: gouvernance_institutions
-    delta_level: -5
+    delta_level: 5
     duree: 20
-    polarite: -1
+    polarite: 1
   - variable: demographie_mobilite_humaine
-    delta_level: -7
+    delta_level: 7
     duree: 25
-    polarite: -1
+    polarite: 1
 propagation:
   via_matrice: true
 acteurs_impliques:
@@ -61,7 +61,7 @@ Automne 2027 : les caméras de surveillance satellitaire captent les champignons
 La destruction partielle des infrastructures pétrolières du Golfe accélère l'effondrement des systèmes d'approvisionnement énergétique mondiaux déjà à genoux, rendant caducs les derniers mécanismes de régulation internationale des ressources. Les flux migratoires du Moyen-Orient et du Golfe se déversent en vagues incontrôlées vers l'arc eurasien, saturant des corridors déjà sous la coupe de seigneurs de guerre logistiques. La zone Golfe Persique–Levant devient une zone grise permanente où aucun acteur souverain n'exerce de contrôle stable, servant de modèle fractal à d'autres régions en voie de désintégration.
 
 ## Impact sur les variables
-- **geopolitique_conflits** : delta -4 sur 25 ans
+- **geopolitique_conflits** : delta +4 sur 25 ans
 - **energie_ressources_critiques** : delta +8 sur 30 ans
 - **gouvernance_institutions** : delta +5 sur 20 ans
 - **demographie_mobilite_humaine** : delta +7 sur 25 ans

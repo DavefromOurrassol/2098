@@ -68,15 +68,15 @@ injection:
   - variable: sante_biotechnologies
     delta_level: 15
     duree: 20
-    polarite: 1
+    polarite: -1
   - variable: demographie_mobilite_humaine
-    delta_level: -10
+    delta_level: 10
     duree: 25
-    polarite: -1
+    polarite: 1
   - variable: gouvernance_institutions
-    delta_level: -8
+    delta_level: 8
     duree: 15
-    polarite: -1
+    polarite: 1
   propagation:
     via_matrice: true
 

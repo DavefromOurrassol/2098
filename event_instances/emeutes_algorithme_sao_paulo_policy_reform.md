@@ -26,13 +26,13 @@ impact_sur_variables:
     duree: 15
     polarite: 1
   - variable: technologie_information
-    delta_level: -10
+    delta_level: 10
     duree: 12
-    polarite: -1
+    polarite: 1
   - variable: organisation_territoires
     delta_level: 6
     duree: 18
-    polarite: 1
+    polarite: -1
 propagation:
   via_matrice: true
 acteurs_impliques:
@@ -65,7 +65,7 @@ L'événement catalyse une réforme forcée des standards d'auditabilité des sy
 ## Impact sur les variables
 - **gouvernance_institutions** : delta +8 sur 15 ans
 - **technologie_information** : delta +10 sur 12 ans
-- **organisation_territoires** : delta +6 sur 18 ans
+- **organisation_territoires** : delta -6 sur 18 ans
 
 ## Acteurs impliqués
 - [[rede_paulista_de_distribuicao_algoritmica_policy_reform]]

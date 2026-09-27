@@ -28,11 +28,11 @@ impact_sur_variables:
   - variable: geopolitique_conflits
     delta_level: 10
     duree: 10
-    polarite: -1
+    polarite: 1
   - variable: sante_biotechnologies
     delta_level: 8
     duree: 12
-    polarite: 1
+    polarite: -1
   - variable: gouvernance_institutions
     delta_level: 12
     duree: 20
@@ -69,8 +69,8 @@ La grève marque un tournant dans la gouvernance du travail critique : les reven
 
 ## Impact sur les variables
 - **systemes_productifs_travail** : delta +15 sur 15 ans
-- **geopolitique_conflits** : delta -10 sur 10 ans
-- **sante_biotechnologies** : delta +8 sur 12 ans
+- **geopolitique_conflits** : delta +10 sur 10 ans
+- **sante_biotechnologies** : delta -8 sur 12 ans
 - **gouvernance_institutions** : delta +12 sur 20 ans
 
 ## Acteurs impliqués

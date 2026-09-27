@@ -23,41 +23,41 @@ constrained_variables:
   - [[gouvernance_institutions]]
 variable_states:
   systeme_economique_redistribution:
-    level: 20
-    trend: down
+    level: 95
+    trend: up
   gouvernance_institutions:
-    level: 25
-    trend: down
+    level: 80
+    trend: up
   geopolitique_conflits:
-    level: 90
+    level: 95
     trend: up
   valeurs_culture_tempo_sociale:
-    level: 35
-    trend: down
+    level: 90
+    trend: up
   organisation_territoires:
-    level: 70
+    level: 90
     trend: up
   sante_biotechnologies:
-    level: 50
-    trend: down
+    level: 85
+    trend: up
   frontieres_du_systeme:
-    level: 65
+    level: 85
     trend: up
   technologie_information:
-    level: 40
-    trend: down
+    level: 95
+    trend: up
   climat_environnement_global:
-    level: 25
-    trend: down
+    level: 95
+    trend: up
   energie_ressources_critiques:
-    level: 20
-    trend: down
+    level: 96
+    trend: up
   demographie_mobilite_humaine:
-    level: 35
-    trend: down
+    level: 90
+    trend: up
   systemes_productifs_travail:
-    level: 30
-    trend: down
+    level: 95
+    trend: up
 triggers:
   - guerre majeure
   - choc énergétique global
@@ -74,6 +74,7 @@ system_effects:
     - fragmentation des réseaux
   environment:
     - dégradation accélérée
+convention_echelle: intensite_2026-09-27
 ---
 
 # breakdown
@@ -123,18 +124,18 @@ Effondrement partiel du système mondial entraînant une fragmentation des écha
 ## 4A. États des variables
 | Variable | Level | Trend |
 |---|---|---|
-| [[systeme_economique_redistribution]] | 20 | down |
-| [[gouvernance_institutions]] | 25 | down |
-| [[geopolitique_conflits]] | 90 | up |
-| [[valeurs_culture_tempo_sociale]] | 35 | down |
-| [[organisation_territoires]] | 70 | up |
-| [[sante_biotechnologies]] | 50 | down |
-| [[frontieres_du_systeme]] | 65 | up |
-| [[technologie_information]] | 40 | down |
-| [[climat_environnement_global]] | 25 | down |
-| [[energie_ressources_critiques]] | 20 | down |
-| [[demographie_mobilite_humaine]] | 35 | down |
-| [[systemes_productifs_travail]] | 30 | down |
+| [[systeme_economique_redistribution]] | 95 | up |
+| [[gouvernance_institutions]] | 80 | up |
+| [[geopolitique_conflits]] | 95 | up |
+| [[valeurs_culture_tempo_sociale]] | 90 | up |
+| [[organisation_territoires]] | 90 | up |
+| [[sante_biotechnologies]] | 85 | up |
+| [[frontieres_du_systeme]] | 85 | up |
+| [[technologie_information]] | 95 | up |
+| [[climat_environnement_global]] | 95 | up |
+| [[energie_ressources_critiques]] | 96 | up |
+| [[demographie_mobilite_humaine]] | 90 | up |
+| [[systemes_productifs_travail]] | 95 | up |
 
 ## 5. Forces dominantes
 - rupture des chaînes globales

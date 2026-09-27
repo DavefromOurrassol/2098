@@ -34,11 +34,11 @@ impact_sur_variables:
   - variable: valeurs_culture_tempo_sociale
     delta_level: 1
     duree: 8
-    polarite: -1
+    polarite: 1
   - variable: gouvernance_institutions
     delta_level: 1
     duree: 5
-    polarite: -1
+    polarite: 1
 propagation:
   via_matrice: false
 acteurs_impliques:
@@ -65,8 +65,8 @@ Condamné à une amende. L'affaire est couverte comme symbole des tensions
 entre réglementation et liberté personnelle. Aucun changement législatif.
 
 ## Impact sur les variables
-- **valeurs_culture_tempo_sociale** : delta -1 sur 8 ans
-- **gouvernance_institutions** : delta -1 sur 5 ans
+- **valeurs_culture_tempo_sociale** : delta +1 sur 8 ans
+- **gouvernance_institutions** : delta +1 sur 5 ans
 
 ## Acteurs impliqués
 - [[le_temoin_reference]]

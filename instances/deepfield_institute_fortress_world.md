@@ -68,7 +68,7 @@ injection:
   - variable: sante_biotechnologies
     delta_level: 3
     duree: 25
-    polarite: -1
+    polarite: 1
   propagation:
     via_matrice: false
 

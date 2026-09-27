@@ -24,7 +24,7 @@ impact_sur_variables:
   - variable: frontieres_du_systeme
     delta_level: 10
     duree: 15
-    polarite: -1
+    polarite: 1
   - variable: valeurs_culture_tempo_sociale
     delta_level: 20
     duree: 25
@@ -55,7 +55,7 @@ Sous un ciel chargé de particules et de drones de surveillance, des centaines d
 Le Marathon des Seuils devient un phénomène récurrent, inspirant des courses similaires dans d'autres zones grises du monde-forteresse. Les Consortiums Énergétiques durcissent leurs contrôles, mais les réseaux de contrebande énergétique et les Réseaux de Maintenance d'Infrastructures Critiques Hors-Blocs profitent de l'attention médiatique pour étendre leur influence. L'événement renforce aussi les liens entre les Coalitions des Déplacés et Apatrides et les Cellules Universitaires Dissidentes, créant une nouvelle forme de résistance hybride, à la fois sportive, technologique et politique.
 
 ## Impact sur les variables
-- **frontieres_du_systeme** : delta -10 sur 15 ans
+- **frontieres_du_systeme** : delta +10 sur 15 ans
 - **valeurs_culture_tempo_sociale** : delta +20 sur 25 ans
 
 ## Acteurs impliqués

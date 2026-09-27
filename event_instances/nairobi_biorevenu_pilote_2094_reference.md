@@ -23,23 +23,23 @@ impact_sur_variables:
   - variable: sante_biotechnologies
     delta_level: 8
     duree: 15
-    polarite: 1
+    polarite: -1
   - variable: systeme_economique_redistribution
     delta_level: 5
     duree: 20
     polarite: 1
   - variable: systemes_productifs_travail
-    delta_level: -6
+    delta_level: 6
     duree: 15
-    polarite: -1
+    polarite: 1
   - variable: gouvernance_institutions
     delta_level: 4
     duree: 10
     polarite: 1
   - variable: valeurs_culture_tempo_sociale
-    delta_level: -7
+    delta_level: 7
     duree: 20
-    polarite: -1
+    polarite: 1
 propagation:
   via_matrice: true
 acteurs_impliques:
@@ -69,7 +69,7 @@ Nairobi, automne 2098 — Le quartier de Westlands s'est transformé en laborato
 Le programme, s'il survit à ses contestations juridiques, pourrait redéfinir le contrat social dans les économies africaines post-travail en établissant un précédent pour la monétisation des données biologiques comme bien commun redistributif. Mais il risque surtout d'accélérer la stratification entre citoyens 'bio-solvables' — ceux dont les données génétiques ont une valeur marchande élevée — et ceux dont les profils biologiques sont jugés moins rentables par l'algorithme, reproduisant sous une forme nouvelle les inégalités de santé existantes.
 
 ## Impact sur les variables
-- **sante_biotechnologies** : delta +8 sur 15 ans
+- **sante_biotechnologies** : delta -8 sur 15 ans
 - **systeme_economique_redistribution** : delta +5 sur 20 ans
 - **systemes_productifs_travail** : delta +6 sur 15 ans
 - **gouvernance_institutions** : delta +4 sur 10 ans

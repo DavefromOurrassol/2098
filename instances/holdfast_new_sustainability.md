@@ -56,13 +56,13 @@ injection:
     Les Holdfasts ont affaibli la gouvernance_institutions en sapant la confiance dans les systèmes collectifs pendant leur existence, mais leur échec a ensuite servi de catalyseur pour renforcer les mécanismes de redistribution et de gouvernance partagée dans les décennies suivantes.
   impact_sur_variables:
   - variable: gouvernance_institutions
-    delta_level: -5
+    delta_level: 5
     duree: 20
-    polarite: -1
+    polarite: 1
   - variable: systeme_economique_redistribution
     delta_level: 3
     duree: 15
-    polarite: 1
+    polarite: -1
   propagation:
     via_matrice: false
 

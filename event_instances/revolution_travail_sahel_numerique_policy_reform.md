@@ -24,19 +24,19 @@ impact_sur_variables:
   - variable: systemes_productifs_travail
     delta_level: 12
     duree: 15
-    polarite: 1
+    polarite: -1
   - variable: technologie_information
     delta_level: 8
     duree: 10
-    polarite: 1
+    polarite: -1
   - variable: energie_ressources_critiques
     delta_level: 10
     duree: 12
-    polarite: 1
+    polarite: -1
   - variable: gouvernance_institutions
     delta_level: 5
     duree: 8
-    polarite: 1
+    polarite: -1
 propagation:
   via_matrice: true
 acteurs_impliques:
@@ -73,10 +73,10 @@ Sous un soleil de plomb, des paysans de la région de Tillabéri (Niger) et des 
 Cette initiative marque un tournant dans la gouvernance locale des ressources critiques, offrant un modèle alternatif de résilience face aux crises hydriques et économiques. Elle inspire des répliques dans d'autres régions africaines, tout en suscitant des débats au sein des institutions globales sur la régulation des plateformes de travail communautaire et leur intégration dans les cadres technocratiques.
 
 ## Impact sur les variables
-- **systemes_productifs_travail** : delta +12 sur 15 ans
-- **technologie_information** : delta +8 sur 10 ans
-- **energie_ressources_critiques** : delta +10 sur 12 ans
-- **gouvernance_institutions** : delta +5 sur 8 ans
+- **systemes_productifs_travail** : delta -12 sur 15 ans
+- **technologie_information** : delta -8 sur 10 ans
+- **energie_ressources_critiques** : delta -10 sur 12 ans
+- **gouvernance_institutions** : delta -5 sur 8 ans
 
 ## Acteurs impliqués
 - [[collectifs_de_biohackers_agro_communautaires_policy_reform]]

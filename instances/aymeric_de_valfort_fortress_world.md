@@ -57,7 +57,7 @@ injection:
     duree: 15
     polarite: 1
   - variable: geopolitique_conflits
-    delta_level: -8
+    delta_level: 8
     duree: 10
     polarite: -1
   - variable: valeurs_culture_tempo_sociale

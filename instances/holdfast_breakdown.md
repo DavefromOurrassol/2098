@@ -59,13 +59,13 @@ injection:
     Les Holdfasts ont accéléré la fragmentation territoriale en normalisant l'idée que des espaces pouvaient être soustraits au contrôle public, affaiblissant durablement la légitimité des institutions communes. Leur existence a aussi creusé les inégalités en privatisant des ressources critiques (eau, énergie, sécurité), rendant toute redistribution ultérieure plus difficile.
   impact_sur_variables:
   - variable: organisation_territoires
-    delta_level: -5
+    delta_level: 5
     duree: 20
-    polarite: -1
+    polarite: 1
   - variable: gouvernance_institutions
-    delta_level: -3
+    delta_level: 3
     duree: 15
-    polarite: -1
+    polarite: 1
   propagation:
     via_matrice: false
 

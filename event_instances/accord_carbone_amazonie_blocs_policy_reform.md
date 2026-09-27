@@ -24,19 +24,19 @@ impact_sur_variables:
   - variable: climat_environnement_global
     delta_level: 8
     duree: 30
-    polarite: 1
+    polarite: -1
   - variable: gouvernance_institutions
     delta_level: 6
     duree: 25
-    polarite: 1
+    polarite: -1
   - variable: geopolitique_conflits
-    delta_level: -9
+    delta_level: 9
     duree: 20
-    polarite: -1
+    polarite: 1
   - variable: energie_ressources_critiques
-    delta_level: -5
+    delta_level: 5
     duree: 15
-    polarite: -1
+    polarite: 1
 propagation:
   via_matrice: true
 acteurs_impliques:
@@ -67,8 +67,8 @@ Novembre 2055, Belém brûle sous une chaleur record quand les délégations se 
 Le traité crée un précédent institutionnel majeur : pour la première fois, des entités non-étatiques autochtones disposent d'un droit de veto formellement intégré dans un accord géopolitique multiblocs, redessinant les contours de la gouvernance des ressources critiques. La fracture entre signataires et non-signataires alimente durablement une compétition réglementaire autour des marchés carbone, fragilisant la cohérence du régime climatique global tout en renforçant la légitimité des institutions favorables à l'intégration. À long terme, le modèle de Belém devient un template controversé pour d'autres bassins — Congo, Mékong — accentuant les tensions entre souveraineté nationale et gouvernance biosphérique supranationale.
 
 ## Impact sur les variables
-- **climat_environnement_global** : delta +8 sur 30 ans
-- **gouvernance_institutions** : delta +6 sur 25 ans
+- **climat_environnement_global** : delta -8 sur 30 ans
+- **gouvernance_institutions** : delta -6 sur 25 ans
 - **geopolitique_conflits** : delta +9 sur 20 ans
 - **energie_ressources_critiques** : delta +5 sur 15 ans
 

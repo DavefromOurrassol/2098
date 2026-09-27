@@ -67,7 +67,7 @@ injection:
   - variable: systeme_economique_redistribution
     delta_level: 15
     duree: 20
-    polarite: -1
+    polarite: 1
   - variable: geopolitique_conflits
     delta_level: 10
     duree: 15
@@ -75,7 +75,7 @@ injection:
   - variable: gouvernance_institutions
     delta_level: 12
     duree: 25
-    polarite: -1
+    polarite: 1
   propagation:
     via_matrice: true
 

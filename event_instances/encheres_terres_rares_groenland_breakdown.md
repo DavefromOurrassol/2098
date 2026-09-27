@@ -22,21 +22,21 @@ realisation: >
   Le Kalaallit Nunaat Sovereign Fund organise effectivement les enchères, mais dans un monde déjà en décomposition institutionnelle, elles se transforment en une foire chaotique. Aucun mécanisme d'arbitrage international ne tient : les blocs licites coexistent avec des offres de milices privées, de consortiums énergétiques hors-État et de cartels logistiques. La procédure s'effondre en 96 heures — non en triomphe diplomatique, mais en guerre d'offres non-contraignantes, de contrats fantômes et d'interventions militaires de basse intensité sur le territoire groenlandais lui-même. Les Archives Neutres de Genève tentent d'enregistrer les actes, mais trois blocs refusent de reconnaître leur légitimité.
 impact_sur_variables:
   - variable: energie_ressources_critiques
-    delta_level: -8
+    delta_level: 8
     duree: 25
-    polarite: -1
+    polarite: 1
   - variable: geopolitique_conflits
     delta_level: 12
     duree: 20
-    polarite: -1
+    polarite: 1
   - variable: gouvernance_institutions
-    delta_level: -10
+    delta_level: 10
     duree: 30
-    polarite: -1
+    polarite: 1
   - variable: organisation_territoires
-    delta_level: -7
+    delta_level: 7
     duree: 20
-    polarite: -1
+    polarite: 1
 propagation:
   via_matrice: true
 acteurs_impliques:
@@ -69,7 +69,7 @@ Les droits d'extraction restent juridiquement illisibles pendant des années, ch
 
 ## Impact sur les variables
 - **energie_ressources_critiques** : delta +8 sur 25 ans
-- **geopolitique_conflits** : delta -12 sur 20 ans
+- **geopolitique_conflits** : delta +12 sur 20 ans
 - **gouvernance_institutions** : delta +10 sur 30 ans
 - **organisation_territoires** : delta +7 sur 20 ans
 

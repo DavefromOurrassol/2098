@@ -24,19 +24,19 @@ impact_sur_variables:
   - variable: systemes_productifs_travail
     delta_level: 20
     duree: 15
-    polarite: -1
+    polarite: 1
   - variable: geopolitique_conflits
     delta_level: 15
     duree: 10
-    polarite: -1
+    polarite: 1
   - variable: sante_biotechnologies
     delta_level: 10
     duree: 8
-    polarite: -1
+    polarite: 1
   - variable: organisation_territoires
     delta_level: 12
     duree: 12
-    polarite: -1
+    polarite: 1
 propagation:
   via_matrice: true
 acteurs_impliques:
@@ -68,10 +68,10 @@ Automne 2039. Les 'Venelles' eurasiatiques, ces corridors logistiques vitaux rel
 La grève des Veines Eurasiatiques marque un tournant dans la fragmentation du système productif mondial. Les États-fragments, incapables de rétablir l'ordre, voient leur légitimité s'effriter davantage, tandis que des communes autonomes émergent le long des axes abandonnés, organisant des économies de subsistance et des réseaux de troc. Les corridors logistiques, désormais contrôlés par des seigneurs de guerre et des milices, deviennent des zones de non-droit où les flux de ressources sont monnayés au prix fort. La dépendance aux terres rares et au lithium, déjà critique, s'aggrave, poussant les enclaves technologiques survivantes à chercher des alternatives locales ou à s'effondrer.
 
 ## Impact sur les variables
-- **systemes_productifs_travail** : delta -20 sur 15 ans
-- **geopolitique_conflits** : delta -15 sur 10 ans
-- **sante_biotechnologies** : delta -10 sur 8 ans
-- **organisation_territoires** : delta -12 sur 12 ans
+- **systemes_productifs_travail** : delta +20 sur 15 ans
+- **geopolitique_conflits** : delta +15 sur 10 ans
+- **sante_biotechnologies** : delta +10 sur 8 ans
+- **organisation_territoires** : delta +12 sur 12 ans
 
 ## Acteurs impliqués
 - [[corridors_eurasiens_convoyage_breakdown]]

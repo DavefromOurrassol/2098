@@ -24,19 +24,19 @@ impact_sur_variables:
   - variable: geopolitique_conflits
     delta_level: 12
     duree: 15
-    polarite: -1
+    polarite: 1
   - variable: energie_ressources_critiques
-    delta_level: -10
+    delta_level: 10
     duree: 12
-    polarite: -1
+    polarite: 1
   - variable: gouvernance_institutions
-    delta_level: -8
+    delta_level: 8
     duree: 10
-    polarite: -1
+    polarite: 1
   - variable: demographie_mobilite_humaine
     delta_level: 6
     duree: 8
-    polarite: -1
+    polarite: 1
 propagation:
   via_matrice: true
 acteurs_impliques:
@@ -62,10 +62,10 @@ Les images de Fordo en flammes font le tour des réseaux en quelques minutes : I
 Le conflit accélère la fragmentation des marchés énergétiques mondiaux : le Consortium Helios doit recomposer en urgence ses flux d'approvisionnement en contournant le Golfe, renforçant paradoxalement les corridors nordiques et accélérant certains investissements dans les énergies renouvelables par peur de dépendance. Sur le plan géopolitique, l'événement consolide le Pacte des Souverains — qui y voit la démonstration que les institutions multilatérales sont incapables de prévenir les conflits régionaux majeurs — et affaiblit durablement la crédibilité des mécanismes de non-prolifération, laissant plusieurs États du Moyen-Orient accélérer discrètement leurs propres programmes.
 
 ## Impact sur les variables
-- **geopolitique_conflits** : delta -12 sur 15 ans
+- **geopolitique_conflits** : delta +12 sur 15 ans
 - **energie_ressources_critiques** : delta +10 sur 12 ans
 - **gouvernance_institutions** : delta +8 sur 10 ans
-- **demographie_mobilite_humaine** : delta -6 sur 8 ans
+- **demographie_mobilite_humaine** : delta +6 sur 8 ans
 
 ## Acteurs impliqués
 - [[consortium_helios_reference]]

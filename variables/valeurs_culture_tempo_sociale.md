@@ -63,6 +63,10 @@ simulation:
   systemic_criticality: 3
   resilience: 4
   adaptability: 4
+echelle:
+  type: intensite
+  zero: "récits communs cohérents, temps social apaisé"
+  cent: "fragmentation extrême des valeurs, polarisation durable"
 states:
 
   fortress_world:
@@ -368,6 +372,7 @@ _extended_
 
 **custom (signaux d'actualité)**
 - décodage des langages animaux par IA ouvre des récits culturels hybrides (→ signal_custom: decodage_langage_animaux_ia, source: actualite)
+- émergence d'une caste de prompteurs puis bergers d'IA, devenant une autorité quasi religieuse dans certains territoires (→ signal_custom: clerge_prompteurs_ia, source: idee_david_2026-09)
 
 ## 8. États par scénario
 ### [[fortress_world]]
@@ -717,4 +722,30 @@ signal_to_state:
         date_bascule: 2028-2043
         evenement_cle: premier documentaire viral sur la communication avec les éléphants 2035
 
+  - signal: clerge_prompteurs_ia
+    scenarios:
+      breakdown:
+        evolution: caste des prompteurs devient secte de survie dans le chaos
+        date_bascule: 2045-2063
+        evenement_cle: Detroit-Sud érige ses Bergers en guides spirituels de l'effondrement 2054
+      fortress_world:
+        evolution: prompteurs sacralisés en gardiens des récits identitaires des blocs
+        date_bascule: 2038-2053
+        evenement_cle: Bloc Eurasiatique impose son Collège des Scribes Sacrés 2048
+      new_sustainability:
+        evolution: caste des prompteurs régulée comme médiateurs culturels IA-humain
+        date_bascule: 2033-2048
+        evenement_cle: Alliance Pacifique adopte la Charte des Interfaces Éthiques 2043
+      eco_communalism:
+        evolution: prompteurs marginalisés au profit des gardiens de savoirs locaux
+        date_bascule: 2040-2058
+        evenement_cle: Réseau des Assemblées Bioterritoriales bannit les interfaces IA centralisées 2052
+      policy_reform:
+        evolution: prompteurs encadrés par des normes professionnelles strictes
+        date_bascule: 2030-2045
+        evenement_cle: UE adopte la Directive sur la Transparence des Requêtes IA 2039
+      reference:
+        evolution: prompteurs émergent comme nouvelle élite culturelle sans régulation
+        date_bascule: 2027-2042
+        evenement_cle: premier syndicat international des prompteurs reconnu à Genève 2036
 ```

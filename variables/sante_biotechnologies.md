@@ -55,6 +55,10 @@ simulation:
   systemic_criticality: 4
   resilience: 3
   adaptability: 4
+echelle:
+  type: intensite
+  zero: "systèmes de santé stables, risques sanitaires maîtrisés"
+  cent: "pandémies récurrentes, saturation et rupture des capacités de soin"
 states:
   fortress_world:
     level: 65
@@ -74,7 +78,7 @@ states:
       [[demographie_mobilite_humaine]]: 70
 
   new_sustainability:
-    level: 75
+    level: 30
     volatility: 25
     state_logic: >
       Médecine régénérative avancée accessible universellement, combinant biotechnologies, IA diagnostique et prévention systémique dans un cadre de gouvernance éthique globale.
@@ -91,7 +95,7 @@ states:
       [[demographie_mobilite_humaine]]: 75
 
   eco_communalism:
-    level: 55
+    level: 40
     volatility: 30
     state_logic: >
       Médecine communautaire sobre et résiliente, combinant savoirs traditionnels, biotechnologies de base et prévention écologique dans des systèmes de santé localisés.
@@ -424,7 +428,7 @@ Médecine à deux vitesses systématisée avec biotechnologies avancées réserv
 - [[demographie_mobilite_humaine]] : 70
 
 ### [[new_sustainability]]
-- **level** : 75 | **volatility** : 25
+- **level** : 30 | **volatility** : 25
 
 Médecine régénérative avancée accessible universellement, combinant biotechnologies, IA diagnostique et prévention systémique dans un cadre de gouvernance éthique globale.
 
@@ -443,7 +447,7 @@ Médecine régénérative avancée accessible universellement, combinant biotech
 - [[demographie_mobilite_humaine]] : 75
 
 ### [[eco_communalism]]
-- **level** : 55 | **volatility** : 30
+- **level** : 40 | **volatility** : 30
 
 Médecine communautaire sobre et résiliente, combinant savoirs traditionnels, biotechnologies de base et prévention écologique dans des systèmes de santé localisés.
 

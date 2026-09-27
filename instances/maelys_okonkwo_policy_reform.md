@@ -66,9 +66,9 @@ injection:
     Le Réseau Écho des Marges affaiblit la légitimité des institutions technocratiques en exposant leurs dysfonctionnements et leurs biais algorithmiques, ce qui réduit leur capacité à imposer des régulations perçues comme opaques ou injustes. En parallèle, il renforce la résilience des réseaux d'information alternatifs et accélère l'adoption de technologies de contournement (audit algorithmique indépendant, plateformes décentralisées), tout en alimentant une culture de la transparence et de la redevabilité qui influence les valeurs sociales et les attentes citoyennes.
   impact_sur_variables:
   - variable: gouvernance_institutions
-    delta_level: -8
+    delta_level: 8
     duree: 15
-    polarite: -1
+    polarite: 1
   - variable: technologie_information
     delta_level: 7
     duree: 10

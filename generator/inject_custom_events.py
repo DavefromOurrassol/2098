@@ -75,6 +75,8 @@ from instance_generation_common import (
     format_concentration_warnings,
 )
 from edition_utils import edition_date_to_float, lire_edition_active, MOIS_FR
+from echelles import CONVENTION_NIVEAUX, CONSIGNE_IMPACT, texte_echelle, verifier_impact
+import dynamique as dyn  # niveaux de persistance (module pur, aucune lecture de fichier)
 
 
 # ---------------------------------------------------------------------------
@@ -442,8 +444,9 @@ def step2_develop_instance(client, idea, event_slug, type_evenement, variables,
     sc_ctx = load_scenario_context(scenario)
     var_levels = load_variables_levels(scenario)
 
-    vars_ctx = "\n".join(
-        f"- {v} : level {var_levels.get(v, '?')}" for v in variables
+    vars_ctx = CONVENTION_NIVEAUX + "\n" + "\n".join(
+        f"- {v} : level {var_levels.get(v, '?')}/100 ({texte_echelle(v) or 'échelle non définie'})"
+        for v in variables
     )
 
     actors_hint_txt = ""
@@ -574,9 +577,10 @@ Règles importantes :
 - Le nom peut être identique, une variante, ou radicalement différent
 {date_rule_txt}
 - Les impacts sur les variables doivent être cohérents avec leurs levels
-  actuels (pas de delta positif massif sur une variable déjà en
-  effondrement), et chaque delta_level doit rester dans la plage
-  raisonnable -{MAX_DELTA_LEVEL} à +{MAX_DELTA_LEVEL}
+  actuels et leur échelle (pas d'impact qui pousserait une variable déjà
+  proche de 0 ou de 100 au-delà de ses bornes), et chaque delta_level doit
+  rester entre 0 et {MAX_DELTA_LEVEL}
+- {CONSIGNE_IMPACT}
 - Le champ "evenement_cle" doit être une phrase courte (4-11 mots) contenant
   une année à 4 chiffres (n'importe où dans la phrase — début, milieu ou
   fin), sans collision avec le registre fourni ci-dessus
@@ -597,7 +601,7 @@ Réponds UNIQUEMENT en JSON, sans aucun texte autour, format exact :
   "consequences": "conséquences à long terme dans ce monde — 2-3 lignes",
   "acteurs": ["slug_instance_existante_ou_texte_libre"],
   "impact_sur_variables": [
-    {{"variable": "slug_variable", "delta_level": 15, "duree": 20, "polarite": -1}}
+    {{"variable": "slug_variable", "delta_level": 15, "duree": 20, "polarite": 1}}
   ],
   "propagation_via_matrice": true,
   "impossible_dans_scenario": false,
@@ -681,8 +685,10 @@ def validate_instance(instance_data, variables, scenario, registre_text, availab
         if abs(delta) > MAX_DELTA_LEVEL:
             issues.append(
                 f"[{var}] delta_level={delta} hors plage raisonnable "
-                f"(-{MAX_DELTA_LEVEL} à +{MAX_DELTA_LEVEL})"
+                f"(0 à {MAX_DELTA_LEVEL})"
             )
+        # Convention de signe (27 septembre 2026, echelles.py)
+        issues.extend(verifier_impact(delta, imp.get("polarite", 1), prefixe=f"[{var}] "))
 
     missing_vars = set(variables) - impacted_vars
     if missing_vars and not instance_data.get("impossible_dans_scenario"):
@@ -744,6 +750,7 @@ type_evenement: {type_evenement}
 portee: {idea['portee']}
 date_approximative: {idea['date_approximative']}
 intensite: {idea['intensite']}
+persistance: {idea.get('persistance') or dyn.PERSISTANCE_DEFAUT}
 description: >
   {idea['description'].strip()}
 variables_hint:
@@ -796,7 +803,7 @@ def write_instance_file(event_slug, type_evenement, idea, scenario, instance_dat
     vars_md = "\n".join(
         "- **{}** : delta {:+} sur {} ans".format(
             imp.get("variable", "?"),
-            (imp.get("delta_level") or 0) * (imp.get("polarite") or 1),
+            abs(imp.get("delta_level") or 0) * (imp.get("polarite") or 1),
             imp.get("duree") or 20,
         )
         for imp in (instance_data.get("impact_sur_variables") or [])
@@ -831,6 +838,7 @@ realisation: >
 impact_sur_variables:{impacts_yaml}
 propagation:
   via_matrice: {via_matrice}
+persistance: {persistance}
 acteurs_impliques:{acteurs_yaml}
 note_coherence: {note}
 custom_source: {source}
@@ -870,6 +878,10 @@ developpements: []
         realisation=instance_data.get("realisation", "").replace("\n", " "),
         impacts_yaml=impacts_yaml,
         via_matrice=str(instance_data.get("propagation_via_matrice", True)).lower(),
+        # Persistance du choc chiffré (27 septembre 2026) : lue par
+        # loader.load_event_instances_for_scenario() puis dynamique.py.
+        # Modifiable à la main dans chaque instance (une par scénario).
+        persistance=idea.get("persistance") or dyn.PERSISTANCE_DEFAUT,
         acteurs_yaml=acteurs_yaml,
         note=yaml_scalar(instance_data.get("note_coherence") or ""),
         source=idea.get("source", "actualite"),
@@ -924,7 +936,14 @@ QUEUE_TEMPLATE = """\
 #                            2098 = année finale de la fiction, borne mise à jour le
 #                            6 septembre 2026, voir clamp_date_dans_plage())
 #   intensite              : faible | modérée | forte | majeure
-#   scenarios              : liste de scénarios à couvrir, ou null pour les 6 par défaut
+#                            (la FORCE de l'événement, oriente le delta_level)
+#   persistance            : optionnel. ephemere | normale | durable | permanente
+#                            (la DURÉE de l'effet chiffré après sa montée :
+#                            demi-vie 10 ans / défaut du type / 40 ans / aucune
+#                            décroissance -- valeurs réglables dans dynamique.py,
+#                            table PERSISTANCE). Absent = normale. Modifiable
+#                            après coup dans chaque event_instances/*.md.
+#   scenarios             : liste de scénarios à couvrir, ou null pour les 6 par défaut
 #                            (valeurs : breakdown, fortress_world, new_sustainability,
 #                            eco_communalism, policy_reform, reference)
 #   variables_hint         : optionnel. null si tu ne sais pas — le LLM choisit
@@ -969,6 +988,7 @@ QUEUE_TEMPLATE = """\
 #     portee: globale
 #     date_approximative: 2026
 #     intensite: majeure
+#     persistance: normale
 #     scenarios: null
 #     variables_hint: [geopolitique_conflits, energie_ressources_critiques]
 #     variables_hint_count: null
@@ -1094,10 +1114,20 @@ def process_idea(client, idea, dry_run=False):
 
     zone_hint = idea.get("zone_hint") or None
 
+    # Persistance du choc chiffré (27 septembre 2026) -- vérifiée AVANT tout
+    # appel LLM, puis normalisée dans une COPIE de l'idée (l'idée d'origine
+    # reste telle quelle dans processed.yaml/needs_review.yaml).
+    persistance = dyn.normaliser_persistance(idea.get("persistance")) or dyn.PERSISTANCE_DEFAUT
+    if persistance not in dyn.PERSISTANCE:
+        return {"status": "needs_review", "idea": idea,
+                "reason": "persistance {!r} inconnue (valeurs : {})".format(
+                    idea.get("persistance"), ", ".join(dyn.PERSISTANCE))}
+    idea = {**idea, "persistance": persistance}
+
     scenarios = idea.get("scenarios") or list(SCENARIOS)
     scenarios = [s for s in scenarios if s in SCENARIOS]
 
-    print(f"\n=== {idea_id} ===")
+    print(f"\n=== {idea_id} ===  (persistance : {persistance})")
     print("[1/4] Sélection de variables + type...")
     selection = step1_select_variables_and_type(
         client, idea, variables_hint, variables_hint_count
@@ -1476,6 +1506,7 @@ exactement {n} élément(s) dans "idees" :
       "portee": "locale|regionale|continentale|globale",
       "date_approximative": "AAAA",
       "intensite": "faible|modérée|forte|majeure",
+      "persistance": "ephemere|normale|durable|permanente (durée de l'effet : normale sauf si l'événement installe un changement qui dure des décennies, ou au contraire un choc vite oublié)",
       "scenarios": ["scenario1", "scenario2"],
       "variables_hint": ["var1", "var2"],
       "variables_hint_count": 3,
@@ -1579,6 +1610,11 @@ def run_auto_mode(client, dry_run, n=None, scenario_filter=None, variables_hint=
     queue_ideas = []
     for idea in ideas:
         rationale = idea.pop("rationale", "")
+        # Persistance (27 septembre 2026) : une valeur non reconnue proposée
+        # par le LLM retombe sur "normale" ICI, au moment de l'écriture en
+        # queue -- sinon l'idée partirait en needs_review à l'injection.
+        pers = dyn.normaliser_persistance(idea.get("persistance"))
+        idea["persistance"] = pers if pers in dyn.PERSISTANCE else dyn.PERSISTANCE_DEFAUT
         queue_ideas.append(idea)
         print(f"  ✓ {idea.get('id')} — {idea.get('portee')} | {idea.get('date_approximative')} | scénarios: {idea.get('scenarios')}")
         if rationale:

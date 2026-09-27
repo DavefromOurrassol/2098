@@ -68,7 +68,7 @@ injection:
   - variable: demographie_mobilite_humaine
     delta_level: 20
     duree: 25
-    polarite: -1
+    polarite: 1
   - variable: systemes_productifs_travail
     delta_level: 15
     duree: 15
@@ -76,7 +76,7 @@ injection:
   - variable: geopolitique_conflits
     delta_level: 10
     duree: 20
-    polarite: -1
+    polarite: 1
   propagation:
     via_matrice: true
 

@@ -26,13 +26,13 @@ impact_sur_variables:
     duree: 15
     polarite: 1
   - variable: climat_environnement_global
-    delta_level: -5
+    delta_level: 5
     duree: 20
-    polarite: -1
+    polarite: 1
   - variable: demographie_mobilite_humaine
-    delta_level: -15
+    delta_level: 15
     duree: 10
-    polarite: -1
+    polarite: 1
   - variable: systeme_economique_redistribution
     delta_level: 8
     duree: 12

@@ -33,11 +33,11 @@ impact_sur_variables:
   - variable: gouvernance_institutions
     delta_level: 2
     duree: 15
-    polarite: 1
+    polarite: -1
   - variable: technologie_information
     delta_level: 1
     duree: 10
-    polarite: 1
+    polarite: -1
 propagation:
   via_matrice: false
 acteurs_impliques:
@@ -64,8 +64,8 @@ Jurisprudence distinguant "patrimoine technologique personnel" et "technologies
 sensibles". Directive de 2071 amendée en 2080.
 
 ## Impact sur les variables
-- **gouvernance_institutions** : delta +2 sur 15 ans
-- **technologie_information** : delta +1 sur 10 ans
+- **gouvernance_institutions** : delta -2 sur 15 ans
+- **technologie_information** : delta -1 sur 10 ans
 
 ## Acteurs impliqués
 - [[le_temoin_policy_reform]]

@@ -64,17 +64,17 @@ injection:
     Les *Ergo-Wian Sovereign Fragments* incarnent la persistance d'un modèle économique et politique fondé sur l'exclusion et la rationalité marchande, même dans un contexte d'effondrement. Leur existence aggrave les inégalités structurelles (systeme_economique_redistribution) en maintenant des logiques de marché dans des zones où la survie devrait primer, tout en fragmentant davantage les territoires (organisation_territoires) en enclaves privatisées. Leur gouvernance, réduite à une gestion optimisée des ressources, sape les dernières tentatives de reconstruction institutionnelle (gouvernance_institutions) en niant toute alternative démocratique ou collective.
   impact_sur_variables:
   - variable: systeme_economique_redistribution
-    delta_level: -8
+    delta_level: 8
     duree: 20
-    polarite: -1
+    polarite: 1
   - variable: organisation_territoires
-    delta_level: -5
+    delta_level: 5
     duree: 15
-    polarite: -1
+    polarite: 1
   - variable: gouvernance_institutions
-    delta_level: -6
+    delta_level: 6
     duree: 25
-    polarite: -1
+    polarite: 1
   propagation:
     via_matrice: false
 

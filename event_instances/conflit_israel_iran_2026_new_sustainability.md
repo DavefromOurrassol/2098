@@ -22,21 +22,21 @@ realisation: >
   En octobre 2026, Israël lance des frappes ciblées sur plusieurs sites nucléaires iraniens. L'Iran riposte sur des terminaux pétroliers du Golfe. Mais contrairement aux scénarios d'escalade craints, la communauté internationale — encore dotée d'institutions multilatérales fonctionnelles bien qu'en tension — mobilise en urgence des mécanismes de désescalade. Le choc est réel mais contenu : il devient l'un des catalyseurs qui accélère, dans les années suivantes, la refonte des cadres de sécurité collective et la transition énergétique hors pétrole du Golfe.
 impact_sur_variables:
   - variable: geopolitique_conflits
-    delta_level: -8
+    delta_level: 8
     duree: 12
-    polarite: -1
+    polarite: 1
   - variable: energie_ressources_critiques
-    delta_level: -10
+    delta_level: 10
     duree: 8
-    polarite: -1
+    polarite: 1
   - variable: gouvernance_institutions
     delta_level: 5
     duree: 15
-    polarite: 1
-  - variable: demographie_mobilite_humaine
-    delta_level: -4
-    duree: 6
     polarite: -1
+  - variable: demographie_mobilite_humaine
+    delta_level: 4
+    duree: 6
+    polarite: 1
 propagation:
   via_matrice: true
 acteurs_impliques:
@@ -63,7 +63,7 @@ Le choc énergétique de 2026-2027 agit comme un électrochoc pour les investiss
 ## Impact sur les variables
 - **geopolitique_conflits** : delta +8 sur 12 ans
 - **energie_ressources_critiques** : delta +10 sur 8 ans
-- **gouvernance_institutions** : delta +5 sur 15 ans
+- **gouvernance_institutions** : delta -5 sur 15 ans
 - **demographie_mobilite_humaine** : delta +4 sur 6 ans
 
 ## Acteurs impliqués

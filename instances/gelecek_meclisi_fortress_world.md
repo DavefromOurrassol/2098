@@ -65,11 +65,11 @@ injection:
   - variable: gouvernance_institutions
     delta_level: 8
     duree: 15
-    polarite: 1
+    polarite: -1
   - variable: organisation_territoires
     delta_level: 6
     duree: 20
-    polarite: 1
+    polarite: -1
   - variable: technologie_information
     delta_level: 5
     duree: 10

@@ -24,19 +24,19 @@ impact_sur_variables:
   - variable: demographie_mobilite_humaine
     delta_level: 12
     duree: 25
-    polarite: -1
+    polarite: 1
   - variable: organisation_territoires
     delta_level: 10
     duree: 30
-    polarite: -1
+    polarite: 1
   - variable: gouvernance_institutions
     delta_level: 6
     duree: 15
-    polarite: 1
-  - variable: climat_environnement_global
-    delta_level: -3
-    duree: 40
     polarite: -1
+  - variable: climat_environnement_global
+    delta_level: 3
+    duree: 40
+    polarite: 1
 propagation:
   via_matrice: true
 acteurs_impliques:
@@ -66,9 +66,9 @@ L'été 2044 restera dans les mémoires comme 'l'été de la marche' : des colon
 L'exode consolide paradoxalement la légitimité des institutions technocratiques de coordination, qui démontrent leur capacité à éviter l'effondrement même sous pression extrême, au prix de tensions durables sur les ressources hydriques des Grands Lacs. Le Great Lakes Autonomous Compact émerge comme un modèle de gouvernance de crise, mais aussi comme acteur revendicateur d'une autonomie renforcée face aux institutions fédérales américaines débordées. La réorganisation territoriale du centre-nord de l'Amérique du Nord devient un chantier de décennie, restructurant durablement l'organisation des territoires résidentiels et productifs.
 
 ## Impact sur les variables
-- **demographie_mobilite_humaine** : delta -12 sur 25 ans
-- **organisation_territoires** : delta -10 sur 30 ans
-- **gouvernance_institutions** : delta +6 sur 15 ans
+- **demographie_mobilite_humaine** : delta +12 sur 25 ans
+- **organisation_territoires** : delta +10 sur 30 ans
+- **gouvernance_institutions** : delta -6 sur 15 ans
 - **climat_environnement_global** : delta +3 sur 40 ans
 
 ## Acteurs impliqués

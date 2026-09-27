@@ -63,15 +63,15 @@ injection:
   - variable: energie_ressources_critiques
     delta_level: 8
     duree: 15
-    polarite: 1
+    polarite: -1
   - variable: organisation_territoires
     delta_level: 6
     duree: 20
-    polarite: 1
+    polarite: -1
   - variable: systeme_economique_redistribution
     delta_level: 5
     duree: 10
-    polarite: 1
+    polarite: -1
   propagation:
     via_matrice: false
 

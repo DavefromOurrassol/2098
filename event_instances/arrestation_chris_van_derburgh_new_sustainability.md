@@ -38,7 +38,7 @@ impact_sur_variables:
   - variable: valeurs_culture_tempo_sociale
     delta_level: 1
     duree: 20
-    polarite: 1
+    polarite: -1
 propagation:
   via_matrice: false
 acteurs_impliques:
@@ -68,7 +68,7 @@ Territoires vote une révision de la loi en 2079 créant une catégorie
 
 ## Impact sur les variables
 - **gouvernance_institutions** : delta +2 sur 15 ans
-- **valeurs_culture_tempo_sociale** : delta +1 sur 20 ans
+- **valeurs_culture_tempo_sociale** : delta -1 sur 20 ans
 
 ## Acteurs impliqués
 - [[le_temoin_new_sustainability]]

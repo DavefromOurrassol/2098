@@ -2826,6 +2826,57 @@ def edition_injecter_evenement():
     return jsonify(payload)
 
 
+TIMEOUT_IDEES_TEXTE_LIBRE = 180  # secondes -- un seul appel LLM
+
+
+@app.route("/api/idees/proposer", methods=["POST"])
+def idees_proposer():
+    """
+    POST /api/idees/proposer  --  Body JSON : {"type": "signal"|"evenement", "texte": "..."}
+
+    Assistant "Depuis un texte libre" (27 septembre 2026) : appelle
+    idees_vers_queue.py --type <type> --json en sous-processus, le texte
+    passé sur l'entrée standard (pas en argument : longueur et caractères
+    spéciaux sans risque). Retourne des PROPOSITIONS d'entrées de queue,
+    n'écrit jamais rien -- le formulaire GUI est pré-rempli puis l'ajout
+    passe par /api/yaml/append comme d'habitude.
+    """
+    cfg = load_config()
+    pipeline_dir = Path(cfg.get("pipeline_dir", ""))
+    data = request.get_json() or {}
+    type_ = data.get("type")
+    texte = (data.get("texte") or "").strip()
+    if type_ not in ("signal", "evenement"):
+        return jsonify({"error": "type doit valoir 'signal' ou 'evenement'"}), 400
+    if not texte:
+        return jsonify({"error": "texte vide"}), 400
+
+    cmd = [sys.executable, "idees_vers_queue.py", "--type", type_, "--json"]
+    try:
+        resultat = subprocess.run(
+            cmd, cwd=pipeline_dir, capture_output=True, text=True,
+            input=texte, timeout=TIMEOUT_IDEES_TEXTE_LIBRE,
+        )
+    except subprocess.TimeoutExpired:
+        return jsonify({"error": f"Proposition expirée après {TIMEOUT_IDEES_TEXTE_LIBRE}s "
+                                  f"(appel LLM trop lent ou bloqué)"}), 504
+    except FileNotFoundError:
+        return jsonify({"error": f"idees_vers_queue.py introuvable dans {pipeline_dir}"}), 500
+
+    sortie = resultat.stdout.strip()
+    if not sortie:
+        return jsonify({"error": f"Aucune sortie du sous-processus "
+                                  f"(code {resultat.returncode}) : {resultat.stderr[-500:]}"}), 500
+    try:
+        payload = json.loads(sortie.splitlines()[-1])
+    except (json.JSONDecodeError, IndexError):
+        return jsonify({"error": f"Sortie non-JSON du sous-processus : {sortie[-500:]}"}), 500
+
+    if not payload.get("ok"):
+        return jsonify({"error": payload.get("error", "Erreur inconnue")}), 500
+    return jsonify(payload)
+
+
 # ---------------------------------------------------------------------------
 # Chantier "Suite narrative des événements", point B (5 septembre 2026) --
 # audit_sujets.py (lecture seule) et editer_sujets.py (destructif, garde-fous
@@ -4573,6 +4624,22 @@ def get_forcer_zones():
         return jsonify({"zones": json.loads(resultat.stdout.strip())})
     except json.JSONDecodeError:
         return jsonify({"error": "Sortie non-JSON", "raw": resultat.stdout[-500:]}), 500
+
+
+@app.route("/api/trace/derniere", methods=["GET"])
+def get_derniere_trace():
+    """Dernière trace écrite par trace_injection.py (generator/state/
+    derniere_trace.json) -- lue par le GUI après un lancement de l'outil
+    « Tracer » pour afficher le récit et le graphique d'évolution (ajouté le
+    27 septembre 2026). Aucun recalcul, aucun appel LLM."""
+    cfg = load_config()
+    chemin = Path(cfg.get("pipeline_dir", "")) / "state" / "derniere_trace.json"
+    if not chemin.exists():
+        return jsonify({"error": "Aucune trace disponible -- lance d'abord l'outil Tracer."}), 404
+    try:
+        return jsonify(json.loads(chemin.read_text(encoding="utf-8")))
+    except (OSError, json.JSONDecodeError) as e:
+        return jsonify({"error": f"Trace illisible : {e}"}), 500
 
 
 @app.route("/api/trace/<slug>", methods=["GET"])

@@ -25,19 +25,19 @@ impact_sur_variables:
   - variable: systemes_productifs_travail
     delta_level: 15
     duree: 25
-    polarite: 1
+    polarite: -1
   - variable: technologie_information
     delta_level: 10
     duree: 20
-    polarite: 1
+    polarite: -1
   - variable: energie_ressources_critiques
     delta_level: 8
     duree: 15
-    polarite: 1
+    polarite: -1
   - variable: gouvernance_institutions
     delta_level: 5
     duree: 10
-    polarite: 1
+    polarite: -1
 propagation:
   via_matrice: true
 acteurs_impliques:
@@ -67,10 +67,10 @@ En cet été 2047, la Confédération des Territoires Sahéliens Autonomes (CTSA
 Cette révolution locale inspire d'autres régions périphériques à adopter des modèles similaires, accélérant la transition vers des systèmes productifs régénératifs. La CTSA devient un modèle de gouvernance distribuée, où la technologie sert la résilience écologique et sociale plutôt que l'extraction. À long terme, cette initiative contribue à réduire la dépendance aux systèmes de dette traditionnels et à renforcer l'autonomie des communautés face aux chocs climatiques.
 
 ## Impact sur les variables
-- **systemes_productifs_travail** : delta +15 sur 25 ans
-- **technologie_information** : delta +10 sur 20 ans
-- **energie_ressources_critiques** : delta +8 sur 15 ans
-- **gouvernance_institutions** : delta +5 sur 10 ans
+- **systemes_productifs_travail** : delta -15 sur 25 ans
+- **technologie_information** : delta -10 sur 20 ans
+- **energie_ressources_critiques** : delta -8 sur 15 ans
+- **gouvernance_institutions** : delta -5 sur 10 ans
 
 ## Acteurs impliqués
 - [[ligue_des_cites_du_sahel_numerique_new_sustainability]]

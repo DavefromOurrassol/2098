@@ -21,6 +21,7 @@ import re
 import yaml
 
 from loader import load_scenario, load_all_variables, VALID_VARS, VALID_SCENARIOS, load_instances_for_scenario, select_relevant_events
+from echelles import CONVENTION_NIVEAUX, texte_echelle  # convention d'échelle, 27 septembre 2026
 
 # Vocabulaire des tags (backlog Partie 1 point 11, 21 août 2026) --
 # construit/rafraîchi par rapprocher_articles.py, injecté ci-dessous
@@ -1169,7 +1170,18 @@ def build_world_context(snapshot):
                 ))
 
         seen = set()
+        if any(m.get("event") == "dynamique" for m in modifications):
+            lines.append("Écarts actuels des variables par rapport à l'état de référence du "
+                         "scénario, résultat cumulé de ces injections (propagation et "
+                         "atténuation dans le temps comprises) :")
         for mod in modifications:
+            if mod.get("event") == "dynamique":
+                contrib = mod.get("contributeurs") or []
+                lines.append("- {} : {} → {} ({:+}){}".format(
+                    mod["variable"], mod["old_level"], mod["new_level"], mod["delta"],
+                    " — surtout : " + " ; ".join(c[:70] for c in contrib) if contrib
+                    else " — par propagation depuis d'autres variables"))
+                continue
             key = (mod.get("instance", mod.get("event", "")), mod.get("variable", ""))
             if key not in seen:
                 seen.add(key)
@@ -1230,6 +1242,8 @@ def build_variables_context(snapshot, thematique, all_variables):
     """
     lines = []
     lines.append("## ÉTAT DES VARIABLES EN 2098")
+    lines.append("")
+    lines.append(CONVENTION_NIVEAUX)
     lines.append("")
 
     vars_vis  = thematique.get("variables_visibles", [])
@@ -1319,6 +1333,9 @@ def build_variables_context(snapshot, thematique, all_variables):
 
         lines.append("**{}**{}".format(var_slug, tag))
         lines.append("- Niveau : {}/100 | Volatilité : {}/100".format(level, volatility))
+        echelle_txt = texte_echelle(var_slug)
+        if echelle_txt:
+            lines.append("- Échelle : {}".format(echelle_txt))
         if state_logic:
             lines.append("- État : {}".format(state_logic))
         if dynamics:
@@ -1390,8 +1407,9 @@ def build_tensions_context(snapshot):
     if global_tensions:
         lines.append("**Cascades critiques**")
         for t in global_tensions[:MAX_TENSIONS_GLOBALES]:
-            pol = "aggrave" if t.get("polarity", 1) == -1 else "renforce"
-            lines.append("- {} {} {} (poids:{} lag:{} cycles)".format(
+            # Convention d'intensité (27 septembre 2026) : +1 = aggrave, -1 = atténue
+            pol = "aggrave" if t.get("polarity", 1) == 1 else "atténue"
+            lines.append("- la crise de {} {} {} (poids:{} lag:{} cycles)".format(
                 t["source"],
                 pol,
                 t["target"],
@@ -1405,7 +1423,7 @@ def build_tensions_context(snapshot):
     if thematic:
         lines.append("**Tensions propres à cette thématique**")
         for t in thematic[:MAX_TENSIONS_THEMATIQUES]:
-            pol_label = "pression négative" if t["polarity"] == -1 else "renforcement"
+            pol_label = "propagation de crise" if t["polarity"] == 1 else "amortissement"
             s_level = t.get("source_level", "?")
             t_level = t.get("target_level", "?")
             lines.append("- {} [{}] → {} [{}] : {} ({})".format(

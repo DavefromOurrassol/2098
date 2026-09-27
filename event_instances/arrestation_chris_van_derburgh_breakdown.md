@@ -35,11 +35,11 @@ impact_sur_variables:
   - variable: gouvernance_institutions
     delta_level: 1
     duree: 5
-    polarite: -1
+    polarite: 1
   - variable: valeurs_culture_tempo_sociale
     delta_level: 1
     duree: 8
-    polarite: -1
+    polarite: 1
 propagation:
   via_matrice: false
 acteurs_impliques:
@@ -67,8 +67,8 @@ Retenu 40 jours, relâché contre la cession de 60% de sa cache. Documenté
 par Le Signal sur les réseaux mesh.
 
 ## Impact sur les variables
-- **gouvernance_institutions** : delta -1 sur 5 ans
-- **valeurs_culture_tempo_sociale** : delta -1 sur 8 ans
+- **gouvernance_institutions** : delta +1 sur 5 ans
+- **valeurs_culture_tempo_sociale** : delta +1 sur 8 ans
 
 ## Acteurs impliqués
 - [[le_temoin_breakdown]]

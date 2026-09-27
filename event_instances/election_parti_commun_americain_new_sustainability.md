@@ -35,11 +35,11 @@ impact_sur_variables:
   - variable: gouvernance_institutions
     delta_level: 8
     duree: 30
-    polarite: 1
+    polarite: -1
   - variable: systeme_economique_redistribution
     delta_level: 12
     duree: 40
-    polarite: 1
+    polarite: -1
   - variable: valeurs_culture_tempo_sociale
     delta_level: 6
     duree: 35
@@ -73,8 +73,8 @@ de la position américaine dans les institutions globales. Modèle repris
 par plusieurs pays d'Amérique latine.
 
 ## Impact sur les variables
-- **gouvernance_institutions** : delta +8 sur 30 ans
-- **systeme_economique_redistribution** : delta +12 sur 40 ans
+- **gouvernance_institutions** : delta -8 sur 30 ans
+- **systeme_economique_redistribution** : delta -12 sur 40 ans
 - **valeurs_culture_tempo_sociale** : delta +6 sur 35 ans
 
 ## Note de cohérence

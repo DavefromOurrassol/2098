@@ -35,7 +35,7 @@ impact_sur_variables:
   - variable: systeme_economique_redistribution
     delta_level: 10
     duree: 25
-    polarite: 1
+    polarite: -1
   - variable: gouvernance_institutions
     delta_level: 5
     duree: 20
@@ -71,7 +71,7 @@ Réformes fiscales redistributives dans le cadre multilatéral. Augmentation
 des contributions américaines aux mécanismes de transition globaux.
 
 ## Impact sur les variables
-- **systeme_economique_redistribution** : delta +10 sur 25 ans
+- **systeme_economique_redistribution** : delta -10 sur 25 ans
 - **gouvernance_institutions** : delta +5 sur 20 ans
 - **valeurs_culture_tempo_sociale** : delta +4 sur 30 ans
 

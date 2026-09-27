@@ -24,15 +24,15 @@ impact_sur_variables:
   - variable: organisation_territoires
     delta_level: 12
     duree: 25
-    polarite: -1
+    polarite: 1
   - variable: gouvernance_institutions
-    delta_level: -14
+    delta_level: 14
     duree: 20
-    polarite: -1
+    polarite: 1
   - variable: geopolitique_conflits
     delta_level: 10
     duree: 15
-    polarite: -1
+    polarite: 1
 propagation:
   via_matrice: true
 acteurs_impliques:
@@ -62,9 +62,9 @@ Le 14 novembre 2051, sous les verrières de l'ancien Millennium Park transformé
 La rupture institutionnalise le modèle confédéral hydro-territorial comme réponse crédible à l'échec de la gouvernance fédérale face aux crises climatiques, inspirant des mouvements similaires dans le bassin du Colorado et les États des Grands Plaines. À l'échelle internationale, elle fragilise la position américaine dans les négociations multilatérales sur les ressources critiques, ouvrant un vide géopolitique partiellement comblé par le Bloc Ressources Eurasiatique et les fonds souverains de la Ceinture Pacifique. Le Compact lui-même reste instable : les tensions entre nations autochtones et administrations étatiques résiduelles sur le partage des revenus hydriques menacent l'unité de la confédération dès ses premières années.
 
 ## Impact sur les variables
-- **organisation_territoires** : delta -12 sur 25 ans
+- **organisation_territoires** : delta +12 sur 25 ans
 - **gouvernance_institutions** : delta +14 sur 20 ans
-- **geopolitique_conflits** : delta -10 sur 15 ans
+- **geopolitique_conflits** : delta +10 sur 15 ans
 
 ## Acteurs impliqués
 - [[great_lakes_autonomous_compact_reference]]

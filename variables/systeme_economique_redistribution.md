@@ -63,6 +63,10 @@ simulation:
   systemic_criticality: 5
   resilience: 2
   adaptability: 3
+echelle:
+  type: intensite
+  zero: "économies stables et peu intégrées, faible tension financière"
+  cent: "crises financières systémiques, effondrement de la confiance monétaire"
 states:
   fortress_world:
     level: 60

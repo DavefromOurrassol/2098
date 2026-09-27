@@ -22,17 +22,17 @@ realisation: >
   Après une mise à jour du Sistema Paulista de Alocação Soberana (SPAS) qui coupe eau et énergie dans 12 zones jugées à 'rendement négatif', les quartiers périphériques de São Paulo s'embrasent. Des collectifs de hacktivistes issus des favelas numériques pénètrent les couches cachées du SPAS et publient via des réseaux chiffrés les paramètres d'exclusion intégrés au code source — révélant que la 'neutralité algorithmique' dissimule des critères ethno-économiques délibérément encodés. Dans un monde-forteresse où chaque bloc sacralise le contrôle numérique, la publication de cette contre-cartographie des allocations constitue une bombe institutionnelle : elle prouve que les populations périphériques sont gérées comme des variables à éliminer, non à gouverner.
 impact_sur_variables:
   - variable: gouvernance_institutions
-    delta_level: -12
+    delta_level: 12
     duree: 15
-    polarite: -1
+    polarite: 1
   - variable: technologie_information
-    delta_level: -8
+    delta_level: 8
     duree: 10
-    polarite: -1
+    polarite: 1
   - variable: organisation_territoires
-    delta_level: -10
+    delta_level: 10
     duree: 12
-    polarite: -1
+    polarite: 1
 propagation:
   via_matrice: true
 acteurs_impliques:

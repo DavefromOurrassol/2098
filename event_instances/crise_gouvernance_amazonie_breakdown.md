@@ -22,21 +22,21 @@ realisation: >
   Le Consortium Amazônia Viva — déjà réduit à l'état de coalition fracturée dans un monde en délitement institutionnel — tente de déclencher un état d'urgence écologique sur 40% du bassin amazonienet. Mais l'ONU n'existe plus que sur papier, et le 'Pacte des Gardiens de l'Amazone' n'est plus reconnu que par une poignée de nœuds régionaux. L'appel à la souveraineté écologique du bassin n'est pas un premier test de gouvernance — c'est un signal d'agonie institutionnelle. Les milices corporatives liées aux blocs énergétiques résiduels enfoncent les périmètres de protection autochtones à Belém pendant que la Frente Sertão Livre tente d'organiser une résistance de terrain sans coordination centrale. Ce qui devait être un acte fondateur de souveraineté amazonienne devient le théâtre de sa désintégration violente.
 impact_sur_variables:
   - variable: climat_environnement_global
-    delta_level: -12
+    delta_level: 12
     duree: 40
-    polarite: -1
+    polarite: 1
   - variable: geopolitique_conflits
     delta_level: 8
     duree: 15
-    polarite: -1
+    polarite: 1
   - variable: gouvernance_institutions
-    delta_level: -8
+    delta_level: 8
     duree: 25
-    polarite: -1
+    polarite: 1
   - variable: organisation_territoires
-    delta_level: -10
+    delta_level: 10
     duree: 30
-    polarite: -1
+    polarite: 1
 propagation:
   via_matrice: true
 acteurs_impliques:
@@ -67,7 +67,7 @@ Le bassin amazonien n'émerge pas comme acteur géopolitique autonome — il se 
 
 ## Impact sur les variables
 - **climat_environnement_global** : delta +12 sur 40 ans
-- **geopolitique_conflits** : delta -8 sur 15 ans
+- **geopolitique_conflits** : delta +8 sur 15 ans
 - **gouvernance_institutions** : delta +8 sur 25 ans
 - **organisation_territoires** : delta +10 sur 30 ans
 

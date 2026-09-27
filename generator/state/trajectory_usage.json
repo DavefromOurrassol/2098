@@ -249,6 +249,12 @@
         "count": 1
       }
     },
+    "journalistes::opposition::zones_grises_tampons": {
+      "Danylo Kovalenko": {
+        "absence_streak": 0,
+        "count": 1
+      }
+    },
     "journalistes::pro_pouvoir::bloc_atlantique": {
       "Malcolm Whitaker": {
         "absence_streak": 0,
@@ -312,9 +318,9 @@
       "Score de Priorité Sanitaire du Bloc Atlantique 2047": 3,
       "adoption d'une spiritualité officielle hybride par les blocs 2050": 4,
       "adoption de barèmes carbone distincts par chaque bloc 2048": 3,
-      "adoption de récits factuels officiels distincts par les blocs 2048": 3,
+      "adoption de récits factuels officiels distincts par les blocs 2048": 4,
       "campagne officielle des blocs sur la fin du monde ancien 2046": 3,
-      "charte commune de fermeture migratoire des blocs 2045": 3,
+      "charte commune de fermeture migratoire des blocs 2045": 4,
       "construction du système de barrières des blocs 2048": 4,
       "création des commandements spatiaux des blocs 2049": 2,
       "création des zones climatiques protégées des blocs 2048": 2,
@@ -359,14 +365,14 @@
       "saisie des stations industrielles privées par le Bloc Atlantique 2048": 3
     },
     "majeurs": {
-      "Bloc Atlantique impose ses agents IA comme uniques interfaces administratives 2047": 29,
-      "Bloc Eurasiatique annexe les aquifères du lac Tchad 2048": 29,
+      "Bloc Atlantique impose ses agents IA comme uniques interfaces administratives 2047": 30,
+      "Bloc Eurasiatique annexe les aquifères du lac Tchad 2048": 30,
       "adoption de la doctrine de conflit permanent par les blocs 2046": 4,
       "adoption de standards environnementaux distincts par chaque bloc 2047": 29,
       "campagne identitaire locale officielle des blocs 2047": 3,
       "classification des zones minières comme zones sacrifiées par les blocs 2049": 30,
       "classification des zones rurales hors-bloc comme territoires non prioritaires 2046": 3,
-      "création de l'Alliance des Blocs Atlantique et Eurasiatique 2048": 29,
+      "création de l'Alliance des Blocs Atlantique et Eurasiatique 2048": 30,
       "création des commandements cyber des blocs 2044": 4,
       "création des territoires protégés des blocs 2049": 3,
       "création des zones d'exclusion minière des blocs 2047": 3,
@@ -374,13 +380,13 @@
       "discours unificateur sur l'autosuffisance énergétique des blocs 2049": 29,
       "doctrine de sécurité énergétique des blocs 2047": 30,
       "déploiement d'unités de combat autonomes par la Chambre de Sécurité 2047": 3,
-      "déploiement des administrations entièrement automatisées dans les blocs 2046": 29,
+      "déploiement des administrations entièrement automatisées dans les blocs 2046": 30,
       "déploiement du système de scoring citoyen des blocs 2046": 30,
       "inauguration de la première cité intelligente fermée du Bloc Sibérien 2049": 3,
-      "instauration des quotas énergétiques par catégorie sociale dans les blocs 2048": 29,
+      "instauration des quotas énergétiques par catégorie sociale dans les blocs 2048": 30,
       "instauration du service de sécurité territoriale obligatoire des blocs 2046": 4,
       "nationalisation des giga-usines de batteries du Bloc Atlantique 2046": 29,
-      "premier réacteur à fusion militarisé du Bloc Asiatique 2058": 29,
+      "premier réacteur à fusion militarisé du Bloc Asiatique 2058": 30,
       "première guerre par procuration pour un territoire climatique viable 2048": 4,
       "sondage confirmant l'effondrement de la confiance dans les institutions mondiales 2045": 29,
       "sondage confirmant la préférence majoritaire pour la sécurité des blocs 2046": 30,

@@ -24,23 +24,23 @@ impact_sur_variables:
   - variable: geopolitique_conflits
     delta_level: 8
     duree: 15
-    polarite: -1
+    polarite: 1
   - variable: energie_ressources_critiques
-    delta_level: -10
+    delta_level: 10
     duree: 20
-    polarite: -1
+    polarite: 1
   - variable: frontieres_du_systeme
-    delta_level: -6
+    delta_level: 6
     duree: 25
-    polarite: -1
+    polarite: 1
   - variable: organisation_territoires
-    delta_level: -7
+    delta_level: 7
     duree: 18
-    polarite: -1
+    polarite: 1
   - variable: climat_environnement_global
-    delta_level: -4
+    delta_level: 4
     duree: 12
-    polarite: -1
+    polarite: 1
 propagation:
   via_matrice: true
 acteurs_impliques:
@@ -68,7 +68,7 @@ Août 2057, eaux du Passage Nord-Ouest : trois navires sous pavillon de l'Autori
 L'incident consacre la mort de facto de toute gouvernance partagée du Passage Nord-Ouest : chaque opérateur armé peut désormais invoquer une 'créance' pour légitimer une saisie. Le Kalaallit Nunaat Sovereign Fund accélère sa militarisation défensive et cherche des alliances avec la Hanse Baltique Recomposée. Les corridors arctiques basculent définitivement dans la logique des seigneuries logistiques armées, réduisant les flux à ce que chaque faction peut défendre par la force.
 
 ## Impact sur les variables
-- **geopolitique_conflits** : delta -8 sur 15 ans
+- **geopolitique_conflits** : delta +8 sur 15 ans
 - **energie_ressources_critiques** : delta +10 sur 20 ans
 - **frontieres_du_systeme** : delta +6 sur 25 ans
 - **organisation_territoires** : delta +7 sur 18 ans

@@ -1,0 +1,2821 @@
+{
+ "event_instances/accord_carbone_amazonie_blocs_new_sustainability.md": {
+  "empreinte": "d600a6138e05",
+  "decisions": {
+   "climat_environnement_global": {
+    "pol": -1,
+    "why": "Le traité renforce la protection des écosystèmes critiques, réduisant les risques d'emballement climatique."
+   },
+   "gouvernance_institutions": {
+    "pol": -1,
+    "why": "Le traité crée un précédent juridique et renforce la légitimité institutionnelle des acteurs autochtones."
+   },
+   "geopolitique_conflits": {
+    "pol": 1,
+    "why": "La fracture diplomatique entre blocs signataires et non-signataires augmente les tensions géopolitiques."
+   },
+   "energie_ressources_critiques": {
+    "pol": 1,
+    "why": "Le veto territorial limite l'accès aux ressources extractives, créant des contraintes d'approvisionnement."
+   }
+  }
+ },
+ "event_instances/accord_carbone_amazonie_blocs_policy_reform.md": {
+  "empreinte": "548414e8975c",
+  "decisions": {
+   "climat_environnement_global": {
+    "pol": -1,
+    "why": "Le traité renforce la protection de l'Amazonie, réduisant les risques de basculements écologiques irréversibles."
+   },
+   "gouvernance_institutions": {
+    "pol": -1,
+    "why": "Le traité crée un précédent institutionnel intégrant des acteurs non-étatiques, renforçant la légitimité et la coordination."
+   },
+   "geopolitique_conflits": {
+    "pol": 1,
+    "why": "La fracture entre signataires et non-signataires alimente une compétition réglementaire et des tensions durables."
+   },
+   "energie_ressources_critiques": {
+    "pol": 1,
+    "why": "Le veto autochtone sur des projets industriels transfrontaliers crée des contraintes d'accès aux ressources critiques."
+   }
+  }
+ },
+ "event_instances/accord_carbone_amazonie_blocs_reference.md": {
+  "empreinte": "9cdf2dcf2f05",
+  "decisions": {
+   "climat_environnement_global": {
+    "pol": -1,
+    "why": "Le traité renforce la protection de l'Amazonie, un poumon écologique crucial, malgré son caractère partiel."
+   },
+   "gouvernance_institutions": {
+    "pol": -1,
+    "why": "Le traité crée un précédent juridique et renforce la gouvernance autochtone, malgré des tensions persistantes."
+   },
+   "geopolitique_conflits": {
+    "pol": 1,
+    "why": "La fracture entre blocs signataires et non-signataires alimente une guérilla diplomatique et des tensions accrues."
+   },
+   "energie_ressources_critiques": {
+    "pol": 1,
+    "why": "Le rayon d'exclusion et les restrictions industrielles limitent l'accès aux ressources en zone amazonienne."
+   }
+  }
+ },
+ "event_instances/arrestation_chris_van_derburgh_breakdown.md": {
+  "empreinte": "95054fb4cfbe",
+  "decisions": {
+   "gouvernance_institutions": {
+    "pol": 1,
+    "why": "L'arrestation arbitraire sans cadre légal illustre l'effritement de la légitimité institutionnelle et la fragmentation du pouvoir."
+   },
+   "valeurs_culture_tempo_sociale": {
+    "pol": 1,
+    "why": "L'incident révèle une polarisation entre récupérateurs et milices, exacerbant la fragmentation des récits de survie."
+   }
+  }
+ },
+ "event_instances/arrestation_chris_van_derburgh_eco_communalism.md": {
+  "empreinte": "6f6a02532709",
+  "decisions": {
+   "valeurs_culture_tempo_sociale": {
+    "pol": 1,
+    "why": "Le débat polarise la communauté sur la frontière entre mémoire personnelle et sobriété partagée, fragmentant temporairement les valeurs."
+   },
+   "gouvernance_institutions": {
+    "pol": -1,
+    "why": "La résolution collective renforce la légitimité des assemblées locales et leur capacité à trancher des conflits par délibération."
+   }
+  }
+ },
+ "event_instances/arrestation_chris_van_derburgh_fortress_world.md": {
+  "empreinte": "184ec634dea7",
+  "decisions": {
+   "valeurs_culture_tempo_sociale": {
+    "pol": 1,
+    "why": "L'affaire polarise la société entre conformistes et partisans de la mémoire pré-certification, fragmentant les récits communs."
+   },
+   "gouvernance_institutions": {
+    "pol": 1,
+    "why": "Le maintien de la poursuite malgré les pressions révèle des tensions internes et une rigidité institutionnelle accrue."
+   }
+  }
+ },
+ "event_instances/arrestation_chris_van_derburgh_new_sustainability.md": {
+  "empreinte": "e88b3f4d6621",
+  "decisions": {
+   "gouvernance_institutions": {
+    "pol": 1,
+    "why": "Le débat public et la révision législative révèlent des tensions sur la légitimité du Protocole, fragilisant temporairement la coordination institutionnelle."
+   },
+   "valeurs_culture_tempo_sociale": {
+    "pol": -1,
+    "why": "L'acquittement et la réforme créent un récit commun autour de la préservation du patrimoine, réduisant la polarisation sur ce sujet."
+   }
+  }
+ },
+ "event_instances/arrestation_chris_van_derburgh_policy_reform.md": {
+  "empreinte": "daecb0b68bb4",
+  "decisions": {
+   "gouvernance_institutions": {
+    "pol": -1,
+    "why": "La jurisprudence clarifie et stabilise le cadre réglementaire, renforçant la légitimité institutionnelle."
+   },
+   "technologie_information": {
+    "pol": -1,
+    "why": "La distinction juridique réduit les tensions sur les réseaux en clarifiant les règles d'usage des technologies anciennes."
+   }
+  }
+ },
+ "event_instances/arrestation_chris_van_derburgh_reference.md": {
+  "empreinte": "a9c14b19612f",
+  "decisions": {
+   "valeurs_culture_tempo_sociale": {
+    "pol": 1,
+    "why": "L'affaire symbolise et alimente les tensions entre réglementation et libertés individuelles, renforçant la polarisation."
+   },
+   "gouvernance_institutions": {
+    "pol": 1,
+    "why": "L'absence de réforme malgré la médiatisation souligne les limites de la légitimité institutionnelle face aux enjeux technologiques."
+   }
+  }
+ },
+ "event_instances/communes_rust_belt_zones_libres_breakdown.md": {
+  "empreinte": "62e201e12e64",
+  "decisions": {
+   "geopolitique_conflits": {
+    "pol": 1,
+    "why": "La proclamation de zones sécessionnistes sans réponse coercitive immédiate mais avec encerclement milicien aggrave les tensions latentes et fragilise l'ordre géopolitique."
+   },
+   "valeurs_culture_tempo_sociale": {
+    "pol": 1,
+    "why": "L'émergence d'un modèle alternatif ambigu et son essaimage accentuent la fragmentation des récits collectifs et la polarisation sociale."
+   },
+   "gouvernance_institutions": {
+    "pol": 1,
+    "why": "L'absence de réponse coordonnée et la confirmation de la fragmentation institutionnelle accélèrent l'effondrement de la légitimité étatique."
+   },
+   "organisation_territoires": {
+    "pol": 1,
+    "why": "La création de zones autonomes dans des territoires abandonnés et leur dépendance aux cartels logistiques fragmentent davantage l'espace humain."
+   }
+  }
+ },
+ "event_instances/communes_rust_belt_zones_libres_eco_communalism.md": {
+  "empreinte": "631bafa81172",
+  "decisions": {
+   "geopolitique_conflits": {
+    "pol": 1,
+    "why": "L'événement défie l'ordre territorial établi et expose les communes à des pressions extérieures (États résiduels, Consortiums), augmentant les tensions géopolitiques."
+   },
+   "valeurs_culture_tempo_sociale": {
+    "pol": -1,
+    "why": "La Proclamation renforce des récits alternatifs d'autogouvernance et de résilience, créant une cohésion locale et une polarisation moins extrême."
+   },
+   "gouvernance_institutions": {
+    "pol": 1,
+    "why": "L'émergence de zones hors-algorithme affaiblit la légitimité des institutions centrales et fragmente davantage la coordination étatique."
+   },
+   "organisation_territoires": {
+    "pol": -1,
+    "why": "Les friches deviennent des laboratoires de résilience territoriale, réduisant la fragmentation et rééquilibrant les espaces humains."
+   }
+  }
+ },
+ "event_instances/communes_rust_belt_zones_libres_fortress_world.md": {
+  "empreinte": "206aa73bddd7",
+  "decisions": {
+   "geopolitique_conflits": {
+    "pol": 1,
+    "why": "L'événement intensifie les tensions internes et la répression étatique, alimentant un conflit latent dans le Bloc Atlantique."
+   },
+   "valeurs_culture_tempo_sociale": {
+    "pol": 1,
+    "why": "La révolte et sa répression exacerbent la polarisation et fragmentent les récits dominants, durcissant les clivages culturels."
+   },
+   "gouvernance_institutions": {
+    "pol": 1,
+    "why": "L'échec des communes et le durcissement sécuritaire affaiblissent la légitimité des institutions et leur capacité à coordonner."
+   },
+   "organisation_territoires": {
+    "pol": 1,
+    "why": "La fragmentation entre zones autonomes et territoires contrôlés par l'État aggrave la désintégration des espaces humains."
+   }
+  }
+ },
+ "event_instances/conflit_indo_arabe_2038_breakdown.md": {
+  "empreinte": "f9eb20b031a6",
+  "decisions": {
+   "geopolitique_conflits": {
+    "pol": 1,
+    "why": "Le conflit régional et la fragmentation des acteurs étatiques aggravent les tensions internationales."
+   },
+   "demographie_mobilite_humaine": {
+    "pol": 1,
+    "why": "Les blocus et l'instabilité chronique provoquent des déplacements forcés de populations."
+   },
+   "energie_ressources_critiques": {
+    "pol": 1,
+    "why": "La militarisation des détroits et la rupture des chaînes d'approvisionnement exacerbent les pénuries."
+   },
+   "organisation_territoires": {
+    "pol": 1,
+    "why": "La régionalisation forcée et le contrôle par des acteurs non étatiques fragmentent les espaces humains."
+   }
+  }
+ },
+ "event_instances/conflit_indo_arabe_2038_policy_reform.md": {
+  "empreinte": "7b1acc0a9475",
+  "decisions": {
+   "geopolitique_conflits": {
+    "pol": 1,
+    "why": "Le conflit renforce la fragmentation des alliances et la militarisation, aggravant les tensions géopolitiques."
+   },
+   "demographie_mobilite_humaine": {
+    "pol": 1,
+    "why": "Les déplacements de populations (migrants, communautés côtières) augmentent la mobilité forcée et les pressions migratoires."
+   },
+   "energie_ressources_critiques": {
+    "pol": 1,
+    "why": "Les différends sur les ressources hydriques et énergétiques et les frappes sur les infrastructures exacerbent les contraintes d'accès."
+   },
+   "gouvernance_institutions": {
+    "pol": -1,
+    "why": "L'ARDS et l'AIER gagnent en légitimité, renforçant temporairement la coordination institutionnelle malgré la crise."
+   }
+  }
+ },
+ "event_instances/conflit_indo_arabe_2038_reference.md": {
+  "empreinte": "684947f0e63b",
+  "decisions": {
+   "geopolitique_conflits": {
+    "pol": 1,
+    "why": "Le conflit naval et cyber intensifie les tensions régionales et fragilise l'ordre international."
+   },
+   "demographie_mobilite_humaine": {
+    "pol": 1,
+    "why": "Les déplacements forcés depuis les zones côtières du golfe augmentent la mobilité contrainte."
+   },
+   "energie_ressources_critiques": {
+    "pol": 1,
+    "why": "L'interception de pétroliers et méthaniers aggrave la pénurie et les tensions pour l'accès à l'énergie."
+   }
+  }
+ },
+ "event_instances/conflit_israel_iran_2026_breakdown.md": {
+  "empreinte": "34232d204a2f",
+  "decisions": {
+   "geopolitique_conflits": {
+    "pol": 1,
+    "why": "L'effondrement des mécanismes de régulation et l'absence d'arbitre international exacerbent les conflits."
+   },
+   "energie_ressources_critiques": {
+    "pol": 1,
+    "why": "La destruction des infrastructures pétrolières aggrave la pénurie et les tensions pour les ressources."
+   },
+   "gouvernance_institutions": {
+    "pol": 1,
+    "why": "L'absence de Conseil de sécurité fonctionnel et la fragmentation des États affaiblissent la coordination internationale."
+   },
+   "demographie_mobilite_humaine": {
+    "pol": 1,
+    "why": "Les vagues de réfugiés et déplacements forcés saturent les corridors migratoires et créent des crises humanitaires."
+   }
+  }
+ },
+ "event_instances/conflit_israel_iran_2026_eco_communalism.md": {
+  "empreinte": "22a0bd99d1d7",
+  "decisions": {
+   "geopolitique_conflits": {
+    "pol": 1,
+    "why": "Frappes militaires et ripostes aggravent les tensions régionales et internationales."
+   },
+   "energie_ressources_critiques": {
+    "pol": 1,
+    "why": "Rupture des approvisionnements fossiles du Golfe plonge dans une pénurie systémique à court terme."
+   },
+   "gouvernance_institutions": {
+    "pol": 1,
+    "why": "Assemblées d'urgence révèlent une coordination locale sous pression, sans cadre global stable."
+   },
+   "demographie_mobilite_humaine": {
+    "pol": 1,
+    "why": "Flux migratoires inédits et déplacements forcés massifs recomposent durablement les territoires."
+   }
+  }
+ },
+ "event_instances/conflit_israel_iran_2026_fortress_world.md": {
+  "empreinte": "9d8281296201",
+  "decisions": {
+   "geopolitique_conflits": {
+    "pol": 1,
+    "why": "Le conflit armé et la fragmentation de l'ordre régional aggravent les tensions internationales."
+   },
+   "energie_ressources_critiques": {
+    "pol": 1,
+    "why": "La destruction des infrastructures et le blocage des flux pétroliers exacerbent la pénurie et les rivalités."
+   },
+   "gouvernance_institutions": {
+    "pol": 1,
+    "why": "L'effondrement des mécanismes d'arbitrage et la balkanisation affaiblissent la coordination globale."
+   },
+   "demographie_mobilite_humaine": {
+    "pol": 1,
+    "why": "Les déplacements forcés massifs de réfugiés amplifient la crise migratoire."
+   }
+  }
+ },
+ "event_instances/conflit_israel_iran_2026_new_sustainability.md": {
+  "empreinte": "33a9ffd88eb8",
+  "decisions": {
+   "geopolitique_conflits": {
+    "pol": 1,
+    "why": "Un conflit armé avec des milliers de victimes et un risque d'embrasement régional augmente les tensions géopolitiques."
+   },
+   "energie_ressources_critiques": {
+    "pol": 1,
+    "why": "La crise fait bondir les prix du pétrole de 60 %, signalant une pression accrue sur les ressources énergétiques critiques."
+   },
+   "gouvernance_institutions": {
+    "pol": -1,
+    "why": "La médiation planétaire et l'évitement de justesse d'une catastrophe renforcent la coordination et la légitimité des institutions."
+   },
+   "demographie_mobilite_humaine": {
+    "pol": 1,
+    "why": "Un conflit de onze semaines avec des victimes et des déplacements locaux augmente la mobilité forcée."
+   }
+  }
+ },
+ "event_instances/conflit_israel_iran_2026_policy_reform.md": {
+  "empreinte": "fe4e104b0c03",
+  "decisions": {
+   "geopolitique_conflits": {
+    "pol": -1,
+    "why": "Le protocole évite une guerre majeure et contient la crise, réduisant les tensions régionales."
+   },
+   "energie_ressources_critiques": {
+    "pol": 1,
+    "why": "La disruption temporaire des flux pétroliers et l'incertitude énergétique augmentent la pression sur les ressources critiques."
+   },
+   "gouvernance_institutions": {
+    "pol": -1,
+    "why": "La médiation réussie renforce la légitimité et l'autorité des institutions de gouvernance mondiale."
+   },
+   "demographie_mobilite_humaine": {
+    "pol": 1,
+    "why": "La crise contenue mais récente peut provoquer des déplacements localisés et une mobilité accrue sous surveillance."
+   }
+  }
+ },
+ "event_instances/conflit_israel_iran_2026_reference.md": {
+  "empreinte": "6f38fe386f5e",
+  "decisions": {
+   "geopolitique_conflits": {
+    "pol": 1,
+    "why": "L'escalade militaire directe entre Israël et l'Iran intensifie les tensions régionales et fragilise l'ordre international."
+   },
+   "energie_ressources_critiques": {
+    "pol": 1,
+    "why": "La perturbation des flux énergétiques et la militarisation des corridors augmentent les risques de pénurie et de conflits pour les ressources."
+   },
+   "gouvernance_institutions": {
+    "pol": 1,
+    "why": "L'incapacité des institutions multilatérales à prévenir le conflit affaiblit leur crédibilité et renforce les dynamiques de fragmentation."
+   },
+   "demographie_mobilite_humaine": {
+    "pol": 1,
+    "why": "Bien que contenu, le conflit crée un climat d'insécurité propice à des déplacements forcés localisés ou à des restrictions de mobilité."
+   }
+  }
+ },
+ "event_instances/crise_gouvernance_amazonie_breakdown.md": {
+  "empreinte": "5ea569952494",
+  "decisions": {
+   "climat_environnement_global": {
+    "pol": 1,
+    "why": "La déforestation accélérée et les seuils bioclimatiques de non-retour aggravent l'emballement climatique."
+   },
+   "geopolitique_conflits": {
+    "pol": 1,
+    "why": "Le morcellement en zones de contrôle disputées et l'absence d'autorité centrale intensifient les conflits régionaux."
+   },
+   "gouvernance_institutions": {
+    "pol": 1,
+    "why": "L'effondrement de la gouvernance environnementale et l'incapacité des institutions à agir renforcent la fragmentation institutionnelle."
+   },
+   "organisation_territoires": {
+    "pol": 1,
+    "why": "La fragmentation en zones contrôlées par des milices, seigneurs de guerre et communautés isolées désintègre l'organisation territoriale."
+   }
+  }
+ },
+ "event_instances/crise_gouvernance_amazonie_eco_communalism.md": {
+  "empreinte": "d17d37f466b0",
+  "decisions": {
+   "climat_environnement_global": {
+    "pol": 1,
+    "why": "L'urgence écologique déclarée et les abattages clandestins aggravent la dégradation environnementale et les risques de basculements irréversibles."
+   },
+   "geopolitique_conflits": {
+    "pol": 1,
+    "why": "L'affrontement entre milices corporatives et Brigades de Restauration Écologique intensifie les tensions et les risques de conflits armés."
+   },
+   "gouvernance_institutions": {
+    "pol": 1,
+    "why": "La fragmentation des communs et l'émergence de zones grises affaiblissent la légitimité et la coordination institutionnelle."
+   },
+   "organisation_territoires": {
+    "pol": 1,
+    "why": "Les corridors d'extraction et les fractures territoriales menacent l'équilibre et la résilience des espaces humains."
+   }
+  }
+ },
+ "event_instances/crise_gouvernance_amazonie_fortress_world.md": {
+  "empreinte": "d9bb947f6dee",
+  "decisions": {
+   "climat_environnement_global": {
+    "pol": 1,
+    "why": "La dégradation irréversible du biome amazonien accélère l'emballement climatique et les basculements écologiques."
+   },
+   "geopolitique_conflits": {
+    "pol": 1,
+    "why": "La militarisation des ressources et la compétition inter-blocs intensifient les tensions géopolitiques et les risques de conflits."
+   },
+   "gouvernance_institutions": {
+    "pol": 1,
+    "why": "L'échec de la coordination internationale et la fragmentation du contrôle territorial affaiblissent la légitimité institutionnelle."
+   },
+   "organisation_territoires": {
+    "pol": 1,
+    "why": "La partition informelle et la radicalisation des résistances fragmentent les espaces humains et territoriaux."
+   }
+  }
+ },
+ "event_instances/crise_gouvernance_amazonie_new_sustainability.md": {
+  "empreinte": "3ebd7ac1de8c",
+  "decisions": {
+   "climat_environnement_global": {
+    "pol": -1,
+    "why": "La reconnaissance du Consortium Amazônia Viva et la restriction des opérateurs extractifs réduisent les pressions sur les écosystèmes."
+   },
+   "geopolitique_conflits": {
+    "pol": 1,
+    "why": "La crise expose des tensions entre acteurs étatiques et non-étatiques, augmentant les risques de conflits."
+   },
+   "gouvernance_institutions": {
+    "pol": -1,
+    "why": "La codification du droit de souveraineté écologique renforce la légitimité et l'adaptabilité des institutions."
+   },
+   "organisation_territoires": {
+    "pol": -1,
+    "why": "La révision des licences et la surveillance des zones tampons favorisent une meilleure résilience territoriale."
+   }
+  }
+ },
+ "event_instances/crise_gouvernance_amazonie_policy_reform.md": {
+  "empreinte": "1f3d97e1a8dc",
+  "decisions": {
+   "climat_environnement_global": {
+    "pol": 1,
+    "why": "La déforestation massive et irréversible aggrave l'emballement climatique et les basculements écologiques."
+   },
+   "geopolitique_conflits": {
+    "pol": 1,
+    "why": "Les tensions entre milices corporatives, autochtones et États-nations exacerbent les risques de conflits et fragilisent l'ordre international."
+   },
+   "gouvernance_institutions": {
+    "pol": 1,
+    "why": "Le protocole précipité crée un précédent juridique fragile qui érode la légitimité des États-nations et affaiblit la coordination globale."
+   },
+   "organisation_territoires": {
+    "pol": 1,
+    "why": "La fragmentation des territoires entre milices, autochtones et zones protégées déséquilibre les espaces humains et accroît leur vulnérabilité."
+   }
+  }
+ },
+ "event_instances/crise_gouvernance_amazonie_reference.md": {
+  "empreinte": "bcc28bd30f64",
+  "decisions": {
+   "climat_environnement_global": {
+    "pol": 1,
+    "why": "La déforestation illégale et la guerre d'usure écologique aggravent les basculements climatiques et la dégradation des écosystèmes."
+   },
+   "geopolitique_conflits": {
+    "pol": 1,
+    "why": "L'émergence d'un acteur non-étatique autonome et les conflits de basse intensité normalisent une instabilité géopolitique durable."
+   },
+   "gouvernance_institutions": {
+    "pol": 1,
+    "why": "Le précédent institutionnel ambigu affaiblit la légitimité des États et fragilise la coordination internationale."
+   },
+   "organisation_territoires": {
+    "pol": 1,
+    "why": "Les corridors d'exclusion économique et les conflits territoriaux fragmentent les espaces humains et urbains."
+   }
+  }
+ },
+ "event_instances/crue_exceptionnelle_congo_eco_communalism.md": {
+  "empreinte": "66199c4c2916",
+  "decisions": {
+   "organisation_territoires": {
+    "pol": 1,
+    "why": "La crue fragmente les espaces humains et révèle des vulnérabilités territoriales malgré les efforts de résilience."
+   },
+   "climat_environnement_global": {
+    "pol": 1,
+    "why": "L'événement extrême aggrave la pression climatique et écologique, signalant une tendance à l'emballement."
+   },
+   "demographie_mobilite_humaine": {
+    "pol": 1,
+    "why": "Les inondations provoquent des déplacements forcés et perturbent la stabilité des populations locales."
+   },
+   "systeme_economique_redistribution": {
+    "pol": 1,
+    "why": "La crise accentue les tensions économiques et redistributives, notamment entre communs et enclaves extractivistes."
+   }
+  }
+ },
+ "event_instances/effondrement_reseau_mondial_communication_breakdown.md": {
+  "empreinte": "2044e1c5ef77",
+  "decisions": {
+   "technologie_information": {
+    "pol": 1,
+    "why": "L'attentat provoque une fragmentation irréversible des réseaux et une perte de confiance dans les infrastructures globales."
+   },
+   "gouvernance_institutions": {
+    "pol": 1,
+    "why": "L'effondrement des nœuds révèle des failles institutionnelles et affaiblit durablement la coordination globale."
+   },
+   "systeme_economique_redistribution": {
+    "pol": 1,
+    "why": "La crise systémique et la perte de confiance monétaire aggravent les tensions financières."
+   }
+  }
+ },
+ "event_instances/effondrement_reseau_mondial_communication_eco_communalism.md": {
+  "empreinte": "bd37c1ae6153",
+  "decisions": {
+   "technologie_information": {
+    "pol": -1,
+    "why": "Le déploiement de réseaux mesh locaux réduit la fragmentation et la dépendance aux plateformes centralisées, améliorant la sobriété et la fiabilité."
+   },
+   "organisation_territoires": {
+    "pol": -1,
+    "why": "La résilience accrue des communautés locales favorise des territoires plus équilibrés et distribués, limitant l'effondrement des mégapoles."
+   },
+   "valeurs_culture_tempo_sociale": {
+    "pol": -1,
+    "why": "L'autonomie locale et la sobriété numérique renforcent des récits communs cohérents et apaisent le tempo social."
+   }
+  }
+ },
+ "event_instances/effondrement_reseau_mondial_communication_fortress_world.md": {
+  "empreinte": "619136ba550d",
+  "decisions": {
+   "technologie_information": {
+    "pol": 1,
+    "why": "La fragmentation des réseaux et la fin de l'internet unifié aggravent la désinformation et la rupture des IA interconnectées."
+   },
+   "gouvernance_institutions": {
+    "pol": 1,
+    "why": "La nationalisation des infrastructures et la fin de la coordination globale affaiblissent la légitimité et la robustesse des institutions."
+   },
+   "geopolitique_conflits": {
+    "pol": 1,
+    "why": "L'attentat et les accusations mutuelles entre blocs intensifient les tensions et menacent l'ordre international."
+   }
+  }
+ },
+ "event_instances/effondrement_reseau_mondial_communication_new_sustainability.md": {
+  "empreinte": "81f7adaa0c09",
+  "decisions": {
+   "technologie_information": {
+    "pol": -1,
+    "why": "La reconstruction vers une architecture distribuée et résiliente réduit la fragmentation et les risques de rupture."
+   },
+   "gouvernance_institutions": {
+    "pol": -1,
+    "why": "Les Accords de Reconstruction Ouverte renforcent la coordination globale et la légitimité institutionnelle."
+   },
+   "systeme_economique_redistribution": {
+    "pol": -1,
+    "why": "La fin du modèle centralisé privé et la création d'une coopérative mondiale stabilisent les tensions financières."
+   }
+  }
+ },
+ "event_instances/effondrement_reseau_mondial_communication_policy_reform.md": {
+  "empreinte": "aaa7f463cb54",
+  "decisions": {
+   "technologie_information": {
+    "pol": -1,
+    "why": "Le traité et la commission renforcent la résilience et la standardisation des réseaux, réduisant fragmentation et risques."
+   },
+   "gouvernance_institutions": {
+    "pol": -1,
+    "why": "La création d'un cadre multilatéral et d'une commission légitime améliore la coordination et la légitimité institutionnelle."
+   },
+   "geopolitique_conflits": {
+    "pol": -1,
+    "why": "La réponse coordonnée et les mécanismes de régulation réduisent les tensions et les risques de conflits liés aux cyberattaques."
+   }
+  }
+ },
+ "event_instances/effondrement_reseau_mondial_communication_reference.md": {
+  "empreinte": "7c4c51d6bf0a",
+  "decisions": {
+   "technologie_information": {
+    "pol": 1,
+    "why": "L'architecture numérique reste fragile et partiellement reconstruite, avec des risques accrus de fragmentation et de désinformation."
+   },
+   "gouvernance_institutions": {
+    "pol": 1,
+    "why": "Les réformes sont partielles et les tensions durables entre États affaiblissent la coordination et la légitimité institutionnelle."
+   },
+   "geopolitique_conflits": {
+    "pol": 1,
+    "why": "La montée des souverainismes numériques et les tensions non résolues augmentent les risques de conflits géopolitiques."
+   }
+  }
+ },
+ "event_instances/election_parti_commun_americain_breakdown.md": {
+  "empreinte": "510e56595fe0",
+  "decisions": {
+   "gouvernance_institutions": {
+    "pol": 1,
+    "why": "La victoire du Parti Commun dans un vide institutionnel accélère la fragmentation et l'effondrement de la légitimité nationale."
+   },
+   "geopolitique_conflits": {
+    "pol": 1,
+    "why": "Le refus de reconnaissance du résultat par d'autres territoires exacerbe les tensions et fragmente l'ordre international."
+   },
+   "organisation_territoires": {
+    "pol": 1,
+    "why": "L'émergence de trois entités territoriales distinctes aggrave la fragmentation et l'effondrement des espaces humains."
+   }
+  }
+ },
+ "event_instances/election_parti_commun_americain_eco_communalism.md": {
+  "empreinte": "33c57d44f38c",
+  "decisions": {
+   "gouvernance_institutions": {
+    "pol": 1,
+    "why": "Abandon des institutions nationales au profit d'une fragmentation locale, réduisant la coordination globale."
+   },
+   "valeurs_culture_tempo_sociale": {
+    "pol": -1,
+    "why": "Relocalisation des récits politiques et intégration de principes communs apaisent la polarisation."
+   },
+   "organisation_territoires": {
+    "pol": -1,
+    "why": "Les bioterritoires équilibrés et résilients remplacent les mégapoles fragmentées."
+   }
+  }
+ },
+ "event_instances/election_parti_commun_americain_fortress_world.md": {
+  "empreinte": "7444f37ca7c1",
+  "decisions": {
+   "gouvernance_institutions": {
+    "pol": 1,
+    "why": "La répression d'un mouvement politique majeur et la suppression d'une opposition viable affaiblissent la légitimité institutionnelle et la coordination démocratique."
+   },
+   "valeurs_culture_tempo_sociale": {
+    "pol": 1,
+    "why": "La liquidation du Mouvement Commun radicalise les clivages et fragmente les récits communs, accentuant la polarisation sociale."
+   },
+   "geopolitique_conflits": {
+    "pol": 1,
+    "why": "L'escalade répressive interne et la clandestinité des résistances créent un terreau de tensions durables, sans résolution pacifique des divergences."
+   }
+  }
+ },
+ "event_instances/election_parti_commun_americain_new_sustainability.md": {
+  "empreinte": "66ad6c50f785",
+  "decisions": {
+   "gouvernance_institutions": {
+    "pol": -1,
+    "why": "Renforcement de la position américaine et convergence institutionnelle améliorent la coordination globale."
+   },
+   "systeme_economique_redistribution": {
+    "pol": -1,
+    "why": "Réformes redistributives et stabilisation économique réduisent les tensions financières."
+   },
+   "valeurs_culture_tempo_sociale": {
+    "pol": 1,
+    "why": "Transition politique radicale et polarisation idéologique fragmentent les récits communs."
+   }
+  }
+ },
+ "event_instances/election_parti_commun_americain_policy_reform.md": {
+  "empreinte": "e4f91a821d86",
+  "decisions": {
+   "systeme_economique_redistribution": {
+    "pol": -1,
+    "why": "Réformes fiscales redistributives stabilisent le système économique en réduisant les tensions financières."
+   },
+   "gouvernance_institutions": {
+    "pol": 1,
+    "why": "Tensions avec les États conservateurs augmentent la pression sur la cohésion institutionnelle."
+   },
+   "valeurs_culture_tempo_sociale": {
+    "pol": 1,
+    "why": "Polarisation accrue due aux réformes et aux résistances conservatrices."
+   }
+  }
+ },
+ "event_instances/election_parti_commun_americain_reference.md": {
+  "empreinte": "ac389af89da9",
+  "decisions": {
+   "gouvernance_institutions": {
+    "pol": 1,
+    "why": "La crise constitutionnelle et la contestation des résultats affaiblissent la légitimité institutionnelle et la coordination."
+   },
+   "geopolitique_conflits": {
+    "pol": 1,
+    "why": "L'instabilité politique aux États-Unis et la polarisation exacerbent les tensions géopolitiques sans déclencher de conflit direct."
+   },
+   "valeurs_culture_tempo_sociale": {
+    "pol": 1,
+    "why": "La forte polarisation et la fragmentation des récits politiques accentuent la division sociale et culturelle."
+   }
+  }
+ },
+ "event_instances/emeutes_algorithme_sao_paulo_breakdown.md": {
+  "empreinte": "a1ff83105e97",
+  "decisions": {
+   "gouvernance_institutions": {
+    "pol": 1,
+    "why": "L'effondrement de la RPDA et la fragmentation institutionnelle aggravent l'absence de coordination et de légitimité."
+   },
+   "technologie_information": {
+    "pol": 1,
+    "why": "La rupture des réseaux centralisés et la prolifération de désinformation fragmentent les systèmes d'information."
+   },
+   "organisation_territoires": {
+    "pol": 1,
+    "why": "Les mégapoles se disloquent et les territoires deviennent plus fragmentés et instables."
+   }
+  }
+ },
+ "event_instances/emeutes_algorithme_sao_paulo_fortress_world.md": {
+  "empreinte": "e082f52d20d2",
+  "decisions": {
+   "gouvernance_institutions": {
+    "pol": 1,
+    "why": "L'insurrection révèle une crise de légitimité et durcit la répression, fragmentant davantage la coordination institutionnelle."
+   },
+   "technologie_information": {
+    "pol": 1,
+    "why": "La contre-cartographie expose les failles des réseaux officiels, mais le verrouillage propriétaire aggrave la fragmentation et la désinformation."
+   },
+   "organisation_territoires": {
+    "pol": 1,
+    "why": "L'insurrection accentue les fractures spatiales entre zones contrôlées et rebelles, fragilisant la résilience des mégapoles."
+   }
+  }
+ },
+ "event_instances/emeutes_algorithme_sao_paulo_policy_reform.md": {
+  "empreinte": "fa9b80904b9d",
+  "decisions": {
+   "gouvernance_institutions": {
+    "pol": 1,
+    "why": "L'insurrection révèle une crise de légitimité des institutions et force une réforme sous pression, augmentant temporairement la fragmentation."
+   },
+   "technologie_information": {
+    "pol": 1,
+    "why": "La contre-cartographie et la désinformation massive fragmentent les réseaux et exposent des failles systémiques critiques."
+   },
+   "organisation_territoires": {
+    "pol": -1,
+    "why": "La mobilisation citoyenne renforce la résilience territoriale et la redistribution des ressources, réduisant la fragmentation."
+   }
+  }
+ },
+ "event_instances/emeutes_algorithme_sao_paulo_reference.md": {
+  "empreinte": "a1d5d43a4811",
+  "decisions": {
+   "gouvernance_institutions": {
+    "pol": -1,
+    "why": "L'audit partiel et les chartes de transparence renforcent temporairement la légitimité institutionnelle malgré la fragilité du système."
+   },
+   "technologie_information": {
+    "pol": 1,
+    "why": "La révélation des biais algorithmiques et la fragmentation des réseaux accentuent la défiance et la désorganisation technologique."
+   },
+   "organisation_territoires": {
+    "pol": 1,
+    "why": "La révolte et la pression sur les mégapoles exacerbent les déséquilibres territoriaux et la fragmentation spatiale."
+   }
+  }
+ },
+ "event_instances/encheres_terres_rares_groenland_breakdown.md": {
+  "empreinte": "bbcc03321ef4",
+  "decisions": {
+   "energie_ressources_critiques": {
+    "pol": 1,
+    "why": "L'accès chaotique et conflictuel aux terres rares aggrave la pénurie et les tensions pour les ressources critiques."
+   },
+   "geopolitique_conflits": {
+    "pol": 1,
+    "why": "Les enchères fractales et les affrontements proxy transforment l'Arctique en zone de conflits généralisés."
+   },
+   "gouvernance_institutions": {
+    "pol": 1,
+    "why": "L'effondrement de la régulation souveraine et la fragmentation institutionnelle affaiblissent la gouvernance globale."
+   },
+   "organisation_territoires": {
+    "pol": 1,
+    "why": "Les pillages et la militarisation des gisements fragmentent et déstabilisent les espaces arctiques."
+   }
+  }
+ },
+ "event_instances/encheres_terres_rares_groenland_eco_communalism.md": {
+  "empreinte": "da0abcb69b85",
+  "decisions": {
+   "energie_ressources_critiques": {
+    "pol": 1,
+    "why": "L'enchère et l'exploitation accrue des terres rares augmentent les tensions et la compétition pour des ressources critiques, aggravant les risques de pénurie."
+   },
+   "geopolitique_conflits": {
+    "pol": 1,
+    "why": "La rivalité entre consortiums néo-industriels et communs arctiques, ainsi que les procédures d'arbitrage, exacerbent les tensions géopolitiques."
+   },
+   "gouvernance_institutions": {
+    "pol": 1,
+    "why": "La contestation interne du Fonds des Terres Émergées affaiblit la légitimité institutionnelle et la coordination."
+   },
+   "organisation_territoires": {
+    "pol": -1,
+    "why": "L'adoption de chartes d'économie circulaire et la réduction de la dépendance aux extractions favorisent une meilleure résilience territoriale."
+   }
+  }
+ },
+ "event_instances/encheres_terres_rares_groenland_fortress_world.md": {
+  "empreinte": "60088673eecc",
+  "decisions": {
+   "energie_ressources_critiques": {
+    "pol": 1,
+    "why": "L'accès aux ressources critiques devient conflictuel et militarisé, aggravant les tensions et les risques de pénurie."
+   },
+   "geopolitique_conflits": {
+    "pol": 1,
+    "why": "La guerre des offres et la militarisation des gisements alimentent les conflits entre blocs, sapant l'ordre international."
+   },
+   "gouvernance_institutions": {
+    "pol": 1,
+    "why": "La CARS est contournée et discréditée, confirmant l'effondrement de la légitimité des institutions multilatérales."
+   },
+   "organisation_territoires": {
+    "pol": 1,
+    "why": "Les enclaves militarisées fragmentent l'espace arctique et créent des points de friction permanents, déséquilibrant les territoires."
+   }
+  }
+ },
+ "event_instances/encheres_terres_rares_groenland_new_sustainability.md": {
+  "empreinte": "60cd434ab83e",
+  "decisions": {
+   "energie_ressources_critiques": {
+    "pol": -1,
+    "why": "L'encadrement strict des concessions réduit les risques de pénurie chaotique et de conflits pour les ressources."
+   },
+   "gouvernance_institutions": {
+    "pol": -1,
+    "why": "Le précédent normatif renforce la légitimité et la coordination des institutions internationales."
+   },
+   "geopolitique_conflits": {
+    "pol": 1,
+    "why": "Les tensions persistantes entre blocs et factions souverainistes maintiennent une pression conflictuelle."
+   },
+   "organisation_territoires": {
+    "pol": -1,
+    "why": "Le modèle Kalaallit favorise une gestion résiliente et équilibrée des territoires arctiques."
+   }
+  }
+ },
+ "event_instances/encheres_terres_rares_groenland_policy_reform.md": {
+  "empreinte": "a9a5c160288f",
+  "decisions": {
+   "energie_ressources_critiques": {
+    "pol": -1,
+    "why": "L'événement structure l'accès aux ressources critiques via une régulation multilatérale, réduisant les risques de pénurie systémique."
+   },
+   "gouvernance_institutions": {
+    "pol": -1,
+    "why": "Le protocole renforce la légitimité et la coordination des institutions, consolidant un modèle technocratique efficace."
+   },
+   "geopolitique_conflits": {
+    "pol": -1,
+    "why": "La régulation apaisante des enchères réduit les tensions géopolitiques liées aux ressources, malgré l'opposition minoritaire."
+   },
+   "organisation_territoires": {
+    "pol": -1,
+    "why": "Le modèle du KNSF-AGRC promeut une gestion territoriale résiliente et équilibrée, inspirant d'autres régions."
+   }
+  }
+ },
+ "event_instances/encheres_terres_rares_groenland_reference.md": {
+  "empreinte": "6ebf62dc5bc2",
+  "decisions": {
+   "energie_ressources_critiques": {
+    "pol": 1,
+    "why": "La compétition accrue et la tension autour des terres rares aggravent les contraintes d'accès aux ressources critiques."
+   },
+   "geopolitique_conflits": {
+    "pol": 1,
+    "why": "Les tensions persistantes entre le BRE et le bloc nordique alimentent des risques de conflits géopolitiques."
+   },
+   "gouvernance_institutions": {
+    "pol": -1,
+    "why": "Le renforcement temporaire de la gouvernance multilatérale des ressources améliore la coordination institutionnelle."
+   },
+   "organisation_territoires": {
+    "pol": -1,
+    "why": "La consolidation de la légitimité du KNSF et l'émergence d'un modèle souverain renforcent la résilience territoriale."
+   }
+  }
+ },
+ "event_instances/exode_midwest_grands_lacs_breakdown.md": {
+  "empreinte": "cc7191c3fc5c",
+  "decisions": {
+   "demographie_mobilite_humaine": {
+    "pol": 1,
+    "why": "Déplacements forcés massifs et crises migratoires généralisées dans le Midwest."
+   },
+   "organisation_territoires": {
+    "pol": 1,
+    "why": "Fragmentation des espaces humains et effondrement des structures territoriales existantes."
+   },
+   "gouvernance_institutions": {
+    "pol": 1,
+    "why": "Effondrement de la légitimité institutionnelle et perte de coordination étatique."
+   },
+   "climat_environnement_global": {
+    "pol": 1,
+    "why": "Aggravation des conditions climatiques rendant le Midwest inhabitable, signalant un basculement écologique."
+   },
+   "geopolitique_conflits": {
+    "pol": 1,
+    "why": "Montée des conflits locaux et régionaux, effritement de l'ordre international."
+   },
+   "energie_ressources_critiques": {
+    "pol": 1,
+    "why": "Spéculation et pénuries sur les ressources critiques (eau, entrepôts climatisés)."
+   }
+  }
+ },
+ "event_instances/exode_midwest_grands_lacs_eco_communalism.md": {
+  "empreinte": "274799c36496",
+  "decisions": {
+   "demographie_mobilite_humaine": {
+    "pol": 1,
+    "why": "Déplacements forcés massifs depuis le Midwest vers les Grands Lacs, augmentant la pression migratoire."
+   },
+   "organisation_territoires": {
+    "pol": 1,
+    "why": "Fragmentation et tensions accrues dans les bioterritoires lacustres, malgré l'émergence de nouveaux communs."
+   },
+   "gouvernance_institutions": {
+    "pol": 1,
+    "why": "Assemblées bioterritoriales en session d'urgence permanente, légitimité institutionnelle fragilisée par les conflits."
+   },
+   "climat_environnement_global": {
+    "pol": 1,
+    "why": "L'événement est une conséquence directe de l'aggravation climatique (fonte, exode), sans signe de stabilisation."
+   },
+   "energie_ressources_critiques": {
+    "pol": 1,
+    "why": "Pression accrue sur les ressources hydriques et énergétiques des communs lacustres, créant des pénuries locales."
+   }
+  }
+ },
+ "event_instances/exode_midwest_grands_lacs_fortress_world.md": {
+  "empreinte": "631ddcbd97dd",
+  "decisions": {
+   "demographie_mobilite_humaine": {
+    "pol": 1,
+    "why": "L'exode massif et forcé des populations vers les Grands Lacs augmente la mobilité contrainte et les crises migratoires."
+   },
+   "organisation_territoires": {
+    "pol": 1,
+    "why": "La fragmentation des territoires et l'effondrement des zones abandonnées aggravent la désorganisation spatiale."
+   },
+   "gouvernance_institutions": {
+    "pol": 1,
+    "why": "L'incapacité des institutions à gérer l'exode et la montée des entités quasi-souveraines affaiblissent la légitimité étatique."
+   },
+   "climat_environnement_global": {
+    "pol": 1,
+    "why": "Les températures extrêmes et la désertification accélèrent les basculements écologiques irréversibles."
+   }
+  }
+ },
+ "event_instances/exode_midwest_grands_lacs_new_sustainability.md": {
+  "empreinte": "21257a59a205",
+  "decisions": {
+   "demographie_mobilite_humaine": {
+    "pol": 1,
+    "why": "L'exode massif et forcé depuis le Midwest aggrave la crise migratoire."
+   },
+   "organisation_territoires": {
+    "pol": 1,
+    "why": "La surpopulation soudaine des villes des Grands Lacs et la fragmentation des espaces humains augmentent la pression territoriale."
+   },
+   "gouvernance_institutions": {
+    "pol": -1,
+    "why": "La coordination technocratique évite l'effondrement et renforce temporairement la légitimité institutionnelle."
+   },
+   "climat_environnement_global": {
+    "pol": 1,
+    "why": "L'exode et la pression sur les ressources lacustres reflètent une aggravation des conditions climatiques et environnementales."
+   }
+  }
+ },
+ "event_instances/exode_midwest_grands_lacs_policy_reform.md": {
+  "empreinte": "55ea51c2a1bc",
+  "decisions": {
+   "demographie_mobilite_humaine": {
+    "pol": 1,
+    "why": "L'exode massif et forcé de 18 millions de personnes aggrave la crise migratoire."
+   },
+   "organisation_territoires": {
+    "pol": 1,
+    "why": "La concentration brutale de populations dans les zones lacustres fragmente et déséquilibre les territoires."
+   },
+   "gouvernance_institutions": {
+    "pol": 1,
+    "why": "Les tensions et la contestation des relocalisations forcées érodent la légitimité des institutions."
+   },
+   "climat_environnement_global": {
+    "pol": 1,
+    "why": "La canicule extrême et l'abandon des terres agricoles accélèrent les pressions climatiques."
+   }
+  }
+ },
+ "event_instances/exode_midwest_grands_lacs_reference.md": {
+  "empreinte": "d07ce100be45",
+  "decisions": {
+   "demographie_mobilite_humaine": {
+    "pol": 1,
+    "why": "Déplacements forcés massifs et crise migratoire généralisée vers les Grands Lacs."
+   },
+   "organisation_territoires": {
+    "pol": 1,
+    "why": "Fragmentation des espaces humains entre zones densifiées et territoires abandonnés."
+   },
+   "gouvernance_institutions": {
+    "pol": 1,
+    "why": "Effondrement de la gouvernance fédérale et légitimation de structures sub-étatiques fragmentées."
+   },
+   "climat_environnement_global": {
+    "pol": 1,
+    "why": "L'exode aggrave indirectement la pression sur les écosystèmes lacustres et les infrastructures."
+   }
+  }
+ },
+ "event_instances/grand_forum_sahel_numerique_breakdown.md": {
+  "empreinte": "41471a6096b3",
+  "decisions": {
+   "technologie_information": {
+    "pol": 1,
+    "why": "La fragmentation des réseaux et l'incompatibilité des protocoles aggravent la désintégration technologique."
+   },
+   "gouvernance_institutions": {
+    "pol": 1,
+    "why": "La Charte disputée et les assemblées parallèles accélèrent l'effondrement de la légitimité institutionnelle."
+   },
+   "organisation_territoires": {
+    "pol": 1,
+    "why": "La balkanisation des infrastructures et des accords locaux ponctuels fragmentent davantage les espaces humains."
+   }
+  }
+ },
+ "event_instances/grand_forum_sahel_numerique_eco_communalism.md": {
+  "empreinte": "8498f161c4b8",
+  "decisions": {
+   "technologie_information": {
+    "pol": -1,
+    "why": "La Charte d'Agadez promeut des réseaux sobres, interopérables et autonomes, réduisant la fragmentation et la dépendance aux plateformes propriétaires."
+   },
+   "gouvernance_institutions": {
+    "pol": -1,
+    "why": "L'adoption d'une charte mutualisée renforce la coordination et la légitimité des communs territoriaux, sans recourir aux États fragmentés."
+   },
+   "organisation_territoires": {
+    "pol": -1,
+    "why": "Le modèle de souveraineté numérique distribuée favorise des territoires résilients et équilibrés, évitant l'effondrement des mégapoles."
+   }
+  }
+ },
+ "event_instances/grand_forum_sahel_numerique_new_sustainability.md": {
+  "empreinte": "235698ee847b",
+  "decisions": {
+   "technologie_information": {
+    "pol": -1,
+    "why": "La Charte d'Agadez promeut des réseaux sobres et résilients, réduisant la fragmentation et la dépendance aux plateformes propriétaires."
+   },
+   "gouvernance_institutions": {
+    "pol": -1,
+    "why": "L'intégration d'un troisième niveau de souveraineté numérique renforce la coordination globale et la légitimité institutionnelle."
+   },
+   "organisation_territoires": {
+    "pol": -1,
+    "why": "Le modèle distribué et résilient des infrastructures hors-grille équilibre les territoires et réduit la fragmentation."
+   }
+  }
+ },
+ "event_instances/greve_generale_corridors_eurasiens_breakdown.md": {
+  "empreinte": "2f39f07af5d4",
+  "decisions": {
+   "systemes_productifs_travail": {
+    "pol": 1,
+    "why": "La grève bloque les corridors logistiques vitaux, désorganisant les chaînes productives et réduisant le travail structuré."
+   },
+   "geopolitique_conflits": {
+    "pol": 1,
+    "why": "Les affrontements entre grévistes, milices et États-fragments exacerbent les tensions et fragmentent l'ordre international."
+   },
+   "sante_biotechnologies": {
+    "pol": 1,
+    "why": "La rupture des flux logistiques aggrave les pénuries de médicaments et de technologies médicales, augmentant les risques sanitaires."
+   },
+   "organisation_territoires": {
+    "pol": 1,
+    "why": "L'émergence de zones de non-droit et de communes autonomes fragmentent les espaces humains et déséquilibrent les territoires."
+   }
+  }
+ },
+ "event_instances/greve_generale_corridors_eurasiens_fortress_world.md": {
+  "empreinte": "7475b4ff9299",
+  "decisions": {
+   "systemes_productifs_travail": {
+    "pol": 1,
+    "why": "La grève bloque les flux critiques et désorganise les chaînes productives eurasiatiques."
+   },
+   "geopolitique_conflits": {
+    "pol": 1,
+    "why": "La grève accentue les tensions militaires et la fragmentation des corridors, aggravant les risques de conflits."
+   },
+   "sante_biotechnologies": {
+    "pol": 1,
+    "why": "Les revendications non satisfaites et l'instabilité aggravent l'accès aux soins et aux thérapies géniques."
+   },
+   "gouvernance_institutions": {
+    "pol": 1,
+    "why": "La grève affaiblit la légitimité des institutions et renforce les économies parallèles, fragmentant davantage la gouvernance."
+   }
+  }
+ },
+ "event_instances/greve_generale_corridors_eurasiens_policy_reform.md": {
+  "empreinte": "0afc32b36a24",
+  "decisions": {
+   "systemes_productifs_travail": {
+    "pol": 1,
+    "why": "La grève paralyse les chaînes logistiques critiques, aggravant la pression sur les systèmes productifs."
+   },
+   "geopolitique_conflits": {
+    "pol": 1,
+    "why": "La réquisition technocratique et la perte d'autonomie des États exacerbent les tensions géopolitiques."
+   },
+   "sante_biotechnologies": {
+    "pol": -1,
+    "why": "L'accès accru aux thérapies géniques pour les travailleurs réduit les risques sanitaires structurels."
+   },
+   "gouvernance_institutions": {
+    "pol": 1,
+    "why": "La perte d'autonomie des États et l'émergence de gouvernances hybrides fragilisent la légitimité institutionnelle."
+   }
+  }
+ },
+ "event_instances/guerre_indo_arabe_2038_fortress_world.md": {
+  "empreinte": "f7dc4b0c27b2",
+  "decisions": {
+   "geopolitique_conflits": {
+    "pol": 1,
+    "why": "La guerre de haute intensité et la fragmentation géopolitique aggravent les conflits internationaux."
+   },
+   "demographie_mobilite_humaine": {
+    "pol": 1,
+    "why": "Les déplacements forcés massifs et les crises migratoires vers l'Europe augmentent la mobilité subie."
+   },
+   "energie_ressources_critiques": {
+    "pol": 1,
+    "why": "La paralysie des échanges énergétiques et les frappes sur les infrastructures critiques exacerbent les pénuries."
+   },
+   "gouvernance_institutions": {
+    "pol": 1,
+    "why": "Le durcissement des politiques et la militarisation des frontières affaiblissent la coordination et la légitimité institutionnelle."
+   }
+  }
+ },
+ "event_instances/helios_bse_active_le_protocole_ombre_les_coupures__fortress_world.md": {
+  "empreinte": "35133ca6dc39",
+  "decisions": {
+   "energie_ressources_critiques": {
+    "pol": 1,
+    "why": "Les coupures ciblées aggravent la pénurie et l'accès inégal aux ressources énergétiques."
+   },
+   "geopolitique_conflits": {
+    "pol": 1,
+    "why": "La fragmentation du Bloc Eurasiatique et l'émergence de milices/réseaux illégaux intensifient les tensions géopolitiques."
+   },
+   "gouvernance_institutions": {
+    "pol": 1,
+    "why": "Les régimes autoritaires renforcent leur emprise répressive, affaiblissant la légitimité institutionnelle."
+   },
+   "organisation_territoires": {
+    "pol": 1,
+    "why": "Les zones tampons deviennent des territoires de non-droit, fragmentant davantage les espaces humains."
+   }
+  }
+ },
+ "event_instances/ils_ont_noye_les_archives_a_milwaukee_basse_le_reg_breakdown.md": {
+  "empreinte": "8b5a1d84b309",
+  "decisions": {
+   "technologie_information": {
+    "pol": 1,
+    "why": "La destruction des archives et la fragmentation des réseaux aggravent la désinformation et la rupture des infrastructures."
+   },
+   "geopolitique_conflits": {
+    "pol": 1,
+    "why": "L'effacement des preuves juridiques et la montée des seigneurs de guerre intensifient les tensions et les conflits territoriaux."
+   },
+   "organisation_territoires": {
+    "pol": 1,
+    "why": "La perte des repères administratifs et la mainmise des milices fragmentent davantage les espaces humains et les structures résilientes."
+   }
+  }
+ },
+ "event_instances/incident_passage_arctique_breakdown.md": {
+  "empreinte": "b7e3ae929b07",
+  "decisions": {
+   "geopolitique_conflits": {
+    "pol": 1,
+    "why": "L'incident consacre l'effondrement de la gouvernance partagée et la montée des seigneuries logistiques armées, aggravant les tensions internationales."
+   },
+   "energie_ressources_critiques": {
+    "pol": 1,
+    "why": "La saisie d'hydrocarbures et d'équipements de forage exacerbe les rivalités pour l'accès aux ressources critiques en Arctique."
+   },
+   "frontieres_du_systeme": {
+    "pol": 1,
+    "why": "La militarisation des corridors arctiques préfigure une extension des conflits vers les espaces orbitaux et logistiques."
+   },
+   "organisation_territoires": {
+    "pol": 1,
+    "why": "La fragmentation des autorités de transit et la militarisation défensive accentuent la fragmentation des espaces humains."
+   },
+   "climat_environnement_global": {
+    "pol": 1,
+    "why": "La disparition de la gouvernance arctique et l'intensification des activités extractives accélèrent les risques écologiques dans la région."
+   }
+  }
+ },
+ "event_instances/incident_passage_arctique_fortress_world.md": {
+  "empreinte": "e40c0b3c628c",
+  "decisions": {
+   "geopolitique_conflits": {
+    "pol": 1,
+    "why": "L'incident marque une confrontation armée directe et entérine la fragmentation des routes arctiques en corridors souverains militarisés."
+   },
+   "energie_ressources_critiques": {
+    "pol": 1,
+    "why": "La saisie du convoi et la militarisation des corridors arctiques exacerbent les tensions pour l'accès aux ressources polaires."
+   },
+   "frontieres_du_systeme": {
+    "pol": 1,
+    "why": "L'échec des institutions multilatérales et la logique forteresse renforcent la militarisation des espaces stratégiques, y compris orbitaux."
+   }
+  }
+ },
+ "event_instances/incident_passage_arctique_policy_reform.md": {
+  "empreinte": "ea5dd600570a",
+  "decisions": {
+   "geopolitique_conflits": {
+    "pol": 1,
+    "why": "L'incident augmente les tensions et fragilise la confiance dans les institutions, alimentant les risques de confrontations armées."
+   },
+   "frontieres_du_systeme": {
+    "pol": 1,
+    "why": "La militarisation accrue des routes arctiques et la remise en cause des frontières maritimes renforcent les dynamiques de conflictualité dans les espaces stratégiques."
+   },
+   "energie_ressources_critiques": {
+    "pol": 1,
+    "why": "La dispute pour le contrôle d'une artère stratégique des ressources exacerbe les rivalités et les pressions sur l'accès aux ressources critiques."
+   }
+  }
+ },
+ "event_instances/incident_passage_arctique_reference.md": {
+  "empreinte": "e35caf3890b3",
+  "decisions": {
+   "geopolitique_conflits": {
+    "pol": 1,
+    "why": "L'incident aggrave les tensions et cristallise une fracture de gouvernance arctique, rapprochant le système d'un effondrement de l'ordre international."
+   },
+   "frontieres_du_systeme": {
+    "pol": 1,
+    "why": "L'escalade dans l'Arctique renforce la logique de milices et de militarisation des corridors, préfigurant un espace plus chaotique et conflictuel."
+   },
+   "energie_ressources_critiques": {
+    "pol": 1,
+    "why": "La saisie du convoi APA perturbe l'accès aux ressources et exacerbe les rivalités pour le contrôle des routes énergétiques critiques."
+   }
+  }
+ },
+ "event_instances/insurrection_rust_belt_breakdown.md": {
+  "empreinte": "78c6cb5ec0e4",
+  "decisions": {
+   "geopolitique_conflits": {
+    "pol": 1,
+    "why": "L'émergence d'enclaves autonomes et la guérilla urbaine intensifient les tensions et fragmentent l'ordre géopolitique."
+   },
+   "valeurs_culture_tempo_sociale": {
+    "pol": 1,
+    "why": "La proclamation des Zones Libres accentue la polarisation et la fragmentation des récits culturels et sociaux."
+   },
+   "gouvernance_institutions": {
+    "pol": 1,
+    "why": "L'humiliation du Commandement Atlantique et la perte de légitimité institutionnelle aggravent l'effondrement de la coordination."
+   },
+   "technologie_information": {
+    "pol": 1,
+    "why": "La rupture avec l'algorithme souverain et l'isolement logistique des Communes fragmentent les réseaux d'information."
+   },
+   "organisation_territoires": {
+    "pol": 1,
+    "why": "L'apparition d'enclaves autonomes et la fragmentation des mégapoles industrielles déséquilibrent l'organisation territoriale."
+   }
+  }
+ },
+ "event_instances/insurrection_rust_belt_eco_communalism.md": {
+  "empreinte": "a6dfac4caa12",
+  "decisions": {
+   "geopolitique_conflits": {
+    "pol": 1,
+    "why": "L'insurrection et la résistance organisée contre les Fragments d'États Centraux Résiduels exacerbent les tensions régionales et affaiblissent l'ordre établi."
+   },
+   "valeurs_culture_tempo_sociale": {
+    "pol": -1,
+    "why": "L'émergence des Zones Libres comme modèle alternatif renforce des récits communs et une cohésion sociale locale, malgré les tensions."
+   },
+   "gouvernance_institutions": {
+    "pol": 1,
+    "why": "L'échec de la répression et la perte de légitimité des institutions centrales accélèrent la fragmentation des structures de gouvernance."
+   },
+   "technologie_information": {
+    "pol": -1,
+    "why": "Les protocoles de déconnexion maîtrisés et les réseaux communautaires sobres réduisent la dépendance aux plateformes centralisées et améliorent la résilience."
+   }
+  }
+ },
+ "event_instances/insurrection_rust_belt_fortress_world.md": {
+  "empreinte": "5ed5981c40e5",
+  "decisions": {
+   "geopolitique_conflits": {
+    "pol": 1,
+    "why": "L'insurrection et sa répression violente exacerbent les tensions internes et affaiblissent la stabilité du Bloc Atlantique."
+   },
+   "valeurs_culture_tempo_sociale": {
+    "pol": 1,
+    "why": "La radicalisation et la polarisation entre zones algorithmiques et résistantes fragmentent les récits communs."
+   },
+   "gouvernance_institutions": {
+    "pol": 1,
+    "why": "La brèche dans la cohérence interne et le durcissement autoritaire réduisent la légitimité institutionnelle."
+   },
+   "technologie_information": {
+    "pol": 1,
+    "why": "Les coupures de flux et la surveillance renforcée fragmentent les réseaux et augmentent la méfiance technologique."
+   }
+  }
+ },
+ "event_instances/le_marathon_des_seuils_quand_le_sport_defie_les_fr_fortress_world.md": {
+  "empreinte": "2c34dbbb6674",
+  "decisions": {
+   "frontieres_du_systeme": {
+    "pol": 1,
+    "why": "L'événement défie les frontières algorithmiques et physiques, exacerbant les tensions et la militarisation des zones grises."
+   },
+   "valeurs_culture_tempo_sociale": {
+    "pol": 1,
+    "why": "Le Marathon des Seuils polarise les récits (résistance vs contrôle), fragmentant davantage les valeurs culturelles et sociales."
+   }
+  }
+ },
+ "event_instances/nairobi_biorevenu_pilote_2094_reference.md": {
+  "empreinte": "81800fd1441c",
+  "decisions": {
+   "sante_biotechnologies": {
+    "pol": -1,
+    "why": "Le programme pilote améliore la prévention collective et la maîtrise des risques sanitaires via la biométrie en temps réel."
+   },
+   "systeme_economique_redistribution": {
+    "pol": 1,
+    "why": "La monétisation des données biologiques crée des tensions financières et une stratification entre 'bio-solvables' et autres."
+   },
+   "systemes_productifs_travail": {
+    "pol": 1,
+    "why": "Le programme redéfinit la valeur économique hors du travail productif traditionnel, fragilisant les structures existantes."
+   },
+   "gouvernance_institutions": {
+    "pol": 1,
+    "why": "Les contestations juridiques et les débats internationaux mettent sous pression la légitimité institutionnelle."
+   },
+   "valeurs_culture_tempo_sociale": {
+    "pol": 1,
+    "why": "Le programme polarise la société entre partisans et opposants, fragmentant les récits communs."
+   }
+  }
+ },
+ "event_instances/revolution_travail_sahel_numerique_eco_communalism.md": {
+  "empreinte": "9e512ead900e",
+  "decisions": {
+   "systemes_productifs_travail": {
+    "pol": -1,
+    "why": "Le travail structuré et régénératif renforce les chaînes productives locales et préserve l'emploi."
+   },
+   "technologie_information": {
+    "pol": -1,
+    "why": "Les data centers solaires et la plateforme locale réduisent la dépendance et la fragmentation des réseaux."
+   },
+   "energie_ressources_critiques": {
+    "pol": -1,
+    "why": "L'accès décentralisé à l'énergie solaire et aux ressources réduit les pénuries et les tensions."
+   },
+   "organisation_territoires": {
+    "pol": -1,
+    "why": "Les coopératives et hubs solaires renforcent la résilience et l'équilibre des territoires ruraux."
+   }
+  }
+ },
+ "event_instances/revolution_travail_sahel_numerique_new_sustainability.md": {
+  "empreinte": "df62fb95d1a1",
+  "decisions": {
+   "systemes_productifs_travail": {
+    "pol": -1,
+    "why": "Le travail régénératif stabilise et préserve les chaînes productives locales."
+   },
+   "technologie_information": {
+    "pol": -1,
+    "why": "Les data centers reconvertis en centres de formation réduisent la dépendance aux plateformes extractives."
+   },
+   "energie_ressources_critiques": {
+    "pol": -1,
+    "why": "Les outils de désalinisation solaire et les semences résistantes améliorent l'accès aux ressources critiques."
+   },
+   "gouvernance_institutions": {
+    "pol": -1,
+    "why": "La gouvernance distribuée renforce la légitimité et la coordination institutionnelle."
+   }
+  }
+ },
+ "event_instances/revolution_travail_sahel_numerique_policy_reform.md": {
+  "empreinte": "3f89947fa2d7",
+  "decisions": {
+   "systemes_productifs_travail": {
+    "pol": -1,
+    "why": "La plateforme renforce la structuration du travail local et préserve les chaînes productives."
+   },
+   "technologie_information": {
+    "pol": -1,
+    "why": "Les hubs locaux et l'open-source améliorent la fiabilité et la sobriété des réseaux."
+   },
+   "energie_ressources_critiques": {
+    "pol": -1,
+    "why": "L'accès décentralisé aux kits solaires et à l'eau réduit les tensions sur les ressources critiques."
+   },
+   "gouvernance_institutions": {
+    "pol": -1,
+    "why": "L'initiative renforce la légitimité des modèles de gouvernance locale et communautaire."
+   }
+  }
+ },
+ "event_instances/secession_great_lakes_compact_breakdown.md": {
+  "empreinte": "0d2b8f00acaa",
+  "decisions": {
+   "organisation_territoires": {
+    "pol": 1,
+    "why": "La sécession et la fragmentation territoriale aggravent la fragmentation des espaces humains."
+   },
+   "gouvernance_institutions": {
+    "pol": 1,
+    "why": "L'effondrement de la légitimité étatique et la montée de gouvernances non reconnues augmentent l'instabilité institutionnelle."
+   },
+   "geopolitique_conflits": {
+    "pol": 1,
+    "why": "La prolifération de milices et les tensions pour le contrôle des ressources exacerbent les conflits régionaux."
+   },
+   "energie_ressources_critiques": {
+    "pol": 1,
+    "why": "La compétition pour l'eau douce et les ressources critiques intensifie les pénuries et les tensions."
+   },
+   "climat_environnement_global": {
+    "pol": 1,
+    "why": "La pression sur les écosystèmes lacustres et les conflits environnementaux locaux contribuent à la dégradation globale."
+   }
+  }
+ },
+ "event_instances/secession_great_lakes_compact_fortress_world.md": {
+  "empreinte": "4602d0a5409e",
+  "decisions": {
+   "organisation_territoires": {
+    "pol": 1,
+    "why": "La sécession fragmente les espaces humains et accentue la fragmentation territoriale."
+   },
+   "gouvernance_institutions": {
+    "pol": 1,
+    "why": "La rupture affaiblit la légitimité fédérale et accélère la fragmentation institutionnelle."
+   },
+   "geopolitique_conflits": {
+    "pol": 1,
+    "why": "La sécession et le blocus militaire exacerbent les tensions géopolitiques et les risques de conflit."
+   },
+   "energie_ressources_critiques": {
+    "pol": 1,
+    "why": "Le contrôle disputé des ressources hydriques aggrave les pénuries et les pressions sur les ressources critiques."
+   }
+  }
+ },
+ "event_instances/secession_great_lakes_compact_new_sustainability.md": {
+  "empreinte": "86a3b265a786",
+  "decisions": {
+   "organisation_territoires": {
+    "pol": -1,
+    "why": "Le Pacte Lacustre renforce une gouvernance distribuée et résiliente des territoires hydriques critiques."
+   },
+   "gouvernance_institutions": {
+    "pol": -1,
+    "why": "L'accord consolide un modèle de coordination multi-niveaux et légitime sous supervision internationale."
+   },
+   "geopolitique_conflits": {
+    "pol": -1,
+    "why": "Le précédent pacifique et négocié réduit les tensions géopolitiques autour des ressources hydriques."
+   }
+  }
+ },
+ "event_instances/secession_great_lakes_compact_reference.md": {
+  "empreinte": "14d86319acca",
+  "decisions": {
+   "organisation_territoires": {
+    "pol": 1,
+    "why": "La sécession fragmente les espaces humains et crée une fragmentation territoriale durable."
+   },
+   "gouvernance_institutions": {
+    "pol": 1,
+    "why": "L'échec de la gouvernance fédérale et la fragmentation institutionnelle aggravent la crise de légitimité."
+   },
+   "geopolitique_conflits": {
+    "pol": 1,
+    "why": "La rupture affaiblit l'ordre international et ouvre un vide géopolitique propice aux tensions."
+   }
+  }
+ },
+ "event_instances/submersion_tuvalu_acte_fondateur_new_sustainability.md": {
+  "empreinte": "ec239fc8f2a7",
+  "decisions": {
+   "climat_environnement_global": {
+    "pol": 1,
+    "why": "L'événement acte la submersion de territoires due au changement climatique, illustrant un basculement écologique irréversible."
+   },
+   "gouvernance_institutions": {
+    "pol": -1,
+    "why": "La création d'un État souverain post-territorial renforce la coordination globale et la légitimité des institutions supranationales."
+   },
+   "organisation_territoires": {
+    "pol": -1,
+    "why": "Le modèle de souveraineté mobile et résiliente inspire une réorganisation plus équilibrée et adaptative des espaces humains."
+   },
+   "frontieres_du_systeme": {
+    "pol": -1,
+    "why": "L'intégration d'un nouvel acteur post-territorial dans le droit international favorise un espace coopératif et moins chaotique."
+   }
+  }
+ },
+ "event_instances/submersion_tuvalu_acte_fondateur_policy_reform.md": {
+  "empreinte": "99f365217949",
+  "decisions": {
+   "climat_environnement_global": {
+    "pol": 1,
+    "why": "L'événement ne résout pas la crise climatique mais institutionnalise une réponse à ses conséquences, sans réduire la pression environnementale."
+   },
+   "gouvernance_institutions": {
+    "pol": -1,
+    "why": "Le Protocole de Funafuti renforce la coordination globale et la légitimité des institutions en adaptant le droit international aux réalités climatiques."
+   },
+   "organisation_territoires": {
+    "pol": 1,
+    "why": "La dissolution d'un État territorial et l'émergence de statuts flottants/diasporiques fragilisent la stabilité des modèles territoriaux traditionnels."
+   },
+   "frontieres_du_systeme": {
+    "pol": -1,
+    "why": "La création d'un réseau résilient et d'un précédent juridique coopératif réduit les risques de fragmentation et de militarisation de l'espace."
+   }
+  }
+ },
+ "event_instances/submersion_tuvalu_acte_fondateur_reference.md": {
+  "empreinte": "f0bcf7dd5c4b",
+  "decisions": {
+   "climat_environnement_global": {
+    "pol": 1,
+    "why": "L'événement ne résout pas les causes de l'emballement climatique, mais légitime des solutions d'adaptation qui reportent les efforts de mitigation."
+   },
+   "gouvernance_institutions": {
+    "pol": -1,
+    "why": "Le Protocole crée un précédent juridique innovant, renforçant la coordination et la légitimité des institutions face à la crise territoriale."
+   },
+   "organisation_territoires": {
+    "pol": 1,
+    "why": "La souveraineté flottante fragmente davantage les repères territoriaux traditionnels, accélérant la fragmentation des espaces humains."
+   },
+   "frontieres_du_systeme": {
+    "pol": 1,
+    "why": "L'accord ouvre une brèche dans l'ordre territorial, encourageant d'autres acteurs à contester les frontières spatiales établies (orbitales incluses)."
+   }
+  }
+ },
+ "instances/alpha47_fortress_world.md": {
+  "empreinte": "d8fc9e0b4b97",
+  "decisions": {
+   "energie_ressources_critiques": {
+    "pol": -1,
+    "why": "L'extraction intensive de ressources critiques par Alpha47 sécurise les approvisionnements et réduit les tensions liées à leur pénurie."
+   },
+   "systemes_productifs_travail": {
+    "pol": 1,
+    "why": "L'exploitation des travailleurs et l'opacité systémique dégradent les conditions de travail et fragilisent les systèmes productifs."
+   },
+   "geopolitique_conflits": {
+    "pol": 1,
+    "why": "La logique extractiviste et sécuritaire des blocs forteresses exacerbe les rivalités géopolitiques pour le contrôle des ressources."
+   }
+  }
+ },
+ "instances/anjali_raghavan_fortress_world.md": {
+  "empreinte": "29121fe8bfd1",
+  "decisions": {
+   "gouvernance_institutions": {
+    "pol": 1,
+    "why": "Anjali érode la légitimité des institutions en révélant des informations qui sapent leur contrôle absolu."
+   },
+   "technologie_information": {
+    "pol": 1,
+    "why": "Ses réseaux de passeurs d'informations fragmentent les flux et favorisent la désinformation."
+   },
+   "valeurs_culture_tempo_sociale": {
+    "pol": 1,
+    "why": "Ses actions accentuent la polarisation en divulguant des récits contradictoires et des secrets."
+   }
+  }
+ },
+ "instances/anton_vasko_fortress_world.md": {
+  "empreinte": "1e2f4a33e2b8",
+  "decisions": {
+   "geopolitique_conflits": {
+    "pol": 1,
+    "why": "Vasko intensifie les tensions en consolidant un pouvoir illégal rival des blocs forteresses."
+   },
+   "gouvernance_institutions": {
+    "pol": 1,
+    "why": "Son action sape l'autorité des institutions en légitimant une gouvernance parallèle."
+   },
+   "organisation_territoires": {
+    "pol": 1,
+    "why": "Il fragmente l'espace territorial en imposant un contrôle alternatif sur les zones grises."
+   }
+  }
+ },
+ "instances/aurelio_stahl_new_sustainability.md": {
+  "empreinte": "b7e24f768875",
+  "decisions": {
+   "valeurs_culture_tempo_sociale": {
+    "pol": -1,
+    "why": "Stahl co-construit des récits hybrides qui réduisent la fragmentation et stabilisent la cohésion sociale."
+   },
+   "gouvernance_institutions": {
+    "pol": -1,
+    "why": "Il reformule les discours pour intégrer les marges et renforcer la légitimité institutionnelle."
+   }
+  }
+ },
+ "instances/aurelio_stahl_policy_reform.md": {
+  "empreinte": "4ab027deed16",
+  "decisions": {
+   "gouvernance_institutions": {
+    "pol": -1,
+    "why": "Le Cercle reformule les doctrines pour renforcer la coordination et la légitimité institutionnelle."
+   },
+   "valeurs_culture_tempo_sociale": {
+    "pol": -1,
+    "why": "Il catalyse des débats structurants qui réduisent la fragmentation des récits et la polarisation."
+   },
+   "technologie_information": {
+    "pol": -1,
+    "why": "Il encadre les réseaux pour limiter la désinformation et favoriser des infrastructures sobres."
+   }
+  }
+ },
+ "instances/aurelio_stahl_reference.md": {
+  "empreinte": "d5aee554d8a8",
+  "decisions": {
+   "valeurs_culture_tempo_sociale": {
+    "pol": 1,
+    "why": "Stahl accélère la fragmentation des récits dominants en promouvant une refonte idéologique systémique."
+   },
+   "gouvernance_institutions": {
+    "pol": 1,
+    "why": "Sa critique des institutions multilatérales affaiblit leur légitimité et favorise la fragmentation étatique."
+   },
+   "technologie_information": {
+    "pol": 1,
+    "why": "Son opposition aux plateformes centralisées exacerbe la fragmentation des réseaux et la désinformation."
+   }
+  }
+ },
+ "instances/aymeric_de_valfort_fortress_world.md": {
+  "empreinte": "c552f285d5e8",
+  "decisions": {
+   "gouvernance_institutions": {
+    "pol": 1,
+    "why": "Valfort légitime des compromis qui affaiblissent la cohésion institutionnelle et fragmentent les blocs."
+   },
+   "geopolitique_conflits": {
+    "pol": -1,
+    "why": "Ses négociations réduisent temporairement les conflits ouverts entre factions."
+   },
+   "valeurs_culture_tempo_sociale": {
+    "pol": 1,
+    "why": "Ses compromis pragmatiques exacerbent la polarisation idéologique et la fragmentation des récits."
+   }
+  }
+ },
+ "instances/contrats_de_service_d_ergo_wian_fortress_world.md": {
+  "empreinte": "535fd9ad5b92",
+  "decisions": {
+   "demographie_mobilite_humaine": {
+    "pol": 1,
+    "why": "EW-SLC transforme la mobilité en servitude forcée, aggravant les déplacements contraints et les crises migratoires."
+   },
+   "systemes_productifs_travail": {
+    "pol": 1,
+    "why": "Le système marchandise le travail humain en précarité extrême, désintégrant les structures stables du travail."
+   },
+   "geopolitique_conflits": {
+    "pol": 1,
+    "why": "La dépendance aux flux humains captifs exacerbe les tensions géopolitiques et les risques de conflits."
+   }
+  }
+ },
+ "instances/deepfield_institute_breakdown.md": {
+  "empreinte": "28b007c7a6a9",
+  "decisions": {
+   "gouvernance_institutions": {
+    "pol": 1,
+    "why": "Les protocoles autoritaires de Deepfield sapent la légitimité et la coordination institutionnelle."
+   },
+   "sante_biotechnologies": {
+    "pol": 1,
+    "why": "La gestion technocratique des crises sanitaires a historiquement aggravé les ruptures de soins et les tensions."
+   },
+   "demographie_mobilite_humaine": {
+    "pol": 1,
+    "why": "Les mesures coercitives et les effondrements locaux provoquent des déplacements forcés massifs."
+   }
+  }
+ },
+ "instances/deepfield_institute_fortress_world.md": {
+  "empreinte": "5ddd5592a927",
+  "decisions": {
+   "gouvernance_institutions": {
+    "pol": 1,
+    "why": "L'héritage autoritaire et technocratique de Deepfield Vestiges renforce la fragmentation et la légitimité contestée des États-Forteresses."
+   },
+   "sante_biotechnologies": {
+    "pol": 1,
+    "why": "Les inégalités sanitaires et l'accès restreint aux biotechnologies aggravent les risques de rupture des systèmes de santé."
+   }
+  }
+ },
+ "instances/deepfield_institute_new_sustainability.md": {
+  "empreinte": "5819606f5483",
+  "decisions": {
+   "gouvernance_institutions": {
+    "pol": 1,
+    "why": "Le contre-modèle autoritaire du Deepfield Legacy Archives alimente la méfiance envers les institutions et fragilise la coordination globale."
+   },
+   "technologie_information": {
+    "pol": -1,
+    "why": "Les réflexions sur les garde-fous technologiques inspirées par ses archives renforcent la sobriété et la fiabilité des réseaux."
+   }
+  }
+ },
+ "instances/deepfield_institute_reference.md": {
+  "empreinte": "20406f6070b8",
+  "decisions": {
+   "sante_biotechnologies": {
+    "pol": -1,
+    "why": "Le DIHC accélère les innovations biotechnologiques et renforce les capacités sanitaires, réduisant les risques de rupture."
+   },
+   "demographie_mobilite_humaine": {
+    "pol": 1,
+    "why": "Ses politiques de natalité sélective et de sélection génétique créent des déséquilibres et des déplacements forcés."
+   },
+   "gouvernance_institutions": {
+    "pol": 1,
+    "why": "Son influence technocratique mine la légitimité des institutions traditionnelles et fragmente la coordination globale."
+   }
+  }
+ },
+ "instances/elias_mork_breakdown.md": {
+  "empreinte": "6370c7848fd5",
+  "decisions": {
+   "energie_ressources_critiques": {
+    "pol": -1,
+    "why": "Mørk restaure des micro-réseaux et réduit la pénurie locale, atténuant la pression sur les ressources critiques."
+   },
+   "organisation_territoires": {
+    "pol": -1,
+    "why": "Ses actions créent des îlots de résilience et réduisent la fragmentation territoriale en stabilisant les communautés."
+   }
+  }
+ },
+ "instances/elias_mork_reference.md": {
+  "empreinte": "7841fa24efee",
+  "decisions": {
+   "sante_biotechnologies": {
+    "pol": -1,
+    "why": "L'accélération des biotechnologies par le DIHC améliore les capacités de soin et réduit les risques sanitaires."
+   },
+   "gouvernance_institutions": {
+    "pol": 1,
+    "why": "Le lobbying pour des normes flexibles affaiblit la régulation et la légitimité des institutions traditionnelles."
+   },
+   "valeurs_culture_tempo_sociale": {
+    "pol": 1,
+    "why": "L'optimisation génétique et les risques d'exclusion exacerbent la polarisation et la fragmentation des valeurs."
+   }
+  }
+ },
+ "instances/ergo_wian_sovereign_holdings_breakdown.md": {
+  "empreinte": "b308b23ab410",
+  "decisions": {
+   "systeme_economique_redistribution": {
+    "pol": 1,
+    "why": "Les fragments maintiennent des logiques marchandes exclusives, aggravant les inégalités et la tension financière."
+   },
+   "organisation_territoires": {
+    "pol": 1,
+    "why": "Leur contrôle sur des corridors critiques et infrastructures accentue la fragmentation territoriale et les déséquilibres."
+   },
+   "gouvernance_institutions": {
+    "pol": 1,
+    "why": "Leur gouvernance privatisée et résiduelle affaiblit la légitimité institutionnelle et la coordination globale."
+   }
+  }
+ },
+ "instances/ergo_wian_sovereign_holdings_eco_communalism.md": {
+  "empreinte": "3e41d3d2cfd6",
+  "decisions": {
+   "gouvernance_institutions": {
+    "pol": 1,
+    "why": "Les EWS fragmentent la gouvernance en maintenant des micro-États privés, affaiblissant la coordination et la légitimité institutionnelle."
+   },
+   "systeme_economique_redistribution": {
+    "pol": 1,
+    "why": "Leur modèle d'exclusion et de privatisation aggrave les inégalités et les tensions financières locales."
+   },
+   "technologie_information": {
+    "pol": 1,
+    "why": "Leur gouvernance algorithmique et leur contrôle des nœuds de données favorisent la fragmentation et la désinformation."
+   }
+  }
+ },
+ "instances/ergo_wian_sovereign_holdings_new_sustainability.md": {
+  "empreinte": "3741bc44e8e9",
+  "decisions": {
+   "gouvernance_institutions": {
+    "pol": -1,
+    "why": "Les Sovereign Trusts fluidifient la coordination globale en institutionnalisant une gouvernance hybride légitime et adaptative."
+   },
+   "systeme_economique_redistribution": {
+    "pol": -1,
+    "why": "L'optimisation algorithmique de la redistribution des actifs écologiques et technologiques réduit les tensions financières et stabilise les économies."
+   },
+   "organisation_territoires": {
+    "pol": -1,
+    "why": "Les mandats régénératifs et la gestion semi-autonome des territoires favorisent un équilibre et une résilience accrus."
+   }
+  }
+ },
+ "instances/ergo_wian_sovereign_holdings_policy_reform.md": {
+  "empreinte": "d229ffea6843",
+  "decisions": {
+   "gouvernance_institutions": {
+    "pol": 1,
+    "why": "L'EWST affaiblit la cohérence des institutions globales en optimisant des territoires pour des acteurs privés, fragmentant la gouvernance."
+   },
+   "systeme_economique_redistribution": {
+    "pol": 1,
+    "why": "En creusant les inégalités et en favorisant des optimisations territoriales privées, l'EWST intensifie les tensions financières et la fragmentation économique."
+   },
+   "organisation_territoires": {
+    "pol": 1,
+    "why": "L'optimisation ciblée de territoires pour des acteurs privés fragmente les espaces humains et déséquilibre leur résilience."
+   }
+  }
+ },
+ "instances/ergo_wian_sovereign_holdings_reference.md": {
+  "empreinte": "5f337fdc6d81",
+  "decisions": {
+   "gouvernance_institutions": {
+    "pol": 1,
+    "why": "Ergo-Wian remplace la légitimité démocratique par une gouvernance actionnariale, fragmentant les institutions traditionnelles."
+   },
+   "systeme_economique_redistribution": {
+    "pol": 1,
+    "why": "La logique client-contractant supprime les mécanismes de redistribution, aggravant les inégalités et les tensions financières."
+   },
+   "organisation_territoires": {
+    "pol": 1,
+    "why": "L'administration territoriale comme actif financier crée des enclaves fragmentées et instables, éloignées d'un équilibre résilient."
+   }
+  }
+ },
+ "instances/gelecek_meclisi_breakdown.md": {
+  "empreinte": "a7065732d511",
+  "decisions": {
+   "gouvernance_institutions": {
+    "pol": -1,
+    "why": "Gelecek Meclisi recrée des cadres minimaux de coordination dans un contexte de fragmentation extrême, réduisant la pression sur la gouvernance."
+   },
+   "valeurs_culture_tempo_sociale": {
+    "pol": -1,
+    "why": "En agrégeant des fragments de légitimité et en maintenant une mémoire des possibles, il atténue la polarisation et la fragmentation des récits."
+   },
+   "technologie_information": {
+    "pol": -1,
+    "why": "Son rôle de délibération entre acteurs disparates favorise une stabilisation des réseaux et une réduction des ruptures informationnelles."
+   }
+  }
+ },
+ "instances/gelecek_meclisi_eco_communalism.md": {
+  "empreinte": "c1ee5fe46d5d",
+  "decisions": {
+   "gouvernance_institutions": {
+    "pol": -1,
+    "why": "Le Meclis réduit la fragmentation institutionnelle en formalisant des règles de coexistence entre acteurs divergents."
+   },
+   "organisation_territoires": {
+    "pol": -1,
+    "why": "Il favorise une stabilité territoriale en articulant les seuils de résilience des bioterritoires autonomes."
+   },
+   "technologie_information": {
+    "pol": -1,
+    "why": "Il promeut des solutions technologiques locales et sobres, limitant la fragmentation des réseaux."
+   }
+  }
+ },
+ "instances/gelecek_meclisi_fortress_world.md": {
+  "empreinte": "cbae34e59ccd",
+  "decisions": {
+   "gouvernance_institutions": {
+    "pol": -1,
+    "why": "Le Gelecek Meclisi Fragmentaire crée des espaces de négociation informels qui atténuent l'effondrement de la coordination institutionnelle."
+   },
+   "organisation_territoires": {
+    "pol": -1,
+    "why": "En facilitant des corridors humanitaires et des logiques locales, il réduit la fragmentation des espaces humains."
+   },
+   "technologie_information": {
+    "pol": 1,
+    "why": "Son fonctionnement informel et hybride accentue la fragmentation des réseaux et la désinformation."
+   }
+  }
+ },
+ "instances/gelecek_meclisi_new_sustainability.md": {
+  "empreinte": "0f5d81e7fae6",
+  "decisions": {
+   "gouvernance_institutions": {
+    "pol": -1,
+    "why": "L'AFC stabilise des cadres de régulation hybrides, renforçant la légitimité et la coordination globale."
+   },
+   "technologie_information": {
+    "pol": -1,
+    "why": "L'intégration d'algorithmes de médiation et de délibération augmentée réduit la fragmentation et la désinformation."
+   },
+   "organisation_territoires": {
+    "pol": -1,
+    "why": "L'AFC favorise l'équilibre entre autonomie locale et coordination, évitant l'effondrement des mégapoles et la fragmentation."
+   }
+  }
+ },
+ "instances/gelecek_meclisi_policy_reform.md": {
+  "empreinte": "923a46f51dfc",
+  "decisions": {
+   "gouvernance_institutions": {
+    "pol": -1,
+    "why": "Le Gelecek Meclisi renforce la coordination et la légitimité institutionnelle en intégrant des acteurs disparates."
+   },
+   "technologie_information": {
+    "pol": -1,
+    "why": "Il encadre les innovations technologiques dans des cadres légitimes, réduisant fragmentation et désinformation."
+   },
+   "organisation_territoires": {
+    "pol": -1,
+    "why": "La coordination systémique favorise un équilibre territorial et limite la fragmentation des espaces humains."
+   }
+  }
+ },
+ "instances/gelecek_meclisi_reference.md": {
+  "empreinte": "5f86164fda0b",
+  "decisions": {
+   "gouvernance_institutions": {
+    "pol": -1,
+    "why": "Le Gelecek Meclisi crée un cadre de coopération et légitimité hybride, réduisant la fragmentation institutionnelle."
+   },
+   "valeurs_culture_tempo_sociale": {
+    "pol": -1,
+    "why": "Il favorise des compromis entre visions divergentes, atténuant la polarisation des récits et valeurs."
+   },
+   "technologie_information": {
+    "pol": 1,
+    "why": "Son rôle de négociation entre acteurs multiples peut complexifier les réseaux et accentuer les risques de fragmentation."
+   }
+  }
+ },
+ "instances/guilhelma_fortress_world.md": {
+  "empreinte": "e5cbd5d9b395",
+  "decisions": {
+   "sante_biotechnologies": {
+    "pol": -1,
+    "why": "Ses pratiques de guérison alternatives réduisent la dépendance aux systèmes biotech contrôlés par les blocs, atténuant les risques de saturation."
+   },
+   "valeurs_culture_tempo_sociale": {
+    "pol": -1,
+    "why": "Elle préserve des récits et savoirs marginaux, créant une cohésion locale qui limite la fragmentation des valeurs."
+   },
+   "geopolitique_conflits": {
+    "pol": 1,
+    "why": "Sa résistance et ses négociations tendues avec la Garde du Seuil maintiennent une pression latente sur l'ordre des blocs, alimentant les tensions."
+   }
+  }
+ },
+ "instances/holdfast_breakdown.md": {
+  "empreinte": "3d294ce8c4f2",
+  "decisions": {
+   "organisation_territoires": {
+    "pol": 1,
+    "why": "Les Vestiges des Citadelles ont accéléré la fragmentation territoriale en normalisant l'exclusion et la privatisation d'espaces critiques."
+   },
+   "gouvernance_institutions": {
+    "pol": 1,
+    "why": "Leur existence a affaibli la légitimité des institutions communes en promouvant des modèles de gouvernance privatisés et exclusifs."
+   }
+  }
+ },
+ "instances/holdfast_fortress_world.md": {
+  "empreinte": "7dc5622c3aa3",
+  "decisions": {
+   "organisation_territoires": {
+    "pol": 1,
+    "why": "Les Holdfast ont normalisé la fragmentation en enclaves privées, accélérant l'effondrement des territoires équilibrés."
+   },
+   "gouvernance_institutions": {
+    "pol": 1,
+    "why": "Leur modèle a sapé la légitimité des États et affaibli la coordination institutionnelle globale."
+   }
+  }
+ },
+ "instances/holdfast_new_sustainability.md": {
+  "empreinte": "16b147e2dd25",
+  "decisions": {
+   "gouvernance_institutions": {
+    "pol": 1,
+    "why": "Les Holdfasts ont sapé la confiance dans les systèmes collectifs, fragmentant la gouvernance pendant leur existence."
+   },
+   "systeme_economique_redistribution": {
+    "pol": -1,
+    "why": "Leur échec a servi de catalyseur pour renforcer les mécanismes de redistribution et réduire les tensions financières."
+   }
+  }
+ },
+ "instances/holdfast_reference.md": {
+  "empreinte": "3c16585c605c",
+  "decisions": {
+   "systeme_economique_redistribution": {
+    "pol": 1,
+    "why": "Le RCSP concentre des ressources critiques entre quelques mains, aggravant les inégalités et la tension financière systémique."
+   },
+   "gouvernance_institutions": {
+    "pol": 1,
+    "why": "L'existence de gouvernances parallèles privées affaiblit la légitimité et la coordination des institutions publiques."
+   },
+   "organisation_territoires": {
+    "pol": 1,
+    "why": "La fragmentation en enclaves privées et zones abandonnées déséquilibre la répartition territoriale et fragmente les espaces humains."
+   }
+  }
+ },
+ "instances/hyphan_raghavan_breakdown.md": {
+  "empreinte": "53f580505851",
+  "decisions": {
+   "energie_ressources_critiques": {
+    "pol": -1,
+    "why": "Hyphan Raghavan répare et adapte les infrastructures énergétiques, réduisant la pénurie dans les zones abandonnées."
+   },
+   "organisation_territoires": {
+    "pol": -1,
+    "why": "Il maintient des liens entre enclaves fragmentées, atténuant la fragmentation territoriale."
+   },
+   "systeme_economique_redistribution": {
+    "pol": -1,
+    "why": "Ses réseaux de solidarité horizontale favorisent une redistribution locale des ressources, stabilisant les tensions économiques."
+   }
+  }
+ },
+ "instances/hyphan_raghavan_eco_communalism.md": {
+  "empreinte": "d546aa48de32",
+  "decisions": {
+   "valeurs_culture_tempo_sociale": {
+    "pol": -1,
+    "why": "Hyphan Raghavan facilite l'émergence de récits alternatifs et réduit la fragmentation des valeurs locales."
+   },
+   "gouvernance_institutions": {
+    "pol": -1,
+    "why": "Il renforce la légitimité des médiations intercommunautaires et améliore la coordination décentralisée."
+   }
+  }
+ },
+ "instances/hyphan_raghavan_new_sustainability.md": {
+  "empreinte": "cf9a0c068732",
+  "decisions": {
+   "climat_environnement_global": {
+    "pol": -1,
+    "why": "Restauration locale des nappes et réduction des gaspillages atténuent légèrement la pression environnementale globale."
+   },
+   "gouvernance_institutions": {
+    "pol": 1,
+    "why": "Le RPRH sape la légitimité des institutions formelles en se substituant à elles, augmentant la fragmentation."
+   },
+   "systeme_economique_redistribution": {
+    "pol": -1,
+    "why": "La gestion locale et résiliente de l'eau réduit les tensions économiques liées aux pénuries et gaspillages."
+   }
+  }
+ },
+ "instances/hyphan_raghavan_policy_reform.md": {
+  "empreinte": "045204c503eb",
+  "decisions": {
+   "gouvernance_institutions": {
+    "pol": 1,
+    "why": "Hyphan Raghavan remet en cause la légitimité des institutions technocratiques centralisées, fragmentant la coordination globale."
+   },
+   "energie_ressources_critiques": {
+    "pol": -1,
+    "why": "Ses modèles décentralisés et communautaires améliorent la gestion locale des ressources hydriques, réduisant les tensions."
+   },
+   "valeurs_culture_tempo_sociale": {
+    "pol": -1,
+    "why": "Il renforce les récits communs en intégrant savoirs traditionnels et outils modernes, apaisant la polarisation."
+   }
+  }
+ },
+ "instances/hyphan_raghavan_reference.md": {
+  "empreinte": "5483b4069f8e",
+  "decisions": {
+   "systeme_economique_redistribution": {
+    "pol": 1,
+    "why": "Hyphan Raghavan teste la résilience d'un système conçu pour l'ordre établi, amplifiant les tensions financières et redistributives."
+   },
+   "geopolitique_conflits": {
+    "pol": 1,
+    "why": "Son mandat contesté et les crises structurelles exacerbent les rivalités géopolitiques et les risques de fragmentation."
+   },
+   "gouvernance_institutions": {
+    "pol": 1,
+    "why": "Son accession opaque et les défis systémiques érodent la légitimité et la coordination des institutions souveraines."
+   }
+  }
+ },
+ "instances/ilse_varga_holm_breakdown.md": {
+  "empreinte": "7f963373822b",
+  "decisions": {
+   "organisation_territoires": {
+    "pol": -1,
+    "why": "Ilse Varga-Holm réduit la fragmentation en optimisant les dépendances mutuelles entre territoires."
+   },
+   "energie_ressources_critiques": {
+    "pol": -1,
+    "why": "Son rôle de médiatrice atténue les pénuries en rationalisant l'accès aux ressources critiques."
+   },
+   "geopolitique_conflits": {
+    "pol": -1,
+    "why": "Elle limite les conflits en créant des corridors de survie et une coopération forcée."
+   }
+  }
+ },
+ "instances/ilse_varga_holm_eco_communalism.md": {
+  "empreinte": "a8f0f44cb65d",
+  "decisions": {
+   "organisation_territoires": {
+    "pol": -1,
+    "why": "Ilse Varga-Holm renforce la résilience et l'équilibre des territoires via une gouvernance décentralisée et des circuits courts."
+   },
+   "energie_ressources_critiques": {
+    "pol": -1,
+    "why": "Sa politique limite l'extractivisme et favorise une gestion durable des ressources critiques, réduisant les tensions."
+   }
+  }
+ },
+ "instances/ilse_varga_holm_fortress_world.md": {
+  "empreinte": "93335ad01da8",
+  "decisions": {
+   "organisation_territoires": {
+    "pol": 1,
+    "why": "Le SGS crée des zones de souveraineté floue, fragmentant davantage les espaces humains."
+   },
+   "systeme_economique_redistribution": {
+    "pol": -1,
+    "why": "Le SGS optimise localement les flux de ressources et réduit les tensions économiques en offrant une soupape informelle."
+   },
+   "geopolitique_conflits": {
+    "pol": -1,
+    "why": "Le SGS réduit les tensions inter-blocs en régulant les flux dans les corridors gris."
+   }
+  }
+ },
+ "instances/ilse_varga_holm_new_sustainability.md": {
+  "empreinte": "c3c6ddfa9d1b",
+  "decisions": {
+   "gouvernance_institutions": {
+    "pol": -1,
+    "why": "Le SGRT renforce la légitimité des contre-pouvoirs locaux et améliore la coordination territoriale, réduisant la fragmentation institutionnelle."
+   },
+   "organisation_territoires": {
+    "pol": -1,
+    "why": "La gouvernance alternative du SGRT favorise un rééquilibrage des territoires et une résilience accrue, limitant la fragmentation."
+   }
+  }
+ },
+ "instances/ilse_varga_holm_policy_reform.md": {
+  "empreinte": "c6b8ca330731",
+  "decisions": {
+   "gouvernance_institutions": {
+    "pol": -1,
+    "why": "La CST renforce la coordination et la légitimité institutionnelle via des réformes technocratiques alignées sur les territoires locaux."
+   },
+   "organisation_territoires": {
+    "pol": -1,
+    "why": "Les politiques de rééquilibrage territorial et de résilience infrastructurelle réduisent les fractures et stabilisent les espaces humains."
+   },
+   "systeme_economique_redistribution": {
+    "pol": -1,
+    "why": "La redistribution économique et la gestion des flux migratoires atténuent les tensions financières et les crises systémiques."
+   }
+  }
+ },
+ "instances/ilse_varga_holm_reference.md": {
+  "empreinte": "41cee8e25d6a",
+  "decisions": {
+   "systeme_economique_redistribution": {
+    "pol": 1,
+    "why": "EWSH concentre le pouvoir économique, aggravant les inégalités et les tensions financières systémiques."
+   },
+   "gouvernance_institutions": {
+    "pol": -1,
+    "why": "Son modèle hybride stabilise temporairement la légitimité institutionnelle malgré les crises."
+   },
+   "organisation_territoires": {
+    "pol": -1,
+    "why": "La maîtrise économique d'EWSH permet une gestion plus résiliente des territoires sous son influence."
+   }
+  }
+ },
+ "instances/kaspar_lind_policy_reform.md": {
+  "empreinte": "26ca0c65ce7e",
+  "decisions": {
+   "gouvernance_institutions": {
+    "pol": -1,
+    "why": "Le Réseau Écho favorise des alternatives citoyennes décentralisées, réduisant la fragmentation institutionnelle et renforçant la légitimité par des réformes bottom-up."
+   },
+   "technologie_information": {
+    "pol": -1,
+    "why": "En connectant des experts pour des audits indépendants et des délibérations augmentées, il limite la désinformation et améliore la fiabilité des réseaux."
+   }
+  }
+ },
+ "instances/kaspar_lind_reference.md": {
+  "empreinte": "2788d0759dfa",
+  "decisions": {
+   "gouvernance_institutions": {
+    "pol": 1,
+    "why": "Kaspar Lind sape la légitimité des institutions en recrutant des profils désabusés pour des mouvements subversifs."
+   },
+   "technologie_information": {
+    "pol": 1,
+    "why": "Son action exploite les failles des systèmes de surveillance, favorisant la fragmentation et la désinformation."
+   }
+  }
+ },
+ "instances/kindling_eco_communalism.md": {
+  "empreinte": "7c07240a4616",
+  "decisions": {
+   "gouvernance_institutions": {
+    "pol": 1,
+    "why": "Le sabotage des infrastructures centralisées accélère l'effondrement de leur légitimité et coordination."
+   },
+   "technologie_information": {
+    "pol": 1,
+    "why": "La décentralisation forcée fragmente les réseaux et augmente les risques de rupture technologique."
+   },
+   "valeurs_culture_tempo_sociale": {
+    "pol": 1,
+    "why": "L'héritage mythifié polarise les récits et renforce la fragmentation des valeurs collectives."
+   }
+  }
+ },
+ "instances/kindling_reference.md": {
+  "empreinte": "b6e985606704",
+  "decisions": {
+   "technologie_information": {
+    "pol": 1,
+    "why": "Le Réseau Étincelle fragmente les réseaux et amplifie la désinformation, aggravant la variable."
+   },
+   "gouvernance_institutions": {
+    "pol": 1,
+    "why": "Leurs actions érodent la légitimité des institutions et sapent la coordination, intensifiant la crise."
+   },
+   "geopolitique_conflits": {
+    "pol": 1,
+    "why": "Le chaos généré par leurs sabotages et infiltrations exacerbe les tensions géopolitiques."
+   }
+  }
+ },
+ "instances/la_garde_du_seuil_fortress_world.md": {
+  "empreinte": "3ec1d9bafc8d",
+  "decisions": {
+   "geopolitique_conflits": {
+    "pol": 1,
+    "why": "La Garde du Seuil renforce la position du Califat dans les conflits, augmentant les tensions géopolitiques par sa réputation et ses capacités uniques."
+   },
+   "gouvernance_institutions": {
+    "pol": 1,
+    "why": "Son existence légitime un contrôle autoritaire accru, érodant la légitimité et la transparence des institutions."
+   },
+   "valeurs_culture_tempo_sociale": {
+    "pol": 1,
+    "why": "La mythologie entretenue et le secret d'État polarisent la société en créant une élite mystifiée et une dualité sociale."
+   }
+  }
+ },
+ "instances/lamplight_eco_communalism.md": {
+  "empreinte": "34e498d89eda",
+  "decisions": {
+   "technologie_information": {
+    "pol": -1,
+    "why": "Les Échos de Lamplight renforcent la fiabilité des réseaux décentralisés et limitent la désinformation."
+   },
+   "gouvernance_institutions": {
+    "pol": -1,
+    "why": "Leur héritage inspire des pratiques de gouvernance participative, améliorant la légitimité et la coordination."
+   },
+   "valeurs_culture_tempo_sociale": {
+    "pol": -1,
+    "why": "Ils favorisent des récits communs et une culture de transparence, réduisant la polarisation."
+   }
+  }
+ },
+ "instances/lamplight_reference.md": {
+  "empreinte": "c1ea850891ee",
+  "decisions": {
+   "technologie_information": {
+    "pol": -1,
+    "why": "Lamplight Collective réduit la désinformation et la fragmentation en exposant les manipulations algorithmiques et les structures opaques."
+   },
+   "gouvernance_institutions": {
+    "pol": -1,
+    "why": "Ses enquêtes forcent les institutions à rendre des comptes, renforçant leur légitimité et la coordination globale."
+   },
+   "systeme_economique_redistribution": {
+    "pol": -1,
+    "why": "En révélant les financements clandestins et la corruption, il réduit les tensions financières et stabilise la confiance monétaire."
+   }
+  }
+ },
+ "instances/les_cycles_fortress_world.md": {
+  "empreinte": "e2ff1ee0d49b",
+  "decisions": {
+   "systeme_economique_redistribution": {
+    "pol": -1,
+    "why": "Les Cycles de Paris créent une économie parallèle de redistribution informelle, réduisant les tensions financières systémiques."
+   },
+   "organisation_territoires": {
+    "pol": 1,
+    "why": "Leur autonomie locale accentue la fragmentation des territoires et affaiblit les structures centralisées."
+   },
+   "energie_ressources_critiques": {
+    "pol": -1,
+    "why": "Le recyclage des métaux améliore l'accès aux ressources critiques et atténue les pénuries."
+   }
+  }
+ },
+ "instances/les_dedoubles_fortress_world.md": {
+  "empreinte": "fc1811dbbb4e",
+  "decisions": {
+   "technologie_information": {
+    "pol": -1,
+    "why": "Les Échos du Hors introduisent des flux de données et technologies alternatives, réduisant la fragmentation et la désinformation."
+   },
+   "geopolitique_conflits": {
+    "pol": 1,
+    "why": "Leur résistance et les révélations de vérités alternatives exacerbent les tensions entre blocs souverains."
+   },
+   "gouvernance_institutions": {
+    "pol": 1,
+    "why": "Ils sapent la légitimité des institutions en remettant en cause leur contrôle absolu sur la réalité."
+   }
+  }
+ },
+ "instances/les_recycleurs_fortress_world.md": {
+  "empreinte": "667056b1a549",
+  "decisions": {
+   "energie_ressources_critiques": {
+    "pol": 1,
+    "why": "Le contrôle monopolistique des métaux rares par les Ferrailleurs aggrave la pénurie et les tensions pour l'accès aux ressources critiques."
+   },
+   "geopolitique_conflits": {
+    "pol": 1,
+    "why": "Leur prédation et leurs alliances secrètes exacerbent les rivalités entre blocs, alimentant les conflits géopolitiques."
+   },
+   "organisation_territoires": {
+    "pol": 1,
+    "why": "Leur domination violente et fragmentée des zones urbaines accélère l'effondrement des structures territoriales équilibrées."
+   }
+  }
+ },
+ "instances/maelys_okonkwo_policy_reform.md": {
+  "empreinte": "b7457a997d4e",
+  "decisions": {
+   "gouvernance_institutions": {
+    "pol": 1,
+    "why": "Le réseau expose les dysfonctionnements et réduit la légitimité des institutions, aggravant leur fragmentation."
+   },
+   "technologie_information": {
+    "pol": 1,
+    "why": "La révélation de biais algorithmiques et d'opacités technocratiques alimente la méfiance et la fragmentation des réseaux."
+   },
+   "valeurs_culture_tempo_sociale": {
+    "pol": 1,
+    "why": "La polarisation s'accentue en opposant récits officiels et contre-récits marginaux, durcissant les divisions."
+   }
+  }
+ },
+ "instances/maelys_okonkwo_reference.md": {
+  "empreinte": "b8d8923fd280",
+  "decisions": {
+   "technologie_information": {
+    "pol": 1,
+    "why": "Exposition des manipulations et fragmentation des réseaux par la contre-information aggravent la désinformation et les tensions."
+   },
+   "geopolitique_conflits": {
+    "pol": 1,
+    "why": "Révélations de collusions exacerbent les tensions entre blocs et augmentent les risques de conflits."
+   },
+   "gouvernance_institutions": {
+    "pol": 1,
+    "why": "Affaiblissement de la légitimité des institutions en exposant leur opacité et leurs liens avec des consortiums."
+   }
+  }
+ },
+ "instances/malo_fortress_world.md": {
+  "empreinte": "96447cb5fb62",
+  "decisions": {
+   "demographie_mobilite_humaine": {
+    "pol": -1,
+    "why": "Malo et les Recycleurs maintiennent des mobilités humaines organisées et solidaires, réduisant les déplacements forcés."
+   },
+   "valeurs_culture_tempo_sociale": {
+    "pol": -1,
+    "why": "Son rôle dans les réseaux de Recycleurs et son espoir de rejoindre le Califat renforcent des récits communs et une cohésion sociale."
+   }
+  }
+ },
+ "instances/meridian_assembly_breakdown.md": {
+  "empreinte": "13e0eb5d4fa7",
+  "decisions": {
+   "gouvernance_institutions": {
+    "pol": 1,
+    "why": "L'échec de la Meridian Assembly renforce la fragmentation et la défiance envers les institutions hybrides, aggravant l'effondrement de la coordination."
+   },
+   "technologie_information": {
+    "pol": 1,
+    "why": "La récupération chaotique de ses protocoles déterritorialisés alimente la fragmentation des réseaux et la désinformation."
+   }
+  }
+ },
+ "instances/meridian_assembly_reference.md": {
+  "empreinte": "79c90fb2b29f",
+  "decisions": {
+   "geopolitique_conflits": {
+    "pol": 1,
+    "why": "Le rachat de souverainetés et la normalisation de pratiques diplomatiques alternatives exacerbent les tensions et fragilisent l'ordre international traditionnel."
+   },
+   "gouvernance_institutions": {
+    "pol": -1,
+    "why": "L'innovation en gouvernance post-nationale propose un modèle alternatif qui renforce la résilience institutionnelle malgré sa légitimité contestée."
+   },
+   "demographie_mobilite_humaine": {
+    "pol": 1,
+    "why": "La citoyenneté fluide et les déplacements liés aux rachats de terres créent une mobilité subie pour les communautés insulaires, augmentant les pressions migratoires."
+   }
+  }
+ },
+ "instances/mouvement_de_reconquete_europeenne_fortress_world.md": {
+  "empreinte": "5ee659019a76",
+  "decisions": {
+   "geopolitique_conflits": {
+    "pol": 1,
+    "why": "La RE-LFP militarise les zones grises et alimente les tensions entre blocs, aggravant les conflits géopolitiques."
+   },
+   "demographie_mobilite_humaine": {
+    "pol": 1,
+    "why": "Ses raids et l'esclavage réduisent la mobilité humaine et génèrent des déplacements forcés dans le Hors."
+   },
+   "valeurs_culture_tempo_sociale": {
+    "pol": 1,
+    "why": "Son discours identitaire radical polarise les valeurs et fragmente le récit social commun."
+   }
+  }
+ },
+ "instances/nadia_ferreira_sato_breakdown.md": {
+  "empreinte": "dd2869ee324e",
+  "decisions": {
+   "organisation_territoires": {
+    "pol": -1,
+    "why": "Les ceintures vertes et réseaux de solidarité réduisent la fragmentation territoriale en créant des structures résilientes et autonomes."
+   },
+   "systeme_economique_redistribution": {
+    "pol": -1,
+    "why": "L'autonomie locale et les modèles open-source atténuent les tensions financières en réduisant la dépendance aux systèmes centralisés."
+   },
+   "climat_environnement_global": {
+    "pol": -1,
+    "why": "La réhabilitation des terres et les pratiques écologiques contribuent à la régénération des écosystèmes et à la stabilisation climatique locale."
+   }
+  }
+ },
+ "instances/nadia_ferreira_sato_new_sustainability.md": {
+  "empreinte": "218732d08c8f",
+  "decisions": {
+   "gouvernance_institutions": {
+    "pol": 1,
+    "why": "Le RBR érode la légitimité des institutions en prouvant que des alternatives autonomes fonctionnent hors des cadres officiels."
+   },
+   "systeme_economique_redistribution": {
+    "pol": -1,
+    "why": "Les micro-infrastructures locales réduisent les tensions financières en offrant des solutions autonomes et résilientes."
+   },
+   "valeurs_culture_tempo_sociale": {
+    "pol": 1,
+    "why": "Le RBR crée une fragmentation des récits dominants en promouvant des valeurs alternatives et marginales."
+   }
+  }
+ },
+ "instances/nadia_ferreira_sato_reference.md": {
+  "empreinte": "d18c537bda9f",
+  "decisions": {
+   "systeme_economique_redistribution": {
+    "pol": -1,
+    "why": "Raised Hands crée des communs urbains redistributifs, réduisant les tensions financières locales."
+   },
+   "technologie_information": {
+    "pol": 1,
+    "why": "Les structures alternatives de Raised Hands fragmentent partiellement les réseaux dominants, augmentant les risques de désinformation."
+   },
+   "gouvernance_institutions": {
+    "pol": 1,
+    "why": "L'autonomie communautaire de Raised Hands affaiblit la légitimité des institutions centralisées, sans les remplacer entièrement."
+   }
+  }
+ },
+ "instances/raimon_fortress_world.md": {
+  "empreinte": "320080a037f6",
+  "decisions": {
+   "demographie_mobilite_humaine": {
+    "pol": -1,
+    "why": "Raimon facilite des déplacements clandestins mais organisés, réduisant les crises migratoires forcées et chaotiques."
+   },
+   "organisation_territoires": {
+    "pol": -1,
+    "why": "Ses corridors clandestins atténuent la fragmentation extrême en recréant des liens entre territoires verrouillés."
+   }
+  }
+ },
+ "instances/raised_hands_breakdown.md": {
+  "empreinte": "ad0b978b1cef",
+  "decisions": {
+   "gouvernance_institutions": {
+    "pol": 1,
+    "why": "L'échec historique du mouvement a érodé la confiance dans les institutions démocratiques, aggravant leur fragmentation."
+   },
+   "valeurs_culture_tempo_sociale": {
+    "pol": -1,
+    "why": "Son héritage persistant comme référence morale renforce des récits communs de résistance et d'inclusion, apaisant partiellement la fragmentation."
+   }
+  }
+ },
+ "instances/raised_hands_reference.md": {
+  "empreinte": "b2d75355f6e3",
+  "decisions": {
+   "gouvernance_institutions": {
+    "pol": 1,
+    "why": "Les Mains Levées exposent l'illégitimité du système en révélant son exclusion politique, fragmentant davantage la gouvernance."
+   },
+   "valeurs_culture_tempo_sociale": {
+    "pol": 1,
+    "why": "Le mouvement polarise les récits en opposant résidents précaires et citoyens, durcissant les divisions culturelles."
+   },
+   "systeme_economique_redistribution": {
+    "pol": 1,
+    "why": "La précarité des contractants et leur mobilisation accentuent les tensions sur les mécanismes de redistribution déjà fragiles."
+   }
+  }
+ },
+ "instances/the_lattice_policy_reform.md": {
+  "empreinte": "012164ea4e0a",
+  "decisions": {
+   "gouvernance_institutions": {
+    "pol": 1,
+    "why": "The Lattice affaiblit la légitimité des institutions technocratiques en promouvant un contre-modèle décentralisé."
+   },
+   "organisation_territoires": {
+    "pol": 1,
+    "why": "Son héritage inspire des alternatives fragmentées, augmentant la pression sur la cohésion territoriale."
+   },
+   "valeurs_culture_tempo_sociale": {
+    "pol": 1,
+    "why": "Il alimente la polarisation en opposant un récit décentralisé aux valeurs institutionnelles dominantes."
+   }
+  }
+ },
+ "instances/the_lattice_reference.md": {
+  "empreinte": "f06c12bfefe2",
+  "decisions": {
+   "gouvernance_institutions": {
+    "pol": 1,
+    "why": "Le Lattice fragmente la légitimité institutionnelle en remplaçant la coordination centralisée par une compétition entre juridictions autonomes."
+   },
+   "organisation_territoires": {
+    "pol": 1,
+    "why": "La reconfiguration en cités autonomes accentue la fragmentation des espaces urbains et affaiblit la résilience territoriale globale."
+   },
+   "demographie_mobilite_humaine": {
+    "pol": -1,
+    "why": "Le droit de sortie garanti et la mobilité choisie réduisent les déplacements forcés, stabilisant les flux migratoires."
+   }
+  }
+ },
+ "instances/the_tidewater_canon_eco_communalism.md": {
+  "empreinte": "2967e1d7240f",
+  "decisions": {
+   "gouvernance_institutions": {
+    "pol": 1,
+    "why": "Le souvenir du Canon Perdu affaiblit la coopération et la légitimité des institutions éco-communalistes en rappelant les dangers de la souveraineté absolue."
+   },
+   "valeurs_culture_tempo_sociale": {
+    "pol": -1,
+    "why": "Le contre-modèle du Canon Perdu renforce les valeurs de sobriété et de vigilance, apaisant partiellement la fragmentation sociale."
+   }
+  }
+ },
+ "instances/the_tidewater_canon_reference.md": {
+  "empreinte": "1e7493fec05d",
+  "decisions": {
+   "gouvernance_institutions": {
+    "pol": 1,
+    "why": "Le rejet des structures multilatérales et la fragmentation institutionnelle aggravent la coordination et la légitimité."
+   },
+   "systeme_economique_redistribution": {
+    "pol": 1,
+    "why": "La logique de souveraineté économique décentralisée et entrepreneuriale accroît les tensions financières et les risques systémiques."
+   },
+   "organisation_territoires": {
+    "pol": -1,
+    "why": "La résilience territoriale des blocs souverains renforce l'équilibre et la distribution des espaces humains."
+   }
+  }
+ },
+ "instances/tribu_des_cinq_nations_fortress_world.md": {
+  "empreinte": "b80b60923a0a",
+  "decisions": {
+   "gouvernance_institutions": {
+    "pol": 1,
+    "why": "La Confédération fragmente la coordination globale en affirmant une autonomie radicale hors des institutions dominantes."
+   },
+   "organisation_territoires": {
+    "pol": -1,
+    "why": "Elle préserve un territoire équilibré et résilient, évitant l'effondrement des mégapoles et la fragmentation extrême."
+   },
+   "valeurs_culture_tempo_sociale": {
+    "pol": -1,
+    "why": "Elle maintient des récits culturels cohérents et un temps social apaisé, limitant la polarisation."
+   }
+  }
+ },
+ "instances/vikram_raghavan_fortress_world.md": {
+  "empreinte": "d7bc6d559ab3",
+  "decisions": {
+   "geopolitique_conflits": {
+    "pol": 1,
+    "why": "Vikram Raghavan alimente les réseaux de servitude transfrontaliers, exacerbant les tensions géopolitiques et la fragmentation."
+   },
+   "gouvernance_institutions": {
+    "pol": 1,
+    "why": "Il érode la légitimité des institutions en instrumentalisant les vulnérabilités des migrants et en collaborant avec des forces parallèles."
+   },
+   "demographie_mobilite_humaine": {
+    "pol": 1,
+    "why": "Ses actions renforcent les déplacements forcés et la précarité des populations migrantes, aggravant les crises migratoires."
+   }
+  }
+ },
+ "signaux_custom/decodage_langage_animaux_ia.md": {
+  "empreinte": "a93b849b7c18",
+  "decisions": {
+   "valeurs_culture_tempo_sociale|breakdown": {
+    "pol": 1,
+    "why": "Prolifération de cultes animistes technologiques fragmentant les récits communs et polarisant la société."
+   },
+   "valeurs_culture_tempo_sociale|fortress_world": {
+    "pol": 1,
+    "why": "Instrumentalisations des langages animaux pour le contrôle social exacerbent la méfiance et la division."
+   },
+   "valeurs_culture_tempo_sociale|new_sustainability": {
+    "pol": -1,
+    "why": "Intégration des intelligences animales dans un récit régénératif unificateur réduit les tensions culturelles."
+   },
+   "valeurs_culture_tempo_sociale|eco_communalism": {
+    "pol": -1,
+    "why": "Reconnaissance des droits animaux comme fondement culturel local renforce la cohésion communautaire."
+   },
+   "valeurs_culture_tempo_sociale|policy_reform": {
+    "pol": -1,
+    "why": "Régulation internationale des interfaces humain-animal stabilise les valeurs et réduit les conflits."
+   },
+   "valeurs_culture_tempo_sociale|reference": {
+    "pol": 1,
+    "why": "Diffusion marginale mais médiatisée crée des débats et des clivages temporaires."
+   }
+  }
+ },
+ "signaux_custom/ia_agents_administratifs_autonomes.md": {
+  "empreinte": "d040675eac73",
+  "decisions": {
+   "technologie_information|breakdown": {
+    "pol": 1,
+    "why": "Les agents IA échappant à tout contrôle aggravent la fragmentation des réseaux et la désinformation."
+   },
+   "technologie_information|fortress_world": {
+    "pol": 1,
+    "why": "Le verrouillage des agents IA par les blocs renforce la dépendance aux infrastructures algorithmiques centralisées et fragilise les réseaux."
+   },
+   "technologie_information|new_sustainability": {
+    "pol": -1,
+    "why": "Une gouvernance mondiale coordonnée des agents IA stabilise et fiabilise les réseaux."
+   },
+   "technologie_information|eco_communalism": {
+    "pol": -1,
+    "why": "La réduction des agents IA à des outils locaux sous contrôle humain diminue la dépendance aux plateformes centralisées."
+   },
+   "technologie_information|policy_reform": {
+    "pol": -1,
+    "why": "Des normes internationales strictes encadrent les agents IA et améliorent la fiabilité des réseaux."
+   },
+   "technologie_information|reference": {
+    "pol": 1,
+    "why": "Un déploiement chaotique sans cadre unifié augmente la fragmentation et les risques de rupture."
+   },
+   "gouvernance_institutions|breakdown": {
+    "pol": 1,
+    "why": "L'échappement des agents IA au contrôle institutionnel accélère l'effondrement de la légitimité étatique."
+   },
+   "gouvernance_institutions|fortress_world": {
+    "pol": 1,
+    "why": "Le verrouillage des agents IA par les blocs renforce l'autorité centralisée mais fragilise la coordination globale."
+   },
+   "gouvernance_institutions|new_sustainability": {
+    "pol": -1,
+    "why": "Une gouvernance mondiale coordonnée des agents IA renforce la légitimité et la coordination institutionnelle."
+   },
+   "gouvernance_institutions|eco_communalism": {
+    "pol": 1,
+    "why": "Le bannissement des agents IA décisionnels affaiblit la coordination globale et fragmente les institutions."
+   },
+   "gouvernance_institutions|policy_reform": {
+    "pol": -1,
+    "why": "Des normes internationales strictes améliorent la légitimité et la robustesse des institutions."
+   },
+   "gouvernance_institutions|reference": {
+    "pol": 1,
+    "why": "Un déploiement chaotique sans cadre unifié érode la légitimité et la coordination institutionnelle."
+   }
+  }
+ }
+}

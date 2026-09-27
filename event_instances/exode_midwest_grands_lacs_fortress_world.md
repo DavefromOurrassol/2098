@@ -24,19 +24,19 @@ impact_sur_variables:
   - variable: demographie_mobilite_humaine
     delta_level: 12
     duree: 15
-    polarite: -1
+    polarite: 1
   - variable: organisation_territoires
-    delta_level: -14
+    delta_level: 14
     duree: 20
-    polarite: -1
+    polarite: 1
   - variable: gouvernance_institutions
-    delta_level: -10
+    delta_level: 10
     duree: 12
-    polarite: -1
+    polarite: 1
   - variable: climat_environnement_global
     delta_level: 8
     duree: 25
-    polarite: -1
+    polarite: 1
 propagation:
   via_matrice: true
 acteurs_impliques:
@@ -64,10 +64,10 @@ Les autoroutes I-90 et I-94 sont des rivières humaines : des colonnes ininterro
 L'exode fracture définitivement la fiction d'un territoire américain unifié et administrable, précipitant la cristallisation de la région des Grands Lacs en entité quasi-souveraine qui culminera avec le Compact de 2051. La surcharge démographique des zones lacustres génère une compétition violente pour l'eau et les logements, alimentant les milices locales et les futures Communes du Rust Belt. Pour les blocs en cours de constitution, l'effondrement de la gestion territoriale américaine devient le paradigme justifiant leurs propres politiques de tri et de fermeture.
 
 ## Impact sur les variables
-- **demographie_mobilite_humaine** : delta -12 sur 15 ans
+- **demographie_mobilite_humaine** : delta +12 sur 15 ans
 - **organisation_territoires** : delta +14 sur 20 ans
 - **gouvernance_institutions** : delta +10 sur 12 ans
-- **climat_environnement_global** : delta -8 sur 25 ans
+- **climat_environnement_global** : delta +8 sur 25 ans
 
 ## Acteurs impliqués
 - [[bureau_des_territoires_residuels_fortress_world]]

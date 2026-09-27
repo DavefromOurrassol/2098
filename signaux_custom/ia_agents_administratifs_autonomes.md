@@ -96,17 +96,17 @@ impact_sur_variables:
         annee_injection: 2031
         duree: 16
         delta_level: 5
-        polarite: 1
+        polarite: -1
       eco_communalism:
         annee_injection: 2038
         duree: 19
         delta_level: 5
-        polarite: 1
+        polarite: -1
       policy_reform:
         annee_injection: 2027
         duree: 16
         delta_level: 5
-        polarite: 1
+        polarite: -1
       reference:
         annee_injection: 2025
         duree: 15
@@ -121,12 +121,12 @@ impact_sur_variables:
         annee_injection: 2042
         duree: 17
         delta_level: 5
-        polarite: -1
+        polarite: 1
       fortress_world:
         annee_injection: 2038
         duree: 15
         delta_level: 5
-        polarite: -1
+        polarite: 1
       new_sustainability:
         annee_injection: 2034
         duree: 15
@@ -136,7 +136,7 @@ impact_sur_variables:
         annee_injection: 2041
         duree: 19
         delta_level: 5
-        polarite: -1
+        polarite: 1
       policy_reform:
         annee_injection: 2031
         duree: 15
@@ -146,5 +146,5 @@ impact_sur_variables:
         annee_injection: 2029
         duree: 14
         delta_level: 5
-        polarite: -1
+        polarite: 1
 ```

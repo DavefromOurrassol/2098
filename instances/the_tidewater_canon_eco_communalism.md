@@ -60,13 +60,13 @@ injection:
     Le Canon Perdu agit comme un contre-modèle dans la gouvernance éco-communaliste : son souvenir rappelle les dangers de la souveraineté absolue, affaiblissant les institutions coopératives (delta négatif sur gouvernance_institutions), mais renforce aussi les valeurs de sobriété et de vigilance face aux hiérarchies (delta positif sur valeurs_culture_tempo_sociale). Son influence est diffuse, mais persistante dans les débats locaux.
   impact_sur_variables:
   - variable: gouvernance_institutions
-    delta_level: -5
+    delta_level: 5
     duree: 20
-    polarite: -1
+    polarite: 1
   - variable: valeurs_culture_tempo_sociale
     delta_level: 3
     duree: 15
-    polarite: 1
+    polarite: -1
   propagation:
     via_matrice: false
 
