@@ -2130,7 +2130,7 @@
         "description": "Sans cette case : aperçu seulement, rien n'est modifié."
       }
     ],
-    "gui_verified": false,
+    "gui_verified": true,
     "required_one_of": [
       [
         "--scenario",
