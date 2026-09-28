@@ -1,0 +1,412 @@
+# sources_signaux_faibles.yaml — Ourrassol 2098
+# ==============================================
+# Liste de départ de la veille « signaux faibles » (concept d'Igor Ansoff).
+# Lue par export_prompt_signaux.py (mode manuel, par défaut) et, plus tard,
+# par la collecte locale (option 2) et la recherche web par API (option 1).
+#
+# L'IA reçoit cette liste comme POINT DE DÉPART : elle doit aussi élargir à
+# d'autres sources (sauf en collecte locale, qui ne lit que cette liste).
+#
+# Champs d'une source :
+#   nom       : nom lisible
+#   url       : page d'accueil ou rubrique à suivre
+#   langue    : fr | en | multi
+#   famille   : prospective | technologie | geopolitique | climat_energie |
+#               sante | societe
+#   variables : slugs de variables privilégiées (liste vide = toutes)
+#   acces     : libre | partiel (une partie sous abonnement : l'IA ne lira
+#               que la partie publique)
+#   rss       : adresse du flux RSS, utile seulement pour la collecte locale
+#               (option 2) — à renseigner à cette étape
+#   verifie   : false tant que l'adresse n'a pas été contrôlée
+#   actif     : false pour mettre une source de côté sans la supprimer
+#   ajoute_par: david | claude
+
+sources:
+
+  # ── Ajoutées par David (28 sept 2026) ─────────────────────────────────
+  - nom: Synthmedia
+    url: https://synthmedia.fr/
+    langue: fr
+    famille: technologie
+    variables: [technologie_information, valeurs_culture_tempo_sociale]
+    acces: libre
+    rss: null
+    verifie: false
+    actif: true
+    ajoute_par: david
+
+  - nom: Dwarkesh Patel — blog
+    url: https://www.dwarkesh.com/s/blog
+    langue: en
+    famille: technologie
+    variables: [technologie_information, systemes_productifs_travail]
+    acces: libre
+    rss: null
+    verifie: false
+    actif: true
+    ajoute_par: david
+
+  - nom: Fondation 2100 — Visions 2100
+    url: https://fondation.2100.org/publications/visions2100
+    langue: fr
+    famille: prospective
+    variables: []
+    acces: libre
+    rss: null
+    verifie: false
+    actif: true
+    ajoute_par: david
+
+  - nom: Futuribles
+    url: https://www.futuribles.com/
+    langue: fr
+    famille: prospective
+    variables: []
+    acces: partiel
+    rss: null
+    verifie: false
+    actif: true
+    ajoute_par: david
+
+  - nom: GEAB (Global Europe Anticipation Bulletin)
+    url: https://geab.eu/
+    langue: multi
+    famille: geopolitique
+    variables: [geopolitique_conflits, systeme_economique_redistribution, gouvernance_institutions]
+    acces: partiel
+    rss: null
+    verifie: false
+    actif: true
+    ajoute_par: david
+
+  # ── Prospective, repérage de signaux (toutes variables) ────────────────
+  - nom: Institute for the Future (IFTF)
+    url: https://www.iftf.org/
+    langue: en
+    famille: prospective
+    variables: []
+    acces: libre
+    rss: null
+    verifie: false
+    actif: true
+    ajoute_par: claude
+
+  - nom: Knowledge4Policy — Foresight (Commission européenne, JRC)
+    url: https://knowledge4policy.ec.europa.eu/foresight_en
+    langue: en
+    famille: prospective
+    variables: []
+    acces: libre
+    rss: null
+    verifie: false
+    actif: true
+    ajoute_par: claude
+
+  - nom: OCDE — Strategic Foresight
+    url: https://www.oecd.org/en/topics/strategic-foresight.html
+    langue: multi
+    famille: prospective
+    variables: []
+    acces: libre
+    rss: null
+    verifie: false
+    actif: true
+    ajoute_par: claude
+
+  - nom: Nesta
+    url: https://www.nesta.org.uk/
+    langue: en
+    famille: prospective
+    variables: [technologie_information, systemes_productifs_travail, sante_biotechnologies]
+    acces: libre
+    rss: null
+    verifie: false
+    actif: true
+    ajoute_par: claude
+
+  - nom: Usbek & Rica
+    url: https://usbeketrica.com/
+    langue: fr
+    famille: prospective
+    variables: []
+    acces: partiel
+    rss: null
+    verifie: false
+    actif: true
+    ajoute_par: claude
+
+  # ── Technologie, information, travail ──────────────────────────────────
+  - nom: MIT Technology Review
+    url: https://www.technologyreview.com/
+    langue: en
+    famille: technologie
+    variables: [technologie_information, sante_biotechnologies, energie_ressources_critiques]
+    acces: partiel
+    rss: null
+    verifie: false
+    actif: true
+    ajoute_par: claude
+
+  - nom: Rest of World
+    url: https://restofworld.org/
+    langue: en
+    famille: technologie
+    variables: [technologie_information, systemes_productifs_travail, organisation_territoires]
+    acces: libre
+    rss: null
+    verifie: false
+    actif: true
+    ajoute_par: claude
+
+  - nom: Hacker News
+    url: https://news.ycombinator.com/
+    langue: en
+    famille: technologie
+    variables: [technologie_information]
+    acces: libre
+    rss: null
+    verifie: false
+    actif: true
+    ajoute_par: claude
+
+  # ── Géopolitique, gouvernance, frontières ──────────────────────────────
+  - nom: Le Grand Continent
+    url: https://legrandcontinent.eu/fr/
+    langue: fr
+    famille: geopolitique
+    variables: [geopolitique_conflits, gouvernance_institutions, frontieres_du_systeme]
+    acces: partiel
+    rss: null
+    verifie: false
+    actif: true
+    ajoute_par: claude
+
+  - nom: International Crisis Group — CrisisWatch
+    url: https://www.crisisgroup.org/crisiswatch
+    langue: en
+    famille: geopolitique
+    variables: [geopolitique_conflits, gouvernance_institutions]
+    acces: libre
+    rss: null
+    verifie: false
+    actif: true
+    ajoute_par: claude
+
+  - nom: Global Voices
+    url: https://globalvoices.org/
+    langue: multi
+    famille: societe
+    variables: [valeurs_culture_tempo_sociale, gouvernance_institutions, demographie_mobilite_humaine]
+    acces: libre
+    rss: null
+    verifie: false
+    actif: true
+    ajoute_par: claude
+
+  # ── Climat, énergie, ressources ────────────────────────────────────────
+  - nom: Carbon Brief
+    url: https://www.carbonbrief.org/
+    langue: en
+    famille: climat_energie
+    variables: [climat_environnement_global, energie_ressources_critiques]
+    acces: libre
+    rss: null
+    verifie: false
+    actif: true
+    ajoute_par: claude
+
+  - nom: Grist
+    url: https://grist.org/
+    langue: en
+    famille: climat_energie
+    variables: [climat_environnement_global, organisation_territoires]
+    acces: libre
+    rss: null
+    verifie: false
+    actif: true
+    ajoute_par: claude
+
+  - nom: AIE (IEA) — Commentaries
+    url: https://www.iea.org/commentaries
+    langue: en
+    famille: climat_energie
+    variables: [energie_ressources_critiques]
+    acces: libre
+    rss: null
+    verifie: false
+    actif: true
+    ajoute_par: claude
+
+  # ── Santé, biotechnologies ─────────────────────────────────────────────
+  - nom: STAT News
+    url: https://www.statnews.com/
+    langue: en
+    famille: sante
+    variables: [sante_biotechnologies]
+    acces: partiel
+    rss: null
+    verifie: false
+    actif: true
+    ajoute_par: claude
+
+  # ── Valeurs, culture, démographie ──────────────────────────────────────
+  - nom: Noema Magazine
+    url: https://www.noemamag.com/
+    langue: en
+    famille: societe
+    variables: [valeurs_culture_tempo_sociale, gouvernance_institutions]
+    acces: libre
+    rss: null
+    verifie: false
+    actif: true
+    ajoute_par: claude
+
+  - nom: The Conversation (France)
+    url: https://theconversation.com/fr
+    langue: fr
+    famille: societe
+    variables: []
+    acces: libre
+    rss: null
+    verifie: false
+    actif: true
+    ajoute_par: claude
+
+  # ── Bases de signaux de changement (réflexion David/ChatGPT, 28 sept 2026)
+  # URL vérifiées par Claude le 28 sept 2026.
+  - nom: ESPAS — Horizon Scanning
+    url: https://espas.eu/horizon.html
+    langue: en
+    famille: prospective
+    variables: []
+    acces: libre
+    rss: null
+    verifie: true
+    actif: true
+    ajoute_par: david
+    # « signals of change » / game changers, 3 à 15 signaux par numéro (PDF HorizonScanning_ESPAS_NN.pdf)
+
+  - nom: Knowledge4Policy — ESPAS Horizon Scanning
+    url: https://knowledge4policy.ec.europa.eu/projects-activities/espas-horizon-scanning_en
+    langue: en
+    famille: prospective
+    variables: []
+    acces: libre
+    rss: null
+    verifie: true
+    actif: true
+    ajoute_par: david
+    # page projet : Signal Cards, ateliers de sense-making
+
+  - nom: Futures4Europe (communauté européenne de prospective)
+    url: https://www.futures4europe.eu/
+    langue: en
+    famille: prospective
+    variables: []
+    acces: libre
+    rss: null
+    verifie: true
+    actif: true
+    ajoute_par: david
+    # relaie Signal Cards et numéros ESPAS
+
+  - nom: PNUD — Future Trends & Signals System
+    url: https://signals.data.undp.org/
+    langue: en
+    famille: prospective
+    variables: []
+    acces: libre
+    rss: null
+    verifie: true
+    actif: true
+    ajoute_par: david
+    # base de plus de 2 000 signaux de changement (social, techno, économie, environnement, politique)
+
+  - nom: PNUD — Signals Spotlight
+    url: https://www.undp.org/future-development/signals-spotlight
+    langue: en
+    famille: prospective
+    variables: []
+    acces: libre
+    rss: null
+    verifie: true
+    actif: true
+    ajoute_par: david
+    # synthèse annuelle des signaux du réseau prospective du PNUD
+
+  - nom: JRC — FUTURINNOV (horizon scanning technologies émergentes)
+    url: https://knowledge4policy.ec.europa.eu/projects-activities/futurinnov_en
+    langue: en
+    famille: technologie
+    variables: [technologie_information, sante_biotechnologies, energie_ressources_critiques]
+    acces: libre
+    rss: null
+    verifie: true
+    actif: true
+    ajoute_par: david
+    # série « … the Future » : Healing, Embodying, (Dis)Entangling, Observing, Mobilising, Powering…
+
+  - nom: ONU — Conseil scientifique du Secrétaire général (horizon scanning)
+    url: https://www.un.org/scientific-advisory-board/en
+    langue: en
+    famille: technologie
+    variables: []
+    acces: libre
+    rss: null
+    verifie: true
+    actif: true
+    ajoute_par: david
+    # Horizon Scanning 2026 : IA, données, biotech, énergie, environnement ; fiches thématiques (ex. mirror life)
+
+  - nom: PNUE — Global Foresight (signals of change)
+    url: https://www.unep.org/resources/global-foresight-report
+    langue: en
+    famille: climat_energie
+    variables: [climat_environnement_global, sante_biotechnologies, energie_ressources_critiques]
+    acces: libre
+    rss: null
+    verifie: true
+    actif: true
+    ajoute_par: david
+    # Navigating New Horizons 2024 : 18 signaux de changement (pergélisol, minerais, IA et environnement…)
+
+  - nom: WEF — Top 10 Emerging Technologies (série)
+    url: https://www.weforum.org/publications/series/top-10-emerging-technologies/
+    langue: en
+    famille: technologie
+    variables: [technologie_information, energie_ressources_critiques, sante_biotechnologies]
+    acces: libre
+    rss: null
+    verifie: true
+    actif: true
+    ajoute_par: david
+    # technologies au point de bascule recherche → application ; éditions 2023-2025 comparables
+
+# ── Livres et documents ──────────────────────────────────────────────────
+# Mode « dépose et oublie » : tout PDF (avec texte), EPUB, .txt ou .md déposé
+# dans dossier_livres est lu automatiquement, SANS entrée ici, par le bouton
+# « Signaux faibles — Lire les livres (API) » (veille_livres_api.py, un appel
+# LLM par livre, pas de copier-coller). À chaque passe, les pages les plus
+# riches en faits concrets (dates, chiffres, lieux, « premier », « pilote »…)
+# pas encore lues sont envoyées : le livre est lu en plusieurs passes, puis
+# « épuisé ». Options du bouton : Lister les livres, Reprendre au début.
+#
+# Une entrée ici ne sert qu'aux EXCEPTIONS (repérée par « fichier: ») :
+#   actif: false          mettre le livre de côté
+#   titre / auteur / annee corriger ce qui est lu dans le fichier
+#   pages: "45-80"        PDF : imposer des pages (numéros du lecteur PDF),
+#                         envoyées telles quelles à chaque veille
+#   chapitres: "3-5"      EPUB : imposer des chapitres
+#   max_caracteres: 30000 budget du livre (défaut : 30000, partagé si
+#                         plusieurs livres ; 80000 au total)
+#   note: "…"             précision affichée à l'IA
+# Une entrée SANS « fichier: » est seulement listée dans le prompt web à coller
+# (livre à joindre à la main dans l'IA de chat).
+# PDF scanné (sans texte) : détecté et signalé, pas encore lu (OCR à venir).
+dossier_livres: documentation/livres
+
+livres: []
+#  - fichier: "ESPAS foresight paper - AI quantum cybersecurity.pdf"
+#    pages: "5, 8, 17-21, 23-24"
+#    note: "ne retenir que BCI, IA malveillantes, capteurs quantiques"

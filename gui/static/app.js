@@ -80,6 +80,7 @@ function buildNav() {
   nav.appendChild(makeNavItem('instances', '🏛️', 'Instances', null, 'tab'));
   nav.appendChild(makeNavItem('event_instances', '⚡', 'Événements', null, 'tab'));
   nav.appendChild(makeNavItem('signaux', '📡', 'Signaux faibles', null, 'tab'));
+  nav.appendChild(makeNavItem('veille_signaux', '🔭', 'Veille signaux faibles', null, 'tab'));
   nav.appendChild(makeNavItem('resumes', '📝', 'Résumés par scénario', null, 'tab'));
   nav.appendChild(makeDivider());
 
@@ -351,6 +352,7 @@ function showTab(tab) {
     if (tab === 'instances') loadInstances();
     if (tab === 'event_instances') loadEventInstances();
     if (tab === 'signaux') loadSignaux();
+    if (tab === 'veille_signaux') loadVeilleSignaux();
     if (tab === 'resumes') loadResumes();
     if (tab === 'sujets')    loadSujets();
     if (tab === 'lore_propositions') loadLorePropositions();
@@ -2230,6 +2232,71 @@ async function buildYamlPanel(yf) {
     badge.className = 'yaml-readonly-badge';
     badge.textContent = 'lecture seule';
     actions.appendChild(badge);
+  }
+
+  // Option "copyable" (28 septembre 2026, veille signaux faibles) : boutons
+  // Copier / Télécharger pour un fichier à coller tel quel dans une IA. Le
+  // contenu est RELU sur le disque au clic (le fichier a pu être régénéré
+  // par un lancement depuis l'ouverture du panneau).
+  if (yf.copyable) {
+    const lireFrais = async () => {
+      const res = await fetch(`/api/yaml?path=${encodeURIComponent(yf.path)}`);
+      const data = await res.json();
+      if (data.error) throw new Error(data.error);
+      if (!data.exists) throw new Error('fichier absent -- lance d\'abord le script');
+      const viewEl = wrapper.querySelector('.yaml-view');
+      if (viewEl && viewEl.style.display !== 'none') viewEl.textContent = data.content;
+      return data.content;
+    };
+    const btnCopier = document.createElement('button');
+    btnCopier.className = 'yaml-btn';
+    btnCopier.textContent = '📋 Copier';
+    btnCopier.title = 'Copie tout le fichier dans le presse-papiers';
+    btnCopier.addEventListener('click', async () => {
+      const statusEl = wrapper.querySelector('.yaml-status-msg');
+      try {
+        const texte = await lireFrais();
+        try {
+          await navigator.clipboard.writeText(texte);
+        } catch (e) {
+          // Repli si l'API presse-papiers est refusée par le navigateur.
+          const ta = document.createElement('textarea');
+          ta.value = texte;
+          ta.style.cssText = 'position:fixed;left:-9999px;top:0;';
+          document.body.appendChild(ta);
+          ta.select();
+          const ok = document.execCommand('copy');
+          document.body.removeChild(ta);
+          if (!ok) throw new Error('copie refusée par le navigateur');
+        }
+        showYamlStatus(statusEl, 'ok', `✓ Copié (${texte.length.toLocaleString('fr-FR')} caractères) — colle-le dans l'IA`);
+      } catch (e) {
+        showYamlStatus(statusEl, 'error', `Erreur : ${e.message}`);
+      }
+    });
+    const btnTelecharger = document.createElement('button');
+    btnTelecharger.className = 'yaml-btn';
+    btnTelecharger.textContent = '⬇ Télécharger .md';
+    btnTelecharger.title = 'Télécharge le fichier, à joindre tel quel dans la conversation IA';
+    btnTelecharger.addEventListener('click', async () => {
+      const statusEl = wrapper.querySelector('.yaml-status-msg');
+      try {
+        const texte = await lireFrais();
+        const blob = new Blob([texte], { type: 'text/markdown;charset=utf-8' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = yf.path.split('/').pop();
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        setTimeout(() => URL.revokeObjectURL(url), 1000);
+      } catch (e) {
+        showYamlStatus(statusEl, 'error', `Erreur : ${e.message}`);
+      }
+    });
+    actions.insertBefore(btnTelecharger, actions.firstChild);
+    actions.insertBefore(btnCopier, actions.firstChild);
   }
 
   titleRow.appendChild(titleEl);
@@ -9559,6 +9626,663 @@ async function genererRapportMdSignaux() {
 }
 
 initPanelResizer('#tab-signaux .articles-sidebar', 'signaux-resizer', 'ourrassol_signaux_panel_width');
+
+// ═══════════════════════════════════════════════════════════════════════
+// ONGLET VEILLE SIGNAUX FAIBLES (28 septembre 2026) -- tri des candidats
+// produits par generator/import_signaux_faibles.py (state/veille_signaux.json,
+// routes dans gui/routes_veille_signaux.py). Calque des onglets Instances/
+// Signaux (table filtrable/triable/paginée + panneau redimensionnable).
+//
+// Actions du panneau :
+//   - Écarter / Remettre à trier : /api/veille_signaux/statut ;
+//   - Envoyer en queue : 1) /api/idees/proposer (idees_vers_queue.py, UN
+//     appel IA) prépare l'entrée ; 2) après relecture, /api/yaml/append
+//     l'ajoute à signaux_custom/queue.yaml ou evenements_custom/queue.yaml
+//     (même point d'écriture que le formulaire guidé) ; 3) statut en_queue.
+//     L'injection réelle reste le lancement habituel d'inject_custom_signals.py
+//     / inject_custom_events.py.
+// Tout texte venant des IA passe par _veilleEsc (jamais d'innerHTML brut) ;
+// les liens de sources ne sont rendus cliquables que s'ils sont en http(s).
+// ═══════════════════════════════════════════════════════════════════════
+
+const VeilleState = {
+  all: [],
+  lots: [],
+  filtered: [],
+  page: 0,
+  perPage: 50,
+  sortKey: 'score',
+  sortDir: 'desc',
+  filtersWired: false,
+  selected: null,
+  propositions: {},   // id candidat -> résultat de /api/idees/proposer
+};
+
+const VEILLE_QUEUES = {
+  signal: 'signaux_custom/queue.yaml',
+  evenement: 'evenements_custom/queue.yaml',
+};
+const VEILLE_STATUTS_LABEL = { a_trier: 'à trier', ecarte: 'écarté', en_queue: 'en queue' };
+
+function _veilleEsc(s) {
+  return String(s == null ? '' : s)
+    .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+}
+
+function _veilleLien(url, nom) {
+  const u = String(url || '');
+  const texte = _veilleEsc(nom || u);
+  if (!/^https?:\/\//i.test(u)) return texte;
+  return `<a href="${_veilleEsc(u)}" target="_blank" rel="noopener noreferrer">${texte}</a>`;
+}
+
+async function loadVeilleSignaux() {
+  if (!VeilleState.filtersWired) {
+    ['veille-lot', 'veille-statut', 'veille-variable', 'veille-ia'].forEach(id =>
+      document.getElementById(id).addEventListener('change', () => {
+        VeilleState.page = 0;
+        _veilleApplyFilterSort();
+        renderVeilleTable();
+      })
+    );
+    document.getElementById('veille-search').addEventListener('input', () => {
+      VeilleState.page = 0;
+      _veilleApplyFilterSort();
+      renderVeilleTable();
+    });
+    document.getElementById('veille-prev').addEventListener('click', () => {
+      if (VeilleState.page > 0) { VeilleState.page--; renderVeilleTable(); }
+    });
+    document.getElementById('veille-next').addEventListener('click', () => {
+      const maxPage = Math.max(0, Math.ceil(VeilleState.filtered.length / VeilleState.perPage) - 1);
+      if (VeilleState.page < maxPage) { VeilleState.page++; renderVeilleTable(); }
+    });
+    document.querySelectorAll('#tab-veille_signaux .articles-table th[data-sort]').forEach(th => {
+      th.addEventListener('click', () => {
+        const key = th.dataset.sort;
+        if (VeilleState.sortKey === key) {
+          VeilleState.sortDir = VeilleState.sortDir === 'asc' ? 'desc' : 'asc';
+        } else {
+          VeilleState.sortKey = key;
+          VeilleState.sortDir = key === 'score' ? 'desc' : 'asc';
+        }
+        _veilleApplyFilterSort();
+        renderVeilleTable();
+      });
+    });
+    VeilleState.filtersWired = true;
+  }
+  await refreshVeilleData();
+}
+
+async function refreshVeilleData() {
+  const tbody = document.getElementById('veille-tbody');
+  tbody.innerHTML = '<tr><td colspan="5" class="articles-empty">Chargement…</td></tr>';
+  try {
+    const res = await fetch('/api/veille_signaux/liste');
+    const data = await res.json();
+    if (!res.ok || data.error) {
+      tbody.innerHTML = `<tr><td colspan="5" class="articles-empty">Erreur : ${_veilleEsc(data.error || res.statusText)}</td></tr>`;
+      return;
+    }
+    VeilleState.lots = data.lots || [];
+    VeilleState.all = (data.candidats || []).map(c => ({
+      ...c,
+      trouve_par_str: (c.trouve_par || []).join(', '),
+      statut: c.statut || 'a_trier',
+    }));
+  } catch (e) {
+    tbody.innerHTML = `<tr><td colspan="5" class="articles-empty">Erreur réseau : ${_veilleEsc(e.message)}</td></tr>`;
+    return;
+  }
+
+  if (VeilleState.selected) {
+    const id = VeilleState.selected.id;
+    VeilleState.selected = VeilleState.all.find(c => c.id === id) || null;
+  }
+  _veillePopulateFilters();
+  _veilleRenderLotInfo();
+  _veilleApplyFilterSort();
+  renderVeilleTable();
+  renderVeillePanel();
+}
+
+function _veilleRenderLotInfo() {
+  const zone = document.getElementById('veille-lot-info');
+  const lot = VeilleState.lots[VeilleState.lots.length - 1];
+  if (!lot) {
+    zone.style.display = 'block';
+    zone.textContent = 'Aucun lot importé. Lance export_prompt_signaux.py, puis import_signaux_faibles.py.';
+    return;
+  }
+  const reps = (lot.reponses || []).map(r => `${r.ia} (${r.signaux})`).join(', ');
+  const couv = (lot.couverture || []).length
+    ? ' — Couverture : ' + lot.couverture.join(' ; ') : '';
+  zone.style.display = 'block';
+  zone.textContent = `Dernier lot ${lot.lot} : ${reps}${couv}`;
+}
+
+function _veillePopulateFilters() {
+  const remplir = (id, valeurs, labelTous, labeller) => {
+    const sel = document.getElementById(id);
+    const courant = sel.value;
+    sel.innerHTML = `<option value="">${labelTous}</option>` +
+      valeurs.map(v => `<option value="${_veilleEsc(v)}">${_veilleEsc(labeller ? labeller(v) : v)}</option>`).join('');
+    if (valeurs.includes(courant)) sel.value = courant;
+  };
+  const statutSel = document.getElementById('veille-statut');
+  const statutAvant = statutSel.value;
+  remplir('veille-statut', ['a_trier', 'en_queue', 'ecarte'], 'Tous', v => VEILLE_STATUTS_LABEL[v]);
+  // Premier affichage : on montre ce qui reste à trier.
+  statutSel.value = statutAvant === undefined || !statutSel.dataset.init ? 'a_trier' : statutAvant;
+  statutSel.dataset.init = '1';
+  // Filtre par lot (une veille = un lot), du plus récent au plus ancien,
+  // avec le nombre de candidats encore à trier dans chacun.
+  const lotSel = document.getElementById('veille-lot');
+  const lotAvant = lotSel.value;
+  const lotsIds = VeilleState.lots.map(l => l.lot).filter(Boolean).reverse();
+  lotSel.innerHTML = '<option value="">Tous les lots</option>' + lotsIds.map(id => {
+    const n = VeilleState.all.filter(c => c.lot === id).length;
+    const aTrier = VeilleState.all.filter(c => c.lot === id && c.statut === 'a_trier').length;
+    const d = /^(\d{4})(\d{2})(\d{2})_(\d{2})(\d{2})/.exec(id);
+    const libelle = d ? `${d[3]}/${d[2]}/${d[1]} ${d[4]}h${d[5]}` : id;
+    return `<option value="${_veilleEsc(id)}">${_veilleEsc(libelle)} — ${aTrier} à trier / ${n}</option>`;
+  }).join('');
+  if (lotsIds.includes(lotAvant)) lotSel.value = lotAvant;
+  remplir('veille-variable',
+    [...new Set(VeilleState.all.map(c => c.variable_principale))].sort(), 'Toutes');
+  remplir('veille-ia',
+    [...new Set(VeilleState.all.flatMap(c => c.trouve_par || []))].sort(), 'Toutes');
+}
+
+function _veilleApplyFilterSort() {
+  const lot = document.getElementById('veille-lot').value;
+  const statut = document.getElementById('veille-statut').value;
+  const variable = document.getElementById('veille-variable').value;
+  const ia = document.getElementById('veille-ia').value;
+  const search = (document.getElementById('veille-search').value || '').trim().toLowerCase();
+
+  let rows = VeilleState.all;
+  if (lot) rows = rows.filter(c => c.lot === lot);
+  if (statut) rows = rows.filter(c => c.statut === statut);
+  if (variable) rows = rows.filter(c => c.variable_principale === variable);
+  if (ia) rows = rows.filter(c => (c.trouve_par || []).includes(ia));
+  if (search) {
+    rows = rows.filter(c => ((c.titre || '') + ' ' + (c.description || '')).toLowerCase().includes(search));
+  }
+
+  const key = VeilleState.sortKey;
+  const dir = VeilleState.sortDir === 'asc' ? 1 : -1;
+  rows = [...rows].sort((a, b) => {
+    let av = a[key], bv = b[key];
+    if (typeof av === 'string') av = av.toLowerCase();
+    if (typeof bv === 'string') bv = bv.toLowerCase();
+    if (av == null) av = '';
+    if (bv == null) bv = '';
+    if (av < bv) return -1 * dir;
+    if (av > bv) return 1 * dir;
+    return 0;
+  });
+  VeilleState.filtered = rows;
+}
+
+function renderVeilleTable() {
+  const tbody = document.getElementById('veille-tbody');
+  const { filtered, page, perPage } = VeilleState;
+  const restants = VeilleState.all.filter(c => c.statut === 'a_trier').length;
+  document.getElementById('veille-count').textContent =
+    `${filtered.length} affiché(s) — ${restants} à trier sur ${VeilleState.all.length}`;
+
+  if (filtered.length === 0) {
+    tbody.innerHTML = '<tr><td colspan="5" class="articles-empty">Aucun candidat pour ces filtres.</td></tr>';
+    document.getElementById('veille-range').textContent = '';
+    document.getElementById('veille-page-label').textContent = '';
+    document.getElementById('veille-prev').disabled = true;
+    document.getElementById('veille-next').disabled = true;
+    return;
+  }
+
+  const start = page * perPage;
+  const slice = filtered.slice(start, start + perPage);
+  tbody.innerHTML = slice.map(c => {
+    const marques = (c.sources_douteuses ? '❌ ' : '') + (c.convergent ? '⭐ ' : '') +
+      ((c.proche_de_signal_injecte || []).length ? '🔁 ' : '');
+    return `
+    <tr data-id="${_veilleEsc(c.id)}" class="${VeilleState.selected && VeilleState.selected.id === c.id ? 'active' : ''}">
+      <td>${_veilleEsc(c.score)}</td>
+      <td title="${_veilleEsc(c.titre)}">${marques}${_veilleEsc(c.titre)}</td>
+      <td>${_veilleEsc(c.variable_principale)}</td>
+      <td>${_veilleEsc(c.trouve_par_str)}</td>
+      <td>${_veilleEsc(VEILLE_STATUTS_LABEL[c.statut] || c.statut)}</td>
+    </tr>`;
+  }).join('');
+  tbody.querySelectorAll('tr[data-id]').forEach((tr, idx) => {
+    tr.addEventListener('click', () => {
+      VeilleState.selected = slice[idx];
+      renderVeilleTable();
+      renderVeillePanel();
+    });
+  });
+
+  const totalPages = Math.max(1, Math.ceil(filtered.length / perPage));
+  document.getElementById('veille-range').textContent =
+    `${start + 1}–${Math.min(start + perPage, filtered.length)} sur ${filtered.length}`;
+  document.getElementById('veille-page-label').textContent = `page ${page + 1} / ${totalPages}`;
+  document.getElementById('veille-prev').disabled = page === 0;
+  document.getElementById('veille-next').disabled = page >= totalPages - 1;
+}
+
+function _veilleTexteProposition(c) {
+  // Texte envoyé à idees_vers_queue.py : le candidat tel quel, plus la
+  // date d'observation (qui devient l'année d'apparition) et les variables
+  // en indice. Rien n'est inventé ici.
+  const vars = [c.variable_principale, ...(c.variables_secondaires || [])]
+    .filter(v => v && v !== 'hors_variables');
+  return [
+    c.titre ? `${c.titre}.` : '',
+    c.description || '',
+    c.lieu ? `Lieu : ${c.lieu}.` : '',
+    c.observe_le ? `Observé en ${c.observe_le}.` : '',
+    vars.length ? `Variables concernées : ${vars.join(', ')}.` : '',
+  ].filter(Boolean).join(' ');
+}
+
+function renderVeillePanel() {
+  const panel = document.getElementById('veille-panel');
+  const c = VeilleState.selected;
+  if (!c) {
+    panel.innerHTML = '<div class="articles-panel-empty">Clique sur une ligne pour voir le détail.</div>';
+    return;
+  }
+  const n = c.notes || {};
+  const notesParIa = Object.entries(c.notes_par_ia || {});
+  const typeDefaut = c.nature === 'evenement' ? 'evenement' : 'signal';
+
+  panel.innerHTML = `
+    <div class="articles-panel-title">${_veilleEsc(c.titre)}</div>
+    ${c.motif_ecart ? `<div class="articles-panel-section" style="color:#c0392b">🗑 Écarté automatiquement : ${_veilleEsc(c.motif_ecart)}. Si tu retrouves une source, « Remettre à trier ».</div>` : ''}
+    <div class="articles-panel-sub">${_veilleEsc(VEILLE_STATUTS_LABEL[c.statut] || c.statut)}
+      — ${_veilleEsc(c.nature)} — observé ${_veilleEsc(c.observe_le)} — ${_veilleEsc(c.lieu)}</div>
+    ${(c.proche_de_signal_injecte || []).length ? `
+    <div class="articles-panel-section" style="color:#b5651d">
+      🔁 Ressemble à un signal déjà injecté : ${_veilleEsc(c.proche_de_signal_injecte.join(', '))}
+    </div>` : ''}
+    <div class="articles-panel-section">
+      <label>Notes (moyenne)</label>
+      pertinence ${_veilleEsc(n.pertinence)} · nouveauté ${_veilleEsc(n.nouveaute)} · impact ${_veilleEsc(n.impact)}
+      — score ${_veilleEsc(c.score)}
+      ${notesParIa.length > 1 ? notesParIa.map(([ia, x]) =>
+        `<div style="font-size:11px;color:#888">${_veilleEsc(ia)} : ${_veilleEsc(x.pertinence)} / ${_veilleEsc(x.nouveaute)} / ${_veilleEsc(x.impact)}</div>`).join('') : ''}
+    </div>
+    <div class="articles-panel-section">
+      <label>Trouvé par</label>
+      ${_veilleEsc(c.trouve_par_str)}${c.convergent ? ' — ⭐ plusieurs IA indépendamment' : ''}
+      ${(c.revu_dans_lots || []).length ? `<div style="font-size:11px;color:#888">Retrouvé dans les veilles suivantes : ${_veilleEsc(c.revu_dans_lots.join(', '))}</div>` : ''}
+      ${c.fusionne ? `<div style="font-size:11px;color:#888">Fusion de : ${(c.variantes_resume || []).map(v =>
+        `${_veilleEsc(v.ia)} #${_veilleEsc(v.numero)} « ${_veilleEsc(v.titre)} »`).join(' | ')}</div>` : ''}
+    </div>
+    <div class="articles-panel-section">
+      <label>Variables</label>
+      principale : ${_veilleEsc(c.variable_principale)}
+      ${(c.variables_secondaires || []).length ? `<br>secondaires : ${_veilleEsc(c.variables_secondaires.join(', '))}` : ''}
+      <br>moteur numérique : ${c.moteur_numerique === true ? 'oui' : c.moteur_numerique === false ? 'non' : '?'}
+    </div>
+    <div class="articles-panel-section">${_veilleEsc(c.description)}</div>
+    ${c.justification ? `<div class="articles-panel-section" style="font-style:italic">${_veilleEsc(c.justification)}</div>` : ''}
+    <div class="articles-panel-section">
+      <label>Sources</label>
+      ${(c.sources || []).map(s => {
+        const v = { ok: '✅', introuvable: '❌', non_verifiable: '❔' }[s.verif] || '';
+        const t = s.verif ? ` title="${_veilleEsc(s.verif + (s.detail ? ' (' + s.detail + ')' : ''))}"` : '';
+        return `<div style="word-break:break-all"><span${t}>${v}</span> ${_veilleLien(s.url, s.nom || s.url)}</div>`;
+      }).join('') || '—'}
+      ${c.sources_verif ? `<div style="font-size:11px;color:#888">Vérification : ${c.sources_verif.ok} ✅ · ${c.sources_verif.introuvable} ❌ · ${c.sources_verif.non_verifiable} ❔</div>` : ''}
+    </div>
+    ${(c.avertissements || []).length ? `
+    <div class="articles-panel-section" style="font-size:11px;color:#c77700">
+      ${c.avertissements.map(a => `⚠ ${_veilleEsc(a)}`).join('<br>')}
+    </div>` : ''}
+    <div class="articles-panel-section" id="veille-actions"></div>
+    <div id="veille-proposition"></div>
+    <div class="articles-panel-section" style="font-size:11px;color:#aaa">${_veilleEsc(c.id)}</div>
+  `;
+
+  const actions = document.getElementById('veille-actions');
+  if (c.statut === 'en_queue') {
+    const queue = VEILLE_QUEUES[c.queue_type] || 'la queue';
+    actions.innerHTML = `<label>Action</label>✓ En queue (${_veilleEsc(c.queue_type)} : ${_veilleEsc(c.queue_id)}).
+      <div class="option-desc">L'injection se fait en lançant ${c.queue_type === 'evenement'
+        ? 'inject_custom_events.py' : 'inject_custom_signals.py'} comme d'habitude.</div>
+      <button id="veille-btn-retrier" class="yaml-btn" style="margin-top:6px">↶ Remettre à trier</button>
+      <div class="option-desc" id="veille-action-etat"></div>`;
+    // Ne touche PAS à queue.yaml (un seul chemin d'écriture vers la queue) :
+    // rappel explicite de retirer l'entrée à la main.
+    document.getElementById('veille-btn-retrier').addEventListener('click', async () => {
+      const ok = confirm(`Remettre « ${c.titre} » à trier ?\n\nL'entrée « ${c.queue_id} » `
+        + `n'est PAS retirée de ${queue} : supprime-la à la main si elle n'a pas encore été injectée.`);
+      if (ok) await _veilleChangerStatut(c, 'a_trier');
+    });
+    return;
+  }
+  actions.innerHTML = `
+    <label>Action</label>
+    <div style="display:flex;gap:6px;flex-wrap:wrap;align-items:center">
+      <select id="veille-type">
+        <option value="signal" ${typeDefaut === 'signal' ? 'selected' : ''}>comme signal faible</option>
+        <option value="evenement" ${typeDefaut === 'evenement' ? 'selected' : ''}>comme événement</option>
+      </select>
+      <button id="veille-btn-preparer" class="yaml-btn" title="Un appel IA réel (idees_vers_queue.py)">✨ Préparer l'entrée de queue</button>
+      ${c.statut === 'ecarte'
+        ? '<button id="veille-btn-retrier" class="yaml-btn">↶ Remettre à trier</button>'
+        : '<button id="veille-btn-ecarter" class="yaml-btn">🗑 Écarter</button>'}
+    </div>
+    <div class="option-desc" id="veille-action-etat"></div>
+  `;
+  document.getElementById('veille-btn-preparer').addEventListener('click', () => _veillePreparer(c));
+  const btnEcarter = document.getElementById('veille-btn-ecarter');
+  if (btnEcarter) btnEcarter.addEventListener('click', () => _veilleChangerStatut(c, 'ecarte'));
+  const btnRetrier = document.getElementById('veille-btn-retrier');
+  if (btnRetrier) btnRetrier.addEventListener('click', () => _veilleChangerStatut(c, 'a_trier'));
+
+  if (VeilleState.propositions[c.id]) _veilleAfficherPropositions(c);
+}
+
+async function _veilleChangerStatut(c, statut, extra) {
+  const etat = document.getElementById('veille-action-etat');
+  try {
+    const res = await fetch('/api/veille_signaux/statut', {
+      method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ id: c.id, statut, ...(extra || {}) }),
+    });
+    const data = await res.json();
+    if (!res.ok || data.error) {
+      if (etat) etat.textContent = `Erreur : ${data.error || res.status}`;
+      return false;
+    }
+  } catch (e) {
+    if (etat) etat.textContent = `Erreur réseau : ${e.message}`;
+    return false;
+  }
+  await refreshVeilleData();
+  return true;
+}
+
+async function _veillePreparer(c) {
+  const btn = document.getElementById('veille-btn-preparer');
+  const etat = document.getElementById('veille-action-etat');
+  const type = document.getElementById('veille-type').value;
+  if (btn.disabled) return;
+  btn.disabled = true;
+  etat.textContent = 'Appel IA en cours (idees_vers_queue.py)…';
+  try {
+    const res = await fetch('/api/idees/proposer', {
+      method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ type, texte: _veilleTexteProposition(c) }),
+    });
+    const data = await res.json();
+    if (!res.ok || !data.ok) {
+      etat.textContent = `Erreur : ${data.error || res.status}`;
+      return;
+    }
+    VeilleState.propositions[c.id] = { type, idees: data.idees || [] };
+    etat.textContent = 'Relis la proposition ci-dessous, puis « Ajouter à la queue ».';
+    _veilleAfficherPropositions(c);
+  } catch (e) {
+    etat.textContent = `Erreur réseau : ${e.message}`;
+  } finally {
+    btn.disabled = false;
+  }
+}
+
+const VEILLE_VARIABLES = [
+  'systeme_economique_redistribution', 'gouvernance_institutions', 'geopolitique_conflits',
+  'valeurs_culture_tempo_sociale', 'organisation_territoires', 'sante_biotechnologies',
+  'frontieres_du_systeme', 'technologie_information', 'climat_environnement_global',
+  'energie_ressources_critiques', 'demographie_mobilite_humaine', 'systemes_productifs_travail',
+];
+// Mêmes valeurs qu'idees_vers_queue.py / dynamique.PERSISTANCE / inject_custom_events.
+const VEILLE_PERSISTANCES = ['ephemere', 'normale', 'durable', 'permanente'];
+const VEILLE_PORTEES = ['locale', 'regionale', 'continentale', 'globale'];
+const VEILLE_INTENSITES = ['faible', 'modérée', 'forte', 'majeure'];
+const VEILLE_MAX_VARS = 4;
+
+/**
+ * Proposition MODIFIABLE (28 septembre 2026, après le premier test réel :
+ * idees_vers_queue.py avait rétréci un candidat -- description réduite aux
+ * seules violences, persistance « ephemere » -- sans moyen de corriger avant
+ * l'ajout). Chaque idée proposée devient un petit formulaire ; ce qui est
+ * ajouté à la queue est ce que David a relu/corrigé, pas la sortie brute.
+ */
+function _veilleAfficherPropositions(c) {
+  const zone = document.getElementById('veille-proposition');
+  const prop = VeilleState.propositions[c.id];
+  if (!zone || !prop) return;
+  zone.innerHTML = '';
+  const estSignal = prop.type === 'signal';
+  const cleVars = estSignal ? 'variable_hint' : 'variables_hint';
+  const cleCount = estSignal ? 'variable_hint_count' : 'variables_hint_count';
+
+  if (prop.idees.length > 1) {
+    const info = document.createElement('div');
+    info.className = 'option-desc';
+    info.textContent = `L'IA a découpé ce candidat en ${prop.idees.length} idées : ajoute celle(s) que tu veux.`;
+    zone.appendChild(info);
+  }
+
+  prop.idees.forEach(p => {
+    const e0 = p.entree || {};
+    const carte = document.createElement('div');
+    carte.className = 'articles-panel-section';
+    carte.style.cssText = 'border:1px solid #ccc;border-radius:6px;padding:8px;';
+
+    const champ = (label, el, aide) => {
+      const bloc = document.createElement('div');
+      bloc.style.marginBottom = '6px';
+      const l = document.createElement('label');
+      l.textContent = label;
+      bloc.appendChild(l);
+      bloc.appendChild(el);
+      if (aide) {
+        const a = document.createElement('div');
+        a.className = 'option-desc';
+        a.textContent = aide;
+        bloc.appendChild(a);
+      }
+      carte.appendChild(bloc);
+      return el;
+    };
+    const input = (type, valeur) => {
+      const el = document.createElement('input');
+      el.type = type;
+      el.value = valeur == null ? '' : String(valeur);
+      el.style.cssText = 'width:100%;box-sizing:border-box;font-size:12px;padding:4px 6px;';
+      return el;
+    };
+    const select = (valeurs, courant, vide) => {
+      const el = document.createElement('select');
+      el.style.cssText = 'width:100%;font-size:12px;';
+      if (vide) {
+        const o = document.createElement('option');
+        o.value = ''; o.textContent = '— à choisir —';
+        el.appendChild(o);
+      }
+      valeurs.forEach(v => {
+        const o = document.createElement('option');
+        o.value = v; o.textContent = v;
+        el.appendChild(o);
+      });
+      el.value = valeurs.includes(courant) ? courant : (vide ? '' : valeurs[0]);
+      return el;
+    };
+
+    const titre = document.createElement('div');
+    titre.style.cssText = 'font-weight:600;margin-bottom:6px;';
+    titre.textContent = `Entrée de queue (${prop.type}) — relis et corrige avant d'ajouter`;
+    carte.appendChild(titre);
+
+    const fId = champ('id', input('text', e0.id), 'snake_case, unique dans la queue');
+    // Description (correctif du 28 septembre 2026, après une injection
+    // réelle où la reformulation d'idees_vers_queue.py avait réduit le
+    // candidat « populisme anti-IA » aux seules violences) : quand l'IA
+    // n'a pas découpé le candidat, on part du TEXTE DU CANDIDAT, pas de la
+    // reformulation -- l'appel IA ne sert plus qu'aux autres champs. La
+    // reformulation reste disponible en un clic. Si l'IA a découpé en
+    // plusieurs idées, chaque idée garde sa propre reformulation (le texte
+    // du candidat les couvrirait toutes à la fois).
+    const texteCandidat = (c.description || '').trim();
+    const texteIA = (e0.description || '').trim();
+    const partirDuCandidat = prop.idees.length === 1 && texteCandidat !== '';
+    const fDesc = document.createElement('textarea');
+    fDesc.rows = 7;
+    fDesc.value = partirDuCandidat ? texteCandidat : texteIA;
+    fDesc.style.cssText = 'width:100%;box-sizing:border-box;font-size:12px;';
+    champ('description', fDesc, partirDuCandidat
+      ? 'Texte du candidat (source de la veille), repris tel quel. Corrige-le si besoin.'
+      : "Reformulation de l'IA pour cette idée (le candidat a été découpé en plusieurs idées).");
+
+    if (texteIA && texteCandidat && texteIA !== texteCandidat) {
+      const bascule = document.createElement('div');
+      bascule.style.cssText = 'display:flex;gap:6px;flex-wrap:wrap;margin:-2px 0 6px;';
+      const bCand = document.createElement('button');
+      bCand.type = 'button'; bCand.className = 'yaml-btn';
+      bCand.textContent = '↺ Texte du candidat';
+      bCand.addEventListener('click', () => { fDesc.value = texteCandidat; });
+      const bIA = document.createElement('button');
+      bIA.type = 'button'; bIA.className = 'yaml-btn';
+      bIA.textContent = "↺ Reformulation de l'IA";
+      bIA.addEventListener('click', () => { fDesc.value = texteIA; });
+      bascule.appendChild(bCand);
+      bascule.appendChild(bIA);
+      carte.appendChild(bascule);
+      const apercu = document.createElement('details');
+      apercu.style.cssText = 'font-size:11px;color:#666;margin-bottom:6px;';
+      const sum = document.createElement('summary');
+      sum.textContent = "Voir la reformulation de l'IA";
+      apercu.appendChild(sum);
+      const t = document.createElement('div');
+      t.textContent = texteIA;
+      apercu.appendChild(t);
+      carte.appendChild(apercu);
+    }
+
+    const fPers = champ('persistance', select(VEILLE_PERSISTANCES, e0.persistance || 'normale', false),
+      'ephemere : mode, buzz · normale : se dilue en 1-2 générations · durable : marque plusieurs '
+      + 'générations · permanente : institution/structure qui existe encore en 2098');
+
+    // Variables : cases à cocher, pré-cochées depuis la proposition.
+    const boiteVars = document.createElement('div');
+    boiteVars.style.cssText = 'display:flex;flex-wrap:wrap;gap:4px 10px;font-size:11px;';
+    const coches = new Set(e0[cleVars] || []);
+    VEILLE_VARIABLES.forEach(v => {
+      const lab = document.createElement('label');
+      lab.style.cssText = 'display:flex;align-items:center;gap:3px;font-size:11px;color:#333;margin:0;';
+      const cb = document.createElement('input');
+      cb.type = 'checkbox'; cb.value = v; cb.checked = coches.has(v);
+      lab.appendChild(cb);
+      lab.appendChild(document.createTextNode(v));
+      boiteVars.appendChild(lab);
+    });
+    champ('variables', boiteVars, `1 à ${VEILLE_MAX_VARS} ; aucune = l'IA choisira à l'injection`);
+
+    let fAnnee, fZone, fPortee, fDate, fIntensite;
+    if (estSignal) {
+      fAnnee = champ("annee_apparition", input('number', e0.annee_apparition), 'vide = non précisée');
+      fZone = champ('zone_hint', input('text', e0.zone_hint), 'lieu réel de 2026, vide si aucun');
+    } else {
+      fPortee = champ('portee', select(VEILLE_PORTEES, e0.portee, true));
+      fDate = champ('date_approximative', input('number', e0.date_approximative), 'année entre 2025 et 2097');
+      fIntensite = champ('intensite', select(VEILLE_INTENSITES, e0.intensite, true));
+    }
+
+    if (p.justification) {
+      const j = document.createElement('div');
+      j.className = 'option-desc';
+      j.style.fontStyle = 'italic';
+      j.textContent = `Pourquoi (IA) : ${p.justification}`;
+      carte.appendChild(j);
+    }
+    (p.avertissements || []).forEach(a => {
+      const w = document.createElement('div');
+      w.className = 'option-desc';
+      w.style.color = '#c77700';
+      w.textContent = `⚠ ${a}`;
+      carte.appendChild(w);
+    });
+
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'yaml-btn';
+    btn.style.marginTop = '6px';
+    btn.textContent = `Ajouter à ${VEILLE_QUEUES[prop.type]}`;
+    const etatCarte = document.createElement('div');
+    etatCarte.className = 'option-desc';
+
+    const construire = () => {
+      const erreurs = [];
+      const e = {};
+      const id = (fId.value || '').trim();
+      if (!/^[a-z0-9_]+$/.test(id)) erreurs.push('id : minuscules, chiffres et _ uniquement');
+      e.id = id;
+      const desc = (fDesc.value || '').trim();
+      if (!desc) erreurs.push('description vide');
+      e.description = desc;
+      const vars = [...boiteVars.querySelectorAll('input:checked')].map(x => x.value);
+      if (vars.length > VEILLE_MAX_VARS) erreurs.push(`au plus ${VEILLE_MAX_VARS} variables`);
+      if (vars.length) { e[cleVars] = vars; e[cleCount] = vars.length; }
+      if (estSignal) {
+        const zoneTxt = (fZone.value || '').trim();
+        if (zoneTxt) e.zone_hint = zoneTxt;
+        if ((fAnnee.value || '').trim() !== '') e.annee_apparition = Number(fAnnee.value);
+      } else {
+        if (!fPortee.value) erreurs.push('portée à choisir');
+        else e.portee = fPortee.value;
+        const d = Number(fDate.value);
+        if (!Number.isInteger(d) || d < 2025 || d > 2097) erreurs.push('date entre 2025 et 2097');
+        else e.date_approximative = d;
+        if (!fIntensite.value) erreurs.push('intensité à choisir');
+        else e.intensite = fIntensite.value;
+        if (Array.isArray(e0.scenarios) && e0.scenarios.length) e.scenarios = e0.scenarios;
+      }
+      e.persistance = fPers.value;
+      // Provenance lisible dans la queue et dans la fiche injectée.
+      e.source = `veille_${c.lot || ''}_${(c.trouve_par || []).join('+')}`;
+      return { e, erreurs };
+    };
+
+    btn.addEventListener('click', async () => {
+      if (btn.disabled) return;
+      const { e, erreurs } = construire();
+      if (erreurs.length) { etatCarte.textContent = 'À corriger : ' + erreurs.join(' ; '); return; }
+      btn.disabled = true;
+      etatCarte.textContent = 'Ajout en cours…';
+      try {
+        const res = await fetch('/api/yaml/append', {
+          method: 'POST', headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ path: VEILLE_QUEUES[prop.type], entry: e }),
+        });
+        const data = await res.json();
+        if (!data.ok) {
+          etatCarte.textContent = `Erreur : ${data.error || res.status}`;
+          btn.disabled = false;
+          return;
+        }
+        etatCarte.textContent = `✓ Ajouté (${data.queue_length} entrée(s) en queue).`;
+        delete VeilleState.propositions[c.id];
+        await _veilleChangerStatut(c, 'en_queue', { queue_id: e.id, queue_type: prop.type });
+      } catch (err) {
+        etatCarte.textContent = `Erreur réseau : ${err.message}`;
+        btn.disabled = false;
+      }
+    });
+    carte.appendChild(btn);
+    carte.appendChild(etatCarte);
+    zone.appendChild(carte);
+  });
+}
+
+initPanelResizer('#tab-veille_signaux .articles-sidebar', 'veille-resizer', 'ourrassol_veille_panel_width');
+
 
 // ═══════════════════════════════════════════════════════════════════════
 // ONGLET RÉSUMÉS PAR SCÉNARIO (demande de David, 7 septembre 2026) --

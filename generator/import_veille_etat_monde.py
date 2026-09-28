@@ -34,11 +34,16 @@ USAGE
     python3 import_veille_etat_monde.py --dry-run   # aperçu, rien écrit
     python3 import_veille_etat_monde.py              # écriture réelle
 
-Lit documentation/need_action/veille_reponse_brute.md (à remplir via le
-panneau GUI, "Éditer" -> coller -> "Sauvegarder", avant de lancer ce
-script). Après un import réussi (hors dry-run), ce fichier est archivé
-(horodaté, déplacé dans documentation/need_action/veille_archive/) pour
-éviter une réimportation accidentelle du même contenu au run suivant.
+Lit documentation/need_action/veille_etat_monde_reponses/
+veille_etat_monde_reponse.md (à remplir via le panneau GUI, "Éditer" -> coller
+-> "Sauvegarder", avant de lancer ce script). Après un import réussi (hors
+dry-run), ce fichier est archivé (horodaté, déplacé dans
+veille_etat_monde_reponses/archive/) pour éviter une réimportation
+accidentelle du même contenu au run suivant.
+
+Avant le 28 septembre 2026, la réponse et l'archive étaient directement
+dans need_action/ (veille_reponse_brute.md, veille_archive/). Au premier
+lancement réel, le script les déplace dans le nouveau dossier.
 
 PRÉREQUIS
 ---------
@@ -56,8 +61,14 @@ VAULT_ROOT = Path(__file__).resolve().parent.parent
 GENERATOR_DIR = Path(__file__).resolve().parent
 NEED_ACTION_DIR = VAULT_ROOT / "documentation" / "need_action"
 ETAT_MONDE_PATH = GENERATOR_DIR / "etat_du_monde_reel.md"
-RAW_RESPONSE_PATH = NEED_ACTION_DIR / "veille_reponse_brute.md"
-ARCHIVE_DIR = NEED_ACTION_DIR / "veille_archive"
+# Rangement (28 septembre 2026) : même organisation que la veille signaux
+# faibles (veille_signaux_reponses/ + archive/). Les anciens emplacements
+# sont migrés une fois par migrer_ancien_emplacement().
+REPONSES_DIR = NEED_ACTION_DIR / "veille_etat_monde_reponses"
+RAW_RESPONSE_PATH = REPONSES_DIR / "veille_etat_monde_reponse.md"
+ARCHIVE_DIR = REPONSES_DIR / "archive"
+ANCIENNE_REPONSE_PATH = NEED_ACTION_DIR / "veille_reponse_brute.md"
+ANCIENNE_ARCHIVE_DIR = NEED_ACTION_DIR / "veille_archive"
 DIFF_REPORT_PATH = NEED_ACTION_DIR / "veille_etat_monde_diff.md"
 
 VARIABLES = [
@@ -180,6 +191,23 @@ def _section_bounds(content: str, slug: str):
     return start, end
 
 
+# Même règle que export_prompt_veille.py (correctif du 28 sept 2026) : la
+# partie "Situation" s'étend jusqu'à la prochaine partie fixe de la section
+# (Trajectoire longue / Perspective longue durée), un séparateur « --- » ou
+# la fin de la section -- les sous-titres internes (« **Mouvement de fond…**
+# : ») en font partie et sont remplacés avec elle.
+FIN_SITUATION_RE = re.compile(
+    r"\n\s*\*\*(?:Trajectoire longue|Perspective longue durée)"
+    r"|\n\s*-{3,}\s*(?:\n|$)",
+    re.IGNORECASE,
+)
+
+
+def fin_situation(rest: str) -> int:
+    m = FIN_SITUATION_RE.search(rest)
+    return m.start() if m else len(rest)
+
+
 def patch_section(content: str, slug: str, new_paragraph: str, today_str: str):
     """
     Remplace le titre + le paragraphe "Situation ..." d'une section par la
@@ -200,15 +228,20 @@ def patch_section(content: str, slug: str, new_paragraph: str, today_str: str):
 
     para_start = m.end()
     rest = section_text[para_start:]
-    next_heading = re.search(r"\n\*\*[^*]+\*\*\s*(?:\(|:)", rest)
-    para_end = next_heading.start() if next_heading else len(rest)
+    para_end = fin_situation(rest)
+    # Conserver l'espacement avant ce qui suit (partie suivante, « --- »
+    # ou section suivante) plutôt que de le coller au nouveau paragraphe.
+    # Toujours une ligne vide entre le paragraphe et ce qui suit (l'ancien
+    # code collait la section suivante : « …).\n## valeurs… »).
+    suite = rest[para_end:]
+    suite = "\n" + suite.lstrip("\n") if suite.strip() else "\n"
 
     new_heading = f"**Situation actuelle (mise à jour : {today_str}) et mouvements en cours** :"
     new_section_text = (
         section_text[:m.start()]
         + new_heading
         + "\n\n" + new_paragraph.strip() + "\n"
-        + rest[para_end:]
+        + suite
     )
 
     return content[:start] + new_section_text + content[end:]
@@ -247,6 +280,48 @@ def check_freshness(path: Path, today: datetime) -> tuple:
 
 
 # ---------------------------------------------------------------------------
+# Migration des anciens emplacements (une seule fois)
+# ---------------------------------------------------------------------------
+
+def migrer_ancien_emplacement(dry_run: bool) -> None:
+    """
+    Déplace need_action/veille_reponse_brute.md et le contenu de
+    need_action/veille_archive/ vers veille_etat_monde_reponses/.
+    Ne remplace jamais un fichier déjà présent au nouvel emplacement.
+    En dry-run, n'écrit rien : annonce seulement ce qui serait déplacé.
+    """
+    a_deplacer = []
+    if ANCIENNE_REPONSE_PATH.exists():
+        a_deplacer.append((ANCIENNE_REPONSE_PATH, RAW_RESPONSE_PATH))
+    if ANCIENNE_ARCHIVE_DIR.is_dir():
+        for f in sorted(ANCIENNE_ARCHIVE_DIR.iterdir()):
+            if f.is_file():
+                a_deplacer.append((f, ARCHIVE_DIR / f.name))
+    if not a_deplacer:
+        return
+
+    print("[RANGEMENT] Ancien emplacement détecté "
+          "(need_action/veille_reponse_brute.md, need_action/veille_archive/) :")
+    for src, dst in a_deplacer:
+        if dst.exists():
+            print(f"  - {src.name} : déjà présent dans {dst.parent.name}/, "
+                  f"laissé à l'ancien emplacement (à vérifier à la main)")
+            continue
+        if dry_run:
+            print(f"  - {src.name} → {dst.relative_to(NEED_ACTION_DIR)} "
+                  f"(sera déplacé au lancement réel)")
+            continue
+        dst.parent.mkdir(parents=True, exist_ok=True)
+        shutil.move(str(src), str(dst))
+        print(f"  - {src.name} → {dst.relative_to(NEED_ACTION_DIR)}")
+
+    if not dry_run and ANCIENNE_ARCHIVE_DIR.is_dir() \
+            and not any(ANCIENNE_ARCHIVE_DIR.iterdir()):
+        ANCIENNE_ARCHIVE_DIR.rmdir()
+        print("  - dossier vide need_action/veille_archive/ supprimé")
+
+
+# ---------------------------------------------------------------------------
 # Main
 # ---------------------------------------------------------------------------
 
@@ -256,12 +331,18 @@ def main():
                          help="Affiche ce qui serait modifié, sans rien écrire.")
     parser.add_argument(
         "--force", action="store_true",
-        help="Importe quand même si veille_reponse_brute.md n'a pas été "
+        help="Importe quand même si veille_etat_monde_reponse.md n'a pas été "
              "modifié aujourd'hui (sinon le script s'arrête par sécurité)."
     )
     args = parser.parse_args()
 
-    if not RAW_RESPONSE_PATH.exists():
+    migrer_ancien_emplacement(args.dry_run)
+
+    reponse_path = RAW_RESPONSE_PATH
+    if not reponse_path.exists() and args.dry_run and ANCIENNE_REPONSE_PATH.exists():
+        # Dry-run avant migration : on lit la réponse là où elle est encore.
+        reponse_path = ANCIENNE_REPONSE_PATH
+    if not reponse_path.exists():
         print(f"[ERREUR] {RAW_RESPONSE_PATH} introuvable — "
               "colle d'abord la réponse de la veille via le panneau GUI.")
         return
@@ -270,10 +351,10 @@ def main():
         return
 
     now = datetime.now()
-    est_frais, date_modif = check_freshness(RAW_RESPONSE_PATH, now)
+    est_frais, date_modif = check_freshness(reponse_path, now)
     if not est_frais and not args.force:
         print(
-            f"[ARRÊT] veille_reponse_brute.md a été modifié pour la dernière "
+            f"[ARRÊT] veille_etat_monde_reponse.md a été modifié pour la dernière "
             f"fois le {date_modif}, pas aujourd'hui ({format_date_fr(now)}).\n"
             f"         C'est peut-être une réponse oubliée d'une veille "
             f"précédente plutôt que celle d'aujourd'hui.\n"
@@ -286,7 +367,7 @@ def main():
             f"{date_modif} (pas aujourd'hui) malgré l'incohérence de date."
         )
 
-    raw_text = RAW_RESPONSE_PATH.read_text(encoding="utf-8")
+    raw_text = reponse_path.read_text(encoding="utf-8")
     parsed = parse_raw_response(raw_text)
     hors_categories = extract_hors_categories(raw_text)
 
@@ -324,7 +405,8 @@ def main():
             old_section = content[bounds[0]:bounds[1]]
             m = SITUATION_HEADING_RE.search(old_section)
             if m:
-                old_paragraph = old_section[m.end():].strip().split("\n\n")[0]
+                reste = old_section[m.end():]
+                old_paragraph = reste[:fin_situation(reste)].strip()
 
         new_content = patch_section(content, slug, paragraph, today_str)
         if new_content is None:
@@ -395,7 +477,7 @@ def main():
 
     ARCHIVE_DIR.mkdir(parents=True, exist_ok=True)
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-    archived_path = ARCHIVE_DIR / f"veille_reponse_brute_{timestamp}.md"
+    archived_path = ARCHIVE_DIR / f"veille_etat_monde_reponse_{timestamp}.md"
     shutil.move(str(RAW_RESPONSE_PATH), str(archived_path))
 
     if modifiees:

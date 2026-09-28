@@ -2774,8 +2774,9 @@
     "yaml_files": [
       {
         "path": "documentation/need_action/veille_prompt_a_copier.md",
-        "label": "Prompt à copier — colle-le dans l'IA de ton choix avec accès web",
-        "readonly": false
+        "label": "Prompt à coller tel quel dans l'IA de ton choix avec accès web (📋 Copier ou ⬇ Télécharger)",
+        "readonly": false,
+        "copyable": true
       }
     ],
     "gui_verified": true
@@ -2801,14 +2802,193 @@
         "type": "checkbox",
         "label": "Importer même si la réponse n'a pas été collée aujourd'hui",
         "default": false,
-        "description": "Par sécurité, le script refuse d'importer si veille_reponse_brute.md n'a pas été modifié aujourd'hui (probable réponse oubliée d'une veille précédente). Cocher pour forcer quand même."
+        "description": "Par sécurité, le script refuse d'importer si veille_etat_monde_reponse.md n'a pas été modifié aujourd'hui (probable réponse oubliée d'une veille précédente). Cocher pour forcer quand même."
       }
     ],
     "yaml_files": [
       {
-        "path": "documentation/need_action/veille_reponse_brute.md",
+        "path": "documentation/need_action/veille_etat_monde_reponses/veille_etat_monde_reponse.md",
         "label": "Réponse de l'IA à coller ici avant de lancer le script",
         "readonly": false
+      }
+    ],
+    "gui_verified": true
+  },
+  {
+    "id": "export_prompt_signaux",
+    "label": "Signaux faibles — 1. Préparer le prompt",
+    "icon": "🔭",
+    "section": "monde_reel",
+    "script": "export_prompt_signaux.py",
+    "description": "Génère le prompt de veille « signaux faibles » (concept d'Igor Ansoff) à coller TEL QUEL dans une ou plusieurs IA avec accès web (Claude.ai, ChatGPT, Le Chat, DeepSeek…) : 📋 Copier ou ⬇ Télécharger ci-dessous. Aucun appel API. Le prompt contient tes sources (fichier modifiable ci-dessous), les 12 variables, le « déjà connu » (état du monde, signaux injectés, candidats des veilles précédentes) et les règles de couverture. Réponses à coller ensuite dans « Signaux faibles — 2. Importer les réponses ». Les livres (documentation/livres/) ne sont pas dans ce prompt : ils sont lus à part par « Signaux faibles — Lire les livres (API) ».",
+    "requires": [],
+    "options": [
+      {
+        "flag": "--nb",
+        "type": "number",
+        "label": "Nombre de signaux visé (par IA)",
+        "min": 1,
+        "max": 50,
+        "default": 10,
+        "description": "Les règles de couverture du prompt en dépendent (pour 10 : 2 signaux max par variable, 8 variables au moins, 3 signaux à moteur numérique au plus)."
+      },
+      {
+        "flag": "--depuis",
+        "type": "text",
+        "label": "Période à couvrir (optionnel)",
+        "optional": true,
+        "placeholder": "ex : juillet 2026",
+        "description": "Vide = « les derniers mois, les plus récents en priorité »."
+      },
+      {
+        "flag": "--dry-run",
+        "type": "checkbox",
+        "label": "Aperçu seulement (n'écrit pas le fichier prompt)",
+        "default": false,
+        "description": "Affiche le prompt dans le journal d'exécution sans mettre à jour le fichier ci-dessous."
+      }
+    ],
+    "yaml_files": [
+      {
+        "path": "documentation/need_action/veille_signaux_prompt_a_copier.md",
+        "label": "Prompt à coller tel quel dans l'IA (relancer le script pour le régénérer)",
+        "readonly": true,
+        "copyable": true
+      },
+      {
+        "path": "generator/sources_signaux_faibles.yaml",
+        "label": "Sources de départ (sites, livres) — actif: false pour mettre une source de côté",
+        "readonly": false
+      }
+    ],
+    "gui_verified": true
+  },
+  {
+    "id": "veille_livres_api",
+    "label": "Signaux faibles — Lire les livres (API)",
+    "icon": "📚",
+    "section": "monde_reel",
+    "script": "veille_livres_api.py",
+    "description": "Lit par API (ton LLM par défaut, tier structured_strict) les PDF/EPUB déposés dans documentation/livres/ — aucun copier-coller. La première fois, un petit appel par livre repère les pages susceptibles de décrire un phénomène précis (le LLM voit le début de chaque page) ; ensuite, à chaque passe, les pages repérées PAS ENCORE LUES sont envoyées (un appel par livre) ; le LLM en tire 0 à 3 signaux faibles au sens strict. Les signaux sont écrits dans l'emplacement « Réponse des livres » de « Signaux faibles — 2. Importer les réponses », à importer avec les réponses des IA de chat. Les pages ne sont marquées lues que si l'appel a réussi ; un livre épuisé est ignoré. Sans web, le LLM ne vérifie pas que le phénomène est encore marginal aujourd'hui : avertissement 📖 à l'import, à trancher au tri.",
+    "requires": [],
+    "options": [
+      {
+        "flag": "--dry-run",
+        "type": "checkbox",
+        "label": "Aperçu (aucun appel API)",
+        "default": false,
+        "description": "Montre les pages retenues et le prompt du premier livre, sans appeler le LLM ni marquer de page lue."
+      },
+      {
+        "flag": "--lister-livres",
+        "type": "checkbox",
+        "label": "Lister les livres seulement",
+        "default": false,
+        "description": "Aucun appel : pour chaque PDF/EPUB, densité de faits concrets (forte/moyenne/faible), pages déjà lues, meilleures pages restantes avec leur début."
+      },
+      {
+        "flag": "--livre",
+        "type": "text",
+        "label": "Un seul livre (optionnel)",
+        "optional": true,
+        "placeholder": "ex : weak signals",
+        "description": "Ne traite que les livres dont le nom de fichier contient ce texte. Vide = tous."
+      },
+      {
+        "flag": "--relire-livres",
+        "type": "checkbox",
+        "label": "Reprendre les livres au début",
+        "default": false,
+        "description": "Oublie les pages déjà lues lors des passes précédentes."
+      },
+      {
+        "flag": "--refaire-reperage",
+        "type": "checkbox",
+        "label": "Refaire le repérage des pages",
+        "default": false,
+        "description": "Le repérage (quelles pages lire) est fait une seule fois par livre par le LLM, puis mémorisé. Coche pour le refaire, par exemple après avoir changé de LLM."
+      }
+    ],
+    "yaml_files": [
+      {
+        "path": "documentation/need_action/veille_signaux_reponses/veille_signaux_reponse_livres.md",
+        "label": "Signaux tirés des livres (en attente d'import)",
+        "readonly": true
+      }
+    ],
+    "gui_verified": true
+  },
+  {
+    "id": "import_signaux_faibles",
+    "label": "Signaux faibles — 2. Importer les réponses",
+    "icon": "📥",
+    "section": "monde_reel",
+    "script": "import_signaux_faibles.py",
+    "description": "Colle la réponse de chaque IA dans son emplacement ci-dessous (Éditer → coller → Sauvegarder ; laisse vides ceux que tu n'utilises pas), puis lance : les réponses sont fusionnées (doublons entre IA = ⭐ convergent), comparées aux veilles précédentes et aux signaux déjà injectés, puis ajoutées à l'onglet « 🔭 Veille signaux faibles » pour le tri. Aucun appel API, rien n'est écrit dans le vault. Après un import réel, les réponses sont archivées et les emplacements redeviennent vides. Tu peux aussi déposer directement dans documentation/need_action/veille_signaux_reponses/ le fichier .md téléchargé depuis l'IA, quel que soit son nom : la provenance est lue dans sa première ligne « ia: … » (à défaut, dans le nom du fichier).",
+    "requires": [],
+    "options": [
+      {
+        "flag": "--dry-run",
+        "type": "checkbox",
+        "label": "Aperçu (rien écrit, rien archivé)",
+        "default": true,
+        "description": "Coché par défaut : affiche le bilan et le rapport. Décoche puis relance pour importer réellement."
+      },
+      {
+        "flag": "--force",
+        "type": "checkbox",
+        "label": "Importer même si une réponse n'a pas été collée aujourd'hui",
+        "default": false,
+        "description": "Par sécurité, l'import s'arrête si une réponse date d'un autre jour (probable réponse oubliée d'une veille précédente)."
+      },
+      {
+        "flag": "--verifier-sources",
+        "type": "checkbox",
+        "label": "Vérifier les sources (teste chaque lien)",
+        "default": true,
+        "description": "Teste chaque URL depuis ta machine : ✅ page trouvée, ❌ introuvable (404, souvent un signal inventé par l'IA), ❔ non vérifiable (site qui bloque les robots). Ajoute quelques secondes à quelques dizaines de secondes. Aucune écriture."
+      }
+    ],
+    "yaml_files": [
+      {
+        "path": "documentation/need_action/veille_signaux_reponses/veille_signaux_reponse_claude.md",
+        "label": "Réponse de Claude",
+        "readonly": false
+      },
+      {
+        "path": "documentation/need_action/veille_signaux_reponses/veille_signaux_reponse_chatgpt.md",
+        "label": "Réponse de ChatGPT",
+        "readonly": false
+      },
+      {
+        "path": "documentation/need_action/veille_signaux_reponses/veille_signaux_reponse_mistral.md",
+        "label": "Réponse de Mistral (Le Chat)",
+        "readonly": false
+      },
+      {
+        "path": "documentation/need_action/veille_signaux_reponses/veille_signaux_reponse_deepseek.md",
+        "label": "Réponse de DeepSeek",
+        "readonly": false
+      },
+      {
+        "path": "documentation/need_action/veille_signaux_reponses/veille_signaux_reponse_gemini.md",
+        "label": "Réponse de Gemini",
+        "readonly": false
+      },
+      {
+        "path": "documentation/need_action/veille_signaux_reponses/veille_signaux_reponse_perplexity.md",
+        "label": "Réponse de Perplexity",
+        "readonly": false
+      },
+      {
+        "path": "documentation/need_action/veille_signaux_reponses/veille_signaux_reponse_livres.md",
+        "label": "Réponse des livres (écrite par « Lire les livres (API) »)",
+        "readonly": false
+      },
+      {
+        "path": "documentation/need_action/veille_signaux_fusion.md",
+        "label": "Rapport du dernier import",
+        "readonly": true
       }
     ],
     "gui_verified": true

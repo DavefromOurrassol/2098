@@ -59,6 +59,11 @@ app.register_blueprint(dashboard_bp)
 from routes_carte import carte_bp
 app.register_blueprint(carte_bp)
 
+# Veille signaux faibles (28 sept 2026) : tri des candidats de
+# generator/import_signaux_faibles.py, routes /api/veille_signaux/*.
+from routes_veille_signaux import veille_signaux_bp
+app.register_blueprint(veille_signaux_bp)
+
 # Intégration GUI du diagnostic doublons pays-entier (14 sept 2026, point 4
 # du backlog) : import direct, pas un sous-processus -- zone_repository.py
 # vit dans gui/, même codebase que app.py (contrairement à generator/

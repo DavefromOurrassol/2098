@@ -5,10 +5,7 @@ septembre 2026 : #2, #2bis, #4 et S11 clos et archivés ; le 24 septembre :
 S15.1 clos et archivés, S17 « audit du lore » ajouté ; le 26 septembre :
 S12, S16 et S17 clos et archivés, S15 réduit, S18 ajouté ; le 27 septembre :
 chantier « Injection et propagation » ouvert et clos dans la session,
-archivé, S19 ajouté ; le 27 septembre après-midi : chantier « Signaux
-faibles — polarité, persistance, idées en texte libre » ouvert et clos,
-archivé, S19 mis à jour, S20 ajouté ; le 28 septembre : chantier « Veille
-signaux faibles » ouvert et clos, archivé, S21 ajouté), mis à jour en continu
+archivé, S19 ajouté), mis à jour en continu
 à chaque clôture de session. Chantiers clos et leur historique complet
 dans `BACKLOG_ARCHIVE.md` (fichier séparé, à uploader seulement en cas
 de besoin de vérifier si un point a déjà été traité). Chaque chantier
@@ -363,18 +360,14 @@ correctif `write_alliances_patch()`, exceptions NAT supprimées. Détail :
 ## ⚪ S19. Propagation dynamique — surveillance et réglages
 **Nouveau, 27 sept.** Moteur `dynamique.py` en service (voir manuel §3ter).
 Rien de bloquant :
-- ~~`gui_verified: true` à remettre sur `trace_injection`~~ — fait (vérifié
-  dans `scripts_config.json` le 27 sept après-midi).
+- **`gui_verified: true` à remettre** sur l'entrée `trace_injection` de
+  `scripts_config.json` (testée et validée par David le 27, drapeau oublié).
 - **Signaux faibles non propagés** : un signal avec `propagation_via_matrice:
   false` (le cas par défaut) agit sur sa variable cible, dans le calcul et
   donc dans les articles, mais ne se propage pas aux autres variables.
   Options non tranchées : **a)** passer certains signaux à `true` à la
   main ; **b)** changer la consigne du prompt `inject_custom_signals.py` ;
-  **c)** propager tous les signaux à ~30 % de leur force. *Depuis le 27
-  sept après-midi*, un signal `durable`/`permanente` pèse enfin en 2098
-  sur sa variable (avant : ≈ 0,4 point résiduel, sous le seuil
-  d'affichage) — la question de sa propagation aux autres variables reste
-  entière.
+  **c)** propager tous les signaux à ~30 % de leur force.
 - **Après un gros lot d'injections** : relancer `python3
   banc_calibration.py --scenarios all --balayage-k 0.05` et vérifier que
   les écarts restent lisibles. La stabilité est garantie par la garde
@@ -383,87 +376,13 @@ Rien de bloquant :
   2098) : à surveiller, c'est peut-être voulu par le lore.
 - **GAIN_CHOCS (0,25) et DEMI_VIE (20 ans)** relèvent du goût narratif :
   ils règlent la force des événements et la durée de leur trace, et
-  peuvent être ajustés au banc sans toucher au reste. Depuis le 27 sept
-  après-midi, la durée se règle aussi **par type** (`DEMI_VIE_PAR_TYPE`) et
-  **par choc** (`persistance` : table `PERSISTANCE`) ; les instances
-  actives sont `permanente` (`PERSISTANCE_INSTANCE_ACTIVE`, repli
-  `durable` si l'effet paraît trop fort) — mesurer avec
-  `mesure_niveaux.py` avant/après tout réglage.
-- **Saturation près des bornes** : dans breakdown, 8 variables finissent
-  entre 99 et 100 (référence déjà à 90-96) ; en new_sustainability,
-  `gouvernance_institutions` descend à 0,3 (référence 10). Tout nouveau choc
-  y est presque sans effet chiffré. Voulu par le plafond doux ; à revoir
-  seulement si des articles en pâtissent (piste : référence moins
-  extrême, ou marge du plafond).
+  peuvent être ajustés au banc sans toucher au reste.
 - `undo_custom.py` ne recalcule pas la ligne « Total » du registre des
   événements (mineur, cosmétique).
 - `matplotlib` absent : le banc écrit des CSV au lieu de graphiques
   (`pip3 install matplotlib` si besoin).
 - Tendances (`trend`) des fiches scénario : affichage seulement, aucun
   calcul ne les lit.
-
----
-
-## ⚪ S20. Signaux faibles et idées en texte libre — suites possibles
-**Nouveau, 27 sept (après-midi).** Rien de bloquant, pistes écartées ou
-reportées explicitement :
-- **Bouton « Proposer en événement »** dans la carte de l'assistant ✨
-  quand le ⚠ « ressemble plutôt à un événement » apparaît — mis de côté
-  par David (« voir à l'usage »).
-- **Doublons d'idées** : le contrôle d'`id` de `idees_vers_queue.py` ne
-  voit pas une idée déjà injectée sous un autre nom (cas réel : les
-  prompteurs, déjà `clerge_prompteurs_ia`). Piste : comparer aux slugs de
-  `signaux_custom/` (ne détecterait que des noms proches). Mis de côté.
-- **Descriptions étoffées sur texte très court** (« chine 2049 champion
-  économique » → 5 phrases et 4 variables) : David a choisi de ne pas
-  ajouter de règle de longueur ; relire, ou « ↶ Rétablir mon texte ».
-- **Reprise d'injection partielle** (`idee_a_remettre_en_queue`) : testée en
-  synthétique seulement — à observer au premier cas réel.
-- **Portée narrative d'un signal** : un jalon de signal custom n'est
-  jamais « structurant » dans `build_signal_trajectory()` (un
-  `evenement_cle` par variable, jamais partagé) — « majeur » si sa
-  variable est pilote du scénario, sinon « local » et rarement cité. Le
-  multi-variables n'augmente pas son poids narratif. Constat, pas de
-  décision.
-- `/api/yaml/append` réécrit `queue.yaml` avec `yaml.dump` : l'en-tête
-  modèle (`QUEUE_TEMPLATE`) disparaît jusqu'au prochain run du script
-  d'injection, qui le remet. Cosmétique, préexistant.
-- Entités : pas de champ `persistance` dans la queue de
-  `create_entities_and_instances.py` (la persistance d'une instance se
-  déduit de sa trajectoire ; forçage possible à la main dans le bloc
-  `injection`). À ajouter seulement si le besoin se présente.
-
----
-
-## ⚪ S21. Veille monde réel et signaux faibles — suites
-**Nouveau, 28 sept.** Chaîne en production (manuel §3quater). Rien de
-bloquant :
-- **Injection des signaux** (lecture de `inject_custom_signals.py`) : les 6
-  scénarios sont obligatoires, `polarite` ±1 (jamais 0) et un seul
-  `delta_level` pour les 6. Chez Ansoff, beaucoup de signaux ne donnent
-  rien dans certains futurs. Pistes, **notées pour plus tard par David** :
-  **a)** « sans suite » autorisé par scénario (évolution narrative, sans
-  effet chiffré) ; **b)** `delta_level` par scénario.
-- **Livres** : 32 pages repérées restent dans le rapport JRC (≈ 4 passes).
-  Documents à déposer repérés le 28 sept (liens dans le handoff) : ESPAS
-  Horizon Scanning n° 10 (et précédents), JRC FUTURINNOV (Healing,
-  Embodying, (Dis)Entangling, Observing…), PNUE Navigating New Horizons,
-  WEF Top 10 Emerging Technologies 2025, ONU Horizon Scanning 2026.
-- **Prompt des livres** : Mistral remplit le quota (3/3). Durcissement
-  possible : une recommandation de l'auteur (« should », « would be »)
-  n'est pas une observation ; un grand programme d'État n'est pas marginal.
-- **Option 1** (recherche web par API, `call_llm_web()` séparée, Mistral
-  Conversations + `web_search` en bêta) et **option 2** (collecte locale
-  RSS, champ `rss` du YAML à remplir) : non faites.
-- **OCR** des PDF scannés : non fait (détectés et signalés).
-- **Fusion multi-IA pour l'état du monde** : proposée (prompt de fusion
-  collable, faits cités par ≥ 2 IA), laissée de côté par David.
-- Onglet 🔭 : pas de bouton pour défaire une fusion ; si l'IA découpe un
-  candidat en plusieurs idées, seule la première ajoutée compte.
-- Idée à garder (Jabbour, ChatGPT) : repérer les signaux qui **relient**
-  plusieurs variables (analyse en réseau via la matrice 12×12).
-- `gui_verified` passé à `true` le 28 sept sur les trois entrées signaux
-  faibles (testées chez David).
 
 ---
 

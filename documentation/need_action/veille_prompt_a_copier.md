@@ -1,8 +1,4 @@
-# PROMPT DE VEILLE — état du monde réel — 10 août 2026
-
-Copie tout ce qui suit dans une IA avec accès web (Claude.ai, ChatGPT, etc.), colle sa réponse telle quelle dans documentation/need_action/veille_reponse_brute.md (panneau GUI de import_veille_etat_monde), puis lance import_veille_etat_monde.py.
-
-==============================================================================
+# Veille — état du monde réel — 28 septembre 2026
 
 CONSIGNE DE LIVRAISON : produis ta réponse sous la forme d'un fichier markdown téléchargeable (ex. artifact/Canvas selon l'interface), nommé veille_reponse_brute.md, plutôt qu'un simple message de chat. S'il n'est pas possible de générer un fichier téléchargeable dans cette interface, réponds normalement en chat — le contenu sera copié à la main, le format ci-dessous reste identique dans les deux cas.
 
@@ -20,6 +16,13 @@ l'après-Seconde Guerre mondiale. Le conflit au Moyen-Orient (depuis février
 importateurs d'énergie, en particulier à faible revenu, encaissent le plus
 gros de la facture. Croissance mondiale ralentie (2,5-3,3 % selon les
 institutions), régulièrement révisée à la baisse en cours d'année.
+**Mouvement de fond identifié en 2026** : une captation croissante du pouvoir
+politique par les ultra-riches, documentée à l'échelle mondiale (rapport
+Oxfam 2026, *"Résister au règne des plus riches"*) — surreprésentation des
+millionnaires dans les gouvernements, politiques fiscales favorables aux
+grandes fortunes, appuyées notamment par l'essor de la valorisation
+boursière liée à l'IA. Ce mouvement dépasse le cas américain et touche de
+nombreuses sociétés occidentales.
 
 Dimensions officielles de cette variable à vérifier explicitement (ne pas se limiter à ce qui était déjà couvert précédemment) :
   - systemes financiers globaux : circulation mondiale du capital et des flux financiers
@@ -46,6 +49,19 @@ Conseil de sécurité (vetos bloquant toute action sur Gaza et l'Ukraine en
 2025-2026), relançant les appels du Secrétaire général Guterres à une
 réforme structurelle (Conseil de sécurité et institutions financières
 mondiales) qui reste sans issue faute de consensus entre puissances.
+
+**Tension réelle documentée sur l'AIE** (Agence Internationale de l'Énergie)
+depuis février 2026 : le secrétaire américain à l'Énergie a publiquement
+qualifié le scénario "net zéro" de l'agence d'"irréaliste", menaçant un
+retrait américain (~14 % du financement). COP30 (Belém, nov. 2025) : bilan
+"mitigé" — accord sur le doublement du financement d'adaptation, échec sur
+l'élimination des fossiles. **Signal encourageant à surveiller** : les
+chercheurs V-Dem rappellent qu'environ 70 % des épisodes d'autocratisation
+de cette troisième vague ont historiquement fini par être inversés, en
+particulier quand garde-fous institutionnels et mobilisation citoyenne
+pacifique se conjuguent — un mouvement de ce type est précisément en train
+de s'observer chez les jeunes générations (voir `valeurs_culture_tempo_
+sociale`).
 
 Dimensions officielles de cette variable à vérifier explicitement (ne pas se limiter à ce qui était déjà couvert précédemment) :
   - etat nation : Unité souveraine de base du système politique moderne.
@@ -221,6 +237,11 @@ supplémentaires liés à la chaleur en Europe sur la seule semaine du 21 au
 ces épisodes par le changement climatique, combiné à un possible retour
 d'El Niño anticipé jusqu'en 2027.
 
+**Mouvement de fond confirmé** : les plans climatiques nationaux actuels ne
+permettraient qu'une baisse d'environ 10 % des émissions d'ici 2035, très
+en-deçà des 60 % jugés nécessaires par le GIEC pour l'objectif 1,5°C — cet
+écart, documenté depuis plusieurs COP consécutives, ne se referme pas.
+
 Dimensions officielles de cette variable à vérifier explicitement (ne pas se limiter à ce qui était déjà couvert précédemment) :
   - rechauffement climatique global : régulation thermique du système Terre
   - evenements extremes : perturbations climatiques systémiques
@@ -232,6 +253,21 @@ Dimensions officielles de cette variable à vérifier explicitement (ne pas se l
 (dernière mise à jour : 08 août 2026)
 
 Rappel du choc pétrolier de mars 2026, inchangé sur le fond : perte de production estimée à 10 millions de barils/jour, libération coordonnée de 426 millions de barils par les 32 pays membres de l'AIE — "le plus grave choc d'offre pétrolière de l'histoire" selon l'AIE. Actualisation début août sur l'énergie : la reprise des frappes américaines directes sur l'Iran début juillet (treize jours consécutifs fin juillet, ciblant installations navales, missiles et sites de surveillance de l'IRGC) et de nouvelles attaques iraniennes contre des pétroliers sous escorte américaine dans le détroit d'Ormuz fin juillet ont ravivé la volatilité des cours : le Brent est repassé au-dessus de 100 $ le baril début juillet avant de refluer autour de 80-84 $ début août. Un accord de transit annoncé fin juillet entre l'Iran et Oman reste sans confirmation américaine. Sur la dimension "matières premières critiques" : la Chine a durci ses contrôles à l'exportation de terres rares tout au long de 2026 (nouvelle salve le 22 juin visant des dizaines d'entreprises américaines, extension aux terres rares lourdes, contrôles étendus à l'argent, l'antimoine et le tungstène), faisant grimper les prix d'environ 30 % depuis janvier et accélérant les stratégies occidentales de diversification (initiative conjointe États-Unis/UE/Japon sur les minéraux critiques).
+
+**Mouvement de fond identifié en 2026** : les investissements mondiaux dans
+l'énergie atteignent un record de 3 400 milliards $ en 2026 (+5 % vs 2025),
+dont environ 65 % (2 200 milliards $) dans les technologies "propres"
+(renouvelables, nucléaire, réseaux, batteries, électrification) — la
+transition continue donc d'avancer en valeur absolue, mais sous une logique
+désormais dominée par la **sécurité énergétique et la souveraineté
+stratégique** plutôt que par un consensus climatique mondial partagé, qui se
+fragmente. Quatre grandes puissances suivent désormais quatre stratégies
+distinctes : les États-Unis misent sur leur abondance fossile domestique, la
+Chine déploie les renouvelables à un rythme inédit tout en stockant des
+fossiles par précaution, l'Europe réduit sa dépendance fossile tout en
+développant une nouvelle dépendance aux minerais critiques et au GNL. Les
+combustibles fossiles restent malgré tout dominants : ~80 % de la
+consommation d'énergie primaire mondiale.
 
 Dimensions officielles de cette variable à vérifier explicitement (ne pas se limiter à ce qui était déjà couvert précédemment) :
   - systemes energetiques : production et distribution d’énergie mondiale
@@ -292,8 +328,6 @@ prompt engineering, audit algorithmique, éthique de l'IA) qui n'existaient
 pas il y a trois ans. Les secteurs en tension restent stables depuis
 plusieurs années : santé, numérique, bâtiment, transition énergétique.
 
----
-
 Dimensions officielles de cette variable à vérifier explicitement (ne pas se limiter à ce qui était déjà couvert précédemment) :
   - industrie automatisee : Production industrielle de biens matériels à grande échelle via automatisation et robotisation.
   - agriculture systemes alimentaires : Production alimentaire mondiale industrialisée et automatisée.
@@ -303,13 +337,13 @@ Dimensions officielles de cette variable à vérifier explicitement (ne pas se l
 
 ------------------------------------------------------------------------------
 
-Date d'aujourd'hui à utiliser comme référence : 10 août 2026
+Date d'aujourd'hui à utiliser comme référence : 28 septembre 2026
 
 Fais des recherches web pour vérifier et actualiser chacune des 12 sections ci-dessus à la date d'aujourd'hui. Pour CHAQUE section :
 
 - COUVERTURE COMPLÈTE (important) : chaque section liste ses dimensions officielles (voir 'Dimensions officielles... à vérifier' sous chaque paragraphe). Vérifie chacune, même celles absentes du paragraphe précédent — un paragraphe déjà écrit peut avoir ignoré certaines dimensions par le passé, ne te contente pas de prolonger le même angle.
 - SEUIL DE MATÉRIALITÉ (important) : ne considère une section MODIFIÉE que si un fait significatif a réellement changé, s'est confirmé ou infirmé, ou si un nouveau mouvement de fond notable est apparu depuis la dernière mise à jour. Un chiffre qui bouge de quelques points, une reformulation, ou une actualité mineure sans portée structurelle ne justifient PAS une modification — dans ce cas, garde le paragraphe précédent tel quel et marque INCHANGÉ. Le but est de suivre les évolutions réelles, pas de réécrire pour le principe à chaque passage.
-- Si le paragraphe est modifié : privilégie l'ajout/la précision de ce qui est nouveau plutôt qu'une réécriture complète. Reste factuel, neutre, 150-250 mots.
+- Si le paragraphe est modifié : privilégie l'ajout/la précision de ce qui est nouveau plutôt qu'une réécriture complète. GARDE les passages encore valables, en particulier les « mouvements de fond » en gras : ne les raccourcis pas pour tenir une longueur. Reste factuel et neutre (environ 150-400 mots).
 - N'ajoute AUCUNE mise en perspective historique (ni "trajectoire ~10-15 ans", ni "~200 ans") — uniquement le constat présent, ces deux autres niveaux existent déjà ailleurs dans le fichier et ne sont pas à toucher.
 - Termine chaque section par une ligne exactement égale à "[MODIFIÉ]" ou "[INCHANGÉ]" (rien d'autre sur cette ligne).
 

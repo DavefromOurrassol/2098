@@ -95,10 +95,7 @@ Doublons pays-entier) et S11 (entrée périmée) ; ligne en double
 `HANDOFF_23_SEPTEMBRE.md`. Mis à jour le 25 septembre 2026 : clôture de
 #4 (zones suspectes), S13 (`assign_pays`) et S15.1 (Ergo-Wian/NAT), première
 passe de l'audit du lore sur les 6 scénarios — voir
-`HANDOFF_25_SEPTEMBRE.md`. Mis à jour le 28 septembre 2026 : chantier
-« Veille signaux faibles » ouvert et clos (chaîne web + livres par API +
-onglet de tri), correctifs de la veille état du monde — voir
-`HANDOFF_28_SEPTEMBRE.md`.*
+`HANDOFF_25_SEPTEMBRE.md`.*
 
 ---
 
@@ -303,83 +300,3 @@ Testé en synthétique seulement : reprise d'injection partielle.
 **Piège rappelé** : deux fois un ancien fichier resté en place
 (`gui/static/app.js` non remplacé ; vérifier par `grep` d'une chaîne
 propre à la nouvelle version avant de conclure à un bug).
-
----
-
-## ✅ Veille signaux faibles (et correctifs de la veille état du monde) — CLOS le 28 septembre 2026
-
-**Origine** : idée de David — un outil de veille, lancé de temps en temps,
-pour repérer des signaux faibles réels (Igor Ansoff) à partir d'une liste
-de sites et de livres, élargie à d'autres sources, rattachés aux 12
-variables (bac `hors_variables`), notés sur 3 axes (pertinence, nouveauté,
-impact), avec le choix de les injecter ou non. Définition retenue en cours
-de session (David) : phénomène **déjà observable**, **marginal ou
-incertain**, pouvant produire une transformation par son évolution **ou
-sa combinaison** avec d'autres.
-
-**Décisions** :
-- Mode par défaut = prompt collé dans l'IA de chat de son choix (comme la
-  veille état du monde ; Mistral ne fait pas de recherche web par l'API
-  classique). Recherche web par API (option 1, LLM par défaut, même
-  routage) et collecte locale RSS (option 2) jugées utiles, **non faites**.
-- Plusieurs IA sur le même prompt, réponses fusionnées ; doublons
-  fusionnés automatiquement puis validés dans l'onglet de tri (choix « a »).
-- Règles de couverture (premier essai : 8 signaux sur 11 tirés par
-  l'IA/le numérique).
-- Tout dans le GUI : prompt collable tel quel (📋/⬇), emplacements de
-  réponse par IA, onglet de tri 🔭, filtre par lot.
-- Candidats sans source valable : écartés d'office à l'import
-  (récupérables, réhabilités s'ils reviennent sourcés) plutôt que filtrés
-  en amont.
-- Livres : « dépose et oublie » (pas d'entrée YAML), lus **par API** (pas
-  besoin de web), un appel par livre, rotation des pages ; repérage des
-  pages par le LLM ; citation exacte vérifiée.
-- Veille état du monde rangée comme les signaux
-  (`veille_etat_monde_reponses/` + `archive/`, réponse
-  `veille_etat_monde_reponse.md`). Fusion multi-IA de l'état du monde :
-  laissée de côté.
-
-**Défauts trouvés et corrigés** (dans l'ordre) :
-1. Sous-variables utilisées comme variable par DeepSeek et Mistral →
-   rattachées à la variable parente.
-2. Doublon avec un signal déjà injecté (Coller-Dolittle ≈
-   `decodage_langage_animaux_ia`) → contrôle 🔁.
-3. `idees_vers_queue` rétrécissait le candidat → formulaire modifiable,
-   description = texte du candidat par défaut.
-4. Gemini : champs inventés, plusieurs `### FIN`, lignes collées → alias,
-   coupe au dernier FIN, lignes « clé : valeur » inconnues ignorées.
-5. Gemini : 9 URL sur 10 en 404 ; Mistral : 9/10 sans source →
-   `--verifier-sources`, écart automatique, source obligatoire dans le
-   prompt.
-6. Emplacements GUI vides pour des fichiers autrement nommés →
-   `ranger_reponses()` (renommage d'après `ia:`).
-7. Deux imports dans la même minute → lot avec secondes.
-8. **« Déjà connu » tronqué** : `extract_situation()` s'arrêtait au premier
-   sous-titre en gras et perdait la **fin** (« mouvements de fond »,
-   jusqu'à 40 % de 4 sections) — corrigé dans les 3 scripts
-   (`extraire_situation_complete`, `fin_situation`). L'import état du
-   monde remplace désormais toute la partie Situation.
-9. Traçabilité : bloc `### SOURCES CONSULTÉES` (GEAB n'apparaissait
-   jamais).
-10. Livres, 1er essai : pages de bibliographie, puis de tableaux, en tête
-    de la note « faits concrets » → pages de références à 0, tableaux ×0,3,
-    exclusion des statistiques dans le prompt ; puis **repérage par LLM**
-    (le rapport JRC : signaux dans les annexes, invisibles pour la note).
-11. Livres, 2e essai : 8 signaux sur 16 **recopiés du « déjà connu »**
-    (Ebola, Ceuta, Hugging Face) et attribués à de fausses pages, exemples
-    inventés sur Jabbour → déjà connu retiré du prompt des livres,
-    citation exacte exigée et vérifiée (page envoyée + mots présents), 1
-    rejet au passage suivant.
-12. Filtre `--livre` : `%20` du nom de fichier non décodé.
-
-**Tests réels** : deux veilles web (Claude, DeepSeek, Mistral, Gemini ;
-premier lot 32 candidats, second 18 écartés automatiquement / 13 à trier),
-injection de bout en bout depuis l'onglet 🔭, import réel de la veille
-état du monde (12 sections, diff relu : aucun mouvement de fond perdu),
-rangement migré chez David, 7 documents lus par API (repérage + lecture,
-≈ 20 centimes), 13 signaux livres dont ~7 retenus.
-
-**Constats** : les catalogues (JRC) et la recherche sur les signaux
-(Jabbour) donnent de bons candidats ; les synthèses (ESPAS, OCDE) donnent
-des tendances connues ou des recommandations. Mistral remplit le quota
-(3/3) même quand le texte est pauvre.

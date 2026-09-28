@@ -151,16 +151,31 @@ def extract_situation(content: str, slug: str):
 
     date_str = m.group("date")  # None si ancien format
 
-    # Le paragraphe court du texte après le titre jusqu'au prochain "**...**"
-    # de type sous-titre (heuristique : ligne commençant par ** en début de
-    # paragraphe) ou jusqu'à la fin de la section.
-    para_start = m.end()
-    rest = section_text[para_start:]
-    next_heading = re.search(r"\n\*\*[^*]+\*\*\s*(?:\(|:)", rest)
-    para_end = next_heading.start() if next_heading else len(rest)
-    paragraph = rest[:para_end].strip()
+    rest = section_text[m.end():]
+    paragraph = rest[:fin_situation(rest)].strip()
 
     return paragraph, date_str
+
+
+# Seuls sous-titres qui mettent fin à la partie "Situation" : les deux
+# autres parties fixes de chaque section. Correctif du 28 sept 2026 --
+# l'ancienne règle (« premier **…** : en début de ligne ») coupait aussi
+# les sous-titres INTERNES à la situation (« **Mouvement de fond identifié
+# en 2026** : … ») : 4 sections (économie, gouvernance, climat, énergie)
+# perdaient ce passage, jamais montré à l'IA ni mis à jour par l'import.
+FIN_SITUATION_RE = re.compile(
+    r"\n\s*\*\*(?:Trajectoire longue|Perspective longue durée)"
+    r"|\n\s*-{3,}\s*(?:\n|$)",
+    re.IGNORECASE,
+)
+
+
+def fin_situation(rest: str) -> int:
+    """Position de fin de la partie "Situation" dans `rest` (texte qui suit
+    son titre, jusqu'à la fin de la section) : prochaine partie fixe de la
+    section, séparateur « --- », ou fin de section."""
+    m = FIN_SITUATION_RE.search(rest)
+    return m.start() if m else len(rest)
 
 
 def load_sub_variables(slug: str):
@@ -233,21 +248,16 @@ def format_sub_variables_block(sub_vars: list) -> str:
 
 def build_prompt(today_str: str, extracts: dict) -> str:
     lines = []
-    lines.append(f"# PROMPT DE VEILLE — état du monde réel — {today_str}")
-    lines.append("")
-    lines.append(
-        "Copie tout ce qui suit dans une IA avec accès web (Claude.ai, "
-        "ChatGPT, etc.), colle sa réponse telle quelle dans "
-        "documentation/need_action/veille_reponse_brute.md (panneau GUI de "
-        "import_veille_etat_monde), puis lance import_veille_etat_monde.py."
-    )
-    lines.append("")
-    lines.append("=" * 78)
+    # Tout le fichier est le prompt, à coller tel quel dans l'IA (28 sept
+    # 2026, même principe que la veille signaux faibles) : plus de consigne
+    # destinée à David ni de ligne de séparation en tête -- ces rappels sont
+    # dans le GUI (boutons Copier / Télécharger) et dans la console.
+    lines.append(f"# Veille — état du monde réel — {today_str}")
     lines.append("")
     lines.append(
         "CONSIGNE DE LIVRAISON : produis ta réponse sous la forme d'un "
         "fichier markdown téléchargeable (ex. artifact/Canvas selon "
-        "l'interface), nommé veille_reponse_brute.md, plutôt qu'un simple "
+        "l'interface), nommé veille_etat_monde_reponse.md, plutôt qu'un simple "
         "message de chat. S'il n'est pas possible de générer un fichier "
         "téléchargeable dans cette interface, réponds normalement en chat "
         "— le contenu sera copié à la main, le format ci-dessous reste "
@@ -308,8 +318,10 @@ def build_prompt(today_str: str, extracts: dict) -> str:
     )
     lines.append(
         "- Si le paragraphe est modifié : privilégie l'ajout/la précision "
-        "de ce qui est nouveau plutôt qu'une réécriture complète. Reste "
-        "factuel, neutre, 150-250 mots."
+        "de ce qui est nouveau plutôt qu'une réécriture complète. GARDE "
+        "les passages encore valables, en particulier les « mouvements de "
+        "fond » en gras : ne les raccourcis pas pour tenir une longueur. "
+        "Reste factuel et neutre (environ 150-400 mots)."
     )
     lines.append(
         "- N'ajoute AUCUNE mise en perspective historique (ni \"trajectoire "
@@ -401,7 +413,8 @@ def main():
     print(f"[OK] Prompt écrit dans {PROMPT_OUTPUT_PATH}")
     print(f"     {len(VARIABLES) - len(missing)}/{len(VARIABLES)} sections extraites.")
     print("     Prochaine étape : copier ce fichier dans une IA avec accès web,")
-    print("     puis coller sa réponse dans veille_reponse_brute.md (panneau GUI)")
+    print("     puis coller sa réponse dans veille_etat_monde_reponses/"
+          "veille_etat_monde_reponse.md (panneau GUI)")
     print("     avant de lancer import_veille_etat_monde.py.")
 
 

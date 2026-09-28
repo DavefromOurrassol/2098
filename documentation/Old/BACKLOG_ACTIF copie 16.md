@@ -7,8 +7,7 @@ S12, S16 et S17 clos et archivés, S15 réduit, S18 ajouté ; le 27 septembre :
 chantier « Injection et propagation » ouvert et clos dans la session,
 archivé, S19 ajouté ; le 27 septembre après-midi : chantier « Signaux
 faibles — polarité, persistance, idées en texte libre » ouvert et clos,
-archivé, S19 mis à jour, S20 ajouté ; le 28 septembre : chantier « Veille
-signaux faibles » ouvert et clos, archivé, S21 ajouté), mis à jour en continu
+archivé, S19 mis à jour, S20 ajouté), mis à jour en continu
 à chaque clôture de session. Chantiers clos et leur historique complet
 dans `BACKLOG_ARCHIVE.md` (fichier séparé, à uploader seulement en cas
 de besoin de vérifier si un point a déjà été traité). Chaque chantier
@@ -432,38 +431,6 @@ reportées explicitement :
   `create_entities_and_instances.py` (la persistance d'une instance se
   déduit de sa trajectoire ; forçage possible à la main dans le bloc
   `injection`). À ajouter seulement si le besoin se présente.
-
----
-
-## ⚪ S21. Veille monde réel et signaux faibles — suites
-**Nouveau, 28 sept.** Chaîne en production (manuel §3quater). Rien de
-bloquant :
-- **Injection des signaux** (lecture de `inject_custom_signals.py`) : les 6
-  scénarios sont obligatoires, `polarite` ±1 (jamais 0) et un seul
-  `delta_level` pour les 6. Chez Ansoff, beaucoup de signaux ne donnent
-  rien dans certains futurs. Pistes, **notées pour plus tard par David** :
-  **a)** « sans suite » autorisé par scénario (évolution narrative, sans
-  effet chiffré) ; **b)** `delta_level` par scénario.
-- **Livres** : 32 pages repérées restent dans le rapport JRC (≈ 4 passes).
-  Documents à déposer repérés le 28 sept (liens dans le handoff) : ESPAS
-  Horizon Scanning n° 10 (et précédents), JRC FUTURINNOV (Healing,
-  Embodying, (Dis)Entangling, Observing…), PNUE Navigating New Horizons,
-  WEF Top 10 Emerging Technologies 2025, ONU Horizon Scanning 2026.
-- **Prompt des livres** : Mistral remplit le quota (3/3). Durcissement
-  possible : une recommandation de l'auteur (« should », « would be »)
-  n'est pas une observation ; un grand programme d'État n'est pas marginal.
-- **Option 1** (recherche web par API, `call_llm_web()` séparée, Mistral
-  Conversations + `web_search` en bêta) et **option 2** (collecte locale
-  RSS, champ `rss` du YAML à remplir) : non faites.
-- **OCR** des PDF scannés : non fait (détectés et signalés).
-- **Fusion multi-IA pour l'état du monde** : proposée (prompt de fusion
-  collable, faits cités par ≥ 2 IA), laissée de côté par David.
-- Onglet 🔭 : pas de bouton pour défaire une fusion ; si l'IA découpe un
-  candidat en plusieurs idées, seule la première ajoutée compte.
-- Idée à garder (Jabbour, ChatGPT) : repérer les signaux qui **relient**
-  plusieurs variables (analyse en réseau via la matrice 12×12).
-- `gui_verified` passé à `true` le 28 sept sur les trois entrées signaux
-  faibles (testées chez David).
 
 ---
 

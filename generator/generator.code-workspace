@@ -1,0 +1,26 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../evenements_custom"
+		},
+		{
+			"path": "../documentation"
+		},
+		{
+			"path": "../event_instances"
+		},
+		{
+			"path": "../variables"
+		},
+		{
+			"path": "../signaux_custom"
+		},
+		{
+			"path": "../gui"
+		}
+	],
+	"settings": {}
+}

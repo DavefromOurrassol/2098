@@ -8,3 +8,7 @@ __pycache__/
 gui/logs/
 __pycache__/
 *.bak_etape*
+
+# Livres de la veille (documents tiers, retéléchargeables)
+documentation/livres/*.pdf
+documentation/livres/*.epub

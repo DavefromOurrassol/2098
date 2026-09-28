@@ -1,4 +1,16 @@
 queue:
-- description: chine 2049 champion économique
+- id: violence_anti_ia_actes
+  description: En avril 2026, la contestation contre l'IA aux États-Unis bascule dans
+    la violence. Le domicile de Sam Altman, figure emblématique du secteur, est visé
+    par un cocktail Molotov. Parallèlement, un élu municipal d'Indianapolis est la
+    cible de coups de feu, accompagnés du message « pas de centres de données ». Ces
+    actes illustrent une radicalisation d'une frange du mouvement anti-IA, bien que
+    celui-ci reste minoritaire dans l'opinion publique.
+  variable_hint:
+  - valeurs_culture_tempo_sociale
+  - technologie_information
   variable_hint_count: 2
-  persistance: normale
+  zone_hint: États-Unis
+  annee_apparition: 2026
+  persistance: durable
+  source: veille_20260928_1038_Claude

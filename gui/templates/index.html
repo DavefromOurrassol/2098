@@ -427,6 +427,8 @@
     #tab-event_instances.active { display: flex; }
     #tab-signaux { display: none; flex-direction: column; height: 100%; padding: 20px; box-sizing: border-box; min-height: 0; }
     #tab-signaux.active { display: flex; }
+    #tab-veille_signaux { display: none; flex-direction: column; height: 100%; padding: 20px; box-sizing: border-box; min-height: 0; }
+    #tab-veille_signaux.active { display: flex; }
     #tab-resumes { display: none; flex-direction: column; height: 100%; padding: 20px; box-sizing: border-box; min-height: 0; overflow-y: auto; }
     #tab-resumes.active { display: flex; }
     /* ── Onglet Résumés par scénario (7 septembre 2026) -- gabarit différent
@@ -1048,6 +1050,69 @@
         <div class="panel-resizer" id="signaux-resizer" title="Glisser pour élargir/réduire le panneau"></div>
         <div class="articles-sidebar">
           <div id="signaux-panel" class="articles-panel">
+            <div class="articles-panel-empty">Clique sur une ligne pour voir le détail.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Veille signaux faibles (28 septembre 2026) : tri des candidats de
+         import_signaux_faibles.py -- même gabarit que #tab-signaux. -->
+    <div id="tab-veille_signaux" class="tab-content">
+      <div class="articles-toolbar">
+        <span class="tab-page-title" style="margin:0">Veille signaux faibles — tri</span>
+        <div class="articles-filter-group">
+          <label for="veille-lot">Lot (veille)</label>
+          <select id="veille-lot"><option value="">Tous</option></select>
+        </div>
+        <div class="articles-filter-group">
+          <label for="veille-statut">Statut</label>
+          <select id="veille-statut"><option value="">Tous</option></select>
+        </div>
+        <div class="articles-filter-group">
+          <label for="veille-variable">Variable principale</label>
+          <select id="veille-variable"><option value="">Toutes</option></select>
+        </div>
+        <div class="articles-filter-group">
+          <label for="veille-ia">Trouvé par</label>
+          <select id="veille-ia"><option value="">Toutes</option></select>
+        </div>
+        <input type="text" id="veille-search" placeholder="🔍 Titre, description…" autocomplete="off">
+        <span id="veille-count" class="articles-count"></span>
+      </div>
+      <div id="veille-lot-info" class="sujets-action-apercu" style="display:none;margin-bottom:10px"></div>
+      <div class="articles-layout">
+        <div class="articles-table-wrap">
+          <div class="articles-table-scroll">
+            <table class="articles-table">
+              <colgroup>
+                <col style="width:8%"><col style="width:48%"><col style="width:20%">
+                <col style="width:14%"><col style="width:10%">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th data-sort="score">Score</th>
+                  <th data-sort="titre">Titre</th>
+                  <th data-sort="variable_principale">Variable principale</th>
+                  <th data-sort="trouve_par_str">Trouvé par</th>
+                  <th data-sort="statut">Statut</th>
+                </tr>
+              </thead>
+              <tbody id="veille-tbody"></tbody>
+            </table>
+          </div>
+          <div class="articles-pagination">
+            <span id="veille-range"></span>
+            <div class="articles-pagination-btns">
+              <button id="veille-prev">← Page précédente</button>
+              <span id="veille-page-label"></span>
+              <button id="veille-next">Page suivante →</button>
+            </div>
+          </div>
+        </div>
+        <div class="panel-resizer" id="veille-resizer" title="Glisser pour élargir/réduire le panneau"></div>
+        <div class="articles-sidebar">
+          <div id="veille-panel" class="articles-panel">
             <div class="articles-panel-empty">Clique sur une ligne pour voir le détail.</div>
           </div>
         </div>
