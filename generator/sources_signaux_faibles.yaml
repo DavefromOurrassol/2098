@@ -31,7 +31,7 @@ sources:
     famille: technologie
     variables: [technologie_information, valeurs_culture_tempo_sociale]
     acces: libre
-    rss: null
+    rss: https://synthmedia.fr/feed/
     verifie: false
     actif: true
     ajoute_par: david
@@ -42,7 +42,7 @@ sources:
     famille: technologie
     variables: [technologie_information, systemes_productifs_travail]
     acces: libre
-    rss: null
+    rss: https://www.dwarkesh.com/feed?sectionId=21898
     verifie: false
     actif: true
     ajoute_par: david
@@ -64,7 +64,7 @@ sources:
     famille: prospective
     variables: []
     acces: partiel
-    rss: null
+    rss: https://www.futuribles.com/feed/
     verifie: false
     actif: true
     ajoute_par: david
@@ -75,7 +75,7 @@ sources:
     famille: geopolitique
     variables: [geopolitique_conflits, systeme_economique_redistribution, gouvernance_institutions]
     acces: partiel
-    rss: null
+    rss: https://geab.eu/feed/
     verifie: false
     actif: true
     ajoute_par: david
@@ -131,7 +131,7 @@ sources:
     famille: prospective
     variables: []
     acces: partiel
-    rss: null
+    rss: https://usbeketrica.com/fr/rss
     verifie: false
     actif: true
     ajoute_par: claude
@@ -143,7 +143,7 @@ sources:
     famille: technologie
     variables: [technologie_information, sante_biotechnologies, energie_ressources_critiques]
     acces: partiel
-    rss: null
+    rss: https://www.technologyreview.com/feed/
     verifie: false
     actif: true
     ajoute_par: claude
@@ -154,7 +154,7 @@ sources:
     famille: technologie
     variables: [technologie_information, systemes_productifs_travail, organisation_territoires]
     acces: libre
-    rss: null
+    rss: https://restofworld.org/feed/latest
     verifie: false
     actif: true
     ajoute_par: claude
@@ -165,7 +165,7 @@ sources:
     famille: technologie
     variables: [technologie_information]
     acces: libre
-    rss: null
+    rss: https://news.ycombinator.com/rss
     verifie: false
     actif: true
     ajoute_par: claude
@@ -177,7 +177,7 @@ sources:
     famille: geopolitique
     variables: [geopolitique_conflits, gouvernance_institutions, frontieres_du_systeme]
     acces: partiel
-    rss: null
+    rss: https://legrandcontinent.eu/fr/feed/
     verifie: false
     actif: true
     ajoute_par: claude
@@ -188,7 +188,7 @@ sources:
     famille: geopolitique
     variables: [geopolitique_conflits, gouvernance_institutions]
     acces: libre
-    rss: null
+    rss: https://www.crisisgroup.org/rss
     verifie: false
     actif: true
     ajoute_par: claude
@@ -199,7 +199,7 @@ sources:
     famille: societe
     variables: [valeurs_culture_tempo_sociale, gouvernance_institutions, demographie_mobilite_humaine]
     acces: libre
-    rss: null
+    rss: https://globalvoices.org/feed/
     verifie: false
     actif: true
     ajoute_par: claude
@@ -211,7 +211,7 @@ sources:
     famille: climat_energie
     variables: [climat_environnement_global, energie_ressources_critiques]
     acces: libre
-    rss: null
+    rss: https://www.carbonbrief.org/feed/
     verifie: false
     actif: true
     ajoute_par: claude
@@ -222,7 +222,7 @@ sources:
     famille: climat_energie
     variables: [climat_environnement_global, organisation_territoires]
     acces: libre
-    rss: null
+    rss: https://grist.org/feed/
     verifie: false
     actif: true
     ajoute_par: claude
@@ -245,7 +245,7 @@ sources:
     famille: sante
     variables: [sante_biotechnologies]
     acces: partiel
-    rss: null
+    rss: https://www.statnews.com/feed/
     verifie: false
     actif: true
     ajoute_par: claude
@@ -257,7 +257,7 @@ sources:
     famille: societe
     variables: [valeurs_culture_tempo_sociale, gouvernance_institutions]
     acces: libre
-    rss: null
+    rss: https://www.noemamag.com/feed/
     verifie: false
     actif: true
     ajoute_par: claude
@@ -268,7 +268,7 @@ sources:
     famille: societe
     variables: []
     acces: libre
-    rss: null
+    rss: https://theconversation.com/fr/articles.atom
     verifie: false
     actif: true
     ajoute_par: claude

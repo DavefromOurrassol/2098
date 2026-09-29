@@ -8,9 +8,7 @@ chantier « Injection et propagation » ouvert et clos dans la session,
 archivé, S19 ajouté ; le 27 septembre après-midi : chantier « Signaux
 faibles — polarité, persistance, idées en texte libre » ouvert et clos,
 archivé, S19 mis à jour, S20 ajouté ; le 28 septembre : chantier « Veille
-signaux faibles » ouvert et clos, archivé, S21 ajouté ; le 29 septembre :
-S21 options 1 et 2 closes — flux RSS en service, recherche web par API non
-retenue —, archivées), mis à jour en continu
+signaux faibles » ouvert et clos, archivé, S21 ajouté), mis à jour en continu
 à chaque clôture de session. Chantiers clos et leur historique complet
 dans `BACKLOG_ARCHIVE.md` (fichier séparé, à uploader seulement en cas
 de besoin de vérifier si un point a déjà été traité). Chaque chantier
@@ -454,24 +452,9 @@ bloquant :
 - **Prompt des livres** : Mistral remplit le quota (3/3). Durcissement
   possible : une recommandation de l'auteur (« should », « would be »)
   n'est pas une observation ; un grand programme d'État n'est pas marginal.
-- ~~**Option 1** (recherche web par API) et **option 2** (collecte locale
-  RSS)~~ — **closes le 29 sept** (voir `BACKLOG_ARCHIVE.md`) : RSS en
-  service (`veille_rss_api.py`, 16 flux) ; recherche web par API essayée
-  sur Mistral et non retenue. Suites possibles, sans urgence :
-  - **Recherche en deux temps** (un appel court par variable, puis mise en
-    forme limitée aux URL trouvées), si l'automatisation de la partie web
-    devient utile : ~12 fois plus chère en recherches.
-  - **Hacker News** : flux sans texte (titres seuls), ignoré à chaque
-    passe ; retirer son champ `rss` ou lire les pages liées.
-  - **Crisis Group** : flux général du site (pas CrisisWatch), articles non
-    datés.
-  - **Pages complètes** au lieu des résumés des flux (articles réservés
-    aux abonnés réduits à une ou deux phrases : STAT+, Rest of World, GEAB).
-  - Relancer `verifier_flux_rss.py` de temps en temps (un flux peut
-    changer ou mourir) ; une nouvelle source avec flux est lue
-    automatiquement une fois son champ `rss` rempli.
-  - Mistral reprend parfois des titres de « déjà repérés » malgré la
-    consigne (rattrapé par l'import).
+- **Option 1** (recherche web par API, `call_llm_web()` séparée, Mistral
+  Conversations + `web_search` en bêta) et **option 2** (collecte locale
+  RSS, champ `rss` du YAML à remplir) : non faites.
 - **OCR** des PDF scannés : non fait (détectés et signalés).
 - **Fusion multi-IA pour l'état du monde** : proposée (prompt de fusion
   collable, faits cités par ≥ 2 IA), laissée de côté par David.

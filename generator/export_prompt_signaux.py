@@ -10,8 +10,10 @@ monde d'Ourrassol 2098.
 
 AUCUN APPEL API — script 100% local, même principe que
 export_prompt_veille.py (mode par défaut décidé par David le 28 sept 2026).
-Les modes automatiques (collecte locale des sources, recherche web par API)
-viendront plus tard et réutiliseront build_prompt() tel quel.
+Les sources dotées d'un flux RSS (champ « rss ») sont lues par
+veille_rss_api.py : depuis le 29 sept 2026, le prompt les signale comme
+déjà lues et oriente l'IA vers les autres sources et l'élargissement.
+Recherche web par API : essayée le 29 sept 2026 (Mistral), non retenue.
 
 DIFFÉRENCE AVEC export_prompt_veille.py
 ---------------------------------------
@@ -553,12 +555,28 @@ def build_prompt(today_str: str, sources: list, livres: list,
         "que tu n'as pas pu lire (abonnement, blocage) ou qui n'apportaient rien."
     )
     L.append("")
-    if sources:
-        for s in sources:
+    # Prompt recentré (décision David 29 sept 2026) : les sources dotées d'un
+    # flux RSS sont lues automatiquement par veille_rss_api.py. L'IA ne les
+    # reçoit plus comme sources de départ, pour passer son temps sur les
+    # autres et sur l'élargissement.
+    sources_depart = [s for s in sources if not s.get("rss")]
+    sources_rss = [s for s in sources if s.get("rss")]
+    if sources_depart:
+        for s in sources_depart:
             L.append(_ligne_source(s))
     else:
         L.append("(aucune source de départ : cherche librement)")
     L.append("")
+    if sources_rss:
+        L.append(
+            "Sources DÉJÀ LUES automatiquement par ailleurs (leurs articles "
+            "récents sont analysés sans toi) : ne passe pas de temps dessus, "
+            "et ne les mets pas dans « SOURCES CONSULTÉES ». Un article plus "
+            "ancien de l'une d'elles reste utilisable si tu y arrives par une "
+            "autre recherche : "
+            + ", ".join(s.get("nom", s["url"]) for s in sources_rss) + "."
+        )
+        L.append("")
 
     # Livres déclarés dans le YAML sans fichier : à joindre à la main.
     if livres:

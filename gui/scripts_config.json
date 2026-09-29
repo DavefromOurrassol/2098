@@ -2820,7 +2820,7 @@
     "icon": "🔭",
     "section": "monde_reel",
     "script": "export_prompt_signaux.py",
-    "description": "Génère le prompt de veille « signaux faibles » (concept d'Igor Ansoff) à coller TEL QUEL dans une ou plusieurs IA avec accès web (Claude.ai, ChatGPT, Le Chat, DeepSeek…) : 📋 Copier ou ⬇ Télécharger ci-dessous. Aucun appel API. Le prompt contient tes sources (fichier modifiable ci-dessous), les 12 variables, le « déjà connu » (état du monde, signaux injectés, candidats des veilles précédentes) et les règles de couverture. Réponses à coller ensuite dans « Signaux faibles — 2. Importer les réponses ». Les livres (documentation/livres/) ne sont pas dans ce prompt : ils sont lus à part par « Signaux faibles — Lire les livres (API) ».",
+    "description": "Génère le prompt de veille « signaux faibles » (concept d'Igor Ansoff) à coller TEL QUEL dans une ou plusieurs IA avec accès web (Claude.ai, ChatGPT, Le Chat, DeepSeek…) : 📋 Copier ou ⬇ Télécharger ci-dessous. Aucun appel API. Le prompt contient tes sources (fichier modifiable ci-dessous), les 12 variables, le « déjà connu » (état du monde, signaux injectés, candidats des veilles précédentes) et les règles de couverture. Réponses à coller ensuite dans « Signaux faibles — 2. Importer les réponses ». Les livres (documentation/livres/) ne sont pas dans ce prompt : ils sont lus à part par « Signaux faibles — Lire les livres (API) ». Les sources dotées d'un flux RSS y sont signalées comme déjà lues (par « Signaux faibles — Lire les flux RSS (API) ») : l'IA se concentre sur les autres et sur l'élargissement.",
     "requires": [],
     "options": [
       {
@@ -2919,6 +2919,79 @@
     "gui_verified": true
   },
   {
+    "id": "veille_rss_api",
+    "label": "Signaux faibles — Lire les flux RSS (API)",
+    "icon": "📰",
+    "section": "monde_reel",
+    "script": "veille_rss_api.py",
+    "description": "Lit par API (ton LLM par défaut, tier structured_strict, sans recherche web) les articles récents des sources qui ont un flux RSS (champ « rss » de sources_signaux_faibles.yaml, rempli par verifier_flux_rss.py). Texte = résumé fourni par le flux ; articles sans texte ignorés (ex. Hacker News). Un appel par lot d'environ 40 articles mélangés entre sources ; le LLM en tire 0 à 3 signaux faibles au sens strict. Chaque signal doit citer un article envoyé avec une citation exacte, sinon il est rejeté ; sa source devient l'URL réelle de l'article. Les signaux sont écrits dans l'emplacement « Réponse des flux RSS » de « Signaux faibles — 2. Importer les réponses ». Un article n'est marqué lu que si l'appel de son lot a réussi : chaque passe ne lit que les nouveaux articles. Ces sources ne sont plus proposées à l'IA dans le prompt à coller.",
+    "requires": [],
+    "options": [
+      {
+        "flag": "--dry-run",
+        "type": "checkbox",
+        "label": "Aperçu (aucun appel API)",
+        "default": false,
+        "description": "Collecte les articles et montre le prompt du premier lot, sans appeler le LLM ni marquer d'article lu."
+      },
+      {
+        "flag": "--lister",
+        "type": "checkbox",
+        "label": "Lister les articles disponibles seulement",
+        "default": false,
+        "description": "Aucun appel : nombre d'articles à lire par source (et ceux déjà lus, trop anciens ou sans texte), nombre de lots prévus."
+      },
+      {
+        "flag": "--jours",
+        "type": "number",
+        "label": "Fenêtre de collecte (jours)",
+        "min": 1,
+        "max": 365,
+        "default": 30,
+        "description": "Seuls les articles publiés dans cette fenêtre sont lus."
+      },
+      {
+        "flag": "--source",
+        "type": "text",
+        "label": "Une seule source (optionnel)",
+        "optional": true,
+        "placeholder": "ex : grist",
+        "description": "Ne lit que les sources dont le nom contient ce texte. Vide = toutes."
+      },
+      {
+        "flag": "--taille-lot",
+        "type": "number",
+        "label": "Articles par appel",
+        "min": 5,
+        "max": 80,
+        "default": 40,
+        "advanced": true,
+        "description": "Plus petit = plus d'appels, lecture plus attentive de chaque article."
+      },
+      {
+        "flag": "--relire",
+        "type": "checkbox",
+        "label": "Relire les articles déjà lus",
+        "default": false,
+        "advanced": true,
+        "description": "Ignore la mémoire des articles déjà envoyés (state/rss_veille.json)."
+      }
+    ],
+    "yaml_files": [
+      {
+        "path": "documentation/need_action/veille_signaux_reponses/veille_signaux_reponse_rss.md",
+        "label": "Signaux tirés des flux RSS (en attente d'import)",
+        "readonly": true
+      },
+      {
+        "path": "generator/sources_signaux_faibles.yaml",
+        "label": "Sources (champ rss) — actif: false pour mettre une source de côté",
+        "readonly": false
+      }
+    ],
+    "gui_verified": true
+  },
+  {
     "id": "import_signaux_faibles",
     "label": "Signaux faibles — 2. Importer les réponses",
     "icon": "📥",
@@ -2983,6 +3056,11 @@
       {
         "path": "documentation/need_action/veille_signaux_reponses/veille_signaux_reponse_livres.md",
         "label": "Réponse des livres (écrite par « Lire les livres (API) »)",
+        "readonly": false
+      },
+      {
+        "path": "documentation/need_action/veille_signaux_reponses/veille_signaux_reponse_rss.md",
+        "label": "Réponse des flux RSS (écrite par « Lire les flux RSS (API) »)",
         "readonly": false
       },
       {

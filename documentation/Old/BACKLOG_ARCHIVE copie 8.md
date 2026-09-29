@@ -98,9 +98,7 @@ passe de l'audit du lore sur les 6 scénarios — voir
 `HANDOFF_25_SEPTEMBRE.md`. Mis à jour le 28 septembre 2026 : chantier
 « Veille signaux faibles » ouvert et clos (chaîne web + livres par API +
 onglet de tri), correctifs de la veille état du monde — voir
-`HANDOFF_28_SEPTEMBRE.md`. Mis à jour le 29 septembre 2026 : S21 options 1
-(recherche web par API, non retenue après essai) et 2 (lecture des flux
-RSS, en service) closes — voir `HANDOFF_29_SEPTEMBRE.md`.*
+`HANDOFF_28_SEPTEMBRE.md`.*
 
 ---
 
@@ -385,79 +383,3 @@ rangement migré chez David, 7 documents lus par API (repérage + lecture,
 (Jabbour) donnent de bons candidats ; les synthèses (ESPAS, OCDE) donnent
 des tendances connues ou des recommandations. Mistral remplit le quota
 (3/3) même quand le texte est pauvre.
-
----
-
-## ✅ Veille signaux faibles — recherche web par API et flux RSS (S21, options 1 et 2) — CLOS le 29 septembre 2026
-
-**Origine** : les deux modes automatiques décidés le 28 sept et laissés en
-S21 — option 1, recherche web par API (LLM par défaut, même routage) ;
-option 2, collecte locale des sources (champ `rss` du YAML).
-
-**Option 1 — recherche web par API : essayée, non retenue.**
-- Aucun des trois fournisseurs ne cherche sur le web par l'appel de
-  `call_llm()` : Mistral passe par l'API Conversations
-  (`client.beta.conversations.start`, outil `web_search`), Claude par
-  l'outil serveur `web_search`, OpenAI par l'API Responses.
-- Test 1 (question courte, `mistral-large-latest`, SDK 1.10.0) : 2
-  recherches, texte entrecoupé de morceaux `tool_reference` (titre + URL).
-- Test 2 (vrai prompt de veille, ~5 100 mots) : **aucune recherche**
-  (`connectors=Unset`), 10 signaux tirés de la mémoire, URL reconstituées
-  (l'URL Nature du signal 3 en 404).
-- `tool_choice` : `any` refusé (valeurs `auto`/`none`/`required`),
-  `required` refusé avec un outil intégré (« Can't set 'tool_choice' to
-  'required' when using built in connectors »). Seule une consigne écrite
-  peut pousser la recherche.
-- Test 3 (prompt régénéré, ~8 000 mots, consigne « au moins une recherche
-  par signal ») : 14 recherches, 96 s, ~95 000 jetons de connecteur pour
-  14 500 de prompt. 10 URL sur 12 vérifiées existantes (2 non vérifiables)
-  mais **aucun `tool_reference` renvoyé** dans ce format : impossible de
-  comparer aux pages lues. 2 signaux sur 10 déformés (Chili : page Böll
-  sans rapport, Mar Menor mêlée ; fermes verticales IA absentes de
-  l'article Afrimag), 2 gros titres (traité BBNJ, essai de Bill Gates), bloc
-  « SOURCES CONSULTÉES » faux (28 sources « consultées » pour 14 recherches).
-- **Décision (David)** : pas plus efficace que le prompt collé (qualité
-  d'une IA de chat moyenne, coût à chaque lancement, abonnements de chat
-  déjà payés). Seul gain : l'automatisation. Non codé. Recherche en deux
-  temps (un appel court par variable, puis mise en forme sur les seules
-  URL trouvées) gardée en réserve, ~12 fois plus chère en recherches.
-
-**Option 2 — flux RSS : en service.**
-- `verifier_flux_rss.py` : trouve le flux de chaque source (champ `rss`,
-  autodécouverte `<link rel="alternate">`, adresses courantes), ne garde
-  qu'un flux lisible avec des articles, écarte un flux dont le dernier
-  article a plus de 180 jours (`un.org/rss.xml` et `unep.org/rss.xml`,
-  abandonnés depuis 2023). `--apply` n'écrit que la ligne `rss:` (.bak).
-  16 flux sur 31 sources ; les 15 autres sont surtout des institutions
-  (ESPAS, PNUD, JRC, OCDE, WEF, ONU, PNUE, IFTF, Nesta, Fondation 2100,
-  AIE, Knowledge4Policy, Futures4Europe).
-- `veille_rss_api.py`, calqué sur les livres : articles des 30 derniers
-  jours pas encore lus, résumé du flux (~1 200 caractères, pas la page
-  complète), lots de 40 mélangés entre sources, `call_llm()` sans web,
-  tier `structured_strict`, 0 à 3 signaux par lot. Citation exacte d'un
-  article envoyé (`[A12]`) exigée et vérifiée ; la ligne source est
-  réécrite en `- URL — nom` (format lu par l'import). Mémoire
-  `state/rss_veille.json`, article marqué lu seulement si l'appel de son
-  lot a réussi. Réponse `veille_signaux_reponse_rss.md` (`ia: rss`).
-- **Prompt collé recentré** (décision David) : les sources à flux ne sont
-  plus données comme sources de départ, elles sont signalées comme déjà
-  lues ; l'IA se concentre sur les 15 autres et sur l'élargissement.
-  Redondance jugée faible (l'IA lisait peu ces sources ; les doublons sont
-  fusionnés à l'import).
-- `import_signaux_faibles.py` : `rss` dispensé du bloc « SOURCES
-  CONSULTÉES », comme `livres`.
-- GUI : entrée « 📰 Signaux faibles — Lire les flux RSS (API) » et
-  emplacement « Réponse des flux RSS » dans l'import (`gui_verified: true`).
-
-**Tests réels** : 211 articles (15 sources avec texte ; Hacker News : 30
-titres sans texte, ignorés) → 6 lots → 12 signaux, tous passés au contrôle
-des citations → import : 12 URL sur 12 OK, 2 fusionnés dans des candidats
-du 28 sept encore à trier (hébergeur « terroriste », centres de données et
-eau), 10 nouveaux candidats. Deuxième passage : 0 article à lire.
-
-**Constats** : bons candidats (incidents d'agents IA, nature dans les
-instances d'entreprise, surveillance citoyenne de la radioactivité à La
-Hague, Hope Theatre thaïlandais, chiens de dépistage augmentés à l'IA) ;
-plus faibles : mesure grand public (Wegovy), tribune (BCE). Mistral reprend
-des titres de la liste « déjà repérés » malgré la consigne et utilise des
-sous-variables comme identifiants (rattachées à l'import).

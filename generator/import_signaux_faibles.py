@@ -1088,9 +1088,10 @@ def main():
         ias_vues[ia] = p.name
         sigs, rej, av = parser_reponse(texte, ia)
         consult_par_ia[ia] = parser_consultation(texte)
-        # La réponse « livres » (veille_livres_api.py) ne consulte pas les
-        # sources web de départ : pas de bloc attendu.
-        if not consult_par_ia[ia] and not ia.startswith("livres"):
+        # Les réponses « livres » (veille_livres_api.py) et « rss »
+        # (veille_rss_api.py, 29 sept 2026) sont produites par nos scripts,
+        # qui lisent eux-mêmes leurs sources : pas de bloc attendu.
+        if not consult_par_ia[ia] and not ia.startswith(("livres", "rss")):
             av.append("bloc « ### SOURCES CONSULTÉES » absent")
         tous.extend(sigs)
         rejets.extend(rej)

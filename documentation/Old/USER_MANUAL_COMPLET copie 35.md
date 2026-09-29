@@ -2154,24 +2154,16 @@ trouvent dans la section GUI **« Référence — monde réel »** :
 | Veille | Ce qu'elle met à jour | Boutons GUI |
 |---|---|---|
 | **État du monde** | `generator/etat_du_monde_reel.md` (paragraphe « Situation… » des 12 variables) | « Préparer le prompt de veille » → « Importer le résultat de la veille » |
-| **Signaux faibles** | Liste de candidats à trier (onglet 🔭), puis `signaux_custom/queue.yaml` ou `evenements_custom/queue.yaml` | « 🔭 Signaux faibles — 1. Préparer le prompt », « 📚 Signaux faibles — Lire les livres (API) », « 📰 Signaux faibles — Lire les flux RSS (API) », « 📥 Signaux faibles — 2. Importer les réponses » |
+| **Signaux faibles** | Liste de candidats à trier (onglet 🔭), puis `signaux_custom/queue.yaml` ou `evenements_custom/queue.yaml` | « 🔭 Signaux faibles — 1. Préparer le prompt », « 📚 Signaux faibles — Lire les livres (API) », « 📥 Signaux faibles — 2. Importer les réponses » |
 
 Principe commun : **pas d'appel API pour la recherche web**. Le prompt
 généré est collé tel quel dans l'IA de chat de ton choix (Claude, ChatGPT,
 Le Chat, DeepSeek, Gemini…), qui a, elle, accès au web ; sa réponse revient
-dans un emplacement du GUI puis est importée. Seuls les **livres** et les
-**flux RSS** des sources sont lus par API (pas besoin de web : le texte est
-fourni par nos scripts, et chaque signal est vérifié contre ce texte).
+dans un emplacement du GUI puis est importée. Mistral ne permet pas la
+recherche web par l'API classique, d'où ce fonctionnement. Seuls les
+**livres** sont lus par API (pas besoin de web : le texte est fourni).
 
-Recherche web par API : essayée le 29 sept 2026 sur Mistral (API
-Conversations, outil `web_search`) et **non retenue** — sans consigne, le
-modèle ne cherche pas et invente ses URL ; avec consigne, il cherche mais
-déclare avoir consulté des sources qu'il n'a pas lues, pour une qualité
-d'IA de chat moyenne et un coût à chaque lancement (détail :
-`BACKLOG_ARCHIVE.md`).
-
-Détail des chantiers : `HANDOFF_28_SEPTEMBRE.md`, `HANDOFF_29_SEPTEMBRE.md`
-et `USER_MANUAL_HISTORIQUE.md`.
+Détail du chantier : `HANDOFF_28_SEPTEMBRE.md` et `USER_MANUAL_HISTORIQUE.md`.
 
 ### Mécanisme GUI générique : `copyable` (boutons 📋 Copier / ⬇ Télécharger)
 Une entrée `yaml_files` de `scripts_config.json` peut porter
@@ -2255,7 +2247,7 @@ sources_signaux_faibles.yaml ─┐
 candidats déjà vus ───────────┘                                                      │
                                                                                       ▼
 documentation/livres/*.pdf|epub ─► 📚 veille_livres_api.py (API) ─► veille_signaux_reponses/*.md
-flux RSS des sources (champ rss) ─► 📰 veille_rss_api.py (API) ─► (même dossier)     │
+                                                                                      │
                                     2. import_signaux_faibles.py ◄────────────────────┘
                                                 │ fusion, vérification, rapprochement
                                                 ▼
@@ -2270,11 +2262,9 @@ flux RSS des sources (champ rss) ─► 📰 veille_rss_api.py (API) ─► (mê
   de l'ONU, PNUE Global Foresight, WEF Top 10 Emerging Technologies).
   Champs : `nom`, `url`, `langue` (fr/en/multi), `famille`
   (prospective/technologie/geopolitique/climat_energie/sante/societe),
-  `variables` (vide = toutes), `acces` (libre/partiel), `rss` (adresse du
-  flux, rempli par `verifier_flux_rss.py` ; une source avec `rss` est lue
-  par « 📰 Lire les flux RSS » et n'est plus proposée à l'IA dans le prompt
-  à coller), `verifie`, `actif` (false = mis de côté), `ajoute_par`.
-  Au 29 sept : 16 sources avec flux.
+  `variables` (vide = toutes), `acces` (libre/partiel), `rss` (pour une
+  future collecte locale), `verifie`, `actif` (false = mis de côté),
+  `ajoute_par`.
 - `dossier_livres:` — dossier des livres (défaut `documentation/livres`).
 - `livres:` — **exceptions seulement** (voir plus bas) ; une entrée sans
   `fichier:` est juste listée dans le prompt web (livre à joindre à la main).
@@ -2303,13 +2293,6 @@ nouveauté, impact), format strict, bloc `### SOURCES CONSULTÉES` (une ligne
 par source de départ : consultée / inaccessible / non consultée, et ce qui
 en a été tiré). **Les PDF/EPUB du dossier des livres ne sont pas dans ce
 prompt** (lus par API, ci-dessous).
-
-**Prompt recentré (29 sept)** : les sources qui ont un champ `rss` ne sont
-plus des « sources de départ ». Une phrase les signale comme déjà lues
-automatiquement : l'IA ne passe pas de temps dessus et ne les met pas dans
-« SOURCES CONSULTÉES » (un article ancien de l'une d'elles, trouvé par une
-autre recherche, reste utilisable). L'IA se concentre sur les sources sans
-flux et sur l'élargissement.
 
 #### `veille_livres_api.py` 🔁 + `livres_veille.py` — 📚 Lire les livres (API)
 Mode **« dépose et oublie »** : tout PDF (avec texte), EPUB, `.txt` ou
@@ -2378,67 +2361,9 @@ tri. PDF scanné : détecté, pas encore lu (OCR non fait). Sans web, le LLM
 ne vérifie pas que le phénomène est encore marginal : avertissement 📖 à
 l'import.
 
-#### `verifier_flux_rss.py` 🔁 — trouver les flux des sources (29 sept)
-Aucun appel LLM. Pour chaque source active : le champ `rss` s'il est
-rempli, sinon l'autodécouverte (balises `<link rel="alternate"
-type="application/rss+xml|atom+xml">` de la page puis de la racine du
-site), sinon les adresses courantes (`feed/`, `rss`, `rss.xml`,
-`atom.xml`…). Un flux n'est retenu que s'il se lit, contient au moins un
-article, et que son dernier article a moins de 180 jours (`--max-jours`) —
-écarte les flux abandonnés (`un.org/rss.xml`, `unep.org/rss.xml`, 2023).
-```bash
-python3 verifier_flux_rss.py                 # rapport seul, rien écrit
-python3 verifier_flux_rss.py --source grist  # une source
-python3 verifier_flux_rss.py --apply         # écrit les flux trouvés (.bak)
-```
-`--apply` ne modifie que la ligne `rss:` des sources concernées
-(commentaires et ordre du YAML conservés) et ne remplace jamais un `rss`
-déjà rempli. Prérequis : `pip3 install feedparser`. CLI seulement (pas de
-bouton) : à relancer de temps en temps, ou après l'ajout d'une source.
-
-#### `veille_rss_api.py` 🔁 — 📰 Lire les flux RSS (API) (29 sept)
-Troisième canal, construit comme les livres. Lit les articles récents des
-sources qui ont un champ `rss`.
-1. **Collecte** : articles des 30 derniers jours (`--jours`) pas encore
-   lus. Texte = contenu ou résumé fourni par le flux (le plus long des
-   deux), nettoyé du HTML, ~1 200 caractères — pas la page complète. Un
-   article de moins de 150 caractères est ignoré (Hacker News : titres
-   seuls).
-2. **Analyse** : un appel par lot de 40 articles (`--taille-lot`),
-   mélangés entre sources, `call_llm()` sans recherche web, tier
-   `structured_strict`. Prompt : définition stricte, règles absolues, 12
-   variables, titres « déjà repérés » (pas le « déjà connu » de l'état du
-   monde), grille de notes, articles numérotés `[A1]…`. **0 à 3** signaux
-   par lot.
-3. **Contrôle anti-invention** : chaque signal cite `[A12]` + une citation
-   exacte de 10 à 25 mots ; rejeté (« ✗ rejeté (motif) ») si le numéro est
-   hors du lot ou si 80 % des mots de la citation ne sont pas dans l'article.
-   La ligne source est réécrite en `- <URL réelle> — <nom de la source>`.
-4. **Écriture** dans `veille_signaux_reponses/veille_signaux_reponse_rss.md`
-   (`ia: rss`), ajoutée aux signaux déjà en attente, puis import habituel.
-5. **Mémoire** `state/rss_veille.json` : URL des articles lus (oubliées
-   après 120 jours). Marquage **lot par lot**, seulement si l'appel du lot
-   a réussi et que la réponse est lisible : un lot en échec est retenté.
-```bash
-python3 veille_rss_api.py --lister      # articles disponibles par source, aucun appel
-python3 veille_rss_api.py --dry-run     # collecte + prompt du 1er lot, aucun appel
-python3 veille_rss_api.py               # collecte + appels LLM
-python3 veille_rss_api.py --source grist --jours 60
-python3 veille_rss_api.py --relire      # renvoie aussi les articles déjà lus
-```
-Premier passage réel (29 sept, Mistral Large) : 211 articles → 6 lots
-(~9 000 mots chacun) → 12 signaux → 10 nouveaux candidats, 12 URL sur 12
-vérifiées. Ensuite, seuls les nouveaux articles sont envoyés.
-
-Différence avec le prompt collé : le RSS ne lit **que** les sources à flux,
-et seulement leurs articles récents, mais il les lit **vraiment** (chaque
-signal est vérifié contre le texte envoyé) ; l'IA de chat élargit à tout
-le web, avec une lecture pas toujours réelle ni fidèle.
-
 #### `import_signaux_faibles.py` 🔁 — 2. Importer les réponses
 Lit tous les `.md` non vides de `documentation/need_action/veille_signaux_reponses/`
-(une réponse par IA, autant que voulu, plus les réponses `livres` et
-`rss` — dispensées du bloc « SOURCES CONSULTÉES »),
+(une réponse par IA, autant que voulu, plus la réponse `livres`),
 fusionne, compare aux veilles précédentes, écrit
 `state/veille_signaux.json` (un **lot** par import, identifiant
 `AAAAMMJJ_HHMMSS`, `.bak`) et le rapport
@@ -2504,10 +2429,8 @@ python3 import_signaux_faibles.py --seuil-titre 0.6              # fusion plus s
    2-3 IA → déposer chaque fichier `.md` reçu dans son emplacement.
 2. Si de nouveaux livres ont été déposés (ou des pages restent) :
    « 📚 Lire les livres (API) ».
-3. « 📰 Lire les flux RSS (API) » (Lister d'abord si besoin : sans nouvel
-   article, rien n'est appelé).
-4. « 📥 2. Importer les réponses » : d'abord en aperçu, puis réel.
-5. Tri dans 🔭, puis injection.
+3. « 📥 2. Importer les réponses » : d'abord en aperçu, puis réel.
+4. Tri dans 🔭, puis injection.
 Les candidats non triés restent d'une veille à l'autre (ils s'additionnent,
 sans doublon). Constat : Claude livre des signaux sourcés ; Mistral omet
 souvent les sources ; Gemini a inventé des URL (9/10 en 404 lors d'un essai).
@@ -2517,14 +2440,8 @@ souvent les sources ; Gemini a inventé des URL (9/10 en 404 lors d'un essai).
 - Si l'IA découpe un candidat en plusieurs idées au moment de « Préparer
   l'entrée », seule la première ajoutée compte.
 - Livres : pas d'OCR ; biais technologique des catalogues du JRC.
-- RSS : seules 16 sources sur 31 ont un flux (les institutions ESPAS,
-  PNUD, JRC, OCDE, WEF, ONU, PNUE… n'en ont pas : prompt collé et dossier
-  des livres) ; résumés parfois très courts (articles réservés aux
-  abonnés) ; Hacker News sans texte ; Crisis Group = flux général du site,
-  non daté ; Mistral reprend parfois des titres « déjà repérés » (rattrapé
-  par l'import).
-- Recherche web par API : non retenue (voir plus haut) ; recherche en
-  deux temps gardée en réserve (backlog S21).
+- Options non faites : collecte locale RSS (option 2), recherche web par
+  API (option 1, `call_llm_web`, Mistral Conversations en bêta).
 
 ---
 
