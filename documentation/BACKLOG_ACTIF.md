@@ -21,7 +21,8 @@ couvrant un fait d'une autre zone » ajoutés ; le 6 octobre : S25 traité
 côté code (cooldown durci, Kharg-9 exclu en eco_communalism, doublon retiré)
 et mis en surveillance, S26 clos et archivé, `nouveau_califat_barcelone`
 supprimée, « Rédaction à » sur le site, S3/S6/S7/S10 et `_extract_byline()`
-clos par décision, Hacker News retiré des flux RSS),
+clos par décision, Hacker News retiré des flux RSS, S28 « outils
+externes » ajouté),
 mis à jour en continu
 à chaque clôture de session. Chantiers clos et leur historique complet
 dans `BACKLOG_ARCHIVE.md` (fichier séparé, à uploader seulement en cas
@@ -671,6 +672,43 @@ articles. Fichiers à relire avant de coder : `dynamique.py`,
 et la sortie `--dry-run` des deux scripts d'injection. Cas test proposé par
 David : invasion du Brésil par les États-Unis en 2029 (continentale,
 majeure, durable, 6 scénarios).
+
+---
+
+## ⚪ S28. Outils externes à greffer sur Ourrassol (pistes du 6 oct)
+**Nouveau, 6 oct (recherche à la demande de David, après la comparaison avec
+la Red Team Défense).** Cinq outils, chacun branché sur une brique existante.
+Rien de décidé ni de codé ; ordre conseillé : 1, puis 3 ou 2.
+1. **Analyse structurelle type MICMAC** sur `influence_matrix.md` (12×12) :
+   influence et dépendance directes **et indirectes** de chaque variable →
+   motrices / relais / dépendantes / autonomes. Vérifier que les variables
+   pilotes sont bien motrices, repérer des leviers cachés. Gratuit, sans IA,
+   quelques lignes de Python (ou paquet R `ISMtools`). Le plus simple.
+2. **Analyse CIB (Cross-Impact Balance)**, logiciel ScenarioWizard (CIB-Lab,
+   université de Stuttgart, version récente sur Zenodo ; licence et formats à
+   vérifier) : liste toutes les configurations cohérentes d'un jeu de
+   variables à états. Contrôler que les 6 scénarios sont stables et faire
+   apparaître des configurations cohérentes non envisagées (réponse
+   méthodique au manque de surprise). Demande de noter la matrice par états
+   de variables, pas par niveaux.
+3. **Base SSP de l'IIASA** (Shared Socioeconomic Pathways) : trajectoires
+   chiffrées par région jusqu'en 2100 (population, PIB, urbanisation, énergie,
+   émissions) pour 5 futurs, même famille que les 6 scénarios (fortress world
+   ≈ SSP3, new sustainability ≈ SSP1, policy reform ≈ SSP2…). Ordres de
+   grandeur pour les articles et repère pour les niveaux de variables.
+4. **Prévisions collectives (API Metaculus)** pour le proche horizon
+   2026-2035 : probabilités agrégées sur des milliers de questions, pour
+   nourrir `etat_du_monde_reel.md` (« ce qui est jugé probable », pas
+   seulement « ce qui s'est passé »). Conditions d'accès à vérifier.
+5. **Détection de signaux en complément du RSS** : **GDELT** (base mondiale
+   d'événements tirés de la presse, accès libre — montées encore marginales
+   par pays/thème) et **OpenAlex** (API gratuite sur la publication
+   scientifique — sujets dont le nombre d'articles décolle, dans l'esprit des
+   catalogues JRC).
+En marge : *Global Trends 2040* (National Intelligence Council, 2021 ; édition
+2025 annulée en sept. 2025) comme grille de comparaison des scénarios et source
+pour la veille état du monde ; idées « wild cards » et « passe équipe rouge »
+tirées de la Red Team Défense (à rattacher à S27).
 
 ---
 
