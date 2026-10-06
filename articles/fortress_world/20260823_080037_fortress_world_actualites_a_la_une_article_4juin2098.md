@@ -22,9 +22,9 @@ tags:
 image_prompt: "Une station de compression énergétique à la frontière kazakhe, entourée de drones de surveillance du NSH et de Gardiens en exosquelettes neutres, avec en arrière-plan les tours blindées d’Helios Bloc Consortium et des écrans holographiques affichant des flux de données en temps réel."
 a_une_photo: false
 image_credit: ""
-journaliste_slug: miroslav_kovac
+journaliste_slug: marco_il_lupo_rossi
 date_evenement: 4 juin 2098
-zone_principale: bloc_eurasiatique_occidental
+zone_principale: zone_euro_sud
 date_publication: 4 juin 2098
 entites_citees:
   - bloc_eurasiatique_occidental_fortress_world
@@ -42,7 +42,7 @@ variables_pilotes:
 **Le Nexus des Seuils Hybrides sous pression : les corridors eurasiens au bord de la rupture**
 
 4 juin 2098
-Miroslav Kováč — Helios Sovereign — Le Phare de l'Eurasie
+Marco « Il Lupo » Rossi — L’Écho des Marges
 
 BRATISLAVA-SECTEUR ALPHA — Les Gardiens du Nexus des Seuils Hybrides (NSH) ont lancé hier un ultimatum aux commandements logistiques du Bloc Eurasiatique Occidental : soit les quotas énergétiques transfrontaliers sont respectés, soit les corridors gris d’Asie centrale seront mis en « mode dégradé » dès le 10 juin. Une décision qui menace directement les flux de lithium et d’hydrogène vert reliant les zones industrielles de Moscou-Est aux hubs de Tbilissi-Nord, déjà fragilisés par les récentes cyberattaques attribuées à des factions pro-autarcie.
 

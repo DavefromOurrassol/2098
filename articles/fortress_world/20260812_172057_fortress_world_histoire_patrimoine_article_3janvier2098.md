@@ -29,7 +29,7 @@ a_une_photo: false
 image_credit: ""
 journaliste_slug: sofia_almeida
 date_evenement: 3 janvier 2098
-zone_principale: pacte_forteresses_souveraines
+zone_principale: bloc_atlantique
 date_publication: 3 janvier 2098
 entites_citees:
   - alliance_blocs_souverains_fortress_world

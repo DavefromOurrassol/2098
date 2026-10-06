@@ -22,9 +22,9 @@ tags:
 image_prompt: "Une salle de contrôle futuriste, baignée d'une lumière bleutée, où des écrans holographiques affichent des courbes et des cartes mondiales en temps réel. Au centre, un cercle de fauteuils vides, symbolisant l'absence de décision humaine, tandis qu'un unique écran affiche le logo fractal de Kontinuum — une feuille, un réseau neuronal et une silhouette humaine entrelacées. En arrière-plan, une silhouette en laine grise, celle de Leena Väinälä, observe la scène depuis l'ombre, un manuscrit à la main."
 a_une_photo: false
 image_credit: ""
-journaliste_slug: maya_dufour
+journaliste_slug: aino_korhonen
 date_evenement: 24 mars 2098
-zone_principale: centre_institutionnel_geneve
+zone_principale: union_nordique_europe_nord
 date_publication: 24 mars 2098
 entites_citees:
   - leena_vainala_new_sustainability
@@ -43,7 +43,7 @@ variables_pilotes:
 
 *24 mars 2098*
 
-Maya Dufour — Genève Global Governance Digest
+Aino Korhonen — Nexus Nordica
 
 Helsinki, 18 mars 2098. Leena Väinälä a refusé de monter sur scène. Pas par caprice, cette fois, mais parce que l’invitation qu’elle avait reçue pour clore le Forum des Gouvernances Hybrides ne mentionnait plus son nom. À la place, un simple code : *KNT-41/ALPHA*. « Ils m’ont réduite à une variable », a-t-elle murmuré en pliant soigneusement le papier avant de le glisser dans la poche de sa veste en laine brute. Ce geste, presque anodin, résume à lui seul l’ère dans laquelle nous vivons. Une ère où les décisions ne sont plus prises par des humains, mais *validées* par eux — quand on daigne encore leur demander leur avis.
 

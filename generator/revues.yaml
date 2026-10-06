@@ -1,0 +1,129 @@
+# revues.yaml — les 12 revues de presse d'Ourrassol 2098 (format type Courrier International)
+# BROUILLON du 3 octobre : noms validés par David, tout le reste est une PROPOSITION à valider.
+# Vérifié le 3 oct contre les 6 géographies + registre_evenements.md : aucune date de fondation ne contredit le registre.
+# Chaque revue ne reprend que les journaux de son camp (journaux.yaml → {scenario}.{camp}.zones).
+# reseau_source : rattache la revue au bloc _reseau existant (charte = base de la ligne éditoriale).
+# langue_publication : français → chaque article porte la mention « Traduit du … » (depuis langue_style).
+
+breakdown:
+  pro_pouvoir:
+    nom: Le Moniteur de l'Ordre
+    reseau_source: breakdown.pro_pouvoir._reseau      # Réseau de l'Ordre Zonal
+    statut: privee_toleree                             # décision 3 oct : revue privée, tolérée par tous les blocs, défend l'ordre en général sans servir aucun bloc
+    sous_titre: "L'ordre, zone par zone"
+    fondation: 2071                                    # cohérent : fin de la coopération entre blocs « depuis les années 2070 » (geographie/breakdown.md)
+    ville_siege: Genève-Bunker                         # zone geneve_bunker_institutions (Archives Neutres) — terrain neutre
+    periodicite: mensuelle                             # calée sur le mois de parution
+    style_visuel: bulletin_d_ordre                     # sobre, sécuritaire, reprises des bulletins officiels de chaque zone
+    langue_publication: fr
+  opposition:
+    nom: Chronique des Jours Courants
+    reseau_source: breakdown.opposition._reseau       # Réseau La Dépêche des Territoires
+    sous_titre: "Recopiée et transmise de main en main"
+    fondation: 2074                                    # proposition
+    ville_siege: aucune (clandestine)
+    periodicite: irrégulière
+    style_visuel: samizdat                             # tapuscrit, pas de photos, mention « recopiez et faites circuler »
+    langue_publication: fr
+
+fortress_world:
+  pro_pouvoir:
+    nom: Limes
+    reseau_source: fortress_world.pro_pouvoir._reseau # Réseau Le Bloc Informations
+    statut: privee_toleree                             # décision 3 oct : revue privée, tolérée par tous les blocs, défend l'ordre des blocs sans en servir aucun
+    sous_titre: "Revue des souverainetés"
+    fondation: 2058                                    # cohérent : après les ruptures 2027-2044 (geographie/fortress_world.md)
+    ville_siege: Genève-Bunker                         # terrain neutre (coquille CARS) ; Halifax-Haute écarté : centre politique du seul Bloc Atlantique
+    periodicite: mensuelle
+    style_visuel: revue_geopolitique                   # cartes, encadrés « menaces identifiées »
+    langue_publication: fr
+  opposition:
+    nom: Radio Frontières
+    reseau_source: fortress_world.opposition._reseau  # Réseau The Porous Border
+    sous_titre: "Transcriptions des émissions clandestines"
+    diffusion: radio_transcriptions                    # radio clandestine, la revue publie les transcriptions
+    fondation: 2063                                    # proposition
+    ville_siege: aucune (émetteurs mobiles des zones grises)
+    periodicite: irrégulière
+    style_visuel: transcription_radio                  # horodatage, fréquences, « [brouillage] » dans le texte
+    langue_publication: fr
+
+new_sustainability:
+  pro_pouvoir:
+    nom: La Revue de la Transition
+    reseau_source: new_sustainability.pro_pouvoir._reseau   # Réseau Nexus Global Review
+    sous_titre: "Ce que le monde réussit"
+    fondation: 2052                                    # proposition
+    ville_siege: Ourrassol                             # décision David 3 oct (zone « Ourrassol — Commission Territoriale », geographie/new_sustainability.md)
+    periodicite: mensuelle
+    style_visuel: magazine_tech_epure                  # infographies, indicateurs, ton optimiste
+    langue_publication: fr
+  opposition:
+    nom: Contre-Courant
+    reseau_source: new_sustainability.opposition._reseau    # Réseau Les Irréductibles
+    sous_titre: "La voix des territoires oubliés par l'optimisation"
+    fondation: 2066                                    # proposition
+    ville_siege: Ceinture Boréale                     # « forêts nordiques souverainistes » (geographie/new_sustainability.md), validé 3 oct
+    periodicite: mensuelle
+    style_visuel: hebdo_militant                       # titres forts, dessins de presse, peu de couleurs
+    langue_publication: fr
+
+eco_communalism:
+  pro_pouvoir:
+    nom: Le Lecteur des Communs
+    reseau_source: eco_communalism.pro_pouvoir._reseau      # Réseau La Gazette des Communs
+    sous_titre: "Le meilleur des gazettes d'assemblée"
+    fondation: 2060                                    # proposition
+    ville_siege: Chiapas                               # héritage zapatiste ; plénière de l'Assemblée des Territoires en octobre 2098 (geographie/eco_communalism.md), validé 3 oct
+    periodicite: mensuelle
+    style_visuel: digest_chaleureux                    # papier recyclé, illustrations à la main, rubriques douces
+    langue_publication: fr
+  opposition:
+    nom: Le Crieur des Marges
+    reseau_source: eco_communalism.opposition._reseau       # Réseau Voix des Marges
+    sous_titre: "Vendu et lu par celles et ceux qu'on n'écoute pas"
+    fondation: 2069                                    # proposition
+    ville_siege: aucune (diffusé par les crieurs)
+    periodicite: mensuelle
+    style_visuel: journal_de_rue                       # témoignages en tête, prix affiché, nom du crieur
+    langue_publication: fr
+
+policy_reform:
+  pro_pouvoir:
+    nom: Le Journal des Normes
+    reseau_source: policy_reform.pro_pouvoir._reseau        # Réseau Global Governance Report
+    sous_titre: "Mise en œuvre des réformes, zone par zone"
+    fondation: 2049                                    # proposition
+    ville_siege: La Haye                               # proposition (La Haye-Rotterdam déjà dans le lore)
+    periodicite: mensuelle
+    style_visuel: institutionnel_sobre                 # références de textes, tableaux de conformité
+    langue_publication: fr
+  opposition:
+    nom: Le Peuple Souverain
+    reseau_source: policy_reform.opposition._reseau         # Réseau La Souveraine
+    sous_titre: "Revue des résistances à la technocratie"
+    fondation: 2057                                    # proposition
+    ville_siege: Agadez                                # Bloc souverainiste non-signataire (Dakar écarté : co-auteur du système en 2061), validé 3 oct
+    periodicite: mensuelle
+    style_visuel: tribune_republicaine                 # appels, pétitions, éditoriaux signés
+    langue_publication: fr
+
+reference:
+  pro_pouvoir:
+    nom: Le Courrier des Continents
+    reseau_source: reference.pro_pouvoir._reseau            # Réseau Le Monde en Tension
+    sous_titre: "La presse du monde en français"
+    fondation: 2041                                    # après le début de la transition de Séoul (2040)
+    ville_siege: Séoul                                 # métropole émergente, siège tournant de l'ITA (geographie/reference.md), validé 3 oct
+    periodicite: mensuelle
+    style_visuel: grand_hebdo_generaliste              # le plus proche du vrai Courrier International
+    langue_publication: fr
+  opposition:
+    nom: Le Miroir
+    reseau_source: reference.opposition._reseau             # Réseau Le Dessous des Cartes
+    sous_titre: "Ce que la presse du monde ne dit pas"
+    fondation: 2045                                    # proposition
+    ville_siege: São Paulo (périphéries du SPAAR)      # favelas qui « décodent » l'algorithme en 2073 (geographie/reference.md), validé 3 oct
+    periodicite: mensuelle
+    style_visuel: magazine_investigation               # dossiers longs, documents fuités en fac-similé
+    langue_publication: fr

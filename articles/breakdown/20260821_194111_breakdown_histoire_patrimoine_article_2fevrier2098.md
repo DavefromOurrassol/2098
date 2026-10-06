@@ -22,7 +22,7 @@ tags:
 image_prompt: "Une pirogue aux flancs renforcés de plaques métalliques, transportant un serveur étanche, navigue entre les piliers rouillés d’un ancien dock de Lagos-Intérieur, sous un ciel chargé de brume acide. Des mains anonymes tendent des jetons de métal gravé vers le passeur, identifiable par son masque de céramique à motif de nœuds marins."
 a_une_photo: false
 image_credit: ""
-journaliste_slug: lea_vasseur
+journaliste_slug: moussa_cisse
 date_evenement: 2 février 2098
 zone_principale: lagos_interieur_mnemos
 date_publication: 2 février 2098
@@ -48,7 +48,7 @@ articles_lies:
 **Les Cryptes Lagunaires : quand l’identité devient monnaie d’échange**
 
 2 février 2098
-Léa Vasseur — Réseau La Dépêche des Territoires
+Moussa Cissé — Ona Tani (Ceux qui Veillent)
 
 LAGOS-INTÉRIEUR — Dans les brumes acides de la lagune, les pirogues glissent sans bruit entre les carcasses rouillées des anciens docks. Leurs coques, renforcées de plaques de métal récupéré, abritent des serveurs étanches où dorment les dernières preuves d’existence de milliers de familles. Ici, dans les *Cryptes Lagunaires* du cluster Mnemos, on ne vend plus de pétrole ou de données agricoles — on monnaye le droit d’exister.
 

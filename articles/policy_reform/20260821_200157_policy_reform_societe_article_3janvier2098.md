@@ -22,7 +22,7 @@ tags:
 image_prompt: "Une salle de classe bondée dans un quartier populaire de Nairobi, où des enfants en uniforme bleu regardent une tablette affichant une carte interactive des nappes phréatiques locales. Au premier plan, une enseignante montre du doigt un écran géant où défile le message \"Seuil critique : -12%\". En arrière-plan, un graffiti sur un mur décrépi dit \"ARIA ment\"."
 a_une_photo: false
 image_credit: ""
-journaliste_slug: 
+journaliste_slug: wairimu_otieno
 date_evenement: 3 janvier 2098
 zone_principale: nairobi_hub
 date_publication: 3 janvier 2098
@@ -47,6 +47,8 @@ articles_lies:
 **Les enfants de Nairobi apprennent à négocier avec les algorithmes avant de savoir lire**
 
 3 janvier 2098
+
+Wairimu Otieno — African Governance Nexus: Nairobi-Kigali-Brazzaville Bulletin
 
 NAIROBI — Dans la classe 3B de l’école primaire de Kibera-Sud, les élèves de huit ans répètent en chœur : *« Je certifie que ma demande d’eau est conforme au quota communautaire. »* Leurs tablettes affichent en temps réel le niveau des nappes phréatiques du bassin du Lac Victoria, mis à jour par les capteurs du RIREC. *« Si le voyant passe au rouge, explique Mme Akinyi, on bascule en mode survie. Les douches sont suspendues, et les cultures en permaculture reçoivent la priorité. »*
 

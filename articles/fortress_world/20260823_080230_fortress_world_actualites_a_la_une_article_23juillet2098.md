@@ -23,9 +23,9 @@ tags:
 image_prompt: "Une plateforme pétrolière rouillée au large d’une côte désertique, surmontée d’antennes paraboliques et de drones de surveillance, éclairée par les lumières bleutées de serveurs low-tech dans des containers empilés. En arrière-plan, des navires militaires du Bloc Atlantique patrouillent à l’horizon."
 a_une_photo: false
 image_credit: ""
-journaliste_slug: maya_o_connor
+journaliste_slug: laila_al_mansouri
 date_evenement: 23 juillet 2098
-zone_principale: bloc_atlantique
+zone_principale: golfe_moyen_orient_zone_disputee
 date_publication: 23 juillet 2098
 entites_citees:
   - voix_du_dehors_fortress_world
@@ -43,7 +43,7 @@ variables_pilotes:
 **Kharg-9 : Le Data Haven du Golfe Persique dans le collimateur du Bloc Atlantique**
 
 23 juillet 2098
-Maya O’Connor — Le Mur Parle
+Laila Al-Mansouri — Al-Mithaq al-Mu'allaq (الميثاق المعلق)
 
 BRUXELLES-FORTERESSE — L’Autorité Numérique du Bloc Atlantique (ANBA) a émis hier un *Avertissement Rouge* contre *Kharg-9*, le data haven clandestin installé sur une plateforme pétrolière reconvertie au large de l’île de Kharg. Dans un communiqué transmis aux médias certifiés, l’ANBA accuse la structure de « compromettre la souveraineté numérique du Bloc » en hébergeant des archives non certifiées et des algorithmes non conformes aux protocoles ARIA. « Kharg-9 n’est pas un acteur neutre, mais un nœud de dissémination de données interdites », a déclaré Markus Veld, directeur général de l’ANBA, sans préciser les mesures envisagées.
 

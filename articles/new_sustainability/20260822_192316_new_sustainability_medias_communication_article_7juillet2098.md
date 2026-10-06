@@ -22,7 +22,7 @@ tags:
 image_prompt: "Une salle d'audience futuriste du Tribunal Algorithmique de Bruxelles, où des juges humains et des modules d'audit IA examinent des écrans affichant en temps réel le code source d'ARIA, tandis qu'une silhouette en robe grise — Leena Väinälä — pointe du doigt une ligne de code controversée, sous le regard tendu des observateurs."
 a_une_photo: false
 image_credit: ""
-journaliste_slug: lena_voss
+journaliste_slug: lars_nystrom
 date_evenement: 7 juillet 2098
 zone_principale: tribunal_gouvernance_algorithmique_bruxelles
 date_publication: 7 juillet 2098
@@ -50,7 +50,7 @@ Le Palais de la Régulation, avenue de Cortenbergh, vibre depuis trois semaines 
 ---
 
 **Bruxelles, 7 juillet 2098**
-**Lena Voss — Réseau Nexus Global Review**
+**Lars Nyström — Nexus Nordica**
 
 ---
 

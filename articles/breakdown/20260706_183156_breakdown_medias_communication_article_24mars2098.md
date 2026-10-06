@@ -26,9 +26,9 @@ tags:
 image_prompt: "Un technicien aux traits fatigués, Kálmán Varga, examine une tablette affichant des flux de données corrompues dans une cave voûtée éclairée par une lumière bleutée, entourée de silhouettes floues, avec en arrière-plan le Danube charriant des débris."
 a_une_photo: false
 image_credit: ""
-journaliste_slug: 
+journaliste_slug: timur_sadykov
 date_evenement: 12 novembre 2098
-zone_principale: arctique_nordark
+zone_principale: arc_eurasien_central
 date_publication: 12 novembre 2098
 entites_citees:
   - arctique_nordark_breakdown
@@ -47,6 +47,8 @@ articles_lies:
 
 ---
 **« Mnemos nous ment ? L’Ordre Zonal face à l’effondrement des récits partagés »**
+
+Timur Sadykov — Trassa Logistika - Voie Logistique
 *Trassa Logistika – Voie Logistique — Réseau de l’Ordre Zonal (Éclats Kontinuum)*
 **12 novembre 2098 | Nœud Mnemos Pannonie — Les Gardiens du Danube**
 

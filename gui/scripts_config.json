@@ -344,6 +344,20 @@
           "slug": "--forcer-slug",
           "element_type": "--forcer-type"
         }
+      },
+      {
+        "flag": "--forcer-zone-journal",
+        "type": "slug_select",
+        "label": "Journal d'une autre zone (optionnel)",
+        "mode_only": "forcer",
+        "optional": true,
+        "description": "Vide = le journal de la zone de l'élément écrit (comportement habituel). Sinon, choisis le journal qui couvre l'élément comme un fait étranger, vu depuis sa zone (regard local, sources à distance). La liste montre les zones qui ont une rédaction pour la ligne éditoriale choisie, dans les scénarios où l'élément existe ; elle se recharge quand l'élément ou la ligne change. Seuls les scénarios où cette zone a une rédaction sont traités, et l'article est rangé sous la zone du journal sur le site.",
+        "slug_type": "zones_journal_forcer",
+        "slug_extra_params": {
+          "slug": "--forcer-slug",
+          "element_type": "--forcer-type",
+          "ligne": "--ligne-editoriale"
+        }
       }
     ],
     "gui_verified": true,
@@ -3387,6 +3401,32 @@
         "type": "number",
         "label": "Mois du mois de parution, 1-12 (optionnel — vide = mois de parution actif)",
         "optional": true
+      }
+    ],
+    "gui_verified": true
+  },
+  {
+    "id": "audit_revues",
+    "label": "Audit des revues (site)",
+    "icon": "📰",
+    "section": "validation",
+    "script": "export_revues.py",
+    "description": "Diagnostic en lecture seule (aucune écriture, aucun appel à l'IA) : pour chacune des 12 revues du site, compte les articles publiables, ceux signés par une personne de la rédaction, ceux signés « La rédaction » et ceux refusés. Sert à repérer les revues trop maigres avant une génération ciblée. Ne fabrique pas le site : la publication reste sur publier_site.sh.",
+    "requires": [],
+    "options": [
+      {
+        "flag": "--detail",
+        "type": "checkbox",
+        "label": "Détail des articles non publiables",
+        "default": false,
+        "description": "Ajoute la liste des articles refusés et la raison (pas de ligne éditoriale, pas de zone, zone sans journal)."
+      },
+      {
+        "flag": "--continents",
+        "type": "checkbox",
+        "label": "Continent de chaque zone de journal",
+        "default": false,
+        "description": "Affiche le continent attribué à chaque zone (rubriques « continents » du site), avec les cas devinés sans certitude."
       }
     ],
     "gui_verified": true

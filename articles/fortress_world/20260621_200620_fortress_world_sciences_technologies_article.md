@@ -24,9 +24,9 @@ tags:
 image_prompt: "Une salle de contrôle futuriste plongée dans une lumière bleutée, où des écrans holographiques affichent des flux de données incompréhensibles tandis qu'une silhouette humaine isolée observe, impuissante, un réseau d'IA s'auto-organiser en temps réel."
 a_une_photo: false
 image_credit: ""
-journaliste_slug: 
+journaliste_slug: anja_weiss
 date_evenement: 9 septembre 2098
-zone_principale: bloc_atlantique
+zone_principale: bloc_eurasiatique_occidental
 date_publication: 9 septembre 2098
 entites_citees:
   - armada_logistique_nordique_fortress_world
@@ -44,8 +44,11 @@ articles_lies:
   - les_jeux_du_mur_quand_le_sport_devient_la_derniere_guerre_que_les_blocs_osent_en
   - bruxelles_forteresse_12_octobre_2098
 
+ligne_editoriale: pro_pouvoir
 ---
 # Les agents autonomes franchissent le seuil décisionnel : comment l'IA souveraine échappe à ses architectes
+
+Anja Weiss — Helios Sovereign — Le Phare de l'Eurasie
 
 **Bulletin Atlantique Certifié — Bruxelles-Forteresse, 9 septembre 2098**
 

@@ -10,7 +10,19 @@ faibles — polarité, persistance, idées en texte libre » ouvert et clos,
 archivé, S19 mis à jour, S20 ajouté ; le 28 septembre : chantier « Veille
 signaux faibles » ouvert et clos, archivé, S21 ajouté ; le 29 septembre :
 S21 options 1 et 2 closes — flux RSS en service, recherche web par API non
-retenue —, archivées), mis à jour en continu
+retenue —, archivées ; le 1er octobre : S22 ajouté, S20 et S21 mis à jour ;
+le 3 octobre : chantier 5 « Site des revues » ouvert, S23 ajouté, #3 mis à
+jour ; le 4 octobre : S23 clos pour l'essentiel et archivé (signatures,
+lieu ≠ zone, journaux manquants, rezonage, temporel), S23 réduit à ses
+restes, S24 ajouté ; le 5 octobre : S22 signal orphelin corrigé et `+1`
+retiré, chantier 5 avancé — titres, recherche, continents forcés —, Hyphan
+exclue hors reference, S25 « Kharg-9 surreprésenté » et S26 « journal
+couvrant un fait d'une autre zone » ajoutés ; le 6 octobre : S25 traité
+côté code (cooldown durci, Kharg-9 exclu en eco_communalism, doublon retiré)
+et mis en surveillance, S26 clos et archivé, `nouveau_califat_barcelone`
+supprimée, « Rédaction à » sur le site, S3/S6/S7/S10 et `_extract_byline()`
+clos par décision, Hacker News retiré des flux RSS),
+mis à jour en continu
 à chaque clôture de session. Chantiers clos et leur historique complet
 dans `BACKLOG_ARCHIVE.md` (fichier séparé, à uploader seulement en cas
 de besoin de vérifier si un point a déjà été traité). Chaque chantier
@@ -123,6 +135,11 @@ déjà documenté plusieurs fois par le passé (15 août notamment),
 reconfirmé ici sur un nouveau cas concret. Résolu après redémarrage,
 confirmé par David.
 
+**Hébergement des journaux — tranché et en ligne le 3 oct** : voir chantier
+5 « Site des revues ». Le site affiche aujourd'hui un emplacement vide pour
+les articles `a_une_photo: true` ; brancher les vraies images (fichier +
+`image_alt`) dans `export_revues.py` au moment du choix du service.
+
 **À faire au branchement (26 sept)** : régénérer l'image de l'article
 fortress_world du 23 août (`20260823_080632_…_18octobre2098.md`) — son
 `image_prompt` a été corrigé (Halifax-Haute au lieu de Bruxelles-Forteresse),
@@ -137,6 +154,50 @@ mais une image déjà produite montrerait encore Bruxelles.
 `peninsule_iberique_cooperative` (policy_reform). Aucun chantier
 `a_traiter` restant. Détail : `BACKLOG_ARCHIVE.md` et
 `HANDOFF_25_SEPTEMBRE.md`.
+
+---
+
+## 🟢 5. Site des revues — publication web (ouvert le 2-3 octobre)
+**En ligne : https://ourrassol.pages.dev** (kiosque + 12 revues, 145 chapôs de
+rédaction). Fonctionnement, commandes et décisions : manuel §2octies ;
+déroulé : `HANDOFF_3_OCTOBRE.md`. Publier = `python3 generator/chapos_revues.py`
+(si nouveaux articles) puis `bash generator/publier_site.sh`.
+
+Reste à faire, dans l'ordre envisagé :
+- **12 identités visuelles** : un bloc `style` par revue dans `revues.yaml`
+  (polices, couleurs, variantes de mise en page) lu par `export_revues.py`,
+  une maquette par revue à valider comme celle du *Courrier des Continents*.
+  Champs `style_visuel` déjà posés (ex. `samizdat`, `transcription_radio`).
+- ~~**Guillemet orphelin dans des titres**~~ — **fait le 5 oct** (24 titres,
+  `retirer_guillemets_englobants()`). Même jour : **titres en capitales**
+  remis en casse française à l'export (14 articles, `normaliser_capitales()`)
+  et consigne ajoutée au prompt ; **recherche** par revue et sur le kiosque
+  (texte complet) ; **continents forcés** pour 5 zones transcontinentales
+  (manuel §2octies) ; entrée GUI « 📰 Audit des revues ».
+- ~~**Continent deviné** `nouveau_califat_barcelone`~~ — **zone supprimée le
+  6 oct** (coquille vide : ni pays ni description ; 2 rédactions retirées de
+  `journaux.yaml`).
+- ~~**Siège de la revue**~~ — **fait le 6 oct** : « Rédaction à Séoul » en pied
+  de page, bandeau de la Une et kiosque (`patch_redaction_siege.py`).
+- **Photos** : brancher les images de `generate_images.py` (lié à #3 P20).
+- **Audio** (*Radio Frontières*, journaux oraux `type_diffusion: oral`) :
+  fichiers lourds → stockage Cloudflare R2 envisagé ; origine des extraits
+  (synthèse vocale ou enregistrements) à décider.
+- **Version multilingue** : isoler les libellés fixes par langue, pages sous
+  `site/<langue>/`. Attention au plafond Cloudflare Pages (20 000 fichiers).
+- Optionnel : titre réécrit par la revue et encadré « Contexte » (même appel
+  que le chapô) ; protection d'accès Cloudflare pendant les tests ; bouton
+  « Publier » dans le GUI ; références entre articles (David, à part).
+- **167 articles en ligne** au 6 oct (le doublon Kharg-9 *Le Nexus qui défie
+  Genève* retiré).
+- **219 articles publiables sur 219, tous signés** (4 oct) : les 17 non
+  publiables du 3 oct sont réglés (zones rattrapées par le rezonage,
+  `ligne_editoriale` déduite des journaux cités). Publication :
+  `bash generator/publier_site.sh` (le script lance lui-même
+  `export_revues.py --build` ; exécutable depuis le 6 oct :
+  `generator/publier_site.sh`).
+- **18 nouveaux journaux** (4 oct) : fiches publiques présentes, chapôs
+  régénérés et site republié.
 
 ---
 
@@ -182,15 +243,8 @@ données. Non traité le 14 août, gardé pour plus tard.
 
 ---
 
-## ⚪ S3. Renommage des YAML génériques par dossier
-**Décision reportée une nouvelle fois le 14 août** (en pause depuis fin
-juillet). `queue.yaml`/`processed.yaml`/`needs_review.yaml` répétés à
-l'identique dans `entites_custom/`, `evenements_custom/`,
-`signaux_custom/` — pas de collision technique (dossiers distincts),
-juste une ambiguïté visuelle. Coût de migration identifié si un jour
-tranché en faveur du renommage : constantes `QUEUE_PATH` dans 3 scripts,
-entrées `scripts_config.json`, documentation (dont les `QUEUE_TEMPLATE`
-eux-mêmes). Aucune urgence identifiée à ce jour.
+## ✅ S3. Renommage des YAML génériques par dossier — CLOS (non retenu) le 6 octobre
+Aucune gêne réelle en trois mois ; décision David : laissé tel quel.
 
 ---
 
@@ -241,20 +295,14 @@ bloquant.
 
 ---
 
-## ⚪ S6. P14 — tier LLM `strict` vers `claude-sonnet-5` en prod
-**Différé sine die** sur demande explicite de David (1er août). Pas un
-oubli, une décision — à reconsidérer seulement si David le redemande.
+## ✅ S6. P14 — tier LLM `strict` vers `claude-sonnet-5` — CLOS (non retenu) le 6 octobre
+Différé sine die depuis le 1er août ; retiré du backlog. À rouvrir seulement
+si David le redemande.
 
 ---
 
-## ⚪ S7. Métaphores vs. descripteurs directs (`ton_personnel`)
-**Repéré le 29 août**, en marge du chantier `ton_personnel`. Question
-non tranchée : privilégier des métaphores plutôt que des descripteurs
-directs pour certains profils de ton personnel. Un protocole de test
-empirique a été conçu mais jamais exécuté — **David a choisi de mettre
-la piste de côté**, `set_ton_personnel.py` jugé suffisant tel quel pour
-le moment. Aucune décision de fond prise ; à reprendre seulement si un
-besoin réel se manifeste en usage.
+## ✅ S7. Métaphores vs. descripteurs directs (`ton_personnel`) — CLOS (non retenu) le 6 octobre
+Protocole de test jamais exécuté ; `set_ton_personnel.py` jugé suffisant.
 
 ---
 
@@ -277,16 +325,8 @@ cas à ce jour, pas de correctif préventif.
 
 ---
 
-## ⚪ S10. `_index.md` réécrit en mode écrasement, pas cumulatif
-**Repéré le 15 août.** `articles/{scenario}/_index.md`, généré par
-`generate_series.py` (`build_index()`), ne liste que les articles du
-dernier batch à chaque run sur un même scénario — pas un cumul
-historique de tous les articles jamais générés. Pas vérifié comme
-gênant en pratique. À réévaluer si un historique cumulatif devient
-utile (ex. navigation Obsidian sur l'ensemble d'un scénario plutôt que
-sur le dernier batch seul). Sans incidence sur les outils d'audit/
-inventaire (depuis le 5 septembre) : tous scannent le dossier
-directement et excluent explicitement les fichiers `_index.md`.
+## ✅ S10. `_index.md` réécrit en mode écrasement — CLOS (accepté) le 6 octobre
+Jamais gênant ; tous les outils d'audit l'ignorent. Laissé tel quel.
 
 ---
 
@@ -357,8 +397,9 @@ correctif `write_alliances_patch()`, exceptions NAT supprimées. Détail :
   Oubliés ; `conseil_regulation_algorithmique` = Autorité Numérique du Bloc
   Atlantique (à ne pas confondre avec `anba_siege_atlantique`, entreprise
   maritime). Renommage possible un jour, pas urgent.
-- `_a_supprimer/` : article du 24 sept (Hyphan en Asie centrale) à
-  supprimer définitivement quand David le décide.
+- ~~`_a_supprimer/`~~ — **vidé et supprimé le 6 oct** (articles Hyphan,
+  doublon Kharg-9, article test S26). Le dossier peut resservir pour retirer
+  un article du site (il est hors `articles/`).
 
 ---
 
@@ -420,7 +461,9 @@ reportées explicitement :
   économique » → 5 phrases et 4 variables) : David a choisi de ne pas
   ajouter de règle de longueur ; relire, ou « ↶ Rétablir mon texte ».
 - **Reprise d'injection partielle** (`idee_a_remettre_en_queue`) : testée en
-  synthétique seulement — à observer au premier cas réel.
+  synthétique seulement — à observer au premier cas réel. *1er oct* : le
+  premier cas réel d'injection partielle venait d'une **exception**, que la
+  reprise ne couvre pas (voir S22).
 - **Portée narrative d'un signal** : un jalon de signal custom n'est
   jamais « structurant » dans `build_signal_trajectory()` (un
   `evenement_cle` par variable, jamais partagé) — « majeur » si sa
@@ -456,13 +499,13 @@ bloquant :
   n'est pas une observation ; un grand programme d'État n'est pas marginal.
 - ~~**Option 1** (recherche web par API) et **option 2** (collecte locale
   RSS)~~ — **closes le 29 sept** (voir `BACKLOG_ARCHIVE.md`) : RSS en
-  service (`veille_rss_api.py`, 16 flux) ; recherche web par API essayée
+  service (`veille_rss_api.py`, 16 flux, 15 depuis le 6 oct) ; recherche web par API essayée
   sur Mistral et non retenue. Suites possibles, sans urgence :
   - **Recherche en deux temps** (un appel court par variable, puis mise en
     forme limitée aux URL trouvées), si l'automatisation de la partie web
     devient utile : ~12 fois plus chère en recherches.
-  - **Hacker News** : flux sans texte (titres seuls), ignoré à chaque
-    passe ; retirer son champ `rss` ou lire les pages liées.
+  - ~~**Hacker News**~~ — **retiré des flux le 6 oct** (`rss: null`,
+    `.bak_hn`) ; reste proposé à l'IA de chat dans le prompt à coller.
   - **Crisis Group** : flux général du site (pas CrisisWatch), articles non
     datés.
   - **Pages complètes** au lieu des résumés des flux (articles réservés
@@ -481,6 +524,153 @@ bloquant :
   plusieurs variables (analyse en réseau via la matrice 12×12).
 - `gui_verified` passé à `true` le 28 sept sur les trois entrées signaux
   faibles (testées chez David).
+- **Ajout de sources RSS (30 sept)** : de façon ciblée, pas en masse. Critères
+  : flux actif (article de moins de 30 jours), résumé exploitable, tendances
+  plutôt qu'actualité chaude, angle absent des 16 flux actuels. Circuit :
+  entrée ajoutée à la main dans `sources_signaux_faibles.yaml` (même format
+  que les autres, `rss: null`, valeurs de `famille`/`variables` déjà
+  présentes dans le fichier), puis `verifier_flux_rss.py --apply`. Idée non
+  codée : un outil qui crée les entrées depuis une simple liste (nom + URL).
+- **10 candidats RSS à trier** dans 🔭 (dont 2 plus faibles : Wegovy, BCE).
+
+---
+
+## ⚪ S22. Injection des signaux — suites du 1er octobre
+**Nouveau, 1er oct.** 5 signaux injectés après correctifs (`+1` toléré dans
+le JSON, plancher de bascule ; voir manuel §3, `inject_custom_signals.py`).
+Reste :
+- ~~**Exception en cours d'injection = signal orphelin**~~ — **corrigé le
+  5 oct** (`patch_s22_exception_signal.py`, manuel §3) : exception capturée
+  par variable, instantané fiche + registre restauré si l'écriture est
+  interrompue. Testé sur faux vault seulement : **à confirmer à la prochaine
+  vraie injection**, puis archiver.
+- ~~**Option `"<1 ou -1>"`**~~ — **fait le 5 oct** (sed, `.bak_plus1`). À la
+  prochaine injection, vérifier que Mistral ne recopie pas le texte tel
+  quel.
+- **Événements recopiés entre variables d'un même signal** : malgré
+  `sibling_events`, Mistral reprend parfois les `evenement_cle` qu'il vient
+  d'écrire pour la variable précédente (Mumbai, Tuvalu le 1er oct). Rattrapé
+  par la validation et une relance ; à surveiller, ça coûte un appel.
+- **Avertissements « fenêtre déjà utilisée »** très fréquents (quasi
+  systématiques sur les 12 variables) : non bloquants par décision du 26
+  juillet ; les fenêtres convergent vers les mêmes plages. Constat, pas de
+  décision.
+- **Origine de la fence manquante** dans `organisation_territoires.md`
+  inconnue (`undo_custom.py` avalait la fence autrefois, corrigé depuis).
+  Si ça se reproduit, chercher quel outil a écrit le fichier en dernier.
+
+---
+
+## 🟡 S23. Génération d'articles — restes (3-4 oct)
+**Clos pour l'essentiel le 4 oct** (signatures, lieu ≠ zone, 9 zones sans
+journal, rezonage de 68 articles, réattribution de 94 signatures, erreurs
+temporelles) — voir `BACKLOG_ARCHIVE.md` et `HANDOFF_4_OCTOBRE.md`. Reste :
+- **`prompt_builder.py` (profils `JOURNAL_PROFILES`)** garde sa propre copie
+  des noms de réseaux, en plus de `journaux.yaml` et `generate_journaux.py` :
+  trois sources pour la même donnée. Non traité.
+- **Lore reference à vérifier** : l'article Amazônia Viva
+  (`20260924_101034_…`) fait de Hyphan Raghavan la dirigeante d'Ergo-Wian
+  « depuis 2091 », alors que la règle du 26 sept la dit successeuse
+  désignée. **Laissé tel quel le 5 oct** (décision David).
+- **Hyphan** (5 oct) : exclue des articles dans les 5 scénarios hors
+  `reference` ; les articles du lot forcé du 24 sept supprimés (6 oct).
+  Ré-exclure après toute régénération.
+- **Volume très inégal entre revues** — diagnostic du 5 oct (219 articles,
+  « 📰 Audit des revues ») : Crieur des Marges 5, Courrier des Continents 6,
+  Chronique 8, Miroir 8, Moniteur 11, Peuple Souverain 13, Journal des
+  Normes 17, Lecteur des Communs 18 ; Radio Frontières 24, Contre-Courant 30,
+  Limes 35, Revue de la Transition 44. Remonter toutes les revues à 15 :
+  39 articles ; à 20 : 74. Génération reportée par David (séries ciblées :
+  scénario + ligne éditoriale dans `config_series.yaml`). *6 oct* : en ligne
+  (mois d'août), le Crieur des Marges n'a qu'**un** article.
+
+---
+
+## ⚪ S24. Suites techniques de S23 (4 oct)
+Rien de bloquant :
+- **`_slugify()` (`api.py`)** : ø, æ, å, ß, ł deviennent `_`
+  (`eirik_b_rresen`), même famille que le bug portugais du 14 août.
+  Corriger change les slugs existants ; `export_revues.py` lit
+  maintenant les deux formes, donc plus d'effet visible sur le site.
+- ~~**`_extract_byline()`**~~ — **clos (accepté) le 6 oct** : ne sert plus
+  qu'en repli depuis le 25 août.
+- **`generate_journaux.py --update`** : un lot au JSON cassé laisse des
+  rédactions factices (7 cas le 3 oct). Nettoyage : `clean_fallback_journaux.py`
+  (existant) ; `validate.py` les signale désormais. Piste : parse JSON
+  tolérant, comme `fix_doublons_journalistes.py`.
+- ~~**`nettoyer_placeholders_journaux.py`**~~ — **supprimé le 6 oct**
+  (aucun appel ailleurs).
+- **Outils d'audit S23** (`audit_signatures.py`, `audit_lieu_zone.py`,
+  `audit_temporel.py`) : CLI seulement. `audit_signatures.py` n'exclut pas
+  `_index.md` et n'emploie pas le slug du pipeline (6 faux positifs).
+- **Ancrage local** : une zone qui n'a qu'une instance localisée reste
+  dominée par des entités d'ailleurs (cas Maghreb). Créer des instances
+  localisées dans les zones pauvres, si le besoin se confirme.
+- **Bloc `===METADONNEES_PUBLICATION===` resté dans le texte** (5 oct) : 1
+  article (education, policy_reform, 23 août, avec retry de longueur) ;
+  réparé par `reparer_bloc_metadonnees.py`. Cause non vérifiée : relire
+  l'extraction après retry dans `api.py`. Relancer le script de temps en
+  temps (aperçu gratuit) — relancé le 6 oct : 0 article.
+- **Doublon de génération Kharg-9** : voir S25.
+
+---
+
+## 🟡 S25. Kharg-9 surreprésenté sur le site — traité côté code le 6 oct, en surveillance
+**Mesure du 6 oct** (articles du vault citant Kharg-9) : eco_communalism 13/22
+(7 où il est le sujet), policy_reform 11/29, fortress_world 11/59, breakdown
+3/18, new_sustainability 5/73, reference 0/14. Depuis le 22 août encore :
+eco 5/8, policy 5/17, fortress 11/38. Dans 24 cas sur 27, il entre par la
+**sélection d'instances** (`entites_citees`), pas par la géographie ni les
+événements. Instance identique dans les 6 scénarios (impact 4/3, dominant).
+Fait :
+- **A — cooldown durci** pour toutes les instances (`loader.py`,
+  `COOLDOWN_STREAK` 3 → 2, `COOLDOWN_DURATION` 2 → 3, `.bak_s25`) : ≈ 40 %
+  de présence au plus (avant ≈ 60 %). Exemption de dominance inchangée.
+- **C — exclusion** en eco_communalism (`set_selection_instance.py`).
+- **D — doublon retiré du site** : *Le Nexus qui défie Genève* (Revue de la
+  Transition, 10 mai). La paire « Dernier Souffle » (Limes / Moniteur)
+  vérifiée : sujets différents, gardée.
+- Piste **b** (baisser l'impact) écartée : 4/3 n'est pas extrême et changerait
+  l'état du monde.
+Reste : **mesurer l'effet de A** après les prochaines séries (même script de
+comptage, articles postérieurs au 6 oct) ; l'IA recycle la description de
+l'instance (« casino des données », « défie Genève-Nexus ») — si les titres
+se répètent encore, retoucher `description_journalistique` de l'instance.
+
+---
+
+## ✅ S26. Journal couvrant un fait d'une autre zone — CLOS le 6 octobre
+Mode Forcer, champ « Journal d'une autre zone » (liste déroulante,
+`--forcer-zone-journal`) ; consigne « couverture d'un fait étranger » ;
+`zone_principale` = zone du journal. Testé en réel. Détail : manuel §2 et
+`BACKLOG_ARCHIVE.md`.
+
+---
+
+## ⚪ S27. Simulateur « et si ? » avant injection (événement ou signal)
+**Nouveau, 5 oct (demande de David).** Évaluer l'effet d'un événement ou
+d'un signal faible **avant** de l'injecter : simulation du vault en mémoire,
+**aucune écriture**, comparaison à l'état sans ce nouvel élément. Faisable en
+réutilisant l'existant :
+1. **Description de l'élément** : saisie manuelle des impacts (variables,
+   `delta_level`, polarité par scénario, date, durée, persistance,
+   `propagation_via_matrice`) — gratuit ; ou génération par l'IA via le
+   `--dry-run` d'`inject_custom_events.py` / `inject_custom_signals.py`
+   (impacts identiques à une vraie injection, appels IA payants).
+2. **Simulation** : pour chaque scénario, `dynamique.simuler()` de 2025 à
+   2098 avec les chocs existants (`chocs_depuis_donnees()`), puis avec ce
+   choc hypothétique en plus — même calcul contrefactuel que la section
+   « Effet sur le monde » de `trace_injection.py`.
+3. **Sortie** : écart par variable en 2098 et aux jalons, pic et année,
+   variables entraînées par propagation, tensions de `check_coherence`
+   apparues / disparues ; option récit IA + graphique Chart.js (même rendu
+   que le Tracer) ; entrée GUI.
+Limite : mesure l'état du monde (niveaux), pas le contenu des futurs
+articles. Fichiers à relire avant de coder : `dynamique.py`,
+`trace_injection.py`, `snapshot.py` (`appliquer_dynamique`), `loader.py`,
+et la sortie `--dry-run` des deux scripts d'injection. Cas test proposé par
+David : invasion du Brésil par les États-Unis en 2029 (continentale,
+majeure, durable, 6 scénarios).
 
 ---
 

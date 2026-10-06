@@ -115,6 +115,28 @@ def _resoudre_zone_n1(zone_slug, scenario_slug):
     return courant["slug"] if courant else zone_slug
 
 
+def _resoudre_zone_redaction(zone_slug, scenario_slug, ligne):
+    """
+    Zone dont la rédaction doit signer l'article (S23, 3 octobre 2026) :
+    première zone de la chaîne zone_slug -> parent -> ... -> N1 qui a une
+    entrée dans journaux.yaml[scenario][ligne]["zones"]. Aucune trouvée :
+    repli sur _resoudre_zone_n1() (comportement d'avant ce correctif, qui
+    laisse get_journal_profile() gérer l'absence comme avant).
+    """
+    global _JOURNAUX_CACHE
+    if _JOURNAUX_CACHE is None:
+        _JOURNAUX_CACHE = _load_journaux()
+    redac = (_JOURNAUX_CACHE.get(scenario_slug, {}).get(ligne, {}).get("zones") or {})
+    by_slug = {z["slug"]: z for z in _load_geographie(scenario_slug) if z.get("slug")}
+    courant, vus = zone_slug, set()
+    while courant and courant not in vus:
+        if courant in redac:
+            return courant
+        vus.add(courant)
+        courant = (by_slug.get(courant) or {}).get("parent")
+    return _resoudre_zone_n1(zone_slug, scenario_slug)
+
+
 def get_journal_profile(scenario_slug, ligne_editoriale, zone_slug=None, thematique_slug=None, dry_run=True, type_diffusion_override=None, intervenant_override=None):
     """
     Retourne le profil éditorial pour un scénario + ligne + zone (+ thématique).
@@ -179,7 +201,14 @@ def get_journal_profile(scenario_slug, ligne_editoriale, zone_slug=None, themati
 
     ligne = ligne_editoriale if ligne_editoriale in ("pro_pouvoir", "opposition") else "pro_pouvoir"
 
-    zone_slug_n1 = _resoudre_zone_n1(zone_slug, scenario_slug) if zone_slug else zone_slug
+    # S23 (3 octobre 2026) : rédaction la plus PROCHE de la zone de
+    # l'article -- zone exacte, puis ses parents, puis la N1 (voir
+    # _resoudre_zone_redaction). Le nom zone_slug_n1 est conservé pour ne
+    # pas toucher au reste de la fonction (namespaces de rotation, logs) :
+    # il vaut désormais la zone de la rédaction retenue, N1 dans la
+    # quasi-totalité des cas.
+    zone_slug_n1 = (_resoudre_zone_redaction(zone_slug, scenario_slug, ligne)
+                    if zone_slug else zone_slug)
 
     # 1. Édition locale depuis journaux.yaml
     if zone_slug_n1 and _JOURNAUX_CACHE:
@@ -347,6 +376,12 @@ def get_journal_profile(scenario_slug, ligne_editoriale, zone_slug=None, themati
                   "(résolue en N1 : '{}') / {} / {} "
                   "→ fallback réseau global".format(
                       zone_slug, zone_slug_n1, scenario_slug, ligne))
+
+    # S23 (3 octobre 2026) : sans zone, le chemin 1 était sauté sans aucun
+    # message -- signature inventée au nom du réseau, invisible en log.
+    if not zone_slug_n1:
+        print("[WARN][journal] Aucune zone fournie / {} / {} "
+              "→ fallback réseau global (signature inventée)".format(scenario_slug, ligne))
 
     # 2. Réseau global depuis journaux.yaml
     if _JOURNAUX_CACHE:
@@ -958,6 +993,7 @@ Le monde dans lequel tu vis et écris est réel pour toi — tu n'écris pas de 
 
 Tes règles absolues :
 - Tu écris toujours à la date indiquée, en 2098, depuis l'intérieur de ce monde.
+- Toute année antérieure à 2098 désigne le PASSÉ de ton monde : jamais d'échéance, de prévision ou de projection « d'ici 2050 » ou « en 2070, ... sera ». Une échéance future est toujours postérieure à la date de publication (ex. « d'ici 2115 »).
 - Tu écris exclusivement en français, sur toute la longueur de l'article — y compris les citations, dialogues et exergues inventés. Les noms propres volontairement empruntés à une autre langue (ex. « Amazônia Viva ») restent isolés comme noms propres, mais ne doivent jamais faire basculer le reste du texte dans cette langue, même si des entités ou alliés du monde décrit sont associés à une autre aire linguistique.
 - Un allié, un rival ou tout événement mentionné comme se déroulant ailleurs dans le monde ne fait pas partie de ta zone : tu ne transposes jamais ses lieux, ses populations, sa langue ou ses marqueurs culturels propres dans ton propre article, sauf si celui-ci porte explicitement sur une interaction ou un événement commun entre les deux. Ta zone garde sa propre géographie, sa propre culture et ses propres noms, même quand tu mentionnes un partenaire extérieur.
 - Tu utilises des noms de lieux, d'organisations, de personnes crédibles et cohérents avec le monde décrit. Tu peux en inventer — ils doivent sonner vrais pour 2098.
@@ -1818,7 +1854,7 @@ def build_journalistic_brief(thematique, config, snapshot=None, type_diffusion="
         "basse, ne dépasse pas la borne haute. C'est une contrainte dure, "
         "pas une indication approximative.".format(longueur)
     )
-    lines.append("- Le titre doit être accrocheur et ancré dans le monde décrit")
+    lines.append("- Le titre doit être accrocheur et ancré dans le monde décrit, écrit à la française : majuscule au premier mot et aux noms propres seulement, jamais tout en capitales")
     if date_fictive_config:
         lines.append(
             "- La date de publication est **{}** — reprends cette date exacte "
@@ -1852,8 +1888,34 @@ def build_journalistic_brief(thematique, config, snapshot=None, type_diffusion="
     # Contrainte géographique — si une zone est définie, l'article doit
     # se dérouler dans cette zone. Les entités d'autres zones peuvent
     # apparaître en contexte mais l'action principale reste ancrée ici.
+    # S26 (6 octobre 2026) : journal d'une autre zone que le fait couvert
+    # (mode Forcer, --forcer-zone-journal). Remplace la consigne d'ancrage.
+    zone_evenement = config.get("zone_evenement")
+    zone_journal_cfg = config.get("zone_slug")
+    couverture_etrangere = bool(zone_evenement and zone_journal_cfg
+                                and zone_evenement != zone_journal_cfg)
+    if couverture_etrangere:
+        _sc = config.get("scenario") or (snapshot or {}).get("scenario_slug")
+        _noms = {z["slug"]: z.get("nom", z["slug"])
+                 for z in _load_geographie(_sc) if z.get("slug")}
+        _ev = _noms.get(zone_evenement, zone_evenement.replace("_", " ").title())
+        _jn = _noms.get(zone_journal_cfg, zone_journal_cfg.replace("_", " ").title())
+        lines.append(
+            "- **Couverture d'un fait étranger** : le fait principal de cet article "
+            "se déroule dans la zone **{ev}**, mais tu écris pour un journal de la "
+            "zone **{jn}**, pour ses lecteurs. La date et le lieu de publication "
+            "sous le titre sont ceux de ta rédaction (zone {jn}). Tu ne prétends "
+            "jamais être sur place : tu t'appuies sur des sources à distance "
+            "(dépêches, correspondant·e, témoignages relayés, communiqués) et tu "
+            "peux le dire. Raconte le fait avec précision, puis regarde-le depuis "
+            "ta zone : ce qu'il change ou pourrait changer pour tes lecteurs "
+            "(économie, alliances, sécurité, ressources, communautés liées), "
+            "comment ta zone et ses acteurs réagissent. Les lieux, la culture et "
+            "la langue de la zone {ev} restent les siens : ne les transpose pas "
+            "chez toi, et ne transpose pas les tiens chez elle.".format(ev=_ev, jn=_jn)
+        )
     zone_slug_article = config.get("zone_slug") or (snapshot or {}).get("zone_slug")
-    if zone_slug_article:
+    if zone_slug_article and not couverture_etrangere:
         # Récupérer le nom lisible de la zone si disponible
         slug_to_name = {}
         if snapshot:
@@ -2173,6 +2235,12 @@ def build_geographie_context(snapshot, thematique=None, config=None):
     zone_forcee = (config or {}).get("zone_slug") or snapshot.get("zone_slug")
     if zone_forcee and zone_forcee in slug_to_zone:
         zones_pertinentes.update(collect_zone_chain(zone_forcee, zone_forcee))
+
+    # S26 (6 octobre 2026) : en couverture d'un fait étranger, la zone du
+    # fait est aussi détaillée (description, tensions, alliés).
+    zone_evenement = (config or {}).get("zone_evenement")
+    if zone_evenement and zone_evenement in slug_to_zone:
+        zones_pertinentes.update(collect_zone_chain(zone_evenement, zone_evenement))
 
     # Tri : zones pertinentes d'abord (niveau croissant), autres ensuite
     sorted_zones = sorted(zones, key=lambda z: (

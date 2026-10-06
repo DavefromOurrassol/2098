@@ -22,7 +22,7 @@ tags:
 image_prompt: "Une vue nocturne de Bratislava-Secteur Alpha, ses tours blindées illuminées en contraste avec les corridors d'Asie centrale plongés dans le noir, où des files de personnes attendent devant des bornes solaires éteintes, éclairées seulement par des lampes à huile improvisées."
 a_une_photo: false
 image_credit: ""
-journaliste_slug: bratislava_secteur_alpha
+journaliste_slug: katalin_farkas
 date_evenement: 7 juillet 2098
 zone_principale: bloc_eurasiatique_occidental
 date_publication: 7 juillet 2098
@@ -43,7 +43,7 @@ variables_pilotes:
 
 7 juillet 2098
 
-Bratislava-Secteur Alpha — Depuis minuit, les écrans de contrôle du *Centre de Calcul Souverain* affichent en rouge les corridors d’Asie centrale et les seuils caucasiens. Helios Bloc Consortium — Division Souveraineté Énergétique (Helios BSE) a activé le protocole *Stromsperre* sur les zones non accréditées, privant d’électricité les nœuds logistiques de Tbilissi-Nord et les marchés gris de Casablanca-Périphérie. Officiellement, une « maintenance préventive des infrastructures orbitales ». En réalité, une démonstration de force après l’annonce, hier, de la création d’un *Comité des Corridors Autonomes* par le *gelecek_meclisi_fragmentaire*, cette assemblée clandestine qui négocie des accords de seuil entre blocs rivaux et populations exclues.
+Katalin Farkas — L'Étincelle de Pannonie
 
 « Ils appellent ça de la maintenance, nous appelons ça une *famine algorithmique* », a déclaré un porte-parole des *Collectifs de Réappropriation Énergétique Périphérique*, contacté via un relais Nexus7 détourné. Les images diffusées sur les réseaux souverains montrent des files d’attente devant les bornes de recharge solaires des zones tampons, tandis que les tours blindées de Bratislava-Secteur Alpha brillent de mille feux, alimentées par des priorités de classe. « Helios décide qui mérite l’hiver », résume une pancarte accrochée à un pylône éteint près d’Almaty.
 

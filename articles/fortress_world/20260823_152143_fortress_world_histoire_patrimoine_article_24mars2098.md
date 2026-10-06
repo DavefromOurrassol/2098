@@ -22,9 +22,9 @@ tags:
 image_prompt: "Une salle souterraine faiblement éclairée par des écrans holographiques bleu nuit, où des membres du *Front du Dehors* (brassards orange délavés, graffitis en demi-cercle barré sur les murs) numérisent frénétiquement des documents papier sous la lumière vacillante de lampes à dynamo. En arrière-plan, une carte projetée des *Zones Grises* du Midwest clignote, marquant les serveurs *off-grid* où sont stockées les contre-archives."
 a_une_photo: false
 image_credit: ""
-journaliste_slug: sanaa_haddad
+journaliste_slug: sofia_la_sarda_piras
 date_evenement: 24 mars 2098
-zone_principale: pacte_forteresses_souveraines
+zone_principale: zone_euro_sud
 date_publication: 24 mars 2098
 entites_citees:
   - mouvement_commun_midwest_fortress_world
@@ -43,7 +43,7 @@ variables_pilotes:
 
 *24 mars 2098*
 
-Sanaa Haddad — The Barbed Wire Chronicle
+Sofia « La Sarda » Piras — Il Confine (Le Confins)
 
 GENÈVE-BUNKER — Dans les sous-sols blindés de la *Chambre de Sécurité Territoriale*, où même les inspecteurs du *Pacte des Forteresses Souveraines* n’ont pas accès sans triple authentification, une opération discrète mais systématique est en cours depuis dix-huit mois. Selon des documents internes obtenus par *The Barbed Wire Chronicle*, plus de 32 000 entrées d’archives publiques — rapports diplomatiques, décrets frontaliers, comptes-rendus de crises — ont été *désindexées* des serveurs souverains, leurs métadonnées effacées, et leurs copies physiques envoyées vers des sites de stockage classifiés *Zones Non-Droit Temporaire*. Officiellement, il s’agit d’une « rationalisation des données historiques ». En réalité, c’est la première fois depuis la *Sécession des Grands Lacs* (2051) qu’un bloc géopolitique organise une censure aussi massive de sa propre mémoire.
 

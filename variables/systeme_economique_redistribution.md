@@ -359,7 +359,6 @@ _extended_
 
 
 ## 7. Signaux faibles
-
 **technological**
 - automatisation financière algorithmique (→ automatisation_financière_algorithmique, déjà développé)
 - domination de l'économie de plateformes (→ economie_plateformes_dominante)
@@ -379,6 +378,9 @@ _extended_
 **cognitive_cultural**
 - remise en cause du paradigme croissance/capitalisme (→ remise_en_cause_capitalisme_croissance)
 - normalisation du revenu universel
+
+**custom (signaux d'actualité)**
+- conception IA de phages ciblant bactéries résistantes (→ signal_custom: ia_phages_antibioresistance_biosurete, source: veille_20260928_123514_mistral)
 
 ## 8. États par scénario
 ### [[breakdown]]
@@ -698,4 +700,31 @@ signal_to_state:
         evolution: domination croissante et concentration continue de l'économie de plateformes
         date_bascule: 2024-2041
         evenement_cle: premier rapport sur la concentration record des plateformes mondiales 2032
+
+  - signal: ia_phages_antibioresistance_biosurete
+    scenarios:
+      breakdown:
+        evolution: phages synthétiques échappent aux laboratoires effondrés
+        date_bascule: 2045-2059
+        evenement_cle: Detroit-Sud libère souches non régulées 2053
+      fortress_world:
+        evolution: blocs militarisent les phages contre bactéries résistantes
+        date_bascule: 2038-2052
+        evenement_cle: Bloc Atlantique brevète 12 souches phages 2046
+      new_sustainability:
+        evolution: phages redistribués via gouvernance mondiale IA
+        date_bascule: 2035-2049
+        evenement_cle: Accords de Nairobi sur les phages ouverts 2042
+      eco_communalism:
+        evolution: bioterritoires bannissent phages centralisés
+        date_bascule: 2042-2060
+        evenement_cle: charte bioterritoriale interdit phages brevetés
+      policy_reform:
+        evolution: régulation progressive des phages par traité international
+        date_bascule: 2033-2047
+        evenement_cle: traité OMS sur les phages thérapeutiques 2039
+      reference:
+        evolution: phages commercialisés sans cadre redistributif stable
+        date_bascule: 2030-2044
+        evenement_cle: premier brevet phage Stanford licencié 2036
 ```

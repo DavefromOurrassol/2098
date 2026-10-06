@@ -22,9 +22,9 @@ tags:
 image_prompt: "Un écran biométrique fissuré affiche un score de 78,5 en chiffres verts fluorescents, tandis qu’une main gantée de gris — uniforme typique des travailleurs de Nexcore Atlantique Infrastructure — glisse une puce de données dans une fente discrète. En arrière-plan, un mur de béton thermorégulé marqué du logo épuré de Nexcore (deux barres parallèles argentées sur fond anthracite), éclairé par une lumière artificielle blanche et froide."
 a_une_photo: false
 image_credit: ""
-journaliste_slug: malik_washington
+journaliste_slug: dario_il_riciclatore_bianchi
 date_evenement: 21 avril 2098
-zone_principale: nexcore_atlantique_infrastructure
+zone_principale: zone_euro_sud
 date_publication: 21 avril 2098
 entites_citees:
   - nexcore_atlantique_infrastructure_fortress_world
@@ -43,7 +43,7 @@ variables_pilotes:
 
 21 avril 2098
 
-Malik Washington — Le Mur Parle
+Dario « Il Riciclatore » Bianchi — Il Confine (Le Confins)
 
 BRUXELLES-FORTERESSE — Depuis que Nexcore Atlantique Infrastructure a renforcé les protocoles de « recalibrage comportemental » sur les corridors pressurisés de l’Espace Atlantique Protégé, les petites annonces des marchés gris pullulent d’offres discrètes pour monétiser son propre score biométrique. « Vente urgente de profil Tier-3 avant audit ANBA », propose un utilisateur sous pseudo *Lacune_98* sur le forum *SeuilsOuverts*, une plateforme non certifiée hébergée depuis les serveurs fantômes de Casablanca-Périphérie. « Score stable à 78,5 — idéal pour contourner les restrictions d’accès aux zones tampons. Paiement en crédits-blocs ou en rations protéinées certifiées. »
 

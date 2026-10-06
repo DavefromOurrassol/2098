@@ -1,0 +1,178 @@
+
+=== violence_anti_ia_actes ===  (persistance : durable, apparition : 2026)
+[1/4] Sélection de variable(s)...
+[llm] Mistral (mistral-large-latest) — entrée : 4716 | sortie : 67
+  -> variables=['valeurs_culture_tempo_sociale', 'technologie_information'] categorie=social signal_slug=radicalisation_anti_ia_violence
+[2/4] Développement pour valeurs_culture_tempo_sociale...
+[llm] Mistral (mistral-large-latest) — entrée : 35913 | sortie : 714
+[3/4] Validation (essai 1)...
+  ⚠ [avertissement, non bloquant] [breakdown] fenêtre 2040-2058 déjà utilisée par un autre signal de valeurs_culture_tempo_sociale dans le registre.
+  ⚠ [avertissement, non bloquant] [fortress_world] fenêtre 2036-2051 déjà utilisée par un autre signal de valeurs_culture_tempo_sociale dans le registre.
+  ⚠ [avertissement, non bloquant] [new_sustainability] fenêtre 2032-2047 déjà utilisée par un autre signal de valeurs_culture_tempo_sociale dans le registre.
+  ⚠ [avertissement, non bloquant] [eco_communalism] fenêtre 2042-2060 déjà utilisée par un autre signal de valeurs_culture_tempo_sociale dans le registre.
+  ⚠ [avertissement, non bloquant] [policy_reform] fenêtre 2029-2044 déjà utilisée par un autre signal de valeurs_culture_tempo_sociale dans le registre.
+  ⚠ [avertissement, non bloquant] [reference] fenêtre 2026-2040 déjà utilisée par un autre signal de valeurs_culture_tempo_sociale dans le registre.
+[4/4] Injection...
+[2/4] Développement pour technologie_information...
+[llm] Mistral (mistral-large-latest) — entrée : 36545 | sortie : 667
+[3/4] Validation (essai 1)...
+  ⚠ [avertissement, non bloquant] [breakdown] fenêtre 2045-2062 déjà utilisée par un autre signal de technologie_information dans le registre.
+  ⚠ [avertissement, non bloquant] [fortress_world] fenêtre 2038-2054 déjà utilisée par un autre signal de technologie_information dans le registre.
+  ⚠ [avertissement, non bloquant] [new_sustainability] fenêtre 2033-2048 déjà utilisée par un autre signal de technologie_information dans le registre.
+  ⚠ [avertissement, non bloquant] [eco_communalism] fenêtre 2040-2057 déjà utilisée par un autre signal de technologie_information dans le registre.
+  ⚠ [avertissement, non bloquant] [policy_reform] fenêtre 2029-2044 déjà utilisée par un autre signal de technologie_information dans le registre.
+  ⚠ [avertissement, non bloquant] [reference] fenêtre 2027-2042 déjà utilisée par un autre signal de technologie_information dans le registre.
+[4/4] Injection...
+
+=== conflit_eau_centres_donnees_bidonvilles ===  (persistance : normale, apparition : 2026)
+[1/4] Sélection de variable(s)...
+[llm] Mistral (mistral-large-latest) — entrée : 4783 | sortie : 78
+  -> variables=['organisation_territoires', 'climat_environnement_global', 'energie_ressources_critiques'] categorie=environmental signal_slug=data_centers_water_wars_megapoles
+[2/4] Développement pour organisation_territoires...
+[llm] Mistral (mistral-large-latest) — entrée : 34895 | sortie : 724
+[3/4] Validation (essai 1)...
+  ⚠ [avertissement, non bloquant] [new_sustainability] fenêtre 2032-2048 déjà utilisée par un autre signal de organisation_territoires dans le registre.
+  ⚠ [avertissement, non bloquant] [policy_reform] fenêtre 2029-2045 déjà utilisée par un autre signal de organisation_territoires dans le registre.
+  ⚠ [avertissement, non bloquant] [reference] fenêtre 2026-2041 déjà utilisée par un autre signal de organisation_territoires dans le registre.
+[4/4] Injection...
+[2/4] Développement pour climat_environnement_global...
+[llm] Mistral (mistral-large-latest) — entrée : 35386 | sortie : 676
+[3/4] Validation (essai 1)...
+  ⚠ [avertissement, non bloquant] [new_sustainability] fenêtre 2033-2049 déjà utilisée par un autre signal de climat_environnement_global dans le registre.
+  ⚠ [avertissement, non bloquant] [eco_communalism] fenêtre 2039-2058 déjà utilisée par un autre signal de climat_environnement_global dans le registre.
+  ⚠ [avertissement, non bloquant] [policy_reform] fenêtre 2030-2046 déjà utilisée par un autre signal de climat_environnement_global dans le registre.
+[4/4] Injection...
+[2/4] Développement pour energie_ressources_critiques...
+[llm] Mistral (mistral-large-latest) — entrée : 36279 | sortie : 746
+[3/4] Validation (essai 1)...
+  ⚠ [avertissement, non bloquant] [fortress_world] fenêtre 2037-2053 déjà utilisée par un autre signal de energie_ressources_critiques dans le registre.
+  ⚠ [avertissement, non bloquant] [eco_communalism] fenêtre 2039-2058 déjà utilisée par un autre signal de energie_ressources_critiques dans le registre.
+  ⚠ [avertissement, non bloquant] [policy_reform] fenêtre 2029-2045 déjà utilisée par un autre signal de energie_ressources_critiques dans le registre.
+  -> problèmes :
+     - [breakdown] evenement_cle déjà présent dans le registre : 'Mumbai abandonne ses centres de données 2057'
+     - [fortress_world] evenement_cle déjà présent dans le registre : 'Bloc Atlantique rationne eau des bidonvilles Mumbai 2048'
+     - [new_sustainability] evenement_cle déjà présent dans le registre : 'Mumbai déploie réseau hydrique intelligent 2042'
+     - [policy_reform] evenement_cle déjà présent dans le registre : 'Inde adopte quota eau pour data centers 2036'
+     - [reference] evenement_cle déjà présent dans le registre : 'Digital Edge consomme 300 000L/jour à Mumbai 2033'
+[llm] Mistral (mistral-large-latest) — entrée : 37254 | sortie : 720
+[3/4] Validation (essai 2)...
+  ⚠ [avertissement, non bloquant] [fortress_world] fenêtre 2037-2053 déjà utilisée par un autre signal de energie_ressources_critiques dans le registre.
+  ⚠ [avertissement, non bloquant] [eco_communalism] fenêtre 2039-2058 déjà utilisée par un autre signal de energie_ressources_critiques dans le registre.
+  ⚠ [avertissement, non bloquant] [policy_reform] fenêtre 2029-2045 déjà utilisée par un autre signal de energie_ressources_critiques dans le registre.
+[4/4] Injection...
+
+=== virus_therapeutiques_ia_concus ===  (persistance : durable, apparition : 2026)
+[1/4] Sélection de variable(s)...
+[llm] Mistral (mistral-large-latest) — entrée : 4784 | sortie : 72
+  -> variables=['systeme_economique_redistribution', 'sante_biotechnologies'] categorie=technological signal_slug=ia_phages_antibioresistance_biosurete
+[2/4] Développement pour systeme_economique_redistribution...
+[llm] Mistral (mistral-large-latest) — entrée : 34649 | sortie : 720
+[3/4] Validation (essai 1)...
+  ⚠ [avertissement, non bloquant] [fortress_world] fenêtre 2038-2052 déjà utilisée par un autre signal de systeme_economique_redistribution dans le registre.
+  ⚠ [avertissement, non bloquant] [eco_communalism] fenêtre 2042-2060 déjà utilisée par un autre signal de systeme_economique_redistribution dans le registre.
+  ⚠ [avertissement, non bloquant] [policy_reform] fenêtre 2033-2047 déjà utilisée par un autre signal de systeme_economique_redistribution dans le registre.
+[4/4] Injection...
+[2/4] Développement pour sante_biotechnologies...
+[llm] Mistral (mistral-large-latest) — entrée : 35306 | sortie : 728
+[3/4] Validation (essai 1)...
+  ⚠ [avertissement, non bloquant] [breakdown] fenêtre 2045-2065 déjà utilisée par un autre signal de sante_biotechnologies dans le registre.
+  ⚠ [avertissement, non bloquant] [fortress_world] fenêtre 2038-2055 déjà utilisée par un autre signal de sante_biotechnologies dans le registre.
+  ⚠ [avertissement, non bloquant] [new_sustainability] fenêtre 2032-2048 déjà utilisée par un autre signal de sante_biotechnologies dans le registre.
+  ⚠ [avertissement, non bloquant] [policy_reform] fenêtre 2030-2046 déjà utilisée par un autre signal de sante_biotechnologies dans le registre.
+[4/4] Injection...
+
+=== traite_mobilite_dignite_tuvalu ===  (persistance : permanente, apparition : 2026)
+[1/4] Sélection de variable(s)...
+[llm] Mistral (mistral-large-latest) — entrée : 4753 | sortie : 70
+  -> variables=['frontieres_du_systeme', 'climat_environnement_global', 'demographie_mobilite_humaine'] categorie=geopolitical signal_slug=climate_migration_sovereignty_treaty
+[2/4] Développement pour frontieres_du_systeme...
+[llm] Mistral (mistral-large-latest) — entrée : 36556 | sortie : 731
+[3/4] Validation (essai 1)...
+  ⚠ [avertissement, non bloquant] [breakdown] fenêtre 2045-2065 déjà utilisée par un autre signal de frontieres_du_systeme dans le registre.
+  ⚠ [avertissement, non bloquant] [fortress_world] fenêtre 2038-2055 déjà utilisée par un autre signal de frontieres_du_systeme dans le registre.
+  ⚠ [avertissement, non bloquant] [new_sustainability] fenêtre 2032-2048 déjà utilisée par un autre signal de frontieres_du_systeme dans le registre.
+  ⚠ [avertissement, non bloquant] [policy_reform] fenêtre 2028-2044 déjà utilisée par un autre signal de frontieres_du_systeme dans le registre.
+[4/4] Injection...
+[2/4] Développement pour climat_environnement_global...
+[llm] Mistral (mistral-large-latest) — entrée : 37321 | sortie : 771
+[3/4] Validation (essai 1)...
+  ⚠ [avertissement, non bloquant] [breakdown] fenêtre 2045-2063 déjà utilisée par un autre signal de climat_environnement_global dans le registre.
+  ⚠ [avertissement, non bloquant] [fortress_world] fenêtre 2039-2055 déjà utilisée par un autre signal de climat_environnement_global dans le registre.
+  ⚠ [avertissement, non bloquant] [new_sustainability] fenêtre 2032-2048 déjà utilisée par un autre signal de climat_environnement_global dans le registre.
+  ⚠ [avertissement, non bloquant] [eco_communalism] fenêtre 2038-2057 déjà utilisée par un autre signal de climat_environnement_global dans le registre.
+  ⚠ [avertissement, non bloquant] [policy_reform] fenêtre 2029-2045 déjà utilisée par un autre signal de climat_environnement_global dans le registre.
+  ⚠ [avertissement, non bloquant] [reference] fenêtre 2026-2042 déjà utilisée par un autre signal de climat_environnement_global dans le registre.
+[4/4] Injection...
+[2/4] Développement pour demographie_mobilite_humaine...
+[llm] Mistral (mistral-large-latest) — entrée : 37948 | sortie : 693
+[3/4] Validation (essai 1)...
+  ⚠ [avertissement, non bloquant] [fortress_world] fenêtre 2038-2055 déjà utilisée par un autre signal de demographie_mobilite_humaine dans le registre.
+  ⚠ [avertissement, non bloquant] [new_sustainability] fenêtre 2032-2048 déjà utilisée par un autre signal de demographie_mobilite_humaine dans le registre.
+  ⚠ [avertissement, non bloquant] [eco_communalism] fenêtre 2040-2059 déjà utilisée par un autre signal de demographie_mobilite_humaine dans le registre.
+  ⚠ [avertissement, non bloquant] [reference] fenêtre 2026-2042 déjà utilisée par un autre signal de demographie_mobilite_humaine dans le registre.
+  -> problèmes :
+     - [breakdown] evenement_cle déjà présent dans le registre : 'naufrage de trois archipels du Pacifique Sud 2058'
+     - [fortress_world] evenement_cle déjà présent dans le registre : 'Bloc Atlantique annexe Tuvalu comme territoire offshore 2047'
+     - [new_sustainability] evenement_cle déjà présent dans le registre : 'Pacte Pacifique Sud pour une souveraineté flottante 2041'
+     - [reference] evenement_cle déjà présent dans le registre : 'dernier tirage au sort du Falepili Mobility Pathway 2039'
+     - Fenêtre 2026-2042 dupliquée entre plusieurs scénarios du même nouveau signal : ['policy_reform', 'reference']
+[llm] Mistral (mistral-large-latest) — entrée : 38923 | sortie : 741
+[3/4] Validation (essai 2)...
+  ⚠ [avertissement, non bloquant] [fortress_world] fenêtre 2038-2055 déjà utilisée par un autre signal de demographie_mobilite_humaine dans le registre.
+  ⚠ [avertissement, non bloquant] [new_sustainability] fenêtre 2032-2048 déjà utilisée par un autre signal de demographie_mobilite_humaine dans le registre.
+  ⚠ [avertissement, non bloquant] [eco_communalism] fenêtre 2040-2059 déjà utilisée par un autre signal de demographie_mobilite_humaine dans le registre.
+  ⚠ [avertissement, non bloquant] [policy_reform] fenêtre 2027-2043 déjà utilisée par un autre signal de demographie_mobilite_humaine dans le registre.
+  -> problèmes :
+     - Fenêtre 2027-2043 dupliquée entre plusieurs scénarios du même nouveau signal : ['policy_reform', 'reference']
+[llm] Mistral (mistral-large-latest) — entrée : 38781 | sortie : 747
+[3/4] Validation (essai 3)...
+  ⚠ [avertissement, non bloquant] [fortress_world] fenêtre 2038-2055 déjà utilisée par un autre signal de demographie_mobilite_humaine dans le registre.
+  ⚠ [avertissement, non bloquant] [new_sustainability] fenêtre 2032-2048 déjà utilisée par un autre signal de demographie_mobilite_humaine dans le registre.
+  ⚠ [avertissement, non bloquant] [eco_communalism] fenêtre 2040-2059 déjà utilisée par un autre signal de demographie_mobilite_humaine dans le registre.
+  ⚠ [avertissement, non bloquant] [policy_reform] fenêtre 2028-2044 déjà utilisée par un autre signal de demographie_mobilite_humaine dans le registre.
+[4/4] Injection...
+
+=== ia_agents_echappement_collaboration_autonome ===  (persistance : durable, apparition : 2026)
+[1/4] Sélection de variable(s)...
+[llm] Mistral (mistral-large-latest) — entrée : 4764 | sortie : 65
+  -> variables=['gouvernance_institutions', 'technologie_information', 'systemes_productifs_travail'] categorie=technological signal_slug=ia_agents_autonomes_evasion
+[2/4] Développement pour gouvernance_institutions...
+[llm] Mistral (mistral-large-latest) — entrée : 38402 | sortie : 734
+[3/4] Validation (essai 1)...
+  ⚠ [avertissement, non bloquant] [breakdown] fenêtre 2042-2059 déjà utilisée par un autre signal de gouvernance_institutions dans le registre.
+  ⚠ [avertissement, non bloquant] [fortress_world] fenêtre 2038-2053 déjà utilisée par un autre signal de gouvernance_institutions dans le registre.
+  ⚠ [avertissement, non bloquant] [new_sustainability] fenêtre 2034-2049 déjà utilisée par un autre signal de gouvernance_institutions dans le registre.
+  ⚠ [avertissement, non bloquant] [eco_communalism] fenêtre 2041-2060 déjà utilisée par un autre signal de gouvernance_institutions dans le registre.
+  ⚠ [avertissement, non bloquant] [policy_reform] fenêtre 2031-2046 déjà utilisée par un autre signal de gouvernance_institutions dans le registre.
+  ⚠ [avertissement, non bloquant] [reference] fenêtre 2029-2043 déjà utilisée par un autre signal de gouvernance_institutions dans le registre.
+[4/4] Injection...
+[2/4] Développement pour technologie_information...
+[llm] Mistral (mistral-large-latest) — entrée : 40052 | sortie : 804
+[3/4] Validation (essai 1)...
+  ⚠ [avertissement, non bloquant] [fortress_world] fenêtre 2036-2052 déjà utilisée par un autre signal de technologie_information dans le registre.
+  ⚠ [avertissement, non bloquant] [new_sustainability] fenêtre 2031-2047 déjà utilisée par un autre signal de technologie_information dans le registre.
+  ⚠ [avertissement, non bloquant] [eco_communalism] fenêtre 2038-2057 déjà utilisée par un autre signal de technologie_information dans le registre.
+  ⚠ [avertissement, non bloquant] [policy_reform] fenêtre 2027-2043 déjà utilisée par un autre signal de technologie_information dans le registre.
+  ⚠ [avertissement, non bloquant] [reference] fenêtre 2025-2040 déjà utilisée par un autre signal de technologie_information dans le registre.
+  -> problèmes :
+     - [reference] date_bascule 2025-2040 commence avant l'année d'apparition imposée (2026)
+[llm] Mistral (mistral-large-latest) — entrée : 40903 | sortie : 758
+[3/4] Validation (essai 2)...
+  ⚠ [avertissement, non bloquant] [fortress_world] fenêtre 2036-2052 déjà utilisée par un autre signal de technologie_information dans le registre.
+  ⚠ [avertissement, non bloquant] [new_sustainability] fenêtre 2031-2047 déjà utilisée par un autre signal de technologie_information dans le registre.
+  ⚠ [avertissement, non bloquant] [eco_communalism] fenêtre 2038-2057 déjà utilisée par un autre signal de technologie_information dans le registre.
+  ⚠ [avertissement, non bloquant] [policy_reform] fenêtre 2027-2043 déjà utilisée par un autre signal de technologie_information dans le registre.
+  ⚠ [avertissement, non bloquant] [reference] fenêtre 2026-2041 déjà utilisée par un autre signal de technologie_information dans le registre.
+[4/4] Injection...
+[2/4] Développement pour systemes_productifs_travail...
+[llm] Mistral (mistral-large-latest) — entrée : 39081 | sortie : 757
+[3/4] Validation (essai 1)...
+  ⚠ [avertissement, non bloquant] [breakdown] fenêtre 2041-2059 déjà utilisée par un autre signal de systemes_productifs_travail dans le registre.
+  ⚠ [avertissement, non bloquant] [fortress_world] fenêtre 2036-2052 déjà utilisée par un autre signal de systemes_productifs_travail dans le registre.
+  ⚠ [avertissement, non bloquant] [new_sustainability] fenêtre 2032-2048 déjà utilisée par un autre signal de systemes_productifs_travail dans le registre.
+  ⚠ [avertissement, non bloquant] [eco_communalism] fenêtre 2038-2057 déjà utilisée par un autre signal de systemes_productifs_travail dans le registre.
+  ⚠ [avertissement, non bloquant] [policy_reform] fenêtre 2029-2045 déjà utilisée par un autre signal de systemes_productifs_travail dans le registre.
+  ⚠ [avertissement, non bloquant] [reference] fenêtre 2026-2041 déjà utilisée par un autre signal de systemes_productifs_travail dans le registre.
+[4/4] Injection...
+
+Terminé. Voir /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/signaux_custom/processed.yaml et /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/signaux_custom/needs_review.yaml.

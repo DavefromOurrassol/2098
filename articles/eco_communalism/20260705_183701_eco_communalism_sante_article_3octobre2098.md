@@ -25,9 +25,9 @@ tags:
 image_prompt: "Une femme âgée, Maman Élikya Bompoko, assise sur la véranda d'une maison sur pilotis à Bolenge, au bord du fleuve Congo, entourée de membres de sa communauté et de soignants en tenue traditionnelle, avec une pirogue amarrée en contrebas."
 a_une_photo: false
 image_credit: ""
-journaliste_slug: 
+journaliste_slug: aline_moke
 date_evenement: 18 juin 2098
-zone_principale: amazonie_pacte_viva
+zone_principale: congo_bassin_du_fleuve
 date_publication: 18 juin 2098
 entites_citees:
   - amazonie_pacte_viva_eco_communalism
@@ -46,6 +46,8 @@ articles_lies:
 # À 126 ans, Maman Élikya oblige la santé des communs à regarder ses fractures
 
 **Mbandaka, Bassin Congo Ressources — 18 juin 2098**
+
+Aline Moke — Lokole ya Ebale
 
 Maman Élikya Bompoko a 126 ans. L’Autorité sanitaire des Rives Équatoriales a confirmé hier, après triple vérification des registres paroissiaux, des carnets vaccinaux de 2031 et des archives familiales, qu’elle est désormais la personne humaine la plus âgée connue sur Terre.
 

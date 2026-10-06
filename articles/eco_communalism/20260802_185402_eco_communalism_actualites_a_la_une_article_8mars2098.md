@@ -25,7 +25,7 @@ tags:
 image_prompt: "Mara Kerval, porte-parole des Veilleurs du Seuil, debout devant une borne de suivi biologique incendiée dans les Plateaux Désertés du Massif Central, entourée de tracts griffonnés sur des écorces de bouleau, avec des Sillons du Plateau fumants en arrière-plan."
 a_une_photo: false
 image_credit: ""
-journaliste_slug: 
+journaliste_slug: solene_guillou
 date_evenement: 12 octobre 2098
 zone_principale: europe_occidentale_reconstituee
 date_publication: 12 octobre 2098
@@ -44,6 +44,8 @@ articles_lies:
 
 ---
 **« Les Veilleurs du Seuil bloquent la Tresse Verte : jusqu’où ira la souveraineté des terres ? »**
+
+Solène Guillou — Les Racines Périssent: Bulletin des Bassins Rebelles
 *Réseau Voix des Marges — 12 octobre 2098, depuis les Plateaux Désertés du Massif Central*
 
 Les Sillons du Plateau fument encore. Depuis trois jours, les Veilleurs du Seuil — ces communautés isolationnistes qui refusent la « continuité écologique imposée » — ont incendié dix-sept bornes de suivi biologique le long des Couloirs Forestiers du Bassin Rhénan. Leurs tracts, griffonnés à la suie sur des écorces de bouleau, martèlent le même message : *« Nos terres, nos règles. Pas de passage pour les espèces des autres. »* Une provocation de plus dans la guerre larvée qui oppose, depuis des décennies, les gardiens des trames vertes régionales et ces groupes farouchement attachés à une souveraineté territoriale absolue.

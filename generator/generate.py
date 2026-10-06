@@ -78,6 +78,9 @@ def _parse_cli_args():
                               "séparés, pas une chaîne à virgules -- voir app.js/collectArgs, "
                               "corrigé le 2 août 2026 après lecture du vrai app.js).")
     parser.add_argument("--forcer-zone", nargs="+", default=None)
+    # S26 (6 octobre 2026) : journal d'une AUTRE zone que celle de l'élément
+    # forcé -- vide (défaut) = comportement inchangé.
+    parser.add_argument("--forcer-zone-journal", default=None)
     # Champs partagés / semi_guide -- ajoutés le 2 août 2026, voir docstring.
     parser.add_argument("--thematique", default=None)
     parser.add_argument("--ligne-editoriale", default=None)
@@ -315,7 +318,8 @@ def _generate_one(scenario_slug, thematique_obj, thematique_slug, config,
 
     snapshot = build_snapshot(scenario_slug, thematique=thematique_obj,
                                dry_run=dry_run, forcer_config=forcer_config,
-                               date_edition=date_edition)
+                               date_edition=date_edition,
+                               zone_article=config.get("zone_slug") or None)
 
     if snapshot.get("forcer_erreur"):
         return {"scenario": scenario_slug, "result": None, "erreur": snapshot["forcer_erreur"]}
@@ -558,6 +562,29 @@ def run():
         forcer_config["type"], forcer_config["slug"], scenarios_a_traiter
     )
 
+    # S26 (6 octobre 2026) : couverture par le journal d'une autre zone.
+    # Seuls les scénarios où cette zone a une rédaction (ligne choisie)
+    # sont gardés -- une zone n'existe en général que dans un scénario.
+    zone_journal = cli_args.forcer_zone_journal or config.get("forcer_zone_journal") or None
+    if zone_journal:
+        from prompt_builder import _load_journaux
+        _jx = _load_journaux()
+        _ligne = config.get("ligne_editoriale") or "pro_pouvoir"
+        avec_journal = [
+            sc for sc in scenarios_a_traiter
+            if zone_journal in ((_jx.get(sc, {}).get(_ligne, {}) or {}).get("zones") or {})
+        ]
+        if not avec_journal:
+            print("\n[erreur] La zone {!r} n'a pas de rédaction {} dans les scénarios "
+                  "retenus pour cet élément ({}).".format(
+                      zone_journal, _ligne, ", ".join(scenarios_a_traiter)))
+            sys.exit(1)
+        ecartes = [sc for sc in scenarios_a_traiter if sc not in avec_journal]
+        if ecartes:
+            print("[generate] S26 — scénario(s) écarté(s), pas de rédaction {} : {}".format(
+                zone_journal, ", ".join(ecartes)))
+        scenarios_a_traiter = avec_journal
+
     resultats = []
     for scenario_slug in scenarios_a_traiter:
         print("\n" + "-"*60)
@@ -568,6 +595,13 @@ def run():
         if zones_ici:
             config_scenario["zone_slug"] = zones_ici[0]
             print("[generate] Zone d'ancrage pour {} : {}".format(scenario_slug, zones_ici[0]))
+        # S26 (6 octobre 2026) : le journal de zone_journal écrit ; la zone
+        # de l'élément devient zone_evenement (consigne « fait étranger »).
+        if zone_journal:
+            config_scenario["zone_evenement"] = zones_ici[0] if zones_ici else None
+            config_scenario["zone_slug"] = zone_journal
+            print("[generate] S26 — journal de la zone {} ; fait couvert : {}".format(
+                zone_journal, config_scenario["zone_evenement"] or "(zone de l'élément inconnue)"))
         res = _generate_one(scenario_slug, thematique, thematique_slug, config_scenario,
                              forcer_config=forcer_config, dry_run=dry_run)
         resultats.append(res)

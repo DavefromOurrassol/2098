@@ -25,9 +25,9 @@ tags:
 image_prompt: "Un vieil homme aux traits marqués, vêtu d'un pagne traditionnel coloré, assis sous un manguier centenaire sur une île fluviale, entouré de chercheurs en blouses légères et d'anciens du village, avec en arrière-plan des panneaux solaires et des plantes médicinales."
 a_une_photo: false
 image_credit: ""
-journaliste_slug: 
+journaliste_slug: aline_moke
 date_evenement: 2 novembre 2098
-zone_principale: amazonie_pacte_viva
+zone_principale: congo_bassin_du_fleuve
 date_publication: 2 novembre 2098
 entites_citees:
   - amazonie_pacte_viva_eco_communalism
@@ -42,6 +42,8 @@ articles_lies:
 
 ---
 *Yawara’i! Tukano itá! Aé!*
+
+Aline Moke — Lokole ya Ebale
 
 **« Le Chant des Cent Vingt-Sept Printemps »**
 *Yaripã — A Voz da Floresta*

@@ -26,7 +26,7 @@ tags:
 image_prompt: "Une femme voilée, Yamina Dahmani, accroupie près d'une caisse métallique rouillée marquée \"BS\" dans un souk désert aux murs décrépis, sous une lumière blafarde filtrant à travers un brouillard de poussière, avec des enfants aux regards fatigués en arrière-plan."
 a_une_photo: false
 image_credit: ""
-journaliste_slug: 
+journaliste_slug: etienne_rouquette
 date_evenement: 24 octobre 2098
 zone_principale: sfax_relais_bouches
 date_publication: 24 octobre 2098
@@ -41,6 +41,8 @@ articles_lies:
 
 ---
 **24 octobre 2098**
+
+Étienne Rouquette — Seuil Sécurisé - Bulletin des Racines-Mères
 *Réseau de l'Ordre Zonal – Bulletin Officiel des Forces de Maintien de l'Ordre Zonal*
 **« Sfax Respire par les Bouches : comment les Relais de la Faim Juste maintiennent encore l’illusion d’une cité »**
 

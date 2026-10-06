@@ -28,9 +28,9 @@ tags:
 image_prompt: "Une salle souterraine faiblement éclairée à Tbilissi, remplie de serveurs empilés clignotant dans une lumière bleutée, avec Tamar Kldiashvili, archiviste en chef du Nœud Mnemos, ajustant une connexion réseau clandestine devant des écrans affichant des données fragmentées."
 a_une_photo: false
 image_credit: ""
-journaliste_slug: lea_marti
+journaliste_slug: aizhan_kenzhebayeva
 date_evenement: 5 avril 2098
-zone_principale: corridor_arctique_nordique
+zone_principale: bloc_eurasien_central
 date_publication: 5 avril 2098
 entites_citees:
   - alliance_blocs_souverains_reference
@@ -59,7 +59,7 @@ Le Système Kontinuum, dont personne ne revendique officiellement la paternité,
 
 En 2098, le débat sur l’IA administrative a pris une tournure géopolitique. Les États centralistes accusent les réseaux décentralisés de "saper la stabilité institutionnelle", tandis que ces derniers dénoncent une "capture algorithmique du pouvoir". À Tbilissi, où les serveurs du Nœud Mnemos tournent au ralenti pour économiser l’énergie, on garde la trace des deux versions. "La mémoire est notre seule arme contre l’uniformisation, murmure Kldiashvili en ajustant une bande passante clandestine. Ici, même les erreurs de Carthage-Nord ont encore le droit d’exister."
 
-Léa Marti — Réseau Le Dessous des Cartes
+Aizhan Kenzhebayeva — Сырые Данные / Raw Data (Центральная Евразия)
 
 ---
 **Voir aussi** : [[alliance_blocs_souverains_reference]] · [[directive_kontinuum_reference]] · [[etats_a_tendance_centraliste_numerique_reference]] · [[leena_vainala_reference]] · [[reseau_mnemos_reference]] · [[zones_grises_globales_reference]] · [[le_silence_des_algorithmes_quand_les_plateformes_eteignent_les_voix_du_nord]] · [[qui_controle_le_recit_controle_les_isruter_la_guerre_des_flux_dans_l_arctique_de]] · [[qui_decide_quand_l_algorithme_parle_leena_vainala_contre_le_silence_des_platefor]]

@@ -27,9 +27,9 @@ tags:
 image_prompt: "Une flottille de drones autonomes blindés de la NAT encercle trois navires de l’Alliance des Peuples Arctiques dans le détroit de Lancaster, sous une lumière glaciale et des projecteurs aveuglants, avec des coques couvertes de givre."
 a_une_photo: false
 image_credit: ""
-journaliste_slug: romain_vasseur
+journaliste_slug: mikkel_andersen
 date_evenement: 10 mai 2098
-zone_principale: bloc_atlantique
+zone_principale: espace_nordique_arctique
 date_publication: 10 mai 2098
 entites_citees:
   - armada_logistique_nordique_fortress_world
@@ -48,7 +48,7 @@ articles_lies:
 *L’incident du Passage du Nord-Ouest révèle l’équilibre précaire des corridors polaires*
 
 10 mai 2098
-Romain Vasseur — Réseau Le Bloc Informations
+Mikkel Andersen — NAT Kontrollposten
 
 NUUK-FORTE — Le 18 avril dernier, à 04h23 UTC, trois navires battant pavillon de l’Alliance des Peuples Arctiques (APA) ont été interceptés par une flottille de drones autonomes de la Nordisk Arktisk Transitkontroll (NAT) dans le détroit de Lancaster, à moins de 800 kilomètres des côtes groenlandaises. Les images, diffusées en boucle sur les réseaux souverains avant d’être effacées par les filtres de conformité, montrent les bâtiments encerclés par des engins blindés, leurs coques luisantes de givre sous les projecteurs des patrouilleurs. Pour la première fois depuis la militarisation des routes polaires, une autorité de transit arctique a ouvertement utilisé la force contre un convoi rival. À Nuuk, le Fonds Souverain Nuna Capital a convoqué une conférence d’urgence, tandis que les capitales des blocs continentaux observent, silencieuses, la montée des tensions dans ce qui est désormais le dernier corridor commercial viable du globe.
 

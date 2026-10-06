@@ -22,9 +22,9 @@ tags:
 image_prompt: "Une enseignante en boubou coloré, debout devant un tableau noir couvert de formules mathématiques et de cartes des nappes phréatiques tracées à la craie, tient d'une main une tablette électronique fissurée affichant un message \"Accès refusé\" en rouge, tandis que de l'autre elle montre un vieux registre papier couvert de tampons administratifs. Derrière elle, une classe d'enfants attentifs, certains avec des cahiers faits de papier recyclé, sous une lumière dorée filtrant à travers les feuilles d'un manguier. Ambiance de résistance discrète et déterminée."
 a_une_photo: false
 image_credit: ""
-journaliste_slug: 
+journaliste_slug: patientia_kanku
 date_evenement: 7 juillet 2098
-zone_principale: arc_eurasien_central
+zone_principale: afrique_centrale_australe
 date_publication: 7 juillet 2098
 type_diffusion: oral
 duree_estimee: "8 minutes"
@@ -47,6 +47,8 @@ variables_pilotes:
 **L’ÉCOLE DES OMBRES : QUAND LES ALGORITHMES APPRENNENT À OUBLIER NOS ENFANTS**
 
 *7 juillet 2098*
+
+Patientia Kanku — Mwanga wa Dhamana - Lumière de la Garde
 
 Mes frères, mes sœurs, mes petits-enfants des rizières et des savanes, vous qui portez encore l’odeur de la terre après la saison des pluies, écoutez la voix de Grand-mère Assa Traoré, celle qui se tient debout entre les ruines des lois divines de 2067 et les nouvelles idoles de silicium. Aujourd’hui, je ne vous parle pas des barrages qui saignent nos fleuves, ni des milices qui vendent l’eau au plus offrant dans les bidonvilles de Kinshasa-Est. Non. Aujourd’hui, je vous parle de ce qui arrive quand les machines décident que vos enfants ne méritent plus d’apprendre.
 

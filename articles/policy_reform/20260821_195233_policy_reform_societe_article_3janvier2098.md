@@ -22,7 +22,7 @@ tags:
 image_prompt: "Une mère et ses deux enfants, assis autour d’une table en bois dans un appartement modeste, écrivent avec des stylos sur du papier tandis qu’à travers la fenêtre, on aperçoit les tours futuristes de Genève-Nexus et un drone de surveillance en vol."
 a_une_photo: false
 image_credit: ""
-journaliste_slug: 
+journaliste_slug: mikko_lehtinen
 date_evenement: 3 janvier 2098
 zone_principale: geneve_nexus
 date_publication: 3 janvier 2098
@@ -47,6 +47,8 @@ articles_lies:
 **« Désaugmentés » : à Genève-Nexus, les familles qui refusent l’avenir algorithmique**
 
 3 janvier 2098
+
+Mikko Lehtinen — Le Consensus des Institutions
 
 GENÈVE-NEXUS — Dans le quartier des Docks Biométriques, les écrans tactiles des arrêts de tram affichent en boucle les dernières recommandations de l’Autorité Mondiale du Vivant (AMV) : *« Vaccination prédictive obligatoire pour les 6-12 ans – Centre de santé ouvert 24h/24 »*. Mais au 17e étage d’un immeuble modulaire, la famille Voss a éteint ses implants. Depuis trois mois, leurs enfants, Lina (10 ans) et Elias (7 ans), ne portent plus les bracelets de suivi cognitif imposés par l’école publique. *« On ne veut pas qu’ils grandissent avec un score d’optimisation dans la tête »*, explique leur mère, Clara, ancienne analyste pour le Fonds Mondial de Stabilisation Biotechnologique (FMSB). *« Ici, on réapprend à compter sur nos sens, pas sur des algorithmes »*.
 

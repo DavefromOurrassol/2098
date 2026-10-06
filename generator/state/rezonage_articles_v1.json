@@ -1,0 +1,972 @@
+{
+ "20260616_203409_fortress_world_sports_article.md": {
+  "confiance": "haute",
+  "lieu": "Bratislava-Secteur Alpha",
+  "zone": "bloc_eurasiatique_occidental"
+ },
+ "20260616_215719_fortress_world_sports_article.md": {
+  "confiance": "haute",
+  "lieu": "Bratislava-Secteur Alpha",
+  "zone": "bloc_eurasiatique_occidental"
+ },
+ "20260621_195524_fortress_world_sciences_technologies_article.md": {
+  "confiance": "haute",
+  "lieu": "corridor d'approvisionnement Halifax–Saint-Jean de Terre-Neuve",
+  "zone": "bloc_atlantique"
+ },
+ "20260621_200620_fortress_world_sciences_technologies_article.md": {
+  "confiance": "haute",
+  "lieu": "Ourrassol-Centre (Nexus-7)",
+  "zone": "bloc_eurasiatique_occidental"
+ },
+ "20260628_075249_fortress_world_sciences_technologies_article.md": {
+  "confiance": "haute",
+  "lieu": "Midwest Désertifié",
+  "zone": "bloc_atlantique"
+ },
+ "20260628_075754_fortress_world_sciences_technologies_article.md": {
+  "confiance": "haute",
+  "lieu": "Ourrassol-Centre (Nexus-7)",
+  "zone": "bloc_eurasiatique_occidental"
+ },
+ "20260628_075917_fortress_world_sciences_technologies_article.md": {
+  "confiance": "haute",
+  "lieu": "Nexus-7 (Ourrassol-Centre)",
+  "zone": "bloc_eurasiatique_occidental"
+ },
+ "20260628_160545_policy_reform_societe_article.md": {
+  "confiance": "haute",
+  "lieu": "Genève-Nexus",
+  "zone": "hub_europeen_regulation"
+ },
+ "20260628_161154_policy_reform_societe_article.md": {
+  "confiance": "haute",
+  "lieu": "Île-de-France (Paris, Créteil, Nanterre)",
+  "zone": "hub_europeen_regulation"
+ },
+ "20260628_161545_policy_reform_societe_article_22aot2098.md": {
+  "confiance": "haute",
+  "lieu": "Genève-Nexus",
+  "zone": "hub_europeen_regulation"
+ },
+ "20260628_175131_eco_communalism_societe_article_20septembre2098.md": {
+  "confiance": "haute",
+  "lieu": "Cévennes Intérieure, Massif Central",
+  "zone": "europe_occidentale_reconstituee"
+ },
+ "20260628_175911_fortress_world_actualites_a_la_une_article_22aot2098.md": {
+  "confiance": "haute",
+  "lieu": "Bratislava-Secteur Alpha",
+  "zone": "bloc_eurasiatique_occidental"
+ },
+ "20260628_233404_fortress_world_actualites_a_la_une_article_8mars2098.md": {
+  "confiance": "haute",
+  "lieu": "Manaus, Nexus-7 Amazônia",
+  "zone": "amazonie_pacte_vert"
+ },
+ "20260628_234522_fortress_world_religion_spiritualite_article_18octobre2098.md": {
+  "confiance": "haute",
+  "lieu": "Terminal Fluvial de Manaus Interdit",
+  "zone": "amazonie_pacte_vert"
+ },
+ "20260705_172900_eco_communalism_sante_article_6aot2098.md": {
+  "confiance": "haute",
+  "lieu": "Belém do Congo",
+  "zone": "congo_bassin_du_fleuve"
+ },
+ "20260705_175125_eco_communalism_sante_article_20septembre2098.md": {
+  "confiance": "haute",
+  "lieu": "Bassin Congo Ressources, Mossaka-Kongo, Pool Malebo",
+  "zone": "congo_bassin_du_fleuve"
+ },
+ "20260705_183701_eco_communalism_sante_article_3octobre2098.md": {
+  "confiance": "haute",
+  "lieu": "Mbandaka, Bassin Congo Ressources",
+  "zone": "congo_bassin_du_fleuve"
+ },
+ "20260706_182946_breakdown_actualites_a_la_une_article_3janvier2098.md": {
+  "confiance": "haute",
+  "lieu": "Lübeck / Hanse Baltique Recomposée",
+  "zone": "arc_eurasien_central"
+ },
+ "20260706_183009_breakdown_politique_article_17janvier2098.md": {
+  "confiance": "haute",
+  "lieu": "Lyon-Part-Dieu",
+  "zone": "arc_sahelo_mediterraneen"
+ },
+ "20260706_183040_breakdown_economie_finance_article_2fvrier2098.md": {
+  "confiance": "haute",
+  "lieu": "Lagos-Est (Nœud NexCore)",
+  "zone": "afrique_de_louest_lagos_sahel"
+ },
+ "20260706_183108_breakdown_environnement_climat_article_19fvrier2098.md": {
+  "confiance": "haute",
+  "lieu": "Tromsø / Longyearbyen (Nœud Nordark)",
+  "zone": "arctique_nordark"
+ },
+ "20260706_183133_breakdown_societe_article_8mars2098.md": {
+  "confiance": "haute",
+  "lieu": "Sfax (Bouches de la Méditerranée)",
+  "zone": "arc_sahelo_mediterraneen"
+ },
+ "20260706_183156_breakdown_medias_communication_article_24mars2098.md": {
+  "confiance": "haute",
+  "lieu": "Nœud Mnemos Pannonie — Győr (Gardiens du Danube)",
+  "zone": "arc_eurasien_central"
+ },
+ "20260706_185558_policy_reform_politique_article_3janvier2098.md": {
+  "confiance": "haute",
+  "lieu": "Genève-Nexus",
+  "zone": "hub_europeen_regulation"
+ },
+ "20260706_185610_policy_reform_societe_article_17janvier2098.md": {
+  "confiance": "haute",
+  "lieu": "Nairobi, Kenya",
+  "zone": "hub_africain_gouvernance"
+ },
+ "20260711_103325_eco_communalism_sante_article_27mai2098.md": {
+  "confiance": "haute",
+  "lieu": "Mbandaka, République Fluviale du Désert Vert",
+  "zone": "congo_bassin_du_fleuve"
+ },
+ "20260711_172517_eco_communalism_sante_article_18octobre2098.md": {
+  "confiance": "haute",
+  "lieu": "Kinshasa-Territoire, quartier Matonge-Renaissance",
+  "zone": "congo_bassin_du_fleuve"
+ },
+ "20260711_173552_eco_communalism_sante_article_4juin2098.md": {
+  "confiance": "haute",
+  "lieu": "Mbandaka, confluence de l'Ubangi et du Congo",
+  "zone": "congo_bassin_du_fleuve"
+ },
+ "20260711_175027_eco_communalism_sante_article_21avril2098.md": {
+  "confiance": "haute",
+  "lieu": "Kinshasa-Territoire, Ngobila-Plage, Biko de Mokomboso Moke",
+  "zone": "congo_bassin_du_fleuve"
+ },
+ "20260716_070008_eco_communalism_sante_article_8mars2098.md": {
+  "confiance": "haute",
+  "lieu": "Mbandaka, bassin du Congo",
+  "zone": "congo_bassin_du_fleuve"
+ },
+ "20260802_185402_eco_communalism_actualites_a_la_une_article_8mars2098.md": {
+  "confiance": "haute",
+  "lieu": "Plateaux Désertés du Massif Central",
+  "zone": "europe_occidentale_reconstituee"
+ },
+ "20260812_172057_fortress_world_histoire_patrimoine_article_3janvier2098.md": {
+  "confiance": "haute",
+  "lieu": "Minneapolis-Seuil",
+  "zone": "bloc_atlantique"
+ },
+ "20260815_100336_policy_reform_actualites_a_la_une_article_6aout2098.md": {
+  "confiance": "haute",
+  "lieu": "Genève-Lacustre / Tampere / La Haye",
+  "zone": "hub_europeen_regulation"
+ },
+ "20260815_101248_policy_reform_actualites_a_la_une_article_27mai2098.md": {
+  "confiance": "haute",
+  "lieu": "Kharg-9 Data Nexus",
+  "zone": "zone_moyen_orient_golfe"
+ },
+ "20260815_101930_new_sustainability_actualites_a_la_une_article_10mai2098.md": {
+  "confiance": "haute",
+  "lieu": "Kharg-9 Data Nexus (détroit d'Ormuz)",
+  "zone": "moyen_orient_golfe"
+ },
+ "20260815_104557_eco_communalism_actualites_a_la_une_article_18octobre2098.md": {
+  "confiance": "haute",
+  "lieu": "Kharg-9 (terminal offshore)",
+  "zone": "proche_orient_en_crise"
+ },
+ "20260815_104841_eco_communalism_actualites_a_la_une_article_6aout2098.md": {
+  "confiance": "haute",
+  "lieu": "Kharg-9 (terminal offshore)",
+  "zone": "proche_orient_en_crise"
+ },
+ "20260815_105017_eco_communalism_actualites_a_la_une_article_7juillet2098.md": {
+  "confiance": "haute",
+  "lieu": "Niamey-Territoire, Agadez, Tamanrasset, Gao, Mopti",
+  "zone": "sahel_numerique_ligue"
+ },
+ "20260815_110232_breakdown_actualites_a_la_une_article_18octobre2098.md": {
+  "confiance": "haute",
+  "lieu": "Agadez (Fragment Ligue du Sahel Numérique)",
+  "zone": "arc_sahelo_mediterraneen"
+ },
+ "20260816_072959_eco_communalism_politique_article_20septembre2098.md": {
+  "confiance": "haute",
+  "lieu": "centrale solaire de Karapınar, Anatolie centrale",
+  "zone": "bioterritoires_anatoliens"
+ },
+ "20260816_163426_policy_reform_politique_article_3octobre2098.md": {
+  "confiance": "haute",
+  "lieu": "Genève (Conseil de Régulation Numérique)",
+  "zone": "hub_europeen_regulation"
+ },
+ "20260816_163501_reference_politique_article_5avril2098.md": {
+  "confiance": "haute",
+  "lieu": "Tbilissi",
+  "zone": "bloc_eurasien_central"
+ },
+ "20260819_185103_fortress_world_religion_spiritualite_article_18octobre2098.md": {
+  "confiance": "haute",
+  "lieu": "Moscou-Est",
+  "zone": "bloc_eurasiatique_occidental"
+ },
+ "20260819_185525_fortress_world_actualites_a_la_une_article_10mai2098.md": {
+  "confiance": "haute",
+  "lieu": "Détroit de Lancaster, Nuuk-Forteresse",
+  "zone": "espace_nordique_arctique"
+ },
+ "20260820_194020_reference_culture_article_3janvier2098.md": {
+  "confiance": "haute",
+  "lieu": "Lyon-Métropole",
+  "zone": "europe_occidentale_reconstruite"
+ },
+ "20260820_194106_reference_culture_article_17janvier2098.md": {
+  "confiance": "haute",
+  "lieu": "Lyon-Métropole",
+  "zone": "europe_occidentale_reconstruite"
+ },
+ "20260820_194143_reference_culture_article_2fevrier2098.md": {
+  "confiance": "haute",
+  "lieu": "Helsinki",
+  "zone": "corridor_arctique_nordique"
+ },
+ "20260820_194226_reference_lifestyle_art_de_vivre_article_19fevrier2098.md": {
+  "confiance": "haute",
+  "lieu": "Manaus, Bassin Amazonien",
+  "zone": "ameriques_multipolaires"
+ },
+ "20260820_194312_reference_lifestyle_art_de_vivre_article_8mars2098.md": {
+  "confiance": "haute",
+  "lieu": "Belém, Bassin Amazonien",
+  "zone": "ameriques_multipolaires"
+ },
+ "20260820_194357_reference_lifestyle_art_de_vivre_article_24mars2098.md": {
+  "confiance": "haute",
+  "lieu": "Manaus, Bassin Amazonien",
+  "zone": "ameriques_multipolaires"
+ },
+ "20260820_194438_reference_histoire_patrimoine_article_5avril2098.md": {
+  "confiance": "haute",
+  "lieu": "Tbilissi",
+  "zone": "bloc_eurasien_central"
+ },
+ "20260820_194521_reference_histoire_patrimoine_article_21avril2098.md": {
+  "confiance": "haute",
+  "lieu": "Tbilissi (Nœud Mnemos)",
+  "zone": "bloc_eurasien_central"
+ },
+ "20260820_194557_reference_histoire_patrimoine_article_10mai2098.md": {
+  "confiance": "haute",
+  "lieu": "Tbilissi",
+  "zone": "bloc_eurasien_central"
+ },
+ "20260820_194817_reference_medias_communication_article_27mai2098.md": {
+  "confiance": "haute",
+  "lieu": "Tromsø (et avant-postes logistiques arctiques)",
+  "zone": "corridor_arctique_nordique"
+ },
+ "20260820_194923_reference_medias_communication_article_4juin2098.md": {
+  "confiance": "haute",
+  "lieu": "Tromsø, Nordkapp, Reykjavik, Mourmansk",
+  "zone": "corridor_arctique_nordique"
+ },
+ "20260820_195136_reference_medias_communication_article_19juin2098.md": {
+  "confiance": "haute",
+  "lieu": "Tromsø",
+  "zone": "corridor_arctique_nordique"
+ },
+ "20260821_095405_fortress_world_economie_finance_article_3janvier2098.md": {
+  "confiance": "haute",
+  "lieu": "Bruxelles-Forteresse",
+  "zone": "bloc_atlantique"
+ },
+ "20260821_095509_fortress_world_economie_finance_article_17janvier2098.md": {
+  "confiance": "haute",
+  "lieu": "Bruxelles-Forteresse",
+  "zone": "bloc_atlantique"
+ },
+ "20260821_095628_fortress_world_societe_article_2fevrier2098.md": {
+  "confiance": "haute",
+  "lieu": "Lagos — Tour Nexus7",
+  "zone": "afrique_subsaharienne_zones_effondrees"
+ },
+ "20260821_095732_fortress_world_societe_article_19fevrier2098.md": {
+  "confiance": "haute",
+  "lieu": "Lagos — Tour Nexus7",
+  "zone": "afrique_subsaharienne_zones_effondrees"
+ },
+ "20260821_100000_fortress_world_sports_article_8mars2098.md": {
+  "confiance": "haute",
+  "lieu": "corridors gris de Biélorussie (Brest-Litovsk, Minsk)",
+  "zone": "bloc_eurasiatique_occidental"
+ },
+ "20260821_100111_fortress_world_sports_article_24mars2098.md": {
+  "confiance": "haute",
+  "lieu": "Stade des Forteresses Unies, Bratislava-Secteur Alpha",
+  "zone": "bloc_eurasiatique_occidental"
+ },
+ "20260821_100154_fortress_world_petites_annonces_services_article_5avril2098.md": {
+  "confiance": "haute",
+  "lieu": "Bruxelles-Forteresse, corridors NexCore Atlantique",
+  "zone": "bloc_atlantique"
+ },
+ "20260821_100236_fortress_world_petites_annonces_services_article_21avril2098.md": {
+  "confiance": "haute",
+  "lieu": "Bruxelles-Forteresse",
+  "zone": "bloc_atlantique"
+ },
+ "20260821_193948_breakdown_faits_divers_article_3janvier2098.md": {
+  "confiance": "haute",
+  "lieu": "Milwaukee-Basse",
+  "zone": "espace_nord_americain_fragmente"
+ },
+ "20260821_194029_breakdown_opinions_editoriaux_article_17janvier2098.md": {
+  "confiance": "haute",
+  "lieu": "Győr (caves des Gardiens du Danube)",
+  "zone": "arc_eurasien_central"
+ },
+ "20260821_194111_breakdown_histoire_patrimoine_article_2fevrier2098.md": {
+  "confiance": "haute",
+  "lieu": "Lagos-Intérieur (Cluster Mnemos)",
+  "zone": "afrique_de_louest_lagos_sahel"
+ },
+ "20260821_195233_policy_reform_societe_article_3janvier2098.md": {
+  "confiance": "haute",
+  "lieu": "Genève-Nexus",
+  "zone": "hub_europeen_regulation"
+ },
+ "20260821_195314_policy_reform_musique_article_17janvier2098.md": {
+  "confiance": "haute",
+  "lieu": "Genève-Nexus",
+  "zone": "hub_europeen_regulation"
+ },
+ "20260821_195352_policy_reform_sante_article_2fevrier2098.md": {
+  "confiance": "haute",
+  "lieu": "Genève-Lacustre",
+  "zone": "hub_europeen_regulation"
+ },
+ "20260821_200157_policy_reform_societe_article_3janvier2098.md": {
+  "confiance": "haute",
+  "lieu": "Nairobi (Kibera-Sud)",
+  "zone": "hub_africain_gouvernance"
+ },
+ "20260822_183332_new_sustainability_politique_article_23aout2098.md": {
+  "confiance": "haute",
+  "lieu": "Genève-Lacus",
+  "zone": "centre_institutionnel_geneve"
+ },
+ "20260822_183438_new_sustainability_politique_article_17janvier2098.md": {
+  "confiance": "haute",
+  "lieu": "Genève-Lacus, Palais des Délibérations Hybrides",
+  "zone": "centre_institutionnel_geneve"
+ },
+ "20260822_183535_new_sustainability_politique_article_2fevrier2098.md": {
+  "confiance": "haute",
+  "lieu": "Genève-Lacus / Tribunal de Gouvernance Algorithmique de Bruxelles",
+  "zone": "centre_institutionnel_geneve"
+ },
+ "20260822_183718_new_sustainability_politique_article_19fevrier2098.md": {
+  "confiance": "haute",
+  "lieu": "Genève-Lacus",
+  "zone": "centre_institutionnel_geneve"
+ },
+ "20260822_183822_new_sustainability_environnement_climat_article_8mars2098.md": {
+  "confiance": "haute",
+  "lieu": "Genève — Siège du Conseil Mondial de la Régénération Écosystémique (CMRE)",
+  "zone": "centre_institutionnel_geneve"
+ },
+ "20260822_184031_new_sustainability_environnement_climat_article_24mars2098.md": {
+  "confiance": "haute",
+  "lieu": "Qaanaaq / détroit de Béring",
+  "zone": "arctic_passage_qaanaaq"
+ },
+ "20260822_184127_new_sustainability_environnement_climat_article_5avril2098.md": {
+  "confiance": "haute",
+  "lieu": "Corridors bioclimatiques (Amazonie, bassin du Congo, Manaus, Brazzaville)",
+  "zone": "reseau_vivant_continental"
+ },
+ "20260822_184228_new_sustainability_environnement_climat_article_21avril2098.md": {
+  "confiance": "haute",
+  "lieu": "Genève",
+  "zone": "centre_institutionnel_geneve"
+ },
+ "20260822_184317_new_sustainability_lifestyle_art_de_vivre_article_10mai2098.md": {
+  "confiance": "haute",
+  "lieu": "Nairobi — quartier de Karen",
+  "zone": "hub_nairobi_kigali"
+ },
+ "20260822_184401_new_sustainability_lifestyle_art_de_vivre_article_27mai2098.md": {
+  "confiance": "haute",
+  "lieu": "Ourrassol, quartier des Archives Vivantes",
+  "zone": "ourrassol_commission_territoriale"
+ },
+ "20260822_184459_new_sustainability_lifestyle_art_de_vivre_article_4juin2098.md": {
+  "confiance": "haute",
+  "lieu": "quartier des Docks rehaussés de Genève",
+  "zone": "centre_institutionnel_geneve"
+ },
+ "20260822_184546_new_sustainability_lifestyle_art_de_vivre_article_19juin2098.md": {
+  "confiance": "haute",
+  "lieu": "Nairobi-Centre",
+  "zone": "hub_nairobi_kigali"
+ },
+ "20260822_184618_new_sustainability_petites_annonces_services_article_7juillet2098.md": {
+  "confiance": "haute",
+  "lieu": "bassin du Congo",
+  "zone": "afrique_continentale"
+ },
+ "20260822_184645_new_sustainability_petites_annonces_services_article_23juillet2098.md": {
+  "confiance": "haute",
+  "lieu": "Heliópolis, São Paulo",
+  "zone": "ameriques_reconfigurees"
+ },
+ "20260822_184710_new_sustainability_petites_annonces_services_article_6aout2098.md": {
+  "confiance": "haute",
+  "lieu": "bassin du Congo",
+  "zone": "afrique_continentale"
+ },
+ "20260822_184744_new_sustainability_petites_annonces_services_article_22aout2098.md": {
+  "confiance": "haute",
+  "lieu": "Nairobi-Centre",
+  "zone": "hub_nairobi_kigali"
+ },
+ "20260822_184823_new_sustainability_meteo_article_4septembre2098.md": {
+  "confiance": "haute",
+  "lieu": "Genève — Centre institutionnel mondial",
+  "zone": "centre_institutionnel_geneve"
+ },
+ "20260822_184850_new_sustainability_meteo_article_20septembre2098.md": {
+  "confiance": "haute",
+  "lieu": "Genève — région lémanique",
+  "zone": "centre_institutionnel_geneve"
+ },
+ "20260822_184941_new_sustainability_meteo_article_3octobre2098.md": {
+  "confiance": "haute",
+  "lieu": "Genève",
+  "zone": "centre_institutionnel_geneve"
+ },
+ "20260822_185029_new_sustainability_meteo_article_18octobre2098.md": {
+  "confiance": "haute",
+  "lieu": "Te Moana Nui (plateforme flottante)",
+  "zone": "te_moana_nui_plateforme"
+ },
+ "20260822_190809_new_sustainability_sciences_technologies_article_3janvier2098.md": {
+  "confiance": "haute",
+  "lieu": "Genève-Lacus",
+  "zone": "centre_institutionnel_geneve"
+ },
+ "20260822_190919_new_sustainability_sciences_technologies_article_17janvier2098.md": {
+  "confiance": "haute",
+  "lieu": "Bassin du Congo",
+  "zone": "afrique_continentale"
+ },
+ "20260822_191134_new_sustainability_sciences_technologies_article_2fevrier2098.md": {
+  "confiance": "haute",
+  "lieu": "Genève-Lacus",
+  "zone": "centre_institutionnel_geneve"
+ },
+ "20260822_191246_new_sustainability_sciences_technologies_article_19fevrier2098.md": {
+  "confiance": "haute",
+  "lieu": "Genève",
+  "zone": "centre_institutionnel_geneve"
+ },
+ "20260822_191336_new_sustainability_opinions_editoriaux_article_8mars2098.md": {
+  "confiance": "haute",
+  "lieu": "Genève (Palais des Nations, Conseil de Régulation Cognitive de l'ONU)",
+  "zone": "centre_institutionnel_geneve"
+ },
+ "20260822_191429_new_sustainability_opinions_editoriaux_article_24mars2098.md": {
+  "confiance": "haute",
+  "lieu": "Helsinki",
+  "zone": "union_nordique_europe_nord"
+ },
+ "20260822_191637_new_sustainability_opinions_editoriaux_article_5avril2098.md": {
+  "confiance": "haute",
+  "lieu": "Helsinki",
+  "zone": "union_nordique_europe_nord"
+ },
+ "20260822_191715_new_sustainability_opinions_editoriaux_article_21avril2098.md": {
+  "confiance": "haute",
+  "lieu": "Genève-Lacus",
+  "zone": "centre_institutionnel_geneve"
+ },
+ "20260822_191812_new_sustainability_education_article_10mai2098.md": {
+  "confiance": "haute",
+  "lieu": "Genève (Académie des Futurs Convergents, Université des Communs Régénératifs)",
+  "zone": "centre_institutionnel_geneve"
+ },
+ "20260822_191909_new_sustainability_education_article_27mai2098.md": {
+  "confiance": "haute",
+  "lieu": "Genève-Lacus — Académie des Systèmes Hybrides",
+  "zone": "centre_institutionnel_geneve"
+ },
+ "20260822_192118_new_sustainability_education_article_4juin2098.md": {
+  "confiance": "haute",
+  "lieu": "Genève-Lacus",
+  "zone": "centre_institutionnel_geneve"
+ },
+ "20260822_192213_new_sustainability_education_article_19juin2098.md": {
+  "confiance": "haute",
+  "lieu": "Genève-Lacus",
+  "zone": "centre_institutionnel_geneve"
+ },
+ "20260822_192316_new_sustainability_medias_communication_article_7juillet2098.md": {
+  "confiance": "haute",
+  "lieu": "Bruxelles — Tribunal de Gouvernance Algorithmique",
+  "zone": "union_nordique_europe_nord"
+ },
+ "20260822_192405_new_sustainability_medias_communication_article_23juillet2098.md": {
+  "confiance": "haute",
+  "lieu": "Bruxelles — Tribunal de Gouvernance Algorithmique",
+  "zone": "union_nordique_europe_nord"
+ },
+ "20260822_192516_new_sustainability_medias_communication_article_6aout2098.md": {
+  "confiance": "haute",
+  "lieu": "Genève — Parlement des Territoires",
+  "zone": "centre_institutionnel_geneve"
+ },
+ "20260822_192617_new_sustainability_medias_communication_article_22aout2098.md": {
+  "confiance": "haute",
+  "lieu": "Genève-Lacus (CGAI)",
+  "zone": "centre_institutionnel_geneve"
+ },
+ "20260822_192707_new_sustainability_religion_spiritualite_article_4septembre2098.md": {
+  "confiance": "haute",
+  "lieu": "Genève-Lacus",
+  "zone": "centre_institutionnel_geneve"
+ },
+ "20260822_192747_new_sustainability_religion_spiritualite_article_20septembre2098.md": {
+  "confiance": "haute",
+  "lieu": "Genève (cathédrale Saint-Pierre / Palais des Nations)",
+  "zone": "centre_institutionnel_geneve"
+ },
+ "20260822_192826_new_sustainability_religion_spiritualite_article_3octobre2098.md": {
+  "confiance": "haute",
+  "lieu": "Genève (Abbaye des Cycles, Meclis-i Atiye, OMC)",
+  "zone": "centre_institutionnel_geneve"
+ },
+ "20260822_192904_new_sustainability_religion_spiritualite_article_18octobre2098.md": {
+  "confiance": "haute",
+  "lieu": "Genève-Lacus (Cathédrale des Flux)",
+  "zone": "centre_institutionnel_geneve"
+ },
+ "20260823_075345_fortress_world_actualites_a_la_une_article_3janvier2098.md": {
+  "confiance": "haute",
+  "lieu": "Plaine de Pannonie (Bratislava-Secteur Alpha, Szeged)",
+  "zone": "bloc_eurasiatique_occidental"
+ },
+ "20260823_075426_fortress_world_actualites_a_la_une_article_17janvier2098.md": {
+  "confiance": "haute",
+  "lieu": "Corridors Gris du Caucase",
+  "zone": "bloc_eurasiatique_occidental"
+ },
+ "20260823_075502_fortress_world_actualites_a_la_une_article_2fevrier2098.md": {
+  "confiance": "haute",
+  "lieu": "plaine de Pannonie (Bratislava-Secteur Alpha, Szeged)",
+  "zone": "bloc_eurasiatique_occidental"
+ },
+ "20260823_075541_fortress_world_actualites_a_la_une_article_19fevrier2098.md": {
+  "confiance": "haute",
+  "lieu": "Ourrassol-Centre (Nexus-7)",
+  "zone": "bloc_eurasiatique_occidental"
+ },
+ "20260823_075621_fortress_world_actualites_a_la_une_article_8mars2098.md": {
+  "confiance": "haute",
+  "lieu": "Ourrassol-Centre (Nexus-7)",
+  "zone": "bloc_eurasiatique_occidental"
+ },
+ "20260823_075655_fortress_world_actualites_a_la_une_article_24mars2098.md": {
+  "confiance": "haute",
+  "lieu": "plaine de Pannonie",
+  "zone": "bloc_eurasiatique_occidental"
+ },
+ "20260823_075732_fortress_world_actualites_a_la_une_article_5avril2098.md": {
+  "confiance": "haute",
+  "lieu": "Plaine de Pannonie (Bratislava-Secteur Alpha, Budapest-Est)",
+  "zone": "bloc_eurasiatique_occidental"
+ },
+ "20260823_075807_fortress_world_actualites_a_la_une_article_21avril2098.md": {
+  "confiance": "haute",
+  "lieu": "Almaty — Zone de Friction",
+  "zone": "bloc_eurasiatique_occidental"
+ },
+ "20260823_075926_fortress_world_actualites_a_la_une_article_10mai2098.md": {
+  "confiance": "haute",
+  "lieu": "Bruxelles-Forteresse",
+  "zone": "bloc_atlantique"
+ },
+ "20260823_080003_fortress_world_actualites_a_la_une_article_27mai2098.md": {
+  "confiance": "haute",
+  "lieu": "Ourrassol-Centre, Nexus-7",
+  "zone": "bloc_eurasiatique_occidental"
+ },
+ "20260823_080037_fortress_world_actualites_a_la_une_article_4juin2098.md": {
+  "confiance": "haute",
+  "lieu": "corridors gris d'Asie centrale",
+  "zone": "bloc_eurasiatique_occidental"
+ },
+ "20260823_080118_fortress_world_actualites_a_la_une_article_19juin2098.md": {
+  "confiance": "haute",
+  "lieu": "Bratislava-Secteur Alpha",
+  "zone": "bloc_eurasiatique_occidental"
+ },
+ "20260823_080156_fortress_world_actualites_a_la_une_article_7juillet2098.md": {
+  "confiance": "haute",
+  "lieu": "Bratislava-Secteur Alpha",
+  "zone": "bloc_eurasiatique_occidental"
+ },
+ "20260823_080230_fortress_world_actualites_a_la_une_article_23juillet2098.md": {
+  "confiance": "haute",
+  "lieu": "Kharg-9 (plateforme pétrolière reconvertie, île de Kharg)",
+  "zone": "golfe_moyen_orient_zone_disputee"
+ },
+ "20260823_080301_fortress_world_actualites_a_la_une_article_6aout2098.md": {
+  "confiance": "haute",
+  "lieu": "Bruxelles-Forteresse",
+  "zone": "bloc_atlantique"
+ },
+ "20260823_080333_fortress_world_actualites_a_la_une_article_22aout2098.md": {
+  "confiance": "haute",
+  "lieu": "Corridor de Bassora, Zone Franche de Tbilissi-Nord, Plaine de Pannonie",
+  "zone": "bloc_eurasiatique_occidental"
+ },
+ "20260823_080442_fortress_world_actualites_a_la_une_article_4septembre2098.md": {
+  "confiance": "haute",
+  "lieu": "Kharg-9 Data Haven",
+  "zone": "golfe_moyen_orient_zone_disputee"
+ },
+ "20260823_080522_fortress_world_actualites_a_la_une_article_20septembre2098.md": {
+  "confiance": "haute",
+  "lieu": "plaine de Pannonie et corridors logistiques caucasiens",
+  "zone": "bloc_eurasiatique_occidental"
+ },
+ "20260823_080556_fortress_world_actualites_a_la_une_article_3octobre2098.md": {
+  "confiance": "haute",
+  "lieu": "Bruxelles-Forteresse",
+  "zone": "bloc_atlantique"
+ },
+ "20260823_080632_fortress_world_actualites_a_la_une_article_18octobre2098.md": {
+  "confiance": "haute",
+  "lieu": "Halifax-Haute",
+  "zone": "bloc_atlantique"
+ },
+ "20260823_125243_policy_reform_actualites_a_la_une_article_3janvier2098.md": {
+  "confiance": "haute",
+  "lieu": "Kharg-9 Data Nexus",
+  "zone": "zone_moyen_orient_golfe"
+ },
+ "20260823_125324_policy_reform_economie_finance_article_17janvier2098.md": {
+  "confiance": "haute",
+  "lieu": "São Paulo",
+  "zone": "bloc_souverainiste_non_signataire"
+ },
+ "20260823_125407_policy_reform_sciences_technologies_article_2fevrier2098.md": {
+  "confiance": "haute",
+  "lieu": "Genève-Lacustre / Genève-Nexus",
+  "zone": "hub_europeen_regulation"
+ },
+ "20260823_125446_policy_reform_societe_article_19fevrier2098.md": {
+  "confiance": "haute",
+  "lieu": "Nairobi (Kibera-Sud, lac Tchad mentionné)",
+  "zone": "hub_africain_gouvernance"
+ },
+ "20260823_125518_policy_reform_international_article_8mars2098.md": {
+  "confiance": "haute",
+  "lieu": "détroit d'Ormuz",
+  "zone": "zone_moyen_orient_golfe"
+ },
+ "20260823_125552_policy_reform_faits_divers_article_24mars2098.md": {
+  "confiance": "haute",
+  "lieu": "Chengdu",
+  "zone": "espace_eurasiatique"
+ },
+ "20260823_125644_policy_reform_opinions_editoriaux_article_5avril2098.md": {
+  "confiance": "haute",
+  "lieu": "Genève (Tours Nexus7, Conseil de Régulation Numérique)",
+  "zone": "hub_europeen_regulation"
+ },
+ "20260823_125726_policy_reform_lifestyle_art_de_vivre_article_21avril2098.md": {
+  "confiance": "haute",
+  "lieu": "Genève-Nexus",
+  "zone": "hub_europeen_regulation"
+ },
+ "20260823_125842_policy_reform_sante_article_10mai2098.md": {
+  "confiance": "haute",
+  "lieu": "Brazzaville, Nairobi, Kigali (corridor Nairobi-Kigali-Brazzaville)",
+  "zone": "hub_africain_gouvernance"
+ },
+ "20260823_130009_policy_reform_education_article_27mai2098.md": {
+  "confiance": "haute",
+  "lieu": "Genève-Nexus / Tampere",
+  "zone": "hub_europeen_regulation"
+ },
+ "20260823_130043_policy_reform_histoire_patrimoine_article_4juin2098.md": {
+  "confiance": "haute",
+  "lieu": "Tillabéri, Niger",
+  "zone": "bloc_souverainiste_non_signataire"
+ },
+ "20260823_130129_policy_reform_medias_communication_article_19juin2098.md": {
+  "confiance": "haute",
+  "lieu": "Genève-Nexus",
+  "zone": "hub_europeen_regulation"
+ },
+ "20260823_130212_policy_reform_religion_spiritualite_article_7juillet2098.md": {
+  "confiance": "haute",
+  "lieu": "Genève-Nexus",
+  "zone": "hub_europeen_regulation"
+ },
+ "20260823_130251_policy_reform_petites_annonces_services_article_23juillet2098.md": {
+  "confiance": "haute",
+  "lieu": "Genève-Lacustre",
+  "zone": "hub_europeen_regulation"
+ },
+ "20260823_130339_policy_reform_meteo_article_6aout2098.md": {
+  "confiance": "haute",
+  "lieu": "Funafuti (Tuvalu)",
+  "zone": "zone_pacifique_industrielle"
+ },
+ "20260823_132012_new_sustainability_actualites_a_la_une_article_3janvier2098.md": {
+  "confiance": "haute",
+  "lieu": "Genève-Lacus",
+  "zone": "centre_institutionnel_geneve"
+ },
+ "20260823_132120_new_sustainability_economie_finance_article_17janvier2098.md": {
+  "confiance": "haute",
+  "lieu": "Genève-Lacus",
+  "zone": "centre_institutionnel_geneve"
+ },
+ "20260823_132201_new_sustainability_sciences_technologies_article_2fevrier2098.md": {
+  "confiance": "haute",
+  "lieu": "Genève-Lacus",
+  "zone": "centre_institutionnel_geneve"
+ },
+ "20260823_132333_new_sustainability_societe_article_19fevrier2098.md": {
+  "confiance": "haute",
+  "lieu": "Genève-Centre",
+  "zone": "centre_institutionnel_geneve"
+ },
+ "20260823_132445_new_sustainability_international_article_8mars2098.md": {
+  "confiance": "haute",
+  "lieu": "Genève — Siège de l'APRC",
+  "zone": "centre_institutionnel_geneve"
+ },
+ "20260823_132517_new_sustainability_faits_divers_article_24mars2098.md": {
+  "confiance": "haute",
+  "lieu": "Tours de verre fumé (Genève)",
+  "zone": "centre_institutionnel_geneve"
+ },
+ "20260823_132555_new_sustainability_opinions_editoriaux_article_5avril2098.md": {
+  "confiance": "haute",
+  "lieu": "Genève — Conseil de Régulation Cognitive de l'ONU",
+  "zone": "centre_institutionnel_geneve"
+ },
+ "20260823_132634_new_sustainability_lifestyle_art_de_vivre_article_21avril2098.md": {
+  "confiance": "haute",
+  "lieu": "Nairobi (Kilimani, Observatoire Climatique Narratif, Nairobi-Centre)",
+  "zone": "hub_nairobi_kigali"
+ },
+ "20260823_132801_new_sustainability_sante_article_10mai2098.md": {
+  "confiance": "haute",
+  "lieu": "Genève — Siège de l'OMS Étendue",
+  "zone": "centre_institutionnel_geneve"
+ },
+ "20260823_132841_new_sustainability_education_article_27mai2098.md": {
+  "confiance": "haute",
+  "lieu": "Genève-Lacus",
+  "zone": "centre_institutionnel_geneve"
+ },
+ "20260823_132922_new_sustainability_histoire_patrimoine_article_4juin2098.md": {
+  "confiance": "haute",
+  "lieu": "Genève — Centre des Mémoires Régénératives",
+  "zone": "centre_institutionnel_geneve"
+ },
+ "20260823_132959_new_sustainability_medias_communication_article_19juin2098.md": {
+  "confiance": "haute",
+  "lieu": "Bruxelles — Tribunal de Gouvernance Algorithmique",
+  "zone": "union_nordique_europe_nord"
+ },
+ "20260823_133112_new_sustainability_religion_spiritualite_article_7juillet2098.md": {
+  "confiance": "haute",
+  "lieu": "Genève — Centre Institutionnel",
+  "zone": "centre_institutionnel_geneve"
+ },
+ "20260823_133148_new_sustainability_petites_annonces_services_article_23juillet2098.md": {
+  "confiance": "haute",
+  "lieu": "delta de l’Ogooué",
+  "zone": "afrique_continentale"
+ },
+ "20260823_133229_new_sustainability_meteo_article_6aout2098.md": {
+  "confiance": "haute",
+  "lieu": "Genève (région lémanique)",
+  "zone": "centre_institutionnel_geneve"
+ },
+ "20260823_134545_new_sustainability_societe_article_3janvier2098.md": {
+  "confiance": "haute",
+  "lieu": "Genève-Centre",
+  "zone": "centre_institutionnel_geneve"
+ },
+ "20260823_134624_new_sustainability_international_article_17janvier2098.md": {
+  "confiance": "haute",
+  "lieu": "Genève (siège flottant de Gibraltar mentionné comme lieu de la session plénière)",
+  "zone": "centre_institutionnel_geneve"
+ },
+ "20260823_134702_new_sustainability_histoire_patrimoine_article_2fevrier2098.md": {
+  "confiance": "haute",
+  "lieu": "Genève (Musée d'Histoire Mondiale de Plainpalais, APRC, CGAI)",
+  "zone": "centre_institutionnel_geneve"
+ },
+ "20260823_145412_new_sustainability_histoire_patrimoine_article_3janvier2098.md": {
+  "confiance": "haute",
+  "lieu": "Genève-Centre",
+  "zone": "centre_institutionnel_geneve"
+ },
+ "20260823_145943_new_sustainability_actualites_a_la_une_article_27mai2098.md": {
+  "confiance": "haute",
+  "lieu": "Genève-Lacus (Siège du CGAI)",
+  "zone": "centre_institutionnel_geneve"
+ },
+ "20260823_150154_new_sustainability_actualites_a_la_une_article_3janvier2098.md": {
+  "confiance": "haute",
+  "lieu": "Genève-Lacus",
+  "zone": "centre_institutionnel_geneve"
+ },
+ "20260823_150241_new_sustainability_actualites_a_la_une_article_17janvier2098.md": {
+  "confiance": "haute",
+  "lieu": "Genève-Lacus",
+  "zone": "centre_institutionnel_geneve"
+ },
+ "20260823_150453_new_sustainability_economie_finance_article_2fevrier2098.md": {
+  "confiance": "haute",
+  "lieu": "São Paulo",
+  "zone": "ameriques_reconfigurees"
+ },
+ "20260823_150556_new_sustainability_economie_finance_article_19fevrier2098.md": {
+  "confiance": "haute",
+  "lieu": "São Paulo / Santo André / Heliópolis",
+  "zone": "ameriques_reconfigurees"
+ },
+ "20260823_150652_new_sustainability_societe_article_8mars2098.md": {
+  "confiance": "haute",
+  "lieu": "Genève-Centre (quartier des Pâquis)",
+  "zone": "centre_institutionnel_geneve"
+ },
+ "20260823_150758_new_sustainability_societe_article_24mars2098.md": {
+  "confiance": "haute",
+  "lieu": "Genève (Centre Régénératif du Léman, quai Wilson)",
+  "zone": "centre_institutionnel_geneve"
+ },
+ "20260823_150859_new_sustainability_education_article_5avril2098.md": {
+  "confiance": "haute",
+  "lieu": "Genève (Académie des Communs Cognitifs)",
+  "zone": "centre_institutionnel_geneve"
+ },
+ "20260823_151001_new_sustainability_education_article_21avril2098.md": {
+  "confiance": "haute",
+  "lieu": "Genève-Lacus",
+  "zone": "centre_institutionnel_geneve"
+ },
+ "20260823_151051_new_sustainability_histoire_patrimoine_article_10mai2098.md": {
+  "confiance": "haute",
+  "lieu": "Genève — Centre de Préservation des Narratives Territoriales (CPNT)",
+  "zone": "centre_institutionnel_geneve"
+ },
+ "20260823_151238_new_sustainability_histoire_patrimoine_article_27mai2098.md": {
+  "confiance": "haute",
+  "lieu": "Qyzylorda, Kazakhstan",
+  "zone": "bloc_eurasien_souverainiste"
+ },
+ "20260823_151302_new_sustainability_petites_annonces_services_article_4juin2098.md": {
+  "confiance": "haute",
+  "lieu": "bassin du Congo",
+  "zone": "afrique_continentale"
+ },
+ "20260823_151332_new_sustainability_petites_annonces_services_article_19juin2098.md": {
+  "confiance": "haute",
+  "lieu": "bassin du Congo (Kinshasa-Nord, Maluku, Nsele, Kimbanseke)",
+  "zone": "afrique_continentale"
+ },
+ "20260823_151734_fortress_world_actualites_a_la_une_article_3janvier2098.md": {
+  "confiance": "haute",
+  "lieu": "Bratislava-Secteur Alpha, Centre de Commandement Orbital d'Helios, Ourrassol-Centre",
+  "zone": "bloc_eurasiatique_occidental"
+ },
+ "20260823_151808_fortress_world_actualites_a_la_une_article_17janvier2098.md": {
+  "confiance": "haute",
+  "lieu": "Minsk, Łódź, Dnipro, Sofia",
+  "zone": "bloc_eurasiatique_occidental"
+ },
+ "20260823_151905_fortress_world_economie_finance_article_2fevrier2098.md": {
+  "confiance": "haute",
+  "lieu": "Bruxelles-Forteresse",
+  "zone": "bloc_atlantique"
+ },
+ "20260823_152004_fortress_world_economie_finance_article_19fevrier2098.md": {
+  "confiance": "haute",
+  "lieu": "Bruxelles-Forteresse",
+  "zone": "bloc_atlantique"
+ },
+ "20260823_152059_fortress_world_histoire_patrimoine_article_8mars2098.md": {
+  "confiance": "haute",
+  "lieu": "Genève-Bunker",
+  "zone": "bloc_atlantique"
+ },
+ "20260823_152143_fortress_world_histoire_patrimoine_article_24mars2098.md": {
+  "confiance": "haute",
+  "lieu": "Genève-Bunker — Chambre de Sécurité Territoriale",
+  "zone": "pacte_forteresses_souveraines"
+ },
+ "20260823_152249_fortress_world_petites_annonces_services_article_5avril2098.md": {
+  "confiance": "haute",
+  "lieu": "corridors des zones tampons",
+  "zone": "zones_grises_tampons"
+ },
+ "20260823_152320_fortress_world_petites_annonces_services_article_21avril2098.md": {
+  "confiance": "haute",
+  "lieu": "Bruxelles-Forteresse",
+  "zone": "bloc_atlantique"
+ },
+ "20260823_175311_breakdown_petites_annonces_services_article_22aout2098.md": {
+  "confiance": "haute",
+  "lieu": "Samarkand-Transit",
+  "zone": "arc_eurasien_central"
+ },
+ "20260823_181126_breakdown_petites_annonces_services_article_20septembre2098.md": {
+  "confiance": "haute",
+  "lieu": "Corridors entre Almaty et la Vistule",
+  "zone": "arc_eurasien_central"
+ },
+ "20260823_181801_breakdown_actualites_a_la_une_article_27mai2098.md": {
+  "confiance": "haute",
+  "lieu": "Kharg-9 (Terminal Pétrolier de Kharg)",
+  "zone": "zone_golfe_levant"
+ },
+ "20260823_181920_breakdown_petites_annonces_services_article_17janvier2098.md": {
+  "confiance": "haute",
+  "lieu": "Corridor Oural-Pannonie (Oural-Central à bassin pannonien)",
+  "zone": "arc_eurasien_central"
+ },
+ "20260823_182210_breakdown_meteo_article_17janvier2098.md": {
+  "confiance": "haute",
+  "lieu": "Sfax",
+  "zone": "arc_sahelo_mediterraneen"
+ },
+ "20260823_182754_breakdown_meteo_article_23juillet2098.md": {
+  "confiance": "haute",
+  "lieu": "Occitanie (plaine de l’Ebre, Massif Central)",
+  "zone": "arc_sahelo_mediterraneen"
+ },
+ "20260825_185426_breakdown_education_article_7juillet2098.md": {
+  "confiance": "haute",
+  "lieu": "Brazzaville-Nord, Kinshasa-Est",
+  "zone": "afrique_centrale_australe"
+ },
+ "20260924_101034_reference_environnement_climat_article_10aout2098.md": {
+  "confiance": "haute",
+  "lieu": "Bassin Amazonien (Belém, Pará)",
+  "zone": "ameriques_multipolaires"
+ }
+}

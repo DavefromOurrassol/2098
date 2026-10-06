@@ -33,6 +33,7 @@ articles_lies:
   - les_jeux_de_la_directive_quand_le_sport_devient_l_ultime_stromsperre
   - les_jeux_du_mur_quand_le_sport_devient_la_derniere_guerre_que_les_blocs_osent_en
 
+zone_principale: bloc_eurasiatique_occidental
 ---
 **Le Marathon des Seuils : quand le sport défie les frontières du Bloc**
 

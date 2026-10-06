@@ -26,7 +26,7 @@ tags:
 image_prompt: "Une frégate militaire hanséatique, le *Sceau du Gotland*, naviguant dans une mer Baltique agitée sous un ciel gris chargé de cendres, avec en arrière-plan les silhouettes de cargos endommagés et des hommes en treillis surveillant depuis un rivage rocheux."
 a_une_photo: false
 image_credit: ""
-journaliste_slug: 
+journaliste_slug: nino_kapanadze
 date_evenement: 14 novembre 2098
 zone_principale: hanse_baltique
 date_publication: 14 novembre 2098
@@ -46,6 +46,8 @@ articles_lies:
 **LYNTH, LIEU ENCOMMANDE**
 
 *Lübeck — 14 novembre 2098*
+
+Nino Kapanadze — Korovodstvo (Le Convoi)
 
 Une grue se dressait encore sur la digue de Travemünde. Son bras oscillait dans un vent chargé d’embruns et de cendres, signal ultime avant que les dockers ne se replient dans les entrepôts blindés de la Hanse Baltique Recomposée. Les données du jour — transmises par les dernières ondes décamétriques de la *Voix du Gotland* — sont claires : deux cargos, l’*Hansa Freyja* et le *Kiel Star*, viennent d’être arraisonnés entre Bornholm et la côte suédoise par une milice locale se revendiquant de l’Autorité du Passage Arctique fantôme. Le prétexte : « droits de transit envers Nordark ». Le terme, dans la bouche de ces hommes en treillis délavé, signifie en réalité 30 % du fret ou l’équivalent en hydrogène volatil.
 

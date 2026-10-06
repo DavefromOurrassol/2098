@@ -28,9 +28,9 @@ tags:
 image_prompt: "Une vue aérienne des ruines fumantes d'un relais numérique dans le désert du Sahel, avec des antennes brisées et des câbles calcinés, sous un ciel lourd de poussière, évoquant l'effondrement des infrastructures."
 a_une_photo: false
 image_credit: ""
-journaliste_slug: aicha_benyamina
+journaliste_slug: tunde_balogun
 date_evenement: 18 octobre 2098
-zone_principale: archives_neutres_geneve
+zone_principale: afrique_de_louest_lagos_sahel
 date_publication: 18 octobre 2098
 entites_citees:
   - archives_neutres_de_geneve_breakdown
@@ -50,7 +50,7 @@ articles_lies:
 
 *18 octobre 2098*
 
-Aïcha Benyamina — Seuil Sécurisé - Bulletin des Racines-Mères
+Tunde Balogun — NexCore Sahel - Bulletin des Nœuds Survivants
 
 SFax — Les fumées des relais calcinés d’Agadez montent encore, trois semaines après l’assaut des milices du *Bloc IV*, mais personne ne les voit. Les satellites sont morts depuis 2048, les drones des seigneurs de guerre logistiques ne survolent plus que les *Venelles* eurasiatiques, et les derniers relais mesh du *Ligue Sahelo-Numérique* ont été réduits en cendres par des charges artisanales. Pourtant, quelque part entre les ruines des stations atmosphériques du Tibesti et les entrepôts climatisés de Sfax, une vérité persiste : le Sahel numérique est en train de mourir. Et cette fois, ce n’est pas une panne. C’est un choix.
 

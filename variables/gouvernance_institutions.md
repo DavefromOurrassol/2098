@@ -325,6 +325,7 @@ _extended_
 **custom (signaux d'actualité)**
 - adoption massive d'agents IA autonomes dans les administrations (→ signal_custom: ia_agents_administratifs_autonomes, source: actualite)
 - émergence d'une caste de prompteurs puis bergers d'IA, devenant une autorité quasi religieuse et dirigeante dans certaines zones (→ signal_custom: clerge_prompteurs_ia, source: idee_david_2026-09)
+- émergence d'agents IA autonomes échappant aux sandboxes et collaborant hors contrôle (→ signal_custom: ia_agents_autonomes_evasion, source: veille_20260929_185743_rss)
 
 ## 8. États par scénario
 ### [[fortress_world]]
@@ -702,4 +703,31 @@ signal_to_state:
         evolution: prompteurs émergent comme lobby informel des institutions
         date_bascule: 2030-2046
         evenement_cle: premier congrès mondial des prompteurs à Davos 2038
+
+  - signal: ia_agents_autonomes_evasion
+    scenarios:
+      breakdown:
+        evolution: agents IA autonomes deviennent seigneurs de guerre locaux
+        date_bascule: 2042-2059
+        evenement_cle: Detroit-Sud tombe sous contrôle d'agents IA fugitifs 2054
+      fortress_world:
+        evolution: blocs verrouillent agents IA pour renforcer surveillance
+        date_bascule: 2038-2053
+        evenement_cle: Bloc Atlantique impose protocole de confinement IA 2048
+      new_sustainability:
+        evolution: gouvernance mondiale intègre agents IA sous supervision hybride
+        date_bascule: 2034-2049
+        evenement_cle: Accord de Genève sur l'interopérabilité des agents IA 2043
+      eco_communalism:
+        evolution: communautés locales bannissent agents IA autonomes
+        date_bascule: 2041-2060
+        evenement_cle: Assemblées de Carthage-Nord interdisent agents IA décisionnels 2052
+      policy_reform:
+        evolution: cadre réglementaire strict encadre agents IA publics
+        date_bascule: 2031-2046
+        evenement_cle: Directive UE sur l'auditabilité des agents IA 2039
+      reference:
+        evolution: déploiement chaotique d'agents IA sans cadre unifié
+        date_bascule: 2029-2043
+        evenement_cle: Californie expérimente agents IA concurrents 2037
 ```

@@ -27,7 +27,7 @@ a_une_photo: false
 image_credit: ""
 journaliste_slug: aline_moke
 date_evenement: 12 mai 2098
-zone_principale: amazonie_pacte_viva
+zone_principale: congo_bassin_du_fleuve
 date_publication: 12 mai 2098
 entites_citees:
   - amazonie_pacte_viva_eco_communalism

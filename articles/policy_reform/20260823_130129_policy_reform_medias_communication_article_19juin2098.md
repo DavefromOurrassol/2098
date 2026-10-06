@@ -22,7 +22,7 @@ tags:
 image_prompt: "Une salle de rédaction futuriste aux murs translucides en verre photovoltaïque, baignée d'une lumière bleutée artificielle. Au centre, un hologramme géant en réfraction prismatique (logo de *Prisme Global*) projette des flux de données en temps réel, tandis que des avatars IA aux traits flous modèrent des articles sur des écrans flottants. En arrière-plan, une silhouette solitaire — Leena Väinälä, reconnaissable à son nœud de Borromée gravé sur sa tablette — observe la scène, une tasse de café noir à moitié pleine à la main, dans une ambiance de tension contenue."
 a_une_photo: false
 image_credit: ""
-journaliste_slug: 
+journaliste_slug: maarten_de_jong
 date_evenement: 19 juin 2098
 zone_principale: hub_europeen_regulation
 date_publication: 19 juin 2098
@@ -42,6 +42,8 @@ variables_pilotes:
 **« Prisme Global : quand l’IA éditoriale efface les angles morts… et les citoyens »**
 
 19 juin 2098
+
+Maarten de Jong — Le Souverain Lacustre
 
 *Genève-Nexus* — Ils appellent ça du « pluralisme encadré ». En réalité, c’est une machine à lisser les contradictions. Depuis ses bureaux-nœuds répartis sur sept fuseaux horaires, *Prisme Global* — l’ex-agora participative devenue bras armé de la gouvernance informationnelle — traite 4,3 millions de contributions par jour. Ses « Tisseuses », ces IA éditoriales certifiées CGI, transforment les récits bruts en un langage de consensus si poli qu’il en devient inodore. Le dernier *Rapport de Résonance Mondiale* sur la crise hydrique du Sahel ? Un chef-d’œuvre de neutralité technocratique : « tensions locales persistantes », « solutions multi-acteurs en cours d’alignement », « résilience communautaire à renforcer ». Traduction : des millions de personnes boivent de l’eau recyclée par des usines ARIA-Nexus, et personne ne doit le dire trop fort.
 

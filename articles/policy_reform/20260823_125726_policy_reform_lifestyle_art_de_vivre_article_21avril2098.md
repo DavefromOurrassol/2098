@@ -22,7 +22,7 @@ tags:
 image_prompt: "Un salon élégant de la *Maison des Mutuelles* à Genève-Nexus, baigné d’une lumière dorée filtrant à travers des stores synthétiques. Au centre, une femme d’une cinquantaine d’années, Élodie Vasseur, assise devant une tasse de café fumant, observe avec attention les reflets du liquide tandis qu’un halo bleuâtre autour de son poignet gauche — vestige d’un ancien module biotech — s’estompe progressivement. En arrière-plan, des écrans holographiques affichent des données de performance en temps réel, mais son regard reste fixé sur la tasse, comme pour savourer l’instant. Ambiance feutrée, couleurs chaudes et naturelles contrastant avec les interfaces numériques froides."
 a_une_photo: false
 image_credit: ""
-journaliste_slug: 
+journaliste_slug: matthijs_van_der_meer
 date_evenement: 21 avril 2098
 zone_principale: geneve_nexus
 date_publication: 21 avril 2098
@@ -42,6 +42,8 @@ variables_pilotes:
 **Le "Slow Augment" : quand Genève-Nexus réinvente la lenteur biotech**
 
 21 avril 2098
+
+Matthijs van der Meer — Le Consensus des Institutions
 Matthijs van der Meer — Le Consensus des Institutions
 
 GENÈVE-NEXUS — Dans les salons feutrés de la *Maison des Mutuelles*, sur les quais de la Rade synthétique, une tendance émerge parmi les cadres augmentés de Genève-Nexus : le *Slow Augment*. Après des décennies de course à l’optimisation cognitive et physique, certains choisissent de ralentir — voire de désactiver — leurs modules biotech, au nom d’un équilibre retrouvé entre performance et humanité.

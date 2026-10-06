@@ -22,7 +22,7 @@ tags:
 image_prompt: "Une salle de conférence high-tech à Genève-Nexus, éclairée par une lumière blanche et froide. Au centre, Leena Väinälä, directrice adjointe de l'ACRA, s'exprime devant un pupitre orné du logo de l'institution — un nœud de réseau inscrit dans un hexagone d'or. Derrière elle, un écran géant affiche en temps réel des flux de données sous forme de rivières chromatiques animées, symboles des algorithmes audités. À ses côtés, des ingénieurs du Réseau des Auditeurs Algorithmiques Indépendants (RAAI) en combinaisons grises, badges holographiques visibles, examinent des tablettes numériques. L'atmosphère est tendue, professionnelle, avec une touche de solennité institutionnelle."
 a_une_photo: false
 image_credit: ""
-journaliste_slug: 
+journaliste_slug: sanne_de_vries
 date_evenement: 2 février 2098
 zone_principale: hub_europeen_regulation
 date_publication: 2 février 2098
@@ -42,6 +42,8 @@ variables_pilotes:
 **L'ACRA SOUS PRESSION : L'AUDIT ALGORITHMIQUE OUVERT RELANCE LE DÉBAT SUR LA SOUVERAINETÉ NUMÉRIQUE**
 
 2 février 2098
+
+Sanne de Vries — Le Consensus des Institutions
 Sanne de Vries — Le Consensus des Institutions
 
 GENÈVE-LACUSTRE — Depuis l'annonce, le 28 janvier, de l'ouverture partielle des algorithmes de l'Autorité Centrale de Régulation Algorithmique (ACRA) aux auditeurs indépendants du Réseau des Auditeurs Algorithmiques Indépendants (RAAI), les couloirs feutrés de Genève-Nexus bruissent d'une tension inédite. Pour la première fois depuis sa création en 2041, l'institution phare de la gouvernance technocratique mondiale accepte de soumettre ses modèles décisionnels à un examen externe — une concession arrachée de haute lutte par les mouvements de résistance algorithmique, mais présentée par ses défenseurs comme une avancée historique en matière de transparence.

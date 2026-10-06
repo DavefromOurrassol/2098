@@ -28,7 +28,7 @@ tags:
 image_prompt: "Une femme (Clara Mendes, fondatrice de la marque Raiz) assise sur une terrasse en bois flottant au-dessus du Rio Negro, entourée de flacons d'huile de copaïba et de plantes amazoniennes, avec en arrière-plan une forêt dense et des drones de surveillance lointains."
 a_une_photo: false
 image_credit: ""
-journaliste_slug: lea_varga
+journaliste_slug: malik_thompson
 date_evenement: 19 février 2098
 zone_principale: amazonie_consortium_viva
 date_publication: 19 février 2098
@@ -47,7 +47,7 @@ articles_lies:
 
 *19 février 2098*
 
-Léa Varga — Réseau Le Dessous des Cartes
+Malik Thompson — El Otro Lado de la Frontera
 
 Manaus, 19 février. La terrasse du *Jardim Flutuante*, café suspendu au-dessus du Rio Negro, est presque vide ce matin. Les clients habituels — biologistes en mission pour Amazonie Consortium Viva, juristes en transit vers les laboratoires de séquençage de Boa Vista, influenceurs en quête de « contenus régénératifs » — ont laissé place à une poignée de locaux et à quelques touristes discrets, venus goûter une tendance qui fait doucement son chemin : le *slow canopée*. Un art de vivre qui prône la lenteur comme acte de résistance, dans une région où chaque gramme de chlorophylle est désormais breveté, monétisé, optimisé.
 

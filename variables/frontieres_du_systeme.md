@@ -377,7 +377,8 @@ _extended_
 - retour du récit civilisationnel spatial (→ retour_recit_civilisationnel_spatial)
 - normalisation de la présence humaine hors Terre
 
-
+**custom (signaux d'actualité)**
+- traité de mobilité climatique souveraine entre Tuvalu et Australie (→ signal_custom: climate_migration_sovereignty_treaty, source: veille_20260928_183444_chatgpt)
 
 ## 8. États par scénario
 ### [[fortress_world]]
@@ -700,4 +701,31 @@ signal_to_state:
         evolution: persistance marginale d'un récit spatial nostalgique et confiné
         date_bascule: 2025-2041
         evenement_cle: dernier lancement habité médiatisé à grande échelle 2032
+
+  - signal: climate_migration_sovereignty_treaty
+    scenarios:
+      breakdown:
+        evolution: traité ignoré dans le chaos migratoire climatique généralisé
+        date_bascule: 2045-2065
+        evenement_cle: naufrage de trois archipels du Pacifique Sud 2058
+      fortress_world:
+        evolution: blocs militarisent les quotas migratoires climatiques souverains
+        date_bascule: 2038-2055
+        evenement_cle: Bloc Atlantique annexe Tuvalu comme territoire offshore 2047
+      new_sustainability:
+        evolution: modèle étendu aux États insulaires menacés par la montée des eaux
+        date_bascule: 2032-2048
+        evenement_cle: Pacte Pacifique Sud pour une souveraineté flottante 2041
+      eco_communalism:
+        evolution: réseaux bioterritoriaux adoptent la mobilité climatique souveraine
+        date_bascule: 2037-2055
+        evenement_cle: charte des réfugiés climatiques comme citoyens bioterritoriaux
+      policy_reform:
+        evolution: ONU adopte le principe de souveraineté post-territoriale climatique
+        date_bascule: 2028-2044
+        evenement_cle: résolution 2036 sur les droits des États submergés
+      reference:
+        evolution: traité Tuvalu-Australie reste une exception marginale non généralisée
+        date_bascule: 2026-2042
+        evenement_cle: dernier tirage au sort du Falepili Mobility Pathway 2039
 ```

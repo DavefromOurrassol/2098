@@ -26,6 +26,10 @@ Modes :
   --all             : traite les 6 scénarios
   --ligne pro_pouvoir|opposition|all : filtre la ligne éditoriale (défaut: all)
   --update          : ajoute uniquement les zones manquantes (ne réécrit pas)
+  --fill-presentation : remplit la fiche publique des journaux qui n'en ont pas
+                        (presentation, ville, periodicite, fondation) — utilisée
+                        par le site des revues ; ne touche à rien d'autre
+  --fill-presentation --force : refait la fiche de TOUS les journaux traités
   --dry-run         : affiche sans écrire
 
 Usage :
@@ -49,6 +53,11 @@ from llm_client import call_llm, resolve_for_tier
 # seront ensuite injectés (via prompt_builder.py) dans chaque article — une
 # rédaction incohérente ici se propage à tous les articles en aval.
 TASK_TIER = "strict"
+# Fiche publique d'un journal (site des revues) : rédaction libre, pas d'identité tierce.
+TASK_TIER_PRESENTATION = "creative_souple"
+CHAMPS_FICHE = ("presentation", "ville", "periodicite", "fondation")
+PERIODICITES = ["quotidien", "hebdomadaire", "bimensuel", "mensuel",
+                "bulletin irrégulier", "radio"]
 
 # ---------------------------------------------------------------------------
 # CHEMINS
@@ -519,6 +528,119 @@ def process_scenario_fill_journalistes(scenario, ligne_filter, journaux, dry_run
         ))
 
 
+# ---------------------------------------------------------------------------
+# FICHE PUBLIQUE DES JOURNAUX (--fill-presentation)
+# ---------------------------------------------------------------------------
+
+SYSTEM_PROMPT_FICHE = """Tu rédiges, pour une revue de presse internationale de l'an 2098, la fiche de présentation des journaux qu'elle reprend, à la manière des fiches « source » de Courrier International.
+Réponds UNIQUEMENT avec un JSON valide. Pas de texte avant ou après. Pas de backticks."""
+
+
+def build_prompt_fiche(scenario, ligne, reseau, lot):
+    """lot : liste de (zone_slug, zone_geo, journal)"""
+    items = []
+    for i, (slug, z, j) in enumerate(lot):
+        lieux = [l.get("nom") if isinstance(l, dict) else str(l)
+                 for l in (z.get("lieux_emblematiques") or [])][:6]
+        items.append({
+            "index": i,
+            "journal": j.get("nom", ""),
+            "consigne_de_ton_interne": j.get("ton", ""),
+            "langue_style": j.get("langue_style", ""),
+            "zone": z.get("nom", slug),
+            "description_zone": (z.get("description") or "")[:400],
+            "periode_transition": z.get("periode_transition", ""),
+            "lieux_emblematiques": lieux,
+        })
+    return """Scénario : {scenario}
+Réseau éditorial du journal : {reseau_nom} — {charte}
+Ligne : {ligne}
+
+Pour chaque journal ci-dessous, rédige sa fiche publique :
+- "presentation" : 2 phrases, 30 à 50 mots, en français, au présent, écrites pour un lecteur. Dis ce qu'est ce journal (type, lectorat, influence, positionnement) de façon neutre et concrète, comme une fiche de revue de presse. N'emploie pas les mots « ton », « registre » ni « style », ne recopie pas la consigne interne, pas de jugement péjoratif, ne parle jamais de fiction ni de scénario.
+- "ville" : la ville où le journal est édité, à choisir dans la zone (lieux emblématiques ou description) ; si le journal est clandestin ou itinérant, écris "itinérant".
+- "periodicite" : une valeur parmi {periodicites}.
+- "fondation" : une année entre 2026 et 2097, cohérente avec l'histoire de la zone (période de transition) et avec la nature du journal (une feuille clandestine est souvent récente).
+
+Réponds avec une liste JSON :
+[{{"index": 0, "presentation": "…", "ville": "…", "periodicite": "…", "fondation": 2061}}, …]
+
+Journaux :
+{items}""".format(
+        scenario=scenario, reseau_nom=reseau["nom"], charte=reseau["charte"], ligne=ligne,
+        periodicites=", ".join(PERIODICITES),
+        items=json.dumps(items, ensure_ascii=False, indent=2),
+    )
+
+
+def _valider_fiche(entry):
+    fiche = {}
+    pres = (entry.get("presentation") or "").strip()
+    if len(pres.split()) >= 12:
+        fiche["presentation"] = pres
+    ville = (entry.get("ville") or "").strip()
+    if ville:
+        fiche["ville"] = ville
+    per = (entry.get("periodicite") or "").strip().lower()
+    if per in PERIODICITES:
+        fiche["periodicite"] = per
+    try:
+        an = int(entry.get("fondation"))
+        if 2026 <= an <= 2097:
+            fiche["fondation"] = an
+    except (TypeError, ValueError):
+        pass
+    return fiche
+
+
+def process_scenario_fill_presentation(scenario, ligne_filter, journaux, dry_run, force, batch_size=5):
+    """
+    Remplit UNIQUEMENT les champs presentation/ville/periodicite/fondation.
+    Sans --force : seulement les journaux qui n'ont pas encore de presentation.
+    Avec --force : tous les journaux du scénario (les 4 champs sont remplacés,
+    rien d'autre n'est touché).
+    """
+    print("\n=== {} (fill-presentation{}) ===".format(scenario.upper(), ", force" if force else ""))
+    fm_zones = {}
+    path = os.path.join(GEOGRAPHIE_DIR, "{}.md".format(scenario))
+    if os.path.exists(path):
+        m = re.match(r"^---\s*\n(.*?)\n---\s*\n", open(path, encoding="utf-8").read(), re.DOTALL)
+        if m:
+            fm = yaml.safe_load(re.sub(r"\[\[([^\]]+)\]\]", r"\1", m.group(1))) or {}
+            fm_zones = {z["slug"]: z for z in fm.get("zones", []) if isinstance(z, dict) and z.get("slug")}
+
+    for ligne in ([ligne_filter] if ligne_filter != "all" else LIGNES):
+        reseau = RESEAUX[scenario][ligne]
+        existing = journaux.get(scenario, {}).get(ligne, {}).get("zones", {})
+        cibles = [slug for slug, j in existing.items() if force or not j.get("presentation")]
+        print("  -- {} : {} journal(aux) à traiter sur {}".format(ligne, len(cibles), len(existing)))
+        if not cibles or dry_run:
+            continue
+        _p, _m = resolve_for_tier(TASK_TIER_PRESENTATION)
+        lots = [cibles[i:i + batch_size] for i in range(0, len(cibles), batch_size)]
+        for n, lot_slugs in enumerate(lots, 1):
+            lot = [(s, fm_zones.get(s, {"nom": s}), existing[s]) for s in lot_slugs]
+            try:
+                raw = call_llm(system_prompt=SYSTEM_PROMPT_FICHE,
+                               user_prompt=build_prompt_fiche(scenario, ligne, reseau, lot),
+                               max_tokens=3000, temperature=0.6,
+                               task_tier=TASK_TIER_PRESENTATION).strip()
+                raw = re.sub(r"^```(?:json)?\s*", "", raw)
+                raw = re.sub(r"\s*```$", "", raw).strip()
+                data, _ = json.JSONDecoder().raw_decode(raw)
+                faits = 0
+                for entry in data:
+                    idx = entry.get("index")
+                    if isinstance(idx, int) and 0 <= idx < len(lot):
+                        fiche = _valider_fiche(entry)
+                        if "presentation" in fiche:
+                            existing[lot[idx][0]].update(fiche)
+                            faits += 1
+                print("    Lot {}/{} ({}) : {} fiche(s)".format(n, len(lots), _m, faits))
+            except Exception as e:
+                print("    [WARN] Lot {}/{} échoué : {} — relancer pour reprendre".format(n, len(lots), e))
+
+
 def parse_args():
     parser = argparse.ArgumentParser(
         description="Génère journaux.yaml depuis les bibles géographiques."
@@ -541,6 +663,11 @@ def parse_args():
                         help="Complète uniquement le champ 'journaliste' des zones "
                              "déjà présentes qui ne l'ont pas encore, sans toucher "
                              "à nom/ton/langue_style.")
+    parser.add_argument("--fill-presentation", action="store_true",
+                        help="Remplit la fiche publique (presentation, ville, periodicite, "
+                             "fondation) des journaux qui n'en ont pas, sans toucher au reste.")
+    parser.add_argument("--force", action="store_true",
+                        help="Avec --fill-presentation : refait la fiche de tous les journaux.")
     parser.add_argument("--dry-run", action="store_true",
                         help="Affiche sans écrire.")
 
@@ -553,11 +680,13 @@ def main():
     scenarios = VALID_SCENARIOS if args.all else [args.scenario]
 
     print("=== generate_journaux.py ===")
-    _p, _m = resolve_for_tier(TASK_TIER)
-    print("Tier : {} → Fournisseur : {} | Modèle : {}".format(TASK_TIER, _p, _m))
+    _p, _m = resolve_for_tier(TASK_TIER_PRESENTATION if args.fill_presentation else TASK_TIER)
+    print("Tier : {} → Fournisseur : {} | Modèle : {}".format(
+        TASK_TIER_PRESENTATION if args.fill_presentation else TASK_TIER, _p, _m))
     print("Scénarios   : {}".format(", ".join(scenarios)))
     print("Ligne       : {}".format(args.ligne))
     print("Mode        : {}{}".format(
+        "fill-presentation" + (" --force" if args.force else "") if args.fill_presentation else
         "fill-journalistes" if args.fill_journalistes else ("update" if args.update else "complet"),
         " [dry-run]" if args.dry_run else ""
     ))
@@ -566,8 +695,21 @@ def main():
     journaux = load_journaux()
 
     # Traitement
+    if args.fill_presentation and not args.dry_run and os.path.exists(JOURNAUX_PATH):
+        import shutil
+        shutil.copy2(JOURNAUX_PATH, JOURNAUX_PATH + ".bak_presentation")
+        print("Sauvegarde : journaux.yaml.bak_presentation")
+
     for scenario in scenarios:
-        if args.fill_journalistes:
+        if args.fill_presentation:
+            process_scenario_fill_presentation(
+                scenario=scenario,
+                ligne_filter=args.ligne,
+                journaux=journaux,
+                dry_run=args.dry_run,
+                force=args.force,
+            )
+        elif args.fill_journalistes:
             process_scenario_fill_journalistes(
                 scenario=scenario,
                 ligne_filter=args.ligne,
@@ -583,8 +725,11 @@ def main():
                 dry_run=args.dry_run,
             )
 
-    # Sauvegarde
-    save_journaux(journaux, dry_run=args.dry_run)
+    # Sauvegarde (en --fill-presentation --dry-run, rien à afficher de plus)
+    if args.fill_presentation and args.dry_run:
+        print("\n[dry-run] rien n'a été appelé ni écrit.")
+    else:
+        save_journaux(journaux, dry_run=args.dry_run)
 
     print("\nTerminé.")
 

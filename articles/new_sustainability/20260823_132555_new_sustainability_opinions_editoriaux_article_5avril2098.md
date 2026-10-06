@@ -22,9 +22,9 @@ tags:
 image_prompt: "Une femme d'une soixantaine d'années, vêtue de laine brute grise et blanc cassé, portant une broche en forme de nœud gordien en fil de cuivre, debout devant un écran géant affichant un réseau de points lumineux interconnectés sur fond noir — symbole de Kontinuum. L'écran projette en transparence des fragments de rapports climatiques partiellement effacés. L'éclairage est froid, blanc-bleuté, typique des espaces institutionnels genevois. En arrière-plan, des délégués en brassards tressés de fibres biosynthétiques observent la scène avec indifférence."
 a_une_photo: false
 image_credit: ""
-journaliste_slug: elodie_chappuis
+journaliste_slug: veera_vartiainen
 date_evenement: 5 avril 2098
-zone_principale: centre_institutionnel_geneve
+zone_principale: union_nordique_europe_nord
 date_publication: 5 avril 2098
 entites_citees:
   - leena_vainala_new_sustainability
@@ -42,7 +42,7 @@ variables_pilotes:
 **Légitimité sans délibération : quand l’IA décide de ce que nous avons le droit d’oublier**
 
 5 avril 2098
-Élodie Chappuis — Le Bulletin des Non-Inscrits
+Veera Vartiainen — Jäämeri — L'Orage Boréal
 
 Helsinki a encore parlé. Leena Väinälä, dans une tribune publiée hier sur le Réseau ARIA, dénonce ce qu’elle appelle « l’amnésie institutionnelle algorithmique » — ce mécanisme par lequel les systèmes de gouvernance hybride décident, sans débat public, quelles parties de notre mémoire collective méritent d’être effacées pour « stabiliser les récits ». Son exemple ? La décision du Conseil de Régulation Cognitive de l’ONU, prise en catimini la semaine dernière à Genève, de déréférencer 17 000 rapports d’audit climatique des années 2030-2040 au motif qu’ils « perturbent les trajectoires de régénération actuelles ». Ces documents, accessibles jusqu’alors via Prisme Global, concernaient des projets de géo-ingénierie avortés, des conflits de souveraineté hydrique en Afrique de l’Est, et des échecs patents de la capture carbone dans le bassin du Congo. Leur suppression n’a fait l’objet d’aucune consultation, pas même auprès du Parlement des Territoires de Nairobi.
 

@@ -22,7 +22,7 @@ tags:
   - Bloc Eurasiatique Occidental
 image_prompt: "Un stade éclairé par des néons bleutés, où des athlètes en maillots floqués d’hexagones courent sous le regard de drones de surveillance ; en arrière-plan, les tours vitrées des Nexus7 dominent la ville, tandis que des écrans géants affichent des scores ARIA en temps réel."
 a_une_photo: false
-journaliste_slug: serhiy_melnyk
+journaliste_slug: aisha_la_guerillera_benali
 date_evenement: 24 mars 2098
 variables_pilotes:
   - geopolitique_conflits
@@ -34,12 +34,13 @@ articles_lies:
   - bruxelles_forteresse_12_octobre_2098-2
   - le_marathon_des_seuils_quand_le_sport_defie_les_frontieres_du_bloc
 
+zone_principale: zone_euro_sud
 ---
 **Les Jeux de la Directive : quand le sport devient l’ultime Stromsperre**
 
 *24 mars 2098*
 
-Serhiy Melnyk — L'Étincelle de Pannonie
+Aisha « La Guérillera » Benali — Il Confine (Le Confins)
 
 ---
 

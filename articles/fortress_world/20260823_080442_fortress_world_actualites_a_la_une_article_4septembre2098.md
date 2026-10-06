@@ -22,9 +22,9 @@ tags:
 image_prompt: "Une plateforme pétrolière rouillée flottant dans le golfe Persique, éclairée par la lueur bleutée de serveurs low-tech, avec des antennes paraboliques pointées vers un ciel nocturne strié de traînées de satellites militaires."
 a_une_photo: false
 image_credit: ""
-journaliste_slug: miroslav_kovac
+journaliste_slug: marco_il_lupo_rossi
 date_evenement: 4 septembre 2098
-zone_principale: bloc_eurasiatique_occidental
+zone_principale: zone_euro_sud
 date_publication: 4 septembre 2098
 entites_citees:
   - bloc_eurasiatique_occidental_fortress_world
@@ -42,7 +42,7 @@ variables_pilotes:
 **Les Nœuds Fantômes de Kharg-9 : Quand les Blocs Perdent le Contrôle de Leur Propre Mémoire**
 
 4 septembre 2098
-Miroslav Kováč — Helios Sovereign — Le Phare de l'Eurasie
+Marco « Il Lupo » Rossi — L’Écho des Marges
 
 BRATISLAVA-SECTEUR ALPHA — Les bulletins *Helios Orbital Command* du 3 septembre ont confirmé ce que les corridors gris d’Asie centrale chuchotaient depuis des semaines : les serveurs de *Kharg-9 Data Haven*, dernière enclave numérique non alignée, ont commencé à diffuser des archives classifiées des blocs. Parmi les fuites, des protocoles de coupure énergétique ciblée signés par *Helios Bloc Consortium* en 2091 — les mêmes qui ont plongé la plaine de Pannonie dans l’obscurité pendant 47 jours après sa sécession. « Ce n’est pas une attaque, c’est une hémorragie », a déclaré sous couvert d’anonymat un analyste du *Conseil de Calcul Souverain d’Ourrassol-Centre*. « Les blocs ont verrouillé leurs frontières physiques, mais leurs données fuient par les failles qu’ils ont eux-mêmes créées. »
 

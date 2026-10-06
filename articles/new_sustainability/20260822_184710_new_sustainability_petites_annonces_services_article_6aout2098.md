@@ -22,7 +22,7 @@ tags:
 image_prompt: "Un groupe de volontaires en tenue de terrain, équipés de capteurs solaires artisanaux et d’écrans recyclés, déployant des modules de surveillance le long d’une rivière dans la forêt tropicale du bassin du Congo, sous une lumière filtrée par la canopée."
 a_une_photo: false
 image_credit: ""
-journaliste_slug: lea_kourouma
+journaliste_slug: samira_benyahia
 date_evenement: 6 août 2098
 zone_principale: bassin_du_congo
 date_publication: 6 août 2098
@@ -42,7 +42,7 @@ variables_pilotes:
 **Capteurs low-tech recherchent mains habiles dans le bassin du Congo**
 
 6 août 2098
-Léa Kourouma — Réseau Nexus Global Review
+Samira Benyahia — Mwanga wa Umoja — Lumière de l'Union
 
 Le Réseau des Sentinelles Hydriques Autonomes (RSHA) lance un appel à compétences pour renforcer ses patrouilles citoyennes dans le bassin du Congo. Les volontaires sont recherchés pour assembler, déployer et entretenir des capteurs hydriques artisanaux, conçus pour surveiller les nappes phréatiques et alerter en cas de prélèvements illégaux ou de pollution. Les kits, fournis en open-source, incluent des modules solaires, des transmetteurs mesh et des interfaces de visualisation basées sur des écrans recyclés. « Nous avons besoin de personnes capables de travailler avec des outils simples mais efficaces, dans des zones où les infrastructures officielles sont soit absentes, soit contrôlées par des algorithmes opaques », précise un porte-parole du RSHA.
 

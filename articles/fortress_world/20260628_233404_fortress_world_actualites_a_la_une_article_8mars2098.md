@@ -25,9 +25,9 @@ tags:
 image_prompt: "Une berge boueuse du Rio Negro de nuit, éclairée par des néons bleutés de *tabernas fluviales*, où des silhouettes échangent des bidons étiquetés *Stromsaft* et des *tubos de boro-arséniate* sous le regard d’un drone de la milice *Estrela do Norte*."
 a_une_photo: false
 image_credit: ""
-journaliste_slug: 
+journaliste_slug: yara_tupinamba
 date_evenement: 12 novembre 2098
-zone_principale: bloc_atlantique
+zone_principale: amazonie_pacte_vert
 date_publication: 12 novembre 2098
 entites_citees:
   - bloc_pacifique_nord_fortress_world
@@ -44,6 +44,8 @@ articles_lies:
 **Le réseau de contrebande énergétique de l'Amazonie franchit un nouveau seuil : la drogue des flots**
 
 *Manaus, *Nexus-7 Amazônia*, le 12 novembre 2098*
+
+Yara Tupinambá — Vert Brisé — Resistência Indígena
 
 Les berges du Rio Negro ne charrient plus seulement des sédiments et des rêves envoûtés — mais désormais des litres de *Stromsaft*, cette drogue hybride concoctée à partir de résidus de condensateurs solaires volés aux centrales Helios BSE et coupelée à du *Glicol Futurista*, un carburant synthétique détourné des convois du Consortium Petrolífero de Belém. Selon les fichiers *Vera Solano*, obtenus via la *Família do Rio*, une milice locale affiliée au *Réseau Vert Clandestin*, le trafic aurait généré, sur les seuls quatorze derniers cycles lunaires, un chiffre d’affaires comparable à celui du marché noir de la *Fracture Numérique* à Casablanca-Périphérie.
 

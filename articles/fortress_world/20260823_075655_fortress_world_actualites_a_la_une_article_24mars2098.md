@@ -22,9 +22,9 @@ tags:
 image_prompt: "Une vue nocturne de Bratislava-Secteur Alpha, où les tours blindées d’Helios BSE brillent de mille lumières, tandis qu’à l’horizon, la plaine de Pannonie s’enfonce dans l’obscurité, seulement éclairée par les feux de campements improvisés. Au premier plan, un écran holographique affiche le logo du Protocole Hiver-9 en surbrillance rouge."
 a_une_photo: false
 image_credit: ""
-journaliste_slug: miroslav_kovac
+journaliste_slug: marco_il_lupo_rossi
 date_evenement: 24 mars 2098
-zone_principale: bloc_eurasiatique_occidental
+zone_principale: zone_euro_sud
 date_publication: 24 mars 2098
 entites_citees:
   - bloc_eurasiatique_occidental_fortress_world
@@ -43,7 +43,7 @@ variables_pilotes:
 
 24 mars 2098
 
-Miroslav Kováč — Helios Sovereign — Le Phare de l'Eurasie
+Marco « Il Lupo » Rossi — L’Écho des Marges
 
 BRATISLAVA-SECTEUR ALPHA — Le Consortium Helios BSE a déclenché hier à 18h42 le Protocole Hiver-9, coupant l’alimentation en énergie solaire orbitale de la plaine de Pannonie pour une durée indéterminée. Cette mesure, prise en coordination avec le Pacte de Stabilité Intérieure, répond à la « menace sécessionniste persistante » que représente la zone autonome proclamée en 2091. Selon un communiqué du Centre de Contrôle Souverain des Forteresses, « l’intégrité énergétique du Bloc Eurasiatique Occidental prime sur les revendications territoriales illégitimes ».
 

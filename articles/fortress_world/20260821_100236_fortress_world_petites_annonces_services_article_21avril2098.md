@@ -21,7 +21,7 @@ tags:
   - travail clandestin
 image_prompt: "Un sas biométrique de NexCore Atlantique Infrastructure, avec un écran mural affichant des offres d’emploi Tier-1 et Tier-2, tandis qu’un agent en combinaison grise vérifie une puce d’identification sous une lumière bleue glaciale."
 a_une_photo: false
-journaliste_slug: lea_voss
+journaliste_slug: dario_il_riciclatore_bianchi
 date_evenement: 21 avril 2098
 variables_pilotes:
   - geopolitique_conflits
@@ -31,6 +31,7 @@ variables_pilotes:
 articles_lies:
   - corridors_pressurises_12_offres_pour_traverser_sans_trace
 
+zone_principale: zone_euro_sud
 ---
 **« Offres d’emploi certifiées : quand le seuil vous choisit »**
 
@@ -46,7 +47,7 @@ Les travailleurs frontaliers, eux, naviguent entre les deux mondes. « Traducteu
 
 Les petites annonces, autrefois un marché libre, sont devenues un miroir de la fragmentation. Entre les murs NexCore et les seuils abandonnés, le travail se négocie désormais comme une ressource critique — avec ses quotas, ses passe-droits et ses zones d’ombre.
 
-Léa Voss — Réseau The Porous Border
+Dario « Il Riciclatore » Bianchi — Il Confine (Le Confins)
 
 ---
 **Voir aussi** : [[corridors_pressurises_12_offres_pour_traverser_sans_trace]]

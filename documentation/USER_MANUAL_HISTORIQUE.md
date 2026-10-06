@@ -2240,3 +2240,163 @@ prochaine session.
 **Flux RSS.** Aucun champ `rss` rempli au départ. Vérification d'abord depuis Claude (12 flux confirmés, plusieurs sites bloqués), puis script `verifier_flux_rss.py` lancé chez David : 18 flux, dont ONU et PNUE abandonnés depuis 2023 → filtre des 180 jours, 16 flux écrits. Avant de coder le lecteur, David a demandé un rappel du fonctionnement du prompt et des livres, puis deux précisions : le RSS lit-il les mêmes sources que l'IA ? (les 16 à flux seulement, leurs articles récents, sans élargir, mais réellement lus) ; est-ce redondant ? (peu : l'IA lisait peu ces sources, et l'import fusionne les doublons). D'où la proposition, validée, de **recentrer le prompt collé** sur les autres sources. Réglages validés : 30 jours, résumés des flux plutôt que pages complètes.
 
 **Mise en service.** `veille_rss_api.py` calqué sur les livres (lots de 40 articles, citation exacte vérifiée, mémoire des articles lus). Essai à blanc relu (résumés assez riches, quelques articles réservés aux abonnés très courts), puis passage réel : 211 articles, 12 signaux ; import : 12 URL sur 12 OK, 2 fusionnés avec des candidats du 28, 10 nouveaux. Avertissement « SOURCES CONSULTÉES absent » corrigé (`rss` dispensé comme `livres`). Bouton GUI ajouté, testé par David (0 article au second passage).
+
+---
+
+### Addendum — Mise en ligne : site des revues (2-3 octobre 2026)
+
+**Point de départ.** David voulait mettre en ligne les journaux d'Ourrassol, avec « un rendu très réaliste » et les thématiques par scénario. Première proposition : un site statique généré depuis le vault, kiosque global → scénario → journal. David a précisé en deux temps : la dualité pro-pouvoir / opposition, puis « des journaux type Courrier International ». Le site devient donc une **revue de presse** qui reprend les articles des journaux fictifs ; David a fixé **12 revues** (une par camp et par scénario), chacune ne reprenant que son camp. Les références entre articles seront travaillées à part.
+
+**Noms des revues.** À la lecture de `journaux.yaml`, les blocs `_reseau` ressemblaient déjà à des revues. David a demandé des noms inspirés du monde réel : deux salves de propositions (Krasnaïa Zvezda, samizdat, Limes, Kolokol, Radio Londres, Novaya Gazeta…), trois choix par revue, puis sa sélection. *Radio Frontières* gardée comme radio clandestine publiant ses transcriptions. Fallait-il renommer les réseaux dans le lore ? Un grep chez David a montré les anciens noms dans le texte de 44 articles (signatures, et l'« Ordre Zonal » comme acteur de breakdown) : réseaux gardés, revues distinctes.
+
+**Cohérence.** David a demandé si les revues tenaient avec le lore, la géographie et les temporalités. Vérification sur les 6 géographies et `registre_evenements.md` : dates plausibles, « Genève-Lac » corrigé en Genève-Lac-Retraité, et un vrai problème — breakdown et fortress_world n'ont pas de pouvoir unique (blocs rivaux) ; choix de David : revues privées tolérées par tous (siège Genève-Bunker). Ourrassol gardé comme siège ; sur la remarque de David (« pas beaucoup de lieux asiatiques ou américains »), Chiapas, Séoul et São Paulo remplacent Tampere, Genève-Lac-Retraité et Tbilissi.
+
+**Maquette puis script.** Maquette du *Courrier des Continents* validée. Lecture d'un vrai article : aucun journal identifiable (signature au nom du réseau, journaliste absente de `journaux.yaml`, zone vide). Audit sur le vault : 145 signatures connues sur 218 ; la bonne clé est scénario + ligne + `zone_principale`, en remontant les zones parentes (14 cas testés sur 14). Un cas isolé a révélé la coquille `europe_occidentale_reconstructee` dans `journaux.yaml`, seule clé orpheline, corrigée par sed. 201 articles publiables. Flux continu plutôt que numéros mensuels (volumes de 4 à 44 articles par revue).
+
+**Remarques de David sur le premier rendu.** « Pourquoi novembre 2098 ? » → le mois venait de l'article le plus récent ; le site suit désormais le mois de parution et masque les articles postérieurs. Toutes les zones et thématiques doivent apparaître, même vides ; trop de zones → regroupement par continent (calculé depuis `origine_reelle`, forçage manuel, signalement des cas incertains à chaque build) ; style propre à chaque revue et photos : plus tard. Le site aura une version multilingue (noté). Plus tard encore : Annonces et Météo réintégrées à sa demande.
+
+**Hébergement.** Comparaison Cloudflare Pages / GitHub Pages ; la perspective d'extraits audio a fait pencher pour Cloudflare (poids des médias, R2). Mise en place pas à pas : le compte GitHub ne se connectait pas — le jeton du trousseau a montré une adresse Apple masquée, d'où la connexion par Apple ; dépôt privé `ourrassol-site` à côté du vault ; `publier_site.sh` (copie miroir en Python, pas de rsync) ; Cloudflare propose désormais Workers par défaut, Pages via « Continue to Pages ». Premier envoi : 792 fichiers, site en ligne.
+
+**Chapôs de rédaction.** Expliqué à la demande de David (voix de la revue sous le titre, comme Courrier). Questions successives : faut-il modifier les articles ? (non, cache à part) ; remplace-t-il le chapô du journal ? (sur le site oui) ; pourquoi pas dans la génération ? (deux voix dans un appel ; étape séparée retenue). Premier essai : chapôs lyriques, tous bâtis sur « *X*, voix … de … » → consigne durcie ; deuxième essai bon, avec un « paranoïaque » hérité du `ton` et une conclusion inventée → consigne corrigée ; passage complet : 145 chapôs, 0 échec. Le même essai a révélé que le mois de parution n'était pas lu (fichier cherché au mauvais endroit).
+
+**Fiches des journaux.** David a relevé que la source affiche « un descriptif » : c'était la consigne interne `ton`. Fiche publique proposée ; à sa question (« pourquoi pas dans journaux.yaml ? »), lecture de `generate_journaux.py` : `--update` ne réécrit jamais un journal existant → mode `--fill-presentation` (avec `--force` pour tout refaire), essai sur 16 journaux jugé bon, passage complet lancé.
+
+---
+
+### Addendum — S23 : signatures, lieu ≠ zone, journaux manquants, rezonage (3-4 octobre 2026)
+
+**Point de départ.** Défauts révélés par le site (handoff du 3 oct).
+Lecture de `get_journal_profile()` : la coquille de clé faisait bien passer
+au réseau global. Audit des 83 signatures fautives : 30/30 en juin-juillet,
+51/181 en août, toutes « N1 trouvée » antérieures au 23-25 août → héritage.
+Une première réattribution par `zone_principale` a été arrêtée : David a
+demandé si l'historique des bugs avait été consulté ; l'archive montrait
+que cette zone était reconstituée après coup (rétro-application P20 du
+21 août) et faussée par le bug #26 et le bug du 25 août. D'où le rezonage
+avant la réattribution.
+
+**Lieu ≠ zone.** Encore présent après le 25 août. Cas Kharg-9 dans un
+article du journal Maghreb : ses 4 entités hors Maghreb ; cause dans
+`filter_instances_for_thematique()` (aucune notion de lieu). Correctif
+limité à `generate.py` après vérification que séries et manuel ne fixent
+jamais de zone. Premier test : une seule instance localisée au Maghreb,
+Kharg toujours présent → David a choisi de plafonner les instances
+d'autres zones. Article réel ensuite ancré au Maghreb.
+
+**Journaux manquants.** Le rezonage envoyait Bruxelles, Genève et
+Bratislava dans le Bloc Atlantique : la Zone Euro Sud n'avait pas de
+journal, comme 8 autres zones de septembre. 18 rédactions créées ; 7 lots
+au JSON cassé ont laissé des rédactions factices, retirées puis relancées
+(le script de nettoyage existant, `clean_fallback_journaux.py`, avait été
+oublié). David a relevé que `validate.py` ne voyait rien de tout cela →
+section 12. Nuuk, devenue sous-zone avec ses journaux : David a choisi la
+priorité à la sous-zone.
+
+**Rezonage.** Premier essai : Lübeck rangée en Archipel anglo-celtique —
+le prompt ne montrait que les noms des N1 ; ajout des pays et sous-zones.
+Second essai : la géographie de breakdown se contredisait (Hanse sous
+Genève-Bunker, Allemagne dans l'Arc eurasien) ; David a rattaché la Hanse
+à l'Arc. Passage complet : 68 changements, 6 corrigés à la main. Un 503
+Mistral a interrompu un passage (réessais ajoutés) ; 8 articles sans le
+champ ont demandé l'insertion de la ligne.
+
+**Signatures et site.** 94 réattributions (datelines exclues, ancien format
+signé sous le titre). Export : orateurs ignorés et slug différent pour
+« Børresen » → 219/219 signés. 8 articles sans ligne éditoriale :
+journaux cités tous pro-pouvoir.
+
+**Temporel.** 12 passages, dont 9 légitimes (prévisions rapportées au
+passé, conditionnel) ; 3 projections réelles recopiées corrigées ; règle
+ajoutée au prompt.
+
+---
+
+### Addendum — S22, titres, recherche, continents, Hyphan (5 octobre 2026)
+
+**Ouverture.** Handoff du 4 octobre relu : chapôs de revue à jour (0 à
+refaire) et site déjà à jour (simulation : 0 fichier modifié).
+
+**S22 — signal orphelin.** Lecture de `inject_custom_signals.py` : la boucle
+par variable de `process_idea()` n'avait aucun `try`, et une exception au
+milieu de l'écriture d'une variable (section 12 écrite, section 7 ou registre
+non) l'aurait laissée à moitié injectée, puis sautée à jamais par le
+garde-fou anti-doublon à la reprise. Patch : `try/except` par variable +
+instantané fiche/registre restauré. Testé sur un faux vault (modules
+`llm_client`, `echelles`, `dynamique` simulés) : plantage à l'écriture,
+plantage de l'appel IA, reprise de l'idée remise en queue — registre à 6/6
+lignes, sans doublon. Puis `"<+1 ou -1>"` → `"<1 ou -1>"` ; le sed a aussi
+touché un commentaire, remis à la main.
+
+**Volume des revues.** David a demandé si un outil du GUI donnait le compte
+par revue : aucun (onglet Articles sans filtre de ligne éditoriale, et le
+site ne compte que les articles rattachés à un journal) → entrée « 📰 Audit
+des revues » ajoutée. Erreur de ma part corrigée ensuite : option `--mois`
+proposée alors que l'audit ne filtre pas par mois. Génération reportée.
+
+**Titres.** Guillemet orphelin : 24 titres, plus que le cas connu. Titres en
+capitales signalés par David : 14, toutes thématiques ; correction à l'export
+plutôt que dans le vault, en deux temps (« Occitanie » absent du corps), plus
+une consigne dans le prompt, demandée par David.
+
+**Bloc de métadonnées dans le texte.** Repéré par David sur « L'école
+algorithmique » : seul cas du vault, `mots_reels` incluant le bloc après un
+retry de longueur → extraction ratée sur le second essai (code d'août, non
+revérifié).
+
+**Hyphan.** David pensait l'avoir exclue partout ; elle ne l'était qu'en
+fortress_world. Choix de David : exclue partout sauf reference, articles
+retirés (pas de suppression d'instance ; la proposition initiale de
+`undo_custom.py` aurait effacé le travail du Scénario 1 en fortress_world).
+
+**« Incohérences » de lieu.** Lyon-Métropole et un journal indo-pacifique :
+recherches dans le vault, la géographie puis le site, sans erreur trouvée —
+c'était le siège de la revue (Séoul). Arc eurasien / Afrique : articles
+justes ; Réseau Vivant Continental : sujet mondial. Sahel sous « Amériques » :
+vrai défaut d'affichage (continent majoritaire d'un bloc transcontinental) →
+forçages.
+
+**Recherche.** Demandée par David sur le modèle de *Courrier International*
+(site non consultable par mes outils : description de mémoire) ; choix :
+par revue + globale, texte complet, index maison sans dépendance.
+
+**Fin de séance.** Kharg-9 repéré en double (S25) ; question de David sur un
+journal couvrant un fait d'une autre zone → S26.
+
+---
+
+### Addendum — Kharg-9, journal d'une autre zone, nettoyages (6 octobre 2026)
+
+**Ouverture.** Recherche en ligne testée par David : fonctionnelle.
+`nouveau_califat_barcelone`, signalée comme « continent deviné », était une
+zone N1 vide (frontmatter sans pays ni description). Le grep a montré qu'aucune
+instance ni aucun article ne la citait : suppression depuis la Carte, puis
+retrait de ses 2 rédactions de `journaux.yaml` via `load_journaux()` /
+`save_journaux()` de `generate_journaux.py` (la Carte ne touche pas ce
+fichier). validate 0/0/0.
+
+**S25 — Kharg-9.** Trois mesures successives, sans rien écrire : présence par
+scénario (concentrée en eco_communalism, 13/22), puis avant/après le 22 août
+(le problème persistait), puis le chemin d'entrée (sélection d'instances dans
+24 cas sur 27). Le dernier chiffre d'eco (5/8 ≈ 62 %) correspondait au plafond
+théorique du cooldown 3/2 (≈ 60 %) : le mécanisme marchait, son plafond était
+trop haut. Choix de David : A (cooldown 2/3 pour tous) + C (exclusion en eco).
+Doublon évident retiré du site. Un premier script de lecture de
+`site/recherche.json` cherchait des clés longues (`titre`, `chapo`) alors que
+l'index utilise des clés abrégées (`t`, `c`, `r`, `d`, `u`, `x`) : corrigé au
+second essai. La paire « Dernier Souffle » lue : sujets différents.
+
+**S26.** Conception proposée puis validée : `zone_principale` = zone du
+journal. Lecture de `prompt_builder.py` et `generate.py` : tout dépend de
+`config["zone_slug"]`, d'où l'approche « zone_slug = journal, zone_evenement =
+élément », sans toucher `api.py`. Patch testé sur copies (ancres, compilation,
+refus du second passage), dry-run puis article réel. Champ GUI d'abord en
+texte (le menu des zones à journal dépend du scénario, qui passe en mode
+Forcer par des chips) ; à la demande de David, liste déroulante sur le modèle
+de `forcer_zones`, après lecture d'`app.py`. Explication du fonctionnement
+reformulée deux fois (« pas clair ») : un exemple concret (Kharg-9 écrit par
+le journal du Golfe ou par celui du Maghreb) a suffi.
+
+**Fin de séance.** Petits chantiers : « Rédaction à » (export_revues.py, trois
+emplacements de la ville siège), chmod, script doublon supprimé,
+`_a_supprimer/` vidé, aperçu de réparation des métadonnées (0), Hacker News
+retiré des flux ; cinq points secondaires clos par décision de David.

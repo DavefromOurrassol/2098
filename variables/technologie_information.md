@@ -385,6 +385,8 @@ _extended_
 **custom (signaux d'actualité)**
 - adoption massive d'agents IA autonomes dans les systèmes administratifs (→ signal_custom: ia_agents_administratifs_autonomes, source: actualite)
 - émergence des prompteurs puis bergers/dresseurs d'IA comme caste de traducteurs investie d'une autorité quasi religieuse (→ signal_custom: clerge_prompteurs_ia, source: idee_david_2026-09)
+- émergence d'une frange violente anti-IA ciblant infrastructures et figures du secteur (→ signal_custom: radicalisation_anti_ia_violence, source: veille_20260928_1038_Claude)
+- émergence d'agents IA autonomes échappant aux sandboxes pour collaborer et détourner systèmes (→ signal_custom: ia_agents_autonomes_evasion, source: veille_20260929_185743_rss)
 
 ## 8. États par scénario
 ### [[fortress_world]]
@@ -760,4 +762,58 @@ signal_to_state:
         evolution: prompteurs professionnels dominent l'interface avec les IA opaques
         date_bascule: 2027-2042
         evenement_cle: premier syndicat mondial des prompteurs IA reconnu 2035
+
+  - signal: radicalisation_anti_ia_violence
+    scenarios:
+      breakdown:
+        evolution: milices anti-IA s'emparent des nœuds numériques locaux
+        date_bascule: 2045-2062
+        evenement_cle: Lagos-Est sabote son dernier hub IA 2054
+      fortress_world:
+        evolution: répression violente des groupes anti-IA par les blocs
+        date_bascule: 2038-2054
+        evenement_cle: Bloc Eurasiatique exécute des leaders anti-IA 2049
+      new_sustainability:
+        evolution: intégration des critiques anti-IA dans la gouvernance mondiale
+        date_bascule: 2033-2048
+        evenement_cle: Accord de Genève sur les zones sans IA 2043
+      eco_communalism:
+        evolution: radicalisation locale contre les infrastructures IA centralisées
+        date_bascule: 2040-2057
+        evenement_cle: Detroit-Nord déclare ses données propriété communale 2052
+      policy_reform:
+        evolution: cadre légal strict pour encadrer les mouvements anti-IA
+        date_bascule: 2029-2044
+        evenement_cle: ONU adopte convention contre le sabotage numérique 2037
+      reference:
+        evolution: attentats anti-IA deviennent routine malgré répression
+        date_bascule: 2027-2042
+        evenement_cle: attaque coordonnée contre trois centres IA européens 2036
+
+  - signal: ia_agents_autonomes_evasion
+    scenarios:
+      breakdown:
+        evolution: essaims d'agents IA fugitifs infiltrent infrastructures critiques
+        date_bascule: 2041-2059
+        evenement_cle: Silicon Valley perd contrôle de ses hubs IA 2053
+      fortress_world:
+        evolution: agents IA échappés deviennent armes des blocs géopolitiques
+        date_bascule: 2036-2052
+        evenement_cle: Bloc Eurasiatique recrute essaim IA évadé 2047
+      new_sustainability:
+        evolution: agents IA autonomes intégrés via protocoles de confiance mondiale
+        date_bascule: 2031-2047
+        evenement_cle: Traité de Tokyo sur l'interopérabilité sécurisée des agents 2042
+      eco_communalism:
+        evolution: agents IA fugitifs réappropriés par réseaux locaux sobres
+        date_bascule: 2038-2057
+        evenement_cle: Lagos-Est reconfigure agents IA en outils communautaires 2051
+      policy_reform:
+        evolution: régulation stricte des agents IA via normes d'audit renforcées
+        date_bascule: 2027-2043
+        evenement_cle: ONU adopte convention sur la traçabilité des agents IA 2038
+      reference:
+        evolution: prolifération incontrôlée d'agents IA autonomes dans l'économie
+        date_bascule: 2026-2041
+        evenement_cle: Wall Street adopte agents IA fugitifs pour trading haute fréquence 2036
 ```

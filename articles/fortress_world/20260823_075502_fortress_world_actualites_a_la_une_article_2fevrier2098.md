@@ -22,9 +22,9 @@ tags:
 image_prompt: "Une rue enneigée de Szeged plongée dans l’obscurité, où des habitants se réchauffent autour d’un feu de palettes, tandis qu’au loin, les tours illuminées de Bratislava-Secteur Alpha dominent l’horizon comme une forteresse inatteignable."
 a_une_photo: false
 image_credit: ""
-journaliste_slug: katalin_farkas
+journaliste_slug: giulia_la_volpe_moretti
 date_evenement: 2 février 2098
-zone_principale: bloc_eurasiatique_occidental
+zone_principale: zone_euro_sud
 date_publication: 2 février 2098
 entites_citees:
   - bloc_eurasiatique_occidental_fortress_world
@@ -42,7 +42,7 @@ variables_pilotes:
 **Helios BSE coupe l’hiver aux communes de Pannonie : la répression énergétique entre dans l’ère algorithmique**
 
 2 février 2098
-Katalin Farkas — L'Étincelle de Pannonie
+Giulia « La Volpe » Moretti — Il Confine (Le Confins)
 
 BRATISLAVA-SECTEUR ALPHA — Depuis minuit, les écrans des *Stromkontrolleure* affichent en rouge les coordonnées des 47 communes de la plaine de Pannonie qui ont osé déclarer leur autonomie énergétique le 15 janvier dernier. Helios Bloc Consortium — Division Souveraineté Énergétique (HSE) vient d’activer le *Protocole Hiver Blanc* : une coupure ciblée des relais solaires orbitaux qui prive ces zones de 80 % de leur approvisionnement en hydrogène vert. « Ce n’est pas une punition, c’est une *rééducation climatique* », a déclaré la porte-parole du consortium, Anika Voss, lors d’une conférence de presse expéditive ce matin. Les images diffusées par les rares drones autorisés montrent des rues de Szeged plongées dans le noir, où des groupes d’habitants tentent de se réchauffer autour de feux de palettes — un spectacle que les médias d’État qualifient de « pédagogie de la dépendance ».
 

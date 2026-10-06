@@ -22,9 +22,9 @@ tags:
 image_prompt: "Une vue nocturne de Bratislava-Secteur Alpha, où les tours blindées d’Helios BSE brillent de mille lumières, tandis qu’à l’horizon, la plaine de Pannonie est plongée dans une obscurité totale, seulement traversée par les lueurs lointaines des émeutes. Au premier plan, un écran géant diffuse le logo d’Helios BSE, encadré par des soldats de VaultCorp en exosquelettes noirs."
 a_une_photo: false
 image_credit: ""
-journaliste_slug: miroslav_kovac
+journaliste_slug: marco_il_lupo_rossi
 date_evenement: 20 septembre 2098
-zone_principale: bloc_eurasiatique_occidental
+zone_principale: zone_euro_sud
 date_publication: 20 septembre 2098
 entites_citees:
   - bloc_eurasiatique_occidental_fortress_world
@@ -42,7 +42,7 @@ variables_pilotes:
 **Helios BSE active le Protocole Éclipse : les coupures ciblées deviennent arme de dissuasion géopolitique**
 
 20 septembre 2098
-Miroslav Kováč — Helios Sovereign — Le Phare de l'Eurasie
+Marco « Il Lupo » Rossi — L’Écho des Marges
 
 BRATISLAVA-SECTEUR ALPHA — Le Consortium Helios Bloc Souveraineté Énergétique (Helios BSE) a déclenché hier soir le *Protocole Éclipse*, une série de coupures énergétiques ciblées affectant les zones frontalières de la plaine de Pannonie et les corridors logistiques caucasiens. Selon les bulletins classifiés du *Centre de Contrôle Orbital Helios*, ces mesures répondent à « des mouvements de populations non autorisés et des tentatives d’infiltration algorithmique depuis les zones tampons ». Les territoires concernés, déjà placés sous surveillance renforcée par *VaultCorp Sovereign Defense Systems*, subissent désormais des rationnements drastiques, plongeant des millions de résidents dans l’obscurité forcée.
 

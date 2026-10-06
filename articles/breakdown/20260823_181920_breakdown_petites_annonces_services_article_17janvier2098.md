@@ -22,7 +22,7 @@ tags:
 image_prompt: "Une halle logistique en béton fissuré sous un ciel d’hiver gris, éclairée par des néons jaunes. Au premier plan, un convoyeur en veste technique noire ornée d’un losange bleu (fanion Venelles) tend un transpondeur basse fréquence à un guide local emmitouflé dans une écharpe usée. En arrière-plan, des camions blindés de fortune alignés, phares éteints, et des silhouettes armées près d’un checkpoint improvisé."
 a_une_photo: false
 image_credit: ""
-journaliste_slug: convoyeurs_recherchent_guides_locaux_pour_corridor_oural_pannonie
+journaliste_slug: timur_akhmetov
 date_evenement: 17 janvier 2098
 zone_principale: corridors_eurasiens_convoyage
 date_publication: 17 janvier 2098

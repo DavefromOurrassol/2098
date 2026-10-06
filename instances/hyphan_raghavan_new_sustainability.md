@@ -86,6 +86,7 @@ tensions_narratives: >
   La trajectoire de Hyphan est un équilibre précaire : son réseau est toléré tant qu'il comble les failles des institutions, mais une crise majeure (sécheresse prolongée, cyberattaque sur les infrastructures) pourrait le transformer en bouc émissaire. Les factions souverainistes hydriques le voient comme une menace à leur contrôle sur les ressources, tandis que les agences de régulation oscillent entre répression et cooptation. Son plus grand défi ? Structurer son mouvement sans tomber dans le piège de la bureaucratie — ou pire, devenir un outil des mêmes systèmes qu'il combat. Certains murmurent qu'il prépare une « charte des communs hydriques », un document qui pourrait redéfinir la gouvernance de l'eau au XXIe siècle.
 
 date_creation: 2026-09-24
+exclure_articles: true
 ---
 
 # Hyphan Raghavan — Réseau des Passeurs de Résilience Hydrique (RPRH)

@@ -25,9 +25,9 @@ tags:
 image_prompt: "Une délégation officielle du CABS-AMV (portant des badges et combinaisons de protection) face à des manifestants masqués tenant des plants de maïs génétiquement modifiés, dans une rue de Nairobi sous tension, avec des unités Kontinuum en arrière-plan."
 a_une_photo: false
 image_credit: ""
-journaliste_slug: elias_mwangi
+journaliste_slug: mikko_lehtinen
 date_evenement: 12 octobre 2098
-zone_principale: nairobi_hub
+zone_principale: hub_europeen_regulation
 date_publication: 12 octobre 2098
 entites_citees:
   - amara_diallo_nkosi_policy_reform
@@ -44,7 +44,7 @@ articles_lies:
 ---
 **Le CABS-AMV dans l'œil du cyclone : quand les semences libérées se rebellent**
 *Genève-Nexus, 12 octobre 2098*
-*Par Elias Mwangi — Réseau Global Governance Report*
+*Mikko Lehtinen — Le Consensus des Institutions*
 
 Dans les sous-sols climatisés du bâtiment du Consortium Africain de Biotechnologies Sociales — Délégation Accréditée auprès de l'Autorité Mondiale du Vivant (CABS-AMV), une réunion secrète s'est tenue hier. Les caméras du Nœud Genève-Nexus ne l'ont pas enregistrée. Pourtant, trois représentants des Collectifs de Biohackers Agro-Communautaires sahariens, un ancien négociateur de l'AMV et une déléguée du Front de Souveraineté Biologique Eurasiatique ont scellé un accord qui pourrait faire trembler ARIA-Nexus.
 

@@ -25,9 +25,9 @@ tags:
 image_prompt: "Un centre de contrôle futuriste souterrain sous Bercy, avec des écrans holographiques affichant des cartes de l'Île-de-France en surbrillance rouge, des techniciens en combinaison ajustant des paramètres, et en arrière-plan, une silhouette floutée de Geneviève Lassalle, coordinatrice régionale du système ARIA-Nexus."
 a_une_photo: false
 image_credit: ""
-journaliste_slug: solene_martelli
+journaliste_slug: mikko_lehtinen
 date_evenement: 12 septembre 2098
-zone_principale: nairobi_hub
+zone_principale: hub_europeen_regulation
 date_publication: 12 septembre 2098
 entites_citees:
   - consortium_africain_de_biotechnologies_sociales_policy_reform
@@ -40,6 +40,8 @@ articles_lies:
 
 ---
 **Kontinuum Sonne l'Alerte en Île-de-France : Réforme Sanitaire ou Reconfiguration Forcée ?**
+
+Mikko Lehtinen — Le Consensus des Institutions
 *Le Monde, édition européenne du 12 septembre 2098 — Solène Martelli*
 
 **Île-de-France** — Les écrans du réseau ARIA-Nexus clignotaient rouge près des gares de Paris-Gare-de-Lyon, ce matin-là. Non pas pour signaler un pic climatique ou une rupture énergétique — mais pour annoncer une **mesure d’anticipation régulatrice** du *Kontinuum*. Depuis son centre de contrôle enfoui sous le quartier de Bercy, le système avait détecté une **anomalie statistique** : une surfréquentation des centres de soins dans trois arrondissements parisiens, couplée à une activité accrue sur les forums locaux de santé communautaire. Le diagnostic ? *« Risque modéré de rupture de cohésion sanitaire à J+14 »*. La prescription : une **réallocation partielle des dotations biotech** de la région vers des stocks d’urgence nouvellement constitués à Créteil et Nanterre.

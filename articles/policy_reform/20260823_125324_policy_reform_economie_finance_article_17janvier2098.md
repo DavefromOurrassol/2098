@@ -22,7 +22,7 @@ tags:
 image_prompt: "Une salle de contrôle climatisée du Complexo Técnico de Gestão Urbana à São Paulo, où des écrans holographiques verts affichent les flux d’allocation de la RPDA. Au premier plan, un ingénieur en combinaison grise avec un badge NFC clignotant manipule discrètement un terminal, tandis que des ombres en arrière-plan échangent des données chiffrées sur des dispositifs portables. Éclairage artificiel blanc froid, contrastant avec les couleurs chaudes des favelas visibles à travers une baie vitrée."
 a_une_photo: false
 image_credit: ""
-journaliste_slug: inti_quispe_mamani
+journaliste_slug: pachamama_sisa_willka
 date_evenement: 17 janvier 2098
 zone_principale: sao_paulo_rpda
 date_publication: 17 janvier 2098
@@ -42,7 +42,7 @@ variables_pilotes:
 **São Paulo : quand l’algorithme de redistribution devient un marché noir**
 
 17 janvier 2098
-Inti Quispe Mamani — Le Peuple des Frontières
+Pachamama Sisa Willka — Le Peuple des Frontières
 
 Depuis l’audit imposé par Genève en 2093, la *Rede Paulista de Distribuição Algorítmica* (RPDA) est sommée de rendre publics les coefficients qui déterminent l’allocation de l’eau, de l’énergie et du logement à São Paulo. Mais ce que les rapports trimestriels ne disent pas, c’est comment ces données fuient, s’échangent, et alimentent un marché parallèle où les priorités urbaines se monnayent comme des actifs financiers.
 

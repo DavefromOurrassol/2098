@@ -23,9 +23,9 @@ tags:
 image_prompt: "Hyphan Raghavan, vêtue d’un sari numérique affichant en temps réel les cours des crédits carbone, debout devant une carte holographique de l’Amazonie où des arbres géolocalisés clignotent en vert ou rouge selon leur statut. En arrière-plan, une forêt dense en lumière dorée du crépuscule, contrastant avec des écrans montrant des données financières et des visages de communautés locales en visioconférence."
 a_une_photo: false
 image_credit: ""
-journaliste_slug: lea_martines
+journaliste_slug: aiyana_begay
 date_evenement: 10 août 2098
-zone_principale: 
+zone_principale: ameriques_multipolaires
 date_publication: 10 août 2098
 type_diffusion: ecrit
 duree_estimee: ""
@@ -44,7 +44,7 @@ variables_pilotes:
 **« Amazônia Viva : quand la forêt négocie son carbone avec le Pacte des Souverains »**
 
 10 août 2098
-Léa Martines — Réseau Le Monde en Tension
+Aiyana Begay — El Clarín de las Américas
 
 Belém, 10 août 2098 — La forêt amazonienne respire encore. Pas grâce à la clémence du climat — les relevés de l’Observatoire Climatique des Territoires (OCT) montrent une saison sèche plus longue de 47 jours qu’en 2050 —, mais parce que ses arbres sont devenus des actifs financiers. Depuis le Traité de Belém de 2055, le Consortium Amazônia Viva (CAV) monétise le carbone piégé dans ses 5,2 millions de km² de biomasse, vendant des crédits à des blocs comme le Pacte des Souverains, dont les émissions dépassent toujours les seuils autorisés par l’Agence Internationale des Énergies Renouvelables (IRENA-2). « Nous ne sauvons pas la forêt, nous la louons », résume avec franchise Jairon dos Santos, coordinateur des coopératives forestières du Pará. « Sans ces accords, les bulldozers auraient tout rasé depuis longtemps. »
 
@@ -52,7 +52,7 @@ Au cœur de cette équation fragile : Hyphan Raghavan, dirigeante d’Ergo-Wian 
 
 La tension a atteint son paroxysme en juin dernier, lorsque EWSH a annoncé un « ajustement » des prix des crédits, justifié par la « volatilité des marchés énergétiques ». Résultat : une baisse de 18 % des revenus pour les communautés locales, alors que les profits du Pacte, selon les estimations de la Banque Mondiale des Transitions Climatiques, ont augmenté de 23 % sur la même période. « C’est du néocolonialisme climatique », accuse Silva. Raghavan, elle, défend une approche « pragmatique ». Lors d’une rare intervention publique à Genève-Nexus en juillet, elle a rappelé que « sans les ressources du Pacte, le CAV n’aurait pas les moyens de protéger 60 % de la forêt encore debout ». Un argument qui sonne comme une menace pour certains, une réalité pour d’autres : le Traité de Belém expire en 2105, et les rumeurs d’un non-renouvellement circulent déjà.
 
-Pour l’heure, la forêt tient. Mais pour combien de temps ? Les scientifiques de l’OCT sont formels : avec un réchauffement à +2,8°C d’ici 2100, même les modèles les plus optimistes prévoient un effondrement partiel de l’écosystème amazonien d’ici 2070. « Nous sommes en train de transformer une catastrophe écologique en une crise financière », résume le climatologue brésilien Pedro Almeida. « Le jour où la forêt ne vaudra plus rien, qui paiera pour la sauver ? »
+Pour l’heure, la forêt tient. Mais pour combien de temps ? Les scientifiques de l’OCT sont formels : avec un réchauffement à +2,8°C d’ici 2100, même les modèles les plus optimistes prévoient un effondrement partiel de l’écosystème amazonien d’ici 2120. « Nous sommes en train de transformer une catastrophe écologique en une crise financière », résume le climatologue brésilien Pedro Almeida. « Le jour où la forêt ne vaudra plus rien, qui paiera pour la sauver ? »
 
 ---
 **Voir aussi** : [[hyphan_raghavan_reference]]

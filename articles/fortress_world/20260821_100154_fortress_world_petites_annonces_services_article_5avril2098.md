@@ -21,7 +21,7 @@ tags:
   - zones grises
 image_prompt: "Un sas de maintenance du secteur K-7, éclairé par des néons bleus, où des silhouettes en combinaisons grises chargent des caisses marquées « NAI-certified » sous le regard d’un drone de surveillance éteint."
 a_une_photo: false
-journaliste_slug: 
+journaliste_slug: dario_il_riciclatore_bianchi
 date_evenement: 5 avril 2098
 variables_pilotes:
   - geopolitique_conflits
@@ -32,10 +32,13 @@ articles_lies:
   - nexus7_l_ecole_ou_l_on_apprend_a_oublier_le_dehors
   - offres_d_emploi_certifiees_quand_le_seuil_vous_choisit
 
+zone_principale: zone_euro_sud
 ---
 **« Corridors pressurisés : 12 offres pour traverser sans trace »**
 
 5 avril 2098
+
+Dario « Il Riciclatore » Bianchi — Il Confine (Le Confins)
 
 Depuis l’entrée en vigueur de la Directive 47-K du Commandement Atlantique, les couloirs sécurisés de Nexcore Atlantique Infrastructure (NAI) sont officiellement réservés aux flux certifiés. Pourtant, sur les forums chiffrés de la zone grise bruxelloise, une dizaine d’annonces proposent encore des « accès alternatifs » — des itinéraires de contournement exploitant les failles des sas biométriques ou les fenêtres de maintenance des corridors pressurisés. Voici une sélection des offres les plus commentées ce mois-ci, vérifiées par nos sources dans les Marches Gris de Tbilissi.
 

@@ -25,9 +25,9 @@ tags:
 image_prompt: "Un vieil homme africain aux traits marqués, assis devant une case en terre battue dans un quartier populaire, épluchant une mangue à la lumière tremblante d’une lampe à huile de palme, entouré d’enfants et d’adultes portant des offrandes de fruits."
 a_une_photo: false
 image_credit: ""
-journaliste_slug: yara_tikuna
+journaliste_slug: aline_moke
 date_evenement: 12 octobre 2098
-zone_principale: trame_mnemos_noeud_reseau
+zone_principale: congo_bassin_du_fleuve
 date_publication: 12 octobre 2098
 entites_citees:
   - consortium_africain_de_biotechnologies_sociales_eco_communalism
@@ -41,6 +41,8 @@ articles_lies:
 
 ---
 **Le Secret de M’Bokolo : à 126 ans, le doyen de l’humanité défie les lois de la médecine communautaire**
+
+Aline Moke — Lokole ya Ebale
 
 *Kinshasa-Territoire, 12 octobre 2098 – Yaripã: A Voz da Floresta, Réseau La Gazette des Communs*
 

@@ -28,9 +28,9 @@ tags:
 image_prompt: "Une salle d'exposition sombre où des visiteurs, équipés de lunettes à réalité augmentée, observent des fresques numériques projetant des visages flous et des cartes de zones d'information \"lissées\", avec en arrière-plan une œuvre interactive intitulée *La Muraille de Verre* où des écrans tactiles brisés révèlent des extraits de journaux censurés."
 a_une_photo: false
 image_credit: ""
-journaliste_slug: lea_vasseur
+journaliste_slug: sofia_martin_keller
 date_evenement: 3 janvier 2098
-zone_principale: singapour_est
+zone_principale: europe_occidentale_reconstruite
 date_publication: 3 janvier 2098
 entites_citees:
   - bureaux_de_regulation_informationnelle_reference
@@ -51,7 +51,7 @@ articles_lies:
 
 *3 janvier 2098*
 
-**Léa Vasseur — Réseau Le Monde en Tension**
+**Sofía Martín Keller — L'Écho des Institutions**
 
 LYON-MÉTROPOLE — La salle 14 du Musée des Archives Vivantes était comble ce soir-là. Pas pour une rétrospective officielle, mais pour l’exposition *Effacements*, une série de fresques numériques signées par le collectif *Nœud Jaune*, dont les membres, tous accrédités par les Bureaux de Régulation Informationnelle, risquent pourtant leur licence d’émission. Le sujet ? Les récits effacés des crises climatiques des années 2040, ceux que les Plateformes Centralisées de Narration Officielle ont relégués dans les limbes de leurs algorithmes de modération. Sur les écrans, des visages flous, des voix étouffées, des cartes de chaleur montrant les zones où l’information a été « lissée » pour éviter la panique. « Ce n’est pas de l’art, c’est de l’archéologie », murmure une visiteuse en ajustant ses lunettes à réalité augmentée, qui superposent aux œuvres les archives certifiées par l’ONG de Préservation Patrimoniale Numérique.
 

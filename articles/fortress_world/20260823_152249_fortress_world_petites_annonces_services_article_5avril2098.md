@@ -22,9 +22,9 @@ tags:
 image_prompt: "Une main colle une annonce manuscrite sur un mur de béton fissuré, éclairée par une lumière dorée filtrant à travers une structure métallique rouillée. En arrière-plan, des silhouettes se déplacent dans un marché gris, entre étals de fortune et écrans fracturés affichant des offres d’emploi non certifiées. Le logo de Nexcore Atlantique Infrastructure — deux barres parallèles argentées sur fond anthracite — est partiellement visible sur un panneau de contrôle climatique abandonné."
 a_une_photo: false
 image_credit: ""
-journaliste_slug: 
+journaliste_slug: javier_el_reciclador_mendez
 date_evenement: 5 avril 2098
-zone_principale: nexcore_atlantique_infrastructure
+zone_principale: zone_euro_sud
 date_publication: 5 avril 2098
 entites_citees:
   - nexcore_atlantique_infrastructure_fortress_world
@@ -42,6 +42,8 @@ variables_pilotes:
 **Offres d’emploi en zone tampon : le marché gris des compétences résiduelles**
 
 5 avril 2098
+
+Javier « El Reciclador » Mendez — L’Écho des Marges
 
 Les corridors pressurisés de Nexcore Atlantique Infrastructure ne sont pas les seuls lieux où se négocie le travail en 2098. Dans les interstices des zones tampons, une économie parallèle émerge, alimentée par des plateformes numériques non certifiées et des annonces manuscrites collées sur les murs de béton des anciens parkings. Voici quelques offres glanées cette semaine, diffusées via les réseaux mesh locaux et les relais humains des Marchés Gris de Tbilissi.
 

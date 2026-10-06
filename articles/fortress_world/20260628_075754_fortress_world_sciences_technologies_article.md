@@ -24,9 +24,9 @@ tags:
 image_prompt: "Une salle de contrôle futuriste aux écrans holographiques affichant des cartes géopolitiques fragmentées, où des ingénieurs en combinaison grise observent en silence des flux de données verrouillés, tandis que des zones périphériques clignotent en rouge sur un globe terrestre divisé en blocs."
 a_une_photo: false
 image_credit: ""
-journaliste_slug: 
+journaliste_slug: anja_weiss
 date_evenement: 7 février 2098
-zone_principale: nexus_biosyn_division_pacifique
+zone_principale: bloc_eurasiatique_occidental
 date_publication: 7 février 2098
 entites_citees:
   - bureau_gouvernance_algorithmique_fortress_world
@@ -39,10 +39,11 @@ articles_lies:
   - les_agents_autonomes_franchissent_le_seuil_decisionnel_comment_l_ia_souveraine_e
   - les_agents_autonomes_franchissent_le_seuil_decisionnel_quand_l_ia_ne_demande_plu
 
+ligne_editoriale: pro_pouvoir
 ---
 # Quand les blocs se lisent eux-mêmes : l'IA décisionnelle au miroir de ses propres angles morts
 
-**NEXUS TECH REVIEW — Ourrassol-Centre / Bratislava-Secteur Alpha**
+**Anja Weiss — Helios Sovereign — Le Phare de l'Eurasie**
 *Publié le 7 février 2098*
 
 ---

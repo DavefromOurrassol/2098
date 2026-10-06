@@ -27,9 +27,9 @@ tags:
 image_prompt: "Une forteresse de serveurs futuriste flottant sur une mer turquoise sous un ciel orageux, entourée de drones de surveillance, avec en arrière-plan les contours flous d’une ville côtière nommée \"Kharg-9 Data Nexus\"."
 a_une_photo: false
 image_credit: ""
-journaliste_slug: elodie_vasseur
+journaliste_slug: layla_al_khatib
 date_evenement: 27 mai 2098
-zone_principale: hub_europeen_regulation
+zone_principale: zone_moyen_orient_golfe
 date_publication: 27 mai 2098
 entites_citees:
   - autorite_mondiale_du_vivant_amv_policy_reform
@@ -52,7 +52,7 @@ articles_lies:
 
 *27 mai 2098*
 
-**Élodie Vasseur — Réseau Global Governance Report**
+**Layla Al-Khatib — Al-Istiqāma al-Mu'āṣira (الاستقامة المعاصر)**
 
 Depuis trois jours, les écrans de contrôle du Conseil Intergouvernemental de Régulation Technologique (CIRT) affichent une anomalie persistante : Kharg-9 Data Nexus, la plateforme offshore ancrée dans le golfe Persique, a cessé de transmettre ses rapports de conformité aux auditeurs de l’Autorité Centrale de Régulation Algorithmique (ACRA). Officiellement, une « panne technique ». En réalité, une crise institutionnelle sans précédent, révélatrice des fractures d’un monde où la gouvernance algorithmique se heurte à ses propres limites.
 

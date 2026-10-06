@@ -356,6 +356,7 @@ _extended_
 
 **custom (signaux d'actualité)**
 - irrigation solaire massive au Sahel accentue les conflits hydriques (→ signal_custom: irrigation_solaire_tensions_eau, source: actualite)
+- centres de données géants consomment massivement eau dans mégapoles en stress hydrique (→ signal_custom: data_centers_water_wars_megapoles, source: veille_20260928_1038_Claude+rss)
 
 ## 8. États par scénario
 ### [[fortress_world]]
@@ -703,4 +704,31 @@ signal_to_state:
         evolution: tensions persistantes entre États pour l'accès à l'eau solaire
         date_bascule: 2025-2040
         evenement_cle: Burkina Faso et Ghana s'opposent sur le barrage de Bagré 2036
+
+  - signal: data_centers_water_wars_megapoles
+    scenarios:
+      breakdown:
+        evolution: centres de données abandonnés par pénurie hydrique généralisée
+        date_bascule: 2045-2063
+        evenement_cle: Chennai ferme ses hubs numériques 2058
+      fortress_world:
+        evolution: blocs énergétiques rationnent eau pour data centers prioritaires
+        date_bascule: 2037-2053
+        evenement_cle: Bloc Sibérien coupe eau bidonvilles Jakarta 2049
+      new_sustainability:
+        evolution: optimisation IA réduit consommation hydrique des hubs numériques
+        date_bascule: 2032-2048
+        evenement_cle: Lagos déploie système hydrique intelligent 2043
+      eco_communalism:
+        evolution: bidonvilles coupent approvisionnement des centres de données
+        date_bascule: 2039-2058
+        evenement_cle: Dharavi bloque adduction NTT 2053
+      policy_reform:
+        evolution: quotas hydriques imposés aux data centers des mégapoles
+        date_bascule: 2029-2045
+        evenement_cle: Afrique du Sud légifère quotas eau 2037
+      reference:
+        evolution: tensions persistantes entre data centers et populations locales
+        date_bascule: 2026-2042
+        evenement_cle: NTT consomme 250 000L/jour à Chennai 2034
 ```

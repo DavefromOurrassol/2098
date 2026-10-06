@@ -27,7 +27,7 @@ a_une_photo: false
 image_credit: ""
 journaliste_slug: aline_moke
 date_evenement: 12 septembre 2098
-zone_principale: sahel_numerique_ligue
+zone_principale: congo_bassin_du_fleuve
 date_publication: 12 septembre 2098
 entites_citees:
   - confederation_bassins_vivants_eco_communalism

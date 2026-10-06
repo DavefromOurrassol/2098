@@ -26,9 +26,9 @@ tags:
 image_prompt: "Un technicien en combinaison usée, portant le logo de NexFlow Ltd, ajuste des câbles sous-marins rouillés dans les eaux troubles de la lagune de Lagos, avec en arrière-plan des panneaux solaires artisanaux et un écran holographique affichant un compteur de crédits-chuteurs en rouge."
 a_une_photo: false
 image_credit: ""
-journaliste_slug: 
+journaliste_slug: zainabou_maiga
 date_evenement: 12 novembre 2098
-zone_principale: arctique_nordark
+zone_principale: afrique_de_louest_lagos_sahel
 date_publication: 12 novembre 2098
 entites_citees:
   - arctique_nordark_breakdown
@@ -46,6 +46,8 @@ articles_lies:
 **LA DETTE AVANCE EN CRÉDITS-CHUTEURS**
 
 *Lagos-Est (Nœud NexCore), 12 novembre 2098*
+
+Zainabou Maïga — Ona Tani (Ceux qui Veillent)
 
 Les techniciens de Lagos Est Nexcore appellent ça « ajuster la synchronisation ». Les autres appellent ça « payer le koro ». Six cents grammes de skrei séché, trois heures de maintenance sur le câble sous-marin de Badagry, ou bien 720 crédits-chuteurs — c’est le tarif pour que vos données continuent de circuler après 16h, quand la courbe de demande sur le nœud de Victoria Island s’affole. Et c’est ainsi que, ce matin même, la corporation agro-logistique **Aquafarms Ltd** a versé son tribut au registre Nordark via la Guilde des Techniciens Nomades, afin que ses palettes de protéines synthétiques arrivent à temps au marché de Lekki. Pas par bienveillance. Par survie.
 

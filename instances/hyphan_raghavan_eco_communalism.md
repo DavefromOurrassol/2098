@@ -81,6 +81,7 @@ tensions_narratives: >
   Hyphan Raghavan est à la croisée des chemins : son succès grandissant en fait une cible pour les Cartels de Narration de Pénurie, qui voient en lui une menace pour leur contrôle des récits locaux. Certains dans les Assemblées Bioterritoriales Régionales le considèrent comme un traître pour son travail avec les dissidents, tandis que ces derniers le soupçonnent de vouloir les intégrer de force aux réseaux coopératifs. Sa trajectoire pourrait basculer vers une figure de martyr, un leader charismatique, ou un simple médiateur oublié, selon que les tensions entre communautés s'apaisent ou s'exacerbent.
 
 date_creation: 2026-09-24
+exclure_articles: true
 ---
 
 # Hyphan Raghavan — Le Passeur des Veilles

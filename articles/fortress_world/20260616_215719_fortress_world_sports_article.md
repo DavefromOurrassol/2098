@@ -24,9 +24,9 @@ tags:
 image_prompt: "Lena Orizović, sprinteuse du Corridor dalmate, assise sur le parvis humide du Helios Arena à Bratislava, serrant un sac de pointes estampillé Helios Bloc Consortium, avec en arrière-plan des athlètes désœuvrés et un stade vide sous un dôme de verre blindé."
 a_une_photo: false
 image_credit: ""
-journaliste_slug: 
+journaliste_slug: marco_il_lupo_rossi
 date_evenement: 17 septembre 2098
-zone_principale: bloc_atlantique
+zone_principale: zone_euro_sud
 date_publication: 17 septembre 2098
 entites_citees:
   - bureau_gouvernance_algorithmique_fortress_world
@@ -40,8 +40,11 @@ articles_lies:
   - les_agents_autonomes_franchissent_le_seuil_decisionnel_comment_l_ia_souveraine_e
   - les_agents_autonomes_franchissent_le_seuil_decisionnel_quand_l_ia_ne_demande_plu
 
+ligne_editoriale: pro_pouvoir
 ---
 # Les Jeux de Bratislava annulés : quand le sport meurt aux portes des blocs
+
+Marco « Il Lupo » Rossi — L’Écho des Marges
 
 **Bratislava-Secteur Alpha | 17 septembre 2098 | Rubrique Sports**
 

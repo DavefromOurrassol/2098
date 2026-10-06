@@ -22,9 +22,9 @@ tags:
 image_prompt: "Le siège flottant du Conseil Mondial de la Régénération Écosystémique (CMRE) au-dessus du lac Léman, baigné d’une lumière crépusculaire, avec des écrans holographiques projetant des cartes du Réseau Vivant Continental en alerte rouge, tandis que des délégués en tenue institutionnelle observent les données avec gravité."
 a_une_photo: false
 image_credit: ""
-journaliste_slug: leila_berset
+journaliste_slug: wanjiku_mwangi
 date_evenement: 5 avril 2098
-zone_principale: centre_institutionnel_geneve
+zone_principale: reseau_vivant_continental
 date_publication: 5 avril 2098
 entites_citees:
   - conseil_mondial_de_la_regeneration_ecosystemique_cmre_new_sustainability
@@ -43,7 +43,7 @@ variables_pilotes:
 
 *5 avril 2098*
 
-Leïla Berset — Genève Global Governance Digest
+Wanjiku Mwangi — BioCorridors Nexus
 
 GENÈVE — Les couloirs du Conseil Mondial de la Régénération Écosystémique (CMRE) bruissent d’une tension inhabituelle ce matin. Sur les écrans translucides qui tapissent les murs, les cartes du Réseau Vivant Continental (RVC) clignotent en rouge : des corridors entiers, de l’Amazonie au bassin du Congo, voient leurs indicateurs de biodiversité s’effondrer en temps réel. « Ce n’est pas une crise écologique, c’est une crise de gouvernance », lâche Elias Voss, délégué du Consortium Amazônia Viva, les yeux rivés sur les données. « Quelqu’un sabote nos algorithmes. Et cette fois, ce n’est pas une panne. C’est une déclaration de guerre. »
 

@@ -46,13 +46,14 @@ import argparse
 import json
 import re
 import sys
+from datetime import date
 from pathlib import Path
 
 import yaml
 
 from llm_client import call_llm  # tier structured_strict — canonique/référencé
 from echelles import CONVENTION_NIVEAUX, CONSIGNE_IMPACT, texte_echelle, verifier_impact
-import dynamique as dyn  # niveaux de persistance (module pur, aucune lecture de fichier)
+import dynamique as dyn  # S22 (5 octobre 2026) -- niveaux de persistance (module pur, aucune lecture de fichier)
 
 
 # ---------------------------------------------------------------------------
@@ -83,6 +84,17 @@ MAX_DELTA_SIGNAL = 10
 # en 2097 (il faut au moins un an de fenêtre avant 2098).
 ANNEE_APPARITION_MIN = 2025
 ANNEE_APPARITION_MAX = 2097
+
+
+def annee_plancher_bascule(annee_apparition=None):
+    """Première année possible pour le début d'une fenêtre `date_bascule`
+    (1er octobre 2026, demande de David) : la plus tardive entre l'année
+    d'apparition du signal (si renseignée) et l'année EN COURS. Un signal
+    faible n'a, par définition, pas encore transformé le système : sa bascule
+    ne peut pas être dans le passé réel, même pour un signal apparu avant
+    (ex. observé en 2025, bascule au plus tôt en 2026). L'année en cours est
+    lue sur l'horloge, pas figée : le plancher avance tout seul chaque année."""
+    return max(annee_apparition or 0, date.today().year)
 
 SCENARIOS = [
     "breakdown",
@@ -298,7 +310,15 @@ def call_claude_json(client, system, user_content, max_tokens=3000):
     ).strip()
     text = re.sub(r"^```(?:json)?\s*", "", text)
     text = re.sub(r"\s*```$", "", text)
-    return json.loads(text)
+    try:
+        return json.loads(text)
+    except json.JSONDecodeError:
+        # 1er octobre 2026 : Mistral écrit "polarite": {"breakdown": +1, ...}
+        # (calqué sur l'exemple "<+1 ou -1>" du prompt, retiré le 5 oct), invalide en JSON --
+        # 4 idées sur 5 parties en needs_review le 30 sept pour cette seule
+        # raison. Correction appliquée UNIQUEMENT en cas d'échec du parsing,
+        # pour ne jamais toucher un "+20 %" légitime dans un texte déjà valide.
+        return json.loads(re.sub(r'(:\s*)\+(\d)', r'\1\2', text))
 
 
 FORMAT_RULES = """\
@@ -518,15 +538,22 @@ def step2_develop(client, idea_text, source, variable_slug, signal_slug, categor
     # cette date, la même dans les 6 scénarios -- il ne peut donc basculer
     # nulle part avant. Contrainte vérifiée mécaniquement ensuite par
     # validate_signal_block().
+    # Plancher de bascule (1er octobre 2026) : toujours envoyé, même sans
+    # année d'apparition -- voir annee_plancher_bascule().
+    plancher = annee_plancher_bascule(annee_apparition)
     apparition_txt = ""
     if annee_apparition:
         apparition_txt = (
             f"\n⚠️ ANNÉE D'APPARITION IMPOSÉE : ce signal apparaît en {annee_apparition}, "
-            f"dans les 6 scénarios. Aucune fenêtre `date_bascule` ne peut commencer avant "
-            f"{annee_apparition}, et l'année de chaque `evenement_cle` doit être "
-            f"{annee_apparition} ou plus tard. La bascule elle-même peut venir plus tard, "
-            f"et à des dates différentes selon les scénarios.\n"
+            f"dans les 6 scénarios.\n"
         )
+    apparition_txt += (
+        f"\n⚠️ PLANCHER DE BASCULE : aucune fenêtre `date_bascule` ne peut commencer "
+        f"avant {plancher}, et l'année de chaque `evenement_cle` doit être {plancher} "
+        f"ou plus tard (un signal faible n'a pas encore basculé dans le monde réel). "
+        f"La bascule elle-même peut venir plus tard, et à des dates différentes selon "
+        f"les scénarios.\n"
+    )
 
     proches = _signaux_thematiquement_proches(idea_text, section12, signal_slug)
     proches_block = ""
@@ -580,9 +607,9 @@ reste identique autant que possible.
   eco_communalism, policy_reform, reference), rien d'autre. Vérifie en
   particulier que tu n'as pas ajouté le nom de la variable cible
   elle-même comme clé.
-- Si un point concerne l'année d'apparition, décale la fenêtre `date_bascule`
-  et l'`evenement_cle` du scénario concerné APRÈS cette année, sans changer
-  le fond de l'évolution.
+- Si un point concerne le plancher de bascule, décale la fenêtre `date_bascule`
+  et l'`evenement_cle` du scénario concerné à partir de cette année, sans
+  changer le fond de l'évolution.
 - Si un point concerne "polarite" ou "delta_level", corrige ces champs
   JSON (pas le YAML) : "polarite" est un dictionnaire des 6 scénarios à
   +1/-1, déduit de l'`evolution` de chaque scénario ; "delta_level" est un
@@ -640,7 +667,7 @@ indentée comme les entrées existantes de la section 12, commençant par
   "section7_annotation": "- description courte du signal (→ signal_custom: {signal_slug}, source: {source})",
   "signaux_existants_consideres": "Explique en 1-3 phrases si un signal déjà présent en section 12 traite d'un sujet proche, et comment tu t'es positionné par rapport à lui (complémentaire / conséquence / tension assumée). Si aucun signal existant proche n'a été identifié, dis-le explicitement (ex: 'Aucun signal existant sur un sujet proche identifié.') -- ce champ est obligatoire même en l'absence de recoupement, pour que le choix (ou l'absence de choix à faire) reste vérifiable a posteriori plutôt que silencieux.",
   "delta_level": 5,
-  "polarite": {{"breakdown": "<+1 ou -1>", "fortress_world": "<+1 ou -1>", "new_sustainability": "<+1 ou -1>", "eco_communalism": "<+1 ou -1>", "policy_reform": "<+1 ou -1>", "reference": "<+1 ou -1>"}},
+  "polarite": {{"breakdown": "<1 ou -1>", "fortress_world": "<1 ou -1>", "new_sustainability": "<1 ou -1>", "eco_communalism": "<1 ou -1>", "policy_reform": "<1 ou -1>", "reference": "<1 ou -1>"}},
   "propagation_via_matrice": false,
   "contexte_injection": "phrase courte expliquant l'impact chiffré ci-dessous"
 }}
@@ -833,10 +860,11 @@ def validate_signal_block(yaml_text, signal_slug, variable_slug, registre_text,
             issues.append(f"[{scen}] date_bascule invalide : {date_bascule!r}")
         else:
             start, end = int(m.group(1)), int(m.group(2))
-            if annee_apparition and start < annee_apparition:
+            plancher = annee_plancher_bascule(annee_apparition)
+            if start < plancher:
                 issues.append(
-                    f"[{scen}] date_bascule {date_bascule} commence avant l'année "
-                    f"d'apparition imposée ({annee_apparition})"
+                    f"[{scen}] date_bascule {date_bascule} commence avant le plancher "
+                    f"de bascule ({plancher})"
                 )
             # Année acceptée n'importe où dans la phrase (27 septembre 2026,
             # même correctif que inject_custom_events.py le 13 août) -- la
@@ -846,10 +874,10 @@ def validate_signal_block(yaml_text, signal_slug, variable_slug, registre_text,
             # de format.
             annees_evt = re.findall(r"\b(\d{4})\b", evenement)
             year_match = re.match(r"(\d{4})", annees_evt[-1]) if annees_evt else None
-            if annee_apparition and year_match and int(year_match.group(1)) < annee_apparition:
+            if year_match and int(year_match.group(1)) < plancher:
                 issues.append(
                     f"[{scen}] année {year_match.group(1)} de evenement_cle antérieure "
-                    f"à l'année d'apparition imposée ({annee_apparition})"
+                    f"au plancher de bascule ({plancher})"
                 )
             if year_match:
                 year = int(year_match.group(1))
@@ -1190,6 +1218,36 @@ def append_yaml_list(path, item, key="processed"):
 # Boucle principale
 # ---------------------------------------------------------------------------
 
+
+# ---------------------------------------------------------------------------
+# S22 (5 octobre 2026) — instantané avant écriture d'une variable
+# ---------------------------------------------------------------------------
+
+def _instantane_ecriture(variable_slug):
+    """Copie en mémoire la fiche variable et le registre AVANT d'écrire, pour
+    pouvoir annuler une écriture interrompue par une exception."""
+    var_path = VARIABLES_DIR / f"{variable_slug}.md"
+    return {
+        "var_path": var_path,
+        "var": var_path.read_text(encoding="utf-8"),
+        "reg": REGISTRE_PATH.read_text(encoding="utf-8") if REGISTRE_PATH.exists() else None,
+    }
+
+
+def _restaurer_instantane(snap):
+    """Remet la fiche variable et le registre dans leur état d'avant l'écriture.
+    Retourne True si la restauration a réussi."""
+    try:
+        snap["var_path"].write_text(snap["var"], encoding="utf-8")
+        if snap["reg"] is not None:
+            REGISTRE_PATH.write_text(snap["reg"], encoding="utf-8")
+        return True
+    except Exception as e:  # restauration impossible : on le dit, sans masquer l'erreur d'origine
+        print(f"  ✗✗ Restauration impossible ({e}) : vérifier {snap['var_path'].name} "
+              f"et {REGISTRE_PATH.name} à la main.")
+        return False
+
+
 def process_idea(client, idea, dry_run=False):
     idea_id = idea.get("id", "sans_id")
     idea_text = idea["description"]
@@ -1269,106 +1327,126 @@ def process_idea(client, idea, dry_run=False):
     sibling_events = {}  # {scenario: evenement_cle} déjà validés pour CE signal dans ce run
 
     for variable_slug in variables:
-        # Garde-fou anti-doublon (27 septembre 2026) : ce signal est déjà
-        # dans la section 12 de cette variable (reprise, ou idée remise en
-        # queue à la main) -> on ne la redéveloppe pas, sans appel LLM.
-        if _signal_deja_injecte(variable_slug, signal_slug):
-            print(f"[2/4] {variable_slug} : signal {signal_slug} déjà injecté -> ignorée")
-            results.append({"variable": variable_slug, "status": "deja_present"})
-            continue
-        print(f"[2/4] Développement pour {variable_slug}...")
-        previous, issues = None, None
-        develop = step2_develop(
-            client, idea_text, source, variable_slug, signal_slug, categorie,
-            registre_text, sibling_events=sibling_events, zone_hint=zone_hint,
-            annee_apparition=annee_apparition,
-        )
-
-        for attempt in range(MAX_FIX_ATTEMPTS + 1):
-            yaml_text = develop["signal_to_state_yaml"]
-            print(f"[3/4] Validation (essai {attempt + 1})...")
-            issues = validate_signal_block(
-                yaml_text, signal_slug, variable_slug, registre_text,
-                delta_level=develop.get("delta_level"),
-                propagation_via_matrice=develop.get("propagation_via_matrice"),
-                polarite=develop.get("polarite"),
+        ecriture = None  # S22 : instantané pris juste avant d'écrire
+        try:
+            # Garde-fou anti-doublon (27 septembre 2026) : ce signal est déjà
+            # dans la section 12 de cette variable (reprise, ou idée remise en
+            # queue à la main) -> on ne la redéveloppe pas, sans appel LLM.
+            if _signal_deja_injecte(variable_slug, signal_slug):
+                print(f"[2/4] {variable_slug} : signal {signal_slug} déjà injecté -> ignorée")
+                results.append({"variable": variable_slug, "status": "deja_present"})
+                continue
+            print(f"[2/4] Développement pour {variable_slug}...")
+            previous, issues = None, None
+            develop = step2_develop(
+                client, idea_text, source, variable_slug, signal_slug, categorie,
+                registre_text, sibling_events=sibling_events, zone_hint=zone_hint,
                 annee_apparition=annee_apparition,
             )
-            if not issues:
-                break
-            print("  -> problèmes :")
-            for i in issues:
-                print(f"     - {i}")
-            if attempt < MAX_FIX_ATTEMPTS:
-                develop = step2_develop(
-                    client, idea_text, source, variable_slug, signal_slug, categorie,
-                    registre_text, previous=yaml_text, issues=issues,
-                    sibling_events=sibling_events, zone_hint=zone_hint,
+
+            for attempt in range(MAX_FIX_ATTEMPTS + 1):
+                yaml_text = develop["signal_to_state_yaml"]
+                print(f"[3/4] Validation (essai {attempt + 1})...")
+                issues = validate_signal_block(
+                    yaml_text, signal_slug, variable_slug, registre_text,
+                    delta_level=develop.get("delta_level"),
+                    propagation_via_matrice=develop.get("propagation_via_matrice"),
+                    polarite=develop.get("polarite"),
                     annee_apparition=annee_apparition,
                 )
+                if not issues:
+                    break
+                print("  -> problèmes :")
+                for i in issues:
+                    print(f"     - {i}")
+                if attempt < MAX_FIX_ATTEMPTS:
+                    develop = step2_develop(
+                        client, idea_text, source, variable_slug, signal_slug, categorie,
+                        registre_text, previous=yaml_text, issues=issues,
+                        sibling_events=sibling_events, zone_hint=zone_hint,
+                        annee_apparition=annee_apparition,
+                    )
 
-        if issues:
-            results.append({
-                "variable": variable_slug, "status": "needs_review",
-                "issues": issues, "yaml_text": yaml_text,
-                "annotation": develop["section7_annotation"],
-                "signaux_existants_consideres": develop.get("signaux_existants_consideres", ""),
-            })
+            if issues:
+                results.append({
+                    "variable": variable_slug, "status": "needs_review",
+                    "issues": issues, "yaml_text": yaml_text,
+                    "annotation": develop["section7_annotation"],
+                    "signaux_existants_consideres": develop.get("signaux_existants_consideres", ""),
+                })
+                continue
+
+            print("[4/4] Injection...")
+            if not dry_run:
+                ecriture = _instantane_ecriture(variable_slug)  # S22 : annulable
+                inject_signal_to_state(variable_slug, yaml_text)
+                inject_section7_annotation(variable_slug, develop["section7_annotation"], signal_slug)
+                entry = yaml.safe_load("signal_to_state:\n" + yaml_text)["signal_to_state"][0]
+                regenerate_registre(variable_slug, signal_slug, entry,
+                                     pilote=variable_slug in PILOTS)
+                # le registre vient de changer, on relit pour le prochain variable_slug
+                registre_text = read_registre_text()
+            else:
+                print(yaml_text)
+                print(develop["section7_annotation"])
+
+            # On retient les evenement_cle de cette variable pour que la/les
+            # variable(s) suivante(s) de CE MÊME signal (dans cette boucle) ne
+            # les réutilisent pas, même en --dry-run où le registre n'est pas
+            # encore mis à jour sur disque.
+            entry_for_siblings = yaml.safe_load("signal_to_state:\n" + yaml_text)["signal_to_state"][0]
+            for scen, data in entry_for_siblings["scenarios"].items():
+                sibling_events[scen] = data["evenement_cle"]
+
+            # Bloc d'impact chiffré par scénario (16 août 2026, chantier
+            # injection matricielle) : annee_injection/duree dérivés de la
+            # fenêtre date_bascule déjà écrite pour ce scénario, pas redemandés
+            # au LLM -- garantit la cohérence entre narratif et numérique sans
+            # risque de désynchronisation entre les deux.
+            # Polarité propre à chaque scénario (27 septembre 2026) -- déjà
+            # validée par validate_signal_block(), aucun repli silencieux ici.
+            polarites, _ = normaliser_polarites(develop.get("polarite"))
+            impact_scenarios = {}
+            for scen, data in entry_for_siblings["scenarios"].items():
+                m = re.match(r"^(\d{4})-(\d{4})$", data.get("date_bascule", ""))
+                if not m:
+                    continue  # date_bascule déjà validée plus haut, filet de sécurité seulement
+                start, end = int(m.group(1)), int(m.group(2))
+                impact_scenarios[scen] = {
+                    "annee_injection": start,
+                    "duree": max(end - start, 1),
+                    "delta_level": develop["delta_level"],
+                    "polarite": polarites[scen],
+                }
+
+            results.append({"variable": variable_slug, "status": "injected",
+                             "yaml_text": yaml_text,
+                             "signaux_existants_consideres": develop.get("signaux_existants_consideres", ""),
+                             "impact": {
+                                 "variable": variable_slug,
+                                 "propagation_via_matrice": bool(develop.get("propagation_via_matrice", False)),
+                                 "persistance": persistance,
+                                 "contexte_injection": develop.get("contexte_injection", ""),
+                                 "scenarios": impact_scenarios,
+                             }})
+        except Exception as e:
+            # S22 (5 octobre 2026) : une exception sur UNE variable devient un
+            # échec de cette variable (comme un échec de validation), au lieu
+            # de remonter jusqu'à main() et d'envoyer l'idée entière en
+            # needs_review sans fiche d'audit ni reprise possible.
+            annulee = False
+            if ecriture is not None:
+                annulee = _restaurer_instantane(ecriture)
+                registre_text = read_registre_text()
+            motif = f"exception : {type(e).__name__}: {e}"
+            print(f"  ✗ {variable_slug} : {motif}"
+                  + (" -- écriture annulée (fiche et registre restaurés)" if annulee else ""))
+            results.append({"variable": variable_slug, "status": "needs_review",
+                            "issues": [motif], "exception": True,
+                            "ecriture_annulee": annulee})
             continue
 
-        print("[4/4] Injection...")
-        if not dry_run:
-            inject_signal_to_state(variable_slug, yaml_text)
-            inject_section7_annotation(variable_slug, develop["section7_annotation"], signal_slug)
-            entry = yaml.safe_load("signal_to_state:\n" + yaml_text)["signal_to_state"][0]
-            regenerate_registre(variable_slug, signal_slug, entry,
-                                 pilote=variable_slug in PILOTS)
-            # le registre vient de changer, on relit pour le prochain variable_slug
-            registre_text = read_registre_text()
-        else:
-            print(yaml_text)
-            print(develop["section7_annotation"])
-
-        # On retient les evenement_cle de cette variable pour que la/les
-        # variable(s) suivante(s) de CE MÊME signal (dans cette boucle) ne
-        # les réutilisent pas, même en --dry-run où le registre n'est pas
-        # encore mis à jour sur disque.
-        entry_for_siblings = yaml.safe_load("signal_to_state:\n" + yaml_text)["signal_to_state"][0]
-        for scen, data in entry_for_siblings["scenarios"].items():
-            sibling_events[scen] = data["evenement_cle"]
-
-        # Bloc d'impact chiffré par scénario (16 août 2026, chantier
-        # injection matricielle) : annee_injection/duree dérivés de la
-        # fenêtre date_bascule déjà écrite pour ce scénario, pas redemandés
-        # au LLM -- garantit la cohérence entre narratif et numérique sans
-        # risque de désynchronisation entre les deux.
-        # Polarité propre à chaque scénario (27 septembre 2026) -- déjà
-        # validée par validate_signal_block(), aucun repli silencieux ici.
-        polarites, _ = normaliser_polarites(develop.get("polarite"))
-        impact_scenarios = {}
-        for scen, data in entry_for_siblings["scenarios"].items():
-            m = re.match(r"^(\d{4})-(\d{4})$", data.get("date_bascule", ""))
-            if not m:
-                continue  # date_bascule déjà validée plus haut, filet de sécurité seulement
-            start, end = int(m.group(1)), int(m.group(2))
-            impact_scenarios[scen] = {
-                "annee_injection": start,
-                "duree": max(end - start, 1),
-                "delta_level": develop["delta_level"],
-                "polarite": polarites[scen],
-            }
-
-        results.append({"variable": variable_slug, "status": "injected",
-                         "yaml_text": yaml_text,
-                         "signaux_existants_consideres": develop.get("signaux_existants_consideres", ""),
-                         "impact": {
-                             "variable": variable_slug,
-                             "propagation_via_matrice": bool(develop.get("propagation_via_matrice", False)),
-                             "persistance": persistance,
-                             "contexte_injection": develop.get("contexte_injection", ""),
-                             "scenarios": impact_scenarios,
-                         }})
-
+    erreur_fiche = None  # S22
     injectees = [r["variable"] for r in results if r["status"] == "injected"]
     echouees = [r["variable"] for r in results if r["status"] == "needs_review"]
 
@@ -1384,13 +1462,23 @@ def process_idea(client, idea, dry_run=False):
             impacts = [r["impact"] for r in results if r["status"] == "injected"]
             # variables_cibles = variables RÉELLEMENT injectées (27 septembre
             # 2026) -- listait auparavant aussi celles qui avaient échoué.
-            write_custom_fiche(signal_slug, idea_text, source, injectees, categorie,
-                                injected_yaml, notes_coherence, impacts=impacts,
-                                annee_apparition=annee_apparition,
-                                completer=bool(reprise))
+            try:
+                write_custom_fiche(signal_slug, idea_text, source, injectees, categorie,
+                                    injected_yaml, notes_coherence, impacts=impacts,
+                                    annee_apparition=annee_apparition,
+                                    completer=bool(reprise))
+            except Exception as e:
+                # S22 : le signal est écrit dans les fiches variables mais
+                # sans fiche d'audit -- on le dit clairement.
+                erreur_fiche = f"{type(e).__name__}: {e}"
+                print(f"  ✗ Fiche d'audit non écrite ({erreur_fiche}). Signal présent dans "
+                      f"{injectees} sans fiche : nettoyer avec "
+                      f"undo_custom.py --slug {signal_slug} --type signal, puis remettre l'idée en queue.")
 
-    overall = "needs_review" if echouees else "injected"
+    overall = "needs_review" if (echouees or erreur_fiche) else "injected"
     outcome = {"status": overall, "idea": idea, "selection": selection, "results": results}
+    if erreur_fiche:
+        outcome["erreur_fiche_audit"] = erreur_fiche
 
     # Injection partielle : entrée prête à remettre en queue, limitée aux
     # variables en échec et rattachée au signal déjà créé (voir `reprise`).
@@ -1450,8 +1538,11 @@ QUEUE_TEMPLATE = """\
 #                         la même dans les 6 scénarios. Aucune fenêtre de
 #                         bascule ne pourra commencer avant (vérifié
 #                         mécaniquement) ; la bascule peut venir plus tard,
-#                         à une date différente selon le scénario. Absent =
-#                         le LLM choisit librement les fenêtres.
+#                         à une date différente selon le scénario.
+#                         Dans tous les cas (champ renseigné ou non), une
+#                         bascule ne peut jamais commencer avant l'année EN
+#                         COURS : un signal apparu en 2025 bascule au plus
+#                         tôt l'année actuelle.
 #   reprise             : NE PAS REMPLIR À LA MAIN. Présent dans l'entrée
 #                         'idee_a_remettre_en_queue' de needs_review.yaml
 #                         après une injection PARTIELLE : recopier cette

@@ -21,7 +21,7 @@ tags:
   - VaultCorp
 image_prompt: Une salle de marché souterraine de Bruxelles-Forteresse, éclairée par des écrans holographiques affichant des flux de *Crédits Souverains* en temps réel. Au premier plan, des traders en uniformes gris consultent des tablettes tactiles, tandis qu’en arrière-plan, des soldats de VaultCorp surveillent les transactions depuis des postes de contrôle blindés.
 a_une_photo: false
-journaliste_slug: malcolm_whitaker
+journaliste_slug: javier_el_reciclador_mendez
 date_evenement: 17 janvier 2098
 variables_pilotes:
   - geopolitique_conflits
@@ -33,11 +33,12 @@ articles_lies:
   - les_agents_autonomes_franchissent_le_seuil_decisionnel_comment_l_ia_souveraine_e
   - les_credits_carbone_souverains_quand_la_finance_devient_une_arme_de_controle_ter
 
+zone_principale: zone_euro_sud
 ---
 **Les "Crédits Souverains" : Quand la monnaie devient une arme de verrouillage territorial**
 
 *17 janvier 2098*
-*Malcolm Whitaker — NexCore Atlantic — La Voix du Commandement*
+*Javier « El Reciclador » Mendez — L’Écho des Marges*
 
 **Bruxelles-Forteresse** — Le 12 janvier, le Conseil de Stabilité du Bloc Atlantique (CSBA) a validé en séance plénière le déploiement des *Crédits Souverains* (CS), une nouvelle unité monétaire indexée non plus sur des réserves métalliques ou des paniers de devises, mais sur la *capacité extractive certifiée* des territoires contrôlés par le Bloc. Une révolution silencieuse, annoncée comme une "mesure de résilience stratégique", mais qui pourrait bien redessiner les équilibres économiques de l’Atlantique Nord — et verrouiller définitivement les frontières numériques du système.
 

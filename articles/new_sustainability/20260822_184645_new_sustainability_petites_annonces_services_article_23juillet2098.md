@@ -22,9 +22,9 @@ tags:
 image_prompt: "Une femme d’une quarantaine d’années, Lúcia Mendes, coordinatrice du Collectif Dados Abertos Já, debout devant un écran géant affichant une carte des inégalités d’allocation d’eau à Heliópolis, São Paulo, entourée d’habitants discutant avec des tablettes en main."
 a_une_photo: false
 image_credit: ""
-journaliste_slug: theo_nkosi
+journaliste_slug: malik_johnson_rivera
 date_evenement: 23 juillet 2098
-zone_principale: nairobi_centre
+zone_principale: ameriques_reconfigurees
 date_publication: 23 juillet 2098
 entites_citees:
   - consortium_africain_de_biotechnologies_sociales_new_sustainability
@@ -51,7 +51,7 @@ Les sessions, organisées dans les hubs communautaires du quartier, attirent une
 
 Pour s’inscrire : plateforme Prisme Global, onglet « Audits Citoyens ».
 
-Théo Nkosi — Réseau Nexus Global Review
+Malik Johnson-Rivera — Manaus Report — Voz da Transição Continental
 
 ---
 **Voir aussi** : [[consortium_africain_de_biotechnologies_sociales_new_sustainability]] · [[les_veilleurs_des_nappes_phreatiques_new_sustainability]] · [[rede_paulista_de_distribuicao_algoritmica_new_sustainability]] · [[pacifique_sud_resilience_network_new_sustainability]] · [[reseaux_de_gouvernance_territoriale_distribues_new_sustainability]] · [[gelecek_meclisi_new_sustainability]]

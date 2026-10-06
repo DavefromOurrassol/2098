@@ -27,9 +27,9 @@ tags:
 image_prompt: "Une plateforme offshore futuriste ancrée dans le golfe Persique, équipée de panneaux solaires et d'éoliennes, entourée d'eaux troubles, avec des hologrammes de cartes hydriques et d'algorithmes flottant au-dessus des serveurs immergés."
 a_une_photo: false
 image_credit: ""
-journaliste_slug: aissata_diop
+journaliste_slug: layla_al_khatib
 date_evenement: 6 août 2098
-zone_principale: sahel_numerique_ligue
+zone_principale: proche_orient_en_crise
 date_publication: 6 août 2098
 entites_citees:
   - consortium_africain_de_biotechnologies_sociales_eco_communalism
@@ -47,7 +47,7 @@ articles_lies:
 
 *6 août 2098*
 
-Aïssata Diop — TikTaqāfi / تكتاقفي
+Layla al-Khatib — Al-Watan al-Jadid / الوطن الجديد
 
 Niamey-Territoire, 6 août 2098 — Il y a trois jours, une délégation de la Ligue des Cités du Sahel Numérique a accosté sur la plateforme flottante de Kharg-9, le terminal offshore devenu le sanctuaire numérique des bioterritoires. Officiellement, la visite devait sceller un nouveau partenariat pour la sauvegarde des protocoles SahelOS, menacés par des attaques répétées des enclaves extractivistes. Officieusement, les délégués sont repartis avec une liste de prix et une question qui hante désormais les assemblées sahéliennes : *à quel moment un commun devient-il une marchandise ?*
 

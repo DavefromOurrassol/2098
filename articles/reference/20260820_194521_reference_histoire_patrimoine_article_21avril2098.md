@@ -28,9 +28,9 @@ tags:
 image_prompt: "Lena Kvaratskhelia, technicienne et gardienne du Nœud Mnemos, nettoie un vieux serveur dans les sous-sols poussiéreux de l’ancien institut de linguistique soviétique à Tbilissi, entourée d’étagères de disques durs rouillés et de registres papier."
 a_une_photo: false
 image_credit: ""
-journaliste_slug: theo_vartanian
+journaliste_slug: nikolai_ermakov
 date_evenement: 21 avril 2098
-zone_principale: sao_paulo_spaar
+zone_principale: bloc_eurasien_central
 date_publication: 21 avril 2098
 entites_citees:
   - confederation_des_megapoles_autonomes_reference
@@ -46,6 +46,8 @@ articles_lies:
 **« Mnemos : la mémoire qui résiste aux algorithmes »**
 
 *21 avril 2098*
+
+Nikolai Ermakov — Сырые Данные / Raw Data (Центральная Евразия)
 
 Lena Kvaratskhelia a les doigts couverts de poussière de silicium. Dans la pénombre des sous-sols du Nœud Mnemos de Tbilissi, elle nettoie méthodiquement les circuits d’un serveur vieux de trente ans, l’un des derniers à fonctionner sans mise à jour forcée par les régulateurs de l’Union Eurasiatique. « C’est ici que l’histoire respire encore », murmure-t-elle en désignant les étagères où s’entassent des disques durs rouillés, des cartes mères fissurées et des registres papier protégés par des films plastiques. « Pas dans les archives officielles, pas dans les récits approuvés par les plateformes. Ici, on garde ce qu’ils veulent effacer. »
 

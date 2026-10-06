@@ -13,3 +13,4 @@ __pycache__/
 documentation/livres/*.pdf
 documentation/livres/*.epub
 documentation/Activation clef.md
+site/

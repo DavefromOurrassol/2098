@@ -76,6 +76,7 @@ tensions_narratives: >
   Kharg-9 cristallise les tensions entre la préservation des savoirs et leur exploitation commerciale. D'un côté, il est un allié indispensable pour les bioterritoires qui y stockent leurs archives, de l'autre, il est accusé de trahir leur confiance en monétisant ces données. Son avenir dépendra de sa capacité à naviguer entre ces deux rôles, ou de son effondrement sous le poids de ses contradictions. Une question persiste : Kharg-9 est-il un mal nécessaire pour survivre dans un monde fragmenté, ou un parasite qui mine les fondements mêmes des communs qu'il prétend protéger ?
 
 date_creation: 2026-08-11
+exclure_articles: true
 ---
 
 # Kharg-9 Data Haven

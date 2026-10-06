@@ -165,7 +165,7 @@ sources:
     famille: technologie
     variables: [technologie_information]
     acces: libre
-    rss: https://news.ycombinator.com/rss
+    rss: null
     verifie: false
     actif: true
     ajoute_par: claude

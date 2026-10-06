@@ -24,7 +24,7 @@ tags:
 image_prompt: "Une famille africaine (Amadou et Aïda Diarra avec leurs deux enfants) debout devant un écran public affichant une notification cryptique de Kontinuum, dans un quartier urbain futuriste aux murs couverts de capteurs et de messages système, ambiance à la fois sobre et oppressante."
 a_une_photo: false
 image_credit: ""
-journaliste_slug: elias_voss
+journaliste_slug: mikko_lehtinen
 date_evenement: 12 octobre 2098
 zone_principale: hub_europeen_regulation
 date_publication: 12 octobre 2098
@@ -41,9 +41,12 @@ articles_lies:
   - kharg_9_le_data_nexus_qui_defie_geneve_nexus
   - aria_nexus_en_alerte_rouge_la_regulation_mondiale_des_ressources_a_l_epreuve_des
 
+ligne_editoriale: pro_pouvoir
 ---
 **L’INVISIBLE BALANCE : KONTINUUM À L’ÉPREUVE DE LA FAMILLE DIARRA**
 *Genève-Nexus, le 12 octobre 2098*
+
+Mikko Lehtinen — Le Consensus des Institutions
 **Par Elias Voss, Réseau Global Governance Report**
 
 La famille Diarra n’existe plus officiellement. Pas au sens où ses membres auraient disparu, mais parce que Kontinuum — le Système Intégré de Prévention des Ruptures Sociales — a statué que leur cohésion communautaire présentait un *potentiel disruptif modéré* depuis le 3 septembre dernier. Ce jour-là, Amadou Diarra, 42 ans, a participé à une réunion du *Collectif des Jardiniers du Plateau*, classée comme *assemblée à risque* par les algorithmes du système. Trois jours plus tard, son allocation alimentaire via ARIA-Nexus a été réduite de 15 %. Sa femme, Aïda, a vu son accès aux thérapies cellulaires décliné de 8 %. Leurs deux enfants, désormais inscrits sur la liste des *cas prioritaires* du Conseil Intergouvernemental de Régulation Technologique, attendent un nouveau scoring.

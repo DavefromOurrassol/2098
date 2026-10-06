@@ -22,7 +22,7 @@ tags:
 image_prompt: "Une archiviste en combinaison de protection usée, agenouillée devant un tas de dossiers en flammes sur un quai inondé de Milwaukee-Basse, tandis que des miliciens du Compact des Grands Lacs, reconnaissables à leurs brassards bleu acier et leurs armes, pompent l’eau du lac pour noyer les sous-sols. En arrière-plan, des graffitis sur des murs en ruine portent l’inscription « ZONE NR » en lettres rouges."
 a_une_photo: false
 image_credit: ""
-journaliste_slug: leo_vasseur
+journaliste_slug: malik_johnson
 date_evenement: 3 janvier 2098
 zone_principale: grandes_lacs_compact_eau
 date_publication: 3 janvier 2098
@@ -48,7 +48,7 @@ articles_lies:
 **« Ils ont noyé les archives » : à Milwaukee-Basse, le Registre des Zones Non Récupérables disparaît dans les eaux**
 
 3 janvier 2098
-Léo Vasseur — Réseau La Dépêche des Territoires
+Malik Johnson — The Broken Ledger
 
 Milwaukee-Basse, 2 janvier 2098. Les miliciens du Compact des Grands Lacs ont forcé l’entrée de l’antenne locale du *Registre des Zones Non Récupérables* à l’aube, sous prétexte d’une « inspection sanitaire ». À midi, les dossiers s’entassaient sur les quais du port intérieur, trempés d’essence. À 14h, les flammes léchaient les murs du bâtiment en tôle rouillée, tandis que des camions-citernes pompaient l’eau du lac Michigan pour noyer les sous-sols. « On a tout perdu », a murmuré une archiviste, les mains encore tachées d’encre rouge — celle des tampons « ZONE NR » qu’elle apposait depuis vingt ans sur les cartes des territoires abandonnés.
 

@@ -3993,6 +3993,56 @@ def get_slugs():
                 # "tous" par défaut, pas de liste vide affichée.
                 return jsonify({"slugs": ["tous"], "zones_par_scenario": {}})
             return jsonify({"slugs": ["tous"] + toutes_zones, "zones_par_scenario": zones_par_scenario})
+        elif slug_type == "zones_journal_forcer":
+            # S26 (6 octobre 2026) : liste du champ « Journal d'une autre
+            # zone » (generate.py --forcer-zone-journal, mode Forcer). Zones
+            # ayant une rédaction pour la ligne choisie, dans les scénarios
+            # où l'élément forcé existe. Valeur = slug de zone ; vide (option
+            # par défaut du menu) = journal de la zone de l'élément.
+            forcer_type = (request.args.get("element_type") or request.args.get("forcer_type") or "")
+            slug_element = request.args.get("slug", "")
+            ligne_j = request.args.get("ligne") or "pro_pouvoir"
+            if ligne_j not in ("pro_pouvoir", "opposition"):
+                ligne_j = "pro_pouvoir"
+            if not forcer_type or not slug_element:
+                return jsonify({"slugs": [], "labels": {}})
+            code = (
+                "import sys, json; sys.path.insert(0, '.'); import loader; "
+                "print(json.dumps(loader.scenarios_disponibles_pour_element({!r}, {!r})))"
+            ).format(forcer_type, slug_element)
+            resultat = subprocess.run(
+                [sys.executable, "-c", code], cwd=pipeline_dir,
+                capture_output=True, text=True, timeout=15, stdin=subprocess.DEVNULL,
+            )
+            if resultat.returncode != 0:
+                return jsonify({"slugs": [], "error": resultat.stderr.strip()[-500:]})
+            try:
+                dispo = json.loads(resultat.stdout.strip())
+            except json.JSONDecodeError:
+                dispo = []
+            import yaml as _yaml
+            try:
+                jx = _yaml.safe_load((pipeline_dir / "journaux.yaml").read_text(encoding="utf-8")) or {}
+            except Exception:
+                jx = {}
+            vus = {}
+            for sc in dispo:
+                zones_j = (((jx.get(sc) or {}).get(ligne_j) or {}).get("zones") or {})
+                noms = {z["slug"]: z["nom"] for z in _scan_zone_slugs_hier(vault_root, sc)}
+                for zs in zones_j:
+                    if zs in vus:
+                        vus[zs]["scenarios"].append(sc)
+                        continue
+                    vus[zs] = {"nom": noms.get(zs, zs.replace("_", " ")),
+                               "journal": ((zones_j.get(zs) or {}).get("nom") or ""),
+                               "scenarios": [sc]}
+            ordre = sorted(vus, key=lambda s: (vus[s]["scenarios"][0], vus[s]["nom"].lower()))
+            labels = {
+                s: "{} — {} ({})".format(vus[s]["nom"], vus[s]["journal"], ", ".join(vus[s]["scenarios"]))
+                if vus[s]["journal"] else "{} ({})".format(vus[s]["nom"], ", ".join(vus[s]["scenarios"]))
+                for s in ordre
+            }
+            return jsonify({"slugs": ordre, "labels": labels})
         elif slug_type == "zones_candidates_oral":
             # Ajouté le 29 août 2026 (P21, retour de David) : liste les
             # zones du scénario n'ayant pas encore type_diffusion en

@@ -22,9 +22,9 @@ tags:
 image_prompt: "Une famille assise autour d'un bio-vault en forme de champignon luminescent, dans un salon aux murs couverts de lianes numériques. L'écran affiche des souvenirs en cours d'archivage manuel, avec des icônes de ralentissement visibles. Ambiance chaleureuse et organique, entre technologie et nature."
 a_une_photo: false
 image_credit: ""
-journaliste_slug: faridah_sari
+journaliste_slug: malo_kerjean
 date_evenement: 27 mai 2098
-zone_principale: infrastructure_numerique_globale
+zone_principale: ourrassol_commission_territoriale
 date_publication: 27 mai 2098
 entites_citees:
   - nexus_biosyn_new_sustainability
@@ -42,7 +42,7 @@ variables_pilotes:
 **« Slow Data » : quand la mémoire numérique devient un art de vivre**
 
 27 mai 2098
-Faridah Sari — Mnemos Nexus
+Malo Kerjean — Ourrassol Chronos
 
 À Ourrassol, dans le quartier des Archives Vivantes, les écrans ne clignotent plus. Ils respirent. Depuis six mois, la famille Nkosi teste le dernier protocole *Slow Data*, une expérience lancée par le nœud local de NexCore en partenariat avec Prisme Global. Le principe ? Ralentir volontairement le flux des données personnelles pour en faire une pratique quotidienne, presque méditative. « Avant, on avalait des gigaoctets sans même s’en rendre compte, explique Amina Nkosi, 42 ans, architecte des flux cognitifs pour le Réseau ARIA. Maintenant, on choisit ce qu’on veut garder, et comment. C’est comme cultiver un jardin au lieu de consommer des plats préparés. »
 

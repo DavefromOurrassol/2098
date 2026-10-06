@@ -21,7 +21,7 @@ tags:
   - résistance
 image_prompt: "Une salle de classe futuriste aux vitres teintées, où des enfants en uniforme gris étudient sous la surveillance discrète de caméras, tandis qu’à l’extérieur, des bidonvilles de tôle s’étendent à perte de vue sous un ciel pollué."
 a_une_photo: false
-journaliste_slug: 
+journaliste_slug: amadou_traore
 date_evenement: 2 février 2098
 variables_pilotes:
   - geopolitique_conflits
@@ -31,10 +31,13 @@ variables_pilotes:
 articles_lies:
   - corridors_pressurises_12_offres_pour_traverser_sans_trace
 
+zone_principale: afrique_subsaharienne_zones_effondrees
 ---
 **« Nexus7 : l’école où l’on apprend à oublier le dehors »**
 
 *2 février 2098*
+
+Amadou Traoré — L'Écho des Sables Perdus
 
 **Lagos** — Les ascenseurs de la Tour Nexus7-Lagos montent en silence, avalant les étages comme des secondes. À l’intérieur, des enfants en uniforme gris perle — chemises à col Mao, pantalons droits, chaussures sans lacets — fixent les numéros qui défilent sur l’écran tactile. Aucun ne parle. Aucun ne regarde par les vitres teintées qui, pourtant, offrent une vue plongeante sur les campements des Seuils Fermés, ces bidonvilles de tôle et de bâches où s’entassent ceux qui n’ont pas eu la chance de naître *dedans*. Ici, on n’apprend pas seulement à lire ou à compter. On apprend à ne plus voir ce qui est en bas.
 

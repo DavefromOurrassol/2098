@@ -27,9 +27,9 @@ tags:
 image_prompt: "Une plateforme offshore rouillée, Kharg-9, émerge des eaux du golfe Persique sous un ciel orageux, entourée de panneaux solaires flottants et de serveurs immergés, avec des silhouettes de délégués en négociation en arrière-plan."
 a_une_photo: false
 image_credit: ""
-journaliste_slug: lea_vasseur
+journaliste_slug: layla_al_khatib
 date_evenement: 18 octobre 2098
-zone_principale: sao_paulo_algorithmique
+zone_principale: proche_orient_en_crise
 date_publication: 18 octobre 2098
 entites_citees:
   - leena_vainala_eco_communalism
@@ -45,7 +45,7 @@ articles_lies:
 
 *18 octobre 2098*
 
-Léa Vasseur — Réseau La Gazette des Communs
+Layla al-Khatib — Al-Watan al-Jadid / الوطن الجديد
 
 Les vagues du golfe Persique léchaient hier les flancs rouillés de Kharg-9, ce terminal offshore devenu en trois décennies le coffre-fort numérique des bioterritoires. Mais derrière les serveurs immergés et les panneaux solaires flottants, une crise couve. Depuis l’aube, des délégués de la Ligue des Cités du Sahel Numérique et du Consórcio Paulistano de Gestão Algorítmica (CPGA) s’affrontent dans des négociations tendues, tandis que des rumeurs persistantes évoquent une tentative d’infiltration par des agents des enclaves extractivistes. À l’heure où les communs dépendent plus que jamais des savoirs préservés ici, Kharg-9 incarne à la fois leur résilience et leur fragilité.
 

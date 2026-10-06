@@ -25,9 +25,9 @@ tags:
 image_prompt: "Odette Nzéla, visage marqué par les cicatrices rituelles et les années, vêtue d’une robe en fibres végétales, tient une jeune pousse de *Milicia excelsa* devant les jardins flottants du Pool Malebo, sous une lumière dorée filtrant à travers les feuilles du grand m’bongui."
 a_une_photo: false
 image_credit: ""
-journaliste_slug: 
+journaliste_slug: aline_moke
 date_evenement: 
-zone_principale: trame_mnemos_noeud_reseau
+zone_principale: congo_bassin_du_fleuve
 date_publication: 
 entites_citees:
   - confederation_bassins_vivants_eco_communalism
@@ -47,6 +47,8 @@ articles_lies:
 ---
 
 **Kin — Le 14 de l’Eau Profonde, 2098**
+
+Aline Moke — Lokole ya Ebale
 
 **Quand l’éternité se compte en siècles**
 *Le record de Cent-en-Un passe aux mains d’une mère fondatrice du Bassin Congo*

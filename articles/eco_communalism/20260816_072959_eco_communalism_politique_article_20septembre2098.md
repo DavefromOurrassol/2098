@@ -27,9 +27,9 @@ tags:
 image_prompt: "Une délégation du *Meclis des Futurs Fragmentés* réunie sous les auvents de l'ancienne centrale solaire de Karapınar, avec des cartes vivantes projetées sur des toiles tendues entre des structures métalliques rouillées, des ceintures de seuils tissées à la taille des participants, et une ambiance de délibération collective en plein air."
 a_une_photo: false
 image_credit: ""
-journaliste_slug: lea_vasseur
+journaliste_slug: elif_kaya
 date_evenement: 20 septembre 2098
-zone_principale: trame_mnemos_noeud_reseau
+zone_principale: bioterritoires_anatoliens
 date_publication: 20 septembre 2098
 entites_citees:
   - collectifs_de_geo_observateurs_citoyens_eco_communalism
@@ -48,7 +48,7 @@ articles_lies:
 
 *20 septembre 2098*
 
-Léa Vasseur — Réseau Voix des Marges
+Elif Kaya — Su Sular — Toprağın Dili
 
 ---
 

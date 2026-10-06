@@ -12,9 +12,14 @@ ligne_editoriale: pro_pouvoir
 scenario_state: stable
 tension_level: 4
 slug: l_ecole_algorithmique_quand_les_ia_deviennent_professeures
-chapo: ""
+chapo: "Dans le Hub Européen de Régulation, les IA pédagogiques certifiées par l’ACRA transforment l’école en laboratoire de gouvernance algorithmique. Mais enseignants et élèves résistent, craignant une éducation sans nuances."
 tags:
-image_prompt: ""
+  - "gouvernance algorithmique"
+  - "résistance algorithmique"
+  - "souveraineté numérique"
+  - "éducation"
+  - "biais algorithmiques"
+image_prompt: "Une salle de classe futuriste à Tampere, où un hologramme bleu-vert représentant Sylva, l’IA pédagogique (logo en forme de feuille stylisée), interagit avec des élèves. En arrière-plan, un écran affiche des données en temps réel sur les seuils hydriques du Sahel, tandis qu’un enseignant humain discute avec un petit groupe. Lumière naturelle dorée filtrant à travers des baies vitrées."
 a_une_photo: false
 image_credit: ""
 journaliste_slug: mikko_lehtinen
@@ -46,11 +51,6 @@ Le débat dépasse les murs des salles de classe. En février dernier, le *Conse
 Les chiffres semblent pourtant donner raison aux régulateurs. Selon l’*Agence Internationale de Supervision IA*, les établissements utilisant des IA pédagogiques ont vu leurs taux de décrochage chuter de 37 % en cinq ans. À Genève-Lacustre, l’école *Horizon 2098* expérimente même des *classes hybrides*, où les élèves votent en temps réel pour ajuster le rythme des cours via la plateforme *Prisme Global*. « L’algorithme ne remplace pas l’enseignant, il le libère des tâches administratives », argue le directeur, Marc Veyrat. Une vision contestée par les *Courants Post-Technocratiques de Reconquête Démocratique*, qui dénoncent une « privatisation douce de l’éducation ». Leur dernier rapport, *L’École sous Surveillance*, révèle que 42 % des IA éducatives du Hub sont développées par des consortiums privés, dont *NexCore*, filiale du géant *ARIA-Nexus*.
 
 La tension culmine ce jeudi, avec une manifestation prévue devant le siège de l’ACRA à La Haye. Les enseignants réclament un moratoire sur les IA évaluatrices, tandis que les institutions défendent un modèle où la technologie « démocratise l’accès au savoir ». Entre les deux, les élèves semblent naviguer avec pragmatisme. Comme le résume Aïcha, 16 ans, lycéenne à Tampere : « Sylva m’aide à comprendre les maths, mais c’est mon prof qui m’explique pourquoi les équations ont changé le monde. » Une distinction que les algorithmes, pour l’instant, ne savent pas faire.
-
-===METADONNEES_PUBLICATION===
-CHAPO: Dans le Hub Européen de Régulation, les IA pédagogiques certifiées par l’ACRA transforment l’école en laboratoire de gouvernance algorithmique. Mais enseignants et élèves résistent, craignant une éducation sans nuances.
-TAGS: gouvernance algorithmique, résistance algorithmique, souveraineté numérique, éducation, biais algorithmiques
-IMAGE_PROMPT: Une salle de classe futuriste à Tampere, où un hologramme bleu-vert représentant Sylva, l’IA pédagogique (logo en forme de feuille stylisée), interagit avec des élèves. En arrière-plan, un écran affiche des données en temps réel sur les seuils hydriques du Sahel, tandis qu’un enseignant humain discute avec un petit groupe. Lumière naturelle dorée filtrant à travers des baies vitrées.
 
 ---
 **Voir aussi** : [[prisme_global_policy_reform]] · [[directive_kontinuum_policy_reform]] · [[leena_vainala_policy_reform]] · [[gelecek_meclisi_policy_reform]] · [[courants_post_technocratiques_de_reconquete_democratique_policy_reform]] · [[front_des_communes_algorithmiques_policy_reform]]

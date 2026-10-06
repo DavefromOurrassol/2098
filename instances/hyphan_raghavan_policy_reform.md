@@ -89,6 +89,7 @@ tensions_narratives: >
   La trajectoire de Hyphan illustre la tension entre légitimité locale et reconnaissance institutionnelle : ses méthodes, bien que plébiscitées par les communautés, sont régulièrement contestées par les agences de régulation pour 'manque de rigueur scientifique'. Son alliance avec les biohackers agro-communautaires soulève des questions sur la propriété des données hydriques, tandis que son opposition frontale aux consortiums agro-industriels en fait une cible pour les milices privées. Son avenir pourrait basculer vers une intégration forcée dans les structures technocratiques, ou vers une radicalisation accrue, notamment si les conflits hydriques s'intensifient avec la montée des stress climatiques.
 
 date_creation: 2026-09-24
+exclure_articles: true
 ---
 
 # Hyphan Raghavan - Réseau des Veilleurs des Nappes

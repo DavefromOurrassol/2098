@@ -21,7 +21,7 @@ tags:
   - VaultCorp
 image_prompt: "Une salle de marché futuriste aux murs blindés, où des traders en combinaisons tactiques échangent des crédits carbone sur des écrans holographiques verrouillés par des protocoles ANBA, tandis qu’à l’extérieur, des drones survolent des zones industrielles en ruine."
 a_une_photo: false
-journaliste_slug: 
+journaliste_slug: javier_el_reciclador_mendez
 date_evenement: 3 janvier 2098
 variables_pilotes:
   - geopolitique_conflits
@@ -31,10 +31,13 @@ variables_pilotes:
 articles_lies:
   - les_credits_souverains_quand_la_monnaie_devient_une_arme_de_verrouillage_territo
 
+zone_principale: zone_euro_sud
 ---
 **Les Crédits Carbone Souverains : Quand la Finance Devient une Arme de Contrôle Territorial**
 
 *3 janvier 2098*
+
+Javier « El Reciclador » Mendez — L’Écho des Marges
 
 **Bruxelles-Forteresse** — Dans les tours climatisées du *Commandement Atlantique des Ressources Stratégiques (CARS)*, une nouvelle doctrine financière vient d’être validée. Baptisée *Protocole Oméga-9*, elle transforme les crédits carbone en instruments de souveraineté territoriale, verrouillant l’accès aux marchés pour les zones jugées « à risque ». Une révolution silencieuse, où la finance ne se contente plus de refléter l’économie — elle la sculpte, la segmente, et l’asservit aux impératifs sécuritaires des blocs.
 

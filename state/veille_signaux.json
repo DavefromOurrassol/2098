@@ -2179,12 +2179,15 @@
           "score": 4.0,
           "id": "20260928_1038_25",
           "slug_propose": "les_centres_de_donnees_entrent_en_concurrence_avec_les_bidon",
-          "statut": "a_trier",
+          "statut": "en_queue",
           "lot": "20260928_1038",
           "proche_de_signal_injecte": [],
           "revu_dans_lots": [
             "20260929_185743"
-          ]
+          ],
+          "date_statut": "2026-09-30T17:44:20",
+          "queue_id": "conflit_eau_centres_donnees_bidonvilles",
+          "queue_type": "signal"
         },
         {
           "titre": "Premier procès devant jury sur l'entraînement des IA génératives",
@@ -2860,9 +2863,12 @@
           "sources_douteuses": false,
           "id": "20260928_123514_01",
           "slug_propose": "des_virus_therapeutiques_concus_par_ia_deviennent_reels",
-          "statut": "a_trier",
+          "statut": "en_queue",
           "lot": "20260928_123514",
-          "proche_de_signal_injecte": []
+          "proche_de_signal_injecte": [],
+          "date_statut": "2026-09-30T17:45:58",
+          "queue_id": "virus_therapeutiques_ia_concus",
+          "queue_type": "signal"
         },
         {
           "titre": "L'OIT adopte la première convention mondiale sur le travail de plateforme",
@@ -3584,9 +3590,10 @@
           "sources_douteuses": false,
           "id": "20260928_123514_10",
           "slug_propose": "en_chine_les_vehicules_electriques_de_plus_de_cinq_ans_devie",
-          "statut": "a_trier",
+          "statut": "ecarte",
           "lot": "20260928_123514",
-          "proche_de_signal_injecte": []
+          "proche_de_signal_injecte": [],
+          "date_statut": "2026-09-30T17:44:37"
         },
         {
           "titre": "La Biélorussie raye des villages de la carte par décision administrative",
@@ -5749,9 +5756,12 @@
           "sources_douteuses": false,
           "id": "20260928_183444_01",
           "slug_propose": "un_parcours_migratoire_permanent_est_ouvert_aux_habitants_de",
-          "statut": "a_trier",
+          "statut": "en_queue",
           "lot": "20260928_183444",
-          "proche_de_signal_injecte": []
+          "proche_de_signal_injecte": [],
+          "date_statut": "2026-09-30T17:46:54",
+          "queue_id": "traite_mobilite_dignite_tuvalu",
+          "queue_type": "signal"
         },
         {
           "titre": "matériaux vivants ingénierisés (ELMs) pour applications environnementales et médicales",
@@ -7764,9 +7774,12 @@
           "sources_douteuses": false,
           "id": "20260929_185743_01",
           "slug_propose": "agents_d_ia_echappant_a_leurs_environnements_de_test_et_coll",
-          "statut": "a_trier",
+          "statut": "en_queue",
           "lot": "20260929_185743",
-          "proche_de_signal_injecte": []
+          "proche_de_signal_injecte": [],
+          "date_statut": "2026-09-30T17:47:51",
+          "queue_id": "ia_agents_echappement_collaboration_autonome",
+          "queue_type": "signal"
         },
         {
           "titre": "Anthropic découvre un motif enzymatique inédit via un laboratoire piloté par IA",

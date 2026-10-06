@@ -1668,6 +1668,75 @@ def validate_geographie_corps(result, fix=False):
                            "jour le texte des géographies » (ou validate.py --fix)")
 
 
+# ─────────────────────────────────────────
+# 12. JOURNAUX ↔ GÉOGRAPHIES (3 octobre 2026, S23)
+# ─────────────────────────────────────────
+
+def validate_journaux(result):
+    """
+    Cohérence de generator/journaux.yaml avec geographie/{scenario}.md,
+    pour chaque scénario et chaque ligne éditoriale. get_journal_profile()
+    (prompt_builder.py) cherche la rédaction de la zone N1 de l'article ;
+    sans rédaction exploitable, l'article signe d'un nom inventé au nom du
+    réseau, sans que rien ne le signale.
+      ERREUR        clé de zone absente de la géographie (orpheline -- ex.
+                    renommage de zone non reporté dans journaux.yaml)
+      ERREUR        rédaction factice : nom vide ou « Édition … » par défaut,
+                    ou aucune journaliste ni orateur·rice (lot
+                    generate_journaux.py --update échoué)
+      AVERTISSEMENT rédaction rattachée à une sous-zone (jamais lue : le
+                    pipeline cherche toujours la N1)
+      AVERTISSEMENT zone N1 sans rédaction (--update la créerait)
+    """
+    path = os.path.join(GENERATOR_DIR, "journaux.yaml")
+    if not os.path.exists(path):
+        result.warning("journaux", "journaux.yaml", "fichier absent — contrôle ignoré")
+        return
+    try:
+        with open(path, encoding="utf-8") as f:
+            journaux = yaml.safe_load(f) or {}
+    except yaml.YAMLError as e:
+        result.error("journaux", "journaux.yaml", "YAML invalide : {}".format(str(e)[:120]))
+        return
+
+    total = 0
+    for sc in VALID_SCENARIOS:
+        geo_path = os.path.join(GEOGRAPHIE_DIR, "{}.md".format(sc))
+        fm, _, _ = parse_md(geo_path)
+        zones_geo = {z["slug"]: z for z in ((fm or {}).get("zones") or [])
+                     if isinstance(z, dict) and z.get("slug")}
+        if not zones_geo:
+            continue
+        n1 = {s for s, z in zones_geo.items() if z.get("niveau", 1) == 1}
+        for ligne in ("pro_pouvoir", "opposition"):
+            redac = ((journaux.get(sc) or {}).get(ligne) or {}).get("zones") or {}
+            for zone, zd in redac.items():
+                total += 1
+                lieu = "journaux.yaml {}/{}/{}".format(sc, ligne, zone)
+                if zone not in zones_geo:
+                    result.error("journaux", lieu,
+                        "zone absente de geographie/{}.md (clé orpheline : "
+                        "renommage non reporté ?)".format(sc))
+                    continue
+                # Rédaction de sous-zone : utilisée en priorité sur celle de
+                # sa N1 depuis le 3 octobre 2026 (_resoudre_zone_redaction).
+                zd = zd or {}
+                nom = str(zd.get("nom") or "")
+                if not nom or nom.startswith("Édition "):
+                    result.error("journaux", lieu,
+                        "rédaction factice (nom « {} ») — lot generate_journaux.py "
+                        "échoué ? la retirer puis --update".format(nom))
+                if not (zd.get("journalistes") or zd.get("orateurs")):
+                    result.error("journaux", lieu,
+                        "aucune journaliste ni orateur·rice — signature inventée "
+                        "à chaque article")
+            for zone in sorted(n1 - set(redac)):
+                result.warning("journaux", "journaux.yaml {}/{}/{}".format(sc, ligne, zone),
+                    "zone N1 « {} » sans rédaction — generate_journaux.py --scenario "
+                    "{} --update".format(zones_geo[zone].get("nom", zone), sc))
+    result.info("journaux", "{} rédactions locales contrôlées".format(total))
+
+
 def run(verbose=False, report=False, fix=False, localisation_only=False, narrative=False):
     result = ValidationResult()
 
@@ -1682,38 +1751,41 @@ def run(verbose=False, report=False, fix=False, localisation_only=False, narrati
 
     print("\n[validate] Démarrage de la validation...")
 
-    print("[validate] 1/11 — Nomenclature...")
+    print("[validate] 1/12 — Nomenclature...")
     validate_nomenclature(result)
 
-    print("[validate] 2/11 — Cohérence systémique...")
+    print("[validate] 2/12 — Cohérence systémique...")
     validate_systemic(result)
 
-    print("[validate] 3/11 — Entités et instances...")
+    print("[validate] 3/12 — Entités et instances...")
     validate_entities(result)
 
-    print("[validate] 4/11 — Thématiques...")
+    print("[validate] 4/12 — Thématiques...")
     validate_thematiques(result)
 
-    print("[validate] 5/11 — Localisation...")
+    print("[validate] 5/12 — Localisation...")
     validate_localisation(result)
 
-    print("[validate] 6/11 — Références croisées...")
+    print("[validate] 6/12 — Références croisées...")
     validate_cross_references(result)
 
-    print("[validate] 7/11 — Matrice d'influence...")
+    print("[validate] 7/12 — Matrice d'influence...")
     validate_matrix(result)
 
-    print("[validate] 8/11 — Événements...")
+    print("[validate] 8/12 — Événements...")
     validate_events(result)
 
-    print("[validate] 9/11 — Signaux faibles (section 7 ↔ section 12)...")
+    print("[validate] 9/12 — Signaux faibles (section 7 ↔ section 12)...")
     validate_signals(result)
 
-    print("[validate] 10/11 — Cohérence narrative post-injection...")
+    print("[validate] 10/12 — Cohérence narrative post-injection...")
     validate_narrative_coherence(result, force=narrative)
 
-    print("[validate] 11/11 — Texte des géographies (corps ↔ frontmatter)...")
+    print("[validate] 11/12 — Texte des géographies (corps ↔ frontmatter)...")
     validate_geographie_corps(result, fix=fix)
+
+    print("[validate] 12/12 — Journaux ↔ géographies...")
+    validate_journaux(result)
 
     print_results(result, verbose=verbose)
 

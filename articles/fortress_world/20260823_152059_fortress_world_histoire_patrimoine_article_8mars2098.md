@@ -22,9 +22,9 @@ tags:
 image_prompt: "Une cave éclairée par la lumière bleutée d’écrans piratés, où des archives physiques — registres jaunis, cartes dessinées à la main, photos collées sur des murs de béton — côtoient des serveurs bricolés. Au premier plan, une main anonyme tourne les pages d’un livre de témoignages, tandis qu’à l’arrière-plan, un groupe de personnes, dont Vera Solano reconnaissable à son brassard orange délavé, discute à voix basse. Ambiance clandestine et déterminée, éclairage artificiel froid contrastant avec la chaleur des documents tangibles."
 a_une_photo: false
 image_credit: ""
-journaliste_slug: nikolai_sokolov
+journaliste_slug: fatima_la_voix_diop
 date_evenement: 8 mars 2098
-zone_principale: pacte_forteresses_souveraines
+zone_principale: zone_euro_sud
 date_publication: 8 mars 2098
 entites_citees:
   - mouvement_commun_midwest_fortress_world
@@ -43,7 +43,7 @@ variables_pilotes:
 
 *8 mars 2098*
 
-Nikolai Sokolov — L'Écho des Forteresses — Forteresse Libre
+Fatima « La Voix » Diop — L’Écho des Marges
 
 GENÈVE-BUNKER — Dans les sous-sols climatisés du Centre de Mémoire Souveraine, les serveurs VaultCorp bourdonnent en silence, alignés comme des sentinelles. Leurs disques durs contiennent l’histoire officielle des Forteresses : 70 ans de décrets, de murs érigés, de populations déplacées et de seuils infranchissables. Mais à quelques kilomètres de là, dans les zones tampons où les drones de la Chambre de Sécurité Territoriale ne s’aventurent plus, une autre mémoire s’écrit. Celle des exclus. Celle qui refuse d’être effacée.
 

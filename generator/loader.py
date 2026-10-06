@@ -1297,8 +1297,8 @@ def _save_instance_usage_state(state):
 # quel que soit son score, même s'il reste dominant. Ce mécanisme ne
 # compare pas les instances entre elles (donc aucun problème d'égalité
 # de fréquence) -- il regarde chaque instance individuellement.
-COOLDOWN_STREAK = 3
-COOLDOWN_DURATION = 2
+COOLDOWN_STREAK = 2
+COOLDOWN_DURATION = 3
 
 # Exemption de dominance écrasante (22 août 2026, retour de David après
 # le premier test du cooldown) : le cooldown dur ci-dessus force la
@@ -1675,7 +1675,80 @@ def select_relevant_events(events, thematique, scenario_slug, forced_event_slug=
     return ([forced] if forced else []) + selected
 
 
-def filter_instances_for_thematique(instances, thematique, scenario_slug=None, dry_run=True):
+# ─────────────────────────────────────────
+# ZONE DU JOURNAL (S23, 3 octobre 2026)
+# ─────────────────────────────────────────
+#
+# Lieu de l'article != zone de son journal : filtered_instances était
+# choisi par thématique à l'échelle du monde entier, sans aucun lien avec
+# la zone du journal (cas réel : article du journal Maghreb Méditerranéen
+# entièrement consacré au Terminal Kharg, golfe Persique). Quand la zone
+# de l'article est connue, une partie des places est désormais réservée
+# aux instances localisées dans la zone du JOURNAL -- zone N1 (une seule
+# rédaction par N1 dans journaux.yaml) et toutes ses sous-zones.
+
+ZONE_PLACES_RESERVEES = 3
+# Plafond d'instances localisées dans une AUTRE zone N1 quand la zone
+# de l'article est fixée (S23, 3 octobre 2026, décision de David).
+MAX_ETRANGERES_ZONE = 2
+_GEOGRAPHIE_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "geographie")
+_GEO_CACHE = {}
+
+
+def _zones_geographie(scenario_slug):
+    """Zones (frontmatter de geographie/{scenario}.md), en cache. [] si absent."""
+    if scenario_slug in _GEO_CACHE:
+        return _GEO_CACHE[scenario_slug]
+    zones = []
+    path = os.path.join(_GEOGRAPHIE_DIR, "{}.md".format(scenario_slug))
+    if os.path.exists(path):
+        with open(path, "r", encoding="utf-8") as f:
+            m = re.match(r"^---\s*\n(.*?)\n---\s*\n", f.read(), re.DOTALL)
+        if m:
+            try:
+                zones = (yaml.safe_load(m.group(1)) or {}).get("zones", []) or []
+            except yaml.YAMLError:
+                zones = []
+    _GEO_CACHE[scenario_slug] = zones
+    return zones
+
+
+def zones_du_journal(scenario_slug, zone_slug):
+    """
+    Ensemble des zones couvertes par le journal d'une zone : remontée
+    jusqu'à l'ancêtre niveau 1 (comme prompt_builder._resoudre_zone_n1,
+    garde-fou anti-cycle), puis cet ancêtre et toutes ses sous-zones.
+    Zone inconnue ou géographie absente : {zone_slug} seul.
+    """
+    if not zone_slug:
+        return set()
+    zones = _zones_geographie(scenario_slug)
+    by_slug = {z["slug"]: z for z in zones if z.get("slug")}
+    courant = by_slug.get(zone_slug)
+    if courant is None:
+        return {zone_slug}
+    vus = set()
+    while courant is not None and courant.get("niveau", 1) != 1:
+        if courant["slug"] in vus:
+            break
+        vus.add(courant["slug"])
+        courant = by_slug.get(courant.get("parent"))
+    racine = courant["slug"] if courant else zone_slug
+    enfants = {}
+    for z in zones:
+        if z.get("slug") and z.get("parent"):
+            enfants.setdefault(z["parent"], []).append(z["slug"])
+    resultat, pile = set(), [racine]
+    while pile:
+        s = pile.pop()
+        if s in resultat:
+            continue
+        resultat.add(s)
+        pile.extend(enfants.get(s, []))
+    return resultat
+
+
+def filter_instances_for_thematique(instances, thematique, scenario_slug=None, dry_run=True, zones_article=None):
     """
     Filtre les instances pertinentes pour une thématique donnée.
 
@@ -1766,7 +1839,12 @@ def filter_instances_for_thematique(instances, thematique, scenario_slug=None, d
         is_custom = (injection.get("type") == "custom"
                      and injection.get("garantie_selection", True) is not False)
         is_priorite_forcee = inst.get("priorite_forcee") is True
-        if score > 0 or is_custom or is_priorite_forcee:
+        # S23 (3 octobre 2026) : une instance localisée dans la zone du
+        # journal reste candidate même à score thématique nul -- c'est
+        # la couleur locale qui manquait aux articles.
+        est_local = bool(zones_article) and (
+            (inst.get("localisation") or {}).get("zone") in zones_article)
+        if score > 0 or is_custom or is_priorite_forcee or est_local:
             scored.append((score, inst))
 
     # Rotation à mémoire (ajouté le 2 août 2026) : au-delà de MAX_INSTANCES
@@ -1782,6 +1860,41 @@ def filter_instances_for_thematique(instances, thematique, scenario_slug=None, d
     # Garantie d'inclusion des instances custom ajoutée le 21 août 2026
     # -- voir _select_with_custom_guarantee(). Sans instance custom,
     # comportement STRICTEMENT identique à avant ce correctif.
+    # S23 (3 octobre 2026) : places réservées aux instances de la zone
+    # du journal, puis places restantes disputées comme avant. Sans
+    # zones_article (ou sans instance locale) : inchangé.
+    if zones_article:
+        def _zone(i):
+            return (i.get("localisation") or {}).get("zone")
+
+        def _etrangere(i):
+            return bool(_zone(i)) and _zone(i) not in zones_article
+
+        locaux = [(s, i) for s, i in scored if _zone(i) in zones_article]
+        sel_locaux = []
+        if locaux:
+            sel_locaux = _select_with_custom_guarantee(
+                locaux, scenario_slug, dry_run, min(ZONE_PLACES_RESERVEES, len(locaux)))
+        pris = {i.get("slug") for i in sel_locaux}
+        reste = [(s, i) for s, i in scored if i.get("slug") not in pris]
+        etrangeres = [(s, i) for s, i in reste if _etrangere(i)]
+        autres = [(s, i) for s, i in reste if not _etrangere(i)]
+
+        places = MAX_INSTANCES - len(sel_locaux)
+        sel_etr = []
+        if places > 0 and etrangeres:
+            sel_etr = _select_with_custom_guarantee(
+                etrangeres, scenario_slug, dry_run, min(MAX_ETRANGERES_ZONE, places))
+        places -= len(sel_etr)
+        sel_autres = []
+        if places > 0 and autres:
+            sel_autres = _select_with_custom_guarantee(autres, scenario_slug, dry_run, places)
+
+        print("[loader] Zone du journal : {} locale(s) sur {} candidate(s), {} d'autres "
+              "zones (plafond {}), {} transnationale(s)/locale(s) en plus".format(
+                  len(sel_locaux), len(locaux), len(sel_etr), MAX_ETRANGERES_ZONE,
+                  len(sel_autres)))
+        return sel_locaux + sel_etr + sel_autres
     return _select_with_custom_guarantee(scored, scenario_slug, dry_run, MAX_INSTANCES)
 
 if __name__ == "__main__":

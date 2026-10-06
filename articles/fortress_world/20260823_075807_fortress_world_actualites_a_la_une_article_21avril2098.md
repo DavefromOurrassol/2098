@@ -22,9 +22,9 @@ tags:
 image_prompt: "Une carte thermique projetée sur un écran géant dans une salle de contrôle blindée, montrant l'extinction progressive des zones tampons eurasiatiques. Au premier plan, des techniciens en uniforme gris d'Helios BSE observent les données, tandis qu'en arrière-plan, des hologrammes de frontières clignotent en rouge."
 a_une_photo: false
 image_credit: ""
-journaliste_slug: miroslav_kovac
+journaliste_slug: leyla_farrokhzad
 date_evenement: 21 avril 2098
-zone_principale: bloc_eurasiatique_occidental
+zone_principale: zones_grises_tampons
 date_publication: 21 avril 2098
 entites_citees:
   - bloc_eurasiatique_occidental_fortress_world
@@ -42,7 +42,7 @@ variables_pilotes:
 **Helios BSE active le Protocole Éclipse : coupures ciblées en cascade sur les zones tampons eurasiatiques**
 
 21 avril 2098
-Miroslav Kováč — Helios Sovereign — Le Phare de l'Eurasie
+Leyla Farrokhzad — Le Tampon Officiel
 
 BRATISLAVA-SECTEUR ALPHA — Dans une décision qualifiée d'« acte de souveraineté énergétique préventive » par le Consortium Helios Bloc Souveraineté Énergétique (Helios BSE), les systèmes de distribution orbitaux ont été réorientés ce matin vers une réduction drastique des flux vers les zones tampons périphériques du Bloc Eurasiatique Occidental. Selon les bulletins Helios Orbital Command, cette mesure, baptisée *Protocole Éclipse*, vise à « neutraliser les vecteurs de perturbation logistique » identifiés dans les corridors d'Asie centrale et les campements frontaliers du Caucase.
 

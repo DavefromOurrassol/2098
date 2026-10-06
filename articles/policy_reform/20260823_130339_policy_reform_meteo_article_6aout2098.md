@@ -22,9 +22,9 @@ tags:
 image_prompt: "Une plateforme flottante du Pacific South Resilience Network (PSRN) ancrée près des côtes de Funafuti, avec son drapeau bleu-vert frappé d’une spirale corallienne flottant au vent. En arrière-plan, des barrières géotechniques gonflables brillent sous une lumière dorée du coucher de soleil, tandis que des drones du RIREC survolent des récifs artificiels. Ambiance à la fois technologique et précaire, avec des habitants évacuant leurs maisons en palétuvier en toile de fond."
 a_une_photo: false
 image_credit: ""
-journaliste_slug: mereoni_tawake
+journaliste_slug: hiroshi_takeda
 date_evenement: 6 août 2098
-zone_principale: iles_pacifique_sud
+zone_principale: zone_pacifique_industrielle
 date_publication: 6 août 2098
 entites_citees:
   - assemblee_territoires_policy_reform
@@ -42,7 +42,7 @@ variables_pilotes:
 **Funafuti sous perfusion climatique : le PSRN active son protocole "Dernier Atoll"**
 
 6 août 2098
-Mereoni Tawake — Le Peuple des Frontières
+Hiroshi Takeda — Pacifik Sovereignist
 
 FUNAFUTI — Depuis hier minuit, les sirènes des *Nœuds de Stabilisation Atmosphérique* (NSA) hurlent en continu sur l’atoll. Le Pacific South Resilience Network (PSRN) a déclenché son protocole d’urgence "Dernier Atoll", une première depuis la submersion définitive de Kiribati en 2042. Les données de l’Agence Technocratique pour la Résilience Biosphérique (ATRB) sont sans appel : la combinaison d’une marée de 3,2 mètres et d’un épisode de réchauffement océanique accéléré menace les dernières infrastructures terrestres de Funafuti, où vivent encore 12 000 habitants et la délégation permanente du PSRN auprès du Conseil de Régulation Climatique Global.
 

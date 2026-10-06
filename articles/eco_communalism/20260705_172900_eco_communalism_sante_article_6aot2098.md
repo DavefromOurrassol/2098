@@ -25,9 +25,9 @@ tags:
 image_prompt: Un vieil homme aux traits marqués, vêtu d'habits tissés de fibres végétales, assis sous un abri en bambou au bord du fleuve Congo, entouré de plantes médicinales et d'outils artisanaux, avec en arrière-plan des structures flottantes évoquant une communauté écologique.
 a_une_photo: false
 image_credit: ""
-journaliste_slug:
+journaliste_slug: aline_moke
 date_evenement: 12 novembre 2098
-zone_principale: trame_mnemos_noeud_reseau
+zone_principale: congo_bassin_du_fleuve
 date_publication: 12 novembre 2098
 entites_citees:
   - reseau_mnemos_eco_communalism
@@ -41,6 +41,8 @@ articles_lies:
 **O MUNDO QUE TECE OS DIAS: A CURA DO TEMPO LONGO**
 *Yaripã: A Voz da Floresta — Réseau La Gazette des Communs*
 **Belém do Congo, 12 novembre 2098**
+
+Aline Moke — Lokole ya Ebale
 
 > *Ô, sol que nasce nas águas do Congo,*
 > *guarda em teu ventre o segredo dos anos,*

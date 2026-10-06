@@ -22,9 +22,9 @@ tags:
 image_prompt: "Une salle de conférence futuriste à Genève, où des délégués humains et des avatars IA siègent côte à côte sous une lumière bleutée, tandis qu’un hologramme géant affiche en temps réel les « empreintes décisionnelles » des participants, avec des scores de souveraineté mentale fluctuants."
 a_une_photo: false
 image_credit: ""
-journaliste_slug: maya_dufour
+journaliste_slug: aino_korhonen
 date_evenement: 5 avril 2098
-zone_principale: centre_institutionnel_geneve
+zone_principale: union_nordique_europe_nord
 date_publication: 5 avril 2098
 entites_citees:
   - leena_vainala_new_sustainability
@@ -43,7 +43,7 @@ variables_pilotes:
 
 *5 avril 2098*
 
-Maya Dufour — Genève Global Governance Digest
+Aino Korhonen — Nexus Nordica
 
 Helsinki, le 2 avril. Dans une salle aux murs couverts de manuscrits jaunis, Leena Väinälä a posé sa tasse de thé froid et fixé l’assistance avec une lassitude calculée. « Nous avons construit un monde où les décisions sont prises avant même que nous ayons fini de les comprendre. Et nous appelons cela de la démocratie. » La philosophe finlandaise, dont les protocoles de 2041 ont structuré la gouvernance hybride actuelle, ne mâche plus ses mots. Son dernier essai, *Le Somnambulisme délibératif*, vient de franchir le million de téléchargements sur le Réseau ARIA – un chiffre qui en dit long sur l’anxiété sourde qui traverse les sociétés stabilisées de 2098.
 

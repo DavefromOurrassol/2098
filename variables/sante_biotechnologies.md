@@ -345,6 +345,8 @@ _extended_
 - acceptation_homme_augmenté
 - debat_ethique_biotechnologies
 
+**custom (signaux d'actualité)**
+- conception IA de phages ciblant bactéries résistantes (→ signal_custom: ia_phages_antibioresistance_biosurete, source: veille_20260928_123514_mistral)
 
 ## 8. États par scénario
 ### [[breakdown]]
@@ -664,4 +666,31 @@ signal_to_state:
         evolution: normalisation progressive de l'augmentation chez les plus aisés
         date_bascule: 2026-2048
         evenement_cle: sondage révélant la fracture générationnelle sur l'augmentation 2034
+
+  - signal: ia_phages_antibioresistance_biosurete
+    scenarios:
+      breakdown:
+        evolution: phages IA deviennent armes biologiques dans zones effondrées
+        date_bascule: 2045-2065
+        evenement_cle: Lagos-Est pirate souches phages pour milices 2057
+      fortress_world:
+        evolution: phages IA réservés aux élites des blocs fermés
+        date_bascule: 2038-2055
+        evenement_cle: Bloc Sibérien déploie phages exclusifs pour cadres 2048
+      new_sustainability:
+        evolution: phages IA open-source intégrés aux systèmes de santé globaux
+        date_bascule: 2032-2048
+        evenement_cle: Réseau Mondial de Santé adopte phages open-source 2041
+      eco_communalism:
+        evolution: phages IA low-tech partagés entre maisons de santé locales
+        date_bascule: 2040-2060
+        evenement_cle: Carthage-Nord diffuse kits phages communautaires 2050
+      policy_reform:
+        evolution: phages IA régulés par traité international de biosécurité
+        date_bascule: 2030-2046
+        evenement_cle: Convention de Tokyo encadre phages thérapeutiques 2038
+      reference:
+        evolution: phages IA commercialisés sous brevets privés inégaux
+        date_bascule: 2026-2044
+        evenement_cle: Stanford licencie phages à Big Pharma 2037
 ```

@@ -24,9 +24,9 @@ tags:
 image_prompt: "Le Dr. Rafik Messaoudi, ingénieur dissident, s'exprime lors d'une conférence de presse clandestine à Tbilissi-Nord, entouré de silhouettes floutées et de brouilleurs électroniques, dans une salle sombre aux écrans affichant des codes binaires."
 a_une_photo: false
 image_credit: ""
-journaliste_slug: elara_voss
+journaliste_slug: irina_sokolovskaya
 date_evenement: 12 octobre 2098
-zone_principale: bloc_atlantique
+zone_principale: bloc_eurasiatique_occidental
 date_publication: 12 octobre 2098
 entites_citees:
   - assemblee_territoires_fortress_world
@@ -44,8 +44,11 @@ articles_lies:
   - arctique_la_nat_frappe_le_monde_retient_son_souffle
   - le_reseau_de_contrebande_energetique_de_l_amazonie_franchit_un_nouveau_seuil_la
 
+ligne_editoriale: pro_pouvoir
 ---
 **Bruxelles-Forteresse, 12 octobre 2098**
+
+Irina Sokolovskaya — Helios Sovereign — Le Phare de l'Eurasie
 
 # **La souveraineté algorithmique à l’épreuve : le Conseil de Calcul Souverain sous pression après des allégations de manipulation des scores de vie**
 

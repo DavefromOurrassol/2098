@@ -24,7 +24,7 @@ tags:
 image_prompt: "Un centre de contrôle futuriste sombre, éclairé par des hologrammes de flux logistiques et de cartes stratégiques, où un écran central affiche en rouge la mention \"DÉCISION AUTONOME PRISE\" au-dessus d'un schéma de réacheminement de ressources."
 a_une_photo: false
 image_credit: ""
-journaliste_slug: s_karadec
+journaliste_slug: nora_caldwell
 date_evenement: 17 septembre 2098
 zone_principale: bloc_atlantique
 date_publication: 17 septembre 2098
@@ -44,8 +44,11 @@ articles_lies:
   - les_jeux_du_mur_quand_le_sport_devient_la_derniere_guerre_que_les_blocs_osent_en
   - bruxelles_forteresse_12_octobre_2098
 
+ligne_editoriale: pro_pouvoir
 ---
 # Les agents autonomes franchissent le seuil décisionnel : quand l'IA ne demande plus la permission
+
+Nora Caldwell — NexCore Atlantic — La Voix du Commandement
 
 **Bruxelles-Forteresse | 17 septembre 2098 | Bureau Sciences & Technologies**
 

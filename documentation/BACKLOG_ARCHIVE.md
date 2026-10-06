@@ -461,3 +461,163 @@ Hague, Hope Theatre thaïlandais, chiens de dépistage augmentés à l'IA) ;
 plus faibles : mesure grand public (Wegovy), tribune (BCE). Mistral reprend
 des titres de la liste « déjà repérés » malgré la consigne et utilise des
 sous-variables comme identifiants (rattachées à l'import).
+
+---
+
+## ✅ S23 — Génération d'articles : signatures, lieu ≠ zone, journaux manquants, rezonage, temporel — CLOS le 4 octobre 2026
+
+**Origine** : défauts rendus visibles par le site des revues (3 oct).
+
+**Signatures (83 articles)** : `audit_signatures.py` — toutes antérieures
+aux correctifs du 23-25 août (remontée N1, `metadata["journaliste"]`) ;
+pas de bug actif sauf un article sans zone qui sautait le chemin 1 sans
+avertissement (WARN ajouté dans `get_journal_profile()`). Coquille
+`_reconstructee` : renommage du 26 sept non reporté dans `journaux.yaml`.
+
+**Lieu ≠ zone (bug actif)** : avec une zone fixée dans `generate.py`, les
+6 entités du prompt étaient tirées par thématique dans le monde entier
+(cas réel : journal Maghreb consacré à Kharg). Correctif : jusqu'à 3 places
+réservées aux instances de la zone du journal (N1 + sous-zones,
+`loader.zones_du_journal()`), au plus 2 instances d'autres N1,
+transnationales libres ; `build_snapshot(..., zone_article=None)`. Séries
+et manuel non concernés (pas de zone fixée). Testé en réel : article
+Maghreb ancré à Oujda/Tlemcen.
+
+**Journaux** : 9 zones N1 de septembre sans rédaction → 18 rédactions
+créées (`--update` ; 7 lots échoués nettoyés puis relancés). Rédaction de
+sous-zone prioritaire (`_resoudre_zone_redaction()`, Nuuk). `validate.py`
+section 12 `[JOURNAUX]` (clé orpheline, rédaction factice, zone N1 sans
+rédaction).
+
+**Articles hérités** : la `zone_principale` d'avant le 21 août avait été
+reconstituée après coup → `rezoner_articles.py` (LLM, pays et sous-zones
+fournis, `hors_zones` possible, cache, `--corriger`) : 68 articles rezonés,
+6 corrections manuelles (Bruxelles, Tbilissi → Zone Euro Sud ; Kharg →
+Proche-Orient). Hanse Baltique rattachée à l'Arc eurasien (breakdown).
+Puis `reattribuer_signatures.py` : 94 signatures curatées. 8 articles sans
+`ligne_editoriale` → `pro_pouvoir` (journaux cités). `export_revues.py` :
+orateurs et double slug. Site : 219/219 publiables, tous signés.
+
+**Temporel** : `audit_temporel.py`, 12 passages, 3 vraies erreurs corrigées
+(« d'ici 2050/2070 » → 2115/2120), règle ajoutée au prompt système.
+
+Leçon : l'archive du backlog (rétro-application P20, bug #26, correctif du
+25 août) expliquait la moitié du diagnostic — la consulter avant de
+corriger des données héritées.
+
+---
+
+## ✅ Site des revues — titres, recherche, continents, Hyphan (chantier 5, partiel) — CLOS le 5 octobre 2026
+
+Points du chantier 5 (toujours ouvert pour les identités visuelles, les
+photos, l'audio et le multilingue) traités et publiés le 5 octobre :
+
+- **Guillemet orphelin** : `nettoyer_corps()` retirait tout guillemet en tête
+  ou en fin de titre (`.strip("«»\"“” ")`), même s'il n'encadrait qu'une
+  citation. 24 titres touchés (pas seulement « isruter ») ; corrigé par
+  `retirer_guillemets_englobants()` (guillemets retirés seulement s'ils
+  encadrent le titre entier). Vérifié par comparaison ancien/nouveau `<h1>`
+  sur le site.
+- **Titres en capitales** : 14 articles, 9 thématiques. Correction à l'export
+  (`normaliser_capitales()`, vault intact) : casse reprise du corps, du chapô
+  et de l'`image_prompt` ; v2 pour les noms propres vus seulement en début de
+  phrase (Occitanie) avec `MOTS_OUTILS` contre « Quand Les… » ; « Occitanie »
+  restait en minuscules car absent du corps (présent dans le frontmatter) →
+  appel élargi au chapô et à l'`image_prompt`. Consigne ajoutée au prompt.
+- **Recherche** : loupe par revue + recherche globale sur le kiosque, texte
+  complet, sans serveur (`patch_recherche_revues.py`). Testée sur mini-vault
+  (build + JS sous node) puis publiée.
+- **Continents** : un article sur le Sahel apparaissait sous « Amériques »
+  (Bloc Souverainiste Non-Signataire, 20 pays américains, 6 africains, 1
+  asiatique). Revue des blocs mixtes (≥ 15 % hors du continent affiché) :
+  5 forçages dans `continents_zones.yaml` (3 → Monde, al_hima → Europe,
+  arc_sahelo_mediterraneen → Afrique).
+- **Fausses alertes vérifiées** : « Lyon-Métropole avec un journal
+  indo-pacifique » = siège de la revue (Séoul) affiché sur la page, géographie
+  correcte ; « Arc eurasien / Afrique » et « Réseau Vivant Continental » =
+  articles correctement rattachés (sujets mondiaux).
+- **Audit des revues** ajouté au GUI (Validation, `gui_verified: true`),
+  option `--mois` retirée (sans effet en mode audit).
+- **Bloc de métadonnées resté dans le texte** : 1 article réparé
+  (`reparer_bloc_metadonnees.py`), chapô de revue régénéré.
+- **Hyphan** : exclue des articles hors `reference` (5 instances), 4 articles
+  du lot forcé du 24 sept retirés dans `_a_supprimer/`. Diagnostic : instances
+  dans les 6 scénarios, seule fortress_world était exclue ; les 5 articles
+  venaient d'un même lot « Forcer, tous les scénarios ».
+
+Leçon : chercher un défaut signalé par David directement dans le site
+construit (`site/`, `recherche.json`) avant de soupçonner le vault — trois
+« incohérences » sur quatre étaient des effets d'affichage.
+
+---
+
+## ✅ S26 — Journal couvrant un fait d'une autre zone — CLOS le 6 octobre 2026
+
+**Origine** : demande de David (5 oct) — en mode Forcer, c'était toujours le
+journal de la zone de l'élément qui écrivait ; aucun moyen de traiter un fait
+étranger comme sujet principal, vu depuis une autre zone (« page
+International »).
+
+**Conception** (validée par David) : `zone_principale` = zone du journal
+(rangement sur le site) ; la zone de l'élément devient `zone_evenement`.
+Approche minimale : en mode Forcer, `generate.py` met la zone du journal dans
+`config["zone_slug"]` — le journal, la signature, l'ancrage local des
+instances et `zone_principale` suivent sans toucher `api.py`.
+
+**Fait** :
+- `patch_s26_journal_etranger.py` : `generate.py` (`--forcer-zone-journal`,
+  scénarios limités à ceux où la zone a une rédaction pour la ligne,
+  `zone_evenement`) ; `prompt_builder.py` (consigne « Couverture d'un fait
+  étranger » à la place de « ancré dans la zone » si les deux zones
+  diffèrent ; zone de l'élément détaillée dans la géographie). `.bak_s26`.
+- Champ GUI d'abord en texte, puis **liste déroulante** à la demande de David
+  (`patch_s26_liste_zones_journal.py` : `app.py`, type
+  `zones_journal_forcer` ; `scripts_config.json`, `slug_select` rechargé sur
+  élément / type / ligne). `.bak_s26_liste`.
+
+**Tests** : dry-run (journal maghrébin, consigne présente, ancrage absent,
+deux zones détaillées) ; génération réelle Kharg-9 / policy_reform /
+maghreb_atlantique — signature et `zone_principale` corrects, regard local et
+sources à distance ; article retiré ensuite (troisième « casino des données »,
+doublon avec le site). Liste GUI confirmée par David.
+
+**Limite** : l'IA reprend largement la description de l'instance (titres
+recyclés) — même cause que S25.
+
+---
+
+## ✅ S25 (partiel) — Kharg-9 : cooldown durci, exclusion, doublon — 6 octobre 2026
+
+Mesure : présence encore forte après les correctifs d'août (eco 5/8,
+policy 5/17, fortress 11/38 depuis le 22 août), 24 cas sur 27 via la
+sélection d'instances. Cause : le cooldown 3/2 laissait ≈ 60 % de présence à
+une instance très bien notée. Fait : cooldown 2/3 pour toutes les instances
+(`loader.py`, `.bak_s25`, ≈ 40 % au plus) ; Kharg-9 exclu en eco_communalism ;
+doublon *Le Nexus qui défie Genève* retiré (site : 167 articles) ; paire
+« Dernier Souffle » vérifiée, gardée. Piste « baisser l'impact » écartée.
+Reste en surveillance dans le backlog actif (mesurer l'effet sur les
+prochaines séries).
+
+---
+
+## ✅ Petits chantiers clos le 6 octobre 2026
+
+- **`nouveau_califat_barcelone`** (new_sustainability) : zone N1 vide (ni pays
+  ni description, statut « dominant »), probablement créée par
+  `creer_zone_vide`. Supprimée depuis la Carte ; ses 2 rédactions retirées de
+  `journaux.yaml` (*Al-Mithaq Al-Barceloni*, *Al-Balagh al-Muqawim*, 6
+  journalistes chacune, `.bak_califat`). validate 0/0/0.
+- **« Rédaction à <ville> »** sur le site (pied de page, bandeau de la Une,
+  kiosque) : `patch_redaction_siege.py`, `.bak_redaction`. Site republié.
+- **Nettoyage** : `publier_site.sh` exécutable ; `nettoyer_placeholders_
+  journaux.py` supprimé (doublon, aucun appel) ; `_a_supprimer/` supprimé ;
+  `reparer_bloc_metadonnees.py` relancé en aperçu (0 article).
+- **Hacker News** retiré des flux RSS (`rss: null`, `.bak_hn`).
+- **Clos par décision (non retenus / acceptés)** : S3 (renommage des YAML
+  génériques), S6 (tier `strict` sur Claude Sonnet 5), S7 (métaphores vs.
+  descripteurs pour `ton_personnel`), S10 (`_index.md` non cumulatif),
+  `_extract_byline()` (repli seulement depuis le 25 août).
+
+Leçon : une zone ou un journal créé « vide » passe tous les contrôles
+(`validate.py` ne demande ni pays ni description) — c'est le site (continent
+deviné) qui l'a révélé.

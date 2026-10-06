@@ -22,7 +22,7 @@ tags:
 image_prompt: "Un groupe de volontaires du RSHA, vêtus de tenues aux motifs inspirés des cartes hydrologiques locales, installent des capteurs solaires artisanaux près d’une rivière dans la forêt du bassin du Congo, sous une lumière filtrée par la canopée."
 a_une_photo: false
 image_credit: ""
-journaliste_slug: lea_mbokani
+journaliste_slug: thandiwe_ndlovu
 date_evenement: 7 juillet 2098
 zone_principale: bassin_du_congo
 date_publication: 7 juillet 2098
@@ -51,7 +51,7 @@ Les volontaires bénéficieront d’un accès privilégié aux rapports du Conso
 
 Inscription via le hub numérique communautaire de Boende ou en présentiel au marché de Bikoro. Aucune affiliation politique requise.
 
-Léa Mbokani — Réseau Les Irréductibles
+Thandiwe Ndlovu — Mwanga wa Umoja
 
 ---
 **Voir aussi** : [[les_veilleurs_des_nappes_phreatiques_new_sustainability]] · [[pacifique_sud_resilience_network_new_sustainability]] · [[rede_paulista_de_distribuicao_algoritmica_new_sustainability]] · [[reseaux_de_gouvernance_territoriale_distribues_new_sustainability]] · [[nexcore_new_sustainability]] · [[gelecek_meclisi_new_sustainability]]

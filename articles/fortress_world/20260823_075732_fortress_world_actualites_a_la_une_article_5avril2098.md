@@ -22,9 +22,9 @@ tags:
 image_prompt: "Une vue nocturne de la Plaine de Pannonie plongée dans l’obscurité, seulement éclairée par les lueurs tremblotantes de feux improvisés et de panneaux solaires pirates. Au loin, les tours illuminées de Bratislava-Secteur Alpha se découpent sur l’horizon, symbolisant la fracture énergétique. En surimpression, le logo hexagonal d’Helios BSE, projeté en hologramme rouge sur un mur de béton."
 a_une_photo: false
 image_credit: ""
-journaliste_slug: katalin_farkas
+journaliste_slug: giulia_la_volpe_moretti
 date_evenement: 5 avril 2098
-zone_principale: bloc_eurasiatique_occidental
+zone_principale: zone_euro_sud
 date_publication: 5 avril 2098
 entites_citees:
   - bloc_eurasiatique_occidental_fortress_world
@@ -42,7 +42,7 @@ variables_pilotes:
 **Helios BSE coupe le courant sur la Plaine de Pannonie : "Optimisation des flux" ou punition collective ?**
 
 5 avril 2098
-Katalin Farkas — L'Étincelle de Pannonie
+Giulia « La Volpe » Moretti — Il Confine (Le Confins)
 
 BRATISLAVA-SECTEUR ALPHA — Depuis hier minuit, les écrans des terminaux publics affichent le même message laconique : *"Flux énergétique suspendu — Directive Helios BSE n°2098-412. Rétablissement sous 72 heures."* Dans la Plaine de Pannonie, zone officiellement "en transition de statut" depuis sa sécession avortée de 2091, des milliers de foyers, usines et centres de données sont plongés dans le noir. Les autorités du Pacte de Stabilité Intérieure, contactées par notre rédaction, se retranchent derrière une formule bureaucratique : *"Réallocation stratégique des ressources conformément aux priorités du Protocole Intérieur."*
 

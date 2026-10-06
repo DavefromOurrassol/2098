@@ -26,9 +26,9 @@ tags:
 image_prompt: "Une gardienne des archives, Amina Diallo, examine à la lueur d'une lampe à huile un parchemin jauni portant des sceaux brisés, dans une ancienne station de métro reconvertie en dépôt souterrain à Lyon-Part-Dieu, entourée de piles de documents fragiles et de clés USB corrodées."
 a_une_photo: false
 image_credit: ""
-journaliste_slug: enzo_bettini
+journaliste_slug: aicha_ould_salem
 date_evenement: 12 novembre 2098
-zone_principale: grandes_lacs_compact_eau
+zone_principale: arc_sahelo_mediterraneen
 date_publication: 12 novembre 2098
 entites_citees:
   - collectifs_de_hackers_archivistes_des_interstices_reseaux_breakdown
@@ -43,6 +43,8 @@ articles_lies:
 ---
 **La Charte d'Agadez brisée : quand les archives se font armes dans l'Arc Sahélo-Méditerranéen**
 *Lyon-Part-Dieu, 12 novembre 2098*
+
+Aïcha Ould Salem — Les Racines du Seuil
 
 ---
 

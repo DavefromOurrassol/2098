@@ -25,9 +25,9 @@ tags:
 image_prompt: "Un drone noir et anguleux de type Cicada-9X, marqué du logo Helios BSE, survole une usine fortifiée éclairée par des néons bleutés, tandis que des ouvriers aux poignets bandés travaillent sous perfusion lumineuse."
 a_une_photo: false
 image_credit: ""
-journaliste_slug: 
+journaliste_slug: giulia_la_volpe_moretti
 date_evenement: 12 novembre 2098
-zone_principale: rust_belt_communes_libres
+zone_principale: zone_euro_sud
 date_publication: 12 novembre 2098
 entites_citees:
   - commandements_logistiques_peripheriques_du_bloc_eurasien_central_fortress_world
@@ -44,6 +44,8 @@ articles_lies:
 
 ---
 **HÉLIOS BSE DÉBARQUE SES DRONES... ET SES STIMULANTS D'ÉTAT**
+
+Giulia « La Volpe » Moretti — Il Confine (Le Confins)
 *Bratislava-Secteur Alpha, 12 novembre 2098 – L'Étincelle de Pannonie*
 
 Dans les couloirs des **Tours de Verre Blindées d'Helios BSE**, où les **Commandements Logistiques Périphériques du Bloc Eurasien Central** supervisent les **Stromsperre** nocturnes, une rumeur enfle : le consortium aurait mis au point une nouvelle génération de drones énergétiques génétiquement modifiés. Selon les archives du **Nœud Mémoriel Eurasiatique**, les modèles **Cicada-9X** — assermentés sous le nom de code **« Projet Mira »** — seraient capables de *« revitaliser les esprits affaiblis par les rigueurs des zones tampons »*.

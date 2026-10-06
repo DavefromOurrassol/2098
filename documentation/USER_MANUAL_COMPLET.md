@@ -1,6 +1,8 @@
 # Manuel utilisateur complet — Pipeline Ourrassol 2098
 *Référence à jour au 3 septembre 2026, complétée au fil des sessions
-(dernier ajout : 28 septembre 2026 — §3quater Veille monde réel) — couvre `generator/` (42+ scripts
+(dernier ajout : 6 octobre 2026 — §2 cooldown durci et journal d'une
+autre zone (S26, mode Forcer) ; §2octies « Rédaction à » ; §3 Kharg-9
+exclu en eco_communalism ; §3quater Hacker News hors RSS) — couvre `generator/` (42+ scripts
 Python) et `gui/` (Flask). Historique complet des sessions et
 chantiers (bugs trouvés, itérations, tests réels) dans
 `USER_MANUAL_HISTORIQUE.md`, à uploader seulement au besoin.*
@@ -15,7 +17,7 @@ Ce manuel classe chaque script par rôle : **modules internes** (jamais lancés 
 Ourrassol2098/                          ← racine du vault Obsidian
 ├── generator/                          ← pipeline Python (35+ scripts)
 │   ├── config.yaml, config_series.yaml, journaux.yaml
-│   ├── state/ (instance_usage.json, trajectory_usage.json, event_relevance_usage.json, manual_progress.json, last_validated.json, editions.json)
+│   ├── state/ (instance_usage.json, trajectory_usage.json, event_relevance_usage.json, manual_progress.json, last_validated.json, rezonage_articles.json, audit_temporel.md…) — la racine du vault a aussi un state/ (editions.json, chapos_revues.json, veille…)
 │   ├── entites_custom/ (queue.yaml, needs_review.yaml, processed.yaml)
 │   ├── evenements_custom/ (queue.yaml, processed.yaml, undo_queue.yaml)
 │   └── signaux_custom/ (queue.yaml, processed.yaml, needs_review.yaml)
@@ -151,6 +153,17 @@ valides. `validate_config_forcer()` est une validation allégée
 équivalente pour le mode forcer (pas de zone_slug fixe à valider, chaque
 article de la boucle utilise la zone propre à l'élément dans son
 scénario).
+
+**Cooldown d'usage des instances** (22 août 2026, durci le 6 octobre 2026,
+`loader.py`, `_select_least_used_instances()`) : après `COOLDOWN_STREAK`
+sélections consécutives dans un scénario, une instance est écartée pendant
+`COOLDOWN_DURATION` apparitions où elle aurait été candidate. Réglage
+actuel **2 / 3** (avant : 3 / 2), soit environ 40 % de présence au plus
+pour une instance très bien notée (avant : environ 60 %, mesuré sur
+Kharg-9 en eco_communalism, 5 articles sur 8). L'exemption de dominance
+écrasante (`DOMINANCE_EXEMPTION_GAP = 10`) est inchangée ; les instances
+custom et `priorite_forcee` ne passent jamais par ce mécanisme.
+Sauvegarde : `loader.py.bak_s25`.
 
 **Rotation à mémoire des instances** (2 août 2026, `loader.py`) : au-delà
 de 6 instances candidates pertinentes pour une thématique, les ex-aequo
@@ -292,6 +305,42 @@ arbitraire ; le design en 3 couches absorbe déjà bien la croissance
 attendue (seule la liste compacte grossit avec le vault, à coût quasi
 nul). À revisiter avec des données réelles une fois le vault plus gros.
 
+### Journal d'une autre zone — mode Forcer (S26, 6 octobre 2026)
+Champ GUI « Journal d'une autre zone (optionnel) » de « Générer un article »
+(mode Forcer seulement) = `generate.py --forcer-zone-journal <zone_slug>`
+(ou `forcer_zone_journal` dans `config.yaml`).
+- **Vide** : comportement habituel, le journal de la zone de l'élément forcé
+  écrit.
+- **Rempli** : le journal de cette zone (ligne éditoriale choisie) couvre
+  l'élément comme un **fait étranger**. Seuls les scénarios où cette zone a
+  une rédaction sont traités (les autres sont écartés avec un message). Par
+  scénario, `config["zone_slug"]` = zone du journal (journal, signature,
+  ancrage local des instances et `zone_principale` la suivent) et
+  `config["zone_evenement"]` = zone de l'élément.
+- `prompt_builder.py` : si `zone_evenement` ≠ `zone_slug`, la consigne
+  « ancré géographiquement dans la zone » est remplacée par « Couverture
+  d'un fait étranger » (le fait se déroule dans la zone de l'élément ; date
+  et lieu de publication = la rédaction ; jamais sur place, sources à
+  distance ; conséquences et réactions dans la zone du journal ; pas de
+  transposition culturelle). La zone de l'élément est aussi détaillée dans
+  la géographie. Même zone choisie que celle de l'élément = article normal.
+- Liste du GUI : `/api/slugs?type=zones_journal_forcer` (`app.py`) — zones
+  ayant une rédaction pour la ligne, dans les scénarios où l'élément existe,
+  libellé « Zone — Journal (scénario) » ; rechargée quand l'élément, son type
+  ou la ligne changent.
+- Patchs (déjà appliqués) : `patch_s26_journal_etranger.py` (`generate.py`,
+  `prompt_builder.py`, `.bak_s26`), `patch_s26_liste_zones_journal.py`
+  (`app.py`, `scripts_config.json`, `.bak_s26_liste`).
+- Testé en réel le 6 oct (Kharg-9, policy_reform, journal du Maghreb
+  Atlantique) : bonne signature, `zone_principale: maghreb_atlantique`,
+  regard local et sources à distance. L'IA reprend toutefois beaucoup la
+  description de l'instance (titre « casino des données » recyclé).
+```bash
+python3 generate.py --mode forcer --forcer-type instance --forcer-slug terminal_kharg_data_haven \
+    --forcer-scenarios policy_reform --forcer-zone-journal maghreb_atlantique \
+    --ligne-editoriale pro_pouvoir --thematique international [--dry-run]
+```
+
 ### `trace_injection.py` 🔁 🗄️ — **nouveau le 2 août 2026, diagnostic pur**
 Reconstitue le parcours complet d'une instance/un événement/un signal :
 origine (idée source, date d'injection), propagation dans l'espace
@@ -355,6 +404,15 @@ conditions réelles sur le vault depuis ces correctifs (le test s'appuie
 sur l'exemple déjà fourni, reconstruit fidèlement, pas sur un nouveau
 run réel du script).
 
+**Ancrage local (4 octobre 2026)** : quand une zone est fixée (Semi-guidé
+`--zone-slug`, ou zone de l'élément en mode Forcer), `build_snapshot()`
+reçoit `zone_article` et `filter_instances_for_thematique()` réserve
+jusqu'à 3 des 6 entités aux instances localisées dans la zone du journal
+(N1 et sous-zones), au plus 2 instances d'autres N1, les transnationales
+libres ; places non remplies laissées vides. Log :
+`[loader] Zone du journal : N locale(s)…`. Sans zone (séries, manuel) :
+inchangé. Voir §2nonies.
+
 ### `generate_series.py` 🔁 🧩
 Génère une **série d'articles** sur plusieurs thématiques avec cohérence temporelle, pilotée par `config_series.yaml`.
 ```bash
@@ -391,9 +449,18 @@ python3 generate_journaux.py --scenario NOM   # ou --all
 python3 generate_journaux.py --ligne pro_pouvoir|opposition|all
 python3 generate_journaux.py --update             # n'ajoute que les zones manquantes
 python3 generate_journaux.py --fill-journalistes  # complète uniquement le champ "journalistes" des zones qui ne l'ont pas encore, sans toucher à nom/ton/langue_style
+python3 generate_journaux.py --all --fill-presentation          # fiche publique des journaux qui n'en ont pas (3 oct 2026)
+python3 generate_journaux.py --all --fill-presentation --force  # refait la fiche de TOUS les journaux (seulement ces 4 champs)
 python3 generate_journaux.py --dry-run
 ```
+**Fiche publique (3 oct 2026)** : `--fill-presentation` remplit `presentation` (2 phrases pour le lecteur), `ville` (« itinérant » pour un journal clandestin), `periodicite` (liste fermée : quotidien, hebdomadaire, bimensuel, mensuel, bulletin irrégulier, radio) et `fondation` (2026-2097). Lots de 5 journaux par appel, tier `creative_souple`, `.bak_presentation` avant écriture ; une fiche invalide est ignorée (relancer reprend les manquantes). Rien d'autre n'est touché. Utilisée par le site des revues (§2octies) et par `chapos_revues.py`. ⚠️ Le mode **complet** (sans `--update`) remplace l'entrée entière de chaque journal : il effacerait fiches, `seniorite`, `ton_personnel`… comme avant. `_reseau` est réécrit à chaque lancement (dict `RESEAUX`).
 ⚠️ Lots de 3 zones par appel, `max_tokens=8000`. Fallback silencieux sur échec de lot : écrit quand même une entrée (vide pour `--update`, ou laisse `journalistes: []` pour `--fill-journalistes` sans toucher au reste). Après tout run partiellement échoué avec `--update` (pas `--fill-journalistes`), lancer `clean_fallback_journaux.py` avant de relancer.
+
+⚠ **Constat du 3 octobre** : un lot `--update` dont le JSON est cassé
+laisse des rédactions factices (`nom: Édition <zone>`, aucun journaliste) ;
+elles sont pires qu'une absence (le pipeline les accepte). Après tout run
+`--update` avec un `[WARN] Lot N échoué`, lancer `clean_fallback_journaux.py`
+puis relancer `--update` — `validate.py` (section 12) les signale aussi.
 
 ### `check_journaux_coherence.py` 🔁 🗄️ — diagnostic pur
 Compare les zones N1 réelles de la géographie aux entrées de `journaux.yaml`, dans les deux sens (manquantes/orphelines), pour les 6 scénarios × 2 lignes. Aucune écriture.
@@ -1452,6 +1519,261 @@ ponctuel), `fix_name_non_quote.py` (outil ponctuel). Modifiés :
 
 ---
 
+## 2octies. Site des revues — publication web (2-3 octobre 2026)
+
+Les articles du vault sont publiés en ligne sous la forme de **12 revues de
+presse** sur le modèle de *Courrier International* : chaque revue choisit,
+« traduit » et présente des articles des journaux de son camp. En ligne :
+**https://ourrassol.pages.dev**. Le GUI Flask reste en local ; le site est un
+ensemble de pages HTML statiques, régénéré à chaque publication.
+
+### Les 12 revues — `generator/revues.yaml`
+Une revue pro-pouvoir et une d'opposition par scénario. Champs : `nom`,
+`reseau_source` (bloc `_reseau` de `journaux.yaml` dont la charte sert de
+ligne), `sous_titre`, `fondation`, `ville_siege`, `periodicite`,
+`style_visuel`, `langue_publication`, et au besoin `statut: privee_toleree`
+(*Le Moniteur de l'Ordre*, *Limes* : revues privées tolérées par tous les
+blocs, siège Genève-Bunker) ou `diffusion: radio_transcriptions` (*Radio
+Frontières*). Une revue ne reprend **que** les journaux de son camp. Les
+réseaux `_reseau` restent tels quels : les revues sont des publications
+distinctes.
+
+### Rattachement article → journal → revue
+- **Revue** = `scenario` + `ligne_editoriale` de l'article.
+- **Journal** = `zone_principale`, en remontant les zones parentes de
+  `geographie/{scenario}.md` jusqu'à une zone qui a un journal dans
+  `journaux.yaml` (ex. `nairobi_hub` → `hub_africain_gouvernance`).
+- **Signature** = la personne de `journaliste_slug` si elle appartient à
+  ce journal — journalistes **et orateur·rices**, slug comparé sous les
+  deux formes (`api._slugify` et `slugify` de l'export ; 4 oct) —, sinon
+  « La rédaction de *journal* ».
+- **« Traduit du … »** = première langue trouvée dans `langue_style` du
+  journal (42 langues reconnues ; rien si français).
+- **Publiés** : articles rattachés à un journal, datés jusqu'au **mois de
+  parution** actif (`edition_active` de `editions.json`). Les articles datés
+  après paraissent quand le mois avance. Toutes les thématiques sont publiées.
+- **Non publiables** : sans `ligne_editoriale`, sans `zone_principale`, ou zone
+  sans journal sur sa chaîne (l'audit les liste).
+
+### Organisation du site
+Kiosque d'accueil (hors fiction, 12 revues par scénario) → pour chaque
+revue : Une (article le plus récent, 4 « À lire aussi », dernières
+parutions), navigation par **continent** (8 rubriques, chacune listant ses
+zones) et par **thématique** (20), pages zone, pages article (fil d'Ariane
+continent › zone, chapô, signature, journal, date, « Traduit du … », fiche
+« La source », mots-clés, « Lire aussi » de la même zone) et « Nos sources ».
+Toutes les zones et thématiques apparaissent, même vides. Numéro en en-tête :
+(année − fondation) × 12 + mois, sur le mois de parution.
+
+**Continents** : majorité des pays de `origine_reelle` de la zone ; « Monde »
+si aucun continent ne réunit 40 % des pays sur au moins 3 continents ; zone
+sans pays : indice tiré du nom. Forçage dans `generator/continents_zones.yaml`
+(`{scenario: {zone: Continent}}`). Chaque `--build` liste les zones classées
+sans certitude ; une zone inscrite dans le fichier sort de la liste.
+
+### `export_revues.py` 🔁 🗄️ — audit et génération du site
+```bash
+python3 generator/export_revues.py                  # audit : publiables / signés / refusés par revue
+python3 generator/export_revues.py --detail         # + liste des articles non publiables
+python3 generator/export_revues.py --csv audit.csv  # une ligne par article
+python3 generator/export_revues.py --continents     # continent attribué à chaque zone de journal
+python3 generator/export_revues.py --build          # génère site/ (n'écrit nulle part ailleurs)
+python3 generator/export_revues.py --build --mois 2098-09   # forcer un mois de parution
+```
+Ne modifie aucun fichier du vault. `--build` refuse d'effacer un dossier de
+sortie qu'il n'a pas créé (marqueur `.export_revues`). Le corps des articles
+est nettoyé (titre, ligne de date, signature et bloc « Voir aussi » retirés,
+wikilinks supprimés). Tout est reconstruit à chaque fois (quelques secondes,
+aucun appel LLM) ; seuls les fichiers modifiés partent en ligne.
+
+### `chapos_revues.py` 🔁 🧩 — chapô de rédaction des revues
+Sous chaque titre, le site affiche le chapô de la **revue** (qui parle, d'où,
+quel angle), pas celui du journal. Un appel `call_llm` par article publié
+(`creative_souple`), avec la ligne de la revue et la fiche du journal.
+Résultat dans `state/chapos_revues.json`, **jamais dans les articles** ; un
+chapô n'est refait que si le texte de l'article change (empreinte). Annonces et
+Météo n'en ont pas. Sans chapô de revue, le site affiche le `chapo` d'origine.
+Jamais lancé automatiquement.
+```bash
+python3 generator/chapos_revues.py --dry-run     # combien d'articles, volume estimé
+python3 generator/chapos_revues.py --limit 3     # essai
+python3 generator/chapos_revues.py               # génère les manquants
+python3 generator/chapos_revues.py --refaire reference/<fichier>.md   # un article
+```
+Consignes du prompt (réglées sur essais réels) : commencer par le fait,
+citer le journal une fois et simplement, pas de formule « voix de… » ni de
+qualificatif péjoratif, 60 mots maximum, rien d'inventé.
+
+### Fiches des journaux
+Présentation, ville, périodicité et fondation de chaque journal, dans
+`journaux.yaml` (voir `generate_journaux.py --fill-presentation`, §2).
+Affichées dans « La source » et « Nos sources » ; à défaut, première phrase du
+`ton` (consigne interne, à éviter).
+
+### Publication — `publier_site.sh`
+```bash
+python3 generator/chapos_revues.py      # si nouveaux articles
+bash generator/publier_site.sh --dry-run   # simulation : fichiers ajoutés/modifiés/supprimés
+bash generator/publier_site.sh             # build + copie + commit + push
+```
+`publier_site.sh` lance lui-même `export_revues.py --build` : inutile de le
+faire avant. Sans droit d'exécution, l'appeler avec `bash`.
+
+Construit `site/`, en fait une copie miroir dans le dépôt `ourrassol-site`
+(à côté du vault ; `SITE_REPO=` pour un autre chemin), puis commit et push
+s'il y a du changement. Cloudflare Pages republie en une à deux minutes.
+
+**Mise en place (faite une fois, 3 oct)** : dépôt GitHub **privé**
+`DavefromOurrassol/ourrassol-site` (README) cloné dans `…/Obsidian Vault/` ;
+projet Cloudflare Pages `ourrassol` via « Continue to Pages » (Pages est
+présenté comme « legacy » mais reste pris en charge), accès GitHub limité à ce
+seul dépôt, branche `main`, preset None, **pas de commande de build**, sortie
+`/`. `site/` est dans le `.gitignore` du vault. Connexion GitHub : **Continue
+with Apple** (compte créé avec une adresse Apple masquée).
+
+### Recherche (5 octobre 2026)
+Une loupe « Rechercher » figure dans l'en-tête de chaque revue (Une,
+rubriques, articles) et sur le kiosque. À chaque `--build` :
+- `<revue>/recherche.json` + `<revue>/recherche.html` : recherche dans la revue ;
+- `recherche.json` + `recherche.html` à la racine : recherche dans les 12 revues
+  (la revue apparaît dans le surtitre de chaque résultat).
+L'index contient titre, chapô affiché, zone, thème, journal, signature,
+mots-clés, date et **texte complet** (`entree_index()`, `texte_brut()`). La
+recherche se fait dans le navigateur (JavaScript dans la page, aucun
+serveur) : accents et casse ignorés, tous les mots tapés doivent être
+présents, score titre > chapô > zone/thème/journal/mots-clés > texte,
+60 résultats au plus, mots surlignés, extrait du texte autour du mot,
+`?q=` dans l'adresse. Ne marche que servi par un serveur (site en ligne,
+ou `python3 -m http.server -d site`), pas en ouvrant les fichiers depuis le
+disque. Ajouté par `patch_recherche_revues.py`.
+
+### Titres (5 octobre 2026)
+- **Guillemets** : `retirer_guillemets_englobants()` ne retire les guillemets
+  que s'ils encadrent le titre ENTIER (« Titre » → Titre). Avant, le « de
+  tête était retiré même quand il n'encadrait qu'une citation (« Slow Data » :
+  … → Slow Data » : …) : 24 titres touchés. `patch_guillemets_titres.py`.
+- **Titres en capitales** (14 articles, toutes thématiques) :
+  `normaliser_capitales()` remet un titre à plus de 80 % en capitales en
+  casse française. Chaque mot reprend la casse qu'il a au milieu d'une phrase
+  du corps, du chapô ou de l'`image_prompt` (noms propres, sigles : Venelles,
+  ACRA, Hélios BSE) ; un mot jamais vu en minuscules et absent de
+  `MOTS_OUTILS` garde sa majuscule (Occitanie, vu seulement en début de
+  phrase) ; une unité collée à un nombre reste telle quelle (52°C) ; le reste
+  passe en minuscules. Les articles du vault ne sont pas modifiés.
+  `patch_titres_capitales.py` puis `patch_titres_capitales_v2.py`, et appel
+  élargi au chapô et à l'`image_prompt` (sed du 5 oct, `.bak_capitales3`).
+  La consigne « titre à la française, jamais tout en capitales » est aussi
+  dans le prompt (§2nonies).
+
+### Continents forcés (`continents_zones.yaml`, état au 5 octobre)
+Un bloc transcontinental est rangé sous le continent de la majorité de ses
+pays, sauf si aucun n'atteint 40 % ; un bloc à 74 % américain et 22 %
+africain reste donc « Amériques » (cas du Bloc Souverainiste Non-Signataire,
+dont les articles sur le Sahel apparaissaient sous Amériques). Forçages
+actuels : `policy_reform/bloc_souverainiste_non_signataire` → Monde,
+`fortress_world/zones_grises_tampons` → Monde,
+`reference/institutions_multilaterales_survivantes` → Monde,
+`fortress_world/al_hima` → Europe, `breakdown/arc_sahelo_mediterraneen` →
+Afrique (ces deux derniers figent l'affichage existant).
+`new_sustainability/nouveau_califat_barcelone`, zone N1 vide (ni pays ni
+description), a été supprimée le 6 oct (Carte + ses 2 rédactions retirées
+de `journaux.yaml`, `.bak_califat`).
+Pour repérer d'autres blocs mixtes, le script ad hoc du 5 oct liste les zones
+à journal dont ≥ 15 % des pays sont sur un autre continent que celui affiché
+(voir `HANDOFF_5_OCTOBRE.md`).
+
+### Audit des revues dans le GUI (5 octobre 2026)
+Entrée « 📰 Audit des revues (site) », section Validation
+(`scripts_config.json`, id `audit_revues`, `gui_verified: true`) : lance
+`export_revues.py` en mode audit (12 revues : publiables, signés, rédaction,
+refusés). Options : `--detail`, `--continents`. Le mode audit ne filtre pas
+par mois de parution (option `--mois` retirée de l'entrée : elle ne sert
+qu'à `--build`).
+
+### Réparation d'un bloc de métadonnées resté dans le texte
+`reparer_bloc_metadonnees.py` (5 octobre 2026, aucun appel IA) : pour tout
+article dont le texte contient encore `===METADONNEES_PUBLICATION===`,
+reporte CHAPO / TAGS / IMAGE_PROMPT dans le frontmatter (si le champ y est
+vide) et retire le bloc (`.bak_meta`). Aperçu par défaut, `--apply` pour
+écrire. Ensuite : `chapos_revues.py` (le texte ayant changé, son chapô de
+revue est refait) puis publication. Un seul cas au 5 oct (article education
+policy_reform du 23 août, généré avec un retry de longueur).
+
+### Siège de la revue
+Le bandeau et le pied de chaque page affichent la ville siège de la REVUE
+(`revues.yaml`, ex. *Le Courrier des Continents* : Séoul), pas celle du
+journal d'origine. Voulu (modèle *Courrier International*). Depuis le
+6 octobre 2026, elle est écrite « Rédaction à Séoul » (pied de page),
+« rédaction à Séoul » (bandeau de la Une, kiosque), pour ne pas laisser
+croire qu'un article sur Lyon-Métropole se passe à Séoul
+(`redaction_siege()`, `patch_redaction_siege.py`, `.bak_redaction`). Revue
+sans ville : rien d'affiché.
+
+`publier_site.sh` est exécutable depuis le 6 oct (`generator/publier_site.sh`).
+
+### Limites connues et suites
+Style unique pour les 12 revues (identités visuelles à venir) ; photos en
+emplacement vide ; pas d'audio ni de version multilingue ; site public pour
+qui a l'adresse. Voir backlog, chantier 5, S23 et S25.
+
+### Fichiers touchés (session du 2-3 octobre)
+Nouveaux : `revues.yaml`, `export_revues.py`, `chapos_revues.py`,
+`publier_site.sh`, `continents_zones.yaml`, `state/chapos_revues.json`.
+Modifiés : `generate_journaux.py`, `journaux.yaml` (clé
+`europe_occidentale_reconstruite` corrigée, fiches), `.gitignore` du vault.
+
+---
+
+## 2nonies. Génération d'articles — journaux, zones et audits (S23, 3-4 octobre 2026)
+
+### Résolution du journal (`prompt_builder.py`)
+`get_journal_profile()` remonte depuis la **zone exacte** de l'article
+(`_resoudre_zone_redaction()`) et prend la première rédaction trouvée dans
+`journaux.yaml` : sous-zone, puis parents, puis N1 (avant : toujours la N1).
+Une sous-zone dotée de ses propres journaux les utilise (Nuuk-Forteresse,
+fortress_world). Sans zone : `[WARN][journal] Aucune zone fournie` puis
+réseau global (signature inventée). `export_revues.py` applique la même
+remontée.
+
+### Titre à la française (prompt, 5 octobre 2026)
+Dans les « Contraintes impératives » de `build_journalistic_brief()` : « Le
+titre doit être accrocheur et ancré dans le monde décrit, écrit à la
+française : majuscule au premier mot et aux noms propres seulement, jamais
+tout en capitales » (`.bak_titre_capitales`). Le site corrige de toute façon
+les titres existants (§2octies).
+
+### Règle temporelle (prompt système)
+Ajoutée aux règles absolues : une année antérieure à 2098 désigne le passé ;
+toute échéance future est postérieure (« d'ici 2115 »).
+
+### `validate.py` — section 12 `[JOURNAUX]`
+Pour les 6 scénarios et les deux camps : **erreur** si une clé de
+`journaux.yaml` n'existe pas dans la géographie (renommage non reporté) ou
+si une rédaction est factice (nom vide / « Édition … », ou sans journaliste
+ni orateur·rice) ; **avertissement** si une zone N1 n'a pas de rédaction.
+
+### Outils S23 (`generator/`, CLI)
+| Script | Rôle | Écrit ? |
+|---|---|---|
+| `audit_signatures.py` | Articles dont la signature n'appartient pas à la rédaction de leur zone, par cause et par mois | non |
+| `audit_lieu_zone.py` | Zone de chaque article récent + début du texte, pour comparer à l'œil | non |
+| `audit_temporel.py` | Années passées employées au futur ; rapport `generator/state/audit_temporel.md` | non |
+| `rezoner_articles.py` | Corrige `zone_principale` des articles hérités (LLM, cache `generator/state/rezonage_articles.json`, rapport `rezonage_rapport.md`) ; `--corriger DEBUT_FICHIER=ZONE`, `--apply` sans appel LLM | `--apply` (`.bak_rezonage`) |
+| `reattribuer_signatures.py` | Remplace une signature hors rédaction par une personne curatée du bon journal (nom gardé s'il est déjà dans la rédaction ; datelines ignorées) | `--apply` (`.bak_signature`) |
+
+`rezoner_articles.py` : périmètre = articles générés jusqu'au 25 août
+(`--jusqu-au`) + tout article sans zone. Le LLM choisit parmi les zones N1
+**ayant une rédaction** (pays et sous-zones fournis), ou `aucune` /
+`hors_zones` (zone gardée). Erreur API (503) : 3 essais, sinon l'article est
+repris au lancement suivant. Après un rezonage, lancer
+`reattribuer_signatures.py`.
+
+Les patchs du 3-4 oct (`patch_zone_instances.py`, `patch_zone_etrangeres.py`,
+`patch_validate_journaux.py`, `patch_redaction_sous_zone.py`,
+`patch_export_signatures.py`) sont déjà appliqués : à ne pas relancer.
+
+---
+
 ## 3. Pipeline entités & événements custom
 
 ### Chantier "dimension temporelle pour la génération automatique" (13 août 2026)
@@ -1611,6 +1933,58 @@ python3 inject_custom_signals.py --dry-run
   difficile à provoquer).
 - **Slug déjà pris par un autre signal** : suffixe `_2` (la fiche d'audit de
   l'autre signal était auparavant écrasée sans prévenir).
+
+**Mise à jour du 1er octobre 2026 (testée en conditions réelles : 5 signaux
+de la veille, 12 variables, 0 en `needs_review`)** :
+- **`+1` toléré dans la réponse JSON** : malgré l'emplacement `"<+1 ou -1>"`,
+  Mistral répond parfois `"breakdown": +1`, ce qui n'est pas du JSON valide
+  (erreur `Expecting value … column 18`, 4 idées sur 5 le 30 sept). En cas
+  d'échec du parsing, `call_claude_json` retire le `+` placé devant un nombre
+  après un `:` et réessaie. Un `+20 %` dans un texte valide n'est jamais touché.
+- **Plancher de bascule** (`annee_plancher_bascule()`) : aucune fenêtre
+  `date_bascule`, et aucune année d'`evenement_cle`, ne peut précéder la plus
+  tardive de deux dates : `annee_apparition` (si renseignée) et l'**année en
+  cours**, lue sur l'horloge (2026 aujourd'hui, 2027 l'an prochain). Un signal
+  faible n'a pas encore basculé dans la réalité. Annoncé dans le prompt même
+  sans `annee_apparition`, vérifié par la validation (→ relance).
+- **Sens de `annee_apparition`** : année où le phénomène a été **observé dans
+  la réalité** ; 2025 reste permise (signal repéré l'an dernier), mais sa
+  bascule commence au plus tôt l'année en cours. Le projet démarre en 2026.
+- **Fenêtres existantes antérieures à 2026** (44 au 1er oct, surtout
+  `reference`, ex. `2024-2041`) : laissées telles quelles, elles décrivent des
+  tendances déjà en cours. Le plancher ne s'applique qu'aux nouvelles
+  injections.
+- **Exception pendant l'injection d'une variable (corrigé le 5 octobre
+  2026, `patch_s22_exception_signal.py`)** : chaque variable est traitée dans
+  un `try/except` ; une exception (appel IA, JSON illisible, écriture) devient
+  un échec de CETTE variable (`issues: ["exception : …"]`), comme un échec de
+  validation : les variables déjà injectées gardent leur fiche d'audit et
+  l'entrée `idee_a_remettre_en_queue` est produite. Avant d'écrire, un
+  instantané de la fiche variable et du registre est pris
+  (`_instantane_ecriture()`) ; une exception en cours d'écriture les restaure
+  (`_restaurer_instantane()`, « écriture annulée »), pour qu'aucune variable
+  ne reste à moitié injectée. Un échec de la fiche d'audit est signalé
+  (`erreur_fiche_audit` + commande `undo_custom.py`). Testé sur un faux vault
+  (plantage écriture / plantage IA / reprise), pas encore en conditions
+  réelles. Une exception à l'étape 1 (sélection) reste attrapée par `main()`
+  (rien n'est écrit à ce stade). Ancien nettoyage manuel, si un vieux cas
+  ressurgit : `grep -rln "<slug>" variables/ signaux_custom/
+  generator/registre_evenements.md`, puis `undo_custom.py --slug <slug>
+  --type signal` (simulation, puis `--execute`).
+- **Exemple JSON de l'étape 2** (5 octobre 2026) : `"<1 ou -1>"` au lieu de
+  `"<+1 ou -1>"`, pour que Mistral n'écrive plus `+1` (invalide en JSON). Le
+  correctif de lecture du 1er octobre reste en filet de sécurité. À vérifier
+  à la prochaine injection : que Mistral ne recopie pas `<1 ou -1>` tel quel
+  (la validation le refuserait et relancerait).
+- **Bloc YAML non refermé dans une fiche variable** → `Aucun bloc ```yaml
+  trouvé dans X.md`. Repérage des fiches concernées (nombre impair de
+  fences) :
+  `for f in variables/*.md; do n=$(grep -c '^```' "$f"); [ $((n % 2)) -ne 0 ] && echo "$f : $n"; done`
+  Réparation : `.bak`, puis ajouter la ligne de fermeture en fin de fichier.
+  Cas réel : `organisation_territoires.md` (1er oct, origine inconnue).
+- **Remettre les idées de `needs_review.yaml` en queue** (toutes, sauf celles
+  déjà en queue) : petit script Python ad hoc du 1er oct, à refaire au besoin
+  (`.bak` des deux fichiers). `requeue_needs_review.py` existe aussi (§3).
 
 ### `idees_vers_queue.py` 🔁 — idées en texte libre → entrées de queue (27 septembre 2026)
 Transforme un texte libre (une ou plusieurs idées) en entrées de queue
@@ -1908,6 +2282,7 @@ python3 generator/set_selection_instance.py --entite ilse_varga_holm --scenario 
 - `exclure` / `autoriser` : pose/retire `exclure_articles: true` (frontmatter de l'instance). `loader.py` retire ces instances **avant** toute sélection automatique (`[loader] N instance(s) exclue(s)`), mais le mode « Forcer un élément » les utilise toujours — personnage « en réserve ».
 - `sans_garantie` / `garantie` : instances **custom** seulement — `injection.garantie_selection: false` supprime la place garantie dans chaque article du scénario (plafond 6 par article), en gardant l'impact sur les variables. Utile quand trop d'instances custom monopolisent les articles.
 - ⚠ **Toute régénération réécrit la fiche et fait perdre le marqueur** : ré-exclure après chaque régénération (cas Hyphan, 24 sept).
+- **État au 6 octobre 2026** : Hyphan Raghavan est exclue (`exclure_articles: true`) dans les 5 scénarios autres que `reference`, où elle reste citable ; ses articles du 24 sept ont été supprimés (dossier `_a_supprimer/` vidé le 6 oct). **Kharg-9** (`terminal_kharg_data_haven_eco_communalism`) est exclu en eco_communalism (S25, il y apparaissait dans 13 articles sur 22).
 
 **Lecture du JSON des réponses LLM** (`extraire_json()`, `instance_generation_common.py`) : tolère un commentaire après le bloc ```json, du texte avant, une imbrication profonde et des virgules finales ; garde le plus grand objet décodable. En cas d'échec, la réponse brute est sauvée dans `gui/logs/llm_json_echec_AAAAMMJJ_HHMMSS.txt` (chemin cité dans l'erreur) — la lire avant de conclure à une troncature (voir S4 du backlog).
 
@@ -2274,7 +2649,7 @@ flux RSS des sources (champ rss) ─► 📰 veille_rss_api.py (API) ─► (mê
   flux, rempli par `verifier_flux_rss.py` ; une source avec `rss` est lue
   par « 📰 Lire les flux RSS » et n'est plus proposée à l'IA dans le prompt
   à coller), `verifie`, `actif` (false = mis de côté), `ajoute_par`.
-  Au 29 sept : 16 sources avec flux.
+  Au 29 sept : 16 sources avec flux ; 15 depuis le 6 oct (Hacker News retiré).
 - `dossier_livres:` — dossier des livres (défaut `documentation/livres`).
 - `livres:` — **exceptions seulement** (voir plus bas) ; une entrée sans
   `fichier:` est juste listée dans le prompt web (livre à joindre à la main).
@@ -2402,8 +2777,10 @@ sources qui ont un champ `rss`.
 1. **Collecte** : articles des 30 derniers jours (`--jours`) pas encore
    lus. Texte = contenu ou résumé fourni par le flux (le plus long des
    deux), nettoyé du HTML, ~1 200 caractères — pas la page complète. Un
-   article de moins de 150 caractères est ignoré (Hacker News : titres
-   seuls).
+   article de moins de 150 caractères est ignoré. Hacker News (titres
+   seuls) a été retiré des flux le 6 oct (`rss: null`, `.bak_hn`) : il est
+   de nouveau proposé à l'IA de chat dans le prompt à coller ; ne pas
+   accepter son flux si `verifier_flux_rss.py --apply` le retrouve.
 2. **Analyse** : un appel par lot de 40 articles (`--taille-lot`),
    mélangés entre sources, `call_llm()` sans recherche web, tier
    `structured_strict`. Prompt : définition stricte, règles absolues, 12
@@ -2517,10 +2894,10 @@ souvent les sources ; Gemini a inventé des URL (9/10 en 404 lors d'un essai).
 - Si l'IA découpe un candidat en plusieurs idées au moment de « Préparer
   l'entrée », seule la première ajoutée compte.
 - Livres : pas d'OCR ; biais technologique des catalogues du JRC.
-- RSS : seules 16 sources sur 31 ont un flux (les institutions ESPAS,
+- RSS : seules 15 sources sur 31 ont un flux (les institutions ESPAS,
   PNUD, JRC, OCDE, WEF, ONU, PNUE… n'en ont pas : prompt collé et dossier
   des livres) ; résumés parfois très courts (articles réservés aux
-  abonnés) ; Hacker News sans texte ; Crisis Group = flux général du site,
+  abonnés) ; Crisis Group = flux général du site,
   non daté ; Mistral reprend parfois des titres « déjà repérés » (rattrapé
   par l'import).
 - Recherche web par API : non retenue (voir plus haut) ; recherche en
@@ -2999,7 +3376,7 @@ python3 generator/regenerer_corps_geographie.py --all [--execute]
 ## 5. Validation
 
 ### `validate.py` 🔁 🧩 — **à lancer avant toute génération**
-Vérifie la cohérence complète de la base (10 sections depuis le 16 août 2026, **11 depuis le 26 septembre** : étape 11 « Texte des géographies », avertissement si la section « ## Zones » d'une géographie est en retard sur son frontmatter, corrigé par `--fix` — voir `regenerer_corps_geographie.py` §4) : nomenclature, cohérence systémique (levels/états/trajectoires), cohérence entités/instances, cohérence thématique, wikilinks cassés, matrice d'influence, événements, section 9 — **signaux faibles** (cohérence section 7 ↔ section 12 des fiches variables, ajoutée le 16 août — croise annotations section 7, blocs `signal_to_state` section 12, et `variables_cibles` des fiches d'audit `signaux_custom/*.md` ; ne s'applique qu'aux signaux prouvés custom, ignore le socle initial de juin 2026 qui utilise un format d'annotation antérieur et différent, distinction trouvée après un faux positif massif au premier test réel), et section 10 — **cohérence narrative** (acteurs actifs vs suffixe scénario, delta overflow [-20,130], cohérence des dates d'instances).
+Vérifie la cohérence complète de la base (10 sections depuis le 16 août 2026, **11 depuis le 26 septembre** : étape 11 « Texte des géographies », avertissement si la section « ## Zones » d'une géographie est en retard sur son frontmatter, corrigé par `--fix` — voir `regenerer_corps_geographie.py` §4), **12 depuis le 4 octobre** : étape 12 « Journaux ↔ géographies », voir §2nonies : nomenclature, cohérence systémique (levels/états/trajectoires), cohérence entités/instances, cohérence thématique, wikilinks cassés, matrice d'influence, événements, section 9 — **signaux faibles** (cohérence section 7 ↔ section 12 des fiches variables, ajoutée le 16 août — croise annotations section 7, blocs `signal_to_state` section 12, et `variables_cibles` des fiches d'audit `signaux_custom/*.md` ; ne s'applique qu'aux signaux prouvés custom, ignore le socle initial de juin 2026 qui utilise un format d'annotation antérieur et différent, distinction trouvée après un faux positif massif au premier test réel), et section 10 — **cohérence narrative** (acteurs actifs vs suffixe scénario, delta overflow [-20,130], cohérence des dates d'instances).
 ```bash
 python3 validate.py                 # validation complète
 python3 validate.py --verbose / -v  # détail terminal
@@ -3409,7 +3786,7 @@ lire ici, ce n'est pas un manque du parseur.
 | `/api/chantiers/approuver` | POST | Approuve/rejette une proposition déjà générée |
 | `/api/chantiers/statut` | POST | Change le statut d'un chantier (ignore/traite/a_traiter) |
 | `/api/chantiers/appliquer` | POST | Applique en lot les chantiers approuvés d'un scénario (ou tous), ou un seul chantier précis via `id` (ajouté le 1er août 2026) |
-| `/api/slugs` | GET | Autocomplétion de slugs (pour `slug_select` dans les formulaires) — types : `instances`, `entities`, `zones`/`zones_all`/`zones_hier`, `signals` (nouveau le 26 juillet, liste `signaux_custom/*.md`) |
+| `/api/slugs` | GET | Autocomplétion de slugs (pour `slug_select` dans les formulaires) — types : `instances`, `entities`, `zones`/`zones_all`/`zones_hier`, `signals` (nouveau le 26 juillet, liste `signaux_custom/*.md`), `zones_journal_forcer` (6 octobre, S26 : zones à rédaction pour `slug`+`element_type`+`ligne`) |
 | `/api/veille_signaux/liste` | GET | Candidats de la veille signaux faibles, tous lots (`state/veille_signaux.json`). Vit dans `gui/routes_veille_signaux.py` (Blueprint). 28 septembre 2026, voir §3quater |
 | `/api/veille_signaux/statut` | POST | Change le statut d'un candidat (`a_trier`/`ecarte`/`en_queue`), `.bak` + écriture atomique. Idem |
 | `/api/dashboard` | GET | Statistiques du vault (compteurs fiches, cohérence). Vit dans `gui/routes_dashboard.py` (Blueprint Flask) |
@@ -3592,6 +3969,11 @@ cd "/Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/gui"
 python3 app.py
 
 # Charger la clé API si besoin (scripts lancés en terminal — pas le GUI)
+# Le Terminal du Mac s'ouvre sous bash (invite « imac:… $ »), qui ne lit pas
+# ~/.zshrc : à refaire dans CHAQUE nouveau terminal, sinon
+# « MISTRAL_API_KEY non définie » et toute la queue part en needs_review
+# (1er oct 2026). Vérification sans afficher la clé :
+#   python3 -c "import os; print('OK' if os.environ.get('MISTRAL_API_KEY') else 'ABSENTE')"
 source ~/.zshrc
 
 # Traiter un scénario avec generer_zones_topdown.py (remplace complete_geographie_coverage.py, retiré du sidebar le 25 juillet 2026)

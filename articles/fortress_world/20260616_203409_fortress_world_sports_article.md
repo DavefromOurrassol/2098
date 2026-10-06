@@ -24,9 +24,9 @@ tags:
 image_prompt: "Une vue en plongée du Stade Souverain de Bratislava-Secteur Alpha, baigné dans une lumière bleutée artificielle, avec des milliers de spectateurs en uniforme levant le poing droit en silence, tandis qu’une flamme d’hydrogène liquide perce la brume au-dessus du stade, encadrée par les tours blindées d’Helios Bloc Consortium."
 a_une_photo: false
 image_credit: ""
-journaliste_slug: lena_kovac
+journaliste_slug: marco_il_lupo_rossi
 date_evenement: 9 novembre 2098
-zone_principale: bloc_atlantique
+zone_principale: zone_euro_sud
 date_publication: 9 novembre 2098
 entites_citees:
   - bunker_chambre_securite_territoriale_fortress_world
@@ -42,10 +42,13 @@ articles_lies:
   - les_agents_autonomes_franchissent_le_seuil_decisionnel_comment_l_ia_souveraine_e
   - les_agents_autonomes_franchissent_le_seuil_decisionnel_quand_l_ia_ne_demande_plu
 
+ligne_editoriale: pro_pouvoir
 ---
 # Les Jeux du Mur : quand le sport devient la dernière guerre que les blocs osent encore nommer
 
 **Bratislava-Secteur Alpha — 9 novembre 2098**
+
+Marco « Il Lupo » Rossi — L’Écho des Marges
 *Par Lena Kovač, envoyée spéciale*
 
 ---

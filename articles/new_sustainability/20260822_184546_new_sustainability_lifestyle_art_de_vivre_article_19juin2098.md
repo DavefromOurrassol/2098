@@ -22,7 +22,7 @@ tags:
 image_prompt: "Une femme d'une quarantaine d'années, Amani Omondi, assise à une table en bois dans un appartement lumineux de Nairobi, éteint un terminal ARIA devant sa fille. Sur la table, un carnet en papier ensemencé, un disque dur vintage et une tasse de café. En arrière-plan, une fenêtre ouverte sur des panneaux solaires urbains et des plantes en pots."
 a_une_photo: false
 image_credit: ""
-journaliste_slug: lea_mbatha
+journaliste_slug: immaculee_uwase
 date_evenement: 19 juin 2098
 zone_principale: nairobi_centre
 date_publication: 19 juin 2098
@@ -42,7 +42,7 @@ variables_pilotes:
 **« Slow Data » : quand Nairobi réinvente le luxe de la lenteur numérique**
 
 19 juin 2098
-Léa Mbatha — Réseau Les Irréductibles
+Immaculée Uwase — Bab-el-Mana — La Porte des Comptes
 
 Nairobi-Centre, 6h47. Le café fume encore dans la tasse en céramique locale quand Amani Omondi éteint son terminal ARIA pour la troisième fois de la matinée. « Aujourd’hui, c’est *slow data* », annonce-t-elle à sa fille de 12 ans, déjà absorbée par son bracelet éducatif. Dans leur appartement du quartier de Kilimani, où les panneaux solaires alimentent une mini-grille autonome, le rituel est devenu une déclaration d’indépendance : pas de notifications avant 9h, pas de mises à jour climatiques en temps réel, pas d’algorithmes de Prisme Global décidant à leur place de l’urgence du jour. « On respire », résume Amani en glissant un disque de stockage physique dans la fente de leur boîtier *Nairobi Commons* — un serveur local conçu par le Réseau des Communs Numériques Globaux, qui filtre les flux mondiaux pour ne garder que l’essentiel.
 

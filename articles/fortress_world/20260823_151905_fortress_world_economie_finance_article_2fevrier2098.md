@@ -22,9 +22,9 @@ tags:
 image_prompt: "Une salle de contrôle souterraine du BACE à Bruxelles-Forteresse, éclairée par des écrans holographiques affichant des cartes de flux de crédits carbone en temps réel. Au centre, un opérateur en uniforme gris de NexCore manipule une interface hexagonale bleue, tandis qu’en arrière-plan, des drones VaultCorp patrouillent derrière des vitres blindées. L’ambiance est froide, industrielle, avec des néons blancs tranchants."
 a_une_photo: false
 image_credit: ""
-journaliste_slug: malcolm_whitaker
+journaliste_slug: javier_el_reciclador_mendez
 date_evenement: 2 février 2098
-zone_principale: bloc_atlantique
+zone_principale: zone_euro_sud
 date_publication: 2 février 2098
 entites_citees:
   - grille_aria_fortress_world
@@ -42,7 +42,7 @@ variables_pilotes:
 **L’ÉCONOMIE DES BLOCS : QUAND LES CRÉDITS CARBONE DEVIENNENT UNE MONNAIE DE GUERRE**
 
 *2 février 2098*
-*Malcolm Whitaker — NexCore Atlantic — La Voix du Commandement*
+*Javier « El Reciclador » Mendez — L’Écho des Marges*
 
 BRUXELLES-FORTERESSE — Le marché des crédits carbone souverains vient d’atteindre un nouveau palier : celui d’arme économique. Depuis l’annonce, hier, du *Bloc Atlantique Carbon Exchange* (BACE), les analystes s’interrogent. Non pas sur la valeur des actifs — celle-ci est indexée sur des protocoles ANBA, donc incontestable — mais sur leur usage. Car pour la première fois, le Commandement a explicitement lié l’accès aux quotas énergétiques des zones industrielles périphériques à la détention de crédits carbone *certifiés par NexCore*. Une décision qui, selon les documents internes consultés par *La Voix*, vise directement les "dépendances résiduelles" du Bloc envers les corridors logistiques eurasiens.
 

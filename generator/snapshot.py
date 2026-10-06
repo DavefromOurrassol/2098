@@ -23,6 +23,7 @@ from loader import (
     load_custom_signals,
     filter_instances_for_thematique,
     select_instances_by_impact,
+    zones_du_journal,
     resolve_forced_element,
     VALID_VARS,
     VALID_SCENARIOS,
@@ -1051,7 +1052,11 @@ def _dominant_zone(instances):
     return Counter(zones).most_common(1)[0][0]
 
 
-def build_snapshot(scenario_slug, thematique=None, dry_run=True, forcer_config=None, date_edition=None):
+def build_snapshot(scenario_slug, thematique=None, dry_run=True, forcer_config=None, date_edition=None, zone_article=None):
+    # zone_article (S23, 3 octobre 2026) : zone de l'article quand elle
+    # est fixée par l'appelant (série, manuel, generate.py) -- réserve
+    # des places aux instances de la zone du journal, voir
+    # loader.zones_du_journal(). None = comportement inchangé.
     """
     Fonction principale — construit le snapshot complet du monde 2098.
 
@@ -1134,7 +1139,8 @@ def build_snapshot(scenario_slug, thematique=None, dry_run=True, forcer_config=N
     filtered_instances = []
     if thematique:
         filtered_instances = filter_instances_for_thematique(
-            all_instances, thematique, scenario_slug=scenario_slug, dry_run=dry_run
+            all_instances, thematique, scenario_slug=scenario_slug, dry_run=dry_run,
+            zones_article=zones_du_journal(scenario_slug, zone_article) if zone_article else None,
         )
     else:
         # Sans thématique : garder les instances à fort impact systémique,

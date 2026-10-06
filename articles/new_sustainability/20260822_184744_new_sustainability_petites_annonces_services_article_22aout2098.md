@@ -22,7 +22,7 @@ tags:
 image_prompt: "Un médiateur cognitif, vêtu d’une combinaison légère aux motifs géométriques inspirés des communs sahéliens, anime un atelier dans un hub urbain de Nairobi-Centre : écrans holographiques affichant des flux ARIA en temps réel, tandis qu’un groupe diversifié de travailleurs locaux discute autour d’une table en matériaux biosourcés."
 a_une_photo: false
 image_credit: ""
-journaliste_slug: lea_okoro
+journaliste_slug: kiptoo_barasa
 date_evenement: 22 août 2098
 zone_principale: nairobi_centre
 date_publication: 22 août 2098
@@ -42,7 +42,7 @@ variables_pilotes:
 **« Offre d’emploi : Médiateur cognitif pour hubs urbains régénératifs »**
 
 22 août 2098
-Léa Okoro — Réseau Nexus Global Review
+Kiptoo Barasa — Uhuru ya Mipaka
 
 Le Réseau des Communs Productifs Régénératifs (RCPR) recrute **trois médiateurs cognitifs** pour ses hubs urbains de Nairobi-Centre, chargés de faciliter l’interface entre les collectifs de production locale et les algorithmes d’allocation d’ARIA. Poste à temps partiel (20h/semaine), contrat renouvelable sous réserve d’évaluation par le Conseil Mondial de l’IA Régénérative.
 

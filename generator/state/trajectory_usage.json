@@ -143,12 +143,14 @@
     },
     "locaux": {
       "Assemblées de Carthage-Nord bannissent les agents IA décisionnels 2051": 1,
+      "Assemblées de Carthage-Nord interdisent agents IA décisionnels 2052": 1,
       "abandon des programmes spatiaux nationaux non essentiels": 1,
       "charte bioterritoriale de Carthage-Nord reconnaît la personnalité juridique des dauphins 2051": 1,
       "charte bioterritoriale de redevabilité écologique directe": 1,
       "charte bioterritoriale des assistants IA communautaires": 1,
       "charte bioterritoriale du mentorat intergénérationnel": 1,
       "charte bioterritoriale du tempo lent et des cycles naturels": 1,
+      "charte bioterritoriale interdit phages brevetés": 1,
       "charte communautaire pour des corps non augmentés 2044": 1,
       "charte des assistants IA communautaires bioterritoriaux": 1,
       "charte des identités bioterritoriales et de l'accueil": 2,
@@ -188,7 +190,12 @@
       "réseau bioterritorial de vérification communautaire de l'information": 1
     },
     "majeurs": {
+      "Archipel des Salomon déclare citoyenneté écologique flottante 2051": 1,
+      "Carthage-Nord nationalise sources pour bidonvilles 2052": 1,
+      "Carthage-Nord reconfigure essaims IA en outils agricoles 2052": 1,
+      "Dharavi bloque adduction NTT 2053": 1,
       "abandon communautaire des projets centralisés de fusion": 7,
+      "bidonvilles de Mumbai coupent approvisionnement NTT": 1,
       "charte bioterritoriale de sobriété énergétique partagée": 7,
       "charte bioterritoriale pour des services assurés par des humains": 6,
       "charte d'Agadez sur la souveraineté hydrique communautaire": 6,
@@ -196,7 +203,7 @@
       "diffusion virale du mouvement des veillées de l'effondrement": 6,
       "manifeste bioterritorial de la contribution choisie": 7,
       "manifeste bioterritorial de la sobriété choisie": 7,
-      "manifeste fondateur du localisme bioterritorial": 2,
+      "manifeste fondateur du localisme bioterritorial": 3,
       "mouvement de boycott des fermes de capture carbone industrielles": 6,
       "mouvement de circularité des matériaux critiques": 7,
       "mouvement de décroissance urbaine volontaire": 3,
@@ -218,10 +225,10 @@
     "orateurs::opposition::maghreb_mediterraneen": {
       "Lalla Nsara 'Tidewhisper'": {
         "absence_streak": 0,
-        "count": 1
+        "count": 2
       },
       "Sidi Mounir 'L'Étincelle des Oueds'": {
-        "absence_streak": 1,
+        "absence_streak": 2,
         "count": 0
       }
     }
@@ -644,6 +651,12 @@
         "count": 1
       }
     },
+    "journalistes::pro_pouvoir::maghreb_atlantique": {
+      "Yassine El Amrani": {
+        "absence_streak": 0,
+        "count": 1
+      }
+    },
     "journalistes::pro_pouvoir::zone_moyen_orient_golfe": {
       "Layla Al-Khatib": {
         "absence_streak": 0,
@@ -689,15 +702,23 @@
       "programme international de dialogue interculturel sur les migrations 2034": 3,
       "ratification du Traité de Brasília sur la biotech responsable 2043": 2,
       "réforme du FMI et création du Conseil Monétaire Mondial": 3,
+      "résolution ONU sur la souveraineté flottante 2038": 1,
+      "traité OMS sur les phages thérapeutiques 2039": 1,
       "traité de Genève sur les droits cognitifs des espèces communicantes 2038": 3,
       "traité de Niamey sur le partage des nappes phréatiques 2038": 2,
       "traité international sur la propriété intellectuelle et l'IA 2036": 2,
       "traité international sur les marchés algorithmiques": 2
     },
     "majeurs": {
+      "Accord de Genève sur le statut des interfaces IA 2041": 1,
+      "Accord de Tokyo fixe quotas eau data centers 2039": 1,
+      "Afrique du Sud légifère quotas eau 2037": 1,
       "Convention de Genève sur le droit à l'eau 2035": 9,
+      "ONU adopte convention contre le sabotage numérique 2037": 1,
+      "ONU adopte convention sur la traçabilité des agents IA 2038": 1,
       "Oslo publie la norme d'audit des agents IA publics 2038": 9,
       "UE adopte la norme d'auditabilité des agents IA publics 2035": 9,
+      "UE adopte la norme d'auditabilité des requêtes IA 2036": 1,
       "accord climatique de Nairobi 2+ avec mécanismes contraignants 2035": 9,
       "adoption de la charte mondiale de transparence institutionnelle 2035": 9,
       "adoption de la norme internationale d'efficacité énergétique de l'IA 2034": 9,

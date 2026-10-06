@@ -28,7 +28,7 @@ tags:
 image_prompt: "Une femme (Léa Varga) debout devant une baie vitrée d'un appartement high-tech à Manaus, observant les fumées des zones de régénération forestière, sans filtre nasal, avec un mur végétalisé affichant des données de pollution en arrière-plan."
 a_une_photo: false
 image_credit: ""
-journaliste_slug: camille_ribero
+journaliste_slug: malik_thompson
 date_evenement: 24 mars 2098
 zone_principale: amazonie_consortium_viva
 date_publication: 24 mars 2098
@@ -47,6 +47,8 @@ articles_lies:
 **« Slow Carbon » : quand respirer devient un luxe**
 
 *24 mars 2098*
+
+Malik Thompson — El Otro Lado de la Frontera
 
 Léa Varga n’a pas allumé son filtre nasal depuis trois semaines. Dans son appartement de Manaus, perché au 12e étage d’une tour certifiée « neutralité carbone active », elle observe par la baie vitrée les fumées des zones de régénération forestière, ces parcelles où EcoSynth Global Resilience Systems (EGRS) teste ses souches microbiennes brevetées. « C’est ma petite rébellion », murmure-t-elle en effleurant l’écran tactile de son mur végétalisé, où s’affichent en temps réel les niveaux de particules fines dans son quartier. 47 µg/m³. « Presque respirable. » Son dernier rapport médical, généré par Nexus BioSyn, indique une « sensibilité accrue aux polluants organiques volatils », mais Léa s’en moque. Elle a désactivé les alertes de son implant pulmonaire.
 

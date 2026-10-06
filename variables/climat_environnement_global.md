@@ -294,7 +294,9 @@ _extended_
 - montée discours effondrement climatique (→ discours_effondrement_climatique)
 - adaptation culturelle à l’instabilité
 
-
+**custom (signaux d'actualité)**
+- concurrence hydrique entre data centers et populations urbaines (→ signal_custom: data_centers_water_wars_megapoles, source: veille_20260928_1038_Claude+rss)
+- traités de mobilité climatique avec souveraineté préservée (→ signal_custom: climate_migration_sovereignty_treaty, source: veille_20260928_183444_chatgpt)
 
 ## 8. États par scénario
 ### [[fortress_world]]
@@ -561,4 +563,58 @@ signal_to_state:
         evolution: diffusion croissante des récits d'effondrement dans le débat public
         date_bascule: 2024-2041
         evenement_cle: best-seller mondial sur l'effondrement civilisationnel 2030
+
+  - signal: data_centers_water_wars_megapoles
+    scenarios:
+      breakdown:
+        evolution: pénurie hydrique généralisée paralyse data centers
+        date_bascule: 2045-2063
+        evenement_cle: Jakarta ferme ses hubs numériques par manque d'eau 2057
+      fortress_world:
+        evolution: blocs sécurisent eau pour data centers prioritaires
+        date_bascule: 2039-2055
+        evenement_cle: Bloc Eurasiatique détourne fleuve pour hubs Sibérie 2050
+      new_sustainability:
+        evolution: gestion hydrique intelligente sauve data centers
+        date_bascule: 2033-2049
+        evenement_cle: Alliance Pacifique recycle 90% eau centres Singapour 2044
+      eco_communalism:
+        evolution: communautés locales réquisitionnent ressources hydriques
+        date_bascule: 2039-2058
+        evenement_cle: Carthage-Nord nationalise sources pour bidonvilles 2052
+      policy_reform:
+        evolution: régulation internationale limite consommation hydrique
+        date_bascule: 2030-2046
+        evenement_cle: Accord de Tokyo fixe quotas eau data centers 2039
+      reference:
+        evolution: tensions hydriques croissantes sans régulation efficace
+        date_bascule: 2027-2043
+        evenement_cle: São Paulo rationne eau pour Google et Microsoft 2038
+
+  - signal: climate_migration_sovereignty_treaty
+    scenarios:
+      breakdown:
+        evolution: traités de mobilité climatique deviennent outils de survie chaotique
+        date_bascule: 2045-2063
+        evenement_cle: Maldives vendent passeports climatiques aux enchères 2056
+      fortress_world:
+        evolution: blocs instrumentalisent traités pour contrôler flux migratoires climatiques
+        date_bascule: 2039-2055
+        evenement_cle: Bloc Eurasiatique impose quotas climatiques à Kiribati 2050
+      new_sustainability:
+        evolution: traités deviennent modèles de gouvernance climatique mondiale
+        date_bascule: 2032-2048
+        evenement_cle: Charte des Nations Unies sur la souveraineté flottante 2042
+      eco_communalism:
+        evolution: communautés locales réinterprètent traités comme droits bioterritoriaux
+        date_bascule: 2038-2057
+        evenement_cle: Archipel des Salomon déclare citoyenneté écologique flottante 2051
+      policy_reform:
+        evolution: traités inspirent cadre légal international pour migrations climatiques
+        date_bascule: 2029-2045
+        evenement_cle: Convention de Vienne sur les droits des déplacés climatiques 2038
+      reference:
+        evolution: traités restent expérimentations marginales face à l'urgence climatique
+        date_bascule: 2026-2042
+        evenement_cle: Nauru abandonne son accord de mobilité climatique 2037
 ```

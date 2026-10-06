@@ -1075,7 +1075,7 @@ zones:
   nom: Barcelone-Hub — Bureau ibérique de la CMTCA
   niveau: 2
   type: ville
-  parent: nouveau_califat_barcelone
+  parent: union_nordique_europe_nord
   origine_reelle:
   - entite: Barcelone
     type_entite: region_administrative
@@ -1417,7 +1417,7 @@ zones:
 - slug: corridor_iberique_energetique
   nom: Corridor ibérique énergétique
   niveau: 2
-  parent: nouveau_califat_barcelone
+  parent: union_nordique_europe_nord
   type: infrastructure
   origine_reelle: []
   description: Le corridor ibérique énergétique est une infrastructure de transit
@@ -2545,22 +2545,6 @@ zones:
   - entite: Papouasie-Nouvelle-Guinée
     type_entite: pays
     portion: null
-- slug: nouveau_califat_barcelone
-  nom: Nouveau Califat Barcelone
-  niveau: 1
-  type: union_regionale
-  parent: null
-  origine_reelle: []
-  description: ''
-  statut: dominant
-  tensions_internes: ''
-  periode_transition: null
-  evenement_transition: null
-  lieux_emblematiques: []
-  relations:
-    allies: []
-    rivaux: []
-  sources_attestees: []
 ---
 
 # Géographie — new_sustainability
@@ -3347,6 +3331,20 @@ L'Union Nordique de 2098 s'est dotée d'un Conseil de Délibération Augmentée 
 
 *Sources attestées : leena_vainala_new_sustainability, conseil_de_deliberation_augmentee_de_l_union_nordique_new_sustainability, institut_de_philosophie_des_systemes_hybrides_d_helsinki_new_sustainability, mouvement_souverainiste_de_la_ceinture_boreale_new_sustainability*
 
+#### Barcelone-Hub — Bureau ibérique de la CMTCA — sous [[union_nordique_europe_nord]]
+
+*ville — niveau 2 — statut : stable*
+
+**Origine réelle (2026)** : Barcelone
+
+**Transition** : 2055-2075
+
+Barcelone-Hub est le siège européen de la Confédération Mondiale des Travailleurs Cognitifs Augmentés (CMTCA), aux côtés de Nairobi-Node. Depuis ses bureaux modulaires, les délégués de la CMTCA négocient avec des IA de médiation institutionnelle les clauses des accords productifs continentaux, incarnant la transformation d'un syndicat de combat en acteur institutionnalisé de la gouvernance mondiale du travail augmenté. Son rattachement aux Amériques reconfigurées reflète les flux ibériques vers le corridor énergétique atlantique.
+
+**Tensions internes** : Fracture interne entre 'intégrateurs' favorables à la négociation permanente et 'dissidents du confort' accusant la Confédération d'avoir légitimé l'optimisation en l'encadrant sans la questionner.
+
+*Sources attestées : internationale_travailleurs_augmentes_new_sustainability*
+
 #### Bruxelles — Tribunal de Gouvernance Algorithmique — sous [[union_nordique_europe_nord]]
 
 *ville — niveau 2 — statut : emergent*
@@ -3396,6 +3394,20 @@ Les forêts boréales nordiques font l'objet d'un mouvement souverainiste actif 
 **Rivaux** : Genève-Centre institutionnel mondial ([[centre_institutionnel_geneve]])
 
 *Sources attestées : mouvement_souverainiste_de_la_ceinture_boreale_new_sustainability*
+
+#### Corridor ibérique énergétique — sous [[union_nordique_europe_nord]]
+
+*infrastructure — niveau 2 — statut : dominant*
+
+**Transition** : 2055-2080
+
+Le corridor ibérique énergétique est une infrastructure de transit et de production d'énergie renouvelable reliant la péninsule ibérique aux flux énergétiques continentaux atlantiques. ARIA y a redirigé en 2098 14% de la capacité solaire vers les fermes verticales du delta du Rhône, illustrant la gouvernance algorithmique des ressources en temps réel. Il constitue un nœud clé dans les flux de convergence entre les systèmes économiques américains et européens.
+
+**Tensions internes** : Les décisions d'ARIA sur le corridor sont notifiées aux élus locaux six minutes avant exécution — délai réglementaire jugé insuffisant par certains ; débat sur la souveraineté énergétique locale face à l'optimisation algorithmique.
+
+**Alliés** : Barcelone-Hub — Bureau ibérique de la CMTCA ([[barcelone_hub]])
+
+*Sources attestées : grille_aria_new_sustainability*
 
 #### Helsinki — Institut de Philosophie des Systèmes Hybrides — sous [[union_nordique_europe_nord]]
 
@@ -3514,38 +3526,6 @@ L'Australie de 2098 a transformé son désert en un réseau de fermes verticales
 **Alliés** : Hub institutionnel Nairobi-Kigali ([[hub_nairobi_kigali]]), Réseau Vivant Continental (RVC) — Trame bioclimatique planétaire ([[reseau_vivant_continental]])
 
 **Rivaux** : Bloc Eurasien souverainiste ([[bloc_eurasien_souverainiste]])
-
-### Nouveau Califat Barcelone
-
-*union_regionale — statut : dominant*
-
-#### Barcelone-Hub — Bureau ibérique de la CMTCA — sous [[nouveau_califat_barcelone]]
-
-*ville — niveau 2 — statut : stable*
-
-**Origine réelle (2026)** : Barcelone
-
-**Transition** : 2055-2075
-
-Barcelone-Hub est le siège européen de la Confédération Mondiale des Travailleurs Cognitifs Augmentés (CMTCA), aux côtés de Nairobi-Node. Depuis ses bureaux modulaires, les délégués de la CMTCA négocient avec des IA de médiation institutionnelle les clauses des accords productifs continentaux, incarnant la transformation d'un syndicat de combat en acteur institutionnalisé de la gouvernance mondiale du travail augmenté. Son rattachement aux Amériques reconfigurées reflète les flux ibériques vers le corridor énergétique atlantique.
-
-**Tensions internes** : Fracture interne entre 'intégrateurs' favorables à la négociation permanente et 'dissidents du confort' accusant la Confédération d'avoir légitimé l'optimisation en l'encadrant sans la questionner.
-
-*Sources attestées : internationale_travailleurs_augmentes_new_sustainability*
-
-#### Corridor ibérique énergétique — sous [[nouveau_califat_barcelone]]
-
-*infrastructure — niveau 2 — statut : dominant*
-
-**Transition** : 2055-2080
-
-Le corridor ibérique énergétique est une infrastructure de transit et de production d'énergie renouvelable reliant la péninsule ibérique aux flux énergétiques continentaux atlantiques. ARIA y a redirigé en 2098 14% de la capacité solaire vers les fermes verticales du delta du Rhône, illustrant la gouvernance algorithmique des ressources en temps réel. Il constitue un nœud clé dans les flux de convergence entre les systèmes économiques américains et européens.
-
-**Tensions internes** : Les décisions d'ARIA sur le corridor sont notifiées aux élus locaux six minutes avant exécution — délai réglementaire jugé insuffisant par certains ; débat sur la souveraineté énergétique locale face à l'optimisation algorithmique.
-
-**Alliés** : Barcelone-Hub — Bureau ibérique de la CMTCA ([[barcelone_hub]])
-
-*Sources attestées : grille_aria_new_sustainability*
 
 ## Notes / zones à enrichir
 _Espace libre, jamais lu par les scripts — ajoute ici tes idées, brouillons, zones à

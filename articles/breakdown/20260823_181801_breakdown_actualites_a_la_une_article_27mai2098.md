@@ -22,7 +22,7 @@ tags:
 image_prompt: "Une plateforme pétrolière rouillée émergeant d'une mer agitée, éclairée par la lueur bleutée de serveurs surchargés. Au premier plan, des antennes paraboliques et des relais satellites peints en noir, avec le logo octogonal de Kharg-9 — un octogone noir traversé par une ligne de code stylisée — visible sur un container transformé en data center. Ambiance nocturne, lumière artificielle froide contrastant avec les reflets dorés de la mer."
 a_une_photo: false
 image_credit: ""
-journaliste_slug: 
+journaliste_slug: leila_al_khatib
 date_evenement: 27 mai 2098
 zone_principale: terminal_kharg
 date_publication: 27 mai 2098
@@ -43,6 +43,8 @@ variables_pilotes:
 **« Kharg-9 : Le Dernier Souffle des Archives Mondiales avant l’Abîme »**
 
 *27 mai 2098*
+
+Leïla al-Khatib — Al-Nizam al-Mustakim (النظام المستقيم) / Le Système Juste
 **Leïla al-Khatib — Al-Nizam al-Mustakim (النظام المستقيم) / Le Système Juste**
 
 Les vagues du golfe Persique frappent les piliers rouillés de Kharg-9 comme elles le font depuis soixante-dix ans — avec une régularité qui contraste avec le chaos qu’abrite la plateforme. Ce matin, pourtant, quelque chose a changé. Les antennes paraboliques, d’ordinaire tournées vers les satellites fantômes des anciens réseaux, sont braquées vers l’horizon. Les miliciens en treillis noir, armés de fusils à impulsion et de brouilleurs électromagnétiques, ont doublé les postes de garde. Et dans les entrailles de la structure, là où les serveurs clignotent comme des cœurs fatigués, une rumeur court : *les Fragments de Mnemos ont été compromis*.

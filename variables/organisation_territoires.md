@@ -323,7 +323,7 @@ _extended_
 - transformation des modèles d’habitat
 
 **custom (signaux d'actualité)**
-
+- centres de données exacerbent crise hydrique mégapoles (→ signal_custom: data_centers_water_wars_megapoles, source: veille_20260928_1038_Claude+rss)
 
 ## 8. États par scénario
 ### [[fortress_world]]
@@ -645,3 +645,30 @@ signal_to_state:
         date_bascule: 2024-2041
         evenement_cle: premier sondage mondial sur la montée du localisme 2032
 
+  - signal: data_centers_water_wars_megapoles
+    scenarios:
+      breakdown:
+        evolution: mégapoles indiennes s'effondrent sous stress hydrique
+        date_bascule: 2045-2064
+        evenement_cle: Mumbai abandonne ses centres de données 2057
+      fortress_world:
+        evolution: élites sécurisent eau pour data centers des blocs
+        date_bascule: 2037-2053
+        evenement_cle: Bloc Atlantique rationne eau des bidonvilles Mumbai 2048
+      new_sustainability:
+        evolution: IA optimise partage eau entre centres et populations
+        date_bascule: 2032-2048
+        evenement_cle: Mumbai déploie réseau hydrique intelligent 2042
+      eco_communalism:
+        evolution: communautés locales réquisitionnent eau des data centers
+        date_bascule: 2039-2057
+        evenement_cle: bidonvilles de Mumbai coupent approvisionnement NTT
+      policy_reform:
+        evolution: lois équilibrent accès eau entre centres et habitants
+        date_bascule: 2029-2045
+        evenement_cle: Inde adopte quota eau pour data centers 2036
+      reference:
+        evolution: tensions hydriques s'aggravent sans régulation forte
+        date_bascule: 2026-2041
+        evenement_cle: Digital Edge consomme 300 000L/jour à Mumbai 2033
+```

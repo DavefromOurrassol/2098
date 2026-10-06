@@ -25,9 +25,9 @@ tags:
 image_prompt: Fatoumata Diabaté, porte-parole des Sans-Terres de la Cévenne Intérieure, brandit un parchemin jauni devant une colonne de marcheurs silencieux traversant un plateau aride sous un soleil écrasant, avec des genévriers desséchés en arrière-plan.
 a_une_photo: false
 image_credit: ""
-journaliste_slug:
+journaliste_slug: clemence_arnaud
 date_evenement: 12 octobre 2098
-zone_principale: universite_nomade
+zone_principale: europe_occidentale_reconstituee
 date_publication: 12 octobre 2098
 entites_citees:
   - assemblees_de_bassin_versant_eco_communalism
@@ -45,6 +45,8 @@ articles_lies:
 
 ---
 **Les Sillons de la Terre : Comment les Sans-Terres du Massif Central forcent l'histoire**
+
+Clémence Arnaud — Les Racines Périssent: Bulletin des Bassins Rebelles
 
 *Le Fil Commun — Mémoire des Terres, Cévennes Intérieure, 12 octobre 2098*
 

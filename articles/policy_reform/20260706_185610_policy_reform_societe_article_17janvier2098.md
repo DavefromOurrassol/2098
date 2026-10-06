@@ -25,7 +25,7 @@ tags:
 image_prompt: "Une femme africaine en tenue traditionnelle, Amara Diallo-Nkosi (coordinatrice des Collectifs de Gouvernance Communautaire Décentralisée), observe des écrans géants affichant des données ARIA-Nexus dans un quartier pauvre de Nairobi, avec des drones survolant des habitations précaires en arrière-plan."
 a_une_photo: false
 image_credit: ""
-journaliste_slug: 
+journaliste_slug: aline_umutoni
 date_evenement: 23 août 2098
 zone_principale: nairobi_hub
 date_publication: 23 août 2098
@@ -44,6 +44,8 @@ articles_lies:
 **« Nairobi sous surveillance : Kontinuum et l'effacement des résistances »**
 
 *23 août 2098 — Nairobi, Kenya*
+
+Aline Umutoni — Terres Inviolées
 
 Dans les locaux climatisés du *Complexe Ilithyia*, trois enfants du quartier de Kibera ont disparu des radars sociaux. Pas d'arrestation, pas de notification officielle — simplement trois points noirs sur les flux de Kontinuum, suivis d'une réallocation automatique de leurs cartes de rationnement alimentaire et d'un retrait implicite de leurs droits d'accès aux cliniques mobiles du Consortium Africain de Biotechnologies Sociales (CABS-AMV). Leur famille, une mère agricultrice de 38 ans, a reçu un SMS crypté : *« Réévaluation de profil en cours. Aucun commentaire ne sera fourni. »*
 

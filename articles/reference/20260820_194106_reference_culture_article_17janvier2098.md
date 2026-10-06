@@ -28,7 +28,7 @@ tags:
 image_prompt: "Une artiste nommée Nour Belkacem, vêtue d'une combinaison futuriste, observe des danseurs équipés de capteurs biométriques évoluant devant des projections d'archives numériques en train de s'effacer, dans un entrepôt industriel réaménagé en sanctuaire de données."
 a_une_photo: false
 image_credit: ""
-journaliste_slug: marine_delcourt
+journaliste_slug: clara_le_gall
 date_evenement: 17 janvier 2098
 zone_principale: lyon_metropole
 date_publication: 17 janvier 2098
@@ -46,6 +46,8 @@ articles_lies:
 **« Mémoire en apnée : quand l’art se noie dans les archives fantômes »**
 
 *17 janvier 2098*
+
+Clara Le Gall — Les Ombres de Terrafond
 
 Lyon-Métropole, 3h12. Les néons du quartier Confluence clignotent en rythme avec les serveurs de l’ONG de Préservation Patrimoniale Numérique, logée dans l’ancien silo à grains réhabilité en « sanctuaire des données orphelines ». C’est ici, entre des racks refroidis à l’eau de la Saône et des écrans affichant des cartes thermiques de l’oubli, que l’artiste Nour Belkacem a choisi d’installer sa dernière œuvre éphémère : *Respire avant l’effacement*. Une performance où des danseurs, équipés de capteurs biométriques, miment l’asphyxie face à des projections d’archives culturelles en train de s’autodétruire. « Chaque expiration est un fichier qui disparaît », murmure-t-elle entre deux prises, tandis qu’un algorithme de l’ONG scanne en temps réel les contenus menacés de la nuit.
 

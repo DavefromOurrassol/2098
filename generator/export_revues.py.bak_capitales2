@@ -1,0 +1,1004 @@
+#!/usr/bin/env python3
+"""
+export_revues.py — Publication web des 12 revues (Ourrassol 2098).
+
+Pour chaque article du vault, retrouve :
+  - la revue      : scenario + ligne_editoriale  -> revues.yaml
+  - le journal    : zone_principale, en remontant les zones parentes de
+                    geographie/{scenario}.md jusqu'à une zone qui a un
+                    journal dans journaux.yaml ({scenario}.{ligne}.zones)
+  - la signature  : journaliste_slug si la personne existe dans ce journal,
+                    sinon « La rédaction de <journal> »
+  - la langue     : langue_style du journal (pour « Traduit du … »)
+
+Deux modes :
+  AUDIT (défaut) : lecture seule, résumé par revue.
+  --build        : génère le site statique (flux continu, décision du 3 oct)
+                   dans site/ à la racine du vault (ou --out). Ne modifie
+                   AUCUN fichier du vault en dehors de ce dossier.
+
+Usage :
+  python3 generator/export_revues.py                       # audit, résumé par revue
+  python3 generator/export_revues.py --detail              # + articles non publiables
+  python3 generator/export_revues.py --csv audit.csv       # une ligne par article
+  python3 generator/export_revues.py --build               # génère site/
+  python3 generator/export_revues.py --build --scenario reference
+  python3 generator/export_revues.py --build --out /tmp/site_test
+"""
+import argparse
+import csv
+import datetime as dt
+import glob
+import html
+import os
+import re
+import shutil
+import sys
+import unicodedata
+from collections import Counter, defaultdict
+
+import yaml
+
+GEN_DIR = os.path.dirname(os.path.abspath(__file__))
+VAULT = os.path.dirname(GEN_DIR)
+SCENARIOS = ["breakdown", "fortress_world", "new_sustainability",
+             "eco_communalism", "policy_reform", "reference"]
+LIGNES = ["pro_pouvoir", "opposition"]
+
+# Thématiques non publiées (vide : toutes les rubriques sont publiées, décision du 3 oct).
+THEMES_EXCLUES = set()
+# Rubriques de service : pas de chapô de rédaction (chapos_revues.py les ignore,
+# le site affiche le chapô d'origine de l'article).
+THEMES_SANS_CHAPO_REVUE = {"petites_annonces_services", "meteo"}
+
+THEMES = {
+    "actualites_a_la_une": "À la une", "politique": "Politique",
+    "economie_finance": "Économie", "international": "International",
+    "societe": "Société", "environnement_climat": "Climat",
+    "sciences_technologies": "Sciences", "sante": "Santé",
+    "education": "Éducation", "culture": "Culture", "musique": "Musique",
+    "lifestyle_art_de_vivre": "Art de vivre", "histoire_patrimoine": "Histoire",
+    "religion_spiritualite": "Religions", "medias_communication": "Médias",
+    "sports": "Sports", "faits_divers": "Faits divers",
+    "opinions_editoriaux": "Opinions", "meteo": "Météo",
+    "petites_annonces_services": "Annonces",
+}
+
+MOIS = {"janvier": 1, "fevrier": 2, "mars": 3, "avril": 4, "mai": 5, "juin": 6,
+        "juillet": 7, "aout": 8, "aot": 8, "septembre": 9, "octobre": 10,
+        "novembre": 11, "decembre": 12}
+MOIS_NOMS = ["", "janvier", "février", "mars", "avril", "mai", "juin", "juillet",
+             "août", "septembre", "octobre", "novembre", "décembre"]
+
+# Langue principale du journal : le premier de ces mots trouvé dans langue_style.
+# (nom affiché, forme élidée « de l' » ?)
+LANGUES = {
+    "français": ("français", False), "anglais": ("anglais", True),
+    "hinglish": ("hinglish", True), "espagnol": ("espagnol", True),
+    "portugais": ("portugais", False), "russe": ("russe", False),
+    "arabe": ("arabe", True), "hébreu": ("hébreu", True), "turc": ("turc", False),
+    "norvégien": ("norvégien", False), "suédois": ("suédois", False),
+    "finnois": ("finnois", False), "gallois": ("gallois", False),
+    "groenlandais": ("groenlandais", False), "néerlandais": ("néerlandais", False),
+    "hongrois": ("hongrois", False), "allemand": ("allemand", True),
+    "italien": ("italien", True), "occitan": ("occitan", True),
+    "swahili": ("swahili", False), "lingala": ("lingala", False),
+    "wolof": ("wolof", False), "yoruba": ("yoruba", False),
+    "haoussa": ("haoussa", False), "afrikaans": ("afrikaans", True),
+    "shikomori": ("shikomori", False), "chinois": ("chinois", False),
+    "mandarin": ("chinois", False), "coréen": ("coréen", False),
+    "japonais": ("japonais", False), "hindi": ("hindi", True),
+    "bengali": ("bengali", False), "cinghalais": ("cinghalais", False),
+    "vietnamien": ("vietnamien", False), "mongol": ("mongol", False),
+    "persan": ("persan", False), "dari": ("dari", False), "pachto": ("pachto", False),
+    "kazakh": ("kazakh", False), "bahasa indonesia": ("indonésien", True),
+    "tok pisin": ("tok pisin", False), "pidgin": ("pidgin", False),
+    "gilbertin": ("gilbertin", False), "marshallais": ("marshallais", False),
+    "tuvaluan": ("tuvaluan", False), "maori": ("maori", False),
+    "tahitien": ("tahitien", False), "reo tahiti": ("tahitien", False),
+    "créole": ("créole", False), "guarani": ("guarani", False),
+    "aymara": ("aymara", True),
+}
+
+
+# ── Continents (regroupement des rubriques géographiques, décision du 3 oct) ──
+CONTINENTS = ["Amériques", "Europe", "Afrique", "Moyen-Orient", "Asie", "Océanie", "Arctique", "Monde"]
+_C = {
+    "Amériques": "antigua_et_barbuda argentine bahamas barbade belize bolivie bresil canada chili colombie "
+                 "costa_rica cuba dominique grenade guatemala guyana haiti honduras jamaique mexique "
+                 "nicaragua panama paraguay perou republique_dominicaine saint_christophe_et_nieves "
+                 "saint_vincent_et_les_grenadines sainte_lucie salvador suriname trinite_et_tobago "
+                 "uruguay venezuela equateur etats_unis etats_unis_d_amerique",
+    "Europe": "albanie allemagne andorre angleterre autriche belgique bielorussie bosnie_herzegovine "
+              "bulgarie chypre croatie danemark ecosse espagne estonie finlande france grece hongrie "
+              "irlande islande italie kosovo lettonie liechtenstein lituanie luxembourg macedoine_du_nord "
+              "malte moldavie monaco montenegro norvege pays_de_galles pays_bas pologne portugal "
+              "roumanie royaume_uni russie saint_marin serbie slovaquie slovenie suede suisse "
+              "republique_tcheque ukraine vatican armenie azerbaidjan georgie",
+    "Afrique": "afrique_du_sud algerie angola benin botswana burkina_faso burundi cameroun cap_vert "
+               "comores cote_d_ivoire djibouti egypte erythree eswatini ethiopie gabon gambie ghana "
+               "guinee guinee_equatoriale guinee_bissau kenya lesotho liberia libye madagascar malawi "
+               "mali maroc maurice mauritanie mozambique namibie niger nigeria ouganda rwanda "
+               "republique_centrafricaine republique_du_congo republique_democratique_du_congo "
+               "sao_tome_et_principe senegal seychelles sierra_leone somalie soudan tanzanie tchad "
+               "togo tunisie zambie zimbabwe",
+    "Moyen-Orient": "arabie_saoudite bahrein emirats_arabes_unis irak iran israel jordanie koweit liban "
+                    "oman palestine qatar syrie turquie yemen",
+    "Asie": "afghanistan bangladesh bhoutan birmanie brunei cambodge chine coree_du_nord coree_du_sud "
+            "inde indonesie japon kazakhstan kirghizistan laos maldives mongolie nepal ouzbekistan "
+            "pakistan philippines singapour sri_lanka tadjikistan taiwan timor_oriental turkmenistan "
+            "vietnam viet_nam asie_centrale",
+    "Océanie": "australie fidji kiribati micronesie nauru nouvelle_zelande palaos "
+               "papouasie_nouvelle_guinee polynesie_francaise samoa tonga tuvalu vanuatu "
+               "iles_marshall iles_salomon",
+    "Arctique": "arctique groenland",
+}
+PAYS_CONTINENT = {p: c for c, ps in _C.items() for p in ps.split()}
+# Zones sans pays : indice tiré du slug ou du nom
+INDICES_CONTINENT = [("bresil", "Amériques"), ("sao_paulo", "Amériques"), ("amazon", "Amériques"),
+                     ("ecosse", "Europe"), ("galles", "Europe"), ("barcelone", "Europe"),
+                     ("polynesie", "Océanie"), ("pacifique", "Océanie"), ("arctique", "Arctique"),
+                     ("groenland", "Arctique"), ("nuuk", "Arctique"), ("sahel", "Afrique"),
+                     ("afri", "Afrique"), ("golfe", "Moyen-Orient"), ("eurasi", "Asie")]
+
+
+def continent_pays(nom):
+    s = slugify(nom)
+    if "groenland" in s or "svalbard" in s:
+        return "Arctique"
+    s = slugify(re.split(r"[(/]", nom)[0])
+    return PAYS_CONTINENT.get(s)
+
+
+def continent_zone(slug, geo, forces, avec_methode=False):
+    """Continent d'une zone : forçage manuel > majorité de ses pays > indice du nom > Monde.
+    Une zone dont aucun continent ne réunit 40 % des pays (≥ 3 continents) est « Monde »."""
+    r = lambda c, m: (c, m) if avec_methode else c
+    if slug in forces:
+        return r(forces[slug], "forcé")
+    z = geo.get(slug, {})
+    votes = Counter(c for c in (continent_pays(p) for p in z.get("pays", [])) if c)
+    if votes:
+        (c, n), total = votes.most_common(1)[0], sum(votes.values())
+        if len(votes) >= 3 and n / total < 0.4:
+            return r("Monde", "pays répartis sur plusieurs continents")
+        return r(c, "pays")
+    cle = slug + " " + slugify(z.get("nom", ""))
+    for indice, c in INDICES_CONTINENT:
+        if indice in cle:
+            return r(c, f"sans pays, deviné d'après « {indice} »")
+    return r("Monde", "sans pays, aucun indice")
+
+
+def charger_forces_continents():
+    """generator/continents_zones.yaml (optionnel) : {scenario: {zone_slug: Continent}}"""
+    p = os.path.join(GEN_DIR, "continents_zones.yaml")
+    if not os.path.exists(p):
+        return {}
+    d = yaml.safe_load(open(p, encoding="utf-8")) or {}
+    for sc, zs in d.items():
+        for z, c in (zs or {}).items():
+            if c not in CONTINENTS:
+                sys.exit(f"❌ continents_zones.yaml : « {c} » ({sc}/{z}) n'est pas dans {CONTINENTS}")
+    return d
+
+
+# ═══════════════════════════════════════════════════════════════════════════
+# Lecture du vault
+# ═══════════════════════════════════════════════════════════════════════════
+
+def slugify(s):
+    s = unicodedata.normalize("NFKD", str(s)).encode("ascii", "ignore").decode().lower()
+    return re.sub(r"[^a-z0-9]+", "_", s).strip("_")
+
+
+def slug_pipeline(s):
+    """Même slug que api._slugify() (celui écrit dans journaliste_slug) :
+    NFD, marques diacritiques retirées, tout non-alphanumérique -> "_".
+    Diffère de slugify() ci-dessus pour ø, æ, å, ß, ł… (S23, 4 octobre 2026)."""
+    s = unicodedata.normalize("NFD", str(s or ""))
+    s = "".join(c for c in s if unicodedata.category(c) != "Mn").lower()
+    return re.sub(r"[^a-z0-9]+", "_", s).strip("_")
+
+
+def trouver(nom):
+    """Cherche un fichier dans generator/ puis dans tout le vault."""
+    for base in (GEN_DIR, VAULT):
+        p = os.path.join(base, nom)
+        if os.path.exists(p):
+            return p
+    hits = [h for h in glob.glob(os.path.join(VAULT, "**", nom), recursive=True)
+            if ".bak" not in h]
+    if not hits:
+        sys.exit(f"❌ {nom} introuvable dans le vault ({VAULT})")
+    return hits[0]
+
+
+def lire_article(path):
+    """-> (frontmatter dict | None, corps markdown)"""
+    try:
+        txt = open(path, encoding="utf-8").read()
+    except Exception:
+        return None, ""
+    m = re.match(r"---\n(.*?)\n---\n?", txt, re.S)
+    if not m:
+        return None, txt
+    try:
+        fm = yaml.safe_load(m.group(1))
+    except Exception:
+        return None, ""
+    return (fm if isinstance(fm, dict) else None), txt[m.end():]
+
+
+def charger_geo(scenario):
+    """slug -> {'parent': slug|None, 'nom': str}"""
+    fm, _ = lire_article(os.path.join(VAULT, "geographie", f"{scenario}.md"))
+    geo = {}
+    for z in (fm or {}).get("zones") or []:
+        if isinstance(z, dict) and z.get("slug"):
+            p = z.get("parent")
+            nom = re.sub(r"\s*\(.*?\)", "", z.get("nom") or z["slug"]).strip()  # « Israël (Pôle …) » -> « Israël »
+            pays = [o.get("entite") for o in (z.get("origine_reelle") or [])
+                    if isinstance(o, dict) and o.get("type_entite") == "pays" and o.get("entite")]
+            geo[z["slug"]] = {"parent": str(p).strip("[]") if p else None, "nom": nom, "pays": pays}
+    return geo
+
+
+def resoudre_journal(zone, zones_journaux, geo):
+    """Remonte la chaîne des parents jusqu'à une zone qui a un journal."""
+    chemin, cur, vus = [zone], zone, set()
+    while cur not in zones_journaux:
+        if cur in vus or cur not in geo or not geo[cur]["parent"]:
+            return None, chemin
+        vus.add(cur)
+        cur = geo[cur]["parent"]
+        chemin.append(cur)
+    return cur, chemin
+
+
+def langue_principale(langue_style):
+    """-> (nom, élidé) ou None. Le mot de langue le plus tôt dans la phrase."""
+    s = (langue_style or "").lower()
+    meilleur = None
+    for mot, val in LANGUES.items():
+        m = re.search(r"(?<![a-zà-ÿ])" + re.escape(mot), s)
+        if m and (meilleur is None or m.start() < meilleur[0]):
+            meilleur = (m.start(), val)
+    return meilleur[1] if meilleur else None
+
+
+def mention_traduction(langue_style):
+    lp = langue_principale(langue_style)
+    if not lp or lp[0] == "français":
+        return ""
+    nom, elide = lp
+    return f"Traduit de l'{nom}" if elide else f"Traduit du {nom}"
+
+
+def parse_date(fm, fichier):
+    """date_publication > date_evenement > nom de fichier ; -> date ou None"""
+    for v in (fm.get("date_publication"), fm.get("date_evenement")):
+        if isinstance(v, (dt.date, dt.datetime)):
+            return v if isinstance(v, dt.date) else v.date()
+        if v:
+            s = slugify(str(v))
+            m = re.match(r"(\d{1,2})_([a-z]+)_(\d{4})", s)
+            if m and m.group(2) in MOIS:
+                try:
+                    return dt.date(int(m.group(3)), MOIS[m.group(2)], int(m.group(1)))
+                except ValueError:
+                    pass
+            m = re.match(r"(\d{4})_(\d{2})_(\d{2})", s)
+            if m:
+                try:
+                    return dt.date(*map(int, m.groups()))
+                except ValueError:
+                    pass
+    m = re.search(r"_(\d{1,2})([a-z]+)(\d{4})\.md$", fichier)
+    if m and m.group(2) in MOIS:
+        try:
+            return dt.date(int(m.group(3)), MOIS[m.group(2)], int(m.group(1)))
+        except ValueError:
+            pass
+    return None
+
+
+def empreinte(corps):
+    """Empreinte du texte d'un article : un chapô de revue n'est réutilisé que si le texte n'a pas changé."""
+    import hashlib
+    return hashlib.sha1((corps or "").encode("utf-8")).hexdigest()[:16]
+
+
+CACHE_CHAPOS = os.path.join(VAULT, "state", "chapos_revues.json")
+
+
+def charger_chapos():
+    try:
+        import json
+        return json.load(open(CACHE_CHAPOS, encoding="utf-8"))
+    except FileNotFoundError:
+        return {}
+
+
+def cle_article(a):
+    return f"{a['scenario']}/{a['fichier']}"
+
+
+def date_fr(d):
+    return f"{d.day} {MOIS_NOMS[d.month]} {d.year}" if d else ""
+
+
+def scanner(scenarios, journaux, revues, geos):
+    """Une entrée par article, avec 'statut' == 'ok' si publiable."""
+    out = []
+    for sc in scenarios:
+        for f in sorted(glob.glob(os.path.join(VAULT, "articles", sc, "*.md"))):
+            nom = os.path.basename(f)
+            if nom.startswith("_"):
+                continue
+            fm, corps = lire_article(f)
+            a = {"fichier": nom, "scenario": sc, "path": f}
+            if fm is None:
+                a["statut"] = "frontmatter illisible"
+                out.append(a)
+                continue
+            lg = fm.get("ligne_editoriale")
+            zone = fm.get("zone_principale") or ""
+            a.update(fm=fm, corps=corps, ligne_editoriale=lg or "", zone_principale=zone)
+            if lg not in LIGNES:
+                a["statut"] = "ligne_editoriale absente"
+            elif not zone:
+                a["statut"] = "zone_principale vide"
+            else:
+                zj = ((journaux.get(sc) or {}).get(lg) or {}).get("zones") or {}
+                zone_j, chemin = resoudre_journal(zone, zj, geos[sc])
+                a["chemin_zones"] = " > ".join(chemin)
+                if zone_j is None:
+                    a["statut"] = ("zone absente de la géographie" if zone not in geos[sc]
+                                   else "aucun journal sur la chaîne de zones")
+                else:
+                    j = zj[zone_j]
+                    # Journalistes ET orateurs (articles oraux), sous les deux
+                    # formes de slug (S23, 4 octobre 2026).
+                    noms = {}
+                    for p in (j.get("journalistes") or []) + (j.get("orateurs") or []):
+                        if p.get("nom"):
+                            noms.setdefault(slugify(p["nom"]), p["nom"])
+                            noms.setdefault(slug_pipeline(p["nom"]), p["nom"])
+                    js = fm.get("journaliste_slug") or ""
+                    a.update(
+                        statut="ok",
+                        revue=revues[sc][lg]["nom"],
+                        journal=j.get("nom", ""),
+                        journal_ton=j.get("ton", ""),
+                        # fiche publique (generate_journaux.py --fill-presentation) ; repli sur le ton
+                        journal_presentation=j.get("presentation") or premiere_phrase(j.get("ton", "")),
+                        journal_meta=" · ".join(str(x) for x in (
+                            j.get("ville") or geos[sc].get(zone_j, {}).get("nom", zone_j),
+                            j.get("periodicite"),
+                            (langue_principale(j.get("langue_style")) or [None])[0]) if x),
+                        journal_fondation=j.get("fondation"),
+                        zone_journal=zone_j,
+                        zone_journal_nom=geos[sc].get(zone_j, {}).get("nom", zone_j),
+                        signature=noms.get(js, f"La rédaction de {j.get('nom', '')}"),
+                        signature_source="journaliste" if js in noms else "rédaction",
+                        langue_style=j.get("langue_style") or "",
+                        traduction=mention_traduction(j.get("langue_style")),
+                        chapo_vide="oui" if not fm.get("chapo") else "",
+                        date=parse_date(fm, nom),
+                    )
+            out.append(a)
+    return out
+
+
+# ═══════════════════════════════════════════════════════════════════════════
+# AUDIT
+# ═══════════════════════════════════════════════════════════════════════════
+
+def audit(articles, scenarios, revues, detail, csv_path):
+    par_revue = defaultdict(Counter)
+    problemes = defaultdict(list)
+    for a in articles:
+        sc, lg, st = a["scenario"], a.get("ligne_editoriale"), a["statut"]
+        cle = f"{sc}/{lg}" if lg in LIGNES else f"{sc}/?"
+        par_revue[cle][st] += 1
+        if st == "ok":
+            par_revue[cle]["signé " + a["signature_source"]] += 1
+        else:
+            problemes[st].append(f"{sc}/{a['fichier']}")
+
+    ok = sum(1 for a in articles if a["statut"] == "ok")
+    print(f"\n=== Audit de publication — {len(articles)} articles, {ok} publiables ===\n")
+    print(f"{'revue':48} {'publiables':>10} {'signés':>7} {'rédac.':>7} {'refusés':>8}")
+    for sc in scenarios:
+        for lg in LIGNES + ["?"]:
+            c = par_revue.get(f"{sc}/{lg}")
+            if not c:
+                continue
+            nom = revues[sc][lg]["nom"] if lg in LIGNES else "(ligne inconnue)"
+            refus = sum(v for k, v in c.items()
+                        if k not in ("ok", "signé journaliste", "signé rédaction"))
+            print(f"{sc + ' · ' + nom:48} {c['ok']:>10} {c['signé journaliste']:>7} "
+                  f"{c['signé rédaction']:>7} {refus:>8}")
+    if problemes:
+        print("\nNon publiables, par cause :")
+        for cause, liste in sorted(problemes.items(), key=lambda x: -len(x[1])):
+            print(f"  {len(liste):>4}  {cause}")
+            if detail:
+                for n in liste:
+                    print(f"          {n}")
+    if csv_path:
+        champs = ["scenario", "fichier", "statut", "ligne_editoriale", "zone_principale",
+                  "chemin_zones", "zone_journal", "revue", "journal", "signature",
+                  "signature_source", "traduction", "chapo_vide"]
+        with open(csv_path, "w", newline="", encoding="utf-8") as fh:
+            w = csv.DictWriter(fh, fieldnames=champs, extrasaction="ignore")
+            w.writeheader()
+            w.writerows(articles)
+        print(f"\nCSV écrit : {csv_path}")
+
+
+# ═══════════════════════════════════════════════════════════════════════════
+# BUILD — nettoyage du texte
+# ═══════════════════════════════════════════════════════════════════════════
+
+RE_DATE_SEULE = re.compile(r"^\*{0,2}_?\d{1,2}(er)? \w+ \d{4}_?\*{0,2}$")
+
+
+def retirer_guillemets_englobants(titre):
+    """Retire les guillemets seulement s'ils encadrent le titre ENTIER (chantier 5,
+    5 octobre 2026). « Titre » -> Titre ; mais « Citation » : suite reste intact
+    (avant : le « de tête était retiré seul, laissant un » orphelin)."""
+    t = titre.strip()
+    for ouvre, ferme in (("«", "»"), ("“", "”"), ('"', '"')):
+        if len(t) > 2 and t.startswith(ouvre) and t.endswith(ferme):
+            interieur = t[len(ouvre):-len(ferme)]
+            if ouvre not in interieur and ferme not in interieur:
+                return interieur.strip()
+    return t
+
+
+def normaliser_capitales(titre, corps_sans_titre):
+    """Titre écrit presque entièrement en capitales -> casse française (chantier 5,
+    5 octobre 2026). Chaque mot reprend la casse qu'il a AU MILIEU d'une phrase du
+    corps de l'article (noms propres, sigles : « Venelles », « ACRA ») ; un mot
+    jamais vu ainsi passe en minuscules. Première lettre du titre en majuscule.
+    Un titre déjà en casse normale est rendu tel quel."""
+    lettres = [c for c in titre if c.isalpha()]
+    if len(lettres) < 4 or sum(c.isupper() for c in lettres) / len(lettres) <= 0.8:
+        return titre
+    formes = {}
+    for m in re.finditer(r"[^\W\d_]+", corps_sans_titre):
+        avant = corps_sans_titre[:m.start()].rstrip(" \t*_")
+        if not avant or not (avant[-1].isalnum() or avant[-1] in ",;(’'-"):
+            continue  # début de ligne ou de phrase : casse non significative
+        formes.setdefault(m.group().lower(), Counter())[m.group()] += 1
+    def forme(mot):
+        c = formes.get(mot.lower())
+        if not c:
+            return mot.lower()
+        meilleures = c.most_common()
+        top = meilleures[0][1]
+        candidates = [f for f, n in meilleures if n == top]
+        return next((f for f in candidates if not f.isupper()), candidates[0])
+    def remplacer(m):
+        if m.start() and (titre[m.start() - 1].isdigit() or titre[m.start() - 1] == "°"):
+            return m.group()  # unité collée à un nombre (52°C, 3D) : inchangée
+        return forme(m.group())
+    t = re.sub(r"[^\W\d_]+", remplacer, titre)
+    for i, ch in enumerate(t):  # première lettre en majuscule
+        if ch.isalpha():
+            return t[:i] + ch.upper() + t[i + 1:]
+    return t
+
+
+def nettoyer_corps(corps, titre_fm=""):
+    """-> (titre, liste de blocs markdown) ; retire titre, date, signature, 'Voir aussi'."""
+    lignes = corps.strip().split("\n")
+
+    # 1. Bloc final après le dernier séparateur '---' (Voir aussi, signature égarée…)
+    for i in range(len(lignes) - 1, -1, -1):
+        if lignes[i].strip() in ("---", "***", "___"):
+            reste = "\n".join(lignes[i + 1:])
+            if len(reste) < 600 or "[[" in reste or "Voir aussi" in reste:
+                lignes = lignes[:i]
+            break
+
+    # 2. Titre : première ligne non vide en gras
+    titre = ""
+    while lignes and not lignes[0].strip():
+        lignes.pop(0)
+    if lignes:
+        m = re.match(r"^\s*(#+\s*)?\*{0,2}(.+?)\*{0,2}\s*$", lignes[0])
+        brut = lignes[0].strip()
+        if brut.startswith("**") or brut.startswith("#"):
+            titre = retirer_guillemets_englobants(m.group(2))
+            lignes.pop(0)
+
+    # 3. Lignes d'en-tête : date seule, signature courte avec tiret
+    tete = 0
+    while lignes and tete < 6:
+        l = lignes[0].strip()
+        if not l:
+            lignes.pop(0)
+            continue
+        court = len(l) < 140 and not l.rstrip("*_ ").endswith((".", "?", "!", "»"))
+        if RE_DATE_SEULE.match(l) or (court and re.search(r"\s[—–-]\s", l)) \
+                or (court and "Réseau" in l):
+            lignes.pop(0)
+            tete += 1
+            continue
+        break
+
+    texte = "\n".join(lignes).strip()
+    blocs = [b.strip() for b in re.split(r"\n\s*\n", texte) if b.strip()]
+    return titre or titre_fm, blocs
+
+
+def inline(md):
+    """markdown inline minimal -> html (texte déjà échappé ici)."""
+    s = html.escape(md, quote=False)
+    s = re.sub(r"\[\[([^\]|]+)\|([^\]]+)\]\]", r"\2", s)      # [[slug|alias]] -> alias
+    s = re.sub(r"\[\[[^\]]+\]\]", "", s)                       # [[slug]] -> rien
+    s = re.sub(r"\*\*(.+?)\*\*", r"<strong>\1</strong>", s)
+    s = re.sub(r"(?<![\w*])\*(?!\s)(.+?)(?<!\s)\*(?![\w*])", r"<em>\1</em>", s)
+    s = re.sub(r"(?<![\w_])_(?!\s)(.+?)(?<!\s)_(?![\w_])", r"<em>\1</em>", s)
+    return s
+
+
+def blocs_html(blocs):
+    out = []
+    for b in blocs:
+        m = re.match(r"^(#{1,6})\s+(.*)$", b)
+        if m:
+            out.append(f"<h2>{inline(m.group(2))}</h2>")
+        elif all(l.strip().startswith(("- ", "* ")) for l in b.split("\n")):
+            items = "".join(f"<li>{inline(l.strip()[2:])}</li>" for l in b.split("\n"))
+            out.append(f"<ul>{items}</ul>")
+        elif b.startswith(">"):
+            q = " ".join(l.lstrip("> ").strip() for l in b.split("\n"))
+            out.append(f"<blockquote>{inline(q)}</blockquote>")
+        else:
+            out.append(f"<p>{inline(' '.join(l.strip() for l in b.split(chr(10))))}</p>")
+    return "\n".join(out)
+
+
+def premiere_phrase(s):
+    s = (s or "").strip()
+    m = re.match(r"(.+?[.!?])(\s|$)", s)
+    return m.group(1) if m else s
+
+
+# ═══════════════════════════════════════════════════════════════════════════
+# BUILD — gabarits HTML (gabarit validé par David le 3 oct, maquette Courrier)
+# ═══════════════════════════════════════════════════════════════════════════
+
+CSS = """
+:root{--ink:#16181D;--muted:#4A4F5A;--rule:#D9DBE1;--soft:#EEF0F4;--paper:#FFFFFF;--accent:#2335A8}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:'Newsreader',Georgia,serif}
+a{color:var(--ink);text-decoration:none}
+a:hover{color:var(--accent);text-decoration:underline}
+.sans{font-family:'Archivo',system-ui,sans-serif}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+.topbar{border-bottom:1px solid var(--rule);font-family:'Archivo',sans-serif;font-size:13px;color:var(--muted)}
+.topbar .wrap{padding-top:10px;padding-bottom:10px;display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between}
+.mast{text-align:center;padding:28px 24px 0}
+.mast .titre{font-weight:700;font-size:clamp(40px,7vw,84px);line-height:1;letter-spacing:-.02em}
+.mast .devise{font-family:'Archivo',sans-serif;font-size:14px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-top:6px}
+.mast-mini{border-bottom:1px solid var(--ink)}
+.mast-mini .wrap{padding-top:14px;padding-bottom:14px;display:flex;flex-wrap:wrap;gap:10px 24px;align-items:baseline;justify-content:space-between}
+.mast-mini .titre{font-weight:700;font-size:30px;letter-spacing:-.015em}
+nav.rub{margin-top:22px}
+nav.rub .l1{border-top:3px solid var(--ink);border-bottom:1px solid var(--ink);padding:12px 0;display:flex;flex-wrap:wrap;gap:8px 22px;justify-content:center;font-family:'Archivo',sans-serif;font-weight:600;font-size:15px}
+nav.rub .l2{padding:10px 0;display:flex;flex-wrap:wrap;gap:6px 18px;justify-content:center;font-family:'Archivo',sans-serif;font-size:13px;color:var(--muted)}
+nav.rub .l2 a{color:var(--muted)}
+main{padding-top:24px;padding-bottom:48px;display:flex;flex-direction:column;gap:48px}
+.kicker{font-family:'Archivo',sans-serif;font-size:13px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
+.kick-s{font-family:'Archivo',sans-serif;font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+.src{font-family:'Archivo',sans-serif;font-size:12px;color:var(--muted)}
+.sec-t{margin:0;font-family:'Archivo',sans-serif;font-size:13px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;border-bottom:3px solid var(--ink);padding-bottom:8px}
+.une{display:flex;flex-wrap:wrap;gap:40px}
+.une .lead{flex:999 1 560px;min-width:0;display:flex;flex-direction:column;gap:16px}
+.une .lead h1{margin:0;font-size:clamp(34px,4.6vw,56px);line-height:1.05;letter-spacing:-.015em}
+.chapo{margin:0;font-size:21px;line-height:1.45;color:#2B2F38}
+.une aside{flex:1 1 300px;min-width:0}
+.item{display:flex;flex-direction:column;gap:6px;padding:16px 0;border-bottom:1px solid var(--rule)}
+.item:last-child{border-bottom:0}
+.item a.t{font-size:20px;font-weight:600;line-height:1.2}
+.grille{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:32px}
+.carte{display:flex;flex-direction:column;gap:8px}
+.carte a.t{font-size:20px;font-weight:600;line-height:1.2}
+.carte p{margin:0;font-size:16px;line-height:1.45;color:#2B2F38}
+.photo{aspect-ratio:16/9;width:100%;background:var(--soft);border:1px solid var(--rule)}
+.encart{background:var(--ink);color:#fff;padding:32px;display:flex;flex-wrap:wrap;gap:24px;align-items:center;justify-content:space-between}
+.encart p{margin:0;font-size:19px;line-height:1.45;flex:1 1 420px}
+.encart a{font-family:'Archivo',sans-serif;font-weight:600;font-size:15px;color:#fff;border:1px solid #fff;padding:12px 20px}
+footer{border-top:1px solid var(--rule);font-family:'Archivo',sans-serif;font-size:13px;color:var(--muted)}
+footer .wrap{padding-top:20px;padding-bottom:20px;display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between}
+.fil{font-family:'Archivo',sans-serif;font-size:13px;color:var(--muted);display:flex;flex-wrap:wrap;gap:8px}
+.fil a{color:var(--muted)}
+.art-tete{max-width:820px;display:flex;flex-direction:column;gap:16px}
+.art-tete h1{margin:0;font-size:clamp(32px,4.4vw,52px);line-height:1.07;letter-spacing:-.015em}
+.byline{display:flex;flex-wrap:wrap;gap:12px 28px;align-items:center;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:14px 0;font-family:'Archivo',sans-serif;font-size:14px}
+.byline .trad{background:var(--soft);padding:4px 10px}
+.art-corps{display:flex;flex-wrap:wrap;gap:48px}
+.art-corps article{flex:999 1 560px;min-width:0;max-width:720px;font-size:19px;line-height:1.65}
+.art-corps article p{margin:0 0 20px}
+.art-corps article h2{font-size:24px;line-height:1.25;margin:28px 0 12px}
+.art-corps article blockquote{margin:0 0 20px;padding-left:20px;border-left:3px solid var(--accent);font-style:italic}
+.art-corps aside{flex:1 1 300px;min-width:0;display:flex;flex-direction:column;gap:28px}
+.fiche{border-top:3px solid var(--ink);padding-top:14px;display:flex;flex-direction:column;gap:10px;font-family:'Archivo',sans-serif;font-size:14px;line-height:1.5}
+.fiche .nom{font-family:'Newsreader',serif;font-size:24px;font-weight:700;line-height:1.15}
+.fiche p{margin:0}
+.tags{display:flex;flex-wrap:wrap;gap:8px}
+.tags span{font-family:'Archivo',sans-serif;font-size:12px;background:var(--soft);padding:4px 10px}
+.pied-art{font-family:'Archivo',sans-serif;font-size:14px;color:var(--muted);border-top:1px solid var(--rule);padding-top:14px}
+.liste .item a.t{font-size:22px}
+.liste .item p{margin:0;font-size:16px;line-height:1.45;color:#2B2F38}
+.kiosque{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
+.kiosque .rv{border:1px solid var(--rule);padding:20px;display:flex;flex-direction:column;gap:6px}
+.kiosque .rv a.t{font-size:26px;font-weight:700;line-height:1.1}
+"""
+
+FONTS = ('<link rel="preconnect" href="https://fonts.googleapis.com">'
+         '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;800'
+         '&amp;family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,700;1,6..72,400&amp;display=swap">')
+
+e = html.escape
+
+
+def page(titre, corps, css_rel, accent):
+    return (f'<!doctype html>\n<html lang="fr">\n<head>\n<meta charset="utf-8">\n'
+            f'<meta name="viewport" content="width=device-width, initial-scale=1">\n'
+            f'<title>{e(titre)}</title>\n{FONTS}\n<link rel="stylesheet" href="{css_rel}">\n'
+            f'<style>:root{{--accent:{e(accent)}}}</style>\n</head>\n<body>\n{corps}\n</body>\n</html>\n')
+
+
+def pied(rv):
+    return (f'<footer><div class="wrap"><span>{e(rv["nom"])} · {e(str(rv.get("ville_siege", "")))}'
+            f' · depuis {e(str(rv.get("fondation", "")))}</span>'
+            f'<span>Ourrassol 2098 · œuvre de fiction</span></div></footer>')
+
+
+def numero(rv, d):
+    try:
+        return (d.year - int(rv["fondation"])) * 12 + d.month
+    except Exception:
+        return None
+
+
+def source_ligne(a):
+    parts = [a["journal"]]
+    if a["traduction"]:
+        parts.append(a["traduction"])
+    return " · ".join(parts)
+
+
+def construire_revue(out_dir, sc, lg, rv, arts, zones_journaux, geo, parution, forces):
+    """Une revue : Une, pages rubriques (zones), pages thèmes, articles, sources."""
+    accent = rv.get("accent") or "#2335A8"
+    arts = sorted(arts, key=lambda a: (a["date"] or dt.date.min, a["fichier"]), reverse=True)
+    os.makedirs(os.path.join(out_dir, "articles"), exist_ok=True)
+    os.makedirs(os.path.join(out_dir, "rubriques"), exist_ok=True)
+
+    # slugs uniques
+    vus = set()
+    for a in arts:
+        base = slugify(a["fm"].get("slug") or a["fichier"][:-3])[:90] or "article"
+        s, i = base, 2
+        while s in vus:
+            s, i = f"{base}_{i}", i + 1
+        vus.add(s)
+        a["page"] = s
+        a["titre"], a["blocs"] = nettoyer_corps(a["corps"], "")
+        a["titre"] = normaliser_capitales(a["titre"], "\n".join(a["blocs"]))
+        if not a["titre"]:
+            a["titre"] = (a["fm"].get("chapo") or s.replace("_", " "))[:120]
+        a["theme"] = THEMES.get(a["fm"].get("thematique"), "")
+
+    # Toutes les zones qui ont un journal dans ce camp, et toutes les thématiques
+    # publiables, même vides aujourd'hui (décision du 3 oct : le volume s'équilibrera).
+    zone_nom = {z: geo.get(z, {}).get("nom", z) for z in zones_journaux}
+    zones = Counter({z: 0 for z in zones_journaux})
+    zones.update(a["zone_journal"] for a in arts)
+    zone_cont = {z: continent_zone(z, geo, forces) for z in zones_journaux}
+    conts = [c for c in CONTINENTS if c in zone_cont.values()]
+    themes = Counter({t: 0 for t in THEMES if t not in THEMES_EXCLUES})
+    themes.update(a["fm"].get("thematique") for a in arts if a["theme"])
+
+    d0 = parution  # mois de parution global (state/editions.json)
+    num = numero(rv, d0) if d0 else None
+    entete_num = (f'N° {num} · ' if num else '') + (f'{MOIS_NOMS[d0.month].capitalize()} {d0.year}' if d0 else '')
+
+    def nav(prefix):
+        l1 = "".join(f'<a href="{prefix}rubriques/continent_{slugify(c)}.html">{e(c)}</a>' for c in conts)
+        l2 = "".join(f'<a href="{prefix}rubriques/theme_{t}.html">{e(THEMES[t])}</a>'
+                     for t in themes)
+        return f'<nav class="rub wrap" aria-label="Rubriques"><div class="l1">{l1}</div><div class="l2">{l2}</div></nav>'
+
+    def mast_mini(prefix):
+        return (f'<header class="mast-mini"><div class="wrap"><a class="titre" href="{prefix}index.html">'
+                f'{e(rv["nom"])}</a><span class="sans" style="font-size:13px;color:var(--muted)">'
+                f'{e(entete_num)}</span></div></header>')
+
+    def item(a, prefix, avec_chapo=False):
+        k = e(a["zone_journal_nom"]) + (f" · {e(a['theme'])}" if a["theme"] else "")
+        ch = f'<p>{inline(a["chapo_aff"])}</p>' if avec_chapo and a["chapo_aff"] else ""
+        return (f'<div class="item"><div class="kick-s">{k}</div>'
+                f'<a class="t" href="{prefix}articles/{a["page"]}.html">{e(a["titre"])}</a>{ch}'
+                f'<div class="src">{e(source_ligne(a))} · {e(date_fr(a["date"]))}</div></div>')
+
+    # ── Une ──
+    lead, cote, reste = arts[:1], arts[1:5], arts[5:17]
+    h = [f'<div class="topbar"><div class="wrap"><span>{e(entete_num)}</span>'
+         f'<span>Mensuel fondé en {e(str(rv.get("fondation", "")))} · {e(str(rv.get("ville_siege", "")))}</span></div></div>',
+         f'<header class="mast"><div class="titre">{e(rv["nom"])}</div>'
+         f'<div class="devise">{e(rv.get("sous_titre", ""))}</div></header>', nav(""),
+         '<main class="wrap">']
+    if lead:
+        a = lead[0]
+        photo = '<div class="photo" role="img" aria-label="Photo à venir"></div>' if a["fm"].get("a_une_photo") else ""
+        h.append(f'<section class="une"><div class="lead"><div class="kicker">{e(a["zone_journal_nom"])}'
+                 f'{(" · " + e(a["theme"])) if a["theme"] else ""}</div>'
+                 f'<h1><a href="articles/{a["page"]}.html">{e(a["titre"])}</a></h1>'
+                 f'<p class="chapo">{inline(a["chapo_aff"])}</p>{photo}'
+                 f'<div class="src">{e(source_ligne(a))} · {e(date_fr(a["date"]))}</div></div>'
+                 f'<aside><h2 class="sec-t">À lire aussi</h2>{"".join(item(x, "") for x in cote)}</aside></section>')
+    if reste:
+        cartes = "".join(
+            f'<div class="carte"><div class="kick-s">{e(a["zone_journal_nom"])}</div>'
+            f'<a class="t" href="articles/{a["page"]}.html">{e(a["titre"])}</a>'
+            f'<div class="src">{e(source_ligne(a))} · {e(date_fr(a["date"]))}</div></div>' for a in reste)
+        h.append(f'<section><h2 class="sec-t">Dernières parutions</h2><div class="grille" style="margin-top:20px">{cartes}</div></section>')
+    h.append(f'<section class="encart"><p>{e(rv["nom"])} choisit, traduit et présente des articles '
+             f'parus dans la presse de son réseau. Le journal d\'origine, sa zone et sa langue figurent '
+             f'sous chaque article.</p><a href="sources.html">Nos sources, journal par journal</a></section>')
+    h.append('</main>')
+    h.append(pied(rv))
+    open(os.path.join(out_dir, "index.html"), "w", encoding="utf-8").write(
+        page(rv["nom"], "\n".join(h), "../style.css", accent))
+
+    # ── Rubriques (zones) et thèmes ──
+    def page_liste(fichier, titre_l, sous, liste, sous_nav=""):
+        corps = [mast_mini("../"), nav("../"), '<main class="wrap">',
+                 f'<section><div class="kicker">{e(sous)}</div><h1 style="margin:8px 0 0;font-size:40px">{e(titre_l)}</h1>{sous_nav}</section>',
+                 (f'<section class="liste">{"".join(item(a, "../", True) for a in liste)}</section>' if liste else
+                  '<section><p class="chapo">Aucun article repris dans cette rubrique pour le moment.</p></section>'),
+                 '</main>', pied(rv)]
+        open(os.path.join(out_dir, "rubriques", fichier), "w", encoding="utf-8").write(
+            page(f"{titre_l} — {rv['nom']}", "\n".join(corps), "../../style.css", accent))
+
+    for c in conts:
+        zs = sorted((z for z in zones_journaux if zone_cont[z] == c), key=lambda z: zone_nom[z])
+        sn = ('<div class="tags" style="margin-top:16px">' +
+              "".join(f'<a href="{z}.html"><span>{e(zone_nom[z])}</span></a>' for z in zs) + '</div>')
+        page_liste(f"continent_{slugify(c)}.html", c, "Rubrique", [a for a in arts if a["zone_journal"] in zs], sn)
+    for z in zones:
+        c = zone_cont[z]
+        page_liste(f"{z}.html", zone_nom[z], c, [a for a in arts if a["zone_journal"] == z],
+                   f'<div class="fil" style="margin-top:12px"><a href="continent_{slugify(c)}.html">← {e(c)}</a></div>')
+    for t in themes:
+        page_liste(f"theme_{t}.html", THEMES[t], "Thème",
+                   [a for a in arts if a["fm"].get("thematique") == t])
+
+    # ── Articles ──
+    for a in arts:
+        fm = a["fm"]
+        tags = "".join(f"<span>{e(str(t))}</span>" for t in (fm.get("tags") or []))
+        voisins = [x for x in arts if x is not a and x["zone_journal"] == a["zone_journal"]][:3]
+        lire = "".join(f'<a href="{x["page"]}.html" style="font-size:18px;font-weight:600;line-height:1.25">'
+                       f'{e(x["titre"])}</a>' for x in voisins)
+        photo = ('<div class="photo" role="img" aria-label="Photo à venir" style="margin-bottom:20px"></div>'
+                 if fm.get("a_une_photo") else "")
+        corps = [mast_mini("../"), '<main class="wrap">',
+                 f'<div class="fil"><a href="../rubriques/continent_{slugify(zone_cont[a["zone_journal"]])}.html">{e(zone_cont[a["zone_journal"]])}</a>'
+                 f'<span aria-hidden="true">›</span><a href="../rubriques/{a["zone_journal"]}.html">{e(a["zone_journal_nom"])}</a>'
+                 + (f'<span aria-hidden="true">›</span><a href="../rubriques/theme_{fm.get("thematique")}.html">{e(a["theme"])}</a>' if a["theme"] else "")
+                 + '</div>',
+                 f'<div class="art-tete"><h1>{e(a["titre"])}</h1>'
+                 + (f'<p class="chapo">{inline(a["chapo_aff"])}</p>' if a["chapo_aff"] else "") + '</div>',
+                 f'<div class="byline"><strong style="font-weight:600">{e(a["signature"])}</strong>'
+                 f'<span><em style="font-style:normal;font-weight:600">{e(a["journal"])}</em></span>'
+                 f'<span style="color:var(--muted)">Paru le {e(date_fr(a["date"]))}</span>'
+                 + (f'<span class="trad">{e(a["traduction"])}</span>' if a["traduction"] else "") + '</div>',
+                 f'<div class="art-corps"><article>{photo}{blocs_html(a["blocs"])}'
+                 f'<div class="pied-art">{e(a["signature"])} · Publié dans <em>{e(a["journal"])}</em> '
+                 f'le {e(date_fr(a["date"]))}</div></article>'
+                 f'<aside><section class="fiche"><h2 class="sec-t" style="border:0;padding:0">La source</h2>'
+                 f'<div class="nom">{e(a["journal"])}</div><div style="color:var(--muted)">{e(a["journal_meta"])}</div>'
+                 f'<p>{inline(a["journal_presentation"])}</p>'
+                 + (f'<div style="color:var(--muted)">Fondé en {e(str(a["journal_fondation"]))}</div>' if a["journal_fondation"] else "") +
+                 f'<div style="color:var(--muted)">{e((rv.get("reseau_nom") or ""))}</div></section>'
+                 + (f'<section><h2 class="sec-t">Mots-clés</h2><div class="tags" style="margin-top:14px">{tags}</div></section>' if tags else "")
+                 + (f'<section style="display:flex;flex-direction:column;gap:14px"><h2 class="sec-t">Lire aussi</h2>{lire}</section>' if lire else "")
+                 + '</aside></div>', '</main>', pied(rv)]
+        open(os.path.join(out_dir, "articles", f"{a['page']}.html"), "w", encoding="utf-8").write(
+            page(f"{a['titre']} — {rv['nom']}", "\n".join(corps), "../../style.css", accent))
+
+    # ── Sources ──
+    par_journal = defaultdict(list)
+    for a in arts:
+        par_journal[a["journal"]].append(a)
+    fiches = "".join(
+        f'<div class="item"><a class="t" href="rubriques/{l[0]["zone_journal"]}.html">{e(j)}</a>'
+        f'<div class="src">{e(l[0]["journal_meta"])}'
+        + (f' · fondé en {e(str(l[0]["journal_fondation"]))}' if l[0]["journal_fondation"] else '')
+        + f' · {len(l)} article{"s" if len(l) > 1 else ""} repris</div>'
+        f'<p>{inline(l[0]["journal_presentation"])}</p></div>'
+        for j, l in sorted(par_journal.items()))
+    corps = [mast_mini(""), '<main class="wrap">',
+             '<section><div class="kicker">Nos sources</div><h1 style="margin:8px 0 0;font-size:40px">Les journaux que nous reprenons</h1></section>',
+             f'<section class="liste">{fiches}</section>', '</main>', pied(rv)]
+    open(os.path.join(out_dir, "sources.html"), "w", encoding="utf-8").write(
+        page(f"Sources — {rv['nom']}", "\n".join(corps).replace('href="index.html"', 'href="index.html"'),
+             "../style.css", accent))
+    return len(arts)
+
+
+def publiables(articles, parution):
+    """Articles qui partent en ligne -> (liste, Counter des thèmes exclus, nb datés après la parution)."""
+    liste, exclus, a_paraitre = [], Counter(), 0
+    for a in articles:
+        if a["statut"] != "ok":
+            continue
+        if a["fm"].get("thematique") in THEMES_EXCLUES:
+            exclus[a["fm"].get("thematique")] += 1
+            continue
+        d = a.get("date")
+        if parution and d and (d.year, d.month) > (parution.year, parution.month):
+            a_paraitre += 1  # daté après le mois de parution : pas encore paru
+            continue
+        liste.append(a)
+    return liste, exclus, a_paraitre
+
+
+def build(articles, scenarios, revues, journaux, geos, out_root, parution):
+    marque = os.path.join(out_root, ".export_revues")
+    if os.path.exists(out_root):
+        if not os.path.exists(marque):
+            sys.exit(f"❌ {out_root} existe et n'a pas été créé par ce script : arrêt (rien supprimé).")
+        shutil.rmtree(out_root)
+    os.makedirs(out_root)
+    open(marque, "w").write(dt.datetime.now().isoformat())
+    open(os.path.join(out_root, "style.css"), "w", encoding="utf-8").write(CSS)
+
+    forces = charger_forces_continents()
+    liste, exclus, a_paraitre = publiables(articles, parution)
+    chapos = charger_chapos()
+    n_revue = 0
+    pubs = defaultdict(list)
+    for a in liste:
+        c = chapos.get(cle_article(a))
+        if c and c.get("empreinte") == empreinte(a["corps"]) and c.get("chapo"):
+            a["chapo_aff"] = c["chapo"]   # chapô de la rédaction de la revue
+            n_revue += 1
+        else:
+            a["chapo_aff"] = a["fm"].get("chapo") or ""   # repli : chapô du journal
+        pubs[(a["scenario"], a["ligne_editoriale"])].append(a)
+
+    print(f"\n=== Génération du site dans {out_root} ===")
+    print(f"    Chapôs de rédaction : {n_revue} / {len(liste)} articles "
+          f"(les autres affichent le chapô du journal ; voir chapos_revues.py)")
+    if parution:
+        print(f"    Mois de parution : {MOIS_NOMS[parution.month]} {parution.year}"
+              f" — {a_paraitre} article(s) daté(s) après, non publié(s)\n")
+    kiosque = []
+    for sc in scenarios:
+        for lg in LIGNES:
+            rv = dict(revues[sc][lg])
+            rv["reseau_nom"] = "Membre du " + ((journaux.get(sc) or {}).get(lg, {}).get("_reseau", {}).get("nom") or "réseau")
+            arts = pubs.get((sc, lg), [])
+            dossier = slugify(rv["nom"])
+            if not arts:
+                print(f"  {rv['nom']:34} aucun article publiable, revue non générée")
+                continue
+            zj = ((journaux.get(sc) or {}).get(lg) or {}).get("zones") or {}
+            n = construire_revue(os.path.join(out_root, dossier), sc, lg, rv, arts, zj, geos[sc], parution,
+                                 forces.get(sc) or {})
+            kiosque.append((sc, lg, rv, dossier, n))
+            print(f"  {rv['nom']:34} {n:>4} articles → {dossier}/")
+    # Zones dont le continent n'est pas sûr : à vérifier, ou à fixer dans continents_zones.yaml
+    douteuses = []
+    for sc in scenarios:
+        zj = set()
+        for lg in LIGNES:
+            zj |= set((((journaux.get(sc) or {}).get(lg) or {}).get("zones") or {}).keys())
+        for z in sorted(zj):
+            c, m = continent_zone(z, geos[sc], forces.get(sc) or {}, avec_methode=True)
+            if m not in ("pays", "forcé"):
+                douteuses.append(f"{sc}/{z} → {c} ({m})")
+    if douteuses:
+        print(f"\n  ⚠ {len(douteuses)} zone(s) classée(s) sans certitude "
+              f"(à fixer si besoin dans generator/continents_zones.yaml) :")
+        for d in douteuses:
+            print(f"      {d}")
+    if exclus:
+        print("\n  Non publiés (thématiques exclues) : " +
+              ", ".join(f"{THEMES[t]} {n}" for t, n in exclus.items()))
+
+    # ── Kiosque (hors fiction) ──
+    blocs = []
+    for sc in scenarios:
+        cartes = "".join(
+            f'<div class="rv"><div class="kick-s">{"Pro-pouvoir" if lg == "pro_pouvoir" else "Opposition"}</div>'
+            f'<a class="t" href="{d}/index.html">{e(rv["nom"])}</a>'
+            f'<div class="src">{e(rv.get("sous_titre", ""))}</div>'
+            f'<div class="src">{n} articles · fondée en {e(str(rv.get("fondation", "")))} · {e(str(rv.get("ville_siege", "")))}</div></div>'
+            for s, lg, rv, d, n in kiosque if s == sc)
+        if cartes:
+            blocs.append(f'<section><h2 class="sec-t">{e(sc.replace("_", " ").capitalize())}</h2>'
+                         f'<div class="kiosque" style="margin-top:20px">{cartes}</div></section>')
+    corps = ('<header class="mast"><div class="titre" style="font-size:clamp(36px,6vw,64px)">Ourrassol 2098</div>'
+             '<div class="devise">Le kiosque · six mondes, douze revues</div></header>'
+             f'<main class="wrap">{"".join(blocs)}</main>'
+             '<footer><div class="wrap"><span>Ourrassol 2098 · œuvre de fiction</span></div></footer>')
+    open(os.path.join(out_root, "index.html"), "w", encoding="utf-8").write(
+        page("Ourrassol 2098 — Kiosque", corps, "style.css", "#2335A8"))
+    print(f"\n  Kiosque : {os.path.join(out_root, 'index.html')}")
+
+
+def mois_parution(force=None):
+    """Mois de parution global : --mois AAAA-MM, sinon edition_active de state/editions.json."""
+    if force:
+        a, m = force.split("-")
+        return dt.date(int(a), int(m), 1)
+    import json
+    candidats = [os.path.join(VAULT, "state", "editions.json"),
+                 os.path.join(GEN_DIR, "state", "editions.json")]
+    candidats += [h for h in glob.glob(os.path.join(VAULT, "**", "editions.json"), recursive=True)
+                  if ".bak" not in h and h not in candidats]
+    p = next((c for c in candidats if os.path.exists(c)), None)
+    if not p:
+        print("⚠ editions.json introuvable dans le vault : aucun filtre de date appliqué")
+        return None
+    try:
+        ed = json.load(open(p, encoding="utf-8"))["edition_active"]
+        return dt.date(int(ed["annee"]), int(ed["mois"]), 1)
+    except Exception as ex:
+        print(f"⚠ Mois de parution illisible ({p} : {type(ex).__name__} {ex}) : aucun filtre de date appliqué")
+        return None
+
+
+# ═══════════════════════════════════════════════════════════════════════════
+
+def main():
+    ap = argparse.ArgumentParser(description="Audit et génération du site des 12 revues")
+    ap.add_argument("--scenario", choices=SCENARIOS)
+    ap.add_argument("--detail", action="store_true", help="liste les articles non publiables")
+    ap.add_argument("--csv", metavar="FICHIER", help="écrit une ligne par article")
+    ap.add_argument("--build", action="store_true", help="génère le site statique")
+    ap.add_argument("--out", default=os.path.join(VAULT, "site"), help="dossier de sortie (défaut : site/)")
+    ap.add_argument("--mois", metavar="AAAA-MM", help="mois de parution (défaut : state/editions.json)")
+    ap.add_argument("--continents", action="store_true", help="affiche le continent attribué à chaque zone de journal")
+    args = ap.parse_args()
+
+    journaux = yaml.safe_load(open(trouver("journaux.yaml"), encoding="utf-8"))
+    revues = yaml.safe_load(open(trouver("revues.yaml"), encoding="utf-8"))
+    scenarios = [args.scenario] if args.scenario else SCENARIOS
+    geos = {sc: charger_geo(sc) for sc in scenarios}
+    articles = scanner(scenarios, journaux, revues, geos)
+
+    if args.continents:
+        forces = charger_forces_continents()
+        for sc in scenarios:
+            zj = set()
+            for lg in LIGNES:
+                zj |= set((((journaux.get(sc) or {}).get(lg) or {}).get("zones") or {}).keys())
+            print(f"\n=== {sc} ===")
+            par_c = defaultdict(list)
+            for z in zj:
+                par_c[continent_zone(z, geos[sc], forces.get(sc) or {})].append(z)
+            for c in CONTINENTS:
+                if par_c.get(c):
+                    print(f"  {c:13} " + ", ".join(sorted(par_c[c])))
+        return
+    if args.build:
+        build(articles, scenarios, revues, journaux, geos, os.path.abspath(args.out),
+              mois_parution(args.mois))
+    else:
+        audit(articles, scenarios, revues, args.detail, args.csv)
+
+
+if __name__ == "__main__":
+    main()

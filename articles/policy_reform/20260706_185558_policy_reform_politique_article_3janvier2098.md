@@ -25,7 +25,7 @@ tags:
 image_prompt: "Leena Väinälä, haute fonctionnaire du Conseil de l'Information, s'exprime avec gravité devant un auditorium bondé, micro à la main, entourée d'écrans affichant des graphiques de conformité restrictive et des logos du CGI et du CIRT."
 a_une_photo: false
 image_credit: ""
-journaliste_slug: 
+journaliste_slug: elodie_berset
 date_evenement: 23 novembre 2098
 zone_principale: hub_europeen_regulation
 date_publication: 23 novembre 2098
@@ -43,6 +43,8 @@ articles_lies:
 
 ---
 **Genève-Nexus cherche ses limites : Leena Väinälä et le Conseil de l'Information à l'épreuve de la critique interne**
+
+Élodie Berset — Le Consensus des Institutions
 *Genève-Nexus, 23 novembre 2098* — **Conseil de Régulation Numérique de Genève**
 
 L'auditorium du Conseil de Régulation Numérique de Genève-Nexus était bondé mardi lorsque Leena Väinälä a prononcé une allocution qui circule déjà sous le nom de « Discours des Clôtures Ouvertes ». Pour la première fois depuis 2092, la haute fonctionnaire a formulé publiquement sa critique la plus frontale envers le Conseil de Gouvernance de l'Information (CGI), l'institution qu'elle sert depuis sept ans. « *Le CGI ne gère plus les informations — il régule les possibles. Et c'est une différence de taille* », a-t-elle déclaré devant un auditoire composé de delegates du Conseil Intergouvernemental de Régulation Technologique (CIRT), de contributeurs certifiés de Prisme Global et d'étudiants en résidence du programme Observateurs Temporaires Indépendants.

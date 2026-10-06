@@ -393,7 +393,8 @@ _extended_
 - évolution des représentations de la mobilité
 - montée des débats identitaires liés aux migrations (→ debats_identitaires_migrations)
 
-
+**custom (signaux d'actualité)**
+- traités de mobilité climatique avec souveraineté territoriale préservée (→ signal_custom: climate_migration_sovereignty_treaty, source: veille_20260928_183444_chatgpt)
 
 ## 8. États par scénario
 ### [[fortress_world]]
@@ -714,4 +715,31 @@ signal_to_state:
         evolution: déploiement inégal des systèmes algorithmiques migratoires selon les pays
         date_bascule: 2027-2044
         evenement_cle: premier scandale de discrimination algorithmique aux frontières 2032
+
+  - signal: climate_migration_sovereignty_treaty
+    scenarios:
+      breakdown:
+        evolution: traités climatiques détournés en crises frontalières chaotiques
+        date_bascule: 2045-2063
+        evenement_cle: Tuvalu expulse ses résidents étrangers 2058
+      fortress_world:
+        evolution: quotas migratoires climatiques militarisés par les blocs
+        date_bascule: 2038-2055
+        evenement_cle: Bloc Atlantique annexe les îles Cook 2049
+      new_sustainability:
+        evolution: souveraineté flottante intégrée aux accords migratoires mondiaux
+        date_bascule: 2032-2048
+        evenement_cle: Fidji obtient siège ONU mobile 2044
+      eco_communalism:
+        evolution: citoyenneté climatique ancrée dans les bioterritoires locaux
+        date_bascule: 2040-2059
+        evenement_cle: Réseau des Assemblées Bioterritoriales accueille réfugiés Tuvalu 2053
+      policy_reform:
+        evolution: cadre juridique international pour les États submergés
+        date_bascule: 2028-2044
+        evenement_cle: résolution ONU sur la souveraineté flottante 2038
+      reference:
+        evolution: mobilité climatique encadrée mais inégalement appliquée
+        date_bascule: 2029-2045
+        evenement_cle: Palau suspend son accord de mobilité 2041
 ```

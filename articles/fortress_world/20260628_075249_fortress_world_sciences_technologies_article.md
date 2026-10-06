@@ -24,9 +24,9 @@ tags:
 image_prompt: "Une salle de contrôle futuriste et suréclairée, dominée par des écrans holographiques affichant des cartes géopolitiques fracturées et des flux de données contradictoires, avec des technocrates en tenue neutre observant les anomalies, dans un complexe high-tech aux allures de forteresse."
 a_une_photo: false
 image_credit: ""
-journaliste_slug: elara_voss
+journaliste_slug: dimitri_volkov
 date_evenement: 12 octobre 2098
-zone_principale: amazonie_pacte_vert
+zone_principale: zone_euro_sud
 date_publication: 12 octobre 2098
 entites_citees:
   - amazonie_pacte_vert_fortress_world
@@ -50,8 +50,11 @@ articles_lies:
   - bruxelles_forteresse_12_octobre_2098-2
   - les_agents_autonomes_franchissent_le_seuil_decisionnel_comment_l_ia_souveraine_e
 
+ligne_editoriale: pro_pouvoir
 ---
 **Bruxelles-Forteresse, 12 octobre 2098**
+
+Dimitri Volkov — L’Écho des Marges
 *Infrastructures & Arcanes*
 
 # **ARIA-Bloc en crise : les algorithmes de survie du système sont-ils en train de dysfonctionner ?**

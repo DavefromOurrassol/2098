@@ -15,16 +15,16 @@
     "secession_great_lakes_compact_breakdown": 13
   },
   "eco_communalism": {
-    "communes_rust_belt_zones_libres_eco_communalism": 11,
-    "conflit_israel_iran_2026_eco_communalism": 12,
-    "crise_gouvernance_amazonie_eco_communalism": 12,
+    "communes_rust_belt_zones_libres_eco_communalism": 12,
+    "conflit_israel_iran_2026_eco_communalism": 13,
+    "crise_gouvernance_amazonie_eco_communalism": 13,
     "crue_exceptionnelle_congo_eco_communalism": 2,
-    "effondrement_reseau_mondial_communication_eco_communalism": 11,
-    "encheres_terres_rares_groenland_eco_communalism": 12,
-    "exode_midwest_grands_lacs_eco_communalism": 12,
-    "grand_forum_sahel_numerique_eco_communalism": 12,
+    "effondrement_reseau_mondial_communication_eco_communalism": 12,
+    "encheres_terres_rares_groenland_eco_communalism": 13,
+    "exode_midwest_grands_lacs_eco_communalism": 13,
+    "grand_forum_sahel_numerique_eco_communalism": 13,
     "insurrection_rust_belt_eco_communalism": 11,
-    "revolution_travail_sahel_numerique_eco_communalism": 1
+    "revolution_travail_sahel_numerique_eco_communalism": 2
   },
   "fortress_world": {
     "communes_rust_belt_zones_libres_fortress_world": 53,
@@ -56,15 +56,16 @@
     "submersion_tuvalu_acte_fondateur_new_sustainability": 69
   },
   "policy_reform": {
-    "accord_carbone_amazonie_blocs_policy_reform": 34,
-    "conflit_israel_iran_2026_policy_reform": 35,
-    "crise_gouvernance_amazonie_policy_reform": 24,
-    "effondrement_reseau_mondial_communication_policy_reform": 34,
+    "accord_carbone_amazonie_blocs_policy_reform": 35,
+    "conflit_indo_arabe_2038_policy_reform": 1,
+    "conflit_israel_iran_2026_policy_reform": 36,
+    "crise_gouvernance_amazonie_policy_reform": 25,
+    "effondrement_reseau_mondial_communication_policy_reform": 35,
     "election_parti_commun_americain_policy_reform": 11,
     "emeutes_algorithme_sao_paulo_policy_reform": 1,
-    "encheres_terres_rares_groenland_policy_reform": 35,
-    "exode_midwest_grands_lacs_policy_reform": 14,
-    "greve_generale_corridors_eurasiens_policy_reform": 32,
+    "encheres_terres_rares_groenland_policy_reform": 36,
+    "exode_midwest_grands_lacs_policy_reform": 15,
+    "greve_generale_corridors_eurasiens_policy_reform": 33,
     "incident_passage_arctique_policy_reform": 4,
     "revolution_travail_sahel_numerique_policy_reform": 20,
     "submersion_tuvalu_acte_fondateur_policy_reform": 34

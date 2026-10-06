@@ -21,7 +21,7 @@ tags:
   - inégalités sociales
 image_prompt: "Une tour futuriste aux parois de verre réfléchissant, entourée d’un campement de fortune sous une lumière orangée et polluée, avec des drones de surveillance patrouillant dans le ciel."
 a_une_photo: false
-journaliste_slug: lea_vasseur
+journaliste_slug: jean_baptiste_mukendi
 date_evenement: 19 février 2098
 variables_pilotes:
   - geopolitique_conflits
@@ -31,12 +31,13 @@ variables_pilotes:
 articles_lies:
   - les_jeux_de_la_directive_quand_le_sport_devient_l_ultime_stromsperre
 
+zone_principale: afrique_subsaharienne_zones_effondrees
 ---
 **« Nexus7 : l’envers du paradis vertical »**
 
 *19 février 2098*
 
-**Léa Vasseur — Réseau Le Bloc Informations**
+**Jean-Baptiste Mukendi — Mining Watch Africa — Le Bloc des Veines**
 
 LAGOS — Les ascenseurs de la Tour Nexus7-Lagos montent en silence, avalant les étages à une vitesse qui donne le vertige. À chaque palier, des portes coulissantes en verre blindé s’ouvrent sur des jardins suspendus, des cliniques aux murs lisses, des écoles où des enfants en uniforme gris perle apprennent le code avant l’alphabet. Ici, l’air est filtré, l’eau recyclée, et les rations alimentaires sont calculées au gramme près par ARIA-Bloc. Dehors, à moins de deux cents mètres, les Seuils Fermés s’étendent à perte de vue : des campements de fortune où s’entassent ceux que les algorithmes ont jugés « non contributifs ». Entre les deux, une frontière invisible, mais infranchissable. Bienvenue dans l’archipel des Forteresses Résiduelles, où le futur se paie cash.
 

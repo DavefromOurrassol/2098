@@ -25,9 +25,9 @@ tags:
 image_prompt: "Un vieil homme assis sous un manguier centenaire à Ngobila-Plage, près du fleuve Congo, entouré de plantes médicinales et de jeunes membres de sa communauté, dans une ambiance paisible et lumineuse."
 a_une_photo: false
 image_credit: ""
-journaliste_slug: 
+journaliste_slug: aline_moke
 date_evenement: 12 novembre 2098
-zone_principale: sahel_numerique_ligue
+zone_principale: congo_bassin_du_fleuve
 date_publication: 12 novembre 2098
 entites_citees:
   - brigades_de_restauration_ecologique_eco_communalism
@@ -42,6 +42,8 @@ articles_lies:
 
 *Lokole ya Ebale — Le Réseau La Gazette des Communs*
 **Kinshasa-Territoire, 12 novembre 2098**
+
+Aline Moke — Lokole ya Ebale
 
 ---
 

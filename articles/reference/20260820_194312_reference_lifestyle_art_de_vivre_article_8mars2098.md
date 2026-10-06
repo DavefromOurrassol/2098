@@ -28,7 +28,7 @@ tags:
 image_prompt: "Une biologiste nommée Léa Morais, vêtue d'une tenue de terrain, tient un sachet en fibre de kapok contenant des graines bleutées de *Solanum resilientis*, devant un balcon urbain de Belém regorgeant de plantes étiquetées \"libres de droits\"."
 a_une_photo: false
 image_credit: ""
-journaliste_slug: camille_viera
+journaliste_slug: lucia_fernandez_quispe
 date_evenement: 8 mars 2098
 zone_principale: amazonie_consortium_viva
 date_publication: 8 mars 2098
@@ -46,6 +46,8 @@ articles_lies:
 **« Slow Biotech » : quand l’Amazonie réinvente l’art de vivre à l’heure des brevets vivants**
 
 *8 mars 2098*
+
+Lucía Fernández Quispe — El Clarín de las Américas
 
 Léa Morais, 34 ans, biologiste de terrain pour le *Consortium Amazônia Viva*, rentre chez elle ce soir avec un sachet en fibre de kapok contenant trois graines bleutées. Pas n’importe lesquelles : des *Solanum resilientis*, une variété de tomate modifiée pour résister aux sols acides de la région, dont la licence d’utilisation a été rachetée par sa coopérative après des années de bataille juridique contre *Nexus BioSyn*. « C’est notre manière de dire non à la dépendance », explique-t-elle en déposant les graines dans un germoir en céramique fabriqué par un artisan de Manaus. Autour d’elle, dans ce quartier périphérique de Belém transformé en laboratoire à ciel ouvert, les balcons regorgent de plantes en pot étiquetées « *libres de droits* ». Une tendance qui, en 2098, dépasse le simple acte militant pour devenir un véritable art de vivre.
 

@@ -23,9 +23,9 @@ tags:
 image_prompt: "Une tour de serveurs blindée aux couleurs du Bloc Atlantique (hexagone bleu sur fond noir), entourée de fils barbelés numériques projetés en hologramme, tandis qu’un technicien en uniforme gris de NexCore surveille des écrans affichant des flux de données bloqués."
 a_une_photo: false
 image_credit: ""
-journaliste_slug: maya_o_connor
+journaliste_slug: giulia_la_volpe_moretti
 date_evenement: 10 mai 2098
-zone_principale: bloc_atlantique
+zone_principale: zone_euro_sud
 date_publication: 10 mai 2098
 entites_citees:
   - voix_du_dehors_fortress_world
@@ -43,7 +43,7 @@ variables_pilotes:
 **NexCore et l’ANBA lancent un protocole de "séparation proactive" des données inter-blocs**
 
 10 mai 2098
-Maya O’Connor — Le Mur Parle
+Giulia « La Volpe » Moretti — Il Confine (Le Confins)
 
 BRUXELLES-FORTERESSE — NexCore Bloc Atlantique et l’Autorité Numérique du Bloc Atlantique (ANBA) ont déployé hier un nouveau protocole de filtrage des flux transfrontaliers, baptisé *Séparation Proactive des Données Sensibles* (SPDS). Officiellement présenté comme une "mesure de sécurité préventive", le dispositif vise à bloquer en amont tout échange numérique non certifié entre le Bloc Atlantique et ses rivaux, notamment le Bloc Eurasiatique Occidental et les zones grises d’Asie centrale.
 

@@ -28,9 +28,9 @@ tags:
 image_prompt: "Tamar Kalandadze, directrice du Nœud Mnemos, debout dans un sous-sol encombré de serveurs et de documents anciens, éclairée par une lumière bleutée, entourée d’écrans affichant des cartes et des textes censurés."
 a_une_photo: false
 image_credit: ""
-journaliste_slug: lea_vartanian
+journaliste_slug: farzona_rahmon
 date_evenement: 5 avril 2098
-zone_principale: delta_du_gange
+zone_principale: bloc_eurasien_central
 date_publication: 5 avril 2098
 entites_citees:
   - delta_du_gange_reference
@@ -46,7 +46,7 @@ articles_lies:
 
 *5 avril 2098*
 
-Léa Vartanian — Réseau Le Monde en Tension
+Farzona Rahmon — Vestnik Central'nykh Resursov
 
 TBILISSI — Dans les sous-sols humides de l’ancienne Académie des Sciences, là où les climatiseurs peinent à filtrer l’air chargé de poussière et de souvenirs, une équipe d’archivistes veille sur ce qui reste des récits interdits. Le *Nœud Mnemos*, comme on l’appelle ici, est devenu en quelques décennies le dernier refuge des mémoires que les régulateurs eurasiatiques préféreraient voir disparaître. Mais à l’heure où les algorithmes décident quelles histoires méritent d’être racontées, ces gardiens du passé résistent, un octet à la fois.
 

@@ -22,9 +22,9 @@ tags:
 image_prompt: "Une vue nocturne de Bratislava-Secteur Alpha, où les tours blindées d’Helios BSE brillent de mille lumières tandis qu’à l’horizon, les zones tampons plongées dans l’obscurité dessinent une frontière nette entre le « Dedans » protégé et les territoires exclus, éclairés seulement par des feux de camp et des écrans publics affichant le message « Statut non conforme »."
 a_une_photo: false
 image_credit: ""
-journaliste_slug: miroslav_kovac
+journaliste_slug: marco_il_lupo_rossi
 date_evenement: 22 août 2098
-zone_principale: bloc_eurasiatique_occidental
+zone_principale: zone_euro_sud
 date_publication: 22 août 2098
 entites_citees:
   - bloc_eurasiatique_occidental_fortress_world
@@ -42,7 +42,7 @@ variables_pilotes:
 **Helios BSE active le Protocole Ombre : les coupures ciblées entrent dans l’arsenal géopolitique**
 
 22 août 2098
-Miroslav Kováč — Helios Sovereign — Le Phare de l'Eurasie
+Marco « Il Lupo » Rossi — L’Écho des Marges
 
 BRATISLAVA-SECTEUR ALPHA — Le Consortium Helios Bloc Souveraineté Énergétique (Helios BSE) a déclenché hier soir, à 23h17 heure du Nœud Mémoriel Eurasiatique, une séquence de coupures énergétiques ciblées sur trois zones tampons du Bloc Eurasiatique Occidental, confirmant l’entrée des *Protocoles Ombre* dans l’arsenal géopolitique officiel. Selon les bulletins classifiés du Helios Orbital Command, interceptés par des réseaux de passeurs d’information, les territoires visés — le Corridor de Bassora, la Zone Franche de Tbilissi-Nord et les marges désaffectées de la Plaine de Pannonie — ont été plongés dans l’obscurité pendant exactement 112 minutes, le temps nécessaire pour « réinitialiser les flux non accrédités » et « rappeler la primauté de la souveraineté énergétique ».
 

@@ -22,7 +22,7 @@ tags:
 image_prompt: "Une scène nocturne dans un studio clandestin des Pâquis, à Genève-Nexus : des musiciens, dont Kaya, beatmaker des *Hors-Prisme*, ajustent des synthétiseurs low-tech sous une lumière bleutée, tandis qu’un écran mural affiche en temps réel les notifications de blocage du Conseil de Gouvernance de l’Information, avec le logo du CGI en filigrane."
 a_une_photo: false
 image_credit: ""
-journaliste_slug: leo_vasseur
+journaliste_slug: nadia_berset
 date_evenement: 17 janvier 2098
 zone_principale: conseil_regulation_numerique_geneve
 date_publication: 17 janvier 2098
@@ -47,7 +47,7 @@ articles_lies:
 **« Algorithmique ou anarchie ? Le rap genevois défie la certification numérique »**
 
 17 janvier 2098
-Léo Vasseur — Réseau La Souveraine
+Nadia Berset — Le Souverain Lacustre
 
 Genève-Nexus, 3h17. Dans un studio clandestin du quartier des Pâquis, le collectif *Les Hors-Prisme* finalise son dernier morceau, *« Certifié Inaudible »*. Le titre, ironique, vise directement le Conseil de Gouvernance de l’Information (CGI), dont les algorithmes de certification décident depuis 2037 quels contenus musicaux peuvent circuler sur les plateformes régulées. « Si ton flow ne rentre pas dans leurs cases, t’existes pas », lance Kaya, 28 ans, beatmaker du groupe. Son dernier clip, tourné avec des drones low-cost dans les zones grises de la ville, a été bloqué trois fois en 48 heures pour « non-conformité aux standards éditoriaux ». Motif ? Une référence à l’Atlas Fantôme, réseau cartographique clandestin que le CGI qualifie de « menace à la stabilité informationnelle ».
 

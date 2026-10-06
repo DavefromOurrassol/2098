@@ -25,9 +25,9 @@ tags:
 image_prompt: "Frei Luciano de Santarém, chef des Guardas da Floresta, debout sur le Púlpito do Rio Negro (bateau-missile désaffecté), vêtu d'un treillis kaki et d'un masque à filtres, psalmodiant devant des containers réfrigérés sous une lumière verdâtre."
 a_une_photo: false
 image_credit: ""
-journaliste_slug: 
+journaliste_slug: joana_pantoja
 date_evenement: 23 novembre 2098
-zone_principale: nexus_biosyn_division_pacifique
+zone_principale: amazonie_pacte_vert
 date_publication: 23 novembre 2098
 entites_citees:
   - nexus_biosyn_division_eurasienne_fortress_world
@@ -41,7 +41,7 @@ articles_lies:
 ---
 **Amazonstammes: quand la forêt parle, même en 2098**
 
-*Manaus Interdit — Terminal Fluvial des Reliques Vertes
+*Joana Pantoja — Vert Brisé — Resistência Indígena
 23 novembre 2098*
 
 Dans les entrepôts climatisés du Terminal Fluvial de Manaus Interdit, là où les containers réfrigérés préservent des dernières semences d’açaí génétiquement modifiées pour résister à la sécheresse du Sahel, les *Guardas da Floresta* — ces moines-soldats en treillis kaki et masques à filtres charbonneux — psalmodient un nouveau *Missa Verde*. Leur prophétie ? Que l’Amazonie ne sera ni sauvée ni détruite, mais *réécrite*.

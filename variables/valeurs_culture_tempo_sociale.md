@@ -373,6 +373,7 @@ _extended_
 **custom (signaux d'actualité)**
 - décodage des langages animaux par IA ouvre des récits culturels hybrides (→ signal_custom: decodage_langage_animaux_ia, source: actualite)
 - émergence d'une caste de prompteurs puis bergers d'IA, devenant une autorité quasi religieuse dans certains territoires (→ signal_custom: clerge_prompteurs_ia, source: idee_david_2026-09)
+- radicalisation violente d'une frange anti-IA aux États-Unis (→ signal_custom: radicalisation_anti_ia_violence, source: veille_20260928_1038_Claude)
 
 ## 8. États par scénario
 ### [[fortress_world]]
@@ -748,4 +749,31 @@ signal_to_state:
         evolution: prompteurs émergent comme nouvelle élite culturelle sans régulation
         date_bascule: 2027-2042
         evenement_cle: premier syndicat international des prompteurs reconnu à Genève 2036
+
+  - signal: radicalisation_anti_ia_violence
+    scenarios:
+      breakdown:
+        evolution: violence anti-IA devient norme dans le chaos social
+        date_bascule: 2040-2058
+        evenement_cle: Detroit-Sud légalise les milices anti-IA 2051
+      fortress_world:
+        evolution: répression violente des dissidents anti-IA par les blocs
+        date_bascule: 2036-2051
+        evenement_cle: Bloc Atlantique criminalise les attaques contre centres IA 2047
+      new_sustainability:
+        evolution: radicalisation marginale contenue par régulation IA inclusive
+        date_bascule: 2032-2047
+        evenement_cle: Alliance Pacifique désamorce attentat contre hub IA 2042
+      eco_communalism:
+        evolution: rejet violent des infrastructures IA centralisées locales
+        date_bascule: 2042-2060
+        evenement_cle: Carthage-Nord sabote son dernier centre de données 2053
+      policy_reform:
+        evolution: radicalisation contenue par réformes sécuritaires ciblées
+        date_bascule: 2029-2044
+        evenement_cle: UE adopte directive anti-terrorisme IA 2038
+      reference:
+        evolution: violence anti-IA persiste comme menace sécuritaire chronique
+        date_bascule: 2026-2040
+        evenement_cle: attentat contre centre IA de Virginie provoque état d'urgence 2035
 ```

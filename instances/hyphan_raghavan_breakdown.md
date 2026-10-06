@@ -86,6 +86,7 @@ tensions_narratives: >
   Hyphan est tiraillé entre deux forces : d'un côté, les communautés qui le voient comme un sauveur et veulent le pousser à structurer un mouvement plus large ; de l'autre, les milices et seigneurs de guerre qui le considèrent comme une menace à éliminer. Son refus de prendre parti politiquement le rend vulnérable, mais c'est aussi ce qui lui permet de circuler entre les territoires. Une question hante ceux qui le suivent : jusqu'où pourra-t-il maintenir cette position de neutralité active, alors que les conflits pour les ressources critiques s'intensifient ? Certains murmurent qu'il détient des archives techniques capables de relancer des infrastructures à grande échelle, ce qui en fait une cible encore plus dangereuse.
 
 date_creation: 2026-09-24
+exclure_articles: true
 ---
 
 # Hyphan Raghavan — Les Mains des Nœuds Oubliés

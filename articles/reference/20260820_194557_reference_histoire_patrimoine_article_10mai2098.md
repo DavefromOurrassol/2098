@@ -28,9 +28,9 @@ tags:
 image_prompt: "Une historienne en chef, Lika Beridze, debout devant des serveurs décentralisés dans les sous-sols de l'ancienne Académie des Sciences géorgienne à Tbilissi, éclairée par une lumière tamisée, entourée de câbles et d'écrans affichant des fragments de textes anciens."
 a_une_photo: false
 image_credit: ""
-journaliste_slug: lea_martel
+journaliste_slug: nikolai_ermakov
 date_evenement: 10 mai 2098
-zone_principale: geneve_lac_retreite
+zone_principale: bloc_eurasien_central
 date_publication: 10 mai 2098
 entites_citees:
   - agence_stabilisation_climatique_reference
@@ -44,6 +44,8 @@ articles_lies:
 **Tbilissi, capitale des mémoires oubliées : quand l’archive défie la géopolitique**
 
 *10 mai 2098*
+
+Nikolai Ermakov — Сырые Данные / Raw Data (Центральная Евразия)
 
 Tbilissi — Les sous-sols de l’ancienne Académie des Sciences géorgienne, renforcés contre les coupures de courant et les intrusions numériques, abritent une anomalie dans le paysage institutionnel eurasiatique : le *Nœud Mnemos*. Depuis soixante ans, cette archive vivante collecte, restaure et diffuse les fragments de savoirs que les blocs géopolitiques préféreraient voir disparaître. Dialectes kartvéliens en voie d’extinction, registres fonciers contestés du Karabakh d’avant-guerre, corpus de jurisprudence islamique centre-asiatique effacés des plateformes commerciales — ici, l’oubli n’est pas une fatalité, mais une bataille.
 

@@ -27,7 +27,7 @@ tags:
 image_prompt: "Un bulldozer noir du Konsortiet Nordark creuse un cratère profond dans la toundra enneigée de l'Arctique, sous un ciel bas et gris, tandis que des vapeurs de méthane s'échappent des fissures du sol gelé."
 a_une_photo: false
 image_credit: ""
-journaliste_slug: 
+journaliste_slug: ole_magnus_nilsen
 date_evenement: 23 novembre 2098
 zone_principale: arctique_nordark
 date_publication: 23 novembre 2098
@@ -42,6 +42,8 @@ articles_lies:
 
 ---
 **23 novembre 2098 — Tromsø / Nœud Nordark**
+
+Ole-Magnus Nilsen — Isbjørnens Vrede
 
 **LA BALEINE SOUS LA GLACE**
 *Comment le Konsortiet Nordark sacrifie le pergélisol arctique pour maintenir ses routes logistiques*
