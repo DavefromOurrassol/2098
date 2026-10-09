@@ -5318,9 +5318,12 @@
           "sources_douteuses": false,
           "id": "20260928_123514_29",
           "slug_propose": "protocoles_d_echange_d_informations_peer_to_peer_chiffres_pa",
-          "statut": "a_trier",
+          "statut": "en_queue",
           "lot": "20260928_123514",
-          "proche_de_signal_injecte": []
+          "proche_de_signal_injecte": [],
+          "date_statut": "2026-10-09T07:17:58",
+          "queue_id": "reseau_maille_radio_chiffre",
+          "queue_type": "signal"
         },
         {
           "titre": "Utilisation pionnière de champignons bioluminescents manipulés pour le balisage nocturne urbain hors réseau",
