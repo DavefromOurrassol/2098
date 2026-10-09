@@ -275,6 +275,49 @@ def get_existing_windows_for_variable(registre_text, variable_slug):
     return result
 
 
+# S22-FRERES (9 octobre 2026) -- événements déjà écrits pour CE signal
+def _evenements_du_signal(registre_text, signal_slug):
+    """Retourne {scénario: [evenement_cle]} des lignes du registre dont la
+    source est `signal_slug` (toutes variables confondues). Sert à interdire
+    au LLM de les réutiliser, y compris en reprise (nouveau lancement), où
+    la mémoire de la boucle est vide."""
+    result = {}
+    parts = re.split(
+        r"\n## (" + "|".join(SCENARIOS) + r")\n", registre_text
+    )
+    for i in range(1, len(parts), 2):
+        scen = parts[i]
+        for cols in parse_registre_table(parts[i + 1]):
+            if len(cols) >= 6 and cols[2].strip() == signal_slug:
+                ev = cols[5].strip()
+                if ev and ev not in result.setdefault(scen, []):
+                    result[scen].append(ev)
+    return result
+
+
+def _ajouter_evenement(dico, scen, ev):
+    """Ajoute `ev` à dico[scen] (liste) sans doublon."""
+    if ev and ev not in dico.setdefault(scen, []):
+        dico[scen].append(ev)
+
+
+def _evenements_refuses(issues):
+    """Extrait {scénario: [evenement_cle]} des problèmes 'déjà présent dans
+    le registre' renvoyés par validate_signal_block()."""
+    import ast
+    refuses = {}
+    for issue in issues or []:
+        m = re.match(r"^\[(\w+)\] evenement_cle déjà présent dans le registre : (.+)$", issue)
+        if not m:
+            continue
+        try:
+            ev = ast.literal_eval(m.group(2))
+        except (ValueError, SyntaxError):
+            ev = m.group(2).strip("'\"")
+        _ajouter_evenement(refuses, m.group(1), ev)
+    return refuses
+
+
 def get_all_evenements(registre_text):
     """Retourne l'ensemble (lowercase) de tous les evenement_cle du
     registre (signaux ET événements custom confondus)."""
@@ -490,7 +533,7 @@ def _signaux_thematiquement_proches(idea_text: str, section12: str, signal_slug:
 
 def step2_develop(client, idea_text, source, variable_slug, signal_slug, categorie,
                    registre_text, previous=None, issues=None, sibling_events=None,
-                   zone_hint=None, annee_apparition=None):
+                   zone_hint=None, annee_apparition=None, interdits=None):
     content = read_variable_file(variable_slug)
     section7 = extract_section(content, 7, 8)
     section8 = extract_section(content, 8, 9)
@@ -618,8 +661,11 @@ reste identique autant que possible.
 
     sibling_block = ""
     if sibling_events:
+        # S22-FRERES (9 octobre 2026) : plusieurs événements par scénario
         sibling_lines = "\n".join(
-            f"  - [{scen}] {ev}" for scen, ev in sibling_events.items()
+            f"  - [{scen}] {ev}"
+            for scen, evs in sibling_events.items()
+            for ev in (evs if isinstance(evs, list) else [evs])
         )
         sibling_block = f"""
 --- ⚠️ ÉVÉNEMENTS DÉJÀ ÉCRITS POUR CE MÊME SIGNAL DANS UNE AUTRE VARIABLE ---
@@ -632,6 +678,19 @@ injectés dans le registre — ils sont INTERDITS pour cette variable :
 même thème de fond (c'est le même signal réel), mais un fait daté distinct
 — un autre lieu, un autre acteur institutionnel, une autre conséquence
 concrète — plutôt qu'une reformulation du même événement.
+"""
+    # S22-FRERES (9 octobre 2026) : événements refusés aux essais précédents, cumulés
+    if interdits:
+        lignes_interdits = "\n".join(
+            f"  - [{scen}] {ev}" for scen, evs in interdits.items() for ev in evs
+        )
+        sibling_block += f"""
+--- ⛔ ÉVÉNEMENTS DÉJÀ REFUSÉS AUX ESSAIS PRÉCÉDENTS (doublons du registre) ---
+Ces `evenement_cle` ont DÉJÀ été rejetés pour cette variable. Ne les
+réutilise sous AUCUNE forme, et ne les remplace pas par un autre événement
+pris dans l'extrait du registre ci-dessus : invente un fait NEUF, propre à
+la variable {variable_slug} (autre lieu, autre acteur, autre nature de fait).
+{lignes_interdits}
 """
 
     user_content = f"""Idée source (signal d'actualité, source : {source}) :
@@ -1324,7 +1383,9 @@ def process_idea(client, idea, dry_run=False):
 
     registre_text = read_registre_text()
     results = []
-    sibling_events = {}  # {scenario: evenement_cle} déjà validés pour CE signal dans ce run
+    # S22-FRERES (9 octobre 2026) : {scenario: [evenement_cle]} déjà écrits pour CE signal,
+    # relus dans le registre (couvre la reprise), puis complétés dans la boucle.
+    sibling_events = _evenements_du_signal(registre_text, signal_slug)
 
     for variable_slug in variables:
         ecriture = None  # S22 : instantané pris juste avant d'écrire
@@ -1338,6 +1399,7 @@ def process_idea(client, idea, dry_run=False):
                 continue
             print(f"[2/4] Développement pour {variable_slug}...")
             previous, issues = None, None
+            interdits = {}  # S22-FRERES (9 octobre 2026) : refusés, cumulés sur les relances
             develop = step2_develop(
                 client, idea_text, source, variable_slug, signal_slug, categorie,
                 registre_text, sibling_events=sibling_events, zone_hint=zone_hint,
@@ -1359,12 +1421,15 @@ def process_idea(client, idea, dry_run=False):
                 print("  -> problèmes :")
                 for i in issues:
                     print(f"     - {i}")
+                for scen, evs in _evenements_refuses(issues).items():
+                    for ev in evs:
+                        _ajouter_evenement(interdits, scen, ev)
                 if attempt < MAX_FIX_ATTEMPTS:
                     develop = step2_develop(
                         client, idea_text, source, variable_slug, signal_slug, categorie,
                         registre_text, previous=yaml_text, issues=issues,
                         sibling_events=sibling_events, zone_hint=zone_hint,
-                        annee_apparition=annee_apparition,
+                        annee_apparition=annee_apparition, interdits=interdits,
                     )
 
             if issues:
@@ -1396,7 +1461,7 @@ def process_idea(client, idea, dry_run=False):
             # encore mis à jour sur disque.
             entry_for_siblings = yaml.safe_load("signal_to_state:\n" + yaml_text)["signal_to_state"][0]
             for scen, data in entry_for_siblings["scenarios"].items():
-                sibling_events[scen] = data["evenement_cle"]
+                _ajouter_evenement(sibling_events, scen, data["evenement_cle"])
 
             # Bloc d'impact chiffré par scénario (16 août 2026, chantier
             # injection matricielle) : annee_injection/duree dérivés de la

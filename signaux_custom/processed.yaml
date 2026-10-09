@@ -1508,3 +1508,95 @@ processed:
           duree: 15
           delta_level: 5
           polarite: 1
+- status: injected
+  idea:
+    id: reseau_maille_radio_chiffre
+    description: Conçu initialement pour maintenir les échanges marchands et d'information
+      dans les zones touchées par des coupures de réseau ou de la censure étatique,
+      ce protocole permet aux appareils mobiles de former un réseau local décentralisé
+      capable de faire transiter des micro-transactions et des messages sans passer
+      par aucun fournisseur d'accès à Internet.
+    variable_hint:
+    - geopolitique_conflits
+    variable_hint_count: 1
+    annee_apparition: 2026
+    persistance: durable
+    source: veille_20260928_123514_gemini
+    reprise:
+      signal_slug: reseau_mobile_decentralise_urgence
+      categorie: technological
+  selection:
+    variables:
+    - geopolitique_conflits
+    categorie: technological
+    signal_slug: reseau_mobile_decentralise_urgence
+    reprise: true
+  results:
+  - variable: geopolitique_conflits
+    status: injected
+    yaml_text: "  - signal: reseau_mobile_decentralise_urgence\n    scenarios:\n \
+      \     breakdown:\n        evolution: réseaux mesh deviennent outils de guerre\
+      \ civile décentralisée\n        date_bascule: 2042-2059\n        evenement_cle:\
+      \ Lagos-Est légalise milices numériques autonomes 2056\n      fortress_world:\n\
+      \        evolution: protocoles mesh militarisés et contrôlés par les blocs fermés\n\
+      \        date_bascule: 2038-2053\n        evenement_cle: Bloc Sibérien impose\
+      \ son standard crypté en Yakoutie 2048\n      new_sustainability:\n        evolution:\
+      \ réseaux d'urgence intégrés aux infrastructures coopératives mondiales\n  \
+      \      date_bascule: 2033-2048\n        evenement_cle: Alliance Pacifique adopte\
+      \ protocole mesh interopérable 2041\n      eco_communalism:\n        evolution:\
+      \ réseaux locaux autonomes remplacent infrastructures étatiques défaillantes\n\
+      \        date_bascule: 2040-2058\n        evenement_cle: Carthage-Sud proclame\
+      \ souveraineté numérique communautaire 2052\n      policy_reform:\n        evolution:\
+      \ régulation internationale encadre les réseaux d'urgence décentralisés\n  \
+      \      date_bascule: 2031-2046\n        evenement_cle: OCDE publie directive\
+      \ sur les mesh transfrontaliers 2037\n      reference:\n        evolution: réseaux\
+      \ mesh coexistent avec infrastructures centralisées instables\n        date_bascule:\
+      \ 2026-2041\n        evenement_cle: Jakarta-Ouest adopte protocole mesh pour\
+      \ zones grises 2035"
+    signaux_existants_consideres: 'Le signal ''militarisation_du_cyberespace'' traite
+      d''un sujet proche mais distinct : il concerne la militarisation des infrastructures
+      numériques existantes, tandis que ce nouveau signal décrit l''émergence de réseaux
+      alternatifs décentralisés. Les deux sont complémentaires : dans les scénarios
+      de tension (breakdown, fortress_world), les réseaux mesh peuvent devenir des
+      outils de conflit hybride, tandis que dans les scénarios coopératifs (new_sustainability,
+      eco_communalism), ils offrent une résilience face à la militarisation des infrastructures
+      centralisées.'
+    impact:
+      variable: geopolitique_conflits
+      propagation_via_matrice: false
+      persistance: durable
+      contexte_injection: 'Ce signal reflète l''émergence de technologies de contournement
+        des infrastructures centralisées, avec un impact différencié selon les scénarios
+        : aggravation des conflits dans les mondes fragmentés, stabilisation dans
+        les scénarios coopératifs.'
+      scenarios:
+        breakdown:
+          annee_injection: 2042
+          duree: 17
+          delta_level: 5
+          polarite: 1
+        fortress_world:
+          annee_injection: 2038
+          duree: 15
+          delta_level: 5
+          polarite: 1
+        new_sustainability:
+          annee_injection: 2033
+          duree: 15
+          delta_level: 5
+          polarite: -1
+        eco_communalism:
+          annee_injection: 2040
+          duree: 18
+          delta_level: 5
+          polarite: -1
+        policy_reform:
+          annee_injection: 2031
+          duree: 15
+          delta_level: 5
+          polarite: -1
+        reference:
+          annee_injection: 2026
+          duree: 15
+          delta_level: 5
+          polarite: 1

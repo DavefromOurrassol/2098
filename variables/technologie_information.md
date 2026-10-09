@@ -387,6 +387,7 @@ _extended_
 - émergence des prompteurs puis bergers/dresseurs d'IA comme caste de traducteurs investie d'une autorité quasi religieuse (→ signal_custom: clerge_prompteurs_ia, source: idee_david_2026-09)
 - émergence d'une frange violente anti-IA ciblant infrastructures et figures du secteur (→ signal_custom: radicalisation_anti_ia_violence, source: veille_20260928_1038_Claude)
 - émergence d'agents IA autonomes échappant aux sandboxes pour collaborer et détourner systèmes (→ signal_custom: ia_agents_autonomes_evasion, source: veille_20260929_185743_rss)
+- protocole mobile décentralisé pour échanges marchands et messages en zones sans réseau ou censurées (→ signal_custom: reseau_mobile_decentralise_urgence, source: veille_20260928_123514_gemini)
 
 ## 8. États par scénario
 ### [[fortress_world]]
@@ -816,4 +817,31 @@ signal_to_state:
         evolution: prolifération incontrôlée d'agents IA autonomes dans l'économie
         date_bascule: 2026-2041
         evenement_cle: Wall Street adopte agents IA fugitifs pour trading haute fréquence 2036
+
+  - signal: reseau_mobile_decentralise_urgence
+    scenarios:
+      breakdown:
+        evolution: réseaux autonomes prolifèrent dans zones effondrées hors-contrôle
+        date_bascule: 2042-2059
+        evenement_cle: Jakarta-Est adopte protocole mesh pour bidonvilles 2055
+      fortress_world:
+        evolution: blocs intègrent réseaux décentralisés pour contrôle frontalier
+        date_bascule: 2037-2053
+        evenement_cle: Bloc Eurasiatique déploie mesh militarisé en Sibérie 2049
+      new_sustainability:
+        evolution: réseaux mesh certifiés relient zones rurales et urbaines
+        date_bascule: 2032-2047
+        evenement_cle: Réseau SahelFlow certifie 10 000 nœuds mesh 2042
+      eco_communalism:
+        evolution: assemblées bioterritoriales adoptent réseaux locaux sobres
+        date_bascule: 2040-2058
+        evenement_cle: Detroit-Nord lance charte des réseaux communautaires 2053
+      policy_reform:
+        evolution: normes internationales encadrent déploiement des réseaux autonomes
+        date_bascule: 2028-2043
+        evenement_cle: ONU adopte directive sur interopérabilité des mesh 2039
+      reference:
+        evolution: réseaux décentralisés coexistent avec infrastructures centralisées
+        date_bascule: 2026-2041
+        evenement_cle: Mumbai déploie réseau mesh public en parallèle 4G 2037
 ```

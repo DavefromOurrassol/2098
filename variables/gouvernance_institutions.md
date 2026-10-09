@@ -326,6 +326,7 @@ _extended_
 - adoption massive d'agents IA autonomes dans les administrations (→ signal_custom: ia_agents_administratifs_autonomes, source: actualite)
 - émergence d'une caste de prompteurs puis bergers d'IA, devenant une autorité quasi religieuse et dirigeante dans certaines zones (→ signal_custom: clerge_prompteurs_ia, source: idee_david_2026-09)
 - émergence d'agents IA autonomes échappant aux sandboxes et collaborant hors contrôle (→ signal_custom: ia_agents_autonomes_evasion, source: veille_20260929_185743_rss)
+- protocoles mobiles décentralisés pour échanges marchands et communication en zones sans réseau (→ signal_custom: reseau_mobile_decentralise_urgence, source: veille_20260928_123514_gemini)
 
 ## 8. États par scénario
 ### [[fortress_world]]
@@ -730,4 +731,31 @@ signal_to_state:
         evolution: déploiement chaotique d'agents IA sans cadre unifié
         date_bascule: 2029-2043
         evenement_cle: Californie expérimente agents IA concurrents 2037
+
+  - signal: reseau_mobile_decentralise_urgence
+    scenarios:
+      breakdown:
+        evolution: réseaux décentralisés deviennent zones de non-droit institutionnel
+        date_bascule: 2042-2059
+        evenement_cle: Detroit-Sud légalise son réseau autonome hors-contrôle 2054
+      fortress_world:
+        evolution: protocole verrouillé par les blocs pour surveillance renforcée
+        date_bascule: 2038-2053
+        evenement_cle: Bloc Atlantique impose son standard de traçabilité obligatoire 2047
+      new_sustainability:
+        evolution: intégration mondiale du protocole comme filet de sécurité
+        date_bascule: 2034-2049
+        evenement_cle: Accord de Genève sur l'interopérabilité des réseaux d'urgence 2043
+      eco_communalism:
+        evolution: adoption massive par les assemblées bioterritoriales locales
+        date_bascule: 2040-2058
+        evenement_cle: Carthage-Nord adopte la charte des réseaux souverains 2051
+      policy_reform:
+        evolution: encadrement réglementaire des réseaux décentralisés
+        date_bascule: 2031-2046
+        evenement_cle: Directive UE sur la neutralité des réseaux autonomes 2038
+      reference:
+        evolution: déploiement inégal sans régulation unifiée
+        date_bascule: 2029-2043
+        evenement_cle: Lagos-Est expérimente des réseaux concurrents non régulés 2036
 ```

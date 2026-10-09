@@ -399,6 +399,7 @@ _extended_
 - érosion de la confiance internationale
 
 **custom (signaux d'actualité)**
+- protocoles mobiles décentralisés pour échanges marchands et communication en zones sans réseau (→ signal_custom: reseau_mobile_decentralise_urgence, source: veille_20260928_123514_gemini)
 
 ## 8. États par scénario
 ### [[fortress_world]]
@@ -723,3 +724,30 @@ signal_to_state:
         date_bascule: 2024-2040
         evenement_cle: première enquête internationale sur la normalisation du conflit hybride 2032
 
+  - signal: reseau_mobile_decentralise_urgence
+    scenarios:
+      breakdown:
+        evolution: réseaux mesh deviennent outils de guerre civile décentralisée
+        date_bascule: 2042-2059
+        evenement_cle: Lagos-Est légalise milices numériques autonomes 2056
+      fortress_world:
+        evolution: protocoles mesh militarisés et contrôlés par les blocs fermés
+        date_bascule: 2038-2053
+        evenement_cle: Bloc Sibérien impose son standard crypté en Yakoutie 2048
+      new_sustainability:
+        evolution: réseaux d'urgence intégrés aux infrastructures coopératives mondiales
+        date_bascule: 2033-2048
+        evenement_cle: Alliance Pacifique adopte protocole mesh interopérable 2041
+      eco_communalism:
+        evolution: réseaux locaux autonomes remplacent infrastructures étatiques défaillantes
+        date_bascule: 2040-2058
+        evenement_cle: Carthage-Sud proclame souveraineté numérique communautaire 2052
+      policy_reform:
+        evolution: régulation internationale encadre les réseaux d'urgence décentralisés
+        date_bascule: 2031-2046
+        evenement_cle: OCDE publie directive sur les mesh transfrontaliers 2037
+      reference:
+        evolution: réseaux mesh coexistent avec infrastructures centralisées instables
+        date_bascule: 2026-2041
+        evenement_cle: Jakarta-Ouest adopte protocole mesh pour zones grises 2035
+```
