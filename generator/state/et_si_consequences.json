@@ -1,0 +1,2092 @@
+{
+ "invasion_bresil_2029::breakdown": {
+  "empreinte": "c89a55dbbdef5f98",
+  "date": "2026-10-09T10:50",
+  "brut": {
+   "lecture": "L'invasion du Brésil par les États-Unis en 2029 constitue un choc géopolitique majeur qui accélère la fragmentation du système mondial dans le scénario *breakdown*. Elle reconfigure durablement les équilibres régionaux en Amérique du Sud, exacerbe les logiques de prédation des ressources (Amazonie, lithium) et polarise les acteurs locaux entre résistance, collaboration et recomposition. Cependant, ce choc n'inverse pas la tendance générale à l'effondrement des interconnexions globales : il en est plutôt un symptôme, et son impact reste contenu par la résilience des dynamiques régionales préexistantes (ex. *nordeste_bresil_frente*, *amazon_pacte_gardiens*). Les effets lointains sont limités, car le monde de 2098 est déjà trop désarticulé pour propager des ondes de choc systémiques.",
+   "ampleur": "forte",
+   "trajectoires": [
+    {
+     "instance": "frente_sertao_livre_breakdown",
+     "apres": "dominant",
+     "raison": "La Frente Sertão Livre devient le principal acteur de résistance et de gouvernance alternative dans le Nordeste brésilien, capitalisant sur le vide étatique et l'effondrement des infrastructures fédérales."
+    },
+    {
+     "instance": "consortium_amazonia_viva_breakdown",
+     "apres": "résiduel",
+     "raison": "Le Pacte des Gardiens de l'Amazone se fracture sous la pression des milices extractivistes et des forces d'occupation, perdant sa cohésion et son influence sur les territoires amazoniens."
+    },
+    {
+     "instance": "corridor_lithium_bouches_breakdown",
+     "apres": "déclinant",
+     "raison": "L'invasion américaine et la militarisation des zones minières perturbent les flux de lithium, réduisant la capacité des acteurs locaux à maintenir une extraction et un convoyage stables."
+    },
+    {
+     "instance": "rede_paulista_de_distribuicao_algoritmica_breakdown",
+     "apres": "disparu",
+     "raison": "Les infrastructures zombies de la RPDA sont ciblées par les forces d'occupation ou sabotées par la résistance, mettant fin à leur fonctionnement résiduel."
+    },
+    {
+     "instance": "midwest_desertifie_breakdown",
+     "apres": "disparu",
+     "raison": "L'effort de guerre américain et la priorisation des ressources vers le front brésilien accélèrent l'abandon des territoires du Midwest, déjà en déprise."
+    },
+    {
+     "instance": "grandes_lacs_compact_eau_breakdown",
+     "apres": "mature",
+     "raison": "Le Compact des Grands Lacs renforce son rôle de bloc de survie en sécurisant ses ressources hydriques face aux risques de déstabilisation régionale, mais sans gagner en influence extérieure."
+    },
+    {
+     "instance": "mouvement_des_communes_du_rust_belt_breakdown",
+     "apres": "ascendant",
+     "raison": "Les Communes Libres du Rust Belt profitent du désengagement fédéral pour étendre leur autonomie et leur modèle de gouvernance post-industrielle."
+    },
+    {
+     "instance": "cartels_logistiques_regionaux_breakdown",
+     "apres": "dominant",
+     "raison": "Les cartels logistiques deviennent incontournables pour acheminer des ressources vers le front brésilien ou contourner les blocus, renforçant leur pouvoir transnational."
+    }
+   ],
+   "relations": [
+    {
+     "a": "frente_sertao_livre_breakdown",
+     "b": "consortium_amazonia_viva_breakdown",
+     "type": "opposition",
+     "action": "nouvelle",
+     "raison": "La Frente Sertão Livre accuse le Pacte des Gardiens de collaborer avec les forces d'occupation pour préserver des corridors amazoniens, tandis que ce dernier la considère comme une menace pour la stabilité écologique."
+    },
+    {
+     "a": "frente_sertao_livre_breakdown",
+     "b": "milices_extractivistes_du_bassin_du_congo_breakdown",
+     "type": "alliance",
+     "action": "nouvelle",
+     "raison": "Des échanges informels s'établissent entre la Frente et les milices congolaises pour contourner les sanctions logistiques et échanger des ressources critiques (lithium contre minerais)."
+    },
+    {
+     "a": "grandes_lacs_compact_eau_breakdown",
+     "b": "etats_fragmentes_nationalisant_les_stocks_breakdown",
+     "type": "opposition",
+     "action": "nouvelle",
+     "raison": "Le Compact des Grands Lacs s'oppose aux tentatives des États fragmentés américains de saisir ses réserves hydriques pour alimenter les fronts militaires."
+    },
+    {
+     "a": "armada_logistique_nordique_breakdown",
+     "b": "cartels_logistiques_regionaux_breakdown",
+     "type": "opposition",
+     "action": "nouvelle",
+     "raison": "Nordark et les cartels logistiques se disputent le contrôle des dernières routes maritimes viables vers l'Amérique du Sud, notamment pour le convoyage de ressources stratégiques."
+    },
+    {
+     "a": "hanse_baltique_breakdown",
+     "b": "armada_logistique_nordique_breakdown",
+     "type": "alliance",
+     "action": "nouvelle",
+     "raison": "La Ligue Hanséatique Baltique et Nordark s'allient pour sécuriser les échanges en mer du Nord et en Arctique, face à la montée des milices privées et des blocus."
+    },
+    {
+     "a": "enclaves_industrielles_bergen_tromso_breakdown",
+     "b": "armada_logistique_nordique_breakdown",
+     "type": "alliance",
+     "action": "rompue",
+     "raison": "Les enclaves industrielles norvégiennes se distancient de Nordark, jugé trop aligné sur les intérêts américains, pour préserver leur neutralité dans les échanges avec l'Europe fragmentée."
+    }
+   ],
+   "geographie": [
+    {
+     "pays": "Brésil",
+     "action": "nouvelle_zone",
+     "nouvelle_zone": {
+      "slug": "bresil_occupe_etats_unis",
+      "nom": "Brésil Occupé (Zones de Contrôle Américain)",
+      "type": "territoire_herite",
+      "statut": "fragmenté"
+     },
+     "raison": "Les États-Unis établissent des zones d'occupation militaire et administrative au Brésil, notamment dans les régions côtières et minières, créant une entité distincte des territoires sous contrôle local ou résistant."
+    },
+    {
+     "pays": "Uruguay",
+     "action": "absorber",
+     "zone": "espace_nord_americain_fragmente",
+     "raison": "L'Uruguay, historiquement stable, est intégré *de facto* à la sphère d'influence américaine pour sécuriser un point d'entrée logistique vers le Brésil occupé."
+    },
+    {
+     "pays": "Paraguay",
+     "action": "nouvelle_zone",
+     "nouvelle_zone": {
+      "slug": "paraguay_sanctuaire_resistants",
+      "nom": "Paraguay (Sanctuaire des Résistants)",
+      "type": "territoire_autonome",
+      "statut": "stable"
+     },
+     "raison": "Le Paraguay devient une base arrière pour les factions brésiliennes résistantes (ex. *frente_sertao_livre_breakdown*), échappant au contrôle américain grâce à son isolement géographique."
+    },
+    {
+     "pays": "Guyana",
+     "action": "nouvelle_zone",
+     "nouvelle_zone": {
+      "slug": "guyana_corridor_extractiviste",
+      "nom": "Guyana (Corridor Extractiviste)",
+      "type": "site_strategique",
+      "statut": "fragmenté"
+     },
+     "raison": "Le Guyana, riche en ressources, est disputé entre les États-Unis (pour ses gisements offshore) et des milices locales, devenant un territoire de convoitise logistique."
+    }
+   ],
+   "zones_statut": [
+    {
+     "zone": "amazon_pacte_gardiens",
+     "apres": "en_declin",
+     "raison": "L'invasion américaine et la fragmentation des acteurs amazoniens affaiblissent la cohésion du Pacte des Gardiens, réduisant son influence sur les territoires forestiers."
+    },
+    {
+     "zone": "nordeste_bresil_frente",
+     "apres": "stable",
+     "raison": "La Frente Sertão Livre consolide son emprise sur le Nordeste brésilien, devenant un pôle de résistance organisé face à l'occupation."
+    },
+    {
+     "zone": "espace_nord_americain_fragmente",
+     "apres": "fragmenté",
+     "raison": "L'effort de guerre au Brésil et les tensions internes aux États-Unis exacerbent les fractures territoriales, sans pour autant faire basculer la zone dans un statut plus instable."
+    },
+    {
+     "zone": "argentine_pampas_autonome",
+     "apres": "fragmenté",
+     "raison": "L'Argentine est déstabilisée par les flux de réfugiés brésiliens et les pressions américaines pour sécuriser sa frontière, fragilisant son autonomie."
+    }
+   ],
+   "nouvelles_entites": [
+    {
+     "nom": "Milices de la Forêt Brûlée",
+     "role": "Factions armées de résistance amazonienne, spécialisées dans la guérilla écologique et le sabotage des infrastructures d'occupation.",
+     "zone": "amazon_pacte_gardiens",
+     "raison": "Émergent en réaction à l'invasion américaine et à la collaboration de certains acteurs locaux, ces milices ciblent les convois logistiques et les bases militaires."
+    },
+    {
+     "nom": "Alliance des Ports Libres du Sud",
+     "role": "Réseau de cités portuaires sud-américaines (ex. Montevideo, Buenos Aires) refusant de collaborer avec les forces d'occupation et organisant des échanges parallèles.",
+     "zone": "argentine_pampas_autonome",
+     "raison": "Formée pour contourner les blocus américains et maintenir des liens avec l'Afrique et l'Europe fragmentée, cette alliance devient un acteur logistique clé."
+    },
+    {
+     "nom": "Administration Fédérale Résiduelle du Brésil Occupé",
+     "role": "Gouvernement fantoche installé par les États-Unis pour administrer les zones sous contrôle militaire, sans légitimité locale.",
+     "zone": "bresil_occupe_etats_unis",
+     "raison": "Cette entité incarne la tentative américaine de normaliser l'occupation, mais elle reste largement ignorée par les populations et les acteurs régionaux."
+    }
+   ]
+  }
+ },
+ "invasion_bresil_2029::fortress_world": {
+  "empreinte": "84fe67f6554c7f3d",
+  "date": "2026-10-09T10:50",
+  "brut": {
+   "lecture": "L'invasion du Brésil par les États-Unis en 2029 constitue un choc géopolitique majeur qui accélère la logique de fragmentation et de souveraineté stratégique du scénario fortress_world. Elle renforce les dynamiques de contrôle territorial et de militarisation des ressources, tout en exacerbant les tensions entre blocs fermés. Cependant, le système forteresse, conçu pour absorber et amortir les chocs, limite les bouleversements structurels : les entités dominantes (bloc_atlantique, bloc_eurasiatique_occidental) consolident leur pouvoir plutôt que de le voir remis en cause. Les zones directement touchées (amazonie_pacte_vert, sao_paulo_megapole) subissent des reconfigurations brutales, mais le scénario global reste ancré dans sa trajectoire de repli souverain.",
+   "ampleur": "forte",
+   "trajectoires": [
+    {
+     "instance": "bloc_atlantique_fortress_world",
+     "apres": "dominant",
+     "raison": "Le bloc atlantique renforce sa position hégémonique en sécurisant des ressources critiques (Amazonie), malgré les coûts politiques et logistiques de l'occupation."
+    },
+    {
+     "instance": "bureau_gouvernance_algorithmique_fortress_world",
+     "apres": "dominant",
+     "raison": "L'invasion nécessite une centralisation accrue des décisions pour gérer l'occupation, les flux de réfugiés et la répression des résistances locales."
+    },
+    {
+     "instance": "amazonie_pacte_vert_fortress_world",
+     "apres": "résiduel",
+     "raison": "Le Pacte Vert Amazônia, déjà affaibli, est dissous ou marginalisé par l'occupation américaine, ses élites locales étant éliminées ou cooptées."
+    },
+    {
+     "instance": "consortium_amazonia_viva_fortress_world",
+     "apres": "disparu",
+     "raison": "L'occupation militaire américaine élimine toute velléité de souveraineté écologique locale, remplaçant le consortium par des structures de contrôle direct."
+    },
+    {
+     "instance": "mouvement_commun_midwest_fortress_world",
+     "apres": "ascendant",
+     "raison": "L'effort de guerre et l'occupation prolongée du Brésil drainent des ressources du Midwest, exacerbant les tensions internes et renforçant les mouvements de résistance."
+    },
+    {
+     "instance": "coalition_vivant_fortress_world",
+     "apres": "ascendant",
+     "raison": "L'occupation de l'Amazonie et la militarisation des écosystèmes catalysent une radicalisation des réseaux écologistes clandestins, qui deviennent un acteur incontournable de la subversion."
+    },
+    {
+     "instance": "bloc_eurasiatique_occidental_fortress_world",
+     "apres": "dominant",
+     "raison": "Le bloc eurasiatique profite de l'affaiblissement relatif du bloc atlantique (distrait par l'occupation) pour renforcer son influence en Afrique et en Asie centrale."
+    },
+    {
+     "instance": "bureau_territoires_residuels_fortress_world",
+     "apres": "dominant",
+     "raison": "L'occupation du Brésil crée de nouvelles zones résiduelles (zones de combat, territoires abandonnés), nécessitant une expansion de ses prérogatives administratives."
+    }
+   ],
+   "relations": [
+    {
+     "a": "bloc_atlantique_fortress_world",
+     "b": "nexcore_atlantique_infrastructure_fortress_world",
+     "type": "alliance",
+     "action": "nouvelle",
+     "raison": "Nexcore devient le principal opérateur des infrastructures logistiques et numériques nécessaires à l'occupation du Brésil, renforçant son intégration au bloc atlantique."
+    },
+    {
+     "a": "bloc_atlantique_fortress_world",
+     "b": "pacte_forteresses_souveraines_fortress_world",
+     "type": "opposition",
+     "action": "nouvelle",
+     "raison": "L'invasion du Brésil, perçue comme une violation des principes de souveraineté territoriale, isole le bloc atlantique diplomatiquement et affaiblit le Pacte des Forteresses Souveraines."
+    },
+    {
+     "a": "bloc_atlantique_fortress_world",
+     "b": "bloc_eurasiatique_occidental_fortress_world",
+     "type": "opposition",
+     "action": "nouvelle",
+     "raison": "L'occupation américaine du Brésil est perçue comme une menace par le bloc eurasiatique, qui y voit une tentative d'hégémonie continentale et renforce ses alliances alternatives (Afrique, Asie)."
+    },
+    {
+     "a": "coalition_vivant_fortress_world",
+     "b": "mouvement_commun_midwest_fortress_world",
+     "type": "alliance",
+     "action": "nouvelle",
+     "raison": "Les deux mouvements, l'un écologique et l'autre social, convergent dans leur opposition à l'occupation du Brésil et aux politiques de contrôle des ressources du bloc atlantique."
+    },
+    {
+     "a": "nexcore_fortress_world",
+     "b": "conseil_regulation_algorithmique_fortress_world",
+     "type": "alliance",
+     "action": "renforcée",
+     "raison": "La gestion algorithmique de l'occupation (surveillance, allocation des ressources) nécessite une collaboration accrue entre les deux entités."
+    },
+    {
+     "a": "bloc_atlantique_fortress_world",
+     "b": "al_hima",
+     "type": "opposition",
+     "action": "nouvelle",
+     "raison": "L'invasion du Brésil, perçue comme une agression impérialiste, radicalise les positions d'Al-Hima, qui devient un relais des réseaux de résistance anti-atlantiques."
+    }
+   ],
+   "geographie": [
+    {
+     "pays": "Brésil",
+     "action": "nouvelle_zone",
+     "zone": "",
+     "nouvelle_zone": {
+      "slug": "bresil_occupe_zone_strategique",
+      "nom": "Brésil Occupé — Zone Stratégique Atlantique",
+      "type": "territoire_herite",
+      "statut": "fragmenté",
+      "territoires_reels": [
+       "Brésil"
+      ]
+     },
+     "raison": "L'occupation américaine transforme le Brésil en une zone militarisée et fragmentée, soustraite au contrôle du amazonie_pacte_vert et intégrée de facto au bloc atlantique."
+    },
+    {
+     "pays": "Colombie",
+     "action": "absorber",
+     "zone": "zones_grises_tampons",
+     "raison": "La Colombie, sous pression des flux de réfugiés et des incursions militaires, bascule dans un statut de zone tampon instable."
+    },
+    {
+     "pays": "Venezuela",
+     "action": "nouvelle_zone",
+     "zone": "",
+     "nouvelle_zone": {
+      "slug": "venezuela_zone_refugies_clandestins",
+      "nom": "Venezuela — Zone de Réfugiés Clandestins",
+      "type": "zone_sinistree",
+      "statut": "fragmenté",
+      "territoires_reels": [
+       "Venezuela"
+      ]
+     },
+     "raison": "L'afflux de réfugiés brésiliens et la déstabilisation régionale transforment le Venezuela en une zone de non-droit, hors du contrôle des forteresses."
+    },
+    {
+     "pays": "Guyana",
+     "action": "absorber",
+     "zone": "bresil_occupe_zone_strategique",
+     "raison": "Le Guyana, riche en ressources et frontalier du Brésil, est annexé de facto par les États-Unis pour sécuriser le périmètre d'occupation."
+    }
+   ],
+   "zones_statut": [
+    {
+     "zone": "amazonie_pacte_vert",
+     "apres": "fragmenté",
+     "raison": "L'occupation américaine et la dissolution du Pacte Vert Amazônia fragmentent la région en zones de contrôle militaire, de résistance locale et de pillage des ressources."
+    },
+    {
+     "zone": "sao_paulo_megapole",
+     "apres": "fragmenté",
+     "raison": "São Paulo devient un foyer de résistance et de répression, avec une partition de facto entre zones contrôlées par les occupants et quartiers insurgés."
+    },
+    {
+     "zone": "pacte_forteresses_souveraines",
+     "apres": "en_declin",
+     "raison": "L'invasion du Brésil, perçue comme une violation des principes de souveraineté territoriale, affaiblit la légitimité du Pacte et accélère son déclin institutionnel."
+    },
+    {
+     "zone": "zones_grises_tampons",
+     "apres": "fragmenté",
+     "raison": "La déstabilisation de l'Amérique du Sud étend les zones grises, notamment en Colombie et en Bolivie, où les réseaux de contrebande et de résistance prospèrent."
+    }
+   ],
+   "nouvelles_entites": [
+    {
+     "nom": "Front de Libération Amazônien — FLA",
+     "role": "Mouvement de résistance armée contre l'occupation américaine, combinant guérilla et sabotage des infrastructures critiques.",
+     "zone": "bresil_occupe_zone_strategique",
+     "raison": "L'occupation américaine catalyse la formation d'un mouvement de résistance unifié, intégrant d'anciens membres du Pacte Vert et des populations locales."
+    },
+    {
+     "nom": "Bureau de Stabilisation Continentale — BSC",
+     "role": "Agence fédérale américaine chargée de gérer l'occupation du Brésil, la répression des résistances et la sécurisation des ressources.",
+     "zone": "bloc_atlantique",
+     "raison": "L'occupation nécessite une structure administrative dédiée, distincte du bureau_territoires_residuels_fortress_world, pour éviter une dilution des efforts."
+    },
+    {
+     "nom": "Réseau des Villes Rebelles — RVR",
+     "role": "Alliance informelle de mégapoles sud-américaines (São Paulo, Caracas, Bogotá) coordonnant des actions de résistance civile et de sabotage logistique.",
+     "zone": "venezuela_zone_refugies_clandestins",
+     "raison": "L'occupation du Brésil et la déstabilisation régionale poussent les grandes villes à s'organiser en marge des forteresses et des États."
+    }
+   ]
+  }
+ },
+ "invasion_bresil_2029::new_sustainability": {
+  "empreinte": "957dd2ea97ec495c",
+  "date": "2026-10-09T10:51",
+  "brut": {
+   "lecture": "L'invasion du Brésil par les États-Unis en 2029 introduit une fracture géopolitique majeure dans un scénario conçu pour l'équilibre hybride et la régénération écologique. Le choc ébranle les piliers institutionnels de la gouvernance coordonnée (notamment le `centre_institutionnel_geneve` et le `hub_nairobi_kigali`), mais le système montre une résilience structurelle : les mécanismes de régulation algorithmique (`grille_aria_new_sustainability`) et les réseaux de gouvernance distribuée (`reseaux_de_gouvernance_territoriale_distribues_new_sustainability`) amortissent partiellement l'impact. L'Amazonie, cœur écologique du scénario, devient un enjeu de souveraineté conflictuelle, menaçant la `trame_bioclimatique_new_sustainability`. Cependant, les entités directement concernées (comme le `consortium_amazonia_viva_new_sustainability`) pourraient se recomposer en forces de résistance ou de médiation, plutôt que de s'effondrer.",
+   "ampleur": "forte",
+   "trajectoires": [
+    {
+     "instance": "consortium_amazonia_viva_new_sustainability",
+     "apres": "ascendant",
+     "raison": "L'invasion transforme le Consortium en acteur de résistance légitime, renforçant sa légitimité internationale et sa capacité à mobiliser des alliances écologiques."
+    },
+    {
+     "instance": "great_lakes_autonomous_compact_new_sustainability",
+     "apres": "mature",
+     "raison": "La Confédération Lacustre des Grands Lacs, déjà dominante, se recentre sur la protection de ses ressources hydriques face à l'instabilité régionale, consolidant son autonomie."
+    },
+    {
+     "instance": "rede_paulista_de_distribuicao_algoritmica_new_sustainability",
+     "apres": "déclinant",
+     "raison": "Le SPAR, dépendant d'une gouvernance hybride stable, voit ses capacités de redistribution perturbées par le conflit et les sanctions économiques."
+    },
+    {
+     "instance": "trame_bioclimatique_new_sustainability",
+     "apres": "marginal",
+     "raison": "La fragmentation de l'Amazonie et la militarisation des corridors écologiques réduisent drastiquement son efficacité opérationnelle."
+    },
+    {
+     "instance": "coalition_vivant_new_sustainability",
+     "apres": "ascendant",
+     "raison": "La Coalition du Vivant gagne en influence en tant que porte-voix des écosystèmes menacés, attirant des soutiens transnationaux."
+    },
+    {
+     "instance": "reseau_des_communs_alimentaires_hors_grille_new_sustainability",
+     "apres": "ascendant",
+     "raison": "Les communs alimentaires deviennent des refuges de résilience face à l'effondrement des chaînes d'approvisionnement conventionnelles."
+    },
+    {
+     "instance": "agence_globale_de_regeneration_des_bassins_versants_agrb_onu_new_sustainability",
+     "apres": "déclinant",
+     "raison": "L'AGRB-ONU perd son accès aux données et aux terrains brésiliens, affaiblissant sa capacité à coordonner les projets de régénération."
+    },
+    {
+     "instance": "bureau_gouvernance_algorithmique_new_sustainability",
+     "apres": "mature",
+     "raison": "Le CGAI renforce son rôle d'arbitre des conflits algorithmiques, mais son autorité est contestée par les blocs souverainistes."
+    }
+   ],
+   "relations": [
+    {
+     "a": "consortium_amazonia_viva_new_sustainability",
+     "b": "coalition_vivant_new_sustainability",
+     "type": "alliance",
+     "action": "nouvelle",
+     "raison": "Les deux entités unissent leurs forces pour défendre la souveraineté écologique de l'Amazonie face à l'occupation militaire."
+    },
+    {
+     "a": "great_lakes_autonomous_compact_new_sustainability",
+     "b": "great_lakes_compact_new_sustainability",
+     "type": "alliance",
+     "action": "renforcée",
+     "raison": "La Confédération Lacustre renforce sa coopération interne pour sécuriser ses ressources hydriques face à l'instabilité régionale."
+    },
+    {
+     "a": "consortium_amazonia_viva_new_sustainability",
+     "b": "bloc_eurasien_souverainiste_new_sustainability",
+     "type": "opposition",
+     "action": "nouvelle",
+     "raison": "Le Bloc Eurasien soutient discrètement les États-Unis pour affaiblir les institutions de gouvernance globale, tandis que le Consortium cherche des alliés contre l'occupation."
+    },
+    {
+     "a": "reseau_des_communs_alimentaires_hors_grille_new_sustainability",
+     "b": "programme_onu_de_restauration_des_sols_new_sustainability",
+     "type": "alliance",
+     "action": "nouvelle",
+     "raison": "Les communs alimentaires s'allient aux programmes onusiens pour contourner les blocages institutionnels et maintenir des pratiques régénératives."
+    },
+    {
+     "a": "agence_stabilisation_climatique_new_sustainability",
+     "b": "bureau_gouvernance_algorithmique_new_sustainability",
+     "type": "alliance",
+     "action": "renforcée",
+     "raison": "L'APRC et le CGAI coordonnent leurs efforts pour limiter les impacts climatiques du conflit, malgré les tensions géopolitiques."
+    },
+    {
+     "a": "trame_bioclimatique_new_sustainability",
+     "b": "reseau_vivant_continental",
+     "type": "opposition",
+     "action": "nouvelle",
+     "raison": "Le RVC, zone géographique, devient un champ de bataille entre les forces d'occupation et les acteurs écologiques, marginalisant la Trame Bioclimatique."
+    }
+   ],
+   "geographie": [
+    {
+     "pays": "Brésil",
+     "action": "nouvelle_zone",
+     "nouvelle_zone": {
+      "slug": "bresil_occupe_amazonie_contestee",
+      "nom": "Brésil occupé — Amazonie contestée",
+      "type": "zone_sinistree",
+      "statut": "fragmenté"
+     },
+     "raison": "L'occupation militaire et la résistance écologique transforment le Brésil en une zone de conflit hybride, échappant aux cadres institutionnels existants."
+    },
+    {
+     "pays": "États-Unis",
+     "action": "absorber",
+     "zone": "ameriques_reconfigurees",
+     "raison": "Les États-Unis, déjà partie de cette zone, voient leur influence régionale se renforcer, mais au prix d'une fragmentation accrue des Amériques."
+    },
+    {
+     "pays": "Colombie",
+     "action": "nouvelle_zone",
+     "nouvelle_zone": {
+      "slug": "corridor_andin_refugie_ecologique",
+      "nom": "Corridor Andin — Refuge écologique et migratoire",
+      "type": "territoire_autonome",
+      "statut": "emergent"
+     },
+     "raison": "La Colombie devient un refuge pour les déplacés brésiliens et un hub de résistance écologique, nécessitant une reconfiguration territoriale."
+    },
+    {
+     "pays": "Venezuela",
+     "action": "absorber",
+     "zone": "ameriques_reconfigurees",
+     "raison": "Le Venezuela, déjà inclus dans cette zone, subit une pression accrue pour s'aligner sur les dynamiques régionales post-invasion."
+    }
+   ],
+   "zones_statut": [
+    {
+     "zone": "ameriques_reconfigurees",
+     "apres": "fragmenté",
+     "raison": "L'invasion brise la cohésion des Amériques, transformant la zone en un espace de tensions et de recompositions territoriales."
+    },
+    {
+     "zone": "reseau_vivant_continental",
+     "apres": "fragmenté",
+     "raison": "La militarisation de l'Amazonie et la rupture des corridors écologiques affaiblissent la connectivité du RVC."
+    },
+    {
+     "zone": "centre_institutionnel_geneve",
+     "apres": "stable",
+     "raison": "Genève conserve son rôle de coordination, mais son autorité est contestée par les blocs souverainistes et les acteurs émergents."
+    },
+    {
+     "zone": "belem_consortium_amazonia",
+     "apres": "disparu",
+     "raison": "Belém, siège du Consortium Amazônia Viva, est occupé ou détruit, forçant une relocalisation des institutions écologiques."
+    }
+   ],
+   "nouvelles_entites": [
+    {
+     "nom": "Front de Libération Écologique Amazonie (FLEA)",
+     "role": "Mouvement de résistance armée et écologique contre l'occupation",
+     "zone": "bresil_occupe_amazonie_contestee",
+     "raison": "Né de la fusion des réseaux autochtones et des milices écologiques, le FLEA incarne la résistance hybride à l'occupation."
+    },
+    {
+     "nom": "Commission d'Urgence pour la Régénération de l'Amazonie (CURA)",
+     "role": "Organe de coordination internationale pour la protection et la restauration de l'Amazonie",
+     "zone": "hub_nairobi_kigali",
+     "raison": "Créée sous l'égide du `parlement_territoires_nairobi_new_sustainability`, la CURA vise à contourner les blocages géopolitiques pour préserver l'Amazonie."
+    },
+    {
+     "nom": "Réseau des Villes-Sanctuaires Climatiques (RVSC)",
+     "role": "Alliance de villes offrant asile et protection aux déplacés climatiques brésiliens",
+     "zone": "corridor_andin_refugie_ecologique",
+     "raison": "Les villes andines et amazoniennes s'organisent pour accueillir les réfugiés et maintenir des pratiques durables en zone de conflit."
+    }
+   ]
+  }
+ },
+ "invasion_bresil_2029::eco_communalism": {
+  "empreinte": "b56c62b338bda89d",
+  "date": "2026-10-09T10:51",
+  "brut": {
+   "lecture": "L'invasion du Brésil par les États-Unis en 2029 introduit un choc géopolitique majeur qui fracture davantage les structures globales déjà affaiblies, tout en accélérant la reconfiguration locale des bioterritoires. Les zones directement concernées (Amazonie, Nordeste brésilien, São Paulo) voient leur dynamique éco-communaliste perturbée par des pressions militaires, des déplacements forcés et une rupture des échanges régionaux. Cependant, le scénario eco_communalism, fondé sur la résilience locale et l'autonomie, absorbe partiellement le choc en renforçant les mécanismes de résistance et de coopération intra-communautaire. Les effets lointains restent limités, car le monde est déjà fragmenté et les dépendances globales réduites.",
+   "ampleur": "forte",
+   "trajectoires": [
+    {
+     "instance": "amazonie_pacte_viva_eco_communalism",
+     "apres": "ascendant",
+     "raison": "La pression militaire et la fragmentation du territoire amazonien renforcent la cohésion des communautés autonomes, qui s'organisent en réseaux de résistance et de gestion collective des ressources face à l'occupation."
+    },
+    {
+     "instance": "consortium_amazonia_viva_eco_communalism",
+     "apres": "mature",
+     "raison": "Le Pacte Amazônia Viva devient un acteur central de la survie écologique et politique, consolidant son rôle de confédération souple pour coordonner la résistance et la reconstruction post-conflit."
+    },
+    {
+     "instance": "frente_sertao_livre_eco_communalism",
+     "apres": "dominant",
+     "raison": "Le Nordeste brésilien, en première ligne des déplacements de population et des tensions, voit la Frente Sertão Livre s'imposer comme une force politique et sociale incontournable, structurant la résilience des communautés semi-arides."
+    },
+    {
+     "instance": "sao_paulo_algorithmique_eco_communalism",
+     "apres": "déclinant",
+     "raison": "L'occupation militaire et la fragmentation de São Paulo perturbent les algorithmes de gestion collective, affaiblissant le CPGA face à l'émergence de micro-communautés autonomes et de réseaux de troc informels."
+    },
+    {
+     "instance": "mouvement_des_communes_du_rust_belt_eco_communalism",
+     "apres": "mature",
+     "raison": "Les États-Unis, engagés dans un conflit coûteux et prolongé, voient leurs ressources internes se raréfier, renforçant la légitimité des communes du Rust Belt comme alternatives viables à l'État central affaibli."
+    },
+    {
+     "instance": "coalition_vivant_eco_communalism",
+     "apres": "dominant",
+     "raison": "La Grande-Vallée, moins directement touchée mais sensible aux flux migratoires et aux perturbations logistiques, renforce son rôle de stabilisateur écologique et politique en accueillant des réfugiés et en adaptant ses pratiques."
+    },
+    {
+     "instance": "les_veilleurs_des_nappes_phreatiques_eco_communalism",
+     "apres": "ascendant",
+     "raison": "La guerre et l'occupation exacerbent les tensions autour des ressources hydriques, poussant les Sentinelles des Nappes à étendre leur surveillance et leur protection des nappes phréatiques face aux accaparements militaires."
+    },
+    {
+     "instance": "ligue_des_cites_du_sahel_numerique_eco_communalism",
+     "apres": "mature",
+     "raison": "Bien que lointaine, la Ligue des Cités du Sahel renforce ses infrastructures numériques et énergétiques pour absorber les flux de migrants et de savoirs en provenance d'Amérique latine, tout en consolidant son autonomie."
+    }
+   ],
+   "relations": [
+    {
+     "a": "amazonie_pacte_viva_eco_communalism",
+     "b": "frente_sertao_livre_eco_communalism",
+     "type": "alliance",
+     "action": "nouvelle",
+     "raison": "La pression commune de l'occupation américaine pousse les deux entités à coordonner leurs actions de résistance et de reconstruction, malgré leurs différences historiques."
+    },
+    {
+     "a": "amazonie_pacte_viva_eco_communalism",
+     "b": "sao_paulo_algorithmique_eco_communalism",
+     "type": "opposition",
+     "action": "nouvelle",
+     "raison": "Les tensions entre les communautés autonomes amazoniennes et les fragments algorithmiques de São Paulo s'exacerbent, les premiers accusant les seconds de collaboration avec l'occupant pour préserver leurs infrastructures."
+    },
+    {
+     "a": "frente_sertao_livre_eco_communalism",
+     "b": "mouvement_des_communes_du_rust_belt_eco_communalism",
+     "type": "alliance",
+     "action": "nouvelle",
+     "raison": "Des échanges de savoir-faire et de ressources s'établissent entre les deux zones, unies par leur opposition à l'État central américain et leur modèle de résilience locale."
+    },
+    {
+     "a": "coalition_vivant_eco_communalism",
+     "b": "amazonie_pacte_viva_eco_communalism",
+     "type": "alliance",
+     "action": "nouvelle",
+     "raison": "La Grande-Vallée apporte un soutien logistique et politique au Pacte Amazônia Viva, facilitant l'accueil de réfugiés et la coordination des actions écologiques transnationales."
+    },
+    {
+     "a": "sao_paulo_algorithmique_eco_communalism",
+     "b": "enclaves_extractivistes_et_etats_residuels_eco_communalism",
+     "type": "alliance",
+     "action": "renforcée",
+     "raison": "Le CPGA collabore avec les enclaves extractivistes pour maintenir un minimum de flux économiques et technologiques, au prix d'une dépendance accrue aux logiques marchandes."
+    },
+    {
+     "a": "ligue_des_cites_du_sahel_numerique_eco_communalism",
+     "b": "amazonie_pacte_viva_eco_communalism",
+     "type": "alliance",
+     "action": "nouvelle",
+     "raison": "La Ligue des Cités du Sahel accueille des réfugiés et des savoirs amazoniens, tout en partageant ses technologies numériques pour renforcer la résistance des communautés."
+    }
+   ],
+   "geographie": [
+    {
+     "pays": "Brésil",
+     "action": "nouvelle_zone",
+     "nouvelle_zone": {
+      "slug": "bresil_occupe_et_fracture",
+      "nom": "Brésil Occupé et Fracturé",
+      "type": "zone_sinistree",
+      "statut": "fragmenté"
+     },
+     "raison": "L'invasion et l'occupation américaine fragmentent le Brésil en zones sous contrôle militaire, territoires autonomes résistants et corridors de conflit, rendant impossible une gouvernance unifiée."
+    },
+    {
+     "pays": "États-Unis d'Amérique",
+     "action": "nouvelle_zone",
+     "nouvelle_zone": {
+      "slug": "etats_unis_en_guerre_peripherique",
+      "nom": "États-Unis en Guerre Périphérique",
+      "type": "territoire_herite",
+      "statut": "fragmenté"
+     },
+     "raison": "L'engagement militaire prolongé au Brésil affaiblit la cohésion interne des États-Unis, accélérant la fragmentation des bioterritoires et des communes autonomes face à un État central distrait et appauvri."
+    },
+    {
+     "pays": "Venezuela",
+     "action": "absorber",
+     "zone": "amazonie_pacte_viva",
+     "raison": "Le Venezuela, déjà intégré au Pacte Amazônia Viva, renforce son rôle de base arrière pour les communautés amazoniennes en résistance, accueillant des réfugiés et des réseaux logistiques."
+    },
+    {
+     "pays": "Guyana",
+     "action": "nouvelle_zone",
+     "nouvelle_zone": {
+      "slug": "guyana_corridor_resistance",
+      "nom": "Guyana — Corridor de la Résistance",
+      "type": "territoire_autonome",
+      "statut": "emergent"
+     },
+     "raison": "Le Guyana devient un corridor stratégique pour les flux de résistance entre l'Amazonie et les Caraïbes, échappant partiellement au contrôle des États-Unis et des enclaves extractivistes."
+    }
+   ],
+   "zones_statut": [
+    {
+     "zone": "amazonie_pacte_viva",
+     "apres": "fragmenté",
+     "raison": "L'occupation militaire et les déplacements de population fragmentent l'Amazonie en poches de résistance, zones occupées et territoires abandonnés, affaiblissant la cohésion du Pacte Amazônia Viva."
+    },
+    {
+     "zone": "nordeste_bresilien_frente",
+     "apres": "stable",
+     "raison": "La Frente Sertão Livre parvient à stabiliser son territoire malgré les pressions, grâce à une organisation communautaire renforcée et à des alliances régionales."
+    },
+    {
+     "zone": "sao_paulo_algorithmique",
+     "apres": "en_declin",
+     "raison": "L'occupation et la fragmentation de São Paulo perturbent les infrastructures algorithmiques, accélérant le déclin du CPGA au profit de micro-communautés autonomes."
+    },
+    {
+     "zone": "bioterritoires_amerique_du_nord",
+     "apres": "fragmenté",
+     "raison": "L'engagement militaire des États-Unis au Brésil affaiblit la cohésion interne des bioterritoires nord-américains, exacerbant les tensions entre communes autonomes et enclaves extractivistes."
+    }
+   ],
+   "nouvelles_entites": [
+    {
+     "nom": "Réseau des Chemins de l'Exode",
+     "role": "Structure logistique et politique coordonnant les déplacements de populations fuyant l'occupation américaine au Brésil, en lien avec les communautés d'accueil en Amazonie et au Nordeste.",
+     "zone": "amazonie_pacte_viva",
+     "raison": "Les déplacements massifs de population nécessitent une coordination transcommunautaire pour éviter les crises humanitaires et renforcer la résilience des territoires d'accueil."
+    },
+    {
+     "nom": "Alliance des Gardiens des Frontières Vertes",
+     "role": "Coalition de communautés autonomes et de collectifs écologistes protégeant les corridors forestiers et les zones tampons entre territoires occupés et zones libres, en Amazonie et au Nordeste.",
+     "zone": "amazonie_pacte_viva",
+     "raison": "La pression militaire et la fragmentation des territoires rendent nécessaire la création de zones de protection écologique et politique pour préserver les écosystèmes et les populations."
+    },
+    {
+     "nom": "Collectif des Techniciens de la Guerre Silencieuse",
+     "role": "Réseau clandestin de techniciens et d'ingénieurs soutenant les communautés résistantes en maintenant des infrastructures critiques (énergie, eau, communications) malgré l'occupation.",
+     "zone": "bresil_occupe_et_fracture",
+     "raison": "L'occupation américaine cible les infrastructures pour affaiblir la résistance, nécessitant une réponse technique décentralisée et clandestine."
+    }
+   ]
+  }
+ },
+ "invasion_bresil_2029::policy_reform": {
+  "empreinte": "3d173dca4b6addcf",
+  "date": "2026-10-09T10:52",
+  "brut": {
+   "lecture": "L'invasion du Brésil par les États-Unis en 2029 introduit une rupture géopolitique majeure dans un scénario *policy_reform* centré sur la stabilisation technocratique. Le choc déstabilise le **bloc_souverainiste_non_signataire**, fragmentant davantage ses dynamiques internes, tout en renforçant temporairement les logiques de centralisation et de régulation globale (ex. : ARIA-Nexus, CRTI). Cependant, le système amortit le choc en intégrant partiellement les conséquences (déplacements de population, pression sur l'Amazonie) dans ses mécanismes de gouvernance, sans remettre en cause ses fondements. Les entités directement concernées (RPDA, Consortium Amazônia Viva, Front Souverainiste) voient leurs trajectoires accélérées, mais le scénario conserve sa logique de réforme institutionnelle plutôt que de bascule systémique.",
+   "ampleur": "forte",
+   "trajectoires": [
+    {
+     "instance": "rede_paulista_de_distribuicao_algoritmica_policy_reform",
+     "apres": "déclinant",
+     "raison": "L'occupation américaine de São Paulo désorganise le système d'allocation algorithmique, le soumettant à des logiques exogènes de contrôle des ressources."
+    },
+    {
+     "instance": "consortium_amazonia_viva_policy_reform",
+     "apres": "marginal",
+     "raison": "La militarisation de l'Amazonie et la fragmentation du Brésil rendent caduque sa délégation reconnue auprès du Conseil de Régulation Climatique Global."
+    },
+    {
+     "instance": "front_souverainiste_des_blocs_non_signataires_policy_reform",
+     "apres": "fragmenté",
+     "raison": "La perte du Brésil, pilier du bloc, affaiblit sa cohésion et sa capacité à résister aux réformes technocratiques globales."
+    },
+    {
+     "instance": "etats_dissidents_du_bloc_austral_policy_reform",
+     "apres": "ascendant",
+     "raison": "L'Argentine et la Bolivie deviennent les nouveaux leaders de la résistance souverainiste en Amérique du Sud, capitalisant sur le vide laissé par le Brésil."
+    },
+    {
+     "instance": "grille_aria_policy_reform",
+     "apres": "dominant",
+     "raison": "L'urgence de gérer les flux de réfugiés et les ressources brésiliennes renforce la dépendance des États à ARIA-Nexus pour la planification d'urgence."
+    },
+    {
+     "instance": "conseil_de_regulation_climatique_global_policy_reform",
+     "apres": "dominant",
+     "raison": "Le Conseil est contraint d'arbitrer en urgence les conflits écologiques liés à l'occupation (déforestation, gestion de l'eau), consolidant son rôle central."
+    },
+    {
+     "instance": "collectifs_de_defense_hydrique_saheliens_policy_reform",
+     "apres": "ascendant",
+     "raison": "Les déplacements de population vers l'Afrique exacerbent les tensions hydriques au Sahel, renforçant l'influence des collectifs locaux."
+    },
+    {
+     "instance": "pacifique_sud_resilience_network_policy_reform",
+     "apres": "mature",
+     "raison": "Les îles du Pacifique, menacées par les répercussions climatiques de la crise brésilienne, institutionnalisent davantage leur délégation auprès du Conseil de Régulation Climatique."
+    }
+   ],
+   "relations": [
+    {
+     "a": "ameriques_reformees",
+     "b": "bloc_souverainiste_non_signataire",
+     "type": "opposition",
+     "action": "renforcée",
+     "raison": "L'invasion durcit les clivages entre le bloc américain et les États dissidents, notamment l'Argentine et la Bolivie."
+    },
+    {
+     "a": "grille_aria_policy_reform",
+     "b": "rede_paulista_de_distribuicao_algoritmica_policy_reform",
+     "type": "opposition",
+     "action": "nouvelle",
+     "raison": "ARIA-Nexus impose ses protocoles de gestion des ressources à São Paulo, marginalisant l'IA municipale brésilienne."
+    },
+    {
+     "a": "conseil_de_regulation_climatique_global_policy_reform",
+     "b": "consortium_amazonia_viva_policy_reform",
+     "type": "alliance",
+     "action": "rompue",
+     "raison": "Le Consortium perd sa légitimité face à l'occupation militaire, rendant caduque sa délégation climatique."
+    },
+    {
+     "a": "front_souverainiste_des_blocs_non_signataires_policy_reform",
+     "b": "etats_dissidents_du_bloc_austral_policy_reform",
+     "type": "alliance",
+     "action": "renforcée",
+     "raison": "L'Argentine et la Bolivie deviennent les nouveaux porte-étendards de la résistance souverainiste, remplaçant le Brésil."
+    },
+    {
+     "a": "agence_de_regulation_des_detroits_strategiques_ards_policy_reform",
+     "b": "ameriques_reformees",
+     "type": "alliance",
+     "action": "nouvelle",
+     "raison": "Les États-Unis obtiennent un soutien logistique de l'ARDS pour sécuriser les routes maritimes vers le Brésil occupé."
+    },
+    {
+     "a": "hyphan_raghavan_policy_reform",
+     "b": "collectifs_de_defense_hydrique_saheliens_policy_reform",
+     "type": "alliance",
+     "action": "renforcée",
+     "raison": "Les déplacements de population vers le Sahel accroissent l'influence des réseaux de défense hydrique, avec Hyphan Raghavan comme figure centrale."
+    }
+   ],
+   "geographie": [
+    {
+     "pays": "Brésil",
+     "action": "nouvelle_zone",
+     "nouvelle_zone": {
+      "slug": "bresil_occupe_etats_unis",
+      "nom": "Brésil Occupé (Zone d'Administration Américaine)",
+      "type": "territoire_herite",
+      "statut": "fragmenté"
+     },
+     "raison": "Le Brésil est divisé en zones d'occupation militaire et en territoires sous contrôle résiduel brésilien (ex. : Manaus, São Paulo)."
+    },
+    {
+     "pays": "Brésil",
+     "action": "absorber",
+     "zone": "ameriques_reformees",
+     "raison": "Les États-Unis intègrent formellement les territoires occupés du Brésil dans leur bloc continental."
+    },
+    {
+     "pays": "Paraguay",
+     "action": "nouvelle_zone",
+     "nouvelle_zone": {
+      "slug": "paraguay_refuge_souverainiste",
+      "nom": "Paraguay (Réfuge Souverainiste)",
+      "type": "territoire_autonome",
+      "statut": "emergent"
+     },
+     "raison": "Le Paraguay devient une base arrière pour les gouvernements dissidents et les réfugiés brésiliens, hors du contrôle américain."
+    },
+    {
+     "pays": "Guyana",
+     "action": "nouvelle_zone",
+     "nouvelle_zone": {
+      "slug": "guyana_base_logistique_usa",
+      "nom": "Guyana (Base Logistique Américaine)",
+      "type": "site_strategique",
+      "statut": "stable"
+     },
+     "raison": "Les États-Unis transforment le Guyana en plateforme logistique pour leur occupation du Brésil."
+    }
+   ],
+   "zones_statut": [
+    {
+     "zone": "andes_bloc_austral",
+     "apres": "fragmenté",
+     "raison": "La Bolivie et l'Argentine, privées de l'alliance brésilienne, voient leur cohésion interne fragilisée par les tensions post-invasion."
+    },
+    {
+     "zone": "sahel_occidental_dissident",
+     "apres": "en_declin",
+     "raison": "L'afflux de réfugiés brésiliens et la pression sur les ressources hydriques exacerbent les conflits locaux, affaiblissant les structures de gouvernance."
+    },
+    {
+     "zone": "hub_africain_gouvernance",
+     "apres": "dominant",
+     "raison": "Nairobi et Kigali deviennent des centres névralgiques pour la gestion des crises migratoires et climatiques liées à l'invasion, renforçant leur statut."
+    },
+    {
+     "zone": "manaus_amazonia_viva",
+     "apres": "en_declin",
+     "raison": "L'occupation militaire et la fragmentation du Brésil rendent impossible la poursuite des projets de régulation écologique dans l'Amazonie."
+    }
+   ],
+   "nouvelles_entites": [
+    {
+     "nom": "Commission Internationale pour la Reconstruction du Brésil (CIRB)",
+     "role": "Organisme technocratique chargé de superviser la reconstruction économique et écologique du Brésil occupé, sous mandat ONU.",
+     "zone": "geneve_nexus",
+     "raison": "Nécessité de légitimer l'occupation américaine et de coordonner les aides internationales pour éviter un effondrement humanitaire."
+    },
+    {
+     "nom": "Front de Libération de l'Amazonie (FLA)",
+     "role": "Mouvement armé et politique regroupant les anciens acteurs du Consortium Amazônia Viva et des groupes indigènes, luttant contre l'occupation américaine.",
+     "zone": "paraguay_refuge_souverainiste",
+     "raison": "La militarisation de l'Amazonie et la répression des acteurs écologiques locaux donnent naissance à une résistance organisée."
+    },
+    {
+     "nom": "Réseau d'Urgence pour les Déplacés Brésiliens (RUDB)",
+     "role": "Coalition d'ONG et d'agences internationales gérant les flux de réfugiés brésiliens vers l'Afrique et l'Europe.",
+     "zone": "hub_africain_gouvernance",
+     "raison": "Les déplacements massifs de population nécessitent une coordination supranationale pour éviter des crises humanitaires incontrôlables."
+    }
+   ]
+  }
+ },
+ "invasion_bresil_2029::reference": {
+  "empreinte": "d66617dc37d13fce",
+  "date": "2026-10-09T10:53",
+  "brut": {
+   "lecture": "L'invasion du Brésil par les États-Unis en 2029 introduit un choc géopolitique majeur dans les Amériques Multipolaires, perturbant durablement les équilibres régionaux et globaux. Les entités directement concernées (SPAAR, Consortium Amazônia Viva, Frente Sertão Livre, etc.) voient leurs trajectoires profondément altérées, tandis que les mécanismes d'absorption du système mondial limitent les répercussions lointaines. Le conflit exacerbe les tensions entre logiques de souveraineté territoriale et gouvernance algorithmique, sans pour autant provoquer un effondrement systémique. Les zones grises et les acteurs marginaux (comme les Zones Grises Globales ou le Pacte des Souverains) pourraient en revanche en tirer parti pour renforcer leur position.",
+   "ampleur": "forte",
+   "trajectoires": [
+    {
+     "instance": "sao_paulo_ita_reference",
+     "apres": "déclinant",
+     "raison": "L'occupation militaire et la fragmentation du Brésil affaiblissent la légitimité et l'efficacité de la Prefeitura Metropolitana de São Paulo, déjà en difficulté."
+    },
+    {
+     "instance": "amazonie_consortium_viva_reference",
+     "apres": "déclinant",
+     "raison": "L'invasion remet en cause les accords d'exploitation des ressources génétiques, fragilisant la position dominante du consortium."
+    },
+    {
+     "instance": "consortium_amazonia_viva_reference",
+     "apres": "déclinant",
+     "raison": "La gouvernance écologique du bassin amazonien est directement menacée par les opérations militaires et les déplacements de population."
+    },
+    {
+     "instance": "frente_sertao_livre_reference",
+     "apres": "ascendant",
+     "raison": "Le chaos de l'invasion crée un vide institutionnel que la Frente Sertão Livre peut exploiter pour étendre son influence dans le Nordeste brésilien."
+    },
+    {
+     "instance": "great_lakes_autonomous_compact_reference",
+     "apres": "mature",
+     "raison": "Le Compact des Grands Lacs renforce sa position en absorbant les flux migratoires et logistiques générés par le conflit, consolidant son rôle de stabilisateur régional."
+    },
+    {
+     "instance": "guadalajara_nexus_reference",
+     "apres": "dominant",
+     "raison": "Le hub logistique de Guadalajara devient un point de passage obligé pour les chaînes d'approvisionnement contournant le Brésil, renforçant son rôle central."
+    },
+    {
+     "instance": "the_lattice_reference",
+     "apres": "mature",
+     "raison": "Les villes à charte de The Lattice absorbent une partie des migrants et des activités économiques déplacées, stabilisant leur modèle de gouvernance."
+    },
+    {
+     "instance": "raised_hands_reference",
+     "apres": "ascendant",
+     "raison": "Les revendications des précaires de The Lattice gagnent en légitimité face à l'effondrement des structures étatiques traditionnelles."
+    }
+   ],
+   "relations": [
+    {
+     "a": "frente_sertao_livre_reference",
+     "b": "great_lakes_autonomous_compact_reference",
+     "type": "alliance",
+     "action": "nouvelle",
+     "raison": "La Frente Sertão Livre cherche des appuis logistiques et politiques pour résister à l'occupation, tandis que le Compact des Grands Lacs y voit une opportunité de stabiliser les flux migratoires."
+    },
+    {
+     "a": "amazonie_consortium_viva_reference",
+     "b": "consortium_amazonia_viva_reference",
+     "type": "opposition",
+     "action": "nouvelle",
+     "raison": "Les deux consortiums entrent en concurrence pour le contrôle des ressources amazoniennes dans un contexte de fragmentation territoriale."
+    },
+    {
+     "a": "sao_paulo_ita_reference",
+     "b": "spaar_reference",
+     "type": "opposition",
+     "action": "nouvelle",
+     "raison": "La Prefeitura Metropolitana de São Paulo conteste l'autorité du SPAAR, dont les algorithmes sont perçus comme des outils de l'occupation."
+    },
+    {
+     "a": "valparaiso_fct_reference",
+     "b": "guadalajara_nexus_reference",
+     "type": "alliance",
+     "action": "nouvelle",
+     "raison": "Les deux hubs financiers et logistiques coordonnent leurs efforts pour capter les flux économiques détournés du Brésil."
+    },
+    {
+     "a": "pacte_des_souverains",
+     "b": "etats_unis_crise_constitutionnelle",
+     "type": "opposition",
+     "action": "nouvelle",
+     "raison": "Le Pacte des Souverains condamne l'invasion comme une violation flagrante de la souveraineté territoriale, renforçant son discours anti-impérialiste."
+    },
+    {
+     "a": "zones_grises_globales_reference",
+     "b": "amazonie_consortium_viva_reference",
+     "type": "alliance",
+     "action": "nouvelle",
+     "raison": "Les acteurs des Zones Grises Globales profitent de l'affaiblissement du consortium pour étendre leur influence sur les marges du bassin amazonien."
+    }
+   ],
+   "geographie": [
+    {
+     "pays": "Brésil",
+     "action": "nouvelle_zone",
+     "nouvelle_zone": {
+      "slug": "bresil_occupe_etats_unis",
+      "nom": "Brésil Occupé (Zone d'Administration Provisoire des États-Unis)",
+      "type": "territoire_herite",
+      "statut": "fragmenté"
+     },
+     "raison": "Les États-Unis établissent une administration militaire et civile sur les territoires brésiliens occupés, créant une zone de facto sous leur contrôle."
+    },
+    {
+     "pays": "Paraguay",
+     "action": "absorber",
+     "zone": "sertao_nordeste_bresilien",
+     "raison": "Le Chaco paraguayen, déjà lié au Sertão brésilien, est intégré à la zone d'influence de la Frente Sertão Livre pour des raisons logistiques et stratégiques."
+    },
+    {
+     "pays": "Uruguay",
+     "action": "nouvelle_zone",
+     "nouvelle_zone": {
+      "slug": "uruguay_neutralise",
+      "nom": "Uruguay Neutralisé (Zone Tampon)",
+      "type": "territoire_autonome",
+      "statut": "stable"
+     },
+     "raison": "L'Uruguay, non directement touché par l'invasion, devient une zone tampon sous protection internationale pour éviter une extension du conflit."
+    },
+    {
+     "pays": "Bolivie",
+     "action": "absorber",
+     "zone": "amazonie_consortium_viva",
+     "raison": "La Bolivie renforce ses liens avec le Consortium Amazônia Viva pour sécuriser ses accès aux ressources et aux corridors logistiques amazoniens."
+    }
+   ],
+   "zones_statut": [
+    {
+     "zone": "ameriques_multipolaires",
+     "apres": "fragmenté",
+     "raison": "L'invasion accentue les divisions internes du bloc, affaiblissant sa cohésion géopolitique."
+    },
+    {
+     "zone": "amazonie_consortium_viva",
+     "apres": "fragmenté",
+     "raison": "Le bassin amazonien devient une zone de conflit et de fragmentation, avec une gouvernance éclatée entre acteurs locaux, occupants et consortiums privés."
+    },
+    {
+     "zone": "zones_grises_globales",
+     "apres": "emergent",
+     "raison": "Les marges du système mondial, notamment en Amérique du Sud, voient leur influence croître en profitant du chaos institutionnel."
+    },
+    {
+     "zone": "corridor_arctique_nordique",
+     "apres": "dominant",
+     "raison": "Le Corridor Arctique Nordique renforce sa position comme alternative logistique aux routes sud-américaines perturbées, attirant davantage de flux économiques."
+    }
+   ],
+   "nouvelles_entites": [
+    {
+     "nom": "Comité de Résistance Amazonienne (CRA)",
+     "role": "Mouvement de résistance armée et civile contre l'occupation, coordonnant les actions des communautés locales et des acteurs marginaux.",
+     "zone": "amazonie_consortium_viva",
+     "raison": "L'invasion pousse les acteurs locaux à s'organiser pour résister à l'occupation et défendre leurs intérêts territoriaux."
+    },
+    {
+     "nom": "Bureau de Reconstruction du Brésil (BRB)",
+     "role": "Structure administrative mise en place par les États-Unis pour gérer les territoires occupés et préparer une transition politique.",
+     "zone": "bresil_occupe_etats_unis",
+     "raison": "Les États-Unis créent une entité dédiée pour administrer les zones sous leur contrôle et légitimer leur présence."
+    },
+    {
+     "nom": "Alliance des Villes Libres du Cône Sud (AVLCS)",
+     "role": "Réseau de villes autonomes (Buenos Aires, Montevideo, Santiago) coordonnant leurs politiques pour atténuer les effets du conflit et capter les flux économiques.",
+     "zone": "ameriques_multipolaires",
+     "raison": "Les grandes villes du Cône Sud s'organisent pour préserver leur stabilité et tirer parti des opportunités économiques générées par le conflit."
+    }
+   ]
+  }
+ },
+ "fusion_commerciale_2038::breakdown": {
+  "empreinte": "32fdfb3164b3ac87",
+  "date": "2026-10-09T19:29",
+  "brut": {
+   "lecture": "La percée de la fusion nucléaire commerciale en 2038 accélère l'effondrement des rentes pétrolières et reconfigure les équilibres géopolitiques autour du lithium et des brevets, sans pour autant résoudre les tensions systémiques du breakdown. Les zones dépendantes des hydrocarbures (Golfe, Russie) s'effondrent plus vite, tandis que les régions maîtrisant le lithium (Chili, Bolivie, Australie) ou les infrastructures critiques (Nordark, Hanse Baltique) gagnent en influence. Cependant, l'énergie abondante ne restaure pas la cohésion mondiale : elle exacerbe les fragmentations locales et les luttes pour le contrôle des nouvelles ressources rares. Le scénario reste dominé par des logiques régionales instables, mais avec des acteurs redéfinis.",
+   "ampleur": "forte",
+   "trajectoires": [
+    {
+     "instance": "zone_golfe_levant_breakdown",
+     "apres": "disparu",
+     "raison": "Effondrement de la rente pétrolière et perte de leviers géopolitiques rendent la zone ingouvernable, accélérant sa fragmentation en micro-entités violentes."
+    },
+    {
+     "instance": "arctique_nordark_breakdown",
+     "apres": "dominant",
+     "raison": "Contrôle des infrastructures critiques (lithium groenlandais, brevets énergétiques) et position stratégique dans l'Arctique en font un acteur hégémonique régional."
+    },
+    {
+     "instance": "consortium_energetique_oural_caspien_breakdown",
+     "apres": "disparu",
+     "raison": "L'obsolescence des hydrocarbures et l'absence de transition vers la fusion condamnent ce consortium à l'effondrement économique."
+    },
+    {
+     "instance": "hanse_baltique_breakdown",
+     "apres": "ascendant",
+     "raison": "Maîtrise des corridors logistiques et accès aux technologies de fusion renforcent sa position comme hub énergétique et commercial en Europe du Nord."
+    },
+    {
+     "instance": "grandes_lacs_compact_eau_breakdown",
+     "apres": "mature",
+     "raison": "L'énergie abondante permet de sécuriser les infrastructures hydriques, stabilisant cette alliance en un acteur durable de gouvernance régionale."
+    },
+    {
+     "instance": "chili_cordillere_autonome_breakdown",
+     "apres": "dominant",
+     "raison": "Contrôle des gisements de lithium et capacité à négocier des brevets de fusion en font un acteur clé du nouveau système énergétique."
+    },
+    {
+     "instance": "bolivie_altipano_strategique_breakdown",
+     "apres": "ascendant",
+     "raison": "Ressources en lithium et position géopolitique centrale attirent des investissements et des alliances, malgré des tensions internes."
+    },
+    {
+     "instance": "agadez_ligue_sahel_numerique_breakdown",
+     "apres": "marginal",
+     "raison": "L'effondrement des flux financiers liés aux hydrocarbures et la redirection des investissements vers les zones lithiumifères marginalisent cette ligue."
+    }
+   ],
+   "relations": [
+    {
+     "a": "arctique_nordark_breakdown",
+     "b": "chili_cordillere_autonome_breakdown",
+     "type": "alliance",
+     "action": "nouvelle",
+     "raison": "Coopération pour sécuriser les chaînes d'approvisionnement en lithium et brevets de fusion, essentiels à leur domination régionale."
+    },
+    {
+     "a": "hanse_baltique_breakdown",
+     "b": "arctique_nordark_breakdown",
+     "type": "alliance",
+     "action": "nouvelle",
+     "raison": "Partage des infrastructures logistiques et énergétiques pour maintenir des flux stables en Europe du Nord et Arctique."
+    },
+    {
+     "a": "grandes_lacs_compact_eau_breakdown",
+     "b": "etats_sud_centre_americain_breakdown",
+     "type": "opposition",
+     "action": "nouvelle",
+     "raison": "Conflit pour le contrôle des technologies de dessalement et des corridors énergétiques, exacerbé par la dépendance des États du Sud aux ressources hydriques."
+    },
+    {
+     "a": "carthage_nord_nexcore_breakdown",
+     "b": "arc_sahelo_mediterraneen_breakdown",
+     "type": "opposition",
+     "action": "rompue",
+     "raison": "L'effondrement des flux pétroliers et la réorientation vers les ressources critiques (lithium) rendent caduque leur alliance historique."
+    },
+    {
+     "a": "milices_extractivistes_du_bassin_du_congo_breakdown",
+     "b": "bloc_johannesburg_breakdown",
+     "type": "opposition",
+     "action": "nouvelle",
+     "raison": "Conflit pour le contrôle des gisements de cobalt et de lithium en Afrique australe, essentiels à la production de supraconducteurs."
+    },
+    {
+     "a": "conglometrat_sino_siberien_bohai_transit_breakdown",
+     "b": "asie_pacifique_sud_est_breakdown",
+     "type": "alliance",
+     "action": "rompue",
+     "raison": "La Chine recentre ses alliances sur les zones lithiumifères (Bolivie, Australie) et réduit sa dépendance aux corridors eurasiens."
+    }
+   ],
+   "geographie": [
+    {
+     "pays": "Iran",
+     "action": "nouvelle_zone",
+     "nouvelle_zone": {
+      "slug": "iran_plateau_central_ruines",
+      "nom": "Plateau Central Iranien (Ruines des Factions Énergétiques)",
+      "type": "zone_sinistree",
+      "statut": "disparu"
+     },
+     "raison": "Effondrement total des structures étatiques et des infrastructures pétrolières, laissant place à des micro-factions en guerre pour les reliquats énergétiques."
+    },
+    {
+     "pays": "Arabie saoudite",
+     "action": "nouvelle_zone",
+     "nouvelle_zone": {
+      "slug": "arabie_desert_fragments",
+      "nom": "Arabie Désertique (Fragments de Rente)",
+      "type": "territoire_autonome",
+      "statut": "fragmenté"
+     },
+     "raison": "Disparition de l'État central et émergence de seigneurs de guerre contrôlant des oasis ou des infrastructures résiduelles."
+    },
+    {
+     "pays": "Bolivie",
+     "action": "absorber",
+     "zone": "amazon_pacte_gardiens",
+     "raison": "Le Pacte des Gardiens étend son influence pour sécuriser les gisements de lithium boliviens, intégrant l'Altiplano dans sa sphère de contrôle."
+    },
+    {
+     "pays": "Kazakhstan",
+     "action": "absorber",
+     "zone": "corridor_oural_caspien",
+     "raison": "Le Kazakhstan, riche en lithium, est absorbé par les enclaves industrielles du corridor pour sécuriser ses ressources."
+    }
+   ],
+   "zones_statut": [
+    {
+     "zone": "zone_golfe_levant",
+     "apres": "disparu",
+     "raison": "Effondrement des États pétroliers et fragmentation en micro-entités rend la zone ingouvernable et non viable."
+    },
+    {
+     "zone": "arc_eurasien_central",
+     "apres": "fragmenté",
+     "raison": "Perte d'influence de la Russie et du Kazakhstan (recentrage sur le lithium) affaiblit la cohésion de la zone, malgré des corridors logistiques résiduels."
+    },
+    {
+     "zone": "arctique_nordark",
+     "apres": "dominant",
+     "raison": "Contrôle des infrastructures critiques (lithium, brevets) et position stratégique en font un acteur hégémonique régional."
+    },
+    {
+     "zone": "chili_cordillere_autonome",
+     "apres": "dominant",
+     "raison": "Maîtrise des gisements de lithium et capacité à négocier des brevets de fusion renforcent son statut."
+    }
+   ],
+   "nouvelles_entites": [
+    {
+     "nom": "Cartel des Lithiums Andins",
+     "role": "Alliance économique et militaire pour contrôler les gisements de lithium en Amérique du Sud",
+     "zone": "amazon_pacte_gardiens",
+     "raison": "Nécessité de sécuriser les ressources critiques face à la demande mondiale et aux tensions régionales."
+    },
+    {
+     "nom": "Fédération des Techniciens de la Fusion",
+     "role": "Guilde transnationale de maintenance des réacteurs à fusion, contrôlant l'accès aux savoirs critiques",
+     "zone": "geneve_bunker_institutions",
+     "raison": "L'expertise technique devient une ressource stratégique, monopolisée par cette fédération pour négocier avec les États et milices."
+    },
+    {
+     "nom": "Milices des Détroits Énergétiques",
+     "role": "Groupes armés contrôlant les détroits stratégiques (Ormuz, Malacca) pour taxer les flux de lithium et de matériaux critiques",
+     "zone": "detroit_ormuz",
+     "raison": "Les détroits deviennent des points de passage obligés pour les nouvelles chaînes d'approvisionnement, attirant des acteurs violents."
+    }
+   ]
+  }
+ },
+ "fusion_commerciale_2038::fortress_world": {
+  "empreinte": "442540a0b1a6e2ed",
+  "date": "2026-10-09T19:30",
+  "brut": {
+   "lecture": "La percée de la fusion nucléaire commerciale en 2038 redéfinit les équilibres énergétiques et géopolitiques du scénario fortress_world sans en bouleverser la logique fondamentale de fragmentation et de souveraineté stratégique. Les blocs dominants (bloc_atlantique, bloc_eurasiatique_occidental, bloc_pacifique_nord) renforcent leur autonomie énergétique, réduisant leur dépendance aux ressources extérieures, mais la compétition pour le lithium et les brevets exacerbe les tensions internes et les inégalités entre zones. Les pétro-États du golfe_moyen_orient_zone_disputee et la russie voient leur pouvoir s'effriter, tandis que les zones fragmentées (afrique_subsaharienne_zones_effondrees, zones_grises_tampons) subissent une marginalisation accrue. Le scénario encaisse le choc sans basculer, mais la reconfiguration des rapports de force est profonde.",
+   "ampleur": "forte",
+   "trajectoires": [
+    {
+     "instance": "consortium_helios_fortress_world",
+     "apres": "disparu",
+     "raison": "L'effondrement de la rente pétrolière et gazière prive le consortium de sa raison d'être, accélérant sa fragmentation en entités régionales obsolètes."
+    },
+    {
+     "instance": "golfe_moyen_orient_zone_disputee_fortress_world",
+     "apres": "résiduel",
+     "raison": "La perte du levier énergétique traditionnel affaiblit durablement les États de la zone, les réduisant à des acteurs secondaires dans les équilibres géopolitiques."
+    },
+    {
+     "instance": "bloc_eurasiatique_occidental_fortress_world",
+     "apres": "ascendant",
+     "raison": "La maîtrise des gisements de lithium et des infrastructures de fusion renforce l'autonomie stratégique du bloc, lui permettant de négocier en position de force."
+    },
+    {
+     "instance": "bloc_atlantique_fortress_world",
+     "apres": "dominant",
+     "raison": "Le contrôle des brevets et des technologies de fusion consolide la domination du bloc, malgré une dépendance réduite aux matières premières."
+    },
+    {
+     "instance": "nexus_biosyn_division_eurasienne_fortress_world",
+     "apres": "dominant",
+     "raison": "La fusion permet de sécuriser l'approvisionnement énergétique des enclaves biotech, renforçant leur rôle dans la gouvernance des forteresses vitales."
+    },
+    {
+     "instance": "contrebandiers_energetiques_des_zones_grises_fortress_world",
+     "apres": "déclinant",
+     "raison": "L'énergie abondante et décentralisée réduit la demande pour les réseaux de contrebande, marginalisant ces acteurs."
+    },
+    {
+     "instance": "corridors_gris_asie_centrale_fortress_world",
+     "apres": "résiduel",
+     "raison": "La fermeture des corridors énergétiques traditionnels et la sécurisation des routes de lithium rendent ces zones moins stratégiques."
+    },
+    {
+     "instance": "al_hima_fortress_world",
+     "apres": "stable",
+     "raison": "L'union régionale tire parti de sa position de transit pour les matériaux critiques (lithium, supraconducteurs), stabilisant son rôle géopolitique."
+    }
+   ],
+   "relations": [
+    {
+     "a": "bloc_atlantique_fortress_world",
+     "b": "bloc_eurasiatique_occidental_fortress_world",
+     "type": "opposition",
+     "action": "nouvelle",
+     "raison": "La compétition pour le contrôle des brevets de fusion et des gisements de lithium exacerbe les tensions entre les deux blocs dominants."
+    },
+    {
+     "a": "bloc_pacifique_nord_fortress_world",
+     "b": "nexus_biosyn_division_pacifique_fortress_world",
+     "type": "alliance",
+     "action": "nouvelle",
+     "raison": "Le bloc pacifique sécurise son approvisionnement énergétique via Nexus BioSyn, renforçant leur coopération biotech et industrielle."
+    },
+    {
+     "a": "ergo_wian_sovereign_holdings_fortress_world",
+     "b": "kalaallit_nunaat_sovereign_fund_fortress_world",
+     "type": "alliance",
+     "action": "renforcée",
+     "raison": "La maîtrise des corridors arctiques pour le transport de lithium et de matériaux critiques consolide leur partenariat stratégique."
+    },
+    {
+     "a": "pacte_forteresses_souveraines_fortress_world",
+     "b": "golfe_moyen_orient_zone_disputee_fortress_world",
+     "type": "opposition",
+     "action": "rompue",
+     "raison": "L'affaiblissement des pétro-États rend leur alliance avec le Pacte caduque, les excluant des négociations énergétiques."
+    },
+    {
+     "a": "consortium_eurasiatique_des_ressources_fermees_fortress_world",
+     "b": "bloc_eurasiatique_occidental_fortress_world",
+     "type": "alliance",
+     "action": "nouvelle",
+     "raison": "Le consortium devient l'outil central du bloc pour verrouiller l'accès au lithium et aux matériaux critiques."
+    },
+    {
+     "a": "nexcore_atlantique_infrastructure_fortress_world",
+     "b": "bureau_gouvernance_algorithmique_fortress_world",
+     "type": "alliance",
+     "action": "renforcée",
+     "raison": "La fusion nécessite une gouvernance algorithmique renforcée pour optimiser les flux énergétiques et sécuriser les infrastructures critiques."
+    }
+   ],
+   "geographie": [
+    {
+     "pays": "Bolivie",
+     "action": "nouvelle_zone",
+     "zone": null,
+     "nouvelle_zone": {
+      "slug": "altiplano_lithium_forteresse",
+      "nom": "Altiplano — Forteresse du Lithium",
+      "type": "territoire_autonome",
+      "statut": "dominant",
+      "raison": "La Bolivie, riche en lithium, devient un territoire stratégique sous contrôle partagé des blocs dominants, sécurisé militairement."
+     }
+    },
+    {
+     "pays": "Chili",
+     "action": "absorber",
+     "zone": "altiplano_lithium_forteresse",
+     "raison": "Le Chili, principal producteur de lithium, est intégré à la nouvelle zone pour sécuriser les gisements sous une gouvernance unifiée."
+    },
+    {
+     "pays": "Arabie Saoudite",
+     "action": "absorber",
+     "zone": "golfe_moyen_orient_zone_disputee",
+     "nouvelle_zone": null,
+     "raison": "L'Arabie Saoudite, affaiblie, est rétrogradée au sein de la zone disputée, perdant son statut de puissance régionale."
+    },
+    {
+     "pays": "Iran",
+     "action": "nouvelle_zone",
+     "zone": null,
+     "nouvelle_zone": {
+      "slug": "iran_zone_ruinee",
+      "nom": "Iran — Zone de Ruine Énergétique",
+      "type": "zone_sinistree",
+      "statut": "disparu",
+      "raison": "L'effondrement de l'économie pétrolière iranienne et les frappes sur ses infrastructures nucléaires transforment le pays en zone sinistrée."
+     }
+    }
+   ],
+   "zones_statut": [
+    {
+     "zone": "golfe_moyen_orient_zone_disputee",
+     "apres": "en_declin",
+     "raison": "La perte de la rente pétrolière affaiblit durablement les États de la zone, les rendant moins stratégiques."
+    },
+    {
+     "zone": "afrique_subsaharienne_zones_effondrees",
+     "apres": "fragmenté",
+     "raison": "L'effondrement des revenus pétroliers et miniers aggrave les crises étatiques, mais les cartels miniers militarisés subsahariens maintiennent une fragmentation violente."
+    },
+    {
+     "zone": "espace_nordique_arctique",
+     "apres": "dominant",
+     "raison": "La maîtrise des corridors arctiques pour le transport de lithium et de matériaux critiques renforce le statut géopolitique de la zone."
+    },
+    {
+     "zone": "amazonie_pacte_vert",
+     "apres": "stable",
+     "raison": "Le Pacte Vert Amazônia tire parti de la demande en matériaux critiques (béryllium, lithium) pour stabiliser son rôle, malgré les tensions internes."
+    }
+   ],
+   "nouvelles_entites": [
+    {
+     "nom": "Lithium Sovereign Cartel",
+     "role": "Cartel de contrôle des gisements de lithium et des chaînes d'approvisionnement en matériaux critiques pour la fusion.",
+     "zone": "altiplano_lithium_forteresse",
+     "raison": "La concentration des gisements de lithium en Amérique du Sud nécessite une gouvernance unifiée pour sécuriser les flux vers les blocs dominants."
+    },
+    {
+     "nom": "Fusion Patent Holders Alliance",
+     "role": "Alliance des détenteurs de brevets de fusion nucléaire, contrôlant l'accès aux technologies et aux mises à jour logicielles des réacteurs.",
+     "zone": "bloc_atlantique",
+     "raison": "Les États-Unis et leurs alliés verrouillent les technologies de fusion pour maintenir leur avantage géopolitique."
+    },
+    {
+     "nom": "ArctiCorp — Division Logistique Arctique",
+     "role": "Filiale d'Ergo-Wian Sovereign Dominion spécialisée dans le transport sécurisé de lithium et de matériaux critiques via les corridors arctiques.",
+     "zone": "espace_nordique_arctique",
+     "raison": "La fonte des glaces et la demande en lithium transforment l'Arctique en une route logistique stratégique sous contrôle privé."
+    }
+   ]
+  }
+ },
+ "fusion_commerciale_2038::new_sustainability": {
+  "empreinte": "f30a1e51441e7201",
+  "date": "2026-10-09T19:31",
+  "brut": {
+   "lecture": "La percée de la fusion nucléaire commerciale en 2038 accélère la transition énergétique et réduit les tensions géopolitiques liées aux hydrocarbures, mais reconfigure les rapports de force autour du lithium et des brevets. Les pétro-États du Golfe et la Russie voient leur influence décliner, tandis que les régions riches en lithium (Amérique du Sud, Australie) ou maîtrisant les technologies (blocs technologiques dominants) gagnent en puissance. Le scénario *new_sustainability* absorbe ce choc sans basculer, car ses institutions (CMRE, AMRRT, CGAI) sont conçues pour gérer les reconfigurations de ressources. Cependant, les souverainistes et les périphéries extractives résistent, créant des frictions durables.",
+   "ampleur": "moderee",
+   "trajectoires": [
+    {
+     "instance": "coalition_des_industries_extractives_residuelles_new_sustainability",
+     "apres": "declinant",
+     "raison": "L'effondrement de la rente pétrolière affaiblit leur base économique et leur capacité de lobbying."
+    },
+    {
+     "instance": "bloc_eurasien_souverainiste_new_sustainability",
+     "apres": "fragmenté",
+     "raison": "La Russie, pilier du bloc, perd son levier énergétique et voit sa cohésion interne fragilisée."
+    },
+    {
+     "instance": "operateurs_de_fusion_energetique_regionaux_new_sustainability",
+     "apres": "dominant",
+     "raison": "Ils deviennent les nouveaux acteurs clés de la gouvernance énergétique mondiale, remplaçant les pétro-États."
+    },
+    {
+     "instance": "consortium_africain_de_biotechnologies_sociales_new_sustainability",
+     "apres": "ascendant",
+     "raison": "L'Afrique, riche en lithium, renforce son rôle dans les chaînes de valeur technologiques et biotech."
+    },
+    {
+     "instance": "kalaallit_nunaat_sovereign_fund_new_sustainability",
+     "apres": "dominant",
+     "raison": "Le Groenland, riche en terres rares et lithium, voit son fonds souverain devenir un acteur majeur des investissements verts."
+    },
+    {
+     "instance": "etats_souverainistes_anti_reseau_new_sustainability",
+     "apres": "marginal",
+     "raison": "La dépendance aux technologies de fusion (brevets, IA) marginalise les États refusant l'intégration aux réseaux globaux."
+    },
+    {
+     "instance": "agence_mondiale_de_modelisation_climatique_ammc_new_sustainability",
+     "apres": "dominant",
+     "raison": "La fusion nucléaire nécessite une modélisation climatique fine pour optimiser son déploiement et ses impacts."
+    },
+    {
+     "instance": "conseil_technocratique_de_gouvernance_alimentaire_new_sustainability",
+     "apres": "mature",
+     "raison": "L'énergie abondante permet de relocaliser et décarboner les systèmes alimentaires, renforçant son rôle."
+    }
+   ],
+   "relations": [
+    {
+     "a": "operateurs_de_fusion_energetique_regionaux_new_sustainability",
+     "b": "conseil_regulation_ressources_new_sustainability",
+     "type": "alliance",
+     "action": "nouvelle",
+     "raison": "L'AMRRT devient le régulateur des opérateurs pour éviter les monopoles et garantir un accès équitable."
+    },
+    {
+     "a": "bloc_eurasien_souverainiste_new_sustainability",
+     "b": "centre_institutionnel_geneve_new_sustainability",
+     "type": "opposition",
+     "action": "renforcée",
+     "raison": "Le bloc eurasiatique résiste à la perte d'influence de la Russie et conteste les normes technocratiques de Genève."
+    },
+    {
+     "a": "coalition_vivant_new_sustainability",
+     "b": "operateurs_de_fusion_energetique_regionaux_new_sustainability",
+     "type": "opposition",
+     "action": "nouvelle",
+     "raison": "Les opérateurs de fusion sont perçus comme une nouvelle menace extractiviste par les défenseurs des écosystèmes."
+    },
+    {
+     "a": "consortium_amazonia_viva_new_sustainability",
+     "b": "agence_globale_de_regeneration_des_bassins_versants_agrb_onu_new_sustainability",
+     "type": "alliance",
+     "action": "renforcée",
+     "raison": "L'Amazonie, riche en lithium, devient un partenaire clé pour les projets de régénération hydrique."
+    },
+    {
+     "a": "fonds_mondial_de_regeneration_ecologique_new_sustainability",
+     "b": "operateurs_de_fusion_energetique_regionaux_new_sustainability",
+     "type": "alliance",
+     "action": "nouvelle",
+     "raison": "Les opérateurs financent des projets de régénération pour légitimer leur expansion."
+    },
+    {
+     "a": "souverainistes_du_bloc_eurasien_new_sustainability",
+     "b": "reseaux_d_information_souverainistes_fermes_new_sustainability",
+     "type": "alliance",
+     "action": "renforcée",
+     "raison": "Les souverainistes utilisent ces réseaux pour mobiliser contre la gouvernance technocratique de la fusion."
+    }
+   ],
+   "geographie": [
+    {
+     "pays": "Arabie Saoudite",
+     "action": "nouvelle_zone",
+     "nouvelle_zone": {
+      "slug": "golfe_persique_post_extractiviste",
+      "nom": "Golfe Persique — Zone Post-Extractiviste",
+      "type": "union_regionale",
+      "statut": "en_declin"
+     },
+     "raison": "L'effondrement de la rente pétrolière pousse les États du Golfe à se regrouper pour négocier une transition économique."
+    },
+    {
+     "pays": "Bolivie",
+     "action": "absorber",
+     "zone": "ameriques_reconfigurees",
+     "raison": "La Bolivie, riche en lithium, est intégrée aux Amériques reconfigurées pour sécuriser les approvisionnements."
+    },
+    {
+     "pays": "Chili",
+     "action": "nouvelle_zone",
+     "nouvelle_zone": {
+      "slug": "corridor_lithium_andin",
+      "nom": "Corridor Lithium Andin",
+      "type": "region",
+      "statut": "emergent"
+     },
+     "raison": "Le Chili et l'Argentine forment un corridor stratégique pour l'extraction et la transformation du lithium."
+    },
+    {
+     "pays": "Australie",
+     "action": "absorber",
+     "zone": "australie_continent_vert",
+     "raison": "L'Australie renforce son autonomie énergétique et technologique grâce à ses réserves de lithium et de terres rares."
+    }
+   ],
+   "zones_statut": [
+    {
+     "zone": "moyen_orient_golfe",
+     "apres": "en_declin",
+     "raison": "La perte de la rente pétrolière accélère le déclin géopolitique de la région."
+    },
+    {
+     "zone": "bloc_eurasien_souverainiste",
+     "apres": "fragmenté",
+     "raison": "La Russie et ses alliés perdent leur cohésion face à la reconfiguration énergétique mondiale."
+    },
+    {
+     "zone": "golfe_persique_terminaux",
+     "apres": "disparu",
+     "raison": "Les terminaux pétroliers deviennent obsolètes et sont démantelés ou reconvertis."
+    },
+    {
+     "zone": "infrastructure_numerique_globale",
+     "apres": "dominant",
+     "raison": "La fusion nucléaire renforce le rôle des infrastructures numériques pour gérer les réseaux énergétiques."
+    }
+   ],
+   "nouvelles_entites": [
+    {
+     "nom": "Alliance des Opérateurs de Fusion pour l'Équité Énergétique (AOFEE)",
+     "role": "Lobby régulateur des opérateurs de fusion pour éviter les monopoles et garantir un accès universel à l'énergie.",
+     "zone": "centre_institutionnel_geneve",
+     "raison": "Nécessité de coordonner les opérateurs régionaux sous l'égide des institutions de Genève."
+    },
+    {
+     "nom": "Fonds de Transition des Pétro-États (FTPE)",
+     "role": "Fonds international pour accompagner la reconversion économique des anciens pétro-États.",
+     "zone": "hub_nairobi_kigali",
+     "raison": "Le Hub Nairobi-Kigali devient le centre de la gouvernance des transitions économiques post-extractivistes."
+    },
+    {
+     "nom": "Observatoire des Conflits Lithium-Eau (OCLE)",
+     "role": "Institution de médiation entre les besoins en lithium et la protection des écosystèmes hydriques.",
+     "zone": "bassin_du_congo",
+     "raison": "Le bassin du Congo, riche en eau et en biodiversité, devient un enjeu clé des tensions lithium-environnement."
+    }
+   ]
+  }
+ },
+ "fusion_commerciale_2038::eco_communalism": {
+  "empreinte": "3520895ff4c3f415",
+  "date": "2026-10-09T19:31",
+  "brut": {
+   "lecture": "La percée de la fusion nucléaire commerciale en 2038 introduit une énergie abondante et décentralisable, ce qui renforce l'autonomie des bioterritoires et réduit la pression sur les ressources critiques comme le lithium. Cependant, cette abondance énergétique ne résout pas les tensions géopolitiques liées aux brevets et aux matériaux rares, ni les dynamiques locales d'autogestion déjà ancrées dans le scénario eco_communalism. Les enclaves extractivistes et les États résiduels voient leur pouvoir s'effriter davantage, tandis que les communautés autonomes gagnent en résilience sans pour autant bouleverser leur modèle. Le choc est absorbé sans remettre en cause la fragmentation territoriale, mais il accélère certaines reconfigurations internes.",
+   "ampleur": "moderee",
+   "trajectoires": [
+    {
+     "instance": "enclaves_extractivistes_et_etats_residuels_eco_communalism",
+     "apres": "declinant",
+     "raison": "L'effondrement de la rente des hydrocarbures prive ces enclaves de leur principale source de pouvoir économique et géopolitique."
+    },
+    {
+     "instance": "enclaves_extractivistes_residuelles_des_corridors_eco_communalism",
+     "apres": "declinant",
+     "raison": "La fusion réduit la dépendance aux corridors extractivistes traditionnels, marginalisant leur rôle."
+    },
+    {
+     "instance": "consortium_amazonia_viva_eco_communalism",
+     "apres": "dominant",
+     "raison": "L'accès à une énergie abondante renforce la capacité des communautés amazoniennes à industrialiser localement et à défendre leur souveraineté territoriale."
+    },
+    {
+     "instance": "ligue_des_cites_du_sahel_numerique_eco_communalism",
+     "apres": "dominant",
+     "raison": "La fusion permet aux villes sahéliennes de sécuriser leur approvisionnement énergétique et de consolider leur leadership régional."
+    },
+    {
+     "instance": "sao_paulo_algorithmique_eco_communalism",
+     "apres": "mature",
+     "raison": "L'énergie abondante stabilise les algorithmes de gestion des ressources, réduisant les tensions internes et renforçant la cohésion du collectif."
+    },
+    {
+     "instance": "factions_autoritaires_locales_identitaires_exclusionnistes_eco_communalism",
+     "apres": "ascendant",
+     "raison": "L'abondance énergétique peut être instrumentalisée par ces factions pour justifier des politiques de repli et de contrôle accru des ressources locales."
+    },
+    {
+     "instance": "terminal_kharg_data_haven_eco_communalism",
+     "apres": "declinant",
+     "raison": "La perte d'influence des pétro-États du Golfe réduit les flux financiers et informationnels vers Kharg-9, affaiblissant son rôle de sanctuaire de données."
+    },
+    {
+     "instance": "cooperatives_d_habitat_regeneratif_eco_communalism",
+     "apres": "ascendant",
+     "raison": "L'énergie abondante permet de généraliser des techniques de construction régénérative, accélérant l'adoption de ces coopératives."
+    }
+   ],
+   "relations": [
+    {
+     "a": "consortium_amazonia_viva_eco_communalism",
+     "b": "ligue_des_cites_du_sahel_numerique_eco_communalism",
+     "type": "alliance",
+     "action": "nouvelle",
+     "raison": "Les deux entités, renforcées par la fusion, cherchent à sécuriser leurs approvisionnements en lithium et brevets via des accords mutuels."
+    },
+    {
+     "a": "enclaves_extractivistes_et_etats_residuels_eco_communalism",
+     "b": "factions_extractivistes_des_aquiferes_communs_eco_communalism",
+     "type": "alliance",
+     "action": "nouvelle",
+     "raison": "Les enclaves affaiblies s'allient aux factions extractivistes pour tenter de capter les dernières rentes des ressources hydriques."
+    },
+    {
+     "a": "sao_paulo_algorithmique_eco_communalism",
+     "b": "ergo_wian_sovereign_holdings_eco_communalism",
+     "type": "opposition",
+     "action": "nouvelle",
+     "raison": "Les algorithmes de São Paulo contestent le contrôle des brevets de fusion par les enclaves corporatistes d'Ergo-Wian."
+    },
+    {
+     "a": "mouvement_des_communes_du_rust_belt_eco_communalism",
+     "b": "consortiums_industriels_de_l_eau_eco_communalism",
+     "type": "opposition",
+     "action": "renforcée",
+     "raison": "La fusion permet aux communes du Rust Belt de résister plus efficacement aux tentatives de privatisation de l'eau."
+    },
+    {
+     "a": "trame_bioclimatique_eco_communalism",
+     "b": "factions_technophiles_de_la_geo_ingenierie_centralisee_eco_communalism",
+     "type": "opposition",
+     "action": "renforcée",
+     "raison": "L'énergie abondante est un levier pour les deux camps : les bioterritoires l'utilisent pour la restauration écologique, les technophiles pour des projets centralisés."
+    },
+    {
+     "a": "agence_de_regulation_des_detroits_strategiques_ards_eco_communalism",
+     "b": "corps_des_gardiens_des_passages_eco_communalism",
+     "type": "alliance",
+     "action": "rompue",
+     "raison": "La fusion réduit l'importance stratégique des détroits pour les flux énergétiques, affaiblissant la nécessité de cette alliance."
+    }
+   ],
+   "geographie": [
+    {
+     "pays": "Arabie Saoudite",
+     "action": "nouvelle_zone",
+     "nouvelle_zone": {
+      "slug": "arabie_saoudite_fragmentation",
+      "nom": "Arabie Saoudite — Zones de Fragmentation Post-Pétrole",
+      "type": "territoire_herite",
+      "statut": "fragmenté"
+     },
+     "raison": "L'effondrement de la rente pétrolière accélère la désintégration de l'État saoudien en micro-territoires autonomes ou contrôlés par des factions."
+    },
+    {
+     "pays": "Russie",
+     "action": "absorber",
+     "zone": "siberie_et_steppes_autonomes",
+     "raison": "La perte d'influence géopolitique de la Russie permet aux régions sibériennes de s'autonomiser davantage sous l'égide des steppes autonomes."
+    },
+    {
+     "pays": "Chili",
+     "action": "nouvelle_zone",
+     "nouvelle_zone": {
+      "slug": "chili_lithium_autonome",
+      "nom": "Chili — Communs du Lithium",
+      "type": "territoire_autonome",
+      "statut": "emergent"
+     },
+     "raison": "Le Chili, principal producteur de lithium, voit émerger des communautés locales gérant cette ressource critique en autonomie."
+    },
+    {
+     "pays": "Bolivie",
+     "action": "absorber",
+     "zone": "chili_lithium_autonome",
+     "raison": "La Bolivie, partageant des gisements de lithium avec le Chili, rejoint les communs chiliens pour mutualiser la gestion de cette ressource."
+    }
+   ],
+   "zones_statut": [
+    {
+     "zone": "proche_orient_en_crise",
+     "apres": "disparu",
+     "raison": "La disparition des pétro-États et la fragmentation accélérée rendent cette zone obsolète, ses territoires rejoignant d'autres entités."
+    },
+    {
+     "zone": "enclaves_extractivistes_et_etats_residuels",
+     "apres": "en_declin",
+     "raison": "L'énergie abondante réduit la viabilité économique des enclaves extractivistes, accélérant leur déclin."
+    },
+    {
+     "zone": "amazon_pacte_viva",
+     "apres": "dominant",
+     "raison": "L'accès à la fusion renforce la position géopolitique et écologique du Pacte Amazônia Viva, en faisant un acteur dominant."
+    },
+    {
+     "zone": "sahel_numerique_ligue",
+     "apres": "dominant",
+     "raison": "La sécurisation énergétique permet à la Ligue des Cités du Sahel de consolider son leadership régional."
+    }
+   ],
+   "nouvelles_entites": [
+    {
+     "nom": "Alliance des Communs Énergétiques",
+     "role": "Coordination des communautés autonomes pour la gestion des brevets et infrastructures de fusion",
+     "zone": "transnationale",
+     "raison": "La diffusion de la fusion nécessite une coopération transrégionale pour éviter les monopoles et garantir un accès équitable."
+    },
+    {
+     "nom": "Factions de la Rente Lithium",
+     "role": "Groupes armés ou politiques cherchant à contrôler les gisements de lithium et les chaînes de production de tritium",
+     "zone": "chili_lithium_autonome",
+     "raison": "Le lithium devient une ressource critique, attirant des acteurs cherchant à en capter la valeur."
+    },
+    {
+     "nom": "Réseau des Réacteurs Communautaires",
+     "role": "Infrastructure décentralisée de réacteurs à fusion gérés par des collectifs locaux",
+     "zone": "europe_occidentale_reconstituee",
+     "raison": "La fusion permet une autonomie énergétique locale, renforçant le modèle éco-communaliste."
+    }
+   ]
+  }
+ },
+ "fusion_commerciale_2038::policy_reform": {
+  "empreinte": "d11f0ed17312b511",
+  "date": "2026-10-09T19:32",
+  "brut": {
+   "lecture": "La percée de la fusion nucléaire commerciale en 2038 redessine les équilibres énergétiques et géopolitiques d'Ourrassol sans remettre en cause la logique technocratique globale. Les pétro-États du Golfe et la Russie voient leur influence s'effriter, tandis que les détenteurs de lithium et de brevets technologiques gagnent en puissance. Cependant, la gouvernance centralisée et les institutions globales absorbent ce choc en intégrant ces nouvelles dynamiques, évitant un effondrement systémique. Les tensions persistent, mais se déplacent vers de nouveaux enjeux : contrôle des infrastructures critiques, régulation des flux de matériaux rares, et résistance des blocs souverainistes à une intégration accrue.",
+   "ampleur": "forte",
+   "trajectoires": [
+    {
+     "instance": "agence_internationale_de_l_energie_reformatee_aier_policy_reform",
+     "apres": "dominant",
+     "raison": "L'AIER devient l'institution centrale de régulation des nouveaux équilibres énergétiques, remplaçant les anciens cadres fossiles."
+    },
+    {
+     "instance": "lobbies_des_energies_fossiles_residuelles_policy_reform",
+     "apres": "résiduel",
+     "raison": "La chute de la rente pétrolière marginalise ces acteurs, réduisant leur capacité de lobbying."
+    },
+    {
+     "instance": "front_des_souverainistes_energetiques_policy_reform",
+     "apres": "déclinant",
+     "raison": "La perte de levier des hydrocarbures affaiblit leur discours de résistance aux réformes énergétiques globales."
+    },
+    {
+     "instance": "zone_moyen_orient_golfe",
+     "apres": "en_declin",
+     "raison": "L'effondrement de la rente pétrolière accélère le déclin économique et géopolitique de la région."
+    },
+    {
+     "instance": "golfe_persique_petrole_residuel",
+     "apres": "disparu",
+     "raison": "Les infrastructures pétrolières résiduelles deviennent obsolètes et sont démantelées ou reconverties."
+    },
+    {
+     "instance": "bloc_souverainiste_non_signataire",
+     "apres": "fragmenté",
+     "raison": "Les divergences internes sur la gestion du lithium et des brevets creusent les divisions entre ses membres."
+    },
+    {
+     "instance": "espace_eurasiatique",
+     "apres": "dominant",
+     "raison": "La Chine et la Russie, malgré leurs pertes, renforcent leur position via le contrôle des matériaux critiques et des brevets."
+    },
+    {
+     "instance": "consortium_helios_policy_reform",
+     "apres": "mature",
+     "raison": "Le Consortium Helios étend son influence en intégrant les infrastructures de fusion dans ses réseaux énergétiques."
+    }
+   ],
+   "relations": [
+    {
+     "a": "agence_internationale_de_l_energie_reformatee_aier_policy_reform",
+     "b": "espace_eurasiatique",
+     "type": "alliance",
+     "action": "nouvelle",
+     "raison": "L'AIER et l'Espace Eurasiatique collaborent pour établir des standards communs sur les matériaux critiques (lithium, supraconducteurs)."
+    },
+    {
+     "a": "bloc_souverainiste_non_signataire",
+     "b": "espace_eurasiatique",
+     "type": "opposition",
+     "action": "nouvelle",
+     "raison": "Les tensions s'exacerbent autour du contrôle des gisements de lithium en Amérique du Sud et en Australie."
+    },
+    {
+     "a": "agence_de_regulation_des_detroits_strategiques_ards_policy_reform",
+     "b": "nexcore_policy_reform",
+     "type": "opposition",
+     "action": "nouvelle",
+     "raison": "L'ARDS cherche à réguler les flux de matériaux critiques, tandis que NexCore défend l'autonomie des infrastructures privées."
+    },
+    {
+     "a": "front_souverainiste_des_blocs_non_signataires_policy_reform",
+     "b": "agence_technocratique_pour_la_resilience_biospherique_atrb_policy_reform",
+     "type": "opposition",
+     "action": "renforcée",
+     "raison": "Les blocs souverainistes rejettent les conditionnalités environnementales imposées par l'ATRB en échange d'accès aux technologies de fusion."
+    },
+    {
+     "a": "consortium_africain_de_biotechnologies_sociales_policy_reform",
+     "b": "hub_africain_gouvernance",
+     "type": "alliance",
+     "action": "nouvelle",
+     "raison": "Le Consortium et le Hub Africain collaborent pour développer des modèles de gouvernance locale des ressources énergétiques."
+    },
+    {
+     "a": "union_technocratique_eurasiatique_policy_reform",
+     "b": "consortium_nexus_calcul_policy_reform",
+     "type": "alliance",
+     "action": "renforcée",
+     "raison": "L'Union Eurasiatique utilise Nexus-Calcul pour optimiser la distribution des matériaux critiques dans ses territoires."
+    }
+   ],
+   "geographie": [
+    {
+     "pays": "Bolivie",
+     "action": "nouvelle_zone",
+     "nouvelle_zone": {
+      "slug": "lithium_triangle_autonome",
+      "nom": "Triangle du Lithium Autonome",
+      "type": "territoire_autonome",
+      "statut": "emergent"
+     },
+     "raison": "La Bolivie, l'Argentine et le Chili forment une zone autonome pour gérer leurs gisements de lithium, sous pression des blocs souverainistes et technocratiques."
+    },
+    {
+     "pays": "Arabie Saoudite",
+     "action": "absorber",
+     "zone": "istanbul",
+     "raison": "L'Arabie Saoudite, en déclin, se rattache à Istanbul pour tenter de préserver une influence régionale via des projets de reconversion économique."
+    },
+    {
+     "pays": "Émirats arabes unis",
+     "action": "nouvelle_zone",
+     "nouvelle_zone": {
+      "slug": "dubai_hub_technologique_residuel",
+      "nom": "Dubai (Hub Technologique Résiduel)",
+      "type": "ville",
+      "statut": "en_declin"
+     },
+     "raison": "Dubai se reconvertit en hub technologique pour attirer des investissements, mais reste en déclin face à la perte de sa rente pétrolière."
+    },
+    {
+     "pays": "Australie",
+     "action": "absorber",
+     "zone": "espace_eurasiatique",
+     "raison": "L'Australie, détentrice de gisements de lithium, se rapproche de l'Espace Eurasiatique pour sécuriser des partenariats technologiques et commerciaux."
+    }
+   ],
+   "zones_statut": [
+    {
+     "zone": "zone_moyen_orient_golfe",
+     "apres": "fragmenté",
+     "raison": "La perte de cohésion économique et géopolitique fragmente la région en sous-ensembles instables."
+    },
+    {
+     "zone": "sahel_occidental_dissident",
+     "apres": "en_declin",
+     "raison": "Le Sahel, privé des revenus pétroliers de ses alliés traditionnels, voit son influence décliner."
+    },
+    {
+     "zone": "hub_africain_gouvernance",
+     "apres": "dominant",
+     "raison": "Le Hub Africain devient un acteur clé dans la gouvernance des matériaux critiques et des infrastructures de fusion."
+    },
+    {
+     "zone": "andes_bloc_austral",
+     "apres": "fragmenté",
+     "raison": "Les tensions internes sur la gestion du lithium et des brevets technologiques affaiblissent la cohésion du bloc."
+    }
+   ],
+   "nouvelles_entites": [
+    {
+     "nom": "Alliance des Producteurs de Lithium (APL)",
+     "role": "Cartel informel de régulation des prix et des flux de lithium, regroupant les principaux pays détenteurs (Chili, Argentine, Bolivie, Australie, Chine).",
+     "zone": "lithium_triangle_autonome",
+     "raison": "La rareté du lithium et son rôle critique dans la fusion nucléaire poussent à la création d'un mécanisme de coordination entre producteurs."
+    },
+    {
+     "nom": "Agence de Sécurité des Infrastructures de Fusion (ASIF)",
+     "role": "Institution supranationale chargée de protéger les réacteurs à fusion contre les cyberattaques et les sabotages, en collaboration avec les États et les consortiums privés.",
+     "zone": "geneve_lacustre",
+     "raison": "La dépendance mondiale à la fusion rend nécessaire une gouvernance sécuritaire centralisée pour éviter les risques systémiques."
+    },
+    {
+     "nom": "Front des Nations pour la Souveraineté Technologique (FNST)",
+     "role": "Coalition de pays et de territoires refusant la domination des brevets détenus par les puissances technocratiques, promouvant des alternatives open-source.",
+     "zone": "bloc_souverainiste_non_signataire",
+     "raison": "Les tensions autour des brevets de fusion et des matériaux critiques alimentent une résistance organisée à la gouvernance technocratique."
+    }
+   ]
+  }
+ },
+ "fusion_commerciale_2038::reference": {
+  "empreinte": "0adf343cdee7e4b7",
+  "date": "2026-10-09T19:32",
+  "brut": {
+   "lecture": "La percée de la fusion nucléaire commerciale en 2038 redessine les équilibres énergétiques et géopolitiques d'Ourrassol 2098 sans provoquer d'effondrement systémique. L'énergie abondante et décentralisée affaiblit les rentes traditionnelles (hydrocarbures) et recentre les conflits sur le lithium et les brevets, mais le système absorbe le choc grâce à ses mécanismes de régulation partielle. Les zones dépendantes des hydrocarbures (bloc_persique_autonome, bloc_eurasien_central) voient leur pouvoir s'éroder, tandis que les hubs technologiques et logistiques (corridor_arctique_nordique, singapour_est) renforcent leur position. Le scénario reste marqué par une fragmentation persistante, mais la fusion accélère certaines reconfigurations sans remettre en cause sa logique d'équilibre fragile.",
+   "ampleur": "moderee",
+   "trajectoires": [
+    {
+     "instance": "bloc_ressources_eurasiatique_bre_reference",
+     "apres": "déclinant",
+     "raison": "La perte de la rente gazière et pétrolière affaiblit sa capacité à réguler les ressources critiques, malgré ses réserves de lithium."
+    },
+    {
+     "instance": "corridor_arctique_nordique_reference",
+     "apres": "dominant",
+     "raison": "L'énergie abondante réduit les coûts logistiques arctiques et renforce son rôle de hub énergétique et minier (lithium, terres rares)."
+    },
+    {
+     "instance": "murmansk_transit_arctique_reference",
+     "apres": "dominant",
+     "raison": "Devient un nœud clé pour l'exportation des ressources critiques (lithium sibérien) vers les marchés asiatiques et européens."
+    },
+    {
+     "instance": "consortium_helios_reference",
+     "apres": "déclinant",
+     "raison": "La fusion réduit la dépendance à l'énergie solaire orbitale, marginalisant son rôle de régulateur énergétique."
+    },
+    {
+     "instance": "kalaallit_nunaat_sovereign_fund_reference",
+     "apres": "ascendant",
+     "raison": "Le Groenland exploite ses gisements de lithium pour alimenter les réacteurs à fusion, renforçant son poids économique."
+    },
+    {
+     "instance": "fonds_souverains_de_la_ceinture_financiere_pacifique_reference",
+     "apres": "dominant",
+     "raison": "Les États de l'Indo-Pacifique investissent massivement dans les brevets et infrastructures de fusion, consolidant leur influence financière."
+    },
+    {
+     "instance": "amazonie_consortium_viva_reference",
+     "apres": "déclinant",
+     "raison": "La baisse des revenus pétroliers réduit les budgets des États amazoniens, affaiblissant leur capacité à négocier avec le consortium."
+    },
+    {
+     "instance": "autorites_regionales_de_regulation_hydrologique_reference",
+     "apres": "ascendant",
+     "raison": "L'énergie abondante permet des projets de dessalement et de gestion de l'eau à grande échelle, renforçant leur légitimité."
+    }
+   ],
+   "relations": [
+    {
+     "a": "corridor_arctique_nordique_reference",
+     "b": "bloc_eurasien_central",
+     "type": "opposition",
+     "action": "nouvelle",
+     "raison": "Conflit pour le contrôle des routes d'exportation du lithium sibérien et des brevets de fusion."
+    },
+    {
+     "a": "fonds_souverains_de_la_ceinture_financiere_pacifique_reference",
+     "b": "consortium_helios_reference",
+     "type": "opposition",
+     "action": "nouvelle",
+     "raison": "Les fonds pacifiques financent des alternatives à l'énergie solaire orbitale, affaiblissant le consortium."
+    },
+    {
+     "a": "kalaallit_nunaat_sovereign_fund_reference",
+     "b": "corridor_arctique_nordique_reference",
+     "type": "alliance",
+     "action": "nouvelle",
+     "raison": "Le Groenland et les États nordiques coopèrent pour sécuriser les chaînes d'approvisionnement en lithium."
+    },
+    {
+     "a": "bloc_persique_autonome",
+     "b": "bloc_eurasien_central",
+     "type": "alliance",
+     "action": "rompue",
+     "raison": "Les pétro-États du Golfe se recentrent sur des partenariats avec l'Indo-Pacifique pour écouler leurs hydrocarbures résiduels."
+    },
+    {
+     "a": "consortium_indo_pacifique_de_l_hydrogene_reference",
+     "b": "fonds_souverains_de_la_ceinture_financiere_pacifique_reference",
+     "type": "alliance",
+     "action": "nouvelle",
+     "raison": "Les fonds pacifiques financent des infrastructures hydrogène pour compléter la fusion dans la région."
+    },
+    {
+     "a": "ergo_wian_sovereign_holdings_reference",
+     "b": "consortiums_prives_d_extraction_de_ressources_critiques_reference",
+     "type": "opposition",
+     "action": "nouvelle",
+     "raison": "Ergo-Wian tente de contrôler les brevets de fusion, entrant en conflit avec les consortiums miniers."
+    }
+   ],
+   "geographie": [
+    {
+     "pays": "Bolivie",
+     "action": "nouvelle_zone",
+     "nouvelle_zone": {
+      "slug": "altiplano_lithium_autonome",
+      "nom": "Altiplano Lithium Autonome",
+      "type": "territoire_autonome",
+      "statut": "emergent"
+     },
+     "raison": "La Bolivie exploite ses gisements de lithium pour devenir un acteur clé de la chaîne d'approvisionnement de la fusion, s'affranchissant partiellement des consortiums amazoniens."
+    },
+    {
+     "pays": "Chili",
+     "action": "absorber",
+     "zone": "altiplano_lithium_autonome",
+     "raison": "Le Chili et la Bolivie forment un bloc régional pour coordonner l'extraction et l'exportation du lithium."
+    },
+    {
+     "pays": "Arabie saoudite",
+     "action": "nouvelle_zone",
+     "nouvelle_zone": {
+      "slug": "neom_energie_residuelle",
+      "nom": "Neom — Zone Énergétique Résiduelle",
+      "type": "territoire_herite",
+      "statut": "en_declin"
+     },
+     "raison": "Neom devient un laboratoire pour les technologies énergétiques de transition, mais son modèle économique s'effondre avec la fin de la rente pétrolière."
+    },
+    {
+     "pays": "Russie",
+     "action": "absorber",
+     "zone": "siberie_federale",
+     "raison": "La Russie recentre son pouvoir sur la Sibérie pour exploiter ses ressources en lithium et terres rares, marginalisant les autres régions."
+    }
+   ],
+   "zones_statut": [
+    {
+     "zone": "bloc_persique_autonome",
+     "apres": "en_declin",
+     "raison": "La perte de la rente pétrolière affaiblit sa cohésion et son influence géopolitique."
+    },
+    {
+     "zone": "bloc_eurasien_central",
+     "apres": "fragmenté",
+     "raison": "Les tensions internes pour le contrôle des ressources critiques (lithium, brevets) exacerbent les divisions."
+    },
+    {
+     "zone": "corridor_arctique_nordique",
+     "apres": "dominant",
+     "raison": "L'énergie abondante et les ressources critiques (lithium, terres rares) renforcent son rôle de hub logistique et énergétique."
+    },
+    {
+     "zone": "indo_pacifique_emergent",
+     "apres": "dominant",
+     "raison": "La maîtrise des brevets et des infrastructures de fusion consolide son ascension géopolitique."
+    }
+   ],
+   "nouvelles_entites": [
+    {
+     "nom": "Alliance des Producteurs de Lithium (APL)",
+     "role": "Cartel informel coordonnant l'extraction et la tarification du lithium pour les réacteurs à fusion.",
+     "zone": "altiplano_lithium_autonome",
+     "raison": "Nécessité de stabiliser les prix et les flux de lithium face à la demande mondiale."
+    },
+    {
+     "nom": "Fonds de Transition des Pétro-États (FTPE)",
+     "role": "Mécanisme de financement pour reconvertir les économies dépendantes des hydrocarbures vers des secteurs technologiques.",
+     "zone": "neom_energie_residuelle",
+     "raison": "Éviter l'effondrement économique des États du Golfe et de la Russie post-pétrole."
+    },
+    {
+     "nom": "Bureau des Brevets de Fusion (BBF)",
+     "role": "Instance de régulation des droits de propriété intellectuelle sur les technologies de fusion, contrôlée par les États détenteurs de brevets.",
+     "zone": "bruxelles_nouveau",
+     "raison": "Éviter une guerre des brevets et encadrer la diffusion des technologies critiques."
+    }
+   ]
+  }
+ }
+}

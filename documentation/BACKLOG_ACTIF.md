@@ -22,7 +22,11 @@ côté code (cooldown durci, Kharg-9 exclu en eco_communalism, doublon retiré)
 et mis en surveillance, S26 clos et archivé, `nouveau_califat_barcelone`
 supprimée, « Rédaction à » sur le site, S3/S6/S7/S10 et `_extract_byline()`
 clos par décision, Hacker News retiré des flux RSS, S28 « outils
-externes » ajouté),
+externes » ajouté ; le 9 octobre : S22 clos et archivé (reprise réussie,
+fence réparée, patch des événements frères), Mistral Large 4 évalué et non
+retenu par défaut (S29 ajouté), S27 avancé — simulateur « et si ? » v6 en
+service —, anomalies de données notées dans S24, notes de calibrage dans
+S19),
 mis à jour en continu
 à chaque clôture de session. Chantiers clos et leur historique complet
 dans `BACKLOG_ARCHIVE.md` (fichier séparé, à uploader seulement en cas
@@ -439,6 +443,16 @@ Rien de bloquant :
   y est presque sans effet chiffré. Voulu par le plafond doux ; à revoir
   seulement si des articles en pâtissent (piste : référence moins
   extrême, ou marge du plafond).
+- **Constats du simulateur « et si ? » (9 oct, S27)** : un choc déclaré
+  « majeur » (invasion du Brésil, forces 8 à 20 sur 6 variables) ne
+  déplace les niveaux que de **3 à 5 points au pic**, atteint en **15 à 20
+  ans**, et il en reste 0,1 à 2,3 points en 2098. En breakdown et
+  fortress_world, `geopolitique_conflits` saturée (≈ 99,7) n'enregistre
+  presque rien. Un choc apaisant (fusion, forces 10 à 20) donne −3,5 à −5,4
+  sur l'énergie, et c'est le premier test où les **tensions** changent
+  vraiment (policy_reform 11 → 5). L'amplitude et la lenteur sont à juger
+  avant tout réglage de `GAIN_CHOCS` ; aucun mode « rupture » n'existe (voir
+  S27).
 - `undo_custom.py` ne recalcule pas la ligne « Total » du registre des
   événements (mineur, cosmétique).
 - `matplotlib` absent : le banc écrit des CSV au lieu de graphiques
@@ -536,29 +550,15 @@ bloquant :
 
 ---
 
-## ⚪ S22. Injection des signaux — suites du 1er octobre
-**Nouveau, 1er oct.** 5 signaux injectés après correctifs (`+1` toléré dans
-le JSON, plancher de bascule ; voir manuel §3, `inject_custom_signals.py`).
-Reste :
-- ~~**Exception en cours d'injection = signal orphelin**~~ — **corrigé le
-  5 oct** (`patch_s22_exception_signal.py`, manuel §3) : exception capturée
-  par variable, instantané fiche + registre restauré si l'écriture est
-  interrompue. Testé sur faux vault seulement : **à confirmer à la prochaine
-  vraie injection**, puis archiver.
-- ~~**Option `"<1 ou -1>"`**~~ — **fait le 5 oct** (sed, `.bak_plus1`). À la
-  prochaine injection, vérifier que Mistral ne recopie pas le texte tel
-  quel.
-- **Événements recopiés entre variables d'un même signal** : malgré
-  `sibling_events`, Mistral reprend parfois les `evenement_cle` qu'il vient
-  d'écrire pour la variable précédente (Mumbai, Tuvalu le 1er oct). Rattrapé
-  par la validation et une relance ; à surveiller, ça coûte un appel.
-- **Avertissements « fenêtre déjà utilisée »** très fréquents (quasi
-  systématiques sur les 12 variables) : non bloquants par décision du 26
-  juillet ; les fenêtres convergent vers les mêmes plages. Constat, pas de
-  décision.
-- **Origine de la fence manquante** dans `organisation_territoires.md`
-  inconnue (`undo_custom.py` avalait la fence autrefois, corrigé depuis).
-  Si ça se reproduit, chercher quel outil a écrit le fichier en dernier.
+## ✅ S22. Injection des signaux — suites du 1er octobre — CLOS le 9 octobre
+Confirmé en conditions réelles (signal `reseau_mobile_decentralise_urgence`,
+idée « radio maillée chiffrée », 3 variables) : exception capturée et écriture
+restaurée sans orphelin ; `"<1 ou -1>"` non recopié ; fence de
+`geopolitique_conflits.md` réparée (séquelle de l'ancien bug d'`undo_custom.py`,
+`.bak_fence`) ; recopie des événements frères corrigée
+(`patch_s22_evenements_freres.py`), reprise passée du premier coup ; 18 lignes
+au registre, validate 0/0/0. Détail : `BACKLOG_ARCHIVE.md`, manuel §3.
+Restent en simple constat : avertissements « fenêtre déjà utilisée ».
 
 ---
 
@@ -583,7 +583,9 @@ temporelles) — voir `BACKLOG_ARCHIVE.md` et `HANDOFF_4_OCTOBRE.md`. Reste :
   Limes 35, Revue de la Transition 44. Remonter toutes les revues à 15 :
   39 articles ; à 20 : 74. Génération reportée par David (séries ciblées :
   scénario + ligne éditoriale dans `config_series.yaml`). *6 oct* : en ligne
-  (mois d'août), le Crieur des Marges n'a qu'**un** article.
+  (mois d'août), le Crieur des Marges n'a qu'**un** article. *9 oct* : +2
+  articles (eco_communalism, opposition, société, Sri Lanka), produits par le
+  test Large 3 / Large 4 (S29) ; pas encore de série ciblée.
 
 ---
 
@@ -606,7 +608,25 @@ Rien de bloquant :
   `_index.md` et n'emploie pas le slug du pipeline (6 faux positifs).
 - **Ancrage local** : une zone qui n'a qu'une instance localisée reste
   dominée par des entités d'ailleurs (cas Maghreb). Créer des instances
-  localisées dans les zones pauvres, si le besoin se confirme.
+  localisées dans les zones pauvres, si le besoin se confirme. *9 oct* :
+  **Sri Lanka** n'a aucune instance localisée (« 0 locale(s) ») ; l'article
+  tombe sur le Meclis, instance custom garantie d'eco_communalism.
+- **Anomalies de données repérées par le simulateur S27 (9 oct)**, à vérifier
+  à la main, rien n'a été modifié :
+  - breakdown : **Uruguay** rattaché à `espace_nord_americain_fragmente`
+    (l'IA y a placé une « alliance des cités portuaires sud-américaines »).
+  - new_sustainability : le **Brésil** est porté par deux zones N1
+    (`ameriques_reconfigurees` et `reseau_vivant_continental`).
+  - reference : la sous-zone `sertao_nordeste_bresilien` déclare le
+    **Paraguay (Chaco)** parmi ses territoires.
+  - Doublons d'entités : eco_communalism, deux fiches « Pacte Amazônia Viva »
+    (`amazonie_pacte_viva_eco_communalism`,
+    `consortium_amazonia_viva_eco_communalism`) ; reference,
+    `amazonie_consortium_viva_reference` et
+    `consortium_amazonia_viva_reference`.
+  - Beaucoup de fiches gardent la trajectoire **« émergent »** par défaut
+    (18 propositions de la lecture IA partaient de là, souvent vers
+    « dominant » ou « résiduel » d'un coup).
 - **Bloc `===METADONNEES_PUBLICATION===` resté dans le texte** (5 oct) : 1
   article (education, policy_reform, 23 août, avec retry de longueur) ;
   réparé par `reparer_bloc_metadonnees.py`. Cause non vérifiée : relire
@@ -648,30 +668,43 @@ Mode Forcer, champ « Journal d'une autre zone » (liste déroulante,
 
 ---
 
-## ⚪ S27. Simulateur « et si ? » avant injection (événement ou signal)
-**Nouveau, 5 oct (demande de David).** Évaluer l'effet d'un événement ou
-d'un signal faible **avant** de l'injecter : simulation du vault en mémoire,
-**aucune écriture**, comparaison à l'état sans ce nouvel élément. Faisable en
-réutilisant l'existant :
-1. **Description de l'élément** : saisie manuelle des impacts (variables,
-   `delta_level`, polarité par scénario, date, durée, persistance,
-   `propagation_via_matrice`) — gratuit ; ou génération par l'IA via le
-   `--dry-run` d'`inject_custom_events.py` / `inject_custom_signals.py`
-   (impacts identiques à une vraie injection, appels IA payants).
-2. **Simulation** : pour chaque scénario, `dynamique.simuler()` de 2025 à
-   2098 avec les chocs existants (`chocs_depuis_donnees()`), puis avec ce
-   choc hypothétique en plus — même calcul contrefactuel que la section
-   « Effet sur le monde » de `trace_injection.py`.
-3. **Sortie** : écart par variable en 2098 et aux jalons, pic et année,
-   variables entraînées par propagation, tensions de `check_coherence`
-   apparues / disparues ; option récit IA + graphique Chart.js (même rendu
-   que le Tracer) ; entrée GUI.
-Limite : mesure l'état du monde (niveaux), pas le contenu des futurs
-articles. Fichiers à relire avant de coder : `dynamique.py`,
-`trace_injection.py`, `snapshot.py` (`appliquer_dynamique`), `loader.py`,
-et la sortie `--dry-run` des deux scripts d'injection. Cas test proposé par
-David : invasion du Brésil par les États-Unis en 2029 (continentale,
-majeure, durable, 6 scénarios).
+## 🟡 S27. Simulateur « et si ? » avant injection — v6 en service le 9 oct
+**Fait le 9 oct** (voir manuel §3quinquies et `HANDOFF_9_OCTOBRE.md`) :
+`generator/simuler_et_si.py` + `et_si/hypotheses.yaml` (à la racine du vault,
+éditable). Lecture seule, rien n'est écrit dans le vault (seulement le rapport
+`documentation/need_action/et_si_<id>.md`, le cache IA et l'état).
+- **Étage A — niveaux** : `dynamique.simuler()` avec / sans l'hypothèse,
+  écart en 2098, pics, tensions apparues / disparues / aggravées.
+- **Étage B — lecture IA** (`--consequences-ia`, 1 appel
+  `structured_strict` par scénario, ≈ 1-2 centimes) : lecture, ampleur,
+  trajectoires, relations, statuts de zone, carte, nouvelles entités ;
+  contrôle mécanique de chaque proposition, cache revérifié à chaque lecture.
+- **Étage C — carte en aperçu** : `ZoneRepository.impact_bascule_pays`
+  (rien n'est modifié), bloc `geographie:` manuel ou propositions de l'IA.
+- **Faits imposés** (`contraintes:`, v6) : corrigent les idées reçues de l'IA
+  sur un sujet technique (cas du tritium).
+- Testé sur deux chocs : `invasion_bresil_2029` (agression locale) et
+  `fusion_commerciale_2038` (technologie mondiale, polarité variable).
+Reste, dans l'ordre proposé :
+1. **Action « partition »** : couper un pays en morceaux nommés (zones
+   occupées / résistantes), chacun rattaché à une zone existante ou nouvelle.
+   Les six mondes la réclament pour le Brésil. Vérifier d'abord que la Carte
+   gère un même pays dans plusieurs zones (`origine_reelle` + `portion`) :
+   `grep -rn "portion" geographie/*.md | head -20`.
+2. **Entrée GUI** (lancement, lecture du rapport, édition du fichier
+   d'hypothèses ; graphique Chart.js comme le Tracer).
+3. **Mode « rupture »** de l'étage A : le moteur amortit tout choc et ramène
+   vers l'équilibre du scénario ; aucune bifurcation possible (lié à S19).
+4. **Phase 3 — liste d'application** : tout ce que l'hypothèse impose de
+   changer, dans l'ordre, avec l'outil à lancer, **à valider à la main** (l'IA
+   propose encore des rattachements absurdes : Qatar dans le Pacifique,
+   Australie dans l'espace eurasiatique). Trous identifiés : aucun outil pour
+   migrer les journaux d'une zone qui disparaît ; instances et articles
+   corrigés fiche par fiche seulement.
+5. Phase 4 (optionnelle) : mode application.
+Limites connues : la lecture IA varie d'un tirage à l'autre (le cache fige
+le dernier ; `--refaire` en produit un autre) ; l'ampleur annoncée par l'IA
+(« forte ») ne suit pas les écarts chiffrés, faibles (S19).
 
 ---
 
@@ -709,6 +742,16 @@ En marge : *Global Trends 2040* (National Intelligence Council, 2021 ; édition
 2025 annulée en sept. 2025) comme grille de comparaison des scénarios et source
 pour la veille état du monde ; idées « wild cards » et « passe équipe rouge »
 tirées de la Red Team Défense (à rattacher à S27).
+
+---
+
+## ⚪ S29. Mistral Large 4 — rejuger à la sortie de l'aperçu
+**Nouveau, 9 oct.** Évalué le 9 oct (voir `BACKLOG_ARCHIVE.md`) : branché
+(`mistral-large-4` dans le sélecteur, `patch_llm_large4.py`), **non retenu par
+défaut** — aucun tier changé. À rejuger si : il sort de l'aperçu, Mistral
+permet de couper la réflexion, ou le tarif baisse. Avant tout usage hors
+article : relever les `max_tokens`, la réflexion peut consommer tout le
+plafond (réponse vide, cas réel au premier appel).
 
 ---
 

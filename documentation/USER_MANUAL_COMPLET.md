@@ -1,8 +1,9 @@
 # Manuel utilisateur complet — Pipeline Ourrassol 2098
 *Référence à jour au 3 septembre 2026, complétée au fil des sessions
-(dernier ajout : 6 octobre 2026 — §2 cooldown durci et journal d'une
-autre zone (S26, mode Forcer) ; §2octies « Rédaction à » ; §3 Kharg-9
-exclu en eco_communalism ; §3quater Hacker News hors RSS) — couvre `generator/` (42+ scripts
+(dernier ajout : 9 octobre 2026 — §0 et §7 Mistral Large 4 ; §3 S22
+confirmé, événements frères en reprise, origine des fences manquantes ;
+§3quinquies simulateur « et si ? » ; précédent : 6 octobre — cooldown
+durci, journal d'une autre zone, « Rédaction à », Hacker News hors RSS) — couvre `generator/` (42+ scripts
 Python) et `gui/` (Flask). Historique complet des sessions et
 chantiers (bugs trouvés, itérations, tests réels) dans
 `USER_MANUAL_HISTORIQUE.md`, à uploader seulement au besoin.*
@@ -55,6 +56,14 @@ mécanisme d'annulation (`undo_custom.py`).
 
 2. **Override manuel** (`LLM_PROVIDER`/`LLM_MODEL` en variable d'environnement, ou toggle GUI "Forcer ce modèle") — priorité absolue sur le tier, pour un test ponctuel sans changer le comportement par défaut. Jamais destiné à un usage permanent (ne pas mettre en `export` fixe dans `.zshrc`).
 
+**Mistral Large 4** (`mistral-large-4`, aperçu public, 9 octobre 2026) :
+disponible dans le sélecteur, **utilisé par aucun tier**. Modèle qui raisonne
+avant d'écrire : sa réponse arrive en morceaux [réflexion, texte], que
+`llm_client.py::_texte_reponse()` réduit au texte (ligne de journal
+« morceau(x) écarté(s) »). La réflexion compte dans `max_tokens` et peut
+l'épuiser (réponse vide). Coût constaté ×4 à ×7 par article par rapport à
+Large 3. Bilan : backlog S29.
+
 Retry réactif centralisé sur 429 : aucune pause préventive, s'adapte automatiquement au palier du compte (Free/Scale) pour les trois fournisseurs. Les **18 scripts** du pipeline qui utilisent un LLM sont désormais tous unifiés sous `llm_client.py`.
 
 **Convention de statut utilisée ci-dessous :**
@@ -84,7 +93,7 @@ Ces fichiers sont importés par les scripts exécutables ; ils n'ont pas de `__m
 | `snapshot.py` | Construit le "snapshot" cohérent du monde 2098 pour un scénario : niveaux de variables, cohérence via la matrice d'influence, ruptures/jalons 2025→2098. Calcule aussi `zone_slug` par défaut (`_dominant_zone`, vote majoritaire sur les instances filtrées) — **utilisé seulement en repli**, un `zone_slug` explicite dans `config.yaml` prime toujours dessus depuis le 11 juillet (bug #26). |
 | `prompt_builder.py` | Assemble le prompt complet (system + user) envoyé au LLM pour générer un article, à partir du snapshot, de la thématique et de `config.yaml`. Contient les 12 profils de journaux (2/scénario). Priorité de `zone_slug` inversée le 11 juillet : `config.get('zone_slug') or snapshot.get('zone_slug')`. **Mis à jour le 3 août 2026** — voir §2 (`generate.py`) pour le détail des 2 bugs de zone/badge forcés corrigés, et §2bis ci-dessous pour les 4 ajouts de contenu issus de l'audit de complétude snapshot/variables. **Mis à jour le 10 août 2026** — voir §2ter pour le détail complet : renforcement de la consigne de longueur, transmission de la date fictive au LLM, signature toujours instruite (position + unicité). |
 | `api.py` | Envoie le prompt au LLM configuré (tier `strict`, via `llm_client.py`) et sauvegarde l'article généré en `.md` dans `articles/{scenario}/` (ou `articles/` si aucun sous-dossier n'est configuré). Le champ `model:` du frontmatter reflète désormais le tier réellement résolu (`resolve_for_tier()`), pas une variable statique. **Mis à jour le 10 août 2026** — voir §2ter pour le détail complet : retry automatique si la longueur générée dévie de plus de 40% de la plage demandée (nouveaux champs frontmatter `mots_reels`/`retry_longueur`), dossier de sortie enfin respecté (`config["output"]["dossier"]`), translittération correcte des accents dans le nom de fichier. |
-| `llm_client.py` | Abstraction unifiée Mistral/Claude/OpenAI. `LLM_PROVIDER`/`LLM_MODEL` (env, override manuel prioritaire). `TASK_TIER_DEFAULTS` + `resolve_for_tier(task_tier)` pour le routing par défaut. Exporte `call_llm(..., task_tier=...)`. |
+| `llm_client.py` | Abstraction unifiée Mistral/Claude/OpenAI. Réponse Mistral en morceaux (modèles qui raisonnent) réduite au texte par `_texte_reponse()` (9 oct). `LLM_PROVIDER`/`LLM_MODEL` (env, override manuel prioritaire). `TASK_TIER_DEFAULTS` + `resolve_for_tier(task_tier)` pour le routing par défaut. Exporte `call_llm(..., task_tier=...)`. |
 | `extract_state_logic.py` *(14 juillet)* | Parseur générique `variables/{variable}.md → states.{scenario}.state_logic`. Sanitise les clés wikilink Obsidian (`[[xxx]]`) des blocs `coupling_intensity` avant `yaml.safe_load` (sinon `unhashable key`). Utilisable en CLI (`--json`, `--scenario`) ou en import (`extract_state_logic(path)`). |
 | `patrons_spatiaux.py` *(14 juillet)* | Source de vérité du patron spatial par scénario, pour P24 (générateur top-down) et P22 signal 2 (garde-fou étendu). `state_logic`/`state_logic_complementaire` chargés dynamiquement depuis le vault à chaque import via `extract_state_logic.py` (jamais figés en dur) ; `patron_a_respecter`/`a_eviter` écrits à la main dans `_ANALYSE`, à revalider si un scénario change en profondeur. Config : `OURRASSOL_VAULT_ROOT` (env), sinon déduit de l'emplacement du fichier. **Consommé depuis le 15 juillet par `complete_geographie_coverage.py`** (P24 étape B, voir §4) via `patron_spatial_prompt_block()`. |
 | `echelles.py` *(27 septembre 2026)* | Échelle de chaque variable (bloc `echelle:` des fiches `variables/`) et convention d'intensité. `charger_echelles()`, `texte_echelle(slug)`, `CONVENTION_NIVEAUX`, `CONSIGNE_IMPACT` (texte injecté dans les prompts d'injection), `verifier_impact(delta_level, polarite)` (contrôle d'un impact produit par l'IA). Voir §3ter. |
@@ -1964,9 +1973,9 @@ de la veille, 12 variables, 0 en `needs_review`)** :
   (`_instantane_ecriture()`) ; une exception en cours d'écriture les restaure
   (`_restaurer_instantane()`, « écriture annulée »), pour qu'aucune variable
   ne reste à moitié injectée. Un échec de la fiche d'audit est signalé
-  (`erreur_fiche_audit` + commande `undo_custom.py`). Testé sur un faux vault
-  (plantage écriture / plantage IA / reprise), pas encore en conditions
-  réelles. Une exception à l'étape 1 (sélection) reste attrapée par `main()`
+  (`erreur_fiche_audit` + commande `undo_custom.py`). **Confirmé en
+  conditions réelles le 9 octobre 2026** (exception sur une fiche au bloc
+  YAML non refermé : écriture annulée, `git diff` vide, reprise produite). Une exception à l'étape 1 (sélection) reste attrapée par `main()`
   (rien n'est écrit à ce stade). Ancien nettoyage manuel, si un vieux cas
   ressurgit : `grep -rln "<slug>" variables/ signaux_custom/
   generator/registre_evenements.md`, puis `undo_custom.py --slug <slug>
@@ -1980,8 +1989,22 @@ de la veille, 12 variables, 0 en `needs_review`)** :
   trouvé dans X.md`. Repérage des fiches concernées (nombre impair de
   fences) :
   `for f in variables/*.md; do n=$(grep -c '^```' "$f"); [ $((n % 2)) -ne 0 ] && echo "$f : $n"; done`
-  Réparation : `.bak`, puis ajouter la ligne de fermeture en fin de fichier.
-  Cas réel : `organisation_territoires.md` (1er oct, origine inconnue).
+  Réparation : `.bak`, puis ajouter la ligne de fermeture en fin de fichier
+  (vérifier d'abord que le bloc de la section 12 termine bien la fiche).
+  Cas réels : `organisation_territoires.md` (1er oct),
+  `geopolitique_conflits.md` (9 oct, `.bak_fence`). Origine retrouvée par
+  l'historique git (nombre de fences par commit) : l'ancien bug
+  d'`undo_custom.py`, corrigé le 27 juillet — séquelles anciennes, pas un bug
+  actif.
+- **Événements des variables sœurs (9 octobre 2026,
+  `patch_s22_evenements_freres.py`, `.bak_s22_freres`)** : un signal à
+  plusieurs variables ne doit pas réutiliser le même `evenement_cle`. En
+  reprise, les événements des variables injectées au premier run n'étaient
+  pas montrés à l'IA, qui les reproduisait (3 échecs sur 3). Désormais
+  `_evenements_du_signal()` relit dans le registre les événements déjà
+  écrits pour ce signal (`sibling_events`), et chaque relance reçoit la liste
+  cumulée « ⛔ ÉVÉNEMENTS DÉJÀ REFUSÉS » (tirée des messages « déjà présent
+  dans le registre »). Reprise réelle passée du premier coup.
 - **Remettre les idées de `needs_review.yaml` en queue** (toutes, sauf celles
   déjà en queue) : petit script Python ad hoc du 1er oct, à refaire au besoin
   (`.bak` des deux fichiers). `requeue_needs_review.py` existe aussi (§3).
@@ -2902,6 +2925,86 @@ souvent les sources ; Gemini a inventé des URL (9/10 en 404 lors d'un essai).
   par l'import).
 - Recherche web par API : non retenue (voir plus haut) ; recherche en
   deux temps gardée en réserve (backlog S21).
+
+---
+
+## 3quinquies. Simulateur « et si ? » (S27, 9 octobre 2026)
+
+Tester l'effet d'un élément perturbateur sur le lore **avant** de l'injecter.
+**Lecture seule** : rien n'est écrit dans le vault, à part le rapport
+`documentation/need_action/et_si_<id>.md`, l'état
+`generator/state/dernier_et_si.json`, le cache IA
+`generator/state/et_si_consequences.json` et les rapports d'impact de la
+Carte (`documentation/need_action/impact_bascule_*.md`). Pas encore d'entrée
+GUI. Le numéro de version figure dans le rapport (« simulateur v6 »).
+
+### `simuler_et_si.py` 🔁 🗄️
+```bash
+python3 generator/simuler_et_si.py --lister                 # hypothèses et erreurs de saisie
+python3 generator/simuler_et_si.py --id <id> --report       # niveaux + carte, 6 scénarios
+python3 generator/simuler_et_si.py --id <id> --consequences-ia --report
+# options : --scenario X | --date 2070 (défaut 2098) | --recit-ia | --json | --refaire
+```
+Trois étages :
+- **A — niveaux** : `dynamique.simuler()` de 2025 à la date choisie, avec et
+  sans l'hypothèse, toutes les injections existantes restant en place (même
+  contrefactuel que le Tracer). Tableau des écarts, pics et années,
+  variables entraînées par la matrice, tensions de `check_coherence()`
+  apparues / disparues / aggravées / atténuées (comparées par paire de
+  variables).
+- **B — lecture IA** (`--consequences-ia`, 1 appel `structured_strict` par
+  scénario, ≈ 1-2 centimes) : l'IA reçoit la logique du scénario,
+  l'hypothèse, les effets chiffrés (avec l'avertissement que le moteur amortit
+  les chocs), les zones N1/N2 et leurs territoires, les entités les plus
+  influentes et celles « DIRECTEMENT CONCERNÉES » (localisées dans les zones
+  des pays cités). Elle propose : lecture et ampleur, trajectoires (8 au plus),
+  relations (6), statuts de zone (4), carte (4), nouvelles entités (3).
+  **Contrôle mécanique** de chaque proposition, écartée et listée si : slug
+  inconnu (une entité finit par `_<scénario>`, une zone jamais), trajectoire ou
+  statut invalide (accents normalisés), aucun changement, recul sur la phase
+  de montée (émergent → dominant) ou dans la phase de déclin (vers mature,
+  déclinant, résiduel ; la renaissance vers ascendant est permise), relation
+  déjà présente ou absente, seconde destination pour un même pays.
+- **C — carte** (aperçu) : pour chaque changement du bloc `geographie:` (ou,
+  à défaut, proposé par l'IA), `ZoneRepository.impact_bascule_pays()` :
+  zones quittées (vidées ? avec journaux ?), zone d'arrivée sans rédaction,
+  sous-zones orphelines, instances des sous-zones du pays, fiches qui citent
+  le pays (les autres instances sont seulement comptées). Un rattachement à
+  une zone qui contient déjà le pays est rejeté (✗).
+
+**Cache** : la réponse brute de l'IA est gardée par hypothèse et scénario
+(empreinte : nom, description, date, impacts, persistance, contraintes) et
+**revérifiée à chaque lecture** — une règle de contrôle nouvelle s'applique
+sans nouvel appel. `--refaire` force un nouveau tirage (la lecture varie d'un
+tirage à l'autre).
+
+### `et_si/hypotheses.yaml` (racine du vault, éditable)
+En-tête documenté. Champs : `id`, `nom`, `description`, `date` (2025-2098),
+`persistance` (ephemere | normale | durable | permanente), `via_matrice`,
+`scenarios` (liste ou `tous`), `impacts` (par variable : `delta_level` = force,
+`polarite` 1 aggrave / −1 apaise, un nombre ou un dictionnaire par scénario,
+`duree` de montée), `contraintes` (faits que la lecture IA doit respecter,
+prioritaires sur ses connaissances générales), `geographie` (par scénario :
+`absorber` dans une zone existante ou `nouvelle_zone` {slug, nom, type,
+statut}). Hypothèses en place : `invasion_bresil_2029`,
+`fusion_commerciale_2038` (avec contraintes sur le tritium et le lithium).
+
+### Lire un rapport
+- Les écarts chiffrés sont faibles (quelques points) et lents à culminer :
+  c'est le calibrage du moteur (S19), pas une absence d'effet. En breakdown et
+  fortress_world, plusieurs variables saturent près de 100.
+- La lecture IA est une lecture possible, pas une prévision ; comparer
+  plusieurs tirages au besoin.
+- Les propositions de carte restent à **relire à la main** : un pays peut être
+  envoyé dans une zone d'un autre continent malgré la consigne.
+- Limite : un pays ne se déplace qu'en entier (pas de partition) ; l'outil
+  n'applique rien — la liste d'application (phase 3) est à faire (S27).
+
+### Fichiers
+`generator/simuler_et_si.py` (nouveau), `et_si/hypotheses.yaml` (nouveau,
+`.bak_fusion`, `.bak_tritium`, `.bak_v6`). Réutilise `dynamique.py`,
+`trace_injection.py`, `snapshot.py`, `loader.py`, `gui/zone_repository.py`
+(chargé par importlib, sans Flask), `generator/journaux.yaml`.
 
 ---
 
@@ -3958,7 +4061,7 @@ Le sélecteur de modèle du GUI ne définit un modèle **réellement utilisé** 
 
 | Provider | Modèles disponibles dans le sélecteur |
 |---|---|
-| Mistral | `mistral-small-latest`, `mistral-large-latest` |
+| Mistral | `mistral-small-latest`, `mistral-large-latest`, `mistral-large-4` (essais seulement, voir §0) |
 | Claude | `claude-sonnet-4-6`, `claude-sonnet-5`, `claude-opus-4-8`, `claude-haiku-4-5-20251001` |
 
 ### Résumé des commandes courantes

@@ -2400,3 +2400,57 @@ le journal du Golfe ou par celui du Maghreb) a suffi.
 emplacements de la ville siège), chmod, script doublon supprimé,
 `_a_supprimer/` vidé, aperçu de réparation des métadonnées (0), Hacker News
 retiré des flux ; cinq points secondaires clos par décision de David.
+
+---
+
+### Addendum — S22 clos, Mistral Large 4, simulateur « et si ? » (9 octobre 2026)
+
+**S22 en conditions réelles.** Queue vide : une idée de David (protocoles P2P
+chiffrés par radio maillée), passée par l'assistant d'idées, ciblant 3
+variables. Premier chemin de queue faux (`generator/signaux_custom/` au lieu
+de `signaux_custom/` à la racine). L'injection a échoué sur
+`geopolitique_conflits` : bloc YAML non refermé. Le correctif du 5 oct a fait
+son travail (écriture annulée, `git diff` vide, reprise produite). Historique
+git, fence par fence : disparition entre le 27 juin et le 2 août, donc
+l'ancien bug d'`undo_custom.py`. Réparation en fin de fichier après
+vérification que le bloc terminait la fiche. Reprise : 3 échecs identiques
+sur le contrôle anti-doublon. Deux hypothèses — restauration incomplète du
+registre (grave) ou recopie des événements frères (connu) — départagées par
+un grep du registre : frères. Lecture de `inject_custom_signals.py` : en
+reprise, les événements du premier run n'étaient pas fournis à l'IA. Patch
+(dry-run : 8 remplacements), reprise réussie du premier coup, validate
+0/0/0. Rappel donné à David : `git commit` seul ne suffit pas, il faut
+`git add -A && git commit -m`.
+
+**Mistral Large 4.** Liste des modèles demandée à l'API (identifiant
+`mistral-large-4` ; `mistral-large-latest` = `mistral-large-2512`). Premier
+article : crash (`TypeError`, contenu en liste) → `patch_llm_large4.py`.
+Second : réflexion qui épuise les 4 000 jetons au premier appel, sauvée par le
+retry de longueur. Comparaison sur le même réglage (Crieur des Marges, Sri
+Lanka) : Large 4 écrit mieux mais exploite moins le vault. Estimation de coût
+revue deux fois (×2,7 sur le tarif, puis ×4 à ×7 avec la réflexion). Décision
+de David : Large 3 par défaut.
+
+**Simulateur « et si ? » (S27).** Choix de David : entrée par fichier YAML
+éditable, simulation dans les 6 scénarios. Premiers runs (breakdown,
+new_sustainability) : écarts de quelques points, saturation près des bornes.
+Question de David : les injections peuvent-elles changer la géographie, et
+est-ce simulable ? → lecture de `zone_repository.py`, étage carte en aperçu.
+Puis : les outils savent-ils appliquer tous les changements en réel ? →
+tableau des briques existantes et des trous (pas de chef d'orchestre, pas de
+migration des journaux d'une zone disparue, contenu existant corrigé fiche
+par fiche). David précise que l'invasion du Brésil n'est qu'un exemple : le
+but est de voir comment le lore se reconfigure sous des conditions très
+perturbatrices → étage de lecture IA. Six versions dans la journée, chacune
+tirée d'un rapport réel (détail dans `BACKLOG_ARCHIVE.md`). Un rapport v4
+montrait des défauts déjà corrigés en v3 : la copie installée n'était pas à
+jour, d'où l'affichage de la version dans le rapport. Second test demandé par
+David sur un autre événement majeur : percée de la fusion (2038). La
+description proposée par Claude parlait de « maîtrise du tritium » : l'IA en a
+tiré des gisements et des cartels de tritium (erreur physique). Correction de
+la description : effet partiel. Champ `contraintes:` (v6) : erreur disparue.
+`sed -i` en échec sur le Mac de David (sed BSD) : remplacé par un petit script
+Python.
+
+**Fin de séance.** Documentation reportée à la fin par David, faite le soir ;
+partition des pays reportée à la session suivante.

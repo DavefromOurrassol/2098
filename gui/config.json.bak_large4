@@ -1,0 +1,38 @@
+{
+  "vault_root": "/Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/",
+  "pipeline_dir": "/Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/generator/",
+  "default_scenario": "reference",
+  "scenarios": [
+    "breakdown",
+    "fortress_world",
+    "new_sustainability",
+    "eco_communalism",
+    "policy_reform",
+    "reference"
+  ],
+  "llm": {
+    "provider": "mistral",
+    "model_mistral": "mistral-large-latest",
+    "model_claude": "claude-sonnet-4-6",
+    "available_providers": [
+      "mistral",
+      "claude",
+      "openai"
+    ],
+    "available_models_mistral": [
+      "mistral-small-latest",
+      "mistral-large-latest"
+    ],
+    "available_models_claude": [
+      "claude-sonnet-4-6",
+      "claude-sonnet-5",
+      "claude-opus-4-8",
+      "claude-haiku-4-5-20251001"
+    ],
+    "available_models_openai": [
+      "gpt-5.5",
+      "gpt-5.4-mini"
+    ],
+    "model_openai": "gpt-5.5"
+  }
+}

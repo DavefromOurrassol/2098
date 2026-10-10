@@ -247,7 +247,35 @@ def _call_mistral(system_prompt: str, user_prompt: str,
     usage = response.usage
     print(f"[llm] Mistral ({model}) — entrée : {usage.prompt_tokens} | sortie : {usage.completion_tokens}")
 
-    return response.choices[0].message.content
+    return _texte_reponse(response.choices[0].message.content, model)
+
+
+# LARGE4 (9 octobre 2026) -- réponses en morceaux (modèles qui raisonnent)
+def _texte_reponse(content, model):
+    """Renvoie le texte d'une réponse Mistral. Une chaîne passe telle quelle ;
+    une liste de morceaux (Mistral Large 4, Magistral : réflexion + texte) est
+    réduite à ses morceaux de type texte, la réflexion étant écartée."""
+    if content is None or isinstance(content, str):
+        return content or ""
+    textes, autres = [], []
+    for morceau in content:
+        if isinstance(morceau, str):
+            textes.append(morceau)
+            continue
+        typ = getattr(morceau, "type", None)
+        if typ is None and isinstance(morceau, dict):
+            typ = morceau.get("type")
+        if typ == "text":
+            txt = getattr(morceau, "text", None)
+            if txt is None and isinstance(morceau, dict):
+                txt = morceau.get("text")
+            textes.append(txt or "")
+        else:
+            autres.append(str(typ))
+    if autres:
+        print(f"[llm] {model} : morceau(x) écarté(s) {sorted(set(autres))}, "
+              f"texte gardé : {sum(len(t) for t in textes)} caractères")
+    return "".join(textes)
 
 
 # ─────────────────────────────────────────

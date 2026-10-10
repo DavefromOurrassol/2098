@@ -621,3 +621,85 @@ prochaines séries).
 Leçon : une zone ou un journal créé « vide » passe tous les contrôles
 (`validate.py` ne demande ni pays ni description) — c'est le site (continent
 deviné) qui l'a révélé.
+
+---
+
+## ✅ S22 — Injection des signaux : exception, `+1`, fence, événements frères — CLOS le 9 octobre 2026
+
+**Test réel** : idée « protocoles P2P chiffrés par radio maillée »
+(`reseau_maille_radio_chiffre`), devenue le signal
+`reseau_mobile_decentralise_urgence`, 3 variables cibles.
+- **Exception pendant l'écriture** (correctif du 5 oct) : déclenchée pour de
+  vrai sur `geopolitique_conflits` (bloc YAML non refermé). Écriture annulée,
+  fiche et registre restaurés (`git diff` vide), les deux autres variables
+  injectées, entrée de reprise produite. ✅
+- **`"<1 ou -1>"`** : aucune relance, Mistral ne recopie pas l'exemple. ✅
+- **Fence manquante** : l'historique git la fait disparaître entre le 27 juin
+  et le 2 août → ancien bug d'`undo_custom.py` (corrigé le 27 juillet), même
+  origine probable que `organisation_territoires.md`. Réparée en fin de
+  fichier (`.bak_fence`). Point « origine inconnue » clos.
+- **Événements recopiés entre variables d'un même signal** : en reprise, la
+  variable restante échouait 3 fois sur 3 (contrôle anti-doublon du registre,
+  essais 1 et 3 identiques). Vérifié d'abord que ce n'était pas une
+  restauration incomplète (aucune ligne `geopolitique_conflits` au registre).
+  Cause : en reprise, `sibling_events` ne contenait pas les événements des
+  variables déjà injectées au premier run, et la relance ne nommait pas les
+  événements refusés. Correctif `patch_s22_evenements_freres.py`
+  (`inject_custom_signals.py`, `.bak_s22_freres`) : événements frères relus
+  dans le registre, liste « ⛔ ÉVÉNEMENTS DÉJÀ REFUSÉS » cumulée entre
+  relances. Reprise passée du premier coup ; 18 lignes au registre, validate
+  0/0/0. Queue rechargée par script (`.bak_reprise`, `.bak_reprise2`).
+
+---
+
+## ✅ Mistral Large 4 — évalué, non retenu par défaut — 9 octobre 2026
+
+- **Disponibilité** : `mistral-large-4` (aperçu public, sorti le 6 oct) ;
+  `mistral-large-latest` reste Large 3 (`mistral-large-2512`).
+- **Bug à l'appel** : modèle qui raisonne, `message.content` = liste
+  [réflexion, texte] → « Article généré : 2 caractères » puis `TypeError`.
+  Correctif `patch_llm_large4.py` (`llm_client.py`, `.bak_large4`) :
+  `_texte_reponse()` ne garde que les morceaux texte, journalise ce qui est
+  écarté ; une chaîne simple passe inchangée. Ajouté au sélecteur
+  (`gui/config.json`, `.bak_large4`).
+- **Test** : même article (eco_communalism, opposition, société, Sri Lanka),
+  Large 3 puis Large 4. Large 4 : premier appel entièrement consommé par la
+  réflexion (4 000 jetons, 0 caractère), sauvé par le retry de longueur ;
+  écriture plus propre, précision locale remarquable, longueur respectée,
+  mais beaucoup moins d'éléments du vault. Large 3 : mieux relié au monde
+  d'Ourrassol, mais trop long pour une brève.
+- **Coût** : tarifs 1,36 / 4,18 $ par million (Large 3 : 0,50 / 1,50), mais
+  c'est la réflexion qui pèse : **×4 à ×7** par article.
+- **Décision (David)** : Large 3 reste par défaut, aucun tier changé, Large 4
+  disponible pour des essais (« Forcer ce modèle »). Suite : S29.
+
+---
+
+## ✅ S27 (étapes 1-2) — Simulateur « et si ? » v1 → v6 — 9 octobre 2026
+
+Livré dans la journée, testé sur deux hypothèses dans les 6 scénarios.
+- **v1** : niveaux (étage A), puis aperçu de carte (étage C), puis lecture IA
+  (étage B, `--consequences-ia`). Tensions comparées par paire (source,
+  cible) pour éviter le bruit « apparue + disparue » ; zone quittée limitée
+  aux N1 ; fichier de géographie absent = erreur explicite.
+- **v2** : slugs de zone pris pour des entités, contresens sur l'axe des
+  trajectoires, effets lointains au détriment des acteurs locaux, types de
+  zone inventés → règles dans le prompt, entités « DIRECTEMENT CONCERNÉE »,
+  2 effets lointains au plus, type invalide remplacé par « autre ».
+- **v3** : recul sur la phase de montée rejeté.
+- **v4** : le cache gardait le résultat déjà filtré (règles nouvelles non
+  appliquées) → il garde la réponse brute et la revérifie à chaque lecture ;
+  accents normalisés ; rattachement à une zone qui contient déjà le pays
+  rejeté ; instances listées limitées à celles du pays. Numéro de version
+  affiché dans le rapport (une copie non mise à jour avait faussé un run).
+- **v5** : une seule destination de carte par pays ; recul dans la phase de
+  déclin rejeté (renaissance vers ascendant permise).
+- **v6** : champ `contraintes:` (faits imposés) — la description seule
+  n'avait pas suffi à corriger le « tritium extrait de gisements » ;
+  règle de contiguïté géographique dans le prompt (respectée en partie).
+
+**Ce que les tests ont montré** : lectures nettement différentes d'un monde à
+l'autre, acteurs locaux au centre, contrôle fiable ; limites : pays déplacé
+en entier seulement, ampleur chiffrée faible (S19), variation d'un tirage à
+l'autre, rattachements géographiquement absurdes encore possibles. Suites
+dans le backlog actif (S27).
