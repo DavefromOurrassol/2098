@@ -1,6 +1,6 @@
 # Rapport d'impact — Arabie Saoudite (policy_reform)
 
-Bascule évaluée : `zone_moyen_orient_golfe` → `istanbul`
+Bascule évaluée : `zone_moyen_orient_golfe` → `golfe_fragmentation_energetique`
 
 ## Sous-zones potentiellement orphelines (1)
 - `golfe_persique_petrole_residuel` (Infrastructure pétrolière résiduelle du Golfe, niveau 2) — origine : Arabie Saoudite

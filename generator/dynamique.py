@@ -269,11 +269,33 @@ def niveau_sature(ref, x):
     return ref + marge * math.tanh(x / marge)
 
 
+def rampe_rupture(rupture, t):
+    """V7.4 (simulateur « et si ? », mode rupture) : déplacement de la
+    référence (points de level) à la date t. Rampe linéaire sur `duree`,
+    puis pleine valeur pour toujours. Ni GAIN_CHOCS, ni demi-vie."""
+    t0, duree = rupture["t0"], max(float(rupture["duree"]), PAS)
+    if t < t0:
+        return 0.0
+    return rupture["amplitude"] * min(1.0, (t - t0) / duree)
+
+
+def reference_deplacee(ref, d):
+    """Référence + déplacement d, saturé en douceur vers la borne 0 ou 100
+    (même forme que niveau_sature, sans le plafond de 15 points)."""
+    if d == 0:
+        return ref
+    marge = (100.0 - ref) if d > 0 else ref
+    if marge <= 1e-6:
+        return ref
+    return ref + marge * math.tanh(d / marge)
+
+
 # ─────────────────────────────────────────
 # Intégration
 # ─────────────────────────────────────────
 
-def simuler(variables, niveaux_ref, params, liens, chocs, date_fin, echantillonner=None, k=None):
+def simuler(variables, niveaux_ref, params, liens, chocs, date_fin, echantillonner=None, k=None,
+            ruptures=None):
     """
     variables    : liste de slugs
     niveaux_ref  : {slug: level de référence du scénario}
@@ -282,6 +304,10 @@ def simuler(variables, niveaux_ref, params, liens, chocs, date_fin, echantillonn
     chocs        : [{"nom", "variable", "t0", "duree", "amplitude", "via_matrice"}]
     date_fin     : date de l'article (float, ex. 2098.08)
     echantillonner : None, ou pas (années) pour renvoyer une trajectoire
+    ruptures     : None, ou [{"variable", "t0", "duree", "amplitude"}] (V7.4,
+                   simulateur « et si ? ») : déplacement permanent de la
+                   référence. Avec ruptures, le résultat contient aussi
+                   "references" {slug: référence déplacée en fin de période}.
 
     Retourne {"niveaux": {slug: level final}, "ecarts": {slug: x final},
               "trajectoire": [(t, {slug: level})]  (si echantillonner)}
@@ -298,8 +324,19 @@ def simuler(variables, niveaux_ref, params, liens, chocs, date_fin, echantillonn
         entrants[t].append((s, c, r))
     chocs_net = [c for c in chocs if c.get("via_matrice") and c["variable"] in x_net]
     chocs_loc = [c for c in chocs if not c.get("via_matrice") and c["variable"] in x_net]
+    ruptures = [r for r in (ruptures or []) if r["variable"] in x_net]
+    dep = {v: 0.0 for v in variables}           # déplacement de la référence (ruptures)
+    hist_dep = {v: [] for v in variables}
+
+    def maj_dep(t):
+        for v in variables:
+            dep[v] = 0.0
+        for r in ruptures:
+            dep[r["variable"]] += rampe_rupture(r, t)
 
     def niveau(v):
+        if ruptures:
+            return niveau_sature(reference_deplacee(niveaux_ref[v], dep[v]), x_net[v] + x_loc[v])
         return niveau_sature(niveaux_ref[v], x_net[v] + x_loc[v])
 
     trajectoire = []
@@ -307,12 +344,16 @@ def simuler(variables, niveaux_ref, params, liens, chocs, date_fin, echantillonn
     prochain_echantillon = ANNEE_DEPART
     for k in range(n_pas):
         t = ANNEE_DEPART + k * PAS
+        if ruptures:
+            maj_dep(t)
         if echantillonner and t >= prochain_echantillon - 1e-9:
             trajectoire.append((round(t, 3), {v: niveau(v) for v in variables}))
             ecarts_traj.append((round(t, 3), {v: x_net[v] + x_loc[v] for v in variables}))
             prochain_echantillon += echantillonner
         for v in variables:
             hist[v].append(x_net[v])
+            if ruptures:
+                hist_dep[v].append(dep[v])
         u_net = {v: 0.0 for v in variables}
         u_loc = {v: 0.0 for v in variables}
         for c in chocs_net:
@@ -324,7 +365,7 @@ def simuler(variables, niveaux_ref, params, liens, chocs, date_fin, echantillonn
             for s, cf, r in entrants[v]:
                 i = k - r
                 if i >= 0:
-                    coup += cf * hist[s][i]
+                    coup += cf * (hist[s][i] + hist_dep[s][i]) if ruptures else cf * hist[s][i]
             w, z = params[v]["omega"], params[v]["zeta"]
             # Euler semi-implicite (stable pour ω·PAS << 1)
             a = w * w * (u_net[v] + k_coup * coup - x_net[v]) - 2 * z * w * v_net[v]
@@ -336,14 +377,19 @@ def simuler(variables, niveaux_ref, params, liens, chocs, date_fin, echantillonn
             x_loc[v] += PAS * v_loc[v]
 
     t_fin = ANNEE_DEPART + n_pas * PAS
+    if ruptures:
+        maj_dep(t_fin)
     if echantillonner:
         trajectoire.append((round(t_fin, 3), {v: niveau(v) for v in variables}))
-    return {
+    res = {
         "niveaux": {v: round(niveau(v), 1) for v in variables},
         "ecarts": {v: round(x_net[v] + x_loc[v], 2) for v in variables},
         "trajectoire": trajectoire,
         "ecarts_traj": ecarts_traj,
     }
+    if ruptures:
+        res["references"] = {v: round(reference_deplacee(niveaux_ref[v], dep[v]), 1) for v in variables}
+    return res
 
 
 # ─────────────────────────────────────────

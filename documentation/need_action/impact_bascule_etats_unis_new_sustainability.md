@@ -1,6 +1,6 @@
 # Rapport d'impact — États-Unis (new_sustainability)
 
-Bascule évaluée : `ameriques_reconfigurees` → `etats_unis_fragmentes`
+Bascule évaluée : `ameriques_reconfigurees` → `confederation_lacs_refuges`
 
 ## Sous-zones potentiellement orphelines (1)
 - `chicago_lacustre_compact` (Chicago-Lacustre — Siège de la Confédération des Grands Lacs, niveau 2) — origine : États-Unis

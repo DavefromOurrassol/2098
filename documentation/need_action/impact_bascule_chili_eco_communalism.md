@@ -1,6 +1,6 @@
 # Rapport d'impact — Chili (eco_communalism)
 
-Bascule évaluée : `chili_cordillere_et_pacifique` → `chili_lithium_autonome`
+Bascule évaluée : `chili_cordillere_et_pacifique` → `atacama_extractiviste`
 
 ## Sous-zones potentiellement orphelines (0)
 

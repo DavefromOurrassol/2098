@@ -1,6 +1,6 @@
 # Rapport d'impact — Arabie saoudite (reference)
 
-Bascule évaluée : `bloc_persique_autonome` → `neom_energie_residuelle`
+Bascule évaluée : `bloc_persique_autonome` → `hautes_plaines_saoudiennes_fragmentation`
 
 ## Sous-zones potentiellement orphelines (0)
 

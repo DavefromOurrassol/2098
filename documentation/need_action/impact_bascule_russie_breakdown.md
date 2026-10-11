@@ -1,12 +1,12 @@
 # Rapport d'impact — Russie (breakdown)
 
-Bascule évaluée : `arc_eurasien_central` → `corridor_oural_caspien`
+Bascule évaluée : `arc_eurasien_central` → `siberie_autonome_energetique`
 
 ## Sous-zones potentiellement orphelines (4)
-- `district_mourmansk_residuel` (District de Mourmansk (Fédération Russe Résiduelle), niveau 2) — origine : Russie (oblast de Mourmansk)
 - `corridor_oural_caspien` (Corridor Oural-Caspien, niveau 2) — origine : Russie (Oural)
-- `bassin_caspien_zone_conflit` (Bassin Caspien (Zone de Conflit Bloc IV–Bloc IX), niveau 2) — origine : Mer Caspienne (zone frontalière Russie/Kazakhstan/Azerbaïdjan/Turkménistan)
+- `district_mourmansk_residuel` (District de Mourmansk (Fédération Russe Résiduelle), niveau 2) — origine : Russie (oblast de Mourmansk)
 - `port_mourmansk` (Port de Mourmansk, niveau 3) — origine : Mourmansk, Russie
+- `bassin_caspien_zone_conflit` (Bassin Caspien (Zone de Conflit Bloc IV–Bloc IX), niveau 2) — origine : Mer Caspienne (zone frontalière Russie/Kazakhstan/Azerbaïdjan/Turkménistan)
 
 ## Instances/événements liés structurellement (15)
 - `consortium_energetique_oural_caspien_breakdown` — zone : corridor_oural_caspien

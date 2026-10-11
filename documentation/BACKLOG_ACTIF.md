@@ -26,7 +26,10 @@ externes » ajouté ; le 9 octobre : S22 clos et archivé (reprise réussie,
 fence réparée, patch des événements frères), Mistral Large 4 évalué et non
 retenu par défaut (S29 ajouté), S27 avancé — simulateur « et si ? » v6 en
 service —, anomalies de données notées dans S24, notes de calibrage dans
-S19),
+S19 ; le 10 octobre : S27 avancé — partition, région, mode rupture, entrée
+GUI et assistant « Nouvelle hypothèse », v7 → v7.9.1, puis liste
+d'application (phase 3) v8 → v8.14, en service mais non validée —, S14 São Paulo
+rattaché au Brésil, S19 mis à jour, résidu de `needs_review` signaux vidé),
 mis à jour en continu
 à chaque clôture de session. Chantiers clos et leur historique complet
 dans `BACKLOG_ARCHIVE.md` (fichier séparé, à uploader seulement en cas
@@ -354,9 +357,12 @@ mécanisme multi-noms partageant un polygone peut laisser une couleur
 fantôme si un seul des 4 noms est réaffecté. Au 23 sept, les 4 noms +
 Irlande sont dans Zone Interdite de Heysham (`fortress_world`),
 `check_conventions_territoires` cohérent. À revérifier si l'un d'eux
-change de zone. Mineur connexe : `sao_paulo_megapole` (`fortress_world`)
-n'a aucun pays dans son `origine_reelle` (2 alertes du garde-fou pour ses
-sous-zones).
+change de zone. ~~Mineur connexe : `sao_paulo_megapole` (`fortress_world`)
+sans pays dans son `origine_reelle`~~ — **corrigé le 10 oct** depuis la Carte :
+entrée Brésil + portion « La mégapole de São Paulo et sa région
+métropolitaine » avec tracé (modèle Allemagne : le Brésil reste pays entier
+dans `amazonie_pacte_vert`). Les 2 alertes du garde-fou sur ses sous-zones
+sont à reconfirmer au prochain scan géographie.
 
 ---
 
@@ -451,8 +457,12 @@ Rien de bloquant :
   presque rien. Un choc apaisant (fusion, forces 10 à 20) donne −3,5 à −5,4
   sur l'énergie, et c'est le premier test où les **tensions** changent
   vraiment (policy_reform 11 → 5). L'amplitude et la lenteur sont à juger
-  avant tout réglage de `GAIN_CHOCS` ; aucun mode « rupture » n'existe (voir
-  S27).
+  avant tout réglage de `GAIN_CHOCS`. *10 oct* : le simulateur a désormais
+  un **mode rupture** (la référence elle-même se déplace, paramètre
+  optionnel `ruptures=` de `dynamique.simuler()`, sans effet sur le calcul
+  normal) : peste à 25 % de mortalité, démographie +27 au lieu de +1. Le
+  moteur du vault (snapshot, Tracer) reste en mode choc ; l'utiliser pour
+  les injections réelles serait une décision séparée.
 - `undo_custom.py` ne recalcule pas la ligne « Total » du registre des
   événements (mineur, cosmétique).
 - `matplotlib` absent : le banc écrit des CSV au lieu de graphiques
@@ -559,6 +569,11 @@ restaurée sans orphelin ; `"<1 ou -1>"` non recopié ; fence de
 (`patch_s22_evenements_freres.py`), reprise passée du premier coup ; 18 lignes
 au registre, validate 0/0/0. Détail : `BACKLOG_ARCHIVE.md`, manuel §3.
 Restent en simple constat : avertissements « fenêtre déjà utilisée ».
+*10 oct* : l'entrée résiduelle de la première tentative, restée dans
+`signaux_custom/needs_review.yaml` (signal présent dans les 3 variables et
+dans `processed.yaml`), vidée (`.bak_residu`). Si le compteur « en revue »
+du tableau de bord affiche encore 1, il compte sans doute la clé vide
+`needs_review: []` du fichier des entités (non vérifié).
 
 ---
 
@@ -626,7 +641,9 @@ Rien de bloquant :
     `consortium_amazonia_viva_reference`.
   - Beaucoup de fiches gardent la trajectoire **« émergent »** par défaut
     (18 propositions de la lecture IA partaient de là, souvent vers
-    « dominant » ou « résiduel » d'un coup).
+    « dominant » ou « résiduel » d'un coup). *10 oct* : toujours vrai après
+    `--refaire` (11 « émergent → dominant » sur les trois hypothèses) ; la
+    liste d'application les signale « ⚠ » depuis la v8.12.
 - **Bloc `===METADONNEES_PUBLICATION===` resté dans le texte** (5 oct) : 1
   article (education, policy_reform, 23 août, avec retry de longueur) ;
   réparé par `reparer_bloc_metadonnees.py`. Cause non vérifiée : relire
@@ -668,43 +685,69 @@ Mode Forcer, champ « Journal d'une autre zone » (liste déroulante,
 
 ---
 
-## 🟡 S27. Simulateur « et si ? » avant injection — v6 en service le 9 oct
-**Fait le 9 oct** (voir manuel §3quinquies et `HANDOFF_9_OCTOBRE.md`) :
-`generator/simuler_et_si.py` + `et_si/hypotheses.yaml` (à la racine du vault,
-éditable). Lecture seule, rien n'est écrit dans le vault (seulement le rapport
-`documentation/need_action/et_si_<id>.md`, le cache IA et l'état).
-- **Étage A — niveaux** : `dynamique.simuler()` avec / sans l'hypothèse,
-  écart en 2098, pics, tensions apparues / disparues / aggravées.
-- **Étage B — lecture IA** (`--consequences-ia`, 1 appel
-  `structured_strict` par scénario, ≈ 1-2 centimes) : lecture, ampleur,
-  trajectoires, relations, statuts de zone, carte, nouvelles entités ;
-  contrôle mécanique de chaque proposition, cache revérifié à chaque lecture.
-- **Étage C — carte en aperçu** : `ZoneRepository.impact_bascule_pays`
-  (rien n'est modifié), bloc `geographie:` manuel ou propositions de l'IA.
-- **Faits imposés** (`contraintes:`, v6) : corrigent les idées reçues de l'IA
-  sur un sujet technique (cas du tritium).
-- Testé sur deux chocs : `invasion_bresil_2029` (agression locale) et
-  `fusion_commerciale_2038` (technologie mondiale, polarité variable).
+## 🟡 S27. Simulateur « et si ? » avant injection — v8.14 en service le 10 oct
+**Fait les 9 et 10 oct** (manuel §3quinquies, `HANDOFF_9_OCTOBRE.md`,
+`HANDOFF_10_OCTOBRE.md`) : `generator/simuler_et_si.py` (v8.14),
+`generator/hypothese_depuis_texte.py`, `et_si/hypotheses.yaml`. Lecture seule
+(seul l'assistant ajoute des hypothèses au fichier YAML).
+- **Étage A — niveaux** avec / sans, en **mode choc** (amorti) ou **mode
+  rupture** (v7.4 : l'équilibre du scénario se déplace pour de bon).
+- **Étage B — lecture IA** contrôlée ; carte seulement si un territoire
+  change de mains (v7.3) ; `carte: non` écarte carte, région et zones
+  `disparu` (v7.5) ; corrections automatiques des relations listées (v7.9).
+- **Étage C — carte en aperçu** : absorber, nouvelle zone, **partition**
+  (v7, modèles France / Allemagne), **région** (v7.6, sous-zone sans
+  changement de mains).
+- **GUI** (v7.7 → v7.8.1) : entrée « 🔮 Simulateur « et si ? » », onglets
+  Simuler (liste déroulante) et Nouvelle hypothèse (assistant ✨ Proposer /
+  Vérifier / Ajouter, garde-fous contre les doublons).
+- **Phase 3 — liste d'application** (v8 → v8.14, 10 oct après-midi et soir) :
+  en fin de chaque scénario du rapport, étapes à cocher dans l'ordre (carte,
+  localisation, journaux, statuts, élément, nouvelles entités, trajectoires,
+  relations, lore, fiches à relire, articles et site, contrôles), commande ou
+  « à la main » ; entrée d'injection commune en fin de rapport. Manuel
+  §3quinquies. **Statut : en service, non validée** — aucune liste n'a encore
+  été appliquée pour de vrai.
+- Testé en réel : invasion du Brésil, fusion, extrême droite (après
+  `--refaire`, partitions et régions comprises), peste (rupture), IA au
+  travail (assistant, GUI de bout en bout), région du Nordeste (aperçu).
+- Récit construit par le script : troncature et accents corrigés
+  (`trace_injection.py`).
+Fait le 10 oct au soir (détail dans l'archive) : `--refaire` des trois
+hypothèses, récit corrigé, sauts de trajectoire signalés « ⚠ » (pas corrigés),
+v8.3 → v8.14.
 Reste, dans l'ordre proposé :
-1. **Action « partition »** : couper un pays en morceaux nommés (zones
-   occupées / résistantes), chacun rattaché à une zone existante ou nouvelle.
-   Les six mondes la réclament pour le Brésil. Vérifier d'abord que la Carte
-   gère un même pays dans plusieurs zones (`origine_reelle` + `portion`) :
-   `grep -rn "portion" geographie/*.md | head -20`.
-2. **Entrée GUI** (lancement, lecture du rapport, édition du fichier
-   d'hypothèses ; graphique Chart.js comme le Tracer).
-3. **Mode « rupture »** de l'étage A : le moteur amortit tout choc et ramène
-   vers l'équilibre du scénario ; aucune bifurcation possible (lié à S19).
-4. **Phase 3 — liste d'application** : tout ce que l'hypothèse impose de
-   changer, dans l'ordre, avec l'outil à lancer, **à valider à la main** (l'IA
-   propose encore des rattachements absurdes : Qatar dans le Pacifique,
-   Australie dans l'espace eurasiatique). Trous identifiés : aucun outil pour
-   migrer les journaux d'une zone qui disparaît ; instances et articles
-   corrigés fiche par fiche seulement.
-5. Phase 4 (optionnelle) : mode application.
-Limites connues : la lecture IA varie d'un tirage à l'autre (le cache fige
-le dernier ; `--refaire` en produit un autre) ; l'ampleur annoncée par l'IA
-(« forte ») ne suit pas les écarts chiffrés, faibles (S19).
+1. **Appliquer une liste pour de vrai**, au moins une fois — sur une
+   hypothèse à adopter ou sur une copie du vault. Seule validation possible
+   de la phase 3 et préalable à la phase 4 ; une partie des étapes est
+   payante (journaux, résumé, relecture IA). Trous qui restent « à la main »
+   dans la liste : migration des journaux d'une zone morte, statuts de zone,
+   trajectoires, relations rompues, forces injectées (recalculées par l'IA
+   d'injection : à comparer), catégorie des nouvelles entités, `portee` et
+   `intensite` de l'entrée d'injection.
+2. **Décision S19 — mode rupture dans le vrai moteur** : la liste propose de
+   changer la référence à la main (`variables/*.md`) et de créer l'événement
+   pour le récit sans impact chiffré ; l'autre voie est de faire évoluer
+   `snapshot` / Tracer.
+3. **Amplitude des chocs** (`GAIN_CHOCS`, voir S19) à juger avant tout
+   réglage.
+4. **Anomalies de données** relevées par le simulateur (voir S24).
+5. Optionnel : **homonymes** (Santa Cruz, Sucre, Perth, Medina — ne compter
+   une fiche que si elle cite aussi le pays) ; test de
+   `ia_majorite_travail_2040` (jamais lancée ici) ; **synthèse haut niveau**
+   le jour où le besoin existe ; **phase 4** (mode application) après le
+   point 1.
+Limites connues de la liste d'application : villes limitées aux capitales et
+aux villes de plus d'un million (`villes_principales.json`, en anglais ; table
+française d'environ 110 noms dans le simulateur, une ville absente de la table
+n'est trouvée que sous son nom anglais) ; régions cherchées seulement par le
+nom court des sous-zones du vault ; homonymes possibles ; recherche par mots
+inopérante pour une hypothèse mondiale (relecture IA proposée à la place).
+Limites connues : la lecture IA varie d'un tirage à l'autre ; l'IA applique
+souvent le même partage de polarités (3 mondes « durs » / 3 « doux ») ; le
+mode rupture vaut pour toute l'hypothèse (un impact passager se règle par
+une force plus faible) ; près des bornes (breakdown, fortress_world), même
+une rupture bouge peu ; un slug mal orthographié par l'IA reste écarté.
 
 ---
 

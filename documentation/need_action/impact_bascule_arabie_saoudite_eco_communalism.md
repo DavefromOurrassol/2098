@@ -1,6 +1,6 @@
 # Rapport d'impact — Arabie Saoudite (eco_communalism)
 
-Bascule évaluée : `proche_orient_en_crise` → `arabie_saoudite_fragmentation`
+Bascule évaluée : `proche_orient_en_crise` → `hijaz_autonome`
 
 ## Sous-zones potentiellement orphelines (1)
 - `ports_du_golfe_sinistres` (Ports du Golfe, niveau 2) — origine : Arabie Saoudite

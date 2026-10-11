@@ -623,8 +623,38 @@ def calculer_effet(trace: dict, date_fin: float, scenario: str = None) -> dict:
 # Récit rédigé pour l'utilisateur (ajouté le 27 septembre 2026)
 # ---------------------------------------------------------------------------
 
+_ACCENTS_VARIABLES = {
+    "frontieres": "frontières", "systeme": "système", "systemes": "systèmes",
+    "energie": "énergie", "geopolitique": "géopolitique", "demographie": "démographie",
+    "mobilite": "mobilité", "societe": "société", "securite": "sécurité",
+    "sante": "santé", "ecologie": "écologie", "economie": "économie",
+    "economique": "économique", "inegalites": "inégalités", "cohesion": "cohésion",
+    "identite": "identité", "biodiversite": "biodiversité", "souverainete": "souveraineté",
+}
+
+
 def _libelle_var(v):
-    return v.replace("_", " ")
+    # S27 (10 oct) : nom lisible de la variable (variables/<slug>.md), en minuscule
+    # initiale dans la phrase ; sinon le slug sans underscores.
+    label = _label_variable(v)
+    if not label or label == v:
+        # S27 : name = slug dans variables/ ; accents rétablis mot par mot.
+        return " ".join(_ACCENTS_VARIABLES.get(m, m) for m in v.split("_"))
+    label = str(label).strip()
+    if len(label) > 1 and label[1].isupper():   # sigle : laissé tel quel
+        return label
+    return label[:1].lower() + label[1:]
+
+
+def _enumerer(noms, max_n=5):
+    """« a, b et c » ; au-delà de max_n : « a, b, c, d, e et N autre(s) »."""
+    noms = [n for n in noms if n]
+    if len(noms) > max_n:
+        reste = len(noms) - max_n
+        return ", ".join(noms[:max_n]) + f" et {reste} autre{'s' if reste > 1 else ''}"
+    if len(noms) > 1:
+        return ", ".join(noms[:-1]) + " et " + noms[-1]
+    return noms[0] if noms else ""
 
 
 def recit_modele(nom, sc, chrono) -> str:
@@ -633,8 +663,9 @@ def recit_modele(nom, sc, chrono) -> str:
     if not reps:
         return (f"Dans le scénario {sc}, {nom} n'a pas d'effet mesurable sur les variables du monde "
                 f"(choc absorbé ou variables déjà à leur plafond).")
+    directes = [_libelle_var(r["variable"]) for r in reps if r["mode"] == "direct"]
     phrases = [f"Apparu en {chrono['apparition']:.0f} dans le scénario {sc}, {nom} agit d'abord sur "
-               + ", ".join(_libelle_var(r["variable"]) for r in reps if r["mode"] == "direct")[:200] + "."]
+               + (_enumerer(directes) or "le monde") + "."]
     p = reps[0]
     sens = "aggrave" if p["pic"] > 0 else "apaise"
     phrases.append(f"Son effet le plus fort {sens} {_libelle_var(p['variable'])}, avec un écart maximal de "

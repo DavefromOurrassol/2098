@@ -1,6 +1,6 @@
 # Rapport d'impact — Brésil (policy_reform)
 
-Bascule évaluée : `bloc_souverainiste_non_signataire` → `bresil_occupe_etats_unis`
+Bascule évaluée : `bloc_souverainiste_non_signataire` → `bresil_sud_americain`
 
 ## Sous-zones potentiellement orphelines (1)
 - `andes_bloc_austral` (Bloc andin (Bolivie-Argentine), niveau 2) — origine : Brésil

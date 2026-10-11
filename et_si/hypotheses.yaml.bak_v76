@@ -1,0 +1,249 @@
+# et_si/hypotheses.yaml — Ourrassol 2098
+#
+# Hypothèses testées par le simulateur « et si ? » (S27) AVANT toute injection.
+# Rien n'est jamais écrit dans le vault à partir de ce fichier.
+#
+#   python3 generator/simuler_et_si.py --lister
+#   python3 generator/simuler_et_si.py --id <id> [--scenario X] [--date 2070] [--report] [--recit-ia]
+#   ... --consequences-ia  : lecture des conséquences sur le lore par l'IA (1 appel par scénario,
+#                            mis en cache ; --refaire pour relancer). Les changements de carte
+#                            qu'elle propose sont évalués quand `geographie` n'est pas rempli à la main.
+#
+# CHAMPS d'une hypothèse :
+#   id           : identifiant court (lettres, chiffres, _)
+#   nom          : nom lisible
+#   description  : optionnelle, reprise dans le rapport (et dans le récit IA)
+#   date         : année d'apparition (2025-2098)
+#   persistance  : ephemere | normale | durable | permanente (défaut normale)
+#   via_matrice  : true = l'effet se propage aux autres variables (défaut true)
+#   scenarios    : liste, ou "tous" (défaut : les 6)
+#   impacts      : une entrée par variable touchée :
+#       variable    : slug de variable (les 12 variables du vault)
+#       delta_level : FORCE, entier positif (plafond conseillé 25, comme un événement)
+#       polarite    : 1 = aggrave (le niveau monte vers la crise), -1 = apaise ;
+#                     un seul nombre pour tous les scénarios, ou un dictionnaire
+#                     {breakdown: 1, new_sustainability: -1, ...}
+#       duree       : années de montée jusqu'à pleine force (défaut 10)
+#   mode         : optionnel, choc | rupture (défaut choc, simulateur v7.4).
+#                  choc    = perturbation amortie qui s'efface (persistance), le monde
+#                            revient vers l'équilibre du scénario.
+#                  rupture = l'élément change le monde pour de bon : la référence de
+#                            chaque variable touchée glisse de delta_level × polarite
+#                            sur `duree`, puis y reste (persistance sans objet).
+#                            Pour une pandémie massive, une IA qui remplace le travail...
+#   carte        : optionnel, défaut oui. `carte: non` = élément sans effet territorial
+#                  (choc politique, sanitaire, technologique) : la lecture IA ne propose
+#                  aucun changement de carte, et toute proposition est écartée.
+#   contraintes  : optionnel. Liste de faits que la lecture IA doit respecter
+#                  (priment sur ses connaissances générales).
+#   geographie   : optionnel. Changements de la CARTE DE 2098, par scénario (un
+#                  scénario absent = aucune trace territoriale). Simulé en
+#                  aperçu (rapport d'impact de la Carte), jamais appliqué :
+#       <scénario>:
+#         - pays: Brésil
+#           action: absorber          # rattacher à une zone EXISTANTE
+#           zone: <slug de la zone>
+#         - pays: Brésil
+#           action: nouvelle_zone     # créer une zone pour ce pays
+#           nouvelle_zone: {slug: bresil_occupe, nom: Brésil occupé,
+#                           type: territoire_autonome, statut: emergent}
+#         - pays: Brésil
+#           action: partition         # couper le pays en parties (simulateur v7)
+#           parties:                  # 2 ou plus, chacune dans une zone différente
+#             - zone: <slug>          # zone existante (la zone actuelle du pays est permise)
+#               portion: Le Nordeste et l'Amazonie, occupés depuis 2029
+#             - nouvelle_zone: {slug: republique_du_sud, nom: République du Sud,
+#                               type: territoire_autonome, statut: emergent}
+#               portion: Le Sud, de São Paulo à Porto Alegre, resté indépendant
+#           partie_principale: 2      # optionnel : cette partie garde le pays entier,
+#                                     # sans portion (modèle Allemagne). Absent : chaque
+#                                     # partie a sa portion et aucune zone ne garde le
+#                                     # pays entier (modèle France).
+#                  types : bloc_continental, union_regionale, territoire_autonome,
+#                  territoire_herite, region, ville, infrastructure,
+#                  site_strategique, zone_sinistree, autre
+#                  statuts : dominant, stable, fragmenté, en_declin, disparu, emergent
+#
+# Rappel de convention : niveau 100 = crise maximale pour les 12 variables.
+
+hypotheses:
+
+  # Cas test proposé par David le 5 octobre. Forces et variables = PREMIÈRE
+  # PROPOSITION de Claude, à ajuster avant de tirer des conclusions.
+  - id: invasion_bresil_2029
+    nom: Invasion du Brésil par les États-Unis
+    description: >
+      En 2029, les États-Unis envahissent le Brésil (portée continentale,
+      intensité majeure). Conflit durable, déplacements de population,
+      pression sur l'Amazonie, rupture des échanges régionaux.
+    date: 2029
+    persistance: durable
+    via_matrice: true
+    scenarios: tous
+    impacts:
+      - variable: geopolitique_conflits
+        delta_level: 20
+        polarite: 1
+        duree: 5
+      - variable: frontieres_du_systeme
+        delta_level: 12
+        polarite: 1
+        duree: 5
+      - variable: demographie_mobilite_humaine
+        delta_level: 10
+        polarite: 1
+        duree: 8
+      - variable: gouvernance_institutions
+        delta_level: 10
+        polarite: 1
+        duree: 8
+      - variable: climat_environnement_global
+        delta_level: 8
+        polarite: 1
+        duree: 10
+      - variable: systeme_economique_redistribution
+        delta_level: 8
+        polarite: 1
+        duree: 8
+    # geographie:            # à compléter : où l'invasion laisse-t-elle une trace en 2098 ?
+    #   fortress_world:
+    #     - pays: Brésil
+    #       action: nouvelle_zone
+    #       nouvelle_zone: {slug: bresil_occupe, nom: Brésil occupé, type: territoire_autonome, statut: emergent}
+
+  # Deuxième cas test (9 octobre) : choc technologique mondial, en partie apaisant,
+  # au sens variable selon le scénario. Forces = première proposition de Claude.
+  - id: fusion_commerciale_2038
+    nom: Percée de la fusion nucléaire commerciale
+    description: >
+      En 2038, un premier réacteur à fusion devient rentable et sa technologie se
+      diffuse en une quinzaine d'années. L'énergie abondante fait s'effondrer la
+      rente des hydrocarbures : les pétro-États du Golfe persique, la Russie et
+      l'Arabie saoudite perdent leur levier, tandis que la maîtrise des brevets et
+      du lithium (dont on tire le tritium du combustible) devient un nouvel enjeu de puissance ; le deutérium, tiré de l'eau de mer, est accessible à tous.
+    contraintes:
+      - Le tritium n'existe dans aucun gisement ; il est produit dans le réacteur à partir de lithium. Rien ne repose sur une extraction, un transport ou un cartel de tritium.
+      - Le deutérium se tire de l'eau de mer ; aucun pays n'en a le monopole.
+      - Les ressources rares de la fusion sont le lithium (Chili, Argentine, Bolivie, Australie, Chine), quelques matériaux (supraconducteurs, béryllium) et les brevets.
+    date: 2038
+    persistance: permanente
+    via_matrice: true
+    scenarios: tous
+    impacts:
+      - variable: energie_ressources_critiques
+        delta_level: 20
+        polarite: -1
+        duree: 15
+      - variable: climat_environnement_global
+        delta_level: 10
+        polarite: -1
+        duree: 25
+      - variable: geopolitique_conflits
+        delta_level: 12
+        polarite: {breakdown: 1, fortress_world: 1, reference: 1, eco_communalism: 1, policy_reform: -1, new_sustainability: -1}
+        duree: 10
+      - variable: systemes_productifs_travail
+        delta_level: 10
+        polarite: 1
+        duree: 10
+      - variable: systeme_economique_redistribution
+        delta_level: 10
+        polarite: {breakdown: 1, fortress_world: 1, reference: 1, eco_communalism: 1, policy_reform: -1, new_sustainability: -1}
+        duree: 12
+  # Troisième cas test (10 octobre) : bascule démographique mondiale, non localisée.
+  # Forces = première proposition de Claude, à ajuster.
+  - id: peste_pulmonaire_2043
+    mode: rupture
+    carte: non
+    nom: Pandémie de peste pulmonaire
+    description: >
+      En 2043, une souche de peste pulmonaire résistante aux antibiotiques se
+      diffuse sur tous les continents et tue un quart de la population mondiale
+      en trois ans. Villes désertées, chaînes de production rompues, frontières
+      fermées, effondrement des systèmes de santé, puis lente recomposition.
+    contraintes:
+      - La pandémie tue environ 25 % de la population mondiale entre 2043 et 2046, sur tous les continents, plus fortement dans les villes denses.
+      - Aucun traitement efficace avant le début des années 2050 ; la maladie devient ensuite endémique et contrôlée.
+      - La population mondiale ne retrouve pas son niveau de 2042 avant la fin du siècle.
+    date: 2043
+    persistance: durable
+    via_matrice: true
+    scenarios: tous
+    impacts:
+      - variable: demographie_mobilite_humaine
+        delta_level: 25
+        polarite: 1
+        duree: 3
+      - variable: sante_biotechnologies
+        delta_level: 25
+        polarite: 1
+        duree: 3
+      - variable: systemes_productifs_travail
+        delta_level: 18
+        polarite: 1
+        duree: 4
+      - variable: systeme_economique_redistribution
+        delta_level: 15
+        polarite: 1
+        duree: 5
+      - variable: frontieres_du_systeme
+        delta_level: 15
+        polarite: 1
+        duree: 3
+      - variable: gouvernance_institutions
+        delta_level: 12
+        polarite: 1
+        duree: 5
+      - variable: organisation_territoires
+        delta_level: 10
+        polarite: 1
+        duree: 6
+      - variable: climat_environnement_global
+        delta_level: 5
+        polarite: -1
+        duree: 10
+
+  # Quatrième cas test (10 octobre) : choc politique diffus, à l'échelle des blocs.
+  # Forces = première proposition de Claude, à ajuster.
+  - id: extreme_droite_2034
+    carte: non
+    nom: Vague d'extrême droite dans 80 % des pays
+    description: >
+      Entre 2030 et 2038, des partis d'extrême droite arrivent au pouvoir dans
+      environ 80 % des pays : fermeture des frontières, restriction des
+      migrations, nationalisme économique, recul des institutions
+      multilatérales et des contre-pouvoirs. Quelques blocs, villes et
+      communautés y échappent et deviennent des refuges.
+    contraintes:
+      - La vague arrive par les urnes, pas par la guerre ; elle ne crée pas de nouveaux États et ne déplace pas de frontières.
+      - Environ 80 % des pays sont touchés ; certains blocs, villes ou communautés y échappent.
+      - Raisonne par blocs et zones (statuts, alliances, entités), pas pays par pays.
+    date: 2034
+    persistance: durable
+    via_matrice: true
+    scenarios: tous
+    impacts:
+      - variable: gouvernance_institutions
+        delta_level: 20
+        polarite: 1
+        duree: 8
+      - variable: frontieres_du_systeme
+        delta_level: 20
+        polarite: 1
+        duree: 8
+      - variable: valeurs_culture_tempo_sociale
+        delta_level: 18
+        polarite: 1
+        duree: 8
+      - variable: geopolitique_conflits
+        delta_level: 15
+        polarite: 1
+        duree: 10
+      - variable: demographie_mobilite_humaine
+        delta_level: 12
+        polarite: 1
+        duree: 8
+      - variable: systeme_economique_redistribution
+        delta_level: 10
+        polarite: 1
+        duree: 10

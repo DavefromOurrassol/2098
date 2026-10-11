@@ -3,9 +3,9 @@
 Bascule évaluée : `arc_eurasien_central` → `corridor_oural_caspien`
 
 ## Sous-zones potentiellement orphelines (3)
-- `bassin_caspien_zone_conflit` (Bassin Caspien (Zone de Conflit Bloc IV–Bloc IX), niveau 2) — origine : Mer Caspienne (zone frontalière Russie/Kazakhstan/Azerbaïdjan/Turkménistan)
-- `corridors_eurasiens_convoyage` (Corridors Eurasiens (Axes de Convoyage Armé), niveau 2) — origine : Kazakhstan
 - `corridor_oural_caspien` (Corridor Oural-Caspien, niveau 2) — origine : Kazakhstan (nord-ouest)
+- `corridors_eurasiens_convoyage` (Corridors Eurasiens (Axes de Convoyage Armé), niveau 2) — origine : Kazakhstan
+- `bassin_caspien_zone_conflit` (Bassin Caspien (Zone de Conflit Bloc IV–Bloc IX), niveau 2) — origine : Mer Caspienne (zone frontalière Russie/Kazakhstan/Azerbaïdjan/Turkménistan)
 
 ## Instances/événements liés structurellement (15)
 - `consortium_energetique_oural_caspien_breakdown` — zone : corridor_oural_caspien

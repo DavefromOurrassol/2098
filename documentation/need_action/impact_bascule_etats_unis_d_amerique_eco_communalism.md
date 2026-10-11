@@ -3,9 +3,9 @@
 Bascule évaluée : `bioterritoires_amerique_du_nord` → `etats_unis_en_guerre_peripherique`
 
 ## Sous-zones potentiellement orphelines (3)
-- `grande_vallee_bioterritoire` (La Grande-Vallée, niveau 2) — origine : États-Unis d'Amérique
-- `universite_nomade` (Université Nomade, niveau 2) — origine : États-Unis d'Amérique
 - `bioterritoires_atlantique_nord` (Bioterritoires de l'Atlantique Nord, niveau 2) — origine : États-Unis d'Amérique
+- `universite_nomade` (Université Nomade, niveau 2) — origine : États-Unis d'Amérique
+- `grande_vallee_bioterritoire` (La Grande-Vallée, niveau 2) — origine : États-Unis d'Amérique
 
 ## Instances/événements liés structurellement (8)
 - `coalition_vivant_eco_communalism` — zone : grande_vallee_bioterritoire

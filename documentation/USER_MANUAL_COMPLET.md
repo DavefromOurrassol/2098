@@ -1,6 +1,9 @@
 # Manuel utilisateur complet — Pipeline Ourrassol 2098
 *Référence à jour au 3 septembre 2026, complétée au fil des sessions
-(dernier ajout : 9 octobre 2026 — §0 et §7 Mistral Large 4 ; §3 S22
+(dernier ajout : 10 octobre 2026 — §3quinquies simulateur « et si ? »
+v7 → v8.14 : partition, région, mode rupture, entrée GUI en deux onglets,
+assistant « Nouvelle hypothèse », liste d'application (phase 3, en service,
+non validée), fiches à relire ; récit du script corrigé ; précédent : 9 octobre — §0 et §7 Mistral Large 4 ; §3 S22
 confirmé, événements frères en reprise, origine des fences manquantes ;
 §3quinquies simulateur « et si ? » ; précédent : 6 octobre — cooldown
 durci, journal d'une autre zone, « Rédaction à », Hacker News hors RSS) — couvre `generator/` (42+ scripts
@@ -2434,6 +2437,12 @@ depuis 2025.
   déplace les niveaux, sans jamais faire diverger le système.
 - **Sortie bornée** : `niveau = ref + marge·tanh(écart/marge)`, marge ≤ 15
   points et ≤ distance à 0/100.
+- **Ruptures** (10 oct, simulateur « et si ? » seulement) : paramètre
+  optionnel `ruptures=[{variable, t0, duree, amplitude}]` de `simuler()` —
+  la référence elle-même glisse (`rampe_rupture()`, puis
+  `reference_deplacee()`, saturée vers 0/100) et les voisines voient le
+  déplacement total de la source. Sans ce paramètre (snapshot, Tracer),
+  calcul identique au chiffre près. Voir §3quinquies.
 - `snapshot.py` (`MOTEUR_DYNAMIQUE = True`) : `appliquer_dynamique()`
   produit une modification par variable dont l'écart ≥ 0,5, avec ses 3
   principaux contributeurs. Les tensions (`check_coherence` : crise
@@ -2928,19 +2937,47 @@ souvent les sources ; Gemini a inventé des URL (9/10 en 404 lors d'un essai).
 
 ---
 
-## 3quinquies. Simulateur « et si ? » (S27, 9 octobre 2026)
+## 3quinquies. Simulateur « et si ? » (S27, 9-10 octobre 2026)
 
 Tester l'effet d'un élément perturbateur sur le lore **avant** de l'injecter.
 **Lecture seule** : rien n'est écrit dans le vault, à part le rapport
-`documentation/need_action/et_si_<id>.md`, l'état
+`documentation/need_action/et_si_<id>.md` (et sa copie
+`et_si_dernier_lancement.md`, affichée dans le GUI), l'état
 `generator/state/dernier_et_si.json`, le cache IA
 `generator/state/et_si_consequences.json` et les rapports d'impact de la
-Carte (`documentation/need_action/impact_bascule_*.md`). Pas encore d'entrée
-GUI. Le numéro de version figure dans le rapport (« simulateur v6 »).
+Carte (`documentation/need_action/impact_bascule_*.md`). Seule exception :
+l'assistant « Nouvelle hypothèse » ajoute des hypothèses à
+`et_si/hypotheses.yaml`. Version affichée dans le rapport (« simulateur
+v8.14 » au 10 oct).
 
-### `simuler_et_si.py` 🔁 🗄️
+### Dans le GUI — « 🔮 Simulateur « et si ? » » (section des outils de suivi, après « Tracer »)
+Deux onglets (`--mode simuler | nouvelle`) :
+- **Simuler une hypothèse** : Scénario (vide = tous ceux de l'hypothèse),
+  **Hypothèse** (liste déroulante « nom (date) », « ⚠ invalide » si mal
+  remplie ; « Aucun » = liste des hypothèses), Effet mesuré en (2098 par
+  défaut), **Lecture IA** (payant, ≈ 1-2 centimes par scénario, cache),
+  **Nouveau tirage** (`--refaire`), et en options avancées **Récit IA**. Le
+  rapport est toujours écrit (`--report` en argument fixe). Choisir le
+  scénario **avant** l'hypothèse : changer de scénario recharge la liste.
+  Fichiers du panneau : `et_si/hypotheses.yaml` (éditable) et le rapport du
+  dernier lancement (lecture seule ; au tout premier lancement, recharger la
+  page pour le voir apparaître).
+- **Nouvelle hypothèse** : panneau ✨. On écrit l'idée librement (« à partir
+  de 2040, les IA font 60 % du travail salarié »), **✨ Proposer** (un appel
+  IA) remplit un bloc YAML complet, modifiable, avec ⚠ et justification ;
+  **Vérifier** (sans IA) ; **Ajouter à hypotheses.yaml** (seul chemin
+  d'écriture, sauvegarde `.bak_ajout`, commentaires du fichier conservés,
+  relecture après écriture et restauration si illisible). Garde-fous : id
+  déjà pris, **même nom ou même description** qu'une hypothèse existante
+  (une même idée proposée deux fois reçoit un id suffixé `_2`) ; après un
+  ajout, l'idée et le bloc sont vidés et « Ajouter » reste grisé jusqu'à un
+  nouveau bloc. Deux formulations d'une même idée restent possibles : retirer
+  l'ancienne à la main. Le bouton Lancer ne sert pas dans cet onglet.
+
+### `simuler_et_si.py` 🔁 🧩
 ```bash
-python3 generator/simuler_et_si.py --lister                 # hypothèses et erreurs de saisie
+python3 generator/simuler_et_si.py --lister                 # hypothèses
+python3 generator/simuler_et_si.py --lister --json          # + erreurs de saisie (liste du GUI)
 python3 generator/simuler_et_si.py --id <id> --report       # niveaux + carte, 6 scénarios
 python3 generator/simuler_et_si.py --id <id> --consequences-ia --report
 # options : --scenario X | --date 2070 (défaut 2098) | --recit-ia | --json | --refaire
@@ -2950,61 +2987,241 @@ Trois étages :
   sans l'hypothèse, toutes les injections existantes restant en place (même
   contrefactuel que le Tracer). Tableau des écarts, pics et années,
   variables entraînées par la matrice, tensions de `check_coherence()`
-  apparues / disparues / aggravées / atténuées (comparées par paire de
-  variables).
+  apparues / disparues / aggravées / atténuées (comparées par paire).
+  - **Mode choc** (défaut) : perturbation amortie (`GAIN_CHOCS` 0,25,
+    demi-vie selon `persistance`, plafond ±15 autour de la référence) ; le
+    monde revient vers l'équilibre du scénario. Écarts de quelques points.
+  - **Mode rupture** (`mode: rupture`, v7.4) : l'élément déplace
+    l'**équilibre** du scénario. La référence de chaque variable touchée
+    glisse de force × polarité sur `duree`, puis y reste (ni GAIN_CHOCS ni
+    demi-vie), saturée en douceur vers 0 / 100 ; le ressort ramène vers la
+    nouvelle référence, le plafond ±15 des autres chocs s'applique autour
+    d'elle, les voisines suivent par la matrice (déplacement total de la
+    source). Le rapport affiche « référence 75,0 → 94,0 ». Ordre de
+    grandeur : peste à 25 % de mortalité, démographie +27 au lieu de +1.
+    Paramètre optionnel `ruptures=` de `dynamique.simuler()` ; sans lui, calcul
+    identique au chiffre près (non-régression vérifiée par le patch).
+    `persistance` est ignorée (avertissement). Le mode vaut pour **toute
+    l'hypothèse** : un impact passager (santé qui se rétablit) se règle par
+    une force plus faible.
 - **B — lecture IA** (`--consequences-ia`, 1 appel `structured_strict` par
-  scénario, ≈ 1-2 centimes) : l'IA reçoit la logique du scénario,
-  l'hypothèse, les effets chiffrés (avec l'avertissement que le moteur amortit
-  les chocs), les zones N1/N2 et leurs territoires, les entités les plus
-  influentes et celles « DIRECTEMENT CONCERNÉES » (localisées dans les zones
-  des pays cités). Elle propose : lecture et ampleur, trajectoires (8 au plus),
-  relations (6), statuts de zone (4), carte (4), nouvelles entités (3).
-  **Contrôle mécanique** de chaque proposition, écartée et listée si : slug
-  inconnu (une entité finit par `_<scénario>`, une zone jamais), trajectoire ou
-  statut invalide (accents normalisés), aucun changement, recul sur la phase
-  de montée (émergent → dominant) ou dans la phase de déclin (vers mature,
-  déclinant, résiduel ; la renaissance vers ascendant est permise), relation
-  déjà présente ou absente, seconde destination pour un même pays.
+  scénario) : l'IA reçoit la logique du scénario, l'hypothèse, les effets
+  chiffrés (en mode choc : avertissement que le moteur amortit ; en mode
+  rupture : les chiffres en tiennent compte), les zones N1/N2 et leurs
+  territoires, les entités influentes et « DIRECTEMENT CONCERNÉES ». Elle
+  propose : lecture et ampleur, trajectoires (8 au plus), relations (6),
+  statuts de zone (4), carte (4), nouvelles entités (3). **Contrôle
+  mécanique**, chaque proposition écartée étant listée : slug inconnu (une
+  entité finit par `_<scénario>`, une zone jamais), trajectoire ou statut
+  invalide, aucun changement, recul sur la phase de montée ou de déclin,
+  relation déjà présente ou absente, seconde destination pour un même pays,
+  partition dont deux parties restent sous la même zone N1 (contestation
+  interne, pas un changement de mains). Consigne de carte (v7.3) : un
+  changement de carte **seulement si un territoire change de mains** ; sinon
+  `"geographie": []`. Avec `carte: non` : toute proposition de carte, de
+  région et tout statut de zone `disparu` (v7.5) sont écartés.
+  **Corrections automatiques** (v7.9, listées dans le rapport, jamais en
+  silence, et seulement pour les relations gardées) : action « renforcée »
+  sur une relation absente → « nouvelle » (sur une relation présente :
+  écartée, « rien à changer ») ; action absente → « nouvelle » ; slug
+  d'entité sans suffixe complété s'il ne désigne qu'une entité. Une zone
+  employée comme entité est signalée (« est une zone »). Une nouvelle entité
+  de zone « transnationale » est acceptée telle quelle.
 - **C — carte** (aperçu) : pour chaque changement du bloc `geographie:` (ou,
-  à défaut, proposé par l'IA), `ZoneRepository.impact_bascule_pays()` :
-  zones quittées (vidées ? avec journaux ?), zone d'arrivée sans rédaction,
-  sous-zones orphelines, instances des sous-zones du pays, fiches qui citent
-  le pays (les autres instances sont seulement comptées). Un rattachement à
-  une zone qui contient déjà le pays est rejeté (✗).
+  à défaut, proposé par l'IA), contrôles et rapport d'impact :
+  - `absorber` / `nouvelle_zone` : `ZoneRepository.impact_bascule_pays()`
+    (zones quittées vidées ? avec journaux ?, zone d'arrivée sans rédaction,
+    sous-zones orphelines, instances du pays, fiches qui le citent). Un
+    rattachement à une zone qui contient déjà le pays est rejeté.
+  - `partition` (v7) : le pays coupé en 2 parties ou plus, chacune dans une
+    zone existante ou nouvelle, avec sa `portion`. **Modèle France** par
+    défaut (chaque partie a sa portion, `zones_pays.json` → `null`) ;
+    **modèle Allemagne** avec `partie_principale` (cette partie garde le pays
+    entier, les autres sont des tracés). Rapport : zones quittées, sous-zones
+    à répartir à la main, tracés à dessiner, valeur de `zones_pays.json`.
+  - `region` (v7.6) : une partie du pays prend une existence propre **sans
+    changer de mains** (foyer de résistance, région autonome, zone sinistrée,
+    enclave de quarantaine) : sous-zone créée sous une zone qui porte le pays
+    (`parent`, déduit si le pays n'est que dans une zone N1). Contrôle par
+    `creer_sous_zone(dry_run=True)` ; alerte si le pays a déjà des sous-zones
+    sous ce parent (portions qui pourraient se chevaucher) ; rapport : niveau,
+    rédaction héritée, 1 tracé, `zones_pays.json` inchangé.
 
 **Cache** : la réponse brute de l'IA est gardée par hypothèse et scénario
-(empreinte : nom, description, date, impacts, persistance, contraintes) et
-**revérifiée à chaque lecture** — une règle de contrôle nouvelle s'applique
-sans nouvel appel. `--refaire` force un nouveau tirage (la lecture varie d'un
-tirage à l'autre).
+(empreinte : nom, description, date, impacts, persistance, contraintes, et
+le mode s'il vaut `rupture`) et **revérifiée à chaque lecture** — une règle
+de contrôle nouvelle s'applique sans nouvel appel. `--refaire` force un
+nouveau tirage (la lecture varie d'un tirage à l'autre ; nécessaire aussi
+pour qu'une hypothèse ancienne reçoive une consigne IA nouvelle).
 
 ### `et_si/hypotheses.yaml` (racine du vault, éditable)
 En-tête documenté. Champs : `id`, `nom`, `description`, `date` (2025-2098),
-`persistance` (ephemere | normale | durable | permanente), `via_matrice`,
-`scenarios` (liste ou `tous`), `impacts` (par variable : `delta_level` = force,
-`polarite` 1 aggrave / −1 apaise, un nombre ou un dictionnaire par scénario,
-`duree` de montée), `contraintes` (faits que la lecture IA doit respecter,
-prioritaires sur ses connaissances générales), `geographie` (par scénario :
-`absorber` dans une zone existante ou `nouvelle_zone` {slug, nom, type,
-statut}). Hypothèses en place : `invasion_bresil_2029`,
-`fusion_commerciale_2038` (avec contraintes sur le tritium et le lithium).
+`mode` (choc | rupture), `persistance` (ephemere | normale | durable |
+permanente, mode choc), `via_matrice`, `scenarios` (liste ou `tous`),
+`carte` (`non` = élément sans effet territorial), `impacts` (par variable :
+`delta_level` = force, `polarite` 1 aggrave / −1 apaise, un nombre ou un
+dictionnaire par scénario, `duree` de montée), `contraintes` (faits imposés à
+la lecture IA), `geographie` (par scénario : `absorber`, `nouvelle_zone`,
+`partition` avec `parties` et `partie_principale`, `region` avec `parent`,
+`nouvelle_zone` et `portion`). Hypothèses au 10 oct : `invasion_bresil_2029`,
+`fusion_commerciale_2038`, `extreme_droite_2034` (`carte: non`),
+`peste_pulmonaire_2043` (`mode: rupture`, `carte: non`),
+`ia_majorite_travail_2040` (écrite par l'assistant, `mode: rupture`).
+
+### `hypothese_depuis_texte.py` 🔁 🧩 (assistant, v7.8)
+```bash
+echo "idée…" | python3 generator/hypothese_depuis_texte.py --proposer     # un appel IA, n'écrit rien
+python3 generator/hypothese_depuis_texte.py --verifier < bloc.yaml        # sans IA
+python3 generator/hypothese_depuis_texte.py --ajouter --json < bloc.yaml  # écrit (GUI)
+```
+Utilisé par les routes `/api/et_si/proposer|verifier|ajouter` (`app.py`).
+L'IA propose id, nom, description, date, mode, persistance, carte, scénarios,
+contraintes et 2 à 8 impacts ; corrections mécaniques signalées (force
+ramenée à 1-25, polarités par scénario complétées, variable inconnue
+retirée, id rendu unique) puis contrôle par `verifier_hypothese()` du
+simulateur. Consigne de fidélité : description et contraintes reprennent
+**uniquement** ce que dit l'idée (une première version inventait dates et
+secteurs, repris en contraintes). Jamais de géographie. Limite connue :
+l'IA applique souvent le même partage de polarités (3 mondes « durs » contre
+3 « doux ») ; relire.
 
 ### Lire un rapport
-- Les écarts chiffrés sont faibles (quelques points) et lents à culminer :
-  c'est le calibrage du moteur (S19), pas une absence d'effet. En breakdown et
-  fortress_world, plusieurs variables saturent près de 100.
+- En mode choc, les écarts sont faibles et lents (calibrage S19) ; pour un
+  élément qui change le monde pour de bon, utiliser `mode: rupture`. Près
+  des bornes (breakdown, fortress_world), même une rupture bouge peu.
 - La lecture IA est une lecture possible, pas une prévision ; comparer
   plusieurs tirages au besoin.
-- Les propositions de carte restent à **relire à la main** : un pays peut être
-  envoyé dans une zone d'un autre continent malgré la consigne.
-- Limite : un pays ne se déplace qu'en entier (pas de partition) ; l'outil
-  n'applique rien — la liste d'application (phase 3) est à faire (S27).
+- Les propositions de carte restent à **relire à la main**.
+- Le récit en tête de chaque scénario (« construit par le script ») ne
+  décrit que la courbe chiffrée ; au-delà de 5 variables directes, il écrit
+  « … et N autres » ; les noms de variables sont le slug accentué
+  (« géopolitique conflits »), faute de nom lisible dans `variables/`.
+  L'option « Récit IA » le rédige en prose (même contenu, 6 appels) : peu utile
+  depuis la lecture des conséquences.
+- L'outil n'applique rien : il dit quoi appliquer (liste ci-dessous) ; le
+  mode application (phase 4) n'existe pas.
+
+### Liste d'application (phase 3, v8 → v8.14, 10 oct après-midi et soir)
+**Statut : en service, non validée.** Éprouvée sur quatre hypothèses (invasion
+du Brésil, fusion, extrême droite, peste en rupture) et leurs six scénarios,
+mais aucune liste n'a encore été appliquée pour de vrai : c'est la validation
+qui reste à faire, avant toute phase 4.
+
+À la fin de chaque scénario du rapport, une section **« Liste d'application »** :
+ce que l'hypothèse imposerait de changer, dans l'ordre, avec la commande ou
+« à la main », à cocher (`- [ ]`). Lecture seule, aucun appel IA : construite
+à partir des niveaux, de la lecture IA gardée et de la carte évaluée, plus trois
+scans (instances et `event_instances` localisées, `articles/` du scénario,
+rédactions de `journaux.yaml` avec `type_diffusion`). Toujours écrite (« Rien à
+appliquer dans ce scénario » sinon) ; aussi dans `dernier_et_si.json`
+(clé `application`). Fonctions : `liste_application()`,
+`construire_application()`, `_rendre_application()`,
+`_rendre_injection_commune()`.
+
+Sections, dans l'ordre :
+1. **Carte** — absorber, nouvelle zone (Carte → clic sur le pays), partition
+   (nouvelles zones d'abord, puis un tracé par portion ; retrait de la portion
+   ou du tracé actuels du pays ; zone qui passe de « pays entier » à
+   « portion » ; contrôle de `zones_pays.json` ; sous-zones à répartir),
+   région (➕ sous-zone puis tracé), zone vidée (garder en vestige ou
+   supprimer), sous-zones orphelines (`reparenter_sous_zones_orphelines.py`),
+   relations allies/rivaux d'une nouvelle zone, continent sur le site
+   (`export_revues.py --continents`). Un changement de carte du YAML refusé au
+   contrôle devient une étape « corriger l'hypothèse » ; une proposition de
+   l'IA écartée n'en devient pas (elle reste notée dans la section Carte).
+   Depuis la v8.4 : sous-zone à plusieurs pays → « la répartir à la main, pas
+   en bloc » (jamais rattachée vers elle-même) ; sous-zone d'une zone qui perd
+   le pays et qui le cite (ou cite une de ses villes) → « à déplacer ? », sauf
+   si ses territoires désignent un autre pays ; ailleurs, seulement si la
+   ville figure dans son nom ou ses territoires ; zone de niveau 1 au nom d'une
+   ville du pays → « reste à part ou rejoint ? » ; une région (pays qui ne
+   change pas de mains) ne déclenche rien de tout cela. Partition (v8.10) :
+   zone quittée qui porte le pays entier → « Retirer <pays> de … » ; une
+   sous-zone qui reçoit elle-même une partie n'est pas « à répartir ».
+2. **Localisation des fiches** — instances et événements localisés dans une
+   zone vidée ou passée à `disparu`, fiches liées aux sous-zones du pays →
+   `extract_localisation.py --scenario X --slug Y --force`.
+3. **Journaux** — rédactions à créer (`generate_journaux.py --update`),
+   couverture des journalistes, orateurs si la zone d'origine est orale ou
+   mixte (`inject_orateur_custom.py --mode convertir`), rédaction d'une zone
+   morte (à la main : exil ou retrait de `journaux.yaml`).
+4. **Statuts de zone** — à la main dans la géographie.
+5. **Élément** — mode choc : injection via l'entrée commune en fin de
+   rapport, puis comparaison des forces injectées aux forces simulées
+   (l'injection les recalcule) avec `trace_injection.py`, banc de calibration
+   si la somme des forces atteint 30. Mode rupture : décision S19, puis la
+   référence de chaque variable (`variables/*.md`, `states.<scénario>.level`)
+   et `synchroniser_scenarios.py` ; référence portée au plafond (≥ 99,5)
+   signalée « ⚠ » ; l'événement est aussi créé **pour le récit** (entrée
+   commune, puis vider `impact_sur_variables` de chaque fiche : la rupture
+   passe déjà par la référence) ; banc de calibration (v8.13).
+6. **Nouvelles entités** — bloc YAML prêt pour `entites_custom/queue.yaml`
+   (`category` à choisir, `scenario_hint` limité au scénario).
+7. **Trajectoires** — à la main ; `annee_fin` pour une trajectoire terminale ;
+   instance custom (`--injection-custom`) et marqueurs `exclure_articles` /
+   `priorite_forcee` signalés. Saut qui passe la phase « ascendant »
+   (émergent ou marginal → dominant ou mature) : gardé, marqué « ⚠ »
+   (garder, ou ramener à ascendant ; v8.12).
+8. **Relations** — nouvelle (à la main, puis réciprocité) ; rompue (retrait
+   dans les deux fiches, la réciprocité n'enlève rien).
+9. **Lore** — règle dans `lore_regles.yaml` pour une zone morte ou des faits
+   imposés.
+9 bis. **Fiches à relire** (v8.3 → v8.14) — instances, événements, zones et
+   lignes du registre postérieures à la date de l'hypothèse qui citent un
+   terme (mot entier, sans casse ni accents ; 25 par type, la suite dans
+   `dernier_et_si.json`), puis `audit_lore.py --llm --slug` pour une relecture
+   ciblée. Termes : pays dont la carte change ; leurs capitales et villes de
+   plus d'un million (`villes_principales.json`), sous leur nom anglais et
+   leur nom français (table d'environ 110 noms : Moscou, Pékin, Le Caire…) ;
+   nom court des sous-zones qui portent le pays (« Sertão », « Corridor
+   Oural-Caspien ») ; pays et noms propres cités par l'hypothèse (mots en
+   tête de phrase, seconds membres de mots composés et mots génériques
+   écartés ; « Golfe », « Détroit »… pris avec le mot qui suit). Une ville
+   homonyme d'un pays (Salvador) n'est pas cherchée dans les territoires.
+   **Sans pays ni nom propre** (hypothèse mondiale) : la recherche par mots
+   ne cible rien ; la liste le dit et propose la relecture IA
+   (`--llm --estimer --limit 10`, `--limit 10`, `--zone` des zones au statut
+   changé), après l'ajout des faits imposés à `lore_regles.yaml`.
+10. **Articles et site** — à rezoner (zone vidée ou disparue :
+    `rezoner_articles.py --corriger <début du fichier>=<zone> --apply`, puis
+    `reattribuer_signatures.py`) ; à relire : zone dont le statut change,
+    zone qui perd ou voit couper un pays **si l'article cite ce pays** (v8.2),
+    article qui cite une entité dont la trajectoire change ; résumé du
+    scénario, chapôs et publication.
+11. **Contrôles** — `validate.py`, `scan_geographie_complet.py`
+    (`--check-overlays` s'il y a des tracés), `audit_lore.py`.
+
+En tête de liste, une note rappelle que carte et conséquences viennent d'un
+tirage IA. En fin de rapport, **« Liste d'application — injection commune »** :
+une entrée pour `evenements_custom/queue.yaml` (id, description, date,
+persistance, scénarios, `variables_hint` ; `portee` et `intensite` à choisir) ;
+avec `--scenario`, un avertissement demande d'y ajouter les autres scénarios
+de l'hypothèse. En mode rupture, l'entrée est donnée pour le récit
+(persistance « permanente »). Testé sur `invasion_bresil_2029` / fortress_world
+(30 étapes, 1 article à relire, légitime), puis sur les six scénarios de quatre
+hypothèses.
+
+Contrôle de la lecture IA (v8.10) : une nouvelle entité placée dans une zone
+que la même lecture propose de créer garde cette zone (correction listée).
+
+**Limites connues** : villes limitées aux capitales et aux villes de plus d'un
+million, et une ville absente de la table française n'est trouvée que sous son
+nom anglais ; régions cherchées seulement par le nom court des sous-zones ;
+homonymes possibles (Santa Cruz, Sucre, Perth, Medina) ; la recherche par mots
+ne voit pas une fiche qui contredit l'hypothèse sans la nommer (relecture IA) ;
+la liste n'a jamais été appliquée en entier.
 
 ### Fichiers
-`generator/simuler_et_si.py` (nouveau), `et_si/hypotheses.yaml` (nouveau,
-`.bak_fusion`, `.bak_tritium`, `.bak_v6`). Réutilise `dynamique.py`,
-`trace_injection.py`, `snapshot.py`, `loader.py`, `gui/zone_repository.py`
-(chargé par importlib, sans Flask), `generator/journaux.yaml`.
+`generator/simuler_et_si.py` (v8.14 au 10 oct), `generator/hypothese_depuis_texte.py`
+(nouveau, 10 oct), `et_si/hypotheses.yaml`. Modifiés le 10 oct pour le
+simulateur : `generator/dynamique.py` (paramètre `ruptures`, `.bak_v74`),
+`gui/zone_repository.py` (mentions en mot entier, `.bak_mots`), `gui/app.py`,
+`gui/static/app.js`, `gui/scripts_config.json`. Patchs `patch_s27_*.py` dans
+`generator/` (déjà appliqués, refusent un second passage ; liste dans
+`HANDOFF_10_OCTOBRE.md`). `generator/trace_injection.py` modifié le 10 oct
+pour le récit (`.bak_recit`, `.bak_recit2`). Réutilise `trace_injection.py`, `snapshot.py`,
+`loader.py`, `gui/zone_repository.py` (chargé par importlib, sans Flask),
+`generator/journaux.yaml`.
 
 ---
 

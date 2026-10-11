@@ -703,3 +703,140 @@ l'autre, acteurs locaux au centre, contrôle fiable ; limites : pays déplacé
 en entier seulement, ampleur chiffrée faible (S19), variation d'un tirage à
 l'autre, rattachements géographiquement absurdes encore possibles. Suites
 dans le backlog actif (S27).
+
+---
+
+## ✅ S27 (étapes 3-5) — Simulateur « et si ? » v7 → v7.9.1 — 10 octobre 2026
+
+Partition, région, mode rupture et entrée GUI, chaque version tirée d'un
+rapport réel.
+- **v7 — partition** : un pays coupé en parties, chacune dans une zone
+  existante ou nouvelle, avec sa `portion` ; modèle France par défaut
+  (`zones_pays.json` → `null`), modèle Allemagne avec `partie_principale`.
+  Imposée dans le YAML (prioritaire) ou proposée par la lecture IA, contrôlée,
+  jamais écrite. Testée : Brésil en 3 parties (invasion, fortress_world).
+- **v7.1** : partition des États-Unis entre un bloc et sa propre sous-zone
+  → deux parties sous la même zone N1 refusées (contestation interne, pas un
+  changement de mains).
+- **São Paulo** (`fortress_world`, S14) : rattaché au Brésil par David depuis
+  la Carte (portion + tracé).
+- **v7.2** : « Inde » trouvé dans « indépendants » → mentions en mot entier
+  (`zone_repository.py`, `_mot_present()`) ; modèle JSON ambigu (parties avec
+  `zone` et `nouvelle_zone`) corrigé.
+- **v7.3** : l'exemple « Nordeste et Amazonie » de la consigne amorçait des
+  partitions du Brésil dans les 6 scénarios, même pour un choc politique →
+  exemple neutre, règle « carte seulement si un territoire change de mains »,
+  champ `carte: non` (filtre mécanique).
+- **v7.4 — mode rupture** : peste à 25 % de mortalité = +1 à +3 points en
+  mode choc (GAIN_CHOCS, demi-vie, plafond autour de la référence). Le mode
+  rupture déplace la référence elle-même (`dynamique.simuler(ruptures=…)`,
+  non-régression vérifiée au chiffre près) : démographie +25 à +28 là où il y
+  a de la marge, tensions 2 → 13-16 dans les mondes qui allaient bien.
+  Décision de David : mode réglé pour toute l'hypothèse.
+- **v7.5** : en rupture, l'IA faisait « disparaître » 7 zones → avec
+  `carte: non`, statut `disparu` écarté (option A de David). Validé depuis le
+  cache, sans appel payant.
+- **v7.6 — région** : sous-zone sans changement de mains, contrôlée par
+  `creer_sous_zone(dry_run=True)`. Testée sur le Nordeste (fortress_world).
+- **v7.7 — entrée GUI**, puis **v7.8** à la demande de David : liste
+  déroulante des hypothèses (plutôt qu'un id à taper) et onglet « Nouvelle
+  hypothèse » (assistant `hypothese_depuis_texte.py`, voie B choisie par
+  David : bloc YAML proposé, modifiable, vérifié, puis ajouté — plutôt qu'un
+  formulaire champ par champ). Consigne de fidélité resserrée après une
+  première proposition qui inventait dates et secteurs, repris en
+  contraintes. **v7.8.1** : garde-fous contre le double ajout (panneau vidé,
+  « Ajouter » verrouillé, refus d'un même nom ou d'une même description),
+  après un constat de David.
+- **v7.9 / v7.9.1 — bruit des relations** : diagnostic sur le cache —
+  l'IA inventait l'action « renforcée », omettait parfois l'action, oubliait
+  le suffixe de scénario, prenait des zones pour des entités. Corrections
+  automatiques listées (seulement pour les relations gardées), messages
+  clairs, entités « transnationales » acceptées. Écartées 56 → 45 sur
+  `ia_majorite_travail_2040`, 6 relations récupérées.
+Hors S27 : résidu `needs_review` des signaux (cas S22 déjà traité le 9 oct)
+vidé. Récit IA du simulateur gardé tel quel ; idée de synthèse haut niveau
+notée (S27).
+
+---
+
+## ✅ S27 (phase 3) — Liste d'application v8 → v8.14 — 10 octobre 2026 (après-midi et soir)
+
+*Clos comme chantier de code ; la phase 3 reste **en service, non validée**
+(aucune liste appliquée pour de vrai, voir S27 dans `BACKLOG_ACTIF.md`).*
+
+Cadrage avec David avant le code : liste dans le rapport, lecture seule, sans
+appel IA, une par scénario. Première liste d'impacts trop courte, complétée
+après relecture des manuels et du backlog (localisation des fiches, relations
+entre zones, continents du site, couverture des journalistes, orateurs, rupture
+réelle via la référence, `trace_injection` et banc, marqueurs perdus à la
+régénération, `lore_regles.yaml`, articles non publiables, chapôs et résumé).
+Lecture de `simuler_et_si.py` puis de `loader.py` : `load_instance` garde déjà
+`exclure_articles`, `priorite_forcee`, `injection.type`, `localisation`,
+`annee_fin`.
+- **v8** (`patch_s27_v8.py`) : `liste_application()`, trois scans (fiches
+  localisées, articles, rédactions avec `type_diffusion`), rendu à cocher,
+  entrée d'injection commune. Testé sur faux vault (partition, zone vidée,
+  rédaction orale, rupture, scénario vide).
+- **v8.1** (`patch_s27_v81.py`), après le premier rapport réel
+  (invasion_bresil_2029, fortress_world) : portion et tracé actuels du pays à
+  retirer (São Paulo) et zone passant de pays entier à portion (Amazonie) ;
+  proposition de carte IA écartée → plus d'étape ; articles des zones qui
+  reçoivent un morceau retirés (12 → 5) ; titre lu dans le texte ; étape Lore
+  réservée aux zones mortes et faits imposés ; note « tirage IA » ;
+  avertissement si `--scenario` limite l'injection commune.
+- **v8.2** (`patch_s27_v82.py`) : zone qui perd un pays sans disparaître → seuls
+  les articles qui citent ce pays (Venezuela quittant `zones_grises_tampons` :
+  articles eurasiatiques écartés, 5 → 1). L'article restant (« Bruxelles-
+  Forteresse, 12 octobre 2098 ») cite deux entités dont la trajectoire change :
+  légitime.
+Constat : l'injection réelle (`inject_custom_events.py`) recalcule les forces
+par IA ; les forces simulées ne sont pas transmises (étape de comparaison).
+
+**Soir (v8.3 → v8.14)**, à partir de la question de David : « avec ce rapport,
+suis-je capable d'évaluer toutes les modifications à apporter au lore ? »
+(réponse : pas encore — rien sur les fiches qui citent le pays sans y être
+localisées). Puis test des six scénarios à chaque version, puis d'autres
+hypothèses pour vérifier que les correctifs ne valent pas que pour le Brésil.
+- **v8.3** : section « Fiches à relire » (termes : pays dont la carte change,
+  leurs grandes villes de `villes_principales.json` via `pays_mapping.json`,
+  pays et noms propres de l'hypothèse ; mot entier, sans casse ni accents ;
+  registre seulement après la date ; 25 fiches par type au plus). « Pression »
+  en tête de phrase n'est plus un nom propre.
+- **v8.4** : sous-zones citant une ville du pays (à déplacer ?), sous-zone à
+  plusieurs pays jamais rattachée en bloc, jamais vers elle-même, alertes de
+  carte devenues étapes (zone N2), bruit de localisation réduit, libellé du
+  registre.
+- **v8.5** : villes non comptées comme autres pays ; sous-zones de ville
+  rangées sous un autre N1.
+- **v8.6** : « États-Unis » = « États-Unis d'Amérique » ; ailleurs, sous-zone
+  signalée seulement par son nom ou ses territoires (plus Séoul ni Nairobi) ;
+  zone N1 au nom d'une ville du pays (Salvador) : reste à part ou rejoint ?
+- **v8.7** : ville homonyme d'un pays (Salvador / El Salvador) ignorée dans
+  les territoires.
+- **v8.8** (fusion) : « États » de « pétro-États » (249 fiches) écarté, mots
+  génériques complétés ; termes en double fusionnés ; Haïfa (territoires en
+  Israël) n'est plus « à déplacer avec Iran ».
+- **v8.9** (extrême droite, sans carte ni nom propre) : relecture IA proposée
+  (`audit_lore.py --llm --estimer --limit 10`, `--limit 10`, `--zone`).
+- **`--refaire`** des trois hypothèses (18 appels) : partitions et régions en
+  nombre, d'où :
+  - **v8.10** : contrôle de la lecture IA — nouvelle entité dans une zone créée
+    par la même lecture gardée (6 cas) ; partition — retirer le pays d'une zone
+    quittée qui le porte entier (5 scénarios), sous-zone cible d'une partie
+    plus « à répartir » ;
+  - **v8.11** : région sans déplacement de sous-zones (Khorasan) ; « Golfe »
+    cherché comme « Golfe persique » (34 → 17 fiches, plus de golfe de
+    Finlande).
+- **v8.12** : sauts émergent/marginal → dominant/mature signalés « ⚠ »
+  (choix b de David : garder et signaler).
+- **v8.13** (peste, rupture) : l'événement est aussi créé pour le récit
+  (sinon ni registre ni articles ne connaissent la pandémie), bloc
+  `impact_sur_variables` à vider ; référence au plafond (≥ 99,5) signalée ;
+  banc de calibration.
+- **v8.14** : nom français de ≈ 110 villes (« Moscou » : 22 fiches trouvées
+  sur la fusion) ; nom court des sous-zones du pays (« Corridor
+  Oural-Caspien », « Sertão »).
+- **Récit** (`trace_injection.py`) : `[:200]` coupait la liste des variables
+  au milieu d'un mot → énumération « … et N autres » (`patch_s27_recit.py`) ;
+  noms des variables accentués mot par mot, faute de nom lisible dans
+  `variables/` (`patch_s27_recit2.py`).

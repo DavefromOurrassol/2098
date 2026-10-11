@@ -1,6 +1,6 @@
 # Rapport d'impact — Arabie Saoudite (fortress_world)
 
-Bascule évaluée : `golfe_moyen_orient_zone_disputee` → `arabie_saoudite_zone_effondree`
+Bascule évaluée : `golfe_moyen_orient_zone_disputee` → `nefoud_enclave_sinistree`
 
 ## Sous-zones potentiellement orphelines (0)
 

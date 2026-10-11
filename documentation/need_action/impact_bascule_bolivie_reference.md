@@ -26,8 +26,7 @@ Bascule évaluée : `ameriques_multipolaires` → `altiplano_lithium_autonome`
 - `exode_midwest_grands_lacs_reference` — zone : detroit_compact_grands_lacs
 - `secession_great_lakes_compact_reference` — zone : detroit_compact_grands_lacs
 
-## Mentions textuelles de « Bolivie » (2)
+## Mentions textuelles de « Bolivie » (1)
 - `amazonie_consortium_viva_reference` — …idictions nationales amazoniennes (Brésil, Pérou, Colombie, Bolivie) et les cadres multilatéraux incomplets sur la biodi…
-- `consortium_amazonia_viva_reference` — …trations locales brésiliennes, colombiennes, péruviennes et boliviennes, il revendique une souveraineté fonctionnelle su…
 
 ## Registre des événements (0)

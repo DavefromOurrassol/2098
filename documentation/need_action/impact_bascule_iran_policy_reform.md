@@ -1,18 +1,23 @@
 # Rapport d'impact — Iran (policy_reform)
 
-Bascule évaluée : `zone_moyen_orient_golfe` → `iran_pole_tritium`
+Bascule évaluée : `zone_moyen_orient_golfe` → `espace_eurasiatique`
 
 ## Sous-zones potentiellement orphelines (1)
 - `kharg_island` (Kharg Island, niveau 2) — origine : Iran
 
-## Instances/événements liés structurellement (7)
+## Instances/événements liés structurellement (12)
 - `agence_de_regulation_des_detroits_strategiques_ards_policy_reform` — zone : zone_moyen_orient_golfe
+- `consortium_nexus_calcul_policy_reform` — zone : datacentres_aria_nexus
+- `front_de_souverainete_biologique_eurasiatique_policy_reform` — zone : espace_eurasiatique
 - `gelecek_meclisi_policy_reform` — zone : istanbul
 - `gouvernement_israel_policy_reform` — zone : tel_aviv
+- `institut_brookings_singapour_de_politique_computationnelle_policy_reform` — zone : singapour_brookings
 - `lobbies_des_energies_fossiles_residuelles_policy_reform` — zone : golfe_persique_petrole_residuel
 - `republique_islamique_iran_policy_reform` — zone : zone_moyen_orient_golfe
 - `terminal_kharg_data_haven_policy_reform` — zone : kharg_island
+- `union_technocratique_eurasiatique_policy_reform` — zone : union_technocratique_eurasiatique_territoire
 - `conflit_israel_iran_2026_policy_reform` — zone : zone_moyen_orient_golfe
+- `greve_generale_corridors_eurasiens_policy_reform` — zone : espace_eurasiatique
 
 ## Mentions textuelles de « Iran » (18)
 - `agence_de_regulation_des_detroits_strategiques_ards_policy_reform` — …es décisions – comme le blocage temporaire des exportations iraniennes en 2052 ou la taxation des convois chinois en 206…

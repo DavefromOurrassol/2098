@@ -20,6 +20,9 @@
 		},
 		{
 			"path": "../gui"
+		},
+		{
+			"path": "../et_si"
 		}
 	],
 	"settings": {}

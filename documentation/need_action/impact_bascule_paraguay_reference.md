@@ -26,7 +26,6 @@ Bascule évaluée : `ameriques_multipolaires` → `sertao_nordeste_bresilien`
 - `exode_midwest_grands_lacs_reference` — zone : detroit_compact_grands_lacs
 - `secession_great_lakes_compact_reference` — zone : detroit_compact_grands_lacs
 
-## Mentions textuelles de « Paraguay » (1)
-- `frente_sertao_livre_reference` — …échées du Piauí comme dans les franges semi-arides du Chaco paraguayen, les couleurs ocre et vert sombre de la Frente Se…
+## Mentions textuelles de « Paraguay » (0)
 
 ## Registre des événements (0)

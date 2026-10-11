@@ -2454,3 +2454,130 @@ Python.
 
 **Fin de séance.** Documentation reportée à la fin par David, faite le soir ;
 partition des pays reportée à la session suivante.
+
+### Addendum — Simulateur « et si ? » : partition, région, rupture, GUI (10 octobre 2026)
+
+**Partition.** Reprise du handoff du 9 oct. David demande d'abord de vérifier
+les briques existantes (backlogs, manuels) avant de coder. Sa question
+concrète — si le Brésil est en partie envahi, qui définit la partition ? —
+fixe le principe : imposée dans le YAML (prioritaire) ou proposée par l'IA,
+toujours contrôlée, jamais écrite. Deux modèles déjà présents dans le vault :
+France (deux zones, chacune sa portion) et Allemagne (une zone garde le pays,
+l'autre un tracé). David rappelle que les éléments simulés peuvent être très
+différents (extraterrestres, extrême droite à 80 %, peste à 25 %, stérilité,
+IA qui travaille) : d'où deux hypothèses de test sans effet territorial.
+v7 testée sur l'invasion ; v7.1 après une partition des États-Unis entre un
+bloc et sa sous-zone. São Paulo (`fortress_world`, signalé S14) rattaché au
+Brésil par David depuis la Carte. v7.2 : « Inde » dans « indépendants ».
+v7.3 : l'exemple de la consigne (Nordeste, Amazonie) — rédigé par Claude —
+amorçait des partitions du Brésil dans les 6 scénarios pour l'extrême
+droite ; exemple neutre et `carte: non`.
+
+**Mode rupture.** Constat des tests : une peste à 25 % ne pèse que +1 à +3
+points. Lecture de `dynamique.py` : GAIN_CHOCS, demi-vie, plafond tanh
+autour d'une référence fixe. Conception : déplacer la référence elle-même.
+Question à David (mode par hypothèse ou par impact) : par hypothèse. v7.4
+vérifiée en non-régression (calcul sans rupture identique au chiffre près),
+puis en réel. Lecture IA en rupture (6 appels, demandée après explication de
+ce que l'étape testait : les consignes v7.3 et v7.4 n'avaient jamais été
+reçues par l'IA) : pas de carte proposée, contraintes respectées, mais 7
+zones « disparues » → v7.5 (option A de David : écartées). Remarque sur la
+santé à +25 pour toujours malgré « endémique en 2050 » : conséquence du mode
+par hypothèse, à régler par la force.
+
+**Pendant les appels IA.** Deux items « en revue » au tableau de bord :
+entrée résiduelle de la première tentative du signal S22 (bloc YAML non
+refermé, puis événements frères), déjà réglée le 9 oct d'après le manuel ;
+signal présent dans les 3 variables → fichier vidé.
+
+**Région.** v7.6, conçue sur `creer_sous_zone` (mode aperçu). Testée sur le
+Nordeste ; David demande à quoi sert le patch (dépôt dans `generator/`,
+lancement depuis la racine, comme les autres).
+
+**GUI.** v7.7 (entrée sidebar, id tapé). David : pourquoi lancer une
+recherche des hypothèses ? et pourquoi ne pas remplir les champs depuis
+l'idée ? → lecture de `app.py`, `app.js`, `idees_vers_queue.py`. Le
+formulaire guidé est câblé pour `queue.yaml` et ne sait pas saisir une liste
+imbriquée : voie B choisie (bloc YAML proposé puis vérifié). Premier essai :
+l'IA invente une chronologie (2035-2045, 2050, secteurs), reprise en
+contraintes → consigne resserrée ; second essai fidèle. David constate qu'on
+peut ajouter deux fois la même idée → v7.8.1. Retrait de la première
+formulation par un petit script (`.bak_retrait`). Question sur le nom du
+rapport (`et_si_<id>.md` + copie au nom fixe pour le panneau) et sur l'option
+« Récit IA » (courbe chiffrée seulement ; gardée, idée de synthèse notée).
+
+**Bruit des relations.** Extraction des relations brutes du cache (id réel
+`ia_majorite_travail_2040`, différent du bloc montré) : action « renforcée »
+inventée dans les 6 scénarios, action absente, suffixe oublié, zones prises
+pour des entités → v7.9, puis v7.9.1 (corrections listées seulement pour les
+relations gardées, grammaire).
+
+**Fin de séance.** Documents mis à jour sur demande de David.
+
+### Addendum — Simulateur « et si ? » : liste d'application (10 octobre 2026, après-midi)
+
+**Nettoyage.** `test_region_nordeste` déjà absente de `hypotheses.yaml`.
+
+**Cadrage.** Proposition d'une liste en 9 rubriques ; David demande si la
+documentation a vraiment été relue : non, une dizaine d'impacts manquaient
+(localisation des fiches, relations entre zones, continents, couverture et
+orateurs, rupture réelle, contrôle après injection, marqueurs, lore, articles
+non publiables, site, résumés). Lecture de `simuler_et_si.py` : la plupart des
+données existent déjà ; trous : instances des zones vidées ou disparues,
+articles, journaux d'une zone disparue par statut, continents, marqueurs
+(réglé par `loader.py`). Point notable : l'injection réelle recalcule les
+forces par IA, d'où une étape de comparaison.
+
+**Itérations sur le rapport réel** (invasion du Brésil, fortress_world, cache
+IA, aucun appel payant) : v8 → v8.1 (tracé de São Paulo oublié, Colombie
+écartée par l'IA transformée en étape, articles trop nombreux, titres en slug,
+Lore vague) → v8.2 (articles des zones qui perdent un pays : seulement s'ils
+citent ce pays). Vérification par grep du dernier article restant : il cite
+deux entités touchées. Deux articles du vault portent le même titre-dateline.
+
+### Addendum — Simulateur « et si ? » : liste d'application, suite (10 octobre 2026, soir)
+
+**Complétude.** David demande si l'étape 3 est validée (non : elle ne l'avait
+pas été par lui) et si le rapport suffit pour évaluer toutes les modifications
+à apporter au lore. Réponse : non, rien ne repérait les fiches qui citent le
+pays sans y être localisées. Option retenue : un scan des fiches qui citent le
+pays, ses villes et les noms propres de l'hypothèse (v8.3).
+
+**Itérations, scénario par scénario** (cache, gratuit) sur l'invasion du
+Brésil : villes sous-zones manquées, sous-zone multi-pays rattachée en bloc,
+rattachement vers elle-même, villes prises pour des pays, sous-zones de ville
+sous un autre N1 (v8.4, v8.5) ; « États-Unis d'Amérique », Séoul et Nairobi
+signalés par leur description, Salvador zone de niveau 1 (v8.6) ; Salvador
+pays d'Amérique centrale (v8.7). David demande si les correctifs sont
+généralisables : oui, avec des limites, d'où le test d'autres hypothèses.
+
+**Autres hypothèses.** Fusion : « États » pris pour un nom propre (249 fiches),
+doublons de termes, Haïfa (v8.8). Extrême droite : aucune fiche à relire faute
+de terme → relecture IA proposée, après lecture de l'aide d'`audit_lore.py`
+(v8.9).
+
+**`--refaire` des trois hypothèses** (18 appels payants) : lectures plus riches
+(partitions et régions dans presque chaque scénario) ; défauts révélés : entité
+« gardée sans zone » alors que sa zone est créée par la même lecture, zone
+quittée qui garde le pays entier, sous-zone « à répartir » vers elle-même
+(v8.10) ; région traitée comme un changement de mains (Khorasan), « Golfe »
+trop large (v8.11). Limite notée : villes en anglais.
+
+**Récit.** `recit_modele()` coupait la chaîne à 200 caractères ; corrigé, puis
+accents (les fiches `variables/` n'ont pas de nom lisible : `name` = slug,
+titre = slug). Envoi de fichier : `generator/trace_injection.py` tapé seul
+dans le terminal a donné « Permission denied » (il fallait le joindre).
+
+**Sauts de trajectoire.** 11 « émergent → dominant » sur trois rapports ;
+David choisit l'option b (signaler, pas corriger) : v8.12.
+
+**Limites et solutions.** David demande les solutions aux limites connues :
+peste en rupture (v8.13 : l'événement n'existait jamais dans le lore), noms
+français des villes et lieux du vault (v8.14 : « Moscou » trouve 22 fiches sur
+la fusion). Homonymes laissés (bruit faible).
+
+**Statut.** À la question « la phase est-elle considérée validée ? » : non —
+**en service, à valider par une première application réelle d'une liste**.
+Reste noté : application réelle, décision S19 sur la rupture dans le vrai
+moteur, amplitude des chocs, anomalies de données (S24), options (homonymes,
+`ia_majorite_travail_2040`, synthèse, phase 4).

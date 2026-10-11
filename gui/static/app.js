@@ -513,6 +513,11 @@ async function renderFormBody(script) {
   // YAML panels
   await renderYamlPanels(script);
 
+  // Assistant « Nouvelle hypothèse » (simulateur « et si ? » v7.8, 10 octobre
+  // 2026) -- avant updateModeOnlyVisibility() ci-dessous, qui le masque en
+  // mode « Simuler » (data-mode-only="nouvelle").
+  if (script.assistant_hypothese) body.appendChild(buildAssistantHypothese());
+
   // État initial de la visibilité mode_only (onglet par défaut = premier de
   // la liste, cf. renderModeSelect) — sans ça, le premier rendu affiche tout
   // avant le premier clic sur un onglet Mode.
@@ -10888,4 +10893,160 @@ function _ouvrirSousZonePanel(parentSlug, parentNom, racineSlug) {
       el('msg').innerHTML = `<span class="carte-panel-error">✗ Erreur réseau : ${e.message}</span>`;
     }
   });
+}
+
+
+// ══════════════════════════════════════════════════
+// ASSISTANT « NOUVELLE HYPOTHÈSE » (simulateur « et si ? » v7.8, 10 octobre 2026)
+// ══════════════════════════════════════════════════
+// Panneau de l'entrée simuler_et_si (clé assistant_hypothese dans
+// scripts_config.json), visible en mode « Nouvelle hypothèse ». Trois
+// routes (app.py -> hypothese_depuis_texte.py) :
+//   ✨ Proposer  /api/et_si/proposer  UN appel IA, bloc YAML modifiable ;
+//   Vérifier     /api/et_si/verifier  sans IA, n'écrit rien ;
+//   Ajouter      /api/et_si/ajouter   contrôle refait côté serveur, seul
+//                                     chemin d'écriture (sauvegarde .bak_ajout).
+function buildAssistantHypothese() {
+  const wrapper = document.createElement('div');
+  wrapper.className = 'yaml-panel';
+  wrapper.dataset.modeOnly = 'nouvelle';
+
+  const mk = (tag, cls, txt) => {
+    const e = document.createElement(tag);
+    if (cls) e.className = cls;
+    if (txt) e.textContent = txt;
+    return e;
+  };
+
+  const header = mk('div', 'yaml-panel-header');
+  const titleRow = mk('div', 'yaml-panel-title-row');
+  titleRow.appendChild(mk('span', 'yaml-panel-title', '✨ Nouvelle hypothèse'));
+  header.appendChild(titleRow);
+  wrapper.appendChild(header);
+
+  const corps = mk('div', 'yaml-form-zone');
+  corps.style.padding = '8px 0';
+  corps.appendChild(mk('div', 'option-desc',
+    'Écris l\'idée librement (date, chiffres, point d\'arrivée…), puis « ✨ Proposer » : l\'IA remplit ' +
+    'l\'hypothèse complète (un appel IA). Corrige le bloc si besoin, « Vérifier », puis « Ajouter ». ' +
+    'Rien n\'est écrit avant « Ajouter ». La nouvelle hypothèse apparaît ensuite dans la liste du mode « Simuler ».'));
+
+  const idee = mk('textarea', 'yaml-form-textarea');
+  idee.rows = 4;
+  idee.placeholder = 'ex : à partir de 2040, des IA font le travail de 60 % des emplois salariés…';
+  idee.autocomplete = 'off';
+  idee.style.width = '100%';
+  corps.appendChild(idee);
+
+  const btnProposer = mk('button', 'yaml-btn yaml-btn-save', '✨ Proposer');
+  btnProposer.type = 'button';
+  btnProposer.style.margin = '6px 0 10px';
+  corps.appendChild(btnProposer);
+
+  const retour = mk('div', 'option-desc');
+  retour.style.whiteSpace = 'pre-wrap';
+  corps.appendChild(retour);
+
+  corps.appendChild(mk('div', 'option-label', 'Bloc de l\'hypothèse (modifiable)'));
+  const bloc = mk('textarea', 'yaml-edit');
+  bloc.rows = 20;
+  bloc.spellcheck = false;
+  bloc.style.display = 'block';
+  bloc.style.width = '100%';
+  bloc.style.fontFamily = 'monospace';
+  bloc.placeholder = '  - id: …\n    nom: …';
+  corps.appendChild(bloc);
+
+  const ligneBoutons = mk('div');
+  ligneBoutons.style.marginTop = '8px';
+  const btnVerifier = mk('button', 'yaml-btn', 'Vérifier');
+  btnVerifier.type = 'button';
+  const btnAjouter = mk('button', 'yaml-btn yaml-btn-save', 'Ajouter à hypotheses.yaml');
+  btnAjouter.type = 'button';
+  btnAjouter.style.marginLeft = '8px';
+  ligneBoutons.appendChild(btnVerifier);
+  ligneBoutons.appendChild(btnAjouter);
+  corps.appendChild(ligneBoutons);
+
+  const statut = mk('div', 'option-desc');
+  statut.style.whiteSpace = 'pre-wrap';
+  statut.style.marginTop = '6px';
+  corps.appendChild(statut);
+  wrapper.appendChild(corps);
+
+  const afficher = (zone, data, titreOk) => {
+    const lignes = [];
+    if (data.error) lignes.push(`✗ ${data.error}`);
+    (data.erreurs || []).forEach(e => lignes.push(`✗ ${e}`));
+    (data.avertissements || []).forEach(a => lignes.push(`⚠ ${a}`));
+    if (data.justification) lignes.push(`💬 ${data.justification}`);
+    if (!data.error && !(data.erreurs || []).length && titreOk) lignes.unshift(titreOk);
+    zone.textContent = lignes.join('\n');
+    zone.style.color = (data.error || (data.erreurs || []).length) ? '#b03a2e' : '';
+  };
+
+  const appeler = async (action, texte) => {
+    try {
+      const res = await fetch(`/api/et_si/${action}`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ texte }),
+      });
+      return await res.json();
+    } catch (e) {
+      return { error: `Erreur réseau : ${e.message}` };
+    }
+  };
+
+  const occupe = (oui) => {
+    [btnProposer, btnVerifier].forEach(b => { b.disabled = oui; });
+    btnAjouter.disabled = oui || !!btnAjouter.dataset.verrou;
+  };
+
+  btnProposer.addEventListener('click', async () => {
+    if (!idee.value.trim()) { retour.textContent = '✗ Écris d\'abord l\'idée.'; return; }
+    if (bloc.value.trim() && !confirm('Remplacer le bloc actuel par une nouvelle proposition ?')) return;
+    occupe(true);
+    btnProposer.textContent = '✨ Proposition en cours… (un appel IA)';
+    const data = await appeler('proposer', idee.value);
+    btnProposer.textContent = '✨ Proposer';
+    occupe(false);
+    if (data.bloc) { bloc.value = data.bloc; delete btnAjouter.dataset.verrou; }
+    statut.textContent = '';
+    afficher(retour, data, data.bloc ? '✓ Proposition prête : relis le bloc, puis Vérifier.' : '');
+  });
+
+  bloc.addEventListener('input', () => {
+    if (btnAjouter.dataset.verrou) { delete btnAjouter.dataset.verrou; btnAjouter.disabled = false; }
+  });
+
+  btnVerifier.addEventListener('click', async () => {
+    if (!bloc.value.trim()) { statut.textContent = '✗ Bloc vide.'; return; }
+    occupe(true);
+    const data = await appeler('verifier', bloc.value);
+    occupe(false);
+    afficher(statut, data, `✓ ${data.id || 'Hypothèse'} : bloc valide.`);
+  });
+
+  btnAjouter.addEventListener('click', async () => {
+    if (!bloc.value.trim()) { statut.textContent = '✗ Bloc vide.'; return; }
+    occupe(true);
+    const data = await appeler('ajouter', bloc.value);
+    occupe(false);
+    afficher(statut, data, data.message ? `✓ ${data.message}` : '');
+    if (data.ok) {
+      // v7.8.1 : garde-fou contre le double ajout -- l'idée et le bloc sont
+      // vidés, « Ajouter » reste verrouillé jusqu'à un nouveau bloc.
+      idee.value = '';
+      bloc.value = '';
+      btnAjouter.disabled = true;
+      btnAjouter.dataset.verrou = '1';
+      const sel = document.querySelector('#form-body [data-slug-type="hypotheses_et_si"]');
+      if (sel) await rafraichirChampDynamique(sel);
+      const panneau = document.querySelector('#form-body .yaml-panel[data-yaml-path="et_si/hypotheses.yaml"]');
+      if (panneau) await loadYamlContent(panneau, 'et_si/hypotheses.yaml');
+    }
+  });
+
+  return wrapper;
 }

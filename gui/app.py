@@ -2831,6 +2831,46 @@ def edition_injecter_evenement():
     return jsonify(payload)
 
 
+# ---------------------------------------------------------------------------
+# Simulateur « et si ? » v7.8 (10 octobre 2026) -- assistant « Nouvelle
+# hypothèse ». Trois actions de hypothese_depuis_texte.py, le texte (idée ou
+# bloc YAML) passé sur l'entrée standard : proposer (UN appel IA, n'écrit
+# rien), verifier (sans IA, n'écrit rien), ajouter (contrôle refait, seul
+# chemin d'écriture vers et_si/hypotheses.yaml, sauvegarde .bak_ajout).
+# ---------------------------------------------------------------------------
+
+TIMEOUT_ET_SI = {"proposer": 180, "verifier": 60, "ajouter": 60}
+
+
+@app.route("/api/et_si/<action>", methods=["POST"])
+def et_si_assistant(action):
+    if action not in TIMEOUT_ET_SI:
+        return jsonify({"error": f"action inconnue : {action}"}), 404
+    cfg = load_config()
+    pipeline_dir = Path(cfg.get("pipeline_dir", ""))
+    data = request.get_json() or {}
+    texte = data.get("texte") or ""   # pas de strip() : l'indentation du bloc YAML compte
+    if not texte.strip():
+        return jsonify({"error": "texte vide"}), 400
+    cmd = [sys.executable, "hypothese_depuis_texte.py", f"--{action}", "--json"]
+    try:
+        resultat = subprocess.run(cmd, cwd=pipeline_dir, capture_output=True, text=True,
+                                  input=texte, timeout=TIMEOUT_ET_SI[action])
+    except subprocess.TimeoutExpired:
+        return jsonify({"error": f"Délai dépassé ({TIMEOUT_ET_SI[action]} s)"}), 504
+    except FileNotFoundError:
+        return jsonify({"error": f"hypothese_depuis_texte.py introuvable dans {pipeline_dir}"}), 500
+    sortie = resultat.stdout.strip()
+    try:
+        payload = json.loads(sortie.splitlines()[-1])
+    except (json.JSONDecodeError, IndexError):
+        return jsonify({"error": f"Sortie inattendue (code {resultat.returncode}) : "
+                                  f"{(resultat.stderr or sortie)[-500:]}"}), 500
+    if payload.get("error"):
+        return jsonify({"error": payload["error"]}), 500
+    return jsonify(payload)
+
+
 TIMEOUT_IDEES_TEXTE_LIBRE = 180  # secondes -- un seul appel LLM
 
 
@@ -4105,6 +4145,24 @@ def get_slugs():
                 "slugs": [c["slug"] for c in candidats],
                 "candidats": candidats,
             })
+        elif slug_type == "hypotheses_et_si":
+            # Simulateur « et si ? » v7.8 (10 octobre 2026) : liste déroulante
+            # des hypothèses de et_si/hypotheses.yaml (nom, date, ⚠ invalide),
+            # via simuler_et_si.py --lister --json (aucun appel IA).
+            resultat = subprocess.run(
+                [sys.executable, "simuler_et_si.py", "--lister", "--json"], cwd=pipeline_dir,
+                capture_output=True, text=True, timeout=60, stdin=subprocess.DEVNULL,
+            )
+            try:
+                hyps = json.loads(resultat.stdout.strip().splitlines()[-1])
+            except (json.JSONDecodeError, IndexError):
+                return jsonify({"slugs": [], "error": (resultat.stderr or resultat.stdout)[-500:]})
+            for h in hyps:
+                if not h.get("id"):
+                    continue
+                slugs.append(h["id"])
+                labels[h["id"]] = (f"{h.get('nom')} ({h.get('date')})"
+                                   + (" ⚠ invalide" if h.get("erreurs") else ""))
         elif slug_type == "signals":
             slugs = _scan_signal_slugs(vault_root)
         elif slug_type == "evenements":

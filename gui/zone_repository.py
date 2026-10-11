@@ -116,6 +116,14 @@ def _fold(s: str) -> str:
     return s.lower()
 
 
+def _mot_present(mot_plie: str, texte_plie: str):
+    """Recherche en MOT ENTIER (textes déjà passés par _fold) : « inde » ne doit
+    pas être trouvé dans « independants ». Retourne le match (ou None)."""
+    if not mot_plie:
+        return None
+    return re.search(r"(?<![a-z0-9])" + re.escape(mot_plie) + r"(?![a-z0-9])", texte_plie)
+
+
 @dataclass
 class GeoFile:
     """État en mémoire d'une fiche geographie/{scenario}.md le temps d'une
@@ -1505,8 +1513,9 @@ class ZoneRepository:
                 if zone in zone_slugs_liees:
                     instances_liees.append({"slug": slug, "zone": zone, "type": fm.get("type", dossier)})
                 folded_raw = _fold(raw)
-                if pays_folded in folded_raw:
-                    idx = folded_raw.find(pays_folded)
+                trouve = _mot_present(pays_folded, folded_raw)
+                if trouve:
+                    idx = trouve.start()
                     extrait = raw[max(0, idx - 60):idx + 60].replace("\n", " ").strip()
                     mentions_texte.append({"slug": slug, "type": fm.get("type", dossier), "extrait": f"…{extrait}…"})
         return instances_liees[:100], mentions_texte[:50]
@@ -1526,7 +1535,7 @@ class ZoneRepository:
                     continue
                 if section != scenario:
                     continue
-                if stripped.startswith("|") and pays_folded in _fold(stripped):
+                if stripped.startswith("|") and _mot_present(pays_folded, _fold(stripped)):
                     hits.append(stripped)
         except OSError:
             pass
@@ -1564,7 +1573,7 @@ class ZoneRepository:
                     continue
                 for o in (z.get("origine_reelle") or []):
                     entite = o.get("entite", "") if isinstance(o, dict) else ""
-                    if pays_folded in _fold(entite):
+                    if _mot_present(pays_folded, _fold(entite)):
                         sous_zones_orphelines.append({
                             "slug": slug, "nom": z.get("nom", slug),
                             "niveau": z.get("niveau"), "origine": entite,

@@ -1,10 +1,10 @@
 # Rapport d'impact — États-Unis d'Amérique (policy_reform)
 
-Bascule évaluée : `ameriques_reformees` → `etats_unis_divises`
+Bascule évaluée : `ameriques_reformees` → `cotes_americaines_resistantes`
 
 ## Sous-zones potentiellement orphelines (2)
-- `etats_federes_conservateurs` (Ceinture des États fédérés conservateurs, niveau 2) — origine : États-Unis d'Amérique
 - `washington_dc_etats_conservateurs_interface` (Ceinture industrielle des Grandes Plaines, niveau 3) — origine : États-Unis d'Amérique
+- `etats_federes_conservateurs` (Ceinture des États fédérés conservateurs, niveau 2) — origine : États-Unis d'Amérique
 
 ## Instances/événements liés structurellement (6)
 - `arctic_passage_authority_policy_reform` — zone : iqaluit_apa

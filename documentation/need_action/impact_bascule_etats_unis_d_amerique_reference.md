@@ -1,6 +1,6 @@
 # Rapport d'impact — États-Unis d'Amérique (reference)
 
-Bascule évaluée : `ameriques_multipolaires` → `etats_unis_crise_constitutionnelle`
+Bascule évaluée : `ameriques_multipolaires` → `californie_pacifique_refuge`
 
 ## Sous-zones potentiellement orphelines (1)
 - `etats_unis_crise_constitutionnelle` (États-Unis post-2055, niveau 2) — origine : États-Unis d'Amérique

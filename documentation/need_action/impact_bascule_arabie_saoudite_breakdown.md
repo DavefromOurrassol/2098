@@ -1,6 +1,6 @@
 # Rapport d'impact — Arabie saoudite (breakdown)
 
-Bascule évaluée : `zone_golfe_levant` → `arabie_desert_fragments`
+Bascule évaluée : `zone_golfe_levant` → `hijaz_autonome`
 
 ## Sous-zones potentiellement orphelines (0)
 

@@ -628,6 +628,9 @@ zones:
   - entite: São Paulo
     type_entite: region_administrative
     portion: null
+  - entite: Brésil
+    type_entite: pays
+    portion: La mégapole de São Paulo et sa région métropolitaine
   description: Mégapole de 34 millions d'habitants gouvernée par le Sistema Paulista
     de Alocação Soberana (SPAS), IA centenaire gérant l'allocation de l'eau, de l'énergie,
     du logement et de la mobilité selon des paramètres jamais audités publiquement
@@ -3482,7 +3485,7 @@ Siège actuel tournant du Pacte des Forteresses Souveraines, plateforme offshore
 
 *ville — statut : stable*
 
-**Origine réelle (2026)** : São Paulo
+**Origine réelle (2026)** : São Paulo, Brésil (La mégapole de São Paulo et sa région métropolitaine)
 
 **Transition** : 2030-2098
 

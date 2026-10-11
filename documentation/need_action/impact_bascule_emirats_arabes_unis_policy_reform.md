@@ -1,6 +1,6 @@
 # Rapport d'impact — Émirats arabes unis (policy_reform)
 
-Bascule évaluée : `zone_moyen_orient_golfe` → `dubai_hub_technologique_residuel`
+Bascule évaluée : `zone_moyen_orient_golfe` → `dubai_hub_technologique`
 
 ## Sous-zones potentiellement orphelines (1)
 - `golfe_persique_petrole_residuel` (Infrastructure pétrolière résiduelle du Golfe, niveau 2) — origine : Émirats arabes unis
