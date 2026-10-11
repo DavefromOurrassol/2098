@@ -312,3 +312,21 @@ hypotheses:
         policy_reform: -1
         reference: 1
       duree: 8
+  - id: destruction_geneve_2076
+    nom: "Destruction de Genève (2076)"
+    description: >
+      En mars 2076, l'explosion du dépôt énergétique souterrain de Genève rase la ville
+      et ses abords. Les institutions internationales qui y survivaient perdent leurs
+      bâtiments, leurs archives physiques et la plupart de leur personnel.
+    date: 2076
+    scenarios: [breakdown]
+    carte: non
+    persistance: permanente
+    contraintes:
+      - "Genève est détruite en mars 2076 ; aucune institution n'y siège physiquement après cette date."
+      - "Les archives physiques conservées à Genève sont perdues ; seules survivent les copies conservées ailleurs."
+    impacts:
+      - variable: gouvernance_institutions
+        delta_level: 6
+        polarite: 1
+        duree: 2

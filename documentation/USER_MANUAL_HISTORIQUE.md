@@ -2581,3 +2581,53 @@ la fusion). Homonymes laissés (bruit faible).
 Reste noté : application réelle, décision S19 sur la rupture dans le vrai
 moteur, amplitude des chocs, anomalies de données (S24), options (homonymes,
 `ia_majorite_travail_2040`, synthèse, phase 4).
+
+---
+
+### Addendum — Pipeline d'injection, passe exhaustive, banc de rejeu (11 octobre 2026)
+
+**Le besoin.** David veut que l'injection d'un événement passe par une
+évaluation de son impact sur le lore : « 1. je teste l'injection, 2. je décide
+si j'injecte ». Le simulateur sert d'étape « tester ». Deux options : (a)
+l'événement injecté reprend ce qui a été simulé ; (b) les conséquences cochées
+sont appliquées aussi. Retenu : (a), comme étape vers (b).
+
+**Impositions.** Lecture d'`inject_custom_events.py` : les forces étaient
+recalculées par l'IA d'injection. Patch : `impacts_imposes`, `date_imposee`,
+`via_matrice_impose`, contrôlés avant tout appel, réappliqués après l'IA.
+Simulateur v8.15 : l'entrée commune du rapport les remplit. Dry-run réel
+conforme ; un ⚠ trompeur sur le nombre de variables reste à faire taire.
+
+**De 9 acteurs à « tout le lore ».** La simulation proposait 9 acteurs, le
+plafond d'injection est 4. David : être sûr que l'impact sur tout le lore est
+considéré. D'où la passe exhaustive : relire toutes les fiches du scénario,
+par lots, pour quelques centimes.
+
+**Itérations.** Bruit massif (v1), puis filtres (v2-v5) ; à la peste, 74
+trajectoires. David craint un réglage sans fin, hypothèse par hypothèse.
+Réponse : l'outil était déjà exhaustif en couverture ; le problème était la
+précision, et chaque filtre risquait de perdre du vrai. Changement de
+principe (v6) : **classer au lieu de filtrer**, avec un critère unique
+(« la fiche devient-elle fausse ? »). Puis contre-lecture (v7), corrigée quand
+l'argumentaire du proposant la convainquait (v7.1). Le tri des possibles par
+score (v8) puis par l'IA (v9) ; réglages arrêtés (classement variable, aide
+à la lecture).
+
+**Itérer plus vite.** Chaque réglage coûtait un aller-retour (code, commande,
+rapport). La session ne peut pas être liée à l'iMac (High Sierra). Solution :
+un export de tout ce qu'il faut (fiches, effets, cache) et un banc de rejeu
+qui recalcule la passe sans IA et la note contre une liste de référence.
+
+**Cas révélateurs.** Une hypothèse à réponse connue (destruction de Genève) a
+montré que la règle « territoire » ignorait les lieux nommés hors carte. Trois
+nouveaux cas ont montré que l'outil **ignorait le temps** : un fait passé
+(conflit de 2026-2027) jugé contredit par 2038, des institutions de 2098
+jugées impossibles après une vague politique de 2030-2038 amortie à 13 %.
+David a tranché quatre cas ; le critère qui en sort : un **acte matériel**
+(invasion, destruction) reste vrai, une **tendance** diffuse s'efface. La
+contre-lecture classe maintenant le fait, et c'est le code qui décide.
+
+**Statut.** v9.5 : 26 verdicts conformes sur 27 (écart toléré : RPDA).
+Banc conservé dans `generator/rejeu/`. Reste : brancher la passe dans le
+simulateur, le ⚠ des variables, l'étape « décider », puis les suites du 10 oct
+(application réelle d'une liste, S19, amplitude des chocs).

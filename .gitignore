@@ -14,3 +14,7 @@ documentation/livres/*.pdf
 documentation/livres/*.epub
 documentation/Activation clef.md
 site/
+
+generator/state/export_et_si.json
+generator/rejeu/sorties/
+generator/rejeu/cache_rejeu.json

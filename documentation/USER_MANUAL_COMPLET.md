@@ -1,6 +1,10 @@
 # Manuel utilisateur complet — Pipeline Ourrassol 2098
 *Référence à jour au 3 septembre 2026, complétée au fil des sessions
-(dernier ajout : 10 octobre 2026 — §3quinquies simulateur « et si ? »
+(dernier ajout : 11 octobre 2026 — §3 `inject_custom_events.py` : valeurs
+imposées (`impacts_imposes`, `date_imposee`, `via_matrice_impose`) ;
+§3quinquies : simulateur v8.15, passe exhaustive `et_si_exhaustif.py` v9.5
+(obligatoire / possible, contre-lecture, possibles prioritaires), export et
+banc de rejeu `generator/rejeu/` ; précédent : 10 octobre — §3quinquies simulateur « et si ? »
 v7 → v8.14 : partition, région, mode rupture, entrée GUI en deux onglets,
 assistant « Nouvelle hypothèse », liste d'application (phase 3, en service,
 non validée), fiches à relire ; récit du script corrigé ; précédent : 9 octobre — §0 et §7 Mistral Large 4 ; §3 S22
@@ -1879,6 +1883,26 @@ sans passer par `queue.yaml`, pour l'écran GUI du même nom.
 
 **Bug trouvé au passage le 13 août — `evenement_cle` sans année finale, jamais corrigé par le retry.** Le 5e cas de la queue (`controle_date_lointaine_test`, test de non-régression sur une date lointaine, 2091) a épuisé ses 3 essais de retry sans jamais être injecté. `validate_instance()` exigeait une année en toute fin de `evenement_cle` (`re.search(r"(\d{4})\s*$", ...)`), mais le LLM produisait invariablement le format `"2091 : L'Europe unifie l'horloge..."` (année en tête, suivie d'un `:`) — sur les 3 essais consécutifs, sans jamais converger vers le format attendu, car le message de retry ne précisait pas *où* replacer l'année. Vérifié que la position de l'année dans `evenement_cle` n'a **aucune fonction technique en aval** : `date` est stockée séparément dans sa propre colonne du registre par `regenerate_registre_with_event()`, et `load_scenario_timeline_summary()` préfixe de toute façon sa propre date à l'affichage chronologique — la contrainte de position était une pure convention de style, sans nécessité. **Corrigé** : regex assouplie (`re.search(r"\b(\d{4})\b", ...)`, année à 4 chiffres acceptée n'importe où dans la phrase), prompt et exemple JSON mis à jour en cohérence (ne demandent plus une "année finale"), message d'erreur reformulé (`"sans année (4 chiffres)"`). **Confirmé en conditions réelles** : `controle_date_lointaine_test` relancé avec son idée d'origine (retrouvée dans `needs_review.yaml`, où le champ `idea` complet reste préservé même après le vidage systématique de `queue.yaml` en fin de run) — injecté au premier essai, `validate.py` toujours propre.
 
+**Valeurs imposées (11 oct 2026, `patch_s27_injection_imposee.py`,
+`.bak_imposee`)** — pour injecter un événement **tel qu'il a été simulé** par le
+simulateur « et si ? » (§3quinquies). Trois champs optionnels d'une entrée de
+`queue.yaml`, remplis par l'« injection commune » du rapport du simulateur
+(v8.15) :
+- `impacts_imposes` : `{scénario: [{variable, delta_level, duree, polarite}]}`
+  — mêmes variables dans chaque scénario ; `delta_level` 1-25, `polarite` ±1,
+  `duree` > 0. Si `scenarios` est vide, les scénarios sont les clés de ce bloc ;
+  `variables_hint` devient la liste des variables imposées ;
+- `date_imposee` : année (2025-2098) ; `edition_active` est alors ignoré ;
+- `via_matrice_impose` : propagation par la matrice (booléen).
+Contrôle **avant tout appel IA** (`lire_impositions()`) : une entrée invalide
+part en `needs_review`, rien n'est corrigé en silence. Le prompt de l'étape 2
+reçoit un bloc « VALEURS IMPOSÉES » (l'IA rédige le récit, pas les chiffres) et
+`appliquer_impositions()` remet impacts, date et propagation après la
+réponse, scénario par scénario (⚠ si l'IA juge l'événement impossible dans un
+scénario). Connu : le ⚠ « N variables reçues au lieu de 4 max » s'affiche à
+tort quand les impacts sont imposés (la troncature passe avant la reprise des
+variables imposées) — sans effet sur l'écriture.
+
 ### `inject_custom_signals.py` 🔁 🧩 *(mise à jour en profondeur le 26 juillet 2026)*
 Injecte des signaux faibles custom (`signaux_custom/queue.yaml`) dans les fiches variables, au format `signal_to_state` (6 scénarios) + annotation section 7. Validation mécanique (comptage de mots, fenêtres de dates, collisions), jusqu'à 2 retries. Tier `structured_strict`.
 ```bash
@@ -2937,7 +2961,7 @@ souvent les sources ; Gemini a inventé des URL (9/10 en 404 lors d'un essai).
 
 ---
 
-## 3quinquies. Simulateur « et si ? » (S27, 9-10 octobre 2026)
+## 3quinquies. Simulateur « et si ? » (S27, 9-11 octobre 2026)
 
 Tester l'effet d'un élément perturbateur sur le lore **avant** de l'injecter.
 **Lecture seule** : rien n'est écrit dans le vault, à part le rapport
@@ -2948,7 +2972,13 @@ Tester l'effet d'un élément perturbateur sur le lore **avant** de l'injecter.
 Carte (`documentation/need_action/impact_bascule_*.md`). Seule exception :
 l'assistant « Nouvelle hypothèse » ajoute des hypothèses à
 `et_si/hypotheses.yaml`. Version affichée dans le rapport (« simulateur
-v8.14 » au 10 oct).
+v8.15 » au 11 oct).
+
+**Pipeline visé (11 oct)** : 1. **tester** (simulation, puis en option la
+passe exhaustive), 2. **décider**, 3. **injecter** l'événement tel qu'il a été
+simulé (valeurs imposées, §3 `inject_custom_events.py`) ; plus tard, appliquer
+aussi les conséquences retenues (phase 4). L'étape « décider » n'est pas encore
+outillée.
 
 ### Dans le GUI — « 🔮 Simulateur « et si ? » » (section des outils de suivi, après « Tracer »)
 Deux onglets (`--mode simuler | nouvelle`) :
@@ -3147,8 +3177,8 @@ Sections, dans l'ordre :
    morte (à la main : exil ou retrait de `journaux.yaml`).
 4. **Statuts de zone** — à la main dans la géographie.
 5. **Élément** — mode choc : injection via l'entrée commune en fin de
-   rapport, puis comparaison des forces injectées aux forces simulées
-   (l'injection les recalcule) avec `trace_injection.py`, banc de calibration
+   rapport, puis vérification que la fiche porte les forces simulées
+   (imposées depuis la v8.15) avec `trace_injection.py`, banc de calibration
    si la somme des forces atteint 30. Mode rupture : décision S19, puis la
    référence de chaque variable (`variables/*.md`, `states.<scénario>.level`)
    et `synchroniser_scenarios.py` ; référence portée au plafond (≥ 99,5)
@@ -3211,9 +3241,112 @@ homonymes possibles (Santa Cruz, Sucre, Perth, Medina) ; la recherche par mots
 ne voit pas une fiche qui contredit l'hypothèse sans la nommer (relecture IA) ;
 la liste n'a jamais été appliquée en entier.
 
+### Injection commune — valeurs simulées (v8.15, 11 oct)
+L'entrée « Liste d'application — injection commune » en fin de rapport
+transmet ce qui a été simulé : `impacts_imposes` (forces, polarités, durées,
+pour **tous** les scénarios de l'hypothèse), `date_imposee`,
+`via_matrice_impose`. ⚠ si la simulation a été limitée par `--scenario`
+(l'entrée couvre quand même les autres scénarios : les simuler, ou les retirer
+de `scenarios` et d'`impacts_imposes`) ; ⚠ si une force dépasse le plafond
+d'un événement custom (25 : l'injection refuserait l'entrée). Mode rupture :
+seule la date est imposée. L'étape « Élément » devient « Vérifier que la fiche
+porte les forces simulées ».
+
+### Passe exhaustive — `et_si_exhaustif.py` 🔁 (v9.5, 11 oct)
+Complète la lecture IA du simulateur, qui ne montre à l'IA qu'une partie des
+entités avec des plafonds : la passe relit **toutes** les instances du
+scénario et tous les événements datés après l'hypothèse (hors l'archétype de
+l'hypothèse), par lots de 15. Lecture seule ; cache
+`generator/state/et_si_exhaustif.json`. Coût : ≈ 0,05 à 0,11 $ par scénario
+(Mistral Large 3, tier `structured_strict`), plus 1 à 2 centimes de
+contre-lecture et de classement. Pas encore branchée dans le simulateur ni le
+GUI.
+
+```bash
+python3 generator/et_si_exhaustif.py --id <hypothèse> --scenario <scénario> --estimer   # coût, aucun appel
+python3 generator/et_si_exhaustif.py --id <hypothèse> --scenario <scénario> > documentation/need_action/et_si_exhaustif_<nom>.md
+# options : --refaire | --taille-lot 15 | --sans-contre-lecture | --sans-classement | --json | --date 2098
+```
+Sans `--scenario` : tous les scénarios de l'hypothèse. La lecture IA du
+simulateur, si elle est en cache, sert de contexte (« déjà retenu ») ; sinon
+lancer d'abord le simulateur avec la lecture IA.
+
+**Ce que rend la passe**, par scénario :
+- **Verdicts** : N fiches à corriger, M avec des changements possibles
+  seulement, K inchangées — chaque fiche reçoit un verdict.
+- **Obligatoire** — la fiche devient **fausse** sans ce changement (critère
+  unique : « si on laisse la fiche telle quelle, un lecteur qui connaît
+  l'élément y trouve-t-il une affirmation fausse ? »). Trajectoires (seule une
+  **disparition** peut être obligatoire), relations créées ou rompues, textes
+  (extrait mot pour mot et fait qui le contredit).
+- **Possible** — conséquence plausible, la fiche reste vraie sans elle :
+  **20 fiches prioritaires** choisies et ordonnées par l'IA (raison en
+  quelques mots, toutes leurs propositions), puis toutes les autres sur une
+  ligne. Rien n'est supprimé.
+- Réponses mal formées (entité inconnue, valeur invalide, contresens sur
+  l'axe des trajectoires) : seules rejetées, comptées à part.
+
+**Contrôles mécaniques** (sans IA) : ils **rétrogradent** d'obligatoire à
+possible, motif affiché, au lieu de supprimer — sans lien direct nommé,
+conditionnel, lien variable sous 2 points ou variable seulement propagée, lien
+territoire alors qu'aucun territoire n'est touché (sauf fiche située dans un
+**lieu nommé** par l'hypothèse, cas Genève), texte qui élargit ou atténue sans
+contredire, extrait introuvable, aucun fait contredit nommé, changement de
+degré. Sur un possible, ces motifs sont marqués « douteux » et l'excluent des
+20 prioritaires.
+
+**Contre-lecture** des obligatoires (un appel par paquet de 25, verdicts en
+cache un par un) : question fermée « incompatible ou non ? », avec le lieu
+(instance) ou la date (événement) de chaque fiche, sans l'argumentaire du
+premier lecteur. Pièges nommés : omission, aggravation, nuance, chronologie,
+invention, **passé** (un fait daté avant l'élément n'est jamais contredit),
+**amorti**. Une ligne calculée donne l'**effet résiduel** en fin de période
+(part de la force initiale) ; la contre-lecture classe le fait invoqué
+**matériel** (destruction, morts, acte entre parties nommées, contraintes) ou
+**tendance** (climat politique, orientation, rapport de force) ; le **code**
+rétrograde « choc amorti (< 25 %) + tendance ». Un échec d'appel garde
+l'obligatoire.
+
+**Lire le résultat** : traiter les obligatoires (peu nombreux) ; parcourir les
+20 prioritaires ; le reste au besoin. Le classement varie d'un passage à
+l'autre : aide à la lecture, pas une décision. Faux positif connu : la RPDA
+(breakdown) avec la peste.
+
+### Export et banc de rejeu (11 oct)
+Pour régler la passe **sans appel IA et sans relire de rapport**.
+- `python3 generator/export_et_si.py` : écrit
+  `generator/state/export_et_si.json` — tous les couples hypothèse:scénario
+  présents dans le cache de la passe (ou `--couple id:scénario`, répétable),
+  avec hypothèse vérifiée, effets, lecture IA, instances, événements, scénario,
+  zones et cache.
+- `generator/rejeu/` : `rejouer.py` (rejoue tous les couples ; `loader.py` et
+  `llm_client.py` du dossier remplacent ceux du générateur, tout appel IA est
+  refusé et compté en « appels manquants »), `evaluer.py` (score contre
+  `reference.json`), `LISEZMOI.md`. Sorties jetables : `sorties/`,
+  `cache_rejeu.json`.
+- `reference.json` : verdicts attendus sur six cas (invasion / fortress_world,
+  fusion / policy_reform, peste / breakdown, extrême droite /
+  new_sustainability, IA 60 % / eco_communalism, `destruction_geneve_2076` /
+  breakdown), validés par David le 11 oct ; clés `obligatoire`,
+  `pas_obligatoire`, `pas_disparu`, `vu` ; `priorite` / `pas_priorite`
+  indicatives. Au 11 oct (v9.5) : **VERDICTS 26/27**, priorités 4/6.
+
+Marche à suivre après une modification de `et_si_exhaustif.py` :
+1. si une **consigne IA** a changé (`VERSION_PROMPT`, `VERSION_CONTRE`,
+   `VERSION_CLASSEMENT`), relancer les six cas puis l'export, en **une seule
+   ligne** (≈ 0,10 $ si seuls contre-lecture et classement changent) :
+   `for c in invasion_bresil_2029:fortress_world fusion_commerciale_2038:policy_reform peste_pulmonaire_2043:breakdown extreme_droite_2034:new_sustainability ia_majorite_travail_2040:eco_communalism destruction_geneve_2076:breakdown; do python3 generator/et_si_exhaustif.py --id ${c%%:*} --scenario ${c##*:} > documentation/need_action/passe_${c%%:*}.md; done; python3 generator/export_et_si.py`
+2. `python3 generator/rejeu/rejouer.py && python3 generator/rejeu/evaluer.py`
+3. viser 26/27 ou mieux ; « appels manquants » > 0 = étape 1 oubliée.
+Une autre session peut tout rejouer avec l'export et le dossier `rejeu/`.
+
 ### Fichiers
-`generator/simuler_et_si.py` (v8.14 au 10 oct), `generator/hypothese_depuis_texte.py`
-(nouveau, 10 oct), `et_si/hypotheses.yaml`. Modifiés le 10 oct pour le
+`generator/simuler_et_si.py` (v8.15 au 11 oct, `.bak_v815`), `generator/hypothese_depuis_texte.py`
+(nouveau, 10 oct), `et_si/hypotheses.yaml` (+ `destruction_geneve_2076` le 11 oct).
+Nouveaux le 11 oct : `generator/et_si_exhaustif.py` (v9.5),
+`generator/export_et_si.py`, `generator/rejeu/` ; patchs
+`patch_s27_injection_imposee.py` (`inject_custom_events.py`, `.bak_imposee`) et
+`patch_s27_v815.py`. Modifiés le 10 oct pour le
 simulateur : `generator/dynamique.py` (paramètre `ruptures`, `.bak_v74`),
 `gui/zone_repository.py` (mentions en mot entier, `.bak_mots`), `gui/app.py`,
 `gui/static/app.js`, `gui/scripts_config.json`. Patchs `patch_s27_*.py` dans

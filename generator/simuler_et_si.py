@@ -55,7 +55,7 @@ SCENARIOS = ["breakdown", "fortress_world", "new_sustainability",
              "eco_communalism", "policy_reform", "reference"]
 DELTA_MAX_CONSEILLE = 25   # plafond d'un événement custom (inject_custom_events.py)
 ACTIONS_GEO = {"absorber": "absorber", "nouvelle_zone": "creer"}   # vocabulaire du fichier -> ZoneRepository
-VERSION = "v8.14"            # affichée dans le rapport : permet de vérifier la version installée
+VERSION = "v8.15"            # affichée dans le rapport : permet de vérifier la version installée
 MAX_LISTE = 10             # éléments listés par rubrique dans le rapport (le reste est compté)
 
 
@@ -2232,10 +2232,12 @@ def liste_application(hyp, sc, res, cons, geo_ops, donnees):
                "une seule injection pour tous les scénarios de l'hypothèse")
         cibles = ", ".join(f"{i['variable']} {'+' if i['polarites'].get(sc, 1) > 0 else '−'}{i['force']:g}"
                            for i in hyp["impacts"] if sc in i["polarites"])
-        _etape(E, "Élément", f"Comparer les forces injectées à celles simulées ({cibles})",
+        # V8.15 : forces, date et propagation imposées à l'injection (impacts_imposes).
+        _etape(E, "Élément", f"Vérifier que la fiche porte les forces simulées ({cibles})",
                f"event_instances/{hyp['id']}_{sc}.md, bloc impact_sur_variables ; "
                f"python3 generator/trace_injection.py --slug {hyp['id']} --type evenement --scenario {sc}",
-               "l'IA de l'injection recalcule les forces : retoucher la fiche si elles s'écartent")
+               "imposées par l'entrée commune (impacts_imposes, date_imposee) : l'effet doit "
+               "correspondre à cette simulation")
         if sum(i["force"] for i in hyp["impacts"]) >= 30:
             _etape(E, "Élément", "Gros choc : vérifier la lisibilité du moteur",
                    "python3 generator/banc_calibration.py --scenarios all --balayage-k 0.05", "S19")
@@ -2430,21 +2432,46 @@ def _rendre_injection_commune(hyp, application):
     if not scen:
         return []
     geo = any((application.get(sc) or {}).get("etapes") and hyp["geographie"].get(sc) for sc in scen)
+    rupture = hyp.get("mode") == "rupture"
+    partiel = [sc for sc in hyp["scenarios"] if sc not in application]
+    if not rupture:
+        scen = list(hyp["scenarios"])   # V8.15 : polarités connues pour tous les scénarios
     entree = {"id": hyp["id"], "description": hyp["description"] or hyp["nom"],
               "portee": "<locale | regionale | continentale | globale>" if geo else "globale",
               "date_approximative": int(hyp["date"]), "intensite": "<à choisir>",
               "persistance": hyp["persistance"] or "permanente", "scenarios": scen,
               "variables_hint": [i["variable"] for i in hyp["impacts"]],
               "variables_hint_count": len(hyp["impacts"]), "source": f"et_si_{hyp['id']}"}
-    partiel = [sc for sc in hyp["scenarios"] if sc not in application]
+    # V8.15 : ce qui a été simulé est imposé à l'injection (patch_s27_injection_imposee.py).
+    def _nombre(x):
+        return int(x) if float(x) == int(x) else x
+    entree["date_imposee"] = _nombre(hyp["date"])
+    trop_fort = []
+    if not rupture:
+        entree["impacts_imposes"] = {
+            sc: [{"variable": i["variable"], "delta_level": _nombre(i["force"]),
+                  "duree": _nombre(i["duree"]), "polarite": i["polarites"][sc]}
+                 for i in hyp["impacts"] if sc in i["polarites"]]
+            for sc in scen}
+        entree["via_matrice_impose"] = bool(hyp["via_matrice"])
+        trop_fort = [f"{i['variable']} ({i['force']:g})" for i in hyp["impacts"] if i["force"] > DELTA_MAX_CONSEILLE]
     return ["## Liste d'application — injection commune", "",
-            ("⚠ Simulation limitée à " + ", ".join(scen) + " : ajouter à `scenarios` les autres scénarios "
-             "de l'hypothèse (" + ", ".join(partiel) + ") avant d'injecter.\n\n" if partiel else "")
+            ("⚠ Simulation limitée à " + ", ".join(sc for sc in scen if sc not in partiel)
+             + " : l'entrée couvre aussi " + ", ".join(partiel) + ", non simulé(s) dans ce rapport ; "
+             "les simuler avant d'injecter, ou les retirer de `scenarios` et de `impacts_imposes`.\n\n"
+             if partiel and not rupture else "")
+            + ("⚠ Simulation limitée à " + ", ".join(scen) + " : ajouter à `scenarios` les autres scénarios "
+               "de l'hypothèse (" + ", ".join(partiel) + ") avant d'injecter.\n\n" if partiel and rupture else "")
+            + ("⚠ Force au-dessus du plafond d'un événement custom (" + str(DELTA_MAX_CONSEILLE) + ") : "
+               + ", ".join(trop_fort) + ". L'injection refusera l'entrée : baisser la force et resimuler.\n\n"
+               if trop_fort else "")
             + ("Mode rupture : l'événement n'est injecté que pour le récit ; vider ensuite le bloc "
                "impact_sur_variables de chaque fiche (étape « Élément »).\n\n" if hyp.get("mode") == "rupture" else "")
             + "Entrée pour `evenements_custom/queue.yaml` (une seule pour tous les scénarios). "
-            + ("Les forces et polarités simulées ne sont pas transmises : l'injection les recalcule ; "
-               "les comparer ensuite scénario par scénario (étape « Élément »)." if hyp.get("mode") != "rupture" else ""), "",
+            + ("Forces, polarités, durées, date et propagation de cette simulation sont imposées "
+               "(`impacts_imposes`, `date_imposee`, `via_matrice_impose`) : l'IA de l'injection ne les "
+               "recalcule pas, elle rédige seulement le récit." if not rupture
+               else "Seule la date est imposée (`date_imposee`)."), "",
             "```yaml", _yaml_bloc([entree]), "```", ""]
 
 

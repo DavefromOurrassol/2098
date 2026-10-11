@@ -840,3 +840,79 @@ hypothèses pour vérifier que les correctifs ne valent pas que pour le Brésil.
   au milieu d'un mot → énumération « … et N autres » (`patch_s27_recit.py`) ;
   noms des variables accentués mot par mot, faute de nom lisible dans
   `variables/` (`patch_s27_recit2.py`).
+
+---
+
+## ✅ S27 (pipeline d'injection) — Impositions, v8.15, passe exhaustive v1 → v9.5, banc de rejeu — 11 octobre 2026
+
+*Clos comme chantier de code ; la suite (branchement de la passe dans le
+simulateur, étape « décider », correction du ⚠ des variables) est dans S27 de
+`BACKLOG_ACTIF.md`.*
+
+Demande de David : un outil d'injection unifié où l'évaluation précède
+l'injection (« 1. je teste l'injection d'un événement, 2. je décide si
+j'injecte »), le simulateur servant d'évaluation. Deux options exposées :
+(a) injecter l'événement fidèle à la simulation, (b) appliquer aussi les
+conséquences cochées ; retenu : (a) d'abord, étape vers (b).
+- **Impositions** (`patch_s27_injection_imposee.py`, `inject_custom_events.py`,
+  `.bak_imposee`, 1880 → 2046 lignes) : `lire_impositions()` (contrôle, aucune
+  correction silencieuse), `appliquer_impositions()` (impacts, date,
+  `date_label`, propagation ; ⚠ si `impossible_dans_scenario`), appelé après
+  chaque `truncate_actors` ; bloc « VALEURS IMPOSÉES » dans le prompt de
+  l'étape 2 ; scénarios déduits des clés d'`impacts_imposes` si `scenarios`
+  est vide ; `variables_hint` = variables imposées ; `edition_active` ignoré si
+  `date_imposee` ; `QUEUE_TEMPLATE` documenté. Dry-run réel : `[imposé]`, date
+  2029, forces conformes ; ⚠ trompeur « 8 variables reçues au lieu de 4 max »
+  (troncature avant la reprise imposée) — correction notée, non faite.
+- **Simulateur v8.15** (`patch_s27_v815.py`, `.bak_v815`, 2552 → 2579 lignes) :
+  `_rendre_injection_commune` ajoute `date_imposee`, `impacts_imposes` (tous les
+  scénarios de l'hypothèse) et `via_matrice_impose` ; ⚠ simulation limitée,
+  ⚠ force > 25 ; rupture : date seule ; étape « Élément » = vérifier.
+- **Acteurs** : la simulation en proposait 9, le plafond d'injection est 4 ;
+  David : « je veux être sûr que l'impact d'un événement sur tout le lore est
+  considéré » → **passe exhaustive** (accord de principe : entités les plus
+  touchées en `acteurs_hint`, 4 au plus).
+- **`et_si_exhaustif.py`**, versions testées en réel chez David :
+  - v1 (invasion / fortress_world) : bruit massif ; v2 : lien direct nommé,
+    conditionnel écarté, règles de trajectoire, texte seulement si la phrase
+    devient fausse, extrait mot pour mot ; v3 : sortie coupée à 4000 jetons →
+    8000 + redécoupage en deux (marqueur `decoupe` en cache), seuil variable
+    2 points, texte qui élargit écarté, « … » retirés avant vérification ;
+  - fusion / policy_reform : événements sans réponse → v4 rattrapage ; textes
+    qui atténuent écartés sauf « faux » ; v5 : liste des fiches en fin de prompt,
+    réponses hors du lot comptées à part (59 → 191 écartées n'était que ça) ;
+  - peste / breakdown : 74 trajectoires sur 150 instances (lien variable
+    passe-partout, territoires inventés). David : « j'ai peur qu'à chaque
+    nouvelle hypothèse il y ait de nouvelles modifications et que l'outil ne
+    soit pas exhaustif » → **v6 : classer au lieu de filtrer** (obligatoire /
+    possible, critère unique, contrôles qui rétrogradent) : 45 fiches à
+    corriger ; v7 : disparition seule obligatoire + contre-lecture → 8 ;
+    v7.1 (exemples neutres, argumentaire masqué) → 1 ;
+  - invasion v7.1 : 2 obligatoires (Pacte Vert ↔ Pacte des Forteresses) ; David
+    ne voit pas d'obligatoire manquant ;
+  - v8 : tri mécanique des possibles (score) — disparitions refusées en tête ;
+    v9 : regroupement par fiche, 20 prioritaires choisis par l'IA ; v9.1 :
+    propositions sur fait inventé exclues de la priorité ; v9.2 : « douteux »
+    aussi sur les possibles (Lagos, Sertão sortis) ; arrêt des réglages du
+    classement.
+- **Itérer plus vite** : David sur iMac mi-2011 (High Sierra), pas de session
+  liée → **export + rejeu** : `export_et_si.py`, banc `rejouer.py` /
+  `evaluer.py`, `reference.json`. v9.3 (conditionnel non signalé), rejeu
+  identique au rapport v9.2 de David.
+- **Cas ajoutés** : extrême droite / new_sustainability, IA 60 % /
+  eco_communalism, fusion relancée, **`destruction_geneve_2076`** (cas à
+  réponse connue). Premier passage commande collée (« /dev/nullpython3 ») →
+  commandes en une ligne.
+- **v9.4** : Genève à 0 obligatoire → règle territoire hors carte (lieu nommé
+  par l'hypothèse) ; verdicts de contre-lecture en cache un par un ; temps :
+  le passé ne change pas, choc amorti, ligne « effet résiduel » (extrême
+  droite : 20 faux obligatoires, Israël / Iran pour un conflit de 2026-2027).
+  Score 26/33 puis 29/33 ; Israël / Iran réglés, l'IA écrit « impossible même
+  après amortissement » pour l'extrême droite.
+- **Réponses de David** (référence) : extrême droite → compatibles ; invasion →
+  rupture obligatoire ; RPDA → pas obligatoire ; Résidu de Genève → obligatoire.
+  Critère qui en sort : acte matériel (invasion, destruction) contre tendance
+  diffuse.
+- **v9.5** : champ « fait » (matériel / tendance), décision par le code ; lieu
+  ou date de la fiche dans la contre-lecture. **26/27 verdicts**, priorités
+  4/6. Banc emballé dans `generator/rejeu/` (`LISEZMOI.md`).

@@ -2174,3 +2174,410 @@ création).
 signature résiduelle) sont tous traités ou actés comme acceptables au
 29 août. À confirmer et déplacer vers l'archive du backlog à la
 prochaine session.
+
+---
+
+### Addendum — Relations & lore, lore fortress_world/reference, géographies, sous-zones (26 septembre 2026)
+
+**Tests GUI du matin.** Les trois entrées du 25 sept testées en conditions réelles. Un faux « la case `--ignorer-exclus` n'a pas d'effet » (0 propagation case décochée) : relancé en CLI puis sur une page rechargée, la case fonctionnait (24 relations) — état de formulaire resté collé ou fausse manipulation, pas de bug de code. Premier `--llm` réel sur Ergo-Wian : 3 contradictions dont 1 vraie (« Gardiens » au lieu de « Sentinelles des Aquifères Oubliés » — la faction existe sous le slug trompeur `les_veilleurs_des_nappes_phreatiques`), 5 relations dont 3 alliances au conditionnel (« négocier ou résister »).
+
+**Refonte « Relations & lore ».** David trouvait les trois outils confus. Découpage en 5 étapes numérotées (voir manuel §3). Choix techniques : `fixed_args` côté serveur plutôt que des cases cachées (un formulaire ne peut pas les oublier) ; étape 5 en onglet (routes synchrones, pas `/api/run`, pour garder la sortie dans l'écran) ; rejet = suppression + mémoire séparée (décision David : pas de `valide: false` « rejeté » dans le fichier) ; simulation obligatoire avant écriture ; réciprocité seulement après une écriture réelle (en simulation elle lirait les fiches d'avant). Bug d'affichage trouvé : la sortie de l'étape 5 tenait sur une ligne (règle `pre` de style.css l'emportant) — styles imposés en ligne.
+
+**Consignes IA v2.** Testées sur Bloc Atlantique : 2 relations affirmatives avec preuve, 0 écartée. Le filtre `_HYPOTHETIQUE` aurait écarté les 2 oppositions retenues le matin (« pourraient s'opposer ») : il juge la formulation, pas le fond — choix assumé (moins de tri, ajout manuel possible). Contradictions Bloc Atlantique réelles : siège Halifax vs « cœur politique symbolique à Bruxelles » dans la zone ; Chambre de Recours dotée d'un pouvoir qu'elle n'a plus.
+
+**Enchaînement de lore Bruxelles/Halifax.** Tranché par David : Halifax-Haute seul centre ; Bruxelles-Forteresse dans le Hors = vestiges européens, gouvernée par Ergo-Wian (rôle de Solberg/Halvorsen). Recherches successives : zone Bloc Atlantique (2 lignes), 6 « ni Bruxelles ni Moscou » (3 variantes de casse et de coupure de ligne YAML, trouvées en deux passes), Orentchev, Autorité Numérique (dont le slug `conseil_regulation_algorithmique` ne correspond pas au nom), Bloc Eurasiatique Occidental, ANBA (poursuites → plaintes sans pouvoir ; frontmatter entre apostrophes, `''`), article du 23 août (dépêche + `image_prompt`). NexCore Atlantique décrit comme nœud actif du Bloc Atlantique mais placé sous Bruxelles : déplacé (option A). L'IA avait proposé une alliance Bloc Atlantique ↔ « ANBA » pointant vers `anba_siege_atlantique` (entreprise maritime) — confusion de sigle, rejetée à l'étape 5.
+
+**Personnages.** Solvay (PDG NexCore, 8 articles) et Solberg (gouverneure, fiche seule) : deux personnes, risque de confusion → Solberg renommée Sigrid Halvorsen (slug compris, 11 fiches liées, 2 occurrences chacune). Vikram : « rôle dual », alliance avec Ergo-Wian **secrète** → retirée des relations (lues par les articles), texte « en secret ». Hyphan « figure de la résistance » chez Vikram et « figure emblématique » chez Malo, contraire à la décision du 25 → reformulés ; article du 24 sept (Hyphan meneuse en Asie centrale) écarté.
+
+**Texte des géographies.** Le script historique `build_geographie_monde.py` régénère tout par IA (frontmatter compris) : inutilisable. Vérification demandée par David avant d'écrire : `fix_lieux_residuels.py` faisait déjà la même régénération de « ## Zones », aucun script ne lit ce texte. Outil sans IA écrit, puis rendu automatique dans la Carte, bouton GUI et contrôle `validate.py` à la demande de David (options 1+2 puis 3).
+
+**Sous-zones, S12, renommage.** S16 codé et testé (aperçu N3 sous une N2). Carte : boutons unifiés, panneau redimensionnable (demande de David). S12 : la première mesure (noms exacts) donnait 11 écarts, la mesure avec la règle de la Carte 3 (Italie, « Arctique » sans polygone, « GAFAM » parasite). En passant sur l'Italie, David a relevé la faute `reconstructee` : zone renommée par la Carte (propagation complète, affichage non rafraîchi), puis entité/instance/22 relations par outil ponctuel ; `entites/_entities_list.json` attrapé par le contrôle final.
+
+---
+
+### Addendum — Injection et propagation : convention d'intensité, moteur dynamique, Tracer (27 septembre 2026)
+
+**Point de départ.** Question de David : comment l'influence d'un événement ou d'un signal injecté se propage-t-elle jusqu'en 2098 ? Exemple étudié : `valeurs_culture_tempo_sociale` qui passe de 55 à 60 — rôle de `polarite` ? La lecture de `snapshot.py` a montré un calcul additif `delta_level × facteur × polarite`, avec des deltas négatifs combinés à des polarités −1 (141 doubles négations selon `audit_polarite.py`, 0 cas ambigu). Les échelles mêlaient capacité (haut = bon) et intensité (haut = crise) selon la variable, ce qui rendait le sens des liens de matrice illisible.
+
+**Choix de la convention.** David a d'abord demandé si le niveau représentait une capacité ou une intensité selon la variable, puis a jugé qu'une seule convention serait plus propre. Choix : intensité pour les 12 variables. Inversions gouvernance/frontières validées variable par variable (santé new_sustainability recalée à 30 ; valeur 55 choisie pour frontières `reference`). Matrice : option b (+1 partout, 3 amortisseurs), préférée à un recodage lien par lien.
+
+**Réévaluation IA.** Le sens des impacts déjà stockés ne pouvait pas se déduire mécaniquement (le signe dépendait de l'ancienne échelle de chaque variable). `reevaluer_polarites.py` a demandé le sens à l'IA avec l'échelle, et par scénario pour les signaux ; rapport relu par David avant `--appliquer` (153 fiches).
+
+**Moteur dynamique.** Question de David : utilise-t-on des lags, des amortissements, des comportements du second ordre ? Non, l'ancien calcul était une somme instantanée. Option c (moteur dynamique complet) retenue après estimation de l'ampleur. Premier réglage trop fort (K 0,1, ρ 0,85, amplification ×6,5 ; somme brute des chocs +60 à +80) : recalibré au banc, K 0,05 et gain 0,25. Question de stabilité de David (« si j'ajoute des événements, le système reste-t-il stable ? ») : réponse par la garde petit gain `k_effectif`, qui borne la boucle quelle que soit la charge ; la saturation `tanh` borne la sortie. Bug de masquage `k` (tout à ±15) trouvé au banc.
+
+**Doublon Rust Belt.** Deux entrées pour la même insurrection ; l'événement `insurrection_rust_belt` a été supprimé (`undo_custom.py --execute`), l'instance `communes_rust_belt_zones_libres` gardée (citée dans un article). validate 0 erreur.
+
+**Fiches scénario.** Leur copie des niveaux (`variable_states`, tableau 4A) n'était lue par aucun calcul et divergeait déjà avant la migration. Synchronisées (étape 8) ; tendances inversées pour les 9 variables dont la corrélation avec les nouveaux niveaux était négative. validate 0/0/0.
+
+**Tracer.** David voulait un outil qui raconte, pour un élément et un scénario, l'évolution depuis son apparition jusqu'à la date de référence, si possible en graphique. Choix b (récit IA) + B (Chart.js dans le GUI). Premier récit réel : il exagérait des effets de quelques dixièmes et ne citait aucun chiffre. Consignes durcies (proportionnalité, ce que l'élément AJOUTE, verbe selon le signe, rythme selon les années) et contrôle automatique des chiffres et années, avec repli sur un récit modèle. Graphique testé par David (capture). Question finale de David sur `propagation_via_matrice: false` pour les signaux : l'effet reste local à la variable ; options a/b/c laissées ouvertes (backlog S19).
+
+---
+
+### Addendum — Veille signaux faibles, livres par API, correctifs de la veille état du monde (28 septembre 2026)
+
+**Point de départ.** Après la session sur l'injection (27 sept), David voulait réfléchir au concept de signal faible d'Igor Ansoff et à un outil de veille pour en détecter, filtré par les variables d'Ourrassol, à partir de sites et de livres. Précisions successives : lancé de temps en temps, sur le modèle de la veille « état du monde » déjà en place ; liste d'idées notées sur 3 axes, avec choix d'injecter ou non ; mode par défaut = prompt collé dans le chat de son choix (Mistral ne cherche pas sur le web par l'API classique) ; API web et collecte RSS jugées utiles pour plus tard.
+
+**Construction de la chaîne web.** `sources_signaux_faibles.yaml` (22 sources dont 5 de David), `export_prompt_signaux.py`, puis `import_signaux_faibles.py` quand David a voulu interroger plusieurs IA et fusionner leurs réponses (choix « a » : fusion automatique, validée au tri). Premier prompt : 8 signaux sur 11 tirés par l'IA/le numérique → règles de couverture. Onglet 🔭 et formulaire de mise en queue construits au fil des essais : la reformulation de `idees_vers_queue` rétrécissait le candidat → description = texte du candidat par défaut.
+
+**Veilles réelles.** Réponses de Claude, DeepSeek, Mistral puis Gemini. Chaque IA a apporté son défaut : sous-variables prises pour des variables (DeepSeek, Mistral), champs inventés et un `### FIN` par signal (Gemini), sources omises (Mistral, 9/10) ou inventées (Gemini, 9/10 en 404). Réponses : alias, coupe au dernier FIN, vérification des URL, écart automatique à l'import (David : « pourquoi ça ne serait pas filtré à la création de la liste ? » → écart à l'import, récupérable), source obligatoire dans le prompt, ligne `ia:` et rangement automatique des fichiers. GEAB n'apparaissant jamais, bloc `### SOURCES CONSULTÉES`.
+
+**« Déjà connu » tronqué.** Le paragraphe Situation extrait de l'état du monde paraissait commencer au milieu d'une phrase : en réalité le début était intact (il suivait un titre en gras) et c'était la **fin** qui manquait — `extract_situation()` s'arrêtait au premier sous-titre en gras, perdant les « mouvements de fond ». Corrigé dans les deux veilles ; l'import état du monde remplace désormais toute la partie Situation. Veille réelle de David avec les scripts corrigés : 12 sections modifiées, diff relu, aucun mouvement de fond perdu. Puis rangement (`veille_etat_monde_reponses/`, fichier renommé `veille_etat_monde_reponse.md` à la demande de David) et boutons Copier/Télécharger (`copyable`). Fusion multi-IA de l'état du monde : trois options présentées, laissée de côté.
+
+**Livres.** Premier jet : extraits de pages imposées dans le YAML, insérés dans le prompt à coller. David ne savait pas quelles parties lire → mode « dépose et oublie » avec note « faits concrets » et rotation. Question de David (« chaque IA va faire le même travail ? ») puis (« par API, pas besoin de copier-coller ? ») → lecture par API, un appel par livre, prompt web allégé. Essais réels successifs sur le rapport JRC : pages de bibliographie en tête (corrigé), puis pages de tableaux → 3 « signaux » qui étaient des statistiques de brevets (note ×0,3 pour les tableaux, statistiques exclues du prompt), puis pages de méthodologie et de réseaux de collaboration → constat que la note ne peut pas trouver les signaux d'un tel document → **repérage par le LLM** (début de chaque page). Résultat : les annexes du JRC, 3 vrais signaux (électrolyseurs AEM, batteries zinc-ion flexibles, matériaux vivants). Passe sur les 7 documents : 8 signaux sur 16 recopiés du « déjà connu » (Ebola, Ceuta, Hugging Face) avec de fausses pages → déjà connu retiré du prompt des livres, citation exacte vérifiée ; passe suivante : 13 signaux, 1 rejet, environ la moitié à garder.
+
+**Sources.** Deux articles regardés à la demande de David (Thorleuchter & Van den Poel 2015 : méthode proche de notre chaîne, sans signaux ; Jabbour et al. 2026 : 20 signaux et analyse en réseau, en accès libre). Réflexion de David avec ChatGPT → 9 bases de signaux ajoutées au YAML (URL vérifiées ; le texte de ChatGPT n'en contenait aucune) et une liste de PDF à déposer.
+
+**Injection.** Question de David : comment un signal injecté « atterrit » dans un scénario ? Lecture de `inject_custom_signals.py` : dans les 6, trajectoire propre à chacun, polarité par scénario, une seule intensité, jamais d'effet nul — deux évolutions notées pour plus tard (S21).
+
+---
+
+### Addendum — Veille signaux faibles : recherche web par API (non retenue) et flux RSS (29 septembre 2026)
+
+**Point de départ.** David a rappelé que le chantier de la veille comptait trois modes : le prompt collé (fait le 28), la recherche web par API et la collecte locale des sources (laissés en S21). Il a demandé de traiter les deux derniers, dans cet ordre : la recherche web d'abord, puis le RSS.
+
+**Recherche web par API.** Constat de départ : aucun fournisseur ne cherche sur le web par l'appel de `call_llm()` (Mistral : API Conversations ; Claude : outil serveur ; OpenAI : API Responses). Plan proposé : `call_llm_web()` et contrôle des URL citées contre celles renvoyées par l'outil. Trois tests réels sur Mistral. Question courte : 2 recherches, URL renvoyées à part. Vrai prompt : aucune recherche, signaux tirés de la mémoire, URL inventées (une 404 vérifiée). Forçage : `any` puis `required` refusés par l'API. Consigne écrite seule : 14 recherches, liens réels (10 sur 12 vérifiés), mais 2 signaux déformés, 2 gros titres et un bilan des sources faux, sans URL d'outil à comparer. Question de David : « est-ce plus efficace que le prompt développé précédemment ? » Réponse : non en qualité (niveau d'une IA de chat moyenne), payant à chaque lancement ; seul gain, l'automatisation. Recommandation acceptée : ne pas le coder, passer au RSS. Le test a surtout montré que l'IA déclare « consultées » des sources qu'elle n'a pas lues : c'est ce que le RSS corrige.
+
+**Flux RSS.** Aucun champ `rss` rempli au départ. Vérification d'abord depuis Claude (12 flux confirmés, plusieurs sites bloqués), puis script `verifier_flux_rss.py` lancé chez David : 18 flux, dont ONU et PNUE abandonnés depuis 2023 → filtre des 180 jours, 16 flux écrits. Avant de coder le lecteur, David a demandé un rappel du fonctionnement du prompt et des livres, puis deux précisions : le RSS lit-il les mêmes sources que l'IA ? (les 16 à flux seulement, leurs articles récents, sans élargir, mais réellement lus) ; est-ce redondant ? (peu : l'IA lisait peu ces sources, et l'import fusionne les doublons). D'où la proposition, validée, de **recentrer le prompt collé** sur les autres sources. Réglages validés : 30 jours, résumés des flux plutôt que pages complètes.
+
+**Mise en service.** `veille_rss_api.py` calqué sur les livres (lots de 40 articles, citation exacte vérifiée, mémoire des articles lus). Essai à blanc relu (résumés assez riches, quelques articles réservés aux abonnés très courts), puis passage réel : 211 articles, 12 signaux ; import : 12 URL sur 12 OK, 2 fusionnés avec des candidats du 28, 10 nouveaux. Avertissement « SOURCES CONSULTÉES absent » corrigé (`rss` dispensé comme `livres`). Bouton GUI ajouté, testé par David (0 article au second passage).
+
+---
+
+### Addendum — Mise en ligne : site des revues (2-3 octobre 2026)
+
+**Point de départ.** David voulait mettre en ligne les journaux d'Ourrassol, avec « un rendu très réaliste » et les thématiques par scénario. Première proposition : un site statique généré depuis le vault, kiosque global → scénario → journal. David a précisé en deux temps : la dualité pro-pouvoir / opposition, puis « des journaux type Courrier International ». Le site devient donc une **revue de presse** qui reprend les articles des journaux fictifs ; David a fixé **12 revues** (une par camp et par scénario), chacune ne reprenant que son camp. Les références entre articles seront travaillées à part.
+
+**Noms des revues.** À la lecture de `journaux.yaml`, les blocs `_reseau` ressemblaient déjà à des revues. David a demandé des noms inspirés du monde réel : deux salves de propositions (Krasnaïa Zvezda, samizdat, Limes, Kolokol, Radio Londres, Novaya Gazeta…), trois choix par revue, puis sa sélection. *Radio Frontières* gardée comme radio clandestine publiant ses transcriptions. Fallait-il renommer les réseaux dans le lore ? Un grep chez David a montré les anciens noms dans le texte de 44 articles (signatures, et l'« Ordre Zonal » comme acteur de breakdown) : réseaux gardés, revues distinctes.
+
+**Cohérence.** David a demandé si les revues tenaient avec le lore, la géographie et les temporalités. Vérification sur les 6 géographies et `registre_evenements.md` : dates plausibles, « Genève-Lac » corrigé en Genève-Lac-Retraité, et un vrai problème — breakdown et fortress_world n'ont pas de pouvoir unique (blocs rivaux) ; choix de David : revues privées tolérées par tous (siège Genève-Bunker). Ourrassol gardé comme siège ; sur la remarque de David (« pas beaucoup de lieux asiatiques ou américains »), Chiapas, Séoul et São Paulo remplacent Tampere, Genève-Lac-Retraité et Tbilissi.
+
+**Maquette puis script.** Maquette du *Courrier des Continents* validée. Lecture d'un vrai article : aucun journal identifiable (signature au nom du réseau, journaliste absente de `journaux.yaml`, zone vide). Audit sur le vault : 145 signatures connues sur 218 ; la bonne clé est scénario + ligne + `zone_principale`, en remontant les zones parentes (14 cas testés sur 14). Un cas isolé a révélé la coquille `europe_occidentale_reconstructee` dans `journaux.yaml`, seule clé orpheline, corrigée par sed. 201 articles publiables. Flux continu plutôt que numéros mensuels (volumes de 4 à 44 articles par revue).
+
+**Remarques de David sur le premier rendu.** « Pourquoi novembre 2098 ? » → le mois venait de l'article le plus récent ; le site suit désormais le mois de parution et masque les articles postérieurs. Toutes les zones et thématiques doivent apparaître, même vides ; trop de zones → regroupement par continent (calculé depuis `origine_reelle`, forçage manuel, signalement des cas incertains à chaque build) ; style propre à chaque revue et photos : plus tard. Le site aura une version multilingue (noté). Plus tard encore : Annonces et Météo réintégrées à sa demande.
+
+**Hébergement.** Comparaison Cloudflare Pages / GitHub Pages ; la perspective d'extraits audio a fait pencher pour Cloudflare (poids des médias, R2). Mise en place pas à pas : le compte GitHub ne se connectait pas — le jeton du trousseau a montré une adresse Apple masquée, d'où la connexion par Apple ; dépôt privé `ourrassol-site` à côté du vault ; `publier_site.sh` (copie miroir en Python, pas de rsync) ; Cloudflare propose désormais Workers par défaut, Pages via « Continue to Pages ». Premier envoi : 792 fichiers, site en ligne.
+
+**Chapôs de rédaction.** Expliqué à la demande de David (voix de la revue sous le titre, comme Courrier). Questions successives : faut-il modifier les articles ? (non, cache à part) ; remplace-t-il le chapô du journal ? (sur le site oui) ; pourquoi pas dans la génération ? (deux voix dans un appel ; étape séparée retenue). Premier essai : chapôs lyriques, tous bâtis sur « *X*, voix … de … » → consigne durcie ; deuxième essai bon, avec un « paranoïaque » hérité du `ton` et une conclusion inventée → consigne corrigée ; passage complet : 145 chapôs, 0 échec. Le même essai a révélé que le mois de parution n'était pas lu (fichier cherché au mauvais endroit).
+
+**Fiches des journaux.** David a relevé que la source affiche « un descriptif » : c'était la consigne interne `ton`. Fiche publique proposée ; à sa question (« pourquoi pas dans journaux.yaml ? »), lecture de `generate_journaux.py` : `--update` ne réécrit jamais un journal existant → mode `--fill-presentation` (avec `--force` pour tout refaire), essai sur 16 journaux jugé bon, passage complet lancé.
+
+---
+
+### Addendum — S23 : signatures, lieu ≠ zone, journaux manquants, rezonage (3-4 octobre 2026)
+
+**Point de départ.** Défauts révélés par le site (handoff du 3 oct).
+Lecture de `get_journal_profile()` : la coquille de clé faisait bien passer
+au réseau global. Audit des 83 signatures fautives : 30/30 en juin-juillet,
+51/181 en août, toutes « N1 trouvée » antérieures au 23-25 août → héritage.
+Une première réattribution par `zone_principale` a été arrêtée : David a
+demandé si l'historique des bugs avait été consulté ; l'archive montrait
+que cette zone était reconstituée après coup (rétro-application P20 du
+21 août) et faussée par le bug #26 et le bug du 25 août. D'où le rezonage
+avant la réattribution.
+
+**Lieu ≠ zone.** Encore présent après le 25 août. Cas Kharg-9 dans un
+article du journal Maghreb : ses 4 entités hors Maghreb ; cause dans
+`filter_instances_for_thematique()` (aucune notion de lieu). Correctif
+limité à `generate.py` après vérification que séries et manuel ne fixent
+jamais de zone. Premier test : une seule instance localisée au Maghreb,
+Kharg toujours présent → David a choisi de plafonner les instances
+d'autres zones. Article réel ensuite ancré au Maghreb.
+
+**Journaux manquants.** Le rezonage envoyait Bruxelles, Genève et
+Bratislava dans le Bloc Atlantique : la Zone Euro Sud n'avait pas de
+journal, comme 8 autres zones de septembre. 18 rédactions créées ; 7 lots
+au JSON cassé ont laissé des rédactions factices, retirées puis relancées
+(le script de nettoyage existant, `clean_fallback_journaux.py`, avait été
+oublié). David a relevé que `validate.py` ne voyait rien de tout cela →
+section 12. Nuuk, devenue sous-zone avec ses journaux : David a choisi la
+priorité à la sous-zone.
+
+**Rezonage.** Premier essai : Lübeck rangée en Archipel anglo-celtique —
+le prompt ne montrait que les noms des N1 ; ajout des pays et sous-zones.
+Second essai : la géographie de breakdown se contredisait (Hanse sous
+Genève-Bunker, Allemagne dans l'Arc eurasien) ; David a rattaché la Hanse
+à l'Arc. Passage complet : 68 changements, 6 corrigés à la main. Un 503
+Mistral a interrompu un passage (réessais ajoutés) ; 8 articles sans le
+champ ont demandé l'insertion de la ligne.
+
+**Signatures et site.** 94 réattributions (datelines exclues, ancien format
+signé sous le titre). Export : orateurs ignorés et slug différent pour
+« Børresen » → 219/219 signés. 8 articles sans ligne éditoriale :
+journaux cités tous pro-pouvoir.
+
+**Temporel.** 12 passages, dont 9 légitimes (prévisions rapportées au
+passé, conditionnel) ; 3 projections réelles recopiées corrigées ; règle
+ajoutée au prompt.
+
+---
+
+### Addendum — S22, titres, recherche, continents, Hyphan (5 octobre 2026)
+
+**Ouverture.** Handoff du 4 octobre relu : chapôs de revue à jour (0 à
+refaire) et site déjà à jour (simulation : 0 fichier modifié).
+
+**S22 — signal orphelin.** Lecture de `inject_custom_signals.py` : la boucle
+par variable de `process_idea()` n'avait aucun `try`, et une exception au
+milieu de l'écriture d'une variable (section 12 écrite, section 7 ou registre
+non) l'aurait laissée à moitié injectée, puis sautée à jamais par le
+garde-fou anti-doublon à la reprise. Patch : `try/except` par variable +
+instantané fiche/registre restauré. Testé sur un faux vault (modules
+`llm_client`, `echelles`, `dynamique` simulés) : plantage à l'écriture,
+plantage de l'appel IA, reprise de l'idée remise en queue — registre à 6/6
+lignes, sans doublon. Puis `"<+1 ou -1>"` → `"<1 ou -1>"` ; le sed a aussi
+touché un commentaire, remis à la main.
+
+**Volume des revues.** David a demandé si un outil du GUI donnait le compte
+par revue : aucun (onglet Articles sans filtre de ligne éditoriale, et le
+site ne compte que les articles rattachés à un journal) → entrée « 📰 Audit
+des revues » ajoutée. Erreur de ma part corrigée ensuite : option `--mois`
+proposée alors que l'audit ne filtre pas par mois. Génération reportée.
+
+**Titres.** Guillemet orphelin : 24 titres, plus que le cas connu. Titres en
+capitales signalés par David : 14, toutes thématiques ; correction à l'export
+plutôt que dans le vault, en deux temps (« Occitanie » absent du corps), plus
+une consigne dans le prompt, demandée par David.
+
+**Bloc de métadonnées dans le texte.** Repéré par David sur « L'école
+algorithmique » : seul cas du vault, `mots_reels` incluant le bloc après un
+retry de longueur → extraction ratée sur le second essai (code d'août, non
+revérifié).
+
+**Hyphan.** David pensait l'avoir exclue partout ; elle ne l'était qu'en
+fortress_world. Choix de David : exclue partout sauf reference, articles
+retirés (pas de suppression d'instance ; la proposition initiale de
+`undo_custom.py` aurait effacé le travail du Scénario 1 en fortress_world).
+
+**« Incohérences » de lieu.** Lyon-Métropole et un journal indo-pacifique :
+recherches dans le vault, la géographie puis le site, sans erreur trouvée —
+c'était le siège de la revue (Séoul). Arc eurasien / Afrique : articles
+justes ; Réseau Vivant Continental : sujet mondial. Sahel sous « Amériques » :
+vrai défaut d'affichage (continent majoritaire d'un bloc transcontinental) →
+forçages.
+
+**Recherche.** Demandée par David sur le modèle de *Courrier International*
+(site non consultable par mes outils : description de mémoire) ; choix :
+par revue + globale, texte complet, index maison sans dépendance.
+
+**Fin de séance.** Kharg-9 repéré en double (S25) ; question de David sur un
+journal couvrant un fait d'une autre zone → S26.
+
+---
+
+### Addendum — Kharg-9, journal d'une autre zone, nettoyages (6 octobre 2026)
+
+**Ouverture.** Recherche en ligne testée par David : fonctionnelle.
+`nouveau_califat_barcelone`, signalée comme « continent deviné », était une
+zone N1 vide (frontmatter sans pays ni description). Le grep a montré qu'aucune
+instance ni aucun article ne la citait : suppression depuis la Carte, puis
+retrait de ses 2 rédactions de `journaux.yaml` via `load_journaux()` /
+`save_journaux()` de `generate_journaux.py` (la Carte ne touche pas ce
+fichier). validate 0/0/0.
+
+**S25 — Kharg-9.** Trois mesures successives, sans rien écrire : présence par
+scénario (concentrée en eco_communalism, 13/22), puis avant/après le 22 août
+(le problème persistait), puis le chemin d'entrée (sélection d'instances dans
+24 cas sur 27). Le dernier chiffre d'eco (5/8 ≈ 62 %) correspondait au plafond
+théorique du cooldown 3/2 (≈ 60 %) : le mécanisme marchait, son plafond était
+trop haut. Choix de David : A (cooldown 2/3 pour tous) + C (exclusion en eco).
+Doublon évident retiré du site. Un premier script de lecture de
+`site/recherche.json` cherchait des clés longues (`titre`, `chapo`) alors que
+l'index utilise des clés abrégées (`t`, `c`, `r`, `d`, `u`, `x`) : corrigé au
+second essai. La paire « Dernier Souffle » lue : sujets différents.
+
+**S26.** Conception proposée puis validée : `zone_principale` = zone du
+journal. Lecture de `prompt_builder.py` et `generate.py` : tout dépend de
+`config["zone_slug"]`, d'où l'approche « zone_slug = journal, zone_evenement =
+élément », sans toucher `api.py`. Patch testé sur copies (ancres, compilation,
+refus du second passage), dry-run puis article réel. Champ GUI d'abord en
+texte (le menu des zones à journal dépend du scénario, qui passe en mode
+Forcer par des chips) ; à la demande de David, liste déroulante sur le modèle
+de `forcer_zones`, après lecture d'`app.py`. Explication du fonctionnement
+reformulée deux fois (« pas clair ») : un exemple concret (Kharg-9 écrit par
+le journal du Golfe ou par celui du Maghreb) a suffi.
+
+**Fin de séance.** Petits chantiers : « Rédaction à » (export_revues.py, trois
+emplacements de la ville siège), chmod, script doublon supprimé,
+`_a_supprimer/` vidé, aperçu de réparation des métadonnées (0), Hacker News
+retiré des flux ; cinq points secondaires clos par décision de David.
+
+---
+
+### Addendum — S22 clos, Mistral Large 4, simulateur « et si ? » (9 octobre 2026)
+
+**S22 en conditions réelles.** Queue vide : une idée de David (protocoles P2P
+chiffrés par radio maillée), passée par l'assistant d'idées, ciblant 3
+variables. Premier chemin de queue faux (`generator/signaux_custom/` au lieu
+de `signaux_custom/` à la racine). L'injection a échoué sur
+`geopolitique_conflits` : bloc YAML non refermé. Le correctif du 5 oct a fait
+son travail (écriture annulée, `git diff` vide, reprise produite). Historique
+git, fence par fence : disparition entre le 27 juin et le 2 août, donc
+l'ancien bug d'`undo_custom.py`. Réparation en fin de fichier après
+vérification que le bloc terminait la fiche. Reprise : 3 échecs identiques
+sur le contrôle anti-doublon. Deux hypothèses — restauration incomplète du
+registre (grave) ou recopie des événements frères (connu) — départagées par
+un grep du registre : frères. Lecture de `inject_custom_signals.py` : en
+reprise, les événements du premier run n'étaient pas fournis à l'IA. Patch
+(dry-run : 8 remplacements), reprise réussie du premier coup, validate
+0/0/0. Rappel donné à David : `git commit` seul ne suffit pas, il faut
+`git add -A && git commit -m`.
+
+**Mistral Large 4.** Liste des modèles demandée à l'API (identifiant
+`mistral-large-4` ; `mistral-large-latest` = `mistral-large-2512`). Premier
+article : crash (`TypeError`, contenu en liste) → `patch_llm_large4.py`.
+Second : réflexion qui épuise les 4 000 jetons au premier appel, sauvée par le
+retry de longueur. Comparaison sur le même réglage (Crieur des Marges, Sri
+Lanka) : Large 4 écrit mieux mais exploite moins le vault. Estimation de coût
+revue deux fois (×2,7 sur le tarif, puis ×4 à ×7 avec la réflexion). Décision
+de David : Large 3 par défaut.
+
+**Simulateur « et si ? » (S27).** Choix de David : entrée par fichier YAML
+éditable, simulation dans les 6 scénarios. Premiers runs (breakdown,
+new_sustainability) : écarts de quelques points, saturation près des bornes.
+Question de David : les injections peuvent-elles changer la géographie, et
+est-ce simulable ? → lecture de `zone_repository.py`, étage carte en aperçu.
+Puis : les outils savent-ils appliquer tous les changements en réel ? →
+tableau des briques existantes et des trous (pas de chef d'orchestre, pas de
+migration des journaux d'une zone disparue, contenu existant corrigé fiche
+par fiche). David précise que l'invasion du Brésil n'est qu'un exemple : le
+but est de voir comment le lore se reconfigure sous des conditions très
+perturbatrices → étage de lecture IA. Six versions dans la journée, chacune
+tirée d'un rapport réel (détail dans `BACKLOG_ARCHIVE.md`). Un rapport v4
+montrait des défauts déjà corrigés en v3 : la copie installée n'était pas à
+jour, d'où l'affichage de la version dans le rapport. Second test demandé par
+David sur un autre événement majeur : percée de la fusion (2038). La
+description proposée par Claude parlait de « maîtrise du tritium » : l'IA en a
+tiré des gisements et des cartels de tritium (erreur physique). Correction de
+la description : effet partiel. Champ `contraintes:` (v6) : erreur disparue.
+`sed -i` en échec sur le Mac de David (sed BSD) : remplacé par un petit script
+Python.
+
+**Fin de séance.** Documentation reportée à la fin par David, faite le soir ;
+partition des pays reportée à la session suivante.
+
+### Addendum — Simulateur « et si ? » : partition, région, rupture, GUI (10 octobre 2026)
+
+**Partition.** Reprise du handoff du 9 oct. David demande d'abord de vérifier
+les briques existantes (backlogs, manuels) avant de coder. Sa question
+concrète — si le Brésil est en partie envahi, qui définit la partition ? —
+fixe le principe : imposée dans le YAML (prioritaire) ou proposée par l'IA,
+toujours contrôlée, jamais écrite. Deux modèles déjà présents dans le vault :
+France (deux zones, chacune sa portion) et Allemagne (une zone garde le pays,
+l'autre un tracé). David rappelle que les éléments simulés peuvent être très
+différents (extraterrestres, extrême droite à 80 %, peste à 25 %, stérilité,
+IA qui travaille) : d'où deux hypothèses de test sans effet territorial.
+v7 testée sur l'invasion ; v7.1 après une partition des États-Unis entre un
+bloc et sa sous-zone. São Paulo (`fortress_world`, signalé S14) rattaché au
+Brésil par David depuis la Carte. v7.2 : « Inde » dans « indépendants ».
+v7.3 : l'exemple de la consigne (Nordeste, Amazonie) — rédigé par Claude —
+amorçait des partitions du Brésil dans les 6 scénarios pour l'extrême
+droite ; exemple neutre et `carte: non`.
+
+**Mode rupture.** Constat des tests : une peste à 25 % ne pèse que +1 à +3
+points. Lecture de `dynamique.py` : GAIN_CHOCS, demi-vie, plafond tanh
+autour d'une référence fixe. Conception : déplacer la référence elle-même.
+Question à David (mode par hypothèse ou par impact) : par hypothèse. v7.4
+vérifiée en non-régression (calcul sans rupture identique au chiffre près),
+puis en réel. Lecture IA en rupture (6 appels, demandée après explication de
+ce que l'étape testait : les consignes v7.3 et v7.4 n'avaient jamais été
+reçues par l'IA) : pas de carte proposée, contraintes respectées, mais 7
+zones « disparues » → v7.5 (option A de David : écartées). Remarque sur la
+santé à +25 pour toujours malgré « endémique en 2050 » : conséquence du mode
+par hypothèse, à régler par la force.
+
+**Pendant les appels IA.** Deux items « en revue » au tableau de bord :
+entrée résiduelle de la première tentative du signal S22 (bloc YAML non
+refermé, puis événements frères), déjà réglée le 9 oct d'après le manuel ;
+signal présent dans les 3 variables → fichier vidé.
+
+**Région.** v7.6, conçue sur `creer_sous_zone` (mode aperçu). Testée sur le
+Nordeste ; David demande à quoi sert le patch (dépôt dans `generator/`,
+lancement depuis la racine, comme les autres).
+
+**GUI.** v7.7 (entrée sidebar, id tapé). David : pourquoi lancer une
+recherche des hypothèses ? et pourquoi ne pas remplir les champs depuis
+l'idée ? → lecture de `app.py`, `app.js`, `idees_vers_queue.py`. Le
+formulaire guidé est câblé pour `queue.yaml` et ne sait pas saisir une liste
+imbriquée : voie B choisie (bloc YAML proposé puis vérifié). Premier essai :
+l'IA invente une chronologie (2035-2045, 2050, secteurs), reprise en
+contraintes → consigne resserrée ; second essai fidèle. David constate qu'on
+peut ajouter deux fois la même idée → v7.8.1. Retrait de la première
+formulation par un petit script (`.bak_retrait`). Question sur le nom du
+rapport (`et_si_<id>.md` + copie au nom fixe pour le panneau) et sur l'option
+« Récit IA » (courbe chiffrée seulement ; gardée, idée de synthèse notée).
+
+**Bruit des relations.** Extraction des relations brutes du cache (id réel
+`ia_majorite_travail_2040`, différent du bloc montré) : action « renforcée »
+inventée dans les 6 scénarios, action absente, suffixe oublié, zones prises
+pour des entités → v7.9, puis v7.9.1 (corrections listées seulement pour les
+relations gardées, grammaire).
+
+**Fin de séance.** Documents mis à jour sur demande de David.
+
+### Addendum — Simulateur « et si ? » : liste d'application (10 octobre 2026, après-midi)
+
+**Nettoyage.** `test_region_nordeste` déjà absente de `hypotheses.yaml`.
+
+**Cadrage.** Proposition d'une liste en 9 rubriques ; David demande si la
+documentation a vraiment été relue : non, une dizaine d'impacts manquaient
+(localisation des fiches, relations entre zones, continents, couverture et
+orateurs, rupture réelle, contrôle après injection, marqueurs, lore, articles
+non publiables, site, résumés). Lecture de `simuler_et_si.py` : la plupart des
+données existent déjà ; trous : instances des zones vidées ou disparues,
+articles, journaux d'une zone disparue par statut, continents, marqueurs
+(réglé par `loader.py`). Point notable : l'injection réelle recalcule les
+forces par IA, d'où une étape de comparaison.
+
+**Itérations sur le rapport réel** (invasion du Brésil, fortress_world, cache
+IA, aucun appel payant) : v8 → v8.1 (tracé de São Paulo oublié, Colombie
+écartée par l'IA transformée en étape, articles trop nombreux, titres en slug,
+Lore vague) → v8.2 (articles des zones qui perdent un pays : seulement s'ils
+citent ce pays). Vérification par grep du dernier article restant : il cite
+deux entités touchées. Deux articles du vault portent le même titre-dateline.
+
+### Addendum — Simulateur « et si ? » : liste d'application, suite (10 octobre 2026, soir)
+
+**Complétude.** David demande si l'étape 3 est validée (non : elle ne l'avait
+pas été par lui) et si le rapport suffit pour évaluer toutes les modifications
+à apporter au lore. Réponse : non, rien ne repérait les fiches qui citent le
+pays sans y être localisées. Option retenue : un scan des fiches qui citent le
+pays, ses villes et les noms propres de l'hypothèse (v8.3).
+
+**Itérations, scénario par scénario** (cache, gratuit) sur l'invasion du
+Brésil : villes sous-zones manquées, sous-zone multi-pays rattachée en bloc,
+rattachement vers elle-même, villes prises pour des pays, sous-zones de ville
+sous un autre N1 (v8.4, v8.5) ; « États-Unis d'Amérique », Séoul et Nairobi
+signalés par leur description, Salvador zone de niveau 1 (v8.6) ; Salvador
+pays d'Amérique centrale (v8.7). David demande si les correctifs sont
+généralisables : oui, avec des limites, d'où le test d'autres hypothèses.
+
+**Autres hypothèses.** Fusion : « États » pris pour un nom propre (249 fiches),
+doublons de termes, Haïfa (v8.8). Extrême droite : aucune fiche à relire faute
+de terme → relecture IA proposée, après lecture de l'aide d'`audit_lore.py`
+(v8.9).
+
+**`--refaire` des trois hypothèses** (18 appels payants) : lectures plus riches
+(partitions et régions dans presque chaque scénario) ; défauts révélés : entité
+« gardée sans zone » alors que sa zone est créée par la même lecture, zone
+quittée qui garde le pays entier, sous-zone « à répartir » vers elle-même
+(v8.10) ; région traitée comme un changement de mains (Khorasan), « Golfe »
+trop large (v8.11). Limite notée : villes en anglais.
+
+**Récit.** `recit_modele()` coupait la chaîne à 200 caractères ; corrigé, puis
+accents (les fiches `variables/` n'ont pas de nom lisible : `name` = slug,
+titre = slug). Envoi de fichier : `generator/trace_injection.py` tapé seul
+dans le terminal a donné « Permission denied » (il fallait le joindre).
+
+**Sauts de trajectoire.** 11 « émergent → dominant » sur trois rapports ;
+David choisit l'option b (signaler, pas corriger) : v8.12.
+
+**Limites et solutions.** David demande les solutions aux limites connues :
+peste en rupture (v8.13 : l'événement n'existait jamais dans le lore), noms
+français des villes et lieux du vault (v8.14 : « Moscou » trouve 22 fiches sur
+la fusion). Homonymes laissés (bruit faible).
+
+**Statut.** À la question « la phase est-elle considérée validée ? » : non —
+**en service, à valider par une première application réelle d'une liste**.
+Reste noté : application réelle, décision S19 sur la rupture dans le vrai
+moteur, amplitude des chocs, anomalies de données (S24), options (homonymes,
+`ia_majorite_travail_2040`, synthèse, phase 4).

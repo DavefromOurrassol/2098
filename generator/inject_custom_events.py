@@ -510,6 +510,12 @@ def step2_develop_instance(client, idea, event_slug, type_evenement, variables,
             f"dans son ensemble."
         )
 
+    # PATCH_S27_INJECTION_IMPOSEE : date fixée et valeurs imposées
+    impositions_txt = _texte_impositions(idea, scenario)
+    if idea.get("date_imposee") is not None and impositions_txt:
+        date_rule_txt = (f"- La date est FIXÉE à {int(float(idea['date_imposee']))} "
+                         f"(issue d'une simulation) : n'en propose pas d'autre")
+
     actors_list_txt = "\n".join(
         f"  - {a['slug']} ({a['name']}) : {a['role']}" for a in available_actors
     ) or "  (aucune instance d'entité disponible pour ce scénario)"
@@ -538,7 +544,7 @@ Ourrassol 2098, dans le scénario "{scenario}".
 - Date approximative : {idea['date_approximative']}
 - Intensité : {idea['intensite']}
 - Description originale : {idea['description']}
-{actors_hint_txt}{zone_hint_txt}
+{actors_hint_txt}{zone_hint_txt}{impositions_txt}
 ## SCÉNARIO {scenario.upper()}
 - État : {sc_ctx['state_of_system']} | Tension : {sc_ctx['tension_level']}/5 | Trajectoire : {sc_ctx['trajectory']}
 - Régime : {sc_ctx['political_regime']} | Vitesse : {sc_ctx['transformation_speed']}
@@ -979,6 +985,16 @@ QUEUE_TEMPLATE = """\
 #                            indicative pour le worldbuilding historique).
 #                            Avertit sans bloquer si aucune édition active.
 #
+#   impacts_imposes        : optionnel (simulateur « et si ? »). Forces IMPOSÉES
+#                            par scénario, l'IA ne les recalcule pas :
+#                              fortress_world:
+#                                - {variable: geopolitique_conflits,
+#                                   delta_level: 20, duree: 5, polarite: 1}
+#                            Mêmes variables dans chaque scénario ; scenarios
+#                            null = les scénarios listés ici.
+#   date_imposee           : optionnel, année 2025-2098 imposée (prime sur
+#                            edition_active).
+#   via_matrice_impose     : optionnel, true/false imposé.
 # EXEMPLE :
 #   - id: guerre_israelo_iranienne
 #     description: >
@@ -1099,6 +1115,130 @@ def clamp_date_dans_plage(instance_data):
           f"ramenée à {annee_clampee} ('{nouveau_label}')")
 
 
+# PATCH_S27_INJECTION_IMPOSEE (11 octobre 2026) -- forces, date et propagation
+# imposées par le simulateur « et si ? ». Sans ces champs dans l'idée, rien ne change.
+
+def lire_impositions(idea):
+    """Lit et contrôle impacts_imposes / date_imposee / via_matrice_impose.
+    Retourne (impositions ou None, erreurs). Les valeurs ne sont jamais
+    corrigées en silence : une valeur invalide est une erreur."""
+    brut = idea.get("impacts_imposes")
+    date = idea.get("date_imposee")
+    via = idea.get("via_matrice_impose")
+    if brut is None and date is None and via is None:
+        return None, []
+    erreurs, impacts = [], {}
+    if brut is not None:
+        if not isinstance(brut, dict) or not brut:
+            erreurs.append("impacts_imposes doit être un dictionnaire {scénario: [impacts]}")
+            brut = {}
+        for sc, liste in brut.items():
+            if sc not in SCENARIOS:
+                erreurs.append(f"impacts_imposes : scénario inconnu {sc!r}")
+                continue
+            if not isinstance(liste, list) or not liste:
+                erreurs.append(f"impacts_imposes[{sc}] doit être une liste non vide")
+                continue
+            propres = []
+            for n, imp in enumerate(liste, 1):
+                ou = f"impacts_imposes[{sc}] n°{n}"
+                if not isinstance(imp, dict):
+                    erreurs.append(f"{ou} mal formé")
+                    continue
+                var = str(imp.get("variable") or "").strip()
+                if var not in VALID_VARS:
+                    erreurs.append(f"{ou} : variable inconnue {var!r}")
+                    continue
+                try:
+                    force = abs(float(imp.get("delta_level")))
+                except (TypeError, ValueError):
+                    erreurs.append(f"{ou} : delta_level absent ou non numérique")
+                    continue
+                if not 1 <= force <= MAX_DELTA_LEVEL:
+                    erreurs.append(f"{ou} : delta_level {force:g} hors de 1-{MAX_DELTA_LEVEL}")
+                    continue
+                try:
+                    pol = int(imp.get("polarite"))
+                except (TypeError, ValueError):
+                    pol = None
+                if pol not in (1, -1):
+                    erreurs.append(f"{ou} : polarite doit valoir 1 ou -1")
+                    continue
+                try:
+                    duree = float(imp.get("duree") or 10)
+                except (TypeError, ValueError):
+                    erreurs.append(f"{ou} : duree non numérique")
+                    continue
+                if duree <= 0:
+                    erreurs.append(f"{ou} : duree doit être positive")
+                    continue
+                propres.append({"variable": var,
+                                "delta_level": int(force) if force == int(force) else force,
+                                "duree": int(duree) if duree == int(duree) else duree,
+                                "polarite": pol})
+            if propres:
+                impacts[sc] = propres
+        jeux = {tuple(sorted(i["variable"] for i in v)) for v in impacts.values()}
+        if len(jeux) > 1:
+            erreurs.append("impacts_imposes : les scénarios doivent porter les mêmes variables")
+    if date is not None:
+        try:
+            date = float(date)
+        except (TypeError, ValueError):
+            erreurs.append("date_imposee non numérique")
+            date = None
+        if date is not None and not 2025 <= date <= 2098:
+            erreurs.append(f"date_imposee {date:g} hors de 2025-2098")
+    if via is not None and not isinstance(via, bool):
+        erreurs.append("via_matrice_impose doit valoir true ou false")
+    if erreurs:
+        return None, erreurs
+    return {"impacts": impacts, "date": date, "via_matrice": via}, []
+
+
+def appliquer_impositions(instance_data, idea, scenario):
+    """Remplace dans la réponse de l'IA ce que l'idée impose (appelé après chaque
+    réponse, essai initial et relances, AVANT la validation)."""
+    imp, _ = lire_impositions(idea)
+    if not imp:
+        return
+    if scenario in imp["impacts"]:
+        instance_data["impact_sur_variables"] = [dict(i) for i in imp["impacts"][scenario]]
+    if imp["date"] is not None:
+        annee = int(imp["date"])
+        instance_data["date"] = int(imp["date"]) if imp["date"] == annee else imp["date"]
+        label = str(instance_data.get("date_label") or "")
+        ancienne = re.search(r"\b(20\d\d)\b", label)
+        if ancienne and ancienne.group(1) != str(annee):
+            label = label.replace(ancienne.group(1), str(annee))
+        elif not ancienne:
+            label = str(annee)
+        instance_data["date_label"] = label
+    if imp["via_matrice"] is not None:
+        instance_data["propagation_via_matrice"] = imp["via_matrice"]
+    if instance_data.get("impossible_dans_scenario"):
+        print(f"  ⚠ [{scenario}] l'IA juge l'événement impossible dans ce scénario, "
+              f"mais les impacts sont imposés : relire la fiche.")
+
+
+def _texte_impositions(idea, scenario):
+    """Bloc du prompt de l'étape 2 : ce qui est fixé, pour que le texte raconte ce choc-là."""
+    imp, _ = lire_impositions(idea)
+    if not imp:
+        return ""
+    lignes = ["", "## VALEURS IMPOSÉES (issues d'une simulation, NE PAS LES MODIFIER)"]
+    for i in imp["impacts"].get(scenario, []):
+        sens = "aggrave" if i["polarite"] > 0 else "apaise"
+        lignes.append(f"- {i['variable']} : force {i['delta_level']}, {sens}, montée sur {i['duree']} ans")
+    if imp["date"] is not None:
+        lignes.append(f"- Date de l'événement : {int(imp['date'])}")
+    if imp["via_matrice"] is not None:
+        lignes.append(f"- Propagation via la matrice : {'oui' if imp['via_matrice'] else 'non'}")
+    lignes.append("Écris la réalisation, la description et les conséquences pour qu'elles "
+                  "correspondent à ces valeurs (ampleur, sens et date).")
+    return "\n".join(lignes) + "\n"
+
+
 def process_idea(client, idea, dry_run=False):
     idea_id = idea.get("id", "sans_id")
     variables_hint = idea.get("variables_hint")
@@ -1127,6 +1267,25 @@ def process_idea(client, idea, dry_run=False):
     scenarios = idea.get("scenarios") or list(SCENARIOS)
     scenarios = [s for s in scenarios if s in SCENARIOS]
 
+    # PATCH_S27_INJECTION_IMPOSEE : contrôle des valeurs imposées AVANT tout appel IA.
+    impositions, err_imp = lire_impositions(idea)
+    if err_imp:
+        return {"status": "needs_review", "idea": idea,
+                "reason": "valeurs imposées invalides : " + " ; ".join(err_imp)}
+    if impositions and impositions["impacts"]:
+        if not idea.get("scenarios"):
+            scenarios = [s for s in SCENARIOS if s in impositions["impacts"]]
+        manquants = [s for s in scenarios if s not in impositions["impacts"]]
+        if manquants:
+            return {"status": "needs_review", "idea": idea,
+                    "reason": f"impacts_imposes absent pour : {', '.join(manquants)}"}
+        vars_imposees = list(dict.fromkeys(
+            i["variable"] for v in impositions["impacts"].values() for i in v))
+        variables_hint = vars_imposees
+        variables_hint_count = len(vars_imposees)
+        print(f"  [imposé] impacts de la simulation pour {', '.join(scenarios)}"
+              + (f", date {impositions['date']:g}" if impositions["date"] is not None else ""))
+
     print(f"\n=== {idea_id} ===  (persistance : {persistance})")
     print("[1/4] Sélection de variables + type...")
     selection = step1_select_variables_and_type(
@@ -1147,6 +1306,9 @@ def process_idea(client, idea, dry_run=False):
               f"— troncature (hints préservés).")
         variables = kept
 
+    # PATCH_S27_INJECTION_IMPOSEE : les variables sont celles des impacts imposés.
+    if impositions and impositions["impacts"]:
+        variables = list(variables_hint)
     type_evenement = selection.get("type_evenement", "systemic")
     # Slug imposé depuis l'id de la queue — le LLM ne l'invente plus
     event_slug = re.sub(r"[^a-z0-9_]", "_", idea_id.lower().strip())
@@ -1192,6 +1354,7 @@ def process_idea(client, idea, dry_run=False):
                 zone_hint=scenario_zone_hint,
             )
             truncate_actors(instance_data, actors_hint, actors_hint_count, available_actors)
+            appliquer_impositions(instance_data, idea, scenario)
 
             for attempt in range(MAX_FIX_ATTEMPTS + 1):
                 print(f"[3/4] Validation (essai {attempt + 1})...")
@@ -1211,6 +1374,7 @@ def process_idea(client, idea, dry_run=False):
                         zone_hint=scenario_zone_hint,
                     )
                     truncate_actors(instance_data, actors_hint, actors_hint_count, available_actors)
+                    appliquer_impositions(instance_data, idea, scenario)
 
             if issues:
                 results.append({
@@ -1219,7 +1383,9 @@ def process_idea(client, idea, dry_run=False):
                 })
                 continue
 
-            if idea.get("edition_active"):
+            if idea.get("edition_active") and idea.get("date_imposee") is not None:
+                print("  ⚠ edition_active ignoré : la date est imposée par la simulation.")
+            elif idea.get("edition_active"):
                 apply_edition_active_date(instance_data, idea_id)
 
             clamp_date_dans_plage(instance_data)
