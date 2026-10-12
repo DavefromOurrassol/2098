@@ -14,7 +14,14 @@
 #                            2098 = année finale de la fiction, borne mise à jour le
 #                            6 septembre 2026, voir clamp_date_dans_plage())
 #   intensite              : faible | modérée | forte | majeure
-#   scenarios              : liste de scénarios à couvrir, ou null pour les 6 par défaut
+#                            (la FORCE de l'événement, oriente le delta_level)
+#   persistance            : optionnel. ephemere | normale | durable | permanente
+#                            (la DURÉE de l'effet chiffré après sa montée :
+#                            demi-vie 10 ans / défaut du type / 40 ans / aucune
+#                            décroissance -- valeurs réglables dans dynamique.py,
+#                            table PERSISTANCE). Absent = normale. Modifiable
+#                            après coup dans chaque event_instances/*.md.
+#   scenarios             : liste de scénarios à couvrir, ou null pour les 6 par défaut
 #                            (valeurs : breakdown, fortress_world, new_sustainability,
 #                            eco_communalism, policy_reform, reference)
 #   variables_hint         : optionnel. null si tu ne sais pas — le LLM choisit
@@ -32,7 +39,8 @@
 #   acteurs_hint           : optionnel. null si tu ne sais pas — le LLM choisit
 #                            parmi les instances d'entités existantes pour
 #                            chaque scénario. Sinon un slug d'instance (chaîne)
-#                            ou plusieurs (liste) que tu IMPOSES.
+#                            ou plusieurs (liste) que tu IMPOSES. Un slug
+#                            suffixé _<scénario> ne vaut que pour ce scénario.
 #   acteurs_hint_count     : optionnel, entier 1-4. Plafond du nombre total
 #                            d'acteurs (hint(s) inclus). Défaut : 2.
 #   zone_hint              : optionnel. null si tu ne sais pas — le LLM choisit
@@ -50,6 +58,16 @@
 #                            indicative pour le worldbuilding historique).
 #                            Avertit sans bloquer si aucune édition active.
 #
+#   impacts_imposes        : optionnel (simulateur « et si ? »). Forces IMPOSÉES
+#                            par scénario, l'IA ne les recalcule pas :
+#                              fortress_world:
+#                                - {variable: geopolitique_conflits,
+#                                   delta_level: 20, duree: 5, polarite: 1}
+#                            Mêmes variables dans chaque scénario ; scenarios
+#                            null = les scénarios listés ici.
+#   date_imposee           : optionnel, année 2025-2098 imposée (prime sur
+#                            edition_active).
+#   via_matrice_impose     : optionnel, true/false imposé.
 # EXEMPLE :
 #   - id: guerre_israelo_iranienne
 #     description: >
@@ -59,6 +77,7 @@
 #     portee: globale
 #     date_approximative: 2026
 #     intensite: majeure
+#     persistance: normale
 #     scenarios: null
 #     variables_hint: [geopolitique_conflits, energie_ressources_critiques]
 #     variables_hint_count: null

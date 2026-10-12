@@ -2631,3 +2631,41 @@ contre-lecture classe maintenant le fait, et c'est le code qui décide.
 Banc conservé dans `generator/rejeu/`. Reste : brancher la passe dans le
 simulateur, le ⚠ des variables, l'étape « décider », puis les suites du 10 oct
 (application réelle d'une liste, S19, amplitude des chocs).
+
+---
+
+### Addendum — Passe dans le simulateur, étape « décider », panneaux du GUI (12 octobre 2026)
+
+**Brancher la passe.** Point 1 de la veille : la passe exhaustive entre dans
+la liste d'application du simulateur (obligatoires à faire, 20 possibles en
+facultatif), et les entités les plus touchées remplissent `acteurs_hint`.
+Premier test sur Genève : la liste maigrit (75 → 59 étapes) ; la recherche
+par mots faisait doublon avec la passe, retirée pour ces fiches.
+
+**Un résultat qui bouge.** La passe se sert de la lecture IA comme contexte.
+Lancée depuis le simulateur avec une lecture neuve, elle a tout relu et rendu
+14 obligatoires au lieu de 24, avec une contradiction : les Archives Neutres
+« résiduelles » pour la lecture, « disparues » pour justifier des alliances
+rompues. Le banc de rejeu a tranché : 26/27, la référence tient. On n'a pas
+ajouté de règle IA ; la liste marque d'un ⚠ ce genre de rupture.
+
+**Le faux ⚠ des variables** de l'injection est corrigé, et une entrée commune
+à plusieurs scénarios n'impose plus dans un scénario les acteurs d'un autre.
+
+**Décider.** David a choisi : un dossier par hypothèse dans un fichier à
+part, « Adopter » qui écrit dans la queue sans injecter, un statut « injecté »
+calculé à partir du vault plutôt que stocké, la ligne de commande avant le
+GUI. Le principe : on n'injecte que ce qui a été testé — la dernière
+simulation complète, refusée si l'hypothèse a changé depuis. Validé sur
+Genève dans les deux sens ; David a préféré ne pas injecter Genève tout de
+suite, d'où une annulation qui retire maintenant l'entrée de la queue
+d'elle-même. Puis le panneau « ⚖️ Décider » dans le GUI.
+
+**Lire sans l'éditeur.** Les panneaux de fichiers gênaient la lecture : les
+`.md` s'ouvrent dans Obsidian d'un clic sur leur nom ; pour le simulateur,
+les deux panneaux ne montrent plus que le nom (`hypotheses.yaml` dans Visual
+Studio Code, Obsidian ne lisant pas le YAML sans plugin).
+
+**Statut.** Pipeline « tester → décider » complet ; « injecter » reste la
+commande existante. Prochaine étape : une première application réelle d'une
+liste (Genève candidate).

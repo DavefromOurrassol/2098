@@ -517,6 +517,8 @@ async function renderFormBody(script) {
   // 2026) -- avant updateModeOnlyVisibility() ci-dessous, qui le masque en
   // mode « Simuler » (data-mode-only="nouvelle").
   if (script.assistant_hypothese) body.appendChild(buildAssistantHypothese());
+  // Panneau « Décider » (PATCH_S27_GUI_DECIDER, 12 octobre 2026), mode « Simuler ».
+  if (script.assistant_decision) body.appendChild(buildDecisionHypothese());
 
   // État initial de la visibilité mode_only (onglet par défaut = premier de
   // la liste, cf. renderModeSelect) — sans ça, le premier rendu affiche tout
@@ -2207,6 +2209,16 @@ async function buildYamlPanel(yf) {
   const titleEl = document.createElement('span');
   titleEl.className = 'yaml-panel-title';
   titleEl.textContent = yf.label;
+  // PATCH_GUI_OBSIDIAN_PANNEAUX (12 octobre 2026) : titre d'un .md cliquable,
+  // ouvre le fichier dans Obsidian (même lien que les boutons existants).
+  if (/\.md$/i.test(yf.path)) {
+    titleEl.textContent = `${yf.label} ↗`;
+    titleEl.title = 'Ouvrir dans Obsidian';
+    titleEl.style.cursor = 'pointer';
+    titleEl.addEventListener('mouseenter', () => { titleEl.style.textDecoration = 'underline'; });
+    titleEl.addEventListener('mouseleave', () => { titleEl.style.textDecoration = ''; });
+    titleEl.addEventListener('click', () => _panneauOuvrirDansObsidian(yf.path));
+  }
 
   const actions = document.createElement('div');
   actions.className = 'yaml-panel-actions';
@@ -2331,6 +2343,23 @@ async function buildYamlPanel(yf) {
 
   // Charger le contenu
   await loadYamlContent(wrapper, yf.path);
+
+  // PATCH_GUI_LIEN_SEUL (12 octobre 2026) : option lien_seul -> le panneau
+  // ne montre que le nom du fichier ; .md -> Obsidian (lien déjà posé sur le
+  // titre), autre -> Visual Studio Code. Contenu chargé mais masqué.
+  if (yf.lien_seul) {
+    viewEl.style.display = 'none';
+    editEl.style.display = 'none';
+    actions.style.display = 'none';
+    if (!/\.md$/i.test(yf.path)) {
+      titleEl.textContent = `${yf.label} ↗`;
+      titleEl.title = 'Ouvrir dans Visual Studio Code';
+      titleEl.style.cursor = 'pointer';
+      titleEl.addEventListener('mouseenter', () => { titleEl.style.textDecoration = 'underline'; });
+      titleEl.addEventListener('mouseleave', () => { titleEl.style.textDecoration = ''; });
+      titleEl.addEventListener('click', () => _panneauOuvrirDansVSCode(yf.path, statusMsg));
+    }
+  }
 
   return wrapper;
 }
@@ -11049,4 +11078,180 @@ function buildAssistantHypothese() {
   });
 
   return wrapper;
+}
+
+
+// ══════════════════════════════════════════════════
+// PANNEAU « DÉCIDER » (simulateur « et si ? » v8.17.1, 12 octobre 2026, PATCH_S27_GUI_DECIDER)
+// ══════════════════════════════════════════════════
+// Clé assistant_decision dans scripts_config.json, visible en mode « Simuler ».
+// Agit sur l'hypothèse choisie dans la liste --id, via /api/et_si/decider/<action>
+// (app.py -> simuler_et_si.py -> et_si_dossiers.py). Seul « Adopter » écrit
+// (evenements_custom/queue.yaml) ; l'injection reste à lancer à part.
+function buildDecisionHypothese() {
+  const wrapper = document.createElement('div');
+  wrapper.className = 'yaml-panel';
+  wrapper.dataset.modeOnly = 'simuler';
+
+  const mk = (tag, cls, txt) => {
+    const e = document.createElement(tag);
+    if (cls) e.className = cls;
+    if (txt) e.textContent = txt;
+    return e;
+  };
+  const bouton = (txt, cls) => {
+    const b = mk('button', cls || 'yaml-btn', txt);
+    b.type = 'button';
+    b.style.margin = '4px 8px 4px 0';
+    return b;
+  };
+  const choix = (options) => {
+    const s = mk('select');
+    options.forEach(([v, l]) => { const o = mk('option', null, l); o.value = v; s.appendChild(o); });
+    s.style.marginRight = '12px';
+    return s;
+  };
+
+  const header = mk('div', 'yaml-panel-header');
+  const titleRow = mk('div', 'yaml-panel-title-row');
+  titleRow.appendChild(mk('span', 'yaml-panel-title', '⚖️ Décider (hypothèse choisie dans la liste)'));
+  header.appendChild(titleRow);
+  wrapper.appendChild(header);
+
+  const corps = mk('div', 'yaml-form-zone');
+  corps.style.padding = '8px 0';
+  corps.appendChild(mk('div', 'option-desc',
+    'Après une simulation de TOUS les scénarios (sans « Scénario » limité). « Adopter » écrit l\'entrée ' +
+    'd\'injection de cette dernière simulation dans evenements_custom/queue.yaml ; l\'injection reste à ' +
+    'lancer à part. « Rejeter » garde la trace et le motif. « Annuler la décision » remet l\'hypothèse à ' +
+    '« simulé » et retire de la queue l\'entrée adoptée si elle n\'est pas encore injectée. ' +
+    'Le statut s\'affiche dans la liste des hypothèses. Aucun appel IA.'));
+
+  const ligneChoix = mk('div');
+  ligneChoix.style.margin = '6px 0';
+  ligneChoix.appendChild(mk('span', 'option-label', 'Portée '));
+  const portee = choix([['', '— celle de la simulation —'], ['locale', 'locale'], ['regionale', 'régionale'],
+                        ['continentale', 'continentale'], ['globale', 'globale']]);
+  ligneChoix.appendChild(portee);
+  ligneChoix.appendChild(mk('span', 'option-label', 'Intensité '));
+  const intensite = choix([['', '— à choisir —'], ['faible', 'faible'], ['modérée', 'modérée'],
+                           ['forte', 'forte'], ['majeure', 'majeure']]);
+  ligneChoix.appendChild(intensite);
+  corps.appendChild(ligneChoix);
+
+  const ligneAdopter = mk('div');
+  const btnApercu = bouton('Aperçu de l\'adoption');
+  const btnAdopter = bouton('Adopter (écrit dans la queue)', 'yaml-btn yaml-btn-save');
+  ligneAdopter.appendChild(btnApercu);
+  ligneAdopter.appendChild(btnAdopter);
+  corps.appendChild(ligneAdopter);
+
+  const ligneRejeter = mk('div');
+  const motif = mk('input');
+  motif.type = 'text';
+  motif.placeholder = 'motif du rejet (facultatif)';
+  motif.autocomplete = 'off';
+  motif.style.width = '50%';
+  motif.style.marginRight = '8px';
+  const btnRejeter = bouton('Rejeter');
+  ligneRejeter.appendChild(motif);
+  ligneRejeter.appendChild(btnRejeter);
+  corps.appendChild(ligneRejeter);
+
+  const ligneAutres = mk('div');
+  const btnAnnuler = bouton('Annuler la décision');
+  const btnDossiers = bouton('Voir les dossiers');
+  ligneAutres.appendChild(btnAnnuler);
+  ligneAutres.appendChild(btnDossiers);
+  corps.appendChild(ligneAutres);
+
+  const sortie = mk('pre');
+  sortie.style.whiteSpace = 'pre-wrap';
+  sortie.style.fontSize = '0.85em';
+  sortie.style.marginTop = '6px';
+  corps.appendChild(sortie);
+  wrapper.appendChild(corps);
+
+  const tous = [btnApercu, btnAdopter, btnRejeter, btnAnnuler, btnDossiers];
+  const listeHyp = () => document.querySelector('#form-body [data-slug-type="hypotheses_et_si"]');
+
+  const appeler = async (action, extra, rafraichir) => {
+    const sel = listeHyp();
+    const id = sel ? sel.value : '';
+    if (action !== 'dossiers' && !id) {
+      sortie.textContent = '✗ Choisis d\'abord une hypothèse dans la liste.';
+      sortie.style.color = '#b03a2e';
+      return;
+    }
+    tous.forEach(b => { b.disabled = true; });
+    sortie.style.color = '';
+    sortie.textContent = '…';
+    let data;
+    try {
+      const res = await fetch(`/api/et_si/decider/${action}`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(Object.assign({ id }, extra || {})),
+      });
+      data = await res.json();
+    } catch (e) {
+      data = { error: `Erreur réseau : ${e.message}` };
+    }
+    tous.forEach(b => { b.disabled = false; });
+    sortie.textContent = data.error ? `✗ ${data.error}` : (data.sortie || '(aucune sortie)');
+    sortie.style.color = (data.error || !data.ok) ? '#b03a2e' : '';
+    if (data.ok && rafraichir && sel) {
+      // La liste est reconstruite (statut à jour) : on remet l'hypothèse choisie.
+      await rafraichirChampDynamique(sel);
+      sel.value = id;
+    }
+  };
+
+  const adoption = () => ({ portee: portee.value, intensite: intensite.value });
+
+  btnApercu.addEventListener('click', () => appeler('adopter', Object.assign(adoption(), { apercu: true }), false));
+  btnAdopter.addEventListener('click', () => {
+    if (!confirm('Écrire l\'entrée de la dernière simulation dans evenements_custom/queue.yaml ?\n' +
+                 '(Elle sera injectée au prochain inject_custom_events.py --mode custom.)')) return;
+    appeler('adopter', adoption(), true);
+  });
+  btnRejeter.addEventListener('click', () => appeler('rejeter', { motif: motif.value }, true));
+  btnAnnuler.addEventListener('click', () => {
+    if (!confirm('Annuler la décision prise sur cette hypothèse ?')) return;
+    appeler('annuler', {}, true);
+  });
+  btnDossiers.addEventListener('click', () => appeler('dossiers', {}, false));
+
+  return wrapper;
+}
+
+
+// PATCH_GUI_OBSIDIAN_PANNEAUX (12 octobre 2026, demande de David) : ouvre dans
+// Obsidian le fichier .md d'un panneau (chemin relatif au vault, sans .md).
+function _panneauOuvrirDansObsidian(chemin) {
+  const vaultRoot = (State.config?.vault_root || '').replace(/[/\\]+$/, '');
+  if (!vaultRoot) {
+    alert('vault_root introuvable dans la configuration -- impossible de construire le lien Obsidian.');
+    return;
+  }
+  const vaultName = vaultRoot.split(/[/\\]/).pop();
+  const fichier = chemin.replace(/^[/\\]+/, '').replace(/\.md$/i, '');
+  window.open(`obsidian://open?vault=${encodeURIComponent(vaultName)}&file=${encodeURIComponent(fichier)}`, '_blank');
+}
+
+
+// PATCH_GUI_LIEN_SEUL (12 octobre 2026) : ouvre un fichier du vault dans
+// Visual Studio Code (route /api/ouvrir_vscode, `open -a` côté Mac).
+async function _panneauOuvrirDansVSCode(chemin, statusEl) {
+  try {
+    const res = await fetch('/api/ouvrir_vscode', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ path: chemin }),
+    });
+    const data = await res.json();
+    if (data.error) showYamlStatus(statusEl, 'error', `Erreur : ${data.error}`);
+  } catch (e) {
+    showYamlStatus(statusEl, 'error', `Erreur réseau : ${e.message}`);
+  }
 }

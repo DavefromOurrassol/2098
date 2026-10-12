@@ -4732,5 +4732,142 @@
     }
    ]
   }
+ },
+ "destruction_geneve_2076::breakdown": {
+  "empreinte": "83974ad82b5b43e6",
+  "date": "2026-10-12T18:43",
+  "brut": {
+   "lecture": "La destruction de Genève en 2076 achève l'effondrement symbolique et fonctionnel des institutions internationales résiduelles, accélérant la fragmentation des légitimités juridiques et administratives. Les entités directement concernées (Archives Neutres, Tour BCUC, Résidu AMSC) perdent leur ancrage physique et leur capacité à coordonner des actions globales, mais leur déclin était déjà engagé. Le choc n'entraîne pas de reconfiguration territoriale majeure, mais renforce les dynamiques locales et régionales de substitution institutionnelle, notamment en Europe et parmi les acteurs transnationaux dépendants des archives ou des protocoles genevois.",
+   "ampleur": "moderee",
+   "trajectoires": [
+    {
+     "instance": "archives_neutres_de_geneve_breakdown",
+     "apres": "résiduel",
+     "raison": "Perte de leur siège physique et de la majorité de leurs archives originales, réduisant leur rôle à un symbole juridique sans capacité opérationnelle."
+    },
+    {
+     "instance": "archives_neutres_geneve_breakdown",
+     "apres": "déclinant",
+     "raison": "Leur statut de référentiel partagé s'effrite avec la disparition des copies locales et la montée des légitimités alternatives."
+    },
+    {
+     "instance": "tour_bcuc_geneve_breakdown",
+     "apres": "disparu",
+     "raison": "La Tour BCUC, déjà transformée en comptoir informel, est détruite dans l'explosion, mettant fin à son rôle hybride."
+    },
+    {
+     "instance": "agence_stabilisation_climatique_breakdown",
+     "apres": "disparu",
+     "raison": "Le BCUC, dernier vestige de l'AMSC, perd toute capacité de coordination avec la destruction de ses infrastructures genevoises."
+    },
+    {
+     "instance": "geneve_bunker_institutions_breakdown",
+     "apres": "disparu",
+     "raison": "Le Palais des Fantômes, déjà marginalisé, n'a plus de raison d'exister après la destruction de Genève."
+    },
+    {
+     "instance": "hanse_baltique_breakdown",
+     "apres": "dominant",
+     "raison": "La Ligue Hanséatique Baltique profite du vide institutionnel européen pour étendre son influence comme alternative crédible aux États défaillants."
+    },
+    {
+     "instance": "kalaallit_nunaat_sovereign_fund_breakdown",
+     "apres": "mature",
+     "raison": "Le Fonds des Glaces Libérées renforce son rôle de stabilisateur régional en absorbant les flux financiers et logistiques auparavant gérés depuis Genève."
+    },
+    {
+     "instance": "grandes_lacs_compact_eau_breakdown",
+     "apres": "ascendant",
+     "raison": "Le Compact des Grands Lacs devient un acteur incontournable de la gouvernance hydrique nord-américaine, comblant le vide laissé par l'effondrement des institutions fédérales."
+    }
+   ],
+   "relations": [
+    {
+     "a": "archives_neutres_geneve_breakdown",
+     "b": "cracovie_registre_zones_breakdown",
+     "type": "alliance",
+     "action": "nouvelle",
+     "raison": "Cracovie, antenne du Registre des Zones Non Récupérables, devient le nouveau dépositaire des archives survivantes, remplaçant Genève."
+    },
+    {
+     "a": "hanse_baltique_breakdown",
+     "b": "enclaves_industrielles_bergen_tromso_breakdown",
+     "type": "alliance",
+     "action": "nouvelle",
+     "raison": "La Ligue Hanséatique Baltique intègre les enclaves industrielles norvégiennes pour sécuriser ses corridors logistiques en Europe du Nord."
+    },
+    {
+     "a": "grandes_lacs_compact_eau_breakdown",
+     "b": "etats_sud_centre_americain_breakdown",
+     "type": "opposition",
+     "action": "nouvelle",
+     "raison": "Les États sécessionnistes du Sud et du Centre contestent l'autorité du Compact sur les ressources hydriques, déclenchant des tensions frontalières."
+    },
+    {
+     "a": "kalaallit_nunaat_sovereign_fund_breakdown",
+     "b": "armada_logistique_nordique_breakdown",
+     "type": "alliance",
+     "action": "nouvelle",
+     "raison": "Le Fonds des Glaces Libérées finance les axes logistiques de Nordark pour sécuriser ses intérêts arctiques."
+    },
+    {
+     "a": "milices_privees_documentees_terrain_breakdown",
+     "b": "archives_neutres_geneve_breakdown",
+     "type": "opposition",
+     "action": "nouvelle",
+     "raison": "Les milices privées, désormais sans contre-pouvoir institutionnel, contestent la légitimité des archives survivantes pour imposer leurs propres règles."
+    },
+    {
+     "a": "cartels_logistiques_regionaux_breakdown",
+     "b": "corridors_eurasiens_convoyage_breakdown",
+     "type": "opposition",
+     "action": "nouvelle",
+     "raison": "Les cartels logistiques régionaux entrent en conflit avec les Venelles pour le contrôle des axes eurasiens, désormais sans régulation."
+    }
+   ],
+   "geographie": [],
+   "zones_statut": [
+    {
+     "zone": "geneve_bunker_institutions",
+     "apres": "en_declin",
+     "raison": "La destruction de Genève prive cette zone de sa raison d'être institutionnelle, accélérant son déclin."
+    },
+    {
+     "zone": "archives_neutres_geneve",
+     "apres": "disparu",
+     "raison": "La zone des Archives Neutres est rendue obsolète par la destruction de son cœur physique."
+    },
+    {
+     "zone": "tour_bcuc_geneve",
+     "apres": "disparu",
+     "raison": "La Tour BCUC est détruite, mettant fin à son existence en tant que zone."
+    },
+    {
+     "zone": "hanse_baltique",
+     "apres": "dominant",
+     "raison": "La Ligue Hanséatique Baltique profite du vide européen pour étendre son influence et devenir un acteur dominant."
+    }
+   ],
+   "nouvelles_entites": [
+    {
+     "nom": "Collectif des Copistes de Cracovie",
+     "role": "Gardiens des archives survivantes et producteurs de légitimité documentaire alternative",
+     "zone": "cracovie_registre_zones",
+     "raison": "Face à la perte des archives genevoises, Cracovie devient le centre de reproduction et de certification des copies, créant un nouveau réseau de légitimité."
+    },
+    {
+     "nom": "Front des Ruines Juridiques",
+     "role": "Coalition de milices et d'anciens fonctionnaires internationaux pour le contrôle des protocoles abandonnés",
+     "zone": "geneve_bunker_institutions",
+     "raison": "Les décombres de Genève attirent des acteurs cherchant à récupérer ou détruire les derniers vestiges des institutions internationales."
+    },
+    {
+     "nom": "Guilde des Archivistes Nomades",
+     "role": "Réseau itinérant de techniciens et de juristes préservant les copies numériques des traités internationaux",
+     "zone": "transnationale",
+     "raison": "Avec la disparition des archives physiques, des collectifs se forment pour sauvegarder et diffuser les données juridiques critiques."
+    }
+   ]
+  }
  }
 }

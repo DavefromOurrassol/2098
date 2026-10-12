@@ -967,7 +967,8 @@ QUEUE_TEMPLATE = """\
 #   acteurs_hint           : optionnel. null si tu ne sais pas — le LLM choisit
 #                            parmi les instances d'entités existantes pour
 #                            chaque scénario. Sinon un slug d'instance (chaîne)
-#                            ou plusieurs (liste) que tu IMPOSES.
+#                            ou plusieurs (liste) que tu IMPOSES. Un slug
+#                            suffixé _<scénario> ne vaut que pour ce scénario.
 #   acteurs_hint_count     : optionnel, entier 1-4. Plafond du nombre total
 #                            d'acteurs (hint(s) inclus). Défaut : 2.
 #   zone_hint              : optionnel. null si tu ne sais pas — le LLM choisit
@@ -1299,7 +1300,9 @@ def process_idea(client, idea, dry_run=False):
     # imposés par l'utilisateur sont toujours préservés en priorité.
     max_vars = variables_hint_count if variables_hint_count else 2
     max_vars = max(1, min(4, max_vars))
-    if len(variables) > max_vars:
+    # PATCH_S27_V8162 : pas de troncature quand les variables sont imposées
+    # (elles sont reprises juste après) : le ⚠ était trompeur.
+    if len(variables) > max_vars and not (impositions and impositions["impacts"]):
         hints_valid = [h for h in (variables_hint or []) if h in VALID_VARS]
         kept = list(dict.fromkeys(hints_valid + variables))[:max_vars]
         print(f"  ⚠ {len(variables)} variable(s) reçue(s) au lieu de {max_vars} max "
@@ -1326,6 +1329,11 @@ def process_idea(client, idea, dry_run=False):
         try:
             print(f"[2/4] Développement pour {scenario}...")
             available_actors = load_available_actors(scenario)
+            # PATCH_S27_V8162 : un slug suffixé d'un autre scénario n'est pas imposé ici
+            # (une entrée commune porte les acteurs de tous les scénarios).
+            autres_sc = [s for s in SCENARIOS if s != scenario]
+            actors_hint_sc = [h for h in (actors_hint or [])
+                              if not any(str(h).endswith("_" + s) for s in autres_sc)] or None
             registre_excerpt = get_registre_excerpt_for_variables(
                 registre_text, variables, scenario
             )
@@ -1350,10 +1358,10 @@ def process_idea(client, idea, dry_run=False):
             previous, issues = None, None
             instance_data = step2_develop_instance(
                 client, idea, event_slug, type_evenement, variables, scenario,
-                registre_excerpt, available_actors, actors_hint,
+                registre_excerpt, available_actors, actors_hint_sc,
                 zone_hint=scenario_zone_hint,
             )
-            truncate_actors(instance_data, actors_hint, actors_hint_count, available_actors)
+            truncate_actors(instance_data, actors_hint_sc, actors_hint_count, available_actors)
             appliquer_impositions(instance_data, idea, scenario)
 
             for attempt in range(MAX_FIX_ATTEMPTS + 1):
@@ -1369,11 +1377,11 @@ def process_idea(client, idea, dry_run=False):
                 if attempt < MAX_FIX_ATTEMPTS:
                     instance_data = step2_develop_instance(
                         client, idea, event_slug, type_evenement, variables, scenario,
-                        registre_excerpt, available_actors, actors_hint,
+                        registre_excerpt, available_actors, actors_hint_sc,
                         previous=instance_data, issues=issues,
                         zone_hint=scenario_zone_hint,
                     )
-                    truncate_actors(instance_data, actors_hint, actors_hint_count, available_actors)
+                    truncate_actors(instance_data, actors_hint_sc, actors_hint_count, available_actors)
                     appliquer_impositions(instance_data, idea, scenario)
 
             if issues:

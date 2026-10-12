@@ -1,0 +1,50 @@
+{
+ "destruction_geneve_2076": {
+  "simulation": {
+   "date": "2026-10-12T20:51",
+   "version": "v8.17",
+   "empreinte": "f186c0a177b450ec",
+   "scenarios": [
+    "breakdown"
+   ],
+   "complet": true,
+   "passe": true,
+   "rapport": "documentation/need_action/et_si_destruction_geneve_2076.md",
+   "entree": {
+    "id": "destruction_geneve_2076",
+    "description": "En mars 2076, l'explosion du dépôt énergétique souterrain de Genève rase la ville et ses abords. Les institutions internationales qui y survivaient perdent leurs bâtiments, leurs archives physiques et la plupart de leur personnel.",
+    "portee": "globale",
+    "date_approximative": 2076,
+    "intensite": "<à choisir>",
+    "persistance": "permanente",
+    "scenarios": [
+     "breakdown"
+    ],
+    "variables_hint": [
+     "gouvernance_institutions"
+    ],
+    "variables_hint_count": 1,
+    "source": "et_si_destruction_geneve_2076",
+    "acteurs_hint": [
+     "archives_neutres_de_geneve_breakdown",
+     "agence_stabilisation_climatique_breakdown",
+     "tour_bcuc_geneve_breakdown",
+     "geneve_bunker_institutions_breakdown"
+    ],
+    "acteurs_hint_count": 4,
+    "date_imposee": 2076,
+    "impacts_imposes": {
+     "breakdown": [
+      {
+       "variable": "gouvernance_institutions",
+       "delta_level": 6,
+       "duree": 2,
+       "polarite": 1
+      }
+     ]
+    },
+    "via_matrice_impose": true
+   }
+  }
+ }
+}

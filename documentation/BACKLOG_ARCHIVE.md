@@ -916,3 +916,65 @@ conséquences cochées ; retenu : (a) d'abord, étape vers (b).
 - **v9.5** : champ « fait » (matériel / tendance), décision par le code ; lieu
   ou date de la fiche dans la contre-lecture. **26/27 verdicts**, priorités
   4/6. Banc emballé dans `generator/rejeu/` (`LISEZMOI.md`).
+
+---
+
+## ✅ S27 (pipeline d'injection, suite) — Passe branchée v8.16 → v8.16.2, étape « décider » v8.17 → v8.17.1, GUI — 12 octobre 2026
+
+*Clos comme chantier de code ; la suite (application réelle d'une liste,
+décision S19, amplitude des chocs, phase 4) est dans S27 de
+`BACKLOG_ACTIF.md`.*
+
+Points 1 à 3 de S27 dans l'ordre proposé le 11 oct, plus deux demandes GUI.
+- **Point 1 — passe dans le simulateur** (`patch_s27_v816.py`, `.bak_v816`,
+  23 remplacements) : `--passe-exhaustive` ; obligatoires dans la liste
+  (trajectoires, relations, textes en « Fiches à relire »), marqués
+  « [passe exhaustive] » ; section « Possibles (facultatif) » (20
+  prioritaires, puis « … et N autre(s) ») ; relations rompues d'une entité
+  disparue regroupées par entité ; passe rendue dans le rapport après la
+  lecture IA ; lecture IA prise en cache si elle n'a pas été demandée.
+  Premier test Genève : 75 → 59 étapes.
+- **v8.16.1** (`patch_s27_v8161.py`) : la recherche par mots ne cite plus les
+  instances et événements déjà relus par la passe (34 étapes « cite Genève »
+  en double).
+- **Constat** : la passe dépend de la lecture IA (contexte « déjà retenu ») ;
+  une nouvelle lecture l'a relancée (≈ 0,10 $) : 24 → 14 obligatoires et
+  incohérence (Archives Neutres « résiduel » d'après la lecture, alliances
+  rompues « parce qu'elles ont disparu » d'après la passe). Banc : toujours
+  26/27. Choix : signaler, pas de règle IA.
+- **v8.16.2 et point 2** (`patch_s27_v8162.py`, deux fichiers, tout ou rien) :
+  ⚠ mécanique sur une relation rompue qui invoque une disparition non
+  déclarée ; `acteurs_hint` (poids : trajectoire lecture 2, trajectoire passe
+  3, texte 2, extrémité de relation 1 ; 4 par scénario ;
+  `acteurs_hint_count` = maximum par scénario). `inject_custom_events.py` :
+  plus de troncature ni de ⚠ « N variables » quand les impacts sont imposés ;
+  `actors_hint_sc` filtre les slugs suffixés d'un autre scénario ;
+  `QUEUE_TEMPLATE` documenté.
+- **Option A — case GUI** (`patch_s27_gui_passe.py`, `.bak_gui_passe`) :
+  « Passe exhaustive : relire toutes les fiches (payant) » après la lecture
+  IA. Vérifiée dans le GUI (rapport de 19:04).
+- **Point 3 — « décider »**, quatre choix de David : statuts dans un fichier à
+  part (`generator/state/et_si_dossiers.json`) ; « Adopter » écrit l'entrée
+  dans `queue.yaml` (portée et intensité exigées), l'injection reste à part ;
+  « injecté » calculé à la lecture (`event_instances/`, queue,
+  `needs_review.yaml`), jamais stocké ; ligne de commande d'abord.
+  `et_si_dossiers.py` (nouveau) + `patch_s27_v817.py` (11 remplacements) :
+  chaque simulation enregistre date, version, empreinte du bloc YAML,
+  scénarios, passe, rapport et entrée commune ; refus si simulation
+  partielle, hypothèse modifiée, entrée déjà dans la queue ou événement déjà
+  dans le vault. Queue écrite par `save_queue_with_template()` (en-tête modèle
+  conservé, vérifié chez David). Test Genève : simulé → aperçu → adopté, en
+  attente → décision annulée, queue restaurée depuis `.bak_et_si`.
+- **Panneau GUI « ⚖️ Décider »** (`patch_s27_gui_decider.py`, quatre fichiers,
+  `.bak_gui_decider`, simulateur v8.17.1) : route
+  `/api/et_si/decider/<action>` ; « Annuler la décision » retire elle-même de
+  la queue l'entrée adoptée (même id et source `et_si_<id>`). Premier essai
+  refusé par `node --check` : node de l'iMac trop ancien pour `||=`, syntaxe
+  déjà présente dans `app.js` → le patch ne vérifie plus que la fonction
+  ajoutée dans ce cas. Vérifié dans le GUI, aller-retour compris.
+- **Panneaux de fichiers** (demande de David : l'éditeur gêne la lecture) :
+  `patch_gui_obsidian_panneaux.py` (`.bak_obsidian`) — titre d'un `.md`
+  cliquable vers Obsidian dans tous les panneaux ; `patch_gui_lien_seul.py`
+  (`.bak_lien_seul`) — option `lien_seul` (nom du fichier seul ; `.yaml` →
+  Visual Studio Code par la route `/api/ouvrir_vscode`), activée pour les
+  deux panneaux du simulateur. Vérifié chez David.

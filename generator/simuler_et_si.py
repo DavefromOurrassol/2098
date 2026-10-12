@@ -35,6 +35,13 @@ USAGE
     python3 generator/simuler_et_si.py --id invasion_bresil_2029 --report     # écrit aussi un .md
     python3 generator/simuler_et_si.py --id invasion_bresil_2029 --recit-ia   # récit rédigé par l'IA (payant)
     python3 generator/simuler_et_si.py --id invasion_bresil_2029 --json
+    python3 generator/simuler_et_si.py --id invasion_bresil_2029 --consequences-ia --passe-exhaustive --report
+
+DÉCIDER (v8.17, et_si_dossiers.py)
+    python3 generator/simuler_et_si.py --dossiers
+    python3 generator/simuler_et_si.py --adopter invasion_bresil_2029 --portee regionale --intensite forte --apercu
+    python3 generator/simuler_et_si.py --rejeter invasion_bresil_2029 --motif "trop invraisemblable"
+    python3 generator/simuler_et_si.py --annuler-decision invasion_bresil_2029
 """
 
 import argparse
@@ -55,7 +62,7 @@ SCENARIOS = ["breakdown", "fortress_world", "new_sustainability",
              "eco_communalism", "policy_reform", "reference"]
 DELTA_MAX_CONSEILLE = 25   # plafond d'un événement custom (inject_custom_events.py)
 ACTIONS_GEO = {"absorber": "absorber", "nouvelle_zone": "creer"}   # vocabulaire du fichier -> ZoneRepository
-VERSION = "v8.15"            # affichée dans le rapport : permet de vérifier la version installée
+VERSION = "v8.17.1"            # affichée dans le rapport : permet de vérifier la version installée
 MAX_LISTE = 10             # éléments listés par rubrique dans le rapport (le reste est compté)
 
 
@@ -1436,7 +1443,14 @@ def _rendre_consequences(c):
         L.append("")
     return L
 
-def rendre_markdown(hyp, resultats, date_fin, avert, geo=None, consequences=None, application=None):
+def _rendre_passe(p):
+    """V8.16 : section du rapport produite par et_si_exhaustif.rendre()."""
+    import et_si_exhaustif as ex
+    return ex.rendre(p)
+
+
+def rendre_markdown(hyp, resultats, date_fin, avert, geo=None, consequences=None, application=None,
+                    passe=None):
     L = [f"# Et si ? — {hyp['nom']}", "",
          f"*Simulation du {datetime.now().strftime('%Y-%m-%d %H:%M')} — lecture seule, rien n'a été injecté (simulateur {VERSION}).*", ""]
     if hyp["description"]:
@@ -1463,6 +1477,7 @@ def rendre_markdown(hyp, resultats, date_fin, avert, geo=None, consequences=None
     geo = geo or {}
     consequences = consequences or {}
     application = application or {}
+    passe = passe or {}
     for sc in SCENARIOS:
         r = resultats.get(sc)
         if not r and sc not in geo and sc not in consequences:
@@ -1471,6 +1486,8 @@ def rendre_markdown(hyp, resultats, date_fin, avert, geo=None, consequences=None
         if not r:
             if sc in consequences:
                 L += _rendre_consequences(consequences[sc])
+            if sc in passe:
+                L += _rendre_passe(passe[sc])
             if sc in geo:
                 L += _rendre_geo(geo[sc])
             if sc in application:
@@ -1519,6 +1536,8 @@ def rendre_markdown(hyp, resultats, date_fin, avert, geo=None, consequences=None
         L.append("")
         if sc in consequences:
             L += _rendre_consequences(consequences[sc])
+        if sc in passe:
+            L += _rendre_passe(passe[sc])
         if sc in geo:
             L += _rendre_geo(geo[sc])
         if sc in application:
@@ -1538,7 +1557,7 @@ def rendre_markdown(hyp, resultats, date_fin, avert, geo=None, consequences=None
 
 SECTIONS_APPLICATION = ["Carte", "Localisation des fiches", "Journaux", "Statuts de zone",
                         "Élément", "Nouvelles entités", "Trajectoires", "Relations", "Lore",
-                        "Fiches à relire", "Articles et site", "Contrôles"]
+                        "Fiches à relire", "Possibles (facultatif)", "Articles et site", "Contrôles"]
 TRAJ_TERMINALES = {"transformé", "disparu", "historique", "mythifié"}
 
 
@@ -1945,10 +1964,14 @@ def _etape(liste, section, action, commande=None, motif=None):
     liste.append({"section": section, "action": action, "commande": commande, "motif": motif})
 
 
-def liste_application(hyp, sc, res, cons, geo_ops, donnees):
+def liste_application(hyp, sc, res, cons, geo_ops, donnees, passe=None):
     """Étapes à valider à la main pour CE scénario. Rien n'est écrit."""
     E = []
     cons = cons if cons and not cons.get("erreur") else {}
+    # V8.16 : passe exhaustive (obligatoires dans la liste, possibles prioritaires en facultatif).
+    passe = passe if passe and not passe.get("erreur") else {}
+    p_obl = passe.get("obligatoire") or {"trajectoires": [], "relations": [], "textes": []}
+    marque = " [passe exhaustive]"
     ops_hyp = (hyp.get("geographie") or {}).get(sc) or []
     by_inst = {i.get("slug"): i for i in donnees["instances"]}
     redac = donnees["redactions"] or {}
@@ -2250,7 +2273,7 @@ def liste_application(hyp, sc, res, cons, geo_ops, donnees):
                "la lecture IA ne donne pas de catégorie ; scenario_hint limite à ce scénario")
 
     # 7. Trajectoires ----------------------------------------------------------
-    for t in cons.get("trajectoires") or []:
+    for t in (cons.get("trajectoires") or []) + [dict(x, passe=True) for x in p_obl["trajectoires"]]:
         inst = by_inst.get(t["instance"]) or {}
         notes = [t.get("raison") or ""]
         cmd = f"à la main : instances/{t['instance']}.md, champ `trajectoire`"
@@ -2264,20 +2287,53 @@ def liste_application(hyp, sc, res, cons, geo_ops, donnees):
         saut = t["avant"] in ("émergent", "marginal") and t["apres"] in ("dominant", "mature")
         if saut:
             notes.insert(0, "saut d'un cran (sans passer par ascendant) : garder, ou ramener à ascendant")
-        _etape(E, "Trajectoires", ("⚠ " if saut else "") + f"{t.get('nom')} (`{t['instance']}`) : {t['avant']} → {t['apres']}",
+        _etape(E, "Trajectoires", ("⚠ " if saut else "") + f"{t.get('nom')} (`{t['instance']}`) : {t['avant']} → {t['apres']}"
+               + (marque if t.get("passe") else ""),
                cmd, " ; ".join(n for n in notes if n))
 
     # 8. Relations -------------------------------------------------------------
-    rels = cons.get("relations") or []
+    # V8.16 : relations de la passe ; les relations rompues d'une entité qui disparaît
+    # sont regroupées en une seule étape (cas Genève : 24 obligatoires).
+    disparues = {t["instance"]: t.get("nom") for t in (cons.get("trajectoires") or []) + p_obl["trajectoires"]
+                 if t.get("apres") == "disparu"}
+    rels = list(cons.get("relations") or [])
+    groupes = {}
+    for r in p_obl["relations"]:
+        cle = r["a"] if r["a"] in disparues else (r["b"] if r["b"] in disparues else None)
+        if cle and r["action"] == "rompue":
+            groupes.setdefault(cle, []).append(r)
+        else:
+            # V8.16.2 : rupture justifiée par une disparition que rien ne déclare.
+            alerte = None
+            if r["action"] == "rompue":
+                traj_b = next((t["apres"] for t in (cons.get("trajectoires") or [])
+                               if t["instance"] == r["b"]), (by_inst.get(r["b"]) or {}).get("trajectoire"))
+                raison_pliee = _plie(r.get("raison") or "")
+                if traj_b != "disparu" and any(m in raison_pliee for m in
+                                               ("dispar", "detrui", "n'existe_plus", "n'existent_plus")):
+                    alerte = (f"`{r['b']}` n'est déclarée disparue nulle part (trajectoire retenue : "
+                              f"{traj_b or '?'}) : garder la relation, ou faire disparaître l'entité")
+            rels.append(dict(r, passe=True, alerte=alerte))
+    for cle, liste_r in groupes.items():
+        autres = list(dict.fromkeys(r["b"] if r["a"] == cle else r["a"] for r in liste_r))
+        _etape(E, "Relations", f"{disparues[cle] or cle} (`{cle}`) disparaît : retirer ses "
+               f"{len(liste_r)} relation(s) rompue(s){marque}",
+               f"à la main : retirer `{cle}` des alliances / oppositions de "
+               + ", ".join(f"`{a}`" for a in autres[:MAX_LISTE]) + (" …" if len(autres) > MAX_LISTE else "")
+               + f", puis vider celles de instances/{cle}.md",
+               "regroupé sous l'entité disparue ; la réciprocité n'enlève rien")
     for r in rels:
         champ = "alliances" if r["type"] == "alliance" else "oppositions"
         if r["action"] == "nouvelle":
-            _etape(E, "Relations", f"{r['type']} nouvelle : {r['a_nom']} ↔ {r['b_nom']}",
+            _etape(E, "Relations", f"{r['type']} nouvelle : {r['a_nom']} ↔ {r['b_nom']}"
+                   + (marque if r.get("passe") else ""),
                    f"à la main : ajouter `{r['b']}` dans `{champ}` de instances/{r['a']}.md", r.get("raison"))
         else:
-            _etape(E, "Relations", f"{r['type']} rompue : {r['a_nom']} ↔ {r['b_nom']}",
+            _etape(E, "Relations", ("⚠ " if r.get("alerte") else "")
+                   + f"{r['type']} rompue : {r['a_nom']} ↔ {r['b_nom']}"
+                   + (marque if r.get("passe") else ""),
                    f"à la main : retirer de `{champ}` dans les DEUX fiches ({r['a']}, {r['b']})",
-                   "la réciprocité n'enlève rien")
+                   r.get("alerte") or "la réciprocité n'enlève rien")
     if any(r["action"] == "nouvelle" for r in rels):
         _etape(E, "Relations", "Rendre les relations réciproques",
                f"python3 generator/fix_alliances_oppositions.py --scenario {sc} --reciprocite-seule --ignorer-exclus",
@@ -2290,24 +2346,41 @@ def liste_application(hyp, sc, res, cons, geo_ops, donnees):
                f"à la main : documentation/lore_regles.yaml, section {sc}",
                "comme les zones abandonnées de fortress_world (Nordgard, Koursk)")
 
+    # V8.16 : phrases que la passe exhaustive juge fausses (obligatoires).
+    for t in p_obl["textes"]:
+        dossier = "instances" if t.get("genre") == "instance" else "event_instances"
+        _etape(E, "Fiches à relire", f"Corriger une phrase de `{t['slug']}`{marque}",
+               f"à la main : {dossier}/{t['slug']}.md",
+               f"« {_court(t['extrait'], 160)} » — contredit par : {t.get('contredit') or '?'}")
+
     # 9 bis. Fiches à relire (V8.3) ------------------------------------------------
-    if cites:
+    # V8.16.1 : avec la passe exhaustive, instances et événements sont déjà relus ;
+    # la recherche par mots ne garde que les zones et le registre.
+    cites_lus = {k: v for k, v in cites.items()
+                 if not passe or k not in ("Instances", "Événements")}
+    if cites_lus:
         _etape(E, "Fiches à relire", "Termes cherchés : " + ", ".join(sorted(termes)[:20])
                + (f" … (+{len(termes) - 20})" if len(termes) > 20 else ""),
                motif="mot entier, sans casse ni accents ; le registre seulement après "
-               f"{hyp['date']:g} (chronologie)")
-        for type_, items in cites.items():
+               f"{hyp['date']:g} (chronologie)"
+               + (" ; instances et événements relus par la passe exhaustive : seuls les zones "
+                  "et le registre sont listés" if passe else ""))
+        for type_, items in cites_lus.items():
             for it in items[:MAX_FICHES]:
                 _etape(E, "Fiches à relire", f"{type_[:-1] if type_.endswith('s') else type_} `{it['slug']}` "
                        f"cite « {it['terme']} »", motif=it["extrait"])
             if len(items) > MAX_FICHES:
                 _etape(E, "Fiches à relire", f"… et {len(items) - MAX_FICHES} autre(s) parmi : {type_.lower()}",
                        motif="liste complète : generator/state/dernier_et_si.json, clé application")
-        if cites.get("Instances"):
+        if cites_lus.get("Instances"):
             _etape(E, "Fiches à relire", "Relecture IA ciblée d'une instance (contradictions avec l'hypothèse)",
                    f"python3 generator/audit_lore.py --scenario {sc} --llm --slug <slug>",
                    "payant (≈ 0,5 centime la fiche) ; après application de la carte et de l'événement")
 
+    elif passe:
+        _etape(E, "Fiches à relire", "Instances et événements relus par la passe exhaustive "
+               "(obligatoires ci-dessus et dans les autres sections) ; aucune zone ni ligne du registre "
+               "ne cite l'hypothèse")
     else:
         # V8.9 : rien à chercher par mots (hypothèse mondiale, sans pays ni nom propre) :
         # une fiche peut la contredire sans la nommer ; seule la relecture IA la trouve.
@@ -2324,8 +2397,25 @@ def liste_application(hyp, sc, res, cons, geo_ops, donnees):
                    f"python3 generator/audit_lore.py --scenario {sc} --llm --zone {z}",
                    "estimer d'abord avec --estimer ; payant")
 
+    # V8.16 : possibles prioritaires de la passe, en étapes facultatives.
+    if passe:
+        import et_si_exhaustif as ex
+        fiches_p = ex.grouper_possibles(passe.get("possible")
+                                        or {"trajectoires": [], "relations": [], "textes": []})
+        prio = [c for c in passe.get("classement") or [] if c.get("slug") in fiches_p][:ex.PRIORITE_MAX]
+        for c in prio:
+            f = fiches_p[c["slug"]]
+            items = [(g, x) for g, x in f["items"] if not ex._disqualifie(x)] or f["items"]
+            _etape(E, "Possibles (facultatif)", f"{f['nom']} (`{c['slug']}`) : "
+                   + ex._resume_fiche({"items": items}) + marque, motif=c.get("pourquoi") or None)
+        if len(fiches_p) > len(prio):
+            _etape(E, "Possibles (facultatif)",
+                   f"… et {len(fiches_p) - len(prio)} autre(s) fiche(s) avec des changements possibles",
+                   motif="détail dans la section « Passe exhaustive » de ce scénario")
+
     # 10. Articles et site -----------------------------------------------------
-    entites_changees = {t["instance"] for t in cons.get("trajectoires") or []}
+    entites_changees = ({t["instance"] for t in cons.get("trajectoires") or []}
+                        | {t["instance"] for t in p_obl["trajectoires"]})
     a_rezoner = [a for a in donnees["articles"] if a["zone"] in zones_mortes]
     import re as _re
 
@@ -2368,17 +2458,34 @@ def liste_application(hyp, sc, res, cons, geo_ops, donnees):
                "puis étapes 2 et 3 de Relations & lore si besoin")
 
     sources_ia = any(op.get("source") == "ia" for op in ops_hyp) or any(
-        cons.get(k) for k in ("trajectoires", "relations", "zones_statut", "nouvelles_entites"))
+        cons.get(k) for k in ("trajectoires", "relations", "zones_statut", "nouvelles_entites")) or bool(passe)
+    # V8.16.2 : entités les plus touchées, pour acteurs_hint de l'entrée commune.
+    poids = {}
+
+    def _pese(slug, p):
+        if slug and str(slug).endswith("_" + sc):
+            poids[slug] = poids.get(slug, 0) + p
+    for t in cons.get("trajectoires") or []:
+        _pese(t["instance"], 2)
+    for t in p_obl["trajectoires"]:
+        _pese(t["instance"], 3)
+    for t in p_obl["textes"]:
+        if t.get("genre") == "instance":
+            _pese(t["slug"], 2)
+    for r in p_obl["relations"]:
+        _pese(r["a"], 1)
+        _pese(r["b"], 1)
+    acteurs = [s for s, _ in sorted(poids.items(), key=lambda x: -x[1])][:4]
     return {"etapes": E, "avert": donnees["avert"], "sources_ia": sources_ia, "fiches_citant": cites,
-            "nouvelles_entites": cons.get("nouvelles_entites") or []}
+            "nouvelles_entites": cons.get("nouvelles_entites") or [], "acteurs": acteurs}
 
 
-def construire_application(hyp, resultats, consequences, geo, scenarios):
+def construire_application(hyp, resultats, consequences, geo, scenarios, passe=None):
     out = {}
     for sc in scenarios:
         try:
             out[sc] = liste_application(hyp, sc, resultats.get(sc), consequences.get(sc),
-                                        geo.get(sc), _donnees_application(sc))
+                                        geo.get(sc), _donnees_application(sc), (passe or {}).get(sc))
         except Exception as e:  # la liste ne doit jamais empêcher le reste du rapport
             out[sc] = {"erreur": f"{type(e).__name__}: {e}", "etapes": []}
     return out
@@ -2424,8 +2531,9 @@ def _rendre_application(app, hyp, sc):
     return L
 
 
-def _rendre_injection_commune(hyp, application):
-    """Entrée de queue commune aux scénarios (mode choc seulement)."""
+def _rendre_injection_commune(hyp, application, out=None):
+    """Entrée de queue commune aux scénarios (mode choc seulement).
+    V8.17 : `out` (dict) reçoit l'entrée sous la clé « entree »."""
     if not hyp.get("impacts"):
         return []
     scen = [sc for sc in hyp["scenarios"] if sc in application]
@@ -2442,6 +2550,13 @@ def _rendre_injection_commune(hyp, application):
               "persistance": hyp["persistance"] or "permanente", "scenarios": scen,
               "variables_hint": [i["variable"] for i in hyp["impacts"]],
               "variables_hint_count": len(hyp["impacts"]), "source": f"et_si_{hyp['id']}"}
+    # V8.16.2 : entités les plus touchées (lecture IA, passe exhaustive), 4 au plus par scénario ;
+    # inject_custom_events.py n'impose dans un scénario que les slugs de ce scénario.
+    par_sc = {sc: (application.get(sc) or {}).get("acteurs") or [] for sc in scen}
+    acteurs = list(dict.fromkeys(a for sc in scen for a in par_sc[sc]))
+    if acteurs:
+        entree["acteurs_hint"] = acteurs
+        entree["acteurs_hint_count"] = max(len(v) for v in par_sc.values())
     # V8.15 : ce qui a été simulé est imposé à l'injection (patch_s27_injection_imposee.py).
     def _nombre(x):
         return int(x) if float(x) == int(x) else x
@@ -2455,6 +2570,8 @@ def _rendre_injection_commune(hyp, application):
             for sc in scen}
         entree["via_matrice_impose"] = bool(hyp["via_matrice"])
         trop_fort = [f"{i['variable']} ({i['force']:g})" for i in hyp["impacts"] if i["force"] > DELTA_MAX_CONSEILLE]
+    if out is not None:
+        out["entree"] = entree
     return ["## Liste d'application — injection commune", "",
             ("⚠ Simulation limitée à " + ", ".join(sc for sc in scen if sc not in partiel)
              + " : l'entrée couvre aussi " + ", ".join(partiel) + ", non simulé(s) dans ce rapport ; "
@@ -2472,12 +2589,51 @@ def _rendre_injection_commune(hyp, application):
                "(`impacts_imposes`, `date_imposee`, `via_matrice_impose`) : l'IA de l'injection ne les "
                "recalcule pas, elle rédige seulement le récit." if not rupture
                else "Seule la date est imposée (`date_imposee`)."), "",
+            *(["`acteurs_hint` : entités les plus touchées de chaque scénario (lecture IA, passe "
+               "exhaustive), 4 au plus par scénario ; chaque slug ne vaut que pour son scénario.", ""]
+              if entree.get("acteurs_hint") else []),
             "```yaml", _yaml_bloc([entree]), "```", ""]
 
 
 # ---------------------------------------------------------------------------
 # main
 # ---------------------------------------------------------------------------
+
+def _decider(args, hyps):
+    """V8.17 : --dossiers, --adopter, --rejeter, --annuler-decision."""
+    import et_si_dossiers as ed
+    if args.dossiers:
+        print(f"Dossiers des hypothèses ({ed.DOSSIERS_PATH.relative_to(VAULT_ROOT)}) :")
+        for ligne in ed.tableau(hyps):
+            print(ligne)
+        return
+    hid = args.adopter or args.rejeter or args.annuler_decision
+    brut = next((h for h in hyps if h.get("id") == hid), None)
+    try:
+        if args.adopter:
+            if brut is None:
+                sys.exit(f"✗ Hypothèse {hid!r} absente de {HYPOTHESES_PATH.name}.")
+            entree = ed.adopter(brut, hid, args.portee, args.intensite, apercu=args.apercu)
+            if args.apercu:
+                print(f"Aperçu de l'entrée adoptée pour {hid} (rien écrit) :\n")
+                print(_yaml_bloc([entree]))
+                print("\nRelancer sans --apercu pour l'écrire dans evenements_custom/queue.yaml.")
+            else:
+                print(f"✓ {hid} adoptée : entrée ajoutée à evenements_custom/queue.yaml "
+                      f"(sauvegarde queue.yaml.bak_et_si).\n"
+                      f"  Injection à lancer à part : python3 generator/inject_custom_events.py --mode custom")
+        elif args.rejeter:
+            ed.rejeter(hid, args.motif)
+            print(f"✓ {hid} rejetée" + (f" ({args.motif})" if args.motif else "") + ".")
+        else:
+            # V8.17.1 (PATCH_S27_GUI_DECIDER) : messages déjà préfixés ✓ / ⚠.
+            ancien, messages = ed.annuler_decision(hid)
+            print(f"✓ Décision retirée ({ancien}) : {hid} revient à « {ed.statut(hid)} ».")
+            for m in messages:
+                print(f"  {m}")
+    except ed.DossierErreur as e:
+        sys.exit(f"✗ {e}")
+
 
 def main():
     ap = argparse.ArgumentParser(description="Simulateur « et si ? » (lecture seule).")
@@ -2488,11 +2644,25 @@ def main():
     ap.add_argument("--recit-ia", action="store_true", help="récit rédigé par l'IA (un appel par scénario)")
     ap.add_argument("--consequences-ia", action="store_true",
                     help="lecture des conséquences sur le lore par l'IA (un appel par scénario, payant)")
-    ap.add_argument("--refaire", action="store_true", help="ignore le cache de la lecture des conséquences")
+    ap.add_argument("--refaire", action="store_true", help="ignore le cache de la lecture des conséquences"
+                    " (et de la passe exhaustive si elle est demandée)")
+    ap.add_argument("--passe-exhaustive", action="store_true",
+                    help="relit toutes les fiches de chaque scénario (et_si_exhaustif.py, payant : "
+                         "≈ 0,05 à 0,11 $ par scénario, cache)")
     ap.add_argument("--report", action="store_true", help="écrit aussi documentation/need_action/et_si_<id>.md")
     ap.add_argument("--json", action="store_true", help="sortie JSON seule")
     ap.add_argument("--mode", choices=["simuler", "nouvelle"], default="simuler",
                     help="onglet du GUI (nouvelle = panneau d'écriture, rien à lancer)")
+    # V8.17 : étape « décider » (et_si_dossiers.py).
+    ap.add_argument("--dossiers", action="store_true", help="statut de chaque hypothèse")
+    ap.add_argument("--adopter", metavar="ID",
+                    help="écrit l'entrée de la dernière simulation complète dans evenements_custom/queue.yaml")
+    ap.add_argument("--portee", help="avec --adopter : locale | regionale | continentale | globale")
+    ap.add_argument("--intensite", help="avec --adopter : faible | modérée | forte | majeure")
+    ap.add_argument("--apercu", action="store_true", help="avec --adopter : montre l'entrée, n'écrit rien")
+    ap.add_argument("--rejeter", metavar="ID", help="marque l'hypothèse rejetée")
+    ap.add_argument("--motif", help="avec --rejeter : raison du rejet")
+    ap.add_argument("--annuler-decision", metavar="ID", help="retire la décision (adoptée ou rejetée)")
     args = ap.parse_args()
     if args.mode == "nouvelle":
         print("Mode « Nouvelle hypothèse » : écris l'idée dans le panneau ✨ ci-dessous, puis "
@@ -2500,6 +2670,14 @@ def main():
         return
 
     hyps = charger_hypotheses()
+    # V8.17 : étape « décider ».
+    actions = [a for a in (args.dossiers, args.adopter, args.rejeter, args.annuler_decision) if a]
+    if len(actions) > 1:
+        sys.exit("✗ Une seule action à la fois : --dossiers, --adopter, --rejeter ou --annuler-decision.")
+    if actions:
+        _decider(args, hyps)
+        return
+    import et_si_dossiers as ed
     if (args.lister or not args.id) and args.json:
         # V7.8 : liste déroulante du GUI (/api/slugs?type=hypotheses_et_si).
         import dynamique as dyn
@@ -2507,14 +2685,17 @@ def main():
         liste = []
         for h in hyps:
             _, err, _ = verifier_hypothese(dict(h), VALID_VARS, dyn)
-            liste.append({"id": h.get("id"), "nom": h.get("nom") or h.get("id"),
-                          "date": h.get("date"), "erreurs": err})
+            st = ed.statut(h.get("id"))
+            nom = h.get("nom") or h.get("id")
+            liste.append({"id": h.get("id"), "nom": nom if st == "non simulé" else f"{nom} · {st}",
+                          "date": h.get("date"), "erreurs": err, "statut": st})
         print(json.dumps(liste, ensure_ascii=False, default=str))
         return
     if args.lister or not args.id:
         print(f"Hypothèses dans {HYPOTHESES_PATH.relative_to(VAULT_ROOT)} :")
         for h in hyps:
-            print(f"  - {h.get('id', '?')} : {h.get('nom', '')} ({h.get('date', '?')})")
+            print(f"  - {h.get('id', '?')} : {h.get('nom', '')} ({h.get('date', '?')}) · "
+                  f"{ed.statut(h.get('id'))}")
         if not args.id:
             print("\nLancer avec --id <id> pour simuler.")
         return
@@ -2525,6 +2706,8 @@ def main():
 
     import dynamique as dyn
     from loader import VALID_VARS
+    import copy
+    brut = copy.deepcopy(choix[0])   # V8.17 : empreinte du bloc tel qu'écrit
     hyp, erreurs, avert = verifier_hypothese(choix[0], VALID_VARS, dyn)
     if erreurs:
         print(f"✗ Hypothèse {args.id!r} invalide, simulation non lancée :")
@@ -2549,12 +2732,38 @@ def main():
         avert.append(f"aperçu de la carte impossible : {type(e).__name__}: {e}")
         geo = {}
 
-    # V8 : liste d'application (phase 3), lecture seule.
     portee = [args.scenario] if args.scenario else hyp["scenarios"]
-    application = construire_application(hyp, resultats, consequences, geo, portee)
+    # V8.16 : passe exhaustive, avant la liste d'application.
+    passe = {}
+    if args.passe_exhaustive:
+        import et_si_exhaustif as ex
+        for sc in portee:
+            effets = (resultats.get(sc) or {}).get("effets") or []
+            lecture = consequences.get(sc)
+            if not lecture or lecture.get("erreur"):
+                lecture = ex.lecture_en_cache(hyp, sc, effets)
+            if lecture is None:
+                avert.append(f"passe exhaustive ({sc}) : lecture IA absente, passe faite sans "
+                             f"(cocher aussi la lecture IA)")
+            print(f"[passe exhaustive] {sc}…", file=sys.stderr)
+            try:
+                passe[sc] = ex.passe_exhaustive(hyp, sc, effets, lecture, refaire=args.refaire)
+            except Exception as e:  # la passe ne doit jamais empêcher le reste du rapport
+                passe[sc] = {"erreur": f"{type(e).__name__}: {e}"}
+
+    # V8 : liste d'application (phase 3), lecture seule.
+    application = construire_application(hyp, resultats, consequences, geo, portee, passe)
+    # V8.17 : dossier de l'hypothèse (dernière simulation, entrée d'injection commune).
+    inj = {}
+    _rendre_injection_commune(hyp, application, inj)
+    try:
+        ed.enregistrer_simulation(brut, hyp, portee, VERSION, inj.get("entree"), bool(passe),
+                                  f"documentation/need_action/et_si_{hyp['id']}.md" if args.report else None)
+    except Exception as e:  # le dossier ne doit jamais empêcher le rapport
+        avert.append(f"dossier de l'hypothèse non mis à jour : {type(e).__name__}: {e}")
     sortie = {"hypothese": hyp, "date": args.date, "avertissements": avert,
               "resultats": resultats, "consequences": consequences, "geographie": geo,
-              "application": application}
+              "application": application, "passe": passe}
     try:
         ETAT_PATH.parent.mkdir(parents=True, exist_ok=True)
         ETAT_PATH.write_text(json.dumps(sortie, ensure_ascii=False, default=str), encoding="utf-8")
@@ -2564,7 +2773,7 @@ def main():
     if args.json:
         print(json.dumps(sortie, ensure_ascii=False, indent=2, default=str))
         return
-    md = rendre_markdown(hyp, resultats, args.date, avert, geo, consequences, application)
+    md = rendre_markdown(hyp, resultats, args.date, avert, geo, consequences, application, passe)
     print(md)
     if args.report:
         REPORT_DIR.mkdir(parents=True, exist_ok=True)

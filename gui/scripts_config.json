@@ -2817,6 +2817,14 @@
         "mode_only": "simuler"
       },
       {
+        "flag": "--passe-exhaustive",
+        "type": "checkbox",
+        "label": "Passe exhaustive : relire toutes les fiches (payant)",
+        "default": false,
+        "description": "⚠️ Relit toutes les instances du scénario et les événements datés après l'hypothèse (≈ 0,05 à 0,11 $ par scénario ; lots gardés en cache). Chaque changement est classé obligatoire (la fiche devient fausse) ou possible. Les obligatoires entrent dans la liste d'application, les 20 possibles prioritaires en étapes facultatives, et les entités les plus touchées dans l'entrée d'injection (acteurs_hint). À cocher avec la lecture IA, qui lui sert de contexte. « Nouveau tirage » relance aussi la passe.",
+        "mode_only": "simuler"
+      },
+      {
         "flag": "--refaire",
         "type": "checkbox",
         "label": "Nouveau tirage (ignorer le cache)",
@@ -2838,15 +2846,17 @@
     "yaml_files": [
       {
         "path": "et_si/hypotheses.yaml",
-        "label": "et_si/hypotheses.yaml (hypothèses, mode d'emploi en tête)"
+        "label": "et_si/hypotheses.yaml (hypothèses, mode d'emploi en tête)",
+        "lien_seul": true
       },
       {
         "path": "documentation/need_action/et_si_dernier_lancement.md",
         "label": "Rapport du dernier lancement",
-        "readonly": true
+        "readonly": true,
+        "lien_seul": true
       }
     ],
-    "gui_verified": false,
+    "gui_verified": true,
     "mode_select": {
       "label": "Mode",
       "choices": [
@@ -2862,7 +2872,8 @@
         }
       ]
     },
-    "assistant_hypothese": true
+    "assistant_hypothese": true,
+    "assistant_decision": true
   },
   {
     "id": "export_prompt_veille",

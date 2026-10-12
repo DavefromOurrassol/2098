@@ -14487,8 +14487,8 @@
   }
  },
  "destruction_geneve_2076::breakdown::0": {
-  "empreinte": "5e241025c1d01d6a",
-  "date": "2026-10-11T21:53",
+  "empreinte": "8c24e1141a36dc8f",
+  "date": "2026-10-12T18:44",
   "brut": {
    "fiches": [
     {
@@ -14507,18 +14507,18 @@
        "niveau": "obligatoire",
        "apres": "disparu",
        "lien": "territoire",
-       "lien_detail": "zone geneve_bunker_institutions (Genève détruite en 2076)",
-       "contredit": "L'institution survit comme une coquille administrative sans autorité réelle, réclamant une légitimité depuis Genève.",
-       "raison": "La destruction de Genève en 2076 rend impossible la survie physique de l'AMSC dans cette ville, et aucune mention de relocalisation n'est plausible sans archives ou personnel."
+       "lien_detail": "zone geneve_bunker_institutions",
+       "contredit": "L'élément perturbateur détruit Genève en 2076, entraînant la perte des bâtiments et archives physiques des institutions internationales y siégeant.",
+       "raison": "La fiche indique que l'AMSC survit comme une coquille administrative, mais son ancrage physique à Genève (mentionné dans le rôle) est détruit en 2076, rendant son existence en tant qu'entité localisée impossible."
       },
       {
        "type": "texte",
        "niveau": "obligatoire",
-       "extrait": "Installées dans les sous-sols renforcés de l'ancienne Palais des Nations — désormais zone geneve_bunker_institutions",
-       "contredit": "Genève est rasée en 2076, aucun bâtiment ne subsiste.",
+       "extrait": "Jadis mandaté pour orchestrer les grandes interventions géo-ingénieristes, il n'existe plus que comme structure fantôme, réclamant une légitimité que personne ne lui accorde depuis les sous-sols renforcés de l'ancienne Palais des Nations — désormais zone fantôme de Genève.",
+       "contredit": "Genève est rasée en 2076, aucun bâtiment ni sous-sol ne subsiste.",
        "lien": "territoire",
        "lien_detail": "zone geneve_bunker_institutions",
-       "raison": "La phrase affirme une localisation physique à Genève, devenue fausse après 2076."
+       "raison": "La phrase suppose une présence physique à Genève après 2076, ce qui est faux."
       }
      ]
     },
@@ -14536,20 +14536,31 @@
       {
        "type": "trajectoire",
        "niveau": "obligatoire",
-       "apres": "disparu",
+       "apres": "résiduel",
        "lien": "territoire",
-       "lien_detail": "zone archives_neutres_geneve (Genève détruite en 2076)",
-       "contredit": "Les Archives Neutres de Genève fonctionnent comme un oracle disputé depuis Genève.",
-       "raison": "La destruction de Genève en 2076 détruit leur localisation physique et leurs archives, rendant impossible leur rôle actuel."
+       "lien_detail": "zone archives_neutres_geneve",
+       "contredit": "La destruction de Genève en 2076 supprime l'ancrage physique des Archives Neutres, or la fiche les décrit comme un « point d'ancrage physique » pour des normes internationales.",
+       "raison": "La fiche suppose une centralité physique à Genève, impossible après 2076. Leur rôle d'oracle disputé ne peut plus reposer sur un lieu détruit."
+      },
+      {
+       "type": "relation",
+       "niveau": "obligatoire",
+       "cible": "geneve_bunker_institutions_breakdown",
+       "relation": "alliance",
+       "action": "rompue",
+       "lien": "relation",
+       "lien_detail": "Les Archives Neutres dépendaient de l'infrastructure genevoise pour leur légitimité physique.",
+       "contredit": "Geneve_bunker_institutions_breakdown est transformé en « disparu » après 2076, rendant toute alliance impossible.",
+       "raison": "La destruction de Genève rompt toute collaboration institutionnelle avec les entités genevoises."
       },
       {
        "type": "texte",
        "niveau": "obligatoire",
-       "extrait": "Dans le scénario breakdown, les Archives Neutres de Genève constituent l'un des derniers référentiels partagés de légitimité juridique internationale, un point d'ancrage physique pour des normes que les États ou blocs contestent ou ignorent.",
-       "contredit": "Genève est détruite en 2076, aucun ancrage physique n'y subsiste.",
+       "extrait": "Elles fonctionnent moins comme une institution que comme un oracle disputé : un point d'ancrage physique pour des normes que les États ou blocs contestent ou ignorent, installé dans les sous-sols du Palais des Nations.",
+       "contredit": "Genève est détruite en 2076, aucun sous-sol ni Palais des Nations ne subsiste.",
        "lien": "territoire",
        "lien_detail": "zone archives_neutres_geneve",
-       "raison": "La phrase affirme une existence physique à Genève, devenue fausse après 2076."
+       "raison": "La phrase décrit une présence physique à Genève après 2076, ce qui est faux."
       }
      ]
     },
@@ -14559,26 +14570,38 @@
       {
        "type": "trajectoire",
        "niveau": "obligatoire",
-       "apres": "disparu",
+       "apres": "résiduel",
        "lien": "territoire",
-       "lien_detail": "zone archives_neutres_geneve (Genève détruite en 2076)",
-       "contredit": "Les Archives Neutres de Genève font office d'arbitre silencieux depuis les sous-sols renforcés de l'ancienne Palais des Nations.",
-       "raison": "La destruction de Genève en 2076 détruit leur localisation physique et leurs archives, rendant impossible leur rôle actuel."
+       "lien_detail": "zone archives_neutres_geneve",
+       "contredit": "La fiche décrit les Archives comme installées dans les sous-sols de Genève, or la ville est rasée en 2076.",
+       "raison": "Leur ancrage physique à Genève est détruit, ce qui contredit leur rôle d'arbitre silencieux basé sur un lieu précis."
       },
       {
        "type": "texte",
        "niveau": "obligatoire",
-       "extrait": "Installées dans les sous-sols renforcés de l'ancienne Palais des Nations — désormais zone archives_neutres_geneve",
-       "contredit": "Genève est rasée en 2076, aucun bâtiment ne subsiste.",
+       "extrait": "Installées dans les sous-sols renforcés de l'ancienne Palais des Nations — désormais zone fantôme de Genève — les Archives Neutres de Genève font office d'arbitre silencieux de ce qui a existé.",
+       "contredit": "Genève est rasée en 2076, aucun sous-sol ni zone fantôme ne subsiste.",
        "lien": "territoire",
        "lien_detail": "zone archives_neutres_geneve",
-       "raison": "La phrase affirme une localisation physique à Genève, devenue fausse après 2076."
+       "raison": "La phrase suppose une localisation physique à Genève après 2076, ce qui est faux."
       }
      ]
     },
     {
      "slug": "arctic_passage_authority_breakdown",
-     "changements": []
+     "changements": [
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "archives_neutres_de_geneve_breakdown",
+       "relation": "alliance",
+       "action": "rompue",
+       "lien": "relation",
+       "lien_detail": "L'APA était alliée aux Archives Neutres, dont l'ancrage physique à Genève est détruit en 2076.",
+       "contredit": "",
+       "raison": "La destruction de Genève affaiblit les Archives Neutres, rendant leur alliance moins pertinente, bien que non impossible."
+      }
+     ]
     },
     {
      "slug": "arctique_nordark_breakdown",
@@ -14586,7 +14609,19 @@
     },
     {
      "slug": "armada_logistique_nordique_breakdown",
-     "changements": []
+     "changements": [
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "arctic_passage_authority_breakdown",
+       "relation": "alliance",
+       "action": "rompue",
+       "lien": "relation",
+       "lien_detail": "L'APA est un allié de l'Armada, mais son déclin (déjà transformé) s'accélère avec la destruction de Genève, affaiblissant les institutions transnationales.",
+       "contredit": "",
+       "raison": "La destruction de Genève renforce les dynamiques régionales, rendant les alliances avec des institutions fantômes moins probables."
+      }
+     ]
     },
     {
      "slug": "assemblee_territoires_breakdown",
@@ -14598,9 +14633,9 @@
        "relation": "alliance",
        "action": "rompue",
        "lien": "relation",
-       "lien_detail": "alliée des Archives Neutres de Genève, disparues en 2076",
-       "contredit": "Aucune contradiction directe, mais l'alliance devient caduque après la disparition de l'entité alliée.",
-       "raison": "L'Assemblée des Territoires Éclatés ne peut plus s'allier à une entité disparue, mais cela n'invalide pas sa fiche."
+       "lien_detail": "L'Assemblée était alliée aux Archives Neutres, dont l'ancrage physique est détruit en 2076.",
+       "contredit": "",
+       "raison": "La destruction de Genève affaiblit les Archives Neutres, rendant leur alliance moins centrale, bien que non impossible."
       }
      ]
     },
@@ -14614,9 +14649,9 @@
        "relation": "opposition",
        "action": "nouvelle",
        "lien": "relation",
-       "lien_detail": "opposition à une légitimité institutionnelle post-Genève",
-       "contredit": "Aucune contradiction directe, mais la disparition de Genève renforce son opposition aux résidus institutionnels.",
-       "raison": "Le Bloc de Johannesburg conteste toute recomposition institutionnelle globale ; la disparition de Genève affaiblit ces institutions, rendant son opposition plus pertinente."
+       "lien_detail": "Le Bloc de Johannesburg contestait déjà les institutions genevoises, mais leur destruction en 2076 renforce sa légitimité comme alternative régionale.",
+       "contredit": "",
+       "raison": "La disparition de Genève élimine un rival symbolique, rendant l'opposition du Bloc plus visible."
       }
      ]
     },
@@ -14638,9 +14673,9 @@
        "relation": "alliance",
        "action": "rompue",
        "lien": "relation",
-       "lien_detail": "alliée des Archives Neutres de Genève, disparues en 2076",
-       "contredit": "Aucune contradiction directe, mais l'alliance devient caduque après la disparition de l'entité alliée.",
-       "raison": "Le Bureau des Territoires Résiduels ne peut plus s'allier à une entité disparue, mais cela n'invalide pas sa fiche."
+       "lien_detail": "Le Bureau était allié aux Archives Neutres, dont l'ancrage physique est détruit en 2076.",
+       "contredit": "",
+       "raison": "La destruction de Genève affaiblit les Archives Neutres, rendant leur alliance moins pertinente, bien que non impossible."
       }
      ]
     }
@@ -14648,8 +14683,8 @@
   }
  },
  "destruction_geneve_2076::breakdown::1": {
-  "empreinte": "d43cb0e6529ec602",
-  "date": "2026-10-11T21:54",
+  "empreinte": "3bc7dbb9d3e6365c",
+  "date": "2026-10-12T18:44",
   "brut": {
    "fiches": [
     {
@@ -14658,7 +14693,17 @@
     },
     {
      "slug": "cartels_logistiques_regionaux_breakdown",
-     "changements": []
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "gouvernance_institutions (+0.3 point)",
+       "contredit": "",
+       "raison": "La destruction de Genève accélère la fragmentation institutionnelle, renforçant le rôle des cartels logistiques comme substituts aux chaînes d'approvisionnement globales effondrées."
+      }
+     ]
     },
     {
      "slug": "carthage_nord_nexcore_breakdown",
@@ -14674,18 +14719,18 @@
        "relation": "opposition",
        "action": "rompue",
        "lien": "relation",
-       "lien_detail": "geneve_bunker_institutions_breakdown (entité directement touchée par la destruction de Genève)",
-       "contredit": "La fiche cite geneve_bunker_institutions_breakdown comme rival, mais cette entité n'existe plus physiquement après 2076 (Geneve est détruite et les institutions n'y siègent plus).",
-       "raison": "La destruction de Genève en 2076 rend impossible toute opposition active avec une entité résiduelle qui n'a plus de présence physique."
+       "lien_detail": "geneve_bunker_institutions_breakdown (disparu)",
+       "contredit": "La fiche cite geneve_bunker_institutions_breakdown comme rival, mais cette entité a disparu après 2076.",
+       "raison": "Geneve_bunker_institutions_breakdown est transformé en 'disparu' après 2076, rendant toute opposition impossible."
       },
       {
-       "type": "texte",
+       "type": "trajectoire",
        "niveau": "possible",
-       "extrait": "rivaux : alliance_blocs_souverains_breakdown, geneve_bunker_institutions_breakdown, tribunal_algorithmique_de_bruxelles_breakdown",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "gouvernance_institutions (+0.3 point)",
        "contredit": "",
-       "lien": "relation",
-       "lien_detail": "geneve_bunker_institutions_breakdown",
-       "raison": "La mention de geneve_bunker_institutions_breakdown comme rival reste plausible si interprétée comme une opposition symbolique ou historique, mais son poids politique est réduit."
+       "raison": "La disparition des institutions genevoises renforce l'autonomie des cités-états sécessionnistes en éliminant un cadre de légitimité résiduel."
       }
      ]
     },
@@ -14703,18 +14748,18 @@
        "relation": "alliance",
        "action": "rompue",
        "lien": "relation",
-       "lien_detail": "archives_neutres_de_geneve_breakdown (entité directement touchée par la destruction de Genève)",
-       "contredit": "La fiche cite archives_neutres_de_geneve_breakdown comme allié, mais les archives physiques de Genève sont détruites en 2076 et cette entité n'a plus de base opérationnelle.",
-       "raison": "La destruction des archives physiques de Genève rend impossible toute collaboration active avec cette entité."
+       "lien_detail": "archives_neutres_de_geneve_breakdown (résiduel)",
+       "contredit": "La fiche cite archives_neutres_de_geneve_breakdown comme allié, mais cette entité est devenue résiduelle et a perdu son ancrage physique après 2076.",
+       "raison": "Les Archives Neutres de Genève, devenues résiduelles, ne peuvent plus entretenir d'alliance active avec la Coalition du Vivant."
       },
       {
        "type": "texte",
-       "niveau": "possible",
-       "extrait": "alliés : collectifs_de_gardiens_archivistes_itinerants_breakdown, communautes_rurales_autogerees_des_n_uds_de_survie_breakdown, archives_neutres_de_geneve_breakdown, mouvement_racines_vivantes_breakdown,…",
-       "contredit": "",
+       "niveau": "obligatoire",
+       "extrait": "alliés : [...] archives_neutres_de_geneve_breakdown, [...]",
+       "contredit": "archives_neutres_de_geneve_breakdown est résiduel et sans capacité de coordination après 2076.",
        "lien": "relation",
        "lien_detail": "archives_neutres_de_geneve_breakdown",
-       "raison": "La mention de archives_neutres_de_geneve_breakdown comme allié reste plausible si interprétée comme une alliance symbolique ou historique, mais son rôle opérationnel est marginalisé."
+       "raison": "La mention d'une alliance avec les Archives Neutres de Genève devient fausse après leur effondrement fonctionnel en 2076."
       }
      ]
     },
@@ -14724,22 +14769,33 @@
       {
        "type": "relation",
        "niveau": "obligatoire",
+       "cible": "agence_stabilisation_climatique_breakdown",
+       "relation": "alliance",
+       "action": "rompue",
+       "lien": "relation",
+       "lien_detail": "agence_stabilisation_climatique_breakdown (disparu)",
+       "contredit": "La fiche cite agence_stabilisation_climatique_breakdown comme allié, mais cette entité a disparu après 2076.",
+       "raison": "Le Résidu AMSC (agence_stabilisation_climatique_breakdown) est transformé en 'disparu' après 2076, rendant toute alliance impossible."
+      },
+      {
+       "type": "relation",
+       "niveau": "obligatoire",
        "cible": "archives_neutres_de_geneve_breakdown",
        "relation": "alliance",
        "action": "rompue",
        "lien": "relation",
-       "lien_detail": "archives_neutres_de_geneve_breakdown (entité directement touchée par la destruction de Genève)",
-       "contredit": "La fiche cite archives_neutres_de_geneve_breakdown comme allié, mais les archives physiques de Genève sont détruites en 2076 et cette entité n'a plus de base opérationnelle.",
-       "raison": "La destruction des archives physiques de Genève rend impossible toute collaboration active avec cette entité."
+       "lien_detail": "archives_neutres_de_geneve_breakdown (résiduel)",
+       "contredit": "La fiche cite archives_neutres_de_geneve_breakdown comme allié, mais cette entité est devenue résiduelle après 2076.",
+       "raison": "Les Archives Neutres de Genève, devenues résiduelles, ne peuvent plus soutenir activement le Collectif des Climatologues Sans État."
       },
       {
        "type": "texte",
-       "niveau": "possible",
-       "extrait": "alliés : agence_stabilisation_climatique_breakdown, archives_neutres_de_geneve_breakdown, assemblee_territoires_breakdown, brigades_medicales_itinerantes_breakdown,…",
-       "contredit": "",
+       "niveau": "obligatoire",
+       "extrait": "alliés : agence_stabilisation_climatique_breakdown, archives_neutres_de_geneve_breakdown, [...]",
+       "contredit": "agence_stabilisation_climatique_breakdown et archives_neutres_de_geneve_breakdown ne sont plus des alliés viables après 2076.",
        "lien": "relation",
-       "lien_detail": "archives_neutres_de_geneve_breakdown",
-       "raison": "La mention de archives_neutres_de_geneve_breakdown comme allié reste plausible si interprétée comme une alliance symbolique ou historique, mais son rôle opérationnel est marginalisé."
+       "lien_detail": "agence_stabilisation_climatique_breakdown, archives_neutres_de_geneve_breakdown",
+       "raison": "La mention d'alliances avec ces entités devient fausse après leur disparition ou affaiblissement en 2076."
       }
      ]
     },
@@ -14757,9 +14813,9 @@
        "relation": "alliance",
        "action": "rompue",
        "lien": "relation",
-       "lien_detail": "archives_neutres_de_geneve_breakdown (entité directement touchée par la destruction de Genève)",
-       "contredit": "La fiche cite archives_neutres_de_geneve_breakdown comme allié, mais les archives physiques de Genève sont détruites en 2076 et cette entité n'a plus de base opérationnelle.",
-       "raison": "La destruction des archives physiques de Genève rend impossible toute collaboration active avec cette entité."
+       "lien_detail": "archives_neutres_de_geneve_breakdown (résiduel)",
+       "contredit": "La fiche cite archives_neutres_de_geneve_breakdown comme allié, mais cette entité est devenue résiduelle après 2076.",
+       "raison": "Les Archives Neutres de Genève, devenues résiduelles, ne peuvent plus entretenir d'alliance active avec les Gardiens-Archivistes Itinérants."
       },
       {
        "type": "relation",
@@ -14768,27 +14824,27 @@
        "relation": "alliance",
        "action": "rompue",
        "lien": "relation",
-       "lien_detail": "archives_neutres_geneve_breakdown (entité directement touchée par la destruction de Genève)",
-       "contredit": "La fiche cite archives_neutres_geneve_breakdown comme allié, mais les archives physiques de Genève sont détruites en 2076 et cette entité n'a plus de base opérationnelle.",
-       "raison": "La destruction des archives physiques de Genève rend impossible toute collaboration active avec cette entité."
+       "lien_detail": "archives_neutres_geneve_breakdown (résiduel)",
+       "contredit": "La fiche cite archives_neutres_geneve_breakdown comme allié, mais cette entité est devenue résiduelle après 2076.",
+       "raison": "Les Archives Neutres de Genève (variante) sont également résiduelles et sans capacité de coordination."
       },
       {
        "type": "texte",
        "niveau": "obligatoire",
-       "extrait": "alliés : agadez_ligue_sahel_numerique_breakdown, archives_neutres_de_geneve_breakdown, archives_neutres_geneve_breakdown, bureau_des_territoires_residuels_breakdown, coalition_vivant_breakdown,…",
-       "contredit": "Les archives_neutres_de_geneve_breakdown et archives_neutres_geneve_breakdown ne peuvent plus être des alliés actifs après 2076.",
+       "extrait": "alliés : [...] archives_neutres_de_geneve_breakdown, archives_neutres_geneve_breakdown, [...]",
+       "contredit": "archives_neutres_de_geneve_breakdown et archives_neutres_geneve_breakdown sont résiduelles après 2076.",
        "lien": "relation",
        "lien_detail": "archives_neutres_de_geneve_breakdown, archives_neutres_geneve_breakdown",
-       "raison": "La destruction de Genève rend fausse l'affirmation d'une alliance active avec ces entités."
+       "raison": "La mention d'alliances avec ces entités devient fausse après leur effondrement fonctionnel."
       },
       {
        "type": "trajectoire",
        "niveau": "possible",
        "apres": "ascendant",
        "lien": "variable",
-       "lien_detail": "gouvernance_institutions (+0.3 point, touchée par l'élément)",
+       "lien_detail": "gouvernance_institutions (+0.3 point)",
        "contredit": "",
-       "raison": "L'effondrement des institutions globales (comme Genève) renforce le rôle des collectifs itinérants comme vecteurs de continuité culturelle, ce qui peut accélérer leur trajectoire."
+       "raison": "La destruction de Genève et la perte des archives physiques renforcent le rôle des Gardiens-Archivistes Itinérants comme gardiens de la mémoire résiduelle."
       }
      ]
     },
@@ -14802,27 +14858,29 @@
        "relation": "alliance",
        "action": "rompue",
        "lien": "relation",
-       "lien_detail": "archives_neutres_de_geneve_breakdown (entité directement touchée par la destruction de Genève)",
-       "contredit": "La fiche cite archives_neutres_de_geneve_breakdown comme allié, mais les archives physiques de Genève sont détruites en 2076 et cette entité n'a plus de base opérationnelle.",
-       "raison": "La destruction des archives physiques de Genève rend impossible toute collaboration active avec cette entité."
+       "lien_detail": "archives_neutres_de_geneve_breakdown (résiduel)",
+       "contredit": "La fiche cite archives_neutres_de_geneve_breakdown comme allié, mais cette entité est devenue résiduelle après 2076.",
+       "raison": "Les Archives Neutres de Genève, devenues résiduelles, ne peuvent plus soutenir activement les Hackers Archivistes."
+      },
+      {
+       "type": "relation",
+       "niveau": "obligatoire",
+       "cible": "archives_neutres_geneve_breakdown",
+       "relation": "alliance",
+       "action": "rompue",
+       "lien": "relation",
+       "lien_detail": "archives_neutres_geneve_breakdown (résiduel)",
+       "contredit": "La fiche cite archives_neutres_geneve_breakdown comme allié, mais cette entité est également résiduelle.",
+       "raison": "Les Archives Neutres de Genève (variante) sont résiduelles et sans capacité de coordination."
       },
       {
        "type": "texte",
-       "niveau": "possible",
-       "extrait": "alliés : archives_neutres_de_geneve_breakdown, archives_neutres_geneve_breakdown, bureau_des_territoires_residuels_breakdown, collectif_des_climatologues_sans_etat_breakdown,…",
-       "contredit": "",
+       "niveau": "obligatoire",
+       "extrait": "alliés : archives_neutres_de_geneve_breakdown, archives_neutres_geneve_breakdown, [...]",
+       "contredit": "archives_neutres_de_geneve_breakdown et archives_neutres_geneve_breakdown sont résiduelles après 2076.",
        "lien": "relation",
-       "lien_detail": "archives_neutres_de_geneve_breakdown",
-       "raison": "La mention de archives_neutres_de_geneve_breakdown comme allié reste plausible si interprétée comme une alliance symbolique ou historique, mais son rôle opérationnel est marginalisé."
-      },
-      {
-       "type": "trajectoire",
-       "niveau": "possible",
-       "apres": "ascendant",
-       "lien": "variable",
-       "lien_detail": "gouvernance_institutions (+0.3 point, touchée par l'élément)",
-       "contredit": "",
-       "raison": "L'effondrement des institutions globales (comme Genève) renforce le rôle des collectifs de hackers-archivistes comme mémoire numérique distribuée, ce qui peut accélérer leur trajectoire."
+       "lien_detail": "archives_neutres_de_geneve_breakdown, archives_neutres_geneve_breakdown",
+       "raison": "La mention d'alliances avec ces entités devient fausse après leur effondrement fonctionnel."
       }
      ]
     },
@@ -14852,18 +14910,18 @@
        "relation": "alliance",
        "action": "rompue",
        "lien": "relation",
-       "lien_detail": "archives_neutres_de_geneve_breakdown (entité directement touchée par la destruction de Genève)",
-       "contredit": "La fiche cite archives_neutres_de_geneve_breakdown comme allié, mais les archives physiques de Genève sont détruites en 2076 et cette entité n'a plus de base opérationnelle.",
-       "raison": "La destruction des archives physiques de Genève rend impossible toute collaboration active avec cette entité."
+       "lien_detail": "archives_neutres_de_geneve_breakdown (résiduel)",
+       "contredit": "La fiche cite archives_neutres_de_geneve_breakdown comme allié, mais cette entité est devenue résiduelle après 2076.",
+       "raison": "Les Archives Neutres de Genève, devenues résiduelles, ne peuvent plus entretenir d'alliance active avec les Communautés Religieuses des Relais Physiques."
       },
       {
        "type": "texte",
-       "niveau": "possible",
-       "extrait": "alliés : archives_neutres_de_geneve_breakdown, brigades_medicales_itinerantes_breakdown, collectifs_de_gardiens_archivistes_itinerants_breakdown, corridors_eurasiens_convoyage_breakdown,…",
-       "contredit": "",
+       "niveau": "obligatoire",
+       "extrait": "alliés : archives_neutres_de_geneve_breakdown, [...]",
+       "contredit": "archives_neutres_de_geneve_breakdown est résiduel après 2076.",
        "lien": "relation",
        "lien_detail": "archives_neutres_de_geneve_breakdown",
-       "raison": "La mention de archives_neutres_de_geneve_breakdown comme allié reste plausible si interprétée comme une alliance symbolique ou historique, mais son rôle opérationnel est marginalisé."
+       "raison": "La mention d'une alliance avec les Archives Neutres de Genève devient fausse après leur effondrement fonctionnel."
       }
      ]
     }
@@ -14871,8 +14929,8 @@
   }
  },
  "destruction_geneve_2076::breakdown::2": {
-  "empreinte": "e107078e7d8336a5",
-  "date": "2026-10-11T21:54",
+  "empreinte": "7eb3f6f1347b5c2b",
+  "date": "2026-10-12T18:45",
   "brut": {
    "fiches": [
     {
@@ -14900,7 +14958,7 @@
        "extrait": "Dans le scénario breakdown, elles incarnent la fragmentation de la gouvernance climatique : en l'absence d'institutions capables d'agir collectivement, des acteurs privés s'arrogent le droit de modifier les systèmes terrestres à l'échelle planétaire.",
        "lien": "variable",
        "lien_detail": "gouvernance_institutions (+0.3 point)",
-       "raison": "La destruction de Genève et l'affaiblissement des institutions internationales renforcent la plausibilité de leur rôle, sans rendre la phrase fausse si omise."
+       "raison": "La destruction de Genève et l'effondrement des institutions résiduelles renforcent leur légitimité comme acteurs alternatifs, bien que cela ne rende pas la phrase fausse."
       }
      ]
     },
@@ -14915,10 +14973,10 @@
        "type": "texte",
        "niveau": "obligatoire",
        "extrait": "N'existe plus en tant qu'institution. Les derniers protocoles de régulation IA ont été abandonnés en 2049 avec l'effondrement des instances multilatérales.",
-       "contredit": "La destruction de Genève en 2076 est postérieure à 2049 et ne contredit pas directement cette phrase, mais l'élément perturbateur rend impossible toute référence à Genève comme siège physique après 2076.",
-       "lien": "territoire",
-       "lien_detail": "geneve_bunker_institutions (zone mentionnée dans la fiche)",
-       "raison": "La fiche ne mentionne pas explicitement Genève comme siège après 2076, donc pas de contradiction directe. Cependant, si la fiche implique une présence institutionnelle à Genève après 2076, elle deviendrait fausse."
+       "contredit": "La destruction de Genève en 2076 achève symboliquement les institutions résiduelles, mais l'extrait situe déjà sa disparition en 2049.",
+       "lien": "relation",
+       "lien_detail": "geneve_bunker_institutions_breakdown (disparu)",
+       "raison": "L'extrait reste vrai car la disparition est antérieure à 2076, mais la destruction de Genève confirme l'impossibilité de toute résurgence institutionnelle."
       }
      ]
     },
@@ -14932,33 +14990,23 @@
        "relation": "alliance",
        "action": "rompue",
        "lien": "relation",
-       "lien_detail": "alliés : archives_neutres_de_geneve_breakdown",
-       "contredit": "Les archives physiques de Genève sont détruites en 2076, rendant impossible toute alliance avec une entité basée à Genève après cette date.",
-       "raison": "L'alliance avec les Archives Neutres de Genève devient impossible après 2076, car celles-ci n'existent plus physiquement à Genève."
+       "lien_detail": "archives_neutres_de_geneve_breakdown (disparu)",
+       "contredit": "L'alliance avec les Archives Neutres de Genève est impossible après leur disparition en 2076.",
+       "raison": "La destruction de Genève et la perte des archives physiques rendent toute alliance avec cette entité caduque."
       },
       {
        "type": "texte",
        "niveau": "possible",
-       "extrait": "Ce qui reste du Conseil de Régulation des Ressources Critiques n'est plus qu'une carcasse administrative disputée entre factions rivales. Surnommé 'le Fantôme de Nairobi' par les correspondants de guerre, l'organe survit sous forme de délégations concurrentes qui se réclament chacune de la légitimité originelle des institutions multilatérales.",
+       "extrait": "Surnommé 'le Fantôme de Nairobi' par les correspondants de guerre, l'organe survit sous forme de délégations concurrentes qui se réclament chacune de la légitimité originelle des institutions multilatérales.",
        "lien": "variable",
        "lien_detail": "gouvernance_institutions (+0.3 point)",
-       "raison": "La destruction de Genève renforce la plausibilité de la fragmentation institutionnelle, sans rendre la phrase fausse si omise."
+       "raison": "La destruction de Genève accentue la fragmentation des légitimités, mais la phrase reste vraie sans modification."
       }
      ]
     },
     {
      "slug": "consortium_africain_de_biotechnologies_sociales_breakdown",
-     "changements": [
-      {
-       "type": "texte",
-       "niveau": "obligatoire",
-       "extrait": "Dépourvues de leur siège central détruit lors des conflits de ressources du corridor sahélo-sahélien, ces cellules héritent des savoirs et infrastructures du CABS original.",
-       "contredit": "La fiche attribue la destruction du siège central à des conflits régionaux, mais ne mentionne pas Genève. Aucun changement obligatoire, sauf si le siège était à Genève (non précisé).",
-       "lien": "variable",
-       "lien_detail": "gouvernance_institutions (+0.3 point)",
-       "raison": "Aucune contradiction directe avec l'élément perturbateur, car la destruction du siège n'est pas liée à Genève dans la fiche."
-      }
-     ]
+     "changements": []
     },
     {
      "slug": "consortium_amazonia_viva_breakdown",
@@ -14973,13 +15021,14 @@
      "changements": [
       {
        "type": "relation",
-       "niveau": "possible",
+       "niveau": "obligatoire",
        "cible": "archives_neutres_de_geneve_breakdown",
        "relation": "opposition",
-       "action": "nouvelle",
+       "action": "rompue",
        "lien": "relation",
-       "lien_detail": "rivaux : archives_neutres_de_geneve_breakdown",
-       "raison": "La destruction de Genève affaiblit les Archives Neutres, ce qui pourrait renforcer l'opposition du Consortium Énergétique Oural-Caspien, mais ce n'est pas obligatoire."
+       "lien_detail": "archives_neutres_de_geneve_breakdown (disparu)",
+       "contredit": "L'opposition aux Archives Neutres de Genève est impossible après leur disparition en 2076.",
+       "raison": "La destruction de Genève rend toute rivalité avec cette entité obsolète."
       }
      ]
     },
@@ -14999,8 +15048,8 @@
   }
  },
  "destruction_geneve_2076::breakdown::3": {
-  "empreinte": "5c820da79424e50a",
-  "date": "2026-10-11T21:54",
+  "empreinte": "b896f47e9fe094ea",
+  "date": "2026-10-12T18:45",
   "brut": {
    "fiches": [
     {
@@ -15013,18 +15062,17 @@
        "relation": "alliance",
        "action": "rompue",
        "lien": "relation",
-       "lien_detail": "tour_bcuc_geneve_breakdown est détruite en 2076 avec Genève",
-       "contredit": "La fiche liste tour_bcuc_geneve_breakdown comme allié, mais cette entité n'existe plus physiquement après mars 2076.",
-       "raison": "La destruction de Genève en 2076 rend impossible toute alliance avec la Tour Bcuc Genève, qui y était localisée."
+       "lien_detail": "tour_bcuc_geneve_breakdown est transformé en disparu après la destruction de Genève",
+       "contredit": "La fiche indique une alliance avec tour_bcuc_geneve_breakdown, qui n'existe plus après 2076",
+       "raison": "La destruction de Genève en 2076 entraîne la disparition de la Tour BCUC, rendant toute alliance avec elle impossible après cette date."
       },
       {
        "type": "texte",
        "niveau": "possible",
        "extrait": "Dans le scénario breakdown, elles bloquent ou monnayent l'accès aux corpus numériques en invoquant des droits PI antérieurs à l'effondrement, créant des frictions majeures dans la reconstruction des systèmes d'information.",
-       "contredit": "",
        "lien": "variable",
-       "lien_detail": "gouvernance_institutions (+0.3 point, crise partielle)",
-       "raison": "La perte des archives physiques de Genève et la fragmentation des institutions renforcent leur capacité à monnayer l'accès aux droits PI, mais cela reste plausible sans modification obligatoire."
+       "lien_detail": "La destruction de Genève accélère la fragmentation des légitimités juridiques et administratives (gouvernance_institutions +0.3)",
+       "raison": "La perte des archives physiques et des institutions genevoises renforce leur capacité à monnayer l'accès aux droits PI, mais cela reste plausible sans être obligatoire."
       }
      ]
     },
@@ -15034,21 +15082,20 @@
     },
     {
      "slug": "corridors_eurasiens_convoyage_breakdown",
-     "changements": []
-    },
-    {
-     "slug": "deepfield_institute_breakdown",
      "changements": [
       {
        "type": "texte",
        "niveau": "possible",
-       "extrait": "Vestige mythifié d'une institution élitiste des années 2020-2050, le Deepfield Institute incarne dans la mémoire collective de 2098 l'archétype de la technocratie long-termiste qui a précipité l'effondrement par son mépris des équilibres démocratiques et des libertés individuelles.",
-       "contredit": "",
+       "extrait": "Ce réseau de routes terrestres et fluviales, autrefois coordonné par des accords interétatiques aujourd'hui caducs,…",
        "lien": "variable",
-       "lien_detail": "gouvernance_institutions (+0.3 point)",
-       "raison": "La destruction de Genève, symbole des institutions technocratiques, peut renforcer la mythification de Deepfield comme archétype de l'échec, mais cela reste une conséquence plausible sans être obligatoire."
+       "lien_detail": "La destruction de Genève accélère la fragmentation des légitimités juridiques (gouvernance_institutions +0.3)",
+       "raison": "La perte des institutions genevoises rend encore plus caducs les accords interétatiques, mais cela ne contredit pas la fiche."
       }
      ]
+    },
+    {
+     "slug": "deepfield_institute_breakdown",
+     "changements": []
     },
     {
      "slug": "delta_mekong_racines_breakdown",
@@ -15079,14 +15126,13 @@
      "changements": [
       {
        "type": "relation",
-       "niveau": "obligatoire",
+       "niveau": "possible",
        "cible": "archives_neutres_geneve_breakdown",
        "relation": "opposition",
-       "action": "rompue",
+       "action": "nouvelle",
        "lien": "relation",
-       "lien_detail": "archives_neutres_geneve_breakdown est détruite en 2076",
-       "contredit": "La fiche liste archives_neutres_geneve_breakdown comme rival, mais cette entité n'existe plus après mars 2076.",
-       "raison": "La destruction de Genève en 2076 rend impossible toute opposition avec les Archives Neutres de Genève, qui y étaient localisées."
+       "lien_detail": "archives_neutres_geneve_breakdown devient résiduel après la destruction de Genève, et la fiche les liste déjà comme rivaux",
+       "raison": "La disparition des Archives Neutres de Genève affaiblit leur capacité à contester les enclaves corporatives, mais l'opposition existait déjà."
       }
      ]
     },
@@ -15104,9 +15150,9 @@
        "relation": "alliance",
        "action": "rompue",
        "lien": "relation",
-       "lien_detail": "archives_neutres_de_geneve_breakdown est détruite en 2076",
-       "contredit": "La fiche liste archives_neutres_de_geneve_breakdown comme allié, mais cette entité n'existe plus après mars 2076.",
-       "raison": "La destruction de Genève en 2076 rend impossible toute alliance avec les Archives Neutres de Genève, qui y étaient localisées."
+       "lien_detail": "archives_neutres_de_geneve_breakdown est transformé en résiduel après la destruction de Genève",
+       "contredit": "La fiche indique une alliance avec archives_neutres_de_geneve_breakdown, qui n'a plus d'ancrage physique après 2076",
+       "raison": "La destruction de Genève prive les Archives Neutres de leur capacité à coordonner des actions globales, rendant toute alliance formelle impossible."
       }
      ]
     },
@@ -15124,9 +15170,9 @@
        "relation": "alliance",
        "action": "rompue",
        "lien": "relation",
-       "lien_detail": "archives_neutres_geneve_breakdown est détruite en 2076",
-       "contredit": "La fiche liste archives_neutres_geneve_breakdown comme allié, mais cette entité n'existe plus après mars 2076.",
-       "raison": "La destruction de Genève en 2076 rend impossible toute alliance avec les Archives Neutres de Genève, qui y étaient localisées."
+       "lien_detail": "archives_neutres_geneve_breakdown est transformé en résiduel après la destruction de Genève",
+       "contredit": "La fiche indique une alliance avec archives_neutres_geneve_breakdown, qui n'a plus d'ancrage physique après 2076",
+       "raison": "La destruction de Genève prive les Archives Neutres de leur capacité à coordonner des actions globales, rendant toute alliance formelle impossible."
       }
      ]
     }
@@ -15134,8 +15180,8 @@
   }
  },
  "destruction_geneve_2076::breakdown::4": {
-  "empreinte": "6a215939c8ec651d",
-  "date": "2026-10-11T21:54",
+  "empreinte": "ec4c8c2e6018420f",
+  "date": "2026-10-12T18:45",
   "brut": {
    "fiches": [
     {
@@ -15144,25 +15190,53 @@
     },
     {
      "slug": "etats_fragmentes_nationalisant_les_stocks_breakdown",
-     "changements": []
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "Dans le scénario breakdown, ces États exercent une pression centrifuge sur les flux de ressources en imposant des saisies unilatérales, aggravant les tensions interétatiques et rendant toute coordination globale quasi impossible.",
+       "lien": "variable",
+       "lien_detail": "gouvernance_institutions (+0.3 point)",
+       "raison": "La destruction de Genève et l'effondrement des institutions internationales renforcent l'impossibilité de coordination globale, ce qui rend le rôle de ces États encore plus central dans la fragmentation."
+      }
+     ]
     },
     {
      "slug": "etats_fragments_en_guerre_pour_les_stations_atmospheriques_breakdown",
      "changements": [
       {
-       "type": "texte",
+       "type": "relation",
        "niveau": "obligatoire",
-       "extrait": "rivaux : archives_neutres_de_geneve_breakdown, assemblee_territoires_breakdown, brigades_medicales_itinerantes_breakdown, collectif_des_climatologues_sans_etat_breakdown,…",
-       "contredit": "Les archives_neutres_de_geneve_breakdown n'existent plus physiquement après mars 2076, leurs archives physiques étant détruites.",
+       "cible": "archives_neutres_de_geneve_breakdown",
+       "relation": "opposition",
+       "action": "rompue",
        "lien": "relation",
-       "lien_detail": "archives_neutres_de_geneve_breakdown",
-       "raison": "La destruction de Genève en 2076 rend impossible toute rivalité avec une entité disparue (archives_neutres_de_geneve_breakdown)."
+       "lien_detail": "archives_neutres_de_geneve_breakdown transformé → disparu",
+       "contredit": "Les archives_neutres_de_geneve_breakdown ne peuvent plus être un rival actif après leur disparition.",
+       "raison": "La destruction de Genève et la disparition des Archives Neutres rendent impossible toute opposition avec elles."
+      },
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "Acteurs déstabilisateurs centraux du scénario breakdown, les États-Fragments en Guerre pour les Stations Atmosphériques incarnent l'aboutissement logique de la fragmentation géopolitique : des entités qui ont renoncé à toute gouvernance sociale pour se concentrer exclusivement sur la maîtrise des leviers climatiques.",
+       "lien": "variable",
+       "lien_detail": "gouvernance_institutions (+0.3 point)",
+       "raison": "La destruction de Genève accélère la fragmentation, ce qui renforce la plausibilité de leur rôle comme aboutissement de cette dynamique."
       }
      ]
     },
     {
      "slug": "factions_energetiques_heritieres_des_pactes_abs_breakdown",
-     "changements": []
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "Dans un scénario de breakdown, elles incarnent la fragmentation de la gouvernance énergétique mondiale : chaque faction défend ses droits acquis contre toute tentative de recentralisation ou de renégociation, accentuant l'instabilité systémique.",
+       "lien": "variable",
+       "lien_detail": "gouvernance_institutions (+0.3 point)",
+       "raison": "La destruction de Genève et l'effondrement des institutions internationales rendent toute recentralisation encore plus improbable, ce qui renforce leur rôle dans la fragmentation."
+      }
+     ]
     },
     {
      "slug": "factions_etatiques_residuelles_de_souverainete_hydrique_breakdown",
@@ -15184,30 +15258,35 @@
      "slug": "factions_propagandistes_des_archives_breakdown",
      "changements": [
       {
-       "type": "texte",
+       "type": "relation",
        "niveau": "obligatoire",
-       "extrait": "alliés : archives_neutres_de_geneve_breakdown, deepfield_institute_breakdown",
-       "contredit": "Les archives_neutres_de_geneve_breakdown n'existent plus physiquement après mars 2076, leurs archives physiques étant détruites.",
+       "cible": "archives_neutres_de_geneve_breakdown",
+       "relation": "alliance",
+       "action": "rompue",
        "lien": "relation",
-       "lien_detail": "archives_neutres_de_geneve_breakdown",
-       "raison": "La destruction de Genève en 2076 rend impossible toute alliance avec une entité disparue (archives_neutres_de_geneve_breakdown)."
+       "lien_detail": "archives_neutres_de_geneve_breakdown transformé → résiduel",
+       "contredit": "Les archives_neutres_de_geneve_breakdown ne peuvent plus être un allié actif après leur transformation en entité résiduelle.",
+       "raison": "La destruction de Genève et la transformation des Archives Neutres en entité résiduelle rendent impossible toute alliance active avec elles."
+      },
+      {
+       "type": "relation",
+       "niveau": "obligatoire",
+       "cible": "geneve_bunker_institutions_breakdown",
+       "relation": "opposition",
+       "action": "rompue",
+       "lien": "relation",
+       "lien_detail": "geneve_bunker_institutions_breakdown transformé → disparu",
+       "contredit": "Le geneve_bunker_institutions_breakdown ne peut plus être un rival après sa disparition.",
+       "raison": "La destruction de Genève et la disparition du Bunker des Institutions rendent impossible toute opposition avec lui."
       },
       {
        "type": "texte",
        "niveau": "obligatoire",
-       "extrait": "rivaux : archives_neutres_geneve_breakdown, bureau_des_territoires_residuels_breakdown, collectifs_de_hackers_archivistes_des_interstices_reseaux_breakdown, geneve_bunker_institutions_breakdown,…",
-       "contredit": "Les archives_neutres_geneve_breakdown (variante de nom) n'existent plus physiquement après mars 2076, leurs archives physiques étant détruites.",
-       "lien": "relation",
-       "lien_detail": "archives_neutres_geneve_breakdown",
-       "raison": "La destruction de Genève en 2076 rend impossible toute rivalité avec une entité disparue (archives_neutres_geneve_breakdown)."
-      },
-      {
-       "type": "trajectoire",
-       "niveau": "possible",
-       "apres": "ascendant",
-       "lien": "variable",
-       "lien_detail": "gouvernance_institutions (+0.3 point)",
-       "raison": "L'effondrement des institutions internationales (variable gouvernance_institutions) renforce les factions capables d'exploiter le vide mémoriel et archivistique."
+       "extrait": "Dans le scénario breakdown, elles exploitent l'effondrement des structures de gouvernance pour infiltrer et corrompre les dépôts d'archives, fragilisant la capacité collective à maintenir une mémoire historique partagée.",
+       "contredit": "Les dépôts d'archives physiques de Genève sont détruits, ce qui rend impossible leur infiltration ou corruption.",
+       "lien": "territoire",
+       "lien_detail": "Genève détruite en 2076, archives physiques perdues",
+       "raison": "La destruction des archives physiques de Genève rend caduque toute mention d'infiltration ou de corruption de ces dépôts spécifiques."
       }
      ]
     },
@@ -15217,7 +15296,16 @@
     },
     {
      "slug": "federation_communs_territoriaux_breakdown",
-     "changements": []
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "Héritière fragmentée de la Fédération des Communs Territoriaux, la Confédération des Bassins Vivants n'est plus qu'un nom partagé par des centaines d'entités locales ayant rompu toute coordination centrale.",
+       "lien": "variable",
+       "lien_detail": "gouvernance_institutions (+0.3 point)",
+       "raison": "La destruction de Genève et l'effondrement des institutions internationales renforcent la plausibilité de l'absence de coordination centrale."
+      }
+     ]
     },
     {
      "slug": "federation_russe_residuelle_district_de_mourmansk_breakdown",
@@ -15225,7 +15313,16 @@
     },
     {
      "slug": "flux_migratoires_non_integrables_breakdown",
-     "changements": []
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "Vecteur d'effondrement en cascade des mécanismes de gouvernance territoriale dans le scénario breakdown : les flux migratoires non intégrables saturent successivement les nœuds urbains résiduels, dissolvent les derniers pactes d'accueil régionaux et forcent les entités territoriales encore stables à se militariser…",
+       "lien": "variable",
+       "lien_detail": "gouvernance_institutions (+0.3 point)",
+       "raison": "La destruction de Genève et l'effondrement des institutions internationales rendent les pactes d'accueil régionaux encore plus précaires, ce qui renforce l'impact des flux migratoires."
+      }
+     ]
     },
     {
      "slug": "frente_sertao_livre_breakdown",
@@ -15233,14 +15330,23 @@
     },
     {
      "slug": "front_de_resistance_aux_peages_sur_les_ressources_breakdown",
-     "changements": []
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "Dans le scénario breakdown, le Front de Résistance aux Péages sur les Ressources cristallise la fracture entre une survie communautaire ancrée dans la réciprocité et des logiques extractives qui étendent leur emprise jusque sur l'air filtré et l'eau de pluie collectée.",
+       "lien": "variable",
+       "lien_detail": "gouvernance_institutions (+0.3 point)",
+       "raison": "La destruction de Genève et l'effondrement des institutions internationales renforcent l'absence de régulation, ce qui rend les logiques extractives encore plus prégnantes et la résistance plus cruciale."
+      }
+     ]
     }
    ]
   }
  },
  "destruction_geneve_2076::breakdown::5": {
-  "empreinte": "6e7c677e4144adb9",
-  "date": "2026-10-11T21:55",
+  "empreinte": "104cc2f3a9bcf7a0",
+  "date": "2026-10-12T18:46",
   "brut": {
    "fiches": [
     {
@@ -15253,16 +15359,16 @@
        "relation": "opposition",
        "action": "renforcée",
        "lien": "relation",
-       "lien_detail": "archives_neutres_de_geneve_breakdown est un rival listé, et sa destruction affaiblit toute légitimité résiduelle des récits globaux",
-       "raison": "La destruction de Genève prive le Front d'un contre-modèle institutionnel crédible, ce qui peut accentuer son opposition aux vestiges des archives, désormais perçues comme encore plus fragiles et illégitimes."
+       "lien_detail": "archives_neutres_de_geneve_breakdown (déjà listé comme rival)",
+       "raison": "La destruction de Genève affaiblit les Archives Neutres, ce qui pourrait réduire leur capacité à contrer les récits régionaux du Front, mais l'opposition préexistante reste plausible sans devenir obligatoire."
       },
       {
-       "type": "trajectoire",
+       "type": "texte",
        "niveau": "possible",
-       "apres": "ascendant",
+       "extrait": "Dans le scénario breakdown, exerce une pression narrative concurrente pour légitimer ses positions dans les disputes territoriales et énergétiques au détriment d'un récit global cohérent.",
        "lien": "variable",
-       "lien_detail": "gouvernance_institutions (+0.3 point, touché par l'élément)",
-       "raison": "L'affaiblissement des institutions globales (variable gouvernance_institutions) renforce la pression narrative des blocs régionaux, qui gagnent en influence relative."
+       "lien_detail": "gouvernance_institutions (+0.3 point)",
+       "raison": "L'effondrement des institutions genevoises renforce la fragmentation des récits, ce qui élargit le rôle du Front, mais la phrase reste vraie sans modification."
       }
      ]
     },
@@ -15276,52 +15382,44 @@
        "relation": "alliance",
        "action": "rompue",
        "lien": "relation",
-       "lien_detail": "archives_neutres_geneve_breakdown est un allié listé, mais Genève est détruite en 2076 et aucune institution n'y siège plus après cette date",
-       "contredit": "Le Front ne peut plus être allié à une entité physiquement disparue (les archives de Genève n'existent plus sur place).",
-       "raison": "La destruction de Genève en 2076 rend impossible toute alliance avec les archives_neutres_geneve_breakdown, qui n'ont plus de siège physique."
+       "lien_detail": "archives_neutres_geneve_breakdown (disparu après 2076)",
+       "contredit": "Les Archives Neutres de Genève n'existent plus physiquement après 2076, rendant impossible une alliance active avec elles.",
+       "raison": "La destruction de Genève en 2076 entraîne la disparition des Archives Neutres, rompant toute alliance formelle ou informelle avec elles."
+      },
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "collectifs_de_gardiens_archivistes_itinerants_breakdown",
+       "relation": "alliance",
+       "action": "nouvelle",
+       "lien": "relation",
+       "lien_detail": "successeur plausible des Archives Neutres",
+       "raison": "Le Front pourrait se rapprocher des collectifs itinérants pour compenser la perte des Archives Neutres, mais ce n'est pas obligatoire."
       },
       {
        "type": "texte",
-       "niveau": "obligatoire",
-       "extrait": "alliés : archives_neutres_geneve_breakdown, brigades_medicales_itinerantes_breakdown, cargo_mombasa_crrc_breakdown, collectif_des_climatologues_sans_etat_breakdown,…",
-       "contredit": "archives_neutres_geneve_breakdown ne peut plus être un allié après 2076.",
-       "lien": "relation",
-       "lien_detail": "archives_neutres_geneve_breakdown est listé comme allié, mais n'existe plus physiquement à Genève",
-       "raison": "La fiche mentionne un allié qui n'a plus de présence physique après 2076, ce qui est factuellement faux."
-      },
-      {
-       "type": "trajectoire",
        "niveau": "possible",
-       "apres": "ascendant",
+       "extrait": "Assure une continuité minimale de secours et de coordination dans les territoires abandonnés par les institutions lors des phases aiguës d'effondrement.",
        "lien": "variable",
-       "lien_detail": "gouvernance_institutions (+0.3 point, touché par l'élément)",
-       "raison": "L'effondrement des institutions globales (variable gouvernance_institutions) crée un vide que le Front peut combler en renforçant son rôle de coordination humanitaire."
+       "lien_detail": "gouvernance_institutions (+0.3 point)",
+       "raison": "L'affaiblissement des institutions genevoises élargit le rôle du Front, mais la phrase reste vraie sans modification."
       }
      ]
     },
     {
      "slug": "front_techno_reconstructionniste_breakdown",
-     "changements": [
-      {
-       "type": "texte",
-       "niveau": "possible",
-       "extrait": "Dans un scénario breakdown dominé par la fragmentation territoriale et la fatigue civilisationnelle, le FTR incarne la résistance idéologique au déclinisme ambiant, cherchant à construire des îlots de relance techno-industrielle régionale capables de préfigurer une reconstruction systémique.",
-       "lien": "variable",
-       "lien_detail": "gouvernance_institutions (+0.3 point, touché par l'élément)",
-       "raison": "La destruction de Genève affaiblit les références aux institutions globales, ce qui peut élargir le rôle du FTR comme alternative crédible à la reconstruction, sans rendre la phrase fausse."
-      }
-     ]
+     "changements": []
     },
     {
      "slug": "fronts_populistes_anti_technocratiques_breakdown",
      "changements": [
       {
-       "type": "trajectoire",
+       "type": "texte",
        "niveau": "possible",
-       "apres": "ascendant",
+       "extrait": "Dans le scénario breakdown, ils incarnent la pression déstabilisatrice sur les institutions affaiblies, contestant la légitimité des mécanismes de décision technicisés au moment où ceux-ci montrent leurs limites.",
        "lien": "variable",
-       "lien_detail": "gouvernance_institutions (+0.3 point, touché par l'élément)",
-       "raison": "L'affaiblissement des institutions (variable gouvernance_institutions) renforce la légitimité des discours anti-technocratiques, sans que cela soit obligatoire."
+       "lien_detail": "gouvernance_institutions (+0.3 point)",
+       "raison": "La destruction de Genève renforce la perte de légitimité des institutions, ce qui élargit le rôle des Fronts Populistes, mais la phrase reste vraie sans modification."
       }
      ]
     },
@@ -15335,18 +15433,19 @@
        "relation": "alliance",
        "action": "rompue",
        "lien": "relation",
-       "lien_detail": "archives_neutres_de_geneve_breakdown est un allié listé, mais Genève est détruite en 2076 et aucune institution n'y siège plus après cette date",
-       "contredit": "Gelecek Meclisi ne peut plus être allié à une entité disparue physiquement.",
-       "raison": "La destruction de Genève en 2076 rend impossible toute alliance avec archives_neutres_de_geneve_breakdown, qui n'a plus de siège physique."
+       "lien_detail": "archives_neutres_de_geneve_breakdown (disparu après 2076)",
+       "contredit": "Les Archives Neutres de Genève n'existent plus physiquement après 2076, rendant impossible une alliance active avec elles.",
+       "raison": "La destruction de Genève en 2076 entraîne la disparition des Archives Neutres, rompant toute alliance formelle ou informelle avec elles."
       },
       {
-       "type": "texte",
-       "niveau": "obligatoire",
-       "extrait": "alliés : archives_neutres_de_geneve_breakdown, collectifs_de_gardiens_archivistes_itinerants_breakdown, collectif_des_climatologues_sans_etat_breakdown, guilde_des_techniciens_nomades_breakdown,…",
-       "contredit": "archives_neutres_de_geneve_breakdown ne peut plus être un allié après 2076.",
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "collectifs_de_gardiens_archivistes_itinerants_breakdown",
+       "relation": "alliance",
+       "action": "nouvelle",
        "lien": "relation",
-       "lien_detail": "archives_neutres_de_geneve_breakdown est listé comme allié, mais n'existe plus physiquement à Genève",
-       "raison": "La fiche mentionne un allié qui n'a plus de présence physique après 2076, ce qui est factuellement faux."
+       "lien_detail": "successeur plausible des Archives Neutres",
+       "raison": "Gelecek Meclisi pourrait se rapprocher des collectifs itinérants pour compenser la perte des Archives Neutres, mais ce n'est pas obligatoire."
       }
      ]
     },
@@ -15356,29 +15455,20 @@
       {
        "type": "trajectoire",
        "niveau": "obligatoire",
-       "apres": "résiduel",
+       "apres": "disparu",
        "lien": "territoire",
-       "lien_detail": "Genève est détruite en 2076, et le Résidu de Genève est localisé dans geneve_bunker_institutions",
-       "contredit": "Le rôle décrit (« tente de préserver une légitimité symbolique ») devient impossible à l'échelle institutionnelle après la destruction totale de Genève.",
-       "raison": "La destruction de Genève en 2076 réduit le Résidu à une entité purement locale, incapable de jouer un rôle symbolique global."
+       "lien_detail": "Genève (détruite en 2076)",
+       "contredit": "Le Résidu de Genève ne peut plus exister physiquement après la destruction de la ville en 2076.",
+       "raison": "La fiche indique une trajectoire 'transformé', mais la destruction totale de Genève rend impossible toute survie institutionnelle locale."
       },
       {
        "type": "texte",
        "niveau": "obligatoire",
        "extrait": "Vestige institutionnel de l'ancien système onusien et diplomatique genevois, le Résidu de Genève survit dans un état fragmenté après l'effondrement des structures internationales.",
-       "contredit": "Le Résidu ne peut plus être un « vestige institutionnel » après la destruction physique de Genève en 2076.",
+       "contredit": "Genève est détruite en 2076, rendant impossible la survie physique du Résidu de Genève.",
        "lien": "territoire",
-       "lien_detail": "Genève est détruite en 2076, et le Résidu y est localisé",
-       "raison": "La phrase suppose une continuité institutionnelle à Genève, ce qui est faux après 2076."
-      },
-      {
-       "type": "texte",
-       "niveau": "obligatoire",
-       "extrait": "Réduite à gérer la survie locale et la coordination minimale entre communautés isolées, elle tente de préserver une légitimité symbolique…",
-       "contredit": "La « légitimité symbolique » ne peut plus être préservée après la destruction totale de Genève, qui était le siège de cette légitimité.",
-       "lien": "territoire",
-       "lien_detail": "Genève est détruite en 2076, et le Résidu y est localisé",
-       "raison": "La phrase surestime le rôle du Résidu après 2076, alors qu'il est réduit à une gestion locale sans portée symbolique."
+       "lien_detail": "Genève (détruite en 2076)",
+       "raison": "La phrase devient fausse car le Résidu de Genève ne peut plus exister après 2076."
       },
       {
        "type": "relation",
@@ -15387,20 +15477,9 @@
        "relation": "alliance",
        "action": "rompue",
        "lien": "relation",
-       "lien_detail": "archives_neutres_de_geneve_breakdown est un allié listé, mais Genève est détruite en 2076 et aucune institution n'y siège plus",
-       "contredit": "Le Résidu ne peut plus être allié à une entité disparue physiquement.",
-       "raison": "La destruction de Genève en 2076 rend impossible toute alliance avec archives_neutres_de_geneve_breakdown."
-      },
-      {
-       "type": "relation",
-       "niveau": "obligatoire",
-       "cible": "archives_neutres_geneve_breakdown",
-       "relation": "alliance",
-       "action": "rompue",
-       "lien": "relation",
-       "lien_detail": "archives_neutres_geneve_breakdown est un allié listé, mais Genève est détruite en 2076 et aucune institution n'y siège plus",
-       "contredit": "Le Résidu ne peut plus être allié à une entité disparue physiquement.",
-       "raison": "La destruction de Genève en 2076 rend impossible toute alliance avec archives_neutres_geneve_breakdown."
+       "lien_detail": "archives_neutres_de_geneve_breakdown (disparu après 2076)",
+       "contredit": "Les Archives Neutres de Genève n'existent plus après 2076, rendant impossible une alliance avec elles.",
+       "raison": "La destruction de Genève entraîne la disparition des Archives Neutres, rompant toute alliance."
       }
      ]
     },
@@ -15414,16 +15493,8 @@
        "relation": "opposition",
        "action": "renforcée",
        "lien": "relation",
-       "lien_detail": "archives_neutres_geneve_breakdown est un rival listé, et sa destruction affaiblit toute référence institutionnelle globale",
-       "raison": "La disparition de Genève prive les Gouvernements de Forteresse d'un contre-modèle crédible, ce qui peut accentuer leur rejet des accords de Nairobi."
-      },
-      {
-       "type": "trajectoire",
-       "niveau": "possible",
-       "apres": "ascendant",
-       "lien": "variable",
-       "lien_detail": "gouvernance_institutions (+0.3 point, touché par l'élément)",
-       "raison": "L'affaiblissement des institutions globales (variable gouvernance_institutions) renforce la légitimité des gouvernements souverainistes, sans que cela soit obligatoire."
+       "lien_detail": "archives_neutres_geneve_breakdown (déjà listé comme rival)",
+       "raison": "L'affaiblissement des Archives Neutres réduit leur capacité à contrer les gouvernements anti-Nairobi, mais l'opposition préexistante reste plausible sans devenir obligatoire."
       }
      ]
     },
@@ -15437,26 +15508,17 @@
        "relation": "alliance",
        "action": "rompue",
        "lien": "relation",
-       "lien_detail": "archives_neutres_de_geneve_breakdown est un allié listé, mais Genève est détruite en 2076 et aucune institution n'y siège plus",
-       "contredit": "Les Gouvernements Régionaux ne peuvent plus être alliés à une entité disparue physiquement.",
-       "raison": "La destruction de Genève en 2076 rend impossible toute alliance avec archives_neutres_de_geneve_breakdown."
+       "lien_detail": "archives_neutres_de_geneve_breakdown (disparu après 2076)",
+       "contredit": "Les Archives Neutres de Genève n'existent plus après 2076, rendant impossible une alliance avec elles.",
+       "raison": "La destruction de Genève en 2076 entraîne la disparition des Archives Neutres, rompant toute alliance formelle ou informelle avec elles."
       },
       {
        "type": "texte",
-       "niveau": "obligatoire",
-       "extrait": "alliés : archives_neutres_de_geneve_breakdown, federation_russe_residuelle_district_de_mourmansk_breakdown, front_des_blocs_regionaux_du_recit_des_conflits_ressources_breakdown,…",
-       "contredit": "archives_neutres_de_geneve_breakdown ne peut plus être un allié après 2076.",
-       "lien": "relation",
-       "lien_detail": "archives_neutres_de_geneve_breakdown est listé comme allié, mais n'existe plus physiquement à Genève",
-       "raison": "La fiche mentionne un allié qui n'a plus de présence physique après 2076, ce qui est factuellement faux."
-      },
-      {
-       "type": "trajectoire",
        "niveau": "possible",
-       "apres": "ascendant",
+       "extrait": "Dans le chaos du breakdown, ces entités constituent les nœuds institutionnels résiduels par lesquels transitent encore les reconnaissances formelles de territoire, les actes d'état civil de substitution et les négociations de cessez-le-feu locaux.",
        "lien": "variable",
-       "lien_detail": "gouvernance_institutions (+0.3 point, touché par l'élément)",
-       "raison": "L'affaiblissement des institutions globales (variable gouvernance_institutions) renforce le rôle des gouvernements régionaux comme derniers garants de l'ordre territorial."
+       "lien_detail": "gouvernance_institutions (+0.3 point)",
+       "raison": "L'affaiblissement des institutions genevoises renforce le rôle des gouvernements régionaux, mais la phrase reste vraie sans modification."
       }
      ]
     },
@@ -15470,7 +15532,16 @@
     },
     {
      "slug": "hanse_baltique_breakdown",
-     "changements": []
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "dominant",
+       "lien": "variable",
+       "lien_detail": "gouvernance_institutions (+0.3 point)",
+       "raison": "L'affaiblissement des institutions genevoises pourrait renforcer la Hanse Baltique, mais son ascension préexistante reste plausible sans devenir obligatoire."
+      }
+     ]
     },
     {
      "slug": "hanse_baltique_recomposee_breakdown",
@@ -15492,8 +15563,8 @@
   }
  },
  "destruction_geneve_2076::breakdown::6": {
-  "empreinte": "f47005f666548687",
-  "date": "2026-10-11T21:55",
+  "empreinte": "e2636b6561789d87",
+  "date": "2026-10-12T18:46",
   "brut": {
    "fiches": [
     {
@@ -15506,18 +15577,18 @@
        "relation": "alliance",
        "action": "rompue",
        "lien": "relation",
-       "lien_detail": "allié direct des Archives Neutres de Genève, détruites en 2076",
-       "contredit": "Les Archives Neutres de Genève n'existent plus physiquement après mars 2076",
-       "raison": "L'alliance avec les Archives Neutres de Genève est impossible après leur destruction, car elles ne peuvent plus agir comme entité physique ou archivistique."
+       "lien_detail": "allié direct de l'entité archives_neutres_de_geneve_breakdown, détruite en 2076",
+       "contredit": "La fiche mentionne une alliance avec les Archives Neutres de Genève, qui n'existent plus physiquement après 2076.",
+       "raison": "L'alliance avec les Archives Neutres de Genève devient impossible après leur destruction en mars 2076."
       },
       {
        "type": "texte",
        "niveau": "obligatoire",
        "extrait": "alliés : collectifs_de_gardiens_archivistes_itinerants_breakdown, reseau_des_courriers_nomades_sahelo_mediterraneens_breakdown, archives_neutres_de_geneve_breakdown, brigades_medicales_itinerantes_breakdown",
-       "contredit": "Les Archives Neutres de Genève sont détruites en 2076 et ne peuvent plus être un allié actif",
+       "contredit": "Les Archives Neutres de Genève sont détruites en 2076 et ne peuvent plus être un allié actif.",
        "lien": "relation",
-       "lien_detail": "allié direct des Archives Neutres de Genève",
-       "raison": "La mention des Archives Neutres de Genève comme allié actif est fausse après 2076."
+       "lien_detail": "allié direct de archives_neutres_de_geneve_breakdown",
+       "raison": "La mention des Archives Neutres de Genève comme allié doit être retirée ou reformulée pour refléter leur disparition."
       }
      ]
     },
@@ -15539,17 +15610,7 @@
     },
     {
      "slug": "le_temoin_breakdown",
-     "changements": [
-      {
-       "type": "texte",
-       "niveau": "possible",
-       "extrait": "Seule voix qui tente encore de donner du sens au chaos systémique global.",
-       "contredit": "",
-       "lien": "variable",
-       "lien_detail": "gouvernance_institutions (+0.3 point, crise partielle)",
-       "raison": "La destruction de Genève et la perte des institutions internationales renforcent le rôle du Témoin comme voix alternative, mais la phrase reste vraie sans ce changement."
-      }
-     ]
+     "changements": []
     },
     {
      "slug": "les_veilleurs_des_nappes_phreatiques_breakdown",
@@ -15573,18 +15634,29 @@
        "relation": "alliance",
        "action": "rompue",
        "lien": "relation",
-       "lien_detail": "allié direct des Archives Neutres de Genève, détruites en 2076",
-       "contredit": "Les Archives Neutres de Genève n'existent plus physiquement après mars 2076",
-       "raison": "L'alliance avec les Archives Neutres de Genève est impossible après leur destruction."
+       "lien_detail": "allié direct de archives_neutres_de_geneve_breakdown, détruite en 2076",
+       "contredit": "La fiche mentionne une alliance avec les Archives Neutres de Genève, qui n'existent plus physiquement après 2076.",
+       "raison": "L'alliance avec les Archives Neutres de Genève devient impossible après leur destruction en mars 2076."
+      },
+      {
+       "type": "relation",
+       "niveau": "obligatoire",
+       "cible": "agence_stabilisation_climatique_breakdown",
+       "relation": "alliance",
+       "action": "rompue",
+       "lien": "relation",
+       "lien_detail": "allié direct de agence_stabilisation_climatique_breakdown, disparue après 2076",
+       "contredit": "L'Agence de Stabilisation Climatique (Résidu AMSC) est marquée comme disparue dans le lore post-2076.",
+       "raison": "L'alliance avec l'Agence de Stabilisation Climatique devient impossible après sa disparition."
       },
       {
        "type": "texte",
        "niveau": "obligatoire",
        "extrait": "alliés : agence_stabilisation_climatique_breakdown, archives_neutres_de_geneve_breakdown, cargo_mombasa_crrc_breakdown, collectifs_de_gardiens_archivistes_itinerants_breakdown,…",
-       "contredit": "Les Archives Neutres de Genève sont détruites en 2076 et ne peuvent plus être un allié actif",
+       "contredit": "Les alliés mentionnés (Archives Neutres de Genève et Agence de Stabilisation Climatique) ne peuvent plus exister en tant que tels après 2076.",
        "lien": "relation",
-       "lien_detail": "allié direct des Archives Neutres de Genève",
-       "raison": "La mention des Archives Neutres de Genève comme allié actif est fausse après 2076."
+       "lien_detail": "alliés directs de entités disparues",
+       "raison": "La liste des alliés doit être mise à jour pour refléter la disparition des Archives Neutres de Genève et de l'Agence de Stabilisation Climatique."
       }
      ]
     },
@@ -15593,14 +15665,34 @@
      "changements": [
       {
        "type": "relation",
-       "niveau": "possible",
+       "niveau": "obligatoire",
+       "cible": "agence_stabilisation_climatique_breakdown",
+       "relation": "opposition",
+       "action": "rompue",
+       "lien": "relation",
+       "lien_detail": "rival direct de agence_stabilisation_climatique_breakdown, disparue après 2076",
+       "contredit": "L'Agence de Stabilisation Climatique (Résidu AMSC) est marquée comme disparue dans le lore post-2076.",
+       "raison": "L'opposition à l'Agence de Stabilisation Climatique devient caduque après sa disparition."
+      },
+      {
+       "type": "relation",
+       "niveau": "obligatoire",
        "cible": "geneve_bunker_institutions_breakdown",
        "relation": "opposition",
-       "action": "nouvelle",
+       "action": "rompue",
        "lien": "relation",
-       "lien_detail": "rivalité avec les vestiges institutionnels de Genève (Geneve_bunker_institutions_breakdown)",
-       "contredit": "",
-       "raison": "La destruction de Genève affaiblit les institutions résiduelles, ce qui peut renforcer l'opposition de la Ligue Eurasiatique à ces vestiges."
+       "lien_detail": "rival direct de geneve_bunker_institutions_breakdown, disparu après 2076",
+       "contredit": "Le Résidu de Genève (geneve_bunker_institutions_breakdown) est marqué comme disparu dans le lore post-2076.",
+       "raison": "L'opposition au Résidu de Genève devient caduque après sa disparition."
+      },
+      {
+       "type": "texte",
+       "niveau": "obligatoire",
+       "extrait": "rivaux : agence_stabilisation_climatique_breakdown, geneve_bunker_institutions_breakdown",
+       "contredit": "Les rivaux mentionnés (Agence de Stabilisation Climatique et Résidu de Genève) ne peuvent plus exister en tant que tels après 2076.",
+       "lien": "relation",
+       "lien_detail": "rivaux directs de entités disparues",
+       "raison": "La liste des rivaux doit être mise à jour pour refléter la disparition de l'Agence de Stabilisation Climatique et du Résidu de Genève."
       }
      ]
     },
@@ -15614,18 +15706,18 @@
        "relation": "alliance",
        "action": "rompue",
        "lien": "relation",
-       "lien_detail": "allié direct des Archives Neutres de Genève, détruites en 2076",
-       "contredit": "Les Archives Neutres de Genève n'existent plus physiquement après mars 2076",
-       "raison": "L'alliance avec les Archives Neutres de Genève est impossible après leur destruction."
+       "lien_detail": "allié direct de archives_neutres_geneve_breakdown, détruite en 2076",
+       "contredit": "La fiche mentionne une alliance avec les Archives Neutres de Genève, qui n'existent plus physiquement après 2076.",
+       "raison": "L'alliance avec les Archives Neutres de Genève devient impossible après leur destruction en mars 2076."
       },
       {
        "type": "texte",
        "niveau": "obligatoire",
        "extrait": "alliés : archives_neutres_geneve_breakdown, carthage_nord_nexcore_breakdown, conseil_regulation_ressources_breakdown, hanse_baltique_breakdown, hanse_baltique_recomposee_breakdown,…",
-       "contredit": "Les Archives Neutres de Genève sont détruites en 2076 et ne peuvent plus être un allié actif",
+       "contredit": "Les Archives Neutres de Genève sont détruites en 2076 et ne peuvent plus être un allié actif.",
        "lien": "relation",
-       "lien_detail": "allié direct des Archives Neutres de Genève",
-       "raison": "La mention des Archives Neutres de Genève comme allié actif est fausse après 2076."
+       "lien_detail": "allié direct de archives_neutres_geneve_breakdown",
+       "raison": "La mention des Archives Neutres de Genève comme allié doit être retirée ou reformulée pour refléter leur disparition."
       }
      ]
     },
@@ -15643,18 +15735,18 @@
        "relation": "alliance",
        "action": "rompue",
        "lien": "relation",
-       "lien_detail": "allié direct des Archives Neutres de Genève, détruites en 2076",
-       "contredit": "Les Archives Neutres de Genève n'existent plus physiquement après mars 2076",
-       "raison": "L'alliance avec les Archives Neutres de Genève est impossible après leur destruction."
+       "lien_detail": "allié direct de archives_neutres_de_geneve_breakdown, détruite en 2076",
+       "contredit": "La fiche mentionne une alliance avec les Archives Neutres de Genève, qui n'existent plus physiquement après 2076.",
+       "raison": "L'alliance avec les Archives Neutres de Genève devient impossible après leur destruction en mars 2076."
       },
       {
        "type": "texte",
        "niveau": "obligatoire",
        "extrait": "alliés : reseau_mnemos_breakdown, archives_neutres_de_geneve_breakdown",
-       "contredit": "Les Archives Neutres de Genève sont détruites en 2076 et ne peuvent plus être un allié actif",
+       "contredit": "Les Archives Neutres de Genève sont détruites en 2076 et ne peuvent plus être un allié actif.",
        "lien": "relation",
-       "lien_detail": "allié direct des Archives Neutres de Genève",
-       "raison": "La mention des Archives Neutres de Genève comme allié actif est fausse après 2076."
+       "lien_detail": "allié direct de archives_neutres_de_geneve_breakdown",
+       "raison": "La mention des Archives Neutres de Genève comme allié doit être retirée ou reformulée pour refléter leur disparition."
       }
      ]
     },
@@ -15666,8 +15758,8 @@
   }
  },
  "destruction_geneve_2076::breakdown::7": {
-  "empreinte": "9afc9ea9120ed01c",
-  "date": "2026-10-11T21:55",
+  "empreinte": "4903dd5f929b562f",
+  "date": "2026-10-12T18:46",
   "brut": {
    "fiches": [
     {
@@ -15694,13 +15786,24 @@
      "slug": "milices_privees_documentees_terrain_breakdown",
      "changements": [
       {
-       "type": "texte",
+       "type": "relation",
        "niveau": "obligatoire",
-       "extrait": "alliés : archives_neutres_de_geneve_breakdown, blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown, consortium_energetique_oural_caspien_breakdown,…",
-       "contredit": "Les archives physiques conservées à Genève sont perdues ; aucune institution n'y siège physiquement après mars 2076.",
+       "cible": "archives_neutres_de_geneve_breakdown",
+       "relation": "alliance",
+       "action": "rompue",
        "lien": "relation",
-       "lien_detail": "archives_neutres_de_geneve_breakdown",
-       "raison": "L'alliance avec les Archives Neutres de Genève est impossible après 2076, car cette entité n'existe plus physiquement à Genève."
+       "lien_detail": "alliée directe des Archives Neutres de Genève, entité disparue après 2076",
+       "contredit": "Les Archives Neutres de Genève n'existent plus physiquement après mars 2076, rendant impossible toute alliance active avec elles.",
+       "raison": "La destruction de Genève en 2076 a entraîné la disparition des Archives Neutres de Genève, rompant de facto toute alliance avec elles."
+      },
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "gouvernance_institutions (+0.3 point, touchée par l'élément)",
+       "contredit": "",
+       "raison": "L'affaiblissement des institutions internationales renforce les dynamiques locales de substitution, ce qui peut favoriser l'ascension des milices privées comme acteurs de gouvernance de facto."
       }
      ]
     },
@@ -15722,17 +15825,7 @@
     },
     {
      "slug": "nairobi_crrc_breakdown",
-     "changements": [
-      {
-       "type": "texte",
-       "niveau": "possible",
-       "extrait": "Né des ruines des agences onusiennes dont il a récupéré les infrastructures et les réseaux locaux.",
-       "contredit": "",
-       "lien": "variable",
-       "lien_detail": "gouvernance_institutions (+0.3 point)",
-       "raison": "La destruction de Genève affaiblit symboliquement les dernières agences onusiennes, mais Nairobi CRRC peut toujours revendiquer leur héritage local sans que cela devienne faux."
-      }
-     ]
+     "changements": []
     },
     {
      "slug": "nexcore_breakdown",
@@ -15747,23 +15840,23 @@
      "changements": [
       {
        "type": "relation",
-       "niveau": "possible",
-       "cible": "collectifs_de_gardiens_archivistes_itinerants_breakdown",
+       "niveau": "obligatoire",
+       "cible": "archives_neutres_de_geneve_breakdown",
        "relation": "alliance",
-       "action": "nouvelle",
-       "lien": "variable",
-       "lien_detail": "gouvernance_institutions (+0.3 point)",
-       "contredit": "",
-       "raison": "La perte des archives de Genève renforce la dépendance aux réseaux décentralisés comme les Gardiens-Archivistes Itinérants, rendant une alliance plus probable."
+       "action": "rompue",
+       "lien": "relation",
+       "lien_detail": "alliée directe des Archives Neutres de Genève, entité disparue après 2076",
+       "contredit": "Les Archives Neutres de Genève n'existent plus physiquement après mars 2076, rendant impossible toute alliance active avec elles.",
+       "raison": "La destruction de Genève en 2076 a entraîné la disparition des Archives Neutres de Genève, rompant de facto toute alliance avec elles."
       },
       {
-       "type": "texte",
+       "type": "trajectoire",
        "niveau": "possible",
-       "extrait": "alliés : archives_neutres_de_geneve_breakdown, collectifs_de_gardiens_archivistes_itinerants_breakdown, communautes_rurales_autogerees_des_n_uds_de_survie_breakdown, communautes_rurales_autonomes_breakdown,…",
+       "apres": "dominant",
+       "lien": "variable",
+       "lien_detail": "gouvernance_institutions (+0.3 point, touchée par l'élément)",
        "contredit": "",
-       "lien": "relation",
-       "lien_detail": "archives_neutres_de_geneve_breakdown",
-       "raison": "L'alliance avec les Archives Neutres de Genève reste plausible si elles opèrent désormais hors de Genève, mais leur poids symbolique diminue."
+       "raison": "La disparition des archives centrales renforce le rôle des nœuds décentralisés comme Mnemos Pannonie, qui deviennent des références incontournables pour la conservation des mémoires collectives."
       }
      ]
     },
@@ -15775,8 +15868,8 @@
   }
  },
  "destruction_geneve_2076::breakdown::8": {
-  "empreinte": "50888548e7ed5846",
-  "date": "2026-10-11T21:56",
+  "empreinte": "f36661adf58d60f4",
+  "date": "2026-10-12T18:47",
   "brut": {
    "fiches": [
     {
@@ -15793,18 +15886,20 @@
        "relation": "alliance",
        "action": "rompue",
        "lien": "relation",
-       "lien_detail": "archives_neutres_de_geneve_breakdown (alliée directe)",
-       "contredit": "Les archives physiques de Genève sont détruites en 2076, rendant impossible toute collaboration avec une entité basée à Genève après cette date.",
-       "raison": "L'alliance avec les Archives Neutres de Genève devient impossible après la destruction de Genève en 2076, car cette entité n'a plus de présence physique ni d'archives à partager."
+       "lien_detail": "alliée directe de archives_neutres_de_geneve_breakdown, disparue en 2076",
+       "contredit": "Les ONG de gestion migratoire survivantes ne peuvent plus être alliées à une entité disparue (archives_neutres_de_geneve_breakdown).",
+       "raison": "La destruction de Genève en 2076 entraîne la disparition physique des Archives Neutres de Genève, rendant toute alliance avec elles impossible après cette date."
       },
       {
-       "type": "texte",
+       "type": "relation",
        "niveau": "possible",
-       "extrait": "alliés : agence_stabilisation_climatique_breakdown, archives_neutres_de_geneve_breakdown, brigades_medicales_itinerantes_breakdown, collectifs_de_sante_communautaire_autogeree_breakdown,…",
-       "contredit": "L'alliance avec les Archives Neutres de Genève est mentionnée comme existante, alors que Genève est détruite en 2076.",
+       "cible": "collectifs_de_gardiens_archivistes_itinerants_breakdown",
+       "relation": "alliance",
+       "action": "nouvelle",
        "lien": "relation",
-       "lien_detail": "archives_neutres_de_geneve_breakdown",
-       "raison": "La mention des Archives Neutres de Genève comme alliée doit être retirée ou reformulée pour refléter leur disparition physique."
+       "lien_detail": "substitution plausible aux archives disparues",
+       "contredit": "",
+       "raison": "La perte des archives physiques de Genève pourrait inciter les ONG à s'allier avec des collectifs itinérants pour préserver des données migratoires critiques."
       }
      ]
     },
@@ -15818,18 +15913,18 @@
        "relation": "alliance",
        "action": "rompue",
        "lien": "relation",
-       "lien_detail": "archives_neutres_de_geneve_breakdown (alliée directe)",
-       "contredit": "Les archives physiques de Genève sont détruites en 2076, rendant impossible toute collaboration avec une entité basée à Genève après cette date.",
-       "raison": "L'alliance avec les Archives Neutres de Genève devient impossible après la destruction de Genève en 2076."
+       "lien_detail": "alliée directe de archives_neutres_de_geneve_breakdown, disparue en 2076",
+       "contredit": "L'Oracle des Seuils ne peut plus être allié à une entité disparue (archives_neutres_de_geneve_breakdown).",
+       "raison": "La destruction de Genève en 2076 entraîne la disparition physique des Archives Neutres de Genève, rendant toute alliance avec elles impossible après cette date."
       },
       {
        "type": "texte",
        "niveau": "possible",
-       "extrait": "alliés : archives_neutres_de_geneve_breakdown, collectif_des_climatologues_sans_etat_breakdown, collectifs_de_hackers_archivistes_des_interstices_reseaux_breakdown, collectifs_du_seuil_breakdown,…",
-       "contredit": "L'alliance avec les Archives Neutres de Genève est mentionnée comme existante, alors que Genève est détruite en 2076.",
-       "lien": "relation",
-       "lien_detail": "archives_neutres_de_geneve_breakdown",
-       "raison": "La mention des Archives Neutres de Genève comme alliée doit être retirée ou reformulée pour refléter leur disparition physique."
+       "extrait": "Ses fragments tournent sur des serveurs hétéroclites — enclaves corporatives, nœuds hackers, relais humanitaires — et produisent des prédictions partielles, contradictoires, parfois falsifiées…",
+       "contredit": "",
+       "lien": "variable",
+       "lien_detail": "renforcement des dynamiques de fragmentation institutionnelle (+0.3 gouvernance_institutions)",
+       "raison": "La perte des archives genevoises pourrait accentuer la fragmentation des prédictions de l'Oracle, les rendant encore plus contradictoires ou falsifiées."
       }
      ]
     },
@@ -15857,17 +15952,27 @@
        "niveau": "possible",
        "cible": "archives_neutres_geneve_breakdown",
        "relation": "opposition",
-       "action": "nouvelle",
+       "action": "renforcée",
        "lien": "relation",
-       "lien_detail": "archives_neutres_geneve_breakdown (rivale potentielle)",
+       "lien_detail": "rivale déclarée des archives, dont la disparition affaiblit un contre-pouvoir",
        "contredit": "",
-       "raison": "La destruction de Genève et la perte des archives physiques pourraient renforcer l'opposition à un réseau cherchant à contrôler l'information, bien que ce ne soit pas obligatoire."
+       "raison": "La disparition des Archives Neutres de Genève élimine un rival direct, ce qui pourrait renforcer l'influence des anciens financeurs devenus censeurs."
       }
      ]
     },
     {
      "slug": "reseau_des_cartographes_des_zones_grises_breakdown",
-     "changements": []
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "Dans un monde où les frontières se sont effondrées sous les coups des conflits géopolitiques, des crises climatiques et de la fragmentation des réseaux d'information, les Veilleurs des Brumes documentent et diffusent les connaissances sur les territoires abandonnés, contestés ou non gouvernés.",
+       "contredit": "",
+       "lien": "variable",
+       "lien_detail": "renforcement des dynamiques de fragmentation institutionnelle (+0.3 gouvernance_institutions)",
+       "raison": "La destruction de Genève pourrait accentuer la fragmentation des réseaux d'information, élargissant le rôle des cartographes des zones grises."
+      }
+     ]
     },
     {
      "slug": "reseau_des_courriers_nomades_sahelo_mediterraneens_breakdown",
@@ -15879,18 +15984,9 @@
        "relation": "alliance",
        "action": "rompue",
        "lien": "relation",
-       "lien_detail": "archives_neutres_geneve_breakdown (alliée directe)",
-       "contredit": "Les archives physiques de Genève sont détruites en 2076, rendant impossible toute collaboration avec une entité basée à Genève après cette date.",
-       "raison": "L'alliance avec les Archives Neutres de Genève devient impossible après la destruction de Genève en 2076."
-      },
-      {
-       "type": "texte",
-       "niveau": "possible",
-       "extrait": "alliés : agadez_ligue_sahel_numerique_breakdown, archives_neutres_geneve_breakdown, assemblee_territoires_breakdown, collectifs_de_hackers_archivistes_des_interstices_reseaux_breakdown,…",
-       "contredit": "L'alliance avec les Archives Neutres de Genève est mentionnée comme existante, alors que Genève est détruite en 2076.",
-       "lien": "relation",
-       "lien_detail": "archives_neutres_geneve_breakdown",
-       "raison": "La mention des Archives Neutres de Genève comme alliée doit être retirée ou reformulée pour refléter leur disparition physique."
+       "lien_detail": "alliée directe de archives_neutres_geneve_breakdown, disparue en 2076",
+       "contredit": "Le réseau des courriers nomades ne peut plus être allié à une entité disparue (archives_neutres_geneve_breakdown).",
+       "raison": "La destruction de Genève en 2076 entraîne la disparition physique des Archives Neutres de Genève, rendant toute alliance avec elles impossible après cette date."
       }
      ]
     },
@@ -15898,13 +15994,13 @@
      "slug": "reseau_des_organisations_humanitaires_hors_cadre_onusien_breakdown",
      "changements": [
       {
-       "type": "trajectoire",
+       "type": "texte",
        "niveau": "possible",
-       "apres": "ascendant",
-       "lien": "variable",
-       "lien_detail": "gouvernance_institutions (+0.3 point, crise partielle des institutions)",
+       "extrait": "Assure une continuité minimale de l'aide humanitaire là où les mécanismes multilatéraux classiques ont cessé de fonctionner, en substituant des logiques de réseau décentralisé à la coordination étatique défaillante.",
        "contredit": "",
-       "raison": "L'effondrement partiel des institutions internationales pourrait renforcer le rôle de ce réseau en comblant le vide laissé, bien que ce ne soit pas obligatoire."
+       "lien": "variable",
+       "lien_detail": "renforcement des dynamiques de fragmentation institutionnelle (+0.3 gouvernance_institutions)",
+       "raison": "La destruction de Genève pourrait élargir le rôle de ces réseaux en comblant le vide laissé par les institutions multilatérales disparues."
       }
      ]
     },
@@ -15914,7 +16010,17 @@
     },
     {
      "slug": "reseau_mnemos_breakdown",
-     "changements": []
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "Ce qui fut l'infrastructure planétaire cohérente de Mnemos s'est disloqué en plusieurs centaines d'archipels informationnels autonomes, souvent incompatibles entre eux.",
+       "contredit": "",
+       "lien": "variable",
+       "lien_detail": "renforcement des dynamiques de fragmentation institutionnelle (+0.3 gouvernance_institutions)",
+       "raison": "La destruction de Genève pourrait accentuer la dislocation des réseaux informationnels comme Mnemos, en éliminant un nœud central de coordination."
+      }
+     ]
     },
     {
      "slug": "reseaux_de_renseignement_informels_issus_de_l_ancienne_structure_militaire_eurasienne_breakdown",
@@ -15928,8 +16034,8 @@
   }
  },
  "destruction_geneve_2076::breakdown::9": {
-  "empreinte": "43d207c8491a4afb",
-  "date": "2026-10-11T21:56",
+  "empreinte": "6185248861ba9982",
+  "date": "2026-10-12T18:47",
   "brut": {
    "fiches": [
     {
@@ -15950,7 +16056,18 @@
     },
     {
      "slug": "seigneuries_logistiques_armees_breakdown",
-     "changements": []
+     "changements": [
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "archives_neutres_de_geneve_breakdown",
+       "relation": "opposition",
+       "action": "nouvelle",
+       "lien": "relation",
+       "lien_detail": "Seigneuries logistiques armées sont rivales des Archives Neutres de Genève, dont la destruction affaiblit la légitimité des archives et renforce les acteurs privés comme les seigneuries.",
+       "raison": "La destruction de Genève en 2076 affaiblit les Archives Neutres, rendant leur opposition aux seigneuries logistiques moins structurante, mais plausible comme rivalité persistante."
+      }
+     ]
     },
     {
      "slug": "seigneurs_de_guerre_agro_territoriaux_breakdown",
@@ -15966,7 +16083,16 @@
     },
     {
      "slug": "terminal_kharg_data_haven_breakdown",
-     "changements": []
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "Kharg-9 est à la fois un sanctuaire de données pour les acteurs en marge des blocs géopolitiques fragmentés et un marché noir numérique où s'échangent informations critiques, brevets piratés et archives d'États effondrés.",
+       "lien": "variable",
+       "lien_detail": "La destruction de Genève et la perte des archives physiques renforcent la demande pour des sanctuaires de données comme Kharg-9.",
+       "raison": "La perte des archives de Genève rend les données encore plus précieuses, ce qui élargit le rôle de Kharg-9 comme marché noir, mais l'extrait reste vrai sans modification."
+      }
+     ]
     },
     {
      "slug": "tour_bcuc_geneve_breakdown",
@@ -15976,18 +16102,9 @@
        "niveau": "obligatoire",
        "apres": "disparu",
        "lien": "territoire",
-       "lien_detail": "Genève est détruite en mars 2076, aucune institution n'y siège physiquement après cette date.",
-       "contredit": "La Tour Bcuc fonctionne désormais comme une structure hybride semi-autonome après l'effondrement des organes de régulation globaux, basée à Genève.",
-       "raison": "La destruction de Genève en 2076 rend impossible l'existence physique de la Tour Bcuc sur ce territoire après cette date."
-      },
-      {
-       "type": "texte",
-       "niveau": "obligatoire",
-       "extrait": "Vestige d'une ancienne institution financière internationale basée à Genève, la Tour Bcuc fonctionne désormais comme une structure hybride semi-autonome après l'effondrement des organes de régulation globaux.",
-       "contredit": "Genève est détruite en mars 2076, aucune institution n'y siège physiquement après cette date.",
-       "lien": "territoire",
-       "lien_detail": "Genève est le territoire explicitement mentionné comme détruit.",
-       "raison": "La phrase affirme que la Tour Bcuc est basée à Genève après l'effondrement, ce qui est faux après 2076."
+       "lien_detail": "La Tour Bcuc est localisée à Genève, détruite en 2076.",
+       "contredit": "La Tour Bcuc fonctionne désormais comme une structure hybride semi-autonome après l'effondrement des organes de régulation globaux.",
+       "raison": "La destruction de Genève en 2076 rend impossible l'existence physique de la Tour Bcuc sur ce territoire."
       },
       {
        "type": "relation",
@@ -15996,20 +16113,9 @@
        "relation": "alliance",
        "action": "rompue",
        "lien": "relation",
-       "lien_detail": "Les Archives Neutres de Genève sont directement touchées par la destruction de Genève.",
-       "contredit": "La Tour Bcuc est alliée aux Archives Neutres de Genève, qui n'existent plus physiquement après 2076.",
-       "raison": "Les Archives Neutres de Genève ne peuvent plus être un allié physique après la destruction de Genève."
-      },
-      {
-       "type": "relation",
-       "niveau": "obligatoire",
-       "cible": "archives_neutres_geneve_breakdown",
-       "relation": "alliance",
-       "action": "rompue",
-       "lien": "relation",
-       "lien_detail": "Les Archives Neutres de Genève sont directement touchées par la destruction de Genève.",
-       "contredit": "La Tour Bcuc est alliée aux Archives Neutres de Genève, qui n'existent plus physiquement après 2076.",
-       "raison": "Les Archives Neutres de Genève ne peuvent plus être un allié physique après la destruction de Genève."
+       "lien_detail": "La Tour Bcuc était alliée aux Archives Neutres de Genève, toutes deux détruites ou disparues après 2076.",
+       "contredit": "alliés : archives_neutres_de_geneve_breakdown, archives_neutres_geneve_breakdown, geneve_bunker_institutions_breakdown",
+       "raison": "Les Archives Neutres de Genève et le bunker des institutions genevoises sont disparus après 2076, rendant toute alliance avec eux impossible."
       },
       {
        "type": "relation",
@@ -16018,9 +16124,9 @@
        "relation": "alliance",
        "action": "rompue",
        "lien": "relation",
-       "lien_detail": "Le Résidu de Genève (geneve_bunker_institutions_breakdown) est directement lié à la destruction de Genève.",
-       "contredit": "La Tour Bcuc est alliée au Résidu de Genève, qui n'a plus de siège physique après 2076.",
-       "raison": "Le Résidu de Genève ne peut plus être un allié physique après la destruction de Genève."
+       "lien_detail": "La Tour Bcuc était alliée au bunker des institutions genevoises, disparu après 2076.",
+       "contredit": "alliés : geneve_bunker_institutions_breakdown",
+       "raison": "Le bunker des institutions genevoises est disparu après 2076, rendant toute alliance avec lui impossible."
       }
      ]
     },
@@ -16033,12 +16139,23 @@
      "changements": [
       {
        "type": "texte",
-       "niveau": "possible",
-       "extrait": "Vestige fracturé du Tribunal Algorithmique de Bruxelles, la Chambre des Recours Algorithmiques survit en nomade judiciaire, se déplaçant entre les enclaves encore dotées d'une infrastructure réseau minimale. Elle n'a plus de siège fixe depuis l'effondrement de la Zone Administrative Bruxelloise en 2091 et opère par…",
-       "contredit": "",
+       "niveau": "obligatoire",
+       "extrait": "Elle n'a plus de siège fixe depuis l'effondrement de la Zone Administrative Bruxelloise en 2091 et opère par relais nomades.",
+       "contredit": "La destruction de Genève en 2076 précède et accélère l'effondrement des institutions internationales, dont le Tribunal Algorithmique de Bruxelles, qui aurait pu perdre son siège plus tôt ou de manière plus fragmentée.",
        "lien": "variable",
-       "lien_detail": "gouvernance_institutions (+0.3 point, touchée par la destruction de Genève)",
-       "raison": "La destruction de Genève affaiblit davantage les institutions globales, ce qui pourrait renforcer le caractère nomade et précaire de la Chambre des Recours Algorithmiques, mais cela reste plausible sans modification."
+       "lien_detail": "La destruction de Genève en 2076 accélère la fragmentation institutionnelle (variable gouvernance_institutions +0.3).",
+       "raison": "La destruction de Genève en 2076 rend plausible que le Tribunal Algorithmique ait perdu son siège avant 2091, ou que sa dislocation ait été plus précoce et chaotique."
+      },
+      {
+       "type": "relation",
+       "niveau": "obligatoire",
+       "cible": "archives_neutres_de_geneve_breakdown",
+       "relation": "alliance",
+       "action": "rompue",
+       "lien": "relation",
+       "lien_detail": "Le Tribunal Algorithmique était allié aux Archives Neutres de Genève, disparues après 2076.",
+       "contredit": "alliés : archives_neutres_de_geneve_breakdown, archives_neutres_geneve_breakdown",
+       "raison": "Les Archives Neutres de Genève sont devenues résiduelles après 2076, rendant toute alliance avec elles impossible."
       }
      ]
     },
@@ -16057,10 +16174,9 @@
        "type": "texte",
        "niveau": "possible",
        "extrait": "Fragment survivant et muté de la Voix du Dehors, Les Bouches de l'Abîme opèrent comme une constellation de cellules de journalisme d'investigation totalement autonomes et non coordonnées, reliées uniquement par des protocoles hérités et une mémoire collective partielle.",
-       "contredit": "",
        "lien": "variable",
-       "lien_detail": "gouvernance_institutions (+0.3 point, touchée par la destruction de Genève)",
-       "raison": "La perte des archives physiques de Genève pourrait affaiblir la mémoire collective partielle, mais cela reste plausible sans modification."
+       "lien_detail": "La destruction de Genève et la perte des archives physiques renforcent la fragmentation des mémoires collectives.",
+       "raison": "La perte des archives de Genève rend la mémoire collective encore plus fragmentée, mais l'extrait reste vrai sans modification."
       }
      ]
     }
@@ -16068,8 +16184,8 @@
   }
  },
  "destruction_geneve_2076::breakdown::10": {
-  "empreinte": "0b5ea679a3a03449",
-  "date": "2026-10-11T21:56",
+  "empreinte": "9042d397e0863773",
+  "date": "2026-10-12T18:47",
   "brut": {
    "fiches": [
     {
@@ -16082,11 +16198,11 @@
       {
        "type": "texte",
        "niveau": "possible",
-       "extrait": "L’effacement des archives du Registre plonge les communautés des Grands Lacs dans un brouillard juridique et mémoriel, rendant impossible toute réclamation territoriale ou compensation pour les communautés riveraines.",
+       "extrait": "L’effacement des archives du Registre plonge les communautés des Grands Lacs dans un brouillard juridique et mémoriel, rendant impossible toute réclamation territoriale ou compensation pour les pertes liées aux anciens traités internationaux ou aux protocoles genevois.",
        "contredit": "",
        "lien": "variable",
-       "lien_detail": "gouvernance_institutions (+0.3 point, crise de légitimité des archives physiques)",
-       "raison": "La destruction de Genève en 2076 a déjà affaibli la valeur symbolique et pratique des archives physiques centralisées. Le naufrage des archives de Milwaukee-Basse en 2098 s'inscrit dans une tendance plus large de dévalorisation des archives physiques, accélérant la perte de confiance dans les registres territoriaux. La phrase reste vraie, mais son impact est amplifié par le contexte post-Genève."
+       "lien_detail": "gouvernance_institutions (+0.3 point, touchée par la destruction de Genève)",
+       "raison": "La destruction de Genève en 2076 a déjà rendu les protocoles et archives genevois largement inaccessibles ou caducs, ce qui renforce l'impact de la perte des archives locales de Milwaukee-Basse. La phrase reste vraie, mais l'effet est amplifié par le contexte post-Genève."
       }
      ]
     }
@@ -20118,6 +20234,462 @@
     {
      "id": "f23",
      "pourquoi": "Mémoire collective affaiblie par la perte des archives"
+    }
+   ]
+  }
+ },
+ "destruction_geneve_2076::breakdown::contre1::b3e94270e2761959": {
+  "date": "2026-10-12T18:47",
+  "verdict": {
+   "id": "o1",
+   "incompatible": true,
+   "fait": "materiel",
+   "motif": "contradiction",
+   "justification": "La fiche affirme une alliance rompue avec une entité (Genève-Bunker) explicitement détruite en 2076, ce qui rend toute alliance matériellement impossible après cette date."
+  }
+ },
+ "destruction_geneve_2076::breakdown::contre1::b1108bd881132b8b": {
+  "date": "2026-10-12T18:47",
+  "verdict": {
+   "id": "o2",
+   "incompatible": false,
+   "motif": "nuance",
+   "justification": "La fiche mentionne une opposition avec une entité disparue, mais une opposition peut être symbolique ou résiduelle ; l'élément ne rend pas la relation logiquement impossible."
+  }
+ },
+ "destruction_geneve_2076::breakdown::contre1::cf4a821c7d9529c7": {
+  "date": "2026-10-12T18:47",
+  "verdict": {
+   "id": "o3",
+   "incompatible": false,
+   "motif": "amorti",
+   "justification": "La fiche décrit une alliance rompue avec une entité devenue résiduelle, ce qui est compatible avec un choc amorti (5% de force résiduelle). L'alliance peut avoir évolué ou disparu sans contradiction matérielle."
+  }
+ },
+ "destruction_geneve_2076::breakdown::contre1::0bf9ac68bfb03eb4": {
+  "date": "2026-10-12T18:47",
+  "verdict": {
+   "id": "o4",
+   "incompatible": true,
+   "fait": "materiel",
+   "motif": "contradiction",
+   "justification": "La fiche cite une alliance avec une entité (Bureau de Coordination d'Urgence Climatique) dont le siège physique à Genève est détruit en 2076, rendant impossible une alliance matérielle post-2076."
+  }
+ },
+ "destruction_geneve_2076::breakdown::contre1::d7e94dfc925c2d49": {
+  "date": "2026-10-12T18:47",
+  "verdict": {
+   "id": "o5",
+   "incompatible": false,
+   "motif": "amorti",
+   "justification": "La fiche décrit une alliance avec une entité résiduelle, ce qui est compatible avec un choc amorti. L'alliance peut persister sous une forme adaptée."
+  }
+ },
+ "destruction_geneve_2076::breakdown::contre1::70654cd06fb9a0db": {
+  "date": "2026-10-12T18:47",
+  "verdict": {
+   "id": "o6",
+   "incompatible": false,
+   "motif": "amorti",
+   "justification": "Même raison que o5 : l'alliance peut persister malgré la transformation résiduelle de l'entité."
+  }
+ },
+ "destruction_geneve_2076::breakdown::contre1::0581931f6dde9e61": {
+  "date": "2026-10-12T18:47",
+  "verdict": {
+   "id": "o7",
+   "incompatible": false,
+   "motif": "amorti",
+   "justification": "Même raison que o5 et o6 : l'alliance peut persister malgré la transformation résiduelle."
+  }
+ },
+ "destruction_geneve_2076::breakdown::contre1::6637a3a4e8f468a8": {
+  "date": "2026-10-12T18:47",
+  "verdict": {
+   "id": "o8",
+   "incompatible": false,
+   "motif": "amorti",
+   "justification": "Même raison que o5 : l'alliance peut persister malgré la transformation résiduelle."
+  }
+ },
+ "destruction_geneve_2076::breakdown::contre1::3f4df60f764d43de": {
+  "date": "2026-10-12T18:47",
+  "verdict": {
+   "id": "o9",
+   "incompatible": false,
+   "motif": "amorti",
+   "justification": "Même raison que o5 : l'alliance peut persister malgré la transformation résiduelle."
+  }
+ },
+ "destruction_geneve_2076::breakdown::contre1::364d6267ee640cf0": {
+  "date": "2026-10-12T18:47",
+  "verdict": {
+   "id": "o10",
+   "incompatible": false,
+   "motif": "amorti",
+   "justification": "Même raison que o5 : l'alliance peut persister malgré la transformation résiduelle."
+  }
+ },
+ "destruction_geneve_2076::breakdown::contre1::cc601f517648837e": {
+  "date": "2026-10-12T18:47",
+  "verdict": {
+   "id": "o11",
+   "incompatible": false,
+   "motif": "amorti",
+   "justification": "La fiche décrit une alliance rompue avec une entité résiduelle, ce qui est compatible avec un choc amorti. L'alliance peut avoir évolué."
+  }
+ },
+ "destruction_geneve_2076::breakdown::contre1::4a3ec8f8706ac619": {
+  "date": "2026-10-12T18:47",
+  "verdict": {
+   "id": "o12",
+   "incompatible": false,
+   "motif": "nuance",
+   "justification": "Une opposition peut être symbolique ou résiduelle même après la disparition de l'entité cible. L'élément ne rend pas la relation impossible."
+  }
+ },
+ "destruction_geneve_2076::breakdown::contre1::9ab367b475259c9f": {
+  "date": "2026-10-12T18:47",
+  "verdict": {
+   "id": "o13",
+   "incompatible": true,
+   "fait": "materiel",
+   "motif": "contradiction",
+   "justification": "La fiche affirme une alliance avec une entité (Tour Bcuc Genève) dont le siège physique est détruit en 2076, rendant impossible une alliance matérielle post-2076."
+  }
+ },
+ "destruction_geneve_2076::breakdown::contre1::7aef1c317e7bdd15": {
+  "date": "2026-10-12T18:47",
+  "verdict": {
+   "id": "o14",
+   "incompatible": false,
+   "motif": "amorti",
+   "justification": "La fiche décrit une alliance avec une entité résiduelle, ce qui est compatible avec un choc amorti. L'alliance peut persister sous une forme adaptée."
+  }
+ },
+ "destruction_geneve_2076::breakdown::contre1::44bd60b506ae7575": {
+  "date": "2026-10-12T18:47",
+  "verdict": {
+   "id": "o15",
+   "incompatible": false,
+   "motif": "amorti",
+   "justification": "Même raison que o14 : l'alliance peut persister malgré la transformation résiduelle."
+  }
+ },
+ "destruction_geneve_2076::breakdown::contre1::d10e1243799a9c34": {
+  "date": "2026-10-12T18:47",
+  "verdict": {
+   "id": "o16",
+   "incompatible": false,
+   "motif": "nuance",
+   "justification": "Une opposition peut être symbolique ou résiduelle même après la disparition de l'entité cible. L'élément ne rend pas la relation impossible."
+  }
+ },
+ "destruction_geneve_2076::breakdown::contre1::15a0d3797d601ec1": {
+  "date": "2026-10-12T18:47",
+  "verdict": {
+   "id": "o17",
+   "incompatible": false,
+   "motif": "amorti",
+   "justification": "La fiche décrit une alliance rompue avec une entité résiduelle, ce qui est compatible avec un choc amorti."
+  }
+ },
+ "destruction_geneve_2076::breakdown::contre1::1c542976e98755c8": {
+  "date": "2026-10-12T18:47",
+  "verdict": {
+   "id": "o18",
+   "incompatible": false,
+   "motif": "nuance",
+   "justification": "Une opposition peut être symbolique ou résiduelle même après la disparition de l'entité cible. L'élément ne rend pas la relation impossible."
+  }
+ },
+ "destruction_geneve_2076::breakdown::contre1::78a08afefc63dbba": {
+  "date": "2026-10-12T18:47",
+  "verdict": {
+   "id": "o19",
+   "incompatible": false,
+   "motif": "amorti",
+   "justification": "La fiche décrit une alliance avec une entité résiduelle, ce qui est compatible avec un choc amorti. L'alliance peut persister sous une forme adaptée."
+  }
+ },
+ "destruction_geneve_2076::breakdown::contre1::1178fa560bc4f801": {
+  "date": "2026-10-12T18:47",
+  "verdict": {
+   "id": "o20",
+   "incompatible": false,
+   "motif": "amorti",
+   "justification": "Même raison que o19 : l'alliance peut persister malgré la transformation résiduelle."
+  }
+ },
+ "destruction_geneve_2076::breakdown::contre1::5cb1a5045e163633": {
+  "date": "2026-10-12T18:47",
+  "verdict": {
+   "id": "o21",
+   "incompatible": false,
+   "motif": "amorti",
+   "justification": "Même raison que o19 : l'alliance peut persister malgré la transformation résiduelle."
+  }
+ },
+ "destruction_geneve_2076::breakdown::contre1::77d87bffc1b77939": {
+  "date": "2026-10-12T18:47",
+  "verdict": {
+   "id": "o22",
+   "incompatible": false,
+   "motif": "amorti",
+   "justification": "Même raison que o19 : l'alliance peut persister malgré la transformation résiduelle."
+  }
+ },
+ "destruction_geneve_2076::breakdown::contre1::8c1bdcddd154a867": {
+  "date": "2026-10-12T18:47",
+  "verdict": {
+   "id": "o23",
+   "incompatible": false,
+   "motif": "amorti",
+   "justification": "Même raison que o19 : l'alliance peut persister malgré la transformation résiduelle."
+  }
+ },
+ "destruction_geneve_2076::breakdown::contre1::5e40fe69298c5e43": {
+  "date": "2026-10-12T18:47",
+  "verdict": {
+   "id": "o24",
+   "incompatible": true,
+   "fait": "materiel",
+   "motif": "contradiction",
+   "justification": "La fiche affirme une alliance avec une entité (Résidu AMSC) dont le siège physique à Genève est détruit en 2076, rendant impossible une alliance matérielle post-2076."
+  }
+ },
+ "destruction_geneve_2076::breakdown::contre1::187d5dab54a6018b": {
+  "date": "2026-10-12T18:47",
+  "verdict": {
+   "id": "o25",
+   "incompatible": false,
+   "motif": "nuance",
+   "justification": "Une opposition peut être symbolique ou résiduelle même après la disparition de l'entité cible. L'élément ne rend pas la relation impossible."
+  }
+ },
+ "destruction_geneve_2076::breakdown::contre1::0044997cfe66591a": {
+  "date": "2026-10-12T18:48",
+  "verdict": {
+   "id": "o26",
+   "incompatible": false,
+   "fait": "tendance",
+   "motif": "nuance",
+   "justification": "La fiche indique une opposition rompue avec le Résidu de Genève, qui est marqué comme disparu. L'élément perturbateur confirme la disparition physique de Genève, ce qui peut expliquer ou renforcer cette rupture, mais ne la contredit pas."
+  }
+ },
+ "destruction_geneve_2076::breakdown::contre1::0f89465e4b0cdb78": {
+  "date": "2026-10-12T18:48",
+  "verdict": {
+   "id": "o27",
+   "incompatible": true,
+   "fait": "materiel",
+   "motif": "contradiction",
+   "justification": "La fiche mentionne une alliance avec les Archives Neutres de Genève, qui n'existent plus physiquement après 2076. Une alliance active avec une entité détruite est impossible."
+  }
+ },
+ "destruction_geneve_2076::breakdown::contre1::a4e774ccad5c09ac": {
+  "date": "2026-10-12T18:48",
+  "verdict": {
+   "id": "o28",
+   "incompatible": true,
+   "fait": "materiel",
+   "motif": "contradiction",
+   "justification": "La fiche mentionne une alliance avec les Archives Neutres de Genève, qui n'existent plus physiquement après 2076. Une alliance active avec une entité détruite est impossible."
+  }
+ },
+ "destruction_geneve_2076::breakdown::contre1::8edc5cda5d3e3791": {
+  "date": "2026-10-12T18:48",
+  "verdict": {
+   "id": "o29",
+   "incompatible": true,
+   "fait": "materiel",
+   "motif": "contradiction",
+   "justification": "Les Archives Neutres de Genève n'existent plus physiquement après mars 2076, rendant impossible toute alliance active avec elles."
+  }
+ },
+ "destruction_geneve_2076::breakdown::contre1::a582bc8d717dc341": {
+  "date": "2026-10-12T18:48",
+  "verdict": {
+   "id": "o30",
+   "incompatible": true,
+   "fait": "materiel",
+   "motif": "contradiction",
+   "justification": "Les Archives Neutres de Genève n'existent plus physiquement après mars 2076, rendant impossible toute alliance active avec elles."
+  }
+ },
+ "destruction_geneve_2076::breakdown::contre1::7fe974307db37d8c": {
+  "date": "2026-10-12T18:48",
+  "verdict": {
+   "id": "o31",
+   "incompatible": true,
+   "fait": "materiel",
+   "motif": "contradiction",
+   "justification": "Les ONG de gestion migratoire survivantes ne peuvent plus être alliées à une entité disparue (les Archives Neutres de Genève)."
+  }
+ },
+ "destruction_geneve_2076::breakdown::contre1::bbf80ac95a225833": {
+  "date": "2026-10-12T18:48",
+  "verdict": {
+   "id": "o32",
+   "incompatible": true,
+   "fait": "materiel",
+   "motif": "contradiction",
+   "justification": "L'Oracle des Seuils ne peut plus être allié à une entité disparue (les Archives Neutres de Genève)."
+  }
+ },
+ "destruction_geneve_2076::breakdown::contre1::ea624884fcec36da": {
+  "date": "2026-10-12T18:48",
+  "verdict": {
+   "id": "o33",
+   "incompatible": true,
+   "fait": "materiel",
+   "motif": "contradiction",
+   "justification": "Le réseau des courriers nomades ne peut plus être allié à une entité disparue (les Archives Neutres de Genève)."
+  }
+ },
+ "destruction_geneve_2076::breakdown::contre1::0a6f1502ccc260b3": {
+  "date": "2026-10-12T18:48",
+  "verdict": {
+   "id": "o34",
+   "incompatible": true,
+   "fait": "materiel",
+   "motif": "contradiction",
+   "justification": "La Tour BCUC ne peut plus être alliée aux Archives Neutres de Genève, une entité disparue après 2076."
+  }
+ },
+ "destruction_geneve_2076::breakdown::contre1::f2b799c9cbdf2d54": {
+  "date": "2026-10-12T18:48",
+  "verdict": {
+   "id": "o35",
+   "incompatible": false,
+   "fait": "tendance",
+   "motif": "nuance",
+   "justification": "La fiche mentionne une alliance avec le Résidu de Genève, qui peut exister sous une forme non physique ou symbolique après 2076. L'élément perturbateur ne contredit pas cette possibilité."
+  }
+ },
+ "destruction_geneve_2076::breakdown::contre1::495f305ef8c6e6f1": {
+  "date": "2026-10-12T18:48",
+  "verdict": {
+   "id": "o36",
+   "incompatible": true,
+   "fait": "materiel",
+   "motif": "contradiction",
+   "justification": "La Chambre des Recours Algorithmiques ne peut plus être alliée aux Archives Neutres de Genève, une entité disparue après 2076."
+  }
+ },
+ "destruction_geneve_2076::breakdown::contre1::1213bc38d6445ded": {
+  "date": "2026-10-12T18:48",
+  "verdict": {
+   "id": "o37",
+   "incompatible": true,
+   "fait": "materiel",
+   "motif": "contradiction",
+   "justification": "La fiche affirme que le Résidu AMSC survit dans les sous-sols du Palais des Nations à Genève, alors que Genève est rasée en 2076 et aucun bâtiment ni sous-sol ne subsiste."
+  }
+ },
+ "destruction_geneve_2076::breakdown::contre1::9ebae583221e078c": {
+  "date": "2026-10-12T18:48",
+  "verdict": {
+   "id": "o38",
+   "incompatible": false,
+   "fait": "tendance",
+   "motif": "passé",
+   "justification": "La fiche situe la disparition des Protocoles Fantômes en 2049, avant la destruction de Genève en 2076. L'élément perturbateur ne contredit pas un fait antérieur."
+  }
+ },
+ "destruction_geneve_2076::breakdown::contre1::36bfd3dfd641f932": {
+  "date": "2026-10-12T18:48",
+  "verdict": {
+   "id": "o39",
+   "incompatible": false,
+   "fait": "tendance",
+   "motif": "nuance",
+   "justification": "La fiche décrit le Résidu de Genève comme un vestige institutionnel fragmenté, ce qui peut inclure une existence symbolique ou dématérialisée après 2076. L'élément perturbateur ne contredit pas cette interprétation."
+  }
+ },
+ "destruction_geneve_2076::breakdown::classement::5bb3acf3748c3859": {
+  "date": "2026-10-12T18:48",
+  "brut": {
+   "classement": [
+    {
+     "id": "f1",
+     "pourquoi": "Accélération de la fragmentation institutionnelle, substitution directe aux chaînes logistiques internationales"
+    },
+    {
+     "id": "f5",
+     "pourquoi": "Renforcement immédiat comme nœud décentralisé de référence pour la mémoire et les archives"
+    },
+    {
+     "id": "f3",
+     "pourquoi": "Devenir incontournable comme gardiens de la mémoire résiduelle après la perte des archives physiques"
+    },
+    {
+     "id": "f4",
+     "pourquoi": "Montée en puissance comme substituts locaux aux institutions sécuritaires disparues"
+    },
+    {
+     "id": "f27",
+     "pourquoi": "Alliance nouvelle avec les Gardiens-Archivistes pour préserver des données migratoires critiques"
+    },
+    {
+     "id": "f12",
+     "pourquoi": "Alliance rompue avec les Archives Neutres et pivot vers les Gardiens-Archivistes pour la continuité des secours"
+    },
+    {
+     "id": "f30",
+     "pourquoi": "Légitimité renforcée comme acteurs alternatifs de géo-ingénierie dans le vide institutionnel"
+    },
+    {
+     "id": "f34",
+     "pourquoi": "Rôle accru comme héritières des pactes énergétiques dans l'absence de recentralisation"
+    },
+    {
+     "id": "f36",
+     "pourquoi": "Précarisation accrue des pactes d'accueil régionaux, amplification des flux non intégrables"
+    },
+    {
+     "id": "f42",
+     "pourquoi": "Élargissement du rôle humanitaire en comblant le vide laissé par les institutions multilatérales"
+    },
+    {
+     "id": "f43",
+     "pourquoi": "Accentuation de la dislocation des réseaux informationnels comme Mnemos"
+    },
+    {
+     "id": "f40",
+     "pourquoi": "Fragmentation accrue des prédictions de l'Oracle après la perte des archives centrales"
+    },
+    {
+     "id": "f41",
+     "pourquoi": "Rôle élargi des cartographes des zones grises dans un monde plus fragmenté"
+    },
+    {
+     "id": "f33",
+     "pourquoi": "Pression accrue sur les stocks nationalisés en l'absence de coordination globale"
+    },
+    {
+     "id": "f37",
+     "pourquoi": "Absence de régulation renforçant les logiques extractives et la résistance aux péages"
+    },
+    {
+     "id": "f28",
+     "pourquoi": "Disparition du Résidu de Genève, rendant obsolète toute référence à ce vestige"
+    },
+    {
+     "id": "f6",
+     "pourquoi": "Disparition du bunker des institutions genevoises, rendant toute alliance impossible"
+    },
+    {
+     "id": "f13",
+     "pourquoi": "Opposition et alliances rompues avec le Résidu de Genève et les Archives Neutres"
+    },
+    {
+     "id": "f14",
+     "pourquoi": "Opposition rompue avec les Archives Neutres, acteur déstabilisateur central"
+    },
+    {
+     "id": "f31",
+     "pourquoi": "Capacité renforcée à monnayer l'accès aux droits de propriété intellectuelle"
     }
    ]
   }

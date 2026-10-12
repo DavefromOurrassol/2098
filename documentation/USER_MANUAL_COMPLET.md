@@ -1,6 +1,11 @@
 # Manuel utilisateur complet — Pipeline Ourrassol 2098
 *Référence à jour au 3 septembre 2026, complétée au fil des sessions
-(dernier ajout : 11 octobre 2026 — §3 `inject_custom_events.py` : valeurs
+(dernier ajout : 12 octobre 2026 — §3quinquies : passe exhaustive branchée
+dans le simulateur (v8.16 → v8.16.2, case du GUI), étape « décider »
+(v8.17 → v8.17.1, `et_si_dossiers.py`, panneau « ⚖️ Décider ») ; §3
+`inject_custom_events.py` : ⚠ des variables corrigé, `acteurs_hint` par
+scénario ; GUI : titres des panneaux `.md` ouverts dans Obsidian, option
+`lien_seul` ; précédent : 11 octobre — §3 `inject_custom_events.py` : valeurs
 imposées (`impacts_imposes`, `date_imposee`, `via_matrice_impose`) ;
 §3quinquies : simulateur v8.15, passe exhaustive `et_si_exhaustif.py` v9.5
 (obligatoire / possible, contre-lecture, possibles prioritaires), export et
@@ -1899,9 +1904,12 @@ part en `needs_review`, rien n'est corrigé en silence. Le prompt de l'étape 2
 reçoit un bloc « VALEURS IMPOSÉES » (l'IA rédige le récit, pas les chiffres) et
 `appliquer_impositions()` remet impacts, date et propagation après la
 réponse, scénario par scénario (⚠ si l'IA juge l'événement impossible dans un
-scénario). Connu : le ⚠ « N variables reçues au lieu de 4 max » s'affiche à
-tort quand les impacts sont imposés (la troncature passe avant la reprise des
-variables imposées) — sans effet sur l'écriture.
+scénario). Corrigé le 12 oct (`patch_s27_v8162.py`, `.bak_v8162`) : plus de
+troncature ni de ⚠ « N variables reçues au lieu de 4 max » quand les impacts
+sont imposés. **`acteurs_hint` par scénario** (même patch) : un slug suffixé
+d'un autre scénario (`…_breakdown` dans policy_reform) n'est pas imposé dans
+ce scénario — l'entrée commune du simulateur porte les acteurs de tous ses
+scénarios (`QUEUE_TEMPLATE` le dit).
 
 ### `inject_custom_signals.py` 🔁 🧩 *(mise à jour en profondeur le 26 juillet 2026)*
 Injecte des signaux faibles custom (`signaux_custom/queue.yaml`) dans les fiches variables, au format `signal_to_state` (6 scénarios) + annotation section 7. Validation mécanique (comptage de mots, fenêtres de dates, collisions), jusqu'à 2 retries. Tier `structured_strict`.
@@ -2961,7 +2969,7 @@ souvent les sources ; Gemini a inventé des URL (9/10 en 404 lors d'un essai).
 
 ---
 
-## 3quinquies. Simulateur « et si ? » (S27, 9-11 octobre 2026)
+## 3quinquies. Simulateur « et si ? » (S27, 9-12 octobre 2026)
 
 Tester l'effet d'un élément perturbateur sur le lore **avant** de l'injecter.
 **Lecture seule** : rien n'est écrit dans le vault, à part le rapport
@@ -2969,16 +2977,19 @@ Tester l'effet d'un élément perturbateur sur le lore **avant** de l'injecter.
 `et_si_dernier_lancement.md`, affichée dans le GUI), l'état
 `generator/state/dernier_et_si.json`, le cache IA
 `generator/state/et_si_consequences.json` et les rapports d'impact de la
-Carte (`documentation/need_action/impact_bascule_*.md`). Seule exception :
+Carte (`documentation/need_action/impact_bascule_*.md`), le cache de la passe
+exhaustive (`generator/state/et_si_exhaustif.json`) et le dossier de chaque
+hypothèse (`generator/state/et_si_dossiers.json`, v8.17). Exceptions :
 l'assistant « Nouvelle hypothèse » ajoute des hypothèses à
-`et_si/hypotheses.yaml`. Version affichée dans le rapport (« simulateur
-v8.15 » au 11 oct).
+`et_si/hypotheses.yaml` ; « Adopter » écrit une entrée dans
+`evenements_custom/queue.yaml`. Version affichée dans le rapport
+(« simulateur v8.17.1 » au 12 oct).
 
 **Pipeline visé (11 oct)** : 1. **tester** (simulation, puis en option la
 passe exhaustive), 2. **décider**, 3. **injecter** l'événement tel qu'il a été
 simulé (valeurs imposées, §3 `inject_custom_events.py`) ; plus tard, appliquer
-aussi les conséquences retenues (phase 4). L'étape « décider » n'est pas encore
-outillée.
+aussi les conséquences retenues (phase 4). L'étape « décider » est outillée
+depuis le 12 oct (v8.17, « Étape « décider » » plus bas).
 
 ### Dans le GUI — « 🔮 Simulateur « et si ? » » (section des outils de suivi, après « Tracer »)
 Deux onglets (`--mode simuler | nouvelle`) :
@@ -2986,12 +2997,18 @@ Deux onglets (`--mode simuler | nouvelle`) :
   **Hypothèse** (liste déroulante « nom (date) », « ⚠ invalide » si mal
   remplie ; « Aucun » = liste des hypothèses), Effet mesuré en (2098 par
   défaut), **Lecture IA** (payant, ≈ 1-2 centimes par scénario, cache),
-  **Nouveau tirage** (`--refaire`), et en options avancées **Récit IA**. Le
+  **Passe exhaustive** (`--passe-exhaustive`, payant, ≈ 0,05 à 0,11 $ par
+  scénario, cache ; 12 oct ; à cocher avec la lecture IA, qui lui sert de
+  contexte), **Nouveau tirage** (`--refaire`, relance aussi la passe), et en
+  options avancées **Récit IA**. Le
   rapport est toujours écrit (`--report` en argument fixe). Choisir le
   scénario **avant** l'hypothèse : changer de scénario recharge la liste.
-  Fichiers du panneau : `et_si/hypotheses.yaml` (éditable) et le rapport du
-  dernier lancement (lecture seule ; au tout premier lancement, recharger la
-  page pour le voir apparaître).
+  La liste affiche le statut du dossier (« nom · simulé (date) », rien si
+  « non simulé »). Fichiers du panneau (option `lien_seul`, 12 oct) : seul leur
+  nom s'affiche, cliquable — `et_si/hypotheses.yaml ↗` s'ouvre dans Visual
+  Studio Code, « Rapport du dernier lancement ↗ » dans Obsidian (au tout
+  premier lancement, recharger la page pour voir le rapport). Sous le
+  formulaire, le panneau **⚖️ Décider** (« Étape « décider » » plus bas).
 - **Nouvelle hypothèse** : panneau ✨. On écrit l'idée librement (« à partir
   de 2040, les IA font 60 % du travail salarié »), **✨ Proposer** (un appel
   IA) remplit un bloc YAML complet, modifiable, avec ⚠ et justification ;
@@ -3010,7 +3027,12 @@ python3 generator/simuler_et_si.py --lister                 # hypothèses
 python3 generator/simuler_et_si.py --lister --json          # + erreurs de saisie (liste du GUI)
 python3 generator/simuler_et_si.py --id <id> --report       # niveaux + carte, 6 scénarios
 python3 generator/simuler_et_si.py --id <id> --consequences-ia --report
+python3 generator/simuler_et_si.py --id <id> --consequences-ia --passe-exhaustive --report   # v8.16
 # options : --scenario X | --date 2070 (défaut 2098) | --recit-ia | --json | --refaire
+python3 generator/simuler_et_si.py --dossiers                                      # v8.17 : statuts
+python3 generator/simuler_et_si.py --adopter <id> --portee regionale --intensite majeure --apercu
+python3 generator/simuler_et_si.py --rejeter <id> --motif "…"
+python3 generator/simuler_et_si.py --annuler-decision <id>
 ```
 Trois étages :
 - **A — niveaux** : `dynamique.simuler()` de 2025 à la date choisie, avec et
@@ -3251,6 +3273,12 @@ de `scenarios` et d'`impacts_imposes`) ; ⚠ si une force dépasse le plafond
 d'un événement custom (25 : l'injection refuserait l'entrée). Mode rupture :
 seule la date est imposée. L'étape « Élément » devient « Vérifier que la fiche
 porte les forces simulées ».
+Depuis la v8.16.2 (12 oct), l'entrée porte aussi **`acteurs_hint`** : les
+entités les plus touchées de chaque scénario, 4 au plus par scénario (poids :
+trajectoire de la lecture IA 2, trajectoire obligatoire de la passe 3, texte
+obligatoire 2, extrémité d'une relation obligatoire 1), et
+`acteurs_hint_count` = le plus grand nombre retenu dans un scénario. Chaque
+slug ne vaut que pour son scénario (§3 `inject_custom_events.py`).
 
 ### Passe exhaustive — `et_si_exhaustif.py` 🔁 (v9.5, 11 oct)
 Complète la lecture IA du simulateur, qui ne montre à l'IA qu'une partie des
@@ -3259,8 +3287,9 @@ scénario et tous les événements datés après l'hypothèse (hors l'archétype
 l'hypothèse), par lots de 15. Lecture seule ; cache
 `generator/state/et_si_exhaustif.json`. Coût : ≈ 0,05 à 0,11 $ par scénario
 (Mistral Large 3, tier `structured_strict`), plus 1 à 2 centimes de
-contre-lecture et de classement. Pas encore branchée dans le simulateur ni le
-GUI.
+contre-lecture et de classement. Branchée dans le simulateur le 12 oct
+(`--passe-exhaustive`, case du GUI : « Passe dans le simulateur » plus bas) ;
+reste utilisable seule.
 
 ```bash
 python3 generator/et_si_exhaustif.py --id <hypothèse> --scenario <scénario> --estimer   # coût, aucun appel
@@ -3340,6 +3369,78 @@ Marche à suivre après une modification de `et_si_exhaustif.py` :
 3. viser 26/27 ou mieux ; « appels manquants » > 0 = étape 1 oubliée.
 Une autre session peut tout rejouer avec l'export et le dossier `rejeu/`.
 
+### Passe dans le simulateur (v8.16 → v8.16.2, 12 oct)
+`--passe-exhaustive` (case « Passe exhaustive » du GUI) lance la passe pour
+chaque scénario simulé, après la lecture IA, avant la liste d'application.
+Contexte : la lecture IA de ce lancement, sinon celle du cache, sinon aucune
+(avertissement : cocher aussi la lecture IA). **La passe dépend de ce
+contexte** : une lecture nouvelle relance toute la passe (≈ 0,10 $) et peut
+changer le résultat (Genève : 24 obligatoires sans lecture, 14 avec ; banc
+toujours 26/27). Une erreur de la passe n'empêche jamais le rapport. Le
+rapport affiche la section de la passe après la lecture IA, puis la liste,
+qui intègre :
+- **obligatoires** : trajectoires (disparitions) en « Trajectoires »,
+  relations en « Relations », textes en « Fiches à relire » (« Corriger une
+  phrase de `slug` »), tous marqués « [passe exhaustive] » ;
+- **relations rompues d'une entité disparue** (lecture ou passe) : une étape
+  par entité ; une relation rompue qui invoque une disparition (« disparu »,
+  « détruit », « n'existe plus ») alors que l'entité n'est déclarée disparue
+  nulle part est marquée **⚠** (garder la relation, ou faire disparaître
+  l'entité) — deux tirages IA qui se contredisent, signalés sans règle IA ;
+- **« Possibles (facultatif) »** (nouvelle section après « Fiches à relire ») :
+  les 20 possibles prioritaires, puis « … et N autre(s) » ;
+- **recherche par mots** (9 bis) : avec la passe, elle ne cite plus les
+  instances ni les événements (déjà relus), seulement zones et registre
+  (v8.16.1) ;
+- **`acteurs_hint`** de l'injection commune (ci-dessus).
+
+### Étape « décider » — `et_si_dossiers.py` (v8.17 → v8.17.1, 12 oct)
+Chaque simulation (ligne de commande ou GUI) enregistre le **dossier** de
+l'hypothèse dans `generator/state/et_si_dossiers.json` : date, version,
+empreinte du bloc tel qu'écrit dans `hypotheses.yaml`, scénarios simulés
+(« complet » si tous ceux de l'hypothèse), passe, rapport et entrée
+d'injection commune. Seules les simulations faites depuis la v8.17 comptent.
+
+**Statut**, calculé à chaque lecture (jamais stocké, donc juste même après un
+`undo_custom.py`) : non simulé · simulé · rejeté · adopté, en attente
+d'injection (entrée dans `queue.yaml`) · injecté (fichiers
+`event_instances/<id>_<scénario>.md` de tous les scénarios) · injecté
+partiellement (— à revoir) · à revoir (`needs_review.yaml`) · adopté, absent
+de la queue.
+
+**Décisions** :
+- **Adopter** (`--adopter <id>`, `--portee`, `--intensite`, `--apercu`) :
+  écrit dans `evenements_custom/queue.yaml` l'entrée de la **dernière
+  simulation complète**, telle quelle (on n'injecte que ce qui a été testé) ;
+  `portee` (locale | regionale | continentale | globale) exigée si la
+  simulation l'a laissée à choisir, `intensite` (faible | modérée | forte |
+  majeure) toujours. Refus : jamais simulée, hypothèse modifiée depuis,
+  simulation limitée par `--scenario`, pas d'entrée (hypothèse sans impact),
+  déjà adoptée ou injectée, entrée de même id dans la queue, événement déjà
+  dans le vault. Queue réécrite par `save_queue_with_template()` (en-tête
+  modèle conservé), sauvegarde `queue.yaml.bak_et_si`, relue après écriture.
+  **L'injection reste à lancer à part** : `inject_custom_events.py --mode
+  custom` (payant ; elle traite toute la queue).
+- **Rejeter** (`--rejeter <id> --motif "…"`) : trace et motif.
+- **Annuler la décision** (`--annuler-decision <id>`) : retour à « simulé » ;
+  retire de la queue l'entrée adoptée pas encore injectée (même id **et**
+  source `et_si_<id>` ; une entrée écrite à la main reste, signalée) ; ne
+  touche jamais au vault — pour un événement injecté, la commande
+  `undo_custom.py` est rappelée.
+- **`--dossiers`** : statut de chaque hypothèse, date et version de la
+  simulation, décision et motif, « ⚠ hypothèse modifiée depuis cette
+  simulation ». `--lister` affiche aussi le statut.
+
+**Dans le GUI** — panneau **⚖️ Décider** (mode « Simuler », sous le
+formulaire ; route `/api/et_si/decider/<action>` d'`app.py`, qui appelle
+`simuler_et_si.py`) : agit sur l'hypothèse choisie dans la liste. Menus
+Portée (« — celle de la simulation — ») et Intensité ; **Aperçu de
+l'adoption** (n'écrit rien) ; **Adopter** (confirmation) ; motif +
+**Rejeter** ; **Annuler la décision** (confirmation) ; **Voir les dossiers**.
+La sortie s'affiche dans le panneau (en rouge si refus) ; après une décision,
+la liste se recharge avec le nouveau statut et garde l'hypothèse choisie.
+Aucun appel IA.
+
 ### Fichiers
 `generator/simuler_et_si.py` (v8.15 au 11 oct, `.bak_v815`), `generator/hypothese_depuis_texte.py`
 (nouveau, 10 oct), `et_si/hypotheses.yaml` (+ `destruction_geneve_2076` le 11 oct).
@@ -3355,6 +3456,15 @@ simulateur : `generator/dynamique.py` (paramètre `ruptures`, `.bak_v74`),
 pour le récit (`.bak_recit`, `.bak_recit2`). Réutilise `trace_injection.py`, `snapshot.py`,
 `loader.py`, `gui/zone_repository.py` (chargé par importlib, sans Flask),
 `generator/journaux.yaml`.
+Le 12 oct : `generator/et_si_dossiers.py` (nouveau) ; `simuler_et_si.py`
+v8.16 → v8.17.1 (`.bak_v816`, `.bak_v8161`, `.bak_v8162`, `.bak_v817`,
+`.bak_gui_decider`) ; `inject_custom_events.py` (`.bak_v8162`) ; `gui/app.py`,
+`gui/static/app.js`, `gui/scripts_config.json` (`.bak_gui_passe`,
+`.bak_gui_decider`, `.bak_obsidian`, `.bak_lien_seul`). Patchs appliqués, qui
+refusent un second passage : `patch_s27_v816.py`, `patch_s27_v8161.py`,
+`patch_s27_v8162.py`, `patch_s27_gui_passe.py`, `patch_s27_v817.py`,
+`patch_s27_gui_decider.py`, `patch_gui_obsidian_panneaux.py`,
+`patch_gui_lien_seul.py`. Créé à l'usage : `generator/state/et_si_dossiers.json`.
 
 ---
 
@@ -4136,6 +4246,11 @@ En plus de `mode_only`/`depends_on`/`required_one_of`/`required_if` déjà docum
 
 #### `copyable` — boutons Copier / Télécharger (28 septembre 2026)
 Sur une entrée `yaml_files` : `"copyable": true` ajoute 📋 Copier et ⬇ Télécharger .md (fichier relu sur le disque au clic). Utilisé pour les prompts de veille (§3quater).
+
+#### Titres `.md` → Obsidian et `lien_seul` (12 octobre 2026)
+- **Tous les panneaux de fichiers** : le titre d'un fichier `.md` porte « ↗ » et, au clic, ouvre le fichier dans Obsidian (`_panneauOuvrirDansObsidian()`, même lien `obsidian://open?vault=…&file=…` que les boutons « Ouvrir dans Obsidian » ; nom du vault = dernier segment de `vault_root`). `patch_gui_obsidian_panneaux.py`.
+- **`"lien_seul": true`** sur une entrée `yaml_files` : le panneau ne montre que le nom du fichier (contenu et boutons masqués, mais toujours chargés : le reste du GUI qui recharge le panneau fonctionne). `.md` → Obsidian ; autre extension → **Visual Studio Code**, par la route `POST /api/ouvrir_vscode` (`open -a "Visual Studio Code"`, macOS, fichier du vault seulement ; erreur affichée sous le titre). Obsidian n'affiche pas le YAML sans plugin. Activé pour les deux panneaux du simulateur « et si ? » (§3quinquies). `patch_gui_lien_seul.py`.
+- Contrôle de syntaxe des patchs JS : le node de l'iMac est trop ancien pour `app.js` entier (`||=`) ; les patchs ne vérifient alors que le code ajouté.
 
 #### Nouveaux mécanismes génériques (31 juillet 2026)
 

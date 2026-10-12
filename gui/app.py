@@ -156,6 +156,35 @@ def get_script(script_id: str):
 
 # ── API YAML viewer/editor ───────────────────────────────────────────────────
 
+# PATCH_GUI_LIEN_SEUL (12 octobre 2026) : panneaux « lien_seul » -- ouvre un
+# fichier du vault (jamais en dehors) dans Visual Studio Code, sur le Mac où
+# tourne le GUI. N'écrit rien.
+@app.route("/api/ouvrir_vscode", methods=["POST"])
+def ouvrir_vscode():
+    cfg = load_config()
+    vault_root = Path(cfg.get("vault_root", ""))
+    rel_path = str((request.get_json() or {}).get("path") or "")
+    if not rel_path:
+        return jsonify({"error": "Paramètre path manquant"}), 400
+    target = (vault_root / rel_path).resolve()
+    try:
+        target.relative_to(vault_root.resolve())
+    except ValueError:
+        return jsonify({"error": "Chemin non autorisé"}), 403
+    if not target.exists():
+        return jsonify({"error": f"fichier absent : {rel_path}"}), 404
+    if sys.platform != "darwin":
+        return jsonify({"error": "ouverture dans Visual Studio Code prévue pour macOS seulement"}), 501
+    try:
+        r = subprocess.run(["open", "-a", "Visual Studio Code", str(target)],
+                           capture_output=True, text=True, timeout=20)
+    except (OSError, subprocess.TimeoutExpired) as e:
+        return jsonify({"error": f"ouverture impossible : {e}"}), 500
+    if r.returncode != 0:
+        return jsonify({"error": f"Visual Studio Code introuvable ? {r.stderr.strip()[-300:]}"}), 500
+    return jsonify({"ok": True})
+
+
 @app.route("/api/yaml", methods=["GET"])
 def get_yaml():
     cfg = load_config()
@@ -2869,6 +2898,50 @@ def et_si_assistant(action):
     if payload.get("error"):
         return jsonify({"error": payload["error"]}), 500
     return jsonify(payload)
+
+
+# ---------------------------------------------------------------------------
+# Simulateur « et si ? » v8.17.1 (12 octobre 2026, PATCH_S27_GUI_DECIDER) --
+# panneau « Décider » : appelle simuler_et_si.py --dossiers / --adopter /
+# --rejeter / --annuler-decision (et_si_dossiers.py). Aucun appel IA ; seul
+# « adopter » (sans apercu) écrit, dans evenements_custom/queue.yaml
+# (sauvegarde .bak_et_si) ; « annuler » peut en retirer l'entrée adoptée.
+# ---------------------------------------------------------------------------
+
+ACTIONS_DECIDER = {"dossiers": "--dossiers", "adopter": "--adopter",
+                   "rejeter": "--rejeter", "annuler": "--annuler-decision"}
+
+
+@app.route("/api/et_si/decider/<action>", methods=["POST"])
+def et_si_decider(action):
+    if action not in ACTIONS_DECIDER:
+        return jsonify({"error": f"action inconnue : {action}"}), 404
+    cfg = load_config()
+    pipeline_dir = Path(cfg.get("pipeline_dir", ""))
+    data = request.get_json() or {}
+    hid = str(data.get("id") or "").strip()
+    cmd = [sys.executable, "simuler_et_si.py", ACTIONS_DECIDER[action]]
+    if action != "dossiers":
+        if not hid:
+            return jsonify({"error": "choisis d'abord une hypothèse dans la liste"}), 400
+        cmd.append(hid)
+    if action == "adopter":
+        for cle in ("portee", "intensite"):
+            if data.get(cle):
+                cmd += [f"--{cle}", str(data[cle])]
+        if data.get("apercu"):
+            cmd.append("--apercu")
+    if action == "rejeter" and str(data.get("motif") or "").strip():
+        cmd += ["--motif", str(data["motif"]).strip()]
+    try:
+        resultat = subprocess.run(cmd, cwd=pipeline_dir, capture_output=True, text=True,
+                                  timeout=120, stdin=subprocess.DEVNULL)
+    except subprocess.TimeoutExpired:
+        return jsonify({"error": "Délai dépassé (120 s)"}), 504
+    except FileNotFoundError:
+        return jsonify({"error": f"simuler_et_si.py introuvable dans {pipeline_dir}"}), 500
+    sortie = "\n".join(s for s in (resultat.stdout.strip(), resultat.stderr.strip()) if s)
+    return jsonify({"ok": resultat.returncode == 0, "sortie": sortie})
 
 
 TIMEOUT_IDEES_TEXTE_LIBRE = 180  # secondes -- un seul appel LLM

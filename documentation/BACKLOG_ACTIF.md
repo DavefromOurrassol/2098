@@ -33,7 +33,10 @@ rattaché au Brésil, S19 mis à jour, résidu de `needs_review` signaux vidé ;
 le 11 octobre : S27 avancé — pipeline « tester avant d'injecter » : impositions
 à l'injection, simulateur v8.15, passe exhaustive `et_si_exhaustif.py` v9.5,
 export et banc de rejeu avec liste de référence (26/27) —, doublons probables
-ajoutés à S24), mis à jour en continu
+ajoutés à S24 ; le 12 octobre : S27 avancé — passe exhaustive branchée dans
+le simulateur (v8.16 → v8.16.2, case GUI), ⚠ des variables corrigé, étape
+« décider » outillée (v8.17 → v8.17.1, `et_si_dossiers.py`, panneau GUI),
+panneaux de fichiers du GUI ouverts dans Obsidian ou VS Code), mis à jour en continu
 à chaque clôture de session. Chantiers clos et leur historique complet
 dans `BACKLOG_ARCHIVE.md` (fichier séparé, à uploader seulement en cas
 de besoin de vérifier si un point a déjà été traité). Chaque chantier
@@ -697,12 +700,15 @@ Mode Forcer, champ « Journal d'une autre zone » (liste déroulante,
 
 ---
 
-## 🟡 S27. Simulateur « et si ? » et pipeline d'injection — v8.15 et passe exhaustive v9.5 le 11 oct
-**Fait les 9, 10 et 11 oct** (manuel §3quinquies, `HANDOFF_9_OCTOBRE.md`,
-`HANDOFF_10_OCTOBRE.md`, `HANDOFF_11_OCTOBRE.md`) : `generator/simuler_et_si.py`
-(v8.15), `generator/hypothese_depuis_texte.py`, `generator/et_si_exhaustif.py`
-(v9.5), `generator/export_et_si.py`, `generator/rejeu/`, `et_si/hypotheses.yaml`.
-Lecture seule (seul l'assistant ajoute des hypothèses au fichier YAML).
+## 🟡 S27. Simulateur « et si ? » et pipeline d'injection — v8.17.1 : passe branchée et étape « décider » le 12 oct
+**Fait du 9 au 12 oct** (manuel §3quinquies, `HANDOFF_9_OCTOBRE.md` à
+`HANDOFF_12_OCTOBRE.md`) : `generator/simuler_et_si.py` (v8.17.1),
+`generator/hypothese_depuis_texte.py`, `generator/et_si_exhaustif.py` (v9.5),
+`generator/et_si_dossiers.py` (12 oct), `generator/export_et_si.py`,
+`generator/rejeu/`, `et_si/hypotheses.yaml`. Lecture seule, sauf l'assistant
+(ajoute des hypothèses), le dossier de chaque hypothèse
+(`generator/state/et_si_dossiers.json`) et « Adopter » (écrit dans
+`evenements_custom/queue.yaml`).
 - **Étage A — niveaux** avec / sans, en **mode choc** (amorti) ou **mode
   rupture** (v7.4 : l'équilibre du scénario se déplace pour de bon).
 - **Étage B — lecture IA** contrôlée ; carte seulement si un territoire
@@ -711,56 +717,59 @@ Lecture seule (seul l'assistant ajoute des hypothèses au fichier YAML).
 - **Étage C — carte en aperçu** : absorber, nouvelle zone, **partition**
   (v7, modèles France / Allemagne), **région** (v7.6, sous-zone sans
   changement de mains).
-- **GUI** (v7.7 → v7.8.1) : entrée « 🔮 Simulateur « et si ? » », onglets
-  Simuler (liste déroulante) et Nouvelle hypothèse (assistant ✨ Proposer /
-  Vérifier / Ajouter, garde-fous contre les doublons).
-- **Phase 3 — liste d'application** (v8 → v8.14, 10 oct) : étapes à cocher
-  par scénario, commande ou « à la main » ; entrée d'injection commune en fin
-  de rapport. **Statut : en service, non validée** — aucune liste n'a encore
-  été appliquée pour de vrai.
-- **Pipeline « tester avant d'injecter » (11 oct)** — option (a) d'abord
-  (injecter l'événement fidèle à la simulation), étape vers (b) (appliquer aussi
-  les conséquences) :
+- **GUI** : entrée « 🔮 Simulateur « et si ? » », onglets Simuler et Nouvelle
+  hypothèse (assistant ✨) ; case **Passe exhaustive** (12 oct) ; panneau
+  **⚖️ Décider** (12 oct) ; statut du dossier dans la liste des hypothèses ;
+  panneaux réduits au nom du fichier (`hypotheses.yaml` → VS Code, rapport →
+  Obsidian, 12 oct).
+- **Phase 3 — liste d'application** (v8 → v8.14, 10 oct). **Statut : en
+  service, non validée** — aucune liste n'a encore été appliquée pour de vrai.
+- **Pipeline « tester → décider → injecter »** (11-12 oct, option (a) d'abord,
+  étape vers (b)) :
   - **impositions** dans `inject_custom_events.py` (`impacts_imposes`,
-    `date_imposee`, `via_matrice_impose`, contrôlés avant tout appel IA) ;
-  - **v8.15** : l'entrée commune du rapport les transmet (tous les scénarios de
-    l'hypothèse ; rupture : date seule) ;
-  - **passe exhaustive** (`et_si_exhaustif.py`, v9.5, ≈ 0,05-0,11 $ par
-    scénario) : toutes les fiches relues, chaque changement **obligatoire**
-    (la fiche devient fausse) ou **possible** ; contrôles qui rétrogradent ;
-    contre-lecture des obligatoires (passé intouchable, choc amorti + fait de
-    tendance rétrogradé par le code) ; 20 possibles prioritaires choisis par
-    l'IA ;
-  - **banc de rejeu** (`export_et_si.py`, `generator/rejeu/`) : six cas,
-    liste de référence validée par David, **26/27 verdicts conformes** (écart
-    toléré : RPDA en breakdown).
+    `date_imposee`, `via_matrice_impose`) ; v8.15 : l'entrée commune du
+    rapport les transmet ;
+  - **passe exhaustive** (`et_si_exhaustif.py` v9.5, ≈ 0,05-0,11 $ par
+    scénario) : obligatoire / possible, contre-lecture, 20 possibles
+    prioritaires ; **banc de rejeu** : 26/27 verdicts conformes (inchangé le
+    12 oct) ;
+  - **passe branchée dans le simulateur** (v8.16 → v8.16.2, 12 oct) :
+    obligatoires dans la liste d'application (« [passe exhaustive] »), 20
+    possibles prioritaires en section « Possibles (facultatif) », relations
+    rompues d'une entité disparue regroupées, pas de doublon avec la recherche
+    par mots, ⚠ sur une relation rompue « parce que l'entité a disparu » alors
+    qu'elle n'est déclarée disparue nulle part ; `acteurs_hint` de l'entrée
+    commune = entités les plus touchées, 4 au plus par scénario ;
+  - **`inject_custom_events.py`** (12 oct) : ⚠ « N variables reçues au lieu de
+    4 max » supprimé quand les impacts sont imposés ; un `acteurs_hint` d'un
+    autre scénario n'est pas imposé ;
+  - **étape « décider »** (v8.17 → v8.17.1, 12 oct) : `--dossiers`,
+    `--adopter <id> --portee … --intensite … [--apercu]`, `--rejeter <id>
+    --motif …`, `--annuler-decision <id>` ; statut calculé à la lecture (non
+    simulé, simulé, rejeté, adopté en attente d'injection, injecté,
+    injecté partiellement, à revoir, adopté absent de la queue) ; adoption
+    refusée si la simulation est partielle ou si l'hypothèse a changé depuis.
+    Validé en ligne de commande et dans le GUI sur Genève (adoptée puis
+    décision annulée : Genève est « simulé », la queue est vide).
 Reste, dans l'ordre proposé :
-1. **Brancher la passe dans le simulateur** (`--passe-exhaustive`) :
-   obligatoires dans la liste d'application, 20 possibles prioritaires en
-   étapes facultatives, marquées « passe exhaustive » ; entités les plus
-   touchées en `acteurs_hint` (4 au plus) dans l'entrée d'injection ;
-   regrouper les alliances rompues qui découlent d'une disparition (Genève :
-   24).
-2. **⚠ « N variables reçues au lieu de 4 max »** à faire taire dans
-   `inject_custom_events.py` quand les impacts sont imposés (troncature avant
-   la reprise des variables imposées ; message trompeur).
-3. **Étape « décider »** : statuts du dossier simulé (simulé → adopté / rejeté
-   → injecté).
-4. **Appliquer une liste pour de vrai**, au moins une fois — sur une
-   hypothèse à adopter ou sur une copie du vault. Seule validation possible
-   de la phase 3 et préalable à la phase 4 (option b) ; une partie des étapes
-   est payante. Trous qui restent « à la main » : migration des journaux d'une
+1. **Appliquer une liste pour de vrai**, au moins une fois — candidat :
+   `destruction_geneve_2076` (adopter, injecter, puis dérouler sa liste
+   d'application), ou une copie du vault. Seule validation possible de la
+   phase 3 et préalable à la phase 4 (option b) ; une partie des étapes est
+   payante. Premier passage réel aussi pour le statut « injecté » des
+   dossiers. Trous qui restent « à la main » : migration des journaux d'une
    zone morte, statuts de zone, trajectoires, relations rompues, catégorie des
-   nouvelles entités, `portee` et `intensite` de l'entrée d'injection.
-5. **Décision S19 — mode rupture dans le vrai moteur** : la liste propose de
+   nouvelles entités.
+2. **Décision S19 — mode rupture dans le vrai moteur** : la liste propose de
    changer la référence à la main (`variables/*.md`) et de créer l'événement
    pour le récit sans impact chiffré ; l'autre voie est de faire évoluer
    `snapshot` / Tracer.
-6. **Amplitude des chocs** (`GAIN_CHOCS`, voir S19) à juger avant tout
+3. **Amplitude des chocs** (`GAIN_CHOCS`, voir S19) à juger avant tout
    réglage.
-7. **Anomalies de données** relevées par le simulateur et la passe (voir S24).
-8. Optionnel : **homonymes** (Santa Cruz, Sucre, Perth, Medina) ; **synthèse
-   haut niveau** le jour où le besoin existe.
+4. **Anomalies de données** relevées par le simulateur et la passe (voir S24).
+5. Optionnel : **homonymes** (Santa Cruz, Sucre, Perth, Medina) ; **synthèse
+   haut niveau** le jour où le besoin existe ; option GUI `lien_seul` à
+   étendre à d'autres panneaux si besoin.
 Méthode de réglage de la passe : banc de rejeu d'abord (gratuit) ; une
 consigne IA modifiée (`VERSION_PROMPT`, `VERSION_CONTRE`, `VERSION_CLASSEMENT`)
 demande une relance réelle des six cas puis un export (manuel §3quinquies).
@@ -769,12 +778,15 @@ aux villes de plus d'un million (`villes_principales.json`, en anglais ; table
 française d'environ 110 noms dans le simulateur) ; régions cherchées seulement
 par le nom court des sous-zones du vault ; homonymes possibles ; recherche par
 mots inopérante pour une hypothèse mondiale (la passe exhaustive y répond).
-Limites connues : la lecture IA varie d'un tirage à l'autre ; le classement des
-possibles aussi (aide à la lecture, pas une décision) ; l'IA applique souvent
-le même partage de polarités (3 mondes « durs » / 3 « doux ») ; le mode
-rupture vaut pour toute l'hypothèse ; près des bornes (breakdown,
-fortress_world), même une rupture bouge peu ; un slug mal orthographié par
-l'IA reste écarté.
+Limites connues : la lecture IA varie d'un tirage à l'autre ; **la passe en
+dépend** (elle lui sert de contexte : une nouvelle lecture relance toute la
+passe, ≈ 0,10 $, et change le résultat — Genève : 24 obligatoires sans
+lecture, 14 avec, banc toujours conforme) ; le classement des possibles varie
+aussi (aide à la lecture, pas une décision) ; l'IA applique souvent le même
+partage de polarités (3 mondes « durs » / 3 « doux ») ; le mode rupture vaut
+pour toute l'hypothèse ; près des bornes (breakdown, fortress_world), même une
+rupture bouge peu ; un slug mal orthographié par l'IA reste écarté ; les
+dossiers ne comptent que les simulations faites depuis la v8.17.
 
 ---
 
