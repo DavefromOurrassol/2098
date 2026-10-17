@@ -52,6 +52,7 @@ oppositions:
 - milices_concurrentes_des_droits_de_passage_reference
 - pacifique_sud_archipels_flottants_reference
 - pacte_des_souverains_reference
+- bloc_ressources_eurasiatique_bre_reference
 type_relation_dominante: compétition
 annee_debut: 2030
 annee_fin: null
@@ -138,6 +139,7 @@ La tension centrale du Consortium réside dans la contradiction entre ses ambiti
 - [[milices_concurrentes_des_droits_de_passage_reference]]
 - [[pacifique_sud_archipels_flottants_reference]]
 - [[pacte_des_souverains_reference]]
+- [[bloc_ressources_eurasiatique_bre_reference]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

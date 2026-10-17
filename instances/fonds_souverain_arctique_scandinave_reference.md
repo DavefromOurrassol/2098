@@ -36,6 +36,7 @@ alliances:
 - conseil_des_etats_nordiques_integres_reference
 - consortium_energetique_baltique_reference
 - consortium_energetique_des_mers_du_nord_reference
+- consortium_helios_reference
 - corridor_arctique_nordique_reference
 - kalaallit_nunaat_sovereign_fund_reference
 - ong_environnementales_de_terrain_reference
@@ -87,7 +88,7 @@ localisation:
   lieu: Tromsø
   type_lieu: ville
 annee_debut_verifiee: true
-trajectoire: ascendant
+trajectoire: dominant
 est_clandestin: false
 
 ---
@@ -124,6 +125,7 @@ Le Fonds est structurellement déchiré entre deux mandats incompatibles : maxim
 - [[conseil_des_etats_nordiques_integres_reference]]
 - [[consortium_energetique_baltique_reference]]
 - [[consortium_energetique_des_mers_du_nord_reference]]
+- [[consortium_helios_reference]]
 - [[corridor_arctique_nordique_reference]]
 - [[kalaallit_nunaat_sovereign_fund_reference]]
 - [[ong_environnementales_de_terrain_reference]]

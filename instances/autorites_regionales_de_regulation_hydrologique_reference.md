@@ -100,7 +100,7 @@ localisation:
   zone: null
   lieu: null
   type_lieu: region
-trajectoire: émergent
+trajectoire: dominant
 est_clandestin: false
 
 ---

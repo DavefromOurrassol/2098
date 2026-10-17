@@ -432,7 +432,7 @@ zones:
     couvrant les plaines ibériques réhumidifiées, le Massif Central et la vallée de
     la Garonne. Lyon-Métropole apparaît comme ville ordinaire sujette à la réglementation
     sur les technologies sensibles.'
-  statut: stable
+  statut: fragmenté
   tensions_internes: Tension entre réseaux agroécologiques (Terrafond) et agriculture
     verticale algorithmique. Pression des réfugiés climatiques vers les zones tampons.
     Réglementation technologique croissante (loi sur le Registre des Technologies
@@ -1056,7 +1056,7 @@ zones:
     des figures comme Amara Diallo-Nkosi et les Accords de Kinshasa sur les eaux du
     Congo (2071-2089). Comprend le Bloc Sahélien Autonome revendiquant sa souveraineté
     sur les ressources hydriques et minières.
-  statut: emergent
+  statut: fragmenté
   tensions_internes: Sécheresse de 2096 menaçant les Accords de Kinshasa et poussant
     plusieurs États à invoquer des clauses d'urgence nationale. Blocage de la réforme
     du droit de veto au CRRC sur les réserves d'eau fossile subsaharienne. Pression
@@ -2957,7 +2957,7 @@ Zones grises opérationnelles contrôlées par des opérateurs logistiques indé
 
 #### Mourmansk — sous [[bloc_eurasien_central]]
 
-*ville — niveau 2 — statut : stable*
+*ville — niveau 2 — statut : en_declin*
 
 **Origine réelle (2026)** : Mourmansk, Arctique russe (Mourmansk)
 

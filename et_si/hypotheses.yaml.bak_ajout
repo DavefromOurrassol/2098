@@ -330,3 +330,45 @@ hypotheses:
         delta_level: 6
         polarite: 1
         duree: 2
+
+  - id: explosion_brise_glace_murmansk_2081
+    nom: Explosion d'un brise-glace nucléaire à Mourmansk
+    description: En 2081, l'explosion d'un brise-glace à propulsion nucléaire à quai détruit
+      le port et les installations de Murmansk Transit Arctique. L'infrastructure Murmansk
+      Transit Arctique disparaît définitivement. La ville de Mourmansk survit, mais déclinante
+      et en partie évacuée. Le Passage Arctique du Nord reste ouvert. L'Armada Logistique
+      Nordique, basée à Tromsø, récupère l'essentiel du trafic arctique et se renforce, sans
+      changer de nature.
+    date: 2081
+    mode: choc
+    persistance: normale
+    carte: non
+    scenarios:
+    - reference
+    contraintes:
+    - L'infrastructure Murmansk Transit Arctique disparaît définitivement.
+    - La ville de Mourmansk survit, mais déclinante et en partie évacuée.
+    - Le Passage Arctique du Nord reste ouvert.
+    - L'Armada Logistique Nordique, basée à Tromsø, récupère l'essentiel du trafic arctique
+      et se renforce, sans changer de nature.
+    impacts:
+    - variable: organisation_territoires
+      delta_level: 6
+      polarite: 1
+      duree: 2
+    - variable: geopolitique_conflits
+      delta_level: 5
+      polarite: 1
+      duree: 3
+    - variable: energie_ressources_critiques
+      delta_level: 4
+      polarite: 1
+      duree: 1
+    - variable: systeme_economique_redistribution
+      delta_level: 5
+      polarite: 1
+      duree: 5
+    - variable: demographie_mobilite_humaine
+      delta_level: 3
+      polarite: 1
+      duree: 3

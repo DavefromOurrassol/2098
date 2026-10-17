@@ -63,6 +63,7 @@ oppositions:
 - consortium_des_pecheries_autonomes_du_grand_nord_reference
 - consortium_energetique_baltique_reference
 - consortium_energetique_des_mers_du_nord_reference
+- consortium_indo_pacifique_de_l_hydrogene_reference
 - delta_du_mekong_reference
 - europe_occidentale_reconstruite_reference
 - fonds_souverain_arctique_scandinave_reference
@@ -176,6 +177,7 @@ Le BRE est structurellement tiraillé entre ses membres aux intérêts divergent
 - [[consortium_des_pecheries_autonomes_du_grand_nord_reference]]
 - [[consortium_energetique_baltique_reference]]
 - [[consortium_energetique_des_mers_du_nord_reference]]
+- [[consortium_indo_pacifique_de_l_hydrogene_reference]]
 - [[delta_du_mekong_reference]]
 - [[europe_occidentale_reconstruite_reference]]
 - [[fonds_souverain_arctique_scandinave_reference]]

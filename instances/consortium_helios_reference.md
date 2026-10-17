@@ -42,6 +42,7 @@ alliances:
 - deepfield_institute_reference
 - fonds_souverains_de_la_ceinture_financiere_pacifique_reference
 - terrametrics_reference
+- fonds_souverain_arctique_scandinave_reference
 oppositions:
 - bloc_des_souverainistes_climatiques_reference
 - factions_eurasiatiques_contre_la_tarification_hydrique_reference
@@ -104,6 +105,7 @@ La pression des métropoles du Sud Global pour renégocier les contrats hérité
 - [[deepfield_institute_reference]]
 - [[fonds_souverains_de_la_ceinture_financiere_pacifique_reference]]
 - [[terrametrics_reference]]
+- [[fonds_souverain_arctique_scandinave_reference]]
 **Opposants :**
 - [[bloc_des_souverainistes_climatiques_reference]]
 - [[factions_eurasiatiques_contre_la_tarification_hydrique_reference]]

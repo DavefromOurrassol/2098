@@ -432,7 +432,7 @@ zones:
     couvrant les plaines ibériques réhumidifiées, le Massif Central et la vallée de
     la Garonne. Lyon-Métropole apparaît comme ville ordinaire sujette à la réglementation
     sur les technologies sensibles.'
-  statut: stable
+  statut: fragmenté
   tensions_internes: Tension entre réseaux agroécologiques (Terrafond) et agriculture
     verticale algorithmique. Pression des réfugiés climatiques vers les zones tampons.
     Réglementation technologique croissante (loi sur le Registre des Technologies
@@ -1056,7 +1056,7 @@ zones:
     des figures comme Amara Diallo-Nkosi et les Accords de Kinshasa sur les eaux du
     Congo (2071-2089). Comprend le Bloc Sahélien Autonome revendiquant sa souveraineté
     sur les ressources hydriques et minières.
-  statut: emergent
+  statut: fragmenté
   tensions_internes: Sécheresse de 2096 menaçant les Accords de Kinshasa et poussant
     plusieurs États à invoquer des clauses d'urgence nationale. Blocage de la réforme
     du droit de veto au CRRC sur les réserves d'eau fossile subsaharienne. Pression
@@ -3155,7 +3155,7 @@ République écossaise autonome centrée sur les énergies marines renouvelables
 
 ### Europe Occidentale Reconstruite
 
-*union_regionale — statut : stable*
+*union_regionale — statut : fragmenté*
 
 **Origine réelle (2026)** : France, Belgique, Espagne, Allemagne, Suisse, Royaume-Uni, Angleterre, Pays-Bas, Autriche, République tchèque, Irlande, Luxembourg, Monaco, Andorre, Liechtenstein, Saint-Marin, Vatican, Malte, Croatie, Slovénie, Slovaquie, Italie
 
@@ -3684,7 +3684,7 @@ Ancienne métropole transcontinentale devenue l'un des épicentres de la diploma
 
 ### Union Africaine de Résilience Territoriale
 
-*union_regionale — statut : emergent*
+*union_regionale — statut : fragmenté*
 
 **Origine réelle (2026)** : Union Africaine, République Démocratique du Congo, Burkina Faso, Kenya, Nigéria, Sénégal, Grèce, Roumanie, Nigeria, Afrique du Sud, Ghana, Rwanda, Mozambique, Zimbabwe, Bulgarie, Gambie, Guinée-Bissau, Guinée, Sierra Leone, Liberia, Côte d'Ivoire, Togo, Bénin, Cap-Vert, São Tomé-et-Príncipe, Cameroun, Gabon, Guinée équatoriale, République du Congo, Angola, Zambie, Malawi, Tanzanie, Ouganda, Burundi, Djibouti, Namibie, Botswana, Lesotho, Eswatini, Comores, Madagascar, Mali, Niger, Tchad, Soudan, Éthiopie
 

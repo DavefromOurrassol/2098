@@ -68,6 +68,13 @@
 #   date_imposee           : optionnel, année 2025-2098 imposée (prime sur
 #                            edition_active).
 #   via_matrice_impose     : optionnel, true/false imposé.
+#   faits_imposes          : optionnel (simulateur, v8.18). Faits que le récit ne
+#                            doit pas contredire, par scénario :
+#                              breakdown:
+#                                - {fait: "X disparaît en 2076", slug: x_breakdown,
+#                                   sort: disparait}
+#                            (sort : disparait | change | reste | zone | contrainte ;
+#                            « reste » déclenche un ⚠ si le texte détruit l'entité).
 # EXEMPLE :
 #   - id: guerre_israelo_iranienne
 #     description: >
@@ -91,4 +98,85 @@
 # ──────────────────────────────────────────────────────────────────────────────
 
 queue:
-  [] # ← remplace [] par tes idées
+  - id: effondrement_circulation_atlantique_2067
+    description: En 2067, la grande circulation océanique de l'Atlantique (dont le Gulf
+      Stream) s'effondre de façon irréversible. L'Europe du Nord-Ouest se refroidit
+      de plusieurs degrés en une décennie, les moussons africaines et sud-américaines
+      se déplacent, le niveau de la mer monte brusquement sur la côte est américaine.
+      Le monde ne revient pas à l'état d'avant.
+    portee: globale
+    date_approximative: 2067
+    intensite: majeure
+    persistance: normale
+    scenarios:
+    - reference
+    variables_hint:
+    - climat_environnement_global
+    - systemes_productifs_travail
+    - energie_ressources_critiques
+    - demographie_mobilite_humaine
+    variables_hint_count: 4
+    source: et_si_effondrement_circulation_atlantique_2067
+    acteurs_hint:
+    - delta_du_gange_reference
+    - consortiums_d_agriculture_verticale_algorithmique_reference
+    - autorites_regionales_de_regulation_hydrologique_reference
+    - fonds_souverain_arctique_scandinave_reference
+    acteurs_hint_count: 4
+    faits_imposes:
+      reference:
+      - fait: 'La circulation atlantique ne redémarre pas avant 2098 : le changement
+          est permanent.'
+        sort: contrainte
+      - fait: Le refroidissement touche surtout l'Europe du Nord-Ouest ; le réchauffement
+          global continue ailleurs.
+        sort: contrainte
+      - fait: 'Delta du Gange — Zone de Crise Permanente (delta_du_gange_reference)
+          passe de « déclinant » à « résiduel » après 2067 : elle existe toujours (elle
+          peut perdre des lieux, des biens ou du pouvoir), ne la décris pas comme disparue.'
+        slug: delta_du_gange_reference
+        sort: change
+      - fait: 'Consortiums d''Agriculture Verticale Algorithmique (consortiums_d_agriculture_verticale_algorithmique_reference)
+          passe de « émergent » à « ascendant » après 2067 : elle existe toujours (elle
+          peut perdre des lieux, des biens ou du pouvoir), ne la décris pas comme disparue.'
+        slug: consortiums_d_agriculture_verticale_algorithmique_reference
+        sort: change
+      - fait: 'Autorités Régionales de Régulation Hydrologique (autorites_regionales_de_regulation_hydrologique_reference)
+          passe de « émergent » à « dominant » après 2067 : elle existe toujours (elle
+          peut perdre des lieux, des biens ou du pouvoir), ne la décris pas comme disparue.'
+        slug: autorites_regionales_de_regulation_hydrologique_reference
+        sort: change
+      - fait: 'Fonds Souverain Arctique Scandinave (fonds_souverain_arctique_scandinave_reference)
+          passe de « ascendant » à « dominant » après 2067 : elle existe toujours (elle
+          peut perdre des lieux, des biens ou du pouvoir), ne la décris pas comme disparue.'
+        slug: fonds_souverain_arctique_scandinave_reference
+        sort: change
+      - fait: 'La zone Europe Occidentale Reconstruite (europe_occidentale_reconstruite)
+          passe de « stable » à « fragmenté » : le lieu subsiste.'
+        slug: europe_occidentale_reconstruite
+        sort: zone
+      - fait: 'La zone Union Africaine de Résilience Territoriale (union_africaine_resilience)
+          passe de « emergent » à « fragmenté » : le lieu subsiste.'
+        slug: union_africaine_resilience
+        sort: zone
+    date_imposee: 2067
+    mode_impose: rupture
+    impacts_imposes:
+      reference:
+      - variable: climat_environnement_global
+        delta_level: 6
+        duree: 10
+        polarite: 1
+      - variable: systemes_productifs_travail
+        delta_level: 4
+        duree: 8
+        polarite: 1
+      - variable: energie_ressources_critiques
+        delta_level: 3
+        duree: 5
+        polarite: 1
+      - variable: demographie_mobilite_humaine
+        delta_level: 4
+        duree: 15
+        polarite: 1
+    via_matrice_impose: true

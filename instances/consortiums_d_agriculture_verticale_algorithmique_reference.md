@@ -90,7 +90,7 @@ localisation:
   zone: null
   lieu: null
   type_lieu: infrastructure
-trajectoire: émergent
+trajectoire: ascendant
 est_clandestin: false
 
 ---

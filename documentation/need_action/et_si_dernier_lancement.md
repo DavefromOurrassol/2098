@@ -1,446 +1,482 @@
-# Et si ? — Explosion d'un brise-glace nucléaire à Mourmansk
+# Et si ? — Effondrement de la circulation méridienne atlantique
 
-*Simulation du 2026-10-17 07:49 — lecture seule, rien n'a été injecté (simulateur v8.19).*
+*Simulation du 2026-10-17 10:46 — lecture seule, rien n'a été injecté (simulateur v8.20).*
 
-En 2081, l'explosion d'un brise-glace à propulsion nucléaire à quai détruit le port et les installations de Murmansk Transit Arctique. L'infrastructure Murmansk Transit Arctique disparaît définitivement. La ville de Mourmansk survit, mais déclinante et en partie évacuée. Le Passage Arctique du Nord reste ouvert. L'Armada Logistique Nordique, basée à Tromsø, récupère l'essentiel du trafic arctique et se renforce, sans changer de nature.
+En 2067, la grande circulation océanique de l'Atlantique (dont le Gulf Stream) s'effondre de façon irréversible. L'Europe du Nord-Ouest se refroidit de plusieurs degrés en une décennie, les moussons africaines et sud-américaines se déplacent, le niveau de la mer monte brusquement sur la côte est américaine. Le monde ne revient pas à l'état d'avant.
 
 **Faits imposés à la lecture IA** :
-- L'infrastructure Murmansk Transit Arctique disparaît définitivement.
-- La ville de Mourmansk survit, mais déclinante et en partie évacuée.
-- Le Passage Arctique du Nord reste ouvert.
-- L'Armada Logistique Nordique, basée à Tromsø, récupère l'essentiel du trafic arctique et se renforce, sans changer de nature.
+- La circulation atlantique ne redémarre pas avant 2098 : le changement est permanent.
+- Le refroidissement touche surtout l'Europe du Nord-Ouest ; le réchauffement global continue ailleurs.
 
-- **Apparition** : 2081 · **Persistance** : normale · **Propagation par la matrice** : oui
+- **Apparition** : 2067 · **Persistance** : — (mode **rupture** : l'équilibre du scénario est déplacé pour de bon) · **Propagation par la matrice** : oui
 - **Effet mesuré en** : 2098
 - **Carte** : élément déclaré sans effet territorial (`carte: non`), aucune proposition de carte retenue
-- Déclaré : **organisation_territoires** — force 6, aggrave ↑, montée sur 2 ans
-- Déclaré : **geopolitique_conflits** — force 5, aggrave ↑, montée sur 3 ans
-- Déclaré : **energie_ressources_critiques** — force 4, aggrave ↑, montée sur 1 ans
-- Déclaré : **systeme_economique_redistribution** — force 5, aggrave ↑, montée sur 5 ans
-- Déclaré : **demographie_mobilite_humaine** — force 3, aggrave ↑, montée sur 3 ans
+- Déclaré : **climat_environnement_global** — force 6, aggrave ↑, montée sur 10 ans
+- Déclaré : **systemes_productifs_travail** — force 4, aggrave ↑, montée sur 8 ans
+- Déclaré : **energie_ressources_critiques** — force 3, aggrave ↑, montée sur 5 ans
+- Déclaré : **demographie_mobilite_humaine** — force 4, aggrave ↑, montée sur 15 ans
 
 Rappel : niveau 100 = crise maximale. Écart = niveau AVEC l'hypothèse − niveau SANS elle, toutes les injections existantes restant en place.
 
 ## reference
 
-Apparu en 2081 dans le scénario reference, Explosion d'un brise-glace nucléaire à Mourmansk agit d'abord sur organisation territoires, énergie ressources critiques, système économique redistribution, démographie mobilité humaine et géopolitique conflits. Son effet le plus fort aggrave organisation territoires, avec un écart maximal de +0,7 points vers 2092. En 2098, il en subsiste +0,7 points sur organisation territoires.
+Apparu en 2067 dans le scénario reference, Effondrement de la circulation méridienne atlantique agit d'abord sur climat environnement global, systèmes productifs travail, démographie mobilité humaine et énergie ressources critiques. Son effet le plus fort aggrave climat environnement global, avec un écart maximal de +6,0 points vers 2098. Par propagation, organisation territoires réagit à son tour environ 16 ans après l'apparition (+0,4 points au plus fort). En 2098, il en subsiste +6,0 points sur climat environnement global.
 
 _(récit construit par le script)_
 
 | Variable | Référence | Sans | Avec | Écart | |
 |---|---|---|---|---|---|
-| energie_ressources_critiques | 72,0 | 78,9 | 79,7 | **+0,8** | direct |
-| organisation_territoires | 65,0 | 74,2 | 74,9 | **+0,7** | direct |
-| systeme_economique_redistribution | 70,0 | 82,4 | 82,8 | **+0,4** | direct |
-| demographie_mobilite_humaine | 55,0 | 64,2 | 64,6 | **+0,4** | direct |
-| geopolitique_conflits | 75,0 | 88,3 | 88,6 | **+0,3** | direct |
-| systemes_productifs_travail | 70,0 | 75,1 | 75,2 | **+0,1** | propagé |
+| climat_environnement_global | 65,0 → 70,9 | 68,4 | 74,4 | **+6,0** | direct |
+| systemes_productifs_travail | 70,0 → 74,0 | 75,2 | 79,8 | **+4,6** | direct |
+| demographie_mobilite_humaine | 55,0 → 59,0 | 64,6 | 68,9 | **+4,3** | direct |
+| energie_ressources_critiques | 72,0 → 75,0 | 79,7 | 82,9 | **+3,2** | direct |
+| frontieres_du_systeme | 55,0 | 62,3 | 62,8 | **+0,5** | propagé |
+| organisation_territoires | 65,0 | 74,9 | 75,3 | **+0,4** | propagé |
+| sante_biotechnologies | 55,0 | 50,7 | 51,0 | **+0,3** | propagé |
+| technologie_information | 80,0 | 92,8 | 93,1 | **+0,3** | propagé |
+| systeme_economique_redistribution | 70,0 | 82,8 | 83,0 | **+0,2** | propagé |
+| valeurs_culture_tempo_sociale | 60,0 | 69,1 | 69,3 | **+0,2** | propagé |
+| gouvernance_institutions | 40,0 | 53,8 | 53,9 | **+0,1** | propagé |
+| geopolitique_conflits | 75,0 | 88,6 | 88,7 | **+0,1** | propagé |
 
 **Repères** :
-- organisation_territoires (direct) : pic +0,7 vers 2092
-- energie_ressources_critiques (direct) : pic +0,7 vers 2097
-- systeme_economique_redistribution (direct) : pic +0,4 vers 2098
-- demographie_mobilite_humaine (direct) : pic +0,4 vers 2096
+- climat_environnement_global (direct) : pic +6,0 vers 2098
+- systemes_productifs_travail (direct) : pic +4,6 vers 2098
+- demographie_mobilite_humaine (direct) : pic +4,3 vers 2098
+- energie_ressources_critiques (direct) : pic +3,2 vers 2098
 
 **Tensions** : 42 sans l'hypothèse → 42 avec.
+- ⬆ devient une cascade critique : demographie_mobilite_humaine → geopolitique_conflits
+_Une tension se déclenche quand un niveau franchit un seuil (60, ou 70 pour une cascade, abaissés selon le risque de bascule de la variable) : un écart de quelques dixièmes peut suffire si le niveau était déjà au bord._
 
 ### Lecture des conséquences (IA, propositions vérifiées — rien n'est écrit)
 
-L'explosion du brise-glace nucléaire à Mourmansk en 2081 élimine définitivement l'infrastructure Murmansk Transit Arctique, pivot logistique et énergétique du Bloc Eurasien Central. Ce choc accélère le basculement du pouvoir arctique vers le Corridor Arctique Nordique, sans pour autant remettre en cause l'ouverture du Passage Arctique du Nord. La ville de Mourmansk survit en déclin, mais l'Armada Logistique Nordique, basée à Tromsø, consolide sa domination sans changer de nature. Les déséquilibres structurels du système mondial s'accentuent, notamment en organisation territoriale et géopolitique, mais le moteur du scénario amortit fortement ces effets. _(ampleur : moderee)_
+L'effondrement irréversible de la circulation méridienne atlantique en 2067 reconfigure durablement les équilibres géopolitiques et économiques du scénario *reference*, sans pour autant provoquer un basculement systémique. L'Europe du Nord-Ouest, frappée par un refroidissement brutal, voit ses systèmes productifs et ses flux migratoires bouleversés, tandis que les Amériques et l'Afrique subissent des perturbations hydrologiques et agricoles majeures. Les acteurs dominants (Corridor Arctique Nordique, Consortium Helios) renforcent leur emprise sur les ressources et les infrastructures critiques, mais les marges (Zones Grises, Sahel) deviennent des zones de friction accrues. Le monde absorbe le choc sans s'effondrer, mais l'équilibre fragile du scénario est durablement déplacé vers une logique de fragmentation et de résilience territoriale. _(ampleur : forte)_
 
 **Trajectoires d'entités**
-- Murmansk Transit Arctique (`murmansk_transit_arctique_reference`) : dominant → **disparu** — Destruction définitive de l'infrastructure Murmansk Transit Arctique suite à l'explosion du brise-glace nucléaire.
-- Conseil des États Nordiques Intégrés (`conseil_des_etats_nordiques_integres_reference`) : émergent → **ascendant** — Renforcement de la coopération régionale pour combler le vide laissé par la disparition de Mourmansk.
-- Fonds Souverain Arctique Scandinave (`fonds_souverain_arctique_scandinave_reference`) : émergent → **ascendant** — Accroissement de son rôle dans la gouvernance des territoires arctiques suite à la redistribution des flux logistiques.
-- Sibérie Fédérale (`siberie_federale_reference`) : émergent → **marginal** — Perte d'accès privilégié aux routes arctiques et marginalisation accrue dans le Bloc Eurasien Central.
-- Consortium Énergétique des Mers du Nord (`consortium_energetique_des_mers_du_nord_reference`) : émergent → **dominant** — Absorption des flux énergétiques redirigés vers Tromsø et renforcement de son rôle systémique.
-- Collectifs de Pêche Inuit et Sami (`collectifs_de_peche_inuit_et_sami_reference`) : émergent → **ascendant** — Renforcement de leurs revendications territoriales face à la reconfiguration des zones de pêche arctiques.
+- Delta du Gange — Zone de Crise Permanente (`delta_du_gange_reference`) : déclinant → **résiduel** — Les déplacements des moussons et la montée des eaux submergent définitivement les infrastructures du delta, rendant la zone ingouvernable et accélérant son abandon.
+- Consortiums d'Agriculture Verticale Algorithmique (`consortiums_d_agriculture_verticale_algorithmique_reference`) : émergent → **ascendant** — La perturbation des écosystèmes agricoles traditionnels en Europe et en Afrique accélère l'adoption des fermes verticales comme solution de souveraineté alimentaire.
+- Autorités Régionales de Régulation Hydrologique (`autorites_regionales_de_regulation_hydrologique_reference`) : émergent → **dominant** — Les crises hydrologiques en cascade (Afrique, Amérique du Sud) imposent une gouvernance décentralisée de l'eau comme condition de survie, renforçant leur légitimité.
+- Fonds Souverain Arctique Scandinave (`fonds_souverain_arctique_scandinave_reference`) : ascendant → **dominant** — Les revenus tirés de l'exploitation des terres rares et des nouvelles routes arctiques font du FSAS un acteur financier majeur, capable de peser sur les équilibres énergétiques.
 
 **Relations**
-- opposition nouvelle : Bloc Eurasien Central (BEC) ↔ Armada Logistique Nordique — Tensions accrues pour le contrôle des routes arctiques et des ressources critiques.
-- alliance nouvelle : Consortium Énergétique des Mers du Nord ↔ Armada Logistique Nordique — Synergie entre logistique et énergie pour optimiser les flux redirigés vers Tromsø.
-- opposition nouvelle : Collectifs de Pêche Inuit et Sami ↔ Conseil des États Nordiques Intégrés — Conflits d'intérêts entre gouvernance régionale et revendications territoriales autochtones.
-- opposition nouvelle : Sibérie Fédérale ↔ Bloc Eurasien Central (BEC) — Marginalisation de la Sibérie Fédérale et contestation de l'autorité centrale russe.
+- alliance nouvelle : Consortium Helios ↔ Fonds Souverain Arctique Scandinave — Helios et le FSAS s'allient pour sécuriser les infrastructures énergétiques orbitales et les corridors arctiques, combinant expertise technologique et contrôle des ressources.
+- opposition nouvelle : Armada Logistique Nordique ↔ OptiFlow Global Logistics Network (OGLN) — L'ALN conteste le monopole d'OptiFlow sur les flux logistiques mondiaux, cherchant à imposer ses propres standards pour les routes arctiques.
+- opposition nouvelle : Consortium Indo-Pacifique de l'Hydrogène ↔ Bloc Ressources Eurasiatique (BRE) — Le Consortium Indo-Pacifique et le BRE s'affrontent pour le contrôle des gisements d'hydrogène et des infrastructures de liquéfaction, dans un contexte de pénurie énergétique aggravée.
+- opposition nouvelle : Gouvernements du Bloc Sahélien Autonome ↔ Union Africaine Résilience (UAR) — Le Bloc Sahélien, confronté à des déplacements de moussons et à des sécheresses prolongées, accuse l'UA de ne pas redistribuer équitablement les ressources hydriques et alimentaires.
+- alliance nouvelle : Ergo-Wian Sovereign Holdings ↔ Consortiums Énergétiques Opaques — EWSH et les Consortiums Opaques s'associent pour exploiter les opportunités spéculatives liées aux pénuries énergétiques en Europe, en contournant les régulations publiques.
 
 **Statut des zones**
-- Mourmansk (`murmansk_transit_arctique`) : stable → **en_declin** — Disparition de l'infrastructure Murmansk Transit Arctique et déclin partiel de la ville.
+- Europe Occidentale Reconstruite (`europe_occidentale_reconstruite`) : stable → **fragmenté** — Le refroidissement climatique et les crises agricoles fragmentent les solidarités territoriales, avec des régions comme le Massif Central ou l'Ibérie Atlantique devenant des zones de repli ou de conflit.
+- Union Africaine de Résilience Territoriale (`union_africaine_resilience`) : emergent → **fragmenté** — Les déplacements des moussons et les crises hydriques exacerbent les tensions internes, affaiblissant la cohésion de l'UA face aux pressions migratoires et aux milices.
 
 **Nouvelles entités plausibles**
-- Commission de Réhabilitation de Mourmansk (murmansk_transit_arctique) : Organisme de gestion post-catastrophe chargé de la décontamination et de la reconstruction partielle de Mourmansk. — Nécessité de coordonner les efforts de réhabilitation et de gérer les risques résiduels de contamination nucléaire.
-- Alliance des Ports Arctiques Secondaires (corridor_arctique_nordique) : Réseau de ports arctiques mineurs cherchant à capter une partie des flux logistiques redirigés depuis Mourmansk. — Stratégie de diversification des routes logistiques pour réduire la dépendance à Tromsø.
-- Fonds de Compensation Arctique (tromsoe_aln) : Mécanisme financier pour indemniser les acteurs économiques affectés par la disparition de Mourmansk Transit Arctique. — Nécessité de stabiliser les équilibres économiques régionaux après le choc.
+- Alliance des Territoires Froids Européens (europe_occidentale_reconstruite) : Bloc de coopération pour la gestion des crises climatiques et énergétiques en Europe du Nord-Ouest, regroupant des régions sinistrées et des villes en repli. — Les régions touchées par le refroidissement (Massif Central, Pays de Galles) s'organisent pour mutualiser leurs ressources et négocier avec les acteurs dominants (Helios, Corridor Arctique).
+- Consortium des Deltas de Crise (zones_grises_globales) : Structure de coordination entre les zones submergées (Gange, Mékong) pour gérer les migrations climatiques et les conflits fonciers, en partenariat avec les Consortiums d'Agriculture Verticale. — Les deltas deviennent des zones de non-droit où émergent des acteurs hybrides (milices, ONG, entreprises) pour organiser la survie des populations déplacées.
+- Fonds d'Urgence Climatique Atlantique (europe_occidentale_reconstruite) : Fonds spéculatif créé par Ergo-Wian et des Consortiums Opaques pour investir dans les infrastructures de relocalisation et les technologies de survie en Europe du Nord-Ouest. — Les acteurs financiers exploitent la crise pour capter les dernières ressources publiques et privées des territoires en déclin.
 
-_Propositions écartées au contrôle (7) : trajectoire : armada_logistique_nordique_reference déjà dominant (aucun changement) ; trajectoire : bloc_eurasien_central_reference déjà déclinant (aucun changement) ; relation armada_logistique_nordique_reference / conseil_des_etats_nordiques_integres_reference : alliance déjà présente ; relation armada_logistique_nordique_reference / fonds_souverain_arctique_scandinave_reference : alliance déjà présente ; statut de zone : tromsoe_aln déjà dominant ; statut de zone : corridor_arctique_nordique déjà dominant ; statut de zone : bloc_eurasien_central déjà fragmenté_
+_Corrections automatiques (1) : relation consortium_indo_pacifique_de_l_hydrogene_reference / bloc_ressources_eurasiatique_bre_reference : action absente -> nouvelle_
+
+_Propositions écartées au contrôle (7) : trajectoire : corridor_arctique_nordique_reference déjà dominant (aucun changement) ; trajectoire : armada_logistique_nordique_reference déjà dominant (aucun changement) ; trajectoire : murmansk_transit_arctique_reference déjà disparu (aucun changement) ; trajectoire : entité inconnue 'ecosse_nordique_independante' ; relation milices_concurrentes_des_droits_de_passage_reference / agence_de_regulation_des_detroits_strategiques_ards_reference : opposition déjà présente ; statut de zone : corridor_arctique_nordique déjà dominant ; statut de zone : ameriques_multipolaires déjà fragmenté_
 
 ### Passe exhaustive (IA, toutes les fiches — rien n'est écrit)
 
-191 fiche(s) relue(s) en 13 lot(s).
-Verdicts : **1 fiche(s) à corriger**, 99 avec des changements possibles seulement, 91 inchangée(s).
+194 fiche(s) relue(s) en 13 lot(s).
+Verdicts : **1 fiche(s) à corriger**, 160 avec des changements possibles seulement, 33 inchangée(s).
 
-_Contre-lecture des obligatoires : 3 vérifié(s), 2 confirmé(s), 1 rétrogradé(s) en possible._
+_Contre-lecture des obligatoires : 7 vérifié(s), 1 confirmé(s), 6 rétrogradé(s) en possible._
 
 #### Obligatoire — la fiche devient fausse sans ce changement
 
 **Relations**
-- alliance rompue : Murmansk Transit Arctique ↔ Armada Logistique Nordique — La disparition de Murmansk Transit Arctique rend cette alliance impossible. [lien relation : armada_logistique_nordique_reference (récupère le trafic arctique)] — contredit : Murmansk Transit Arctique n'existe plus pour maintenir cette alliance.
-
-**Textes**
-- instance Murmansk Transit Arctique (`murmansk_transit_arctique_reference`) : « Plaque tournante stratégique du trafic maritime et énergétique arctique, Murmansk Transit Arctique s'est imposée comme nœud incontournable des nouvelles routes commerciales ouvertes par la fonte accélérée des glaces polaires depuis les années 2040 » — contredit par : L'infrastructure Murmansk Transit Arctique n'existe plus en 2098. — Cette phrase devient fausse après 2081. [lien territoire : infrastructure Murmansk Transit Arctique (détruite en 2081)]
+- opposition nouvelle : Bloc Eurasien Central (BEC) ↔ Bloc Ressources Eurasiatique (BRE) — Le BRE, en tant que régulateur autoritaire, ne peut plus maintenir d'alliance avec un BEC devenu résiduel et incapable de garantir des compromis stables. [lien relation : Le BRE devient un régulateur autoritaire des ressources critiques eurasiatiques, capable d'influer sur les prix mondiaux.] — contredit : Le BEC et le BRE sont alliés dans le scénario de référence.
 
 #### Possible — conséquence plausible, la fiche reste vraie sans elle
 
-_Rétrogradés d'obligatoire à possible par les contrôles : 2 extrait introuvable dans la fiche, 1 changement de degré, 1 contre-lecture nuance, 1 élargit le rôle sans le contredire, 1 lien territoire alors qu'aucun territoire précis n'est touché._
+_Rétrogradés d'obligatoire à possible par les contrôles : 27 changement de degré, 19 lien territoire alors qu'aucun territoire précis n'est touché, 4 élargit le rôle sans le contredire, 3 contre-lecture aggravation, 3 atténue le rôle sans le contredire, 3 au conditionnel, 2 contre-lecture nuance, 1 contre-lecture invention, 1 extrait introuvable dans la fiche._
 
-**À lire en priorité (20 fiches sur 100)** — choisies et ordonnées par l'IA
+**À lire en priorité (20 fiches sur 161)** — choisies et ordonnées par l'IA
 
-- **Bloc Eurasien Central (BEC)** (`bloc_eurasien_central_reference`) — _Disparition directe de son pivot logistique et énergétique, Murmansk Transit Arctique_
-  - Bloc Eurasien Central (BEC) (`bloc_eurasien_central_reference`) : déclinant → **résiduel** — La disparition définitive de Murmansk Transit Arctique, pivot logistique et énergétique du Bloc Eurasien Central, rend impossible le maintien de son influence actuelle. Le BEC perd un levier majeur de son équilibre géopolitique. [lien relation : murmansk_transit_arctique_reference (disparu, ancien allié indirect)] _(rétrogradé : changement de degré)_ — contredit : Son influence reste réelle mais contestée, reflétant la fragmentation du système international de 2098.
-- **Cartel des Terres Rares d'Asie Centrale** (`cartel_des_terres_rares_d_asie_centrale_reference`) — _Renforcement direct comme acteur clé des ressources critiques post-explosion_
-  - Cartel des Terres Rares d'Asie Centrale (`cartel_des_terres_rares_d_asie_centrale_reference`) : émergent → **ascendant** — L'explosion de Mourmansk accentue les tensions sur les ressources critiques, ce qui pourrait renforcer l'influence du Cartel comme acteur clé de l'accès aux terres rares. [lien variable : energie_ressources_critiques (+0.8)] _(douteux : lien variable sous 2 points)_
-- **Bloc Ressources Eurasiatique (BRE)** (`bloc_ressources_eurasiatique_bre_reference`) — _Rôle accru dans la régulation autoritaire des ressources critiques_
-  - Bloc Ressources Eurasiatique (BRE) (`bloc_ressources_eurasiatique_bre_reference`) : émergent → **ascendant** — L'explosion de Mourmansk accentue les tensions sur les ressources critiques, ce qui pourrait renforcer le rôle du BRE comme régulateur autoritaire de l'accès à ces ressources. [lien variable : energie_ressources_critiques (+0.8)] _(douteux : lien variable sous 2 points)_
-- **Alliance des Glaces Libres (AGL)** (`consortium_des_pecheries_autonomes_du_grand_nord_reference`) — _Opposition directe avec l'Armada Logistique Nordique, renforcée par le déclin de Mourmansk_
-  - Alliance des Glaces Libres (AGL) (`consortium_des_pecheries_autonomes_du_grand_nord_reference`) : ascendant → **dominant** — Le déclin de Mourmansk et le renforcement de l'Armada Logistique Nordique pourraient accélérer l'ascension de l'AGL, mais sa trajectoire actuelle reste plausible. [lien relation : Rivalité avec le corridor_arctique_nordique_reference, déjà établie, et renforcement de l'Armada Logistique Nordique.]
-  - opposition nouvelle : Alliance des Glaces Libres (AGL) ↔ Armada Logistique Nordique — Le renforcement de l'Armada Logistique Nordique crée une tension potentielle avec l'AGL, mais cette opposition n'est pas obligatoire pour la cohérence de la fiche. [lien relation : L'Armada Logistique Nordique récupère l'essentiel du trafic arctique et se renforce.]
-- **Consortiums Privés d'Extraction de Ressources Critiques** (`consortiums_prives_d_extraction_de_ressources_critiques_reference`) — _Exploitation directe du vide logistique et énergétique créé par la disparition de Murmansk_
-  - Consortiums Privés d'Extraction de Ressources Critiques (`consortiums_prives_d_extraction_de_ressources_critiques_reference`) : émergent → **ascendant** — La disparition de Murmansk Transit Arctique crée un vide logistique et énergétique qui pourrait être exploité par des acteurs privés pour étendre leur emprise sur les ressources critiques, notamment en Sibérie. [lien variable : energie_ressources_critiques (+0.8)] _(douteux : lien variable sous 2 points)_
-- **Opérateurs Logistiques Privés des Zones Grises Eurasiennes** (`operateurs_logistiques_prives_des_zones_grises_eurasiennes_reference`) — _Opportunité directe de montée en puissance face à l'Armada Logistique Nordique_
-  - Opérateurs Logistiques Privés des Zones Grises Eurasiennes (`operateurs_logistiques_prives_des_zones_grises_eurasiennes_reference`) : émergent → **ascendant** — La disparition de Murmansk Transit Arctique et le renforcement de l'Armada Logistique Nordique pourraient créer des opportunités pour les opérateurs logistiques privés dans les zones grises eurasiennes, sans que cela soit obligatoire. [lien variable : variable organisation_territoires (+0.7 point) et geopolitique_conflits (+0.3 point)] _(douteux : lien variable sous 2 points)_
-  - opposition nouvelle : Opérateurs Logistiques Privés des Zones Grises Eurasiennes ↔ Armada Logistique Nordique — Les opérateurs logistiques privés des zones grises pourraient entrer en concurrence avec l'Armada Logistique Nordique pour le contrôle des flux logistiques, sans que cela soit une certitude. [lien relation : L'Armada Logistique Nordique se renforce et récupère l'essentiel du trafic arctique, ce qui pourrait en faire un rival des opérateurs logistiques privés des zones grises.]
-- **Kalaallit Nunaat Sovereign Fund** (`kalaallit_nunaat_sovereign_fund_reference`) — _Alliance renforcée avec le Consortium Énergétique des Mers du Nord, acteur nordique dominant_
-  - Kalaallit Nunaat Sovereign Fund (`kalaallit_nunaat_sovereign_fund_reference`) : ascendant → **dominant** — Le renforcement de l'Armada Logistique Nordique, alliée du KNSF, pourrait indirectement renforcer la position géopolitique du KNSF dans les négociations arctiques. [lien relation : allié de armada_logistique_nordique_reference (renforcée par l'élément)]
-  - alliance nouvelle : Kalaallit Nunaat Sovereign Fund ↔ Consortium Énergétique des Mers du Nord — Le KNSF pourrait nouer une alliance avec le Consortium Énergétique des Mers du Nord, déjà allié à l'Armada Logistique Nordique, pour consolider son influence dans la région. [lien relation : allié de armada_logistique_nordique_reference (renforcée et alliée du consortium)]
-- **Consortiums Énergétiques Opaques** (`consortiums_energetiques_opaques_reference`) — _Renforcement direct via l'exploitation des tensions énergétiques critiques_
-  - Consortiums Énergétiques Opaques (`consortiums_energetiques_opaques_reference`) : émergent → **ascendant** — L'explosion de Mourmansk accentue les tensions sur les ressources énergétiques critiques, ce qui pourrait renforcer les consortiums opaques en leur offrant des opportunités de contourner les régulations dans un contexte de pénurie relative. [lien variable : energie_ressources_critiques (+0.8)] _(douteux : lien variable sous 2 points)_
-- **Factions d'Extraction Minière Indépendantes** (`factions_d_extraction_miniere_independantes_reference`) — _Acteurs alternatifs renforcés par la perturbation des ressources critiques_
-  - Factions d'Extraction Minière Indépendantes (`factions_d_extraction_miniere_independantes_reference`) : émergent → **ascendant** — La perturbation des ressources critiques due à l'explosion de Mourmansk pourrait renforcer la position de ces factions en tant qu'acteurs alternatifs d'approvisionnement, sans que cela ne soit obligatoire. [lien variable : energie_ressources_critiques (+0.8)] _(douteux : lien variable sous 2 points)_
-- **Fonds Souverains de la Ceinture Financière Pacifique** (`fonds_souverains_de_la_ceinture_financiere_pacifique_reference`) — _Rôle accru dans la stabilisation économique post-crise arctique_
-  - Fonds Souverains de la Ceinture Financière Pacifique (`fonds_souverains_de_la_ceinture_financiere_pacifique_reference`) : émergent → **ascendant** — L'élément perturbateur accentue les déséquilibres économiques mondiaux, ce qui peut renforcer le rôle des fonds souverains comme acteurs de stabilisation ou de spéculation, sans rendre leur trajectoire actuelle fausse. [lien variable : systeme_economique_redistribution (+0.4)] _(douteux : lien variable sous 2 points)_
-  - alliance nouvelle : Fonds Souverains de la Ceinture Financière Pacifique ↔ Armada Logistique Nordique — L'Armada Logistique Nordique se renforce, ce qui pourrait inciter les fonds souverains pacifiques à chercher des partenariats logistiques ou énergétiques avec elle, sans que cela soit obligatoire. [lien relation : Rivalité indirecte avec le bloc_eurasien_central_reference, affaibli par l'élément perturbateur]
-- **The Tidewater Canon** (`the_tidewater_canon_reference`) — _Opposition directe avec l'Armada Logistique Nordique, doctrine souverainiste face à son ascension_
-  - The Tidewater Canon (`the_tidewater_canon_reference`) : mature → **ascendant** — Le renforcement de l'Armada Logistique Nordique et la marginalisation du Bloc Eurasien Central pourraient accroître l'influence des doctrines souverainistes comme le Tidewater Canon, en réaction à la perte d'influence des blocs eurasiatiques. [lien relation : allié du bloc_ressources_eurasiatique_bre_reference, directement touché par la disparition de murmansk_transit_arctique_reference]
-  - opposition nouvelle : The Tidewater Canon ↔ Armada Logistique Nordique — Le Tidewater Canon, doctrine souverainiste, pourrait s'opposer à l'Armada Logistique Nordique, qui incarne une gouvernance transnationale renforcée dans l'Arctique. [lien relation : opposition déjà retenue entre bloc_eurasien_central_reference et armada_logistique_nordique_reference]
-- **Vasil Orentchev** (`vasil_orentchev_reference`) — _Concurrence directe avec l'Armada pour le contrôle des flux logistiques_
-  - opposition nouvelle : Vasil Orentchev ↔ Armada Logistique Nordique — Orentchev, opérateur indépendant, pourrait entrer en concurrence avec l'Armada pour le contrôle des flux logistiques. [lien relation : rivalité avec les consortiums logistiques dominants, dont l'Armada Logistique Nordique]
-- **Milices Concurrentes des Droits de Passage** (`milices_concurrentes_des_droits_de_passage_reference`) — _Intensification directe de la compétition pour les nouveaux points de passage arctiques_
-  - instance Milices Concurrentes des Droits de Passage (`milices_concurrentes_des_droits_de_passage_reference`) : « Dans ce scénario, elles incarnent la concurrence violente pour le contrôle des nœuds de mobilité, fragmentant l'espace en zones de friction où chaque passage est négocié ou imposé par la force » — La reconfiguration des routes arctiques pourrait intensifier la compétition entre milices pour le contrôle des nouveaux points de passage stratégiques. [lien variable : organisation_territoires (+0.7) et geopolitique_conflits (+0.3)] _(douteux : lien variable sous 2 points)_
-- **Autorité de Régulation des Passages Stratégiques (ARPS)** (`agence_de_regulation_des_detroits_strategiques_ards_reference`) — _Coordination accrue nécessaire avec l'Armada Logistique Nordique, désormais dominante_
-  - instance Autorité de Régulation des Passages Stratégiques (ARPS) (`agence_de_regulation_des_detroits_strategiques_ards_reference`) : « Elle incarne une gouvernance hybride, mêlant souveraineté étatique, intérêts des consortiums logistiques privés et impératifs géopolitiques liés aux flux critiques » — L'ARPS pourrait voir son rôle s'élargir pour inclure une coordination accrue avec l'Armada Logistique Nordique, désormais dominante dans le trafic arctique, sans que cela ne rende la fiche fausse. [lien relation : allié de l'armada_logistique_nordique_reference, qui se renforce après la disparition de Murmansk Transit Arctique] _(douteux : élargit le rôle sans le contredire)_
-- **Fonds Souverain Arctique Scandinave** (`fonds_souverain_arctique_scandinave_reference`) — _Devenu acteur central dans la gouvernance arctique post-Mourmansk_
-  - instance Fonds Souverain Arctique Scandinave (`fonds_souverain_arctique_scandinave_reference`) : « Acteur de référence pour le financement et la gouvernance des territoires arctiques, pesant sur les arbitrages entre exploitation ressourcière et conservation environnementale » — contredit par : L'explosion de Mourmansk et le renforcement de l'Armada Logistique Nordique élargissent son rôle au-delà de la simple 'référence'. — Le fonds devient un acteur central dans la gouvernance arctique post-Mourmansk, ce qui rend la phrase trop restrictive et donc fausse. [lien relation : Allié de l'armada_logistique_nordique_reference, qui se renforce après l'explosion de Mourmansk.] _(rétrogradé : élargit le rôle sans le contredire)_
-- **Atlas des Marges** (`reseau_des_cartographes_des_zones_grises_reference`) — _Création de nouvelles zones grises en Arctique post-disparition de Murmansk_
-  - instance Atlas des Marges (`reseau_des_cartographes_des_zones_grises_reference`) : « Le Réseau des Cartographes des Zones Grises dans *reference* est une nébuleuse de collecteurs de données, hackers et géographes dissidents qui documentent les territoires abandonnés, contestés ou non gouvernés » — La disparition de Murmansk Transit Arctique et le déclin de Mourmansk pourraient créer de nouvelles zones grises ou marginalisées en Arctique, élargissant potentiellement le champ d'action du réseau, mais cela reste plausible et non obligatoire. [lien variable : organisation_territoires (+0.7)] _(douteux : lien variable sous 2 points, élargit le rôle sans le contredire)_
-- **ONG de Traçabilité des Ressources Critiques** (`ong_de_tracabilite_des_ressources_critiques_reference`) — _Opposition directe probable avec le Consortium Énergétique des Mers du Nord_
-  - opposition nouvelle : ONG de Traçabilité des Ressources Critiques ↔ Consortium Énergétique des Mers du Nord — L'ONG de traçabilité des ressources critiques, déjà rivale des acteurs extractifs, a une probabilité accrue de s'opposer au Consortium Énergétique des Mers du Nord, désormais acteur majeur dans l'Arctique. [lien relation : Le Consortium Énergétique des Mers du Nord devient dominant après l'explosion de Mourmansk, ce qui en fait une cible probable pour une ONG dénonçant les pratiques d'extraction et de gestion des ressources critiques.]
-  - instance ONG de Traçabilité des Ressources Critiques (`ong_de_tracabilite_des_ressources_critiques_reference`) : « Dénonce publiquement les pratiques d'une entité du scénario liées à l'extraction ou à la gestion de ressources critiques, en s'appuyant sur des données de traçabilité » — L'explosion de Mourmansk accentue les enjeux autour des ressources critiques, ce qui pourrait élargir le rôle de l'ONG sans rendre son énoncé actuel faux. [lien variable : variable energie_ressources_critiques (+0.8 point)] _(douteux : lien variable sous 2 points, élargit le rôle sans le contredire)_
-- **Programme ONU-Eau 2080** (`programme_onu_eau_2080_reference`) — _Rôle élargi dans la coordination des déséquilibres territoriaux arctiques_
-  - instance Programme ONU-Eau 2080 (`programme_onu_eau_2080_reference`) : « Sert de référentiel normatif et d'instance de coordination internationale dans le scénario, influençant les arbitrages entre États sur le partage des ressources hydriques » — L'explosion de Mourmansk et la disparition de Murmansk Transit Arctique accentuent les déséquilibres territoriaux en Arctique, ce qui pourrait élargir le rôle du Programme ONU-Eau 2080 dans la coordination des arbitrages hydriques et logistiques liés à la réorganisation des flux arctiques. [lien variable : organisation_territoires (+0.7)] _(douteux : lien variable sous 2 points, élargit le rôle sans le contredire)_
-- **Réseau des Sentinelles des Eaux Profondes** (`les_veilleurs_des_nappes_phreatiques_reference`) — _Surveillance renforcée des ressources critiques post-crise_
-  - instance Réseau des Sentinelles des Eaux Profondes (`les_veilleurs_des_nappes_phreatiques_reference`) : « Les Veilleurs agissent comme un contre-pouvoir face aux consortiums privés et aux lobbies agro-industriels, documentant les accaparements de ressources hydriques » — L'élément perturbateur accentue les tensions sur les ressources critiques, ce qui pourrait renforcer l'importance des Veilleurs dans la surveillance des accaparements hydriques. [lien variable : energie_ressources_critiques (+0.8)] _(douteux : lien variable sous 2 points, élargit le rôle sans le contredire)_
-- **Réseaux de lanceurs d'alerte institutionnels dissidents** (`reseaux_de_lanceurs_d_alerte_institutionnels_dissidents_reference`) — _Dysfonctionnements institutionnels accrus générant plus d'alertes_
-  - instance Réseaux de lanceurs d'alerte institutionnels dissidents (`reseaux_de_lanceurs_d_alerte_institutionnels_dissidents_reference`) : « Dans ce scénario, ils constituent une source d'information critique sur les dysfonctionnements internes des institutions, fragilisant leur légitimité tout en alimentant les débats publics » — La reconfiguration des équilibres arctiques et le déclin de Mourmansk pourraient générer des dysfonctionnements institutionnels supplémentaires, offrant plus de matière aux lanceurs d'alerte pour documenter les failles du système. [lien variable : geopolitique_conflits (+0.3 point) et organisation_territoires (+0.7 point)] _(douteux : lien variable sous 2 points)_
+- **Agence Mondiale pour la Stabilisation Climatique** (`agence_stabilisation_climatique_reference`) — _Centralisation géo-ingénierie post-effondrement_
+  - Agence Mondiale pour la Stabilisation Climatique (`agence_stabilisation_climatique_reference`) : mature → **dominant** — L'ampleur de la crise climatique post-2067 impose une centralisation accrue des interventions géo-ingénieristes, rendant l'AMSC incontournable. [lien variable : climat_environnement_global (+6.0)] _(rétrogradé : changement de degré)_ — contredit : L'AMSC ne peut rester en trajectoire 'mature' alors que l'effondrement de la circulation méridienne atlantique en fait l'acteur central de la gestion des crises climatiques irréversibles.
+  - instance Agence Mondiale pour la Stabilisation Climatique (`agence_stabilisation_climatique_reference`) : « L'AMSC opère comme une instance de coordination technocratique internationale dont l'autorité est reconnue mais constamment négociée » — contredit par : L'autorité de l'AMSC n'est plus 'constamment négociée' mais devient un impératif de survie face à la crise climatique irréversible. — La phrase doit être révisée pour refléter l'urgence et la centralisation du rôle de l'AMSC. [lien variable : climat_environnement_global (+6.0)] _(rétrogradé : contre-lecture nuance)_ — La phrase de la fiche reste vraie : l'autorité de l'AMSC peut être 'reconnue mais constamment négociée' même si elle devient un impératif de survie. L'élément perturbateur n'impose pas que cette négociation cesse, seulement qu'elle soit plus urgente.
+- **AgriSynth** (`agrisynth_reference`) — _Refonte agricole Europe du Nord-Ouest_
+  - AgriSynth (`agrisynth_reference`) : émergent → **ascendant** — Le refroidissement de l'Europe du Nord-Ouest impose une refonte des systèmes agricoles, rendant AgriSynth un acteur clé de cette transition. [lien territoire : europe_occidentale_reconstruite (refroidissement brutal)] _(rétrogradé : changement de degré)_ — contredit : AgriSynth ne peut rester 'émergent' alors que l'Europe du Nord-Ouest, son territoire d'action, subit un refroidissement brutal nécessitant une adaptation agricole massive.
+- **Consortium Amazônia Viva** (`consortium_amazonia_viva_reference`) — _Gestion hydrique Amazonie critique_
+  - Consortium Amazônia Viva (`consortium_amazonia_viva_reference`) : ascendant → **dominant** — Les perturbations des moussons sud-américaines et les tensions sur les ressources hydriques renforcent le rôle du Consortium comme acteur central de la gouvernance écologique du bassin amazonien. [lien variable : climat_environnement_global (+6.0) et systemes_productifs_travail (+4.6)]
+- **Frente Sertão Livre** (`frente_sertao_livre_reference`) — _Conflit hydrique Amérique du Sud dominant_
+  - Frente Sertão Livre (`frente_sertao_livre_reference`) : ascendant → **dominant** — Les perturbations hydrologiques et agricoles en Amérique du Sud, exacerbées par le déplacement des moussons, renforcent la dépendance aux modèles agroécologiques résilients portés par la Frente Sertão Livre, ce qui pourrait accélérer son ascension. [lien variable : systemes_productifs_travail (+4.6) et demographie_mobilite_humaine (+4.3), touchés par l'élément perturbateur]
+  - opposition nouvelle : Frente Sertão Livre ↔ Consortium Amazônia Viva — Les perturbations hydrologiques en Amazonie pourraient intensifier les conflits entre la Frente Sertão Livre et le Consortium Amazônia Viva pour le contrôle des terres et des ressources en eau. [lien relation : consortium_amazonia_viva_reference est un rival historique, mais les perturbations climatiques pourraient exacerber les tensions pour le contrôle des ressources en Amazonie]
+- **Compact des Grands Lacs** (`great_lakes_autonomous_compact_reference`) — _Stratégie Grands Lacs post-montée des eaux_
+  - Compact des Grands Lacs (`great_lakes_autonomous_compact_reference`) : mature → **dominant** — La montée du niveau de la mer sur la côte est américaine et les perturbations climatiques pourraient renforcer l'importance stratégique du Compact des Grands Lacs comme réservoir d'eau douce et zone de stabilité. [lien variable : demographie_mobilite_humaine (+4.3) et systemes_productifs_travail (+4.6), touchés par l'élément perturbateur]
+- **Valparaíso FCT — Facilitation & Compensation Transfrontalière** (`valparaiso_fct_reference`) — _Hub logistique Valparaíso incontournable_
+  - Valparaíso FCT — Facilitation & Compensation Transfrontalière (`valparaiso_fct_reference`) : mature → **dominant** — La reconfiguration des flux économiques et logistiques post-effondrement renforce le rôle de Valparaíso FCT comme hub de compensation interbloc. [lien variable : systemes_productifs_travail (+4.6) et energie_ressources_critiques (+3.2)]
+- **Assemblée des Territoires Fédérés (ATF)** (`assemblee_territoires_reference`) — _Coordination décentralisée post-fragmentation_
+  - Assemblée des Territoires Fédérés (ATF) (`assemblee_territoires_reference`) : ascendant → **dominant** — La fragmentation territoriale post-2067 renforce la nécessité d'une coordination décentralisée, augmentant l'importance de l'ATF. [lien variable : organisation_territoires (+0.4)] _(douteux : lien variable sous 2 points)_
+- **Gouvernements du Bloc Sahélien Autonome** (`gouvernements_du_bloc_sahelien_autonome_reference`) — _Bloc Sahélien face aux moussons déplacées_
+  - Gouvernements du Bloc Sahélien Autonome (`gouvernements_du_bloc_sahelien_autonome_reference`) : émergent → **ascendant** — Les perturbations des moussons africaines et les flux migratoires accrus renforcent le rôle du Bloc Sahélien Autonome comme acteur incontournable de la résilience territoriale en Afrique subsaharienne. [lien variable : demographie_mobilite_humaine (+4.3) et systemes_productifs_travail (+4.6), touchés par l'élément perturbateur] _(rétrogradé : changement de degré)_ — contredit : Le rôle du Bloc Sahélien Autonome reste émergent, alors que les perturbations des moussons africaines et les flux migratoires accrus en font un acteur clé pour la stabilité régionale.
+- **Commission Hydrique de l'Union Africaine** (`commission_hydrique_de_l_union_africaine_reference`) — _Régulation hydrique Union Africaine critique_
+  - Commission Hydrique de l'Union Africaine (`commission_hydrique_de_l_union_africaine_reference`) : émergent → **ascendant** — Les perturbations des moussons africaines et les tensions hydriques accrues rendent son rôle de régulation et de médiation indispensable, renforçant sa trajectoire. [lien variable : systemes_productifs_travail (+4.6) et demographie_mobilite_humaine (+4.3)] _(rétrogradé : changement de degré)_ — contredit : Acteur institutionnel de référence sur les questions d'accès à l'eau en Afrique, elle intervient comme autorité de régulation et de médiation entre États membres confrontés à des tensions hydriques croissantes.
+- **Union Africaine de Résilience Territoriale** (`union_africaine_de_resilience_territoriale_reference`) — _Résilience territoriale africaine renforcée_
+  - Union Africaine de Résilience Territoriale (`union_africaine_de_resilience_territoriale_reference`) : émergent → **ascendant** — Les perturbations hydrologiques et agricoles en Afrique (déplacement des moussons) renforcent le besoin d'une gouvernance régionale autonome, accélérant la trajectoire de l'UART. [lien variable : demographie_mobilite_humaine (+4.3) et systemes_productifs_travail (+4.6)]
+  - alliance nouvelle : Union Africaine de Résilience Territoriale ↔ Autorités Régionales de Régulation Hydrologique — La gestion des ressources hydriques devient critique pour l'Afrique post-effondrement, rendant une alliance avec les autorités hydrologiques émergentes plausible. [lien variable : organisation_territoires (+0.4) et systemes_productifs_travail (+4.6)]
+- **Consortium Africain de Biotechnologies Sociales (CABS)** (`consortium_africain_de_biotechnologies_sociales_reference`) — _Biorevenu africain face aux crises agricoles_
+  - Consortium Africain de Biotechnologies Sociales (CABS) (`consortium_africain_de_biotechnologies_sociales_reference`) : ascendant → **dominant** — Les perturbations hydrologiques et agricoles en Afrique augmentent la dépendance des populations aux programmes de biorevenu et aux solutions biotechnologiques, renforçant le rôle du CABS comme acteur dominant. [lien variable : systemes_productifs_travail (+4.6) et demographie_mobilite_humaine (+4.3)] _(rétrogradé : changement de degré)_ — contredit : Le CABS opère comme un intermédiaire stratégique entre les grandes institutions financières et régulatrices mondiales et les populations africaines à faibles revenus.
+- **Kalaallit Nunaat Sovereign Fund** (`kalaallit_nunaat_sovereign_fund_reference`) — _Fonds souverain arctique dominant post-refroidissement_
+  - Kalaallit Nunaat Sovereign Fund (`kalaallit_nunaat_sovereign_fund_reference`) : ascendant → **dominant** — Le refroidissement de l'Europe du Nord-Ouest et la reconfiguration des routes logistiques arctiques renforcent la position géopolitique du KNSF comme acteur clé des ressources critiques et des négociations arctiques. [lien variable : energie_ressources_critiques (+3.2)]
+  - opposition nouvelle : Kalaallit Nunaat Sovereign Fund ↔ Fonds Souverain Arctique Scandinave — La compétition pour le contrôle des ressources arctiques et des nouvelles routes logistiques pourrait opposer le KNSF au Fonds Souverain Arctique Scandinave, déjà allié à un acteur dominant. [lien relation : alliance déjà retenue entre Consortium Helios et Fonds Souverain Arctique Scandinave]
+- **Bloc Ressources Eurasiatique (BRE)** (`bloc_ressources_eurasiatique_bre_reference`) — _Ressources eurasiatiques critiques post-effondrement_
+  - Bloc Ressources Eurasiatique (BRE) (`bloc_ressources_eurasiatique_bre_reference`) : émergent → **dominant** — L'effondrement de la circulation atlantique renforce la dépendance aux ressources critiques eurasiatiques, augmentant l'influence du BRE sans rendre sa trajectoire actuelle fausse. [lien variable : energie_ressources_critiques (+3.2) est directement touché.]
+- **Pacte des Souverains** (`alliance_blocs_souverains_reference`) — _Pacte des Souverains renforcé par fragmentation_
+  - Pacte des Souverains (`alliance_blocs_souverains_reference`) : ascendant → **dominant** — La fragmentation territoriale et la résilience accrue des blocs souverains post-2067 renforcent leur poids géopolitique. [lien variable : frontieres_du_systeme (+0.5) et organisation_territoires (+0.4)] _(douteux : lien variable sous 2 points)_
+  - alliance nouvelle : Pacte des Souverains ↔ Fonds Souverain Arctique Scandinave — La collaboration avec les acteurs arctiques devient stratégique pour sécuriser les ressources et les routes logistiques. [lien relation : Alliée au Fonds Souverain Arctique Scandinave, déjà retenu comme dominant.]
+- **The Tidewater Canon** (`the_tidewater_canon_reference`) — _Doctrine Tidewater Canon dominante post-crise_
+  - The Tidewater Canon (`the_tidewater_canon_reference`) : mature → **dominant** — La reconfiguration des systèmes productifs et des chaînes logistiques post-effondrement renforce la pertinence de la doctrine souverainiste du Tidewater Canon, déjà en phase ascendante. [lien variable : systemes_productifs_travail (+4.6)]
+  - alliance nouvelle : The Tidewater Canon ↔ Fonds Souverain Arctique Scandinave — Le Tidewater Canon, philosophie des blocs souverains, pourrait s'aligner plus étroitement avec les acteurs dominants post-effondrement comme le Fonds Souverain Arctique Scandinave. [lien relation : Alliance déjà retenue entre Consortium Helios et Fonds Souverain Arctique Scandinave]
+- **The Lattice of Chartered Cities** (`the_lattice_reference`) — _Villes-refuge pour migrations climatiques massives_
+  - The Lattice of Chartered Cities (`the_lattice_reference`) : mature → **ascendant** — L'effondrement de la circulation méridienne atlantique provoque des migrations climatiques massives depuis l'Europe du Nord-Ouest et les zones agricoles perturbées, renforçant le rôle des juridictions autonomes comme The Lattice pour absorber ces flux. [lien variable : demographie_mobilite_humaine (+4.3)]
+  - alliance nouvelle : The Lattice of Chartered Cities ↔ Réseau des Villes-Refuge pour Travailleurs Désaugmentés — La crise migratoire post-2067 rend probable une coopération accrue avec les réseaux de villes-refuge pour gérer les travailleurs déplacés. [lien variable : demographie_mobilite_humaine (+4.3)]
+- **Réseau des Métropoles Côtières Adaptées** (`reseau_des_metropoles_cotieres_adaptees_reference`) — _Gouvernance métropoles côtières post-montée des eaux_
+  - Réseau des Métropoles Côtières Adaptées (`reseau_des_metropoles_cotieres_adaptees_reference`) : émergent → **ascendant** — La montée brutale du niveau de la mer et les déplacements de populations côtières rendent indispensable une gouvernance renforcée des métropoles côtières. Un statut émergent devient faux. [lien variable : demographie_mobilite_humaine (+4.3), organisation_territoires (+0.4)] _(rétrogradé : changement de degré)_ — contredit : Le réseau reste émergent malgré la montée des eaux sur la côte est américaine et les perturbations côtières.
+  - instance Réseau des Métropoles Côtières Adaptées (`reseau_des_metropoles_cotieres_adaptees_reference`) : « Acteur collectif structurant la gouvernance territoriale des zones côtières en 2098, pesant sur les arbitrages entre adaptation, relocalisation et maintien des populations littorales » — contredit par : Le rôle reste inchangé malgré la montée des eaux et les perturbations côtières. — La crise côtière rend le réseau central, pas seulement influent. La phrase doit refléter une nécessité accrue de coordination. [lien variable : demographie_mobilite_humaine (+4.3)] _(rétrogradé : élargit le rôle sans le contredire)_
+- **Fédération des Communs Territoriaux** (`federation_communs_territoriaux_reference`) — _Fédération des Communs Territoriaux dominante_
+  - Fédération des Communs Territoriaux (`federation_communs_territoriaux_reference`) : ascendant → **dominant** — La fragmentation territoriale et la crise climatique renforcent la pertinence des modèles décentralisés comme la FCT. [lien variable : climat_environnement_global (+6.0), systemes_productifs_travail (+4.6)]
+- **Internationale des Travailleurs Augmentés** (`internationale_travailleurs_augmentes_reference`) — _Travailleurs augmentés précarisés post-bouleversements_
+  - Internationale des Travailleurs Augmentés (`internationale_travailleurs_augmentes_reference`) : ascendant → **dominant** — Les bouleversements des systèmes productifs en Europe du Nord-Ouest et ailleurs pourraient augmenter la précarité des travailleurs augmentés, renforçant le rôle de l'ITA comme syndicat transnational de défense. [lien variable : systemes_productifs_travail (+4.6)]
+- **Coopératives Agro-Écologiques de Reconstruction Territoriale** (`cooperatives_agro_ecologiques_de_reconstruction_territoriale_reference`) — _Coopératives agro-écologiques sahéliennes critiques_
+  - Coopératives Agro-Écologiques de Reconstruction Territoriale (`cooperatives_agro_ecologiques_de_reconstruction_territoriale_reference`) : émergent → **ascendant** — La perturbation des systèmes productifs et des flux migratoires renforce le rôle des coopératives comme acteurs de résilience locale, surtout dans les zones touchées par les déplacements de populations. [lien variable : demographie_mobilite_humaine (+4.3) et systemes_productifs_travail (+4.6)]
+  - alliance nouvelle : Coopératives Agro-Écologiques de Reconstruction Territoriale ↔ Gouvernements du Bloc Sahélien Autonome — Les coopératives pourraient s'allier aux gouvernements sahéliens pour répondre aux perturbations hydrologiques en Afrique. [lien relation : gouvernements_du_bloc_sahelien_autonome_reference (opposé à l'Union Africaine Résilience)]
 
-**Autres fiches avec des changements possibles (80)**
-- Murmansk Transit Arctique : alliance rompue avec Collectifs de Pêche Inuit et Sami ; texte « Le territoire est administré par un consortium… »
-- Autorité de Passage Arctique : texte « treize États souverains riverains siègent à parité formelle… »
-- Consortium des Fournisseurs d'Énergie Renouvelable Distribuée : trajectoire émergent → ascendant
-- Consortium Énergétique Baltique : trajectoire émergent → ascendant ; texte « Acteur économique et infrastructurel structurant… »
-- Consortium Logistique Asiatique de Contournement ALN : trajectoire émergent → ascendant
+**Autres fiches avec des changements possibles (141)**
+- Réseau Terrafond : trajectoire mature → déclinant ; texte « Le Réseau Terrafond constitue l'une des architectures… »
+- Union Occidentale de Coordination (UOC) : trajectoire déclinant → résiduel ; opposition nouvelle avec Fonds Souverain Arctique Scandinave ; texte « Elle ne prétend plus à l'intégration politique profonde de… »
+- Syndicats de travail rural hybride : trajectoire émergent → déclinant
+- Banque des Communs : trajectoire émergent → ascendant ; alliance nouvelle avec Consortiums d'Agriculture Verticale Algorithmique
+- Bloc Eurasien Central (BEC) : trajectoire déclinant → résiduel
+- Bureau des Zones Non Prioritaires (BZNP) : trajectoire déclinant → résiduel
+- Collectifs de Journalisme Embarqué : trajectoire émergent → ascendant ; texte « Ancrés dans des zones à fort enjeu territorial — deltas… »
+- Conseil de Régulation des Ressources Critiques : trajectoire déclinant → résiduel
+- Alliance des Glaces Libres (AGL) : trajectoire ascendant → dominant
 - Front Souverainiste des Ressources d'Amérique du Sud : trajectoire émergent → ascendant
-- Lobbies Industriels des États Non-Signataires : trajectoire émergent → ascendant ; alliance nouvelle avec Bloc Eurasien Central (BEC)
-- Régulateurs de l'Union Eurasiatique sur les Données Critiques : trajectoire émergent → ascendant ; texte « Exerce une pression institutionnelle sur les acteurs qui… »
-- Réseaux de financement gris issus d'anciens blocs militaires : trajectoire émergent → ascendant
-- Pacte des Souverains : alliance nouvelle avec Armada Logistique Nordique
-- Assemblée des Territoires Fédérés (ATF) : alliance nouvelle avec Conseil des États Nordiques Intégrés
-- Union Occidentale de Coordination (UOC) : alliance nouvelle avec Armada Logistique Nordique
-- Factions Eurasiatiques contre la Tarification Hydrique : opposition nouvelle avec Bloc Eurasien Central (BEC)
-- gelecek_meclisi_reference : alliance nouvelle avec Conseil des États Nordiques Intégrés
-- Gouvernements Fédéraux Résiduels Souverainistes : opposition nouvelle avec Bloc Eurasien Central (BEC)
-- Hyphan Raghavan de Ergo-Wian Sovereign Holdings : alliance nouvelle avec Consortium Énergétique des Mers du Nord
-- Leena Väinälä : alliance nouvelle avec Conseil des États Nordiques Intégrés
-- Alliance des Blocs Souverains (ABS) : opposition nouvelle avec Armada Logistique Nordique
-- Réseau Hospitalier Hybride Eurasiatique : texte « Acteur-pivot de la santé eurasiatique en contexte de… » ; texte « il maintient une infrastructure de soins transfrontalière… »
-- Coopératives Énergétiques Décentralisées : trajectoire émergent → ascendant
-- Union Africaine de Résilience Territoriale : trajectoire émergent → ascendant
-- Compact des Grands Lacs : alliance nouvelle avec Armada Logistique Nordique
-- Banque Mondiale des Transitions Climatiques : texte « Pilier financier de l'équilibre fragile du scénario de… »
-- Blocs Signataires du Pacte Énergétique Multilatéral : texte « Structure l'architecture diplomatique et réglementaire du… »
-- Direction des Zones Non Prioritaires (DZNP) : texte « Administration fédérale fantôme opérant dans les… »
-- Bureau des Zones Non Prioritaires (BZNP) : texte « Organe institutionnel maintenu dans un état de… »
-- Collectif Nuit Jaune : texte « Dans le scénario reference, le Collectif Nuit Jaune… »
-- Collectifs de Journalisme Embarqué : texte « Ancrés dans des zones à fort enjeu territorial — deltas… »
-- Confédération des Mégapoles Autonomes : texte « Incarne la fragmentation géopolitique en blocs… »
-- Conseil de Régulation des Ressources Critiques : texte « Dans un monde multipolaire fracturé, il joue un rôle de… »
-- Consortium des Grandes Plateformes Logistiques Globales : texte « Dans le scénario de référence, le Consortium incarne la… »
-- Consortium Indo-Pacifique de l'Hydrogène : texte « Dans le scénario reference, le Consortium structure les… »
-- Consortiums d'Extraction Minière du Bassin Congolais : texte « Dans le scénario reference, les Consortiums d'Extraction… »
-- Consortiums Énergétiques des Mégapoles : texte « Dans le scénario reference, ils exercent une pression pour… »
-- Consortiums Médiatiques Corporatifs : texte « Dans le scénario reference, les Consortiums Médiatiques… »
-- Coopératives Agro-Écologiques de Reconstruction Territoriale : texte « Dans le scénario de référence, les coopératives incarnent… »
-- Courant Nationaliste Instrumentalisateur du Discours des Racines : texte « Dans ce scénario, représente une force de résistance… »
-- EcoSynth Global Resilience Systems (EGRS) : texte « EGRS incarne la marchandisation des solutions climatiques.… »
-- États à Tendance Centraliste Numérique : texte « Leur montée en puissance depuis 2026 a redessiné les… »
-- Fonds d'Investissement Foncier Climatique : texte « Il agit comme courroie de transmission entre les marchés… »
-- Fonds Monétaire Climatique (FMC) : texte « Le FMC constitue un pilier de la gouvernance économique… »
-- Gouvernements à Régime de Productivité Mandatée : texte « Dans ce scénario, ces gouvernements constituent un contexte… »
-- Ilse Varga-Holm de Ergo-Wian Sovereign Holdings : texte « Pragmatique et stratège, elle incarne l'équilibre précaire… »
-- Institut des Seuils Démographiques (ISD-2098) : texte « Il agit comme arbitre des flux humains, produisant des… »
-- Réseau de Gouvernance Multilatérale Survivant (RGMS) : texte « Elles peinent à imposer leur autorité face aux blocs… »
-- Accords Hydriques de Kinshasa : texte « Régulièrement mis à l'épreuve par les sécheresses, les… »
-- Lamplight Collective : texte « En enquêtant sur les financements clandestins des… »
-- Raj Mehta : texte « Couvre les tensions géopolitiques et économiques dans un… »
-- Les Gardiens des Rives : texte « Ils agissent comme un système nerveux parallèle, reliant… »
-- Ligue des Métropoles du Sud pour les Infrastructures Libres : texte « Dans ce scénario, elle incarne la pression organisée des… »
-- Ligue des Municipalités Périphériques Sous-Connectées : texte « Dans ce scénario, elle représente la pression collective… »
-- Lobbies Agro-Industriels à Haute Consommation d'Eau : texte « Exercent des pressions politiques et économiques pour… »
+- Accords Hydriques de Kinshasa : trajectoire mature → déclinant ; opposition nouvelle avec Autorités Régionales de Régulation Hydrologique
+- Les Gardiens des Rives : trajectoire ascendant → dominant
+- Mouvement des Racines Vivantes : trajectoire ascendant → dominant ; alliance nouvelle avec Coopératives Agro-Écologiques du Bassin Méditerranéen
+- Programme ONU-Eau 2080 : trajectoire émergent → ascendant ; texte « Sert de référentiel normatif et d'instance de coordination… »
+- Régulateurs de l'Union Continentale Africaine : trajectoire émergent → ascendant ; alliance nouvelle avec Gouvernements du Bloc Sahélien Autonome
+- Réseau des Coopératives Agro-Sahéliennes : trajectoire émergent → ascendant
+- Union Africaine Résilience (UAR) : trajectoire déclinant → résiduel
+- Autorités Régionales de Régulation Hydrologique : alliance nouvelle avec Fonds Souverain Arctique Scandinave
+- Consortium des Grandes Plateformes Logistiques Globales : opposition nouvelle avec Armada Logistique Nordique ; texte « il est l'épine dorsale matérielle sans laquelle l'équilibre… »
+- Ergo-Wian Sovereign Holdings : alliance nouvelle avec Fonds Souverain Arctique Scandinave
+- Alliance des Blocs Souverains (ABS) : opposition nouvelle avec Fonds Souverain Arctique Scandinave
+- Detroit Compact Grands Lacs : texte « le Compact coordonne la gestion des ressources hydriques et… »
+- Administrations Hybrides des Cités-Relais Périphériques : trajectoire émergent → ascendant
+- Agence Internationale des Énergies Renouvelables (IRENA-2) : trajectoire émergent → ascendant
+- Agences de Sécurité Régionales de Normalisation des Zones Grises : trajectoire émergent → ascendant
+- Algorithmic Labor Exchange : trajectoire émergent → ascendant
+- Amara Diallo-Nkosi : trajectoire mature → dominant
+- Banque Mondiale des Transitions Climatiques : trajectoire émergent → ascendant ; alliance nouvelle avec Autorités Régionales de Régulation Hydrologique
+- Bloc des Souverainistes Climatiques : trajectoire émergent → ascendant ; opposition nouvelle avec Fonds Souverain Arctique Scandinave
+- Direction des Zones Non Prioritaires (DZNP) : trajectoire mature → ascendant
+- Cartel des Terres Rares d'Asie Centrale : trajectoire émergent → ascendant
+- Collectif Nuit Jaune : trajectoire émergent → ascendant ; opposition nouvelle avec Autorités Régionales de Régulation Hydrologique
+- Collectifs Académiques Indépendants : trajectoire émergent → ascendant
+- Collectifs de Biopiraterie Inversée : trajectoire émergent → ascendant
+- Collectifs de Journalistes Indépendants Régionaux : trajectoire émergent → ascendant
+- Communs Numériques Agroécologiques : trajectoire émergent → ascendant
+- Conseil de Genève pour les Droits Biosociaux : trajectoire émergent → ascendant
+- Conseil des États Nordiques Intégrés : trajectoire ascendant → dominant ; alliance nouvelle avec Consortium Helios
+- Consortium des Fournisseurs d'Énergie Renouvelable Distribuée : trajectoire émergent → ascendant
+- Consortium Énergétique Baltique : trajectoire émergent → déclinant ; alliance nouvelle avec Consortium Helios
+- Consortium Énergétique des Mers du Nord : trajectoire émergent → déclinant ; alliance nouvelle avec Consortium Helios
+- Consortium Indo-Pacifique de l'Hydrogène : trajectoire émergent → ascendant
+- Consortium Logistique Asiatique de Contournement ALN : trajectoire émergent → ascendant
+- Consortiums Énergétiques Opaques : trajectoire émergent → ascendant ; alliance nouvelle avec Fonds Souverain Arctique Scandinave
+- Consortiums Privés d'Extraction de Ressources Critiques : trajectoire émergent → ascendant ; alliance nouvelle avec Fonds Souverain Arctique Scandinave
+- Consortiums Privés de Gestion des Données Critiques : trajectoire émergent → ascendant
+- Coopératives Agro-Écologiques du Bassin Méditerranéen : trajectoire émergent → ascendant
+- Coopératives Énergétiques Décentralisées : trajectoire émergent → ascendant ; opposition nouvelle avec Armada Logistique Nordique
+- Corporations d'Extraction Énergétique Non Signataires : trajectoire émergent → ascendant
+- Courant Nationaliste Instrumentalisateur du Discours des Racines : trajectoire émergent → ascendant
+- Delta du Mékong — Zone de Friction Nourricière : trajectoire déclinant → résiduel
+- Factions d'Extraction Minière Indépendantes : trajectoire émergent → ascendant
+- Factions Eurasiatiques contre la Tarification Hydrique : trajectoire émergent → ascendant
+- Fonds d'Investissement Foncier Climatique : trajectoire émergent → ascendant
+- Fonds Monétaire Climatique (FMC) : trajectoire émergent → ascendant
+- Fonds Souverains de la Ceinture Financière Pacifique : trajectoire émergent → ascendant
+- Forum Léman — Coordination pour le Recul des Eaux : trajectoire mature → déclinant ; texte « Organisation de gestion environnementale et patrimoniale… »
+- Helsinki Communs Numériques : trajectoire mature → déclinant
+- Institut Polytechnique de Ouagadougou : trajectoire émergent → ascendant
+- Kaspar Lind : trajectoire marginal → ascendant
+- Réseau Étincelle : trajectoire marginal → ascendant
+- Lamplight Collective : trajectoire ascendant → dominant
+- Leena Väinälä : trajectoire ascendant → dominant
+- Réseau des Sentinelles des Eaux Profondes : trajectoire ascendant → dominant
+- Ligue des Métropoles du Sud pour les Infrastructures Libres : trajectoire émergent → ascendant
+- Ligue des Municipalités Périphériques Sous-Connectées : trajectoire émergent → ascendant
+- Lobbies Agro-Industriels à Haute Consommation d'Eau : trajectoire émergent → ascendant
+- Lobbies Industriels des États Non-Signataires : trajectoire émergent → ascendant
+- Milices Concurrentes des Droits de Passage : trajectoire émergent → ascendant
+- Mouvement pour la Libre Circulation des Personnes et des Données : trajectoire émergent → ascendant
+- Nairobi CRRC — Centre Régional de Résilience et de Coordination : trajectoire mature → ascendant
+- NeuroHarmonics Global Augmentation Network (NH-GAN) : trajectoire dominant → mature
+- Observatoire Climatique des Territoires (OCT) : trajectoire émergent → ascendant
+- ONG de Traçabilité des Ressources Critiques : trajectoire émergent → ascendant
+- ONG Environnementales de Terrain : trajectoire émergent → ascendant ; texte « Dans le scénario de référence, elles constituent un… »
+- Opérateurs de Zones Économiques Spéciales Périurbaines : trajectoire émergent → ascendant
+- Opérateurs Logistiques Privés des Zones Grises Eurasiennes : trajectoire émergent → ascendant
+- Opérateurs Privés d'Énergie Distribuée Hors-FCT : trajectoire émergent → ascendant ; texte « Leur expansion — notamment depuis la généralisation du… »
+- OptiFlow Global Logistics Network (OGLN) : trajectoire dominant → mature
+- Ouagadougou Polytechnique : trajectoire ascendant → dominant
+- Plateformes d'Optimisation Territoriale par IA : trajectoire émergent → ascendant
+- Prisme Global : trajectoire ascendant → dominant
+- Réseaux de Capteurs Citoyens : trajectoire émergent → ascendant
+- Sibérie Fédérale : trajectoire marginal → ascendant ; opposition nouvelle avec Fonds Souverain Arctique Scandinave
+- Syndicats de travailleurs de la transition énergétique : trajectoire émergent → ascendant
+- Universités et Think Tanks en Zones de Liberté Académique : trajectoire émergent → ascendant ; texte « elles produisent des contre-expertises sur les gouvernances… »
+- Consortiums Médiatiques Corporatifs : alliance nouvelle avec Consortium Helios ; texte « ils minimisent les signaux de rupture, valorisent les… »
+- gelecek_meclisi_reference : alliance nouvelle avec Autorités Régionales de Régulation Hydrologique
+- Hyphan Raghavan de Ergo-Wian Sovereign Holdings : alliance nouvelle avec Fonds Souverain Arctique Scandinave
+- Ilse Varga-Holm de Ergo-Wian Sovereign Holdings : alliance nouvelle avec Fonds Souverain Arctique Scandinave
+- Meridian Assembly : alliance nouvelle avec Confédération des Archipels Flottants du Pacifique Sud (CAFPS)
+- Nexus BioSyn : alliance nouvelle avec Consortiums d'Agriculture Verticale Algorithmique
+- Consortiums Énergétiques des Mégapoles : texte « ils exercent une pression pour absorber les corridors… »
+- Autorité de Régulation des Passages Stratégiques (ARPS) : texte « Elle incarne une gouvernance hybride, mêlant souveraineté… »
+- Consortium de Maintenance Orbitale SEOM-7 : texte « Il est l'opérateur technique de dernier recours sur lequel… »
+- Consortiums Bancaires Financiarisés : texte « ils incarnent une dépendance structurelle aux… »
+- Consortiums d'Extraction Minière du Bassin Congolais : texte « les ressources critiques nécessaires à la décarbonation… »
 - Maëlys Okonkwo : texte « Son travail se concentre sur l'exposition des liens entre… »
-- Mouvement pour la Libre Circulation des Personnes et des Données : texte « Pression sur les institutions pour abolir ou contourner les… »
-- Nairobi CRRC — Centre Régional de Résilience et de Coordination : texte « Dans un monde fragmenté mais encore institutionnellement… »
-- NexCore Global Infrastructure Group : texte « NexCore GIG est devenu l'épine dorsale numérique de facto… »
-- Observatoire Climatique des Territoires (OCT) : texte « Elle occupe une position d'arbitre technique dans un… »
-- ONG Environnementales de Terrain : texte « Dans le scénario de référence, elles constituent un… »
-- Opérateurs Privés d'Énergie Distribuée Hors-FCT : texte « Dans le scénario référence, les Opérateurs Hors-FCT… »
-- Oracle des Seuils : texte « Système d'intelligence artificielle distribué opérant sous… »
-- Plateformes Centralisées de Narration Officielle : texte « Dans le scénario référence, les Plateformes Centralisées de… »
-- Plateformes d'Optimisation Territoriale par IA : texte « Dans ce scénario, ces plateformes structurent la manière… »
+- Nadia Ferreira-Sato de Raised Hands : texte « elle crée des structures alternatives de survie et de… »
+- NexCore Global Infrastructure Group : texte « elle opère les réseaux de communication intercontinentaux,… »
+- Confédération des Archipels Flottants du Pacifique Sud (CAFPS) : texte « Confédération de communautés installées sur des archipels… »
+- Alliance pour la Souveraineté Maritime des Peuples Insulaires (ASMPI) : texte « L'ASMPI fédère les États-archipels et communautés… »
+- Plateformes Centralisées de Narration Officielle : texte « Elles constituent le cadre dominant contre lequel s'inscrit… »
 - Plateformes Informationnelles Dominantes et leurs IA de Modération : texte « Dans le scénario reference, elles forment le substrat… »
-- Prisme Global : texte « Prisme Global s'est imposé comme la principale… »
-- Régulateurs de l'Union Continentale Africaine : texte « Instance régulatrice continentale émergente, les… »
-- Réseau des Métropoles Côtières Adaptées : texte « Acteur collectif structurant la gouvernance territoriale… »
-- Réseau des Villes-Refuge pour Travailleurs Désaugmentés : texte « Constitue un contre-modèle territorial à la logique… »
-- Réseaux de Capteurs Citoyens : texte « Dans le scénario de référence, les Réseaux de Capteurs… »
-- Réseaux de gouvernance multilatérale survivants : texte « Représente la persistance — fragile et contestée — d'une… »
-- Services de contre-information des blocs géopolitiques concurrents : texte « Acteurs exogènes qui alimentent la guerre informationnelle… »
-- Singapour Est Nexcore : texte « Singapour Est Nexcore est une organisation technologique… »
-- Singapour Est : texte « Singapour Est désigne la zone administrative orientale de… »
-- Syndicats de travailleurs de la transition énergétique : texte « Acteurs de négociation et de pression sur les modalités… »
-- TerraMetrics Global Climate Solutions (TM-GCS) : texte « TerraMetrics Global Climate Solutions (TM-GCS) est l'acteur… »
-- Tribunal Algorithmique de Bruxelles : texte « Le Tribunal Algorithmique de Bruxelles est la juridiction… »
-- Union Africaine Résilience (UAR) : texte « Elle reste un interlocuteur reconnu sur la scène… »
-- Universités et Think Tanks en Zones de Liberté Académique : texte « elles produisent des contre-expertises sur les gouvernances… »
-- Valparaíso FCT — Facilitation & Compensation Transfrontalière : texte « elle n'émet pas de monnaie, ne produit pas de marchandises,… »
 - Voix du Dehors : texte « Dans un monde où l'infrastructure numérique est hautement… »
-- Marges Persistantes — Zones Grises du Système Mondial : texte « Elles fonctionnent comme des soupapes systémiques —… »
+- Programme Pilote de Bio-Revenu Universel de Nairobi : texte « Le programme, s'il survit à ses contestations juridiques,… »
+- Amazonie Consortium Viva : trajectoire dominant → mature
+- Bloc des États du Sud Global contre la Cession de Données : trajectoire émergent → ascendant
+- Bureaux de Régulation Informationnelle : trajectoire émergent → ascendant
+- Coalition des Gouvernements Contre les Chartes de Déstabilisation : trajectoire émergent → ascendant
+- Coalition pour la Souveraineté Numérique Nationale : trajectoire émergent → ascendant
+- États à Tendance Centraliste Numérique : trajectoire émergent → ascendant
+- Fédération des Cliniques Autonomes : trajectoire émergent → ascendant
+- Gouvernements à Régime de Productivité Mandatée : trajectoire émergent → ascendant
+- Guadalajara Nexus : trajectoire ascendant → dominant
+- Atlas des Marges : trajectoire ascendant → dominant
+- Réseau des Villes-Refuge pour Travailleurs Désaugmentés : trajectoire émergent → ascendant
+- Réseaux de gouvernance multilatérale survivants : trajectoire émergent → déclinant
+- Réseaux de lanceurs d'alerte institutionnels dissidents : trajectoire émergent → ascendant
+- Prefeitura Metropolitana de São Paulo — Administração de Continuidade (PMSP-AC) : trajectoire déclinant → résiduel ; texte « La PMSP-AC continue d'administrer une agglomération de 32… »
+- Services de contre-information des blocs géopolitiques concurrents : trajectoire émergent → ascendant
+- Kharg Data Nexus : trajectoire mature → dominant
+- Aurelio Stahl : texte « En tant que conférencier et essayiste itinérant entre les… »
+- Confédération des Mégapoles Autonomes : texte « Incarne la fragmentation géopolitique en blocs… »
+- Système Kontinuum : texte « Le Système Kontinuum est une infrastructure algorithmique… »
+- Raj Mehta : texte « Couvre les tensions géopolitiques et économiques dans un… »
+- Sistema Paulista de Alocação Algorítmica de Recursos (SPAAR) : texte « orchestre en temps réel l'allocation de l'eau, de… »
+- Gouvernements Fédéraux Résiduels Souverainistes : trajectoire émergent → déclinant
+- Réseau des Administrations Locales Rurales Participatives : trajectoire émergent → ascendant
+- Réseaux de financement gris issus d'anciens blocs militaires : trajectoire émergent → ascendant
+- Réseaux de médecine traditionnelle augmentée : trajectoire émergent → ascendant
+- Oracle des Seuils : texte « l'Oracle des Seuils est devenu l'instrument de référence… »
+- Autorité de Passage Arctique : trajectoire mature → dominant
+- Bruxelles Nouveau : trajectoire déclinant → résiduel ; opposition nouvelle avec Fonds Souverain Arctique Scandinave
+- Collectifs de Pêche Inuit et Sami : trajectoire ascendant → dominant
+- Passage Arctique du Nord — Zone de Transit Disputée : trajectoire dominant → mature ; texte « une voie maritime dégagée par la fonte quasi-totale de la… »
+- Murmansk Transit Arctique : trajectoire disparu → historique
+- Tribunal Algorithmique de Bruxelles : trajectoire ascendant → déclinant ; texte « Le Tribunal Algorithmique de Bruxelles est la juridiction… »
+- Delta du Gange — Zone de Crise Permanente : texte « Territoire en crise permanente, submergé par la montée des… »
+- Lyon Métropole — Autorité de Coordination Territoriale : texte « Lyon Métropole est une organisation administrative… »
+- L'Écho Glacé de Murmansk : texte « Le *Polaris-7*, fleuron de la flotte de Murmansk Transit… »
 
-_Corrections automatiques (2) : relation factions_eurasiatiques_contre_la_tarification_hydrique_reference / bloc_eurasien_central_reference : renforcée -> nouvelle (absente du vault) ; relation gouvernements_federaux_residuels_souverainistes_reference / bloc_eurasien_central_reference : renforcée -> nouvelle (absente du vault)_
-
-_Réponses rejetées car mal formées (16) : relation armada_logistique_nordique_reference / murmansk_transit_arctique_reference : opposition à rompre absente du vault ; trajectoire : armada_logistique_nordique_reference dominant → ascendant (recul sur la phase de montée, incohérent) ; relation arctic_passage_authority_reference / armada_logistique_nordique_reference : alliance déjà présente ; relation bloc_ressources_eurasiatique_bre_reference / armada_logistique_nordique_reference : opposition déjà présente ; relation collectifs_de_peche_inuit_et_sami_reference / armada_logistique_nordique_reference : opposition déjà présente ; relation consortium_des_grandes_plateformes_logistiques_globales_reference / armada_logistique_nordique_reference : alliance déjà présente ; trajectoire : corridor_arctique_nordique_reference dominant → mature présenté comme un renforcement (contresens sur l'axe) ; relation corridor_arctique_nordique_reference / armada_logistique_nordique_reference : alliance déjà présente (proposée comme renforcée, rien à changer) …_
+_Réponses rejetées car mal formées (47) : trajectoire : armada_logistique_nordique_reference déjà dominant (aucun changement) ; relation administrations_hybrides_des_cites_relais_peripheriques_reference / autorites_regionales_de_regulation_hydrologique_reference : alliance déjà présente ; relation agence_de_regulation_des_detroits_strategiques_ards_reference / arctic_passage_authority_reference : alliance déjà présente ; relation agrisynth_reference / consortiums_d_agriculture_verticale_algorithmique_reference : alliance déjà présente ; relation arctic_passage_authority_reference / fonds_souverain_arctique_scandinave_reference : alliance déjà présente ; trajectoire : blocs_signataires_du_pacte_energetique_multilateral_reference émergent → mature présenté comme un renforcement (contresens sur l'axe) ; relation conseil_des_etats_nordiques_integres_reference / fonds_souverain_arctique_scandinave_reference : alliance déjà présente ; relation collectifs_academiques_independants_reference / autorites_regionales_de_regulation_hydrologique_reference : alliance déjà présente …_
 
 ### Liste d'application (à valider à la main — rien n'est écrit)
 
 _Carte et conséquences tirées de la lecture IA (un tirage) : relire chaque étape avant de l'appliquer ; écarter une proposition suffit à sauter ses étapes._
 
 **Statuts de zone**
-- [ ] 1. `murmansk_transit_arctique` (Mourmansk) : stable → en_declin
+- [ ] 1. `europe_occidentale_reconstruite` (Europe Occidentale Reconstruite) : stable → fragmenté
   - à la main : geographie/reference.md, champ `statut` (texte mis à jour par regenerer_corps_geographie.py --scenario reference --execute)
-  - _Disparition de l'infrastructure Murmansk Transit Arctique et déclin partiel de la ville._
+  - _Le refroidissement climatique et les crises agricoles fragmentent les solidarités territoriales, avec des régions comme le Massif Central ou l'Ibérie Atlantique devenant des zones de repli ou de conflit._
+- [ ] 2. `union_africaine_resilience` (Union Africaine de Résilience Territoriale) : emergent → fragmenté
+  - à la main : geographie/reference.md, champ `statut` (texte mis à jour par regenerer_corps_geographie.py --scenario reference --execute)
+  - _Les déplacements des moussons et les crises hydriques exacerbent les tensions internes, affaiblissant la cohésion de l'UA face aux pressions migratoires et aux milices._
 
 **Élément**
-- [ ] 2. Injecter l'événement `explosion_brise_glace_murmansk_2081` (entrée commune en fin de rapport)
+- [ ] 3. Injecter l'événement `effondrement_circulation_atlantique_2067` en mode rupture (entrée commune en fin de rapport)
   - `python3 generator/inject_custom_events.py --mode custom`
-  - _une seule injection pour tous les scénarios de l'hypothèse_
-- [ ] 3. Vérifier que la fiche porte les forces simulées (organisation_territoires +6, geopolitique_conflits +5, energie_ressources_critiques +4, systeme_economique_redistribution +5, demographie_mobilite_humaine +3)
-  - event_instances/explosion_brise_glace_murmansk_2081_reference.md, bloc impact_sur_variables ; python3 generator/trace_injection.py --slug explosion_brise_glace_murmansk_2081 --type evenement --scenario reference
-  - _imposées par l'entrée commune (impacts_imposes, date_imposee) : l'effet doit correspondre à cette simulation_
+  - _une seule injection pour tous les scénarios ; mode_impose: rupture écrit `mode: rupture` dans chaque fiche_
+- [ ] 4. climat_environnement_global : référence 65,0 → 70,9
+  - aucune action : déplacée par le moteur dès l'injection
+- [ ] 5. systemes_productifs_travail : référence 70,0 → 74,0
+  - aucune action : déplacée par le moteur dès l'injection
+- [ ] 6. demographie_mobilite_humaine : référence 55,0 → 59,0
+  - aucune action : déplacée par le moteur dès l'injection
+- [ ] 7. energie_ressources_critiques : référence 72,0 → 75,0
+  - aucune action : déplacée par le moteur dès l'injection
+- [ ] 8. Vérifier que la fiche porte `mode: rupture` et les forces simulées (climat_environnement_global +6, systemes_productifs_travail +4, energie_ressources_critiques +3, demographie_mobilite_humaine +4)
+  - event_instances/effondrement_circulation_atlantique_2067_reference.md ; python3 generator/trace_injection.py --slug effondrement_circulation_atlantique_2067 --type evenement --scenario reference
+  - _le Tracer doit finir chaque ligne « Déclaré » par « rupture »_
+- [ ] 9. Nouvelle référence : vérifier la lisibilité du moteur
+  - `python3 generator/banc_calibration.py --scenarios all --balayage-k 0.05`
+  - _S19_
 
 **Nouvelles entités**
-- [ ] 4. 3 entrée(s) prête(s) (bloc YAML ci-dessous) pour entites_custom/queue.yaml — catégorie à choisir
+- [ ] 10. 3 entrée(s) prête(s) (bloc YAML ci-dessous) pour entites_custom/queue.yaml — catégorie à choisir
   - `python3 generator/create_entities_and_instances.py --mode custom`
   - _la lecture IA ne donne pas de catégorie ; scenario_hint limite à ce scénario_
 
 **Trajectoires**
-- [ ] 5. Murmansk Transit Arctique (`murmansk_transit_arctique_reference`) : dominant → disparu
-  - à la main : instances/murmansk_transit_arctique_reference.md, champ `trajectoire` ; puis `annee_fin` (fix_annee_fin_manquant.py)
-  - _Destruction définitive de l'infrastructure Murmansk Transit Arctique suite à l'explosion du brise-glace nucléaire._
-- [ ] 6. Conseil des États Nordiques Intégrés (`conseil_des_etats_nordiques_integres_reference`) : émergent → ascendant
-  - à la main : instances/conseil_des_etats_nordiques_integres_reference.md, champ `trajectoire`
-  - _Renforcement de la coopération régionale pour combler le vide laissé par la disparition de Mourmansk._
-- [ ] 7. Fonds Souverain Arctique Scandinave (`fonds_souverain_arctique_scandinave_reference`) : émergent → ascendant
+- [ ] 11. Delta du Gange — Zone de Crise Permanente (`delta_du_gange_reference`) : déclinant → résiduel
+  - à la main : instances/delta_du_gange_reference.md, champ `trajectoire`
+  - _Les déplacements des moussons et la montée des eaux submergent définitivement les infrastructures du delta, rendant la zone ingouvernable et accélérant son abandon._
+- [ ] 12. Consortiums d'Agriculture Verticale Algorithmique (`consortiums_d_agriculture_verticale_algorithmique_reference`) : émergent → ascendant
+  - à la main : instances/consortiums_d_agriculture_verticale_algorithmique_reference.md, champ `trajectoire`
+  - _La perturbation des écosystèmes agricoles traditionnels en Europe et en Afrique accélère l'adoption des fermes verticales comme solution de souveraineté alimentaire._
+- [ ] 13. ⚠ Autorités Régionales de Régulation Hydrologique (`autorites_regionales_de_regulation_hydrologique_reference`) : émergent → dominant
+  - à la main : instances/autorites_regionales_de_regulation_hydrologique_reference.md, champ `trajectoire`
+  - _saut d'un cran (sans passer par ascendant) : garder, ou ramener à ascendant ; Les crises hydrologiques en cascade (Afrique, Amérique du Sud) imposent une gouvernance décentralisée de l'eau comme condition de survie, renforçant leur légitimité._
+- [ ] 14. Fonds Souverain Arctique Scandinave (`fonds_souverain_arctique_scandinave_reference`) : ascendant → dominant
   - à la main : instances/fonds_souverain_arctique_scandinave_reference.md, champ `trajectoire`
-  - _Accroissement de son rôle dans la gouvernance des territoires arctiques suite à la redistribution des flux logistiques._
-- [ ] 8. Sibérie Fédérale (`siberie_federale_reference`) : émergent → marginal
-  - à la main : instances/siberie_federale_reference.md, champ `trajectoire`
-  - _Perte d'accès privilégié aux routes arctiques et marginalisation accrue dans le Bloc Eurasien Central._
-- [ ] 9. ⚠ Consortium Énergétique des Mers du Nord (`consortium_energetique_des_mers_du_nord_reference`) : émergent → dominant
-  - à la main : instances/consortium_energetique_des_mers_du_nord_reference.md, champ `trajectoire`
-  - _saut d'un cran (sans passer par ascendant) : garder, ou ramener à ascendant ; Absorption des flux énergétiques redirigés vers Tromsø et renforcement de son rôle systémique._
-- [ ] 10. Collectifs de Pêche Inuit et Sami (`collectifs_de_peche_inuit_et_sami_reference`) : émergent → ascendant
-  - à la main : instances/collectifs_de_peche_inuit_et_sami_reference.md, champ `trajectoire`
-  - _Renforcement de leurs revendications territoriales face à la reconfiguration des zones de pêche arctiques._
+  - _Les revenus tirés de l'exploitation des terres rares et des nouvelles routes arctiques font du FSAS un acteur financier majeur, capable de peser sur les équilibres énergétiques._
 
 **Relations**
-- [ ] 11. Murmansk Transit Arctique (`murmansk_transit_arctique_reference`) disparaît : retirer ses 1 relation(s) rompue(s) [passe exhaustive]
-  - à la main : retirer `murmansk_transit_arctique_reference` des alliances / oppositions de `armada_logistique_nordique_reference`, puis vider celles de instances/murmansk_transit_arctique_reference.md
-  - _regroupé sous l'entité disparue ; la réciprocité n'enlève rien_
-- [ ] 12. opposition nouvelle : Bloc Eurasien Central (BEC) ↔ Armada Logistique Nordique
-  - à la main : ajouter `armada_logistique_nordique_reference` dans `oppositions` de instances/bloc_eurasien_central_reference.md
-  - _Tensions accrues pour le contrôle des routes arctiques et des ressources critiques._
-- [ ] 13. alliance nouvelle : Consortium Énergétique des Mers du Nord ↔ Armada Logistique Nordique
-  - à la main : ajouter `armada_logistique_nordique_reference` dans `alliances` de instances/consortium_energetique_des_mers_du_nord_reference.md
-  - _Synergie entre logistique et énergie pour optimiser les flux redirigés vers Tromsø._
-- [ ] 14. opposition nouvelle : Collectifs de Pêche Inuit et Sami ↔ Conseil des États Nordiques Intégrés
-  - à la main : ajouter `conseil_des_etats_nordiques_integres_reference` dans `oppositions` de instances/collectifs_de_peche_inuit_et_sami_reference.md
-  - _Conflits d'intérêts entre gouvernance régionale et revendications territoriales autochtones._
-- [ ] 15. opposition nouvelle : Sibérie Fédérale ↔ Bloc Eurasien Central (BEC)
-  - à la main : ajouter `bloc_eurasien_central_reference` dans `oppositions` de instances/siberie_federale_reference.md
-  - _Marginalisation de la Sibérie Fédérale et contestation de l'autorité centrale russe._
-- [ ] 16. Rendre les relations réciproques
+- [ ] 15. alliance nouvelle : Consortium Helios ↔ Fonds Souverain Arctique Scandinave
+  - à la main : ajouter `fonds_souverain_arctique_scandinave_reference` dans `alliances` de instances/consortium_helios_reference.md
+  - _Helios et le FSAS s'allient pour sécuriser les infrastructures énergétiques orbitales et les corridors arctiques, combinant expertise technologique et contrôle des ressources._
+- [ ] 16. opposition nouvelle : Armada Logistique Nordique ↔ OptiFlow Global Logistics Network (OGLN)
+  - à la main : ajouter `optiflow_logistics_reference` dans `oppositions` de instances/armada_logistique_nordique_reference.md
+  - _L'ALN conteste le monopole d'OptiFlow sur les flux logistiques mondiaux, cherchant à imposer ses propres standards pour les routes arctiques._
+- [ ] 17. opposition nouvelle : Consortium Indo-Pacifique de l'Hydrogène ↔ Bloc Ressources Eurasiatique (BRE)
+  - à la main : ajouter `bloc_ressources_eurasiatique_bre_reference` dans `oppositions` de instances/consortium_indo_pacifique_de_l_hydrogene_reference.md
+  - _Le Consortium Indo-Pacifique et le BRE s'affrontent pour le contrôle des gisements d'hydrogène et des infrastructures de liquéfaction, dans un contexte de pénurie énergétique aggravée._
+- [ ] 18. opposition nouvelle : Gouvernements du Bloc Sahélien Autonome ↔ Union Africaine Résilience (UAR)
+  - à la main : ajouter `union_africaine_resilience_reference` dans `oppositions` de instances/gouvernements_du_bloc_sahelien_autonome_reference.md
+  - _Le Bloc Sahélien, confronté à des déplacements de moussons et à des sécheresses prolongées, accuse l'UA de ne pas redistribuer équitablement les ressources hydriques et alimentaires._
+- [ ] 19. alliance nouvelle : Ergo-Wian Sovereign Holdings ↔ Consortiums Énergétiques Opaques
+  - à la main : ajouter `consortiums_energetiques_opaques_reference` dans `alliances` de instances/ergo_wian_sovereign_holdings_reference.md
+  - _EWSH et les Consortiums Opaques s'associent pour exploiter les opportunités spéculatives liées aux pénuries énergétiques en Europe, en contournant les régulations publiques._
+- [ ] 20. opposition nouvelle : Bloc Eurasien Central (BEC) ↔ Bloc Ressources Eurasiatique (BRE) [passe exhaustive]
+  - à la main : ajouter `bloc_ressources_eurasiatique_bre_reference` dans `oppositions` de instances/bloc_eurasien_central_reference.md
+  - _Le BRE, en tant que régulateur autoritaire, ne peut plus maintenir d'alliance avec un BEC devenu résiduel et incapable de garantir des compromis stables. [lien relation : Le BRE devient un régulateur autoritaire des ressources critiques eurasiatiques, capable d'influer sur les prix mondiaux.] — contredit : Le BEC et le BRE sont alliés dans le scénario de référence._
+- [ ] 21. Rendre les relations réciproques
   - `python3 generator/fix_alliances_oppositions.py --scenario reference --reciprocite-seule --ignorer-exclus`
   - _étape 2 de Relations & lore (simulation d'abord)_
 
 **Lore**
-- [ ] 17. Règles à ajouter pour que l'audit du lore surveille : faits imposés de l'hypothèse
+- [ ] 22. Règles à ajouter pour que l'audit du lore surveille : faits imposés de l'hypothèse
   - à la main : documentation/lore_regles.yaml, section reference
   - _comme les zones abandonnées de fortress_world (Nordgard, Koursk)_
 
 **Fiches à relire**
-- [ ] 18. Corriger une phrase de `murmansk_transit_arctique_reference` [passe exhaustive]
-  - à la main : instances/murmansk_transit_arctique_reference.md
-  - _« Plaque tournante stratégique du trafic maritime et énergétique arctique, Murmansk Transit Arctique s'est imposée comme nœud incontournable des nouvelles routes… » — contredit par : L'infrastructure Murmansk Transit Arctique n'existe plus en 2098._
-- [ ] 19. Termes cherchés : Arctique, Logistique, Mourmansk, Murmansk, Nord, Nordique, Passage, Transit, Tromsø
-  - _mot entier, sans casse ni accents ; le registre seulement après 2081 (chronologie) ; instances et événements relus par la passe exhaustive : seuls les zones et le registre sont listés_
-- [ ] 20. Zone `bloc_eurasien_central` cite « Transit »
-  - _…rale (lithium, terres rares, hydrogène) et les corridors de transit vers les mégapoles eurasiatiques. Comprend la Sibérie Fédérale comme entité rev…_
-- [ ] 21. Zone `corridor_arctique_nordique` cite « Arctique »
-  - _Corridor Arctique Nordique…_
-- [ ] 22. Zone `ecosse_nordique_independante` cite « Nordique »
-  - _Écosse Nordique Indépendante…_
-- [ ] 23. Zone `iberie_atlantique_fragmentee` cite « Logistique »
-  - _Zone centrée sur Lisbonne, devenue un hub logistique et financier secondaire pour les flux atlantiques, en concurrence avec les port…_
-- [ ] 24. Zone `indo_pacifique_emergent` cite « Nord »
-  - _…anie ; Laos ; Cambodge ; Brunei ; Timor oriental ; Corée du Nord ; Taïwan ; Seychelles ; Barbade ; Sainte-Lucie ; Grenade ; Saint-Vincent-et-les…_
-- [ ] 25. Zone `turquie_eurasie_moyen_orient` cite « Transit »
-  - _…corridors énergétiques entre l'Europe et l'Asie. Centre de transit pour les flux de données et d'énergie.…_
-- [ ] 26. Zone `zones_grises_globales` cite « Nord »
-  - _…; Érythrée ; Bosnie-Herzégovine ; Monténégro ; Macédoine du Nord ; Albanie ; Kosovo ; Turkménistan ; Palestine ; République centrafricaine ; Som…_
-- [ ] 27. Zone `bloc_sahelien_autonome` cite « Passage »
-  - _…ésion du bloc. Compétition entre milices pour les droits de passage sur les couloirs du Sahel. Captation des savoirs écologiques locaux par des pla…_
-- [ ] 28. Zone `corridors_eurasiens_peripheriques` cite « Logistique »
-  - _…Ces corridors constituent le segment le plus instable de la logistique eurasiatique — ni sous contrôle étatique formel, ni entièrement dans les mains…_
-- [ ] 29. Zone `corridors_eurasiens_zones_grises` cite « Logistique »
-  - _…formel du Bloc Eurasien Central et constituent le substrat logistique de l'économie parallèle eurasiatique.…_
-- [ ] 30. Zone `couloirs_saheliens` cite « Passage »
-  - _…c Sahélien Autonome, les milices concurrentes des droits de passage, et les agences de sécurité régionales de normalisation. Leur contrôle est au c…_
-- [ ] 31. Zone `detroit_compact_grands_lacs` cite « Nord »
-  - _…hydriques massifs vers les zones désertifiées du Sud-Ouest nord-américain crée une fracture entre délégués autochtones opposés à toute exportat…_
-- [ ] 32. Zone `helsinki_communs_numeriques` cite « Arctique »
-  - _…d de production intellectuelle alternative dans le Corridor Arctique Nordique, à l'interface entre la logique para-étatique de l'ALN et les expérien…_
-- [ ] 33. Zone `murmansk_transit_arctique` cite « Mourmansk »
-  - _Mourmansk…_
-- [ ] 34. Zone `nuuk_capitale_groenland` cite « Arctique »
-  - _…itale est le centre de gravité géopolitique d'une puissance arctique émergente qui joue méthodiquement les blocs eurasiatique, indo-pacifique et nor…_
-- [ ] 35. Zone `siberie_federale` cite « Arctique »
-  - _Contestation des zones maritimes arctiques avec le Corridor Arctique Nordique. Tension avec le cartel des terres rares d'Asie centrale sur le partag…_
-- [ ] 36. Zone `singapour_est` cite « Logistique »
-  - _…l'Arc Indo-Pacifique — carrefour des flux d'information, de logistique et de finance régionale. Les traders de Singapour sont aussi familiers aux esta…_
-- [ ] 37. Zone `tampere_communs_territoriaux` cite « Logistique »
-  - _…due dans le Corridor Arctique Nordique entre la gouvernance logistique dominante de l'ALN et les structures de communs territoriaux qui résistent à l'…_
-- [ ] 38. Zone `tbilissi_noeud_mnemos` cite « Passage »
-  - _…ationnellement à mi-chemin entre blocs, servant de point de passage pour des flux d'information alternatifs.…_
-- [ ] 39. Zone `tromsoe_aln` cite « Tromsø »
-  - _Tromsø…_
-- [ ] 40. Zone `zones_grises_sahel_central` cite « Passage »
-  - _…Racines Vivantes et les milices concurrentes des droits de passage. Ces zones sont le terrain d'opération privilégié des agences de sécurité régio…_
-- [ ] 41. Zone `ilulissat_apa` cite « Arctique »
-  - _Siège de l'Autorité de Passage Arctique (APA), institution de co-gouvernance des corridors maritimes arctiques rendus n…_
+- [ ] 23. Termes cherchés : Atlantique, Gulf, Nord-Ouest, Stream
+  - _mot entier, sans casse ni accents ; le registre seulement après 2067 (chronologie) ; instances et événements relus par la passe exhaustive : seuls les zones et le registre sont listés_
+- [ ] 24. Zone `iberie_atlantique_fragmentee` cite « Atlantique »
+  - _Ibérie Atlantique Fragmentée…_
+- [ ] 25. Zone `pays_de_galles_atlantique` cite « Atlantique »
+  - _Pays de Galles Atlantique…_
 
 **Possibles (facultatif)**
-- [ ] 42. Bloc Eurasien Central (BEC) (`bloc_eurasien_central_reference`) : trajectoire déclinant → résiduel [passe exhaustive]
-  - _Disparition directe de son pivot logistique et énergétique, Murmansk Transit Arctique_
-- [ ] 43. Cartel des Terres Rares d'Asie Centrale (`cartel_des_terres_rares_d_asie_centrale_reference`) : trajectoire émergent → ascendant [passe exhaustive]
-  - _Renforcement direct comme acteur clé des ressources critiques post-explosion_
-- [ ] 44. Bloc Ressources Eurasiatique (BRE) (`bloc_ressources_eurasiatique_bre_reference`) : trajectoire émergent → ascendant [passe exhaustive]
-  - _Rôle accru dans la régulation autoritaire des ressources critiques_
-- [ ] 45. Alliance des Glaces Libres (AGL) (`consortium_des_pecheries_autonomes_du_grand_nord_reference`) : trajectoire ascendant → dominant ; opposition nouvelle avec Armada Logistique Nordique [passe exhaustive]
-  - _Opposition directe avec l'Armada Logistique Nordique, renforcée par le déclin de Mourmansk_
-- [ ] 46. Consortiums Privés d'Extraction de Ressources Critiques (`consortiums_prives_d_extraction_de_ressources_critiques_reference`) : trajectoire émergent → ascendant [passe exhaustive]
-  - _Exploitation directe du vide logistique et énergétique créé par la disparition de Murmansk_
-- [ ] 47. Opérateurs Logistiques Privés des Zones Grises Eurasiennes (`operateurs_logistiques_prives_des_zones_grises_eurasiennes_reference`) : trajectoire émergent → ascendant ; opposition nouvelle avec Armada Logistique Nordique [passe exhaustive]
-  - _Opportunité directe de montée en puissance face à l'Armada Logistique Nordique_
-- [ ] 48. Kalaallit Nunaat Sovereign Fund (`kalaallit_nunaat_sovereign_fund_reference`) : trajectoire ascendant → dominant ; alliance nouvelle avec Consortium Énergétique des Mers du Nord [passe exhaustive]
-  - _Alliance renforcée avec le Consortium Énergétique des Mers du Nord, acteur nordique dominant_
-- [ ] 49. Consortiums Énergétiques Opaques (`consortiums_energetiques_opaques_reference`) : trajectoire émergent → ascendant [passe exhaustive]
-  - _Renforcement direct via l'exploitation des tensions énergétiques critiques_
-- [ ] 50. Factions d'Extraction Minière Indépendantes (`factions_d_extraction_miniere_independantes_reference`) : trajectoire émergent → ascendant [passe exhaustive]
-  - _Acteurs alternatifs renforcés par la perturbation des ressources critiques_
-- [ ] 51. Fonds Souverains de la Ceinture Financière Pacifique (`fonds_souverains_de_la_ceinture_financiere_pacifique_reference`) : trajectoire émergent → ascendant ; alliance nouvelle avec Armada Logistique Nordique [passe exhaustive]
-  - _Rôle accru dans la stabilisation économique post-crise arctique_
-- [ ] 52. The Tidewater Canon (`the_tidewater_canon_reference`) : trajectoire mature → ascendant ; opposition nouvelle avec Armada Logistique Nordique [passe exhaustive]
-  - _Opposition directe avec l'Armada Logistique Nordique, doctrine souverainiste face à son ascension_
-- [ ] 53. Vasil Orentchev (`vasil_orentchev_reference`) : opposition nouvelle avec Armada Logistique Nordique [passe exhaustive]
-  - _Concurrence directe avec l'Armada pour le contrôle des flux logistiques_
-- [ ] 54. Milices Concurrentes des Droits de Passage (`milices_concurrentes_des_droits_de_passage_reference`) : texte « Dans ce scénario, elles incarnent la concurrence violente… » [passe exhaustive]
-  - _Intensification directe de la compétition pour les nouveaux points de passage arctiques_
-- [ ] 55. Autorité de Régulation des Passages Stratégiques (ARPS) (`agence_de_regulation_des_detroits_strategiques_ards_reference`) : texte « Elle incarne une gouvernance hybride, mêlant souveraineté… » [passe exhaustive]
-  - _Coordination accrue nécessaire avec l'Armada Logistique Nordique, désormais dominante_
-- [ ] 56. Fonds Souverain Arctique Scandinave (`fonds_souverain_arctique_scandinave_reference`) : texte « Acteur de référence pour le financement et la gouvernance… » [passe exhaustive]
-  - _Devenu acteur central dans la gouvernance arctique post-Mourmansk_
-- [ ] 57. Atlas des Marges (`reseau_des_cartographes_des_zones_grises_reference`) : texte « Le Réseau des Cartographes des Zones Grises dans… » [passe exhaustive]
-  - _Création de nouvelles zones grises en Arctique post-disparition de Murmansk_
-- [ ] 58. ONG de Traçabilité des Ressources Critiques (`ong_de_tracabilite_des_ressources_critiques_reference`) : opposition nouvelle avec Consortium Énergétique des Mers du Nord ; texte « Dénonce publiquement les pratiques d'une entité du scénario… » [passe exhaustive]
-  - _Opposition directe probable avec le Consortium Énergétique des Mers du Nord_
-- [ ] 59. Programme ONU-Eau 2080 (`programme_onu_eau_2080_reference`) : texte « Sert de référentiel normatif et d'instance de coordination… » [passe exhaustive]
-  - _Rôle élargi dans la coordination des déséquilibres territoriaux arctiques_
-- [ ] 60. Réseau des Sentinelles des Eaux Profondes (`les_veilleurs_des_nappes_phreatiques_reference`) : texte « Les Veilleurs agissent comme un contre-pouvoir face aux… » [passe exhaustive]
-  - _Surveillance renforcée des ressources critiques post-crise_
-- [ ] 61. Réseaux de lanceurs d'alerte institutionnels dissidents (`reseaux_de_lanceurs_d_alerte_institutionnels_dissidents_reference`) : texte « Dans ce scénario, ils constituent une source d'information… » [passe exhaustive]
-  - _Dysfonctionnements institutionnels accrus générant plus d'alertes_
-- [ ] 62. … et 80 autre(s) fiche(s) avec des changements possibles
+- [ ] 26. Agence Mondiale pour la Stabilisation Climatique (`agence_stabilisation_climatique_reference`) : trajectoire mature → dominant ; texte « L'AMSC opère comme une instance de coordination… » [passe exhaustive]
+  - _Centralisation géo-ingénierie post-effondrement_
+- [ ] 27. AgriSynth (`agrisynth_reference`) : trajectoire émergent → ascendant [passe exhaustive]
+  - _Refonte agricole Europe du Nord-Ouest_
+- [ ] 28. Consortium Amazônia Viva (`consortium_amazonia_viva_reference`) : trajectoire ascendant → dominant [passe exhaustive]
+  - _Gestion hydrique Amazonie critique_
+- [ ] 29. Frente Sertão Livre (`frente_sertao_livre_reference`) : trajectoire ascendant → dominant ; opposition nouvelle avec Consortium Amazônia Viva [passe exhaustive]
+  - _Conflit hydrique Amérique du Sud dominant_
+- [ ] 30. Compact des Grands Lacs (`great_lakes_autonomous_compact_reference`) : trajectoire mature → dominant [passe exhaustive]
+  - _Stratégie Grands Lacs post-montée des eaux_
+- [ ] 31. Valparaíso FCT — Facilitation & Compensation Transfrontalière (`valparaiso_fct_reference`) : trajectoire mature → dominant [passe exhaustive]
+  - _Hub logistique Valparaíso incontournable_
+- [ ] 32. Assemblée des Territoires Fédérés (ATF) (`assemblee_territoires_reference`) : trajectoire ascendant → dominant [passe exhaustive]
+  - _Coordination décentralisée post-fragmentation_
+- [ ] 33. Gouvernements du Bloc Sahélien Autonome (`gouvernements_du_bloc_sahelien_autonome_reference`) : trajectoire émergent → ascendant [passe exhaustive]
+  - _Bloc Sahélien face aux moussons déplacées_
+- [ ] 34. Commission Hydrique de l'Union Africaine (`commission_hydrique_de_l_union_africaine_reference`) : trajectoire émergent → ascendant [passe exhaustive]
+  - _Régulation hydrique Union Africaine critique_
+- [ ] 35. Union Africaine de Résilience Territoriale (`union_africaine_de_resilience_territoriale_reference`) : trajectoire émergent → ascendant ; alliance nouvelle avec Autorités Régionales de Régulation Hydrologique [passe exhaustive]
+  - _Résilience territoriale africaine renforcée_
+- [ ] 36. Consortium Africain de Biotechnologies Sociales (CABS) (`consortium_africain_de_biotechnologies_sociales_reference`) : trajectoire ascendant → dominant [passe exhaustive]
+  - _Biorevenu africain face aux crises agricoles_
+- [ ] 37. Kalaallit Nunaat Sovereign Fund (`kalaallit_nunaat_sovereign_fund_reference`) : trajectoire ascendant → dominant ; opposition nouvelle avec Fonds Souverain Arctique Scandinave [passe exhaustive]
+  - _Fonds souverain arctique dominant post-refroidissement_
+- [ ] 38. Bloc Ressources Eurasiatique (BRE) (`bloc_ressources_eurasiatique_bre_reference`) : trajectoire émergent → dominant [passe exhaustive]
+  - _Ressources eurasiatiques critiques post-effondrement_
+- [ ] 39. Pacte des Souverains (`alliance_blocs_souverains_reference`) : trajectoire ascendant → dominant ; alliance nouvelle avec Fonds Souverain Arctique Scandinave [passe exhaustive]
+  - _Pacte des Souverains renforcé par fragmentation_
+- [ ] 40. The Tidewater Canon (`the_tidewater_canon_reference`) : trajectoire mature → dominant ; alliance nouvelle avec Fonds Souverain Arctique Scandinave [passe exhaustive]
+  - _Doctrine Tidewater Canon dominante post-crise_
+- [ ] 41. The Lattice of Chartered Cities (`the_lattice_reference`) : trajectoire mature → ascendant ; alliance nouvelle avec Réseau des Villes-Refuge pour Travailleurs Désaugmentés [passe exhaustive]
+  - _Villes-refuge pour migrations climatiques massives_
+- [ ] 42. Réseau des Métropoles Côtières Adaptées (`reseau_des_metropoles_cotieres_adaptees_reference`) : trajectoire émergent → ascendant ; texte « Acteur collectif structurant la gouvernance territoriale… » [passe exhaustive]
+  - _Gouvernance métropoles côtières post-montée des eaux_
+- [ ] 43. Fédération des Communs Territoriaux (`federation_communs_territoriaux_reference`) : trajectoire ascendant → dominant [passe exhaustive]
+  - _Fédération des Communs Territoriaux dominante_
+- [ ] 44. Internationale des Travailleurs Augmentés (`internationale_travailleurs_augmentes_reference`) : trajectoire ascendant → dominant [passe exhaustive]
+  - _Travailleurs augmentés précarisés post-bouleversements_
+- [ ] 45. Coopératives Agro-Écologiques de Reconstruction Territoriale (`cooperatives_agro_ecologiques_de_reconstruction_territoriale_reference`) : trajectoire émergent → ascendant ; alliance nouvelle avec Gouvernements du Bloc Sahélien Autonome [passe exhaustive]
+  - _Coopératives agro-écologiques sahéliennes critiques_
+- [ ] 46. … et 141 autre(s) fiche(s) avec des changements possibles
   - _détail dans la section « Passe exhaustive » de ce scénario_
 
 **Articles et site**
-- [ ] 63. 2 article(s) à relire (zone au statut changé, pays cité ou entité dont la trajectoire change)
-  - _« « Le Silence des Algorithmes : Quand les Plateformes Éteignent les Voix du Nord » »; « « Qui contrôle le récit contrôle les isruter » : la guerre des flux dans l’Arctique déglacé »_
-- [ ] 64. Résumé du scénario
+- [ ] 47. 2 article(s) à relire (zone au statut changé, pays cité ou entité dont la trajectoire change)
+  - _« « Mémoire en fragments : quand l’art défie la muraille de verre » »; « Les mémoires oubliées de Tbilissi : quand l’Histoire résiste aux algorithmes »_
+- [ ] 48. Résumé du scénario
   - `python3 generator/generate_resume_scenarios.py --scenario reference`
   - _payant, un appel_
-- [ ] 65. Site des revues
+- [ ] 49. Site des revues
   - `python3 generator/chapos_revues.py`
   - _puis bash generator/publier_site.sh_
 
 **Contrôles**
-- [ ] 66. Base
+- [ ] 50. Base
   - `python3 generator/validate.py`
-- [ ] 67. Lore
+- [ ] 51. Lore
   - `python3 generator/audit_lore.py --scenario reference`
   - _puis étapes 2 et 3 de Relations & lore si besoin_
 
 Entrées pour `entites_custom/queue.yaml` :
 
 ```yaml
-- nom: Commission de Réhabilitation de Mourmansk
+- nom: Alliance des Territoires Froids Européens
   category: <à choisir>
-  role: Organisme de gestion post-catastrophe chargé de la décontamination et de la reconstruction partielle
-    de Mourmansk.
+  role: Bloc de coopération pour la gestion des crises climatiques et énergétiques en Europe du Nord-Ouest,
+    regroupant des régions sinistrées et des villes en repli.
   etat: émergent
   scenario_ref: reference
   scenario_hint:
   - reference
-  zone_hint: murmansk_transit_arctique
-  source: et_si_explosion_brise_glace_murmansk_2081
-- nom: Alliance des Ports Arctiques Secondaires
+  zone_hint: europe_occidentale_reconstruite
+  source: et_si_effondrement_circulation_atlantique_2067
+- nom: Consortium des Deltas de Crise
   category: <à choisir>
-  role: Réseau de ports arctiques mineurs cherchant à capter une partie des flux logistiques redirigés
-    depuis Mourmansk.
+  role: Structure de coordination entre les zones submergées (Gange, Mékong) pour gérer les migrations
+    climatiques et les conflits fonciers, en partenariat avec les Consortiums d'Agriculture Verticale.
   etat: émergent
   scenario_ref: reference
   scenario_hint:
   - reference
-  zone_hint: corridor_arctique_nordique
-  source: et_si_explosion_brise_glace_murmansk_2081
-- nom: Fonds de Compensation Arctique
+  zone_hint: zones_grises_globales
+  source: et_si_effondrement_circulation_atlantique_2067
+- nom: Fonds d'Urgence Climatique Atlantique
   category: <à choisir>
-  role: Mécanisme financier pour indemniser les acteurs économiques affectés par la disparition de Mourmansk
-    Transit Arctique.
+  role: Fonds spéculatif créé par Ergo-Wian et des Consortiums Opaques pour investir dans les infrastructures
+    de relocalisation et les technologies de survie en Europe du Nord-Ouest.
   etat: émergent
   scenario_ref: reference
   scenario_hint:
   - reference
-  zone_hint: tromsoe_aln
-  source: et_si_explosion_brise_glace_murmansk_2081
+  zone_hint: europe_occidentale_reconstruite
+  source: et_si_effondrement_circulation_atlantique_2067
 ```
 
 ## Liste d'application — injection commune
+
+Mode rupture : `mode_impose: rupture` fait écrire `mode: rupture` dans chaque fiche ; le moteur déplace alors durablement la référence du scénario au lieu d'amortir un choc.
 
 Entrée pour `evenements_custom/queue.yaml` (une seule pour tous les scénarios). Forces, polarités, durées, date et propagation de cette simulation sont imposées (`impacts_imposes`, `date_imposee`, `via_matrice_impose`) : l'IA de l'injection ne les recalcule pas, elle rédige seulement le récit.
 
@@ -449,88 +485,84 @@ Entrée pour `evenements_custom/queue.yaml` (une seule pour tous les scénarios)
 `faits_imposes` : contraintes de l'hypothèse et sort des acteurs du récit (disparaît, change, reste) ; l'injection les donne à l'IA comme faits non négociables.
 
 ```yaml
-- id: explosion_brise_glace_murmansk_2081
-  description: En 2081, l'explosion d'un brise-glace à propulsion nucléaire à quai détruit le port et
-    les installations de Murmansk Transit Arctique. L'infrastructure Murmansk Transit Arctique disparaît
-    définitivement. La ville de Mourmansk survit, mais déclinante et en partie évacuée. Le Passage Arctique
-    du Nord reste ouvert. L'Armada Logistique Nordique, basée à Tromsø, récupère l'essentiel du trafic
-    arctique et se renforce, sans changer de nature.
+- id: effondrement_circulation_atlantique_2067
+  description: En 2067, la grande circulation océanique de l'Atlantique (dont le Gulf Stream) s'effondre
+    de façon irréversible. L'Europe du Nord-Ouest se refroidit de plusieurs degrés en une décennie, les
+    moussons africaines et sud-américaines se déplacent, le niveau de la mer monte brusquement sur la
+    côte est américaine. Le monde ne revient pas à l'état d'avant.
   portee: globale
-  date_approximative: 2081
+  date_approximative: 2067
   intensite: <à choisir>
   persistance: normale
   scenarios:
   - reference
   variables_hint:
-  - organisation_territoires
-  - geopolitique_conflits
+  - climat_environnement_global
+  - systemes_productifs_travail
   - energie_ressources_critiques
-  - systeme_economique_redistribution
   - demographie_mobilite_humaine
-  variables_hint_count: 5
-  source: et_si_explosion_brise_glace_murmansk_2081
+  variables_hint_count: 4
+  source: et_si_effondrement_circulation_atlantique_2067
   acteurs_hint:
-  - murmansk_transit_arctique_reference
-  - conseil_des_etats_nordiques_integres_reference
+  - delta_du_gange_reference
+  - consortiums_d_agriculture_verticale_algorithmique_reference
+  - autorites_regionales_de_regulation_hydrologique_reference
   - fonds_souverain_arctique_scandinave_reference
-  - siberie_federale_reference
   acteurs_hint_count: 4
   faits_imposes:
     reference:
-    - fait: L'infrastructure Murmansk Transit Arctique disparaît définitivement.
+    - fait: 'La circulation atlantique ne redémarre pas avant 2098 : le changement est permanent.'
       sort: contrainte
-    - fait: La ville de Mourmansk survit, mais déclinante et en partie évacuée.
+    - fait: Le refroidissement touche surtout l'Europe du Nord-Ouest ; le réchauffement global continue
+        ailleurs.
       sort: contrainte
-    - fait: Le Passage Arctique du Nord reste ouvert.
-      sort: contrainte
-    - fait: L'Armada Logistique Nordique, basée à Tromsø, récupère l'essentiel du trafic arctique et se
-        renforce, sans changer de nature.
-      sort: contrainte
-    - fait: 'Murmansk Transit Arctique (murmansk_transit_arctique_reference) disparaît en 2081 (trajectoire
-        dominant → disparu) : après cette date, elle n''agit plus.'
-      slug: murmansk_transit_arctique_reference
-      sort: disparait
-    - fait: 'Conseil des États Nordiques Intégrés (conseil_des_etats_nordiques_integres_reference) passe
-        de « émergent » à « ascendant » après 2081 : elle existe toujours (elle peut perdre des lieux,
+    - fait: 'Delta du Gange — Zone de Crise Permanente (delta_du_gange_reference) passe de « déclinant
+        » à « résiduel » après 2067 : elle existe toujours (elle peut perdre des lieux, des biens ou du
+        pouvoir), ne la décris pas comme disparue.'
+      slug: delta_du_gange_reference
+      sort: change
+    - fait: 'Consortiums d''Agriculture Verticale Algorithmique (consortiums_d_agriculture_verticale_algorithmique_reference)
+        passe de « émergent » à « ascendant » après 2067 : elle existe toujours (elle peut perdre des
+        lieux, des biens ou du pouvoir), ne la décris pas comme disparue.'
+      slug: consortiums_d_agriculture_verticale_algorithmique_reference
+      sort: change
+    - fait: 'Autorités Régionales de Régulation Hydrologique (autorites_regionales_de_regulation_hydrologique_reference)
+        passe de « émergent » à « dominant » après 2067 : elle existe toujours (elle peut perdre des lieux,
         des biens ou du pouvoir), ne la décris pas comme disparue.'
-      slug: conseil_des_etats_nordiques_integres_reference
+      slug: autorites_regionales_de_regulation_hydrologique_reference
       sort: change
     - fait: 'Fonds Souverain Arctique Scandinave (fonds_souverain_arctique_scandinave_reference) passe
-        de « émergent » à « ascendant » après 2081 : elle existe toujours (elle peut perdre des lieux,
+        de « ascendant » à « dominant » après 2067 : elle existe toujours (elle peut perdre des lieux,
         des biens ou du pouvoir), ne la décris pas comme disparue.'
       slug: fonds_souverain_arctique_scandinave_reference
       sort: change
-    - fait: 'Sibérie Fédérale (siberie_federale_reference) passe de « émergent » à « marginal » après
-        2081 : elle existe toujours (elle peut perdre des lieux, des biens ou du pouvoir), ne la décris
-        pas comme disparue.'
-      slug: siberie_federale_reference
-      sort: change
-    - fait: 'La zone Mourmansk (murmansk_transit_arctique) passe de « stable » à « en_declin » : le lieu
-        subsiste.'
-      slug: murmansk_transit_arctique
+    - fait: 'La zone Europe Occidentale Reconstruite (europe_occidentale_reconstruite) passe de « stable
+        » à « fragmenté » : le lieu subsiste.'
+      slug: europe_occidentale_reconstruite
       sort: zone
-  date_imposee: 2081
+    - fait: 'La zone Union Africaine de Résilience Territoriale (union_africaine_resilience) passe de
+        « emergent » à « fragmenté » : le lieu subsiste.'
+      slug: union_africaine_resilience
+      sort: zone
+  date_imposee: 2067
+  mode_impose: rupture
   impacts_imposes:
     reference:
-    - variable: organisation_territoires
+    - variable: climat_environnement_global
       delta_level: 6
-      duree: 2
+      duree: 10
       polarite: 1
-    - variable: geopolitique_conflits
-      delta_level: 5
-      duree: 3
+    - variable: systemes_productifs_travail
+      delta_level: 4
+      duree: 8
       polarite: 1
     - variable: energie_ressources_critiques
-      delta_level: 4
-      duree: 1
-      polarite: 1
-    - variable: systeme_economique_redistribution
-      delta_level: 5
+      delta_level: 3
       duree: 5
       polarite: 1
     - variable: demographie_mobilite_humaine
-      delta_level: 3
-      duree: 3
+      delta_level: 4
+      duree: 15
       polarite: 1
   via_matrice_impose: true
 ```

@@ -55,6 +55,7 @@ alliances:
 - ilse_varga_holm_reference
 - pacte_des_souverains_reference
 - plateformes_d_optimisation_territoriale_par_ia_reference
+- consortiums_energetiques_opaques_reference
 oppositions:
 - banque_des_communs_reference
 - collectifs_academiques_independants_reference
@@ -165,6 +166,7 @@ Ergo-Wian est au cœur d'une bataille juridique mondiale sur la définition mêm
 - [[ilse_varga_holm_reference]]
 - [[pacte_des_souverains_reference]]
 - [[plateformes_d_optimisation_territoriale_par_ia_reference]]
+- [[consortiums_energetiques_opaques_reference]]
 **Opposants :**
 - [[banque_des_communs_reference]]
 - [[collectifs_academiques_independants_reference]]

@@ -23641,5 +23641,3592 @@
     }
    ]
   }
+ },
+ "effondrement_circulation_atlantique_2067::reference::0": {
+  "empreinte": "9022a2af14595cb9",
+  "date": "2026-10-17T10:39",
+  "brut": {
+   "fiches": [
+    {
+     "slug": "administrations_hybrides_des_cites_relais_peripheriques_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "demographie_mobilite_humaine (+4.3)",
+       "raison": "L'effondrement de la circulation méridienne atlantique provoque des déplacements massifs de populations, notamment depuis l'Europe du Nord-Ouest, renforçant le rôle des cités-relais périphériques comme points d'accueil et de redistribution des flux migratoires."
+      },
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "autorites_regionales_de_regulation_hydrologique_reference",
+       "relation": "alliance",
+       "action": "nouvelle",
+       "lien": "variable",
+       "lien_detail": "systemes_productifs_travail (+4.6) et demographie_mobilite_humaine (+4.3)",
+       "raison": "La perturbation hydrologique et migratoire accrue rend la collaboration avec les Autorités Régionales de Régulation Hydrologique plus stratégique pour gérer les crises locales."
+      }
+     ]
+    },
+    {
+     "slug": "agence_de_regulation_des_detroits_strategiques_ards_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "obligatoire",
+       "extrait": "Elle incarne une gouvernance hybride, mêlant souveraineté étatique, intérêts des consortiums logistiques privés et impératifs climatiques dans un monde où les détroits sont devenus des points de friction géopolitique majeurs.",
+       "contredit": "L'effondrement de la circulation méridienne atlantique modifie durablement les routes logistiques, notamment en Arctique et en Europe du Nord-Ouest, rendant certains détroits moins stratégiques et en créant de nouveaux.",
+       "lien": "variable",
+       "lien_detail": "systemes_productifs_travail (+4.6)",
+       "raison": "La phrase doit être ajustée pour refléter que les détroits stratégiques ont évolué en raison des changements climatiques et logistiques post-2067."
+      },
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "arctic_passage_authority_reference",
+       "relation": "alliance",
+       "action": "nouvelle",
+       "lien": "relation",
+       "lien_detail": "Alliée à l'Arctic Passage Authority, directement touchée par les nouvelles routes logistiques arctiques.",
+       "raison": "La reconfiguration des routes maritimes renforce la nécessité d'une coordination accrue avec l'Arctic Passage Authority."
+      }
+     ]
+    },
+    {
+     "slug": "agence_internationale_des_energies_renouvelables_irena_2_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "energie_ressources_critiques (+3.2)",
+       "raison": "La crise énergétique et climatique post-2067 augmente la demande pour des normes et coordinations multilatérales en matière d'énergies renouvelables, renforçant le rôle de l'IRENA-2."
+      }
+     ]
+    },
+    {
+     "slug": "agence_stabilisation_climatique_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "obligatoire",
+       "apres": "dominant",
+       "lien": "variable",
+       "lien_detail": "climat_environnement_global (+6.0)",
+       "contredit": "L'AMSC ne peut rester en trajectoire 'mature' alors que l'effondrement de la circulation méridienne atlantique en fait l'acteur central de la gestion des crises climatiques irréversibles.",
+       "raison": "L'ampleur de la crise climatique post-2067 impose une centralisation accrue des interventions géo-ingénieristes, rendant l'AMSC incontournable."
+      },
+      {
+       "type": "texte",
+       "niveau": "obligatoire",
+       "extrait": "L'AMSC opère comme une instance de coordination technocratique internationale dont l'autorité est reconnue mais constamment négociée.",
+       "contredit": "L'autorité de l'AMSC n'est plus 'constamment négociée' mais devient un impératif de survie face à la crise climatique irréversible.",
+       "lien": "variable",
+       "lien_detail": "climat_environnement_global (+6.0)",
+       "raison": "La phrase doit être révisée pour refléter l'urgence et la centralisation du rôle de l'AMSC."
+      }
+     ]
+    },
+    {
+     "slug": "agences_de_securite_regionales_de_normalisation_des_zones_grises_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "demographie_mobilite_humaine (+4.3)",
+       "raison": "L'augmentation des flux migratoires et des tensions territoriales post-2067 renforce la nécessité de normaliser les zones grises, augmentant l'importance de ces agences."
+      }
+     ]
+    },
+    {
+     "slug": "agrisynth_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "obligatoire",
+       "apres": "ascendant",
+       "lien": "territoire",
+       "lien_detail": "europe_occidentale_reconstruite (refroidissement brutal)",
+       "contredit": "AgriSynth ne peut rester 'émergent' alors que l'Europe du Nord-Ouest, son territoire d'action, subit un refroidissement brutal nécessitant une adaptation agricole massive.",
+       "raison": "Le refroidissement de l'Europe du Nord-Ouest impose une refonte des systèmes agricoles, rendant AgriSynth un acteur clé de cette transition."
+      },
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "consortiums_d_agriculture_verticale_algorithmique_reference",
+       "relation": "alliance",
+       "action": "nouvelle",
+       "lien": "relation",
+       "lien_detail": "Alliée aux Consortiums d'Agriculture Verticale Algorithmique, déjà retenus comme ascendants.",
+       "raison": "La collaboration avec les acteurs de l'agriculture verticale devient stratégique pour adapter les systèmes agricoles au refroidissement."
+      }
+     ]
+    },
+    {
+     "slug": "algorithmic_labor_exchange_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "systemes_productifs_travail (+4.6)",
+       "raison": "La reconfiguration des systèmes productifs post-2067 augmente la demande pour des plateformes de fluidification du travail, renforçant le rôle de l'Algorithmic Labor Exchange."
+      }
+     ]
+    },
+    {
+     "slug": "alliance_blocs_souverains_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "dominant",
+       "lien": "variable",
+       "lien_detail": "frontieres_du_systeme (+0.5) et organisation_territoires (+0.4)",
+       "raison": "La fragmentation territoriale et la résilience accrue des blocs souverains post-2067 renforcent leur poids géopolitique."
+      },
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "fonds_souverain_arctique_scandinave_reference",
+       "relation": "alliance",
+       "action": "nouvelle",
+       "lien": "relation",
+       "lien_detail": "Alliée au Fonds Souverain Arctique Scandinave, déjà retenu comme dominant.",
+       "raison": "La collaboration avec les acteurs arctiques devient stratégique pour sécuriser les ressources et les routes logistiques."
+      }
+     ]
+    },
+    {
+     "slug": "amara_diallo_nkosi_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "dominant",
+       "lien": "variable",
+       "lien_detail": "demographie_mobilite_humaine (+4.3)",
+       "raison": "Les perturbations hydrologiques et migratoires post-2067 augmentent l'importance des Accords de Kinshasa, renforçant le rôle d'Amara Diallo-Nkosi."
+      }
+     ]
+    },
+    {
+     "slug": "amazonie_consortium_viva_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "mature",
+       "lien": "variable",
+       "lien_detail": "climat_environnement_global (+6.0)",
+       "raison": "Les perturbations climatiques en Amérique du Sud pourraient complexifier les opérations du Consortium Viva, le faisant passer d'une phase de croissance à une phase de stabilisation."
+      }
+     ]
+    },
+    {
+     "slug": "arctic_passage_authority_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "obligatoire",
+       "apres": "dominant",
+       "lien": "territoire",
+       "lien_detail": "Corridor Arctique Nordique (zone de transit disputée)",
+       "contredit": "L'APA ne peut rester 'mature' alors que l'effondrement de la circulation méridienne atlantique rend les routes arctiques les seules alternatives viables pour le transit Europe-Asie.",
+       "raison": "La reconfiguration des routes logistiques post-2067 impose une centralisation accrue de la gouvernance arctique."
+      },
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "fonds_souverain_arctique_scandinave_reference",
+       "relation": "alliance",
+       "action": "nouvelle",
+       "lien": "relation",
+       "lien_detail": "Alliée au Fonds Souverain Arctique Scandinave, déjà retenu comme dominant.",
+       "raison": "La collaboration avec les acteurs financiers arctiques devient stratégique pour sécuriser les infrastructures critiques."
+      }
+     ]
+    },
+    {
+     "slug": "armada_logistique_nordique_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "obligatoire",
+       "apres": "dominant",
+       "lien": "territoire",
+       "lien_detail": "Corridor Arctique Nordique (zone de transit disputée)",
+       "contredit": "L'ALN ne peut rester 'dominant' sans devenir hégémonique alors que les routes arctiques deviennent les seules alternatives logistiques viables post-2067.",
+       "raison": "La reconfiguration des routes logistiques post-2067 renforce l'importance stratégique de l'ALN, la rendant incontournable."
+      },
+      {
+       "type": "relation",
+       "niveau": "obligatoire",
+       "cible": "optiflow_logistics_reference",
+       "relation": "opposition",
+       "action": "nouvelle",
+       "lien": "relation",
+       "lien_detail": "Opposition déjà retenue dans le lore, mais l'effondrement de la circulation méridienne atlantique la rend inévitable et structurelle.",
+       "contredit": "L'absence de cette opposition post-2067 serait fausse, car l'ALN et OptiFlow Logistics se disputent désormais le contrôle des routes logistiques alternatives.",
+       "raison": "La rivalité entre l'ALN et OptiFlow Logistics devient une opposition géopolitique majeure post-2067."
+      }
+     ]
+    },
+    {
+     "slug": "assemblee_territoires_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "dominant",
+       "lien": "variable",
+       "lien_detail": "organisation_territoires (+0.4)",
+       "raison": "La fragmentation territoriale post-2067 renforce la nécessité d'une coordination décentralisée, augmentant l'importance de l'ATF."
+      }
+     ]
+    },
+    {
+     "slug": "aurelio_stahl_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "En tant que conférencier et essayiste itinérant entre les territoires du Pacte des Souverains, il reformule les fondements idéologiques d'une époque en crise, articulant une vision de la 'sortie' adaptée aux défis du XXIe siècle.",
+       "lien": "variable",
+       "lien_detail": "climat_environnement_global (+6.0)",
+       "raison": "La crise climatique post-2067 pourrait élargir son rôle en tant qu'idéologue des réponses souverainistes aux bouleversements environnementaux."
+      }
+     ]
+    },
+    {
+     "slug": "autorites_regionales_de_regulation_hydrologique_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "obligatoire",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "systemes_productifs_travail (+4.6) et demographie_mobilite_humaine (+4.3)",
+       "contredit": "Les Autorités Régionales de Régulation Hydrologique ne peuvent rester 'émergentes' alors que les perturbations hydrologiques et migratoires post-2067 en font des acteurs clés de la gestion des crises locales.",
+       "raison": "La reconfiguration des systèmes hydrologiques et agricoles post-2067 impose une centralisation accrue de leur rôle."
+      },
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "fonds_souverain_arctique_scandinave_reference",
+       "relation": "alliance",
+       "action": "nouvelle",
+       "lien": "relation",
+       "lien_detail": "Alliée au Fonds Souverain Arctique Scandinave, déjà retenu comme dominant.",
+       "raison": "La collaboration avec les acteurs arctiques devient stratégique pour gérer les ressources hydrologiques critiques."
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "effondrement_circulation_atlantique_2067::reference::1": {
+  "empreinte": "5a218a64e3c557c6",
+  "date": "2026-10-17T10:40",
+  "brut": {
+   "fiches": [
+    {
+     "slug": "banque_des_communs_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "territoire",
+       "lien_detail": "Lyon Métropole (Europe du Nord-Ouest) est touchée par le refroidissement brutal et la rétraction des circuits marchands.",
+       "raison": "La Banque des Communs finance la résilience territoriale là où les circuits marchands se rétractent. Le refroidissement de l'Europe du Nord-Ouest amplifie ce besoin, renforçant son rôle sans rendre sa trajectoire actuelle fausse."
+      },
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "consortiums_d_agriculture_verticale_algorithmique_reference",
+       "relation": "alliance",
+       "action": "nouvelle",
+       "lien": "variable",
+       "lien_detail": "systemes_productifs_travail (+4.6) et demographie_mobilite_humaine (+4.3) sont directement touchés par l'effondrement de la circulation atlantique.",
+       "raison": "Les consortiums d'agriculture verticale algorithmique deviennent dominants (déjà retenu). La Banque des Communs pourrait s'allier à eux pour stabiliser les systèmes productifs en Europe du Nord-Ouest, mais ce n'est pas obligatoire."
+      }
+     ]
+    },
+    {
+     "slug": "banque_mondiale_des_transitions_climatiques_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "climat_environnement_global (+6.0) et systemes_productifs_travail (+4.6) sont directement touchés.",
+       "raison": "La BMTC est le pilier financier de la coordination climatique globale. L'effondrement de la circulation atlantique augmente les tensions climatiques, renforçant son rôle sans rendre sa trajectoire actuelle fausse."
+      },
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "autorites_regionales_de_regulation_hydrologique_reference",
+       "relation": "alliance",
+       "action": "nouvelle",
+       "lien": "variable",
+       "lien_detail": "systemes_productifs_travail (+4.6) et demographie_mobilite_humaine (+4.3) sont directement touchés.",
+       "raison": "Les Autorités Régionales de Régulation Hydrologique deviennent dominantes (déjà retenu). La BMTC pourrait s'allier à elles pour gérer les perturbations hydrologiques, mais ce n'est pas obligatoire."
+      }
+     ]
+    },
+    {
+     "slug": "bloc_des_etats_du_sud_global_contre_la_cession_de_donnees_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "demographie_mobilite_humaine (+4.3) et systemes_productifs_travail (+4.6) sont directement touchés.",
+       "raison": "Les perturbations hydrologiques et agricoles en Afrique et Amérique du Sud (moussons déplacées) pourraient renforcer les tensions Nord-Sud, augmentant l'influence du Bloc sans rendre sa trajectoire actuelle fausse."
+      }
+     ]
+    },
+    {
+     "slug": "bloc_des_souverainistes_climatiques_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "climat_environnement_global (+6.0) et systemes_productifs_travail (+4.6) sont directement touchés.",
+       "raison": "L'effondrement de la circulation atlantique fragmente davantage la coordination climatique, renforçant les zones de non-conformité et le rôle du Bloc sans rendre sa trajectoire actuelle fausse."
+      },
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "fonds_souverain_arctique_scandinave_reference",
+       "relation": "opposition",
+       "action": "nouvelle",
+       "lien": "relation",
+       "lien_detail": "Le Fonds Souverain Arctique Scandinave devient dominant (déjà retenu) et est allié au Consortium Helios, qui gère des infrastructures critiques.",
+       "raison": "Le Bloc des Souverainistes Climatiques pourrait s'opposer aux ajustements technologiques et géo-ingénieristes promus par le Fonds Souverain Arctique Scandinave, mais cette opposition n'est pas obligatoire."
+      }
+     ]
+    },
+    {
+     "slug": "bloc_eurasien_central_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "obligatoire",
+       "apres": "résiduel",
+       "lien": "variable",
+       "lien_detail": "energie_ressources_critiques (+3.2) est directement touché.",
+       "contredit": "Le BEC fonctionne par compromis successifs sans vision commune, reflétant la fragmentation du système international de 2098.",
+       "raison": "L'effondrement de la circulation atlantique déplace les équilibres géopolitiques vers une logique de fragmentation et de résilience territoriale. Le BEC, déjà déclinant, perdrait toute capacité à maintenir des compromis face à la montée des blocs régionaux dominants (ex : Consortium Helios, Fonds Souverain Arctique Scandinave)."
+      },
+      {
+       "type": "relation",
+       "niveau": "obligatoire",
+       "cible": "bloc_ressources_eurasiatique_bre_reference",
+       "relation": "opposition",
+       "action": "nouvelle",
+       "lien": "relation",
+       "lien_detail": "Le BRE devient un régulateur autoritaire des ressources critiques eurasiatiques, capable d'influer sur les prix mondiaux.",
+       "contredit": "Le BEC et le BRE sont alliés dans le scénario de référence.",
+       "raison": "Le BRE, en tant que régulateur autoritaire, ne peut plus maintenir d'alliance avec un BEC devenu résiduel et incapable de garantir des compromis stables."
+      }
+     ]
+    },
+    {
+     "slug": "bloc_ressources_eurasiatique_bre_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "dominant",
+       "lien": "variable",
+       "lien_detail": "energie_ressources_critiques (+3.2) est directement touché.",
+       "raison": "L'effondrement de la circulation atlantique renforce la dépendance aux ressources critiques eurasiatiques, augmentant l'influence du BRE sans rendre sa trajectoire actuelle fausse."
+      },
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "consortium_indo_pacifique_de_l_hydrogene_reference",
+       "relation": "opposition",
+       "action": "nouvelle",
+       "lien": "variable",
+       "lien_detail": "energie_ressources_critiques (+3.2) est directement touché.",
+       "raison": "Le Consortium Indo-Pacifique de l'Hydrogène est en opposition avec le BRE (déjà retenu). Cette rivalité pourrait s'intensifier, mais elle existe déjà."
+      }
+     ]
+    },
+    {
+     "slug": "blocs_signataires_du_pacte_energetique_multilateral_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "mature",
+       "lien": "variable",
+       "lien_detail": "energie_ressources_critiques (+3.2) est directement touché.",
+       "raison": "Les perturbations énergétiques et climatiques pourraient renforcer la nécessité d'un cadre multilatéral, stabilisant le rôle des Blocs Signataires sans rendre leur trajectoire actuelle fausse."
+      }
+     ]
+    },
+    {
+     "slug": "bruxelles_nouveau_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "obligatoire",
+       "apres": "résiduel",
+       "lien": "territoire",
+       "lien_detail": "Bruxelles (Europe du Nord-Ouest) est touchée par le refroidissement brutal.",
+       "contredit": "Bruxelles Nouveau joue un rôle de médiation entre États membres aux intérêts profondément divergents, sans disposer d'autorité contraignante réelle.",
+       "raison": "Le refroidissement de l'Europe du Nord-Ouest rend les divergences entre États membres ingérables pour une institution déjà déclinante et sans autorité contraignante. Son rôle devient symbolique."
+      },
+      {
+       "type": "relation",
+       "niveau": "obligatoire",
+       "cible": "fonds_souverain_arctique_scandinave_reference",
+       "relation": "opposition",
+       "action": "nouvelle",
+       "lien": "territoire",
+       "lien_detail": "Le Fonds Souverain Arctique Scandinave devient dominant (déjà retenu) et gère les ressources critiques de l'Europe du Nord-Ouest.",
+       "contredit": "Bruxelles Nouveau est allié à la Confédération des Mégapoles Autonomes et à la Banque Mondiale des Transitions Climatiques, mais n'a pas de relation explicite avec le Fonds Souverain Arctique Scandinave.",
+       "raison": "Bruxelles Nouveau, en tant qu'institution déclinante, ne peut plus s'opposer efficacement à la montée en puissance du Fonds Souverain Arctique Scandinave, qui prend le relais de la coordination en Europe du Nord-Ouest."
+      }
+     ]
+    },
+    {
+     "slug": "bureau_des_territoires_residuels_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "demographie_mobilite_humaine (+4.3) et organisation_territoires (+0.4) sont touchés.",
+       "raison": "L'effondrement de la circulation atlantique augmente le nombre de territoires abandonnés ou dégradés, renforçant le rôle de la DZNP sans rendre sa trajectoire actuelle fausse."
+      }
+     ]
+    },
+    {
+     "slug": "bureau_zones_non_prioritaires_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "obligatoire",
+       "apres": "résiduel",
+       "lien": "variable",
+       "lien_detail": "demographie_mobilite_humaine (+4.3) et organisation_territoires (+0.4) sont touchés.",
+       "contredit": "Le BZNP produit des rapports que personne ne lit et sert de caution humanitaire à un système indifférent.",
+       "raison": "L'augmentation des zones non prioritaires (Europe du Nord-Ouest refroidie, déplacements de populations) rend le BZNP obsolète, car le système mondial se fragmente et ne maintient plus de caution humanitaire symbolique."
+      }
+     ]
+    },
+    {
+     "slug": "bureaux_de_regulation_informationnelle_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "demographie_mobilite_humaine (+4.3) et technologie_information (+0.3) sont touchés.",
+       "raison": "Les perturbations migratoires et les tensions géopolitiques pourraient renforcer la nécessité de réguler l'information, augmentant l'influence des Bureaux sans rendre leur trajectoire actuelle fausse."
+      }
+     ]
+    },
+    {
+     "slug": "cartel_des_terres_rares_d_asie_centrale_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "energie_ressources_critiques (+3.2) est directement touché.",
+       "raison": "La dépendance aux terres rares pour les technologies de résilience climatique et énergétique renforce le rôle du Cartel sans rendre sa trajectoire actuelle fausse."
+      }
+     ]
+    },
+    {
+     "slug": "coalition_des_gouvernements_contre_les_chartes_de_destabilisation_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "demographie_mobilite_humaine (+4.3) et frontieres_du_systeme (+0.5) sont touchés.",
+       "raison": "La fragmentation territoriale et les migrations accrues pourraient renforcer la nécessité de réprimer les chartes de déstabilisation, augmentant l'influence de la Coalition sans rendre sa trajectoire actuelle fausse."
+      }
+     ]
+    },
+    {
+     "slug": "coalition_pour_la_souverainete_numerique_nationale_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "demographie_mobilite_humaine (+4.3) et technologie_information (+0.3) sont touchés.",
+       "raison": "Les perturbations géopolitiques et les tensions sur les flux d'information pourraient renforcer les revendications de souveraineté numérique, augmentant l'influence de la Coalition sans rendre sa trajectoire actuelle fausse."
+      }
+     ]
+    },
+    {
+     "slug": "collectif_nuit_jaune_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "territoire",
+       "lien_detail": "Zones tampons climatiques européennes (Europe du Nord-Ouest) sont touchées par le refroidissement.",
+       "raison": "Les relocalisations de populations en Europe du Nord-Ouest pourraient renforcer l'opposition du Collectif aux mécanismes bureaucratiques, augmentant son influence sans rendre sa trajectoire actuelle fausse."
+      },
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "autorites_regionales_de_regulation_hydrologique_reference",
+       "relation": "opposition",
+       "action": "nouvelle",
+       "lien": "variable",
+       "lien_detail": "demographie_mobilite_humaine (+4.3) et systemes_productifs_travail (+4.6) sont directement touchés.",
+       "raison": "Les Autorités Régionales de Régulation Hydrologique deviennent dominantes (déjà retenu) et pourraient orchestrer des relocalisations, s'opposant au Collectif Nuit Jaune. Cette opposition est plausible mais pas obligatoire."
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "effondrement_circulation_atlantique_2067::reference::2": {
+  "empreinte": "a793a98d1022eb77",
+  "date": "2026-10-17T10:40",
+  "brut": {
+   "fiches": [
+    {
+     "slug": "collectifs_academiques_independants_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "demographie_mobilite_humaine (+4.3)",
+       "raison": "L'effondrement de la circulation atlantique intensifie les crises de confiance institutionnelle et les besoins en contre-expertise, renforçant le rôle des CAI comme réservoir de légitimité alternative."
+      },
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "autorites_regionales_de_regulation_hydrologique_reference",
+       "relation": "alliance",
+       "action": "nouvelle",
+       "lien": "relation",
+       "lien_detail": "autorites_regionales_de_regulation_hydrologique_reference (déjà alliée, mais renforcement plausible)",
+       "raison": "Les CAI pourraient renforcer leur collaboration avec les autorités hydrologiques pour analyser les impacts climatiques et proposer des solutions alternatives."
+      }
+     ]
+    },
+    {
+     "slug": "collectifs_de_biopiraterie_inversee_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "climat_environnement_global (+6.0)",
+       "raison": "Les perturbations climatiques et hydrologiques exacerbent les tensions sur les ressources biotechnologiques, augmentant la pertinence des collectifs comme perturbateurs du régime de propriété intellectuelle."
+      },
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "consortium_africain_de_biotechnologies_sociales_reference",
+       "relation": "alliance",
+       "action": "nouvelle",
+       "lien": "relation",
+       "lien_detail": "consortium_africain_de_biotechnologies_sociales_reference (déjà alliée à des acteurs africains)",
+       "raison": "Les collectifs pourraient s'allier plus étroitement avec le CABS pour contester les monopoles biotechnologiques en Afrique, touchée par les perturbations hydrologiques."
+      }
+     ]
+    },
+    {
+     "slug": "collectifs_de_journalisme_embarque_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "demographie_mobilite_humaine (+4.3) et systemes_productifs_travail (+4.6)",
+       "raison": "Les crises territoriales (deltas, zones côtières) deviennent des enjeux majeurs, augmentant la demande pour un journalisme ancré dans ces zones."
+      },
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "Ancrés dans des zones à fort enjeu territorial — deltas menacés, zones côtières en recomposition accélérée, corridors logistiques contestés — ils documentent les reconfigurations géopolitiques et sociales en temps réel.",
+       "lien": "territoire",
+       "lien_detail": "zones touchées par les perturbations hydrologiques et climatiques (ex. : deltas, côtes)",
+       "raison": "Le rôle des collectifs s'élargit pour couvrir les reconfigurations territoriales liées à l'effondrement de la circulation atlantique, sans rendre la phrase fausse."
+      }
+     ]
+    },
+    {
+     "slug": "collectifs_de_journalistes_independants_regionaux_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "demographie_mobilite_humaine (+4.3)",
+       "raison": "Les perturbations climatiques et migratoires augmentent la demande pour une information de proximité résistante aux pressions centrales."
+      }
+     ]
+    },
+    {
+     "slug": "collectifs_de_peche_inuit_et_sami_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "obligatoire",
+       "apres": "dominant",
+       "lien": "territoire",
+       "lien_detail": "corridor_arctique_nordique (zone directement touchée par le refroidissement de l'Europe du Nord-Ouest)",
+       "contredit": "Acteurs en résistance contre la spoliation de territoires ancestraux rendus accessibles et exploitables par le recul des glaces",
+       "raison": "Le refroidissement de l'Europe du Nord-Ouest ralentit le recul des glaces dans l'Arctique, rendant les territoires moins accessibles et modifiant les dynamiques de spoliation. Leur rôle de résistance reste crucial mais leur trajectoire est renforcée par cette nouvelle donne climatique."
+      },
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "conseil_des_etats_nordiques_integres_reference",
+       "relation": "opposition",
+       "action": "nouvelle",
+       "lien": "relation",
+       "lien_detail": "conseil_des_etats_nordiques_integres_reference (rivaux existants : arctic_passage_authority, armada_logistique_nordique)",
+       "raison": "Le refroidissement pourrait exacerber les tensions avec le Conseil des États Nordiques Intégrés, qui pourrait chercher à exploiter les nouvelles conditions climatiques pour renforcer son contrôle sur le Corridor Arctique."
+      }
+     ]
+    },
+    {
+     "slug": "commission_hydrique_de_l_union_africaine_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "obligatoire",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "systemes_productifs_travail (+4.6) et demographie_mobilite_humaine (+4.3)",
+       "contredit": "Acteur institutionnel de référence sur les questions d'accès à l'eau en Afrique, elle intervient comme autorité de régulation et de médiation entre États membres confrontés à des tensions hydriques croissantes.",
+       "raison": "Les perturbations des moussons africaines et les tensions hydriques accrues rendent son rôle de régulation et de médiation indispensable, renforçant sa trajectoire."
+      },
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "autorites_regionales_de_regulation_hydrologique_reference",
+       "relation": "alliance",
+       "action": "nouvelle",
+       "lien": "relation",
+       "lien_detail": "autorites_regionales_de_regulation_hydrologique_reference (déjà alliée, mais renforcement plausible)",
+       "raison": "La Commission pourrait renforcer son alliance avec les autorités régionales pour coordonner les réponses aux crises hydriques."
+      }
+     ]
+    },
+    {
+     "slug": "communs_numeriques_agroecologiques_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "systemes_productifs_travail (+4.6) et climat_environnement_global (+6.0)",
+       "raison": "Les perturbations agricoles et climatiques augmentent la demande pour des infrastructures distribuées de connaissances agroécologiques."
+      }
+     ]
+    },
+    {
+     "slug": "confederation_des_megapoles_autonomes_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "Incarne la fragmentation géopolitique en blocs mégapolitains concurrents, substituant la rivalité inter-urbaine à la rivalité interétatique classique.",
+       "lien": "variable",
+       "lien_detail": "demographie_mobilite_humaine (+4.3) et systemes_productifs_travail (+4.6)",
+       "raison": "Les mégapoles européennes (ex. : Bruxelles Nouveau) pourraient voir leur rôle renforcé ou contesté par les reconfigurations territoriales, mais la phrase reste vraie."
+      }
+     ]
+    },
+    {
+     "slug": "conseil_de_geneve_pour_les_droits_biosociaux_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "climat_environnement_global (+6.0) et demographie_mobilite_humaine (+4.3)",
+       "raison": "Les crises climatiques et migratoires exacerbent les tensions biosociales, augmentant l'importance du Conseil comme point de friction institutionnel."
+      }
+     ]
+    },
+    {
+     "slug": "conseil_des_etats_nordiques_integres_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "obligatoire",
+       "apres": "dominant",
+       "lien": "territoire",
+       "lien_detail": "corridor_arctique_nordique (zone directement touchée par le refroidissement)",
+       "contredit": "Acteur géopolitique régional structurant dans le scénario reference, le Conseil des États Nordiques Intégrés incarne une forme aboutie de fédéralisme post-national nordique, administrant collectivement le Corridor Arctique dans un monde multipolaire fragmenté.",
+       "raison": "Le refroidissement de l'Europe du Nord-Ouest renforce l'importance stratégique du Corridor Arctique et du Conseil comme acteur central de sa gouvernance, accélérant sa trajectoire vers la domination."
+      },
+      {
+       "type": "relation",
+       "niveau": "obligatoire",
+       "cible": "fonds_souverain_arctique_scandinave_reference",
+       "relation": "alliance",
+       "action": "nouvelle",
+       "lien": "relation",
+       "lien_detail": "fonds_souverain_arctique_scandinave_reference (déjà retenu comme dominant et allié à Consortium Helios)",
+       "contredit": "Le Conseil n'est pas explicitement allié au Fonds Souverain Arctique Scandinave dans la fiche.",
+       "raison": "Le refroidissement et la reconfiguration géopolitique rendent une alliance entre le Conseil et le Fonds Souverain Arctique Scandinave indispensable pour gérer les ressources et infrastructures critiques de la région."
+      },
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "consortium_helios_reference",
+       "relation": "alliance",
+       "action": "nouvelle",
+       "lien": "relation",
+       "lien_detail": "consortium_helios_reference (déjà retenu comme allié au Fonds Souverain Arctique Scandinave)",
+       "raison": "Le Conseil pourrait s'allier au Consortium Helios pour sécuriser des ressources énergétiques et technologiques dans un contexte de refroidissement."
+      }
+     ]
+    },
+    {
+     "slug": "conseil_regulation_algorithmique_reference",
+     "changements": []
+    },
+    {
+     "slug": "conseil_regulation_ressources_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "obligatoire",
+       "apres": "résiduel",
+       "lien": "variable",
+       "lien_detail": "energie_ressources_critiques (+3.2)",
+       "contredit": "Organe supranational issu des accords de Nairobi 2061, le CRRC survit en 2098 comme arbitre imparfait mais indispensable des flux de ressources stratégiques — lithium, eau dessalée, hydrogène vert, terres rares.",
+       "raison": "Les perturbations des flux de ressources critiques (eau, énergie) et la montée en puissance des acteurs régionaux (ex. : Consortium Helios, Fonds Souverain Arctique Scandinave) rendent le CRRC moins indispensable, accélérant son déclin."
+      }
+     ]
+    },
+    {
+     "slug": "consortium_africain_de_biotechnologies_sociales_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "obligatoire",
+       "apres": "dominant",
+       "lien": "variable",
+       "lien_detail": "systemes_productifs_travail (+4.6) et demographie_mobilite_humaine (+4.3)",
+       "contredit": "Le CABS opère comme un intermédiaire stratégique entre les grandes institutions financières et régulatrices mondiales et les populations africaines à faibles revenus.",
+       "raison": "Les perturbations hydrologiques et agricoles en Afrique augmentent la dépendance des populations aux programmes de biorevenu et aux solutions biotechnologiques, renforçant le rôle du CABS comme acteur dominant."
+      }
+     ]
+    },
+    {
+     "slug": "consortium_amazonia_viva_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "dominant",
+       "lien": "variable",
+       "lien_detail": "climat_environnement_global (+6.0) et systemes_productifs_travail (+4.6)",
+       "raison": "Les perturbations des moussons sud-américaines et les tensions sur les ressources hydriques renforcent le rôle du Consortium comme acteur central de la gouvernance écologique du bassin amazonien."
+      }
+     ]
+    },
+    {
+     "slug": "consortium_augmentwork_reference",
+     "changements": []
+    }
+   ]
+  }
+ },
+ "effondrement_circulation_atlantique_2067::reference::3": {
+  "empreinte": "51637a12491ab270",
+  "date": "2026-10-17T10:41",
+  "brut": {
+   "fiches": [
+    {
+     "slug": "consortium_de_maintenance_orbitale_seom_7_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "Il est l'opérateur technique de dernier recours sur lequel reposent communications, navigation et surveillance environnementale globale,…",
+       "contredit": "",
+       "lien": "variable",
+       "lien_detail": "climat_environnement_global (+6.0)",
+       "raison": "La surveillance environnementale globale devient plus critique avec l'effondrement de la circulation atlantique, renforçant le rôle du SEOM-7 comme opérateur de dernier recours pour le suivi des perturbations climatiques."
+      }
+     ]
+    },
+    {
+     "slug": "consortium_des_fournisseurs_d_energie_renouvelable_distribuee_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "energie_ressources_critiques (+3.2)",
+       "contredit": "",
+       "raison": "La perturbation des systèmes énergétiques traditionnels (refroidissement en Europe du Nord-Ouest, déplacements des moussons) accroît la dépendance aux réseaux distribués, renforçant la position du consortium."
+      }
+     ]
+    },
+    {
+     "slug": "consortium_des_grandes_plateformes_ia_integrees_reference",
+     "changements": []
+    },
+    {
+     "slug": "consortium_des_grandes_plateformes_logistiques_globales_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "obligatoire",
+       "extrait": "il est l'épine dorsale matérielle sans laquelle l'équilibre fragile s'effondre, mais son existence même cristallise les rapports de force entre blocs souverains, États en déclin et…",
+       "contredit": "L'effondrement de la circulation atlantique bouleverse les flux logistiques (ex. : routes maritimes, chaînes d'approvisionnement alimentaire), rendant impossible le maintien du statu quo décrit.",
+       "lien": "variable",
+       "lien_detail": "systemes_productifs_travail (+4.6), demographie_mobilite_humaine (+4.3)",
+       "raison": "Les perturbations des systèmes productifs et des flux migratoires obligent à une reconfiguration des infrastructures logistiques, invalidant l'idée d'une épine dorsale inchangée."
+      },
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "armada_logistique_nordique_reference",
+       "relation": "opposition",
+       "action": "nouvelle",
+       "lien": "relation",
+       "lien_detail": "armada_logistique_nordique_reference (rivale directe, touchée par le refroidissement européen)",
+       "contredit": "",
+       "raison": "Le refroidissement de l'Europe du Nord-Ouest exacerbe la concurrence pour les routes logistiques alternatives, rendant probable une opposition accrue avec l'Armada Logistique Nordique."
+      }
+     ]
+    },
+    {
+     "slug": "consortium_des_pecheries_autonomes_du_grand_nord_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "dominant",
+       "lien": "territoire",
+       "lien_detail": "corridor_arctique_nordique (zone d'activité principale)",
+       "contredit": "",
+       "raison": "Le refroidissement de l'Europe du Nord-Ouest et la perturbation des écosystèmes marins arctiques renforcent l'importance stratégique des pêcheries autonomes comme acteurs de gouvernance régionale."
+      },
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "fonds_souverain_arctique_scandinave_reference",
+       "relation": "opposition",
+       "action": "nouvelle",
+       "lien": "relation",
+       "lien_detail": "fonds_souverain_arctique_scandinave_reference (déjà retenu comme dominant, en alliance avec Helios)",
+       "contredit": "",
+       "raison": "La montée en puissance du Fonds Souverain Arctique Scandinave (déjà actée) entre en conflit avec les revendications autonomes de l'AGL sur les ressources halieutiques."
+      }
+     ]
+    },
+    {
+     "slug": "consortium_des_plateformes_ia_centralisees_anti_deliberation_reference",
+     "changements": []
+    },
+    {
+     "slug": "consortium_energetique_baltique_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "obligatoire",
+       "apres": "déclinant",
+       "lien": "territoire",
+       "lien_detail": "helsinki_communs_numeriques (zone d'activité, touchée par le refroidissement européen)",
+       "contredit": "Le refroidissement brutal de l'Europe du Nord-Ouest réduit la demande énergétique régionale et perturbe les infrastructures baltiques, rendant impossible le maintien de son rôle actuel.",
+       "raison": "La baisse des températures en Europe du Nord-Ouest diminue les besoins en énergie pour le chauffage et les activités économiques, affaiblissant la position du consortium."
+      },
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "consortium_helios_reference",
+       "relation": "alliance",
+       "action": "nouvelle",
+       "lien": "relation",
+       "lien_detail": "consortium_helios_reference (dominant, déjà en alliance avec le Fonds Souverain Arctique Scandinave)",
+       "contredit": "",
+       "raison": "Helios pourrait absorber ou s'allier avec le Consortium Énergétique Baltique pour compenser les pertes liées au refroidissement européen."
+      }
+     ]
+    },
+    {
+     "slug": "consortium_energetique_des_mers_du_nord_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "obligatoire",
+       "apres": "déclinant",
+       "lien": "territoire",
+       "lien_detail": "tromsoe_aln (zone d'activité, touchée par le refroidissement européen)",
+       "contredit": "Le refroidissement de l'Europe du Nord-Ouest réduit la viabilité des infrastructures énergétiques offshore dans les Mers du Nord, invalidant son rôle d'acteur charnière.",
+       "raison": "Les conditions climatiques plus rudes et la baisse de la demande énergétique régionale affaiblissent sa position."
+      },
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "consortium_helios_reference",
+       "relation": "alliance",
+       "action": "nouvelle",
+       "lien": "relation",
+       "lien_detail": "consortium_helios_reference (dominant, déjà en alliance avec le Fonds Souverain Arctique Scandinave)",
+       "contredit": "",
+       "raison": "Helios pourrait intégrer ou s'allier avec le Consortium Énergétique des Mers du Nord pour diversifier ses sources d'énergie."
+      }
+     ]
+    },
+    {
+     "slug": "consortium_helios_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "mature",
+       "lien": "variable",
+       "lien_detail": "energie_ressources_critiques (+3.2)",
+       "contredit": "",
+       "raison": "L'effondrement de la circulation atlantique renforce la dépendance aux énergies renouvelables (solaire, hydrogène), consolidant la position dominante de Helios sans pour autant la faire progresser vers un nouveau stade."
+      },
+      {
+       "type": "relation",
+       "niveau": "obligatoire",
+       "cible": "fonds_souverain_arctique_scandinave_reference",
+       "relation": "alliance",
+       "action": "nouvelle",
+       "lien": "relation",
+       "lien_detail": "fonds_souverain_arctique_scandinave_reference (déjà retenu comme dominant, en alliance avec Helios)",
+       "contredit": "L'alliance entre Helios et le Fonds Souverain Arctique Scandinave est déjà actée dans le lore, donc elle ne peut pas être 'nouvelle'.",
+       "raison": "Cette relation est déjà validée dans les faits à respecter, donc aucun changement n'est nécessaire ici."
+      }
+     ]
+    },
+    {
+     "slug": "consortium_indo_pacifique_de_l_hydrogene_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "energie_ressources_critiques (+3.2)",
+       "contredit": "",
+       "raison": "La perturbation des flux énergétiques traditionnels (ex. : refroidissement européen) renforce l'importance de l'hydrogène comme alternative, bénéficiant au consortium."
+      },
+      {
+       "type": "relation",
+       "niveau": "obligatoire",
+       "cible": "bloc_ressources_eurasiatique_bre_reference",
+       "relation": "opposition",
+       "action": "nouvelle",
+       "lien": "relation",
+       "lien_detail": "bloc_ressources_eurasiatique_bre_reference (déjà retenu comme opposé au consortium)",
+       "contredit": "L'opposition entre le Consortium Indo-Pacifique de l'Hydrogène et le BRE est déjà actée dans le lore, donc elle ne peut pas être 'nouvelle'.",
+       "raison": "Cette relation est déjà validée dans les faits à respecter, donc aucun changement n'est nécessaire ici."
+      }
+     ]
+    },
+    {
+     "slug": "consortium_logistique_asiatique_de_contournement_aln_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "systemes_productifs_travail (+4.6), demographie_mobilite_humaine (+4.3)",
+       "contredit": "",
+       "raison": "Les perturbations des flux logistiques traditionnels (ex. : routes maritimes atlantiques) renforcent la demande pour des alternatives comme l'ALN, bénéficiant au consortium."
+      }
+     ]
+    },
+    {
+     "slug": "consortiums_bancaires_financiarises_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "ils incarnent une dépendance structurelle aux infrastructures de clearing — toute fragilité de ces couches menace leur fonctionnement et, par extension, la stabilité des marchés financiers globaux.",
+       "contredit": "",
+       "lien": "variable",
+       "lien_detail": "systemes_productifs_travail (+4.6), energie_ressources_critiques (+3.2)",
+       "raison": "Les perturbations des systèmes productifs et énergétiques augmentent les risques de fragilité des infrastructures de clearing, renforçant la dépendance des consortiums bancaires à ces couches critiques."
+      }
+     ]
+    },
+    {
+     "slug": "consortiums_d_agriculture_verticale_algorithmique_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "obligatoire",
+       "apres": "dominant",
+       "lien": "variable",
+       "lien_detail": "systemes_productifs_travail (+4.6), demographie_mobilite_humaine (+4.3)",
+       "contredit": "Le refroidissement de l'Europe du Nord-Ouest et les perturbations agricoles (déplacement des moussons) rendent impossible le maintien d'une trajectoire émergente : leur rôle devient central pour la sécurité alimentaire.",
+       "raison": "Les consortiums d'agriculture verticale deviennent indispensables pour compenser les pertes agricoles régionales, invalidant leur statut émergent."
+      }
+     ]
+    },
+    {
+     "slug": "consortiums_d_extraction_miniere_du_bassin_congolais_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "les ressources critiques nécessaires à la décarbonation sont extraites dans des conditions qui perpétuent conflits armés, inégalités patrimoniales et fragilité…",
+       "contredit": "",
+       "lien": "variable",
+       "lien_detail": "energie_ressources_critiques (+3.2)",
+       "raison": "La demande accrue en ressources critiques (ex. : terres rares pour les énergies renouvelables) exacerbe les tensions autour de l'extraction, renforçant les conflits et inégalités décrits."
+      }
+     ]
+    },
+    {
+     "slug": "consortiums_energetiques_des_megapoles_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "obligatoire",
+       "extrait": "ils exercent une pression pour absorber les corridors logistiques et énergétiques reliant les mégapoles, transformant des infrastructures potentiellement mutualisées en actifs privés captifs.",
+       "contredit": "Le refroidissement de l'Europe du Nord-Ouest et les perturbations hydrologiques rendent impossible la poursuite de cette logique d'absorption sans adaptation.",
+       "lien": "variable",
+       "lien_detail": "energie_ressources_critiques (+3.2), systemes_productifs_travail (+4.6)",
+       "raison": "Les mégapoles doivent prioriser la résilience énergétique locale, invalidant la stratégie d'absorption décrite."
+      },
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "autorites_regionales_de_regulation_hydrologique_reference",
+       "relation": "opposition",
+       "action": "nouvelle",
+       "lien": "relation",
+       "lien_detail": "autorites_regionales_de_regulation_hydrologique_reference (déjà retenues comme dominantes)",
+       "contredit": "",
+       "raison": "Les autorités de régulation hydrologique entrent en conflit avec les consortiums énergétiques pour le contrôle des infrastructures critiques."
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "effondrement_circulation_atlantique_2067::reference::4": {
+  "empreinte": "dc39eac32f9f8abc",
+  "date": "2026-10-17T10:42",
+  "brut": {
+   "fiches": [
+    {
+     "slug": "consortiums_energetiques_opaques_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "energie_ressources_critiques (+3.2)",
+       "contredit": "",
+       "raison": "L'effondrement de la circulation atlantique augmente la pression sur les ressources énergétiques, renforçant les acteurs capables de contourner les régulations. Leur opacité devient un atout stratégique dans un contexte de fragmentation accrue."
+      },
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "fonds_souverain_arctique_scandinave_reference",
+       "relation": "alliance",
+       "action": "nouvelle",
+       "lien": "relation",
+       "lien_detail": "fonds_souverain_arctique_scandinave_reference (dominant après 2067)",
+       "contredit": "",
+       "raison": "Le Fonds Souverain Arctique Scandinave, devenu dominant, pourrait s'allier à des consortiums opaques pour sécuriser des approvisionnements énergétiques hors des cadres régulés, surtout dans un contexte de refroidissement européen."
+      }
+     ]
+    },
+    {
+     "slug": "consortiums_mediatiques_corporatifs_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "obligatoire",
+       "extrait": "ils minimisent les signaux de rupture, valorisent les ajustements techno-institutionnels et…",
+       "contredit": "L'effondrement irréversible de la circulation atlantique en 2067 est un signal de rupture majeur, impossible à minimiser sans rendre la fiche fausse.",
+       "lien": "variable",
+       "lien_detail": "climat_environnement_global (+6.0)",
+       "raison": "Un événement climatique irréversible de cette ampleur ne peut être minimisé par les médias corporatifs sans contredire leur rôle de stabilisateurs narratifs. Leur discours doit intégrer cette rupture comme un fait structurant."
+      },
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "consortium_helios_reference",
+       "relation": "alliance",
+       "action": "nouvelle",
+       "lien": "relation",
+       "lien_detail": "consortium_helios_reference (dominant après 2067)",
+       "contredit": "",
+       "raison": "Le Consortium Helios, renforcé par la crise climatique, pourrait s'allier aux médias corporatifs pour contrôler le récit autour des solutions technologiques qu'il promeut."
+      }
+     ]
+    },
+    {
+     "slug": "consortiums_prives_d_extraction_de_ressources_critiques_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "energie_ressources_critiques (+3.2)",
+       "contredit": "",
+       "raison": "La perturbation des chaînes d'approvisionnement énergétiques et minières renforce la position des acteurs privés capables de sécuriser des ressources critiques dans un contexte de fragmentation géopolitique."
+      },
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "fonds_souverain_arctique_scandinave_reference",
+       "relation": "alliance",
+       "action": "nouvelle",
+       "lien": "relation",
+       "lien_detail": "fonds_souverain_arctique_scandinave_reference (dominant après 2067)",
+       "contredit": "",
+       "raison": "Le Fonds Souverain Arctique Scandinave pourrait s'allier à ces consortiums pour exploiter les ressources rendues accessibles par le refroidissement européen et la fonte arctique."
+      }
+     ]
+    },
+    {
+     "slug": "consortiums_prives_de_gestion_des_donnees_critiques_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "demographie_mobilite_humaine (+4.3)",
+       "contredit": "",
+       "raison": "La reconfiguration des flux migratoires et des infrastructures critiques augmente la demande en gestion privée des données, renforçant leur rôle dans un système mondial fragmenté."
+      }
+     ]
+    },
+    {
+     "slug": "cooperative_terrafond_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "obligatoire",
+       "apres": "déclinant",
+       "lien": "territoire",
+       "lien_detail": "zone europe_occidentale_reconstruite (refroidissement brutal)",
+       "contredit": "Le Réseau Terrafond est structuré autour de bassins hydrologiques interconnectés en Europe de l'Ouest, une région directement touchée par le refroidissement.",
+       "raison": "Le refroidissement brutal de l'Europe du Nord-Ouest perturbe les cycles hydrologiques et agricoles, rendant impossible le maintien de son architecture agroécologique actuelle sans adaptation majeure."
+      },
+      {
+       "type": "texte",
+       "niveau": "obligatoire",
+       "extrait": "Le Réseau Terrafond constitue l'une des architectures agroécologiques les plus étendues de l'hémisphère nord, structurée autour de 47 bassins hydrologiques régionaux interconnectés.",
+       "contredit": "Les bassins hydrologiques de l'Europe du Nord-Ouest sont directement affectés par le refroidissement, rendant leur interconnexion actuelle caduque.",
+       "lien": "territoire",
+       "lien_detail": "zone europe_occidentale_reconstruite",
+       "raison": "La fiche doit mentionner une reconfiguration ou une réduction de son étendue pour rester cohérente avec l'effondrement climatique."
+      },
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "autorites_regionales_de_regulation_hydrologique_reference",
+       "relation": "alliance",
+       "action": "nouvelle",
+       "lien": "relation",
+       "lien_detail": "autorites_regionales_de_regulation_hydrologique_reference (dominant après 2067)",
+       "contredit": "",
+       "raison": "Les Autorités Régionales de Régulation Hydrologique, devenues dominantes, pourraient s'allier à Terrafond pour gérer les crises hydriques en Europe."
+      }
+     ]
+    },
+    {
+     "slug": "cooperatives_agro_ecologiques_de_reconstruction_territoriale_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "demographie_mobilite_humaine (+4.3) et systemes_productifs_travail (+4.6)",
+       "contredit": "",
+       "raison": "La perturbation des systèmes productifs et des flux migratoires renforce le rôle des coopératives comme acteurs de résilience locale, surtout dans les zones touchées par les déplacements de populations."
+      },
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "gouvernements_du_bloc_sahelien_autonome_reference",
+       "relation": "alliance",
+       "action": "nouvelle",
+       "lien": "relation",
+       "lien_detail": "gouvernements_du_bloc_sahelien_autonome_reference (opposé à l'Union Africaine Résilience)",
+       "contredit": "",
+       "raison": "Les coopératives pourraient s'allier aux gouvernements sahéliens pour répondre aux perturbations hydrologiques en Afrique."
+      }
+     ]
+    },
+    {
+     "slug": "cooperatives_agro_ecologiques_du_bassin_mediterraneen_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "systemes_productifs_travail (+4.6)",
+       "contredit": "",
+       "raison": "Les perturbations hydrologiques et agricoles en Afrique et en Méditerranée renforcent le rôle des coopératives comme garantes de la souveraineté alimentaire régionale."
+      }
+     ]
+    },
+    {
+     "slug": "cooperatives_energetiques_decentralisees_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "energie_ressources_critiques (+3.2)",
+       "contredit": "",
+       "raison": "La fragmentation des réseaux énergétiques globaux renforce la résilience des coopératives décentralisées, surtout dans les zones touchées par les perturbations climatiques."
+      },
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "armada_logistique_nordique_reference",
+       "relation": "opposition",
+       "action": "nouvelle",
+       "lien": "relation",
+       "lien_detail": "armada_logistique_nordique_reference (opposée à OptiFlow Logistics)",
+       "contredit": "",
+       "raison": "L'Armada Logistique Nordique, renforcée par le refroidissement européen, pourrait entrer en conflit avec les coopératives pour le contrôle des infrastructures énergétiques locales."
+      }
+     ]
+    },
+    {
+     "slug": "cooperatives_ia_open_source_reference",
+     "changements": []
+    },
+    {
+     "slug": "corporations_d_extraction_energetique_non_signataires_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "energie_ressources_critiques (+3.2)",
+       "contredit": "",
+       "raison": "La perturbation des chaînes d'approvisionnement énergétiques renforce les acteurs non régulés, capables de contourner les cadres de gouvernance affaiblis."
+      },
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "bloc_ressources_eurasiatique_bre_reference",
+       "relation": "alliance",
+       "action": "nouvelle",
+       "lien": "relation",
+       "lien_detail": "bloc_ressources_eurasiatique_bre_reference (opposé au Consortium Indo-Pacifique de l'Hydrogène)",
+       "contredit": "",
+       "raison": "Le Bloc Ressources Eurasiatique pourrait s'allier à ces corporations pour sécuriser des ressources énergétiques hors des cadres multilatéraux."
+      }
+     ]
+    },
+    {
+     "slug": "corridor_arctique_nordique_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "obligatoire",
+       "apres": "mature",
+       "lien": "territoire",
+       "lien_detail": "zone corridor_arctique_nordique (dégel accéléré par le réchauffement global)",
+       "contredit": "Le refroidissement de l'Europe du Nord-Ouest ne contredit pas directement la fonte arctique, mais la reconfiguration des routes logistiques rend son rôle moins central qu'envisagé.",
+       "raison": "Le refroidissement européen réduit la demande pour les routes arctiques depuis l'Europe, limitant leur expansion prévue. Le corridor reste dominant mais entre dans une phase de maturité plutôt que de croissance."
+      },
+      {
+       "type": "texte",
+       "niveau": "obligatoire",
+       "extrait": "une voie maritime dégagée par la fonte quasi-totale de la banquise estivale, reliant les ports scandinaves aux territoires sibériens dégelés en pleine mise en valeur.",
+       "contredit": "Le refroidissement de l'Europe du Nord-Ouest réduit l'attractivité des ports scandinaves pour les échanges transarctiques.",
+       "lien": "territoire",
+       "lien_detail": "zone corridor_arctique_nordique",
+       "raison": "La fiche doit mentionner une adaptation des flux logistiques ou une diversification des partenaires pour rester cohérente."
+      },
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "fonds_souverain_arctique_scandinave_reference",
+       "relation": "alliance",
+       "action": "nouvelle",
+       "lien": "relation",
+       "lien_detail": "fonds_souverain_arctique_scandinave_reference (dominant après 2067)",
+       "contredit": "",
+       "raison": "Le Fonds Souverain Arctique Scandinave pourrait renforcer son alliance avec le corridor pour compenser le déclin des échanges européens."
+      }
+     ]
+    },
+    {
+     "slug": "courant_nationaliste_instrumentalisateur_du_discours_des_racines_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "demographie_mobilite_humaine (+4.3)",
+       "contredit": "",
+       "raison": "Les flux migratoires accrus et les recompositions territoriales renforcent les discours nationalistes comme outils de résistance aux dynamiques de mobilité."
+      }
+     ]
+    },
+    {
+     "slug": "datasovereign_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "mature",
+       "lien": "variable",
+       "lien_detail": "demographie_mobilite_humaine (+4.3)",
+       "contredit": "",
+       "raison": "La reconfiguration des flux migratoires et des infrastructures critiques augmente la demande en souveraineté numérique, mais aussi les tensions autour de la gestion des données, limitant sa croissance."
+      }
+     ]
+    },
+    {
+     "slug": "deepfield_institute_reference",
+     "changements": []
+    },
+    {
+     "slug": "delta_du_gange_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "obligatoire",
+       "apres": "résiduel",
+       "lien": "territoire",
+       "lien_detail": "zone delta_du_gange (submersion aggravée par la montée des eaux)",
+       "contredit": "Le delta est déjà en déclin, mais l'effondrement de la circulation atlantique accélère la montée des eaux sur la côte est américaine, aggravant indirectement sa submersion.",
+       "raison": "La fiche indique déjà un déclin, mais la submersion devient si critique que le territoire ne peut plus jouer un rôle significatif, même comme zone de crise."
+      },
+      {
+       "type": "texte",
+       "niveau": "obligatoire",
+       "extrait": "Territoire en crise permanente, submergé par la montée des eaux et les migrations massives qu'elle génère.",
+       "contredit": "La montée des eaux est aggravée par l'effondrement de la circulation atlantique, rendant la crise permanente encore plus critique.",
+       "lien": "territoire",
+       "lien_detail": "zone delta_du_gange",
+       "raison": "La fiche doit mentionner une aggravation de la submersion ou une réduction drastique de la population pour rester cohérente."
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "effondrement_circulation_atlantique_2067::reference::5": {
+  "empreinte": "890dfca8027bfb1f",
+  "date": "2026-10-17T10:42",
+  "brut": {
+   "fiches": [
+    {
+     "slug": "delta_du_mekong_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "résiduel",
+       "lien": "variable",
+       "lien_detail": "demographie_mobilite_humaine (+4.3), systemes_productifs_travail (+4.6)",
+       "contredit": "",
+       "raison": "Le déplacement des moussons sud-américaines et africaines (effet indirect de l'effondrement de la circulation atlantique) aggrave la salinisation et les pressions hydrologiques dans le Delta du Mékong, accélérant son déclin fonctionnel."
+      },
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "autorites_regionales_de_regulation_hydrologique_reference",
+       "relation": "alliance",
+       "action": "nouvelle",
+       "lien": "relation",
+       "lien_detail": "autorites_regionales_de_regulation_hydrologique_reference (déjà alliée, mais renforcement probable)",
+       "contredit": "",
+       "raison": "La perturbation hydrologique régionale renforce la dépendance du Delta du Mékong envers les Autorités Régionales de Régulation Hydrologique, déjà alliées."
+      }
+     ]
+    },
+    {
+     "slug": "detroit_compact_grands_lacs_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "obligatoire",
+       "extrait": "le Compact coordonne la gestion des ressources hydriques et la reconversion économique post-désindustrialisation dans une région qui a connu l'effondrement de son tissu manufacturier…",
+       "contredit": "La montée brutale du niveau de la mer sur la côte est américaine (effet de l'effondrement de la circulation atlantique) perturbe les équilibres hydrologiques des Grands Lacs et les flux logistiques régionaux.",
+       "lien": "variable",
+       "lien_detail": "demographie_mobilite_humaine (+4.3), systemes_productifs_travail (+4.6)",
+       "raison": "Le texte actuel ignore l'impact hydrologique et migratoire indirect sur les Grands Lacs, rendant la fiche partiellement fausse."
+      },
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "autorites_regionales_de_regulation_hydrologique_reference",
+       "relation": "alliance",
+       "action": "nouvelle",
+       "lien": "relation",
+       "lien_detail": "autorites_regionales_de_regulation_hydrologique_reference (déjà alliée, mais renforcement probable)",
+       "contredit": "",
+       "raison": "La pression hydrologique accrue renforce la coopération avec les Autorités Régionales de Régulation Hydrologique."
+      }
+     ]
+    },
+    {
+     "slug": "directive_kontinuum_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "Le Système Kontinuum est une infrastructure algorithmique de gouvernance préventive déployée progressivement depuis les années 2040 par un consortium d'États à tendance centraliste numérique et de plateformes IA intégrées, sous couvert de stabilisation des 'risques de rupture systémique'.",
+       "contredit": "",
+       "lien": "variable",
+       "lien_detail": "frontieres_du_systeme (+0.5), organisation_territoires (+0.4)",
+       "raison": "L'effondrement de la circulation atlantique augmente la demande pour des outils de gouvernance préventive, élargissant le rôle du Kontinuum sans le rendre faux."
+      }
+     ]
+    },
+    {
+     "slug": "ecosynth_global_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "dominant",
+       "lien": "variable",
+       "lien_detail": "climat_environnement_global (+6.0), systemes_productifs_travail (+4.6)",
+       "contredit": "",
+       "raison": "La crise climatique permanente renforce la dépendance envers les solutions biotechnologiques brevetées d'EcoSynth, consolidant son quasi-monopole."
+      },
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "consortiums_d_agriculture_verticale_algorithmique_reference",
+       "relation": "alliance",
+       "action": "nouvelle",
+       "lien": "relation",
+       "lien_detail": "consortiums_d_agriculture_verticale_algorithmique_reference (déjà alliés, mais renforcement probable)",
+       "contredit": "",
+       "raison": "La perturbation agricole globale rapproche EcoSynth des consortiums d'agriculture verticale pour des solutions intégrées."
+      }
+     ]
+    },
+    {
+     "slug": "elias_mork_reference",
+     "changements": []
+    },
+    {
+     "slug": "ergo_wian_sovereign_holdings_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "obligatoire",
+       "apres": "dominant",
+       "lien": "territoire",
+       "lien_detail": "europe_occidentale_reconstruite_reference (zone d'action principale d'Ergo-Wian, touchée par le refroidissement)",
+       "contredit": "Le refroidissement brutal de l'Europe du Nord-Ouest affaiblit les États traditionnels, renforçant mécaniquement les acteurs corporatifs comme Ergo-Wian.",
+       "raison": "La fiche indique une trajectoire déjà 'dominant', mais l'effondrement de la circulation atlantique rend cette domination inévitable et accélérée."
+      },
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "fonds_souverain_arctique_scandinave_reference",
+       "relation": "alliance",
+       "action": "nouvelle",
+       "lien": "relation",
+       "lien_detail": "fonds_souverain_arctique_scandinave_reference (déjà dominant, complémentarité stratégique)",
+       "contredit": "",
+       "raison": "Le refroidissement européen et la montée en puissance des acteurs arctiques créent une convergence d'intérêts entre Ergo-Wian et le Fonds Souverain Arctique Scandinave."
+      }
+     ]
+    },
+    {
+     "slug": "etats_a_tendance_centraliste_numerique_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "frontieres_du_systeme (+0.5), organisation_territoires (+0.4)",
+       "contredit": "",
+       "raison": "La fragmentation territoriale accrue et la demande de stabilité renforcent la légitimité des États centralistes numériques."
+      }
+     ]
+    },
+    {
+     "slug": "europe_occidentale_reconstruite_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "obligatoire",
+       "apres": "résiduel",
+       "lien": "territoire",
+       "lien_detail": "europe_occidentale_reconstruite_reference (zone directement touchée par le refroidissement)",
+       "contredit": "Le refroidissement brutal de l'Europe du Nord-Ouest rend impossible le maintien d'une coordination institutionnelle lâche comme l'UOC.",
+       "raison": "La fiche décrit une trajectoire 'déclinant', mais l'effondrement de la circulation atlantique accélère ce déclin vers un statut résiduel."
+      },
+      {
+       "type": "texte",
+       "niveau": "obligatoire",
+       "extrait": "Elle ne prétend plus à l'intégration politique profonde de ses prédécesseurs, mais assure une coordination minimale des normes commerciales et sécuritaires.",
+       "contredit": "Le refroidissement climatique et les perturbations économiques rendent impossible toute coordination minimale durable.",
+       "lien": "territoire",
+       "lien_detail": "europe_occidentale_reconstruite_reference (zone directement touchée)",
+       "raison": "La phrase devient fausse : l'UOC ne peut plus assurer de coordination minimale."
+      },
+      {
+       "type": "relation",
+       "niveau": "obligatoire",
+       "cible": "fonds_souverain_arctique_scandinave_reference",
+       "relation": "opposition",
+       "action": "nouvelle",
+       "lien": "relation",
+       "lien_detail": "fonds_souverain_arctique_scandinave_reference (dominant, acteur clé des nouvelles dynamiques arctiques)",
+       "contredit": "Le refroidissement européen et la montée des acteurs arctiques créent une rivalité structurelle entre l'UOC affaiblie et le Fonds Souverain Arctique Scandinave.",
+       "raison": "L'UOC ne peut plus coexister pacifiquement avec un acteur arctique dominant dans un contexte de refroidissement."
+      }
+     ]
+    },
+    {
+     "slug": "factions_d_extraction_miniere_independantes_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "energie_ressources_critiques (+3.2)",
+       "contredit": "",
+       "raison": "La perturbation des chaînes d'approvisionnement en ressources critiques renforce le rôle des factions indépendantes."
+      }
+     ]
+    },
+    {
+     "slug": "factions_eurasiatiques_contre_la_tarification_hydrique_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "systemes_productifs_travail (+4.6), demographie_mobilite_humaine (+4.3)",
+       "contredit": "",
+       "raison": "Les perturbations hydrologiques globales (déplacement des moussons) renforcent la légitimité des factions opposées à la tarification hydrique."
+      },
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "bloc_ressources_eurasiatique_bre_reference",
+       "relation": "alliance",
+       "action": "nouvelle",
+       "lien": "relation",
+       "lien_detail": "bloc_ressources_eurasiatique_bre_reference (déjà allié, mais renforcement probable)",
+       "contredit": "",
+       "raison": "La crise hydrologique rapproche les factions eurasiatiques des blocs souverains de ressources."
+      }
+     ]
+    },
+    {
+     "slug": "federation_communs_territoriaux_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "dominant",
+       "lien": "variable",
+       "lien_detail": "climat_environnement_global (+6.0), systemes_productifs_travail (+4.6)",
+       "contredit": "",
+       "raison": "La fragmentation territoriale et la crise climatique renforcent la pertinence des modèles décentralisés comme la FCT."
+      },
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "autorites_regionales_de_regulation_hydrologique_reference",
+       "relation": "alliance",
+       "action": "nouvelle",
+       "lien": "relation",
+       "lien_detail": "autorites_regionales_de_regulation_hydrologique_reference (déjà alliée, mais renforcement probable)",
+       "contredit": "",
+       "raison": "La crise hydrologique globale renforce la coopération entre la FCT et les autorités de régulation hydrologique."
+      }
+     ]
+    },
+    {
+     "slug": "federation_des_cliniques_autonomes_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "sante_biotechnologies (+0.3, par propagation)",
+       "contredit": "",
+       "raison": "Les perturbations climatiques et migratoires augmentent la demande pour des systèmes de santé décentralisés."
+      }
+     ]
+    },
+    {
+     "slug": "fonds_d_investissement_foncier_climatique_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "climat_environnement_global (+6.0), demographie_mobilite_humaine (+4.3)",
+       "contredit": "",
+       "raison": "La crise climatique permanente renforce le rôle des fonds d'investissement foncier climatique."
+      }
+     ]
+    },
+    {
+     "slug": "fonds_monetaire_climatique_fmc_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "climat_environnement_global (+6.0), systemes_productifs_travail (+4.6)",
+       "contredit": "",
+       "raison": "La crise climatique permanente augmente la centralité du FMC dans la gouvernance économique globale."
+      }
+     ]
+    },
+    {
+     "slug": "fonds_souverain_arctique_scandinave_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "obligatoire",
+       "apres": "dominant",
+       "lien": "territoire",
+       "lien_detail": "tromsoe_aln (zone arctique, indirectement touchée par le refroidissement européen)",
+       "contredit": "Le refroidissement de l'Europe du Nord-Ouest renforce la position géopolitique des acteurs arctiques, dont le Fonds Souverain Arctique Scandinave.",
+       "raison": "La fiche indique une trajectoire 'ascendant', mais l'effondrement de la circulation atlantique rend cette domination inévitable."
+      },
+      {
+       "type": "relation",
+       "niveau": "obligatoire",
+       "cible": "consortium_helios_reference",
+       "relation": "alliance",
+       "action": "nouvelle",
+       "lien": "relation",
+       "lien_detail": "consortium_helios_reference (déjà retenu comme allié dans le lore)",
+       "contredit": "L'alliance entre le Fonds Souverain Arctique Scandinave et le Consortium Helios est déjà actée dans le lore, mais l'effondrement de la circulation atlantique la rend obligatoire.",
+       "raison": "Sans cette alliance, la fiche devient fausse : le Fonds ne peut plus jouer son rôle sans le soutien d'Helios."
+      },
+      {
+       "type": "relation",
+       "niveau": "obligatoire",
+       "cible": "europe_occidentale_reconstruite_reference",
+       "relation": "opposition",
+       "action": "nouvelle",
+       "lien": "relation",
+       "lien_detail": "europe_occidentale_reconstruite_reference (affaiblie par le refroidissement)",
+       "contredit": "Le refroidissement européen crée une rivalité structurelle entre le Fonds Souverain Arctique Scandinave et l'UOC.",
+       "raison": "Le Fonds ne peut plus coexister pacifiquement avec une UOC affaiblie dans un contexte de refroidissement."
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "effondrement_circulation_atlantique_2067::reference::6": {
+  "empreinte": "ff9821c2e74fadff",
+  "date": "2026-10-17T10:43",
+  "brut": {
+   "fiches": [
+    {
+     "slug": "fonds_souverains_de_la_ceinture_financiere_pacifique_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "relation",
+       "lien_detail": "alliés avec consortium_indo_pacifique_de_l_hydrogene_reference, directement touché par la perturbation hydrologique en Indo-Pacifique",
+       "raison": "Le consortium indo-pacifique de l'hydrogène, allié clé, voit son poids géopolitique renforcé par les perturbations hydrologiques en Asie du Sud-Est et en Océanie, ce qui pourrait accélérer la montée en puissance des fonds souverains de la Ceinture Financière Pacifique."
+      },
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "consortium_helios_reference",
+       "relation": "alliance",
+       "action": "nouvelle",
+       "lien": "relation",
+       "lien_detail": "consortium_helios_reference est un acteur dominant renforcé par l'élément perturbateur, et les fonds souverains pourraient chercher à s'allier avec lui pour sécuriser des investissements énergétiques critiques",
+       "raison": "L'effondrement de la circulation atlantique renforce le Consortium Helios, acteur clé dans les énergies renouvelables, ce qui rend une alliance avec les fonds souverains de la Ceinture Financière Pacifique plausible pour mutualiser des ressources."
+      }
+     ]
+    },
+    {
+     "slug": "frente_sertao_livre_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "dominant",
+       "lien": "variable",
+       "lien_detail": "systemes_productifs_travail (+4.6) et demographie_mobilite_humaine (+4.3), touchés par l'élément perturbateur",
+       "raison": "Les perturbations hydrologiques et agricoles en Amérique du Sud, exacerbées par le déplacement des moussons, renforcent la dépendance aux modèles agroécologiques résilients portés par la Frente Sertão Livre, ce qui pourrait accélérer son ascension."
+      },
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "consortium_amazonia_viva_reference",
+       "relation": "opposition",
+       "action": "nouvelle",
+       "lien": "relation",
+       "lien_detail": "consortium_amazonia_viva_reference est un rival historique, mais les perturbations climatiques pourraient exacerber les tensions pour le contrôle des ressources en Amazonie",
+       "raison": "Les perturbations hydrologiques en Amazonie pourraient intensifier les conflits entre la Frente Sertão Livre et le Consortium Amazônia Viva pour le contrôle des terres et des ressources en eau."
+      }
+     ]
+    },
+    {
+     "slug": "front_souverainiste_des_ressources_d_amerique_du_sud_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "obligatoire",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "systemes_productifs_travail (+4.6) et demographie_mobilite_humaine (+4.3), touchés par l'élément perturbateur",
+       "contredit": "Le rôle du Front comme acteur de pression géopolitique contestataire reste émergent, alors que les perturbations hydrologiques et agricoles en Amérique du Sud créent un contexte où son influence devient critique pour renégocier les flux de ressources.",
+       "raison": "Les perturbations hydrologiques et agricoles en Amérique du Sud rendent le Front Souverainiste des Ressources un acteur incontournable pour la renégociation des accords d'exploitation, ce qui rend sa trajectoire émergente obsolète."
+      },
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "amazonie_consortium_viva_reference",
+       "relation": "opposition",
+       "action": "nouvelle",
+       "lien": "relation",
+       "lien_detail": "amazonie_consortium_viva_reference est un rival historique, mais les perturbations climatiques pourraient exacerber les tensions pour le contrôle des ressources",
+       "raison": "Les perturbations hydrologiques en Amazonie pourraient intensifier les conflits entre le Front Souverainiste et le Consortium Amazônia Viva pour le contrôle des terres et des ressources critiques."
+      }
+     ]
+    },
+    {
+     "slug": "gelecek_meclisi_reference",
+     "changements": [
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "autorites_regionales_de_regulation_hydrologique_reference",
+       "relation": "alliance",
+       "action": "nouvelle",
+       "lien": "relation",
+       "lien_detail": "autorites_regionales_de_regulation_hydrologique_reference est un acteur dominant renforcé par l'élément perturbateur, et gelecek_meclisi pourrait chercher à s'allier avec lui pour coordonner des réponses climatiques",
+       "raison": "L'effondrement de la circulation atlantique renforce le rôle des Autorités Régionales de Régulation Hydrologique, ce qui rend une alliance avec gelecek_meclisi plausible pour négocier des solutions climatiques transnationales."
+      }
+     ]
+    },
+    {
+     "slug": "geneve_lac_retreite_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "obligatoire",
+       "extrait": "Organisation de gestion environnementale et patrimoniale fondée autour de la retraite progressive des eaux du lac Léman, devenu symbole des mutations climatiques non résolues.",
+       "contredit": "Le refroidissement brutal de l'Europe du Nord-Ouest après 2067 pourrait stabiliser ou même inverser temporairement la retraite des eaux du lac Léman, rendant cette phrase fausse.",
+       "lien": "territoire",
+       "lien_detail": "Le lac Léman est situé en Europe du Nord-Ouest, zone directement touchée par le refroidissement",
+       "raison": "Le refroidissement de l'Europe du Nord-Ouest pourrait ralentir ou inverser la montée des eaux du lac Léman, contredisant l'idée d'une retraite progressive des eaux."
+      },
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "déclinant",
+       "lien": "territoire",
+       "lien_detail": "Le lac Léman est situé en Europe du Nord-Ouest, zone directement touchée par le refroidissement",
+       "raison": "Le refroidissement de l'Europe du Nord-Ouest pourrait réduire l'urgence des projets d'adaptation territoriale, affaiblissant le rôle du Forum Léman."
+      }
+     ]
+    },
+    {
+     "slug": "gouvernements_a_regime_de_productivite_mandatee_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "systemes_productifs_travail (+4.6), touché par l'élément perturbateur",
+       "raison": "Les perturbations des systèmes productifs pourraient renforcer la demande pour des gouvernements capables d'imposer des régimes de productivité stricte afin de maintenir la stabilité économique."
+      }
+     ]
+    },
+    {
+     "slug": "gouvernements_du_bloc_sahelien_autonome_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "obligatoire",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "demographie_mobilite_humaine (+4.3) et systemes_productifs_travail (+4.6), touchés par l'élément perturbateur",
+       "contredit": "Le rôle du Bloc Sahélien Autonome reste émergent, alors que les perturbations des moussons africaines et les flux migratoires accrus en font un acteur clé pour la stabilité régionale.",
+       "raison": "Les perturbations des moussons africaines et les flux migratoires accrus renforcent le rôle du Bloc Sahélien Autonome comme acteur incontournable de la résilience territoriale en Afrique subsaharienne."
+      },
+      {
+       "type": "relation",
+       "niveau": "obligatoire",
+       "cible": "union_africaine_resilience_reference",
+       "relation": "opposition",
+       "action": "nouvelle",
+       "lien": "relation",
+       "lien_detail": "L'élément perturbateur crée une opposition déjà retenue dans le lore entre le Bloc Sahélien Autonome et l'Union Africaine Résilience",
+       "contredit": "L'absence de cette opposition dans la fiche contredit le lore déjà retenu.",
+       "raison": "L'effondrement de la circulation atlantique exacerbe les tensions entre le Bloc Sahélien Autonome et l'Union Africaine Résilience pour le contrôle des ressources hydriques et agricoles."
+      }
+     ]
+    },
+    {
+     "slug": "gouvernements_federaux_residuels_souverainistes_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "déclinant",
+       "lien": "variable",
+       "lien_detail": "frontieres_du_systeme (+0.5) et organisation_territoires (+0.4), touchés indirectement par l'élément perturbateur",
+       "raison": "La fragmentation territoriale accrue et les perturbations climatiques pourraient affaiblir les gouvernements fédéraux résiduels, incapables de s'adapter aux nouvelles dynamiques géopolitiques."
+      }
+     ]
+    },
+    {
+     "slug": "great_lakes_autonomous_compact_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "dominant",
+       "lien": "variable",
+       "lien_detail": "demographie_mobilite_humaine (+4.3) et systemes_productifs_travail (+4.6), touchés par l'élément perturbateur",
+       "raison": "La montée du niveau de la mer sur la côte est américaine et les perturbations climatiques pourraient renforcer l'importance stratégique du Compact des Grands Lacs comme réservoir d'eau douce et zone de stabilité."
+      },
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "autorites_regionales_de_regulation_hydrologique_reference",
+       "relation": "alliance",
+       "action": "nouvelle",
+       "lien": "relation",
+       "lien_detail": "autorites_regionales_de_regulation_hydrologique_reference est un acteur dominant renforcé par l'élément perturbateur, et le Compact des Grands Lacs pourrait chercher à s'allier avec lui pour sécuriser la gestion de l'eau",
+       "raison": "Les perturbations hydrologiques mondiales renforcent le rôle des Autorités Régionales de Régulation Hydrologique, ce qui rend une alliance avec le Compact des Grands Lacs plausible pour mutualiser des ressources."
+      }
+     ]
+    },
+    {
+     "slug": "guadalajara_nexus_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "dominant",
+       "lien": "variable",
+       "lien_detail": "systemes_productifs_travail (+4.6) et demographie_mobilite_humaine (+4.3), touchés par l'élément perturbateur",
+       "raison": "Les perturbations des chaînes d'approvisionnement nord-américaines, exacerbées par les changements climatiques, pourraient renforcer le rôle du Guadalajara Nexus comme hub logistique incontournable."
+      }
+     ]
+    },
+    {
+     "slug": "helsinki_communs_numeriques_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "déclinant",
+       "lien": "territoire",
+       "lien_detail": "Helsinki est située en Europe du Nord-Ouest, zone directement touchée par le refroidissement",
+       "raison": "Le refroidissement de l'Europe du Nord-Ouest pourrait réduire les investissements dans les infrastructures numériques, affaiblissant le rôle d'Helsinki Communs Numériques."
+      }
+     ]
+    },
+    {
+     "slug": "holdfast_reference",
+     "changements": []
+    },
+    {
+     "slug": "hyphan_raghavan_reference",
+     "changements": [
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "fonds_souverain_arctique_scandinave_reference",
+       "relation": "alliance",
+       "action": "nouvelle",
+       "lien": "relation",
+       "lien_detail": "fonds_souverain_arctique_scandinave_reference est un acteur dominant renforcé par l'élément perturbateur, et Hyphan Raghavan pourrait chercher à s'allier avec lui pour sécuriser des ressources arctiques",
+       "raison": "Le refroidissement de l'Europe du Nord-Ouest renforce le Fonds Souverain Arctique Scandinave, ce qui rend une alliance avec Ergo-Wian Sovereign Holdings plausible pour mutualiser des ressources stratégiques."
+      }
+     ]
+    },
+    {
+     "slug": "ilse_varga_holm_reference",
+     "changements": [
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "fonds_souverain_arctique_scandinave_reference",
+       "relation": "alliance",
+       "action": "nouvelle",
+       "lien": "relation",
+       "lien_detail": "fonds_souverain_arctique_scandinave_reference est un acteur dominant renforcé par l'élément perturbateur, et Ilse Varga-Holm pourrait chercher à s'allier avec lui pour sécuriser des ressources arctiques",
+       "raison": "Le refroidissement de l'Europe du Nord-Ouest renforce le Fonds Souverain Arctique Scandinave, ce qui rend une alliance avec Ergo-Wian Sovereign Holdings plausible pour mutualiser des ressources stratégiques."
+      }
+     ]
+    },
+    {
+     "slug": "institut_des_seuils_demographiques_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "dominant",
+       "lien": "variable",
+       "lien_detail": "demographie_mobilite_humaine (+4.3), touché par l'élément perturbateur",
+       "raison": "Les perturbations migratoires accrues renforcent le rôle de l'Institut des Seuils Démographiques comme arbitre des flux humains, ce qui pourrait accélérer son ascension vers un statut dominant."
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "effondrement_circulation_atlantique_2067::reference::7": {
+  "empreinte": "dc9ec47c5f5829df",
+  "date": "2026-10-17T10:44",
+  "brut": {
+   "fiches": [
+    {
+     "slug": "institut_polytechnique_de_ouagadougou_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "demographie_mobilite_humaine (+4.3)",
+       "raison": "Le déplacement des moussons africaines et les perturbations hydrologiques renforcent l'importance stratégique de l'IPO comme pôle d'expertise climatique et hydrique pour le Bloc Sahélien Autonome, augmentant son influence régionale."
+      },
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "gouvernements_du_bloc_sahelien_autonome_reference",
+       "relation": "alliance",
+       "action": "nouvelle",
+       "lien": "relation",
+       "lien_detail": "alliés indirects via commission_hydrique_de_l_union_africaine_reference et amara_diallo_nkosi_reference",
+       "raison": "La crise hydrique accrue dans le Sahel rend probable un renforcement des liens avec les gouvernements sahéliens pour des solutions techniques et politiques."
+      }
+     ]
+    },
+    {
+     "slug": "institutions_multilaterales_survivantes_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "déclinant",
+       "lien": "variable",
+       "lien_detail": "climat_environnement_global (+6.0)",
+       "raison": "L'effondrement de la circulation atlantique accentue les tensions géopolitiques, réduisant davantage la capacité des institutions multilatérales à imposer leur autorité face aux blocs régionaux et aux acteurs dominants comme le Consortium Helios ou le Fonds Souverain Arctique Scandinave."
+      },
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "agence_stabilisation_climatique_reference",
+       "relation": "alliance",
+       "action": "renforcée",
+       "lien": "relation",
+       "lien_detail": "alliés existants",
+       "raison": "La crise climatique permanente pourrait pousser ces institutions à collaborer plus étroitement pour tenter de stabiliser les impacts, bien que leur déclin global limite leur efficacité."
+      }
+     ]
+    },
+    {
+     "slug": "internationale_travailleurs_augmentes_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "dominant",
+       "lien": "variable",
+       "lien_detail": "systemes_productifs_travail (+4.6)",
+       "raison": "Les bouleversements des systèmes productifs en Europe du Nord-Ouest et ailleurs pourraient augmenter la précarité des travailleurs augmentés, renforçant le rôle de l'ITA comme syndicat transnational de défense."
+      }
+     ]
+    },
+    {
+     "slug": "kalaallit_nunaat_sovereign_fund_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "dominant",
+       "lien": "variable",
+       "lien_detail": "energie_ressources_critiques (+3.2)",
+       "raison": "Le refroidissement de l'Europe du Nord-Ouest et la reconfiguration des routes logistiques arctiques renforcent la position géopolitique du KNSF comme acteur clé des ressources critiques et des négociations arctiques."
+      },
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "fonds_souverain_arctique_scandinave_reference",
+       "relation": "opposition",
+       "action": "nouvelle",
+       "lien": "relation",
+       "lien_detail": "alliance déjà retenue entre Consortium Helios et Fonds Souverain Arctique Scandinave",
+       "raison": "La compétition pour le contrôle des ressources arctiques et des nouvelles routes logistiques pourrait opposer le KNSF au Fonds Souverain Arctique Scandinave, déjà allié à un acteur dominant."
+      }
+     ]
+    },
+    {
+     "slug": "kaspar_lind_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "territoire",
+       "lien_detail": "europe_occidentale_reconstruite (zone d'opération)",
+       "raison": "Le refroidissement brutal de l'Europe du Nord-Ouest et les bouleversements socio-économiques qui en découlent pourraient créer un terreau fertile pour le recrutement de profils désabusés, augmentant l'influence de Lind et du réseau Kindling."
+      }
+     ]
+    },
+    {
+     "slug": "kindling_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "territoire",
+       "lien_detail": "europe_occidentale_reconstruite (zone d'opération)",
+       "raison": "Les crises institutionnelles accrues en Europe Occidentale Reconstruite, provoquées par le refroidissement climatique, pourraient offrir des opportunités pour accélérer l'effondrement des structures démocratiques résiduelles."
+      }
+     ]
+    },
+    {
+     "slug": "kinshasa_accords_hydriques_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "obligatoire",
+       "apres": "déclinant",
+       "lien": "variable",
+       "lien_detail": "demographie_mobilite_humaine (+4.3) et systemes_productifs_travail (+4.6)",
+       "contredit": "Les Accords Hydriques de Kinshasa sont présentés comme un cadre de négociation mature et stable pour réguler l'accès au bassin du Congo.",
+       "raison": "Les perturbations hydrologiques majeures en Afrique (déplacement des moussons) et les migrations climatiques rendent les tensions entre États riverains ingérables, affaiblissant durablement la capacité des Accords à réguler le bassin du Congo."
+      },
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "autorites_regionales_de_regulation_hydrologique_reference",
+       "relation": "opposition",
+       "action": "nouvelle",
+       "lien": "relation",
+       "lien_detail": "alliés existants, mais crise hydrique accrue",
+       "raison": "Les Autorités Régionales de Régulation Hydrologique, devenues dominantes, pourraient imposer des solutions top-down incompatibles avec les négociations multilatérales des Accords de Kinshasa."
+      }
+     ]
+    },
+    {
+     "slug": "lamplight_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "dominant",
+       "lien": "variable",
+       "lien_detail": "climat_environnement_global (+6.0) et systemes_productifs_travail (+4.6)",
+       "raison": "Les bouleversements géopolitiques et économiques créent un besoin accru d'investigation sur les structures opaques, renforçant le rôle de Lamplight comme contre-pouvoir informationnel."
+      },
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "ergo_wian_sovereign_holdings_reference",
+       "relation": "opposition",
+       "action": "renforcée",
+       "lien": "relation",
+       "lien_detail": "rivaux existants",
+       "raison": "La reconfiguration des alliances et des consortiums énergétiques opaques (comme Ergo-Wian) augmente les cibles d'investigation pour Lamplight."
+      }
+     ]
+    },
+    {
+     "slug": "le_temoin_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "Couvre les tensions géopolitiques et économiques dans un contexte d'incertitude croissante.",
+       "lien": "variable",
+       "lien_detail": "climat_environnement_global (+6.0) et systemes_productifs_travail (+4.6)",
+       "raison": "L'effondrement de la circulation atlantique et ses conséquences globales pourraient élargir le champ d'investigation de Raj Mehta, mais la phrase reste vraie sans modification."
+      }
+     ]
+    },
+    {
+     "slug": "leena_vainala_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "dominant",
+       "lien": "variable",
+       "lien_detail": "climat_environnement_global (+6.0) et organisation_territoires (+0.4)",
+       "raison": "Les crises climatiques et la reconfiguration des territoires augmentent la demande pour des chartes de gouvernance innovantes, renforçant l'influence de Väinälä comme référence intellectuelle."
+      }
+     ]
+    },
+    {
+     "slug": "les_veilleurs_des_nappes_phreatiques_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "dominant",
+       "lien": "variable",
+       "lien_detail": "demographie_mobilite_humaine (+4.3) et energie_ressources_critiques (+3.2)",
+       "raison": "Les perturbations hydrologiques et la pression accrue sur les ressources en eau renforcent le rôle des Veilleurs comme contre-pouvoir face aux consortiums privés et aux lobbies agro-industriels."
+      },
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "autorites_regionales_de_regulation_hydrologique_reference",
+       "relation": "opposition",
+       "action": "renforcée",
+       "lien": "relation",
+       "lien_detail": "rivaux existants",
+       "raison": "Les Autorités Régionales de Régulation Hydrologique, devenues dominantes, pourraient adopter des mesures centralisées en conflit avec les actions décentralisées des Veilleurs."
+      }
+     ]
+    },
+    {
+     "slug": "les_veilleurs_du_fleuve_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "dominant",
+       "lien": "territoire",
+       "lien_detail": "delta_du_mekong (zone d'action)",
+       "raison": "Les perturbations hydrologiques et agricoles dans le delta du Mékong renforcent le rôle des Gardiens des Rives comme système de résilience locale face aux institutions défaillantes."
+      }
+     ]
+    },
+    {
+     "slug": "ligue_des_metropoles_du_sud_pour_les_infrastructures_libres_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "climat_environnement_global (+6.0) et frontieres_du_systeme (+0.5)",
+       "raison": "La fragmentation accrue du système mondial et les crises climatiques renforcent la pression des métropoles du Sud pour redistribuer le contrôle des infrastructures, augmentant l'influence de la Ligue."
+      }
+     ]
+    },
+    {
+     "slug": "ligue_des_municipalites_peripheriques_sous_connectees_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "demographie_mobilite_humaine (+4.3) et organisation_territoires (+0.4)",
+       "raison": "Les migrations climatiques et la reconfiguration des territoires augmentent la marginalisation des zones périphériques, renforçant le rôle de la Ligue comme contrepoids aux logiques centralisatrices."
+      }
+     ]
+    },
+    {
+     "slug": "lobbies_agro_industriels_a_haute_consommation_d_eau_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "climat_environnement_global (+6.0) et systemes_productifs_travail (+4.6)",
+       "raison": "Les perturbations hydrologiques et agricoles augmentent la pression sur les ressources en eau, renforçant temporairement l'influence des lobbies pour maintenir leurs droits d'usage."
+      },
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "autorites_regionales_de_regulation_hydrologique_reference",
+       "relation": "opposition",
+       "action": "renforcée",
+       "lien": "relation",
+       "lien_detail": "rivaux existants",
+       "raison": "Les Autorités Régionales de Régulation Hydrologique, devenues dominantes, pourraient imposer des réformes restrictives, intensifiant les conflits avec les lobbies agro-industriels."
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "effondrement_circulation_atlantique_2067::reference::8": {
+  "empreinte": "8e37c8140bd519ff",
+  "date": "2026-10-17T10:44",
+  "brut": {
+   "fiches": [
+    {
+     "slug": "lobbies_industriels_des_etats_non_signataires_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "systemes_productifs_travail (+4.6), energie_ressources_critiques (+3.2)",
+       "contredit": "",
+       "raison": "L'effondrement de la circulation méridienne atlantique exacerbe les tensions sur les ressources et les systèmes productifs, renforçant le rôle des lobbies comme vecteurs de fragmentation institutionnelle face aux régulations climatiques."
+      }
+     ]
+    },
+    {
+     "slug": "lyon_metropole_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "obligatoire",
+       "extrait": "Lyon Métropole est une organisation administrative régionale qui maintient une gouvernance urbaine fonctionnelle malgré les tensions croissantes entre factions économiques et climatiques.",
+       "contredit": "Le refroidissement brutal de l'Europe du Nord-Ouest perturbe les corridors industriels rhônalpins et les flux migratoires, rendant impossible le maintien d'une gouvernance 'fonctionnelle' sans adaptation explicite.",
+       "lien": "territoire",
+       "lien_detail": "Europe du Nord-Ouest (proche géographiquement de Lyon, impact indirect mais significatif)",
+       "raison": "L'effondrement climatique régional impose une reconfiguration des priorités de gouvernance, non mentionnée dans le rôle actuel."
+      },
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "autorites_regionales_de_regulation_hydrologique_reference",
+       "relation": "alliance",
+       "action": "nouvelle",
+       "lien": "variable",
+       "lien_detail": "organisation_territoires (+0.4)",
+       "contredit": "",
+       "raison": "La perturbation hydrologique en Europe renforce la nécessité de coordination avec les autorités hydrologiques, déjà alliées mais sans lien direct avec l'élément perturbateur."
+      }
+     ]
+    },
+    {
+     "slug": "maelys_okonkwo_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "Son travail se concentre sur l'exposition des liens entre les réseaux de Kindling, les consortiums énergétiques opaques et les mécanismes de stabilisation climatique.",
+       "contredit": "",
+       "lien": "variable",
+       "lien_detail": "climat_environnement_global (+6.0)",
+       "raison": "L'effondrement de la circulation atlantique devient un sujet central d'investigation, élargissant son rôle sans le rendre faux."
+      }
+     ]
+    },
+    {
+     "slug": "meridian_assembly_reference",
+     "changements": [
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "pacifique_sud_archipels_flottants_reference",
+       "relation": "alliance",
+       "action": "nouvelle",
+       "lien": "variable",
+       "lien_detail": "demographie_mobilite_humaine (+4.3)",
+       "contredit": "",
+       "raison": "Les déplacements de moussons et la montée des eaux dans le Pacifique Sud augmentent la pression sur les États insulaires, rendant une alliance avec Meridian Assembly plus probable."
+      }
+     ]
+    },
+    {
+     "slug": "milices_concurrentes_des_droits_de_passage_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "demographie_mobilite_humaine (+4.3), systemes_productifs_travail (+4.6)",
+       "contredit": "",
+       "raison": "La perturbation des flux migratoires et logistiques renforce la concurrence violente pour le contrôle des nœuds de mobilité, sans rendre leur existence impossible."
+      }
+     ]
+    },
+    {
+     "slug": "mouvement_pour_la_libre_circulation_des_personnes_et_des_donnees_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "demographie_mobilite_humaine (+4.3)",
+       "contredit": "",
+       "raison": "Les barrières à la mobilité se multiplient avec les perturbations climatiques, augmentant la pression pour contourner ces restrictions."
+      }
+     ]
+    },
+    {
+     "slug": "mouvement_racines_vivantes_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "dominant",
+       "lien": "territoire",
+       "lien_detail": "zones_tampons_climatiques_europeennes (Europe du Nord-Ouest refroidie)",
+       "contredit": "",
+       "raison": "Le refroidissement de l'Europe du Nord-Ouest crée de nouvelles marges périurbaines et rurales, renforçant le rôle du mouvement comme tiers-espace dans les zones de transition écologique."
+      },
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "cooperatives_agro_ecologiques_du_bassin_mediterraneen_reference",
+       "relation": "alliance",
+       "action": "nouvelle",
+       "lien": "territoire",
+       "lien_detail": "Bassin méditerranéen (impact indirect des perturbations hydrologiques)",
+       "contredit": "",
+       "raison": "Les déplacements des moussons africaines pourraient favoriser une collaboration avec les coopératives méditerranéennes pour des solutions agroécologiques adaptées."
+      }
+     ]
+    },
+    {
+     "slug": "murmansk_transit_arctique_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "obligatoire",
+       "apres": "historique",
+       "lien": "territoire",
+       "lien_detail": "Murmansk (Arctique, impact indirect du refroidissement européen)",
+       "contredit": "Le rôle de plaque tournante stratégique est rendu obsolète par le refroidissement de l'Europe du Nord-Ouest et la reconfiguration des routes commerciales arctiques.",
+       "raison": "La disparition de Murmansk Transit Arctique est déjà actée (trajectoire 'disparu'), mais l'élément perturbateur en explique la cause : l'effondrement climatique a redirigé les flux logistiques."
+      }
+     ]
+    },
+    {
+     "slug": "nadia_ferreira_sato_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "elle crée des structures alternatives de survie et de résistance en dehors des cadres institutionnels des Amériques Multipolaires.",
+       "contredit": "",
+       "lien": "variable",
+       "lien_detail": "demographie_mobilite_humaine (+4.3)",
+       "raison": "Les perturbations climatiques en Amérique (montée des eaux sur la côte est) augmentent la demande pour des structures alternatives, élargissant son rôle sans le rendre faux."
+      }
+     ]
+    },
+    {
+     "slug": "nairobi_crrc_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "systemes_productifs_travail (+4.6), demographie_mobilite_humaine (+4.3)",
+       "contredit": "",
+       "raison": "Les perturbations hydrologiques en Afrique (déplacement des moussons) renforcent le rôle de coordination du CRRC, sans rendre son existence impossible."
+      },
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "autorites_regionales_de_regulation_hydrologique_reference",
+       "relation": "alliance",
+       "action": "nouvelle",
+       "lien": "variable",
+       "lien_detail": "organisation_territoires (+0.4)",
+       "contredit": "",
+       "raison": "La nécessité de réguler les ressources hydriques en Afrique rend une alliance avec les autorités hydrologiques plus probable."
+      }
+     ]
+    },
+    {
+     "slug": "neuroharmonics_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "mature",
+       "lien": "variable",
+       "lien_detail": "systemes_productifs_travail (+4.6)",
+       "contredit": "",
+       "raison": "La productivité devient une question de survie systémique encore plus critique, mais NeuroHarmonics reste dominant sans changement obligatoire."
+      }
+     ]
+    },
+    {
+     "slug": "nexcore_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "elle opère les réseaux de communication intercontinentaux, les nœuds de traitement de données climatiques critiques et les systèmes de routage énergétique dans un équilibre fragile.",
+       "contredit": "",
+       "lien": "variable",
+       "lien_detail": "climat_environnement_global (+6.0), energie_ressources_critiques (+3.2)",
+       "raison": "Les données climatiques deviennent encore plus critiques, renforçant le rôle de NexCore sans le rendre faux."
+      }
+     ]
+    },
+    {
+     "slug": "nexus_biosyn_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "mature",
+       "lien": "variable",
+       "lien_detail": "systemes_productifs_travail (+4.6), sante_biotechnologies (+0.3)",
+       "contredit": "",
+       "raison": "Les perturbations agricoles et hydrologiques augmentent la dépendance aux infrastructures biologiques de Nexus BioSyn, mais son rôle reste dominant sans changement obligatoire."
+      },
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "consortiums_d_agriculture_verticale_algorithmique_reference",
+       "relation": "alliance",
+       "action": "nouvelle",
+       "lien": "variable",
+       "lien_detail": "systemes_productifs_travail (+4.6)",
+       "contredit": "",
+       "raison": "La collaboration avec les consortiums d'agriculture verticale devient plus probable pour sécuriser les approvisionnements alimentaires."
+      }
+     ]
+    },
+    {
+     "slug": "observatoire_climatique_des_territoires_oct_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "climat_environnement_global (+6.0)",
+       "contredit": "",
+       "raison": "L'effondrement climatique renforce le rôle de l'OCT comme arbitre technique, sans rendre son existence impossible."
+      }
+     ]
+    },
+    {
+     "slug": "ong_de_preservation_patrimoniale_numerique_reference",
+     "changements": []
+    }
+   ]
+  }
+ },
+ "effondrement_circulation_atlantique_2067::reference::9": {
+  "empreinte": "5e577bd863699670",
+  "date": "2026-10-17T10:45",
+  "brut": {
+   "fiches": [
+    {
+     "slug": "ong_de_tracabilite_des_ressources_critiques_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "energie_ressources_critiques (+3.2)",
+       "contredit": "",
+       "raison": "L'effondrement de la circulation atlantique exacerbe les tensions autour des ressources critiques (énergie, minerais, eau), augmentant la demande pour des mécanismes de traçabilité indépendants. Leur rôle devient plus visible et stratégique, sans pour autant rendre leur existence impossible sans ce changement."
+      }
+     ]
+    },
+    {
+     "slug": "ong_environnementales_de_terrain_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "climat_environnement_global (+6.0)",
+       "contredit": "",
+       "raison": "Le choc climatique permanent renforce la légitimité et l'urgence de leur observation de terrain, mais leur existence ne dépend pas de cet événement spécifique."
+      },
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "Dans le scénario de référence, elles constituent un contrepoids civil aux logiques institutionnelles ou économiques, portant une observation de terrain irremplaçable sur l'état réel de l'environnement en 2098.",
+       "contredit": "",
+       "lien": "variable",
+       "lien_detail": "climat_environnement_global (+6.0)",
+       "raison": "Leur rôle de contrepoids devient plus crucial face à l'aggravation des déséquilibres environnementaux, mais la phrase reste vraie sans modification."
+      }
+     ]
+    },
+    {
+     "slug": "operateurs_de_zones_economiques_speciales_periurbaines_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "demographie_mobilite_humaine (+4.3)",
+       "contredit": "",
+       "raison": "Les flux migratoires accrus et les reconfigurations territoriales post-effondrement augmentent la pression sur les zones périurbaines, renforçant le rôle de ces opérateurs comme interfaces entre logiques locales et globales."
+      }
+     ]
+    },
+    {
+     "slug": "operateurs_logistiques_prives_des_zones_grises_eurasiennes_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "systemes_productifs_travail (+4.6)",
+       "contredit": "",
+       "raison": "Les perturbations des chaînes logistiques institutionnelles (notamment en Europe du Nord-Ouest) créent des opportunités pour les corridors parallèles eurasiens, sans rendre leur existence impossible sans ce changement."
+      }
+     ]
+    },
+    {
+     "slug": "operateurs_prives_d_energie_distribuee_hors_fct_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "energie_ressources_critiques (+3.2)",
+       "contredit": "",
+       "raison": "La crise énergétique structurelle post-effondrement renforce la demande pour des solutions décentralisées, mais leur expansion était déjà en cours avant 2067."
+      },
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "Leur expansion — notamment depuis la généralisation du stockage longue durée…",
+       "contredit": "",
+       "lien": "variable",
+       "lien_detail": "energie_ressources_critiques (+3.2)",
+       "raison": "L'effondrement accélère probablement leur expansion, mais la phrase reste vraie sans préciser une date post-2067."
+      }
+     ]
+    },
+    {
+     "slug": "optiflow_logistics_reference",
+     "changements": [
+      {
+       "type": "relation",
+       "niveau": "obligatoire",
+       "cible": "armada_logistique_nordique_reference",
+       "relation": "opposition",
+       "action": "nouvelle",
+       "lien": "relation",
+       "lien_detail": "armada_logistique_nordique_reference (déjà retenue comme opposée à OptiFlow dans le lore)",
+       "contredit": "L'effondrement de la circulation atlantique reconfigure les flux logistiques mondiaux, rendant impossible le maintien d'une neutralité entre OptiFlow et l'Armada Logistique Nordique (cette dernière étant directement touchée par le refroidissement de l'Europe du Nord-Ouest).",
+       "raison": "L'opposition entre ces deux entités est déjà actée dans le lore comme 'déjà retenu', donc l'élément perturbateur la rend obligatoire et non plus seulement plausible."
+      },
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "mature",
+       "lien": "variable",
+       "lien_detail": "systemes_productifs_travail (+4.6)",
+       "contredit": "",
+       "raison": "Leur rôle de stabilisateur logistique devient plus critique, mais leur trajectoire dominante ne peut pas être remise en cause sans preuve d'un déclin."
+      }
+     ]
+    },
+    {
+     "slug": "oracle_des_seuils_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "mature",
+       "lien": "variable",
+       "lien_detail": "climat_environnement_global (+6.0)",
+       "contredit": "",
+       "raison": "L'effondrement de la circulation atlantique renforce leur légitimité comme outil de modélisation des points de bascule, mais leur dominance n'est pas menacée."
+      },
+      {
+       "type": "texte",
+       "niveau": "obligatoire",
+       "extrait": "l'Oracle des Seuils est devenu l'instrument de référence pour la détection et la modélisation des points de bascule systémiques — climatiques, économiques, hydrologiques, énergétiques.",
+       "contredit": "L'effondrement irréversible de la circulation atlantique en 2067 est un point de bascule climatique majeur non modélisé ou anticipé par l'Oracle (sinon il n'aurait pas été 'irréversible').",
+       "lien": "variable",
+       "lien_detail": "climat_environnement_global (+6.0)",
+       "raison": "La phrase suggère que l'Oracle a anticipé ou géré ce basculement, ce qui est faux. Elle doit être révisée pour refléter une limite de leur modélisation."
+      }
+     ]
+    },
+    {
+     "slug": "ouagadougou_polytechnique_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "dominant",
+       "lien": "variable",
+       "lien_detail": "demographie_mobilite_humaine (+4.3) et systemes_productifs_travail (+4.6)",
+       "contredit": "",
+       "raison": "Les perturbations hydrologiques en Afrique (déplacement des moussons) et la demande accrue en ingénierie climatique renforcent son rôle comme pôle de formation, mais son ascendance était déjà actée."
+      }
+     ]
+    },
+    {
+     "slug": "pacifique_sud_archipels_flottants_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "obligatoire",
+       "extrait": "Confédération de communautés installées sur des archipels artificiels flottants dans le Pacifique Sud, construits en réponse à la montée des eaux.",
+       "contredit": "L'effondrement de la circulation atlantique provoque une montée brutale du niveau de la mer sur la côte est américaine, mais pas nécessairement dans le Pacifique Sud. La phrase reste vraie, mais leur construction pourrait aussi répondre à d'autres facteurs (ex. : submersion progressive pré-2067).",
+       "lien": "variable",
+       "lien_detail": "climat_environnement_global (+6.0)",
+       "raison": "La phrase n'est pas fausse, mais elle doit être nuancée : leur existence n'est pas uniquement liée à cet événement."
+      }
+     ]
+    },
+    {
+     "slug": "pacifique_sud_resilience_network_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "L'ASMPI fédère les États-archipels et communautés insulaires du Pacifique Sud dont les territoires terrestres sont partiellement ou totalement submergés, leur offrant un cadre juridique post-territorial innovant fondé sur des zones économiques exclusives mobiles et des droits souverains attachés à la population plutôt qu'au territoire.",
+       "contredit": "",
+       "lien": "variable",
+       "lien_detail": "climat_environnement_global (+6.0)",
+       "raison": "Leur modèle juridique devient plus pertinent face à l'aggravation des crises climatiques, mais la phrase reste vraie sans modification."
+      }
+     ]
+    },
+    {
+     "slug": "pacte_des_souverains_reference",
+     "changements": [
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "fonds_souverain_arctique_scandinave_reference",
+       "relation": "opposition",
+       "action": "nouvelle",
+       "lien": "relation",
+       "lien_detail": "fonds_souverain_arctique_scandinave_reference (déjà retenu comme dominant post-2067)",
+       "contredit": "",
+       "raison": "Le renforcement du Fonds Souverain Arctique Scandinave (lié au refroidissement de l'Europe du Nord-Ouest) crée une tension naturelle avec le Pacte des Souverains, mais cette opposition n'est pas obligatoire."
+      }
+     ]
+    },
+    {
+     "slug": "plateformes_centralisees_de_narration_officielle_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "Elles constituent le cadre dominant contre lequel s'inscrit toute contestation informationnelle.",
+       "contredit": "",
+       "lien": "variable",
+       "lien_detail": "climat_environnement_global (+6.0)",
+       "raison": "Leur hégémonie est renforcée par la nécessité de contrôler les récits sur la crise climatique, mais la phrase reste vraie sans modification."
+      }
+     ]
+    },
+    {
+     "slug": "plateformes_d_optimisation_territoriale_par_ia_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "organisation_territoires (+0.4) et systemes_productifs_travail (+4.6)",
+       "contredit": "",
+       "raison": "Les reconfigurations territoriales post-effondrement augmentent la demande pour des outils d'optimisation, mais leur émergence était déjà en cours."
+      }
+     ]
+    },
+    {
+     "slug": "plateformes_informationnelles_dominantes_et_leurs_ia_de_moderation_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "Dans le scénario reference, elles forment le substrat technologique sur lequel circule (ou est bloquée) l'information, agissant comme arbitres de facto de ce qui est visible, crédible ou audible.",
+       "contredit": "",
+       "lien": "variable",
+       "lien_detail": "climat_environnement_global (+6.0)",
+       "raison": "Leur rôle de filtre devient plus critique face à la prolifération de récits sur la crise climatique, mais la phrase reste vraie sans modification."
+      }
+     ]
+    },
+    {
+     "slug": "prisme_global_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "dominant",
+       "lien": "variable",
+       "lien_detail": "climat_environnement_global (+6.0)",
+       "contredit": "",
+       "raison": "La demande pour des contre-récits locaux et des données alternatives explose après l'effondrement, renforçant leur position, mais leur ascendance était déjà actée."
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "effondrement_circulation_atlantique_2067::reference::10": {
+  "empreinte": "042a70c4c6fab1a1",
+  "date": "2026-10-17T10:45",
+  "brut": {
+   "fiches": [
+    {
+     "slug": "programme_onu_eau_2080_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "obligatoire",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "demographie_mobilite_humaine (+4.3), systemes_productifs_travail (+4.6)",
+       "contredit": "Le programme reste émergent malgré l'effondrement de la circulation atlantique, qui intensifie les crises hydriques et migratoires.",
+       "raison": "L'effondrement de la circulation atlantique exacerbe les tensions sur les ressources hydriques (moussons déplacées, refroidissement en Europe du Nord-Ouest), rendant indispensable une coordination internationale renforcée. Un statut émergent devient faux."
+      },
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "autorites_regionales_de_regulation_hydrologique_reference",
+       "relation": "alliance",
+       "action": "nouvelle",
+       "lien": "variable",
+       "lien_detail": "organisation_territoires (+0.4)",
+       "contredit": "",
+       "raison": "La crise hydrique accrue rend probable une collaboration renforcée avec les autorités régionales déjà dominantes dans ce domaine."
+      },
+      {
+       "type": "texte",
+       "niveau": "obligatoire",
+       "extrait": "Sert de référentiel normatif et d'instance de coordination internationale dans le scénario, influençant les arbitrages entre États sur le partage des ressources hydriques.",
+       "contredit": "Le rôle reste inchangé malgré l'effondrement de la circulation atlantique, qui bouleverse les équilibres hydriques.",
+       "lien": "variable",
+       "lien_detail": "demographie_mobilite_humaine (+4.3), systemes_productifs_travail (+4.6)",
+       "raison": "L'effondrement rend le rôle du programme plus central, pas seulement influent. La phrase doit refléter une nécessité accrue de coordination."
+      }
+     ]
+    },
+    {
+     "slug": "raised_hands_reference",
+     "changements": []
+    },
+    {
+     "slug": "rede_paulista_de_distribuicao_algoritmica_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "orchestre en temps réel l'allocation de l'eau, de l'énergie, du logement et de la mobilité pour les 32 millions d'habitants de la mégapole pauliste.",
+       "contredit": "",
+       "lien": "variable",
+       "lien_detail": "systemes_productifs_travail (+4.6)",
+       "raison": "Les perturbations hydrologiques en Amérique du Sud (moussons déplacées) pourraient élargir le rôle du SPAAR à une gestion de crise, sans rendre la phrase fausse."
+      }
+     ]
+    },
+    {
+     "slug": "regulateurs_de_l_union_continentale_africaine_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "obligatoire",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "demographie_mobilite_humaine (+4.3), systemes_productifs_travail (+4.6)",
+       "contredit": "Les Régulateurs restent émergents malgré les perturbations hydrologiques et migratoires en Afrique.",
+       "raison": "Les déplacements de moussons et les crises agricoles en Afrique rendent indispensable une régulation continentale renforcée. Un statut émergent devient faux."
+      },
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "gouvernements_du_bloc_sahelien_autonome_reference",
+       "relation": "alliance",
+       "action": "nouvelle",
+       "lien": "variable",
+       "lien_detail": "demographie_mobilite_humaine (+4.3)",
+       "contredit": "",
+       "raison": "La crise migratoire et hydrique pourrait rapprocher les Régulateurs des gouvernements sahéliens autonomes."
+      }
+     ]
+    },
+    {
+     "slug": "regulateurs_de_l_union_eurasiatique_sur_les_donnees_critiques_reference",
+     "changements": []
+    },
+    {
+     "slug": "reseau_des_administrations_locales_rurales_participatives_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "organisation_territoires (+0.4)",
+       "contredit": "",
+       "raison": "Le refroidissement en Europe du Nord-Ouest pourrait renforcer les dynamiques de recomposition territoriale par le bas, sans rendre le statut émergent faux."
+      }
+     ]
+    },
+    {
+     "slug": "reseau_des_cartographes_des_zones_grises_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "dominant",
+       "lien": "variable",
+       "lien_detail": "demographie_mobilite_humaine (+4.3)",
+       "contredit": "",
+       "raison": "Les déplacements de populations et les reconfigurations territoriales pourraient accroître l'importance du réseau, sans rendre son statut ascendant faux."
+      }
+     ]
+    },
+    {
+     "slug": "reseau_des_chercheurs_en_ethique_des_systemes_distribues_reference",
+     "changements": []
+    },
+    {
+     "slug": "reseau_des_cooperatives_agro_saheliennes_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "obligatoire",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "systemes_productifs_travail (+4.6), demographie_mobilite_humaine (+4.3)",
+       "contredit": "Le réseau reste émergent malgré les perturbations des moussons africaines et la crise agricole.",
+       "raison": "Les déplacements de moussons et les crises alimentaires rendent indispensable une structuration renforcée des coopératives sahéliennes. Un statut émergent devient faux."
+      },
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "gouvernements_du_bloc_sahelien_autonome_reference",
+       "relation": "alliance",
+       "action": "nouvelle",
+       "lien": "variable",
+       "lien_detail": "systemes_productifs_travail (+4.6)",
+       "contredit": "",
+       "raison": "La crise agricole pourrait rapprocher les coopératives des gouvernements sahéliens autonomes."
+      }
+     ]
+    },
+    {
+     "slug": "reseau_des_metropoles_cotieres_adaptees_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "obligatoire",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "demographie_mobilite_humaine (+4.3), organisation_territoires (+0.4)",
+       "contredit": "Le réseau reste émergent malgré la montée des eaux sur la côte est américaine et les perturbations côtières.",
+       "raison": "La montée brutale du niveau de la mer et les déplacements de populations côtières rendent indispensable une gouvernance renforcée des métropoles côtières. Un statut émergent devient faux."
+      },
+      {
+       "type": "texte",
+       "niveau": "obligatoire",
+       "extrait": "Acteur collectif structurant la gouvernance territoriale des zones côtières en 2098, pesant sur les arbitrages entre adaptation, relocalisation et maintien des populations littorales.",
+       "contredit": "Le rôle reste inchangé malgré la montée des eaux et les perturbations côtières.",
+       "lien": "variable",
+       "lien_detail": "demographie_mobilite_humaine (+4.3)",
+       "raison": "La crise côtière rend le réseau central, pas seulement influent. La phrase doit refléter une nécessité accrue de coordination."
+      }
+     ]
+    },
+    {
+     "slug": "reseau_des_villes_etats_pilotes_en_gouvernance_participative_reference",
+     "changements": []
+    },
+    {
+     "slug": "reseau_des_villes_refuge_pour_travailleurs_desaugmentes_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "demographie_mobilite_humaine (+4.3)",
+       "contredit": "",
+       "raison": "Les déplacements de populations et les crises économiques pourraient accroître l'importance des villes-refuge, sans rendre le statut émergent faux."
+      }
+     ]
+    },
+    {
+     "slug": "reseau_hospitalier_hybride_eurasiatique_reference",
+     "changements": []
+    },
+    {
+     "slug": "reseau_meshcommons_netsolidaire_reference",
+     "changements": []
+    },
+    {
+     "slug": "reseau_mnemos_reference",
+     "changements": []
+    }
+   ]
+  }
+ },
+ "effondrement_circulation_atlantique_2067::reference::11": {
+  "empreinte": "4f116788c948ceec",
+  "date": "2026-10-17T10:45",
+  "brut": {
+   "fiches": [
+    {
+     "slug": "reseaux_de_capteurs_citoyens_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "climat_environnement_global (+6.0)",
+       "raison": "L'effondrement de la circulation atlantique et les perturbations climatiques accrues augmentent la demande pour des données environnementales indépendantes, renforçant le rôle des Réseaux de Capteurs Citoyens."
+      },
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "autorites_regionales_de_regulation_hydrologique_reference",
+       "relation": "alliance",
+       "action": "nouvelle",
+       "lien": "relation",
+       "lien_detail": "autorites_regionales_de_regulation_hydrologique_reference (déjà alliée, mais renforcement plausible)",
+       "raison": "Les Autorités Régionales de Régulation Hydrologique, devenues dominantes, pourraient s'appuyer davantage sur les Réseaux de Capteurs Citoyens pour des données locales fiables face aux perturbations hydrologiques."
+      }
+     ]
+    },
+    {
+     "slug": "reseaux_de_financement_gris_issus_d_anciens_blocs_militaires_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "frontieres_du_systeme (+0.5)",
+       "raison": "Les déséquilibres structurels et la fragmentation accrue du système mondial pourraient augmenter la demande pour des financements hors-traçabilité, renforçant ces réseaux."
+      }
+     ]
+    },
+    {
+     "slug": "reseaux_de_gouvernance_multilaterale_survivants_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "déclinant",
+       "lien": "variable",
+       "lien_detail": "climat_environnement_global (+6.0), systemes_productifs_travail (+4.6)",
+       "raison": "Les chocs climatiques et économiques pourraient affaiblir la légitimité des institutions multilatérales, déjà fragiles, en faveur de solutions locales ou souveraines."
+      }
+     ]
+    },
+    {
+     "slug": "reseaux_de_lanceurs_d_alerte_institutionnels_dissidents_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "climat_environnement_global (+6.0), demographie_mobilite_humaine (+4.3)",
+       "raison": "Les perturbations climatiques et migratoires pourraient révéler davantage de dysfonctionnements institutionnels, augmentant l'influence des lanceurs d'alerte."
+      }
+     ]
+    },
+    {
+     "slug": "reseaux_de_medecine_traditionnelle_augmentee_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "sante_biotechnologies (+0.3)",
+       "raison": "Les perturbations climatiques et les migrations pourraient aggraver les inégalités d'accès aux soins, renforçant la demande pour des alternatives sanitaires comme ces réseaux."
+      }
+     ]
+    },
+    {
+     "slug": "sao_paulo_ita_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "obligatoire",
+       "extrait": "La PMSP-AC continue d'administrer une agglomération de 32 millions d'habitants avec des moyens budgétaires réduits à moins de 40% de leur niveau de 2050, en s'appuyant sur des partenariats avec les consortiums d'agriculture verticale algorithmique pour stabiliser l'approvisionnement alimentaire local.",
+       "contredit": "Les moussons sud-américaines se déplacent après 2067, perturbant les systèmes agricoles locaux et régionaux.",
+       "lien": "territoire",
+       "lien_detail": "Amérique du Sud (perturbations hydrologiques et agricoles)",
+       "raison": "L'effondrement de la circulation atlantique perturbe les moussons sud-américaines, rendant impossible la stabilisation de l'approvisionnement alimentaire par les consortiums d'agriculture verticale sans adaptation explicite."
+      },
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "résiduel",
+       "lien": "variable",
+       "lien_detail": "systemes_productifs_travail (+4.6), demographie_mobilite_humaine (+4.3)",
+       "raison": "Les perturbations agricoles et migratoires pourraient accélérer le déclin de la PMSP-AC en affaiblissant ses capacités administratives et budgétaires."
+      }
+     ]
+    },
+    {
+     "slug": "services_de_contre_information_des_blocs_geopolitiques_concurrents_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "climat_environnement_global (+6.0), systemes_productifs_travail (+4.6)",
+       "raison": "Les chocs climatiques et économiques pourraient intensifier les guerres informationnelles, augmentant l'influence de ces services."
+      }
+     ]
+    },
+    {
+     "slug": "siberie_federale_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "energie_ressources_critiques (+3.2)",
+       "raison": "Le refroidissement de l'Europe du Nord-Ouest pourrait augmenter la valeur stratégique des ressources sibériennes, renforçant la position de la Sibérie Fédérale."
+      },
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "fonds_souverain_arctique_scandinave_reference",
+       "relation": "opposition",
+       "action": "nouvelle",
+       "lien": "relation",
+       "lien_detail": "fonds_souverain_arctique_scandinave_reference (dominant, rival potentiel)",
+       "raison": "Le refroidissement de l'Europe du Nord-Ouest pourrait exacerber les tensions entre la Sibérie Fédérale et le Fonds Souverain Arctique Scandinave pour le contrôle des ressources arctiques."
+      }
+     ]
+    },
+    {
+     "slug": "singapour_est_nexcore_reference",
+     "changements": []
+    },
+    {
+     "slug": "singapour_est_reference",
+     "changements": []
+    },
+    {
+     "slug": "syndicats_de_travail_rural_hybride_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "obligatoire",
+       "apres": "déclinant",
+       "lien": "territoire",
+       "lien_detail": "europe_occidentale_reconstruite (refroidissement brutal)",
+       "contredit": "Les Syndicats de travail rural hybride tentent d'imposer une régulation sociale du travail hybride dans les territoires ruraux en recomposition.",
+       "raison": "Le refroidissement brutal de l'Europe du Nord-Ouest bouleverse les systèmes productifs agricoles et les flux de travail ruraux, rendant impossible la persistance de ces syndicats sans adaptation majeure."
+      },
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "consortiums_d_agriculture_verticale_algorithmique_reference",
+       "relation": "opposition",
+       "action": "nouvelle",
+       "lien": "relation",
+       "lien_detail": "consortiums_d_agriculture_verticale_algorithmique_reference (ascendants)",
+       "raison": "Les perturbations agricoles pourraient intensifier les conflits entre syndicats ruraux et consortiums d'agriculture verticale pour le contrôle des ressources et des travailleurs."
+      }
+     ]
+    },
+    {
+     "slug": "syndicats_de_travailleurs_de_la_transition_energetique_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "territoire",
+       "lien_detail": "europe_occidentale_reconstruite (refroidissement brutal)",
+       "raison": "Le refroidissement de l'Europe du Nord-Ouest pourrait accélérer les projets de transition énergétique, augmentant l'influence de ces syndicats."
+      }
+     ]
+    },
+    {
+     "slug": "tbilissi_noeud_mnemos_reference",
+     "changements": []
+    },
+    {
+     "slug": "terminal_kharg_data_haven_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "dominant",
+       "lien": "variable",
+       "lien_detail": "demographie_mobilite_humaine (+4.3), frontieres_du_systeme (+0.5)",
+       "raison": "Les perturbations migratoires et la fragmentation du système mondial pourraient augmenter la demande pour des sanctuaires de données comme Kharg Data Nexus."
+      }
+     ]
+    },
+    {
+     "slug": "terrametrics_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "dominant",
+       "lien": "variable",
+       "lien_detail": "climat_environnement_global (+6.0)",
+       "raison": "Les perturbations climatiques accrues pourraient renforcer la position de TerraMetrics comme acteur incontournable de la géo-ingénierie."
+      },
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "autorites_regionales_de_regulation_hydrologique_reference",
+       "relation": "alliance",
+       "action": "nouvelle",
+       "lien": "relation",
+       "lien_detail": "autorites_regionales_de_regulation_hydrologique_reference (dominantes)",
+       "raison": "Les Autorités Régionales de Régulation Hydrologique pourraient s'allier à TerraMetrics pour gérer les perturbations hydrologiques post-effondrement."
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "effondrement_circulation_atlantique_2067::reference::12": {
+  "empreinte": "0a011296a32f0b12",
+  "date": "2026-10-17T10:46",
+  "brut": {
+   "fiches": [
+    {
+     "slug": "the_lattice_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "demographie_mobilite_humaine (+4.3)",
+       "raison": "L'effondrement de la circulation méridienne atlantique provoque des migrations climatiques massives depuis l'Europe du Nord-Ouest et les zones agricoles perturbées, renforçant le rôle des juridictions autonomes comme The Lattice pour absorber ces flux."
+      },
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "reseau_des_villes_refuge_pour_travailleurs_desaugmentes_reference",
+       "relation": "alliance",
+       "action": "nouvelle",
+       "lien": "variable",
+       "lien_detail": "demographie_mobilite_humaine (+4.3)",
+       "raison": "La crise migratoire post-2067 rend probable une coopération accrue avec les réseaux de villes-refuge pour gérer les travailleurs déplacés."
+      }
+     ]
+    },
+    {
+     "slug": "the_tidewater_canon_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "dominant",
+       "lien": "variable",
+       "lien_detail": "systemes_productifs_travail (+4.6)",
+       "raison": "La reconfiguration des systèmes productifs et des chaînes logistiques post-effondrement renforce la pertinence de la doctrine souverainiste du Tidewater Canon, déjà en phase ascendante."
+      },
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "fonds_souverain_arctique_scandinave_reference",
+       "relation": "alliance",
+       "action": "nouvelle",
+       "lien": "relation",
+       "lien_detail": "Alliance déjà retenue entre Consortium Helios et Fonds Souverain Arctique Scandinave",
+       "raison": "Le Tidewater Canon, philosophie des blocs souverains, pourrait s'aligner plus étroitement avec les acteurs dominants post-effondrement comme le Fonds Souverain Arctique Scandinave."
+      }
+     ]
+    },
+    {
+     "slug": "tribunal_algorithmique_de_bruxelles_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "obligatoire",
+       "apres": "déclinant",
+       "lien": "territoire",
+       "lien_detail": "Bruxelles (Europe du Nord-Ouest, zone touchée par le refroidissement)",
+       "contredit": "Le Tribunal Algorithmique de Bruxelles est la juridiction de référence de l'Union Continentale Européenne.",
+       "raison": "Le refroidissement brutal de l'Europe du Nord-Ouest affaiblit durablement les institutions européennes, rendant impossible le maintien de Bruxelles comme centre décisionnel dominant."
+      },
+      {
+       "type": "texte",
+       "niveau": "obligatoire",
+       "extrait": "Le Tribunal Algorithmique de Bruxelles est la juridiction de référence de l'Union Continentale Européenne chargée de statuer sur les litiges nés des décisions automatisées affectant les droits fondamentaux — allocations de ressources, scores de crédit social climatique, accès aux soins, mobilité contrainte.",
+       "contredit": "Bruxelles n'est plus le centre décisionnel dominant en Europe du Nord-Ouest post-effondrement.",
+       "lien": "territoire",
+       "lien_detail": "Bruxelles (Europe du Nord-Ouest, zone touchée)",
+       "raison": "L'effondrement de la circulation atlantique rend fausse l'affirmation que Bruxelles reste la juridiction de référence pour l'Europe continentale."
+      }
+     ]
+    },
+    {
+     "slug": "union_africaine_de_resilience_territoriale_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "demographie_mobilite_humaine (+4.3) et systemes_productifs_travail (+4.6)",
+       "raison": "Les perturbations hydrologiques et agricoles en Afrique (déplacement des moussons) renforcent le besoin d'une gouvernance régionale autonome, accélérant la trajectoire de l'UART."
+      },
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "autorites_regionales_de_regulation_hydrologique_reference",
+       "relation": "alliance",
+       "action": "nouvelle",
+       "lien": "variable",
+       "lien_detail": "organisation_territoires (+0.4) et systemes_productifs_travail (+4.6)",
+       "raison": "La gestion des ressources hydriques devient critique pour l'Afrique post-effondrement, rendant une alliance avec les autorités hydrologiques émergentes plausible."
+      }
+     ]
+    },
+    {
+     "slug": "union_africaine_resilience_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "obligatoire",
+       "apres": "résiduel",
+       "lien": "variable",
+       "lien_detail": "demographie_mobilite_humaine (+4.3) et systemes_productifs_travail (+4.6)",
+       "contredit": "L'UAR reste un interlocuteur reconnu sur la scène internationale — impossible à ignorer.",
+       "raison": "Les perturbations climatiques et migratoires en Afrique sapent la capacité de coordination de l'UAR, la rendant résiduelle face à des acteurs plus agiles comme l'UART."
+      },
+      {
+       "type": "relation",
+       "niveau": "obligatoire",
+       "cible": "gouvernements_du_bloc_sahelien_autonome_reference",
+       "relation": "opposition",
+       "action": "nouvelle",
+       "lien": "variable",
+       "lien_detail": "demographie_mobilite_humaine (+4.3)",
+       "contredit": "L'UAR tente de coordonner les réponses continentales.",
+       "raison": "L'effondrement des moussons africaines exacerbe les tensions avec le Bloc Sahélien Autonome, déjà en opposition retenue dans le lore."
+      }
+     ]
+    },
+    {
+     "slug": "universites_et_think_tanks_en_zones_de_liberte_academique_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "climat_environnement_global (+6.0)",
+       "raison": "La crise climatique permanente renforce la demande pour des contre-expertises indépendantes, accélérant la trajectoire de ces institutions."
+      },
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "elles produisent des contre-expertises sur les gouvernances algorithmiques, documentent les migrations climatiques invisibilisées, et forment la prochaine génération de décideurs locaux.",
+       "lien": "variable",
+       "lien_detail": "demographie_mobilite_humaine (+4.3)",
+       "raison": "Le rôle de documentation des migrations climatiques prend plus de poids, mais l'extrait reste vrai sans modification."
+      }
+     ]
+    },
+    {
+     "slug": "valparaiso_fct_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "dominant",
+       "lien": "variable",
+       "lien_detail": "systemes_productifs_travail (+4.6) et energie_ressources_critiques (+3.2)",
+       "raison": "La reconfiguration des flux économiques et logistiques post-effondrement renforce le rôle de Valparaíso FCT comme hub de compensation interbloc."
+      }
+     ]
+    },
+    {
+     "slug": "vasil_orentchev_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "dominant",
+       "lien": "variable",
+       "lien_detail": "systemes_productifs_travail (+4.6) et frontieres_du_systeme (+0.5)",
+       "raison": "La fragmentation des chaînes logistiques post-effondrement renforce la niche d'Orentchev comme garant des flux dans les zones grises."
+      }
+     ]
+    },
+    {
+     "slug": "voix_du_dehors_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "Dans un monde où l'infrastructure numérique est hautement centralisée et surveillée par des IA intégrées, la Voix du Dehors maintient une architecture hybride mêlant relais chiffrés sur des réseaux mesh et des nœuds physiques dans les zones grises.",
+       "lien": "variable",
+       "lien_detail": "demographie_mobilite_humaine (+4.3)",
+       "raison": "La crise migratoire post-effondrement élargit le rôle de la Voix du Dehors pour documenter les flux invisibilisés, mais l'extrait reste vrai."
+      }
+     ]
+    },
+    {
+     "slug": "zones_grises_globales_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "dominant",
+       "lien": "variable",
+       "lien_detail": "demographie_mobilite_humaine (+4.3) et systemes_productifs_travail (+4.6)",
+       "raison": "L'effondrement de la circulation atlantique augmente les flux migratoires et économiques vers les zones grises, renforçant leur rôle de soupapes systémiques."
+      }
+     ]
+    },
+    {
+     "slug": "emeutes_algorithme_sao_paulo_reference",
+     "changements": []
+    },
+    {
+     "slug": "arrestation_chris_van_derburgh_reference",
+     "changements": []
+    },
+    {
+     "slug": "explosion_brise_glace_murmansk_2081_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "obligatoire",
+       "extrait": "Le *Polaris-7*, fleuron de la flotte de Murmansk Transit Arctique, se brise en deux avant de sombrer dans les eaux glacées de la mer de Barents.",
+       "contredit": "Le refroidissement de l'Europe du Nord-Ouest post-2067 rend les eaux de la mer de Barents plus accessibles, pas 'glacées' au point de briser un brise-glace.",
+       "lien": "territoire",
+       "lien_detail": "Murmansk (Europe du Nord-Ouest, zone touchée par le refroidissement)",
+       "raison": "L'effondrement du Gulf Stream refroidit la région, mais la mer de Barents ne gèle pas davantage ; l'extrait devient faux."
+      }
+     ]
+    },
+    {
+     "slug": "nairobi_biorevenu_pilote_2094_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "Le programme, s'il survit à ses contestations juridiques, pourrait redéfinir le contrat social dans les économies africaines post-travail en établissant un précédent pour la monétisation des données biologiques.",
+       "lien": "variable",
+       "lien_detail": "systemes_productifs_travail (+4.6)",
+       "raison": "Les perturbations agricoles et hydrologiques en Afrique post-effondrement renforcent la pertinence du bio-revenu, mais l'extrait reste vrai sans modification."
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "effondrement_circulation_atlantique_2067::reference::contre1::a63358e03b0ac59e": {
+  "date": "2026-10-17T10:46",
+  "verdict": {
+   "id": "o1",
+   "incompatible": true,
+   "fait": "tendance",
+   "motif": "contradiction",
+   "justification": "La fiche affirme une opposition nouvelle entre le BEC et le BRE, tandis que le fait invoqué (et le scénario de référence) indique qu'ils sont alliés. Ces deux états relationnels ne peuvent être vrais simultanément."
+  }
+ },
+ "effondrement_circulation_atlantique_2067::reference::contre1::a2152df42a26f96d": {
+  "date": "2026-10-17T10:46",
+  "verdict": {
+   "id": "o2",
+   "incompatible": false,
+   "motif": "aggravation",
+   "justification": "L'élément perturbateur (refroidissement européen et montée des acteurs arctiques) peut renforcer ou précipiter une rivalité structurelle entre l'UOC et le Fonds Souverain Arctique Scandinave, sans contredire la fiche."
+  }
+ },
+ "effondrement_circulation_atlantique_2067::reference::contre1::c02b741596124d1f": {
+  "date": "2026-10-17T10:46",
+  "verdict": {
+   "id": "o3",
+   "incompatible": false,
+   "motif": "nuance",
+   "justification": "La phrase de la fiche reste vraie : l'autorité de l'AMSC peut être 'reconnue mais constamment négociée' même si elle devient un impératif de survie. L'élément perturbateur n'impose pas que cette négociation cesse, seulement qu'elle soit plus urgente."
+  }
+ },
+ "effondrement_circulation_atlantique_2067::reference::contre1::97112eed87ac1407": {
+  "date": "2026-10-17T10:46",
+  "verdict": {
+   "id": "o4",
+   "incompatible": false,
+   "motif": "aggravation",
+   "justification": "L'effondrement de la circulation atlantique peut bouleverser les flux logistiques et renforcer les rapports de force décrits, sans rendre impossible l'existence du Consortium. La phrase ne décrit pas un statu quo immuable, mais une dynamique qui peut s'adapter."
+  }
+ },
+ "effondrement_circulation_atlantique_2067::reference::contre1::c0cbc8a1587e7791": {
+  "date": "2026-10-17T10:46",
+  "verdict": {
+   "id": "o5",
+   "incompatible": false,
+   "motif": "nuance",
+   "justification": "La logique d'absorption décrite peut se poursuivre, mais avec des adaptations nécessaires (ex. : nouvelles infrastructures). La phrase ne nie pas ces adaptations, elle décrit une tendance qui peut évoluer."
+  }
+ },
+ "effondrement_circulation_atlantique_2067::reference::contre1::f17c92011d4ffa6f": {
+  "date": "2026-10-17T10:46",
+  "verdict": {
+   "id": "o6",
+   "incompatible": false,
+   "motif": "aggravation",
+   "justification": "La montée du niveau de la mer peut perturber les équilibres hydrologiques et les flux logistiques des Grands Lacs, mais cela n'invalide pas la coordination du Compact. La phrase décrit une gestion adaptative, qui peut intégrer ces perturbations."
+  }
+ },
+ "effondrement_circulation_atlantique_2067::reference::contre1::f7d5c4870c28cee5": {
+  "date": "2026-10-17T10:46",
+  "verdict": {
+   "id": "o7",
+   "incompatible": false,
+   "motif": "invention",
+   "justification": "L'élément perturbateur ne précise pas si l'Oracle des Seuils a modélisé ou anticipé l'effondrement de la circulation atlantique. La phrase de la fiche ne contredit pas cette possibilité (l'Oracle peut être devenu une référence *après* avoir échoué sur ce point précis)."
+  }
+ },
+ "effondrement_circulation_atlantique_2067::reference::classement::3ae940278cfa165e": {
+  "date": "2026-10-17T10:46",
+  "brut": {
+   "classement": [
+    {
+     "id": "f3",
+     "pourquoi": "Centralisation géo-ingénierie post-effondrement"
+    },
+    {
+     "id": "f5",
+     "pourquoi": "Refonte agricole Europe du Nord-Ouest"
+    },
+    {
+     "id": "f34",
+     "pourquoi": "Gestion hydrique Amazonie critique"
+    },
+    {
+     "id": "f59",
+     "pourquoi": "Conflit hydrique Amérique du Sud dominant"
+    },
+    {
+     "id": "f64",
+     "pourquoi": "Stratégie Grands Lacs post-montée des eaux"
+    },
+    {
+     "id": "f116",
+     "pourquoi": "Hub logistique Valparaíso incontournable"
+    },
+    {
+     "id": "f10",
+     "pourquoi": "Coordination décentralisée post-fragmentation"
+    },
+    {
+     "id": "f62",
+     "pourquoi": "Bloc Sahélien face aux moussons déplacées"
+    },
+    {
+     "id": "f28",
+     "pourquoi": "Régulation hydrique Union Africaine critique"
+    },
+    {
+     "id": "f113",
+     "pourquoi": "Résilience territoriale africaine renforcée"
+    },
+    {
+     "id": "f33",
+     "pourquoi": "Biorevenu africain face aux crises agricoles"
+    },
+    {
+     "id": "f68",
+     "pourquoi": "Fonds souverain arctique dominant post-refroidissement"
+    },
+    {
+     "id": "f16",
+     "pourquoi": "Ressources eurasiatiques critiques post-effondrement"
+    },
+    {
+     "id": "f7",
+     "pourquoi": "Pacte des Souverains renforcé par fragmentation"
+    },
+    {
+     "id": "f112",
+     "pourquoi": "Doctrine Tidewater Canon dominante post-crise"
+    },
+    {
+     "id": "f111",
+     "pourquoi": "Villes-refuge pour migrations climatiques massives"
+    },
+    {
+     "id": "f98",
+     "pourquoi": "Gouvernance métropoles côtières post-montée des eaux"
+    },
+    {
+     "id": "f54",
+     "pourquoi": "Fédération des Communs Territoriaux dominante"
+    },
+    {
+     "id": "f67",
+     "pourquoi": "Travailleurs augmentés précarisés post-bouleversements"
+    },
+    {
+     "id": "f44",
+     "pourquoi": "Coopératives agro-écologiques sahéliennes critiques"
+    }
+   ]
+  }
  }
 }

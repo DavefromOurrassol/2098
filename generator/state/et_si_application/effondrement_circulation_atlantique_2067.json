@@ -1,0 +1,154 @@
+{
+ "id": "effondrement_circulation_atlantique_2067",
+ "date_simulation": "2026-10-17T10:46",
+ "version": "v8.20",
+ "empreinte": "21c4836b7d62c91d",
+ "annee": 2067.0,
+ "mode": "rupture",
+ "contraintes": [
+  "La circulation atlantique ne redémarre pas avant 2098 : le changement est permanent.",
+  "Le refroidissement touche surtout l'Europe du Nord-Ouest ; le réchauffement global continue ailleurs."
+ ],
+ "scenarios_hypothese": [
+  "reference"
+ ],
+ "scenarios": [
+  "reference"
+ ],
+ "complet": true,
+ "par_scenario": {
+  "reference": {
+   "lecture": {
+    "trajectoires": [
+     {
+      "instance": "delta_du_gange_reference",
+      "nom": "Delta du Gange — Zone de Crise Permanente",
+      "avant": "déclinant",
+      "apres": "résiduel",
+      "raison": "Les déplacements des moussons et la montée des eaux submergent définitivement les infrastructures du delta, rendant la zone ingouvernable et accélérant son abandon."
+     },
+     {
+      "instance": "consortiums_d_agriculture_verticale_algorithmique_reference",
+      "nom": "Consortiums d'Agriculture Verticale Algorithmique",
+      "avant": "émergent",
+      "apres": "ascendant",
+      "raison": "La perturbation des écosystèmes agricoles traditionnels en Europe et en Afrique accélère l'adoption des fermes verticales comme solution de souveraineté alimentaire."
+     },
+     {
+      "instance": "autorites_regionales_de_regulation_hydrologique_reference",
+      "nom": "Autorités Régionales de Régulation Hydrologique",
+      "avant": "émergent",
+      "apres": "dominant",
+      "raison": "Les crises hydrologiques en cascade (Afrique, Amérique du Sud) imposent une gouvernance décentralisée de l'eau comme condition de survie, renforçant leur légitimité."
+     },
+     {
+      "instance": "fonds_souverain_arctique_scandinave_reference",
+      "nom": "Fonds Souverain Arctique Scandinave",
+      "avant": "ascendant",
+      "apres": "dominant",
+      "raison": "Les revenus tirés de l'exploitation des terres rares et des nouvelles routes arctiques font du FSAS un acteur financier majeur, capable de peser sur les équilibres énergétiques."
+     }
+    ],
+    "relations": [
+     {
+      "a": "consortium_helios_reference",
+      "a_nom": "Consortium Helios",
+      "b": "fonds_souverain_arctique_scandinave_reference",
+      "b_nom": "Fonds Souverain Arctique Scandinave",
+      "type": "alliance",
+      "action": "nouvelle",
+      "raison": "Helios et le FSAS s'allient pour sécuriser les infrastructures énergétiques orbitales et les corridors arctiques, combinant expertise technologique et contrôle des ressources."
+     },
+     {
+      "a": "armada_logistique_nordique_reference",
+      "a_nom": "Armada Logistique Nordique",
+      "b": "optiflow_logistics_reference",
+      "b_nom": "OptiFlow Global Logistics Network (OGLN)",
+      "type": "opposition",
+      "action": "nouvelle",
+      "raison": "L'ALN conteste le monopole d'OptiFlow sur les flux logistiques mondiaux, cherchant à imposer ses propres standards pour les routes arctiques."
+     },
+     {
+      "a": "consortium_indo_pacifique_de_l_hydrogene_reference",
+      "a_nom": "Consortium Indo-Pacifique de l'Hydrogène",
+      "b": "bloc_ressources_eurasiatique_bre_reference",
+      "b_nom": "Bloc Ressources Eurasiatique (BRE)",
+      "type": "opposition",
+      "action": "nouvelle",
+      "raison": "Le Consortium Indo-Pacifique et le BRE s'affrontent pour le contrôle des gisements d'hydrogène et des infrastructures de liquéfaction, dans un contexte de pénurie énergétique aggravée."
+     },
+     {
+      "a": "gouvernements_du_bloc_sahelien_autonome_reference",
+      "a_nom": "Gouvernements du Bloc Sahélien Autonome",
+      "b": "union_africaine_resilience_reference",
+      "b_nom": "Union Africaine Résilience (UAR)",
+      "type": "opposition",
+      "action": "nouvelle",
+      "raison": "Le Bloc Sahélien, confronté à des déplacements de moussons et à des sécheresses prolongées, accuse l'UA de ne pas redistribuer équitablement les ressources hydriques et alimentaires."
+     },
+     {
+      "a": "ergo_wian_sovereign_holdings_reference",
+      "a_nom": "Ergo-Wian Sovereign Holdings",
+      "b": "consortiums_energetiques_opaques_reference",
+      "b_nom": "Consortiums Énergétiques Opaques",
+      "type": "alliance",
+      "action": "nouvelle",
+      "raison": "EWSH et les Consortiums Opaques s'associent pour exploiter les opportunités spéculatives liées aux pénuries énergétiques en Europe, en contournant les régulations publiques."
+     }
+    ],
+    "zones_statut": [
+     {
+      "zone": "europe_occidentale_reconstruite",
+      "nom": "Europe Occidentale Reconstruite",
+      "avant": "stable",
+      "apres": "fragmenté",
+      "raison": "Le refroidissement climatique et les crises agricoles fragmentent les solidarités territoriales, avec des régions comme le Massif Central ou l'Ibérie Atlantique devenant des zones de repli ou de conflit."
+     },
+     {
+      "zone": "union_africaine_resilience",
+      "nom": "Union Africaine de Résilience Territoriale",
+      "avant": "emergent",
+      "apres": "fragmenté",
+      "raison": "Les déplacements des moussons et les crises hydriques exacerbent les tensions internes, affaiblissant la cohésion de l'UA face aux pressions migratoires et aux milices."
+     }
+    ],
+    "nouvelles_entites": [
+     {
+      "nom": "Alliance des Territoires Froids Européens",
+      "role": "Bloc de coopération pour la gestion des crises climatiques et énergétiques en Europe du Nord-Ouest, regroupant des régions sinistrées et des villes en repli.",
+      "zone": "europe_occidentale_reconstruite",
+      "raison": "Les régions touchées par le refroidissement (Massif Central, Pays de Galles) s'organisent pour mutualiser leurs ressources et négocier avec les acteurs dominants (Helios, Corridor Arctique)."
+     },
+     {
+      "nom": "Consortium des Deltas de Crise",
+      "role": "Structure de coordination entre les zones submergées (Gange, Mékong) pour gérer les migrations climatiques et les conflits fonciers, en partenariat avec les Consortiums d'Agriculture Verticale.",
+      "zone": "zones_grises_globales",
+      "raison": "Les deltas deviennent des zones de non-droit où émergent des acteurs hybrides (milices, ONG, entreprises) pour organiser la survie des populations déplacées."
+     },
+     {
+      "nom": "Fonds d'Urgence Climatique Atlantique",
+      "role": "Fonds spéculatif créé par Ergo-Wian et des Consortiums Opaques pour investir dans les infrastructures de relocalisation et les technologies de survie en Europe du Nord-Ouest.",
+      "zone": "europe_occidentale_reconstruite",
+      "raison": "Les acteurs financiers exploitent la crise pour capter les dernières ressources publiques et privées des territoires en déclin."
+     }
+    ]
+   },
+   "passe": {
+    "trajectoires": [],
+    "relations": [
+     {
+      "a": "bloc_eurasien_central_reference",
+      "a_nom": "Bloc Eurasien Central (BEC)",
+      "b": "bloc_ressources_eurasiatique_bre_reference",
+      "b_nom": "Bloc Ressources Eurasiatique (BRE)",
+      "type": "opposition",
+      "action": "nouvelle",
+      "raison": "Le BRE, en tant que régulateur autoritaire, ne peut plus maintenir d'alliance avec un BEC devenu résiduel et incapable de garantir des compromis stables. [lien relation : Le BRE devient un régulateur autoritaire des ressources critiques eurasiatiques, capable d'influer sur les prix mondiaux.] — contredit : Le BEC et le BRE sont alliés dans le scénario de référence."
+     }
+    ],
+    "textes": []
+   },
+   "erreurs": []
+  }
+ }
+}

@@ -38,6 +38,7 @@ alliances:
 - consortiums_d_extraction_miniere_du_bassin_congolais_reference
 - consortiums_energetiques_des_megapoles_reference
 - consortiums_prives_d_extraction_de_ressources_critiques_reference
+- ergo_wian_sovereign_holdings_reference
 - hyphan_raghavan_reference
 - lobbies_industriels_des_etats_non_signataires_reference
 - pacte_des_souverains_reference
@@ -136,6 +137,7 @@ La tension centrale est structurelle : ces consortiums ont besoin d'une stabilit
 - [[consortiums_d_extraction_miniere_du_bassin_congolais_reference]]
 - [[consortiums_energetiques_des_megapoles_reference]]
 - [[consortiums_prives_d_extraction_de_ressources_critiques_reference]]
+- [[ergo_wian_sovereign_holdings_reference]]
 - [[hyphan_raghavan_reference]]
 - [[lobbies_industriels_des_etats_non_signataires_reference]]
 - [[pacte_des_souverains_reference]]
