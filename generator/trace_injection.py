@@ -344,6 +344,7 @@ def tracer_evenement(slug: str) -> dict:
             "consequences": fm.get("consequences"),
             "impact_sur_variables": fm.get("impact_sur_variables") or [],
             "propagation_via_matrice": (fm.get("propagation") or {}).get("via_matrice"),
+            "mode": fm.get("mode"),   # PATCH_S19_RUPTURE
             "acteurs_impliques": fm.get("acteurs_impliques") or [],
         })
 
@@ -469,7 +470,9 @@ def _impacts_declares(trace: dict) -> dict:
         for i in trace["instances"]:
             if i.get("impossible_dans_scenario"):
                 continue
-            out[i["scenario"]] = [ligne(imp, i.get("propagation_via_matrice"))
+            # PATCH_S19_RUPTURE : clé « rupture » seulement pour un événement en rupture.
+            rupt = str(i.get("mode") or "").strip().lower() == "rupture"
+            out[i["scenario"]] = [dict(ligne(imp, i.get("propagation_via_matrice")), **({"rupture": True} if rupt else {}))
                                   for imp in i.get("impact_sur_variables") or [] if isinstance(imp, dict)]
     elif trace["type"] == "instance":
         for i in trace["instances"]:
@@ -585,12 +588,19 @@ def calculer_effet(trace: dict, date_fin: float, scenario: str = None) -> dict:
 
         chocs_avec = dyn.chocs_depuis_donnees(sc, instances, events, signals)
         chocs_sans = dyn.chocs_depuis_donnees(sc, inst_sans, ev_sans, sig_sans)
-        avec = dyn.simuler(variables, ref, params, liens, chocs_avec, date_fin, echantillonner=PAS_CHRONO, k=k)
-        sans = dyn.simuler(variables, ref, params, liens, chocs_sans, date_fin, echantillonner=PAS_CHRONO, k=k)
+        # PATCH_S19_RUPTURE : ruptures (événements en mode rupture), avec et sans l'élément.
+        rup_avec = dyn.ruptures_depuis_donnees(events)
+        rup_sans = dyn.ruptures_depuis_donnees(ev_sans)
+        avec = dyn.simuler(variables, ref, params, liens, chocs_avec, date_fin, echantillonner=PAS_CHRONO, k=k,
+                           ruptures=rup_avec or None)
+        sans = dyn.simuler(variables, ref, params, liens, chocs_sans, date_fin, echantillonner=PAS_CHRONO, k=k,
+                           ruptures=rup_sans or None)
 
         # Chocs propres à l'élément = ceux qui disparaissent de la liste "sans"
         cles_sans = {(c["nom"], c["variable"], c["t0"]) for c in chocs_sans}
         propres = [c for c in chocs_avec if (c["nom"], c["variable"], c["t0"]) not in cles_sans]
+        cles_rs = {(r["nom"], r["variable"], r["t0"]) for r in rup_sans}
+        propres += [r for r in rup_avec if (r["nom"], r["variable"], r["t0"]) not in cles_rs]
         t_debut = min((c["t0"] for c in propres), default=dyn.ANNEE_DEPART)
         directes = {d["variable"] for d in declares[sc]}
 
@@ -1043,7 +1053,9 @@ def _rendre_markdown(trace: dict) -> str:
                     sens = "aggrave ↑" if d["sens"] > 0 else "apaise ↓"
                     lines.append(f"- Déclaré : **{d['variable']}** — force {d['force']:g}, {sens}, "
                                  f"sur {d.get('duree') or '?'} ans"
-                                 f"{', propagé par la matrice' if d['via_matrice'] else ', sans propagation'}")
+                                 f"{', propagé par la matrice' if d['via_matrice'] else ', sans propagation'}"
+                                 + (" — **rupture** : référence du scénario déplacée pour de bon"
+                                    if d.get("rupture") else ""))
                 effets = eff["par_scenario"].get(sc) or []
                 if not effets:
                     lines.append("- Effet net en fin de période : négligeable (< 0,1 point, choc absorbé).")

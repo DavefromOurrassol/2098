@@ -961,7 +961,13 @@ def appliquer_dynamique(variable_states, scenario_slug, instances, events, signa
         print("[snapshot] ⚠ Stabilité : couplage réduit automatiquement de {} à {:.3f} "
               "(critère petit gain {:.2f})".format(dyn.K_COUPLAGE, k, indicateur))
     chocs = dyn.chocs_depuis_donnees(scenario_slug, instances, events, signals)
-    res = dyn.simuler(variables, ref, params, liens, chocs, date_reference, k=k)
+    # PATCH_S19_RUPTURE : événements en mode rupture = référence déplacée.
+    ruptures = dyn.ruptures_depuis_donnees(events)
+    res = dyn.simuler(variables, ref, params, liens, chocs, date_reference, k=k,
+                      ruptures=ruptures or None)
+    if ruptures:
+        print("[snapshot] Ruptures : {} (référence déplacée) -- {}".format(
+            len(ruptures), " ; ".join(sorted({r["nom"][:50] for r in ruptures}))))
     print("[snapshot] Moteur dynamique : {} chocs ({} propagés), K={:.3f}, petit gain={:.2f}".format(
         len(chocs), sum(1 for c in chocs if c["via_matrice"]), k, indicateur))
 
@@ -977,8 +983,10 @@ def appliquer_dynamique(variable_states, scenario_slug, instances, events, signa
         # d'un facteur 4 et masquait la plupart des contributeurs sous le
         # seuil de 0,2 point.
         directs = sorted(
-            ((c["nom"], dyn.forcage(c, date_reference))
-             for c in chocs if c["variable"] == v),
+            [(c["nom"], dyn.forcage(c, date_reference))
+             for c in chocs if c["variable"] == v]
+            + [(r["nom"], dyn.rampe_rupture(r, date_reference))
+               for r in ruptures if r["variable"] == v],
             key=lambda x: -abs(x[1]))
         contributeurs = [n for n, f in directs if abs(f) >= 0.2][:3]
         states[v]["level"] = nouveau

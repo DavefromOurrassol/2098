@@ -1011,6 +1011,10 @@ def load_event_instances_for_scenario(scenario_slug):
             # normale | durable | permanente, absente = normale (instances
             # écrites avant ce chantier). Lue par dynamique.chocs_depuis_donnees().
             "persistance":  _persistance_verifiee(fm.get("persistance"), fname),
+            # PATCH_S19_RUPTURE (17 octobre 2026) : `mode: rupture` = l'événement
+            # déplace durablement la référence du scénario (dynamique.
+            # ruptures_depuis_donnees) ; absent ou autre valeur = choc amorti.
+            "mode":         "rupture" if str(fm.get("mode") or "").strip().lower() == "rupture" else "choc",
             "custom":       True,
             # Ajouté le 2 août 2026 -- manquait, nécessaire pour restreindre
             # la liste de zones proposées lors du forçage d'un événement.

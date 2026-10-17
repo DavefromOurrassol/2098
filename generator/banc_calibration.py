@@ -55,7 +55,8 @@ def lancer(scenario, all_vars, matrix, date_fin, signals):
     liens = dyn.couplages(VALID_VARS, matrix["edges"], params)
     chocs = dyn.chocs_depuis_donnees(scenario, load_instances_for_scenario(scenario),
                                      load_events_for_scenario(scenario), signals)
-    res = dyn.simuler(VALID_VARS, niveaux_ref, params, liens, chocs, date_fin, echantillonner=0.5)
+    res = dyn.simuler(VALID_VARS, niveaux_ref, params, liens, chocs, date_fin, echantillonner=0.5,
+                      ruptures=dyn.ruptures_depuis_donnees(load_events_for_scenario(scenario)) or None)  # PATCH_S19_RUPTURE
     return niveaux_ref, liens, chocs, res
 
 

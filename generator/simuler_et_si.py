@@ -353,12 +353,15 @@ def simuler_hypothese(hyp, date_fin, scenarios=None):
         rupts = ruptures_hypothese(hyp, sc) if rupture else []
         if not propres and not rupts:
             continue
+        # PATCH_S19_RUPTURE : ruptures déjà présentes dans le monde (fiches en mode rupture).
+        rupt_base = dyn.ruptures_depuis_donnees(events)
         sans = dyn.simuler(variables, ref, params, liens, chocs_sans, date_fin,
-                           echantillonner=ti.PAS_CHRONO, k=k)
+                           echantillonner=ti.PAS_CHRONO, k=k, ruptures=rupt_base or None)
         avec = dyn.simuler(variables, ref, params, liens, chocs_sans + propres, date_fin,
-                           echantillonner=ti.PAS_CHRONO, k=k, ruptures=rupts or None)
+                           echantillonner=ti.PAS_CHRONO, k=k, ruptures=(rupt_base + rupts) or None)
         directes = {c["variable"] for c in propres + rupts}
         ref_apres = avec.get("references") or ref
+        ref = sans.get("references") or ref   # référence du monde actuel, ruptures existantes comprises
 
         effets = []
         for v in variables:

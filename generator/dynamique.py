@@ -422,6 +422,8 @@ def chocs_depuis_donnees(scenario, instances, events, signals):
                           "amplitude": amp(imp.get("delta_level"), imp.get("polarite", 1))})
 
     for ev in events or []:
+        if est_rupture(ev):   # PATCH_S19_RUPTURE : jouée par ruptures_depuis_donnees()
+            continue
         for imp in ev.get("impacts") or []:
             chocs.append({"nom": ev.get("name", "?"), "type": "evenement",
                           "variable": imp.get("variable", ""), "t0": float(ev.get("date", 2050)),
@@ -441,3 +443,33 @@ def chocs_depuis_donnees(scenario, instances, events, signals):
                       "amplitude": amp(d.get("delta_level"), d.get("polarite", 1))})
 
     return [c for c in chocs if c["amplitude"]]
+
+
+# PATCH_S19_RUPTURE (17 octobre 2026) -- événements en mode rupture
+# (`mode: rupture` dans la fiche event_instances, lu par loader.py).
+
+def est_rupture(ev):
+    return str((ev or {}).get("mode") or "").strip().lower() == "rupture"
+
+
+def ruptures_depuis_donnees(events):
+    """Ruptures au format de simuler(ruptures=...) : une par impact d'un
+    événement en mode rupture. Même convention que les chocs (force =
+    |delta_level|, sens = polarite), mais ni GAIN_CHOCS ni demi-vie :
+    la référence est déplacée pour de bon (voir rampe_rupture()).
+    Liste vide si aucun événement n'est en rupture."""
+    out = []
+    for ev in events or []:
+        if not est_rupture(ev):
+            continue
+        for imp in ev.get("impacts") or []:
+            try:
+                a = abs(float(imp.get("delta_level") or 0)) * (1 if int(imp.get("polarite") or 1) >= 0 else -1)
+            except (TypeError, ValueError):
+                a = 0.0
+            if not a:
+                continue
+            out.append({"nom": ev.get("name", "?"), "variable": imp.get("variable", ""),
+                        "t0": float(ev.get("date", 2050)), "duree": float(imp.get("duree") or 15),
+                        "amplitude": a})
+    return out
