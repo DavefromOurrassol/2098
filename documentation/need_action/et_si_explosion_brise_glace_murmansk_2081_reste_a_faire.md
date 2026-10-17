@@ -1,6 +1,6 @@
 # Reste à faire à la main — explosion_brise_glace_murmansk_2081
 
-*Généré le 2026-10-17 08:31 par appliquer_et_si.py, à partir de la simulation du 2026-10-17T07:49 (v8.19). Les opérations mécaniques (zones, trajectoires, relations) sont déjà appliquées : ne figure ici que ce qui reste à la main.*
+*Généré le 2026-10-17 08:44 par appliquer_et_si.py, à partir de la simulation du 2026-10-17T07:49 (v8.19). Les opérations mécaniques (zones, trajectoires, relations) sont déjà appliquées : ne figure ici que ce qui reste à la main.*
 
 ## reference
 

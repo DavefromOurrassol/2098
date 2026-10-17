@@ -2944,6 +2944,97 @@ def et_si_decider(action):
     return jsonify({"ok": resultat.returncode == 0, "sortie": sortie})
 
 
+# ---------------------------------------------------------------------------
+# PATCH_S27_GUI_APPLIQUER (17 octobre 2026) -- phase 4 dans le panneau
+# « Décider » : appliquer_et_si.py (aperçu, --apply, --reste-a-faire).
+# Aucun appel IA ; « appliquer » écrit dans le vault (.bak_appliquer).
+# ---------------------------------------------------------------------------
+
+ACTIONS_APPLIQUER = {"apercu": [], "appliquer": ["--apply"], "reste": ["--reste-a-faire"]}
+TIMEOUT_APPLIQUER = 300  # secondes -- --apply enchaîne réciprocité et validate.py
+
+
+@app.route("/api/et_si/appliquer/<action>", methods=["POST"])
+def et_si_appliquer(action):
+    if action not in ACTIONS_APPLIQUER:
+        return jsonify({"error": f"action inconnue : {action}"}), 404
+    cfg = load_config()
+    pipeline_dir = Path(cfg.get("pipeline_dir", ""))
+    data = request.get_json() or {}
+    hid = str(data.get("id") or "").strip()
+    if not hid:
+        return jsonify({"error": "choisis d'abord une hypothèse dans la liste"}), 400
+    cmd = [sys.executable, "appliquer_et_si.py", "--id", hid]
+    for cle in ("sauter", "inclure"):
+        valeur = re.sub(r"[^0-9,]", "", str(data.get(cle) or ""))
+        if valeur.strip(","):
+            cmd += [f"--{cle}", valeur.strip(",")]
+    cmd += ACTIONS_APPLIQUER[action]
+    try:
+        resultat = subprocess.run(cmd, cwd=pipeline_dir, capture_output=True, text=True,
+                                  timeout=TIMEOUT_APPLIQUER, stdin=subprocess.DEVNULL)
+    except subprocess.TimeoutExpired:
+        return jsonify({"error": f"Délai dépassé ({TIMEOUT_APPLIQUER} s)"}), 504
+    except FileNotFoundError:
+        return jsonify({"error": f"appliquer_et_si.py introuvable dans {pipeline_dir}"}), 500
+    sortie = "\n".join(s for s in (resultat.stdout.strip(), resultat.stderr.strip()) if s)
+    m = re.search(r"check-list : (\S+\.md)", sortie)
+    return jsonify({"ok": resultat.returncode == 0, "sortie": sortie,
+                    "checklist": m.group(1) if m else None})
+
+
+# ---------------------------------------------------------------------------
+# PATCH_S27_GUI_PARCOURS (17 octobre 2026) -- panneau « Parcours de l'hypothèse » :
+# état de l'hypothèse (et_si_statut.py, lecture seule) et injection d'une seule
+# hypothèse adoptée (et_si_injecter.py : inject_custom_events.py --idea, puis
+# retrait de son entrée de la queue).
+# ---------------------------------------------------------------------------
+
+TIMEOUT_INJECTER_ET_SI = 960  # secondes -- appels IA par scénario + cycle post-injection
+
+
+@app.route("/api/et_si/statut", methods=["POST"])
+def et_si_statut():
+    cfg = load_config()
+    pipeline_dir = Path(cfg.get("pipeline_dir", ""))
+    hid = str((request.get_json() or {}).get("id") or "").strip()
+    if not hid:
+        return jsonify({"error": "choisis d'abord une hypothèse dans la liste"}), 400
+    try:
+        r = subprocess.run([sys.executable, "et_si_statut.py", "--id", hid, "--json"], cwd=pipeline_dir,
+                           capture_output=True, text=True, timeout=90, stdin=subprocess.DEVNULL)
+    except subprocess.TimeoutExpired:
+        return jsonify({"error": "Délai dépassé (90 s)"}), 504
+    except FileNotFoundError:
+        return jsonify({"error": f"et_si_statut.py introuvable dans {pipeline_dir}"}), 500
+    try:
+        return jsonify(json.loads(r.stdout.strip().splitlines()[-1]))
+    except (ValueError, IndexError):
+        return jsonify({"error": (r.stderr or r.stdout or "réponse illisible").strip()[-500:]}), 500
+
+
+@app.route("/api/et_si/injecter/<action>", methods=["POST"])
+def et_si_injecter(action):
+    if action not in ("apercu", "injecter"):
+        return jsonify({"error": f"action inconnue : {action}"}), 404
+    cfg = load_config()
+    pipeline_dir = Path(cfg.get("pipeline_dir", ""))
+    hid = str((request.get_json() or {}).get("id") or "").strip()
+    if not hid:
+        return jsonify({"error": "choisis d'abord une hypothèse dans la liste"}), 400
+    cmd = [sys.executable, "et_si_injecter.py", "--id", hid] + (["--dry-run"] if action == "apercu" else [])
+    try:
+        r = subprocess.run(cmd, cwd=pipeline_dir, capture_output=True, text=True,
+                           timeout=TIMEOUT_INJECTER_ET_SI, stdin=subprocess.DEVNULL)
+    except subprocess.TimeoutExpired:
+        return jsonify({"error": f"Délai dépassé ({TIMEOUT_INJECTER_ET_SI} s) : vérifier "
+                                 "evenements_custom/processed.yaml et needs_review.yaml"}), 504
+    except FileNotFoundError:
+        return jsonify({"error": f"et_si_injecter.py introuvable dans {pipeline_dir}"}), 500
+    sortie = "\n".join(s for s in (r.stdout.strip(), r.stderr.strip()) if s)
+    return jsonify({"ok": r.returncode == 0, "sortie": sortie})
+
+
 TIMEOUT_IDEES_TEXTE_LIBRE = 180  # secondes -- un seul appel LLM
 
 
