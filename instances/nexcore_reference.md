@@ -58,7 +58,6 @@ oppositions:
 - consortium_amazonia_viva_reference
 - frente_sertao_livre_reference
 - helsinki_communs_numeriques_reference
-- murmansk_transit_arctique_reference
 - regulateurs_de_l_union_eurasiatique_sur_les_donnees_critiques_reference
 - reseau_meshcommons_netsolidaire_reference
 type_relation_dominante: dépendance
@@ -131,6 +130,5 @@ La grande question de 2098 : peut-on nationaliser ce qu'on ne comprend plus tech
 - [[consortium_amazonia_viva_reference]]
 - [[frente_sertao_livre_reference]]
 - [[helsinki_communs_numeriques_reference]]
-- [[murmansk_transit_arctique_reference]]
 - [[regulateurs_de_l_union_eurasiatique_sur_les_donnees_critiques_reference]]
 - [[reseau_meshcommons_netsolidaire_reference]]

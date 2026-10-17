@@ -38,27 +38,12 @@ zone_systemique:
     - économie
     - sécurité
 
-alliances:
-- arctic_passage_authority_reference
-- armada_logistique_nordique_reference
-- collectifs_de_peche_inuit_et_sami_reference
-- conseil_des_etats_nordiques_integres_reference
-- consortium_energetique_baltique_reference
-- corridor_arctique_nordique_reference
-oppositions:
-- bloc_ressources_eurasiatique_bre_reference
-- consortium_logistique_asiatique_de_contournement_aln_reference
-- corporations_d_extraction_energetique_non_signataires_reference
-- factions_d_extraction_miniere_independantes_reference
-- fonds_souverain_arctique_scandinave_reference
-- milices_concurrentes_des_droits_de_passage_reference
-- nexcore_reference
-- reseaux_de_financement_gris_issus_d_anciens_blocs_militaires_reference
-- siberie_federale_reference
+alliances: []
+oppositions: []
 type_relation_dominante: rivalité
 
 annee_debut: 2041
-annee_fin: 
+annee_fin: 2081
 
 generation: transition
 
@@ -80,7 +65,7 @@ tensions_narratives: >
   La montée en puissance du Consortium Logistique Asiatique de Contournement ALN, qui finance activement des routes alternatives via le détroit de Béring, fragilise la rente de position de Mourmansk et accentue les divisions internes du Pacte de Kola. Parallèlement, les collectifs Inuit et Sami intensifient leurs revendications sur les zones côtières transformées en zones industrielles sans consultation. La question centrale reste entière : jusqu'à quand le consortium russo-scandinave peut-il tenir face à une puissance asiatique qui préfère payer pour contourner plutôt que pour traverser ?
 
 date_creation: 2026-06-27
-trajectoire: dominant
+trajectoire: disparu
 est_clandestin: false
 
 ---
@@ -108,19 +93,4 @@ La montée en puissance du Consortium Logistique Asiatique de Contournement ALN,
 
 ## Relations
 **Alliés :**
-- [[arctic_passage_authority_reference]]
-- [[armada_logistique_nordique_reference]]
-- [[collectifs_de_peche_inuit_et_sami_reference]]
-- [[conseil_des_etats_nordiques_integres_reference]]
-- [[consortium_energetique_baltique_reference]]
-- [[corridor_arctique_nordique_reference]]
 **Opposants :**
-- [[bloc_ressources_eurasiatique_bre_reference]]
-- [[consortium_logistique_asiatique_de_contournement_aln_reference]]
-- [[corporations_d_extraction_energetique_non_signataires_reference]]
-- [[factions_d_extraction_miniere_independantes_reference]]
-- [[fonds_souverain_arctique_scandinave_reference]]
-- [[milices_concurrentes_des_droits_de_passage_reference]]
-- [[nexcore_reference]]
-- [[reseaux_de_financement_gris_issus_d_anciens_blocs_militaires_reference]]
-- [[siberie_federale_reference]]

@@ -54,7 +54,6 @@ alliances:
 - conseil_des_etats_nordiques_integres_reference
 - consortium_energetique_baltique_reference
 - fonds_souverain_arctique_scandinave_reference
-- murmansk_transit_arctique_reference
 - nexcore_reference
 - operateurs_logistiques_prives_des_zones_grises_eurasiennes_reference
 oppositions:
@@ -156,7 +155,6 @@ La question centrale est celle du seuil : à quel moment la contestation permane
 - [[conseil_des_etats_nordiques_integres_reference]]
 - [[consortium_energetique_baltique_reference]]
 - [[fonds_souverain_arctique_scandinave_reference]]
-- [[murmansk_transit_arctique_reference]]
 - [[nexcore_reference]]
 - [[operateurs_logistiques_prives_des_zones_grises_eurasiennes_reference]]
 **Opposants :**

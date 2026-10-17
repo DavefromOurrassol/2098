@@ -49,7 +49,6 @@ oppositions:
 - corridor_arctique_nordique_reference
 - lobbies_industriels_des_etats_non_signataires_reference
 - milices_concurrentes_des_droits_de_passage_reference
-- murmansk_transit_arctique_reference
 - singapour_est_nexcore_reference
 type_relation_dominante: compétition
 annee_debut: 2029
@@ -135,7 +134,6 @@ Le Consortium est pris en étau entre sa promesse de désintermédiation — sé
 - [[corridor_arctique_nordique_reference]]
 - [[lobbies_industriels_des_etats_non_signataires_reference]]
 - [[milices_concurrentes_des_droits_de_passage_reference]]
-- [[murmansk_transit_arctique_reference]]
 - [[singapour_est_nexcore_reference]]
 
 ## Notes

@@ -42,13 +42,14 @@ alliances:
 - conseil_des_etats_nordiques_integres_reference
 - consortium_des_grandes_plateformes_logistiques_globales_reference
 - consortium_energetique_baltique_reference
+- consortium_energetique_des_mers_du_nord_reference
 - corridor_arctique_nordique_reference
 - fonds_souverain_arctique_scandinave_reference
 - kalaallit_nunaat_sovereign_fund_reference
 - milices_concurrentes_des_droits_de_passage_reference
-- murmansk_transit_arctique_reference
 - optiflow_logistics_reference
 oppositions:
+- bloc_eurasien_central_reference
 - bloc_ressources_eurasiatique_bre_reference
 - cartel_des_terres_rares_d_asie_centrale_reference
 - collectifs_de_peche_inuit_et_sami_reference
@@ -113,13 +114,14 @@ L'ALN maintient un équilibre précaire entre blocs qui la tolèrent faute de mi
 - [[conseil_des_etats_nordiques_integres_reference]]
 - [[consortium_des_grandes_plateformes_logistiques_globales_reference]]
 - [[consortium_energetique_baltique_reference]]
+- [[consortium_energetique_des_mers_du_nord_reference]]
 - [[corridor_arctique_nordique_reference]]
 - [[fonds_souverain_arctique_scandinave_reference]]
 - [[kalaallit_nunaat_sovereign_fund_reference]]
 - [[milices_concurrentes_des_droits_de_passage_reference]]
-- [[murmansk_transit_arctique_reference]]
 - [[optiflow_logistics_reference]]
 **Opposants :**
+- [[bloc_eurasien_central_reference]]
 - [[bloc_ressources_eurasiatique_bre_reference]]
 - [[cartel_des_terres_rares_d_asie_centrale_reference]]
 - [[collectifs_de_peche_inuit_et_sami_reference]]

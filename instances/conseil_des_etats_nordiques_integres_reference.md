@@ -43,9 +43,9 @@ alliances:
 - helsinki_communs_numeriques_reference
 - institutions_multilaterales_survivantes_reference
 - kalaallit_nunaat_sovereign_fund_reference
-- murmansk_transit_arctique_reference
 oppositions:
 - bloc_eurasien_central_reference
+- collectifs_de_peche_inuit_et_sami_reference
 - pacte_des_souverains_reference
 type_relation_dominante: coopération
 annee_debut: 2040
@@ -87,7 +87,7 @@ localisation:
   zone: corridor_arctique_nordique
   lieu: Helsinki / Nuuk (siège rotatif)
   type_lieu: ville
-trajectoire: émergent
+trajectoire: ascendant
 est_clandestin: false
 
 ---
@@ -128,9 +128,9 @@ La tension la plus profonde du Conseil oppose ses membres continentaux — attac
 - [[helsinki_communs_numeriques_reference]]
 - [[institutions_multilaterales_survivantes_reference]]
 - [[kalaallit_nunaat_sovereign_fund_reference]]
-- [[murmansk_transit_arctique_reference]]
 **Opposants :**
 - [[bloc_eurasien_central_reference]]
+- [[collectifs_de_peche_inuit_et_sami_reference]]
 - [[pacte_des_souverains_reference]]
 
 ## Notes

@@ -56,7 +56,6 @@ oppositions:
 - gouvernements_du_bloc_sahelien_autonome_reference
 - institutions_multilaterales_survivantes_reference
 - les_veilleurs_des_nappes_phreatiques_reference
-- murmansk_transit_arctique_reference
 - observatoire_climatique_des_territoires_oct_reference
 - ong_de_tracabilite_des_ressources_critiques_reference
 - ong_environnementales_de_terrain_reference
@@ -157,7 +156,6 @@ La tension centrale est existentielle : à mesure que les technologies de stocka
 - [[gouvernements_du_bloc_sahelien_autonome_reference]]
 - [[institutions_multilaterales_survivantes_reference]]
 - [[les_veilleurs_des_nappes_phreatiques_reference]]
-- [[murmansk_transit_arctique_reference]]
 - [[observatoire_climatique_des_territoires_oct_reference]]
 - [[ong_de_tracabilite_des_ressources_critiques_reference]]
 - [[ong_environnementales_de_terrain_reference]]

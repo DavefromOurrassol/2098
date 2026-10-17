@@ -41,6 +41,7 @@ alliances:
 - europe_occidentale_reconstruite_reference
 - fonds_souverain_arctique_scandinave_reference
 - optiflow_logistics_reference
+- armada_logistique_nordique_reference
 oppositions:
 - bloc_eurasien_central_reference
 - bloc_ressources_eurasiatique_bre_reference
@@ -127,6 +128,7 @@ Le Consortium est structurellement déchiré entre ses actionnaires historiques 
 - [[europe_occidentale_reconstruite_reference]]
 - [[fonds_souverain_arctique_scandinave_reference]]
 - [[optiflow_logistics_reference]]
+- [[armada_logistique_nordique_reference]]
 **Opposants :**
 - [[bloc_eurasien_central_reference]]
 - [[bloc_ressources_eurasiatique_bre_reference]]

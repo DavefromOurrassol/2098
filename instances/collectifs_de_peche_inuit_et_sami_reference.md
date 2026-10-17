@@ -37,7 +37,6 @@ alliances:
 - corridor_arctique_nordique_reference
 - institutions_multilaterales_survivantes_reference
 - kalaallit_nunaat_sovereign_fund_reference
-- murmansk_transit_arctique_reference
 - pacifique_sud_resilience_network_reference
 - reseaux_de_gouvernance_multilaterale_survivants_reference
 oppositions:
@@ -47,6 +46,7 @@ oppositions:
 - consortiums_prives_d_extraction_de_ressources_critiques_reference
 - detroit_compact_grands_lacs_reference
 - fonds_souverain_arctique_scandinave_reference
+- conseil_des_etats_nordiques_integres_reference
 type_relation_dominante: conflit
 annee_debut: 2041
 annee_fin: null
@@ -84,7 +84,7 @@ localisation:
   zone: corridor_arctique_nordique
   lieu: Tromsø / Nuuk
   type_lieu: region
-trajectoire: émergent
+trajectoire: ascendant
 est_clandestin: false
 
 ---
@@ -121,7 +121,6 @@ La déglaciation qui menace leur mode de vie ouvre paradoxalement de nouvelles z
 - [[corridor_arctique_nordique_reference]]
 - [[institutions_multilaterales_survivantes_reference]]
 - [[kalaallit_nunaat_sovereign_fund_reference]]
-- [[murmansk_transit_arctique_reference]]
 - [[pacifique_sud_resilience_network_reference]]
 - [[reseaux_de_gouvernance_multilaterale_survivants_reference]]
 **Opposants :**
@@ -131,6 +130,7 @@ La déglaciation qui menace leur mode de vie ouvre paradoxalement de nouvelles z
 - [[consortiums_prives_d_extraction_de_ressources_critiques_reference]]
 - [[detroit_compact_grands_lacs_reference]]
 - [[fonds_souverain_arctique_scandinave_reference]]
+- [[conseil_des_etats_nordiques_integres_reference]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

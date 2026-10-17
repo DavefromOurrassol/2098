@@ -46,7 +46,6 @@ oppositions:
 - consortiums_prives_d_extraction_de_ressources_critiques_reference
 - factions_eurasiatiques_contre_la_tarification_hydrique_reference
 - lobbies_industriels_des_etats_non_signataires_reference
-- murmansk_transit_arctique_reference
 type_relation_dominante: compétition
 annee_debut: 2026
 annee_fin: null
@@ -88,7 +87,7 @@ localisation:
   lieu: Tromsø
   type_lieu: ville
 annee_debut_verifiee: true
-trajectoire: émergent
+trajectoire: ascendant
 est_clandestin: false
 
 ---
@@ -135,7 +134,6 @@ Le Fonds est structurellement déchiré entre deux mandats incompatibles : maxim
 - [[consortiums_prives_d_extraction_de_ressources_critiques_reference]]
 - [[factions_eurasiatiques_contre_la_tarification_hydrique_reference]]
 - [[lobbies_industriels_des_etats_non_signataires_reference]]
-- [[murmansk_transit_arctique_reference]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

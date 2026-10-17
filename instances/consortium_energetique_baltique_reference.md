@@ -40,7 +40,6 @@ alliances:
 - corridor_arctique_nordique_reference
 - fonds_souverain_arctique_scandinave_reference
 - helsinki_communs_numeriques_reference
-- murmansk_transit_arctique_reference
 oppositions:
 - bloc_eurasien_central_reference
 - bloc_ressources_eurasiatique_bre_reference
@@ -126,7 +125,6 @@ La tension centrale du Consortium réside dans sa double nature : il est à la f
 - [[corridor_arctique_nordique_reference]]
 - [[fonds_souverain_arctique_scandinave_reference]]
 - [[helsinki_communs_numeriques_reference]]
-- [[murmansk_transit_arctique_reference]]
 **Opposants :**
 - [[bloc_eurasien_central_reference]]
 - [[bloc_ressources_eurasiatique_bre_reference]]

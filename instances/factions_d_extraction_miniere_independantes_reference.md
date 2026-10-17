@@ -51,7 +51,6 @@ oppositions:
 - corridor_arctique_nordique_reference
 - gouvernements_du_bloc_sahelien_autonome_reference
 - kalaallit_nunaat_sovereign_fund_reference
-- murmansk_transit_arctique_reference
 - nairobi_crrc_reference
 - ong_de_tracabilite_des_ressources_critiques_reference
 - union_africaine_resilience_reference
@@ -141,7 +140,6 @@ La tension centrale est celle de la dépendance honteuse : les institutions mult
 - [[corridor_arctique_nordique_reference]]
 - [[gouvernements_du_bloc_sahelien_autonome_reference]]
 - [[kalaallit_nunaat_sovereign_fund_reference]]
-- [[murmansk_transit_arctique_reference]]
 - [[nairobi_crrc_reference]]
 - [[ong_de_tracabilite_des_ressources_critiques_reference]]
 - [[union_africaine_resilience_reference]]

@@ -50,7 +50,6 @@ oppositions:
 - conseil_regulation_ressources_reference
 - consortiums_bancaires_financiarises_reference
 - corridor_arctique_nordique_reference
-- murmansk_transit_arctique_reference
 - ong_de_tracabilite_des_ressources_critiques_reference
 - plateformes_d_optimisation_territoriale_par_ia_reference
 - reseaux_de_gouvernance_multilaterale_survivants_reference
@@ -140,7 +139,6 @@ La tension centrale réside dans leur double nature : instruments de stabilisati
 - [[conseil_regulation_ressources_reference]]
 - [[consortiums_bancaires_financiarises_reference]]
 - [[corridor_arctique_nordique_reference]]
-- [[murmansk_transit_arctique_reference]]
 - [[ong_de_tracabilite_des_ressources_critiques_reference]]
 - [[plateformes_d_optimisation_territoriale_par_ia_reference]]
 - [[reseaux_de_gouvernance_multilaterale_survivants_reference]]

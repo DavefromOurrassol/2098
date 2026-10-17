@@ -47,7 +47,6 @@ alliances:
 - corridor_arctique_nordique_reference
 - fonds_souverain_arctique_scandinave_reference
 - kalaallit_nunaat_sovereign_fund_reference
-- murmansk_transit_arctique_reference
 - observatoire_climatique_des_territoires_oct_reference
 - ong_de_tracabilite_des_ressources_critiques_reference
 oppositions:
@@ -123,7 +122,6 @@ La question centrale qui mine l'APA en 2098 est celle du vote qualifié : les na
 - [[corridor_arctique_nordique_reference]]
 - [[fonds_souverain_arctique_scandinave_reference]]
 - [[kalaallit_nunaat_sovereign_fund_reference]]
-- [[murmansk_transit_arctique_reference]]
 - [[observatoire_climatique_des_territoires_oct_reference]]
 - [[ong_de_tracabilite_des_ressources_critiques_reference]]
 **Opposants :**

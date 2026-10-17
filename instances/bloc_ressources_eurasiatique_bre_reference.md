@@ -69,7 +69,6 @@ oppositions:
 - institutions_multilaterales_survivantes_reference
 - kalaallit_nunaat_sovereign_fund_reference
 - milices_concurrentes_des_droits_de_passage_reference
-- murmansk_transit_arctique_reference
 - ong_de_tracabilite_des_ressources_critiques_reference
 - operateurs_logistiques_prives_des_zones_grises_eurasiennes_reference
 - ouagadougou_polytechnique_reference
@@ -183,7 +182,6 @@ Le BRE est structurellement tiraillé entre ses membres aux intérêts divergent
 - [[institutions_multilaterales_survivantes_reference]]
 - [[kalaallit_nunaat_sovereign_fund_reference]]
 - [[milices_concurrentes_des_droits_de_passage_reference]]
-- [[murmansk_transit_arctique_reference]]
 - [[ong_de_tracabilite_des_ressources_critiques_reference]]
 - [[operateurs_logistiques_prives_des_zones_grises_eurasiennes_reference]]
 - [[ouagadougou_polytechnique_reference]]

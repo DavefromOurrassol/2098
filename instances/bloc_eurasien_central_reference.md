@@ -75,6 +75,7 @@ oppositions:
 - reseau_hospitalier_hybride_eurasiatique_reference
 - reseaux_de_lanceurs_d_alerte_institutionnels_dissidents_reference
 - tbilissi_noeud_mnemos_reference
+- armada_logistique_nordique_reference
 type_relation_dominante: rivalité
 
 annee_debut: 2041
@@ -165,3 +166,4 @@ La question de l'accès aux terres rares d'Asie centrale oppose frontalement deu
 - [[reseau_hospitalier_hybride_eurasiatique_reference]]
 - [[reseaux_de_lanceurs_d_alerte_institutionnels_dissidents_reference]]
 - [[tbilissi_noeud_mnemos_reference]]
+- [[armada_logistique_nordique_reference]]

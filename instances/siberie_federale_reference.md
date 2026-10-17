@@ -39,7 +39,6 @@ oppositions:
 - corridor_arctique_nordique_reference
 - helsinki_communs_numeriques_reference
 - institutions_multilaterales_survivantes_reference
-- murmansk_transit_arctique_reference
 - ong_environnementales_de_terrain_reference
 type_relation_dominante: conflit
 annee_debut: 2041
@@ -82,7 +81,7 @@ localisation:
   zone: siberie_federale
   lieu: Sibérie Fédérale — territoire administratif central
   type_lieu: region
-trajectoire: émergent
+trajectoire: marginal
 est_clandestin: false
 
 ---
@@ -120,7 +119,6 @@ La Sibérie Fédérale est prise en étau entre le Bloc Eurasien Central dont el
 - [[corridor_arctique_nordique_reference]]
 - [[helsinki_communs_numeriques_reference]]
 - [[institutions_multilaterales_survivantes_reference]]
-- [[murmansk_transit_arctique_reference]]
 - [[ong_environnementales_de_terrain_reference]]
 
 ## Notes

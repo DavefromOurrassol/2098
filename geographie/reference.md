@@ -1860,7 +1860,7 @@ zones:
     et le Corridor Arctique Nordique — ville formellement sous juridiction russe mais
     opérationnellement intégrée aux flux logistiques de l'ALN, ce qui en fait un nœud
     de tension géopolitique permanent.
-  statut: stable
+  statut: en_declin
   tensions_internes: Ambiguïté juridictionnelle entre autorité ALN et souveraineté
     formelle de la Sibérie Fédérale/Bloc Eurasien Central. Contestation des accords
     de transit par les structures eurasiatiques.
@@ -2957,7 +2957,7 @@ Zones grises opérationnelles contrôlées par des opérateurs logistiques indé
 
 #### Mourmansk — sous [[bloc_eurasien_central]]
 
-*ville — niveau 2 — statut : stable*
+*ville — niveau 2 — statut : en_declin*
 
 **Origine réelle (2026)** : Mourmansk, Arctique russe (Mourmansk)
 

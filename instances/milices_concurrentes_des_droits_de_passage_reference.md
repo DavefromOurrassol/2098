@@ -59,7 +59,6 @@ oppositions:
 - gelecek_meclisi_reference
 - gouvernements_du_bloc_sahelien_autonome_reference
 - guadalajara_nexus_reference
-- murmansk_transit_arctique_reference
 - nairobi_crrc_reference
 - optiflow_logistics_reference
 - pacte_des_souverains_reference
@@ -167,7 +166,6 @@ La tension centrale réside dans leur paradoxe fonctionnel : en assurant une cer
 - [[gelecek_meclisi_reference]]
 - [[gouvernements_du_bloc_sahelien_autonome_reference]]
 - [[guadalajara_nexus_reference]]
-- [[murmansk_transit_arctique_reference]]
 - [[nairobi_crrc_reference]]
 - [[optiflow_logistics_reference]]
 - [[pacte_des_souverains_reference]]
