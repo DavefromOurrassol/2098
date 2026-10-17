@@ -1,0 +1,62 @@
+{
+ "id": "fusion_commerciale_2038",
+ "date_simulation": "2026-10-15T18:51",
+ "version": "v8.19",
+ "empreinte": "442b14cbea3db493",
+ "annee": 2038.0,
+ "mode": "choc",
+ "contraintes": [
+  "Le tritium n'existe dans aucun gisement ; il est produit dans le réacteur à partir de lithium. Rien ne repose sur une extraction, un transport ou un cartel de tritium.",
+  "Le deutérium se tire de l'eau de mer ; aucun pays n'en a le monopole.",
+  "Les ressources rares de la fusion sont le lithium (Chili, Argentine, Bolivie, Australie, Chine), quelques matériaux (supraconducteurs, béryllium) et les brevets."
+ ],
+ "scenarios_hypothese": [
+  "breakdown",
+  "fortress_world",
+  "new_sustainability",
+  "eco_communalism",
+  "policy_reform",
+  "reference"
+ ],
+ "scenarios": [
+  "breakdown",
+  "fortress_world",
+  "new_sustainability",
+  "eco_communalism",
+  "policy_reform",
+  "reference"
+ ],
+ "complet": true,
+ "par_scenario": {
+  "breakdown": {
+   "lecture": null,
+   "passe": null,
+   "erreurs": []
+  },
+  "fortress_world": {
+   "lecture": null,
+   "passe": null,
+   "erreurs": []
+  },
+  "new_sustainability": {
+   "lecture": null,
+   "passe": null,
+   "erreurs": []
+  },
+  "eco_communalism": {
+   "lecture": null,
+   "passe": null,
+   "erreurs": []
+  },
+  "policy_reform": {
+   "lecture": null,
+   "passe": null,
+   "erreurs": []
+  },
+  "reference": {
+   "lecture": null,
+   "passe": null,
+   "erreurs": []
+  }
+ }
+}

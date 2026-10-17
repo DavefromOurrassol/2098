@@ -512,6 +512,7 @@ def step2_develop_instance(client, idea, event_slug, type_evenement, variables,
 
     # PATCH_S27_INJECTION_IMPOSEE : date fixée et valeurs imposées
     impositions_txt = _texte_impositions(idea, scenario)
+    faits_txt = _texte_faits(idea, scenario)  # PATCH_S27_V818
     if idea.get("date_imposee") is not None and impositions_txt:
         date_rule_txt = (f"- La date est FIXÉE à {int(float(idea['date_imposee']))} "
                          f"(issue d'une simulation) : n'en propose pas d'autre")
@@ -544,7 +545,7 @@ Ourrassol 2098, dans le scénario "{scenario}".
 - Date approximative : {idea['date_approximative']}
 - Intensité : {idea['intensite']}
 - Description originale : {idea['description']}
-{actors_hint_txt}{zone_hint_txt}{impositions_txt}
+{actors_hint_txt}{zone_hint_txt}{impositions_txt}{faits_txt}
 ## SCÉNARIO {scenario.upper()}
 - État : {sc_ctx['state_of_system']} | Tension : {sc_ctx['tension_level']}/5 | Trajectoire : {sc_ctx['trajectory']}
 - Régime : {sc_ctx['political_regime']} | Vitesse : {sc_ctx['transformation_speed']}
@@ -996,6 +997,13 @@ QUEUE_TEMPLATE = """\
 #   date_imposee           : optionnel, année 2025-2098 imposée (prime sur
 #                            edition_active).
 #   via_matrice_impose     : optionnel, true/false imposé.
+#   faits_imposes          : optionnel (simulateur, v8.18). Faits que le récit ne
+#                            doit pas contredire, par scénario :
+#                              breakdown:
+#                                - {fait: "X disparaît en 2076", slug: x_breakdown,
+#                                   sort: disparait}
+#                            (sort : disparait | change | reste | zone | contrainte ;
+#                            « reste » déclenche un ⚠ si le texte détruit l'entité).
 # EXEMPLE :
 #   - id: guerre_israelo_iranienne
 #     description: >
@@ -1234,10 +1242,78 @@ def _texte_impositions(idea, scenario):
     if imp["date"] is not None:
         lignes.append(f"- Date de l'événement : {int(imp['date'])}")
     if imp["via_matrice"] is not None:
-        lignes.append(f"- Propagation via la matrice : {'oui' if imp['via_matrice'] else 'non'}")
+        # PATCH_S27_V818 : ne plus donner le mot « matrice » à l'IA (il finissait dans le récit).
+        lignes.append(f"- Effet propagé aux autres variables : {'oui' if imp['via_matrice'] else 'non'} "
+                      f"(mécanique interne du simulateur : ne nomme jamais ce mécanisme ni le mot "
+                      f"« matrice » dans le récit)")
     lignes.append("Écris la réalisation, la description et les conséquences pour qu'elles "
                   "correspondent à ces valeurs (ampleur, sens et date).")
     return "\n".join(lignes) + "\n"
+
+
+# PATCH_S27_V818 (13 octobre 2026) -- faits imposés par le simulateur « et si ? »
+# (sort des acteurs du récit, contraintes de l'hypothèse). Sans faits_imposes, rien ne change.
+
+def _faits_du_scenario(idea, scenario):
+    """faits_imposes : {scénario: [fait]} ou [fait] (tous scénarios) ; un fait est une
+    phrase ou {fait, slug, sort}. Retourne une liste de dicts."""
+    brut = idea.get("faits_imposes")
+    if isinstance(brut, dict):
+        liste = brut.get(scenario) or []
+    elif isinstance(brut, list):
+        liste = brut
+    else:
+        return []
+    out = []
+    for f in liste if isinstance(liste, list) else []:
+        if isinstance(f, str) and f.strip():
+            out.append({"fait": f.strip()})
+        elif isinstance(f, dict) and str(f.get("fait") or "").strip():
+            out.append(f)
+    return out
+
+
+def _texte_faits(idea, scenario):
+    faits = _faits_du_scenario(idea, scenario)
+    if not faits:
+        return ""
+    return ("\n## FAITS IMPOSÉS (issus de la simulation -- le récit ne doit JAMAIS les contredire)\n"
+            + "\n".join(f"- {f['fait']}" for f in faits)
+            + "\nSi la description originale semble contredire un de ces faits, les faits priment.\n")
+
+
+def _plie_v818(s):
+    import unicodedata
+    s = unicodedata.normalize("NFKD", str(s or "").lower())
+    return "".join(c for c in s if not unicodedata.combining(c))
+
+
+MOTS_DESTRUCTION_V818 = re.compile(
+    r"detrui|\brase|\braye|aneanti|dispar|n'existe plus|effondr|en cendres|englouti|raye de la carte")
+
+
+def verifier_faits(instance_data, idea, scenario, available_actors):
+    """Avertissements (jamais bloquants) : entité censée survivre associée à une
+    destruction dans une même phrase ; mot « matrice » dans le récit."""
+    avert = []
+    textes = " ".join(str(instance_data.get(k) or "")
+                      for k in ("realisation", "description_complete", "consequences"))
+    if re.search(r"\bmatrices?\b", _plie_v818(textes)):
+        avert.append("le récit emploie « matrice » (terme interne du simulateur) : à retoucher")
+    noms = {a["slug"]: a["name"] for a in available_actors}
+    phrases = re.split(r"(?<=[.!?])\s+", textes)
+    for f in _faits_du_scenario(idea, scenario):
+        if f.get("sort") != "reste" or not f.get("slug"):
+            continue
+        nom = str(noms.get(f["slug"]) or f["slug"])
+        morceaux = [_plie_v818(m.strip()) for m in re.split(r"\s+[—–-]\s+", nom) if len(m.strip()) >= 6]
+        for ph in phrases:
+            pp = _plie_v818(ph)
+            if any(m in pp for m in morceaux) and MOTS_DESTRUCTION_V818.search(pp):
+                avert.append(f"{nom} ({f['slug']}) doit survivre, mais une phrase l'associe à une "
+                             f"destruction : « {' '.join(ph.split())[:160]} »")
+                break
+    return avert
 
 
 def process_idea(client, idea, dry_run=False):
@@ -1390,6 +1466,9 @@ def process_idea(client, idea, dry_run=False):
                     "issues": issues, "instance_data": instance_data,
                 })
                 continue
+
+            for avert in verifier_faits(instance_data, idea, scenario, available_actors):  # PATCH_S27_V818
+                print(f"  ⚠ [{scenario}] {avert}")
 
             if idea.get("edition_active") and idea.get("date_imposee") is not None:
                 print("  ⚠ edition_active ignoré : la date est imposée par la simulation.")

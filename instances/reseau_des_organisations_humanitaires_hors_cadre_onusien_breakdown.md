@@ -45,7 +45,6 @@ alliances:
 - diaspora_tech_sahel_breakdown
 - flux_migratoires_non_integrables_breakdown
 - front_humanitaire_d_urgence_non_affilie_breakdown
-- geneve_bunker_institutions_breakdown
 - gouvernements_regionaux_residuels_reterritorialisants_breakdown
 - ligue_des_cites_littorales_en_sursis_breakdown
 - nairobi_crrc_breakdown
@@ -129,7 +128,6 @@ Le Réseau est perpétuellement tiraillé entre l'impératif de neutralité huma
 - [[diaspora_tech_sahel_breakdown]]
 - [[flux_migratoires_non_integrables_breakdown]]
 - [[front_humanitaire_d_urgence_non_affilie_breakdown]]
-- [[geneve_bunker_institutions_breakdown]]
 - [[gouvernements_regionaux_residuels_reterritorialisants_breakdown]]
 - [[ligue_des_cites_littorales_en_sursis_breakdown]]
 - [[nairobi_crrc_breakdown]]

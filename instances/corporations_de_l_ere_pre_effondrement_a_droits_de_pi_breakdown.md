@@ -42,7 +42,6 @@ alliances:
 - enclaves_corporatives_fortifiees_breakdown
 - milices_contractuelles_des_anciens_etats_membres_breakdown
 - reseau_des_anciens_financeurs_devenus_censeurs_breakdown
-- tour_bcuc_geneve_breakdown
 oppositions:
 - collectif_hackers_decroissance_infrastructure_breakdown
 - collectifs_de_hackers_archivistes_des_interstices_reseaux_breakdown
@@ -125,7 +124,6 @@ La tension centrale est celle de la légitimité : dans un monde où les États 
 - [[enclaves_corporatives_fortifiees_breakdown]]
 - [[milices_contractuelles_des_anciens_etats_membres_breakdown]]
 - [[reseau_des_anciens_financeurs_devenus_censeurs_breakdown]]
-- [[tour_bcuc_geneve_breakdown]]
 **Opposants :**
 - [[collectif_hackers_decroissance_infrastructure_breakdown]]
 - [[collectifs_de_hackers_archivistes_des_interstices_reseaux_breakdown]]

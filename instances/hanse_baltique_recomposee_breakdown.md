@@ -44,7 +44,6 @@ alliances:
 - ligue_mediterraneenne_des_villes_etats_portuaires_breakdown
 - noeud_nordark_tromso_breakdown
 - reseau_des_courriers_nomades_sahelo_mediterraneens_breakdown
-- tour_bcuc_geneve_breakdown
 oppositions:
 - armada_logistique_nordique_breakdown
 - cartels_logistiques_regionaux_breakdown
@@ -123,7 +122,6 @@ La Hanse est déchirée entre sa vocation marchande — qui exige neutralité et
 - [[ligue_mediterraneenne_des_villes_etats_portuaires_breakdown]]
 - [[noeud_nordark_tromso_breakdown]]
 - [[reseau_des_courriers_nomades_sahelo_mediterraneens_breakdown]]
-- [[tour_bcuc_geneve_breakdown]]
 **Opposants :**
 - [[armada_logistique_nordique_breakdown]]
 - [[cartels_logistiques_regionaux_breakdown]]

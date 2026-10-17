@@ -59,7 +59,6 @@ oppositions:
 - agence_de_regulation_des_detroits_strategiques_ards_breakdown
 - amara_diallo_nkosi_breakdown
 - archives_neutres_de_geneve_breakdown
-- archives_neutres_geneve_breakdown
 - arctic_passage_authority_breakdown
 - arctique_nordark_breakdown
 - assemblee_territoires_breakdown
@@ -83,7 +82,6 @@ oppositions:
 - front_de_resistance_aux_peages_sur_les_ressources_breakdown
 - front_humanitaire_d_urgence_non_affilie_breakdown
 - gelecek_meclisi_breakdown
-- geneve_bunker_institutions_breakdown
 - gouvernements_regionaux_residuels_reterritorialisants_breakdown
 - guilde_des_techniciens_nomades_breakdown
 - hanse_baltique_breakdown
@@ -106,7 +104,6 @@ oppositions:
 - reseaux_de_soigneurs_traditionnels_breakdown
 - saboteurs_des_corridors_de_transit_breakdown
 - sfax_relais_bouches_breakdown
-- tour_bcuc_geneve_breakdown
 type_relation_dominante: conflit
 annee_debut: 2041
 annee_fin: null
@@ -191,7 +188,6 @@ Elles sont structurellement condamnées à étendre leur territoire pour rester 
 - [[agence_de_regulation_des_detroits_strategiques_ards_breakdown]]
 - [[amara_diallo_nkosi_breakdown]]
 - [[archives_neutres_de_geneve_breakdown]]
-- [[archives_neutres_geneve_breakdown]]
 - [[arctic_passage_authority_breakdown]]
 - [[arctique_nordark_breakdown]]
 - [[assemblee_territoires_breakdown]]
@@ -215,7 +211,6 @@ Elles sont structurellement condamnées à étendre leur territoire pour rester 
 - [[front_de_resistance_aux_peages_sur_les_ressources_breakdown]]
 - [[front_humanitaire_d_urgence_non_affilie_breakdown]]
 - [[gelecek_meclisi_breakdown]]
-- [[geneve_bunker_institutions_breakdown]]
 - [[gouvernements_regionaux_residuels_reterritorialisants_breakdown]]
 - [[guilde_des_techniciens_nomades_breakdown]]
 - [[hanse_baltique_breakdown]]
@@ -238,7 +233,6 @@ Elles sont structurellement condamnées à étendre leur territoire pour rester 
 - [[reseaux_de_soigneurs_traditionnels_breakdown]]
 - [[saboteurs_des_corridors_de_transit_breakdown]]
 - [[sfax_relais_bouches_breakdown]]
-- [[tour_bcuc_geneve_breakdown]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

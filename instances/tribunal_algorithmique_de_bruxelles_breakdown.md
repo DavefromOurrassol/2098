@@ -35,12 +35,10 @@ zone_systemique:
 
 alliances:
 - archives_neutres_de_geneve_breakdown
-- archives_neutres_geneve_breakdown
 - collectifs_de_hackers_archivistes_des_interstices_reseaux_breakdown
 - conseil_regulation_algorithmique_breakdown
 - le_temoin_breakdown
 - reseau_mnemos_breakdown
-- tour_bcuc_geneve_breakdown
 oppositions:
 - cites_etats_secessionistes_breakdown
 - directive_kontinuum_breakdown
@@ -100,12 +98,10 @@ La Chambre est déchirée entre deux factions internes : les 'archivistes', qui 
 ## Relations
 **Alliés :**
 - [[archives_neutres_de_geneve_breakdown]]
-- [[archives_neutres_geneve_breakdown]]
 - [[collectifs_de_hackers_archivistes_des_interstices_reseaux_breakdown]]
 - [[conseil_regulation_algorithmique_breakdown]]
 - [[le_temoin_breakdown]]
 - [[reseau_mnemos_breakdown]]
-- [[tour_bcuc_geneve_breakdown]]
 **Opposants :**
 - [[cites_etats_secessionistes_breakdown]]
 - [[directive_kontinuum_breakdown]]

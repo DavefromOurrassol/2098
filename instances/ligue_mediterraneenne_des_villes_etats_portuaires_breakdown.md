@@ -37,7 +37,7 @@ zone_geographique:
 zone_systemique:
 - société
 alliances:
-- archives_neutres_geneve_breakdown
+- archives_neutres_de_geneve_breakdown
 - carthage_nord_nexcore_breakdown
 - conseil_regulation_ressources_breakdown
 - hanse_baltique_breakdown
@@ -108,7 +108,7 @@ La Ligue est tiraillée entre sa vocation d'espace neutre d'échange et les pres
 
 ## Relations
 **Alliés :**
-- [[archives_neutres_geneve_breakdown]]
+- [[archives_neutres_de_geneve_breakdown]]
 - [[carthage_nord_nexcore_breakdown]]
 - [[conseil_regulation_ressources_breakdown]]
 - [[hanse_baltique_breakdown]]

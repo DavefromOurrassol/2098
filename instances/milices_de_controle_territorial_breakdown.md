@@ -51,7 +51,7 @@ alliances:
 - seigneurs_de_guerre_agro_territoriaux_breakdown
 oppositions:
 - agadez_ligue_sahel_numerique_breakdown
-- archives_neutres_geneve_breakdown
+- archives_neutres_de_geneve_breakdown
 - blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown
 - brigades_medicales_itinerantes_breakdown
 - collectif_hackers_decroissance_infrastructure_breakdown
@@ -166,7 +166,7 @@ La tension fondamentale de ces milices réside dans leur double nature : porteus
 - [[seigneurs_de_guerre_agro_territoriaux_breakdown]]
 **Opposants :**
 - [[agadez_ligue_sahel_numerique_breakdown]]
-- [[archives_neutres_geneve_breakdown]]
+- [[archives_neutres_de_geneve_breakdown]]
 - [[blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown]]
 - [[brigades_medicales_itinerantes_breakdown]]
 - [[collectif_hackers_decroissance_infrastructure_breakdown]]

@@ -37,13 +37,11 @@ zone_geographique:
 zone_systemique:
 - société
 alliances:
-- archives_neutres_de_geneve_breakdown
 - deepfield_institute_breakdown
 oppositions:
-- archives_neutres_geneve_breakdown
+- archives_neutres_de_geneve_breakdown
 - bureau_des_territoires_residuels_breakdown
 - collectifs_de_hackers_archivistes_des_interstices_reseaux_breakdown
-- geneve_bunker_institutions_breakdown
 - lagos_interieur_mnemos_breakdown
 - noeud_mnemos_pannonie_breakdown
 - oracle_des_seuils_breakdown
@@ -112,13 +110,11 @@ La tension centrale réside dans leur propre fragmentation interne : les différ
 
 ## Relations
 **Alliés :**
-- [[archives_neutres_de_geneve_breakdown]]
 - [[deepfield_institute_breakdown]]
 **Opposants :**
-- [[archives_neutres_geneve_breakdown]]
+- [[archives_neutres_de_geneve_breakdown]]
 - [[bureau_des_territoires_residuels_breakdown]]
 - [[collectifs_de_hackers_archivistes_des_interstices_reseaux_breakdown]]
-- [[geneve_bunker_institutions_breakdown]]
 - [[lagos_interieur_mnemos_breakdown]]
 - [[noeud_mnemos_pannonie_breakdown]]
 - [[oracle_des_seuils_breakdown]]

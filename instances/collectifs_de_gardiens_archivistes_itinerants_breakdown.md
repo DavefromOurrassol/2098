@@ -40,7 +40,6 @@ zone_systemique:
 alliances:
 - agadez_ligue_sahel_numerique_breakdown
 - archives_neutres_de_geneve_breakdown
-- archives_neutres_geneve_breakdown
 - bureau_des_territoires_residuels_breakdown
 - coalition_vivant_breakdown
 - collectif_des_climatologues_sans_etat_breakdown
@@ -133,7 +132,6 @@ La tension centrale qui travaille ces collectifs est celle entre la conservation
 **Alliés :**
 - [[agadez_ligue_sahel_numerique_breakdown]]
 - [[archives_neutres_de_geneve_breakdown]]
-- [[archives_neutres_geneve_breakdown]]
 - [[bureau_des_territoires_residuels_breakdown]]
 - [[coalition_vivant_breakdown]]
 - [[collectif_des_climatologues_sans_etat_breakdown]]

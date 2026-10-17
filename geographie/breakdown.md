@@ -675,7 +675,7 @@ zones:
     CRRC n''existe plus que comme label fantôme utilisé pour légitimer des raids sur
     les données. Aucun pouvoir supranational n''y subsiste, seulement des fragments
     de légitimité instrumentalisables.'
-  statut: fragmenté
+  statut: en_declin
   tensions_internes: Conflits permanents entre la milice archivistique du Bloc IX,
     les mercenaires du Bloc IV chargés de la 'protection' des données, et des groupes
     locaux tentant de monnayer l'accès aux archives. Les anciens fonctionnaires survivent
@@ -4001,7 +4001,7 @@ Mégapoles et États côtiers encore partiellement fonctionnels qui ont permis l
 
 ### Genève-Bunker (Nœud Institutionnel Résiduel)
 
-*site_strategique — statut : fragmenté*
+*site_strategique — statut : en_declin*
 
 **Origine réelle (2026)** : Suisse, Irlande, Luxembourg, Vatican, Pologne
 

@@ -47,7 +47,6 @@ alliances:
 oppositions:
 - alliance_blocs_souverains_breakdown
 - archives_neutres_de_geneve_breakdown
-- archives_neutres_geneve_breakdown
 - arctique_nordark_breakdown
 - front_techno_reconstructionniste_breakdown
 - nexcore_breakdown
@@ -127,7 +126,6 @@ La contradiction fondamentale du Front est qu'il prétend représenter une coali
 **Opposants :**
 - [[alliance_blocs_souverains_breakdown]]
 - [[archives_neutres_de_geneve_breakdown]]
-- [[archives_neutres_geneve_breakdown]]
 - [[arctique_nordark_breakdown]]
 - [[front_techno_reconstructionniste_breakdown]]
 - [[nexcore_breakdown]]

@@ -33,30 +33,12 @@ zone_systemique:
     - société
     - sécurité
 
-alliances:
-- archives_neutres_de_geneve_breakdown
-- archives_neutres_geneve_breakdown
-- brigades_medicales_itinerantes_breakdown
-- collectifs_de_sante_communautaire_autogeree_breakdown
-- ong_de_gestion_migratoire_survivantes_breakdown
-- reseau_des_organisations_humanitaires_hors_cadre_onusien_breakdown
-- tour_bcuc_geneve_breakdown
-oppositions:
-- bloc_de_johannesburg_breakdown
-- blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown
-- cites_etats_secessionistes_breakdown
-- compagnies_de_geo_ingenierie_privees_sans_mandat_breakdown
-- enclaves_corporatives_fortifiees_breakdown
-- factions_propagandistes_des_archives_breakdown
-- front_humanitaire_d_urgence_non_affilie_breakdown
-- fronts_populistes_anti_technocratiques_breakdown
-- ligue_eurasiatique_coalition_pacifique_breakdown
-- milices_contractuelles_des_anciens_etats_membres_breakdown
-- seigneuries_logistiques_armees_breakdown
+alliances: []
+oppositions: []
 type_relation_dominante: neutralité
 
 annee_debut: 2041
-annee_fin: 2061
+annee_fin: 2076
 
 generation: post-effondrement
 
@@ -78,7 +60,7 @@ tensions_narratives: >
   Le Résidu de Genève oscille en permanence entre deux abîmes : se soumettre davantage aux logiques locales pour rester utile, au risque de ne plus être distinguable d'un simple intermédiaire mercenaire ; ou s'accrocher à une posture symbolique qui l'isole et le rend inopérant. Certains de ses fonctionnaires militent pour une alliance formelle avec les Archives Neutres afin de créer un pôle de mémoire institutionnelle à valeur contraignante ; d'autres craignent que cette fusion ne les dévoie définitivement vers l'archivage plutôt que vers l'action. La question non dite est : qui, dans ce monde fracturé, a encore besoin d'une légitimité qui ne s'appuie sur aucune force ?
 
 date_creation: 2026-06-27
-trajectoire: transformé
+trajectoire: disparu
 est_clandestin: false
 
 ---
@@ -104,22 +86,4 @@ Le Résidu de Genève oscille en permanence entre deux abîmes : se soumettre da
 
 ## Relations
 **Alliés :**
-- [[archives_neutres_de_geneve_breakdown]]
-- [[archives_neutres_geneve_breakdown]]
-- [[brigades_medicales_itinerantes_breakdown]]
-- [[collectifs_de_sante_communautaire_autogeree_breakdown]]
-- [[ong_de_gestion_migratoire_survivantes_breakdown]]
-- [[reseau_des_organisations_humanitaires_hors_cadre_onusien_breakdown]]
-- [[tour_bcuc_geneve_breakdown]]
 **Opposants :**
-- [[bloc_de_johannesburg_breakdown]]
-- [[blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown]]
-- [[cites_etats_secessionistes_breakdown]]
-- [[compagnies_de_geo_ingenierie_privees_sans_mandat_breakdown]]
-- [[enclaves_corporatives_fortifiees_breakdown]]
-- [[factions_propagandistes_des_archives_breakdown]]
-- [[front_humanitaire_d_urgence_non_affilie_breakdown]]
-- [[fronts_populistes_anti_technocratiques_breakdown]]
-- [[ligue_eurasiatique_coalition_pacifique_breakdown]]
-- [[milices_contractuelles_des_anciens_etats_membres_breakdown]]
-- [[seigneuries_logistiques_armees_breakdown]]

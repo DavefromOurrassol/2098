@@ -44,7 +44,6 @@ alliances:
 - flux_migratoires_non_integrables_breakdown
 - frente_sertao_livre_breakdown
 - front_humanitaire_d_urgence_non_affilie_breakdown
-- geneve_bunker_institutions_breakdown
 - les_veilleurs_du_fleuve_breakdown
 - mouvement_des_communes_du_rust_belt_breakdown
 - nairobi_crrc_breakdown
@@ -134,7 +133,6 @@ La tension centrale qui traverse ces collectifs est celle entre l'urgence du soi
 - [[flux_migratoires_non_integrables_breakdown]]
 - [[frente_sertao_livre_breakdown]]
 - [[front_humanitaire_d_urgence_non_affilie_breakdown]]
-- [[geneve_bunker_institutions_breakdown]]
 - [[les_veilleurs_du_fleuve_breakdown]]
 - [[mouvement_des_communes_du_rust_belt_breakdown]]
 - [[nairobi_crrc_breakdown]]

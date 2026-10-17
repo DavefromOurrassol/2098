@@ -78,7 +78,6 @@ oppositions:
 - reseau_logistique_criminel_concurrent_breakdown
 - seigneuries_logistiques_armees_breakdown
 - seigneurs_de_guerre_agro_territoriaux_breakdown
-- tour_bcuc_geneve_breakdown
 - vasil_orentchev_breakdown
 type_relation_dominante: conflit
 annee_debut: 2054
@@ -183,7 +182,6 @@ Le Front est tiraillé entre sa posture de résistance non-violente héritée de
 - [[reseau_logistique_criminel_concurrent_breakdown]]
 - [[seigneuries_logistiques_armees_breakdown]]
 - [[seigneurs_de_guerre_agro_territoriaux_breakdown]]
-- [[tour_bcuc_geneve_breakdown]]
 - [[vasil_orentchev_breakdown]]
 
 ## Notes

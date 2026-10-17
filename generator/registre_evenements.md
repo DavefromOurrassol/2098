@@ -10,7 +10,7 @@ RÈGLE DE LECTURE DE LA COLONNE "date" :
   - type=signal    -> fenêtre "AAAA-AAAA" (date_bascule du signal_to_state)
   - type=evenement -> année unique "AAAA" (date précise de l'instance)
 
-Total : 639 entrées (96 signaux uniques × 6 scénarios + 63 entrées d'événements custom).
+Total : 641 entrées (96 signaux uniques × 6 scénarios + 65 entrées d'événements custom).
 
 ## breakdown
 
@@ -123,6 +123,7 @@ Total : 639 entrées (96 signaux uniques × 6 scénarios + 63 entrées d'événe
 | evenement | 2061 | communes_rust_belt_zones_libres | geopolitique_conflits, valeurs_culture_tempo_sociale, gouvernance_institutions, organisation_territoires | — | Rust Belt proclame zones libres algorithme, 2061 |
 | evenement | 2061 | grand_forum_sahel_numerique | technologie_information, gouvernance_institutions, organisation_territoires | — | Forum d'Agadez fracturé, Charte disputée par les éclats, 2061 |
 | evenement | 2073 | emeutes_algorithme_sao_paulo | gouvernance_institutions, technologie_information, organisation_territoires | — | São Paulo brise l'algorithme fantôme, 2073 |
+| evenement | 2076 | destruction_geneve_2076 | gouvernance_institutions | — | 2076, Genève réduite en cendres par l'explosion souterraine |
 | evenement | 2098 | ils_ont_noye_les_archives_a_milwaukee_basse_le_reg | technologie_information, geopolitique_conflits | — | 2098, Milwaukee-Basse noie les archives du Registre |
 
 ## fortress_world
@@ -679,4 +680,5 @@ Total : 639 entrées (96 signaux uniques × 6 scénarios + 63 entrées d'événe
 | evenement | 2055 | accord_carbone_amazonie_blocs | climat_environnement_global, gouvernance_institutions, geopolitique_conflits, energie_ressources_critiques | — | Belém signe le pacte carbone amazonie fracture 2055 |
 | evenement | 2059 | incident_passage_arctique | geopolitique_conflits, frontieres_du_systeme, energie_ressources_critiques | — | Convoi arctique saisi, premières armes tirées 2059 |
 | evenement | 2073 | emeutes_algorithme_sao_paulo | gouvernance_institutions, technologie_information, organisation_territoires | — | Favelas décodent le SPAAR, soulèvement urbain São Paulo 2073 |
+| evenement | 2081 | explosion_brise_glace_murmansk_2081 | organisation_territoires, geopolitique_conflits, energie_ressources_critiques, systeme_economique_redistribution, demographie_mobilite_humaine | — | 2081, le brise-glace nucléaire qui brisa Murmansk |
 | evenement | 2098 | nairobi_biorevenu_pilote_2098 | sante_biotechnologies, systeme_economique_redistribution, systemes_productifs_travail, gouvernance_institutions, valeurs_culture_tempo_sociale | — | Nairobi lance le bio-revenu universel algorithmique 2098 |

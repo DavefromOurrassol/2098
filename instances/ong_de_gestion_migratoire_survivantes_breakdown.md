@@ -34,12 +34,10 @@ zone_geographique:
 zone_systemique:
 - société
 alliances:
-- agence_stabilisation_climatique_breakdown
 - archives_neutres_de_geneve_breakdown
 - brigades_medicales_itinerantes_breakdown
 - collectifs_de_sante_communautaire_autogeree_breakdown
 - front_humanitaire_d_urgence_non_affilie_breakdown
-- geneve_bunker_institutions_breakdown
 - gouvernements_regionaux_residuels_reterritorialisants_breakdown
 - midwest_desertifie_breakdown
 - reseau_des_organisations_humanitaires_hors_cadre_onusien_breakdown
@@ -112,12 +110,10 @@ La tension centrale de ces ONG réside dans la contradiction entre leur mandat h
 
 ## Relations
 **Alliés :**
-- [[agence_stabilisation_climatique_breakdown]]
 - [[archives_neutres_de_geneve_breakdown]]
 - [[brigades_medicales_itinerantes_breakdown]]
 - [[collectifs_de_sante_communautaire_autogeree_breakdown]]
 - [[front_humanitaire_d_urgence_non_affilie_breakdown]]
-- [[geneve_bunker_institutions_breakdown]]
 - [[gouvernements_regionaux_residuels_reterritorialisants_breakdown]]
 - [[midwest_desertifie_breakdown]]
 - [[reseau_des_organisations_humanitaires_hors_cadre_onusien_breakdown]]

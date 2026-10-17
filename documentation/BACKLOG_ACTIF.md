@@ -36,7 +36,12 @@ export et banc de rejeu avec liste de référence (26/27) —, doublons probable
 ajoutés à S24 ; le 12 octobre : S27 avancé — passe exhaustive branchée dans
 le simulateur (v8.16 → v8.16.2, case GUI), ⚠ des variables corrigé, étape
 « décider » outillée (v8.17 → v8.17.1, `et_si_dossiers.py`, panneau GUI),
-panneaux de fichiers du GUI ouverts dans Obsidian ou VS Code), mis à jour en continu
+panneaux de fichiers du GUI ouverts dans Obsidian ou VS Code) ; les 13-15
+octobre : S27 avancé — Genève appliquée à la main (liste jugée non
+exhaustive), faits imposés à l'injection (v8.18), opérations structurées
+(v8.19), phase 4 `appliquer_et_si.py` livrée (non testée en réel), banc de
+rejeu breakdown périmé —, S24 : doublon des Archives Neutres fusionné, Hanse
+Baltique ajoutée), mis à jour en continu
 à chaque clôture de session. Chantiers clos et leur historique complet
 dans `BACKLOG_ARCHIVE.md` (fichier séparé, à uploader seulement en cas
 de besoin de vérifier si un point a déjà été traité). Chaque chantier
@@ -416,7 +421,10 @@ correctif `write_alliances_patch()`, exceptions NAT supprimées. Détail :
   maritime). Renommage possible un jour, pas urgent.
 - ~~`_a_supprimer/`~~ — **vidé et supprimé le 6 oct** (articles Hyphan,
   doublon Kharg-9, article test S26). Le dossier peut resservir pour retirer
-  un article du site (il est hors `articles/`).
+  un article du site (il est hors `articles/`). *13 oct* : il contient la fiche
+  et l'archétype fusionnés des Archives Neutres
+  (`fusion_archives_neutres_geneve_breakdown_20261013_1921/`), à vider quand la
+  fusion est confirmée.
 
 ---
 
@@ -657,14 +665,19 @@ Rien de bloquant :
   temps (aperçu gratuit) — relancé le 6 oct : 0 article.
 - **Doublon de génération Kharg-9** : voir S25.
 - **Doublons probables repérés par la passe exhaustive (11 oct)**, à vérifier
-  à la main, rien n'a été modifié : fortress_world,
+  à la main : fortress_world,
   `bureau_des_territoires_residuels_fortress_world` /
-  `bureau_territoires_residuels_fortress_world` ; breakdown, deux « Archives
-  Neutres de Genève » (`archives_neutres_de_geneve_breakdown`, émergent ;
-  `archives_neutres_geneve_breakdown`, résiduel) et trois « Communes Libres du
-  Rust Belt — Les Forges du Commun » (`communes_rust_belt_breakdown`,
+  `bureau_territoires_residuels_fortress_world` ; breakdown, trois « Communes
+  Libres du Rust Belt — Les Forges du Commun » (`communes_rust_belt_breakdown`,
   `communes_rust_belt_zones_libres_breakdown`,
-  `mouvement_des_communes_du_rust_belt_breakdown`).
+  `mouvement_des_communes_du_rust_belt_breakdown`) ; *13 oct* : breakdown,
+  `hanse_baltique_breakdown` / `hanse_baltique_recomposee_breakdown` (repéré en
+  retirant les relations des entités disparues de Genève).
+  ~~Archives Neutres de Genève~~ — **fusionnées le 13 oct**
+  (`archives_neutres_geneve_breakdown` → `archives_neutres_de_geneve_breakdown`,
+  17 fichiers ; fiche et archétype dans `_a_supprimer/` ; voir
+  `BACKLOG_ARCHIVE.md`). Outil : `fusionner_doublon_instance.py --garder A
+  --retirer B` (aperçu, puis `--apply` ; manuel §3quinquies).
 
 ---
 
@@ -700,76 +713,59 @@ Mode Forcer, champ « Journal d'une autre zone » (liste déroulante,
 
 ---
 
-## 🟡 S27. Simulateur « et si ? » et pipeline d'injection — v8.17.1 : passe branchée et étape « décider » le 12 oct
-**Fait du 9 au 12 oct** (manuel §3quinquies, `HANDOFF_9_OCTOBRE.md` à
-`HANDOFF_12_OCTOBRE.md`) : `generator/simuler_et_si.py` (v8.17.1),
+## 🟡 S27. Simulateur « et si ? » et pipeline d'injection — v8.19 et phase 4 livrées le 15 oct
+**Fait du 9 au 15 oct** (manuel §3quinquies, `HANDOFF_9_OCTOBRE.md` à
+`HANDOFF_15_OCTOBRE.md`) : `generator/simuler_et_si.py` (v8.19),
 `generator/hypothese_depuis_texte.py`, `generator/et_si_exhaustif.py` (v9.5),
-`generator/et_si_dossiers.py` (12 oct), `generator/export_et_si.py`,
-`generator/rejeu/`, `et_si/hypotheses.yaml`. Lecture seule, sauf l'assistant
-(ajoute des hypothèses), le dossier de chaque hypothèse
-(`generator/state/et_si_dossiers.json`) et « Adopter » (écrit dans
-`evenements_custom/queue.yaml`).
-- **Étage A — niveaux** avec / sans, en **mode choc** (amorti) ou **mode
-  rupture** (v7.4 : l'équilibre du scénario se déplace pour de bon).
-- **Étage B — lecture IA** contrôlée ; carte seulement si un territoire
-  change de mains (v7.3) ; `carte: non` écarte carte, région et zones
-  `disparu` (v7.5) ; corrections automatiques des relations listées (v7.9).
-- **Étage C — carte en aperçu** : absorber, nouvelle zone, **partition**
-  (v7, modèles France / Allemagne), **région** (v7.6, sous-zone sans
-  changement de mains).
-- **GUI** : entrée « 🔮 Simulateur « et si ? » », onglets Simuler et Nouvelle
-  hypothèse (assistant ✨) ; case **Passe exhaustive** (12 oct) ; panneau
-  **⚖️ Décider** (12 oct) ; statut du dossier dans la liste des hypothèses ;
-  panneaux réduits au nom du fichier (`hypotheses.yaml` → VS Code, rapport →
-  Obsidian, 12 oct).
-- **Phase 3 — liste d'application** (v8 → v8.14, 10 oct). **Statut : en
-  service, non validée** — aucune liste n'a encore été appliquée pour de vrai.
-- **Pipeline « tester → décider → injecter »** (11-12 oct, option (a) d'abord,
-  étape vers (b)) :
-  - **impositions** dans `inject_custom_events.py` (`impacts_imposes`,
-    `date_imposee`, `via_matrice_impose`) ; v8.15 : l'entrée commune du
-    rapport les transmet ;
-  - **passe exhaustive** (`et_si_exhaustif.py` v9.5, ≈ 0,05-0,11 $ par
-    scénario) : obligatoire / possible, contre-lecture, 20 possibles
-    prioritaires ; **banc de rejeu** : 26/27 verdicts conformes (inchangé le
-    12 oct) ;
-  - **passe branchée dans le simulateur** (v8.16 → v8.16.2, 12 oct) :
-    obligatoires dans la liste d'application (« [passe exhaustive] »), 20
-    possibles prioritaires en section « Possibles (facultatif) », relations
-    rompues d'une entité disparue regroupées, pas de doublon avec la recherche
-    par mots, ⚠ sur une relation rompue « parce que l'entité a disparu » alors
-    qu'elle n'est déclarée disparue nulle part ; `acteurs_hint` de l'entrée
-    commune = entités les plus touchées, 4 au plus par scénario ;
-  - **`inject_custom_events.py`** (12 oct) : ⚠ « N variables reçues au lieu de
-    4 max » supprimé quand les impacts sont imposés ; un `acteurs_hint` d'un
-    autre scénario n'est pas imposé ;
-  - **étape « décider »** (v8.17 → v8.17.1, 12 oct) : `--dossiers`,
-    `--adopter <id> --portee … --intensite … [--apercu]`, `--rejeter <id>
-    --motif …`, `--annuler-decision <id>` ; statut calculé à la lecture (non
-    simulé, simulé, rejeté, adopté en attente d'injection, injecté,
-    injecté partiellement, à revoir, adopté absent de la queue) ; adoption
-    refusée si la simulation est partielle ou si l'hypothèse a changé depuis.
-    Validé en ligne de commande et dans le GUI sur Genève (adoptée puis
-    décision annulée : Genève est « simulé », la queue est vide).
+`generator/et_si_dossiers.py`, `generator/appliquer_et_si.py` (15 oct),
+`generator/export_et_si.py`, `generator/rejeu/`, `et_si/hypotheses.yaml`.
+Tout le pipeline est outillé : **tester** (niveaux avec / sans en mode choc ou
+rupture, lecture IA, carte en aperçu, passe exhaustive) → **décider**
+(dossiers, adopter / rejeter, panneau ⚖️ Décider) → **injecter** (valeurs et
+faits imposés) → **appliquer** (phase 4). Détail des versions jusqu'au 12 oct :
+`BACKLOG_ARCHIVE.md`.
+- **13 oct — Genève appliquée pour de vrai, à la main** (point 1 du 12 oct) :
+  adoptée, injectée (le complexe enterré de Genève-Bunker résiste ; le lieu
+  survit en `en_declin`, l'institution « Palais des Fantômes » disparaît),
+  trajectoires (4), statut de zone, 3 disparues retirées des relations de 30
+  fiches, doublon des Archives fusionné (S24) ; base valide. **Constat : la
+  liste d'application n'est pas exhaustive** (5 relations relevées sur 30
+  fiches), l'injection réinventait le sort des entités, et « la matrice »
+  venait de notre propre prompt. Étapes encore à faire pour Genève : voir 2.
+- **15 oct — v8.18** : `faits_imposes` dans l'entrée commune (contraintes, sort
+  de chaque acteur, zones changées), bloc « FAITS IMPOSÉS » à l'injection, ⚠
+  sans rejet si le récit les contredit ou emploie « matrice ». **v8.19** :
+  opérations structurées par simulation
+  (`generator/state/et_si_application/<id>.json`). **Phase 4** :
+  `appliquer_et_si.py` (aperçu, `--sauter` / `--inclure`, `--apply`, journal) —
+  testé sur un faux vault, **pas encore en conditions réelles**.
+- **Banc de rejeu** : 21/27 le 15 oct, sans régression du code — les caches des
+  deux couples breakdown sont périmés (vault modifié le 13 oct ; peste
+  rafraîchie sans lecture IA, ≈ 0,10 $). Seuil provisoire : 4 couples hors
+  breakdown conformes (manuel §3quinquies).
 Reste, dans l'ordre proposé :
-1. **Appliquer une liste pour de vrai**, au moins une fois — candidat :
-   `destruction_geneve_2076` (adopter, injecter, puis dérouler sa liste
-   d'application), ou une copie du vault. Seule validation possible de la
-   phase 3 et préalable à la phase 4 (option b) ; une partie des étapes est
-   payante. Premier passage réel aussi pour le statut « injecté » des
-   dossiers. Trous qui restent « à la main » : migration des journaux d'une
-   zone morte, statuts de zone, trajectoires, relations rompues, catégorie des
-   nouvelles entités.
-2. **Décision S19 — mode rupture dans le vrai moteur** : la liste propose de
-   changer la référence à la main (`variables/*.md`) et de créer l'événement
-   pour le récit sans impact chiffré ; l'autre voie est de faire évoluer
-   `snapshot` / Tracer.
-3. **Amplitude des chocs** (`GAIN_CHOCS`, voir S19) à juger avant tout
-   réglage.
-4. **Anomalies de données** relevées par le simulateur et la passe (voir S24).
-5. Optionnel : **homonymes** (Santa Cruz, Sucre, Perth, Medina) ; **synthèse
+1. **Test réel de la phase 4** : une nouvelle hypothèse simulée avec lecture IA
+   et passe exhaustive (≈ 0,15 $), adoptée, injectée (vérifier les ⚠ de v8.18),
+   puis `appliquer_et_si.py --id <id>` (aperçu, tri, `--apply`). Genève ne
+   convient plus (déjà appliquée).
+2. **Genève, hors application mécanique** : règle de lore (étape 26), phrase de
+   l'AMSC (27), zones et articles à relire (28-33, 55), résumé du scénario et
+   site (56-57), `audit_lore.py --scenario breakdown` (59) ; vérifier la fiche
+   `agence_stabilisation_climatique_breakdown` (aucune relation retirée de son
+   corps : section « ## Relations » absente ?).
+3. **Décision S19 — mode rupture dans le vrai moteur** (`appliquer_et_si.py`
+   refuse le mode rupture en attendant) : la liste propose de changer la
+   référence à la main (`variables/*.md`) et de créer l'événement pour le récit
+   sans impact chiffré ; l'autre voie est de faire évoluer `snapshot` / Tracer.
+4. **Amplitude des chocs** (`GAIN_CHOCS`, voir S19) à juger avant tout réglage.
+5. **Banc de rejeu** : rebâtir les couples breakdown sur le vault actuel (lecture
+   neuve, nouveau tri manuel des verdicts).
+6. **GUI** : brancher `appliquer_et_si.py` (panneau ⚖️ Décider ou voisin).
+7. **Anomalies de données** relevées par le simulateur et la passe (voir S24).
+8. Optionnel : **homonymes** (Santa Cruz, Sucre, Perth, Medina) ; **synthèse
    haut niveau** le jour où le besoin existe ; option GUI `lien_seul` à
-   étendre à d'autres panneaux si besoin.
+   étendre à d'autres panneaux si besoin ; récit IA de `trace_injection.py`
+   qui a échoué deux fois sur Genève (repli sur le modèle, sans conséquence).
 Méthode de réglage de la passe : banc de rejeu d'abord (gratuit) ; une
 consigne IA modifiée (`VERSION_PROMPT`, `VERSION_CONTRE`, `VERSION_CLASSEMENT`)
 demande une relance réelle des six cas puis un export (manuel §3quinquies).

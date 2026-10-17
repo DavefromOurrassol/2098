@@ -39,7 +39,6 @@ zone_systemique:
 - société
 alliances:
 - archives_neutres_de_geneve_breakdown
-- archives_neutres_geneve_breakdown
 - bureau_des_territoires_residuels_breakdown
 - collectif_des_climatologues_sans_etat_breakdown
 - collectif_hackers_decroissance_infrastructure_breakdown
@@ -129,7 +128,6 @@ La tension fondamentale qui déchire ces collectifs est celle entre la préserva
 ## Relations
 **Alliés :**
 - [[archives_neutres_de_geneve_breakdown]]
-- [[archives_neutres_geneve_breakdown]]
 - [[bureau_des_territoires_residuels_breakdown]]
 - [[collectif_des_climatologues_sans_etat_breakdown]]
 - [[collectif_hackers_decroissance_infrastructure_breakdown]]

@@ -42,7 +42,6 @@ alliances:
 - corridors_eurasiens_convoyage_breakdown
 - federation_communs_territoriaux_breakdown
 - reseau_mnemos_breakdown
-- tour_bcuc_geneve_breakdown
 oppositions:
 - factions_propagandistes_des_archives_breakdown
 - milices_de_controle_territorial_breakdown
@@ -108,7 +107,6 @@ La neutralité des Gardiens est leur seul bouclier, mais elle se fissure : une s
 - [[corridors_eurasiens_convoyage_breakdown]]
 - [[federation_communs_territoriaux_breakdown]]
 - [[reseau_mnemos_breakdown]]
-- [[tour_bcuc_geneve_breakdown]]
 **Opposants :**
 - [[factions_propagandistes_des_archives_breakdown]]
 - [[milices_de_controle_territorial_breakdown]]

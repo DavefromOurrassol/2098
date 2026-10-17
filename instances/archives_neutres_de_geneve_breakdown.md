@@ -49,25 +49,31 @@ alliances:
 - communautes_religieuses_des_relais_physiques_breakdown
 - conseil_regulation_ressources_breakdown
 - enclaves_industrielles_de_bergen_troms_breakdown
-- factions_propagandistes_des_archives_breakdown
+- enclaves_technologiques_survivantes_breakdown
+- front_humanitaire_d_urgence_non_affilie_breakdown
 - gelecek_meclisi_breakdown
-- geneve_bunker_institutions_breakdown
 - gouvernements_regionaux_residuels_reterritorialisants_breakdown
 - institut_des_seuils_demographiques_breakdown
 - ligue_des_cites_littorales_en_sursis_breakdown
+- ligue_mediterraneenne_des_villes_etats_portuaires_breakdown
 - meridian_assembly_breakdown
 - milices_privees_documentees_terrain_breakdown
 - noeud_mnemos_pannonie_breakdown
 - ong_de_gestion_migratoire_survivantes_breakdown
 - oracle_des_seuils_breakdown
-- tour_bcuc_geneve_breakdown
+- reseau_des_courriers_nomades_sahelo_mediterraneens_breakdown
 - tribunal_algorithmique_de_bruxelles_breakdown
 oppositions:
 - arctique_nordark_breakdown
 - bloc_de_johannesburg_breakdown
 - consortium_energetique_oural_caspien_breakdown
+- enclaves_corporatives_fortifiees_breakdown
 - etats_fragments_en_guerre_pour_les_stations_atmospheriques_breakdown
+- factions_propagandistes_des_archives_breakdown
 - front_des_blocs_regionaux_du_recit_des_conflits_ressources_breakdown
+- gouvernements_de_forteresse_anti_nairobi_breakdown
+- milices_de_controle_territorial_breakdown
+- reseau_des_anciens_financeurs_devenus_censeurs_breakdown
 - seigneuries_logistiques_armees_breakdown
 type_relation_dominante: neutralité
 annee_debut: 2041
@@ -102,7 +108,7 @@ tensions_narratives: 'La tension fondamentale des Archives est celle de l''archi
   de savoir si préserver un ordre juridique effondré constitue un acte de résistance
   ou de mystification.'
 date_creation: 2026-06-20
-trajectoire: émergent
+trajectoire: résiduel
 est_clandestin: false
 
 ---
@@ -143,25 +149,31 @@ La tension fondamentale des Archives est celle de l'archive sans autorité : ell
 - [[communautes_religieuses_des_relais_physiques_breakdown]]
 - [[conseil_regulation_ressources_breakdown]]
 - [[enclaves_industrielles_de_bergen_troms_breakdown]]
-- [[factions_propagandistes_des_archives_breakdown]]
+- [[enclaves_technologiques_survivantes_breakdown]]
+- [[front_humanitaire_d_urgence_non_affilie_breakdown]]
 - [[gelecek_meclisi_breakdown]]
-- [[geneve_bunker_institutions_breakdown]]
 - [[gouvernements_regionaux_residuels_reterritorialisants_breakdown]]
 - [[institut_des_seuils_demographiques_breakdown]]
 - [[ligue_des_cites_littorales_en_sursis_breakdown]]
+- [[ligue_mediterraneenne_des_villes_etats_portuaires_breakdown]]
 - [[meridian_assembly_breakdown]]
 - [[milices_privees_documentees_terrain_breakdown]]
 - [[noeud_mnemos_pannonie_breakdown]]
 - [[ong_de_gestion_migratoire_survivantes_breakdown]]
 - [[oracle_des_seuils_breakdown]]
-- [[tour_bcuc_geneve_breakdown]]
+- [[reseau_des_courriers_nomades_sahelo_mediterraneens_breakdown]]
 - [[tribunal_algorithmique_de_bruxelles_breakdown]]
 **Opposants :**
 - [[arctique_nordark_breakdown]]
 - [[bloc_de_johannesburg_breakdown]]
 - [[consortium_energetique_oural_caspien_breakdown]]
+- [[enclaves_corporatives_fortifiees_breakdown]]
 - [[etats_fragments_en_guerre_pour_les_stations_atmospheriques_breakdown]]
+- [[factions_propagandistes_des_archives_breakdown]]
 - [[front_des_blocs_regionaux_du_recit_des_conflits_ressources_breakdown]]
+- [[gouvernements_de_forteresse_anti_nairobi_breakdown]]
+- [[milices_de_controle_territorial_breakdown]]
+- [[reseau_des_anciens_financeurs_devenus_censeurs_breakdown]]
 - [[seigneuries_logistiques_armees_breakdown]]
 
 ## Notes

@@ -37,7 +37,6 @@ zone_geographique:
 zone_systemique:
 - société
 alliances:
-- agence_stabilisation_climatique_breakdown
 - archives_neutres_de_geneve_breakdown
 - cargo_mombasa_crrc_breakdown
 - collectifs_de_gardiens_archivistes_itinerants_breakdown
@@ -48,7 +47,6 @@ alliances:
 - lagos_est_nexcore_breakdown
 - reseau_des_organisations_humanitaires_hors_cadre_onusien_breakdown
 - sfax_relais_bouches_breakdown
-- tour_bcuc_geneve_breakdown
 oppositions:
 - enclaves_corporatives_fortifiees_breakdown
 - gouvernements_de_forteresse_anti_nairobi_breakdown
@@ -121,7 +119,6 @@ La tension centrale de la Ligue réside dans l'impossibilité de son mandat : re
 
 ## Relations
 **Alliés :**
-- [[agence_stabilisation_climatique_breakdown]]
 - [[archives_neutres_de_geneve_breakdown]]
 - [[cargo_mombasa_crrc_breakdown]]
 - [[collectifs_de_gardiens_archivistes_itinerants_breakdown]]
@@ -132,7 +129,6 @@ La tension centrale de la Ligue réside dans l'impossibilité de son mandat : re
 - [[lagos_est_nexcore_breakdown]]
 - [[reseau_des_organisations_humanitaires_hors_cadre_onusien_breakdown]]
 - [[sfax_relais_bouches_breakdown]]
-- [[tour_bcuc_geneve_breakdown]]
 **Opposants :**
 - [[enclaves_corporatives_fortifiees_breakdown]]
 - [[gouvernements_de_forteresse_anti_nairobi_breakdown]]

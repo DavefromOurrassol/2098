@@ -34,7 +34,6 @@ zone_principale: afrique_de_louest_lagos_sahel
 date_publication: 18 octobre 2098
 entites_citees:
   - archives_neutres_de_geneve_breakdown
-  - archives_neutres_geneve_breakdown
   - collectifs_de_hackers_archivistes_des_interstices_reseaux_breakdown
   - cooperative_terrafond_breakdown
   - grandes_lacs_compact_eau_breakdown
@@ -75,4 +74,4 @@ Pourtant, quelque part dans les *fragments Terrafond* de la vallée de l’Allie
 Le problème ? Les graines ont besoin d’eau. Et l’eau, dans l’*Arc Sahélo-Méditerranéen*, coule désormais vers le nord. *« Les milices du *Bloc IV* ont compris une chose »*, analyse Diallo. *« Dans un monde où tout s’effondre, celui qui contrôle l’information contrôle les survivants. Et celui qui contrôle les survivants contrôle l’avenir. »* Les *Bouches de l’Abîme* l’ont écrit en latin, dans un coin de leur dernier envoi : *« Civis pacem parat bellum. »* Le citoyen prépare la paix par la guerre. Mais dans le Sahel de 2098, la guerre n’a plus de règles. Et la paix n’est plus qu’un mot.
 
 ---
-**Voir aussi** : [[archives_neutres_de_geneve_breakdown]] · [[archives_neutres_geneve_breakdown]] · [[collectifs_de_hackers_archivistes_des_interstices_reseaux_breakdown]] · [[cooperative_terrafond_breakdown]] · [[grandes_lacs_compact_eau_breakdown]] · [[seigneuries_logistiques_armees_breakdown]] · [[terminal_kharg_data_haven_breakdown]] · [[24_octobre_2098]] · [[la_charte_d_agadez_brisee_quand_les_archives_se_font_armes_dans_l_arc_sahelo_med]] · [[mnemos_nous_ment_l_ordre_zonal_face_a_l_effondrement_des_recits_partages]]
+**Voir aussi** : [[archives_neutres_de_geneve_breakdown]] · [[collectifs_de_hackers_archivistes_des_interstices_reseaux_breakdown]] · [[cooperative_terrafond_breakdown]] · [[grandes_lacs_compact_eau_breakdown]] · [[seigneuries_logistiques_armees_breakdown]] · [[terminal_kharg_data_haven_breakdown]] · [[24_octobre_2098]] · [[la_charte_d_agadez_brisee_quand_les_archives_se_font_armes_dans_l_arc_sahelo_med]] · [[mnemos_nous_ment_l_ordre_zonal_face_a_l_effondrement_des_recits_partages]]

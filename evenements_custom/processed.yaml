@@ -4322,3 +4322,145 @@ processed:
   - policy_reform
   - reference
   status: injected
+- idea:
+    id: destruction_geneve_2076
+    description: En mars 2076, l'explosion du dépôt énergétique souterrain de Genève
+      rase la ville et ses abords. Les institutions internationales qui y survivaient
+      perdent leurs bâtiments de surface, leurs archives physiques et la plupart de
+      leur personnel. Seul le complexe enterré de Genève-Bunker résiste, isolé au
+      milieu des ruines.
+    portee: regionale
+    date_approximative: 2076
+    intensite: majeure
+    persistance: permanente
+    scenarios:
+    - breakdown
+    variables_hint:
+    - gouvernance_institutions
+    variables_hint_count: 1
+    source: et_si_destruction_geneve_2076
+    acteurs_hint:
+    - archives_neutres_de_geneve_breakdown
+    - agence_stabilisation_climatique_breakdown
+    - tour_bcuc_geneve_breakdown
+    - geneve_bunker_institutions_breakdown
+    acteurs_hint_count: 4
+    date_imposee: 2076
+    impacts_imposes:
+      breakdown:
+      - variable: gouvernance_institutions
+        delta_level: 6
+        duree: 2
+        polarite: 1
+    via_matrice_impose: true
+  selection:
+    variables:
+    - gouvernance_institutions
+    - geopolitique_conflits
+    - organisation_territoires
+    - demographie_mobilite_humaine
+    type_evenement: political_social
+  injected_scenarios:
+  - breakdown
+  status: injected
+- idea:
+    id: explosion_brise_glace_murmansk_2081
+    description: En 2081, l'explosion d'un brise-glace à propulsion nucléaire à quai
+      détruit le port et les installations de Murmansk Transit Arctique. L'infrastructure
+      Murmansk Transit Arctique disparaît définitivement. La ville de Mourmansk survit,
+      mais déclinante et en partie évacuée. Le Passage Arctique du Nord reste ouvert.
+      L'Armada Logistique Nordique, basée à Tromsø, récupère l'essentiel du trafic
+      arctique et se renforce, sans changer de nature.
+    portee: regionale
+    date_approximative: 2081
+    intensite: forte
+    persistance: normale
+    scenarios:
+    - reference
+    variables_hint:
+    - organisation_territoires
+    - geopolitique_conflits
+    - energie_ressources_critiques
+    - systeme_economique_redistribution
+    - demographie_mobilite_humaine
+    variables_hint_count: 5
+    source: et_si_explosion_brise_glace_murmansk_2081
+    acteurs_hint:
+    - murmansk_transit_arctique_reference
+    - conseil_des_etats_nordiques_integres_reference
+    - fonds_souverain_arctique_scandinave_reference
+    - siberie_federale_reference
+    acteurs_hint_count: 4
+    faits_imposes:
+      reference:
+      - fait: L'infrastructure Murmansk Transit Arctique disparaît définitivement.
+        sort: contrainte
+      - fait: La ville de Mourmansk survit, mais déclinante et en partie évacuée.
+        sort: contrainte
+      - fait: Le Passage Arctique du Nord reste ouvert.
+        sort: contrainte
+      - fait: L'Armada Logistique Nordique, basée à Tromsø, récupère l'essentiel du
+          trafic arctique et se renforce, sans changer de nature.
+        sort: contrainte
+      - fait: 'Murmansk Transit Arctique (murmansk_transit_arctique_reference) disparaît
+          en 2081 (trajectoire dominant → disparu) : après cette date, elle n''agit
+          plus.'
+        slug: murmansk_transit_arctique_reference
+        sort: disparait
+      - fait: 'Conseil des États Nordiques Intégrés (conseil_des_etats_nordiques_integres_reference)
+          passe de « émergent » à « ascendant » après 2081 : elle existe toujours
+          (elle peut perdre des lieux, des biens ou du pouvoir), ne la décris pas
+          comme disparue.'
+        slug: conseil_des_etats_nordiques_integres_reference
+        sort: change
+      - fait: 'Fonds Souverain Arctique Scandinave (fonds_souverain_arctique_scandinave_reference)
+          passe de « émergent » à « ascendant » après 2081 : elle existe toujours
+          (elle peut perdre des lieux, des biens ou du pouvoir), ne la décris pas
+          comme disparue.'
+        slug: fonds_souverain_arctique_scandinave_reference
+        sort: change
+      - fait: 'Sibérie Fédérale (siberie_federale_reference) passe de « émergent »
+          à « marginal » après 2081 : elle existe toujours (elle peut perdre des lieux,
+          des biens ou du pouvoir), ne la décris pas comme disparue.'
+        slug: siberie_federale_reference
+        sort: change
+      - fait: 'La zone Mourmansk (murmansk_transit_arctique) passe de « stable » à
+          « en_declin » : le lieu subsiste.'
+        slug: murmansk_transit_arctique
+        sort: zone
+    date_imposee: 2081
+    impacts_imposes:
+      reference:
+      - variable: organisation_territoires
+        delta_level: 6
+        duree: 2
+        polarite: 1
+      - variable: geopolitique_conflits
+        delta_level: 5
+        duree: 3
+        polarite: 1
+      - variable: energie_ressources_critiques
+        delta_level: 4
+        duree: 1
+        polarite: 1
+      - variable: systeme_economique_redistribution
+        delta_level: 5
+        duree: 5
+        polarite: 1
+      - variable: demographie_mobilite_humaine
+        delta_level: 3
+        duree: 3
+        polarite: 1
+    via_matrice_impose: true
+  selection:
+    variables:
+    - organisation_territoires
+    - geopolitique_conflits
+    - energie_ressources_critiques
+    - systeme_economique_redistribution
+    - demographie_mobilite_humaine
+    - systemes_productifs_travail
+    type_evenement: systemic
+  injected_scenarios:
+  - reference
+  status: injected

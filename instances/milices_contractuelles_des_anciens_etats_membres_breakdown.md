@@ -54,11 +54,9 @@ oppositions:
 - collectif_hackers_decroissance_infrastructure_breakdown
 - communautes_rurales_autogerees_des_n_uds_de_survie_breakdown
 - front_de_resistance_aux_peages_sur_les_ressources_breakdown
-- geneve_bunker_institutions_breakdown
 - milices_agro_defensives_locales_breakdown
 - reseau_logistique_criminel_concurrent_breakdown
 - saboteurs_des_corridors_de_transit_breakdown
-- tour_bcuc_geneve_breakdown
 type_relation_dominante: compétition
 annee_debut: 2041
 annee_fin: null
@@ -142,11 +140,9 @@ La contradiction fondamentale de ces milices réside dans leur double nature : i
 - [[collectif_hackers_decroissance_infrastructure_breakdown]]
 - [[communautes_rurales_autogerees_des_n_uds_de_survie_breakdown]]
 - [[front_de_resistance_aux_peages_sur_les_ressources_breakdown]]
-- [[geneve_bunker_institutions_breakdown]]
 - [[milices_agro_defensives_locales_breakdown]]
 - [[reseau_logistique_criminel_concurrent_breakdown]]
 - [[saboteurs_des_corridors_de_transit_breakdown]]
-- [[tour_bcuc_geneve_breakdown]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

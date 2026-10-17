@@ -45,6 +45,683 @@
     },
     "via_matrice_impose": true
    }
+  },
+  "decision": {
+   "statut": "adopté",
+   "date": "2026-10-13T19:01",
+   "motif": null,
+   "empreinte": "f186c0a177b450ec",
+   "simulation_du": "2026-10-12T20:51",
+   "entree": {
+    "id": "destruction_geneve_2076",
+    "description": "En mars 2076, l'explosion du dépôt énergétique souterrain de Genève rase la ville et ses abords. Les institutions internationales qui y survivaient perdent leurs bâtiments, leurs archives physiques et la plupart de leur personnel.",
+    "portee": "regionale",
+    "date_approximative": 2076,
+    "intensite": "majeure",
+    "persistance": "permanente",
+    "scenarios": [
+     "breakdown"
+    ],
+    "variables_hint": [
+     "gouvernance_institutions"
+    ],
+    "variables_hint_count": 1,
+    "source": "et_si_destruction_geneve_2076",
+    "acteurs_hint": [
+     "archives_neutres_de_geneve_breakdown",
+     "agence_stabilisation_climatique_breakdown",
+     "tour_bcuc_geneve_breakdown",
+     "geneve_bunker_institutions_breakdown"
+    ],
+    "acteurs_hint_count": 4,
+    "date_imposee": 2076,
+    "impacts_imposes": {
+     "breakdown": [
+      {
+       "variable": "gouvernance_institutions",
+       "delta_level": 6,
+       "duree": 2,
+       "polarite": 1
+      }
+     ]
+    },
+    "via_matrice_impose": true
+   }
+  }
+ },
+ "peste_pulmonaire_2043": {
+  "simulation": {
+   "date": "2026-10-15T18:39",
+   "version": "v8.18",
+   "empreinte": "69190144b4d7d576",
+   "scenarios": [
+    "breakdown"
+   ],
+   "complet": false,
+   "passe": true,
+   "rapport": null,
+   "entree": {
+    "id": "peste_pulmonaire_2043",
+    "description": "En 2043, une souche de peste pulmonaire résistante aux antibiotiques se diffuse sur tous les continents et tue un quart de la population mondiale en trois ans. Villes désertées, chaînes de production rompues, frontières fermées, effondrement des systèmes de santé, puis lente recomposition.",
+    "portee": "globale",
+    "date_approximative": 2043,
+    "intensite": "<à choisir>",
+    "persistance": "durable",
+    "scenarios": [
+     "breakdown"
+    ],
+    "variables_hint": [
+     "demographie_mobilite_humaine",
+     "sante_biotechnologies",
+     "systemes_productifs_travail",
+     "systeme_economique_redistribution",
+     "frontieres_du_systeme",
+     "gouvernance_institutions",
+     "organisation_territoires",
+     "climat_environnement_global"
+    ],
+    "variables_hint_count": 8,
+    "source": "et_si_peste_pulmonaire_2043",
+    "acteurs_hint": [
+     "bureau_des_territoires_residuels_breakdown",
+     "holdfast_breakdown",
+     "rede_paulista_de_distribuicao_algoritmica_breakdown"
+    ],
+    "acteurs_hint_count": 3,
+    "faits_imposes": {
+     "breakdown": [
+      {
+       "fait": "La pandémie tue environ 25 % de la population mondiale entre 2043 et 2046, sur tous les continents, plus fortement dans les villes denses.",
+       "sort": "contrainte"
+      },
+      {
+       "fait": "Aucun traitement efficace avant le début des années 2050 ; la maladie devient ensuite endémique et contrôlée.",
+       "sort": "contrainte"
+      },
+      {
+       "fait": "La population mondiale ne retrouve pas son niveau de 2042 avant la fin du siècle.",
+       "sort": "contrainte"
+      },
+      {
+       "fait": "Registre des Zones Non Récupérables (bureau_des_territoires_residuels_breakdown) garde sa trajectoire « résiduel » : elle survit à l'événement sans changement majeur, ne la décris ni détruite ni disparue.",
+       "slug": "bureau_des_territoires_residuels_breakdown",
+       "sort": "reste"
+      },
+      {
+       "fait": "Les Vestiges des Citadelles (holdfast_breakdown) garde sa trajectoire « historique » : elle survit à l'événement sans changement majeur, ne la décris ni détruite ni disparue.",
+       "slug": "holdfast_breakdown",
+       "sort": "reste"
+      },
+      {
+       "fait": "Os Algoritmos Quebrados — Fragmentos da RPDA (rede_paulista_de_distribuicao_algoritmica_breakdown) garde sa trajectoire « transformé » : elle survit à l'événement sans changement majeur, ne la décris ni détruite ni disparue.",
+       "slug": "rede_paulista_de_distribuicao_algoritmica_breakdown",
+       "sort": "reste"
+      }
+     ]
+    },
+    "date_imposee": 2043
+   }
+  }
+ },
+ "fusion_commerciale_2038": {
+  "simulation": {
+   "date": "2026-10-15T18:51",
+   "version": "v8.19",
+   "empreinte": "442b14cbea3db493",
+   "scenarios": [
+    "breakdown",
+    "fortress_world",
+    "new_sustainability",
+    "eco_communalism",
+    "policy_reform",
+    "reference"
+   ],
+   "complet": true,
+   "passe": false,
+   "rapport": null,
+   "entree": {
+    "id": "fusion_commerciale_2038",
+    "description": "En 2038, un premier réacteur à fusion devient rentable et sa technologie se diffuse en une quinzaine d'années. L'énergie abondante fait s'effondrer la rente des hydrocarbures : les pétro-États du Golfe persique, la Russie et l'Arabie saoudite perdent leur levier, tandis que la maîtrise des brevets et du lithium (dont on tire le tritium du combustible) devient un nouvel enjeu de puissance ; le deutérium, tiré de l'eau de mer, est accessible à tous.",
+    "portee": "globale",
+    "date_approximative": 2038,
+    "intensite": "<à choisir>",
+    "persistance": "permanente",
+    "scenarios": [
+     "breakdown",
+     "fortress_world",
+     "new_sustainability",
+     "eco_communalism",
+     "policy_reform",
+     "reference"
+    ],
+    "variables_hint": [
+     "energie_ressources_critiques",
+     "climat_environnement_global",
+     "geopolitique_conflits",
+     "systemes_productifs_travail",
+     "systeme_economique_redistribution"
+    ],
+    "variables_hint_count": 5,
+    "source": "et_si_fusion_commerciale_2038",
+    "faits_imposes": {
+     "breakdown": [
+      {
+       "fait": "Le tritium n'existe dans aucun gisement ; il est produit dans le réacteur à partir de lithium. Rien ne repose sur une extraction, un transport ou un cartel de tritium.",
+       "sort": "contrainte"
+      },
+      {
+       "fait": "Le deutérium se tire de l'eau de mer ; aucun pays n'en a le monopole.",
+       "sort": "contrainte"
+      },
+      {
+       "fait": "Les ressources rares de la fusion sont le lithium (Chili, Argentine, Bolivie, Australie, Chine), quelques matériaux (supraconducteurs, béryllium) et les brevets.",
+       "sort": "contrainte"
+      }
+     ],
+     "fortress_world": [
+      {
+       "fait": "Le tritium n'existe dans aucun gisement ; il est produit dans le réacteur à partir de lithium. Rien ne repose sur une extraction, un transport ou un cartel de tritium.",
+       "sort": "contrainte"
+      },
+      {
+       "fait": "Le deutérium se tire de l'eau de mer ; aucun pays n'en a le monopole.",
+       "sort": "contrainte"
+      },
+      {
+       "fait": "Les ressources rares de la fusion sont le lithium (Chili, Argentine, Bolivie, Australie, Chine), quelques matériaux (supraconducteurs, béryllium) et les brevets.",
+       "sort": "contrainte"
+      }
+     ],
+     "new_sustainability": [
+      {
+       "fait": "Le tritium n'existe dans aucun gisement ; il est produit dans le réacteur à partir de lithium. Rien ne repose sur une extraction, un transport ou un cartel de tritium.",
+       "sort": "contrainte"
+      },
+      {
+       "fait": "Le deutérium se tire de l'eau de mer ; aucun pays n'en a le monopole.",
+       "sort": "contrainte"
+      },
+      {
+       "fait": "Les ressources rares de la fusion sont le lithium (Chili, Argentine, Bolivie, Australie, Chine), quelques matériaux (supraconducteurs, béryllium) et les brevets.",
+       "sort": "contrainte"
+      }
+     ],
+     "eco_communalism": [
+      {
+       "fait": "Le tritium n'existe dans aucun gisement ; il est produit dans le réacteur à partir de lithium. Rien ne repose sur une extraction, un transport ou un cartel de tritium.",
+       "sort": "contrainte"
+      },
+      {
+       "fait": "Le deutérium se tire de l'eau de mer ; aucun pays n'en a le monopole.",
+       "sort": "contrainte"
+      },
+      {
+       "fait": "Les ressources rares de la fusion sont le lithium (Chili, Argentine, Bolivie, Australie, Chine), quelques matériaux (supraconducteurs, béryllium) et les brevets.",
+       "sort": "contrainte"
+      }
+     ],
+     "policy_reform": [
+      {
+       "fait": "Le tritium n'existe dans aucun gisement ; il est produit dans le réacteur à partir de lithium. Rien ne repose sur une extraction, un transport ou un cartel de tritium.",
+       "sort": "contrainte"
+      },
+      {
+       "fait": "Le deutérium se tire de l'eau de mer ; aucun pays n'en a le monopole.",
+       "sort": "contrainte"
+      },
+      {
+       "fait": "Les ressources rares de la fusion sont le lithium (Chili, Argentine, Bolivie, Australie, Chine), quelques matériaux (supraconducteurs, béryllium) et les brevets.",
+       "sort": "contrainte"
+      }
+     ],
+     "reference": [
+      {
+       "fait": "Le tritium n'existe dans aucun gisement ; il est produit dans le réacteur à partir de lithium. Rien ne repose sur une extraction, un transport ou un cartel de tritium.",
+       "sort": "contrainte"
+      },
+      {
+       "fait": "Le deutérium se tire de l'eau de mer ; aucun pays n'en a le monopole.",
+       "sort": "contrainte"
+      },
+      {
+       "fait": "Les ressources rares de la fusion sont le lithium (Chili, Argentine, Bolivie, Australie, Chine), quelques matériaux (supraconducteurs, béryllium) et les brevets.",
+       "sort": "contrainte"
+      }
+     ]
+    },
+    "date_imposee": 2038,
+    "impacts_imposes": {
+     "breakdown": [
+      {
+       "variable": "energie_ressources_critiques",
+       "delta_level": 20,
+       "duree": 15,
+       "polarite": -1
+      },
+      {
+       "variable": "climat_environnement_global",
+       "delta_level": 10,
+       "duree": 25,
+       "polarite": -1
+      },
+      {
+       "variable": "geopolitique_conflits",
+       "delta_level": 12,
+       "duree": 10,
+       "polarite": 1
+      },
+      {
+       "variable": "systemes_productifs_travail",
+       "delta_level": 10,
+       "duree": 10,
+       "polarite": 1
+      },
+      {
+       "variable": "systeme_economique_redistribution",
+       "delta_level": 10,
+       "duree": 12,
+       "polarite": 1
+      }
+     ],
+     "fortress_world": [
+      {
+       "variable": "energie_ressources_critiques",
+       "delta_level": 20,
+       "duree": 15,
+       "polarite": -1
+      },
+      {
+       "variable": "climat_environnement_global",
+       "delta_level": 10,
+       "duree": 25,
+       "polarite": -1
+      },
+      {
+       "variable": "geopolitique_conflits",
+       "delta_level": 12,
+       "duree": 10,
+       "polarite": 1
+      },
+      {
+       "variable": "systemes_productifs_travail",
+       "delta_level": 10,
+       "duree": 10,
+       "polarite": 1
+      },
+      {
+       "variable": "systeme_economique_redistribution",
+       "delta_level": 10,
+       "duree": 12,
+       "polarite": 1
+      }
+     ],
+     "new_sustainability": [
+      {
+       "variable": "energie_ressources_critiques",
+       "delta_level": 20,
+       "duree": 15,
+       "polarite": -1
+      },
+      {
+       "variable": "climat_environnement_global",
+       "delta_level": 10,
+       "duree": 25,
+       "polarite": -1
+      },
+      {
+       "variable": "geopolitique_conflits",
+       "delta_level": 12,
+       "duree": 10,
+       "polarite": -1
+      },
+      {
+       "variable": "systemes_productifs_travail",
+       "delta_level": 10,
+       "duree": 10,
+       "polarite": 1
+      },
+      {
+       "variable": "systeme_economique_redistribution",
+       "delta_level": 10,
+       "duree": 12,
+       "polarite": -1
+      }
+     ],
+     "eco_communalism": [
+      {
+       "variable": "energie_ressources_critiques",
+       "delta_level": 20,
+       "duree": 15,
+       "polarite": -1
+      },
+      {
+       "variable": "climat_environnement_global",
+       "delta_level": 10,
+       "duree": 25,
+       "polarite": -1
+      },
+      {
+       "variable": "geopolitique_conflits",
+       "delta_level": 12,
+       "duree": 10,
+       "polarite": 1
+      },
+      {
+       "variable": "systemes_productifs_travail",
+       "delta_level": 10,
+       "duree": 10,
+       "polarite": 1
+      },
+      {
+       "variable": "systeme_economique_redistribution",
+       "delta_level": 10,
+       "duree": 12,
+       "polarite": 1
+      }
+     ],
+     "policy_reform": [
+      {
+       "variable": "energie_ressources_critiques",
+       "delta_level": 20,
+       "duree": 15,
+       "polarite": -1
+      },
+      {
+       "variable": "climat_environnement_global",
+       "delta_level": 10,
+       "duree": 25,
+       "polarite": -1
+      },
+      {
+       "variable": "geopolitique_conflits",
+       "delta_level": 12,
+       "duree": 10,
+       "polarite": -1
+      },
+      {
+       "variable": "systemes_productifs_travail",
+       "delta_level": 10,
+       "duree": 10,
+       "polarite": 1
+      },
+      {
+       "variable": "systeme_economique_redistribution",
+       "delta_level": 10,
+       "duree": 12,
+       "polarite": -1
+      }
+     ],
+     "reference": [
+      {
+       "variable": "energie_ressources_critiques",
+       "delta_level": 20,
+       "duree": 15,
+       "polarite": -1
+      },
+      {
+       "variable": "climat_environnement_global",
+       "delta_level": 10,
+       "duree": 25,
+       "polarite": -1
+      },
+      {
+       "variable": "geopolitique_conflits",
+       "delta_level": 12,
+       "duree": 10,
+       "polarite": 1
+      },
+      {
+       "variable": "systemes_productifs_travail",
+       "delta_level": 10,
+       "duree": 10,
+       "polarite": 1
+      },
+      {
+       "variable": "systeme_economique_redistribution",
+       "delta_level": 10,
+       "duree": 12,
+       "polarite": 1
+      }
+     ]
+    },
+    "via_matrice_impose": true
+   }
+  }
+ },
+ "explosion_brise_glace_murmansk_2081": {
+  "simulation": {
+   "date": "2026-10-17T07:49",
+   "version": "v8.19",
+   "empreinte": "1fd53d13e7c10997",
+   "scenarios": [
+    "reference"
+   ],
+   "complet": true,
+   "passe": true,
+   "rapport": "documentation/need_action/et_si_explosion_brise_glace_murmansk_2081.md",
+   "entree": {
+    "id": "explosion_brise_glace_murmansk_2081",
+    "description": "En 2081, l'explosion d'un brise-glace à propulsion nucléaire à quai détruit le port et les installations de Murmansk Transit Arctique. L'infrastructure Murmansk Transit Arctique disparaît définitivement. La ville de Mourmansk survit, mais déclinante et en partie évacuée. Le Passage Arctique du Nord reste ouvert. L'Armada Logistique Nordique, basée à Tromsø, récupère l'essentiel du trafic arctique et se renforce, sans changer de nature.",
+    "portee": "globale",
+    "date_approximative": 2081,
+    "intensite": "<à choisir>",
+    "persistance": "normale",
+    "scenarios": [
+     "reference"
+    ],
+    "variables_hint": [
+     "organisation_territoires",
+     "geopolitique_conflits",
+     "energie_ressources_critiques",
+     "systeme_economique_redistribution",
+     "demographie_mobilite_humaine"
+    ],
+    "variables_hint_count": 5,
+    "source": "et_si_explosion_brise_glace_murmansk_2081",
+    "acteurs_hint": [
+     "murmansk_transit_arctique_reference",
+     "conseil_des_etats_nordiques_integres_reference",
+     "fonds_souverain_arctique_scandinave_reference",
+     "siberie_federale_reference"
+    ],
+    "acteurs_hint_count": 4,
+    "faits_imposes": {
+     "reference": [
+      {
+       "fait": "L'infrastructure Murmansk Transit Arctique disparaît définitivement.",
+       "sort": "contrainte"
+      },
+      {
+       "fait": "La ville de Mourmansk survit, mais déclinante et en partie évacuée.",
+       "sort": "contrainte"
+      },
+      {
+       "fait": "Le Passage Arctique du Nord reste ouvert.",
+       "sort": "contrainte"
+      },
+      {
+       "fait": "L'Armada Logistique Nordique, basée à Tromsø, récupère l'essentiel du trafic arctique et se renforce, sans changer de nature.",
+       "sort": "contrainte"
+      },
+      {
+       "fait": "Murmansk Transit Arctique (murmansk_transit_arctique_reference) disparaît en 2081 (trajectoire dominant → disparu) : après cette date, elle n'agit plus.",
+       "slug": "murmansk_transit_arctique_reference",
+       "sort": "disparait"
+      },
+      {
+       "fait": "Conseil des États Nordiques Intégrés (conseil_des_etats_nordiques_integres_reference) passe de « émergent » à « ascendant » après 2081 : elle existe toujours (elle peut perdre des lieux, des biens ou du pouvoir), ne la décris pas comme disparue.",
+       "slug": "conseil_des_etats_nordiques_integres_reference",
+       "sort": "change"
+      },
+      {
+       "fait": "Fonds Souverain Arctique Scandinave (fonds_souverain_arctique_scandinave_reference) passe de « émergent » à « ascendant » après 2081 : elle existe toujours (elle peut perdre des lieux, des biens ou du pouvoir), ne la décris pas comme disparue.",
+       "slug": "fonds_souverain_arctique_scandinave_reference",
+       "sort": "change"
+      },
+      {
+       "fait": "Sibérie Fédérale (siberie_federale_reference) passe de « émergent » à « marginal » après 2081 : elle existe toujours (elle peut perdre des lieux, des biens ou du pouvoir), ne la décris pas comme disparue.",
+       "slug": "siberie_federale_reference",
+       "sort": "change"
+      },
+      {
+       "fait": "La zone Mourmansk (murmansk_transit_arctique) passe de « stable » à « en_declin » : le lieu subsiste.",
+       "slug": "murmansk_transit_arctique",
+       "sort": "zone"
+      }
+     ]
+    },
+    "date_imposee": 2081,
+    "impacts_imposes": {
+     "reference": [
+      {
+       "variable": "organisation_territoires",
+       "delta_level": 6,
+       "duree": 2,
+       "polarite": 1
+      },
+      {
+       "variable": "geopolitique_conflits",
+       "delta_level": 5,
+       "duree": 3,
+       "polarite": 1
+      },
+      {
+       "variable": "energie_ressources_critiques",
+       "delta_level": 4,
+       "duree": 1,
+       "polarite": 1
+      },
+      {
+       "variable": "systeme_economique_redistribution",
+       "delta_level": 5,
+       "duree": 5,
+       "polarite": 1
+      },
+      {
+       "variable": "demographie_mobilite_humaine",
+       "delta_level": 3,
+       "duree": 3,
+       "polarite": 1
+      }
+     ]
+    },
+    "via_matrice_impose": true
+   }
+  },
+  "decision": {
+   "statut": "adopté",
+   "date": "2026-10-17T07:55",
+   "motif": null,
+   "empreinte": "1fd53d13e7c10997",
+   "simulation_du": "2026-10-17T07:49",
+   "entree": {
+    "id": "explosion_brise_glace_murmansk_2081",
+    "description": "En 2081, l'explosion d'un brise-glace à propulsion nucléaire à quai détruit le port et les installations de Murmansk Transit Arctique. L'infrastructure Murmansk Transit Arctique disparaît définitivement. La ville de Mourmansk survit, mais déclinante et en partie évacuée. Le Passage Arctique du Nord reste ouvert. L'Armada Logistique Nordique, basée à Tromsø, récupère l'essentiel du trafic arctique et se renforce, sans changer de nature.",
+    "portee": "regionale",
+    "date_approximative": 2081,
+    "intensite": "forte",
+    "persistance": "normale",
+    "scenarios": [
+     "reference"
+    ],
+    "variables_hint": [
+     "organisation_territoires",
+     "geopolitique_conflits",
+     "energie_ressources_critiques",
+     "systeme_economique_redistribution",
+     "demographie_mobilite_humaine"
+    ],
+    "variables_hint_count": 5,
+    "source": "et_si_explosion_brise_glace_murmansk_2081",
+    "acteurs_hint": [
+     "murmansk_transit_arctique_reference",
+     "conseil_des_etats_nordiques_integres_reference",
+     "fonds_souverain_arctique_scandinave_reference",
+     "siberie_federale_reference"
+    ],
+    "acteurs_hint_count": 4,
+    "faits_imposes": {
+     "reference": [
+      {
+       "fait": "L'infrastructure Murmansk Transit Arctique disparaît définitivement.",
+       "sort": "contrainte"
+      },
+      {
+       "fait": "La ville de Mourmansk survit, mais déclinante et en partie évacuée.",
+       "sort": "contrainte"
+      },
+      {
+       "fait": "Le Passage Arctique du Nord reste ouvert.",
+       "sort": "contrainte"
+      },
+      {
+       "fait": "L'Armada Logistique Nordique, basée à Tromsø, récupère l'essentiel du trafic arctique et se renforce, sans changer de nature.",
+       "sort": "contrainte"
+      },
+      {
+       "fait": "Murmansk Transit Arctique (murmansk_transit_arctique_reference) disparaît en 2081 (trajectoire dominant → disparu) : après cette date, elle n'agit plus.",
+       "slug": "murmansk_transit_arctique_reference",
+       "sort": "disparait"
+      },
+      {
+       "fait": "Conseil des États Nordiques Intégrés (conseil_des_etats_nordiques_integres_reference) passe de « émergent » à « ascendant » après 2081 : elle existe toujours (elle peut perdre des lieux, des biens ou du pouvoir), ne la décris pas comme disparue.",
+       "slug": "conseil_des_etats_nordiques_integres_reference",
+       "sort": "change"
+      },
+      {
+       "fait": "Fonds Souverain Arctique Scandinave (fonds_souverain_arctique_scandinave_reference) passe de « émergent » à « ascendant » après 2081 : elle existe toujours (elle peut perdre des lieux, des biens ou du pouvoir), ne la décris pas comme disparue.",
+       "slug": "fonds_souverain_arctique_scandinave_reference",
+       "sort": "change"
+      },
+      {
+       "fait": "Sibérie Fédérale (siberie_federale_reference) passe de « émergent » à « marginal » après 2081 : elle existe toujours (elle peut perdre des lieux, des biens ou du pouvoir), ne la décris pas comme disparue.",
+       "slug": "siberie_federale_reference",
+       "sort": "change"
+      },
+      {
+       "fait": "La zone Mourmansk (murmansk_transit_arctique) passe de « stable » à « en_declin » : le lieu subsiste.",
+       "slug": "murmansk_transit_arctique",
+       "sort": "zone"
+      }
+     ]
+    },
+    "date_imposee": 2081,
+    "impacts_imposes": {
+     "reference": [
+      {
+       "variable": "organisation_territoires",
+       "delta_level": 6,
+       "duree": 2,
+       "polarite": 1
+      },
+      {
+       "variable": "geopolitique_conflits",
+       "delta_level": 5,
+       "duree": 3,
+       "polarite": 1
+      },
+      {
+       "variable": "energie_ressources_critiques",
+       "delta_level": 4,
+       "duree": 1,
+       "polarite": 1
+      },
+      {
+       "variable": "systeme_economique_redistribution",
+       "delta_level": 5,
+       "duree": 5,
+       "polarite": 1
+      },
+      {
+       "variable": "demographie_mobilite_humaine",
+       "delta_level": 3,
+       "duree": 3,
+       "polarite": 1
+      }
+     ]
+    },
+    "via_matrice_impose": true
+   }
   }
  }
 }

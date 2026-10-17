@@ -59,7 +59,6 @@ oppositions:
 - milices_contractuelles_des_anciens_etats_membres_breakdown
 - milices_de_controle_territorial_breakdown
 - rede_paulista_de_distribuicao_algoritmica_breakdown
-- tour_bcuc_geneve_breakdown
 type_relation_dominante: conflit
 annee_debut: 2041
 annee_fin: null
@@ -146,7 +145,6 @@ La contradiction fondamentale du Collectif est celle de tout accélérationnisme
 - [[milices_contractuelles_des_anciens_etats_membres_breakdown]]
 - [[milices_de_controle_territorial_breakdown]]
 - [[rede_paulista_de_distribuicao_algoritmica_breakdown]]
-- [[tour_bcuc_geneve_breakdown]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

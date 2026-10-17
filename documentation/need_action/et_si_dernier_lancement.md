@@ -1,383 +1,443 @@
-# Et si ? — Destruction de Genève (2076)
+# Et si ? — Explosion d'un brise-glace nucléaire à Mourmansk
 
-*Simulation du 2026-10-12 20:51 — lecture seule, rien n'a été injecté (simulateur v8.17).*
+*Simulation du 2026-10-17 07:49 — lecture seule, rien n'a été injecté (simulateur v8.19).*
 
-En mars 2076, l'explosion du dépôt énergétique souterrain de Genève rase la ville et ses abords. Les institutions internationales qui y survivaient perdent leurs bâtiments, leurs archives physiques et la plupart de leur personnel.
+En 2081, l'explosion d'un brise-glace à propulsion nucléaire à quai détruit le port et les installations de Murmansk Transit Arctique. L'infrastructure Murmansk Transit Arctique disparaît définitivement. La ville de Mourmansk survit, mais déclinante et en partie évacuée. Le Passage Arctique du Nord reste ouvert. L'Armada Logistique Nordique, basée à Tromsø, récupère l'essentiel du trafic arctique et se renforce, sans changer de nature.
 
 **Faits imposés à la lecture IA** :
-- Genève est détruite en mars 2076 ; aucune institution n'y siège physiquement après cette date.
-- Les archives physiques conservées à Genève sont perdues ; seules survivent les copies conservées ailleurs.
+- L'infrastructure Murmansk Transit Arctique disparaît définitivement.
+- La ville de Mourmansk survit, mais déclinante et en partie évacuée.
+- Le Passage Arctique du Nord reste ouvert.
+- L'Armada Logistique Nordique, basée à Tromsø, récupère l'essentiel du trafic arctique et se renforce, sans changer de nature.
 
-- **Apparition** : 2076 · **Persistance** : permanente · **Propagation par la matrice** : oui
+- **Apparition** : 2081 · **Persistance** : normale · **Propagation par la matrice** : oui
 - **Effet mesuré en** : 2098
 - **Carte** : élément déclaré sans effet territorial (`carte: non`), aucune proposition de carte retenue
-- Déclaré : **gouvernance_institutions** — force 6, aggrave ↑, montée sur 2 ans
+- Déclaré : **organisation_territoires** — force 6, aggrave ↑, montée sur 2 ans
+- Déclaré : **geopolitique_conflits** — force 5, aggrave ↑, montée sur 3 ans
+- Déclaré : **energie_ressources_critiques** — force 4, aggrave ↑, montée sur 1 ans
+- Déclaré : **systeme_economique_redistribution** — force 5, aggrave ↑, montée sur 5 ans
+- Déclaré : **demographie_mobilite_humaine** — force 3, aggrave ↑, montée sur 3 ans
 
 Rappel : niveau 100 = crise maximale. Écart = niveau AVEC l'hypothèse − niveau SANS elle, toutes les injections existantes restant en place.
 
-## breakdown
+## reference
 
-Apparu en 2076 dans le scénario breakdown, Destruction de Genève (2076) agit d'abord sur gouvernance institutions. Son effet le plus fort aggrave gouvernance institutions, avec un écart maximal de +0,3 points vers 2098. En 2098, il en subsiste +0,3 points sur gouvernance institutions.
+Apparu en 2081 dans le scénario reference, Explosion d'un brise-glace nucléaire à Mourmansk agit d'abord sur organisation territoires, énergie ressources critiques, système économique redistribution, démographie mobilité humaine et géopolitique conflits. Son effet le plus fort aggrave organisation territoires, avec un écart maximal de +0,7 points vers 2092. En 2098, il en subsiste +0,7 points sur organisation territoires.
 
 _(récit construit par le script)_
 
 | Variable | Référence | Sans | Avec | Écart | |
 |---|---|---|---|---|---|
-| gouvernance_institutions | 80,0 | 93,2 | 93,5 | **+0,3** | direct |
+| energie_ressources_critiques | 72,0 | 78,9 | 79,7 | **+0,8** | direct |
+| organisation_territoires | 65,0 | 74,2 | 74,9 | **+0,7** | direct |
+| systeme_economique_redistribution | 70,0 | 82,4 | 82,8 | **+0,4** | direct |
+| demographie_mobilite_humaine | 55,0 | 64,2 | 64,6 | **+0,4** | direct |
+| geopolitique_conflits | 75,0 | 88,3 | 88,6 | **+0,3** | direct |
+| systemes_productifs_travail | 70,0 | 75,1 | 75,2 | **+0,1** | propagé |
 
 **Repères** :
-- gouvernance_institutions (direct) : pic +0,3 vers 2098
+- organisation_territoires (direct) : pic +0,7 vers 2092
+- energie_ressources_critiques (direct) : pic +0,7 vers 2097
+- systeme_economique_redistribution (direct) : pic +0,4 vers 2098
+- demographie_mobilite_humaine (direct) : pic +0,4 vers 2096
 
 **Tensions** : 42 sans l'hypothèse → 42 avec.
 
 ### Lecture des conséquences (IA, propositions vérifiées — rien n'est écrit)
 
-_(résultat repris du cache : même hypothèse, mêmes effets — `--refaire` pour relancer)_
-
-La destruction de Genève en 2076 achève l'effondrement symbolique et fonctionnel des institutions internationales résiduelles, accélérant la fragmentation des légitimités juridiques et administratives. Les entités directement concernées (Archives Neutres, Tour BCUC, Résidu AMSC) perdent leur ancrage physique et leur capacité à coordonner des actions globales, mais leur déclin était déjà engagé. Le choc n'entraîne pas de reconfiguration territoriale majeure, mais renforce les dynamiques locales et régionales de substitution institutionnelle, notamment en Europe et parmi les acteurs transnationaux dépendants des archives ou des protocoles genevois. _(ampleur : moderee)_
+L'explosion du brise-glace nucléaire à Mourmansk en 2081 élimine définitivement l'infrastructure Murmansk Transit Arctique, pivot logistique et énergétique du Bloc Eurasien Central. Ce choc accélère le basculement du pouvoir arctique vers le Corridor Arctique Nordique, sans pour autant remettre en cause l'ouverture du Passage Arctique du Nord. La ville de Mourmansk survit en déclin, mais l'Armada Logistique Nordique, basée à Tromsø, consolide sa domination sans changer de nature. Les déséquilibres structurels du système mondial s'accentuent, notamment en organisation territoriale et géopolitique, mais le moteur du scénario amortit fortement ces effets. _(ampleur : moderee)_
 
 **Trajectoires d'entités**
-- Archives Neutres de Genève (`archives_neutres_de_geneve_breakdown`) : émergent → **résiduel** — Perte de leur siège physique et de la majorité de leurs archives originales, réduisant leur rôle à un symbole juridique sans capacité opérationnelle.
-- Tour Bcuc Genève — Le Comptoir des Ruines (`tour_bcuc_geneve_breakdown`) : transformé → **disparu** — La Tour BCUC, déjà transformée en comptoir informel, est détruite dans l'explosion, mettant fin à son rôle hybride.
-- Résidu AMSC — Bureau de Coordination d'Urgence Climatique (`agence_stabilisation_climatique_breakdown`) : transformé → **disparu** — Le BCUC, dernier vestige de l'AMSC, perd toute capacité de coordination avec la destruction de ses infrastructures genevoises.
-- Résidu de Genève — Le Palais des Fantômes (`geneve_bunker_institutions_breakdown`) : transformé → **disparu** — Le Palais des Fantômes, déjà marginalisé, n'a plus de raison d'exister après la destruction de Genève.
-- Ligue Hanséatique Baltique — Le Sceau du Gotland (`hanse_baltique_breakdown`) : ascendant → **dominant** — La Ligue Hanséatique Baltique profite du vide institutionnel européen pour étendre son influence comme alternative crédible aux États défaillants.
-- Kalaallit Nunaat Sovereign Fund — Fonds des Glaces Libérées (`kalaallit_nunaat_sovereign_fund_breakdown`) : dominant → **mature** — Le Fonds des Glaces Libérées renforce son rôle de stabilisateur régional en absorbant les flux financiers et logistiques auparavant gérés depuis Genève.
+- Murmansk Transit Arctique (`murmansk_transit_arctique_reference`) : dominant → **disparu** — Destruction définitive de l'infrastructure Murmansk Transit Arctique suite à l'explosion du brise-glace nucléaire.
+- Conseil des États Nordiques Intégrés (`conseil_des_etats_nordiques_integres_reference`) : émergent → **ascendant** — Renforcement de la coopération régionale pour combler le vide laissé par la disparition de Mourmansk.
+- Fonds Souverain Arctique Scandinave (`fonds_souverain_arctique_scandinave_reference`) : émergent → **ascendant** — Accroissement de son rôle dans la gouvernance des territoires arctiques suite à la redistribution des flux logistiques.
+- Sibérie Fédérale (`siberie_federale_reference`) : émergent → **marginal** — Perte d'accès privilégié aux routes arctiques et marginalisation accrue dans le Bloc Eurasien Central.
+- Consortium Énergétique des Mers du Nord (`consortium_energetique_des_mers_du_nord_reference`) : émergent → **dominant** — Absorption des flux énergétiques redirigés vers Tromsø et renforcement de son rôle systémique.
+- Collectifs de Pêche Inuit et Sami (`collectifs_de_peche_inuit_et_sami_reference`) : émergent → **ascendant** — Renforcement de leurs revendications territoriales face à la reconfiguration des zones de pêche arctiques.
 
 **Relations**
-- opposition nouvelle : Milices Privées Documentées Terrain ↔ Archives Neutres de Genève — Les milices privées, désormais sans contre-pouvoir institutionnel, contestent la légitimité des archives survivantes pour imposer leurs propres règles.
-- opposition nouvelle : Cartels Logistiques Régionaux ↔ Les Venelles — Corridors Eurasiens Convoyage — Les cartels logistiques régionaux entrent en conflit avec les Venelles pour le contrôle des axes eurasiens, désormais sans régulation.
+- opposition nouvelle : Bloc Eurasien Central (BEC) ↔ Armada Logistique Nordique — Tensions accrues pour le contrôle des routes arctiques et des ressources critiques.
+- alliance nouvelle : Consortium Énergétique des Mers du Nord ↔ Armada Logistique Nordique — Synergie entre logistique et énergie pour optimiser les flux redirigés vers Tromsø.
+- opposition nouvelle : Collectifs de Pêche Inuit et Sami ↔ Conseil des États Nordiques Intégrés — Conflits d'intérêts entre gouvernance régionale et revendications territoriales autochtones.
+- opposition nouvelle : Sibérie Fédérale ↔ Bloc Eurasien Central (BEC) — Marginalisation de la Sibérie Fédérale et contestation de l'autorité centrale russe.
 
 **Statut des zones**
-- Genève-Bunker (Nœud Institutionnel Résiduel) (`geneve_bunker_institutions`) : fragmenté → **en_declin** — La destruction de Genève prive cette zone de sa raison d'être institutionnelle, accélérant son déclin.
-- Hanse Baltique Recomposée (`hanse_baltique`) : stable → **dominant** — La Ligue Hanséatique Baltique profite du vide européen pour étendre son influence et devenir un acteur dominant.
+- Mourmansk (`murmansk_transit_arctique`) : stable → **en_declin** — Disparition de l'infrastructure Murmansk Transit Arctique et déclin partiel de la ville.
 
 **Nouvelles entités plausibles**
-- Collectif des Copistes de Cracovie (cracovie_registre_zones) : Gardiens des archives survivantes et producteurs de légitimité documentaire alternative — Face à la perte des archives genevoises, Cracovie devient le centre de reproduction et de certification des copies, créant un nouveau réseau de légitimité.
-- Front des Ruines Juridiques (geneve_bunker_institutions) : Coalition de milices et d'anciens fonctionnaires internationaux pour le contrôle des protocoles abandonnés — Les décombres de Genève attirent des acteurs cherchant à récupérer ou détruire les derniers vestiges des institutions internationales.
-- Guilde des Archivistes Nomades (transnationale) : Réseau itinérant de techniciens et de juristes préservant les copies numériques des traités internationaux — Avec la disparition des archives physiques, des collectifs se forment pour sauvegarder et diffuser les données juridiques critiques.
+- Commission de Réhabilitation de Mourmansk (murmansk_transit_arctique) : Organisme de gestion post-catastrophe chargé de la décontamination et de la reconstruction partielle de Mourmansk. — Nécessité de coordonner les efforts de réhabilitation et de gérer les risques résiduels de contamination nucléaire.
+- Alliance des Ports Arctiques Secondaires (corridor_arctique_nordique) : Réseau de ports arctiques mineurs cherchant à capter une partie des flux logistiques redirigés depuis Mourmansk. — Stratégie de diversification des routes logistiques pour réduire la dépendance à Tromsø.
+- Fonds de Compensation Arctique (tromsoe_aln) : Mécanisme financier pour indemniser les acteurs économiques affectés par la disparition de Mourmansk Transit Arctique. — Nécessité de stabiliser les équilibres économiques régionaux après le choc.
 
-_Propositions écartées au contrôle (8) : trajectoire : archives_neutres_geneve_breakdown résiduel → déclinant (recul dans la phase de déclin, incohérent ; une renaissance irait vers ascendant) ; trajectoire : grandes_lacs_compact_eau_breakdown dominant → ascendant (recul sur la phase de montée, incohérent) ; relation : entités 'archives_neutres_geneve_breakdown' / 'cracovie_registre_zones_breakdown' inconnues ou identiques ; relation : entités 'hanse_baltique_breakdown' / 'enclaves_industrielles_bergen_tromso_breakdown' inconnues ou identiques ; relation : entités 'grandes_lacs_compact_eau_breakdown' / 'etats_sud_centre_americain_breakdown' inconnues ou identiques ; relation kalaallit_nunaat_sovereign_fund_breakdown / armada_logistique_nordique_breakdown : alliance déjà présente ; statut de zone : archives_neutres_geneve → disparu écarté, hypothèse sans effet territorial (`carte: non`) ; statut de zone : tour_bcuc_geneve → disparu écarté, hypothèse sans effet territorial (`carte: non`)_
+_Propositions écartées au contrôle (7) : trajectoire : armada_logistique_nordique_reference déjà dominant (aucun changement) ; trajectoire : bloc_eurasien_central_reference déjà déclinant (aucun changement) ; relation armada_logistique_nordique_reference / conseil_des_etats_nordiques_integres_reference : alliance déjà présente ; relation armada_logistique_nordique_reference / fonds_souverain_arctique_scandinave_reference : alliance déjà présente ; statut de zone : tromsoe_aln déjà dominant ; statut de zone : corridor_arctique_nordique déjà dominant ; statut de zone : bloc_eurasien_central déjà fragmenté_
 
 ### Passe exhaustive (IA, toutes les fiches — rien n'est écrit)
 
-152 fiche(s) relue(s) en 11 lot(s), dont 11 lot(s) repris du cache.
-Verdicts : **14 fiche(s) à corriger**, 39 avec des changements possibles seulement, 99 inchangée(s).
+191 fiche(s) relue(s) en 13 lot(s).
+Verdicts : **1 fiche(s) à corriger**, 99 avec des changements possibles seulement, 91 inchangée(s).
 
-_Contre-lecture des obligatoires : 39 vérifié(s), 14 confirmé(s), 25 rétrogradé(s) en possible._
+_Contre-lecture des obligatoires : 3 vérifié(s), 2 confirmé(s), 1 rétrogradé(s) en possible._
 
 #### Obligatoire — la fiche devient fausse sans ce changement
 
 **Relations**
-- alliance rompue : Archives Neutres de Genève ↔ Résidu de Genève — Le Palais des Fantômes — La destruction de Genève rompt toute collaboration institutionnelle avec les entités genevoises. [lien relation : Les Archives Neutres dépendaient de l'infrastructure genevoise pour leur légitimité physique.] — contredit : Geneve_bunker_institutions_breakdown est transformé en « disparu » après 2076, rendant toute alliance impossible.
-- alliance rompue : Collectif des Climatologues Sans État ↔ Résidu AMSC — Bureau de Coordination d'Urgence Climatique — Le Résidu AMSC (agence_stabilisation_climatique_breakdown) est transformé en 'disparu' après 2076, rendant toute alliance impossible. [lien relation : agence_stabilisation_climatique_breakdown (disparu)] — contredit : La fiche cite agence_stabilisation_climatique_breakdown comme allié, mais cette entité a disparu après 2076.
-- alliance rompue : Corporations de l'Ère Pré-Effondrement à Droits de PI ↔ Tour Bcuc Genève — Le Comptoir des Ruines — La destruction de Genève en 2076 entraîne la disparition de la Tour BCUC, rendant toute alliance avec elle impossible après cette date. [lien relation : tour_bcuc_geneve_breakdown est transformé en disparu après la destruction de Genève] — contredit : La fiche indique une alliance avec tour_bcuc_geneve_breakdown, qui n'existe plus après 2076
-- alliance rompue : Ligue des Cités Littorales en Sursis ↔ Résidu AMSC — Bureau de Coordination d'Urgence Climatique — L'alliance avec l'Agence de Stabilisation Climatique devient impossible après sa disparition. [lien relation : allié direct de agence_stabilisation_climatique_breakdown, disparue après 2076] — contredit : L'Agence de Stabilisation Climatique (Résidu AMSC) est marquée comme disparue dans le lore post-2076.
-- alliance rompue : Ligue Méditerranéenne des Villes-États Portuaires ↔ Archives Neutres de Genève — L'alliance avec les Archives Neutres de Genève devient impossible après leur destruction en mars 2076. [lien relation : allié direct de archives_neutres_geneve_breakdown, détruite en 2076] — contredit : La fiche mentionne une alliance avec les Archives Neutres de Genève, qui n'existent plus physiquement après 2076.
-- alliance rompue : Les Échos du Méridien ↔ Archives Neutres de Genève — L'alliance avec les Archives Neutres de Genève devient impossible après leur destruction en mars 2076. [lien relation : allié direct de archives_neutres_de_geneve_breakdown, détruite en 2076] — contredit : La fiche mentionne une alliance avec les Archives Neutres de Genève, qui n'existent plus physiquement après 2076.
-- alliance rompue : Milices Privées Documentées Terrain ↔ Archives Neutres de Genève — La destruction de Genève en 2076 a entraîné la disparition des Archives Neutres de Genève, rompant de facto toute alliance avec elles. [lien relation : alliée directe des Archives Neutres de Genève, entité disparue après 2076] — contredit : Les Archives Neutres de Genève n'existent plus physiquement après mars 2076, rendant impossible toute alliance active avec elles.
-- alliance rompue : Nœud Mnemos Pannonie — Les Gardiens du Danube ↔ Archives Neutres de Genève — La destruction de Genève en 2076 a entraîné la disparition des Archives Neutres de Genève, rompant de facto toute alliance avec elles. [lien relation : alliée directe des Archives Neutres de Genève, entité disparue après 2076] — contredit : Les Archives Neutres de Genève n'existent plus physiquement après mars 2076, rendant impossible toute alliance active avec elles.
-- alliance rompue : ONG de Gestion Migratoire Survivantes ↔ Archives Neutres de Genève — La destruction de Genève en 2076 entraîne la disparition physique des Archives Neutres de Genève, rendant toute alliance avec elles impossible après cette date. [lien relation : alliée directe de archives_neutres_de_geneve_breakdown, disparue en 2076] — contredit : Les ONG de gestion migratoire survivantes ne peuvent plus être alliées à une entité disparue (archives_neutres_de_geneve_breakdown).
-- alliance rompue : Les Voix du Seuil — Fragments de l'Oracle ↔ Archives Neutres de Genève — La destruction de Genève en 2076 entraîne la disparition physique des Archives Neutres de Genève, rendant toute alliance avec elles impossible après cette date. [lien relation : alliée directe de archives_neutres_de_geneve_breakdown, disparue en 2076] — contredit : L'Oracle des Seuils ne peut plus être allié à une entité disparue (archives_neutres_de_geneve_breakdown).
-- alliance rompue : Réseau des Courriers Nomades Sahélo-Méditerranéens ↔ Archives Neutres de Genève — La destruction de Genève en 2076 entraîne la disparition physique des Archives Neutres de Genève, rendant toute alliance avec elles impossible après cette date. [lien relation : alliée directe de archives_neutres_geneve_breakdown, disparue en 2076] — contredit : Le réseau des courriers nomades ne peut plus être allié à une entité disparue (archives_neutres_geneve_breakdown).
-- alliance rompue : Tour Bcuc Genève — Le Comptoir des Ruines ↔ Archives Neutres de Genève — Les Archives Neutres de Genève et le bunker des institutions genevoises sont disparus après 2076, rendant toute alliance avec eux impossible. [lien relation : La Tour Bcuc était alliée aux Archives Neutres de Genève, toutes deux détruites ou disparues après 2076.] — contredit : alliés : archives_neutres_de_geneve_breakdown, archives_neutres_geneve_breakdown, geneve_bunker_institutions_breakdown
-- alliance rompue : Chambre des Recours Algorithmiques — Ce qu'il en reste ↔ Archives Neutres de Genève — Les Archives Neutres de Genève sont devenues résiduelles après 2076, rendant toute alliance avec elles impossible. [lien relation : Le Tribunal Algorithmique était allié aux Archives Neutres de Genève, disparues après 2076.] — contredit : alliés : archives_neutres_de_geneve_breakdown, archives_neutres_geneve_breakdown
+- alliance rompue : Murmansk Transit Arctique ↔ Armada Logistique Nordique — La disparition de Murmansk Transit Arctique rend cette alliance impossible. [lien relation : armada_logistique_nordique_reference (récupère le trafic arctique)] — contredit : Murmansk Transit Arctique n'existe plus pour maintenir cette alliance.
 
 **Textes**
-- instance Résidu AMSC — Bureau de Coordination d'Urgence Climatique (`agence_stabilisation_climatique_breakdown`) : « Jadis mandaté pour orchestrer les grandes interventions géo-ingénieristes, il n'existe plus que comme structure fantôme, réclamant une légitimité que personne ne lui accorde depuis les sous-sols renforcés de l'ancienne Palais des Nations — désormais zone fantôme de Genève » — contredit par : Genève est rasée en 2076, aucun bâtiment ni sous-sol ne subsiste. — La phrase suppose une présence physique à Genève après 2076, ce qui est faux. [lien territoire : zone geneve_bunker_institutions]
+- instance Murmansk Transit Arctique (`murmansk_transit_arctique_reference`) : « Plaque tournante stratégique du trafic maritime et énergétique arctique, Murmansk Transit Arctique s'est imposée comme nœud incontournable des nouvelles routes commerciales ouvertes par la fonte accélérée des glaces polaires depuis les années 2040 » — contredit par : L'infrastructure Murmansk Transit Arctique n'existe plus en 2098. — Cette phrase devient fausse après 2081. [lien territoire : infrastructure Murmansk Transit Arctique (détruite en 2081)]
 
 #### Possible — conséquence plausible, la fiche reste vraie sans elle
 
-_Rétrogradés d'obligatoire à possible par les contrôles : 16 contre-lecture amorti, 13 extrait introuvable dans la fiche, 8 contre-lecture nuance, 1 contre-lecture passe, 1 lien territoire alors qu'aucun territoire précis n'est touché, 1 lien variable sous 2 points._
+_Rétrogradés d'obligatoire à possible par les contrôles : 2 extrait introuvable dans la fiche, 1 changement de degré, 1 contre-lecture nuance, 1 élargit le rôle sans le contredire, 1 lien territoire alors qu'aucun territoire précis n'est touché._
 
-**À lire en priorité (20 fiches sur 51)** — choisies et ordonnées par l'IA
+**À lire en priorité (20 fiches sur 100)** — choisies et ordonnées par l'IA
 
-- **Cartels Logistiques Régionaux** (`cartels_logistiques_regionaux_breakdown`) — _Accélération de la fragmentation institutionnelle, substitution directe aux chaînes logistiques internationales_
-  - Cartels Logistiques Régionaux (`cartels_logistiques_regionaux_breakdown`) : émergent → **ascendant** — La destruction de Genève accélère la fragmentation institutionnelle, renforçant le rôle des cartels logistiques comme substituts aux chaînes d'approvisionnement globales effondrées. [lien variable : gouvernance_institutions (+0.3 point)] _(douteux : lien variable sous 2 points)_
-- **Nœud Mnemos Pannonie — Les Gardiens du Danube** (`noeud_mnemos_pannonie_breakdown`) — _Renforcement immédiat comme nœud décentralisé de référence pour la mémoire et les archives_
-  - Nœud Mnemos Pannonie — Les Gardiens du Danube (`noeud_mnemos_pannonie_breakdown`) : ascendant → **dominant** — La disparition des archives centrales renforce le rôle des nœuds décentralisés comme Mnemos Pannonie, qui deviennent des références incontournables pour la conservation des mémoires collectives. [lien variable : gouvernance_institutions (+0.3 point, touchée par l'élément)] _(douteux : lien variable sous 2 points)_
-- **Collectifs de Gardiens-Archivistes Itinérants** (`collectifs_de_gardiens_archivistes_itinerants_breakdown`) — _Devenir incontournable comme gardiens de la mémoire résiduelle après la perte des archives physiques_
-  - Collectifs de Gardiens-Archivistes Itinérants (`collectifs_de_gardiens_archivistes_itinerants_breakdown`) : émergent → **ascendant** — La destruction de Genève et la perte des archives physiques renforcent le rôle des Gardiens-Archivistes Itinérants comme gardiens de la mémoire résiduelle. [lien variable : gouvernance_institutions (+0.3 point)] _(douteux : lien variable sous 2 points)_
-  - alliance rompue : Collectifs de Gardiens-Archivistes Itinérants ↔ Archives Neutres de Genève — Les Archives Neutres de Genève (variante) sont également résiduelles et sans capacité de coordination. [lien relation : archives_neutres_geneve_breakdown (résiduel)] — contredit : La fiche cite archives_neutres_geneve_breakdown comme allié, mais cette entité est devenue résiduelle après 2076. _(rétrogradé : contre-lecture amorti)_ — Même raison que o5 et o6 : l'alliance peut persister malgré la transformation résiduelle.
-  - alliance rompue : Collectifs de Gardiens-Archivistes Itinérants ↔ Archives Neutres de Genève — Les Archives Neutres de Genève, devenues résiduelles, ne peuvent plus entretenir d'alliance active avec les Gardiens-Archivistes Itinérants. [lien relation : archives_neutres_de_geneve_breakdown (résiduel)] — contredit : La fiche cite archives_neutres_de_geneve_breakdown comme allié, mais cette entité est devenue résiduelle après 2076. _(rétrogradé : contre-lecture amorti)_ — Même raison que o5 : l'alliance peut persister malgré la transformation résiduelle de l'entité.
-  - instance Collectifs de Gardiens-Archivistes Itinérants (`collectifs_de_gardiens_archivistes_itinerants_breakdown`) : « alliés : [...] archives_neutres_de_geneve_breakdown, archives_neutres_geneve_breakdown, [...] » — contredit par : archives_neutres_de_geneve_breakdown et archives_neutres_geneve_breakdown sont résiduelles après 2076. — La mention d'alliances avec ces entités devient fausse après leur effondrement fonctionnel. [lien relation : archives_neutres_de_geneve_breakdown, archives_neutres_geneve_breakdown] _(rétrogradé : extrait introuvable dans la fiche)_
-- **Milices Privées Documentées Terrain** (`milices_privees_documentees_terrain_breakdown`) — _Montée en puissance comme substituts locaux aux institutions sécuritaires disparues_
-  - Milices Privées Documentées Terrain (`milices_privees_documentees_terrain_breakdown`) : émergent → **ascendant** — L'affaiblissement des institutions internationales renforce les dynamiques locales de substitution, ce qui peut favoriser l'ascension des milices privées comme acteurs de gouvernance de facto. [lien variable : gouvernance_institutions (+0.3 point, touchée par l'élément)] _(douteux : lien variable sous 2 points)_
-- **ONG de Gestion Migratoire Survivantes** (`ong_de_gestion_migratoire_survivantes_breakdown`) — _Alliance nouvelle avec les Gardiens-Archivistes pour préserver des données migratoires critiques_
-  - alliance nouvelle : ONG de Gestion Migratoire Survivantes ↔ Collectifs de Gardiens-Archivistes Itinérants — La perte des archives physiques de Genève pourrait inciter les ONG à s'allier avec des collectifs itinérants pour préserver des données migratoires critiques. [lien relation : substitution plausible aux archives disparues]
-- **Front Humanitaire d'Urgence Non Affilié** (`front_humanitaire_d_urgence_non_affilie_breakdown`) — _Alliance rompue avec les Archives Neutres et pivot vers les Gardiens-Archivistes pour la continuité des secours_
-  - alliance rompue : Front Humanitaire d'Urgence Non Affilié ↔ Archives Neutres de Genève — La destruction de Genève en 2076 entraîne la disparition des Archives Neutres, rompant toute alliance formelle ou informelle avec elles. [lien relation : archives_neutres_geneve_breakdown (disparu après 2076)] — contredit : Les Archives Neutres de Genève n'existent plus physiquement après 2076, rendant impossible une alliance active avec elles. _(rétrogradé : contre-lecture amorti)_ — La fiche décrit une alliance avec une entité résiduelle, ce qui est compatible avec un choc amorti. L'alliance peut persister sous une forme adaptée.
-  - alliance nouvelle : Front Humanitaire d'Urgence Non Affilié ↔ Collectifs de Gardiens-Archivistes Itinérants — Le Front pourrait se rapprocher des collectifs itinérants pour compenser la perte des Archives Neutres, mais ce n'est pas obligatoire. [lien relation : successeur plausible des Archives Neutres]
-  - instance Front Humanitaire d'Urgence Non Affilié (`front_humanitaire_d_urgence_non_affilie_breakdown`) : « Assure une continuité minimale de secours et de coordination dans les territoires abandonnés par les institutions lors des phases aiguës d'effondrement » — L'affaiblissement des institutions genevoises élargit le rôle du Front, mais la phrase reste vraie sans modification. [lien variable : gouvernance_institutions (+0.3 point)] _(douteux : lien variable sous 2 points, élargit le rôle sans le contredire)_
-- **Compagnies de Géo-Ingénierie Privées Sans Mandat** (`compagnies_de_geo_ingenierie_privees_sans_mandat_breakdown`) — _Légitimité renforcée comme acteurs alternatifs de géo-ingénierie dans le vide institutionnel_
-  - instance Compagnies de Géo-Ingénierie Privées Sans Mandat (`compagnies_de_geo_ingenierie_privees_sans_mandat_breakdown`) : « Dans le scénario breakdown, elles incarnent la fragmentation de la gouvernance climatique : en l'absence d'institutions capables d'agir collectivement, des acteurs privés s'arrogent le droit de modifier les systèmes terrestres à l'échelle planétaire » — La destruction de Genève et l'effondrement des institutions résiduelles renforcent leur légitimité comme acteurs alternatifs, bien que cela ne rende pas la phrase fausse. [lien variable : gouvernance_institutions (+0.3 point)] _(douteux : lien variable sous 2 points, élargit le rôle sans le contredire)_
-- **Factions Énergétiques Héritières des Pactes ABS** (`factions_energetiques_heritieres_des_pactes_abs_breakdown`) — _Rôle accru comme héritières des pactes énergétiques dans l'absence de recentralisation_
-  - instance Factions Énergétiques Héritières des Pactes ABS (`factions_energetiques_heritieres_des_pactes_abs_breakdown`) : « Dans un scénario de breakdown, elles incarnent la fragmentation de la gouvernance énergétique mondiale : chaque faction défend ses droits acquis contre toute tentative de recentralisation ou de renégociation, accentuant l'instabilité systémique » — La destruction de Genève et l'effondrement des institutions internationales rendent toute recentralisation encore plus improbable, ce qui renforce leur rôle dans la fragmentation. [lien variable : gouvernance_institutions (+0.3 point)] _(douteux : lien variable sous 2 points, élargit le rôle sans le contredire)_
-- **Flux Migratoires Non Intégrables** (`flux_migratoires_non_integrables_breakdown`) — _Précarisation accrue des pactes d'accueil régionaux, amplification des flux non intégrables_
-  - instance Flux Migratoires Non Intégrables (`flux_migratoires_non_integrables_breakdown`) : « Vecteur d'effondrement en cascade des mécanismes de gouvernance territoriale dans le scénario breakdown : les flux migratoires non intégrables saturent successivement les nœuds urbains résiduels, dissolvent les derniers pactes d'accueil régionaux et forcent les entités territoriales encore stables à se militariser » — La destruction de Genève et l'effondrement des institutions internationales rendent les pactes d'accueil régionaux encore plus précaires, ce qui renforce l'impact des flux migratoires. [lien variable : gouvernance_institutions (+0.3 point)] _(douteux : lien variable sous 2 points, élargit le rôle sans le contredire)_
-- **Réseau des Organisations Humanitaires Hors Cadre Onusien** (`reseau_des_organisations_humanitaires_hors_cadre_onusien_breakdown`) — _Élargissement du rôle humanitaire en comblant le vide laissé par les institutions multilatérales_
-  - instance Réseau des Organisations Humanitaires Hors Cadre Onusien (`reseau_des_organisations_humanitaires_hors_cadre_onusien_breakdown`) : « Assure une continuité minimale de l'aide humanitaire là où les mécanismes multilatéraux classiques ont cessé de fonctionner, en substituant des logiques de réseau décentralisé à la coordination étatique défaillante » — La destruction de Genève pourrait élargir le rôle de ces réseaux en comblant le vide laissé par les institutions multilatérales disparues. [lien variable : renforcement des dynamiques de fragmentation institutionnelle (+0.3 gouvernance_institutions)] _(douteux : lien variable sous 2 points, élargit le rôle sans le contredire)_
-- **Les Fragments de Mnemos** (`reseau_mnemos_breakdown`) — _Accentuation de la dislocation des réseaux informationnels comme Mnemos_
-  - instance Les Fragments de Mnemos (`reseau_mnemos_breakdown`) : « Ce qui fut l'infrastructure planétaire cohérente de Mnemos s'est disloqué en plusieurs centaines d'archipels informationnels autonomes, souvent incompatibles entre eux » — La destruction de Genève pourrait accentuer la dislocation des réseaux informationnels comme Mnemos, en éliminant un nœud central de coordination. [lien variable : renforcement des dynamiques de fragmentation institutionnelle (+0.3 gouvernance_institutions)] _(douteux : lien variable sous 2 points)_
-- **Les Voix du Seuil — Fragments de l'Oracle** (`oracle_des_seuils_breakdown`) — _Fragmentation accrue des prédictions de l'Oracle après la perte des archives centrales_
-  - instance Les Voix du Seuil — Fragments de l'Oracle (`oracle_des_seuils_breakdown`) : « Ses fragments tournent sur des serveurs hétéroclites — enclaves corporatives, nœuds hackers, relais humanitaires — et produisent des prédictions partielles, contradictoires, parfois falsifiées » — La perte des archives genevoises pourrait accentuer la fragmentation des prédictions de l'Oracle, les rendant encore plus contradictoires ou falsifiées. [lien variable : renforcement des dynamiques de fragmentation institutionnelle (+0.3 gouvernance_institutions)] _(douteux : lien variable sous 2 points)_
-- **Les Veilleurs des Brumes — Réseau des Cartographes des Zones Grises** (`reseau_des_cartographes_des_zones_grises_breakdown`) — _Rôle élargi des cartographes des zones grises dans un monde plus fragmenté_
-  - instance Les Veilleurs des Brumes — Réseau des Cartographes des Zones Grises (`reseau_des_cartographes_des_zones_grises_breakdown`) : « Dans un monde où les frontières se sont effondrées sous les coups des conflits géopolitiques, des crises climatiques et de la fragmentation des réseaux d'information, les Veilleurs des Brumes documentent et diffusent les connaissances sur les territoires abandonnés, contestés ou non gouvernés » — La destruction de Genève pourrait accentuer la fragmentation des réseaux d'information, élargissant le rôle des cartographes des zones grises. [lien variable : renforcement des dynamiques de fragmentation institutionnelle (+0.3 gouvernance_institutions)] _(douteux : lien variable sous 2 points, élargit le rôle sans le contredire)_
-- **États Fragmentés Nationalisant les Stocks** (`etats_fragmentes_nationalisant_les_stocks_breakdown`) — _Pression accrue sur les stocks nationalisés en l'absence de coordination globale_
-  - instance États Fragmentés Nationalisant les Stocks (`etats_fragmentes_nationalisant_les_stocks_breakdown`) : « Dans le scénario breakdown, ces États exercent une pression centrifuge sur les flux de ressources en imposant des saisies unilatérales, aggravant les tensions interétatiques et rendant toute coordination globale quasi impossible » — La destruction de Genève et l'effondrement des institutions internationales renforcent l'impossibilité de coordination globale, ce qui rend le rôle de ces États encore plus central dans la fragmentation. [lien variable : gouvernance_institutions (+0.3 point)] _(douteux : lien variable sous 2 points, élargit le rôle sans le contredire)_
-- **Front de Résistance aux Péages sur les Ressources** (`front_de_resistance_aux_peages_sur_les_ressources_breakdown`) — _Absence de régulation renforçant les logiques extractives et la résistance aux péages_
-  - instance Front de Résistance aux Péages sur les Ressources (`front_de_resistance_aux_peages_sur_les_ressources_breakdown`) : « Dans le scénario breakdown, le Front de Résistance aux Péages sur les Ressources cristallise la fracture entre une survie communautaire ancrée dans la réciprocité et des logiques extractives qui étendent leur emprise jusque sur l'air filtré et l'eau de pluie collectée » — La destruction de Genève et l'effondrement des institutions internationales renforcent l'absence de régulation, ce qui rend les logiques extractives encore plus prégnantes et la résistance plus cruciale. [lien variable : gouvernance_institutions (+0.3 point)] _(douteux : lien variable sous 2 points, élargit le rôle sans le contredire)_
-- **Résidu de Genève — Le Palais des Fantômes** (`geneve_bunker_institutions_breakdown`) — _Disparition du Résidu de Genève, rendant obsolète toute référence à ce vestige_
-  - instance Résidu de Genève — Le Palais des Fantômes (`geneve_bunker_institutions_breakdown`) : « Vestige institutionnel de l'ancien système onusien et diplomatique genevois, le Résidu de Genève survit dans un état fragmenté après l'effondrement des structures internationales » — contredit par : Genève est détruite en 2076, rendant impossible la survie physique du Résidu de Genève. — La phrase devient fausse car le Résidu de Genève ne peut plus exister après 2076. [lien territoire : Genève (détruite en 2076)] _(rétrogradé : contre-lecture nuance)_ — La fiche décrit le Résidu de Genève comme un vestige institutionnel fragmenté, ce qui peut inclure une existence symbolique ou dématérialisée après 2076. L'élément perturbateur ne contredit pas cette interprétation.
-- **Tour Bcuc Genève — Le Comptoir des Ruines** (`tour_bcuc_geneve_breakdown`) — _Disparition du bunker des institutions genevoises, rendant toute alliance impossible_
-  - alliance rompue : Tour Bcuc Genève — Le Comptoir des Ruines ↔ Résidu de Genève — Le Palais des Fantômes — Le bunker des institutions genevoises est disparu après 2076, rendant toute alliance avec lui impossible. [lien relation : La Tour Bcuc était alliée au bunker des institutions genevoises, disparu après 2076.] — contredit : alliés : geneve_bunker_institutions_breakdown _(rétrogradé : contre-lecture nuance)_ — La fiche mentionne une alliance avec le Résidu de Genève, qui peut exister sous une forme non physique ou symbolique après 2076. L'élément perturbateur ne contredit pas cette possibilité.
-- **Factions Propagandistes des Archives** (`factions_propagandistes_des_archives_breakdown`) — _Opposition et alliances rompues avec le Résidu de Genève et les Archives Neutres_
-  - opposition rompue : Factions Propagandistes des Archives ↔ Résidu de Genève — Le Palais des Fantômes — La destruction de Genève et la disparition du Bunker des Institutions rendent impossible toute opposition avec lui. [lien relation : geneve_bunker_institutions_breakdown transformé → disparu] — contredit : Le geneve_bunker_institutions_breakdown ne peut plus être un rival après sa disparition. _(rétrogradé : contre-lecture nuance)_ — Une opposition peut être symbolique ou résiduelle même après la disparition de l'entité cible. L'élément ne rend pas la relation impossible.
-  - alliance rompue : Factions Propagandistes des Archives ↔ Archives Neutres de Genève — La destruction de Genève et la transformation des Archives Neutres en entité résiduelle rendent impossible toute alliance active avec elles. [lien relation : archives_neutres_de_geneve_breakdown transformé → résiduel] — contredit : Les archives_neutres_de_geneve_breakdown ne peuvent plus être un allié actif après leur transformation en entité résiduelle. _(rétrogradé : contre-lecture amorti)_ — La fiche décrit une alliance rompue avec une entité résiduelle, ce qui est compatible avec un choc amorti.
-  - instance Factions Propagandistes des Archives (`factions_propagandistes_des_archives_breakdown`) : « Dans le scénario breakdown, elles exploitent l'effondrement des structures de gouvernance pour infiltrer et corrompre les dépôts d'archives, fragilisant la capacité collective à maintenir une mémoire historique partagée » — contredit par : Les dépôts d'archives physiques de Genève sont détruits, ce qui rend impossible leur infiltration ou corruption. — La destruction des archives physiques de Genève rend caduque toute mention d'infiltration ou de corruption de ces dépôts spécifiques. [lien territoire : Genève détruite en 2076, archives physiques perdues] _(rétrogradé : lien territoire alors qu'aucun territoire précis n'est touché)_
-- **États-Fragments en Guerre pour les Stations Atmosphériques** (`etats_fragments_en_guerre_pour_les_stations_atmospheriques_breakdown`) — _Opposition rompue avec les Archives Neutres, acteur déstabilisateur central_
-  - opposition rompue : États-Fragments en Guerre pour les Stations Atmosphériques ↔ Archives Neutres de Genève — La destruction de Genève et la disparition des Archives Neutres rendent impossible toute opposition avec elles. [lien relation : archives_neutres_de_geneve_breakdown transformé → disparu] — contredit : Les archives_neutres_de_geneve_breakdown ne peuvent plus être un rival actif après leur disparition. _(rétrogradé : contre-lecture nuance)_ — Une opposition peut être symbolique ou résiduelle même après la disparition de l'entité cible. L'élément ne rend pas la relation impossible.
-  - instance États-Fragments en Guerre pour les Stations Atmosphériques (`etats_fragments_en_guerre_pour_les_stations_atmospheriques_breakdown`) : « Acteurs déstabilisateurs centraux du scénario breakdown, les États-Fragments en Guerre pour les Stations Atmosphériques incarnent l'aboutissement logique de la fragmentation géopolitique : des entités qui ont renoncé à toute gouvernance sociale pour se concentrer exclusivement sur la maîtrise des leviers climatiques » — La destruction de Genève accélère la fragmentation, ce qui renforce la plausibilité de leur rôle comme aboutissement de cette dynamique. [lien variable : gouvernance_institutions (+0.3 point)] _(douteux : lien variable sous 2 points, élargit le rôle sans le contredire)_
-- **Corporations de l'Ère Pré-Effondrement à Droits de PI** (`corporations_de_l_ere_pre_effondrement_a_droits_de_pi_breakdown`) — _Capacité renforcée à monnayer l'accès aux droits de propriété intellectuelle_
-  - instance Corporations de l'Ère Pré-Effondrement à Droits de PI (`corporations_de_l_ere_pre_effondrement_a_droits_de_pi_breakdown`) : « Dans le scénario breakdown, elles bloquent ou monnayent l'accès aux corpus numériques en invoquant des droits PI antérieurs à l'effondrement, créant des frictions majeures dans la reconstruction des systèmes d'information » — La perte des archives physiques et des institutions genevoises renforce leur capacité à monnayer l'accès aux droits PI, mais cela reste plausible sans être obligatoire. [lien variable : La destruction de Genève accélère la fragmentation des légitimités juridiques et administratives (gouvernance_institutions +0.3)] _(douteux : lien variable sous 2 points, élargit le rôle sans le contredire)_
+- **Bloc Eurasien Central (BEC)** (`bloc_eurasien_central_reference`) — _Disparition directe de son pivot logistique et énergétique, Murmansk Transit Arctique_
+  - Bloc Eurasien Central (BEC) (`bloc_eurasien_central_reference`) : déclinant → **résiduel** — La disparition définitive de Murmansk Transit Arctique, pivot logistique et énergétique du Bloc Eurasien Central, rend impossible le maintien de son influence actuelle. Le BEC perd un levier majeur de son équilibre géopolitique. [lien relation : murmansk_transit_arctique_reference (disparu, ancien allié indirect)] _(rétrogradé : changement de degré)_ — contredit : Son influence reste réelle mais contestée, reflétant la fragmentation du système international de 2098.
+- **Cartel des Terres Rares d'Asie Centrale** (`cartel_des_terres_rares_d_asie_centrale_reference`) — _Renforcement direct comme acteur clé des ressources critiques post-explosion_
+  - Cartel des Terres Rares d'Asie Centrale (`cartel_des_terres_rares_d_asie_centrale_reference`) : émergent → **ascendant** — L'explosion de Mourmansk accentue les tensions sur les ressources critiques, ce qui pourrait renforcer l'influence du Cartel comme acteur clé de l'accès aux terres rares. [lien variable : energie_ressources_critiques (+0.8)] _(douteux : lien variable sous 2 points)_
+- **Bloc Ressources Eurasiatique (BRE)** (`bloc_ressources_eurasiatique_bre_reference`) — _Rôle accru dans la régulation autoritaire des ressources critiques_
+  - Bloc Ressources Eurasiatique (BRE) (`bloc_ressources_eurasiatique_bre_reference`) : émergent → **ascendant** — L'explosion de Mourmansk accentue les tensions sur les ressources critiques, ce qui pourrait renforcer le rôle du BRE comme régulateur autoritaire de l'accès à ces ressources. [lien variable : energie_ressources_critiques (+0.8)] _(douteux : lien variable sous 2 points)_
+- **Alliance des Glaces Libres (AGL)** (`consortium_des_pecheries_autonomes_du_grand_nord_reference`) — _Opposition directe avec l'Armada Logistique Nordique, renforcée par le déclin de Mourmansk_
+  - Alliance des Glaces Libres (AGL) (`consortium_des_pecheries_autonomes_du_grand_nord_reference`) : ascendant → **dominant** — Le déclin de Mourmansk et le renforcement de l'Armada Logistique Nordique pourraient accélérer l'ascension de l'AGL, mais sa trajectoire actuelle reste plausible. [lien relation : Rivalité avec le corridor_arctique_nordique_reference, déjà établie, et renforcement de l'Armada Logistique Nordique.]
+  - opposition nouvelle : Alliance des Glaces Libres (AGL) ↔ Armada Logistique Nordique — Le renforcement de l'Armada Logistique Nordique crée une tension potentielle avec l'AGL, mais cette opposition n'est pas obligatoire pour la cohérence de la fiche. [lien relation : L'Armada Logistique Nordique récupère l'essentiel du trafic arctique et se renforce.]
+- **Consortiums Privés d'Extraction de Ressources Critiques** (`consortiums_prives_d_extraction_de_ressources_critiques_reference`) — _Exploitation directe du vide logistique et énergétique créé par la disparition de Murmansk_
+  - Consortiums Privés d'Extraction de Ressources Critiques (`consortiums_prives_d_extraction_de_ressources_critiques_reference`) : émergent → **ascendant** — La disparition de Murmansk Transit Arctique crée un vide logistique et énergétique qui pourrait être exploité par des acteurs privés pour étendre leur emprise sur les ressources critiques, notamment en Sibérie. [lien variable : energie_ressources_critiques (+0.8)] _(douteux : lien variable sous 2 points)_
+- **Opérateurs Logistiques Privés des Zones Grises Eurasiennes** (`operateurs_logistiques_prives_des_zones_grises_eurasiennes_reference`) — _Opportunité directe de montée en puissance face à l'Armada Logistique Nordique_
+  - Opérateurs Logistiques Privés des Zones Grises Eurasiennes (`operateurs_logistiques_prives_des_zones_grises_eurasiennes_reference`) : émergent → **ascendant** — La disparition de Murmansk Transit Arctique et le renforcement de l'Armada Logistique Nordique pourraient créer des opportunités pour les opérateurs logistiques privés dans les zones grises eurasiennes, sans que cela soit obligatoire. [lien variable : variable organisation_territoires (+0.7 point) et geopolitique_conflits (+0.3 point)] _(douteux : lien variable sous 2 points)_
+  - opposition nouvelle : Opérateurs Logistiques Privés des Zones Grises Eurasiennes ↔ Armada Logistique Nordique — Les opérateurs logistiques privés des zones grises pourraient entrer en concurrence avec l'Armada Logistique Nordique pour le contrôle des flux logistiques, sans que cela soit une certitude. [lien relation : L'Armada Logistique Nordique se renforce et récupère l'essentiel du trafic arctique, ce qui pourrait en faire un rival des opérateurs logistiques privés des zones grises.]
+- **Kalaallit Nunaat Sovereign Fund** (`kalaallit_nunaat_sovereign_fund_reference`) — _Alliance renforcée avec le Consortium Énergétique des Mers du Nord, acteur nordique dominant_
+  - Kalaallit Nunaat Sovereign Fund (`kalaallit_nunaat_sovereign_fund_reference`) : ascendant → **dominant** — Le renforcement de l'Armada Logistique Nordique, alliée du KNSF, pourrait indirectement renforcer la position géopolitique du KNSF dans les négociations arctiques. [lien relation : allié de armada_logistique_nordique_reference (renforcée par l'élément)]
+  - alliance nouvelle : Kalaallit Nunaat Sovereign Fund ↔ Consortium Énergétique des Mers du Nord — Le KNSF pourrait nouer une alliance avec le Consortium Énergétique des Mers du Nord, déjà allié à l'Armada Logistique Nordique, pour consolider son influence dans la région. [lien relation : allié de armada_logistique_nordique_reference (renforcée et alliée du consortium)]
+- **Consortiums Énergétiques Opaques** (`consortiums_energetiques_opaques_reference`) — _Renforcement direct via l'exploitation des tensions énergétiques critiques_
+  - Consortiums Énergétiques Opaques (`consortiums_energetiques_opaques_reference`) : émergent → **ascendant** — L'explosion de Mourmansk accentue les tensions sur les ressources énergétiques critiques, ce qui pourrait renforcer les consortiums opaques en leur offrant des opportunités de contourner les régulations dans un contexte de pénurie relative. [lien variable : energie_ressources_critiques (+0.8)] _(douteux : lien variable sous 2 points)_
+- **Factions d'Extraction Minière Indépendantes** (`factions_d_extraction_miniere_independantes_reference`) — _Acteurs alternatifs renforcés par la perturbation des ressources critiques_
+  - Factions d'Extraction Minière Indépendantes (`factions_d_extraction_miniere_independantes_reference`) : émergent → **ascendant** — La perturbation des ressources critiques due à l'explosion de Mourmansk pourrait renforcer la position de ces factions en tant qu'acteurs alternatifs d'approvisionnement, sans que cela ne soit obligatoire. [lien variable : energie_ressources_critiques (+0.8)] _(douteux : lien variable sous 2 points)_
+- **Fonds Souverains de la Ceinture Financière Pacifique** (`fonds_souverains_de_la_ceinture_financiere_pacifique_reference`) — _Rôle accru dans la stabilisation économique post-crise arctique_
+  - Fonds Souverains de la Ceinture Financière Pacifique (`fonds_souverains_de_la_ceinture_financiere_pacifique_reference`) : émergent → **ascendant** — L'élément perturbateur accentue les déséquilibres économiques mondiaux, ce qui peut renforcer le rôle des fonds souverains comme acteurs de stabilisation ou de spéculation, sans rendre leur trajectoire actuelle fausse. [lien variable : systeme_economique_redistribution (+0.4)] _(douteux : lien variable sous 2 points)_
+  - alliance nouvelle : Fonds Souverains de la Ceinture Financière Pacifique ↔ Armada Logistique Nordique — L'Armada Logistique Nordique se renforce, ce qui pourrait inciter les fonds souverains pacifiques à chercher des partenariats logistiques ou énergétiques avec elle, sans que cela soit obligatoire. [lien relation : Rivalité indirecte avec le bloc_eurasien_central_reference, affaibli par l'élément perturbateur]
+- **The Tidewater Canon** (`the_tidewater_canon_reference`) — _Opposition directe avec l'Armada Logistique Nordique, doctrine souverainiste face à son ascension_
+  - The Tidewater Canon (`the_tidewater_canon_reference`) : mature → **ascendant** — Le renforcement de l'Armada Logistique Nordique et la marginalisation du Bloc Eurasien Central pourraient accroître l'influence des doctrines souverainistes comme le Tidewater Canon, en réaction à la perte d'influence des blocs eurasiatiques. [lien relation : allié du bloc_ressources_eurasiatique_bre_reference, directement touché par la disparition de murmansk_transit_arctique_reference]
+  - opposition nouvelle : The Tidewater Canon ↔ Armada Logistique Nordique — Le Tidewater Canon, doctrine souverainiste, pourrait s'opposer à l'Armada Logistique Nordique, qui incarne une gouvernance transnationale renforcée dans l'Arctique. [lien relation : opposition déjà retenue entre bloc_eurasien_central_reference et armada_logistique_nordique_reference]
+- **Vasil Orentchev** (`vasil_orentchev_reference`) — _Concurrence directe avec l'Armada pour le contrôle des flux logistiques_
+  - opposition nouvelle : Vasil Orentchev ↔ Armada Logistique Nordique — Orentchev, opérateur indépendant, pourrait entrer en concurrence avec l'Armada pour le contrôle des flux logistiques. [lien relation : rivalité avec les consortiums logistiques dominants, dont l'Armada Logistique Nordique]
+- **Milices Concurrentes des Droits de Passage** (`milices_concurrentes_des_droits_de_passage_reference`) — _Intensification directe de la compétition pour les nouveaux points de passage arctiques_
+  - instance Milices Concurrentes des Droits de Passage (`milices_concurrentes_des_droits_de_passage_reference`) : « Dans ce scénario, elles incarnent la concurrence violente pour le contrôle des nœuds de mobilité, fragmentant l'espace en zones de friction où chaque passage est négocié ou imposé par la force » — La reconfiguration des routes arctiques pourrait intensifier la compétition entre milices pour le contrôle des nouveaux points de passage stratégiques. [lien variable : organisation_territoires (+0.7) et geopolitique_conflits (+0.3)] _(douteux : lien variable sous 2 points)_
+- **Autorité de Régulation des Passages Stratégiques (ARPS)** (`agence_de_regulation_des_detroits_strategiques_ards_reference`) — _Coordination accrue nécessaire avec l'Armada Logistique Nordique, désormais dominante_
+  - instance Autorité de Régulation des Passages Stratégiques (ARPS) (`agence_de_regulation_des_detroits_strategiques_ards_reference`) : « Elle incarne une gouvernance hybride, mêlant souveraineté étatique, intérêts des consortiums logistiques privés et impératifs géopolitiques liés aux flux critiques » — L'ARPS pourrait voir son rôle s'élargir pour inclure une coordination accrue avec l'Armada Logistique Nordique, désormais dominante dans le trafic arctique, sans que cela ne rende la fiche fausse. [lien relation : allié de l'armada_logistique_nordique_reference, qui se renforce après la disparition de Murmansk Transit Arctique] _(douteux : élargit le rôle sans le contredire)_
+- **Fonds Souverain Arctique Scandinave** (`fonds_souverain_arctique_scandinave_reference`) — _Devenu acteur central dans la gouvernance arctique post-Mourmansk_
+  - instance Fonds Souverain Arctique Scandinave (`fonds_souverain_arctique_scandinave_reference`) : « Acteur de référence pour le financement et la gouvernance des territoires arctiques, pesant sur les arbitrages entre exploitation ressourcière et conservation environnementale » — contredit par : L'explosion de Mourmansk et le renforcement de l'Armada Logistique Nordique élargissent son rôle au-delà de la simple 'référence'. — Le fonds devient un acteur central dans la gouvernance arctique post-Mourmansk, ce qui rend la phrase trop restrictive et donc fausse. [lien relation : Allié de l'armada_logistique_nordique_reference, qui se renforce après l'explosion de Mourmansk.] _(rétrogradé : élargit le rôle sans le contredire)_
+- **Atlas des Marges** (`reseau_des_cartographes_des_zones_grises_reference`) — _Création de nouvelles zones grises en Arctique post-disparition de Murmansk_
+  - instance Atlas des Marges (`reseau_des_cartographes_des_zones_grises_reference`) : « Le Réseau des Cartographes des Zones Grises dans *reference* est une nébuleuse de collecteurs de données, hackers et géographes dissidents qui documentent les territoires abandonnés, contestés ou non gouvernés » — La disparition de Murmansk Transit Arctique et le déclin de Mourmansk pourraient créer de nouvelles zones grises ou marginalisées en Arctique, élargissant potentiellement le champ d'action du réseau, mais cela reste plausible et non obligatoire. [lien variable : organisation_territoires (+0.7)] _(douteux : lien variable sous 2 points, élargit le rôle sans le contredire)_
+- **ONG de Traçabilité des Ressources Critiques** (`ong_de_tracabilite_des_ressources_critiques_reference`) — _Opposition directe probable avec le Consortium Énergétique des Mers du Nord_
+  - opposition nouvelle : ONG de Traçabilité des Ressources Critiques ↔ Consortium Énergétique des Mers du Nord — L'ONG de traçabilité des ressources critiques, déjà rivale des acteurs extractifs, a une probabilité accrue de s'opposer au Consortium Énergétique des Mers du Nord, désormais acteur majeur dans l'Arctique. [lien relation : Le Consortium Énergétique des Mers du Nord devient dominant après l'explosion de Mourmansk, ce qui en fait une cible probable pour une ONG dénonçant les pratiques d'extraction et de gestion des ressources critiques.]
+  - instance ONG de Traçabilité des Ressources Critiques (`ong_de_tracabilite_des_ressources_critiques_reference`) : « Dénonce publiquement les pratiques d'une entité du scénario liées à l'extraction ou à la gestion de ressources critiques, en s'appuyant sur des données de traçabilité » — L'explosion de Mourmansk accentue les enjeux autour des ressources critiques, ce qui pourrait élargir le rôle de l'ONG sans rendre son énoncé actuel faux. [lien variable : variable energie_ressources_critiques (+0.8 point)] _(douteux : lien variable sous 2 points, élargit le rôle sans le contredire)_
+- **Programme ONU-Eau 2080** (`programme_onu_eau_2080_reference`) — _Rôle élargi dans la coordination des déséquilibres territoriaux arctiques_
+  - instance Programme ONU-Eau 2080 (`programme_onu_eau_2080_reference`) : « Sert de référentiel normatif et d'instance de coordination internationale dans le scénario, influençant les arbitrages entre États sur le partage des ressources hydriques » — L'explosion de Mourmansk et la disparition de Murmansk Transit Arctique accentuent les déséquilibres territoriaux en Arctique, ce qui pourrait élargir le rôle du Programme ONU-Eau 2080 dans la coordination des arbitrages hydriques et logistiques liés à la réorganisation des flux arctiques. [lien variable : organisation_territoires (+0.7)] _(douteux : lien variable sous 2 points, élargit le rôle sans le contredire)_
+- **Réseau des Sentinelles des Eaux Profondes** (`les_veilleurs_des_nappes_phreatiques_reference`) — _Surveillance renforcée des ressources critiques post-crise_
+  - instance Réseau des Sentinelles des Eaux Profondes (`les_veilleurs_des_nappes_phreatiques_reference`) : « Les Veilleurs agissent comme un contre-pouvoir face aux consortiums privés et aux lobbies agro-industriels, documentant les accaparements de ressources hydriques » — L'élément perturbateur accentue les tensions sur les ressources critiques, ce qui pourrait renforcer l'importance des Veilleurs dans la surveillance des accaparements hydriques. [lien variable : energie_ressources_critiques (+0.8)] _(douteux : lien variable sous 2 points, élargit le rôle sans le contredire)_
+- **Réseaux de lanceurs d'alerte institutionnels dissidents** (`reseaux_de_lanceurs_d_alerte_institutionnels_dissidents_reference`) — _Dysfonctionnements institutionnels accrus générant plus d'alertes_
+  - instance Réseaux de lanceurs d'alerte institutionnels dissidents (`reseaux_de_lanceurs_d_alerte_institutionnels_dissidents_reference`) : « Dans ce scénario, ils constituent une source d'information critique sur les dysfonctionnements internes des institutions, fragilisant leur légitimité tout en alimentant les débats publics » — La reconfiguration des équilibres arctiques et le déclin de Mourmansk pourraient générer des dysfonctionnements institutionnels supplémentaires, offrant plus de matière aux lanceurs d'alerte pour documenter les failles du système. [lien variable : geopolitique_conflits (+0.3 point) et organisation_territoires (+0.7 point)] _(douteux : lien variable sous 2 points)_
 
-**Autres fiches avec des changements possibles (31)**
-- Cités-États Sécessionistes : trajectoire émergent → ascendant ; opposition rompue avec Résidu de Genève — Le Palais des Fantômes
-- Ligue Eurasiatique–Coalition Pacifique : opposition rompue avec Résidu de Genève — Le Palais des Fantômes ; opposition rompue avec Résidu AMSC — Bureau de Coordination d'Urgence Climatique ; texte « rivaux : agence_stabilisation_climatique_breakdown,… »
-- Ligue des Cités Littorales en Sursis : alliance rompue avec Archives Neutres de Genève ; texte « alliés : agence_stabilisation_climatique_breakdown,… »
-- Les Fantômes des Seuils : alliance rompue avec Archives Neutres de Genève ; texte « alliés :… »
-- Gouvernements Régionaux Résiduels Reterritorialisants : alliance rompue avec Archives Neutres de Genève ; texte « Dans le chaos du breakdown, ces entités constituent les… »
-- Gelecek Meclisi — Les Échos du Demain : alliance rompue avec Archives Neutres de Genève
-- Enclaves Technologiques Survivantes : alliance rompue avec Archives Neutres de Genève
-- Enclaves Industrielles de Bergen-Tromsø : alliance rompue avec Archives Neutres de Genève
-- Consortium Énergétique Oural-Caspien : opposition rompue avec Archives Neutres de Genève
-- Fantôme de Nairobi : alliance rompue avec Archives Neutres de Genève ; texte « Surnommé 'le Fantôme de Nairobi' par les correspondants de… »
-- Communautés Religieuses des Relais Physiques : alliance rompue avec Archives Neutres de Genève ; texte « alliés : archives_neutres_de_geneve_breakdown, [...] »
-- Collectifs de Hackers Archivistes des Interstices Réseaux : alliance rompue avec Archives Neutres de Genève ; alliance rompue avec Archives Neutres de Genève ; texte « alliés : archives_neutres_de_geneve_breakdown,… »
-- Collectif des Climatologues Sans État : alliance rompue avec Archives Neutres de Genève ; texte « alliés : agence_stabilisation_climatique_breakdown,… »
-- Les Racines de l'Aube : alliance rompue avec Archives Neutres de Genève ; texte « alliés : [...] archives_neutres_de_geneve_breakdown, [...] »
-- Autorité du Passage Arctique — Ce qu'il en reste : alliance rompue avec Archives Neutres de Genève
-- Konsortiet Nordark — Axes du Grand Nord : alliance rompue avec Autorité du Passage Arctique — Ce qu'il en reste
-- Assemblée des Territoires Éclatés : alliance rompue avec Archives Neutres de Genève
-- Registre des Zones Non Récupérables : alliance rompue avec Archives Neutres de Genève
-- Les Protocoles Fantômes : texte « N'existe plus en tant qu'institution. Les derniers… »
-- Archives Neutres de Genève : texte « Elles fonctionnent moins comme une institution que comme un… »
-- Archives Neutres de Genève : texte « Installées dans les sous-sols renforcés de l'ancienne… »
-- Ligue Méditerranéenne des Villes-États Portuaires : texte « alliés : archives_neutres_geneve_breakdown,… »
-- Les Échos du Méridien : texte « alliés : reseau_mnemos_breakdown,… »
-- Les Venelles — Corridors Eurasiens Convoyage : texte « Ce réseau de routes terrestres et fluviales, autrefois… »
-- Confédération des Bassins Vivants : texte « Héritière fragmentée de la Fédération des Communs… »
-- Front des Blocs Régionaux du Récit des Conflits-Ressources : texte « Dans le scénario breakdown, exerce une pression narrative… »
-- Fronts Populistes Anti-Technocratiques : texte « Dans le scénario breakdown, ils incarnent la pression… »
-- Chambre des Recours Algorithmiques — Ce qu'il en reste : texte « Elle n'a plus de siège fixe depuis l'effondrement de la… »
-- Naufrage des Mémoires du Compact : texte « L’effacement des archives du Registre plonge les… »
-- Kharg-9 Data Haven : texte « Kharg-9 est à la fois un sanctuaire de données pour les… »
-- Les Bouches de l'Abîme : texte « Fragment survivant et muté de la Voix du Dehors, Les… »
+**Autres fiches avec des changements possibles (80)**
+- Murmansk Transit Arctique : alliance rompue avec Collectifs de Pêche Inuit et Sami ; texte « Le territoire est administré par un consortium… »
+- Autorité de Passage Arctique : texte « treize États souverains riverains siègent à parité formelle… »
+- Consortium des Fournisseurs d'Énergie Renouvelable Distribuée : trajectoire émergent → ascendant
+- Consortium Énergétique Baltique : trajectoire émergent → ascendant ; texte « Acteur économique et infrastructurel structurant… »
+- Consortium Logistique Asiatique de Contournement ALN : trajectoire émergent → ascendant
+- Front Souverainiste des Ressources d'Amérique du Sud : trajectoire émergent → ascendant
+- Lobbies Industriels des États Non-Signataires : trajectoire émergent → ascendant ; alliance nouvelle avec Bloc Eurasien Central (BEC)
+- Régulateurs de l'Union Eurasiatique sur les Données Critiques : trajectoire émergent → ascendant ; texte « Exerce une pression institutionnelle sur les acteurs qui… »
+- Réseaux de financement gris issus d'anciens blocs militaires : trajectoire émergent → ascendant
+- Pacte des Souverains : alliance nouvelle avec Armada Logistique Nordique
+- Assemblée des Territoires Fédérés (ATF) : alliance nouvelle avec Conseil des États Nordiques Intégrés
+- Union Occidentale de Coordination (UOC) : alliance nouvelle avec Armada Logistique Nordique
+- Factions Eurasiatiques contre la Tarification Hydrique : opposition nouvelle avec Bloc Eurasien Central (BEC)
+- gelecek_meclisi_reference : alliance nouvelle avec Conseil des États Nordiques Intégrés
+- Gouvernements Fédéraux Résiduels Souverainistes : opposition nouvelle avec Bloc Eurasien Central (BEC)
+- Hyphan Raghavan de Ergo-Wian Sovereign Holdings : alliance nouvelle avec Consortium Énergétique des Mers du Nord
+- Leena Väinälä : alliance nouvelle avec Conseil des États Nordiques Intégrés
+- Alliance des Blocs Souverains (ABS) : opposition nouvelle avec Armada Logistique Nordique
+- Réseau Hospitalier Hybride Eurasiatique : texte « Acteur-pivot de la santé eurasiatique en contexte de… » ; texte « il maintient une infrastructure de soins transfrontalière… »
+- Coopératives Énergétiques Décentralisées : trajectoire émergent → ascendant
+- Union Africaine de Résilience Territoriale : trajectoire émergent → ascendant
+- Compact des Grands Lacs : alliance nouvelle avec Armada Logistique Nordique
+- Banque Mondiale des Transitions Climatiques : texte « Pilier financier de l'équilibre fragile du scénario de… »
+- Blocs Signataires du Pacte Énergétique Multilatéral : texte « Structure l'architecture diplomatique et réglementaire du… »
+- Direction des Zones Non Prioritaires (DZNP) : texte « Administration fédérale fantôme opérant dans les… »
+- Bureau des Zones Non Prioritaires (BZNP) : texte « Organe institutionnel maintenu dans un état de… »
+- Collectif Nuit Jaune : texte « Dans le scénario reference, le Collectif Nuit Jaune… »
+- Collectifs de Journalisme Embarqué : texte « Ancrés dans des zones à fort enjeu territorial — deltas… »
+- Confédération des Mégapoles Autonomes : texte « Incarne la fragmentation géopolitique en blocs… »
+- Conseil de Régulation des Ressources Critiques : texte « Dans un monde multipolaire fracturé, il joue un rôle de… »
+- Consortium des Grandes Plateformes Logistiques Globales : texte « Dans le scénario de référence, le Consortium incarne la… »
+- Consortium Indo-Pacifique de l'Hydrogène : texte « Dans le scénario reference, le Consortium structure les… »
+- Consortiums d'Extraction Minière du Bassin Congolais : texte « Dans le scénario reference, les Consortiums d'Extraction… »
+- Consortiums Énergétiques des Mégapoles : texte « Dans le scénario reference, ils exercent une pression pour… »
+- Consortiums Médiatiques Corporatifs : texte « Dans le scénario reference, les Consortiums Médiatiques… »
+- Coopératives Agro-Écologiques de Reconstruction Territoriale : texte « Dans le scénario de référence, les coopératives incarnent… »
+- Courant Nationaliste Instrumentalisateur du Discours des Racines : texte « Dans ce scénario, représente une force de résistance… »
+- EcoSynth Global Resilience Systems (EGRS) : texte « EGRS incarne la marchandisation des solutions climatiques.… »
+- États à Tendance Centraliste Numérique : texte « Leur montée en puissance depuis 2026 a redessiné les… »
+- Fonds d'Investissement Foncier Climatique : texte « Il agit comme courroie de transmission entre les marchés… »
+- Fonds Monétaire Climatique (FMC) : texte « Le FMC constitue un pilier de la gouvernance économique… »
+- Gouvernements à Régime de Productivité Mandatée : texte « Dans ce scénario, ces gouvernements constituent un contexte… »
+- Ilse Varga-Holm de Ergo-Wian Sovereign Holdings : texte « Pragmatique et stratège, elle incarne l'équilibre précaire… »
+- Institut des Seuils Démographiques (ISD-2098) : texte « Il agit comme arbitre des flux humains, produisant des… »
+- Réseau de Gouvernance Multilatérale Survivant (RGMS) : texte « Elles peinent à imposer leur autorité face aux blocs… »
+- Accords Hydriques de Kinshasa : texte « Régulièrement mis à l'épreuve par les sécheresses, les… »
+- Lamplight Collective : texte « En enquêtant sur les financements clandestins des… »
+- Raj Mehta : texte « Couvre les tensions géopolitiques et économiques dans un… »
+- Les Gardiens des Rives : texte « Ils agissent comme un système nerveux parallèle, reliant… »
+- Ligue des Métropoles du Sud pour les Infrastructures Libres : texte « Dans ce scénario, elle incarne la pression organisée des… »
+- Ligue des Municipalités Périphériques Sous-Connectées : texte « Dans ce scénario, elle représente la pression collective… »
+- Lobbies Agro-Industriels à Haute Consommation d'Eau : texte « Exercent des pressions politiques et économiques pour… »
+- Maëlys Okonkwo : texte « Son travail se concentre sur l'exposition des liens entre… »
+- Mouvement pour la Libre Circulation des Personnes et des Données : texte « Pression sur les institutions pour abolir ou contourner les… »
+- Nairobi CRRC — Centre Régional de Résilience et de Coordination : texte « Dans un monde fragmenté mais encore institutionnellement… »
+- NexCore Global Infrastructure Group : texte « NexCore GIG est devenu l'épine dorsale numérique de facto… »
+- Observatoire Climatique des Territoires (OCT) : texte « Elle occupe une position d'arbitre technique dans un… »
+- ONG Environnementales de Terrain : texte « Dans le scénario de référence, elles constituent un… »
+- Opérateurs Privés d'Énergie Distribuée Hors-FCT : texte « Dans le scénario référence, les Opérateurs Hors-FCT… »
+- Oracle des Seuils : texte « Système d'intelligence artificielle distribué opérant sous… »
+- Plateformes Centralisées de Narration Officielle : texte « Dans le scénario référence, les Plateformes Centralisées de… »
+- Plateformes d'Optimisation Territoriale par IA : texte « Dans ce scénario, ces plateformes structurent la manière… »
+- Plateformes Informationnelles Dominantes et leurs IA de Modération : texte « Dans le scénario reference, elles forment le substrat… »
+- Prisme Global : texte « Prisme Global s'est imposé comme la principale… »
+- Régulateurs de l'Union Continentale Africaine : texte « Instance régulatrice continentale émergente, les… »
+- Réseau des Métropoles Côtières Adaptées : texte « Acteur collectif structurant la gouvernance territoriale… »
+- Réseau des Villes-Refuge pour Travailleurs Désaugmentés : texte « Constitue un contre-modèle territorial à la logique… »
+- Réseaux de Capteurs Citoyens : texte « Dans le scénario de référence, les Réseaux de Capteurs… »
+- Réseaux de gouvernance multilatérale survivants : texte « Représente la persistance — fragile et contestée — d'une… »
+- Services de contre-information des blocs géopolitiques concurrents : texte « Acteurs exogènes qui alimentent la guerre informationnelle… »
+- Singapour Est Nexcore : texte « Singapour Est Nexcore est une organisation technologique… »
+- Singapour Est : texte « Singapour Est désigne la zone administrative orientale de… »
+- Syndicats de travailleurs de la transition énergétique : texte « Acteurs de négociation et de pression sur les modalités… »
+- TerraMetrics Global Climate Solutions (TM-GCS) : texte « TerraMetrics Global Climate Solutions (TM-GCS) est l'acteur… »
+- Tribunal Algorithmique de Bruxelles : texte « Le Tribunal Algorithmique de Bruxelles est la juridiction… »
+- Union Africaine Résilience (UAR) : texte « Elle reste un interlocuteur reconnu sur la scène… »
+- Universités et Think Tanks en Zones de Liberté Académique : texte « elles produisent des contre-expertises sur les gouvernances… »
+- Valparaíso FCT — Facilitation & Compensation Transfrontalière : texte « elle n'émet pas de monnaie, ne produit pas de marchandises,… »
+- Voix du Dehors : texte « Dans un monde où l'infrastructure numérique est hautement… »
+- Marges Persistantes — Zones Grises du Système Mondial : texte « Elles fonctionnent comme des soupapes systémiques —… »
 
-_Réponses rejetées car mal formées (8) : trajectoire : archives_neutres_geneve_breakdown déjà résiduel (aucun changement) ; relation bloc_de_johannesburg_breakdown / geneve_bunker_institutions_breakdown : opposition déjà présente ; relation enclaves_corporatives_fortifiees_breakdown / archives_neutres_geneve_breakdown : opposition déjà présente ; relation front_des_blocs_regionaux_du_recit_des_conflits_ressources_breakdown / archives_neutres_de_geneve_breakdown : opposition déjà présente (proposée comme renforcée, rien à changer) ; relation gelecek_meclisi_breakdown / collectifs_de_gardiens_archivistes_itinerants_breakdown : alliance déjà présente ; relation gouvernements_de_forteresse_anti_nairobi_breakdown / archives_neutres_geneve_breakdown : opposition déjà présente (proposée comme renforcée, rien à changer) ; relation reseau_des_anciens_financeurs_devenus_censeurs_breakdown / archives_neutres_geneve_breakdown : opposition déjà présente (proposée comme renforcée, rien à changer) ; relation seigneuries_logistiques_armees_breakdown / archives_neutres_de_geneve_breakdown : opposition déjà présente_
+_Corrections automatiques (2) : relation factions_eurasiatiques_contre_la_tarification_hydrique_reference / bloc_eurasien_central_reference : renforcée -> nouvelle (absente du vault) ; relation gouvernements_federaux_residuels_souverainistes_reference / bloc_eurasien_central_reference : renforcée -> nouvelle (absente du vault)_
+
+_Réponses rejetées car mal formées (16) : relation armada_logistique_nordique_reference / murmansk_transit_arctique_reference : opposition à rompre absente du vault ; trajectoire : armada_logistique_nordique_reference dominant → ascendant (recul sur la phase de montée, incohérent) ; relation arctic_passage_authority_reference / armada_logistique_nordique_reference : alliance déjà présente ; relation bloc_ressources_eurasiatique_bre_reference / armada_logistique_nordique_reference : opposition déjà présente ; relation collectifs_de_peche_inuit_et_sami_reference / armada_logistique_nordique_reference : opposition déjà présente ; relation consortium_des_grandes_plateformes_logistiques_globales_reference / armada_logistique_nordique_reference : alliance déjà présente ; trajectoire : corridor_arctique_nordique_reference dominant → mature présenté comme un renforcement (contresens sur l'axe) ; relation corridor_arctique_nordique_reference / armada_logistique_nordique_reference : alliance déjà présente (proposée comme renforcée, rien à changer) …_
 
 ### Liste d'application (à valider à la main — rien n'est écrit)
 
 _Carte et conséquences tirées de la lecture IA (un tirage) : relire chaque étape avant de l'appliquer ; écarter une proposition suffit à sauter ses étapes._
 
 **Statuts de zone**
-- [ ] 1. `geneve_bunker_institutions` (Genève-Bunker (Nœud Institutionnel Résiduel)) : fragmenté → en_declin
-  - à la main : geographie/breakdown.md, champ `statut` (texte mis à jour par regenerer_corps_geographie.py --scenario breakdown --execute)
-  - _La destruction de Genève prive cette zone de sa raison d'être institutionnelle, accélérant son déclin._
-- [ ] 2. `hanse_baltique` (Hanse Baltique Recomposée) : stable → dominant
-  - à la main : geographie/breakdown.md, champ `statut` (texte mis à jour par regenerer_corps_geographie.py --scenario breakdown --execute)
-  - _La Ligue Hanséatique Baltique profite du vide européen pour étendre son influence et devenir un acteur dominant._
+- [ ] 1. `murmansk_transit_arctique` (Mourmansk) : stable → en_declin
+  - à la main : geographie/reference.md, champ `statut` (texte mis à jour par regenerer_corps_geographie.py --scenario reference --execute)
+  - _Disparition de l'infrastructure Murmansk Transit Arctique et déclin partiel de la ville._
 
 **Élément**
-- [ ] 3. Injecter l'événement `destruction_geneve_2076` (entrée commune en fin de rapport)
+- [ ] 2. Injecter l'événement `explosion_brise_glace_murmansk_2081` (entrée commune en fin de rapport)
   - `python3 generator/inject_custom_events.py --mode custom`
   - _une seule injection pour tous les scénarios de l'hypothèse_
-- [ ] 4. Vérifier que la fiche porte les forces simulées (gouvernance_institutions +6)
-  - event_instances/destruction_geneve_2076_breakdown.md, bloc impact_sur_variables ; python3 generator/trace_injection.py --slug destruction_geneve_2076 --type evenement --scenario breakdown
+- [ ] 3. Vérifier que la fiche porte les forces simulées (organisation_territoires +6, geopolitique_conflits +5, energie_ressources_critiques +4, systeme_economique_redistribution +5, demographie_mobilite_humaine +3)
+  - event_instances/explosion_brise_glace_murmansk_2081_reference.md, bloc impact_sur_variables ; python3 generator/trace_injection.py --slug explosion_brise_glace_murmansk_2081 --type evenement --scenario reference
   - _imposées par l'entrée commune (impacts_imposes, date_imposee) : l'effet doit correspondre à cette simulation_
 
 **Nouvelles entités**
-- [ ] 5. 3 entrée(s) prête(s) (bloc YAML ci-dessous) pour entites_custom/queue.yaml — catégorie à choisir
+- [ ] 4. 3 entrée(s) prête(s) (bloc YAML ci-dessous) pour entites_custom/queue.yaml — catégorie à choisir
   - `python3 generator/create_entities_and_instances.py --mode custom`
   - _la lecture IA ne donne pas de catégorie ; scenario_hint limite à ce scénario_
 
 **Trajectoires**
-- [ ] 6. Archives Neutres de Genève (`archives_neutres_de_geneve_breakdown`) : émergent → résiduel
-  - à la main : instances/archives_neutres_de_geneve_breakdown.md, champ `trajectoire`
-  - _Perte de leur siège physique et de la majorité de leurs archives originales, réduisant leur rôle à un symbole juridique sans capacité opérationnelle._
-- [ ] 7. Tour Bcuc Genève — Le Comptoir des Ruines (`tour_bcuc_geneve_breakdown`) : transformé → disparu
-  - à la main : instances/tour_bcuc_geneve_breakdown.md, champ `trajectoire`
-  - _La Tour BCUC, déjà transformée en comptoir informel, est détruite dans l'explosion, mettant fin à son rôle hybride._
-- [ ] 8. Résidu AMSC — Bureau de Coordination d'Urgence Climatique (`agence_stabilisation_climatique_breakdown`) : transformé → disparu
-  - à la main : instances/agence_stabilisation_climatique_breakdown.md, champ `trajectoire`
-  - _Le BCUC, dernier vestige de l'AMSC, perd toute capacité de coordination avec la destruction de ses infrastructures genevoises._
-- [ ] 9. Résidu de Genève — Le Palais des Fantômes (`geneve_bunker_institutions_breakdown`) : transformé → disparu
-  - à la main : instances/geneve_bunker_institutions_breakdown.md, champ `trajectoire`
-  - _Le Palais des Fantômes, déjà marginalisé, n'a plus de raison d'exister après la destruction de Genève._
-- [ ] 10. Ligue Hanséatique Baltique — Le Sceau du Gotland (`hanse_baltique_breakdown`) : ascendant → dominant
-  - à la main : instances/hanse_baltique_breakdown.md, champ `trajectoire`
-  - _La Ligue Hanséatique Baltique profite du vide institutionnel européen pour étendre son influence comme alternative crédible aux États défaillants._
-- [ ] 11. Kalaallit Nunaat Sovereign Fund — Fonds des Glaces Libérées (`kalaallit_nunaat_sovereign_fund_breakdown`) : dominant → mature
-  - à la main : instances/kalaallit_nunaat_sovereign_fund_breakdown.md, champ `trajectoire`
-  - _Le Fonds des Glaces Libérées renforce son rôle de stabilisateur régional en absorbant les flux financiers et logistiques auparavant gérés depuis Genève._
+- [ ] 5. Murmansk Transit Arctique (`murmansk_transit_arctique_reference`) : dominant → disparu
+  - à la main : instances/murmansk_transit_arctique_reference.md, champ `trajectoire` ; puis `annee_fin` (fix_annee_fin_manquant.py)
+  - _Destruction définitive de l'infrastructure Murmansk Transit Arctique suite à l'explosion du brise-glace nucléaire._
+- [ ] 6. Conseil des États Nordiques Intégrés (`conseil_des_etats_nordiques_integres_reference`) : émergent → ascendant
+  - à la main : instances/conseil_des_etats_nordiques_integres_reference.md, champ `trajectoire`
+  - _Renforcement de la coopération régionale pour combler le vide laissé par la disparition de Mourmansk._
+- [ ] 7. Fonds Souverain Arctique Scandinave (`fonds_souverain_arctique_scandinave_reference`) : émergent → ascendant
+  - à la main : instances/fonds_souverain_arctique_scandinave_reference.md, champ `trajectoire`
+  - _Accroissement de son rôle dans la gouvernance des territoires arctiques suite à la redistribution des flux logistiques._
+- [ ] 8. Sibérie Fédérale (`siberie_federale_reference`) : émergent → marginal
+  - à la main : instances/siberie_federale_reference.md, champ `trajectoire`
+  - _Perte d'accès privilégié aux routes arctiques et marginalisation accrue dans le Bloc Eurasien Central._
+- [ ] 9. ⚠ Consortium Énergétique des Mers du Nord (`consortium_energetique_des_mers_du_nord_reference`) : émergent → dominant
+  - à la main : instances/consortium_energetique_des_mers_du_nord_reference.md, champ `trajectoire`
+  - _saut d'un cran (sans passer par ascendant) : garder, ou ramener à ascendant ; Absorption des flux énergétiques redirigés vers Tromsø et renforcement de son rôle systémique._
+- [ ] 10. Collectifs de Pêche Inuit et Sami (`collectifs_de_peche_inuit_et_sami_reference`) : émergent → ascendant
+  - à la main : instances/collectifs_de_peche_inuit_et_sami_reference.md, champ `trajectoire`
+  - _Renforcement de leurs revendications territoriales face à la reconfiguration des zones de pêche arctiques._
 
 **Relations**
-- [ ] 12. Résidu de Genève — Le Palais des Fantômes (`geneve_bunker_institutions_breakdown`) disparaît : retirer ses 1 relation(s) rompue(s) [passe exhaustive]
-  - à la main : retirer `geneve_bunker_institutions_breakdown` des alliances / oppositions de `archives_neutres_de_geneve_breakdown`, puis vider celles de instances/geneve_bunker_institutions_breakdown.md
+- [ ] 11. Murmansk Transit Arctique (`murmansk_transit_arctique_reference`) disparaît : retirer ses 1 relation(s) rompue(s) [passe exhaustive]
+  - à la main : retirer `murmansk_transit_arctique_reference` des alliances / oppositions de `armada_logistique_nordique_reference`, puis vider celles de instances/murmansk_transit_arctique_reference.md
   - _regroupé sous l'entité disparue ; la réciprocité n'enlève rien_
-- [ ] 13. Résidu AMSC — Bureau de Coordination d'Urgence Climatique (`agence_stabilisation_climatique_breakdown`) disparaît : retirer ses 2 relation(s) rompue(s) [passe exhaustive]
-  - à la main : retirer `agence_stabilisation_climatique_breakdown` des alliances / oppositions de `collectif_des_climatologues_sans_etat_breakdown`, `ligue_des_cites_littorales_en_sursis_breakdown`, puis vider celles de instances/agence_stabilisation_climatique_breakdown.md
-  - _regroupé sous l'entité disparue ; la réciprocité n'enlève rien_
-- [ ] 14. Tour Bcuc Genève — Le Comptoir des Ruines (`tour_bcuc_geneve_breakdown`) disparaît : retirer ses 2 relation(s) rompue(s) [passe exhaustive]
-  - à la main : retirer `tour_bcuc_geneve_breakdown` des alliances / oppositions de `corporations_de_l_ere_pre_effondrement_a_droits_de_pi_breakdown`, `archives_neutres_de_geneve_breakdown`, puis vider celles de instances/tour_bcuc_geneve_breakdown.md
-  - _regroupé sous l'entité disparue ; la réciprocité n'enlève rien_
-- [ ] 15. opposition nouvelle : Milices Privées Documentées Terrain ↔ Archives Neutres de Genève
-  - à la main : ajouter `archives_neutres_geneve_breakdown` dans `oppositions` de instances/milices_privees_documentees_terrain_breakdown.md
-  - _Les milices privées, désormais sans contre-pouvoir institutionnel, contestent la légitimité des archives survivantes pour imposer leurs propres règles._
-- [ ] 16. opposition nouvelle : Cartels Logistiques Régionaux ↔ Les Venelles — Corridors Eurasiens Convoyage
-  - à la main : ajouter `corridors_eurasiens_convoyage_breakdown` dans `oppositions` de instances/cartels_logistiques_regionaux_breakdown.md
-  - _Les cartels logistiques régionaux entrent en conflit avec les Venelles pour le contrôle des axes eurasiens, désormais sans régulation._
-- [ ] 17. ⚠ alliance rompue : Ligue Méditerranéenne des Villes-États Portuaires ↔ Archives Neutres de Genève [passe exhaustive]
-  - à la main : retirer de `alliances` dans les DEUX fiches (ligue_mediterraneenne_des_villes_etats_portuaires_breakdown, archives_neutres_geneve_breakdown)
-  - _`archives_neutres_geneve_breakdown` n'est déclarée disparue nulle part (trajectoire retenue : résiduel) : garder la relation, ou faire disparaître l'entité_
-- [ ] 18. ⚠ alliance rompue : Les Échos du Méridien ↔ Archives Neutres de Genève [passe exhaustive]
-  - à la main : retirer de `alliances` dans les DEUX fiches (meridian_assembly_breakdown, archives_neutres_de_geneve_breakdown)
-  - _`archives_neutres_de_geneve_breakdown` n'est déclarée disparue nulle part (trajectoire retenue : résiduel) : garder la relation, ou faire disparaître l'entité_
-- [ ] 19. ⚠ alliance rompue : Milices Privées Documentées Terrain ↔ Archives Neutres de Genève [passe exhaustive]
-  - à la main : retirer de `alliances` dans les DEUX fiches (milices_privees_documentees_terrain_breakdown, archives_neutres_de_geneve_breakdown)
-  - _`archives_neutres_de_geneve_breakdown` n'est déclarée disparue nulle part (trajectoire retenue : résiduel) : garder la relation, ou faire disparaître l'entité_
-- [ ] 20. ⚠ alliance rompue : Nœud Mnemos Pannonie — Les Gardiens du Danube ↔ Archives Neutres de Genève [passe exhaustive]
-  - à la main : retirer de `alliances` dans les DEUX fiches (noeud_mnemos_pannonie_breakdown, archives_neutres_de_geneve_breakdown)
-  - _`archives_neutres_de_geneve_breakdown` n'est déclarée disparue nulle part (trajectoire retenue : résiduel) : garder la relation, ou faire disparaître l'entité_
-- [ ] 21. ⚠ alliance rompue : ONG de Gestion Migratoire Survivantes ↔ Archives Neutres de Genève [passe exhaustive]
-  - à la main : retirer de `alliances` dans les DEUX fiches (ong_de_gestion_migratoire_survivantes_breakdown, archives_neutres_de_geneve_breakdown)
-  - _`archives_neutres_de_geneve_breakdown` n'est déclarée disparue nulle part (trajectoire retenue : résiduel) : garder la relation, ou faire disparaître l'entité_
-- [ ] 22. ⚠ alliance rompue : Les Voix du Seuil — Fragments de l'Oracle ↔ Archives Neutres de Genève [passe exhaustive]
-  - à la main : retirer de `alliances` dans les DEUX fiches (oracle_des_seuils_breakdown, archives_neutres_de_geneve_breakdown)
-  - _`archives_neutres_de_geneve_breakdown` n'est déclarée disparue nulle part (trajectoire retenue : résiduel) : garder la relation, ou faire disparaître l'entité_
-- [ ] 23. ⚠ alliance rompue : Réseau des Courriers Nomades Sahélo-Méditerranéens ↔ Archives Neutres de Genève [passe exhaustive]
-  - à la main : retirer de `alliances` dans les DEUX fiches (reseau_des_courriers_nomades_sahelo_mediterraneens_breakdown, archives_neutres_geneve_breakdown)
-  - _`archives_neutres_geneve_breakdown` n'est déclarée disparue nulle part (trajectoire retenue : résiduel) : garder la relation, ou faire disparaître l'entité_
-- [ ] 24. ⚠ alliance rompue : Chambre des Recours Algorithmiques — Ce qu'il en reste ↔ Archives Neutres de Genève [passe exhaustive]
-  - à la main : retirer de `alliances` dans les DEUX fiches (tribunal_algorithmique_de_bruxelles_breakdown, archives_neutres_de_geneve_breakdown)
-  - _`archives_neutres_de_geneve_breakdown` n'est déclarée disparue nulle part (trajectoire retenue : résiduel) : garder la relation, ou faire disparaître l'entité_
-- [ ] 25. Rendre les relations réciproques
-  - `python3 generator/fix_alliances_oppositions.py --scenario breakdown --reciprocite-seule --ignorer-exclus`
+- [ ] 12. opposition nouvelle : Bloc Eurasien Central (BEC) ↔ Armada Logistique Nordique
+  - à la main : ajouter `armada_logistique_nordique_reference` dans `oppositions` de instances/bloc_eurasien_central_reference.md
+  - _Tensions accrues pour le contrôle des routes arctiques et des ressources critiques._
+- [ ] 13. alliance nouvelle : Consortium Énergétique des Mers du Nord ↔ Armada Logistique Nordique
+  - à la main : ajouter `armada_logistique_nordique_reference` dans `alliances` de instances/consortium_energetique_des_mers_du_nord_reference.md
+  - _Synergie entre logistique et énergie pour optimiser les flux redirigés vers Tromsø._
+- [ ] 14. opposition nouvelle : Collectifs de Pêche Inuit et Sami ↔ Conseil des États Nordiques Intégrés
+  - à la main : ajouter `conseil_des_etats_nordiques_integres_reference` dans `oppositions` de instances/collectifs_de_peche_inuit_et_sami_reference.md
+  - _Conflits d'intérêts entre gouvernance régionale et revendications territoriales autochtones._
+- [ ] 15. opposition nouvelle : Sibérie Fédérale ↔ Bloc Eurasien Central (BEC)
+  - à la main : ajouter `bloc_eurasien_central_reference` dans `oppositions` de instances/siberie_federale_reference.md
+  - _Marginalisation de la Sibérie Fédérale et contestation de l'autorité centrale russe._
+- [ ] 16. Rendre les relations réciproques
+  - `python3 generator/fix_alliances_oppositions.py --scenario reference --reciprocite-seule --ignorer-exclus`
   - _étape 2 de Relations & lore (simulation d'abord)_
 
 **Lore**
-- [ ] 26. Règles à ajouter pour que l'audit du lore surveille : faits imposés de l'hypothèse
-  - à la main : documentation/lore_regles.yaml, section breakdown
+- [ ] 17. Règles à ajouter pour que l'audit du lore surveille : faits imposés de l'hypothèse
+  - à la main : documentation/lore_regles.yaml, section reference
   - _comme les zones abandonnées de fortress_world (Nordgard, Koursk)_
 
 **Fiches à relire**
-- [ ] 27. Corriger une phrase de `agence_stabilisation_climatique_breakdown` [passe exhaustive]
-  - à la main : instances/agence_stabilisation_climatique_breakdown.md
-  - _« Jadis mandaté pour orchestrer les grandes interventions géo-ingénieristes, il n'existe plus que comme structure fantôme, réclamant une légitimité que personne… » — contredit par : Genève est rasée en 2076, aucun bâtiment ni sous-sol ne subsiste._
-- [ ] 28. Termes cherchés : Genève
-  - _mot entier, sans casse ni accents ; le registre seulement après 2076 (chronologie) ; instances et événements relus par la passe exhaustive : seuls les zones et le registre sont listés_
-- [ ] 29. Zone `geneve_bunker_institutions` cite « Genève »
-  - _Genève-Bunker (Nœud Institutionnel Résiduel)…_
-- [ ] 30. Zone `archives_neutres_geneve` cite « Genève »
-  - _Archives Neutres de Genève-Bunker…_
-- [ ] 31. Zone `bloc_johannesburg` cite « Genève »
-  - _…eté régionale australe contre les prétentions de Nairobi ou Genève.…_
-- [ ] 32. Zone `nairobi_crrc` cite « Genève »
-  - _…rgo au large de Mombasa, la troisième s'étant réinstallée à Genève. Surnommé 'le Fantôme de Nairobi'.…_
-- [ ] 33. Zone `tour_bcuc_geneve` cite « Genève »
-  - _Genève, Suisse…_
+- [ ] 18. Corriger une phrase de `murmansk_transit_arctique_reference` [passe exhaustive]
+  - à la main : instances/murmansk_transit_arctique_reference.md
+  - _« Plaque tournante stratégique du trafic maritime et énergétique arctique, Murmansk Transit Arctique s'est imposée comme nœud incontournable des nouvelles routes… » — contredit par : L'infrastructure Murmansk Transit Arctique n'existe plus en 2098._
+- [ ] 19. Termes cherchés : Arctique, Logistique, Mourmansk, Murmansk, Nord, Nordique, Passage, Transit, Tromsø
+  - _mot entier, sans casse ni accents ; le registre seulement après 2081 (chronologie) ; instances et événements relus par la passe exhaustive : seuls les zones et le registre sont listés_
+- [ ] 20. Zone `bloc_eurasien_central` cite « Transit »
+  - _…rale (lithium, terres rares, hydrogène) et les corridors de transit vers les mégapoles eurasiatiques. Comprend la Sibérie Fédérale comme entité rev…_
+- [ ] 21. Zone `corridor_arctique_nordique` cite « Arctique »
+  - _Corridor Arctique Nordique…_
+- [ ] 22. Zone `ecosse_nordique_independante` cite « Nordique »
+  - _Écosse Nordique Indépendante…_
+- [ ] 23. Zone `iberie_atlantique_fragmentee` cite « Logistique »
+  - _Zone centrée sur Lisbonne, devenue un hub logistique et financier secondaire pour les flux atlantiques, en concurrence avec les port…_
+- [ ] 24. Zone `indo_pacifique_emergent` cite « Nord »
+  - _…anie ; Laos ; Cambodge ; Brunei ; Timor oriental ; Corée du Nord ; Taïwan ; Seychelles ; Barbade ; Sainte-Lucie ; Grenade ; Saint-Vincent-et-les…_
+- [ ] 25. Zone `turquie_eurasie_moyen_orient` cite « Transit »
+  - _…corridors énergétiques entre l'Europe et l'Asie. Centre de transit pour les flux de données et d'énergie.…_
+- [ ] 26. Zone `zones_grises_globales` cite « Nord »
+  - _…; Érythrée ; Bosnie-Herzégovine ; Monténégro ; Macédoine du Nord ; Albanie ; Kosovo ; Turkménistan ; Palestine ; République centrafricaine ; Som…_
+- [ ] 27. Zone `bloc_sahelien_autonome` cite « Passage »
+  - _…ésion du bloc. Compétition entre milices pour les droits de passage sur les couloirs du Sahel. Captation des savoirs écologiques locaux par des pla…_
+- [ ] 28. Zone `corridors_eurasiens_peripheriques` cite « Logistique »
+  - _…Ces corridors constituent le segment le plus instable de la logistique eurasiatique — ni sous contrôle étatique formel, ni entièrement dans les mains…_
+- [ ] 29. Zone `corridors_eurasiens_zones_grises` cite « Logistique »
+  - _…formel du Bloc Eurasien Central et constituent le substrat logistique de l'économie parallèle eurasiatique.…_
+- [ ] 30. Zone `couloirs_saheliens` cite « Passage »
+  - _…c Sahélien Autonome, les milices concurrentes des droits de passage, et les agences de sécurité régionales de normalisation. Leur contrôle est au c…_
+- [ ] 31. Zone `detroit_compact_grands_lacs` cite « Nord »
+  - _…hydriques massifs vers les zones désertifiées du Sud-Ouest nord-américain crée une fracture entre délégués autochtones opposés à toute exportat…_
+- [ ] 32. Zone `helsinki_communs_numeriques` cite « Arctique »
+  - _…d de production intellectuelle alternative dans le Corridor Arctique Nordique, à l'interface entre la logique para-étatique de l'ALN et les expérien…_
+- [ ] 33. Zone `murmansk_transit_arctique` cite « Mourmansk »
+  - _Mourmansk…_
+- [ ] 34. Zone `nuuk_capitale_groenland` cite « Arctique »
+  - _…itale est le centre de gravité géopolitique d'une puissance arctique émergente qui joue méthodiquement les blocs eurasiatique, indo-pacifique et nor…_
+- [ ] 35. Zone `siberie_federale` cite « Arctique »
+  - _Contestation des zones maritimes arctiques avec le Corridor Arctique Nordique. Tension avec le cartel des terres rares d'Asie centrale sur le partag…_
+- [ ] 36. Zone `singapour_est` cite « Logistique »
+  - _…l'Arc Indo-Pacifique — carrefour des flux d'information, de logistique et de finance régionale. Les traders de Singapour sont aussi familiers aux esta…_
+- [ ] 37. Zone `tampere_communs_territoriaux` cite « Logistique »
+  - _…due dans le Corridor Arctique Nordique entre la gouvernance logistique dominante de l'ALN et les structures de communs territoriaux qui résistent à l'…_
+- [ ] 38. Zone `tbilissi_noeud_mnemos` cite « Passage »
+  - _…ationnellement à mi-chemin entre blocs, servant de point de passage pour des flux d'information alternatifs.…_
+- [ ] 39. Zone `tromsoe_aln` cite « Tromsø »
+  - _Tromsø…_
+- [ ] 40. Zone `zones_grises_sahel_central` cite « Passage »
+  - _…Racines Vivantes et les milices concurrentes des droits de passage. Ces zones sont le terrain d'opération privilégié des agences de sécurité régio…_
+- [ ] 41. Zone `ilulissat_apa` cite « Arctique »
+  - _Siège de l'Autorité de Passage Arctique (APA), institution de co-gouvernance des corridors maritimes arctiques rendus n…_
 
 **Possibles (facultatif)**
-- [ ] 34. Cartels Logistiques Régionaux (`cartels_logistiques_regionaux_breakdown`) : trajectoire émergent → ascendant [passe exhaustive]
-  - _Accélération de la fragmentation institutionnelle, substitution directe aux chaînes logistiques internationales_
-- [ ] 35. Nœud Mnemos Pannonie — Les Gardiens du Danube (`noeud_mnemos_pannonie_breakdown`) : trajectoire ascendant → dominant [passe exhaustive]
-  - _Renforcement immédiat comme nœud décentralisé de référence pour la mémoire et les archives_
-- [ ] 36. Collectifs de Gardiens-Archivistes Itinérants (`collectifs_de_gardiens_archivistes_itinerants_breakdown`) : trajectoire émergent → ascendant ; alliance rompue avec Archives Neutres de Genève ; alliance rompue avec Archives Neutres de Genève [passe exhaustive]
-  - _Devenir incontournable comme gardiens de la mémoire résiduelle après la perte des archives physiques_
-- [ ] 37. Milices Privées Documentées Terrain (`milices_privees_documentees_terrain_breakdown`) : trajectoire émergent → ascendant [passe exhaustive]
-  - _Montée en puissance comme substituts locaux aux institutions sécuritaires disparues_
-- [ ] 38. ONG de Gestion Migratoire Survivantes (`ong_de_gestion_migratoire_survivantes_breakdown`) : alliance nouvelle avec Collectifs de Gardiens-Archivistes Itinérants [passe exhaustive]
-  - _Alliance nouvelle avec les Gardiens-Archivistes pour préserver des données migratoires critiques_
-- [ ] 39. Front Humanitaire d'Urgence Non Affilié (`front_humanitaire_d_urgence_non_affilie_breakdown`) : alliance rompue avec Archives Neutres de Genève ; alliance nouvelle avec Collectifs de Gardiens-Archivistes Itinérants ; texte « Assure une continuité minimale de secours et de… » [passe exhaustive]
-  - _Alliance rompue avec les Archives Neutres et pivot vers les Gardiens-Archivistes pour la continuité des secours_
-- [ ] 40. Compagnies de Géo-Ingénierie Privées Sans Mandat (`compagnies_de_geo_ingenierie_privees_sans_mandat_breakdown`) : texte « Dans le scénario breakdown, elles incarnent la… » [passe exhaustive]
-  - _Légitimité renforcée comme acteurs alternatifs de géo-ingénierie dans le vide institutionnel_
-- [ ] 41. Factions Énergétiques Héritières des Pactes ABS (`factions_energetiques_heritieres_des_pactes_abs_breakdown`) : texte « Dans un scénario de breakdown, elles incarnent la… » [passe exhaustive]
-  - _Rôle accru comme héritières des pactes énergétiques dans l'absence de recentralisation_
-- [ ] 42. Flux Migratoires Non Intégrables (`flux_migratoires_non_integrables_breakdown`) : texte « Vecteur d'effondrement en cascade des mécanismes de… » [passe exhaustive]
-  - _Précarisation accrue des pactes d'accueil régionaux, amplification des flux non intégrables_
-- [ ] 43. Réseau des Organisations Humanitaires Hors Cadre Onusien (`reseau_des_organisations_humanitaires_hors_cadre_onusien_breakdown`) : texte « Assure une continuité minimale de l'aide humanitaire là où… » [passe exhaustive]
-  - _Élargissement du rôle humanitaire en comblant le vide laissé par les institutions multilatérales_
-- [ ] 44. Les Fragments de Mnemos (`reseau_mnemos_breakdown`) : texte « Ce qui fut l'infrastructure planétaire cohérente de Mnemos… » [passe exhaustive]
-  - _Accentuation de la dislocation des réseaux informationnels comme Mnemos_
-- [ ] 45. Les Voix du Seuil — Fragments de l'Oracle (`oracle_des_seuils_breakdown`) : texte « Ses fragments tournent sur des serveurs hétéroclites —… » [passe exhaustive]
-  - _Fragmentation accrue des prédictions de l'Oracle après la perte des archives centrales_
-- [ ] 46. Les Veilleurs des Brumes — Réseau des Cartographes des Zones Grises (`reseau_des_cartographes_des_zones_grises_breakdown`) : texte « Dans un monde où les frontières se sont effondrées sous les… » [passe exhaustive]
-  - _Rôle élargi des cartographes des zones grises dans un monde plus fragmenté_
-- [ ] 47. États Fragmentés Nationalisant les Stocks (`etats_fragmentes_nationalisant_les_stocks_breakdown`) : texte « Dans le scénario breakdown, ces États exercent une pression… » [passe exhaustive]
-  - _Pression accrue sur les stocks nationalisés en l'absence de coordination globale_
-- [ ] 48. Front de Résistance aux Péages sur les Ressources (`front_de_resistance_aux_peages_sur_les_ressources_breakdown`) : texte « Dans le scénario breakdown, le Front de Résistance aux… » [passe exhaustive]
-  - _Absence de régulation renforçant les logiques extractives et la résistance aux péages_
-- [ ] 49. Résidu de Genève — Le Palais des Fantômes (`geneve_bunker_institutions_breakdown`) : texte « Vestige institutionnel de l'ancien système onusien et… » [passe exhaustive]
-  - _Disparition du Résidu de Genève, rendant obsolète toute référence à ce vestige_
-- [ ] 50. Tour Bcuc Genève — Le Comptoir des Ruines (`tour_bcuc_geneve_breakdown`) : alliance rompue avec Résidu de Genève — Le Palais des Fantômes [passe exhaustive]
-  - _Disparition du bunker des institutions genevoises, rendant toute alliance impossible_
-- [ ] 51. Factions Propagandistes des Archives (`factions_propagandistes_des_archives_breakdown`) : opposition rompue avec Résidu de Genève — Le Palais des Fantômes ; alliance rompue avec Archives Neutres de Genève [passe exhaustive]
-  - _Opposition et alliances rompues avec le Résidu de Genève et les Archives Neutres_
-- [ ] 52. États-Fragments en Guerre pour les Stations Atmosphériques (`etats_fragments_en_guerre_pour_les_stations_atmospheriques_breakdown`) : opposition rompue avec Archives Neutres de Genève ; texte « Acteurs déstabilisateurs centraux du scénario breakdown,… » [passe exhaustive]
-  - _Opposition rompue avec les Archives Neutres, acteur déstabilisateur central_
-- [ ] 53. Corporations de l'Ère Pré-Effondrement à Droits de PI (`corporations_de_l_ere_pre_effondrement_a_droits_de_pi_breakdown`) : texte « Dans le scénario breakdown, elles bloquent ou monnayent… » [passe exhaustive]
-  - _Capacité renforcée à monnayer l'accès aux droits de propriété intellectuelle_
-- [ ] 54. … et 31 autre(s) fiche(s) avec des changements possibles
+- [ ] 42. Bloc Eurasien Central (BEC) (`bloc_eurasien_central_reference`) : trajectoire déclinant → résiduel [passe exhaustive]
+  - _Disparition directe de son pivot logistique et énergétique, Murmansk Transit Arctique_
+- [ ] 43. Cartel des Terres Rares d'Asie Centrale (`cartel_des_terres_rares_d_asie_centrale_reference`) : trajectoire émergent → ascendant [passe exhaustive]
+  - _Renforcement direct comme acteur clé des ressources critiques post-explosion_
+- [ ] 44. Bloc Ressources Eurasiatique (BRE) (`bloc_ressources_eurasiatique_bre_reference`) : trajectoire émergent → ascendant [passe exhaustive]
+  - _Rôle accru dans la régulation autoritaire des ressources critiques_
+- [ ] 45. Alliance des Glaces Libres (AGL) (`consortium_des_pecheries_autonomes_du_grand_nord_reference`) : trajectoire ascendant → dominant ; opposition nouvelle avec Armada Logistique Nordique [passe exhaustive]
+  - _Opposition directe avec l'Armada Logistique Nordique, renforcée par le déclin de Mourmansk_
+- [ ] 46. Consortiums Privés d'Extraction de Ressources Critiques (`consortiums_prives_d_extraction_de_ressources_critiques_reference`) : trajectoire émergent → ascendant [passe exhaustive]
+  - _Exploitation directe du vide logistique et énergétique créé par la disparition de Murmansk_
+- [ ] 47. Opérateurs Logistiques Privés des Zones Grises Eurasiennes (`operateurs_logistiques_prives_des_zones_grises_eurasiennes_reference`) : trajectoire émergent → ascendant ; opposition nouvelle avec Armada Logistique Nordique [passe exhaustive]
+  - _Opportunité directe de montée en puissance face à l'Armada Logistique Nordique_
+- [ ] 48. Kalaallit Nunaat Sovereign Fund (`kalaallit_nunaat_sovereign_fund_reference`) : trajectoire ascendant → dominant ; alliance nouvelle avec Consortium Énergétique des Mers du Nord [passe exhaustive]
+  - _Alliance renforcée avec le Consortium Énergétique des Mers du Nord, acteur nordique dominant_
+- [ ] 49. Consortiums Énergétiques Opaques (`consortiums_energetiques_opaques_reference`) : trajectoire émergent → ascendant [passe exhaustive]
+  - _Renforcement direct via l'exploitation des tensions énergétiques critiques_
+- [ ] 50. Factions d'Extraction Minière Indépendantes (`factions_d_extraction_miniere_independantes_reference`) : trajectoire émergent → ascendant [passe exhaustive]
+  - _Acteurs alternatifs renforcés par la perturbation des ressources critiques_
+- [ ] 51. Fonds Souverains de la Ceinture Financière Pacifique (`fonds_souverains_de_la_ceinture_financiere_pacifique_reference`) : trajectoire émergent → ascendant ; alliance nouvelle avec Armada Logistique Nordique [passe exhaustive]
+  - _Rôle accru dans la stabilisation économique post-crise arctique_
+- [ ] 52. The Tidewater Canon (`the_tidewater_canon_reference`) : trajectoire mature → ascendant ; opposition nouvelle avec Armada Logistique Nordique [passe exhaustive]
+  - _Opposition directe avec l'Armada Logistique Nordique, doctrine souverainiste face à son ascension_
+- [ ] 53. Vasil Orentchev (`vasil_orentchev_reference`) : opposition nouvelle avec Armada Logistique Nordique [passe exhaustive]
+  - _Concurrence directe avec l'Armada pour le contrôle des flux logistiques_
+- [ ] 54. Milices Concurrentes des Droits de Passage (`milices_concurrentes_des_droits_de_passage_reference`) : texte « Dans ce scénario, elles incarnent la concurrence violente… » [passe exhaustive]
+  - _Intensification directe de la compétition pour les nouveaux points de passage arctiques_
+- [ ] 55. Autorité de Régulation des Passages Stratégiques (ARPS) (`agence_de_regulation_des_detroits_strategiques_ards_reference`) : texte « Elle incarne une gouvernance hybride, mêlant souveraineté… » [passe exhaustive]
+  - _Coordination accrue nécessaire avec l'Armada Logistique Nordique, désormais dominante_
+- [ ] 56. Fonds Souverain Arctique Scandinave (`fonds_souverain_arctique_scandinave_reference`) : texte « Acteur de référence pour le financement et la gouvernance… » [passe exhaustive]
+  - _Devenu acteur central dans la gouvernance arctique post-Mourmansk_
+- [ ] 57. Atlas des Marges (`reseau_des_cartographes_des_zones_grises_reference`) : texte « Le Réseau des Cartographes des Zones Grises dans… » [passe exhaustive]
+  - _Création de nouvelles zones grises en Arctique post-disparition de Murmansk_
+- [ ] 58. ONG de Traçabilité des Ressources Critiques (`ong_de_tracabilite_des_ressources_critiques_reference`) : opposition nouvelle avec Consortium Énergétique des Mers du Nord ; texte « Dénonce publiquement les pratiques d'une entité du scénario… » [passe exhaustive]
+  - _Opposition directe probable avec le Consortium Énergétique des Mers du Nord_
+- [ ] 59. Programme ONU-Eau 2080 (`programme_onu_eau_2080_reference`) : texte « Sert de référentiel normatif et d'instance de coordination… » [passe exhaustive]
+  - _Rôle élargi dans la coordination des déséquilibres territoriaux arctiques_
+- [ ] 60. Réseau des Sentinelles des Eaux Profondes (`les_veilleurs_des_nappes_phreatiques_reference`) : texte « Les Veilleurs agissent comme un contre-pouvoir face aux… » [passe exhaustive]
+  - _Surveillance renforcée des ressources critiques post-crise_
+- [ ] 61. Réseaux de lanceurs d'alerte institutionnels dissidents (`reseaux_de_lanceurs_d_alerte_institutionnels_dissidents_reference`) : texte « Dans ce scénario, ils constituent une source d'information… » [passe exhaustive]
+  - _Dysfonctionnements institutionnels accrus générant plus d'alertes_
+- [ ] 62. … et 80 autre(s) fiche(s) avec des changements possibles
   - _détail dans la section « Passe exhaustive » de ce scénario_
 
 **Articles et site**
-- [ ] 55. 6 article(s) à relire (zone au statut changé, pays cité ou entité dont la trajectoire change)
-  - _« LYNTH, LIEU ENCOMMANDE »; « Les Bouches de l’Abîme parlent : le Sahel numérique saigne en silence »; « CONVOIS FANTÔMES : LES COURTIERS DE L'OMBRE DES VENELLES »; « CONVOIS NOCTURNES : GUIDES ET ESCORTES POUR LES VENELLES EURASIENNES »; « « Kharg-9 : Le Dernier Souffle des Archives Mondiales avant l’Abîme » »; « Les Bouches de l’Abîme étouffées : le silence forcé des gardiens du dernier maillage »_
-- [ ] 56. Résumé du scénario
-  - `python3 generator/generate_resume_scenarios.py --scenario breakdown`
+- [ ] 63. 2 article(s) à relire (zone au statut changé, pays cité ou entité dont la trajectoire change)
+  - _« « Le Silence des Algorithmes : Quand les Plateformes Éteignent les Voix du Nord » »; « « Qui contrôle le récit contrôle les isruter » : la guerre des flux dans l’Arctique déglacé »_
+- [ ] 64. Résumé du scénario
+  - `python3 generator/generate_resume_scenarios.py --scenario reference`
   - _payant, un appel_
-- [ ] 57. Site des revues
+- [ ] 65. Site des revues
   - `python3 generator/chapos_revues.py`
   - _puis bash generator/publier_site.sh_
 
 **Contrôles**
-- [ ] 58. Base
+- [ ] 66. Base
   - `python3 generator/validate.py`
-- [ ] 59. Lore
-  - `python3 generator/audit_lore.py --scenario breakdown`
+- [ ] 67. Lore
+  - `python3 generator/audit_lore.py --scenario reference`
   - _puis étapes 2 et 3 de Relations & lore si besoin_
 
 Entrées pour `entites_custom/queue.yaml` :
 
 ```yaml
-- nom: Collectif des Copistes de Cracovie
+- nom: Commission de Réhabilitation de Mourmansk
   category: <à choisir>
-  role: Gardiens des archives survivantes et producteurs de légitimité documentaire alternative
+  role: Organisme de gestion post-catastrophe chargé de la décontamination et de la reconstruction partielle
+    de Mourmansk.
   etat: émergent
-  scenario_ref: breakdown
+  scenario_ref: reference
   scenario_hint:
-  - breakdown
-  zone_hint: cracovie_registre_zones
-  source: et_si_destruction_geneve_2076
-- nom: Front des Ruines Juridiques
+  - reference
+  zone_hint: murmansk_transit_arctique
+  source: et_si_explosion_brise_glace_murmansk_2081
+- nom: Alliance des Ports Arctiques Secondaires
   category: <à choisir>
-  role: Coalition de milices et d'anciens fonctionnaires internationaux pour le contrôle des protocoles
-    abandonnés
+  role: Réseau de ports arctiques mineurs cherchant à capter une partie des flux logistiques redirigés
+    depuis Mourmansk.
   etat: émergent
-  scenario_ref: breakdown
+  scenario_ref: reference
   scenario_hint:
-  - breakdown
-  zone_hint: geneve_bunker_institutions
-  source: et_si_destruction_geneve_2076
-- nom: Guilde des Archivistes Nomades
+  - reference
+  zone_hint: corridor_arctique_nordique
+  source: et_si_explosion_brise_glace_murmansk_2081
+- nom: Fonds de Compensation Arctique
   category: <à choisir>
-  role: Réseau itinérant de techniciens et de juristes préservant les copies numériques des traités internationaux
+  role: Mécanisme financier pour indemniser les acteurs économiques affectés par la disparition de Mourmansk
+    Transit Arctique.
   etat: émergent
-  scenario_ref: breakdown
+  scenario_ref: reference
   scenario_hint:
-  - breakdown
-  source: et_si_destruction_geneve_2076
+  - reference
+  zone_hint: tromsoe_aln
+  source: et_si_explosion_brise_glace_murmansk_2081
 ```
 
 ## Liste d'application — injection commune
@@ -386,33 +446,91 @@ Entrée pour `evenements_custom/queue.yaml` (une seule pour tous les scénarios)
 
 `acteurs_hint` : entités les plus touchées de chaque scénario (lecture IA, passe exhaustive), 4 au plus par scénario ; chaque slug ne vaut que pour son scénario.
 
+`faits_imposes` : contraintes de l'hypothèse et sort des acteurs du récit (disparaît, change, reste) ; l'injection les donne à l'IA comme faits non négociables.
+
 ```yaml
-- id: destruction_geneve_2076
-  description: En mars 2076, l'explosion du dépôt énergétique souterrain de Genève rase la ville et ses
-    abords. Les institutions internationales qui y survivaient perdent leurs bâtiments, leurs archives
-    physiques et la plupart de leur personnel.
+- id: explosion_brise_glace_murmansk_2081
+  description: En 2081, l'explosion d'un brise-glace à propulsion nucléaire à quai détruit le port et
+    les installations de Murmansk Transit Arctique. L'infrastructure Murmansk Transit Arctique disparaît
+    définitivement. La ville de Mourmansk survit, mais déclinante et en partie évacuée. Le Passage Arctique
+    du Nord reste ouvert. L'Armada Logistique Nordique, basée à Tromsø, récupère l'essentiel du trafic
+    arctique et se renforce, sans changer de nature.
   portee: globale
-  date_approximative: 2076
+  date_approximative: 2081
   intensite: <à choisir>
-  persistance: permanente
+  persistance: normale
   scenarios:
-  - breakdown
+  - reference
   variables_hint:
-  - gouvernance_institutions
-  variables_hint_count: 1
-  source: et_si_destruction_geneve_2076
+  - organisation_territoires
+  - geopolitique_conflits
+  - energie_ressources_critiques
+  - systeme_economique_redistribution
+  - demographie_mobilite_humaine
+  variables_hint_count: 5
+  source: et_si_explosion_brise_glace_murmansk_2081
   acteurs_hint:
-  - archives_neutres_de_geneve_breakdown
-  - agence_stabilisation_climatique_breakdown
-  - tour_bcuc_geneve_breakdown
-  - geneve_bunker_institutions_breakdown
+  - murmansk_transit_arctique_reference
+  - conseil_des_etats_nordiques_integres_reference
+  - fonds_souverain_arctique_scandinave_reference
+  - siberie_federale_reference
   acteurs_hint_count: 4
-  date_imposee: 2076
+  faits_imposes:
+    reference:
+    - fait: L'infrastructure Murmansk Transit Arctique disparaît définitivement.
+      sort: contrainte
+    - fait: La ville de Mourmansk survit, mais déclinante et en partie évacuée.
+      sort: contrainte
+    - fait: Le Passage Arctique du Nord reste ouvert.
+      sort: contrainte
+    - fait: L'Armada Logistique Nordique, basée à Tromsø, récupère l'essentiel du trafic arctique et se
+        renforce, sans changer de nature.
+      sort: contrainte
+    - fait: 'Murmansk Transit Arctique (murmansk_transit_arctique_reference) disparaît en 2081 (trajectoire
+        dominant → disparu) : après cette date, elle n''agit plus.'
+      slug: murmansk_transit_arctique_reference
+      sort: disparait
+    - fait: 'Conseil des États Nordiques Intégrés (conseil_des_etats_nordiques_integres_reference) passe
+        de « émergent » à « ascendant » après 2081 : elle existe toujours (elle peut perdre des lieux,
+        des biens ou du pouvoir), ne la décris pas comme disparue.'
+      slug: conseil_des_etats_nordiques_integres_reference
+      sort: change
+    - fait: 'Fonds Souverain Arctique Scandinave (fonds_souverain_arctique_scandinave_reference) passe
+        de « émergent » à « ascendant » après 2081 : elle existe toujours (elle peut perdre des lieux,
+        des biens ou du pouvoir), ne la décris pas comme disparue.'
+      slug: fonds_souverain_arctique_scandinave_reference
+      sort: change
+    - fait: 'Sibérie Fédérale (siberie_federale_reference) passe de « émergent » à « marginal » après
+        2081 : elle existe toujours (elle peut perdre des lieux, des biens ou du pouvoir), ne la décris
+        pas comme disparue.'
+      slug: siberie_federale_reference
+      sort: change
+    - fait: 'La zone Mourmansk (murmansk_transit_arctique) passe de « stable » à « en_declin » : le lieu
+        subsiste.'
+      slug: murmansk_transit_arctique
+      sort: zone
+  date_imposee: 2081
   impacts_imposes:
-    breakdown:
-    - variable: gouvernance_institutions
+    reference:
+    - variable: organisation_territoires
       delta_level: 6
       duree: 2
+      polarite: 1
+    - variable: geopolitique_conflits
+      delta_level: 5
+      duree: 3
+      polarite: 1
+    - variable: energie_ressources_critiques
+      delta_level: 4
+      duree: 1
+      polarite: 1
+    - variable: systeme_economique_redistribution
+      delta_level: 5
+      duree: 5
+      polarite: 1
+    - variable: demographie_mobilite_humaine
+      delta_level: 3
+      duree: 3
       polarite: 1
   via_matrice_impose: true
 ```

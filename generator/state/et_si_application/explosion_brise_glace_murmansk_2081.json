@@ -1,0 +1,164 @@
+{
+ "id": "explosion_brise_glace_murmansk_2081",
+ "date_simulation": "2026-10-17T07:49",
+ "version": "v8.19",
+ "empreinte": "1fd53d13e7c10997",
+ "annee": 2081.0,
+ "mode": "choc",
+ "contraintes": [
+  "L'infrastructure Murmansk Transit Arctique disparaît définitivement.",
+  "La ville de Mourmansk survit, mais déclinante et en partie évacuée.",
+  "Le Passage Arctique du Nord reste ouvert.",
+  "L'Armada Logistique Nordique, basée à Tromsø, récupère l'essentiel du trafic arctique et se renforce, sans changer de nature."
+ ],
+ "scenarios_hypothese": [
+  "reference"
+ ],
+ "scenarios": [
+  "reference"
+ ],
+ "complet": true,
+ "par_scenario": {
+  "reference": {
+   "lecture": {
+    "trajectoires": [
+     {
+      "instance": "murmansk_transit_arctique_reference",
+      "nom": "Murmansk Transit Arctique",
+      "avant": "dominant",
+      "apres": "disparu",
+      "raison": "Destruction définitive de l'infrastructure Murmansk Transit Arctique suite à l'explosion du brise-glace nucléaire."
+     },
+     {
+      "instance": "conseil_des_etats_nordiques_integres_reference",
+      "nom": "Conseil des États Nordiques Intégrés",
+      "avant": "émergent",
+      "apres": "ascendant",
+      "raison": "Renforcement de la coopération régionale pour combler le vide laissé par la disparition de Mourmansk."
+     },
+     {
+      "instance": "fonds_souverain_arctique_scandinave_reference",
+      "nom": "Fonds Souverain Arctique Scandinave",
+      "avant": "émergent",
+      "apres": "ascendant",
+      "raison": "Accroissement de son rôle dans la gouvernance des territoires arctiques suite à la redistribution des flux logistiques."
+     },
+     {
+      "instance": "siberie_federale_reference",
+      "nom": "Sibérie Fédérale",
+      "avant": "émergent",
+      "apres": "marginal",
+      "raison": "Perte d'accès privilégié aux routes arctiques et marginalisation accrue dans le Bloc Eurasien Central."
+     },
+     {
+      "instance": "consortium_energetique_des_mers_du_nord_reference",
+      "nom": "Consortium Énergétique des Mers du Nord",
+      "avant": "émergent",
+      "apres": "dominant",
+      "raison": "Absorption des flux énergétiques redirigés vers Tromsø et renforcement de son rôle systémique."
+     },
+     {
+      "instance": "collectifs_de_peche_inuit_et_sami_reference",
+      "nom": "Collectifs de Pêche Inuit et Sami",
+      "avant": "émergent",
+      "apres": "ascendant",
+      "raison": "Renforcement de leurs revendications territoriales face à la reconfiguration des zones de pêche arctiques."
+     }
+    ],
+    "relations": [
+     {
+      "a": "bloc_eurasien_central_reference",
+      "a_nom": "Bloc Eurasien Central (BEC)",
+      "b": "armada_logistique_nordique_reference",
+      "b_nom": "Armada Logistique Nordique",
+      "type": "opposition",
+      "action": "nouvelle",
+      "raison": "Tensions accrues pour le contrôle des routes arctiques et des ressources critiques."
+     },
+     {
+      "a": "consortium_energetique_des_mers_du_nord_reference",
+      "a_nom": "Consortium Énergétique des Mers du Nord",
+      "b": "armada_logistique_nordique_reference",
+      "b_nom": "Armada Logistique Nordique",
+      "type": "alliance",
+      "action": "nouvelle",
+      "raison": "Synergie entre logistique et énergie pour optimiser les flux redirigés vers Tromsø."
+     },
+     {
+      "a": "collectifs_de_peche_inuit_et_sami_reference",
+      "a_nom": "Collectifs de Pêche Inuit et Sami",
+      "b": "conseil_des_etats_nordiques_integres_reference",
+      "b_nom": "Conseil des États Nordiques Intégrés",
+      "type": "opposition",
+      "action": "nouvelle",
+      "raison": "Conflits d'intérêts entre gouvernance régionale et revendications territoriales autochtones."
+     },
+     {
+      "a": "siberie_federale_reference",
+      "a_nom": "Sibérie Fédérale",
+      "b": "bloc_eurasien_central_reference",
+      "b_nom": "Bloc Eurasien Central (BEC)",
+      "type": "opposition",
+      "action": "nouvelle",
+      "raison": "Marginalisation de la Sibérie Fédérale et contestation de l'autorité centrale russe."
+     }
+    ],
+    "zones_statut": [
+     {
+      "zone": "murmansk_transit_arctique",
+      "nom": "Mourmansk",
+      "avant": "stable",
+      "apres": "en_declin",
+      "raison": "Disparition de l'infrastructure Murmansk Transit Arctique et déclin partiel de la ville."
+     }
+    ],
+    "nouvelles_entites": [
+     {
+      "nom": "Commission de Réhabilitation de Mourmansk",
+      "role": "Organisme de gestion post-catastrophe chargé de la décontamination et de la reconstruction partielle de Mourmansk.",
+      "zone": "murmansk_transit_arctique",
+      "raison": "Nécessité de coordonner les efforts de réhabilitation et de gérer les risques résiduels de contamination nucléaire."
+     },
+     {
+      "nom": "Alliance des Ports Arctiques Secondaires",
+      "role": "Réseau de ports arctiques mineurs cherchant à capter une partie des flux logistiques redirigés depuis Mourmansk.",
+      "zone": "corridor_arctique_nordique",
+      "raison": "Stratégie de diversification des routes logistiques pour réduire la dépendance à Tromsø."
+     },
+     {
+      "nom": "Fonds de Compensation Arctique",
+      "role": "Mécanisme financier pour indemniser les acteurs économiques affectés par la disparition de Mourmansk Transit Arctique.",
+      "zone": "tromsoe_aln",
+      "raison": "Nécessité de stabiliser les équilibres économiques régionaux après le choc."
+     }
+    ]
+   },
+   "passe": {
+    "trajectoires": [],
+    "relations": [
+     {
+      "a": "murmansk_transit_arctique_reference",
+      "a_nom": "Murmansk Transit Arctique",
+      "b": "armada_logistique_nordique_reference",
+      "b_nom": "Armada Logistique Nordique",
+      "type": "alliance",
+      "action": "rompue",
+      "raison": "La disparition de Murmansk Transit Arctique rend cette alliance impossible. [lien relation : armada_logistique_nordique_reference (récupère le trafic arctique)] — contredit : Murmansk Transit Arctique n'existe plus pour maintenir cette alliance."
+     }
+    ],
+    "textes": [
+     {
+      "slug": "murmansk_transit_arctique_reference",
+      "genre": "instance",
+      "nom": "Murmansk Transit Arctique",
+      "extrait": "Plaque tournante stratégique du trafic maritime et énergétique arctique, Murmansk Transit Arctique s'est imposée comme nœud incontournable des nouvelles routes commerciales ouvertes par la fonte accélérée des glaces polaires depuis les années 2040",
+      "extrait_trouve": true,
+      "contredit": "L'infrastructure Murmansk Transit Arctique n'existe plus en 2098.",
+      "raison": "Cette phrase devient fausse après 2081. [lien territoire : infrastructure Murmansk Transit Arctique (détruite en 2081)]"
+     }
+    ]
+   },
+   "erreurs": []
+  }
+ }
+}

@@ -1,6 +1,11 @@
 # Manuel utilisateur complet — Pipeline Ourrassol 2098
 *Référence à jour au 3 septembre 2026, complétée au fil des sessions
-(dernier ajout : 12 octobre 2026 — §3quinquies : passe exhaustive branchée
+(dernier ajout : 13-15 octobre 2026 — §3quinquies : faits imposés à
+l'injection (v8.18), opérations structurées (v8.19), phase 4
+`appliquer_et_si.py`, outils unitaires d'application (fusion de doublons,
+statut de zone, trajectoire, retrait de relations), banc de rejeu après
+modification d'un scénario ; §3 `inject_custom_events.py` : `faits_imposes`,
+mot « matrice » retiré du prompt ; précédent : 12 octobre — §3quinquies : passe exhaustive branchée
 dans le simulateur (v8.16 → v8.16.2, case du GUI), étape « décider »
 (v8.17 → v8.17.1, `et_si_dossiers.py`, panneau « ⚖️ Décider ») ; §3
 `inject_custom_events.py` : ⚠ des variables corrigé, `acteurs_hint` par
@@ -1911,6 +1916,21 @@ d'un autre scénario (`…_breakdown` dans policy_reform) n'est pas imposé dans
 ce scénario — l'entrée commune du simulateur porte les acteurs de tous ses
 scénarios (`QUEUE_TEMPLATE` le dit).
 
+**Faits imposés (15 oct 2026, `patch_s27_v818.py`, `.bak_v818`)** — champ
+optionnel `faits_imposes`, rempli par le simulateur v8.18 : `{scénario: [{fait,
+slug, sort}]}` (ou une liste valable pour tous les scénarios ; un fait peut
+être une simple phrase). `sort` : `disparait`, `change` (l'entité existe
+toujours, elle peut perdre lieux ou pouvoir), `reste` (sans changement majeur),
+`zone`, `contrainte` (contraintes de l'hypothèse). Le prompt de l'étape 2
+reçoit un bloc « FAITS IMPOSÉS » (le récit ne doit jamais les contredire ; ils
+priment sur la description). Après la réponse, **⚠ sans rejet** (règle
+« signaler, pas de règle IA ») : une entité au sort `reste` associée à une
+destruction (« détruit », « rasé », « disparaît », « effondré »…) dans une même
+phrase ; le mot « matrice » dans le récit. La ligne « Propagation via la
+matrice » du bloc des valeurs imposées est devenue « Effet propagé aux autres
+variables », avec l'interdiction de nommer ce mécanisme : c'est elle qui
+faisait apparaître « la matrice » dans les récits (cas Genève, 13 oct).
+
 ### `inject_custom_signals.py` 🔁 🧩 *(mise à jour en profondeur le 26 juillet 2026)*
 Injecte des signaux faibles custom (`signaux_custom/queue.yaml`) dans les fiches variables, au format `signal_to_state` (6 scénarios) + annotation section 7. Validation mécanique (comptage de mots, fenêtres de dates, collisions), jusqu'à 2 retries. Tier `structured_strict`.
 ```bash
@@ -2969,7 +2989,7 @@ souvent les sources ; Gemini a inventé des URL (9/10 en 404 lors d'un essai).
 
 ---
 
-## 3quinquies. Simulateur « et si ? » (S27, 9-12 octobre 2026)
+## 3quinquies. Simulateur « et si ? » (S27, 9-15 octobre 2026)
 
 Tester l'effet d'un élément perturbateur sur le lore **avant** de l'injecter.
 **Lecture seule** : rien n'est écrit dans le vault, à part le rapport
@@ -2983,13 +3003,17 @@ hypothèse (`generator/state/et_si_dossiers.json`, v8.17). Exceptions :
 l'assistant « Nouvelle hypothèse » ajoute des hypothèses à
 `et_si/hypotheses.yaml` ; « Adopter » écrit une entrée dans
 `evenements_custom/queue.yaml`. Version affichée dans le rapport
-(« simulateur v8.17.1 » au 12 oct).
+(« simulateur v8.19 » au 15 oct). Depuis la v8.19, chaque simulation écrit
+aussi ses opérations structurées dans
+`generator/state/et_si_application/<id>.json`.
 
-**Pipeline visé (11 oct)** : 1. **tester** (simulation, puis en option la
-passe exhaustive), 2. **décider**, 3. **injecter** l'événement tel qu'il a été
-simulé (valeurs imposées, §3 `inject_custom_events.py`) ; plus tard, appliquer
-aussi les conséquences retenues (phase 4). L'étape « décider » est outillée
-depuis le 12 oct (v8.17, « Étape « décider » » plus bas).
+**Pipeline (11-15 oct)** : 1. **tester** (simulation, lecture IA, passe
+exhaustive), 2. **décider**, 3. **injecter** l'événement tel qu'il a été
+simulé (valeurs et faits imposés, §3 `inject_custom_events.py`),
+4. **appliquer** les conséquences au vault (`appliquer_et_si.py`, 15 oct,
+« Phase 4 » plus bas). Tout est outillé ; la phase 4 n'a pas encore été
+lancée en conditions réelles (Genève a été appliquée à la main le 13 oct,
+avec les outils unitaires décrits plus bas).
 
 ### Dans le GUI — « 🔮 Simulateur « et si ? » » (section des outils de suivi, après « Tracer »)
 Deux onglets (`--mode simuler | nouvelle`) :
@@ -3154,10 +3178,15 @@ l'IA applique souvent le même partage de polarités (3 mondes « durs » contre
   mode application (phase 4) n'existe pas.
 
 ### Liste d'application (phase 3, v8 → v8.14, 10 oct après-midi et soir)
-**Statut : en service, non validée.** Éprouvée sur quatre hypothèses (invasion
-du Brésil, fusion, extrême droite, peste en rupture) et leurs six scénarios,
-mais aucune liste n'a encore été appliquée pour de vrai : c'est la validation
-qui reste à faire, avant toute phase 4.
+**Statut : appliquée pour de vrai une fois (Genève / breakdown, 13 oct), à
+la main.** Constat : la liste est une **check-list à relire**, pas un plan
+exhaustif. Elle ne contient que ce que l'IA a remarqué (5 relations rompues
+relevées, 30 fiches réellement concernées par les trois disparitions), ne fait
+pas circuler les décisions vers l'injection (corrigé par la v8.18) et ignore
+l'état réel des fiches (doublon d'entité, `annee_fin` déjà remplie, relation
+contradictoire). Les opérations mécaniques (zones, trajectoires, relations)
+passent désormais par la **phase 4** (`appliquer_et_si.py`, plus bas) ; la
+liste reste utile pour le reste (carte, articles, journaux, lore, site).
 
 À la fin de chaque scénario du rapport, une section **« Liste d'application »** :
 ce que l'hypothèse imposerait de changer, dans l'ordre, avec la commande ou
@@ -3279,6 +3308,14 @@ trajectoire de la lecture IA 2, trajectoire obligatoire de la passe 3, texte
 obligatoire 2, extrémité d'une relation obligatoire 1), et
 `acteurs_hint_count` = le plus grand nombre retenu dans un scénario. Chaque
 slug ne vaut que pour son scénario (§3 `inject_custom_events.py`).
+Depuis la v8.18 (15 oct), l'entrée porte aussi **`faits_imposes`** : les
+`contraintes` de l'hypothèse, puis le sort de chaque acteur de `acteurs_hint`
+(trajectoire retenue par la lecture ou la passe : « disparaît en <année> »,
+« passe de X à Y, existe toujours », ou « garde sa trajectoire, survit ») et les
+statuts de zone changés. Sans cela, l'IA de l'injection réinventait le sort des
+entités à chaque tirage (Genève : le bunker détruit au premier tirage, sauvé
+au second). Une hypothèse simulée avant la v8.18 doit être resimulée pour que
+son entrée les contienne.
 
 ### Passe exhaustive — `et_si_exhaustif.py` 🔁 (v9.5, 11 oct)
 Complète la lecture IA du simulateur, qui ne montre à l'IA qu'une partie des
@@ -3369,6 +3406,19 @@ Marche à suivre après une modification de `et_si_exhaustif.py` :
 3. viser 26/27 ou mieux ; « appels manquants » > 0 = étape 1 oubliée.
 Une autre session peut tout rejouer avec l'export et le dossier `rejeu/`.
 
+**Après une modification d'un scénario (15 oct)** : les caches de la passe et
+de la lecture IA sont indexés sur le contenu des fiches et sur les effets
+simulés ; toucher un scénario (fiches, événement injecté) les périme. Les
+couples de ce scénario échouent alors lot par lot (`RuntimeError`, « lots en
+cache 0/N ») : ce n'est pas une régression du code. Au 15 oct, les deux
+couples breakdown sont périmés (Genève appliquée le 13 oct ; la peste
+rafraîchie sans lecture, donc non comparable). Seuil provisoire : **les 4
+couples hors breakdown conformes**, à lancer ainsi :
+`python3 generator/export_et_si.py --couple invasion_bresil_2029:fortress_world --couple fusion_commerciale_2038:policy_reform --couple extreme_droite_2034:new_sustainability --couple ia_majorite_travail_2040:eco_communalism && python3 generator/rejeu/rejouer.py && python3 generator/rejeu/evaluer.py`
+Genève ne peut plus servir de référence (hypothèse déjà appliquée au vault).
+Les lignes Genève et peste éventuellement encore affichées par `evaluer.py`
+(anciennes sorties dans `generator/rejeu/sorties/`) sont à ignorer.
+
 ### Passe dans le simulateur (v8.16 → v8.16.2, 12 oct)
 `--passe-exhaustive` (case « Passe exhaustive » du GUI) lance la passe pour
 chaque scénario simulé, après la lecture IA, avant la liste d'application.
@@ -3441,6 +3491,84 @@ La sortie s'affiche dans le panneau (en rouge si refus) ; après une décision,
 la liste se recharge avec le nouveau statut et garde l'hypothèse choisie.
 Aucun appel IA.
 
+### Phase 4 — `appliquer_et_si.py` 🔁 (15 oct, non encore testé en réel)
+Applique au vault les conséquences d'une hypothèse **adoptée et injectée**, à
+partir des opérations de sa **dernière simulation complète** (fichier
+`generator/state/et_si_application/<id>.json`, écrit par le simulateur
+v8.19 ; une hypothèse simulée avant doit être resimulée). Pourquoi : la liste
+d'application du rapport n'est pas exhaustive — elle ne contient que ce que
+l'IA a remarqué (Genève : 5 relations relevées, 30 fiches réellement
+concernées) — et elle ignore l'état réel des fiches.
+
+```
+python3 generator/appliquer_et_si.py --id <id>                         # aperçu, rien écrit
+python3 generator/appliquer_et_si.py --id <id> --sauter 3,7 --apply    # écrit
+```
+
+Refus : fichier d'opérations absent, simulation partielle, statut autre que
+« injecté », opérations d'une autre simulation que celle du dossier,
+simulation changée depuis l'adoption, mode rupture (décision S19).
+
+**Opérations numérotées** (aperçu groupé par scénario ; ✓ retenue, – sautée) :
+- **statut de zone** (lecture IA) — contrôle du statut actuel ;
+- **trajectoire** (lecture et passe, fusionnées par instance) — sautée avec ⚠
+  si la fiche n'a plus la trajectoire de départ, si lecture et passe
+  divergent, si le saut passe un cran (émergent → dominant), ou si une autre
+  fiche du scénario porte le même nom (doublon à fusionner d'abord) ;
+  `annee_fin` : « disparu » ⇒ année de l'élément, même si elle était remplie ;
+  autre fin (transformé, historique, mythifié) ⇒ remplie seulement si vide ;
+- **disparition** (déduite de chaque trajectoire « disparu ») — retire
+  l'entité de **toutes** les `alliances` / `oppositions` du scénario
+  (frontmatter et section « ## Relations ») et vide les siennes ; acteurs
+  d'événements, articles et textes libres gardent leurs mentions ; suit
+  l'opération de trajectoire dont elle dépend (et reste active si la
+  trajectoire était déjà appliquée à la main) ;
+- **relation** rompue (retirée des deux fiches, du seul champ concerné) ou
+  nouvelle (ajoutée) — une rompue d'une entité qui disparaît est couverte par
+  l'opération de disparition ; ⚠ si la rupture invoque une disparition non
+  déclarée, ou si la nouvelle relation contredit une relation inverse.
+
+**Tri** : tout est retenu sauf les ⚠ ; `--inclure N` reprend une ⚠, `--sauter
+N` retire une opération ; « déjà appliqué / absente / présente » n'est jamais
+rejoué (relancer la commande après coup est sans effet). Les « possibles » de
+la passe ne sont jamais appliqués.
+
+**Avec `--apply`** : écriture de tous les fichiers à la fin, ou d'aucun si une
+opération échoue (sauvegarde `<fichier>.bak_appliquer`, la première seulement)
+; puis, par scénario touché, `regenerer_corps_geographie.py --execute` (si une
+zone a changé), `fix_alliances_oppositions.py --reciprocite-seule
+--ignorer-exclus --resoudre-conflits --bascule-en-opposition` (si une relation
+a changé : opposition prioritaire), enfin `validate.py`. Journal :
+`generator/state/et_si_application/<id>.applique.json` (opérations appliquées
+et sautées).
+
+**Reste à la main** (listé en fin d'aperçu) : phrases à corriger, nouvelles
+entités, règles de lore des contraintes, carte (GUI), articles à relire,
+résumé du scénario, site.
+
+### Outils unitaires d'application (13 oct)
+Écrits pour appliquer Genève à la main ; aperçu par défaut, `--apply` pour
+écrire, refus si l'état actuel n'est pas celui annoncé.
+- **`fusionner_doublon_instance.py --garder A --retirer B`** (S24) : redirige
+  toutes les citations de B vers A (instances, événements, archétypes,
+  articles, géographies ; mot entier — un slug de zone homonyme sans suffixe
+  n'est pas touché), retire les doublons créés (même élément deux fois dans
+  une liste, `[[x]] · [[x]]`), signale ⚠ l'entité à la fois alliée et opposée
+  d'une même fiche ; met la fiche B et son archétype (s'il ne sert à aucune
+  autre instance) dans `_a_supprimer/fusion_<B>_<date>/`. `.bak_fusion`.
+  Ensuite : réciprocité (étape 2 de Relations & lore), `validate.py`.
+- **`changer_statut_zone.py --scenario S --zone Z --avant X --apres Y`** : ne
+  change que la ligne `statut` du bloc de la zone (pas un `statut` imbriqué) ;
+  `.bak_statut` ; ensuite `regenerer_corps_geographie.py --scenario S
+  --execute`.
+- **`changer_trajectoire.py --changer slug=avant:apres [...] [--annee-fin N]
+  [--ecraser-annee-fin]`** : plusieurs fiches à la fois, rien d'écrit si une
+  seule est refusée ; `annee_fin` remplie si vide (ou remplacée avec
+  `--ecraser-annee-fin`) pour une trajectoire de fin ; `.bak_traj`.
+- **`retirer_relations.py --scenario S --entites a,b [--vider-propres]`** :
+  retire ces entités des `alliances` / `oppositions` de toutes les fiches du
+  scénario (frontmatter et section « ## Relations ») ; `.bak_rel`.
+
 ### Fichiers
 `generator/simuler_et_si.py` (v8.15 au 11 oct, `.bak_v815`), `generator/hypothese_depuis_texte.py`
 (nouveau, 10 oct), `et_si/hypotheses.yaml` (+ `destruction_geneve_2076` le 11 oct).
@@ -3465,6 +3593,13 @@ refusent un second passage : `patch_s27_v816.py`, `patch_s27_v8161.py`,
 `patch_s27_v8162.py`, `patch_s27_gui_passe.py`, `patch_s27_v817.py`,
 `patch_s27_gui_decider.py`, `patch_gui_obsidian_panneaux.py`,
 `patch_gui_lien_seul.py`. Créé à l'usage : `generator/state/et_si_dossiers.json`.
+Les 13-15 oct : nouveaux `generator/appliquer_et_si.py`,
+`generator/fusionner_doublon_instance.py`, `generator/changer_statut_zone.py`,
+`generator/changer_trajectoire.py`, `generator/retirer_relations.py` ;
+`simuler_et_si.py` v8.17.1 → v8.19 (`.bak_v818`, `.bak_v819`) ;
+`inject_custom_events.py` (`.bak_v818`). Patchs appliqués, qui refusent un
+second passage : `patch_s27_v818.py`, `patch_s27_v819.py`. Créé à l'usage :
+`generator/state/et_si_application/`.
 
 ---
 

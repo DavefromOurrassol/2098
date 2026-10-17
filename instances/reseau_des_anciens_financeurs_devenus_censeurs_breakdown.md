@@ -45,7 +45,7 @@ alliances:
 - enclaves_corporatives_fortifiees_breakdown
 - seigneuries_logistiques_armees_breakdown
 oppositions:
-- archives_neutres_geneve_breakdown
+- archives_neutres_de_geneve_breakdown
 - bureau_des_territoires_residuels_breakdown
 - collectif_des_climatologues_sans_etat_breakdown
 - communes_rust_belt_breakdown
@@ -125,7 +125,7 @@ La contradiction fondamentale qui les mine est celle du mécène retourné : leu
 - [[enclaves_corporatives_fortifiees_breakdown]]
 - [[seigneuries_logistiques_armees_breakdown]]
 **Opposants :**
-- [[archives_neutres_geneve_breakdown]]
+- [[archives_neutres_de_geneve_breakdown]]
 - [[bureau_des_territoires_residuels_breakdown]]
 - [[collectif_des_climatologues_sans_etat_breakdown]]
 - [[communes_rust_belt_breakdown]]

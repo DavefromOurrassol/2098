@@ -47,7 +47,7 @@ alliances:
 - seigneuries_logistiques_armees_breakdown
 oppositions:
 - agadez_ligue_sahel_numerique_breakdown
-- archives_neutres_geneve_breakdown
+- archives_neutres_de_geneve_breakdown
 - arctique_nordark_breakdown
 - assemblee_territoires_breakdown
 - coalition_vivant_breakdown
@@ -61,7 +61,6 @@ oppositions:
 - factions_para_etatiques_hydriques_breakdown
 - federation_communs_territoriaux_breakdown
 - front_de_resistance_aux_peages_sur_les_ressources_breakdown
-- geneve_bunker_institutions_breakdown
 - grandes_lacs_compact_eau_breakdown
 - lagos_interieur_mnemos_breakdown
 - le_registre_du_fleuve_breakdown
@@ -148,7 +147,7 @@ La légitimité des enclaves repose entièrement sur leur capacité à maintenir
 - [[seigneuries_logistiques_armees_breakdown]]
 **Opposants :**
 - [[agadez_ligue_sahel_numerique_breakdown]]
-- [[archives_neutres_geneve_breakdown]]
+- [[archives_neutres_de_geneve_breakdown]]
 - [[arctique_nordark_breakdown]]
 - [[assemblee_territoires_breakdown]]
 - [[coalition_vivant_breakdown]]
@@ -162,7 +161,6 @@ La légitimité des enclaves repose entièrement sur leur capacité à maintenir
 - [[factions_para_etatiques_hydriques_breakdown]]
 - [[federation_communs_territoriaux_breakdown]]
 - [[front_de_resistance_aux_peages_sur_les_ressources_breakdown]]
-- [[geneve_bunker_institutions_breakdown]]
 - [[grandes_lacs_compact_eau_breakdown]]
 - [[lagos_interieur_mnemos_breakdown]]
 - [[le_registre_du_fleuve_breakdown]]

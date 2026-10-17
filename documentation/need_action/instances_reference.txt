@@ -1,0 +1,596 @@
+============================================================
+INVENTAIRE INSTANCES — reference
+============================================================
+Total : 190 instance(s)
+
+Par scénario :
+  reference                 190
+
+Par type dans le scénario :
+  institution               50
+  organisation              50
+  réseau                    32
+  entreprise                24
+  humain                    11
+  infrastructure            7
+  hybride                   6
+  autre                     4
+  système                   4
+  IA                        2
+
+Transnationales (sans zone) : 81
+Clandestines : 3
+
+------------------------------------------------------------
+DÉTAIL
+------------------------------------------------------------
+[reference] Administrations Hybrides des Cités-Relais Périphériques — institution (entité : Administrations Hybrides des Cités-Relais Périphériques)
+  zone : (transnationale) | trajectoire : émergent
+  → administrations_hybrides_des_cites_relais_peripheriques_reference.md
+[reference] Autorité de Régulation des Passages Stratégiques (ARPS) — institution (entité : Agence de Régulation des Détroits Stratégiques (ARDS))
+  zone : (transnationale) | trajectoire : dominant
+  → agence_de_regulation_des_detroits_strategiques_ards_reference.md
+[reference] Agence Internationale des Énergies Renouvelables (IRENA-2) — institution (entité : Agence Internationale des Énergies Renouvelables (IRENA-2))
+  zone : geneve_lac_retreite | trajectoire : émergent
+  → agence_internationale_des_energies_renouvelables_irena_2_reference.md
+[reference] Agence Mondiale pour la Stabilisation Climatique — institution (entité : Agence Mondiale pour la Stabilisation Climatique)
+  zone : geneve_lac_retreite | trajectoire : mature
+  → agence_stabilisation_climatique_reference.md
+[reference] Agences de Sécurité Régionales de Normalisation des Zones Grises — organisation (entité : Agences de Sécurité Régionales de Normalisation des Zones Grises)
+  zone : zones_grises_globales | trajectoire : émergent
+  → agences_de_securite_regionales_de_normalisation_des_zones_grises_reference.md
+[reference] AgriSynth — entreprise (entité : AgriSynth)
+  zone : europe_occidentale_reconstruite | trajectoire : émergent
+  → agrisynth_reference.md
+[reference] Algorithmic Labor Exchange — infrastructure (entité : Algorithmic Labor Exchange)
+  zone : (transnationale) | trajectoire : émergent
+  → algorithmic_labor_exchange_reference.md
+[reference] Pacte des Souverains — institution (entité : Alliance des Blocs Souverains)
+  zone : (transnationale) | trajectoire : ascendant
+  → alliance_blocs_souverains_reference.md
+[reference] Amara Diallo-Nkosi — humain (entité : Amara Diallo-Nkosi)
+  zone : kinshasa_accords_hydriques | trajectoire : mature
+  → amara_diallo_nkosi_reference.md
+[reference] Amazonie Consortium Viva — entreprise (entité : Amazonie Consortium Viva)
+  zone : amazonie_consortium_viva | trajectoire : dominant
+  → amazonie_consortium_viva_reference.md
+[reference] Autorité de Passage Arctique — institution (entité : Arctic Passage Authority)
+  zone : ilulissat_apa | trajectoire : mature
+  → arctic_passage_authority_reference.md
+[reference] Armada Logistique Nordique — organisation (entité : Armada Logistique Nordique)
+  zone : tromsoe_aln | trajectoire : dominant
+  → armada_logistique_nordique_reference.md
+[reference] Assemblée des Territoires Fédérés (ATF) — institution (entité : Assemblée des Territoires)
+  zone : (transnationale) | trajectoire : ascendant
+  → assemblee_territoires_reference.md
+[reference] Aurelio Stahl — humain (entité : Aurelio Stahl)
+  zone : (transnationale) | trajectoire : mature
+  → aurelio_stahl_reference.md
+[reference] Autorités Régionales de Régulation Hydrologique — institution (entité : Autorités Régionales de Régulation Hydrologique)
+  zone : (transnationale) | trajectoire : émergent
+  → autorites_regionales_de_regulation_hydrologique_reference.md
+[reference] Banque des Communs — institution (entité : Banque des Communs)
+  zone : lyon_metropole | trajectoire : émergent
+  → banque_des_communs_reference.md
+[reference] Banque Mondiale des Transitions Climatiques — institution (entité : Banque Mondiale des Transitions Climatiques)
+  zone : geneve_lac_retreite | trajectoire : émergent
+  → banque_mondiale_des_transitions_climatiques_reference.md
+[reference] Bloc des États du Sud Global contre la Cession de Données — organisation (entité : Bloc des États du Sud Global contre la Cession de Données)
+  zone : (transnationale) | trajectoire : émergent
+  → bloc_des_etats_du_sud_global_contre_la_cession_de_donnees_reference.md
+[reference] Bloc des Souverainistes Climatiques — organisation (entité : Bloc des Souverainistes Climatiques)
+  zone : pacte_des_souverains | trajectoire : émergent
+  → bloc_des_souverainistes_climatiques_reference.md
+[reference] Bloc Eurasien Central (BEC) — organisation (entité : Bloc Eurasien Central)
+  zone : bloc_eurasien_central | trajectoire : déclinant
+  → bloc_eurasien_central_reference.md
+[reference] Bloc Ressources Eurasiatique (BRE) — organisation (entité : Bloc Ressources Eurasiatique (BRE))
+  zone : bloc_eurasien_central | trajectoire : émergent
+  → bloc_ressources_eurasiatique_bre_reference.md
+[reference] Blocs Signataires du Pacte Énergétique Multilatéral — organisation (entité : Blocs Signataires du Pacte Énergétique Multilatéral)
+  zone : (transnationale) | trajectoire : émergent
+  → blocs_signataires_du_pacte_energetique_multilateral_reference.md
+[reference] Bruxelles Nouveau — institution (entité : Bruxelles Nouveau)
+  zone : bruxelles_nouveau | trajectoire : déclinant
+  → bruxelles_nouveau_reference.md
+[reference] Direction des Zones Non Prioritaires (DZNP) — institution (entité : Bureau des Territoires Résiduels)
+  zone : bureau_zones_non_prioritaires | trajectoire : mature
+  → bureau_des_territoires_residuels_reference.md
+[reference] Bureau des Zones Non Prioritaires (BZNP) — institution (entité : Bureau Zones Non Prioritaires)
+  zone : bureau_zones_non_prioritaires | trajectoire : déclinant
+  → bureau_zones_non_prioritaires_reference.md
+[reference] Bureaux de Régulation Informationnelle — institution (entité : Bureaux de Régulation Informationnelle)
+  zone : (transnationale) | trajectoire : émergent
+  → bureaux_de_regulation_informationnelle_reference.md
+[reference] Cartel des Terres Rares d'Asie Centrale — entreprise (entité : Cartel des Terres Rares d'Asie Centrale)
+  zone : corridors_eurasiens_zones_grises | trajectoire : émergent
+  → cartel_des_terres_rares_d_asie_centrale_reference.md
+[reference] Coalition des Gouvernements Contre les Chartes de Déstabilisation — organisation (entité : Coalition des Gouvernements Contre les Chartes de Déstabilisation)
+  zone : sommets_itinerants_pacte | trajectoire : émergent
+  → coalition_des_gouvernements_contre_les_chartes_de_destabilisation_reference.md
+[reference] Coalition pour la Souveraineté Numérique Nationale — organisation (entité : Coalition pour la Souveraineté Numérique Nationale)
+  zone : pacte_des_souverains | trajectoire : émergent
+  → coalition_pour_la_souverainete_numerique_nationale_reference.md
+[reference] Collectif Nuit Jaune — organisation (entité : Collectif Nuit Jaune)
+  zone : zones_tampons_climatiques_europeennes | trajectoire : émergent
+  → collectif_nuit_jaune_reference.md
+[reference] Collectifs Académiques Indépendants — réseau (entité : Collectifs Académiques Indépendants)
+  zone : (transnationale) | trajectoire : émergent
+  → collectifs_academiques_independants_reference.md
+[reference] Collectifs de Biopiraterie Inversée — réseau (entité : Collectifs de Biopiraterie Inversée)
+  zone : (transnationale) | trajectoire : émergent
+  → collectifs_de_biopiraterie_inversee_reference.md
+[reference] Collectifs de Journalisme Embarqué — réseau (entité : Collectifs de Journalisme Embarqué)
+  zone : (transnationale) | trajectoire : émergent
+  → collectifs_de_journalisme_embarque_reference.md
+[reference] Collectifs de Journalistes Indépendants Régionaux — réseau (entité : Collectifs de Journalistes Indépendants Régionaux)
+  zone : (transnationale) | trajectoire : émergent
+  → collectifs_de_journalistes_independants_regionaux_reference.md
+[reference] Collectifs de Pêche Inuit et Sami — organisation (entité : Collectifs de Pêche Inuit et Sami)
+  zone : corridor_arctique_nordique | trajectoire : émergent
+  → collectifs_de_peche_inuit_et_sami_reference.md
+[reference] Commission Hydrique de l'Union Africaine — institution (entité : Commission Hydrique de l'Union Africaine)
+  zone : kinshasa_accords_hydriques | trajectoire : émergent
+  → commission_hydrique_de_l_union_africaine_reference.md
+[reference] Communs Numériques Agroécologiques — réseau (entité : Communs Numériques Agroécologiques)
+  zone : (transnationale) | trajectoire : émergent
+  → communs_numeriques_agroecologiques_reference.md
+[reference] Confédération des Mégapoles Autonomes — organisation (entité : Confédération des Mégapoles Autonomes)
+  zone : (transnationale) | trajectoire : émergent
+  → confederation_des_megapoles_autonomes_reference.md
+[reference] Conseil de Genève pour les Droits Biosociaux — institution (entité : Conseil de Genève pour les Droits Biosociaux)
+  zone : geneve_conseil_biosocial | trajectoire : émergent
+  → conseil_de_geneve_pour_les_droits_biosociaux_reference.md
+[reference] Conseil des États Nordiques Intégrés — institution (entité : Conseil des États Nordiques Intégrés)
+  zone : corridor_arctique_nordique | trajectoire : émergent
+  → conseil_des_etats_nordiques_integres_reference.md
+[reference] Comité de Surveillance IA — institution (entité : Conseil de Régulation Algorithmique)
+  zone : geneve_lac_retreite | trajectoire : déclinant
+  → conseil_regulation_algorithmique_reference.md
+[reference] Conseil de Régulation des Ressources Critiques — institution (entité : Conseil de Régulation des Ressources Critiques)
+  zone : nairobi_crrc | trajectoire : déclinant
+  → conseil_regulation_ressources_reference.md
+[reference] Consortium Africain de Biotechnologies Sociales (CABS) — organisation (entité : Consortium Africain de Biotechnologies Sociales)
+  zone : nairobi_crrc | trajectoire : ascendant
+  → consortium_africain_de_biotechnologies_sociales_reference.md
+[reference] Consortium Amazônia Viva — organisation (entité : Consortium Amazônia Viva)
+  zone : amazonie_consortium_viva | trajectoire : ascendant
+  → consortium_amazonia_viva_reference.md
+[reference] Consortium AugmentWork — organisation (entité : Consortium AugmentWork)
+  zone : (transnationale) | trajectoire : émergent
+  → consortium_augmentwork_reference.md
+[reference] Consortium de Maintenance Orbitale SEOM-7 — organisation (entité : Consortium de Maintenance Orbitale SEOM-7)
+  zone : kourou_controle_orbital | trajectoire : émergent
+  → consortium_de_maintenance_orbitale_seom_7_reference.md
+[reference] Consortium des Fournisseurs d'Énergie Renouvelable Distribuée — réseau (entité : Consortium des Fournisseurs d'Énergie Renouvelable Distribuée)
+  zone : (transnationale) | trajectoire : émergent
+  → consortium_des_fournisseurs_d_energie_renouvelable_distribuee_reference.md
+[reference] Consortium des Grandes Plateformes IA Intégrées — entreprise (entité : Consortium des Grandes Plateformes IA Intégrées)
+  zone : (transnationale) | trajectoire : émergent
+  → consortium_des_grandes_plateformes_ia_integrees_reference.md
+[reference] Consortium des Grandes Plateformes Logistiques Globales — entreprise (entité : Consortium des Grandes Plateformes Logistiques Globales)
+  zone : (transnationale) | trajectoire : émergent
+  → consortium_des_grandes_plateformes_logistiques_globales_reference.md
+[reference] Alliance des Glaces Libres (AGL) — organisation (entité : Consortium des Pêcheries Autonomes du Grand Nord)
+  zone : corridor_arctique_nordique | trajectoire : ascendant
+  → consortium_des_pecheries_autonomes_du_grand_nord_reference.md
+[reference] Consortium des Plateformes IA Centralisées Anti-Délibération — organisation (entité : Consortium des Plateformes IA Centralisées Anti-Délibération)
+  zone : (transnationale) | trajectoire : émergent
+  → consortium_des_plateformes_ia_centralisees_anti_deliberation_reference.md
+[reference] Consortium Énergétique Baltique — entreprise (entité : Consortium Énergétique Baltique)
+  zone : helsinki_communs_numeriques | trajectoire : émergent
+  → consortium_energetique_baltique_reference.md
+[reference] Consortium Énergétique des Mers du Nord — entreprise (entité : Consortium Énergétique des Mers du Nord)
+  zone : tromsoe_aln | trajectoire : émergent
+  → consortium_energetique_des_mers_du_nord_reference.md
+[reference] Consortium Helios — organisation (entité : Consortium Helios)
+  zone : bruxelles_nouveau | trajectoire : dominant
+  → consortium_helios_reference.md
+[reference] Consortium Indo-Pacifique de l'Hydrogène — entreprise (entité : Consortium Indo-Pacifique de l'Hydrogène)
+  zone : singapour_est | trajectoire : émergent
+  → consortium_indo_pacifique_de_l_hydrogene_reference.md
+[reference] Consortium Logistique Asiatique de Contournement ALN — entreprise (entité : Consortium Logistique Asiatique de Contournement ALN)
+  zone : indo_pacifique_emergent | trajectoire : émergent
+  → consortium_logistique_asiatique_de_contournement_aln_reference.md
+[reference] Consortiums Bancaires Financiarisés — entreprise (entité : Consortiums Bancaires Financiarisés)
+  zone : (transnationale) | trajectoire : émergent
+  → consortiums_bancaires_financiarises_reference.md
+[reference] Consortiums d'Agriculture Verticale Algorithmique — entreprise (entité : Consortiums d'Agriculture Verticale Algorithmique)
+  zone : (transnationale) | trajectoire : émergent
+  → consortiums_d_agriculture_verticale_algorithmique_reference.md
+[reference] Consortiums d'Extraction Minière du Bassin Congolais — entreprise (entité : Consortiums d'Extraction Minière du Bassin Congolais)
+  zone : bassin_congo_ressources | trajectoire : émergent
+  → consortiums_d_extraction_miniere_du_bassin_congolais_reference.md
+[reference] Consortiums Énergétiques des Mégapoles — entreprise (entité : Consortiums Énergétiques des Mégapoles)
+  zone : (transnationale) | trajectoire : émergent
+  → consortiums_energetiques_des_megapoles_reference.md
+[reference] Consortiums Énergétiques Opaques — entreprise (entité : Consortiums Énergétiques Opaques)
+  zone : (transnationale) | trajectoire : émergent
+  → consortiums_energetiques_opaques_reference.md
+[reference] Consortiums Médiatiques Corporatifs — entreprise (entité : Consortiums Médiatiques Corporatifs)
+  zone : (transnationale) | trajectoire : émergent
+  → consortiums_mediatiques_corporatifs_reference.md
+[reference] Consortiums Privés d'Extraction de Ressources Critiques — entreprise (entité : Consortiums Privés d'Extraction de Ressources Critiques)
+  zone : (transnationale) | trajectoire : émergent
+  → consortiums_prives_d_extraction_de_ressources_critiques_reference.md
+[reference] Consortiums Privés de Gestion des Données Critiques — entreprise (entité : Consortiums Privés de Gestion des Données Critiques)
+  zone : (transnationale) | trajectoire : émergent
+  → consortiums_prives_de_gestion_des_donnees_critiques_reference.md
+[reference] Réseau Terrafond — réseau (entité : Coopérative Terrafond)
+  zone : europe_occidentale_reconstruite | trajectoire : mature
+  → cooperative_terrafond_reference.md
+[reference] Coopératives Agro-Écologiques de Reconstruction Territoriale — organisation (entité : Coopératives Agro-Écologiques de Reconstruction Territoriale)
+  zone : (transnationale) | trajectoire : émergent
+  → cooperatives_agro_ecologiques_de_reconstruction_territoriale_reference.md
+[reference] Coopératives Agro-Écologiques du Bassin Méditerranéen — réseau (entité : Coopératives Agro-Écologiques du Bassin Méditerranéen)
+  zone : (transnationale) | trajectoire : émergent
+  → cooperatives_agro_ecologiques_du_bassin_mediterraneen_reference.md
+[reference] Coopératives Énergétiques Décentralisées — organisation (entité : Coopératives Énergétiques Décentralisées)
+  zone : (transnationale) | trajectoire : émergent
+  → cooperatives_energetiques_decentralisees_reference.md
+[reference] Coopératives IA Open-Source — réseau (entité : Coopératives IA Open-Source)
+  zone : (transnationale) | trajectoire : émergent
+  → cooperatives_ia_open_source_reference.md
+[reference] Corporations d'Extraction Énergétique Non Signataires — entreprise (entité : Corporations d'Extraction Énergétique Non Signataires)
+  zone : (transnationale) | trajectoire : émergent
+  → corporations_d_extraction_energetique_non_signataires_reference.md
+[reference] Passage Arctique du Nord — Zone de Transit Disputée — infrastructure (entité : Corridor Arctique Nordique)
+  zone : corridor_arctique_nordique | trajectoire : dominant
+  → corridor_arctique_nordique_reference.md
+[reference] Courant Nationaliste Instrumentalisateur du Discours des Racines — autre (entité : Courant Nationaliste Instrumentalisateur du Discours des Racines)
+  zone : (transnationale) | trajectoire : émergent
+  → courant_nationaliste_instrumentalisateur_du_discours_des_racines_reference.md
+[reference] SovData Global Trust — entreprise (entité : DataSovereign)
+  zone : geneve_lac_retreite | trajectoire : dominant
+  → datasovereign_reference.md
+[reference] Deepfield Institute for Human Continuity (DIHC) — institution (entité : Deepfield Institute)
+  zone : (transnationale) | trajectoire : mature
+  → deepfield_institute_reference.md
+[reference] Delta du Gange — Zone de Crise Permanente — autre (entité : Delta Du Gange)
+  zone : delta_du_gange | trajectoire : déclinant
+  → delta_du_gange_reference.md
+[reference] Delta du Mékong — Zone de Friction Nourricière — autre (entité : Delta Du Mekong)
+  zone : delta_du_mekong | trajectoire : déclinant
+  → delta_du_mekong_reference.md
+[reference] Detroit Compact Grands Lacs — institution (entité : Detroit Compact Grands Lacs)
+  zone : detroit_compact_grands_lacs | trajectoire : mature
+  → detroit_compact_grands_lacs_reference.md
+[reference] Système Kontinuum — IA (entité : Directive Kontinuum)
+  zone : (transnationale) | trajectoire : dominant
+  → directive_kontinuum_reference.md
+[reference] EcoSynth Global Resilience Systems (EGRS) — entreprise (entité : EcoSynth Global)
+  zone : (transnationale) | trajectoire : dominant
+  → ecosynth_global_reference.md
+[reference] Elias Mørk — humain (entité : Elias Mørk)
+  zone : (transnationale) | trajectoire : mature
+  → elias_mork_reference.md
+[reference] Ergo-Wian Sovereign Holdings — hybride (entité : Ergo-Wian Sovereign Holdings)
+  zone : europe_occidentale_reconstruite | trajectoire : dominant
+  → ergo_wian_sovereign_holdings_reference.md
+[reference] États à Tendance Centraliste Numérique — institution (entité : États à Tendance Centraliste Numérique)
+  zone : (transnationale) | trajectoire : émergent
+  → etats_a_tendance_centraliste_numerique_reference.md
+[reference] Union Occidentale de Coordination (UOC) — institution (entité : Europe Occidentale Reconstructee)
+  zone : bruxelles_nouveau | trajectoire : déclinant
+  → europe_occidentale_reconstruite_reference.md
+[reference] Factions d'Extraction Minière Indépendantes — organisation (entité : Factions d'Extraction Minière Indépendantes)
+  zone : zones_grises_globales | trajectoire : émergent
+  → factions_d_extraction_miniere_independantes_reference.md
+[reference] Factions Eurasiatiques contre la Tarification Hydrique — organisation (entité : Factions Eurasiatiques contre la Tarification Hydrique)
+  zone : corridors_eurasiens_zones_grises | trajectoire : émergent
+  → factions_eurasiatiques_contre_la_tarification_hydrique_reference.md
+[reference] Fédération des Communs Territoriaux — institution (entité : Fédération des Communs Territoriaux)
+  zone : (transnationale) | trajectoire : ascendant
+  → federation_communs_territoriaux_reference.md
+[reference] Fédération des Cliniques Autonomes — organisation (entité : Fédération des Cliniques Autonomes)
+  zone : europe_occidentale_reconstruite | trajectoire : émergent
+  → federation_des_cliniques_autonomes_reference.md
+[reference] Fonds d'Investissement Foncier Climatique — institution (entité : Fonds d'Investissement Foncier Climatique)
+  zone : (transnationale) | trajectoire : émergent
+  → fonds_d_investissement_foncier_climatique_reference.md
+[reference] Fonds Monétaire Climatique (FMC) — institution (entité : Fonds Monétaire Climatique (FMC))
+  zone : geneve_lac_retreite | trajectoire : émergent
+  → fonds_monetaire_climatique_fmc_reference.md
+[reference] Fonds Souverain Arctique Scandinave — institution (entité : Fonds Souverain Arctique Scandinave)
+  zone : tromsoe_aln | trajectoire : émergent
+  → fonds_souverain_arctique_scandinave_reference.md
+[reference] Fonds Souverains de la Ceinture Financière Pacifique — institution (entité : Fonds Souverains de la Ceinture Financière Pacifique)
+  zone : indo_pacifique_emergent | trajectoire : émergent
+  → fonds_souverains_de_la_ceinture_financiere_pacifique_reference.md
+[reference] Frente Sertão Livre — réseau (entité : Frente Sertão Livre)
+  zone : sertao_nordeste_bresilien | trajectoire : ascendant
+  → frente_sertao_livre_reference.md
+[reference] Front Souverainiste des Ressources d'Amérique du Sud — organisation (entité : Front Souverainiste des Ressources d'Amérique du Sud)
+  zone : ameriques_multipolaires | trajectoire : émergent
+  → front_souverainiste_des_ressources_d_amerique_du_sud_reference.md
+[reference] gelecek_meclisi_reference — hybride (entité : gelecek_meclisi)
+  zone : (transnationale) | trajectoire : ascendant
+  → gelecek_meclisi_reference.md
+[reference] Forum Léman — Coordination pour le Recul des Eaux — organisation (entité : Geneve Lac Retreite)
+  zone : geneve_lac_retreite | trajectoire : mature
+  → geneve_lac_retreite_reference.md
+[reference] Gouvernements à Régime de Productivité Mandatée — institution (entité : Gouvernements à Régime de Productivité Mandatée)
+  zone : (transnationale) | trajectoire : émergent
+  → gouvernements_a_regime_de_productivite_mandatee_reference.md
+[reference] Gouvernements du Bloc Sahélien Autonome — institution (entité : Gouvernements du Bloc Sahélien Autonome)
+  zone : bloc_sahelien_autonome | trajectoire : émergent
+  → gouvernements_du_bloc_sahelien_autonome_reference.md
+[reference] Gouvernements Fédéraux Résiduels Souverainistes — institution (entité : Gouvernements Fédéraux Résiduels Souverainistes)
+  zone : pacte_des_souverains | trajectoire : émergent
+  → gouvernements_federaux_residuels_souverainistes_reference.md
+[reference] Compact des Grands Lacs — institution (entité : Great Lakes Autonomous Compact)
+  zone : detroit_compact_grands_lacs | trajectoire : mature
+  → great_lakes_autonomous_compact_reference.md
+[reference] Guadalajara Nexus — hybride (entité : Guadalajara Nexus)
+  zone : guadalajara_nexus | trajectoire : ascendant
+  → guadalajara_nexus_reference.md
+[reference] Helsinki Communs Numériques — organisation (entité : Helsinki Communs Numeriques)
+  zone : helsinki_communs_numeriques | trajectoire : mature
+  → helsinki_communs_numeriques_reference.md
+[reference] Réseau des Citadelles du Sud-Pacifique (RCSP) — infrastructure (entité : Holdfast)
+  zone : indo_pacifique_emergent | trajectoire : résiduel
+  → holdfast_reference.md
+[reference] Hyphan Raghavan de Ergo-Wian Sovereign Holdings — humain (entité : Hyphan Raghavan)
+  zone : (transnationale) | trajectoire : ascendant
+  → hyphan_raghavan_reference.md
+[reference] Ilse Varga-Holm de Ergo-Wian Sovereign Holdings — humain (entité : Ilse Varga-Holm)
+  zone : (transnationale) | trajectoire : dominant
+  → ilse_varga_holm_reference.md
+[reference] Institut des Seuils Démographiques (ISD-2098) — institution (entité : Institut des Seuils Démographiques)
+  zone : (transnationale) | trajectoire : dominant
+  → institut_des_seuils_demographiques_reference.md
+[reference] Institut Polytechnique de Ouagadougou — institution (entité : Institut Polytechnique de Ouagadougou)
+  zone : ouagadougou_polytechnique | trajectoire : émergent
+  → institut_polytechnique_de_ouagadougou_reference.md
+[reference] Réseau de Gouvernance Multilatérale Survivant (RGMS) — institution (entité : Institutions Multilaterales Survivantes)
+  zone : (transnationale) | trajectoire : déclinant
+  → institutions_multilaterales_survivantes_reference.md
+[reference] Internationale des Travailleurs Augmentés — organisation (entité : Internationale des Travailleurs Augmentés)
+  zone : (transnationale) | trajectoire : ascendant
+  → internationale_travailleurs_augmentes_reference.md
+[reference] Kalaallit Nunaat Sovereign Fund — institution (entité : Kalaallit Nunaat Sovereign Fund)
+  zone : nuuk_capitale_groenland | trajectoire : ascendant
+  → kalaallit_nunaat_sovereign_fund_reference.md
+[reference] Kaspar Lind — humain (entité : Kaspar Lind)
+  zone : europe_occidentale_reconstruite | trajectoire : marginal
+  → kaspar_lind_reference.md
+[reference] Réseau Étincelle — réseau (entité : Kindling)
+  zone : europe_occidentale_reconstruite | trajectoire : marginal
+  → kindling_reference.md
+[reference] Accords Hydriques de Kinshasa — institution (entité : Kinshasa Accords Hydriques)
+  zone : kinshasa_accords_hydriques | trajectoire : mature
+  → kinshasa_accords_hydriques_reference.md
+[reference] Lamplight Collective — réseau (entité : Lamplight)
+  zone : geneve_lac_retreite | trajectoire : ascendant
+  → lamplight_reference.md
+[reference] Raj Mehta — humain (entité : Le Témoin)
+  zone : singapour_est | trajectoire : ascendant
+  → le_temoin_reference.md
+[reference] Leena Väinälä — humain (entité : Leena Väinälä)
+  zone : corridor_arctique_nordique | trajectoire : ascendant
+  → leena_vainala_reference.md
+[reference] Réseau des Sentinelles des Eaux Profondes — réseau (entité : Les Veilleurs des Nappes Phréatiques)
+  zone : bassin_congo_ressources | trajectoire : ascendant
+  → les_veilleurs_des_nappes_phreatiques_reference.md
+[reference] Les Gardiens des Rives — réseau (entité : Les Veilleurs du Fleuve)
+  zone : delta_du_mekong | trajectoire : ascendant
+  → les_veilleurs_du_fleuve_reference.md
+[reference] Ligue des Métropoles du Sud pour les Infrastructures Libres — organisation (entité : Ligue des Métropoles du Sud pour les Infrastructures Libres)
+  zone : (transnationale) | trajectoire : émergent
+  → ligue_des_metropoles_du_sud_pour_les_infrastructures_libres_reference.md
+[reference] Ligue des Municipalités Périphériques Sous-Connectées — institution (entité : Ligue des Municipalités Périphériques Sous-Connectées)
+  zone : (transnationale) | trajectoire : émergent
+  → ligue_des_municipalites_peripheriques_sous_connectees_reference.md
+[reference] Lobbies Agro-Industriels à Haute Consommation d'Eau — organisation (entité : Lobbies Agro-Industriels à Haute Consommation d'Eau)
+  zone : (transnationale) | trajectoire : émergent
+  → lobbies_agro_industriels_a_haute_consommation_d_eau_reference.md
+[reference] Lobbies Industriels des États Non-Signataires — organisation (entité : Lobbies Industriels des États Non-Signataires)
+  zone : (transnationale) | trajectoire : émergent
+  → lobbies_industriels_des_etats_non_signataires_reference.md
+[reference] Lyon Métropole — Autorité de Coordination Territoriale — institution (entité : Lyon Metropole)
+  zone : lyon_metropole | trajectoire : mature
+  → lyon_metropole_reference.md
+[reference] Maëlys Okonkwo — humain (entité : Maëlys Okonkwo)
+  zone : europe_occidentale_reconstruite | trajectoire : ascendant
+  → maelys_okonkwo_reference.md
+[reference] Meridian Assembly — institution (entité : Meridian Assembly)
+  zone : (transnationale) | trajectoire : ascendant
+  → meridian_assembly_reference.md
+[reference] Milices Concurrentes des Droits de Passage — organisation (entité : Milices Concurrentes des Droits de Passage)
+  zone : zones_grises_globales | trajectoire : émergent
+  → milices_concurrentes_des_droits_de_passage_reference.md
+[reference] Mouvement pour la Libre Circulation des Personnes et des Données — organisation (entité : Mouvement pour la Libre Circulation des Personnes et des Données)
+  zone : (transnationale) | trajectoire : émergent
+  → mouvement_pour_la_libre_circulation_des_personnes_et_des_donnees_reference.md
+[reference] Mouvement des Racines Vivantes — réseau (entité : Mouvement des Racines Vivantes)
+  zone : zones_tampons_climatiques_europeennes | trajectoire : ascendant
+  → mouvement_racines_vivantes_reference.md
+[reference] Murmansk Transit Arctique — infrastructure (entité : Murmansk Transit Arctique)
+  zone : murmansk_transit_arctique | trajectoire : dominant
+  → murmansk_transit_arctique_reference.md
+[reference] Nadia Ferreira-Sato de Raised Hands — humain (entité : Nadia Ferreira-Sato)
+  zone : ameriques_multipolaires | trajectoire : ascendant
+  → nadia_ferreira_sato_reference.md
+[reference] Nairobi CRRC — Centre Régional de Résilience et de Coordination — organisation (entité : Nairobi Crrc)
+  zone : nairobi_crrc | trajectoire : mature
+  → nairobi_crrc_reference.md
+[reference] NeuroHarmonics Global Augmentation Network (NH-GAN) — hybride (entité : NeuroHarmonics)
+  zone : singapour_est_nexcore | trajectoire : dominant
+  → neuroharmonics_reference.md
+[reference] NexCore Global Infrastructure Group — entreprise (entité : NexCore)
+  zone : (transnationale) | trajectoire : dominant
+  → nexcore_reference.md
+[reference] Nexus BioSyn — entreprise (entité : Nexus BioSyn)
+  zone : (transnationale) | trajectoire : dominant
+  → nexus_biosyn_reference.md
+[reference] Observatoire Climatique des Territoires (OCT) — institution (entité : Observatoire Climatique des Territoires (OCT))
+  zone : geneve_lac_retreite | trajectoire : émergent
+  → observatoire_climatique_des_territoires_oct_reference.md
+[reference] ONG de Préservation Patrimoniale Numérique — organisation (entité : ONG de Préservation Patrimoniale Numérique)
+  zone : lyon_metropole | trajectoire : émergent
+  → ong_de_preservation_patrimoniale_numerique_reference.md
+[reference] ONG de Traçabilité des Ressources Critiques — organisation (entité : ONG de Traçabilité des Ressources Critiques)
+  zone : (transnationale) | trajectoire : émergent
+  → ong_de_tracabilite_des_ressources_critiques_reference.md
+[reference] ONG Environnementales de Terrain — organisation (entité : ONG Environnementales de Terrain)
+  zone : (transnationale) | trajectoire : émergent
+  → ong_environnementales_de_terrain_reference.md
+[reference] Opérateurs de Zones Économiques Spéciales Périurbaines — entreprise (entité : Opérateurs de Zones Économiques Spéciales Périurbaines)
+  zone : (transnationale) | trajectoire : émergent
+  → operateurs_de_zones_economiques_speciales_periurbaines_reference.md
+[reference] Opérateurs Logistiques Privés des Zones Grises Eurasiennes — réseau (entité : Opérateurs Logistiques Privés des Zones Grises Eurasiennes)
+  zone : corridors_eurasiens_peripheriques | trajectoire : émergent
+  → operateurs_logistiques_prives_des_zones_grises_eurasiennes_reference.md
+[reference] Opérateurs Privés d'Énergie Distribuée Hors-FCT — organisation (entité : Opérateurs Privés d'Énergie Distribuée Hors-FCT)
+  zone : zones_grises_globales | trajectoire : émergent
+  → operateurs_prives_d_energie_distribuee_hors_fct_reference.md
+[reference] OptiFlow Global Logistics Network (OGLN) — hybride (entité : OptiFlow Logistics)
+  zone : (transnationale) | trajectoire : dominant
+  → optiflow_logistics_reference.md
+[reference] Oracle des Seuils — IA (entité : Oracle des Seuils)
+  zone : (transnationale) | trajectoire : dominant
+  → oracle_des_seuils_reference.md
+[reference] Ouagadougou Polytechnique — institution (entité : Ouagadougou Polytechnique)
+  zone : ouagadougou_polytechnique | trajectoire : ascendant
+  → ouagadougou_polytechnique_reference.md
+[reference] Confédération des Archipels Flottants du Pacifique Sud (CAFPS) — organisation (entité : Pacifique Sud Archipels Flottants)
+  zone : pacifique_sud_archipels_flottants | trajectoire : ascendant
+  → pacifique_sud_archipels_flottants_reference.md
+[reference] Alliance pour la Souveraineté Maritime des Peuples Insulaires (ASMPI) — réseau (entité : Pacifique Sud Resilience Network)
+  zone : pacifique_sud_archipels_flottants | trajectoire : ascendant
+  → pacifique_sud_resilience_network_reference.md
+[reference] Alliance des Blocs Souverains (ABS) — organisation (entité : Pacte Des Souverains)
+  zone : sommets_itinerants_pacte | trajectoire : mature
+  → pacte_des_souverains_reference.md
+[reference] Plateformes Centralisées de Narration Officielle — infrastructure (entité : Plateformes Centralisées de Narration Officielle)
+  zone : (transnationale) | trajectoire : émergent
+  → plateformes_centralisees_de_narration_officielle_reference.md
+[reference] Plateformes d'Optimisation Territoriale par IA — système (entité : Plateformes d'Optimisation Territoriale par IA)
+  zone : (transnationale) | trajectoire : émergent
+  → plateformes_d_optimisation_territoriale_par_ia_reference.md
+[reference] Plateformes Informationnelles Dominantes et leurs IA de Modération — système (entité : Plateformes Informationnelles Dominantes et leurs IA de Modération)
+  zone : (transnationale) | trajectoire : émergent
+  → plateformes_informationnelles_dominantes_et_leurs_ia_de_moderation_reference.md
+[reference] Prisme Global — hybride (entité : Prisme Global)
+  zone : (transnationale) | trajectoire : ascendant
+  → prisme_global_reference.md
+[reference] Programme ONU-Eau 2080 — institution (entité : Programme ONU-Eau 2080)
+  zone : geneve_lac_retreite | trajectoire : émergent
+  → programme_onu_eau_2080_reference.md
+[reference] Mains Levées (Raised Hands - The Lattice) — organisation (entité : Raised Hands)
+  zone : ameriques_multipolaires | trajectoire : émergent
+  → raised_hands_reference.md
+[reference] Sistema Paulista de Alocação Algorítmica de Recursos (SPAAR) — système (entité : Rede Paulista de Distribuição Algorítmica)
+  zone : sao_paulo_spaar | trajectoire : mature
+  → rede_paulista_de_distribuicao_algoritmica_reference.md
+[reference] Régulateurs de l'Union Continentale Africaine — institution (entité : Régulateurs de l'Union Continentale Africaine)
+  zone : union_africaine_resilience | trajectoire : émergent
+  → regulateurs_de_l_union_continentale_africaine_reference.md
+[reference] Régulateurs de l'Union Eurasiatique sur les Données Critiques — institution (entité : Régulateurs de l'Union Eurasiatique sur les Données Critiques)
+  zone : bloc_eurasien_central | trajectoire : émergent
+  → regulateurs_de_l_union_eurasiatique_sur_les_donnees_critiques_reference.md
+[reference] Réseau des Administrations Locales Rurales Participatives — organisation (entité : Réseau des Administrations Locales Rurales Participatives)
+  zone : massif_central_terrafond | trajectoire : émergent
+  → reseau_des_administrations_locales_rurales_participatives_reference.md
+[reference] Atlas des Marges — réseau (entité : Réseau des Cartographes des Zones Grises)
+  zone : (transnationale) | trajectoire : ascendant
+  → reseau_des_cartographes_des_zones_grises_reference.md
+[reference] Réseau des Chercheurs en Éthique des Systèmes Distribués — réseau (entité : Réseau des Chercheurs en Éthique des Systèmes Distribués)
+  zone : (transnationale) | trajectoire : émergent
+  → reseau_des_chercheurs_en_ethique_des_systemes_distribues_reference.md
+[reference] Réseau des Coopératives Agro-Sahéliennes — réseau (entité : Réseau des Coopératives Agro-Sahéliennes)
+  zone : bloc_sahelien_autonome | trajectoire : émergent
+  → reseau_des_cooperatives_agro_saheliennes_reference.md
+[reference] Réseau des Métropoles Côtières Adaptées — réseau (entité : Réseau des Métropoles Côtières Adaptées)
+  zone : (transnationale) | trajectoire : émergent
+  → reseau_des_metropoles_cotieres_adaptees_reference.md
+[reference] Réseau des Villes-États Pilotes en Gouvernance Participative — réseau (entité : Réseau des Villes-États Pilotes en Gouvernance Participative)
+  zone : (transnationale) | trajectoire : émergent
+  → reseau_des_villes_etats_pilotes_en_gouvernance_participative_reference.md
+[reference] Réseau des Villes-Refuge pour Travailleurs Désaugmentés — réseau (entité : Réseau des Villes-Refuge pour Travailleurs Désaugmentés)
+  zone : (transnationale) | trajectoire : émergent
+  → reseau_des_villes_refuge_pour_travailleurs_desaugmentes_reference.md
+[reference] Réseau Hospitalier Hybride Eurasiatique — réseau (entité : Réseau Hospitalier Hybride Eurasiatique)
+  zone : (transnationale) | trajectoire : émergent
+  → reseau_hospitalier_hybride_eurasiatique_reference.md
+[reference] Réseau MeshCommons-NetSolidaire — réseau (entité : Réseau MeshCommons-NetSolidaire)
+  zone : (transnationale) | trajectoire : émergent
+  → reseau_meshcommons_netsolidaire_reference.md
+[reference] Mnemos — Réseau de Mémoire Distribuée — infrastructure (entité : Réseau de Mémoire Distribuée Mnemos)
+  zone : (transnationale) | trajectoire : ascendant
+  → reseau_mnemos_reference.md
+[reference] Réseaux de Capteurs Citoyens — réseau (entité : Réseaux de Capteurs Citoyens)
+  zone : (transnationale) | trajectoire : émergent
+  → reseaux_de_capteurs_citoyens_reference.md
+[reference] Réseaux de financement gris issus d'anciens blocs militaires — réseau (entité : Réseaux de financement gris issus d'anciens blocs militaires)
+  zone : zones_grises_globales | trajectoire : émergent
+  → reseaux_de_financement_gris_issus_d_anciens_blocs_militaires_reference.md
+[reference] Réseaux de gouvernance multilatérale survivants — réseau (entité : Réseaux de gouvernance multilatérale survivants)
+  zone : institutions_multilaterales_survivantes | trajectoire : émergent
+  → reseaux_de_gouvernance_multilaterale_survivants_reference.md
+[reference] Réseaux de lanceurs d'alerte institutionnels dissidents — réseau (entité : Réseaux de lanceurs d'alerte institutionnels dissidents)
+  zone : (transnationale) | trajectoire : émergent
+  → reseaux_de_lanceurs_d_alerte_institutionnels_dissidents_reference.md
+[reference] Réseaux de médecine traditionnelle augmentée — réseau (entité : Réseaux de médecine traditionnelle augmentée)
+  zone : (transnationale) | trajectoire : émergent
+  → reseaux_de_medecine_traditionnelle_augmentee_reference.md
+[reference] Prefeitura Metropolitana de São Paulo — Administração de Continuidade (PMSP-AC) — institution (entité : Sao Paulo Ita)
+  zone : sao_paulo_ita | trajectoire : déclinant
+  → sao_paulo_ita_reference.md
+[reference] Services de contre-information des blocs géopolitiques concurrents — organisation (entité : Services de contre-information des blocs géopolitiques concurrents)
+  zone : (transnationale) | trajectoire : émergent
+  → services_de_contre_information_des_blocs_geopolitiques_concurrents_reference.md
+[reference] Sibérie Fédérale — institution (entité : Sibérie Fédérale)
+  zone : siberie_federale | trajectoire : émergent
+  → siberie_federale_reference.md
+[reference] Singapour Est Nexcore — organisation (entité : Singapour Est Nexcore)
+  zone : singapour_est_nexcore | trajectoire : dominant
+  → singapour_est_nexcore_reference.md
+[reference] Singapour Est — organisation (entité : Singapour Est)
+  zone : singapour_est | trajectoire : ascendant
+  → singapour_est_reference.md
+[reference] Syndicats de travail rural hybride — organisation (entité : Syndicats de travail rural hybride)
+  zone : europe_occidentale_reconstruite | trajectoire : émergent
+  → syndicats_de_travail_rural_hybride_reference.md
+[reference] Syndicats de travailleurs de la transition énergétique — organisation (entité : Syndicats de travailleurs de la transition énergétique)
+  zone : europe_occidentale_reconstruite | trajectoire : émergent
+  → syndicats_de_travailleurs_de_la_transition_energetique_reference.md
+[reference] Tbilissi Nœud Mnemos — organisation (entité : Tbilissi Noeud Mnemos)
+  zone : tbilissi_noeud_mnemos | trajectoire : ascendant
+  → tbilissi_noeud_mnemos_reference.md
+[reference] Kharg Data Nexus — infrastructure (entité : Terminal Kharg Data Haven)
+  zone : bloc_persique_autonome | trajectoire : mature
+  → terminal_kharg_data_haven_reference.md
+[reference] TerraMetrics Global Climate Solutions (TM-GCS) — entreprise (entité : TerraMetrics)
+  zone : singapour_est | trajectoire : dominant
+  → terrametrics_reference.md
+[reference] The Lattice of Chartered Cities — réseau (entité : The Lattice)
+  zone : ameriques_multipolaires | trajectoire : mature
+  → the_lattice_reference.md
+[reference] The Tidewater Canon — système (entité : The Tidewater Canon)
+  zone : (transnationale) | trajectoire : mature
+  → the_tidewater_canon_reference.md
+[reference] Tribunal Algorithmique de Bruxelles — institution (entité : Tribunal Algorithmique de Bruxelles)
+  zone : bruxelles_nouveau | trajectoire : ascendant
+  → tribunal_algorithmique_de_bruxelles_reference.md
+[reference] Union Africaine de Résilience Territoriale — institution (entité : Union Africaine de Résilience Territoriale)
+  zone : union_africaine_resilience | trajectoire : émergent
+  → union_africaine_de_resilience_territoriale_reference.md
+[reference] Union Africaine Résilience (UAR) — organisation (entité : Union Africaine Resilience)
+  zone : union_africaine_resilience | trajectoire : déclinant
+  → union_africaine_resilience_reference.md
+[reference] Universités et Think Tanks en Zones de Liberté Académique — institution (entité : Universités et Think Tanks en Zones de Liberté Académique)
+  zone : (transnationale) | trajectoire : émergent
+  → universites_et_think_tanks_en_zones_de_liberte_academique_reference.md
+[reference] Valparaíso FCT — Facilitation & Compensation Transfrontalière — organisation (entité : Valparaiso Fct)
+  zone : valparaiso_fct | trajectoire : mature
+  → valparaiso_fct_reference.md
+[reference] Vasil Orentchev — humain (entité : Vasil Orentchev)
+  zone : corridors_eurasiens_peripheriques | trajectoire : dominant
+  → vasil_orentchev_reference.md
+[reference] Voix du Dehors — réseau (entité : Voix du Dehors)
+  zone : (transnationale) | trajectoire : mature
+  → voix_du_dehors_reference.md
+[reference] Marges Persistantes — Zones Grises du Système Mondial — autre (entité : Zones Grises Globales)
+  zone : (transnationale) | trajectoire : dominant
+  → zones_grises_globales_reference.md

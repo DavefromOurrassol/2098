@@ -36,7 +36,7 @@ zone_geographique:
 zone_systemique:
 - société
 alliances:
-- archives_neutres_geneve_breakdown
+- archives_neutres_de_geneve_breakdown
 - brigades_medicales_itinerantes_breakdown
 - cargo_mombasa_crrc_breakdown
 - collectif_des_climatologues_sans_etat_breakdown
@@ -59,7 +59,6 @@ oppositions:
 - alliance_blocs_souverains_breakdown
 - collectifs_du_seuil_breakdown
 - factions_paramilitaires_locales_neutralisees_breakdown
-- geneve_bunker_institutions_breakdown
 - grandes_lacs_compact_eau_breakdown
 - milices_agro_defensives_locales_breakdown
 - milices_de_controle_territorial_breakdown
@@ -129,7 +128,7 @@ Le Front est perpétuellement tiraillé entre son impératif de neutralité — 
 
 ## Relations
 **Alliés :**
-- [[archives_neutres_geneve_breakdown]]
+- [[archives_neutres_de_geneve_breakdown]]
 - [[brigades_medicales_itinerantes_breakdown]]
 - [[cargo_mombasa_crrc_breakdown]]
 - [[collectif_des_climatologues_sans_etat_breakdown]]
@@ -152,7 +151,6 @@ Le Front est perpétuellement tiraillé entre son impératif de neutralité — 
 - [[alliance_blocs_souverains_breakdown]]
 - [[collectifs_du_seuil_breakdown]]
 - [[factions_paramilitaires_locales_neutralisees_breakdown]]
-- [[geneve_bunker_institutions_breakdown]]
 - [[grandes_lacs_compact_eau_breakdown]]
 - [[milices_agro_defensives_locales_breakdown]]
 - [[milices_de_controle_territorial_breakdown]]

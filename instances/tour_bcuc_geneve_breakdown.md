@@ -33,28 +33,12 @@ zone_systemique:
     - économie
     - information
 
-alliances:
-- archives_neutres_de_geneve_breakdown
-- archives_neutres_geneve_breakdown
-- corporations_de_l_ere_pre_effondrement_a_droits_de_pi_breakdown
-- geneve_bunker_institutions_breakdown
-- hanse_baltique_breakdown
-- hanse_baltique_recomposee_breakdown
-- ligue_des_cites_littorales_en_sursis_breakdown
-- noeud_mnemos_pannonie_breakdown
-- tribunal_algorithmique_de_bruxelles_breakdown
-oppositions:
-- collectif_hackers_decroissance_infrastructure_breakdown
-- etats_fragmentes_nationalisant_les_stocks_breakdown
-- front_de_resistance_aux_peages_sur_les_ressources_breakdown
-- fronts_populistes_anti_technocratiques_breakdown
-- gouvernements_de_forteresse_anti_nairobi_breakdown
-- milices_contractuelles_des_anciens_etats_membres_breakdown
-- seigneuries_logistiques_armees_breakdown
+alliances: []
+oppositions: []
 type_relation_dominante: dépendance
 
 annee_debut: 2041
-annee_fin: 2057
+annee_fin: 2076
 
 generation: post-effondrement
 
@@ -76,7 +60,7 @@ tensions_narratives: >
   La Tour est assise sur un paradoxe existentiel : plus elle mobilise ses archives pour arbitrer des conflits, plus elle révèle l'étendue de ses anciennes compromissions avec des entités aujourd'hui disparues ou ennemies, sapant la neutralité qu'elle revendique. Certains fragments d'États membres la soupçonnent de favoriser secrètement les grandes enclaves corporatives qui continuent de la financer discrètement, ce qui alimente les fronts populistes qui réclament sa dissolution. En parallèle, des réseaux comme les Archives Neutres de Genève ou Mnemos Pannonie cherchent à absorber ses fonds documentaires, rendant sa survie institutionnelle conditionnelle à sa capacité à rester irremplaçable — un pari de plus en plus incertain dans un monde où la force prime sur la procédure.
 
 date_creation: 2026-06-27
-trajectoire: transformé
+trajectoire: disparu
 est_clandestin: false
 
 ---
@@ -102,20 +86,4 @@ La Tour est assise sur un paradoxe existentiel : plus elle mobilise ses archives
 
 ## Relations
 **Alliés :**
-- [[archives_neutres_de_geneve_breakdown]]
-- [[archives_neutres_geneve_breakdown]]
-- [[corporations_de_l_ere_pre_effondrement_a_droits_de_pi_breakdown]]
-- [[geneve_bunker_institutions_breakdown]]
-- [[hanse_baltique_breakdown]]
-- [[hanse_baltique_recomposee_breakdown]]
-- [[ligue_des_cites_littorales_en_sursis_breakdown]]
-- [[noeud_mnemos_pannonie_breakdown]]
-- [[tribunal_algorithmique_de_bruxelles_breakdown]]
 **Opposants :**
-- [[collectif_hackers_decroissance_infrastructure_breakdown]]
-- [[etats_fragmentes_nationalisant_les_stocks_breakdown]]
-- [[front_de_resistance_aux_peages_sur_les_ressources_breakdown]]
-- [[fronts_populistes_anti_technocratiques_breakdown]]
-- [[gouvernements_de_forteresse_anti_nairobi_breakdown]]
-- [[milices_contractuelles_des_anciens_etats_membres_breakdown]]
-- [[seigneuries_logistiques_armees_breakdown]]

@@ -42,10 +42,8 @@ alliances:
 - arctique_nordark_breakdown
 - enclaves_corporatives_fortifiees_breakdown
 oppositions:
-- agence_stabilisation_climatique_breakdown
 - collectif_des_climatologues_sans_etat_breakdown
 - etats_fragments_en_guerre_pour_les_stations_atmospheriques_breakdown
-- geneve_bunker_institutions_breakdown
 - guilde_des_techniciens_nomades_breakdown
 - les_veilleurs_du_fleuve_breakdown
 type_relation_dominante: compétition
@@ -113,10 +111,8 @@ Leurs interventions unilatérales déclenchent des représailles armées de rég
 - [[arctique_nordark_breakdown]]
 - [[enclaves_corporatives_fortifiees_breakdown]]
 **Opposants :**
-- [[agence_stabilisation_climatique_breakdown]]
 - [[collectif_des_climatologues_sans_etat_breakdown]]
 - [[etats_fragments_en_guerre_pour_les_stations_atmospheriques_breakdown]]
-- [[geneve_bunker_institutions_breakdown]]
 - [[guilde_des_techniciens_nomades_breakdown]]
 - [[les_veilleurs_du_fleuve_breakdown]]
 

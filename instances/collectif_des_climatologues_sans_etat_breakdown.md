@@ -38,7 +38,6 @@ zone_geographique:
 zone_systemique:
 - société
 alliances:
-- agence_stabilisation_climatique_breakdown
 - archives_neutres_de_geneve_breakdown
 - assemblee_territoires_breakdown
 - brigades_medicales_itinerantes_breakdown
@@ -130,7 +129,6 @@ La tension centrale du Collectif réside dans sa dépendance à une infrastructu
 
 ## Relations
 **Alliés :**
-- [[agence_stabilisation_climatique_breakdown]]
 - [[archives_neutres_de_geneve_breakdown]]
 - [[assemblee_territoires_breakdown]]
 - [[brigades_medicales_itinerantes_breakdown]]

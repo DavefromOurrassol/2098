@@ -37,7 +37,7 @@ zone_systemique:
 - société
 alliances:
 - agadez_ligue_sahel_numerique_breakdown
-- archives_neutres_geneve_breakdown
+- archives_neutres_de_geneve_breakdown
 - assemblee_territoires_breakdown
 - collectifs_de_hackers_archivistes_des_interstices_reseaux_breakdown
 - consortium_africain_de_biotechnologies_sociales_breakdown
@@ -128,7 +128,7 @@ Le réseau est convoité par des acteurs très dissemblables : NexCore cherche �
 ## Relations
 **Alliés :**
 - [[agadez_ligue_sahel_numerique_breakdown]]
-- [[archives_neutres_geneve_breakdown]]
+- [[archives_neutres_de_geneve_breakdown]]
 - [[assemblee_territoires_breakdown]]
 - [[collectifs_de_hackers_archivistes_des_interstices_reseaux_breakdown]]
 - [[consortium_africain_de_biotechnologies_sociales_breakdown]]

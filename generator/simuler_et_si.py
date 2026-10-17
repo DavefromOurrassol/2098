@@ -57,12 +57,13 @@ VAULT_ROOT = SCRIPT_DIR.parent
 HYPOTHESES_PATH = VAULT_ROOT / "et_si" / "hypotheses.yaml"
 REPORT_DIR = VAULT_ROOT / "documentation" / "need_action"
 ETAT_PATH = SCRIPT_DIR / "state" / "dernier_et_si.json"
+APPLICATION_DIR = SCRIPT_DIR / "state" / "et_si_application"   # PATCH_S27_V819 (appliquer_et_si.py)
 
 SCENARIOS = ["breakdown", "fortress_world", "new_sustainability",
              "eco_communalism", "policy_reform", "reference"]
 DELTA_MAX_CONSEILLE = 25   # plafond d'un événement custom (inject_custom_events.py)
 ACTIONS_GEO = {"absorber": "absorber", "nouvelle_zone": "creer"}   # vocabulaire du fichier -> ZoneRepository
-VERSION = "v8.17.1"            # affichée dans le rapport : permet de vérifier la version installée
+VERSION = "v8.19"            # affichée dans le rapport : permet de vérifier la version installée
 MAX_LISTE = 10             # éléments listés par rubrique dans le rapport (le reste est compté)
 
 
@@ -2476,8 +2477,33 @@ def liste_application(hyp, sc, res, cons, geo_ops, donnees, passe=None):
         _pese(r["a"], 1)
         _pese(r["b"], 1)
     acteurs = [s for s, _ in sorted(poids.items(), key=lambda x: -x[1])][:4]
+    # PATCH_S27_V818 : sort de chaque acteur du récit (et zones changées), transmis à
+    # l'injection pour que le texte ne le réinvente pas à chaque tirage.
+    annee = f"{hyp['date']:g}"
+    sort_final = {t["instance"]: t for t in (cons.get("trajectoires") or []) + p_obl["trajectoires"]}
+    faits = []
+    for s in acteurs:
+        inst = by_inst.get(s) or {}
+        nom = inst.get("name") or s
+        t = sort_final.get(s)
+        if t and t["apres"] == "disparu":
+            faits.append({"fait": f"{nom} ({s}) disparaît en {annee} (trajectoire {t['avant']} → disparu) : "
+                                  f"après cette date, elle n'agit plus.", "slug": s, "sort": "disparait"})
+        elif t:
+            faits.append({"fait": f"{nom} ({s}) passe de « {t['avant']} » à « {t['apres']} » après {annee} : "
+                                  f"elle existe toujours (elle peut perdre des lieux, des biens ou du pouvoir), "
+                                  f"ne la décris pas comme disparue.", "slug": s, "sort": "change"})
+        elif inst:
+            faits.append({"fait": f"{nom} ({s}) garde sa trajectoire « {inst.get('trajectoire') or '?'} » : "
+                                  f"elle survit à l'événement sans changement majeur, ne la décris ni détruite "
+                                  f"ni disparue.", "slug": s, "sort": "reste"})
+    for z in cons.get("zones_statut") or []:
+        faits.append({"fait": f"La zone {z.get('nom') or z['zone']} ({z['zone']}) passe de « {z['avant']} » à "
+                              f"« {z['apres']} »" + (" : le lieu disparaît." if z["apres"] == "disparu"
+                                                     else " : le lieu subsiste."),
+                      "slug": z["zone"], "sort": "zone"})
     return {"etapes": E, "avert": donnees["avert"], "sources_ia": sources_ia, "fiches_citant": cites,
-            "nouvelles_entites": cons.get("nouvelles_entites") or [], "acteurs": acteurs}
+            "nouvelles_entites": cons.get("nouvelles_entites") or [], "acteurs": acteurs, "faits": faits}
 
 
 def construire_application(hyp, resultats, consequences, geo, scenarios, passe=None):
@@ -2557,6 +2583,14 @@ def _rendre_injection_commune(hyp, application, out=None):
     if acteurs:
         entree["acteurs_hint"] = acteurs
         entree["acteurs_hint_count"] = max(len(v) for v in par_sc.values())
+    # PATCH_S27_V818 : faits imposés au récit (contraintes de l'hypothèse + sort des acteurs).
+    faits = {sc: list((application.get(sc) or {}).get("faits") or []) for sc in scen}
+    if hyp.get("contraintes"):
+        faits = {sc: [{"fait": c, "sort": "contrainte"} for c in hyp["contraintes"]] + v
+                 for sc, v in faits.items()}
+    faits = {sc: v for sc, v in faits.items() if v}
+    if faits:
+        entree["faits_imposes"] = faits
     # V8.15 : ce qui a été simulé est imposé à l'injection (patch_s27_injection_imposee.py).
     def _nombre(x):
         return int(x) if float(x) == int(x) else x
@@ -2592,6 +2626,9 @@ def _rendre_injection_commune(hyp, application, out=None):
             *(["`acteurs_hint` : entités les plus touchées de chaque scénario (lecture IA, passe "
                "exhaustive), 4 au plus par scénario ; chaque slug ne vaut que pour son scénario.", ""]
               if entree.get("acteurs_hint") else []),
+            *(["`faits_imposes` : contraintes de l'hypothèse et sort des acteurs du récit (disparaît, "
+               "change, reste) ; l'injection les donne à l'IA comme faits non négociables.", ""]
+              if entree.get("faits_imposes") else []),
             "```yaml", _yaml_bloc([entree]), "```", ""]
 
 
@@ -2633,6 +2670,42 @@ def _decider(args, hyps):
                 print(f"  {m}")
     except ed.DossierErreur as e:
         sys.exit(f"✗ {e}")
+
+
+def _ecrire_operations(brut, hyp, portee, consequences, passe):
+    """PATCH_S27_V819 : données brutes de la lecture IA et des obligatoires de la passe,
+    par scénario. appliquer_et_si.py en tire les opérations (numérotées) à appliquer."""
+    import et_si_dossiers as _ed
+    par_sc = {}
+    for sc in portee:
+        cons = consequences.get(sc) if isinstance(consequences, dict) else None
+        p = passe.get(sc) if isinstance(passe, dict) else None
+        erreurs = []
+        if cons and cons.get("erreur"):
+            erreurs.append(f"lecture IA : {cons['erreur']}")
+            cons = None
+        if p and p.get("erreur"):
+            erreurs.append(f"passe exhaustive : {p['erreur']}")
+            p = None
+        par_sc[sc] = {
+            "lecture": ({k: cons.get(k) or [] for k in ("trajectoires", "relations", "zones_statut",
+                                                         "nouvelles_entites")} if cons else None),
+            "passe": ({k: (p.get("obligatoire") or {}).get(k) or [] for k in ("trajectoires", "relations", "textes")}
+                      if p else None),
+            "erreurs": erreurs,
+        }
+    data = {
+        "id": hyp["id"], "date_simulation": datetime.now().isoformat(timespec="minutes"),
+        "version": VERSION, "empreinte": _ed.empreinte_hypothese(brut),
+        "annee": hyp.get("date"), "mode": hyp.get("mode"), "contraintes": hyp.get("contraintes") or [],
+        "scenarios_hypothese": list(hyp.get("scenarios") or []), "scenarios": list(portee),
+        "complet": set(portee) >= set(hyp.get("scenarios") or []), "par_scenario": par_sc,
+    }
+    APPLICATION_DIR.mkdir(parents=True, exist_ok=True)
+    cible = APPLICATION_DIR / f"{hyp['id']}.json"
+    tmp = cible.with_suffix(".json.tmp")
+    tmp.write_text(json.dumps(data, ensure_ascii=False, indent=1, default=str), encoding="utf-8")
+    tmp.replace(cible)
 
 
 def main():
@@ -2756,6 +2829,11 @@ def main():
     # V8.17 : dossier de l'hypothèse (dernière simulation, entrée d'injection commune).
     inj = {}
     _rendre_injection_commune(hyp, application, inj)
+    # PATCH_S27_V819 : opérations structurées pour appliquer_et_si.py (phase 4).
+    try:
+        _ecrire_operations(brut, hyp, portee, consequences, passe)
+    except Exception as e:  # ne doit jamais empêcher le rapport
+        avert.append(f"opérations pour appliquer_et_si.py non écrites : {type(e).__name__}: {e}")
     try:
         ed.enregistrer_simulation(brut, hyp, portee, VERSION, inj.get("entree"), bool(passe),
                                   f"documentation/need_action/et_si_{hyp['id']}.md" if args.report else None)

@@ -40,7 +40,7 @@ zone_systemique:
 - société
 alliances: []
 oppositions:
-- archives_neutres_geneve_breakdown
+- archives_neutres_de_geneve_breakdown
 - arctic_passage_authority_breakdown
 - cargo_mombasa_crrc_breakdown
 - communautes_paysannes_refugiees_breakdown
@@ -49,7 +49,6 @@ oppositions:
 - flux_migratoires_non_integrables_breakdown
 - ligue_des_cites_littorales_en_sursis_breakdown
 - nairobi_crrc_breakdown
-- tour_bcuc_geneve_breakdown
 type_relation_dominante: conflit
 annee_debut: 2041
 annee_fin: null
@@ -111,7 +110,7 @@ La contradiction centrale de ces gouvernements réside dans leur dépendance aux
 
 ## Relations
 **Opposants :**
-- [[archives_neutres_geneve_breakdown]]
+- [[archives_neutres_de_geneve_breakdown]]
 - [[arctic_passage_authority_breakdown]]
 - [[cargo_mombasa_crrc_breakdown]]
 - [[communautes_paysannes_refugiees_breakdown]]
@@ -120,7 +119,6 @@ La contradiction centrale de ces gouvernements réside dans leur dépendance aux
 - [[flux_migratoires_non_integrables_breakdown]]
 - [[ligue_des_cites_littorales_en_sursis_breakdown]]
 - [[nairobi_crrc_breakdown]]
-- [[tour_bcuc_geneve_breakdown]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

@@ -68,6 +68,13 @@
 #   date_imposee           : optionnel, année 2025-2098 imposée (prime sur
 #                            edition_active).
 #   via_matrice_impose     : optionnel, true/false imposé.
+#   faits_imposes          : optionnel (simulateur, v8.18). Faits que le récit ne
+#                            doit pas contredire, par scénario :
+#                              breakdown:
+#                                - {fait: "X disparaît en 2076", slug: x_breakdown,
+#                                   sort: disparait}
+#                            (sort : disparait | change | reste | zone | contrainte ;
+#                            « reste » déclenche un ⚠ si le texte détruit l'entité).
 # EXEMPLE :
 #   - id: guerre_israelo_iranienne
 #     description: >

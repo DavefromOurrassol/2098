@@ -40,9 +40,7 @@ alliances:
 - coalition_pacifique_nord_breakdown
 - conglometrat_sino_siberien_bohai_transit_breakdown
 - front_des_blocs_regionaux_du_recit_des_conflits_ressources_breakdown
-oppositions:
-- agence_stabilisation_climatique_breakdown
-- geneve_bunker_institutions_breakdown
+oppositions: []
 type_relation_dominante: compétition
 annee_debut: 2041
 annee_fin: null
@@ -110,8 +108,6 @@ La tension fondamentale de la Ligue réside dans la contradiction entre son disc
 - [[conglometrat_sino_siberien_bohai_transit_breakdown]]
 - [[front_des_blocs_regionaux_du_recit_des_conflits_ressources_breakdown]]
 **Opposants :**
-- [[agence_stabilisation_climatique_breakdown]]
-- [[geneve_bunker_institutions_breakdown]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

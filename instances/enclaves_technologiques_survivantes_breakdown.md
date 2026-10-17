@@ -37,7 +37,7 @@ zone_geographique:
 zone_systemique:
 - société
 alliances:
-- archives_neutres_geneve_breakdown
+- archives_neutres_de_geneve_breakdown
 - enclaves_finlandaises_breakdown
 - enclaves_industrielles_du_corridor_oural_caspien_breakdown
 - hanse_baltique_breakdown
@@ -111,7 +111,7 @@ Leur paradoxe fondamental est d'être à la fois indispensables et condamnées :
 
 ## Relations
 **Alliés :**
-- [[archives_neutres_geneve_breakdown]]
+- [[archives_neutres_de_geneve_breakdown]]
 - [[enclaves_finlandaises_breakdown]]
 - [[enclaves_industrielles_du_corridor_oural_caspien_breakdown]]
 - [[hanse_baltique_breakdown]]

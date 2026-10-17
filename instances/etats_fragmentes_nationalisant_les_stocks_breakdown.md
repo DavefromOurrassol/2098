@@ -60,7 +60,6 @@ oppositions:
 - pirates_biologiques_open_source_breakdown
 - reseau_logistique_criminel_concurrent_breakdown
 - reseaux_noirs_pharmaceutiques_breakdown
-- tour_bcuc_geneve_breakdown
 type_relation_dominante: conflit
 annee_debut: 2041
 annee_fin: null
@@ -147,7 +146,6 @@ La contradiction fondamentale de ces États est d'utiliser l'outil souverain —
 - [[pirates_biologiques_open_source_breakdown]]
 - [[reseau_logistique_criminel_concurrent_breakdown]]
 - [[reseaux_noirs_pharmaceutiques_breakdown]]
-- [[tour_bcuc_geneve_breakdown]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

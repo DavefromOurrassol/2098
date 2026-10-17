@@ -978,3 +978,70 @@ Points 1 à 3 de S27 dans l'ordre proposé le 11 oct, plus deux demandes GUI.
   (`.bak_lien_seul`) — option `lien_seul` (nom du fichier seul ; `.yaml` →
   Visual Studio Code par la route `/api/ouvrir_vscode`), activée pour les
   deux panneaux du simulateur. Vérifié chez David.
+
+---
+
+## ✅ S27 (application réelle et phase 4) — Genève appliquée à la main, v8.18, v8.19, `appliquer_et_si.py` — 13 et 15 octobre 2026
+
+*Clos comme chantier de code ; la suite (test réel de la phase 4, reste de
+Genève, S19, amplitude des chocs, banc breakdown) est dans S27 de
+`BACKLOG_ACTIF.md`.*
+
+**13 oct — Genève (`destruction_geneve_2076`, breakdown) appliquée pour de
+vrai** (point 1 du 12 oct), étape par étape :
+- **Adoption** (19:01, régionale, majeure), puis **injection** après deux
+  aperçus : le premier tirage détruisait « le bunker des institutions
+  résiduelles », contre le *Moniteur de l'Ordre* qui y siège en 2098 ;
+  description de l'entrée retouchée dans `queue.yaml` (« Seul le complexe
+  enterré de Genève-Bunker résiste », `.bak_bunker`). Fiche injectée : bunker
+  intact, « matrice » absente du récit. Statut « injecté » vérifié ;
+  `trace_injection.py` : gouvernance +6 sur 2 ans, effet net +0,3 en 2098,
+  identique à la simulation.
+- **Lecture du rapport corrigée** : deux « Genève-Bunker » — l'instance
+  `geneve_bunker_institutions_breakdown` (*Palais des Fantômes*, disparaît) et
+  la zone `geneve_bunker_institutions` (passe en_declin). Décision : le lieu
+  survit, l'institution disparaît.
+- **Tri de David** : étapes 17-24 (ruptures ⚠ des Archives) et tous les
+  possibles sautés ; étapes 2, 10, 11 (effets lointains, +0,3 seulement), 15
+  (contredisait l'alliance des Milices) et 16 sautées.
+- **S24 — doublon des Archives Neutres** traité avant les relations :
+  `fusionner_doublon_instance.py` (nouveau) ; gardé
+  `archives_neutres_de_geneve_breakdown` (48 citations contre 25) ; 17 fichiers
+  redirigés, 0 citation restante ; fiche et archétype `archives_neutres_geneve`
+  dans `_a_supprimer/` ; conflit Factions Propagandistes (alliées à l'une,
+  opposées à l'autre) tranché en opposition des deux côtés ; réciprocité +4 / +4.
+- **Zone** en_declin (`changer_statut_zone.py`, nouveau ; corps régénéré) ;
+  **trajectoires** (`changer_trajectoire.py`, nouveau) : Archives émergent →
+  résiduel, Tour BCUC, Résidu AMSC et Palais des Fantômes transformé →
+  disparu, `annee_fin` 2057 / 2061 → 2076 (`--ecraser-annee-fin` : une date
+  antérieure faisait disparaître l'entité avant l'explosion) ; **relations**
+  (`retirer_relations.py`, nouveau) : les 3 disparues retirées de 30 fiches.
+  `validate.py` : 0 / 0 / 0 après chaque étape.
+- **Constat qui a décidé la suite** (« l'outil doit être exhaustif », David) :
+  la liste d'application ne contient que ce que l'IA a remarqué, ne transmet
+  rien à l'injection, ignore l'état réel des fiches. Arrêt du déroulé manuel ;
+  phase 4 plutôt que les étapes 26-59 une par une.
+- Incident : terminal bloqué par une commande `python3 -c` très longue →
+  convention : un petit script plutôt qu'un long one-liner ; plus de `mv` dans
+  les commandes (David place les fichiers).
+
+**15 oct — code** :
+- **v8.18** (`patch_s27_v818.py`, 4 + 6 remplacements, `.bak_v818`) :
+  `faits_imposes` (contraintes, sort de chaque acteur, zones changées) ;
+  bloc « FAITS IMPOSÉS » à l'injection ; « Propagation via la matrice » →
+  « Effet propagé aux autres variables », sans nommer le mécanisme ; ⚠ sans
+  rejet (`verifier_faits()`).
+- **Banc de rejeu** : 21/27 ; diagnostic : caches breakdown indexés sur un vault
+  modifié, pas une régression (les 4 couples hors breakdown conformes sous
+  v8.18). Passe de la peste rafraîchie (≈ 0,10 $) mais sans lecture IA (cache
+  de lecture périmé lui aussi : les effets de breakdown ont changé avec
+  l'injection de Genève) → non comparable. Genève retirée du banc.
+- **v8.19** (`patch_s27_v819.py`, `.bak_v819`) : opérations structurées par
+  simulation (`generator/state/et_si_application/<id>.json`) ; vérifié sans IA
+  sur `fusion_commerciale_2038`.
+- **`appliquer_et_si.py`** (phase 4) : règles validées par David — n'appliquer
+  qu'une hypothèse injectée ; ⚠ sautées par défaut ; possibles jamais
+  appliqués ; disparition = retrait exhaustif des relations ; `annee_fin` d'une
+  disparue = année de l'élément ; réciprocité opposition prioritaire. Testé sur
+  un faux vault (homonyme, trajectoire changée, `annee_fin` remplie, rupture
+  non déclarée, relance sans effet, refus hors « injecté »).

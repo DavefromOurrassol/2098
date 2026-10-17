@@ -47,7 +47,6 @@ alliances:
 - ligue_des_cites_littorales_en_sursis_breakdown
 - ligue_mediterraneenne_des_villes_etats_portuaires_breakdown
 - noeud_nordark_tromso_breakdown
-- tour_bcuc_geneve_breakdown
 oppositions:
 - blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown
 - factions_militaires_residuelles_de_l_ex_otan_nordique_breakdown
@@ -120,7 +119,6 @@ La légitimité juridique que s'arroge la Ligue repose sur un paradoxe fondament
 - [[ligue_des_cites_littorales_en_sursis_breakdown]]
 - [[ligue_mediterraneenne_des_villes_etats_portuaires_breakdown]]
 - [[noeud_nordark_tromso_breakdown]]
-- [[tour_bcuc_geneve_breakdown]]
 **Opposants :**
 - [[blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown]]
 - [[factions_militaires_residuelles_de_l_ex_otan_nordique_breakdown]]

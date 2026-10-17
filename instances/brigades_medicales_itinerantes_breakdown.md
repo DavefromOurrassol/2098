@@ -56,7 +56,6 @@ alliances:
 - flux_migratoires_non_integrables_breakdown
 - frente_sertao_livre_breakdown
 - front_humanitaire_d_urgence_non_affilie_breakdown
-- geneve_bunker_institutions_breakdown
 - guilde_des_techniciens_nomades_breakdown
 - institut_des_seuils_demographiques_breakdown
 - midwest_desertifie_breakdown
@@ -161,7 +160,6 @@ Les Brigades oscillent en permanence entre neutralité revendiquée et instrumen
 - [[flux_migratoires_non_integrables_breakdown]]
 - [[frente_sertao_livre_breakdown]]
 - [[front_humanitaire_d_urgence_non_affilie_breakdown]]
-- [[geneve_bunker_institutions_breakdown]]
 - [[guilde_des_techniciens_nomades_breakdown]]
 - [[institut_des_seuils_demographiques_breakdown]]
 - [[midwest_desertifie_breakdown]]

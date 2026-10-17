@@ -675,7 +675,7 @@ zones:
     CRRC n''existe plus que comme label fantôme utilisé pour légitimer des raids sur
     les données. Aucun pouvoir supranational n''y subsiste, seulement des fragments
     de légitimité instrumentalisables.'
-  statut: fragmenté
+  statut: en_declin
   tensions_internes: Conflits permanents entre la milice archivistique du Bloc IX,
     les mercenaires du Bloc IV chargés de la 'protection' des données, et des groupes
     locaux tentant de monnayer l'accès aux archives. Les anciens fonctionnaires survivent
@@ -3462,6 +3462,22 @@ Infrastructure portuaire arctique disputée entre les factions résiduelles de l
 
 *Sources attestées : federation_russe_residuelle_district_de_mourmansk_breakdown, armada_logistique_nordique_breakdown*
 
+#### Hanse Baltique Recomposée — sous [[arc_eurasien_central]]
+
+*union_regionale — niveau 2 — statut : stable*
+
+**Origine réelle (2026)** : Pologne (côte baltique)
+
+**Transition** : 2060-2098
+
+Bloc de résistance régionale structuré maintenant des flux économiques et une cohérence institutionnelle minimale dans l'espace baltique, en marge de l'empire Nordark. La Hanse Recomposée s'appuie sur des réseaux commerciaux historiques réactivés pour maintenir une forme d'autonomie vis-à-vis du Konsortiet, tout en négociant des accords de transit qui la placent dans une dépendance structurelle difficile à assumer.
+
+**Tensions internes** : Dépendance aux corridors Nordark pour les échanges nord-sud ; factions favorables à une intégration formelle dans l'empire Nordark contre tenants d'une autonomie coûteuse ; pression des factions militaires résiduelles de l'ex-OTAN nordique cherchant à instrumentaliser la Hanse.
+
+**Rivaux** : Tromsø / Nœud Nordark ([[noeud_nordark_tromso]])
+
+*Sources attestées : hanse_baltique_recomposee_breakdown*
+
 #### Nœud Mnemos du Bassin Pannonien — sous [[arc_eurasien_central]]
 
 *infrastructure — niveau 2 — statut : en_declin*
@@ -4032,22 +4048,6 @@ Sous-sol cracovien abritant l'une des antennes encore actives du Registre des Zo
 **Alliés** : Archives Neutres de Genève-Bunker ([[archives_neutres_geneve]])
 
 *Sources attestées : bureau_des_territoires_residuels_breakdown*
-
-#### Hanse Baltique Recomposée — sous [[geneve_bunker_institutions]]
-
-*union_regionale — niveau 2 — statut : stable*
-
-**Origine réelle (2026)** : Pologne (côte baltique)
-
-**Transition** : 2060-2098
-
-Bloc de résistance régionale structuré maintenant des flux économiques et une cohérence institutionnelle minimale dans l'espace baltique, en marge de l'empire Nordark. La Hanse Recomposée s'appuie sur des réseaux commerciaux historiques réactivés pour maintenir une forme d'autonomie vis-à-vis du Konsortiet, tout en négociant des accords de transit qui la placent dans une dépendance structurelle difficile à assumer.
-
-**Tensions internes** : Dépendance aux corridors Nordark pour les échanges nord-sud ; factions favorables à une intégration formelle dans l'empire Nordark contre tenants d'une autonomie coûteuse ; pression des factions militaires résiduelles de l'ex-OTAN nordique cherchant à instrumentaliser la Hanse.
-
-**Rivaux** : Tromsø / Nœud Nordark ([[noeud_nordark_tromso]])
-
-*Sources attestées : hanse_baltique_recomposee_breakdown*
 
 #### Tour BCUC (47e étage) — sous [[geneve_bunker_institutions]]
 

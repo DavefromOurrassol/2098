@@ -57,7 +57,6 @@ oppositions:
 - enclaves_industrielles_du_corridor_oural_caspien_breakdown
 - etats_fragmentes_nationalisant_les_stocks_breakdown
 - factions_energetiques_heritieres_des_pactes_abs_breakdown
-- geneve_bunker_institutions_breakdown
 - hanse_baltique_breakdown
 - kalaallit_nunaat_sovereign_fund_breakdown
 - ligue_des_cites_du_sahel_numerique_breakdown
@@ -151,7 +150,6 @@ La contradiction fondamentale des Blocs est qu'en cherchant à sécuriser les re
 - [[enclaves_industrielles_du_corridor_oural_caspien_breakdown]]
 - [[etats_fragmentes_nationalisant_les_stocks_breakdown]]
 - [[factions_energetiques_heritieres_des_pactes_abs_breakdown]]
-- [[geneve_bunker_institutions_breakdown]]
 - [[hanse_baltique_breakdown]]
 - [[kalaallit_nunaat_sovereign_fund_breakdown]]
 - [[ligue_des_cites_du_sahel_numerique_breakdown]]

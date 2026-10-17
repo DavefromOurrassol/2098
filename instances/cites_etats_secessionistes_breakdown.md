@@ -41,7 +41,6 @@ alliances:
 - hanse_baltique_breakdown
 oppositions:
 - alliance_blocs_souverains_breakdown
-- geneve_bunker_institutions_breakdown
 - tribunal_algorithmique_de_bruxelles_breakdown
 type_relation_dominante: compétition
 annee_debut: 2041
@@ -107,7 +106,6 @@ La tension centrale est celle de la survie par l'isolement contre la nécessité
 - [[hanse_baltique_breakdown]]
 **Opposants :**
 - [[alliance_blocs_souverains_breakdown]]
-- [[geneve_bunker_institutions_breakdown]]
 - [[tribunal_algorithmique_de_bruxelles_breakdown]]
 
 ## Notes
