@@ -63,7 +63,7 @@ SCENARIOS = ["breakdown", "fortress_world", "new_sustainability",
              "eco_communalism", "policy_reform", "reference"]
 DELTA_MAX_CONSEILLE = 25   # plafond d'un événement custom (inject_custom_events.py)
 ACTIONS_GEO = {"absorber": "absorber", "nouvelle_zone": "creer"}   # vocabulaire du fichier -> ZoneRepository
-VERSION = "v8.19"            # affichée dans le rapport : permet de vérifier la version installée
+VERSION = "v8.20"            # affichée dans le rapport : permet de vérifier la version installée
 MAX_LISTE = 10             # éléments listés par rubrique dans le rapport (le reste est compté)
 
 
@@ -2233,24 +2233,25 @@ def liste_application(hyp, sc, res, cons, geo_ops, donnees, passe=None):
 
     # 5. Élément ---------------------------------------------------------------
     if hyp.get("mode") == "rupture":
-        _etape(E, "Élément", "Mode rupture : décision S19 à prendre avant toute écriture",
-               motif="l'injection réelle ne connaît que le mode choc ; appliquer la rupture = changer la référence")
+        # PATCH_S19_CHAINE (v8.20) : la rupture passe par l'injection. Les fiches portent
+        # `mode: rupture` et le moteur déplace lui-même la référence : rien à changer à la main.
+        _etape(E, "Élément", f"Injecter l'événement `{hyp['id']}` en mode rupture (entrée commune en fin de rapport)",
+               "python3 generator/inject_custom_events.py --mode custom",
+               "une seule injection pour tous les scénarios ; mode_impose: rupture écrit `mode: rupture` dans chaque fiche")
         for e in (res or {}).get("effets") or []:
             if abs(e.get("reference_apres", e["reference"]) - e["reference"]) >= 0.1:
                 # V8.13 : une référence portée au plafond ne laisse plus de marge.
                 plafond = e["reference_apres"] >= 99.5
                 _etape(E, "Élément", ("⚠ " if plafond else "") + f"{e['variable']} : référence "
                        f"{_virgule(e['reference'], False)} → {_virgule(e['reference_apres'], False)}",
-                       f"à la main : variables/{e['variable']}.md, states.{sc}.level, "
-                       f"puis python3 generator/synchroniser_scenarios.py",
-                       "seulement si la décision S19 est oui"
-                       + (" ; au plafond : plus aucune marge pour une autre crise sur cette variable" if plafond else ""))
-        # V8.13 : la rupture déplace les niveaux, mais l'événement doit exister pour le récit
-        # (registre, articles, journaux) ; sans impact chiffré, sinon le choc compterait deux fois.
-        _etape(E, "Élément", f"Créer l'événement `{hyp['id']}` pour le récit (entrée commune en fin de rapport)",
-               "python3 generator/inject_custom_events.py --mode custom",
-               f"puis vider le bloc impact_sur_variables de event_instances/{hyp['id']}_{sc}.md : "
-               "la rupture passe déjà par la référence, le choc compterait deux fois")
+                       "aucune action : déplacée par le moteur dès l'injection",
+                       "au plafond : plus aucune marge pour une autre crise sur cette variable" if plafond else None)
+        cibles = ", ".join(f"{i['variable']} {'+' if i['polarites'].get(sc, 1) > 0 else '−'}{i['force']:g}"
+                           for i in hyp["impacts"] if sc in i["polarites"])
+        _etape(E, "Élément", f"Vérifier que la fiche porte `mode: rupture` et les forces simulées ({cibles})",
+               f"event_instances/{hyp['id']}_{sc}.md ; "
+               f"python3 generator/trace_injection.py --slug {hyp['id']} --type evenement --scenario {sc}",
+               "le Tracer doit finir chaque ligne « Déclaré » par « rupture »")
         _etape(E, "Élément", "Nouvelle référence : vérifier la lisibilité du moteur",
                "python3 generator/banc_calibration.py --scenarios all --balayage-k 0.05", "S19")
     elif hyp.get("impacts"):
@@ -2571,8 +2572,7 @@ def _rendre_injection_commune(hyp, application, out=None):
     geo = any((application.get(sc) or {}).get("etapes") and hyp["geographie"].get(sc) for sc in scen)
     rupture = hyp.get("mode") == "rupture"
     partiel = [sc for sc in hyp["scenarios"] if sc not in application]
-    if not rupture:
-        scen = list(hyp["scenarios"])   # V8.15 : polarités connues pour tous les scénarios
+    scen = list(hyp["scenarios"])   # V8.15 : polarités connues pour tous les scénarios (S19 : rupture comprise)
     entree = {"id": hyp["id"], "description": hyp["description"] or hyp["nom"],
               "portee": "<locale | regionale | continentale | globale>" if geo else "globale",
               "date_approximative": int(hyp["date"]), "intensite": "<à choisir>",
@@ -2599,7 +2599,9 @@ def _rendre_injection_commune(hyp, application, out=None):
         return int(x) if float(x) == int(x) else x
     entree["date_imposee"] = _nombre(hyp["date"])
     trop_fort = []
-    if not rupture:
+    if rupture:
+        entree["mode_impose"] = "rupture"   # PATCH_S19_CHAINE : écrit `mode: rupture` dans les fiches
+    if True:   # S19 : forces imposées aussi en mode rupture
         entree["impacts_imposes"] = {
             sc: [{"variable": i["variable"], "delta_level": _nombre(i["force"]),
                   "duree": _nombre(i["duree"]), "polarite": i["polarites"][sc]}
@@ -2613,19 +2615,17 @@ def _rendre_injection_commune(hyp, application, out=None):
             ("⚠ Simulation limitée à " + ", ".join(sc for sc in scen if sc not in partiel)
              + " : l'entrée couvre aussi " + ", ".join(partiel) + ", non simulé(s) dans ce rapport ; "
              "les simuler avant d'injecter, ou les retirer de `scenarios` et de `impacts_imposes`.\n\n"
-             if partiel and not rupture else "")
-            + ("⚠ Simulation limitée à " + ", ".join(scen) + " : ajouter à `scenarios` les autres scénarios "
-               "de l'hypothèse (" + ", ".join(partiel) + ") avant d'injecter.\n\n" if partiel and rupture else "")
+             if partiel else "")
             + ("⚠ Force au-dessus du plafond d'un événement custom (" + str(DELTA_MAX_CONSEILLE) + ") : "
                + ", ".join(trop_fort) + ". L'injection refusera l'entrée : baisser la force et resimuler.\n\n"
                if trop_fort else "")
-            + ("Mode rupture : l'événement n'est injecté que pour le récit ; vider ensuite le bloc "
-               "impact_sur_variables de chaque fiche (étape « Élément »).\n\n" if hyp.get("mode") == "rupture" else "")
+            + ("Mode rupture : `mode_impose: rupture` fait écrire `mode: rupture` dans chaque fiche ; le "
+               "moteur déplace alors durablement la référence du scénario au lieu d'amortir un choc.\n\n"
+               if hyp.get("mode") == "rupture" else "")
             + "Entrée pour `evenements_custom/queue.yaml` (une seule pour tous les scénarios). "
             + ("Forces, polarités, durées, date et propagation de cette simulation sont imposées "
                "(`impacts_imposes`, `date_imposee`, `via_matrice_impose`) : l'IA de l'injection ne les "
-               "recalcule pas, elle rédige seulement le récit." if not rupture
-               else "Seule la date est imposée (`date_imposee`)."), "",
+               "recalcule pas, elle rédige seulement le récit."), "",
             *(["`acteurs_hint` : entités les plus touchées de chaque scénario (lecture IA, passe "
                "exhaustive), 4 au plus par scénario ; chaque slug ne vaut que pour son scénario.", ""]
               if entree.get("acteurs_hint") else []),

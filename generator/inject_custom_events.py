@@ -845,7 +845,7 @@ realisation: >
 impact_sur_variables:{impacts_yaml}
 propagation:
   via_matrice: {via_matrice}
-persistance: {persistance}
+persistance: {persistance}{mode_ligne}
 acteurs_impliques:{acteurs_yaml}
 note_coherence: {note}
 custom_source: {source}
@@ -889,6 +889,8 @@ developpements: []
         # loader.load_event_instances_for_scenario() puis dynamique.py.
         # Modifiable à la main dans chaque instance (une par scénario).
         persistance=idea.get("persistance") or dyn.PERSISTANCE_DEFAUT,
+        # PATCH_S19_CHAINE : `mode: rupture` (lu par loader.py) seulement si imposé.
+        mode_ligne="\nmode: rupture" if instance_data.get("mode") == "rupture" else "",
         acteurs_yaml=acteurs_yaml,
         note=yaml_scalar(instance_data.get("note_coherence") or ""),
         source=idea.get("source", "actualite"),
@@ -1134,7 +1136,8 @@ def lire_impositions(idea):
     brut = idea.get("impacts_imposes")
     date = idea.get("date_imposee")
     via = idea.get("via_matrice_impose")
-    if brut is None and date is None and via is None:
+    mode = idea.get("mode_impose")   # PATCH_S19_CHAINE : choc | rupture
+    if brut is None and date is None and via is None and mode is None:
         return None, []
     erreurs, impacts = [], {}
     if brut is not None:
@@ -1200,9 +1203,15 @@ def lire_impositions(idea):
             erreurs.append(f"date_imposee {date:g} hors de 2025-2098")
     if via is not None and not isinstance(via, bool):
         erreurs.append("via_matrice_impose doit valoir true ou false")
+    if mode is not None:
+        mode = str(mode).strip().lower()
+        if mode not in ("choc", "rupture"):
+            erreurs.append(f"mode_impose {idea.get('mode_impose')!r} inconnu (choc | rupture)")
+        elif mode == "rupture" and not impacts:
+            erreurs.append("mode_impose: rupture sans impacts_imposes (la rupture a besoin de ses forces)")
     if erreurs:
         return None, erreurs
-    return {"impacts": impacts, "date": date, "via_matrice": via}, []
+    return {"impacts": impacts, "date": date, "via_matrice": via, "mode": mode}, []
 
 
 def appliquer_impositions(instance_data, idea, scenario):
@@ -1225,6 +1234,8 @@ def appliquer_impositions(instance_data, idea, scenario):
         instance_data["date_label"] = label
     if imp["via_matrice"] is not None:
         instance_data["propagation_via_matrice"] = imp["via_matrice"]
+    if imp.get("mode"):
+        instance_data["mode"] = imp["mode"]   # PATCH_S19_CHAINE, écrit par write_instance_file()
     if instance_data.get("impossible_dans_scenario"):
         print(f"  ⚠ [{scenario}] l'IA juge l'événement impossible dans ce scénario, "
               f"mais les impacts sont imposés : relire la fiche.")
@@ -1246,6 +1257,9 @@ def _texte_impositions(idea, scenario):
         lignes.append(f"- Effet propagé aux autres variables : {'oui' if imp['via_matrice'] else 'non'} "
                       f"(mécanique interne du simulateur : ne nomme jamais ce mécanisme ni le mot "
                       f"« matrice » dans le récit)")
+    if imp.get("mode") == "rupture":   # PATCH_S19_CHAINE
+        lignes.append("- Nature : RUPTURE DURABLE -- l'événement change pour de bon l'équilibre du monde ; "
+                      "ses effets ne s'estompent pas avec le temps (ce n'est pas un choc passager)")
     lignes.append("Écris la réalisation, la description et les conséquences pour qu'elles "
                   "correspondent à ces valeurs (ampleur, sens et date).")
     return "\n".join(lignes) + "\n"

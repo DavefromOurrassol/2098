@@ -625,7 +625,18 @@ def main():
     if dec.get("empreinte") and dec["empreinte"] != data.get("empreinte"):
         sys.exit("✗ la simulation a changé depuis l'adoption : vérifier avant d'appliquer.")
     if data.get("mode") == "rupture":
-        sys.exit("✗ mode rupture : décision S19 à prendre avant toute application.")
+        # PATCH_S19_CHAINE : la rupture est jouée par le moteur si les fiches portent `mode: rupture`.
+        manque = []
+        for sc in data["scenarios"]:
+            p = VAULT / "event_instances" / f"{a.id}_{sc}.md"
+            d = decoupe(p.read_text(encoding="utf-8")) if p.exists() else None
+            fm = lire_fm(d[1]) if d else None
+            if not fm or str(fm.get("mode") or "").strip().lower() != "rupture":
+                manque.append(f"event_instances/{p.name}" + ("" if p.exists() else " (absente)"))
+        if manque:
+            sys.exit("✗ mode rupture, mais ces fiches ne portent pas `mode: rupture` : " + ", ".join(manque)
+                     + ". Le moteur les jouerait comme un choc : ajouter la ligne `mode: rupture` "
+                       "(sous `persistance:`) avant d'appliquer.")
 
     ops, a_main = construire_plan(data)
     sauter, inclure = nombres(a.sauter), nombres(a.inclure)
