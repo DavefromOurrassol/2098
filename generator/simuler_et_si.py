@@ -2238,20 +2238,24 @@ def liste_application(hyp, sc, res, cons, geo_ops, donnees, passe=None):
         _etape(E, "Élément", f"Injecter l'événement `{hyp['id']}` en mode rupture (entrée commune en fin de rapport)",
                "python3 generator/inject_custom_events.py --mode custom",
                "une seule injection pour tous les scénarios ; mode_impose: rupture écrit `mode: rupture` dans chaque fiche")
+        # PATCH_S19_RETOUCHES : références déplacées regroupées dans la vérification (rien à faire).
+        deplacees, plafonnees = [], []
         for e in (res or {}).get("effets") or []:
             if abs(e.get("reference_apres", e["reference"]) - e["reference"]) >= 0.1:
                 # V8.13 : une référence portée au plafond ne laisse plus de marge.
-                plafond = e["reference_apres"] >= 99.5
-                _etape(E, "Élément", ("⚠ " if plafond else "") + f"{e['variable']} : référence "
-                       f"{_virgule(e['reference'], False)} → {_virgule(e['reference_apres'], False)}",
-                       "aucune action : déplacée par le moteur dès l'injection",
-                       "au plafond : plus aucune marge pour une autre crise sur cette variable" if plafond else None)
+                if e["reference_apres"] >= 99.5:
+                    plafonnees.append(e["variable"])
+                deplacees.append(f"{e['variable']} {_virgule(e['reference'], False)} → "
+                                 f"{_virgule(e['reference_apres'], False)}")
         cibles = ", ".join(f"{i['variable']} {'+' if i['polarites'].get(sc, 1) > 0 else '−'}{i['force']:g}"
                            for i in hyp["impacts"] if sc in i["polarites"])
-        _etape(E, "Élément", f"Vérifier que la fiche porte `mode: rupture` et les forces simulées ({cibles})",
+        _etape(E, "Élément", ("⚠ " if plafonnees else "")
+               + f"Vérifier que la fiche porte `mode: rupture` et les forces simulées ({cibles})",
                f"event_instances/{hyp['id']}_{sc}.md ; "
                f"python3 generator/trace_injection.py --slug {hyp['id']} --type evenement --scenario {sc}",
-               "le Tracer doit finir chaque ligne « Déclaré » par « rupture »")
+               "le Tracer doit finir chaque ligne « Déclaré » par « rupture » et retrouver l'effet simulé"
+               + (" ; références déplacées par le moteur (rien à faire) : " + " ; ".join(deplacees) if deplacees else "")
+               + (" ; au plafond, plus aucune marge pour une autre crise : " + ", ".join(plafonnees) if plafonnees else ""))
         _etape(E, "Élément", "Nouvelle référence : vérifier la lisibilité du moteur",
                "python3 generator/banc_calibration.py --scenarios all --balayage-k 0.05", "S19")
     elif hyp.get("impacts"):
@@ -2576,7 +2580,8 @@ def _rendre_injection_commune(hyp, application, out=None):
     entree = {"id": hyp["id"], "description": hyp["description"] or hyp["nom"],
               "portee": "<locale | regionale | continentale | globale>" if geo else "globale",
               "date_approximative": int(hyp["date"]), "intensite": "<à choisir>",
-              "persistance": hyp["persistance"] or "permanente", "scenarios": scen,
+              # PATCH_S19_RETOUCHES : en rupture, la persistance est sans objet (permanente).
+              "persistance": "permanente" if rupture else (hyp["persistance"] or "permanente"), "scenarios": scen,
               "variables_hint": [i["variable"] for i in hyp["impacts"]],
               "variables_hint_count": len(hyp["impacts"]), "source": f"et_si_{hyp['id']}"}
     # V8.16.2 : entités les plus touchées (lecture IA, passe exhaustive), 4 au plus par scénario ;

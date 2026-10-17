@@ -1040,6 +1040,11 @@ def _rendre_markdown(trace: dict) -> str:
                          "toutes les autres injections du scénario restant en place. Rappel : niveau 100 = crise maximale ; "
                          "le moteur n'injecte qu'une fraction de la force déclarée, l'effet s'atténue avec le temps "
                          "et se propage avec retard aux autres variables.")
+            # PATCH_S19_RETOUCHES : la phrase ci-dessus ne vaut pas pour une rupture.
+            if any(d.get("rupture") for l in eff["declares"].values() for d in l):
+                lines += ["", "**Mode rupture** : cet élément ne s'atténue pas. Il déplace pour de bon la "
+                              "référence du scénario, à pleine force (sans la fraction réduite appliquée aux "
+                              "chocs) : l'effet net ci-dessous est durable."]
             for sc in SCENARIOS:
                 if sc not in eff["declares"]:
                     continue

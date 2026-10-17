@@ -11240,7 +11240,10 @@ function buildDecisionHypothese() {
     'quitte ensuite la file : « Injecter des événements » ne la reprendra pas.\nSimuler l\'injection fait les ' +
     'mêmes appels IA (quelques centimes) sans rien écrire : vérifie qu\'aucune ligne ⚠ n\'apparaît ' +
     '(entité censée survivre décrite comme détruite, mot « matrice »). Le texte final peut différer de la ' +
-    'simulation (nouveau tirage). Compte une à deux minutes.'));
+    'simulation (nouveau tirage). Compte plusieurs minutes (jusqu\'à une dizaine) : ne reclique pas tant ' +
+    'que « ⏳ en cours » est affiché.\nDifférence avec le bouton « Lancer » de « Injecter des événements » : ' +
+    'Lancer traite TOUTE la file d\'injection ; ce bouton ne prend que l\'entrée de cette hypothèse, refuse ' +
+    'une double injection, la retire de la file et fait passer le parcours à ④.'));
 
   // ④ Appliquer
   const b4 = blocs[3].contenu;
@@ -11314,6 +11317,16 @@ function buildDecisionHypothese() {
 
   const tous = [btnActualiser, btnApercu, btnAdopter, btnRejeter, btnAnnuler, btnInjApercu, btnInjecter,
                 btnAppApercu, btnAppliquer, btnReste, btnDossiers];
+  // PATCH_S19_RETOUCHES : signe d'activité à côté du bouton cliqué (le résultat
+  // s'affiche en bas du panneau, hors de vue pendant les longs appels).
+  let dernierBouton = null;
+  wrapper.addEventListener('click', (ev) => {
+    const b = ev.target && ev.target.closest ? ev.target.closest('button') : null;
+    if (b) dernierBouton = b;
+  }, true);
+  const indic = mk('span', 'option-desc');
+  indic.style.marginLeft = '8px';
+  indic.style.fontWeight = 'bold';
   const listeHyp = () => document.querySelector('#form-body [data-slug-type="hypotheses_et_si"]');
   const montrer = (el, oui) => { el.style.display = oui ? '' : 'none'; };
   const date = (d) => {
@@ -11385,9 +11398,18 @@ function buildDecisionHypothese() {
       sortie.style.color = '#b03a2e';
       return;
     }
-    tous.forEach(b => { b.disabled = true; });
+    tous.forEach(b => { b.disabled = true; b.style.opacity = '0.5'; });
     sortie.style.color = '';
-    sortie.textContent = '…';
+    const libelle = dernierBouton ? dernierBouton.textContent : 'Appel';
+    const debut = Date.now();
+    const secondes = () => Math.round((Date.now() - debut) / 1000);
+    indic.style.color = '#2e86c1';
+    indic.textContent = `⏳ ${libelle} : en cours, 0 s — ne pas recliquer`;
+    if (dernierBouton && dernierBouton.parentNode) dernierBouton.parentNode.appendChild(indic);
+    sortie.textContent = `⏳ ${libelle} : en cours…`;
+    const minuteur = setInterval(() => {
+      indic.textContent = `⏳ ${libelle} : en cours, ${secondes()} s — ne pas recliquer`;
+    }, 1000);
     let data;
     try {
       const res = await fetch(`/api/et_si/${base}/${action}`, {
@@ -11399,9 +11421,14 @@ function buildDecisionHypothese() {
     } catch (err) {
       data = { error: `Erreur réseau : ${err.message}` };
     }
-    tous.forEach(b => { b.disabled = false; });
+    clearInterval(minuteur);
+    tous.forEach(b => { b.disabled = false; b.style.opacity = ''; });
+    const echec = !!(data.error || !data.ok);
+    indic.style.color = echec ? '#b03a2e' : '#1e8449';
+    indic.textContent = `${echec ? '✗' : '✓'} ${libelle} : terminé en ${secondes()} s — résultat en bas du panneau`;
     sortie.textContent = data.error ? `✗ ${data.error}` : (data.sortie || '(aucune sortie)');
-    sortie.style.color = (data.error || !data.ok) ? '#b03a2e' : '';
+    sortie.style.color = echec ? '#b03a2e' : '';
+    try { sortie.scrollIntoView({ behavior: 'smooth', block: 'start' }); } catch (e) { /* ancien navigateur */ }
     if (sel && id && action !== 'dossiers') {
       await rafraichirChampDynamique(sel);   // statut dans la liste
       sel.value = id;
@@ -11424,7 +11451,7 @@ function buildDecisionHypothese() {
   });
   btnInjApercu.addEventListener('click', () => appeler('injecter', 'apercu', {}));
   btnInjecter.addEventListener('click', () => {
-    if (!confirm('Injecter cet événement dans le vault ? (appels IA ; une à deux minutes)')) return;
+    if (!confirm('Injecter cet événement dans le vault ? (appels IA ; plusieurs minutes)')) return;
     appeler('injecter', 'injecter', {});
   });
   btnAppApercu.addEventListener('click', () => appeler('appliquer', 'apercu', tri()));
