@@ -16,7 +16,13 @@ Aide à la partie mécanique de l'étape ⑤, pour une hypothèse déjà APPLIQU
   3. Phrases à corriger : celles de la passe exhaustive, plus celles de la fiche
      d'événement qui contredisent les faits de l'hypothèse (relecture IA) ; l'IA
      propose une réécriture, remplacée dans la fiche après aperçu (--apply).
-  4. Commandes de fin : audit du lore (gratuit), résumé du scénario (payant).
+  4. Articles à relire : repérage par l'IA des passages qui contredisent l'hypothèse
+     (aucune écriture dans les articles ; correction à la main, puis « relu »).
+  5. Carte (18 oct 2026) : suites de la carte appliquée en phase 4 -- sous-zones à
+     plusieurs pays (la laisser, la déplacer entière sous la zone cible, ou tracer une
+     portion dans l'onglet Carte), zones vidées, nouvelle zone (description, relations).
+  6. Commandes de fin : audit du lore et contrôle de la géographie (gratuits), résumé
+     du scénario (payant).
 
 USAGE (depuis la racine du coffre)
     python3 generator/et_si_main.py --id X --json                      # état (pour le GUI)
@@ -27,6 +33,10 @@ USAGE (depuis la racine du coffre)
     python3 generator/et_si_main.py --id X --phrases-proposer                 # appels IA (en cache)
     python3 generator/et_si_main.py --id X --phrase CLE [--apply] < phrase.txt
     python3 generator/et_si_main.py --id X --phrase CLE --ignorer
+    python3 generator/et_si_main.py --id X --articles-verifier                 # appels IA (en cache), lecture seule
+    python3 generator/et_si_main.py --id X --article-relu articles/<sc>/<fichier>.md
+    python3 generator/et_si_main.py --id X --carte-deplacer reference:sertao_nordeste_bresilien [--apply]
+    python3 generator/et_si_main.py --id X --carte-laisser reference:sertao_nordeste_bresilien
     python3 generator/et_si_main.py --id X --lancer audit --scenario reference
     python3 generator/et_si_main.py --id X --lancer resume --scenario reference
 Suivi : generator/state/et_si_application/<id>.main.json (ce qui a été ajouté).
@@ -54,6 +64,7 @@ SLUG_REGLE = re.compile(r"^[a-z0-9_]+$")
 LANCER = {
     "audit": ("Relecture du lore (gratuit)", ["generator/audit_lore.py", "--scenario"], 300),
     "resume": ("Résumé du scénario (payant, un appel IA)", ["generator/generate_resume_scenarios.py", "--scenario"], 600),
+    "geo": ("Contrôle de la géographie (gratuit)", ["generator/scan_geographie_complet.py", "--scenario"], 300),
 }
 
 
@@ -495,6 +506,16 @@ def ia_json(system, user, max_tokens=1500):
     return json.loads(texte[debut:fin + 1])
 
 
+# Réponses de l'IA qui avouent n'avoir rien trouvé de contraire (omission, simple précision) :
+# écartées, malgré la consigne qui le dit déjà.
+PAS_UNE_CONTRADICTION = re.compile(r"aucune contradiction|pas de contradiction|pas une contradiction|omission"
+                                   r"|pourrait etre (clarifie|precise)|a preciser|manque de precision")
+
+
+def vraie_contradiction(fait):
+    return not PAS_UNE_CONTRADICTION.search(_plie(fait))
+
+
 SYSTEME_RELECTEUR = ("Tu es le relecteur du lore du monde fictif Ourrassol 2098. Tu corriges le moins possible. "
                      "Réponds UNIQUEMENT en JSON valide, sans texte autour.")
 
@@ -540,7 +561,7 @@ def verifier_evenement(data, sc, suivi, refaire):
         if not isinstance(x, dict) or not x.get("extrait"):
             continue
         m = motif_phrase(x["extrait"])
-        if m and m.search(raw):   # gardé seulement si l'extrait est retrouvé dans la fiche
+        if m and m.search(raw) and vraie_contradiction(x.get("fait")):   # extrait retrouvé, vraie contradiction
             problemes.append({"extrait": _norm(x["extrait"]), "fait": _norm(x.get("fait")),
                               "correction": _norm(x.get("correction"))})
     cache[sc] = {"empreinte": emp, "date": maintenant(), "problemes": problemes}
@@ -687,7 +708,284 @@ def remplacer_phrase(hid, data, cle, nouveau, ignorer, apply):
 
 
 # ---------------------------------------------------------------------------
-# 3. Commandes de fin
+# 2 ter. Articles à relire (morceau 3, 18 octobre 2026) -- REPÉRAGE seulement :
+#   les articles publiés ne sont jamais modifiés par l'outil. L'IA relève, dans
+#   chaque article concerné, les passages qui contredisent les faits de
+#   l'hypothèse (gardés seulement s'ils sont retrouvés mot pour mot) ; la
+#   correction se fait à la main dans Obsidian, puis « marquer comme relu ».
+# ---------------------------------------------------------------------------
+
+VERSION_ARTICLES = "v1"
+MAX_ARTICLE = 14000   # caractères de corps envoyés à l'IA
+
+
+def articles_a_relire(data):
+    """[(sc, chemin relatif, titre, date, motifs)] : articles qui citent une entité touchée
+    ou dont la zone principale a changé (même règle que la check-list)."""
+    out = []
+    for sc in data["scenarios"]:
+        ps = data["par_scenario"].get(sc) or {}
+        lec, pas = ps.get("lecture") or {}, ps.get("passe") or {}
+        ents = sorted({t["instance"] for t in (lec.get("trajectoires") or []) + (pas.get("trajectoires") or [])
+                       if t.get("instance")})
+        zones = {z["zone"] for z in lec.get("zones_statut") or [] if z.get("zone")}
+        vus = set()
+        for chemin, titre, date, motifs in ap._articles_concernes(sc, ents, zones):
+            out.append((sc, str(chemin), titre, date, motifs))
+            vus.add(str(chemin))
+        # Élargissement (18 oct) : articles qui NOMMENT une entité touchée ou une zone changée dans
+        # leur texte, sans l'avoir dans entites_citees / zone_principale. Sans IA.
+        noms = {t.get("nom") for t in (lec.get("trajectoires") or []) + (pas.get("trajectoires") or [])}
+        zn = noms_de_zones(sc)
+        noms |= {zn.get(z) for z in zones}
+        motifs_noms = [(n, re.compile(r"(?<![a-z0-9])" + re.escape(_plie(n)) + r"(?![a-z0-9])"))
+                       for n in sorted(x for x in noms if x and len(x) >= 6)]
+        racine = VAULT / "articles"
+        for p in sorted(racine.rglob("*.md")) if racine.exists() and motifs_noms else []:
+            chemin = str(p.relative_to(VAULT))
+            if p.name.startswith("_") or chemin in vus:
+                continue
+            try:
+                raw = p.read_text(encoding="utf-8")
+            except OSError:
+                continue
+            d = ap.decoupe(raw)
+            fm = (ap.lire_fm(d[1]) if d else None) or {}
+            if fm.get("scenario") != sc:
+                continue
+            texte = _plie(d[3] if d else raw)
+            trouves = [f"nomme « {n} » dans le texte" for n, m in motifs_noms if m.search(texte)]
+            # Forme approchée (« collectifs de pêcheurs inuit » pour « Collectifs de Pêche Inuit et
+            # Sami ») : la plupart des mots du nom, par leur début, à moins de 100 caractères.
+            trouves += [f"nomme peut-être « {n} » (forme approchée)" for n, _ in motifs_noms
+                        if not any(f"« {n} »" in t for t in trouves) and forme_approchee(n, texte)]
+            if trouves:
+                titre = ap._titre_article(fm, d[3] if d else raw, p.stem)
+                date = fm.get("date_evenement") or fm.get("date_publication") or ""
+                out.append((sc, chemin, str(titre).strip(), date, trouves))
+    return out
+
+
+MOTS_VIDES = {"des", "les", "aux", "pour", "dans", "avec", "sans", "sous", "vers", "entre", "et", "de", "du",
+              "la", "le", "en", "sur", "par", "the", "of", "and"}
+
+
+def forme_approchee(nom, texte_plie):
+    """Au moins 60 % (et au moins 2) des mots distinctifs du nom, reconnus par leurs 5 premières
+    lettres, dans une fenêtre de 100 caractères du texte (déjà plié)."""
+    mots = [m for m in re.findall(r"[a-z0-9]+", _plie(nom)) if len(m) >= 4 and m not in MOTS_VIDES]
+    if len(mots) < 2:
+        return False
+    racines = [m[:5] for m in mots]
+    besoin = max(2, -(-len(racines) * 3 // 5))
+    motif = re.compile(r"(?<![a-z0-9])(" + "|".join(re.escape(r) for r in racines) + r")")
+    for o in motif.finditer(texte_plie):
+        fenetre = texte_plie[o.start():o.start() + 100]
+        if sum(1 for r in racines if re.search(r"(?<![a-z0-9])" + re.escape(r), fenetre)) >= besoin:
+            return True
+    return False
+
+
+def verifier_articles(hid, data, refaire):
+    import hashlib
+    suivi = lire_suivi(hid)
+    cache = suivi.setdefault("articles", {})
+    liste = articles_a_relire(data)
+    n_ia = 0
+    for sc, chemin, titre, date, motifs in liste:
+        p = VAULT / chemin
+        raw = p.read_text(encoding="utf-8")
+        emp = hashlib.sha1((VERSION_ARTICLES + raw).encode("utf-8")).hexdigest()[:12]
+        if not refaire and (cache.get(chemin) or {}).get("empreinte") == emp:
+            continue
+        d = ap.decoupe(raw)
+        corps = _norm(d[3] if d else raw)[:MAX_ARTICLE]
+        etats = etats_cites(data, sc, corps)
+        user = (f"ARTICLE DE PRESSE « {titre} » (scénario {sc}, daté {date or '2098'}) :\n{corps}\n\n"
+                "FAITS ÉTABLIS PAR L'HYPOTHÈSE (priment sur l'article) :\n"
+                + "\n".join(f"- {f}" for f in faits_hypothese(data, sc)) + "\n\n"
+                + ("ÉTATS DES ENTITÉS CITÉES (seule référence pour leur rang ; un passage conforme n'est "
+                   "JAMAIS une contradiction) :\n" + "\n".join(etats) + "\n\n" if etats else "")
+                + "TÂCHE : relève UNIQUEMENT les passages qui contredisent un fait à la date de l'article : "
+                "entité disparue décrite comme existante ou active au présent ; entité à qui l'article donne un "
+                "rang contraire à son état ; zone décrite autrement que son statut ; contrainte niée. Un rappel "
+                "historique au passé est CORRECT. Une omission n'est pas une contradiction. En cas de doute, ne "
+                "relève rien : la réponse attendue est souvent une liste vide.\n"
+                "Pour chaque passage : \"extrait\" = la phrase entière, MOT POUR MOT ; \"fait\" = le fait "
+                "contredit ; \"suggestion\" = la phrase réécrite en changeant le moins de mots possible.\n"
+                'Format : {"passages": [{"extrait": "...", "fait": "...", "suggestion": "..."}]}')
+        res = ia_json(SYSTEME_RELECTEUR, user, max_tokens=2000)
+        passages = []
+        for x in res.get("passages") or []:
+            if not isinstance(x, dict) or not x.get("extrait"):
+                continue
+            m = motif_phrase(x["extrait"])
+            if m and m.search(raw) and vraie_contradiction(x.get("fait")):
+                passages.append({"extrait": _norm(x["extrait"]), "fait": _norm(x.get("fait")),
+                                 "suggestion": _norm(x.get("suggestion"))})
+        ancien = cache.get(chemin) or {}
+        cache[chemin] = {"empreinte": emp, "date": maintenant(), "passages": passages,
+                         **({"relu": ancien["relu"]} if ancien.get("relu") and not passages else {})}
+        n_ia += 1
+        ecrire_suivi(hid, suivi)
+        print(f"  [{sc}] {chemin} : {len(passages)} passage(s) à revoir")
+    print(f"\n{len(liste)} article(s) concerné(s), {n_ia} relu(s) par l'IA "
+          f"(les autres n'ont pas changé depuis leur dernière relecture). Rien n'a été modifié.")
+    return 0
+
+
+def marquer_article(hid, data, chemin):
+    if chemin not in {c for _, c, _, _, _ in articles_a_relire(data)}:
+        sys.exit(f"✗ article inconnu pour cette hypothèse : {chemin}")
+    suivi = lire_suivi(hid)
+    suivi.setdefault("articles", {}).setdefault(chemin, {})["relu"] = maintenant()
+    ecrire_suivi(hid, suivi)
+    print(f"✓ `{chemin}` marqué comme relu.")
+    return 0
+
+
+def etat_articles(data, suivi):
+    cache = suivi.get("articles") or {}
+    out = []
+    for sc, chemin, titre, date, motifs in articles_a_relire(data):
+        c = cache.get(chemin) or {}
+        out.append({"sc": sc, "chemin": chemin, "titre": titre, "date": str(date or ""), "motifs": motifs,
+                    "verifie": "empreinte" in c, "passages": c.get("passages") or [], "relu": c.get("relu")})
+    return out
+
+
+# ---------------------------------------------------------------------------
+# 5. Carte (18 oct 2026) : suites de la carte appliquée par appliquer_et_si.py
+# ---------------------------------------------------------------------------
+
+def _sous_arbre(by, racine):
+    """Slugs de `racine` et de tous ses descendants."""
+    out, a_voir = {racine}, [racine]
+    while a_voir:
+        s = a_voir.pop()
+        for z in by.values():
+            if z.get("parent") == s and z.get("slug") not in out:
+                out.add(z["slug"])
+                a_voir.append(z["slug"])
+    return out
+
+
+def ops_carte(data, sc):
+    return [c for c in (data["par_scenario"].get(sc) or {}).get("carte") or []]
+
+
+def trouver_carte(data, cle, videes=False):
+    """(scénario, opération, entrée) pour une clé « scénario:slug » de sous-zone à répartir
+    (ou de zone vidée si `videes`)."""
+    if ":" not in str(cle or ""):
+        sys.exit("✗ clé attendue : scénario:slug")
+    sc, slug = cle.split(":", 1)
+    for c in ops_carte(data, sc):
+        for s in c.get("a_repartir") or []:
+            if s["slug"] == slug:
+                return sc, c, s
+        if videes and slug in (c.get("videes") or []):
+            return sc, c, {"slug": slug}
+    sys.exit(f"✗ {cle} : ni sous-zone à répartir{' ni zone vidée' if videes else ''} pour cette hypothèse")
+
+
+def etat_carte(data, suivi):
+    dec = suivi.get("carte") or {}
+    out = []
+    for sc in data["scenarios"]:
+        ops = ops_carte(data, sc)
+        if not ops:
+            continue
+        by = {z.get("slug"): z for z in ap.zones_geo(sc)}
+        for c in ops:
+            if c["action"] not in ("absorber", "nouvelle_zone"):
+                out.append({"sc": sc, "pays": c["pays"], "action": c["action"], "cible": c.get("cible"),
+                            "manuel": True})
+                continue
+            cible = c["cible"]
+            item = {"sc": sc, "pays": c["pays"], "action": c["action"], "cible": cible,
+                    "nom_cible": (by.get(cible) or {}).get("nom") or (c.get("nouvelle_zone") or {}).get("nom") or cible,
+                    "applique": ap.porte_pays(by.get(cible), c["pays"]), "nouvelle": c["action"] == "nouvelle_zone",
+                    "sous_zones": [], "videes": []}
+            dessous = _sous_arbre(by, cible)
+            for s in c.get("a_repartir") or []:
+                z = by.get(s["slug"])
+                if not item["applique"]:
+                    e = "en_attente"
+                elif not z:
+                    e = "disparue"
+                elif s["slug"] in dessous:
+                    e = "deplacee"
+                elif ap.porte_pays(z, c["pays"]):
+                    e = "portion"
+                elif dec.get(f"{sc}:{s['slug']}"):
+                    e = "laissee"
+                else:
+                    e = "a_decider"
+                item["sous_zones"].append({"cle": f"{sc}:{s['slug']}", "slug": s["slug"],
+                                           "nom": (z or {}).get("nom") or s.get("nom") or s["slug"],
+                                           "autres": s.get("autres") or [], "etat": e})
+            for v in c.get("videes") or []:
+                z = by.get(v)
+                e = ("supprimee" if not z else "territoire" if z.get("origine_reelle")
+                     else "gardee" if dec.get(f"{sc}:{v}") else "a_decider")
+                item["videes"].append({"cle": f"{sc}:{v}", "slug": v, "nom": (z or {}).get("nom") or v, "etat": e})
+            out.append(item)
+    return out
+
+
+def carte_laisser(hid, data, cle):
+    sc, c, s = trouver_carte(data, cle, videes=True)
+    suivi = lire_suivi(hid)
+    suivi.setdefault("carte", {})[cle] = maintenant()
+    ecrire_suivi(hid, suivi)
+    print(f"✓ `{s['slug']}` gardée telle quelle ({sc}) : décision notée, rien n'est écrit dans la géographie.")
+    return 0
+
+
+def carte_deplacer(hid, data, cle, apply):
+    sc, c, s = trouver_carte(data, cle)
+    by = {z.get("slug"): z for z in ap.zones_geo(sc)}
+    cible = c["cible"]
+    if not ap.porte_pays(by.get(cible), c["pays"]):
+        sys.exit(f"✗ `{cible}` ne porte pas encore {c['pays']} : appliquer d'abord la carte (étape ④).")
+    if s["slug"] not in by:
+        sys.exit(f"✗ `{s['slug']}` n'existe plus dans geographie/{sc}.md.")
+    if s["slug"] in _sous_arbre(by, cible):
+        print(f"· `{s['slug']}` est déjà sous `{cible}` : rien à faire.")
+        return 0
+    repo = ap._repo()
+    try:
+        a = repo.reparent(sc, s["slug"], cible, dry_run=True)
+    except Exception as e:
+        sys.exit(f"✗ {type(e).__name__}: {e}")
+    print(("ÉCRITURE" if apply else "APERÇU (rien écrit)") + f" — {sc}")
+    print(f"  `{s['slug']}` ({a['zone']['nom']}) : sous `{a['zone']['ancien_parent']}` → sous `{cible}` "
+          f"(niveau {a['zone']['niveau']} → {a['nouveau_niveau_zone']})")
+    for d in a.get("descendants_impactes") or []:
+        print(f"  suit : `{d['slug']}` (niveau {d['ancien_niveau']} → {d['nouveau_niveau']})")
+    print(f"  Elle garde ses territoires ({', '.join(s.get('autres') or [])}) : ils comptent désormais dans "
+          f"`{cible}` ({c['pays']} n'y revient pas).")
+    if not apply:
+        print(f"\nPour écrire : bouton « La déplacer sous {cible} » (terminal : --apply).")
+        return 0
+    geo = VAULT / "geographie" / f"{sc}.md"
+    shutil.copy2(geo, geo.with_name(geo.name + ".bak_et_si_main"))
+    try:
+        repo.reparent(sc, s["slug"], cible, dry_run=False)
+    except Exception as e:
+        sys.exit(f"✗ {type(e).__name__}: {e} (rien d'autre n'est modifié ; sauvegarde {geo.name}.bak_et_si_main)")
+    apres = {z.get("slug"): z for z in ap.zones_geo(sc)}
+    if (apres.get(s["slug"]) or {}).get("parent") != cible:
+        shutil.copy2(geo.with_name(geo.name + ".bak_et_si_main"), geo)
+        sys.exit("✗ résultat inattendu à la relecture : géographie remise en l'état.")
+    print(f"\n✓ `{s['slug']}` déplacée sous `{cible}` (sauvegarde {geo.name}.bak_et_si_main). "
+          f"Contrôle : « Contrôle de la géographie » dans « Pour finir ».")
+    return 0
+
+
+# ---------------------------------------------------------------------------
+# 6. Commandes de fin
 # ---------------------------------------------------------------------------
 
 def lancer(action, sc, data):
@@ -739,6 +1037,16 @@ def etat(hid, data):
     except Exception as e:
         out["phrases"] = []
         out["erreurs"].append(f"phrases : {type(e).__name__}: {e}")
+    try:
+        out["carte"] = etat_carte(data, suivi)
+    except Exception as e:
+        out["carte"] = []
+        out["erreurs"].append(f"carte : {type(e).__name__}: {e}")
+    try:
+        out["articles"] = etat_articles(data, suivi)
+    except Exception as e:
+        out["articles"] = []
+        out["erreurs"].append(f"articles : {type(e).__name__}: {e}")
     return out
 
 
@@ -754,6 +1062,11 @@ def main():
     a.add_argument("--refaire", action="store_true", help="avec --phrases-proposer : ignore le cache")
     a.add_argument("--phrase", metavar="CLE", help="remplace la phrase CLE par le texte lu sur l'entrée standard")
     a.add_argument("--ignorer", action="store_true", help="avec --phrase : marque la phrase « ignorée »")
+    a.add_argument("--articles-verifier", action="store_true",
+                   help="relit les articles concernés (appels IA, en cache) ; n'écrit jamais dans un article")
+    a.add_argument("--article-relu", metavar="CHEMIN", help="marque un article comme relu")
+    a.add_argument("--carte-deplacer", metavar="SC:SLUG", help="déplace une sous-zone à répartir sous la zone cible")
+    a.add_argument("--carte-laisser", metavar="SC:SLUG", help="note qu'une sous-zone (ou zone vidée) reste telle quelle")
     a.add_argument("--scenario")
     a.add_argument("--apply", action="store_true")
     x = a.parse_args()
@@ -769,6 +1082,14 @@ def main():
         return ajouter_entites(x.id, data, choix if isinstance(choix, list) else [choix], x.apply)
     if x.regle:
         return ajouter_regle(x.id, data, x.regle, sys.stdin.read(), x.apply)
+    if x.carte_deplacer:
+        return carte_deplacer(x.id, data, x.carte_deplacer, x.apply)
+    if x.carte_laisser:
+        return carte_laisser(x.id, data, x.carte_laisser)
+    if x.articles_verifier:
+        return verifier_articles(x.id, data, x.refaire)
+    if x.article_relu:
+        return marquer_article(x.id, data, x.article_relu)
     if x.phrases_proposer:
         return proposer_phrases(x.id, data, x.refaire)
     if x.phrase:
@@ -777,7 +1098,7 @@ def main():
         if not x.scenario:
             sys.exit("✗ --lancer demande --scenario")
         return lancer(x.lancer, x.scenario, data)
-    a.error("préciser --json, --entites, --regle, --phrases-proposer, --phrase ou --lancer")
+    a.error("préciser --json, --entites, --regle, --phrases-proposer, --phrase, --articles-verifier, --article-relu, --carte-deplacer, --carte-laisser ou --lancer")
 
 
 if __name__ == "__main__":

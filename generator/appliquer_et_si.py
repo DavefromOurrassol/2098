@@ -17,6 +17,9 @@ Ce qui est appliqué (numéroté dans l'aperçu) :
     scénario (calculé depuis le vault) et ses propres relations sont vidées ;
     relation rompue retirée des deux fiches ; relation nouvelle ajoutée ; puis
     réciprocité (fix_alliances_oppositions.py, opposition prioritaire) ;
+  - carte (18 oct 2026) : absorber / nouvelle_zone de l'hypothèse, par la Carte (zone_repository),
+    après les autres écritures ; les sous-zones qui ne portent que ce pays le gardent et suivent ;
+    partition, région et sous-zones à plusieurs pays restent à la main ;
   - contrôle final : validate.py.
 Ce qui est seulement listé (à faire à la main) : phrases à corriger, nouvelles
 entités, règles de lore, carte, articles, site.
@@ -341,6 +344,33 @@ def construire_plan(data):
             op(sc, "zone", f"Zone `{z['zone']}` : {z['avant']} → {z['apres']}", alerte,
                zone=z["zone"], avant=z["avant"], apres=z["apres"])
 
+        # Carte (PATCH_S27_CARTE) : absorber / nouvelle_zone ; partition et région à la main.
+        by_z = {z.get("slug"): z for z in zones_geo(sc)}
+        for c in ps.get("carte") or []:
+            if c["action"] not in ("absorber", "nouvelle_zone"):
+                a_main.append(f"[{sc}] carte : {c['action']} de {c['pays']} (tracés) : voir la liste "
+                              "d'application du rapport")
+                continue
+            cible, z = c["cible"], by_z.get(c["cible"])
+            alerte = None
+            if c.get("erreurs"):
+                alerte = "refusé au contrôle de la simulation : " + "; ".join(c["erreurs"][:2])
+            elif porte_pays(z, c["pays"]):
+                alerte = "déjà appliqué"
+            elif c["action"] == "nouvelle_zone" and z:
+                alerte = "slug déjà pris"
+            elif c["action"] == "absorber" and not z:
+                alerte = "zone introuvable dans la géographie"
+            elif c.get("source") == "ia":
+                alerte = "proposé par la lecture IA, absent de l'hypothèse"
+            elif c.get("alertes"):
+                alerte = "; ".join(c["alertes"][:2])
+            texte = (f"Créer la zone `{cible}` ({(c.get('nouvelle_zone') or {}).get('nom')}) avec {c['pays']}"
+                     if c["action"] == "nouvelle_zone" else f"Rattacher {c['pays']} à `{cible}`")
+            op(sc, "carte", texte, alerte, pays=c["pays"], action=c["action"], cible=cible,
+               nouvelle_zone=c.get("nouvelle_zone"), simples=c.get("simples") or [],
+               a_repartir=c.get("a_repartir") or [], videes=c.get("videes") or [])
+
         # Trajectoires (lecture puis passe ; même instance, sorts différents : ⚠ sur les deux)
         trajs = [dict(t, source="lecture") for t in lec.get("trajectoires") or []] + \
                 [dict(t, source="passe") for t in pas.get("trajectoires") or []]
@@ -505,6 +535,28 @@ def ecrire_reste_a_faire(data, ops, rapport_ok=True):
                      f"`python3 generator/appliquer_et_si.py --id {hid} --inclure {o['n']} --apply`.")
             L.append("")
 
+        # PATCH_S27_CARTE : suites de la carte
+        cartes = [o for o in mes_ops if o["genre"] == "carte" and faites(o)]
+        if cartes:
+            L += ["### Carte", ""]
+            for o in cartes:
+                for s in o.get("a_repartir") or []:
+                    case(f"Sous-zone `{s['slug']}` ({s.get('nom') or s['slug']}) : elle porte aussi "
+                         f"{', '.join(s['autres'])} et a perdu {o['pays']}. Au choix : la laisser ainsi ; la "
+                         f"déplacer entière sous `{o['cible']}` (Carte → arbre → ↗️ déplacer) ; ou lui rendre une "
+                         f"portion de {o['pays']} par un tracé (Carte → ✏️ éditer → ✏️ dessiner).")
+                for v in o.get("videes") or []:
+                    case(f"`{v}` n'a plus aucun territoire : la garder (vestige, exil) ou la supprimer "
+                         "(Carte → ✏️ éditer → Zone dangereuse).")
+                if o["action"] == "nouvelle_zone":
+                    case(f"Description, relations (alliés / rivaux) de `{o['cible']}` : `geographie/{sc}.md` "
+                         "(la création n'en écrit aucune)")
+                    case(f"Rédactions de `{o['cible']}` : `python3 generator/generate_journaux.py --scenario {sc} "
+                         "--update`, puis `python3 generator/audit_couverture_journalistes.py --report`")
+                    case("Continent de la nouvelle zone sur le site : `python3 generator/export_revues.py --continents`")
+            case(f"Contrôle de la géographie : `python3 generator/scan_geographie_complet.py --scenario {sc}`")
+            L.append("")
+
         # Phrases à corriger
         textes = pas.get("textes") or []
         if textes:
@@ -575,13 +627,107 @@ def ecrire_reste_a_faire(data, ops, rapport_ok=True):
     L += ["## Site", ""]
     case("Si des articles ont été corrigés : `python3 generator/chapos_revues.py`, puis `bash generator/publier_site.sh`")
     L += ["", "## Non repris ici", "",
-          f"Les « possibles » de la passe exhaustive, la carte et les fiches trouvées par mots-clés restent "
+          f"Les « possibles » de la passe exhaustive, les tracés de carte et les fiches trouvées par mots-clés restent "
           f"dans le rapport du simulateur : `documentation/need_action/et_si_{hid}.md`"
           + ("" if rapport_ok else " (introuvable : resimuler pour le régénérer)") + "."]
     NEED_ACTION.mkdir(parents=True, exist_ok=True)
     sortie = NEED_ACTION / f"et_si_{hid}_reste_a_faire.md"
     sortie.write_text("\n".join(L) + "\n", encoding="utf-8")
     return sortie
+
+
+# ---------------------------------------------------------------------------
+# Carte (PATCH_S27_CARTE, 18 oct 2026) : absorber / nouvelle_zone par la Carte
+# ---------------------------------------------------------------------------
+
+def zones_geo(sc):
+    p = VAULT / "geographie" / f"{sc}.md"
+    if not p.exists():
+        return []
+    d = decoupe(p.read_text(encoding="utf-8"))
+    fm = lire_fm(d[1]) if d else None
+    return [z for z in (fm or {}).get("zones") or [] if isinstance(z, dict)]
+
+
+def porte_pays(zone, pays):
+    return any(isinstance(o, dict) and plie(o.get("entite")) == plie(pays)
+               for o in (zone or {}).get("origine_reelle") or [])
+
+
+def note_carte(o):
+    parts = []
+    if o.get("simples"):
+        parts.append(f"puis sous-zone(s) rattachée(s) à `{o['cible']}` en gardant {o['pays']} : "
+                     + ", ".join(o["simples"]))
+    if o.get("a_repartir"):
+        parts.append("à répartir à la main (étape ⑤) : "
+                     + ", ".join(f"{s['slug']} (aussi {', '.join(s['autres'])})" for s in o["a_repartir"]))
+    if o.get("videes"):
+        parts.append("zone(s) vidée(s) de tout territoire : " + ", ".join(o["videes"]))
+    return "\n         → ".join(parts)
+
+
+def _repo():
+    import importlib.util
+    spec = importlib.util.spec_from_file_location("zone_repository", VAULT / "gui" / "zone_repository.py")
+    mod = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(mod)
+    return mod.ZoneRepository(VAULT, VAULT / "gui")
+
+
+def appliquer_carte(repo, o):
+    """Un changement de carte ; lève une exception si le résultat n'est pas celui attendu."""
+    import copy
+    sc, pays, cible = o["sc"], o["pays"], o["cible"]
+    by = {z.get("slug"): z for z in repo.load_all_zones(sc)}
+    simples = [s for s in o.get("simples") or [] if s in by]
+    gardees = {s: copy.deepcopy(by[s].get("origine_reelle") or []) for s in simples}
+    hautes = [s for s in simples if by[s].get("parent") not in simples]   # le sous-arbre suit
+    if o["action"] == "nouvelle_zone":
+        repo.assign_pays(sc, pays, "creer", nouvelle_zone=dict(o.get("nouvelle_zone") or {}))
+    else:
+        repo.assign_pays(sc, pays, "absorber", zone_slug=cible)
+    if gardees:
+        gf = repo._load_geo(sc)
+        for z in gf.zones:
+            if z.get("slug") in gardees:
+                z["origine_reelle"] = gardees[z["slug"]]
+        repo._save_geo(gf)
+        for s in hautes:
+            if by[s].get("parent") != cible:
+                repo.reparent(sc, s, cible, dry_run=False)
+    apres = {z.get("slug"): z for z in repo.load_all_zones(sc)}
+    if not porte_pays(apres.get(cible), pays):
+        raise ValueError(f"{pays} absent de `{cible}` après l'opération")
+    for s in hautes:
+        if (apres.get(s) or {}).get("parent") != cible or not porte_pays(apres.get(s), pays):
+            raise ValueError(f"sous-zone `{s}` mal rattachée après l'opération")
+    return (f"✓ {o['n']}. {o['texte']}"
+            + (f" ; {len(hautes)} sous-zone(s) rattachée(s) : {', '.join(hautes)}" if hautes else ""))
+
+
+def appliquer_cartes(cartes):
+    """Toutes les opérations de carte retenues, après les autres écritures. Échec : géographie et
+    zones_pays.json remis en l'état d'avant la carte. Retourne (nombre fait, messages)."""
+    repo = _repo()
+    fichiers = [repo._zones_pays_path()] + sorted({VAULT / "geographie" / f"{o['sc']}.md" for o in cartes})
+    avant = {p: p.read_text(encoding="utf-8") for p in fichiers if p.exists()}
+    for p in avant:
+        bak = p.with_name(p.name + ".bak_appliquer")
+        if not bak.exists():
+            shutil.copy2(p, bak)
+    msgs = []
+    try:
+        for o in cartes:
+            msgs.append(appliquer_carte(repo, o))
+    except Exception as e:
+        for p, t in avant.items():
+            p.write_text(t, encoding="utf-8")
+        for o in cartes:
+            o["retenue"], o["alerte"] = False, f"échec à l'écriture : {type(e).__name__}: {e}"
+        return 0, [f"✗ carte non appliquée ({type(e).__name__}: {e}) : géographie et zones_pays.json "
+                   "remis en l'état ; le reste est écrit."]
+    return len(cartes), msgs
 
 
 def lancer(cmd):
@@ -645,7 +791,9 @@ def main():
     for o in ops:
         o["retenue"] = (o["n"] not in sauter) and (not o["alerte"] or o["n"] in inclure) \
             and o["alerte"] not in ("déjà appliqué", "déjà absente", "déjà présente", "fiche introuvable",
-                                    "zone introuvable dans la géographie", "trajectoire inconnue")
+                                    "zone introuvable dans la géographie", "trajectoire inconnue",
+                                    "slug déjà pris") \
+            and not str(o["alerte"] or "").startswith("refusé")   # PATCH_S27_CARTE
     par_n = {o["n"]: o for o in ops}
     for o in ops:
         dep = par_n.get(o.get("depend"))
@@ -669,6 +817,8 @@ def main():
                 if not ajouter:
                     n += modifier_relation(W, o["b"], o["champ"], o["a"], False)
                 notes[o["n"]] = f"{n} modification(s)"
+            elif o["genre"] == "carte":   # PATCH_S27_CARTE : écrite après les autres (--apply)
+                notes[o["n"]] = note_carte(o)
         except (ValueError, OSError) as e:
             erreurs.append(f"{o['n']}. {e}")
 
@@ -713,9 +863,16 @@ def main():
 
     n = W.ecrire()
     print(f"\n✓ {n} fichier(s) écrit(s).")
+    cartes = [o for o in ops if o["retenue"] and o["genre"] == "carte"]   # PATCH_S27_CARTE
+    if cartes:
+        print("Carte :")
+        faits, msgs = appliquer_cartes(cartes)
+        for m in msgs:
+            print(f"  {m}")
+        n += faits
     retenues = [o for o in ops if o["retenue"]]
     for sc in dict.fromkeys(o["sc"] for o in retenues):
-        if any(o["sc"] == sc and o["genre"] == "zone" for o in retenues):
+        if any(o["sc"] == sc and o["genre"] in ("zone", "carte") for o in retenues):
             lancer(["generator/regenerer_corps_geographie.py", "--scenario", sc, "--execute"])
         if any(o["sc"] == sc and o["genre"] in ("relation", "disparition") for o in retenues):
             lancer(["generator/fix_alliances_oppositions.py", "--scenario", sc, "--reciprocite-seule",

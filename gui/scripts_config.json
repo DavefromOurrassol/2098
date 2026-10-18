@@ -1072,6 +1072,113 @@
     "gui_verified": false
   },
   {
+    "id": "simuler_et_si",
+    "label": "Simulateur « et si ? »",
+    "icon": "🔮",
+    "section": "entites_creation",
+    "script": "simuler_et_si.py",
+    "description": "Teste une hypothèse « et si ? » AVANT toute injection : effet chiffré sur les 12 variables (avec et sans), tensions, aperçu de la carte et, en option, lecture des conséquences par l'IA. Ne modifie jamais le vault. Onglet « Nouvelle hypothèse » : écrire une hypothèse à partir d'une idée. Rapport : documentation/need_action/et_si_<id>.md (et ci-dessous).",
+    "requires": [],
+    "fixed_args": [
+      "--report"
+    ],
+    "options": [
+      {
+        "flag": "--scenario",
+        "type": "select",
+        "label": "Scénario",
+        "source": "config_scenarios",
+        "default": "",
+        "optional": true,
+        "description": "Limite la simulation à ce scénario. Vide = tous les scénarios de l'hypothèse.",
+        "mode_only": "simuler"
+      },
+      {
+        "flag": "--id",
+        "type": "slug_select",
+        "label": "Hypothèse",
+        "slug_type": "hypotheses_et_si",
+        "mode_only": "simuler",
+        "description": "Hypothèses de et_si/hypotheses.yaml (⚠ = mal remplie : le lancement listera ses erreurs). « Aucun » = liste des hypothèses, sans rien simuler."
+      },
+      {
+        "flag": "--date",
+        "type": "number",
+        "label": "Effet mesuré en",
+        "min": 2026,
+        "max": 2098,
+        "default": 2098,
+        "description": "Année à laquelle l'effet est mesuré (pas avant l'apparition de l'hypothèse).",
+        "mode_only": "simuler"
+      },
+      {
+        "flag": "--consequences-ia",
+        "type": "checkbox",
+        "label": "Lecture des conséquences par l'IA (payant)",
+        "default": false,
+        "description": "⚠️ Un appel IA par scénario (≈ 1-2 centimes chacun) : trajectoires d'entités, relations, statuts de zone, carte, nouvelles entités, toutes contrôlées. La réponse est gardée en cache : relancer la même hypothèse ne coûte rien.",
+        "mode_only": "simuler"
+      },
+      {
+        "flag": "--passe-exhaustive",
+        "type": "checkbox",
+        "label": "Passe exhaustive : relire toutes les fiches (payant)",
+        "default": false,
+        "description": "⚠️ Relit toutes les instances du scénario et les événements datés après l'hypothèse (≈ 0,05 à 0,11 $ par scénario ; lots gardés en cache). Chaque changement est classé obligatoire (la fiche devient fausse) ou possible. Les obligatoires entrent dans la liste d'application, les 20 possibles prioritaires en étapes facultatives, et les entités les plus touchées dans l'entrée d'injection (acteurs_hint). À cocher avec la lecture IA, qui lui sert de contexte. « Nouveau tirage » relance aussi la passe.",
+        "mode_only": "simuler"
+      },
+      {
+        "flag": "--refaire",
+        "type": "checkbox",
+        "label": "Nouveau tirage (ignorer le cache)",
+        "default": false,
+        "depends_on": "--consequences-ia",
+        "description": "Refait les appels IA même si la réponse est en cache (la lecture varie d'un tirage à l'autre). Payant.",
+        "mode_only": "simuler"
+      },
+      {
+        "flag": "--recit-ia",
+        "type": "checkbox",
+        "label": "Récit rédigé par l'IA (payant)",
+        "default": false,
+        "advanced": true,
+        "description": "Remplace le récit construit par le script (gratuit) par un récit rédigé par l'IA, un appel par scénario.",
+        "mode_only": "simuler"
+      }
+    ],
+    "yaml_files": [
+      {
+        "path": "et_si/hypotheses.yaml",
+        "label": "et_si/hypotheses.yaml (hypothèses, mode d'emploi en tête)",
+        "lien_seul": true
+      },
+      {
+        "path": "documentation/need_action/et_si_dernier_lancement.md",
+        "label": "Rapport du dernier lancement",
+        "readonly": true,
+        "lien_seul": true
+      }
+    ],
+    "gui_verified": true,
+    "mode_select": {
+      "label": "Mode",
+      "choices": [
+        {
+          "value": "simuler",
+          "label": "Simuler une hypothèse",
+          "note": "Choisis une hypothèse dans la liste, puis Lancer. Rien n'est jamais écrit dans le vault."
+        },
+        {
+          "value": "nouvelle",
+          "label": "Nouvelle hypothèse",
+          "note": "Écris une idée dans le panneau ✨ ci-dessous : l'IA propose l'hypothèse, tu la corriges, puis tu l'ajoutes à et_si/hypotheses.yaml. Le bouton Lancer ne sert pas dans ce mode."
+        }
+      ]
+    },
+    "assistant_hypothese": true,
+    "assistant_decision": true
+  },
+  {
     "id": "inject_events",
     "label": "Injecter des événements",
     "icon": "⚡",
@@ -2767,113 +2874,6 @@
     ],
     "yaml_files": [],
     "gui_verified": true
-  },
-  {
-    "id": "simuler_et_si",
-    "label": "Simulateur « et si ? »",
-    "icon": "🔮",
-    "section": "entites_nettoyage",
-    "script": "simuler_et_si.py",
-    "description": "Teste une hypothèse « et si ? » AVANT toute injection : effet chiffré sur les 12 variables (avec et sans), tensions, aperçu de la carte et, en option, lecture des conséquences par l'IA. Ne modifie jamais le vault. Onglet « Nouvelle hypothèse » : écrire une hypothèse à partir d'une idée. Rapport : documentation/need_action/et_si_<id>.md (et ci-dessous).",
-    "requires": [],
-    "fixed_args": [
-      "--report"
-    ],
-    "options": [
-      {
-        "flag": "--scenario",
-        "type": "select",
-        "label": "Scénario",
-        "source": "config_scenarios",
-        "default": "",
-        "optional": true,
-        "description": "Limite la simulation à ce scénario. Vide = tous les scénarios de l'hypothèse.",
-        "mode_only": "simuler"
-      },
-      {
-        "flag": "--id",
-        "type": "slug_select",
-        "label": "Hypothèse",
-        "slug_type": "hypotheses_et_si",
-        "mode_only": "simuler",
-        "description": "Hypothèses de et_si/hypotheses.yaml (⚠ = mal remplie : le lancement listera ses erreurs). « Aucun » = liste des hypothèses, sans rien simuler."
-      },
-      {
-        "flag": "--date",
-        "type": "number",
-        "label": "Effet mesuré en",
-        "min": 2026,
-        "max": 2098,
-        "default": 2098,
-        "description": "Année à laquelle l'effet est mesuré (pas avant l'apparition de l'hypothèse).",
-        "mode_only": "simuler"
-      },
-      {
-        "flag": "--consequences-ia",
-        "type": "checkbox",
-        "label": "Lecture des conséquences par l'IA (payant)",
-        "default": false,
-        "description": "⚠️ Un appel IA par scénario (≈ 1-2 centimes chacun) : trajectoires d'entités, relations, statuts de zone, carte, nouvelles entités, toutes contrôlées. La réponse est gardée en cache : relancer la même hypothèse ne coûte rien.",
-        "mode_only": "simuler"
-      },
-      {
-        "flag": "--passe-exhaustive",
-        "type": "checkbox",
-        "label": "Passe exhaustive : relire toutes les fiches (payant)",
-        "default": false,
-        "description": "⚠️ Relit toutes les instances du scénario et les événements datés après l'hypothèse (≈ 0,05 à 0,11 $ par scénario ; lots gardés en cache). Chaque changement est classé obligatoire (la fiche devient fausse) ou possible. Les obligatoires entrent dans la liste d'application, les 20 possibles prioritaires en étapes facultatives, et les entités les plus touchées dans l'entrée d'injection (acteurs_hint). À cocher avec la lecture IA, qui lui sert de contexte. « Nouveau tirage » relance aussi la passe.",
-        "mode_only": "simuler"
-      },
-      {
-        "flag": "--refaire",
-        "type": "checkbox",
-        "label": "Nouveau tirage (ignorer le cache)",
-        "default": false,
-        "depends_on": "--consequences-ia",
-        "description": "Refait les appels IA même si la réponse est en cache (la lecture varie d'un tirage à l'autre). Payant.",
-        "mode_only": "simuler"
-      },
-      {
-        "flag": "--recit-ia",
-        "type": "checkbox",
-        "label": "Récit rédigé par l'IA (payant)",
-        "default": false,
-        "advanced": true,
-        "description": "Remplace le récit construit par le script (gratuit) par un récit rédigé par l'IA, un appel par scénario.",
-        "mode_only": "simuler"
-      }
-    ],
-    "yaml_files": [
-      {
-        "path": "et_si/hypotheses.yaml",
-        "label": "et_si/hypotheses.yaml (hypothèses, mode d'emploi en tête)",
-        "lien_seul": true
-      },
-      {
-        "path": "documentation/need_action/et_si_dernier_lancement.md",
-        "label": "Rapport du dernier lancement",
-        "readonly": true,
-        "lien_seul": true
-      }
-    ],
-    "gui_verified": true,
-    "mode_select": {
-      "label": "Mode",
-      "choices": [
-        {
-          "value": "simuler",
-          "label": "Simuler une hypothèse",
-          "note": "Choisis une hypothèse dans la liste, puis Lancer. Rien n'est jamais écrit dans le vault."
-        },
-        {
-          "value": "nouvelle",
-          "label": "Nouvelle hypothèse",
-          "note": "Écris une idée dans le panneau ✨ ci-dessous : l'IA propose l'hypothèse, tu la corriges, puis tu l'ajoutes à et_si/hypotheses.yaml. Le bouton Lancer ne sert pas dans ce mode."
-        }
-      ]
-    },
-    "assistant_hypothese": true,
-    "assistant_decision": true
   },
   {
     "id": "export_prompt_veille",

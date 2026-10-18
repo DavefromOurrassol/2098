@@ -11632,7 +11632,8 @@ function buildDecisionHypothese() {
     tous.splice(nBase);
   }
   function sousTitre(txt) {
-    const ICONES = [['Nouvelles', '🧩'], ['Phrases', '✏️'], ['Règle', '📜'], ['Pour finir', '🏁']];
+    const ICONES = [['Carte', '🗺️'], ['Nouvelles', '🧩'], ['Phrases', '✏️'], ['Articles', '📰'],
+                    ['Règle', '📜'], ['Pour finir', '🏁']];   // PATCH_S27_CARTE_MAIN
     const icone = (ICONES.find(([k]) => txt.startsWith(k)) || [null, ''])[1];
     const t = mk('div', 'option-label', (icone ? icone + '  ' : '') + txt);
     Object.assign(t.style, { marginTop: '18px', marginBottom: '8px', padding: '6px 10px', borderRadius: '6px',
@@ -11648,6 +11649,107 @@ function buildDecisionHypothese() {
       e.style.color = '#b03a2e';
       e.style.whiteSpace = 'pre-wrap';
       zoneMain.appendChild(e);
+    }
+
+    // PATCH_S27_CARTE_MAIN : suites de la carte appliquée (étape ④).
+    const cartes = etat.carte || [];
+    if (cartes.length) {
+      zoneMain.appendChild(sousTitre('Carte'));
+      const normal = (el) => Object.assign(el.style, { textTransform: 'none', letterSpacing: 'normal',
+                                                       fontSize: '12px', color: 'var(--text)' });
+      const ouvrirCarte = (sc) => {
+        showTab('carte');
+        const s = document.getElementById('carte-scenario');
+        if (s && s.value !== sc && [...s.options].some(o => o.value === sc)) {
+          s.value = sc;
+          s.dispatchEvent(new Event('change'));
+        }
+      };
+      const ETATS = {
+        a_decider: ['⚠ à décider', '#b9770e'], laissee: ['✓ laissée ainsi', '#1e8449'],
+        deplacee: ['✓ déplacée', '#1e8449'], portion: ['✓ garde une portion (tracé)', '#1e8449'],
+        disparue: ['· n\'existe plus', '#888'], gardee: ['✓ gardée', '#1e8449'],
+        territoire: ['✓ a de nouveau un territoire', '#1e8449'], supprimee: ['· supprimée', '#888'],
+        en_attente: ['· carte pas encore appliquée', '#888'],
+      };
+      cartes.forEach(c => {
+        const bloc = mk('div');
+        Object.assign(bloc.style, { margin: '6px 0', paddingLeft: '8px', borderLeft: '2px solid #ddd' });
+        const titre = mk('div', 'option-label', c.manuel
+          ? `${c.pays} : ${c.action} (tracés) — ${c.sc}`
+          : (c.nouvelle ? `Nouvelle zone ${c.nom_cible} (${c.cible}) avec ${c.pays}`
+                        : `${c.pays} rattaché à ${c.nom_cible} (${c.cible})`) + ` — ${c.sc}`
+            + (c.applique ? '  [appliqué]' : ''));
+        normal(titre);
+        if (c.applique) titre.style.color = '#1e8449';
+        bloc.appendChild(titre);
+        if (c.manuel || !c.applique) {
+          bloc.appendChild(mk('div', 'option-desc', c.manuel
+            ? 'À faire dans l\'onglet Carte, d\'après la liste d\'application du rapport.'
+            : 'Pas encore appliqué : étape ④ « Appliquer ».'));
+          if (c.manuel) {
+            const bC = bouton('Ouvrir la Carte ↗');
+            bC.addEventListener('click', () => ouvrirCarte(c.sc));
+            bloc.appendChild(bC);
+          }
+          zoneMain.appendChild(bloc);
+          return;
+        }
+        const ligneZone = (z, texte, actions) => {
+          const d = mk('div');
+          Object.assign(d.style, { margin: '6px 0 6px 8px' });
+          const [lib, coul] = ETATS[z.etat] || [z.etat, '#888'];
+          d.appendChild(mk('div', 'option-desc', texte));
+          const e = mk('div', 'option-desc', lib);
+          Object.assign(e.style, { color: coul, fontWeight: '600' });
+          d.appendChild(e);
+          if (z.etat === 'a_decider') {
+            const l = mk('div');
+            actions.forEach(([txt, fn, cls]) => {
+              const b = bouton(txt, cls);
+              b.addEventListener('click', fn);
+              l.appendChild(b);
+              tous.push(b);
+            });
+            d.appendChild(l);
+          }
+          return d;
+        };
+        (c.sous_zones || []).forEach(z => {
+          bloc.appendChild(ligneZone(z,
+            `Sous-zone ${z.nom} (${z.slug}) : porte aussi ${(z.autres || []).join(', ')}, a perdu ${c.pays}.`,
+            [['La laisser ainsi', () => appeler('main/carte', 'laisser', { cle: z.cle })],
+             [`Aperçu : la déplacer sous ${c.cible}`, () => appeler('main/carte', 'apercu', { cle: z.cle })],
+             [`La déplacer sous ${c.cible}`, () => {
+               if (!confirm(`Déplacer ${z.slug} (et ses ${(z.autres || []).join(', ')}) sous ${c.cible} ? `
+                            + '(sauvegarde .bak_et_si_main)')) return;
+               appeler('main/carte', 'deplacer', { cle: z.cle });
+             }, 'yaml-btn yaml-btn-save'],
+             ['Tracer une portion ↗', () => ouvrirCarte(c.sc)]]));
+        });
+        (c.videes || []).forEach(z => {
+          bloc.appendChild(ligneZone(z, `Zone ${z.nom} (${z.slug}) : n'a plus aucun territoire.`,
+            [['La garder (vestige, exil)', () => appeler('main/carte', 'laisser', { cle: z.cle })],
+             ['La supprimer : onglet Carte ↗', () => ouvrirCarte(c.sc)]]));
+        });
+        if (c.nouvelle) {
+          const n = mk('div', 'option-desc',
+            `Nouvelle zone : description et relations (alliés / rivaux) à écrire dans geographie/${c.sc}.md.\n`
+            + `Rédactions (payant) : python3 generator/generate_journaux.py --scenario ${c.sc} --update\n`
+            + 'Continent sur le site : python3 generator/export_revues.py --continents');
+          Object.assign(n.style, { whiteSpace: 'pre-wrap', margin: '6px 0 4px 8px' });
+          bloc.appendChild(n);
+          const l = mk('div');
+          const bO = bouton(`Ouvrir geographie/${c.sc}.md dans Obsidian ↗`);
+          bO.addEventListener('click', () => _panneauOuvrirDansObsidian(`geographie/${c.sc}.md`));
+          const bC = bouton('Ouvrir la Carte ↗');
+          bC.addEventListener('click', () => ouvrirCarte(c.sc));
+          l.appendChild(bO);
+          l.appendChild(bC);
+          bloc.appendChild(l);
+        }
+        zoneMain.appendChild(bloc);
+      });
     }
 
     // 1. Nouvelles entités
@@ -11738,6 +11840,8 @@ function buildDecisionHypothese() {
       bloc.style.borderLeft = '2px solid #ddd';
       const close = x.statut === 'corrigée' || x.statut === 'ignorée';
       const titre = mk('div', 'option-label', `${x.nom} — ${x.fichier}` + (x.statut ? `  [${x.statut}]` : ''));
+      Object.assign(titre.style, { textTransform: 'none', letterSpacing: 'normal', fontSize: '12px',
+                                   color: 'var(--text)' });   // PATCH_S27_ARTICLES
       if (close) titre.style.color = '#1e8449';
       bloc.appendChild(titre);
       const av = mk('div', 'option-desc', `Phrase : « ${x.extrait} »\nContredit : ${x.contredit}`
@@ -11768,6 +11872,59 @@ function buildDecisionHypothese() {
         [bA, bR, bI].forEach(b => { l.appendChild(b); tous.push(b); });
         bloc.appendChild(l);
       }
+      zoneMain.appendChild(bloc);
+    });
+
+    // PATCH_S27_ARTICLES : articles à relire -- repérage par l'IA, jamais d'écriture dans un article.
+    zoneMain.appendChild(sousTitre('Articles à relire'));
+    const arts = etat.articles || [];
+    const titreNormal = (el) => Object.assign(el.style, { textTransform: 'none', letterSpacing: 'normal',
+                                                          fontSize: '12px', color: 'var(--text)' });
+    if (!arts.length) {
+      zoneMain.appendChild(mk('div', 'option-desc',
+        'Aucun article ne cite une entité touchée ni n\'a pour zone une zone changée.'));
+    } else {
+      const neufs = arts.filter(a => !a.verifie).length;
+      const bV = bouton(neufs ? `Relire ${neufs} article(s) avec l'IA` : 'Relire à nouveau avec l\'IA');
+      bV.addEventListener('click', () => {
+        if (!confirm('Appels IA (quelques centimes par article) : repérage seulement, aucun article n\'est '
+                     + 'modifié. Continuer ?')) return;
+        appeler('main/articles', 'verifier', {});
+      });
+      zoneMain.appendChild(bV);
+      tous.push(bV);
+    }
+    arts.forEach(a => {
+      const bloc = mk('div');
+      Object.assign(bloc.style, { margin: '6px 0', paddingLeft: '8px', borderLeft: '2px solid #ddd' });
+      const titre = mk('div', 'option-label', `${a.titre}${a.date ? ' — ' + a.date : ''}` + (a.relu ? '  [relu]' : ''));
+      titreNormal(titre);
+      if (a.relu) titre.style.color = '#1e8449';
+      bloc.appendChild(titre);
+      const n = (a.passages || []).length;
+      const info = mk('div', 'option-desc', `${a.chemin} (${(a.motifs || []).join(', ')})\n`
+        + (!a.verifie ? 'Pas encore relu par l\'IA.'
+           : (n ? `${n} passage(s) à revoir :` : 'Aucun passage contradictoire relevé par l\'IA.')));
+      info.style.whiteSpace = 'pre-wrap';
+      bloc.appendChild(info);
+      (a.passages || []).forEach(p => {
+        const d = mk('div', 'option-desc', `« ${p.extrait} »\nContredit : ${p.fait}`
+          + (p.suggestion ? `\nSuggestion : ${p.suggestion}` : ''));
+        Object.assign(d.style, { whiteSpace: 'pre-wrap', margin: '4px 0 4px 12px', paddingLeft: '8px',
+                                 borderLeft: '2px solid #e0a040' });
+        bloc.appendChild(d);
+      });
+      const l = mk('div');
+      const bO = bouton('Ouvrir dans Obsidian ↗');
+      bO.addEventListener('click', () => _panneauOuvrirDansObsidian(a.chemin));
+      l.appendChild(bO);
+      if (!a.relu) {
+        const bR = bouton('Marquer comme relu');
+        bR.addEventListener('click', () => appeler('main/article', 'relu', { chemin: a.chemin }));
+        l.appendChild(bR);
+        tous.push(bR);
+      }
+      bloc.appendChild(l);
       zoneMain.appendChild(bloc);
     });
 
@@ -11836,6 +11993,9 @@ function buildDecisionHypothese() {
       'chaque réécriture est modifiable, « Remplacer » l\'écrit dans la fiche (toutes ses occurrences, ' +
       'frontmatter et corps ; sauvegarde .bak_et_si_main). Seule la phrase change : relis la fiche si le ' +
       'reste du texte en dépend.\n' +
+      'Carte : une sous-zone qui porte aussi d\'autres pays a perdu le pays ; la laisser ainsi, la ' +
+      'déplacer entière sous la zone cible (ses autres pays la suivent ; aperçu d\'abord), ou lui rendre ' +
+      'une portion par un tracé dans l\'onglet Carte (l\'état se met à jour à l\'actualisation).\n' +
       'Articles et décisions ⚠ restent à faire avec la check-list.'));
   }
   async function chargerMain() {

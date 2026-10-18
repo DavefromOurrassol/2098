@@ -3042,7 +3042,9 @@ def et_si_injecter(action):
 # ---------------------------------------------------------------------------
 
 TIMEOUTS_MAIN = {"etat": 120, "entites": 120, "regle": 60, "lancer": 900,
-                 "phrases": 900, "phrase": 60}   # PATCH_S27_PHRASES
+                 "phrases": 900, "phrase": 60,   # PATCH_S27_PHRASES
+                 "articles": 1500, "article": 60,   # PATCH_S27_ARTICLES
+                 "carte": 120}   # PATCH_S27_CARTE_MAIN
 
 
 @app.route("/api/et_si/main/<quoi>", methods=["POST"])
@@ -3065,7 +3067,7 @@ def et_si_main_route(quoi, action=None):
     elif quoi == "regle" and action in ("apercu", "ajouter") and re.match(r"^[a-z_]+$", sc):
         cmd += ["--regle", sc] + (["--apply"] if action == "ajouter" else [])
         entree = str(data.get("texte") or "")
-    elif quoi == "lancer" and action in ("audit", "resume") and re.match(r"^[a-z_]+$", sc):
+    elif quoi == "lancer" and action in ("audit", "resume", "geo") and re.match(r"^[a-z_]+$", sc):
         cmd += ["--lancer", action, "--scenario", sc]
     elif quoi == "phrases" and action == "proposer":   # PATCH_S27_PHRASES (appels IA)
         cmd.append("--phrases-proposer")
@@ -3074,6 +3076,16 @@ def et_si_main_route(quoi, action=None):
         cmd += ["--phrase", str(data["cle"])]
         cmd += ["--ignorer"] if action == "ignorer" else (["--apply"] if action == "remplacer" else [])
         entree = str(data.get("texte") or "")
+    elif (quoi == "carte" and action in ("apercu", "deplacer", "laisser")   # PATCH_S27_CARTE_MAIN
+          and re.match(r"^[a-z_]+:[a-z0-9_]+$", str(data.get("cle") or ""))):
+        cle = str(data["cle"])
+        cmd += ["--carte-laisser", cle] if action == "laisser" else (
+            ["--carte-deplacer", cle] + (["--apply"] if action == "deplacer" else []))
+    elif quoi == "articles" and action == "verifier":   # PATCH_S27_ARTICLES (appels IA, lecture seule)
+        cmd.append("--articles-verifier")
+    elif (quoi == "article" and action == "relu" and ".." not in str(data.get("chemin") or "")
+          and re.match(r"^articles/\S+\.md$", str(data.get("chemin") or ""))):
+        cmd += ["--article-relu", str(data["chemin"])]
     else:
         return jsonify({"error": f"demande inconnue : {quoi}/{action}"}), 404
     delai = TIMEOUTS_MAIN[quoi]

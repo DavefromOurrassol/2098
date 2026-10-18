@@ -63,7 +63,7 @@ SCENARIOS = ["breakdown", "fortress_world", "new_sustainability",
              "eco_communalism", "policy_reform", "reference"]
 DELTA_MAX_CONSEILLE = 25   # plafond d'un événement custom (inject_custom_events.py)
 ACTIONS_GEO = {"absorber": "absorber", "nouvelle_zone": "creer"}   # vocabulaire du fichier -> ZoneRepository
-VERSION = "v8.21"            # affichée dans le rapport : permet de vérifier la version installée
+VERSION = "v8.22"            # affichée dans le rapport : permet de vérifier la version installée
 MAX_LISTE = 10             # éléments listés par rubrique dans le rapport (le reste est compté)
 
 
@@ -1235,6 +1235,14 @@ def ajouter_consequences(hyp, resultats, scenarios, refaire=False):
                     f"statut de zone : {z['zone']} → disparu écarté, hypothèse sans effet territorial (`carte: non`)"
                     for z in disparues]
                 out[sc]["zones_statut"] = [z for z in out[sc]["zones_statut"] if z.get("apres") != "disparu"]
+        # PATCH_S27_CARTE (v8.22) : l'hypothèse fixe la carte de ce scénario -> les
+        # propositions de carte de l'IA sont écartées (elles la contrediraient).
+        if out[sc].get("geographie") and any(g.get("source") != "ia"
+                                              for g in hyp["geographie"].get(sc) or []):
+            out[sc]["ecartees"] = (out[sc].get("ecartees") or []) + [
+                f"carte : {g['pays']} ({g['action']}) écartée, carte de ce scénario fixée par l'hypothèse"
+                for g in out[sc]["geographie"]]
+            out[sc]["geographie"] = []
         if out[sc].get("geographie") and sc not in hyp["geographie"]:
             hyp["geographie"][sc] = [dict(g, source="ia") for g in out[sc]["geographie"]]
     return out
@@ -2021,13 +2029,15 @@ def liste_application(hyp, sc, res, cons, geo_ops, donnees, passe=None):
             # un morceau n'a pas d'articles à relire pour autant.
             if a["slug"] not in cibles_op or g["action"] == "partition":
                 zones_touchees.setdefault(a["slug"], set()).add(pays)
+        auto = op.get("source") != "ia"   # PATCH_S27_CARTE : fait par ④ « Appliquer »
         if g["action"] == "absorber":
             _etape(E, "Carte", f"Rattacher {pays} à `{g['cible']}`",
-                   f"Carte → clic sur {pays} → affecter à `{g['cible']}`",
+                   "④ « Appliquer » le fait" if auto else f"Carte → clic sur {pays} → affecter à `{g['cible']}`",
                    "le pays change de mains")
         elif g["action"] == "nouvelle_zone":
             nz = op.get("nouvelle_zone") or {}
             _etape(E, "Carte", f"Créer la zone `{g['cible']}` ({nz.get('nom')}) avec {pays}",
+                   "④ « Appliquer » le fait" if auto else
                    f"Carte → clic sur {pays} → créer une zone (slug `{g['cible']}`, type {nz.get('type') or 'autre'}, "
                    f"statut {nz.get('statut') or 'emergent'})", "nouvelle zone de niveau 1")
             zones_nouvelles.append({"slug": g["cible"], "pays": pays})
@@ -2099,13 +2109,18 @@ def liste_application(hyp, sc, res, cons, geo_ops, donnees, passe=None):
             if autres:
                 _etape(E, "Carte", f"`{o['slug']}` porte aussi {', '.join(autres[:3])}"
                        + (" …" if len(autres) > 3 else "") + " : la répartir à la main, pas en bloc",
-                       "Carte → arbre → ↗️ déplacer, ou nouvelle sous-zone pour la part de " + pays,
+                       (f"au choix (étape ⑤) : la laisser sans {pays} ; la déplacer entière sous `{g['cible']}` "
+                        f"(Carte → arbre → ↗️ déplacer) ; ou lui garder une portion de {pays} par un tracé"
+                        if g["action"] in ("absorber", "nouvelle_zone") else
+                        "Carte → arbre → ↗️ déplacer, ou nouvelle sous-zone pour la part de " + pays),
                        f"sous-zone de {pays} à plusieurs pays")
             else:
                 simples.append(o)
         if simples and g["action"] in ("absorber", "nouvelle_zone"):
-            _etape(E, "Carte", f"{len(simples)} sous-zone(s) de {pays} à rattacher à `{g['cible']}`",
-                   f"python3 generator/reparenter_sous_zones_orphelines.py --scenario {sc} --zone-cible {g['cible']}",
+            _etape(E, "Carte", f"{len(simples)} sous-zone(s) de {pays} à rattacher à `{g['cible']}`"
+                   + (f" (en gardant {pays})" if auto else ""),
+                   ("④ « Appliquer » le fait (pas le bouton de la Carte : il leur retire le pays)" if auto else
+                    f"python3 generator/reparenter_sous_zones_orphelines.py --scenario {sc} --zone-cible {g['cible']}"),
                    ", ".join(o["slug"] for o in simples[:MAX_LISTE]))
         # V8.4-V8.8 : zones liées au pays par son nom ou une de ses villes.
         #  - sous-zone d'une zone qui perd le pays : citée n'importe où (nom, territoires, texte) ;
@@ -2692,7 +2707,35 @@ def _decider(args, hyps):
         sys.exit(f"✗ {e}")
 
 
-def _ecrire_operations(brut, hyp, portee, consequences, passe):
+def _carte_operations(hyp, sc, geo):
+    """PATCH_S27_CARTE : changements de carte du scénario pour appliquer_et_si.py."""
+    carte, zones_sc = [], None
+    for op_h, g in zip((hyp.get("geographie") or {}).get(sc) or [], (geo or {}).get(sc) or []):
+        entree = {"pays": g["pays"], "action": g["action"], "cible": g.get("cible"),
+                  "source": op_h.get("source") or "hypothese",
+                  "nouvelle_zone": dict(op_h.get("nouvelle_zone") or {}) if g["action"] == "nouvelle_zone" else None,
+                  "erreurs": list(g.get("erreurs") or []), "alertes": list(g.get("alertes") or []),
+                  "simples": [], "a_repartir": [],
+                  "videes": [q["slug"] for q in g.get("quittees") or [] if q.get("videe")]}
+        if g["action"] in ("absorber", "nouvelle_zone") and not entree["erreurs"]:
+            if zones_sc is None:
+                repo, _m = charger_zone_repository()
+                zones_sc = {z.get("slug"): z for z in repo.load_all_zones(sc)}
+            for o in (g.get("impact") or {}).get("sous_zones_orphelines") or []:
+                if not o.get("slug") or o["slug"] == g.get("cible"):
+                    continue
+                autres = sorted({p for x in (zones_sc.get(o["slug"]) or {}).get("origine_reelle") or []
+                                 if isinstance(x, dict) and x.get("entite")
+                                 for p in _autres_pays(str(x["entite"]), g["pays"])})
+                if autres:
+                    entree["a_repartir"].append({"slug": o["slug"], "nom": o.get("nom"), "autres": autres})
+                else:
+                    entree["simples"].append(o["slug"])
+        carte.append(entree)
+    return carte
+
+
+def _ecrire_operations(brut, hyp, portee, consequences, passe, geo=None):
     """PATCH_S27_V819 : données brutes de la lecture IA et des obligatoires de la passe,
     par scénario. appliquer_et_si.py en tire les opérations (numérotées) à appliquer."""
     import et_si_dossiers as _ed
@@ -2714,6 +2757,11 @@ def _ecrire_operations(brut, hyp, portee, consequences, passe):
                       if p else None),
             "erreurs": erreurs,
         }
+        try:   # PATCH_S27_CARTE
+            par_sc[sc]["carte"] = _carte_operations(hyp, sc, geo)
+        except Exception as e:  # la carte ne doit jamais empêcher le reste
+            par_sc[sc]["carte"] = []
+            par_sc[sc]["erreurs"].append(f"carte : {type(e).__name__}: {e}")
     data = {
         "id": hyp["id"], "date_simulation": datetime.now().isoformat(timespec="minutes"),
         "version": VERSION, "empreinte": _ed.empreinte_hypothese(brut),
@@ -2851,7 +2899,7 @@ def main():
     _rendre_injection_commune(hyp, application, inj)
     # PATCH_S27_V819 : opérations structurées pour appliquer_et_si.py (phase 4).
     try:
-        _ecrire_operations(brut, hyp, portee, consequences, passe)
+        _ecrire_operations(brut, hyp, portee, consequences, passe, geo)   # PATCH_S27_CARTE
     except Exception as e:  # ne doit jamais empêcher le rapport
         avert.append(f"opérations pour appliquer_et_si.py non écrites : {type(e).__name__}: {e}")
     try:
