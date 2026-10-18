@@ -7134,6 +7134,49 @@ function initPanelResizer(panelSelector, resizerId, storageKey, onResize) {
   });
 }
 
+// PATCH_S27_FORM_RESIZER (18 octobre 2026) : poignée entre la colonne du formulaire d'un
+// script (#form-panel, 340 px par défaut) et la sortie (#log-panel). Le panneau est à GAUCHE
+// de sa poignée (comme #sidebar) : largeur = position de la souris − bord gauche.
+(function initFormResizer() {
+  const panel = document.getElementById('form-panel');
+  const resizer = document.getElementById('form-resizer');
+  if (!panel || !resizer) return;
+  const CLE = 'ourrassol_form_panel_width';
+  const MIN = 280;
+  const maxi = () => Math.max(MIN, window.innerWidth - panel.getBoundingClientRect().left - 260);
+  const poser = (px) => {
+    panel.style.width = px ? `${px}px` : '';
+    panel.style.minWidth = px ? `${px}px` : '';
+  };
+  try {
+    const memo = parseInt(localStorage.getItem(CLE), 10);
+    if (memo >= MIN) poser(Math.min(memo, Math.max(MIN, window.innerWidth - 500)));
+  } catch (e) { /* stockage indisponible : largeur par défaut */ }
+  let tire = false;
+  resizer.addEventListener('mousedown', (e) => {
+    tire = true;
+    resizer.classList.add('dragging');
+    document.body.classList.add('panel-resizing');
+    e.preventDefault();
+  });
+  document.addEventListener('mousemove', (e) => {
+    if (!tire) return;
+    const largeur = e.clientX - panel.getBoundingClientRect().left;
+    poser(Math.round(Math.max(MIN, Math.min(maxi(), largeur))));
+  });
+  document.addEventListener('mouseup', () => {
+    if (!tire) return;
+    tire = false;
+    resizer.classList.remove('dragging');
+    document.body.classList.remove('panel-resizing');
+    try { localStorage.setItem(CLE, String(parseInt(panel.style.width, 10))); } catch (e) { /* rien */ }
+  });
+  resizer.addEventListener('dblclick', () => {
+    poser(0);
+    try { localStorage.removeItem(CLE); } catch (e) { /* rien */ }
+  });
+})();
+
 initPanelResizer('#tab-articles .articles-sidebar', 'articles-resizer', 'ourrassol_articles_panel_width');
 // Carte (26 sept 2026) : panneau latéral (légende, arbre des zones)
 // redimensionnable ; la carte Leaflet doit recalculer sa taille à chaque fois.
@@ -11160,18 +11203,70 @@ function buildDecisionHypothese() {
     agrandi = oui;
     const s = wrapper.style;
     if (oui) {
+      // PATCH_S27_POIGNEE : la largeur choisie à la poignée est mise de côté pendant l'agrandissement.
+      wrapper.dataset.largeur = s.width;
+      s.width = '';
+      s.maxWidth = '';
+      poignee.style.display = 'none';
       Object.assign(s, { position: 'fixed', top: '2vh', left: '2vw', right: '2vw', bottom: '2vh',
                          overflow: 'auto', zIndex: '1000', background: fondPage(), padding: '12px 18px',
                          boxShadow: '0 4px 30px rgba(0,0,0,0.35)', borderRadius: '6px' });
     } else {
-      ['position', 'top', 'left', 'right', 'bottom', 'overflow', 'zIndex', 'background', 'padding',
+      ['top', 'left', 'right', 'bottom', 'overflow', 'zIndex', 'background', 'padding',
        'boxShadow', 'borderRadius'].forEach(p => { s[p] = ''; });
+      s.position = 'relative';
+      if (wrapper.dataset.largeur) { s.width = wrapper.dataset.largeur; s.maxWidth = 'none'; }
+      poignee.style.display = '';
     }
     btnLarge.textContent = oui ? '⤡ Réduire' : '⛶ Agrandir';
   };
   btnLarge.addEventListener('click', () => basculerLargeur(!agrandi));
   document.addEventListener('keydown', (ev) => {
     if (ev.key === 'Escape' && agrandi && wrapper.isConnected) basculerLargeur(false);
+  });
+  // PATCH_S27_POIGNEE : poignée de largeur sur le bord droit (mémorisée dans ce navigateur).
+  const CLE_LARGEUR = 'ourrassol_parcours_largeur';
+  const LARGEUR_MIN = 400;
+  wrapper.style.position = 'relative';
+  const poignee = mk('div');
+  poignee.title = 'Glisser pour changer la largeur du panneau (double-clic : largeur normale)';
+  Object.assign(poignee.style, { position: 'absolute', top: '0', right: '-5px', width: '10px', height: '100%',
+                                 cursor: 'col-resize', zIndex: '5' });
+  poignee.addEventListener('mouseenter', () => { poignee.style.background = 'rgba(46,134,193,0.3)'; });
+  poignee.addEventListener('mouseleave', () => { if (!tire) poignee.style.background = ''; });
+  // PATCH_S27_FORM_RESIZER : poignée du panneau remplacée par celle de la colonne (index.html).
+  try { localStorage.removeItem(CLE_LARGEUR); } catch (e) { /* rien */ }
+  const poserLargeur = (px) => {
+    wrapper.style.width = px ? `${px}px` : '';
+    wrapper.style.maxWidth = px ? 'none' : '';
+  };
+  try {
+    const memorisee = parseInt(localStorage.getItem(CLE_LARGEUR), 10);
+    void memorisee;   // PATCH_S27_FORM_RESIZER : plus de largeur propre au panneau
+  } catch (e) { /* stockage indisponible : largeur normale */ }
+  let tire = false;
+  poignee.addEventListener('mousedown', (ev) => {
+    if (agrandi) return;
+    tire = true;
+    document.body.style.userSelect = 'none';
+    ev.preventDefault();
+  });
+  document.addEventListener('mousemove', (ev) => {
+    if (!tire) return;
+    const gauche = wrapper.getBoundingClientRect().left;
+    const px = Math.max(LARGEUR_MIN, Math.min(window.innerWidth - gauche - 12, ev.clientX - gauche));
+    poserLargeur(Math.round(px));
+  });
+  document.addEventListener('mouseup', () => {
+    if (!tire) return;
+    tire = false;
+    document.body.style.userSelect = '';
+    poignee.style.background = '';
+    try { localStorage.setItem(CLE_LARGEUR, String(parseInt(wrapper.style.width, 10))); } catch (e) { /* rien */ }
+  });
+  poignee.addEventListener('dblclick', () => {
+    poserLargeur(0);
+    try { localStorage.removeItem(CLE_LARGEUR); } catch (e) { /* rien */ }
   });
   header.appendChild(titleRow);
   wrapper.appendChild(header);
@@ -11191,14 +11286,69 @@ function buildDecisionHypothese() {
   alertesEl.style.whiteSpace = 'pre-wrap';
   corps.appendChild(alertesEl);
 
+  // PATCH_S27_VISUEL : frise des cinq étapes + cartes colorées selon l'état.
+  const COULEURS = { 'fait': ['#27ae60', 'rgba(39,174,96,0.07)'],
+                     'en cours': ['#2e86c1', 'rgba(46,134,193,0.10)'],
+                     'à venir': ['#9aa5ad', 'transparent'] };
+  const ETAPES_COURTES = ['Tester', 'Décider', 'Injecter', 'Appliquer', 'À la main'];
+  const frise = mk('div');
+  Object.assign(frise.style, { display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '6px',
+                               margin: '12px 0 4px 0' });
+  corps.appendChild(frise);
+  function pastille(n, couleur, plein) {
+    const p = mk('span', null, String(n));
+    Object.assign(p.style, { display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
+      width: '26px', height: '26px', borderRadius: '50%', fontWeight: '700', fontSize: '0.95em',
+      border: `2px solid ${couleur}`, background: plein ? couleur : 'transparent',
+      color: plein ? '#fff' : couleur, flex: '0 0 auto', boxSizing: 'border-box' });
+    return p;
+  }
+  function styliserEtape(b, etat) {
+    const [c, fond] = COULEURS[etat];
+    b.bloc.style.borderLeftColor = c;
+    b.bloc.style.background = fond;
+    b.bloc.style.boxShadow = etat === 'en cours' ? '0 2px 12px rgba(46,134,193,0.20)' : '';
+    b.titre.textContent = '';
+    b.titre.appendChild(pastille(b.n, c, etat !== 'à venir'));
+    b.titre.appendChild(mk('span', null, b.nom));
+    const etiq = mk('span', null, etat === 'fait' ? '✓ fait' : '▶ en cours');
+    Object.assign(etiq.style, { marginLeft: 'auto', fontSize: '0.8em', fontWeight: '600', padding: '2px 10px',
+                                borderRadius: '10px', color: '#fff', background: c });
+    b.titre.appendChild(etiq);
+  }
+  function dessinerFrise(etape) {
+    frise.textContent = '';
+    if (!etape) return;
+    ETAPES_COURTES.forEach((nom, i) => {
+      const n = i + 1;
+      const etat = n < etape ? 'fait' : (n === etape ? 'en cours' : 'à venir');
+      const [c] = COULEURS[etat];
+      const item = mk('span');
+      Object.assign(item.style, { display: 'inline-flex', alignItems: 'center', gap: '5px',
+                                  fontWeight: etat === 'en cours' ? '700' : '' });
+      if (etat === 'à venir') item.style.color = c;
+      item.appendChild(pastille(n, c, etat !== 'à venir'));
+      item.appendChild(mk('span', null, nom));
+      frise.appendChild(item);
+      if (n < 5) {
+        const trait = mk('span', null, '——');
+        trait.style.color = n < etape ? COULEURS['fait'][0] : '#9aa5ad';
+        frise.appendChild(trait);
+      }
+    });
+  }
+
   // Une étape = un bloc avec titre (pastille d'état) et contenu
   const ETAPES = ['Tester', 'Décider', 'Injecter', 'Appliquer au vault', 'À faire à la main'];
   const blocs = ETAPES.map((nom, i) => {
     const bloc = mk('div');
-    bloc.style.borderLeft = '3px solid #ccc';
-    bloc.style.padding = '4px 0 4px 10px';
-    bloc.style.margin = '10px 0';
+    Object.assign(bloc.style, { border: '1px solid rgba(128,128,128,0.25)', borderLeft: '6px solid #ccc',
+                                borderRadius: '8px', padding: '10px 14px', margin: '14px 0' });
     const titre = mk('div', 'option-label');
+    Object.assign(titre.style, { display: 'flex', alignItems: 'center', gap: '10px', fontSize: '1.05em',
+                                 fontWeight: '600', marginBottom: '6px',
+                                 // PATCH_S27_FORM_RESIZER : pas le style « étiquette » (majuscules grises) du GUI
+                                 textTransform: 'none', letterSpacing: 'normal', color: 'var(--text)' });
     const contenu = mk('div');
     bloc.appendChild(titre);
     bloc.appendChild(contenu);
@@ -11338,10 +11488,14 @@ function buildDecisionHypothese() {
   const btnDossiers = bouton('Voir tous les dossiers');
   pied.appendChild(btnDossiers);
   corps.appendChild(pied);
+  const titreSortie = mk('div', 'option-label', '📋 Résultat du dernier bouton');
+  Object.assign(titreSortie.style, { marginTop: '16px', fontWeight: '600', fontSize: '12px',
+                                     textTransform: 'none', letterSpacing: 'normal', color: 'var(--text)' });
+  corps.appendChild(titreSortie);
   const sortie = mk('pre');
-  sortie.style.whiteSpace = 'pre-wrap';
-  sortie.style.fontSize = '0.85em';
-  sortie.style.marginTop = '6px';
+  Object.assign(sortie.style, { whiteSpace: 'pre-wrap', fontSize: '0.85em', marginTop: '6px', padding: '10px 12px',
+                                border: '1px solid rgba(128,128,128,0.3)', borderRadius: '6px', minHeight: '2em',
+                                background: 'rgba(128,128,128,0.06)', maxHeight: '60vh', overflow: 'auto' });
   corps.appendChild(sortie);
 
   const tous = [btnActualiser, btnApercu, btnAdopter, btnRejeter, btnAnnuler, btnInjApercu, btnInjecter,
@@ -11369,6 +11523,7 @@ function buildDecisionHypothese() {
       statutTxt.textContent = 'Choisis une hypothèse dans la liste ci-dessus.';
       alertesEl.textContent = '';
       blocs.forEach(b => montrer(b.bloc, false));
+      dessinerFrise(0);
       return;
     }
     statutTxt.textContent = `Statut : ${e.statut}  `;
@@ -11376,9 +11531,9 @@ function buildDecisionHypothese() {
     blocs.forEach(b => {
       const etat = b.n < e.etape ? 'fait' : (b.n === e.etape ? 'en cours' : 'à venir');
       montrer(b.bloc, etat !== 'à venir');
-      b.titre.textContent = `${'①②③④⑤'[b.n - 1]} ${b.nom} — ${etat === 'fait' ? '✓ fait' : '▶ en cours'}`;
-      b.bloc.style.borderLeftColor = etat === 'en cours' ? '#2e86c1' : '#7dcea0';
+      if (etat !== 'à venir') styliserEtape(b, etat);
     });
+    dessinerFrise(e.etape);
     const sim = e.simulation, dec = e.decision;
     resumeSim.textContent = sim
       ? `Simulée le ${date(sim.date)} (${sim.version}) — ${sim.complet ? 'tous les scénarios' : 'simulation partielle'}` +
@@ -11476,8 +11631,12 @@ function buildDecisionHypothese() {
     tous.splice(nBase);
   }
   function sousTitre(txt) {
-    const t = mk('div', 'option-label', txt);
-    t.style.marginTop = '10px';
+    const ICONES = [['Nouvelles', '🧩'], ['Phrases', '✏️'], ['Règle', '📜'], ['Pour finir', '🏁']];
+    const icone = (ICONES.find(([k]) => txt.startsWith(k)) || [null, ''])[1];
+    const t = mk('div', 'option-label', (icone ? icone + '  ' : '') + txt);
+    Object.assign(t.style, { marginTop: '18px', marginBottom: '8px', padding: '6px 10px', borderRadius: '6px',
+                             background: 'rgba(128,128,128,0.14)', fontWeight: '600', fontSize: '12px',
+                             textTransform: 'none', letterSpacing: 'normal', color: 'var(--text)' });
     return t;
   }
   function rendreMain(etat) {

@@ -406,9 +406,65 @@ def cle_phrase(sc, slug, extrait):
     return f"{sc}:{slug}:{hashlib.sha1(_norm(extrait).encode('utf-8')).hexdigest()[:8]}"
 
 
+VERSION_RELECTURE = "v3-etats-cites"   # entre dans l'empreinte du cache : changer = relire à nouveau
+
+
+def _annee(data):
+    a = data.get("annee")
+    try:
+        return int(a) if float(a) == int(float(a)) else a
+    except (TypeError, ValueError):
+        return a
+
+
+def etats_entites(data, sc):
+    """[(nom, avant, après)] des entités dont l'hypothèse change la trajectoire."""
+    ps = data["par_scenario"].get(sc) or {}
+    out, vus = [], set()
+    for t in ((ps.get("lecture") or {}).get("trajectoires") or []) + ((ps.get("passe") or {}).get("trajectoires") or []):
+        if t.get("instance") in vus:
+            continue
+        vus.add(t.get("instance"))
+        out.append((t.get("nom") or t.get("instance"), t.get("avant"), t.get("apres")))
+    return out
+
+
+_NOMS_INSTANCES = {}
+
+
+def trajectoires_du_scenario(sc):
+    """{nom: trajectoire actuelle} des instances du scénario (lu une fois)."""
+    if sc not in _NOMS_INSTANCES:
+        out = {}
+        for p in sorted(ap.INSTANCES.glob(f"*_{sc}.md")):
+            d = ap.decoupe(p.read_text(encoding="utf-8"))
+            fm = ap.lire_fm(d[1]) if d else None
+            if fm and fm.get("name") and fm.get("trajectoire"):
+                out[str(fm["name"]).strip()] = str(fm["trajectoire"])
+        _NOMS_INSTANCES[sc] = out
+    return _NOMS_INSTANCES[sc]
+
+
+def etats_cites(data, sc, texte):
+    """Lignes « État de X » pour TOUTES les entités nommées dans `texte` : avant / après pour
+    celles que l'hypothèse change, état actuel (inchangé) pour les autres."""
+    pt = _plie(texte)
+    annee = _annee(data)
+    lignes, vus = [], set()
+    for nom, av, apr in etats_entites(data, sc):
+        if nom and _plie(nom) in pt:
+            lignes.append(f"- {nom} : avant {annee} = « {av} » ; après {annee} = « {apr} »")
+            vus.add(_plie(nom))
+    for nom, traj in trajectoires_du_scenario(sc).items():
+        if len(nom) >= 4 and _plie(nom) in pt and _plie(nom) not in vus:
+            lignes.append(f"- {nom} : « {traj} », inchangé par l'hypothèse (avant comme après {annee})")
+            vus.add(_plie(nom))
+    return lignes
+
+
 def faits_hypothese(data, sc):
     """Faits établis par l'hypothèse dans ce scénario (contraintes, trajectoires, zones)."""
-    annee = data.get("annee")
+    annee = _annee(data)
     ps = data["par_scenario"].get(sc) or {}
     lec, pas = ps.get("lecture") or {}, ps.get("passe") or {}
     faits = [str(c) for c in data.get("contraintes") or []]
@@ -450,7 +506,7 @@ def verifier_evenement(data, sc, suivi, refaire):
         return []
     raw = p.read_text(encoding="utf-8")
     import hashlib
-    emp = hashlib.sha1(raw.encode("utf-8")).hexdigest()[:12]
+    emp = hashlib.sha1((VERSION_RELECTURE + raw).encode("utf-8")).hexdigest()[:12]
     cache = suivi.setdefault("verif_evenement", {})
     if not refaire and (cache.get(sc) or {}).get("empreinte") == emp:
         return cache[sc]["problemes"]
@@ -462,12 +518,21 @@ def verifier_evenement(data, sc, suivi, refaire):
         return []
     user = (f"FICHE D'ÉVÉNEMENT « {fm.get('name') or data['id']} » (scénario {sc}) :\n{texte}\n\n"
             "FAITS ÉTABLIS (priment sur la fiche) :\n" + "\n".join(f"- {f}" for f in faits) + "\n\n"
-            "TÂCHE : relève les phrases de la fiche qui CONTREDISENT un fait (par exemple : entité décrite "
-            "comme déjà dominante alors qu'elle ne fait que devenir ascendante ; entité disparue décrite comme "
-            "active ; zone décrite comme détruite alors que le lieu subsiste). Une omission n'est pas une "
-            "contradiction. Pour chaque phrase : \"extrait\" = la phrase entière, MOT POUR MOT ; \"fait\" = le "
-            "fait contredit ; \"correction\" = la phrase réécrite, en changeant le moins de mots possible, sans "
-            "ajouter de fait nouveau. Aucune contradiction → liste vide.\n"
+            + ("ÉTATS DES ENTITÉS CITÉES DANS LA FICHE (seule référence pour leur rang : une phrase conforme "
+               "à ces états n'est JAMAIS une contradiction) :\n" + "\n".join(etats_cites(data, sc, texte)) + "\n\n"
+               if etats_cites(data, sc, texte) else "") +
+            "TÂCHE : relève UNIQUEMENT les phrases qui contredisent un fait, c'est-à-dire :\n"
+            "- une entité à qui la phrase donne, AVANT l'événement, un état plus avancé que son état d'avant "
+            "(« déjà dominante » alors qu'elle était émergente) ;\n"
+            "- une entité à qui la phrase donne, APRÈS l'événement, un état contraire à son état d'après "
+            "(active alors qu'elle a disparu, déclinante alors qu'elle devient dominante) ;\n"
+            "- une zone décrite comme détruite ou disparue alors que le lieu subsiste ; une contrainte niée.\n"
+            "NE SONT PAS des contradictions : décrire une entité qui se renforce, s'étend ou gagne en influence "
+            "quand son état progresse ; parler de sa géographie, de ses activités ou de ses moyens ; une omission. "
+            "En cas de doute, ne relève pas la phrase : la réponse attendue la plupart du temps est une liste vide.\n"
+            "Pour chaque phrase : \"extrait\" = la phrase entière, MOT POUR MOT ; \"fait\" = le fait contredit ; "
+            "\"correction\" = la phrase réécrite en changeant le moins de mots possible, avec l'état d'avant ou "
+            "d'après EXACT (jamais un état intermédiaire inventé), sans fait nouveau.\n"
             'Format : {"problemes": [{"extrait": "...", "fait": "...", "correction": "..."}]}')
     res = ia_json(SYSTEME_RELECTEUR, user)
     problemes = []
@@ -529,8 +594,11 @@ def proposer_phrases(hid, data, refaire):
         fm = ap.lire_fm(d[1]) if d else {}
         contexte = " ".join(_norm(v) for k, v in (fm or {}).items()
                             if isinstance(v, str) and _norm(e["extrait"])[:40] in _norm(v))[:1200]
+        etats = etats_cites(data, e["sc"], e["extrait"] + " " + e["contredit"])
         user = (f"FICHE : {e['nom']} ({e['fichier']}), scénario {e['sc']}.\n"
-                f"FAIT ÉTABLI PAR L'HYPOTHÈSE {data['id']} (année {data.get('annee')}) : {e['contredit']}\n"
+                f"FAIT ÉTABLI PAR L'HYPOTHÈSE {data['id']} (année {_annee(data)}) : {e['contredit']}\n"
+                + ("ÉTATS DES ENTITÉS CITÉES (à respecter exactement, jamais d'état intermédiaire) :\n"
+                   + "\n".join(etats) + "\n" if etats else "") +
                 f"PHRASE DEVENUE FAUSSE : « {e['extrait']} »\n"
                 f"TEXTE AUTOUR : {contexte}\n\n"
                 "Réécris CETTE phrase seulement, pour qu'elle soit vraie en 2098 compte tenu du fait établi : "
@@ -592,7 +660,11 @@ def remplacer_phrase(hid, data, cle, nouveau, ignorer, apply):
         return 1
     morceaux, pos = [], 0
     for o in occ:
-        morceaux += [raw[pos:o.start()], _echapper_pour(raw, o.start(), nouveau)]
+        texte = nouveau
+        # Pas de ponctuation doublée : l'extrait s'arrête souvent avant le point final de la fiche.
+        if re.match(r"\s*[.!?…]", raw[o.end():o.end() + 3]) and texte[-1:] in ".!?…":
+            texte = texte.rstrip(".!?…").rstrip()
+        morceaux += [raw[pos:o.start()], _echapper_pour(raw, o.start(), texte)]
         pos = o.end()
     neuf = "".join(morceaux) + raw[pos:]
     dn = ap.decoupe(neuf)
