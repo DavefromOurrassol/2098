@@ -21,7 +21,7 @@ Aide à la partie mécanique de l'étape ⑤, pour une hypothèse déjà APPLIQU
   5. Carte (18 oct 2026) : suites de la carte appliquée en phase 4 -- sous-zones à
      plusieurs pays (la laisser, la déplacer entière sous la zone cible, ou tracer une
      portion dans l'onglet Carte), zones vidées, nouvelle zone (description, relations).
-  6. Commandes de fin : audit du lore et contrôle de la géographie (gratuits), résumé
+  6. Commandes de fin : audit du lore (gratuit), contrôle de la géographie (un petit appel IA), résumé
      du scénario (payant).
 
 USAGE (depuis la racine du coffre)
@@ -64,7 +64,7 @@ SLUG_REGLE = re.compile(r"^[a-z0-9_]+$")
 LANCER = {
     "audit": ("Relecture du lore (gratuit)", ["generator/audit_lore.py", "--scenario"], 300),
     "resume": ("Résumé du scénario (payant, un appel IA)", ["generator/generate_resume_scenarios.py", "--scenario"], 600),
-    "geo": ("Contrôle de la géographie (gratuit)", ["generator/scan_geographie_complet.py", "--scenario"], 300),
+    "geo": ("Contrôle de la géographie (un petit appel IA)", ["generator/scan_geographie_complet.py", "--scenario"], 300),
 }
 
 
