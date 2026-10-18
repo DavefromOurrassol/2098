@@ -527,7 +527,9 @@ def ecrire_reste_a_faire(data, ops, rapport_ok=True):
                  "`entites_custom/queue.yaml`, puis `python3 generator/create_entities_and_instances.py --mode custom`.")
             L += ["", "```yaml"]
             for e in nouv:
-                L += [f"- nom: {e.get('nom')}", "  category: <à choisir>", f"  role: {e.get('role')}",
+                # PATCH_S27_CATEGORIES : catégorie de la lecture IA si elle existe (v8.21).
+                L += [f"- nom: {e.get('nom')}", f"  category: {e.get('category') or '<à choisir>'}",
+                      f"  role: {e.get('role')}",
                       "  etat: émergent", f"  scenario_ref: {sc}", "  scenario_hint:", f"  - {sc}"]
                 if e.get("zone"):
                     L.append(f"  zone_hint: {e['zone']}")

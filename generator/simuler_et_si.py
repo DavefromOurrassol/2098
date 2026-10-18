@@ -63,7 +63,7 @@ SCENARIOS = ["breakdown", "fortress_world", "new_sustainability",
              "eco_communalism", "policy_reform", "reference"]
 DELTA_MAX_CONSEILLE = 25   # plafond d'un événement custom (inject_custom_events.py)
 ACTIONS_GEO = {"absorber": "absorber", "nouvelle_zone": "creer"}   # vocabulaire du fichier -> ZoneRepository
-VERSION = "v8.20"            # affichée dans le rapport : permet de vérifier la version installée
+VERSION = "v8.21"            # affichée dans le rapport : permet de vérifier la version installée
 MAX_LISTE = 10             # éléments listés par rubrique dans le rapport (le reste est compté)
 
 
@@ -755,6 +755,11 @@ MAX_INSTANCES_CONTEXTE = 40
 TYPES_ZONE = ["bloc_continental", "union_regionale", "territoire_autonome", "territoire_herite", "region",
               "ville", "infrastructure", "site_strategique", "zone_sinistree", "autre"]
 PLAFONDS = {"trajectoires": 8, "alliances": 6, "geographie": 4, "zones_statut": 4, "nouvelles_entites": 3}
+# PATCH_S27_CATEGORIES (v8.21) : catégories d'entité, même liste que VALID_CATEGORIES de
+# create_entities_and_instances.py (entites_custom/queue.yaml) -- à garder identiques.
+CATEGORIES_ENTITE = ["IA", "organisation", "entreprise", "institution", "infrastructure",
+                     "réseau", "humain", "système", "hybride", "autre", "média", "territoire"]
+CATEGORIES_TXT = " | ".join(CATEGORIES_ENTITE)
 CACHE_CONSEQUENCES = SCRIPT_DIR / "state" / "et_si_consequences.json"
 
 
@@ -942,6 +947,7 @@ déjà présente qui se renforce ne change rien au vault : ne la propose pas.
 Plafonds : {PLAFONDS['trajectoires']} trajectoires, {PLAFONDS['alliances']} relations,
 {PLAFONDS['geographie']} changements de carte, {PLAFONDS['zones_statut']} statuts de zone,
 {PLAFONDS['nouvelles_entites']} nouvelles entités. Chaque proposition a une raison courte (une phrase).
+Nouvelle entité : "category" vaut EXACTEMENT une de ces valeurs : {CATEGORIES_TXT}.
 Trajectoire = position sur un axe ORDONNÉ (vie d'une entité) :
 émergent → marginal → ascendant → dominant → mature → déclinant → résiduel → transformé
 → disparu → historique → mythifié. Une entité qui se RENFORCE avance vers ascendant/dominant ;
@@ -989,7 +995,7 @@ Réponds UNIQUEMENT en JSON, format exact :
                               {{"nouvelle_zone": {{"slug": "...", "nom": "...", "type": "...", "statut": "..."}}, "portion": "..."}}],
                   "raison": "..."}}],
   "zones_statut": [{{"zone": "slug", "apres": "statut", "raison": "..."}}],
-  "nouvelles_entites": [{{"nom": "...", "role": "...", "zone": "slug", "raison": "..."}}]
+  "nouvelles_entites": [{{"nom": "...", "category": "...", "role": "...", "zone": "slug", "raison": "..."}}]
 }}"""
     from llm_client import call_llm
     texte = call_llm(system_prompt="Tu es l'architecte du lore d'un monde fictif. Tu proposes, tu n'inventes pas de références.",
@@ -1191,8 +1197,13 @@ def verifier_consequences(brut, by_inst, by_zone):
         elif zone and zone not in by_zone:
             ecartees.append(f"nouvelle entité {n.get('nom')} : zone {zone!r} inconnue (gardée sans zone)")
             zone = None
+        # PATCH_S27_CATEGORIES : catégorie gardée si elle est dans la liste (casse et accents tolérés).
+        brute = str(n.get("category") or "").strip()
+        cat = next((c for c in CATEGORIES_ENTITE if _plie(c) == _plie(brute)), None)
+        if brute and not cat:
+            corrigees.append(f"nouvelle entité {n.get('nom')} : catégorie {brute!r} hors liste (à choisir)")
         ne.append({"nom": str(n["nom"]), "role": str(n.get("role") or ""), "zone": zone,
-                   "raison": str(n.get("raison") or "")})
+                   "raison": str(n.get("raison") or ""), **({"category": cat} if cat else {})})
     out["nouvelles_entites"] = ne
     out["ecartees"] = ecartees
     out["corrigees"] = corrigees
@@ -1435,7 +1446,8 @@ def _rendre_consequences(c):
     if c.get("nouvelles_entites"):
         L.append("**Nouvelles entités plausibles**")
         for n in c["nouvelles_entites"]:
-            L.append(f"- {n['nom']}" + (f" ({n['zone']})" if n.get("zone") else "") + f" : {n['role']} — {n['raison']}")
+            L.append(f"- {n['nom']}" + (f" ({n['zone']})" if n.get("zone") else "")
+                     + (f" [{n['category']}]" if n.get("category") else "") + f" : {n['role']} — {n['raison']}")
         L.append("")
     if c.get("corrigees"):
         L.append(f"_Corrections automatiques ({len(c['corrigees'])}) : " + " ; ".join(c["corrigees"][:8])
@@ -2557,7 +2569,7 @@ def _rendre_application(app, hyp, sc):
             L.append(txt)
         L.append("")
     if app.get("nouvelles_entites"):
-        entrees = [{"nom": ne["nom"], "category": "<à choisir>", "role": ne["role"], "etat": "émergent",
+        entrees = [{"nom": ne["nom"], "category": ne.get("category") or "<à choisir>", "role": ne["role"], "etat": "émergent",
                     "scenario_ref": sc, "scenario_hint": [sc],
                     **({"zone_hint": ne["zone"]} if ne.get("zone") and ne["zone"] != "transnationale" else {}),
                     "source": f"et_si_{hyp['id']}"} for ne in app["nouvelles_entites"]]

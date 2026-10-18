@@ -11297,6 +11297,8 @@ function buildDecisionHypothese() {
   ligneMain.appendChild(btnReste);
   ligneMain.appendChild(lienChecklist);
   b5.appendChild(ligneMain);
+  const zoneMain = mk('div');   // PATCH_S27_GUI_MAIN, rempli par chargerMain()
+  b5.appendChild(zoneMain);
   b5.appendChild(aide(
     'La check-list liste ce que l\'outil ne fait pas : phrases à réécrire (en entier, avec le fait qui les ' +
     'contredit), nouvelles entités proposées (bloc YAML), brouillon de règle de lore, articles à relire, ' +
@@ -11385,6 +11387,7 @@ function buildDecisionHypothese() {
       const data = await res.json();
       if (data.error) { statutTxt.textContent = `✗ ${data.error}`; return; }
       afficher(data);
+      if (data.etape >= 5) chargerMain(); else viderMain();   // PATCH_S27_GUI_MAIN
     } catch (err) {
       statutTxt.textContent = `✗ Erreur réseau : ${err.message}`;
     }
@@ -11435,6 +11438,173 @@ function buildDecisionHypothese() {
       await actualiser();
     }
   };
+
+  // PATCH_S27_GUI_MAIN : étape ⑤, partie mécanique (et_si_main.py) -- nouvelles
+  // entités vers la file, règle de lore vers lore_regles.yaml, commandes de fin.
+  // Les saisies (cases, catégories, brouillons) survivent aux actualisations.
+  const nBase = tous.length;
+  const memo = { garde: {}, cat: {}, texte: {} };
+  function viderMain() {
+    zoneMain.textContent = '';
+    tous.splice(nBase);
+  }
+  function sousTitre(txt) {
+    const t = mk('div', 'option-label', txt);
+    t.style.marginTop = '10px';
+    return t;
+  }
+  function rendreMain(etat) {
+    viderMain();
+    const id = etat.id;
+    if ((etat.erreurs || []).length) {
+      const e = mk('div', 'option-desc', etat.erreurs.map(x => `⚠ ${x}`).join('\n'));
+      e.style.color = '#b03a2e';
+      e.style.whiteSpace = 'pre-wrap';
+      zoneMain.appendChild(e);
+    }
+
+    // 1. Nouvelles entités
+    zoneMain.appendChild(sousTitre('Nouvelles entités proposées par la lecture IA'));
+    const ents = etat.entites || [];
+    if (!ents.length) zoneMain.appendChild(mk('div', 'option-desc', 'Aucune.'));
+    ents.forEach(e => {
+      const k = `${id}|${e.cle}`;
+      const ligne = mk('div');
+      ligne.style.margin = '4px 0';
+      const libre = e.statut === 'proposée';
+      const garde = mk('input');
+      garde.type = 'checkbox';
+      garde.disabled = !libre;
+      // PATCH_S27_CATEGORIES : catégorie proposée (IA, ou devinée d'après le nom) = case cochée.
+      garde.checked = libre && ((k in memo.garde) ? memo.garde[k] : !!e.category_proposee);
+      garde.addEventListener('change', () => { memo.garde[k] = garde.checked; });
+      const cat = choix([['', '— catégorie —']].concat((etat.categories || []).map(c => [c, c])));
+      cat.disabled = !libre;
+      cat.value = memo.cat[k] || (libre ? (e.category_proposee || '') : '');
+      cat.addEventListener('change', () => {
+        memo.cat[k] = cat.value;
+        if (cat.value && !garde.checked) { garde.checked = true; memo.garde[k] = true; }
+      });
+      const nom = mk('span', 'option-label', ` ${e.nom} `);
+      ligne.appendChild(garde);
+      ligne.appendChild(nom);
+      ligne.appendChild(cat);
+      if (libre && e.category_proposee) {
+        const src = mk('span', 'option-desc', e.source_categorie === 'ia'
+          ? `(${e.category_proposee} : proposée par l'IA) ` : `(${e.category_proposee} : devinée d'après le nom) `);
+        ligne.appendChild(src);
+      }
+      const etatTxt = mk('span', 'option-desc', libre ? '' : `✓ ${e.statut}${e.detail ? ' — ' + e.detail : ''}`);
+      etatTxt.style.color = libre ? '' : '#1e8449';
+      ligne.appendChild(etatTxt);
+      const desc = mk('div', 'option-desc',
+        `${e.role}${e.zone_nom ? ' — ancrage : ' + e.zone_nom : ''} (${e.sc})` + (e.raison ? `\nPourquoi : ${e.raison}` : ''));
+      desc.style.whiteSpace = 'pre-wrap';
+      desc.style.marginLeft = '22px';
+      ligne.appendChild(desc);
+      ligne.dataset.cle = e.cle;
+      ligne._garde = garde;
+      ligne._cat = cat;
+      zoneMain.appendChild(ligne);
+    });
+    if (ents.some(e => e.statut === 'proposée')) {
+      const l = mk('div');
+      const bA = bouton('Aperçu (entités cochées)');
+      const bE = bouton('Ajouter à la file', 'yaml-btn yaml-btn-save');
+      const lire = () => [...zoneMain.querySelectorAll('div[data-cle]')]
+        .filter(d => d._garde.checked).map(d => ({ cle: d.dataset.cle, category: d._cat.value }));
+      bA.addEventListener('click', () => appeler('main/entites', 'apercu', { choix: lire() }));
+      bE.addEventListener('click', () => {
+        const c = lire();
+        if (!c.length) { sortie.textContent = '✗ Coche au moins une entité.'; sortie.style.color = '#b03a2e'; return; }
+        if (!confirm(`Ajouter ${c.length} entité(s) à entites_custom/queue.yaml ?`)) return;
+        appeler('main/entites', 'ajouter', { choix: c });
+      });
+      l.appendChild(bA);
+      l.appendChild(bE);
+      zoneMain.appendChild(l);
+      tous.push(bA, bE);
+    }
+
+    // 2. Règle de lore
+    zoneMain.appendChild(sousTitre('Règle de lore (documentation/lore_regles.yaml)'));
+    (etat.regles || []).forEach(r => {
+      const k = `${id}|${r.sc}`;
+      const bloc = mk('div');
+      bloc.style.margin = '4px 0';
+      const info = mk('div', 'option-desc', `Section ${r.sc}`
+        + ((r.ajoutees || []).length ? ` — ✓ déjà ajoutée(s) : ${r.ajoutees.join(', ')}` : '')
+        + ((r.deja || []).length && !(r.ajoutees || []).length ? ` — déjà présente(s) : ${r.deja.join(', ')}` : ''));
+      bloc.appendChild(info);
+      const ta = mk('textarea');
+      ta.rows = 8;
+      ta.style.width = '100%';
+      ta.style.fontFamily = 'monospace';
+      ta.style.fontSize = '0.85em';
+      ta.value = (k in memo.texte) ? memo.texte[k]
+        : (r.brouillon || '# Aucune entité disparue : écrire une règle si une contrainte doit être surveillée.\n');
+      ta.addEventListener('input', () => { memo.texte[k] = ta.value; });
+      bloc.appendChild(ta);
+      const l = mk('div');
+      const bA = bouton('Aperçu de la règle');
+      const bE = bouton('Ajouter la règle', 'yaml-btn yaml-btn-save');
+      bA.addEventListener('click', () => appeler('main/regle', 'apercu', { scenario: r.sc, texte: ta.value }));
+      bE.addEventListener('click', () => {
+        if (!confirm(`Ajouter cette règle à lore_regles.yaml (section ${r.sc}) ?`)) return;
+        appeler('main/regle', 'ajouter', { scenario: r.sc, texte: ta.value });
+      });
+      l.appendChild(bA);
+      l.appendChild(bE);
+      bloc.appendChild(l);
+      zoneMain.appendChild(bloc);
+      tous.push(bA, bE);
+    });
+
+    // 3. Pour finir
+    zoneMain.appendChild(sousTitre('Pour finir'));
+    (etat.scenarios || []).forEach(sc => {
+      const l = mk('div');
+      (etat.fin || []).forEach(f => {
+        const b = bouton(`${f.libelle} — ${sc}`);
+        b.addEventListener('click', () => {
+          if (f.action === 'resume' && !confirm(`Régénérer le résumé du scénario ${sc} ? (un appel IA payant)`)) return;
+          appeler('main/lancer', f.action, { scenario: sc });
+        });
+        l.appendChild(b);
+        tous.push(b);
+      });
+      zoneMain.appendChild(l);
+    });
+    const site = mk('div', 'option-desc',
+      'Site, si des articles ont été corrigés : dans le terminal, python3 generator/chapos_revues.py puis '
+      + 'bash generator/publier_site.sh (publication : laissée hors du GUI).');
+    site.style.marginTop = '4px';
+    zoneMain.appendChild(site);
+    zoneMain.appendChild(aide(
+      'Entités : coche celles à garder et choisis leur catégorie ; l\'aperçu montre les entrées, « Ajouter » les ' +
+      'écrit dans entites_custom/queue.yaml (sauvegarde .bak_et_si_main, refus si l\'entité existe déjà ou est ' +
+      'déjà dans la file). La création reste « Créer des entités » (appels IA, traite toute la file).\n' +
+      'Règle : relis et modifie le brouillon (les lignes # sont ignorées) ; « Ajouter » l\'écrit à la fin de la ' +
+      'section du scénario (format et identifiant vérifiés, sauvegarde .bak_et_si). Lance ensuite la relecture ' +
+      'du lore pour voir ce qu\'elle signale.\n' +
+      'Phrases, articles et décisions ⚠ restent à faire avec la check-list.'));
+  }
+  async function chargerMain() {
+    const sel = listeHyp();
+    const id = sel ? sel.value : '';
+    if (!id) { viderMain(); return; }
+    try {
+      const res = await fetch('/api/et_si/main/etat', {
+        method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ id }),
+      });
+      const data = await res.json();
+      if (data.error) { viderMain(); zoneMain.appendChild(mk('div', 'option-desc', `✗ ${data.error}`)); return; }
+      rendreMain(data);
+    } catch (err) {
+      viderMain();
+      zoneMain.appendChild(mk('div', 'option-desc', `✗ Erreur réseau : ${err.message}`));
+    }
+  }
 
   const tri = () => ({ sauter: sauter.value, inclure: inclure.value });
   btnActualiser.addEventListener('click', actualiser);
