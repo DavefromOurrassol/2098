@@ -11611,7 +11611,8 @@ function buildDecisionHypothese() {
     const echec = !!(data.error || !data.ok);
     indic.style.color = echec ? '#b03a2e' : '#1e8449';
     indic.textContent = `${echec ? '✗' : '✓'} ${libelle} : terminé en ${secondes()} s — résultat en bas du panneau`;
-    sortie.textContent = data.error ? `✗ ${data.error}` : (data.sortie || '(aucune sortie)');
+    sortie.textContent = data.error ? `✗ ${data.error}`
+      : adapterSortie(base, action, data.sortie || '(aucune sortie)');   // PATCH_S27_INDICATIONS
     sortie.style.color = echec ? '#b03a2e' : '';
     try { sortie.scrollIntoView({ behavior: 'smooth', block: 'start' }); } catch (e) { /* ancien navigateur */ }
     if (sel && id && action !== 'dossiers') {
@@ -11854,6 +11855,22 @@ function buildDecisionHypothese() {
     }
   }
 
+  // PATCH_S27_INDICATIONS : indications écrites pour le terminal → bouton ou champ du panneau.
+  function adapterSortie(base, action, texte) {
+    const bouton = { 'appliquer': '« Appliquer »', 'main/entites': '« Ajouter à la file »',
+                     'main/regle': '« Ajouter la règle »' }[base] || 'le bouton d\'écriture';
+    return String(texte)
+      .replace(/Relancer avec --apply pour écrire \(sauvegarde \.bak_appliquer\), --sauter \/ --inclure pour trier ;\n?/g,
+               'Pour écrire : bouton « Appliquer » (sauvegarde .bak_appliquer) ; champs « Sauter » / « Inclure » pour trier ;\n')
+      .replace(/--reste-a-faire pour écrire seulement la check-list des tâches à la main\./g,
+               'bouton « Générer la check-list » (étape ⑤) pour la check-list seule.')
+      .replace(/sautée \(--inclure (\d+) pour l'appliquer\)/g, 'sautée (mettre $1 dans « Inclure » pour l\'appliquer)')
+      .replace(/Relancer avec --apply\./g, `Pour écrire : bouton ${bouton}.`)
+      .replace(/Relancer sans --apercu pour l'écrire dans evenements_custom\/queue\.yaml\./g,
+               'Pour l\'écrire dans la file d\'injection : bouton « Adopter ».')
+      .replace(/Injection à lancer à part : python3 generator\/inject_custom_events\.py --mode custom/g,
+               'Injection : étape ③ « Injecter » de ce panneau (après ↻ Actualiser si besoin).');
+  }
   const tri = () => ({ sauter: sauter.value, inclure: inclure.value });
   btnActualiser.addEventListener('click', actualiser);
   btnApercu.addEventListener('click', () =>
