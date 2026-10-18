@@ -3035,6 +3035,64 @@ def et_si_injecter(action):
     return jsonify({"ok": r.returncode == 0, "sortie": sortie})
 
 
+# ---------------------------------------------------------------------------
+# PATCH_S27_GUI_MAIN (17 octobre 2026) -- étape ⑤ « À la main » du panneau
+# « Parcours » : generator/et_si_main.py (entités vers la file, règle de lore,
+# relecture du lore, résumé du scénario). Aucun appel IA, sauf « résumé ».
+# ---------------------------------------------------------------------------
+
+TIMEOUTS_MAIN = {"etat": 120, "entites": 120, "regle": 60, "lancer": 900,
+                 "phrases": 900, "phrase": 60}   # PATCH_S27_PHRASES
+
+
+@app.route("/api/et_si/main/<quoi>", methods=["POST"])
+@app.route("/api/et_si/main/<quoi>/<action>", methods=["POST"])
+def et_si_main_route(quoi, action=None):
+    cfg = load_config()
+    pipeline_dir = Path(cfg.get("pipeline_dir", ""))
+    data = request.get_json() or {}
+    hid = str(data.get("id") or "").strip()
+    if not hid:
+        return jsonify({"error": "choisis d'abord une hypothèse dans la liste"}), 400
+    cmd = [sys.executable, "et_si_main.py", "--id", hid]
+    entree = None
+    sc = str(data.get("scenario") or "").strip()
+    if quoi == "etat" and action is None:
+        cmd.append("--json")
+    elif quoi == "entites" and action in ("apercu", "ajouter"):
+        choix = data.get("choix") if isinstance(data.get("choix"), list) else []
+        cmd += ["--entites", json.dumps(choix, ensure_ascii=False)] + (["--apply"] if action == "ajouter" else [])
+    elif quoi == "regle" and action in ("apercu", "ajouter") and re.match(r"^[a-z_]+$", sc):
+        cmd += ["--regle", sc] + (["--apply"] if action == "ajouter" else [])
+        entree = str(data.get("texte") or "")
+    elif quoi == "lancer" and action in ("audit", "resume") and re.match(r"^[a-z_]+$", sc):
+        cmd += ["--lancer", action, "--scenario", sc]
+    elif quoi == "phrases" and action == "proposer":   # PATCH_S27_PHRASES (appels IA)
+        cmd.append("--phrases-proposer")
+    elif (quoi == "phrase" and action in ("apercu", "remplacer", "ignorer")
+          and re.match(r"^[a-z_]+:[A-Za-z0-9_]+:[0-9a-f]{8}$", str(data.get("cle") or ""))):
+        cmd += ["--phrase", str(data["cle"])]
+        cmd += ["--ignorer"] if action == "ignorer" else (["--apply"] if action == "remplacer" else [])
+        entree = str(data.get("texte") or "")
+    else:
+        return jsonify({"error": f"demande inconnue : {quoi}/{action}"}), 404
+    delai = TIMEOUTS_MAIN[quoi]
+    try:
+        r = subprocess.run(cmd, cwd=pipeline_dir, capture_output=True, text=True, timeout=delai,
+                           input=entree if entree is not None else "")
+    except subprocess.TimeoutExpired:
+        return jsonify({"error": f"Délai dépassé ({delai} s)"}), 504
+    except FileNotFoundError:
+        return jsonify({"error": f"et_si_main.py introuvable dans {pipeline_dir}"}), 500
+    if quoi == "etat":
+        try:
+            return jsonify(json.loads(r.stdout.strip().splitlines()[-1]))
+        except (ValueError, IndexError):
+            return jsonify({"error": (r.stderr or r.stdout or "réponse illisible").strip()[-500:]}), 500
+    sortie = "\n".join(s for s in (r.stdout.strip(), r.stderr.strip()) if s)
+    return jsonify({"ok": r.returncode == 0, "sortie": sortie})
+
+
 TIMEOUT_IDEES_TEXTE_LIBRE = 180  # secondes -- un seul appel LLM
 
 

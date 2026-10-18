@@ -11146,6 +11146,33 @@ function buildDecisionHypothese() {
   const header = mk('div', 'yaml-panel-header');
   const titleRow = mk('div', 'yaml-panel-title-row');
   titleRow.appendChild(mk('span', 'yaml-panel-title', '🧭 Parcours de l\'hypothèse choisie dans la liste'));
+  // PATCH_S27_LARGEUR : panneau agrandi par-dessus la page (Échap ou « Réduire » pour revenir).
+  const btnLarge = mk('button', 'yaml-btn', '⛶ Agrandir');
+  btnLarge.type = 'button';
+  btnLarge.style.marginLeft = '12px';
+  titleRow.appendChild(btnLarge);
+  let agrandi = false;
+  const fondPage = () => {
+    const c = getComputedStyle(document.body).backgroundColor;
+    return (c && c !== 'rgba(0, 0, 0, 0)' && c !== 'transparent') ? c : '#ffffff';
+  };
+  const basculerLargeur = (oui) => {
+    agrandi = oui;
+    const s = wrapper.style;
+    if (oui) {
+      Object.assign(s, { position: 'fixed', top: '2vh', left: '2vw', right: '2vw', bottom: '2vh',
+                         overflow: 'auto', zIndex: '1000', background: fondPage(), padding: '12px 18px',
+                         boxShadow: '0 4px 30px rgba(0,0,0,0.35)', borderRadius: '6px' });
+    } else {
+      ['position', 'top', 'left', 'right', 'bottom', 'overflow', 'zIndex', 'background', 'padding',
+       'boxShadow', 'borderRadius'].forEach(p => { s[p] = ''; });
+    }
+    btnLarge.textContent = oui ? '⤡ Réduire' : '⛶ Agrandir';
+  };
+  btnLarge.addEventListener('click', () => basculerLargeur(!agrandi));
+  document.addEventListener('keydown', (ev) => {
+    if (ev.key === 'Escape' && agrandi && wrapper.isConnected) basculerLargeur(false);
+  });
   header.appendChild(titleRow);
   wrapper.appendChild(header);
 
@@ -11526,6 +11553,64 @@ function buildDecisionHypothese() {
       tous.push(bA, bE);
     }
 
+    // PATCH_S27_PHRASES : phrases à corriger (passe exhaustive + fiche d'événement relue par l'IA).
+    zoneMain.appendChild(sousTitre('Phrases à corriger'));
+    const phr = etat.phrases || [];
+    const relue = (etat.evenement_verifie || []).length > 0;
+    const bProp = bouton(relue ? 'Relire et proposer à nouveau (IA)'
+                                : 'Vérifier la fiche d\'événement et proposer les réécritures (IA)');
+    bProp.addEventListener('click', () => {
+      if (!confirm('Appels IA (quelques centimes) : relecture de la fiche d\'événement, puis une proposition '
+                   + 'par phrase sans proposition. Continuer ?')) return;
+      appeler('main/phrases', 'proposer', {});
+    });
+    zoneMain.appendChild(bProp);
+    tous.push(bProp);
+    if (!phr.length) {
+      zoneMain.appendChild(mk('div', 'option-desc', relue ? 'Aucune phrase à corriger.'
+        : 'Aucune phrase relevée par la passe exhaustive ; la fiche d\'événement n\'a pas encore été relue.'));
+    }
+    phr.forEach(x => {
+      const k = `${id}|${x.cle}`;
+      const bloc = mk('div');
+      bloc.style.margin = '6px 0';
+      bloc.style.paddingLeft = '8px';
+      bloc.style.borderLeft = '2px solid #ddd';
+      const close = x.statut === 'corrigée' || x.statut === 'ignorée';
+      const titre = mk('div', 'option-label', `${x.nom} — ${x.fichier}` + (x.statut ? `  [${x.statut}]` : ''));
+      if (close) titre.style.color = '#1e8449';
+      bloc.appendChild(titre);
+      const av = mk('div', 'option-desc', `Phrase : « ${x.extrait} »\nContredit : ${x.contredit}`
+        + (x.source === 'evenement' ? '\n(relevée par la relecture IA de la fiche d\'événement)' : ''));
+      av.style.whiteSpace = 'pre-wrap';
+      bloc.appendChild(av);
+      if (x.statut === 'introuvable') {
+        bloc.appendChild(mk('div', 'option-desc',
+          'Phrase introuvable mot pour mot dans la fiche : à corriger à la main.'));
+      } else if (!close) {
+        const ta = mk('textarea');
+        ta.rows = 3;
+        ta.style.width = '100%';
+        ta.placeholder = 'Réécriture : clique sur le bouton IA ci-dessus, ou écris la phrase toi-même';
+        ta.value = (k in memo.texte) ? memo.texte[k] : (x.proposition || '');
+        ta.addEventListener('input', () => { memo.texte[k] = ta.value; });
+        bloc.appendChild(ta);
+        const l = mk('div');
+        const bA = bouton('Aperçu');
+        const bR = bouton('Remplacer', 'yaml-btn yaml-btn-save');
+        const bI = bouton('Ignorer');
+        bA.addEventListener('click', () => appeler('main/phrase', 'apercu', { cle: x.cle, texte: ta.value }));
+        bR.addEventListener('click', () => {
+          if (!confirm(`Remplacer la phrase dans ${x.fichier} ? (sauvegarde .bak_et_si_main)`)) return;
+          appeler('main/phrase', 'remplacer', { cle: x.cle, texte: ta.value });
+        });
+        bI.addEventListener('click', () => appeler('main/phrase', 'ignorer', { cle: x.cle }));
+        [bA, bR, bI].forEach(b => { l.appendChild(b); tous.push(b); });
+        bloc.appendChild(l);
+      }
+      zoneMain.appendChild(bloc);
+    });
+
     // 2. Règle de lore
     zoneMain.appendChild(sousTitre('Règle de lore (documentation/lore_regles.yaml)'));
     (etat.regles || []).forEach(r => {
@@ -11587,7 +11672,11 @@ function buildDecisionHypothese() {
       'Règle : relis et modifie le brouillon (les lignes # sont ignorées) ; « Ajouter » l\'écrit à la fin de la ' +
       'section du scénario (format et identifiant vérifiés, sauvegarde .bak_et_si). Lance ensuite la relecture ' +
       'du lore pour voir ce qu\'elle signale.\n' +
-      'Phrases, articles et décisions ⚠ restent à faire avec la check-list.'));
+      'Phrases : la relecture IA ajoute les phrases de la fiche d\'événement qui contredisent les faits ; ' +
+      'chaque réécriture est modifiable, « Remplacer » l\'écrit dans la fiche (toutes ses occurrences, ' +
+      'frontmatter et corps ; sauvegarde .bak_et_si_main). Seule la phrase change : relis la fiche si le ' +
+      'reste du texte en dépend.\n' +
+      'Articles et décisions ⚠ restent à faire avec la check-list.'));
   }
   async function chargerMain() {
     const sel = listeHyp();

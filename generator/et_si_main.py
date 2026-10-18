@@ -13,7 +13,10 @@ Aide à la partie mécanique de l'étape ⑤, pour une hypothèse déjà APPLIQU
   2. Règle de lore : ajouter un brouillon relu à documentation/lore_regles.yaml,
      section du scénario (format vérifié, identifiant unique, fichier relu après
      écriture ; commentaires du fichier conservés).
-  3. Commandes de fin : audit du lore (gratuit), résumé du scénario (payant).
+  3. Phrases à corriger : celles de la passe exhaustive, plus celles de la fiche
+     d'événement qui contredisent les faits de l'hypothèse (relecture IA) ; l'IA
+     propose une réécriture, remplacée dans la fiche après aperçu (--apply).
+  4. Commandes de fin : audit du lore (gratuit), résumé du scénario (payant).
 
 USAGE (depuis la racine du coffre)
     python3 generator/et_si_main.py --id X --json                      # état (pour le GUI)
@@ -21,6 +24,9 @@ USAGE (depuis la racine du coffre)
     python3 generator/et_si_main.py --id X --entites '…' --apply
     python3 generator/et_si_main.py --id X --regle reference < brouillon.yaml           # aperçu
     python3 generator/et_si_main.py --id X --regle reference --apply < brouillon.yaml
+    python3 generator/et_si_main.py --id X --phrases-proposer                 # appels IA (en cache)
+    python3 generator/et_si_main.py --id X --phrase CLE [--apply] < phrase.txt
+    python3 generator/et_si_main.py --id X --phrase CLE --ignorer
     python3 generator/et_si_main.py --id X --lancer audit --scenario reference
     python3 generator/et_si_main.py --id X --lancer resume --scenario reference
 Suivi : generator/state/et_si_application/<id>.main.json (ce qui a été ajouté).
@@ -371,6 +377,244 @@ def ajouter_regle(hid, data, sc, texte, apply):
 
 
 # ---------------------------------------------------------------------------
+# 2 bis. Phrases à corriger (morceau 2, 18 octobre 2026)
+#   - phrases relevées par la passe exhaustive (data.par_scenario.<sc>.passe.textes) ;
+#   - phrases de la fiche d'événement qui contredisent les faits de l'hypothèse
+#     (vérification IA, une par scénario, gardée seulement si l'extrait est retrouvé).
+#   L'IA propose une réécriture ; rien n'est écrit sans --apply ; tout est mis en
+#   cache dans le suivi (aucun appel refait sans --refaire).
+# ---------------------------------------------------------------------------
+
+def _norm(s):
+    return " ".join(str(s or "").split())
+
+
+def motif_phrase(extrait):
+    """Regex tolérante : espaces et retours à la ligne (scalaires YAML repliés),
+    apostrophes droites, courbes ou doublées (scalaire entre apostrophes)."""
+    mots = _norm(extrait).split(" ")
+    morceaux = [re.sub(r"['’]", "['’]{1,2}", re.escape(m).replace("\\'", "'")) for m in mots if m]
+    return re.compile(r"\s+".join(morceaux)) if morceaux else None
+
+
+def chemin_fiche(genre, slug):
+    return VAULT / ("instances" if genre == "instance" else "event_instances") / f"{slug}.md"
+
+
+def cle_phrase(sc, slug, extrait):
+    import hashlib
+    return f"{sc}:{slug}:{hashlib.sha1(_norm(extrait).encode('utf-8')).hexdigest()[:8]}"
+
+
+def faits_hypothese(data, sc):
+    """Faits établis par l'hypothèse dans ce scénario (contraintes, trajectoires, zones)."""
+    annee = data.get("annee")
+    ps = data["par_scenario"].get(sc) or {}
+    lec, pas = ps.get("lecture") or {}, ps.get("passe") or {}
+    faits = [str(c) for c in data.get("contraintes") or []]
+    vus = set()
+    for t in (lec.get("trajectoires") or []) + (pas.get("trajectoires") or []):
+        if t.get("instance") in vus:
+            continue
+        vus.add(t.get("instance"))
+        nom = t.get("nom") or t.get("instance")
+        if t.get("apres") == "disparu":
+            faits.append(f"{nom} disparaît en {annee} : après {annee}, il n'existe plus (passé seulement).")
+        else:
+            faits.append(f"{nom} passe de « {t.get('avant')} » à « {t.get('apres')} » après {annee} : "
+                         f"avant {annee}, il était « {t.get('avant')} », pas davantage.")
+    for z in lec.get("zones_statut") or []:
+        faits.append(f"La zone {z.get('zone')} passe de « {z.get('avant')} » à « {z.get('apres')} » ; le lieu subsiste.")
+    return faits
+
+
+def ia_json(system, user, max_tokens=1500):
+    from llm_client import call_llm
+    texte = call_llm(system_prompt=system, user_prompt=user, max_tokens=max_tokens, temperature=0.3,
+                     task_tier="structured_strict")
+    texte = (texte or "").strip()
+    debut, fin = texte.find("{"), texte.rfind("}")
+    if debut < 0 or fin <= debut:
+        raise ValueError("réponse IA sans JSON")
+    return json.loads(texte[debut:fin + 1])
+
+
+SYSTEME_RELECTEUR = ("Tu es le relecteur du lore du monde fictif Ourrassol 2098. Tu corriges le moins possible. "
+                     "Réponds UNIQUEMENT en JSON valide, sans texte autour.")
+
+
+def verifier_evenement(data, sc, suivi, refaire):
+    """Phrases de la fiche d'événement qui contredisent les faits (un appel IA, en cache)."""
+    p = chemin_fiche("evenement", f"{data['id']}_{sc}")
+    if not p.exists():
+        return []
+    raw = p.read_text(encoding="utf-8")
+    import hashlib
+    emp = hashlib.sha1(raw.encode("utf-8")).hexdigest()[:12]
+    cache = suivi.setdefault("verif_evenement", {})
+    if not refaire and (cache.get(sc) or {}).get("empreinte") == emp:
+        return cache[sc]["problemes"]
+    d = ap.decoupe(raw)
+    fm = ap.lire_fm(d[1]) if d else {}
+    texte = "\n".join(f"{k} : {_norm(fm.get(k))}" for k in ("realisation", "description", "consequences") if fm.get(k))
+    faits = faits_hypothese(data, sc)
+    if not texte or not faits:
+        return []
+    user = (f"FICHE D'ÉVÉNEMENT « {fm.get('name') or data['id']} » (scénario {sc}) :\n{texte}\n\n"
+            "FAITS ÉTABLIS (priment sur la fiche) :\n" + "\n".join(f"- {f}" for f in faits) + "\n\n"
+            "TÂCHE : relève les phrases de la fiche qui CONTREDISENT un fait (par exemple : entité décrite "
+            "comme déjà dominante alors qu'elle ne fait que devenir ascendante ; entité disparue décrite comme "
+            "active ; zone décrite comme détruite alors que le lieu subsiste). Une omission n'est pas une "
+            "contradiction. Pour chaque phrase : \"extrait\" = la phrase entière, MOT POUR MOT ; \"fait\" = le "
+            "fait contredit ; \"correction\" = la phrase réécrite, en changeant le moins de mots possible, sans "
+            "ajouter de fait nouveau. Aucune contradiction → liste vide.\n"
+            'Format : {"problemes": [{"extrait": "...", "fait": "...", "correction": "..."}]}')
+    res = ia_json(SYSTEME_RELECTEUR, user)
+    problemes = []
+    for x in res.get("problemes") or []:
+        if not isinstance(x, dict) or not x.get("extrait"):
+            continue
+        m = motif_phrase(x["extrait"])
+        if m and m.search(raw):   # gardé seulement si l'extrait est retrouvé dans la fiche
+            problemes.append({"extrait": _norm(x["extrait"]), "fait": _norm(x.get("fait")),
+                              "correction": _norm(x.get("correction"))})
+    cache[sc] = {"empreinte": emp, "date": maintenant(), "problemes": problemes}
+    return problemes
+
+
+def phrases_a_corriger(data, suivi):
+    out = []
+    for sc in data["scenarios"]:
+        pas = ((data["par_scenario"].get(sc) or {}).get("passe")) or {}
+        for t in pas.get("textes") or []:
+            genre = t.get("genre", "instance")
+            out.append({"sc": sc, "slug": t["slug"], "genre": genre, "nom": t.get("nom") or t["slug"],
+                        "extrait": _norm(t.get("extrait")), "contredit": _norm(t.get("contredit")),
+                        "source": "passe", "proposition": None})
+        for x in ((suivi.get("verif_evenement") or {}).get(sc) or {}).get("problemes") or []:
+            out.append({"sc": sc, "slug": f"{data['id']}_{sc}", "genre": "evenement", "nom": "fiche de l'événement",
+                        "extrait": x["extrait"], "contredit": x["fait"], "source": "evenement",
+                        "proposition": x.get("correction") or None})
+    ph = suivi.get("phrases") or {}
+    for e in out:
+        e["cle"] = cle_phrase(e["sc"], e["slug"], e["extrait"])
+        e["fichier"] = str(chemin_fiche(e["genre"], e["slug"]).relative_to(VAULT))
+        s = ph.get(e["cle"]) or {}
+        e["proposition"] = s.get("proposition") or e["proposition"]
+        e["statut"] = s.get("statut") or ""
+        p = VAULT / e["fichier"]
+        m = motif_phrase(e["extrait"])
+        e["trouve"] = bool(p.exists() and m and m.search(p.read_text(encoding="utf-8")))
+        if not e["statut"] and not e["trouve"]:
+            e["statut"] = "introuvable"
+    return out
+
+
+def proposer_phrases(hid, data, refaire):
+    suivi = lire_suivi(hid)
+    ph = suivi.setdefault("phrases", {})
+    n_ia = 0
+    for sc in data["scenarios"]:
+        avant = (suivi.get("verif_evenement") or {}).get(sc)
+        trouves = verifier_evenement(data, sc, suivi, refaire)
+        if (suivi.get("verif_evenement") or {}).get(sc) is not avant:
+            n_ia += 1
+            print(f"[{sc}] fiche d'événement relue : {len(trouves)} phrase(s) contredisent les faits")
+        ecrire_suivi(hid, suivi)
+    for e in phrases_a_corriger(data, suivi):
+        if e["statut"] or (e["proposition"] and not refaire) or not e["trouve"]:
+            continue
+        p = VAULT / e["fichier"]
+        d = ap.decoupe(p.read_text(encoding="utf-8"))
+        fm = ap.lire_fm(d[1]) if d else {}
+        contexte = " ".join(_norm(v) for k, v in (fm or {}).items()
+                            if isinstance(v, str) and _norm(e["extrait"])[:40] in _norm(v))[:1200]
+        user = (f"FICHE : {e['nom']} ({e['fichier']}), scénario {e['sc']}.\n"
+                f"FAIT ÉTABLI PAR L'HYPOTHÈSE {data['id']} (année {data.get('annee')}) : {e['contredit']}\n"
+                f"PHRASE DEVENUE FAUSSE : « {e['extrait']} »\n"
+                f"TEXTE AUTOUR : {contexte}\n\n"
+                "Réécris CETTE phrase seulement, pour qu'elle soit vraie en 2098 compte tenu du fait établi : "
+                "garde le ton, la longueur et ce qui reste vrai ; mets au passé ce qui a cessé ; n'ajoute "
+                "aucun fait nouveau, aucun nom nouveau.\n"
+                'Format : {"phrase": "..."}')
+        res = ia_json(SYSTEME_RELECTEUR, user, max_tokens=800)
+        if res.get("phrase"):
+            ph[e["cle"]] = {"proposition": _norm(res["phrase"]), "date": maintenant()}
+            n_ia += 1
+            print(f"  ✓ proposition pour `{e['fichier']}`")
+        ecrire_suivi(hid, suivi)
+    print(f"\n{n_ia} appel(s) IA. Relire chaque proposition avant de remplacer.")
+    return 0
+
+
+def _echapper_pour(raw, debut, texte):
+    """Adapte la phrase au style YAML de la ligne où elle tombe (frontmatter seulement)."""
+    d = ap.decoupe(raw)
+    if not d or debut > len(d[0]) + len(d[1]):
+        return texte   # corps du fichier : texte libre
+    ligne = raw[raw.rfind("\n", 0, debut) + 1:debut]
+    sous = raw[:debut]
+    cle = re.findall(r"(?m)^[A-Za-z_]+:\s*(.*)$", sous)
+    style = cle[-1].strip()[:1] if cle else ""
+    if style == "'" or ligne.lstrip().startswith("'"):
+        return texte.replace("'", "''")
+    if style == '"':
+        return texte.replace("\\", "\\\\").replace('"', '\\"')
+    return texte
+
+
+def remplacer_phrase(hid, data, cle, nouveau, ignorer, apply):
+    suivi = lire_suivi(hid)
+    items = {e["cle"]: e for e in phrases_a_corriger(data, suivi)}
+    e = items.get(cle)
+    if not e:
+        sys.exit(f"✗ phrase {cle} inconnue")
+    ph = suivi.setdefault("phrases", {})
+    if ignorer:
+        ph.setdefault(cle, {})["statut"] = "ignorée"
+        ecrire_suivi(hid, suivi)
+        print(f"· phrase de `{e['fichier']}` marquée « ignorée » (rien écrit dans la fiche).")
+        return 0
+    nouveau = _norm(nouveau)
+    print(("ÉCRITURE" if apply else "APERÇU (rien écrit)") + f" — `{e['fichier']}`\n")
+    if (ph.get(cle) or {}).get("statut") == "corrigée":
+        print(f"· déjà corrigée le {ph[cle].get('date_correction')} : « {ph[cle].get('remplacee_par')} »")
+        return 0
+    if not nouveau:
+        print("✗ phrase de remplacement vide.")
+        return 1
+    p = VAULT / e["fichier"]
+    raw = p.read_text(encoding="utf-8")
+    m = motif_phrase(e["extrait"])
+    occ = list(m.finditer(raw)) if m else []
+    if not occ:
+        print("✗ phrase introuvable dans la fiche (déjà modifiée ?) : à faire à la main.")
+        return 1
+    morceaux, pos = [], 0
+    for o in occ:
+        morceaux += [raw[pos:o.start()], _echapper_pour(raw, o.start(), nouveau)]
+        pos = o.end()
+    neuf = "".join(morceaux) + raw[pos:]
+    dn = ap.decoupe(neuf)
+    fm = ap.lire_fm(dn[1]) if dn else None
+    if dn and fm is None:
+        print("✗ le frontmatter ne serait plus lisible après remplacement : à faire à la main.")
+        return 1
+    print(f"Avant : « {e['extrait']} »\nAprès : « {nouveau} »\n({len(occ)} occurrence(s) : frontmatter et corps)")
+    if not apply:
+        print("\nPrêt. Cliquer sur « Remplacer » pour écrire.")
+        return 0
+    bak = p.with_name(p.name + ".bak_et_si_main")
+    if not bak.exists():
+        shutil.copy2(p, bak)
+    p.write_text(neuf, encoding="utf-8")
+    ph[cle] = dict(ph.get(cle) or {}, statut="corrigée", remplacee_par=nouveau, date_correction=maintenant())
+    ecrire_suivi(hid, suivi)
+    print(f"\n✓ phrase remplacée (sauvegarde {bak.name}).")
+    return 0
+
+
+# ---------------------------------------------------------------------------
 # 3. Commandes de fin
 # ---------------------------------------------------------------------------
 
@@ -417,6 +661,12 @@ def etat(hid, data):
                                                      if k.startswith(sc + ":"))})
     except Exception as e:
         out["erreurs"].append(f"règles : {type(e).__name__}: {e}")
+    try:
+        out["phrases"] = phrases_a_corriger(data, suivi)
+        out["evenement_verifie"] = sorted((suivi.get("verif_evenement") or {}).keys())
+    except Exception as e:
+        out["phrases"] = []
+        out["erreurs"].append(f"phrases : {type(e).__name__}: {e}")
     return out
 
 
@@ -427,6 +677,11 @@ def main():
     a.add_argument("--entites", help='choix JSON : [{"cle": "reference:1", "category": "institution"}]')
     a.add_argument("--regle", metavar="SCENARIO", help="ajoute la règle lue sur l'entrée standard")
     a.add_argument("--lancer", choices=list(LANCER))
+    a.add_argument("--phrases-proposer", action="store_true",
+                   help="relit la fiche d'événement et propose les réécritures (appels IA, mis en cache)")
+    a.add_argument("--refaire", action="store_true", help="avec --phrases-proposer : ignore le cache")
+    a.add_argument("--phrase", metavar="CLE", help="remplace la phrase CLE par le texte lu sur l'entrée standard")
+    a.add_argument("--ignorer", action="store_true", help="avec --phrase : marque la phrase « ignorée »")
     a.add_argument("--scenario")
     a.add_argument("--apply", action="store_true")
     x = a.parse_args()
@@ -442,11 +697,15 @@ def main():
         return ajouter_entites(x.id, data, choix if isinstance(choix, list) else [choix], x.apply)
     if x.regle:
         return ajouter_regle(x.id, data, x.regle, sys.stdin.read(), x.apply)
+    if x.phrases_proposer:
+        return proposer_phrases(x.id, data, x.refaire)
+    if x.phrase:
+        return remplacer_phrase(x.id, data, x.phrase, "" if x.ignorer else sys.stdin.read(), x.ignorer, x.apply)
     if x.lancer:
         if not x.scenario:
             sys.exit("✗ --lancer demande --scenario")
         return lancer(x.lancer, x.scenario, data)
-    a.error("préciser --json, --entites, --regle ou --lancer")
+    a.error("préciser --json, --entites, --regle, --phrases-proposer, --phrase ou --lancer")
 
 
 if __name__ == "__main__":
