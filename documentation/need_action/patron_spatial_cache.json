@@ -178,5 +178,19 @@
       "raison": "Absence de description, mais le nom et le type suggèrent une entité politique ou religieuse centralisée et potentiellement conflictuelle, incompatible avec le patron de gouvernance distribuée et stabilisée.",
       "slug": "nouveau_califat_barcelone"
     }
+  ],
+  "f939bcfd13b8f6f6a8e167b4711b714b14a9367d344e1c80c09b6ad3d97b6488": [
+    {
+      "raison": "Gouvernance para-étatique et fonds souverain arctique suggèrent une innovation institutionnelle trop marquée pour le scénario 'reference'",
+      "slug": "corridor_arctique_nordique"
+    },
+    {
+      "raison": "Présence d'institutions multilatérales innovantes (CRRC, accords de 2061) contredit la logique conservatrice du scénario",
+      "slug": "institutions_multilaterales_survivantes"
+    },
+    {
+      "raison": "Mécanismes de régulation hydrique et coopératives agroécologiques autonomes dépassent le cadre conservateur attendu",
+      "slug": "union_africaine_resilience"
+    }
   ]
 }

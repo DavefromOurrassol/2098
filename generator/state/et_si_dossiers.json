@@ -941,5 +941,162 @@
     "via_matrice_impose": true
    }
   }
+ },
+ "occupation_bresil_2029": {
+  "simulation": {
+   "date": "2026-10-18T16:25",
+   "version": "v8.22",
+   "empreinte": "0a5f411eafde785e",
+   "scenarios": [
+    "reference"
+   ],
+   "complet": true,
+   "passe": true,
+   "rapport": "documentation/need_action/et_si_occupation_bresil_2029.md",
+   "entree": {
+    "id": "occupation_bresil_2029",
+    "description": "En 2029, les États-Unis envahissent le Brésil et l'occupent durablement. Le pays quitte les structures régionales des Amériques et devient un territoire administré sous tutelle militaire. Déplacements de population, pression sur l'Amazonie, rupture des échanges régionaux.",
+    "portee": "<locale | regionale | continentale | globale>",
+    "date_approximative": 2029,
+    "intensite": "<à choisir>",
+    "persistance": "durable",
+    "scenarios": [
+     "reference"
+    ],
+    "variables_hint": [
+     "geopolitique_conflits",
+     "frontieres_du_systeme",
+     "demographie_mobilite_humaine",
+     "gouvernance_institutions"
+    ],
+    "variables_hint_count": 4,
+    "source": "et_si_occupation_bresil_2029",
+    "acteurs_hint": [
+     "sao_paulo_ita_reference",
+     "amazonie_consortium_viva_reference",
+     "great_lakes_autonomous_compact_reference",
+     "guadalajara_nexus_reference"
+    ],
+    "acteurs_hint_count": 4,
+    "faits_imposes": {
+     "reference": [
+      {
+       "fait": "Le Brésil est occupé par les États-Unis à partir de 2029 ; en 2098 il forme une zone à part, sous tutelle.",
+       "sort": "contrainte"
+      },
+      {
+       "fait": "L'Amazonie brésilienne reste un enjeu disputé, mais le territoire brésilien relève de la zone d'occupation.",
+       "sort": "contrainte"
+      },
+      {
+       "fait": "Prefeitura Metropolitana de São Paulo — Administração de Continuidade (PMSP-AC) (sao_paulo_ita_reference) passe de « déclinant » à « résiduel » après 2029 : elle existe toujours (elle peut perdre des lieux, des biens ou du pouvoir), ne la décris pas comme disparue.",
+       "slug": "sao_paulo_ita_reference",
+       "sort": "change"
+      },
+      {
+       "fait": "Amazonie Consortium Viva (amazonie_consortium_viva_reference) passe de « dominant » à « déclinant » après 2029 : elle existe toujours (elle peut perdre des lieux, des biens ou du pouvoir), ne la décris pas comme disparue.",
+       "slug": "amazonie_consortium_viva_reference",
+       "sort": "change"
+      },
+      {
+       "fait": "Compact des Grands Lacs (great_lakes_autonomous_compact_reference) passe de « mature » à « dominant » après 2029 : elle existe toujours (elle peut perdre des lieux, des biens ou du pouvoir), ne la décris pas comme disparue.",
+       "slug": "great_lakes_autonomous_compact_reference",
+       "sort": "change"
+      },
+      {
+       "fait": "Guadalajara Nexus (guadalajara_nexus_reference) passe de « ascendant » à « dominant » après 2029 : elle existe toujours (elle peut perdre des lieux, des biens ou du pouvoir), ne la décris pas comme disparue.",
+       "slug": "guadalajara_nexus_reference",
+       "sort": "change"
+      }
+     ]
+    },
+    "date_imposee": 2029,
+    "impacts_imposes": {
+     "reference": [
+      {
+       "variable": "geopolitique_conflits",
+       "delta_level": 20,
+       "duree": 5,
+       "polarite": 1
+      },
+      {
+       "variable": "frontieres_du_systeme",
+       "delta_level": 12,
+       "duree": 5,
+       "polarite": 1
+      },
+      {
+       "variable": "demographie_mobilite_humaine",
+       "delta_level": 10,
+       "duree": 8,
+       "polarite": 1
+      },
+      {
+       "variable": "gouvernance_institutions",
+       "delta_level": 10,
+       "duree": 8,
+       "polarite": 1
+      }
+     ]
+    },
+    "via_matrice_impose": true
+   }
+  }
+ },
+ "reunification_ecosse_2070": {
+  "simulation": {
+   "date": "2026-10-19T18:54",
+   "version": "v8.22",
+   "empreinte": "c4a4e7ddfd9d962b",
+   "scenarios": [
+    "reference"
+   ],
+   "complet": true,
+   "passe": false,
+   "rapport": "documentation/need_action/et_si_reunification_ecosse_2070.md",
+   "entree": {
+    "id": "reunification_ecosse_2070",
+    "description": "En 2070, après l'échec du corridor nordique, l'Écosse renonce à son indépendance et réintègre le Royaume-Uni. Les institutions écossaises sont dissoutes ou absorbées par celles de l'Europe occidentale reconstruite.",
+    "portee": "<locale | regionale | continentale | globale>",
+    "date_approximative": 2070,
+    "intensite": "<à choisir>",
+    "persistance": "durable",
+    "scenarios": [
+     "reference"
+    ],
+    "variables_hint": [
+     "gouvernance_institutions",
+     "frontieres_du_systeme"
+    ],
+    "variables_hint_count": 2,
+    "source": "et_si_reunification_ecosse_2070",
+    "faits_imposes": {
+     "reference": [
+      {
+       "fait": "À partir de 2070, l'Écosse fait de nouveau partie du Royaume-Uni ; elle n'a plus de gouvernement indépendant.",
+       "sort": "contrainte"
+      }
+     ]
+    },
+    "date_imposee": 2070,
+    "impacts_imposes": {
+     "reference": [
+      {
+       "variable": "gouvernance_institutions",
+       "delta_level": 6,
+       "duree": 5,
+       "polarite": 1
+      },
+      {
+       "variable": "frontieres_du_systeme",
+       "delta_level": 5,
+       "duree": 5,
+       "polarite": -1
+      }
+     ]
+    },
+    "via_matrice_impose": true
+   }
+  }
  }
 }

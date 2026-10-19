@@ -405,3 +405,70 @@ hypotheses:
         delta_level: 4
         duree: 15
         polarite: 1
+  # Cas test carte (18 octobre) : copie limitée de invasion_bresil_2029 (qui reste intacte
+  # pour le banc de rejeu), dans reference (hors banc), avec un changement de carte actif.
+  - id: occupation_bresil_2029
+    nom: Occupation du Brésil par les États-Unis
+    description: >
+      En 2029, les États-Unis envahissent le Brésil et l'occupent durablement. Le pays
+      quitte les structures régionales des Amériques et devient un territoire administré
+      sous tutelle militaire. Déplacements de population, pression sur l'Amazonie,
+      rupture des échanges régionaux.
+    date: 2029
+    mode: choc
+    persistance: durable
+    via_matrice: true
+    scenarios: [reference]
+    contraintes:
+      - "Le Brésil est occupé par les États-Unis à partir de 2029 ; en 2098 il forme une zone à part, sous tutelle."
+      - "L'Amazonie brésilienne reste un enjeu disputé, mais le territoire brésilien relève de la zone d'occupation."
+    impacts:
+      - variable: geopolitique_conflits
+        delta_level: 20
+        polarite: 1
+        duree: 5
+      - variable: frontieres_du_systeme
+        delta_level: 12
+        polarite: 1
+        duree: 5
+      - variable: demographie_mobilite_humaine
+        delta_level: 10
+        polarite: 1
+        duree: 8
+      - variable: gouvernance_institutions
+        delta_level: 10
+        polarite: 1
+        duree: 8
+    geographie:
+      reference:
+        - pays: Brésil
+          action: nouvelle_zone
+          nouvelle_zone: {slug: bresil_occupe, nom: Brésil occupé, type: territoire_autonome, statut: emergent}
+            # Cas test carte n°2 (19 octobre) : absorber + zone vidée, dans reference (hors banc).
+  - id: reunification_ecosse_2070
+    nom: Réintégration de l'Écosse au Royaume-Uni
+    description: >
+      En 2070, après l'échec du corridor nordique, l'Écosse renonce à son indépendance et
+      réintègre le Royaume-Uni. Les institutions écossaises sont dissoutes ou absorbées par
+      celles de l'Europe occidentale reconstruite.
+    date: 2070
+    mode: choc
+    persistance: durable
+    via_matrice: true
+    scenarios: [reference]
+    contraintes:
+      - "À partir de 2070, l'Écosse fait de nouveau partie du Royaume-Uni ; elle n'a plus de gouvernement indépendant."
+    impacts:
+      - variable: gouvernance_institutions
+        delta_level: 6
+        polarite: 1
+        duree: 5
+      - variable: frontieres_du_systeme
+        delta_level: 5
+        polarite: -1
+        duree: 5
+    geographie:
+      reference:
+        - pays: Écosse
+          action: absorber
+          zone: europe_occidentale_reconstruite

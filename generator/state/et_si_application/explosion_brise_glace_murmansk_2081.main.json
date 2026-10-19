@@ -1,0 +1,55 @@
+{
+ "entites": {},
+ "regles": {},
+ "phrases": {
+  "reference:murmansk_transit_arctique_reference:262d69a7": {
+   "proposition": "Plaque tournante stratégique du trafic maritime et énergétique arctique jusqu'en 2081, Murmansk Transit Arctique s'était imposée comme nœud incontournable des nouvelles routes commerciales ouvertes par la fonte accélérée des glaces polaires depuis les années 2040.",
+   "date": "2026-10-18T08:49"
+  }
+ },
+ "verif_evenement": {
+  "reference": {
+   "empreinte": "abfff127eaaf",
+   "date": "2026-10-18T08:49",
+   "problemes": [
+    {
+     "extrait": "L'Armada Logistique Nordique, déjà dominante, consolide son monopole sur le trafic maritime,",
+     "fait": "L'Armada Logistique Nordique était « émergente » avant 2081, pas « dominante ».",
+     "correction": "L'Armada Logistique Nordique, déjà en position de force, consolide son monopole sur le trafic maritime,"
+    }
+   ]
+  }
+ },
+ "articles": {
+  "articles/reference/20260820_194817_reference_medias_communication_article_27mai2098.md": {
+   "empreinte": "33d638d16449",
+   "date": "2026-10-18T15:06",
+   "passages": [],
+   "relu": "2026-10-18T15:12"
+  },
+  "articles/reference/20260820_194923_reference_medias_communication_article_4juin2098.md": {
+   "empreinte": "e079e6f278da",
+   "date": "2026-10-18T15:06",
+   "passages": [],
+   "relu": "2026-10-18T15:12"
+  },
+  "articles/reference/20260820_194438_reference_histoire_patrimoine_article_5avril2098.md": {
+   "empreinte": "423eca74237b",
+   "date": "2026-10-18T15:06",
+   "passages": [],
+   "relu": "2026-10-18T15:13"
+  },
+  "articles/reference/20260820_195136_reference_medias_communication_article_19juin2098.md": {
+   "empreinte": "19c4442ac55d",
+   "date": "2026-10-18T15:06",
+   "passages": [
+    {
+     "extrait": "À Tromsø, où l’*Armada Logistique Nordique* (ALN) gère les flux de lithium et d’hydrogène liquéfié à travers le Passage Nord-Ouest, les notifications du Kontinuum se multiplient depuis l’ouverture des enchères pour les nouvelles zones d’exploitation.",
+     "fait": "Aucune contradiction directe, mais l'article ne précise pas que l'ALN a récupéré l'essentiel du trafic arctique après la disparition de Murmansk Transit Arctique en 2081. Cela pourrait être clarifié pour éviter une omission contextuelle.",
+     "suggestion": "À Tromsø, où l’*Armada Logistique Nordique* (ALN), désormais principale gestionnaire des flux arctiques depuis la disparition de Murmansk Transit Arctique, gère les flux de lithium et d’hydrogène liquéfié à travers le Passage Nord-Ouest, les notifications du Kontinuum se multiplient depuis l’ouverture des enchères pour les nouvelles zones d’exploitation."
+    }
+   ],
+   "relu": "2026-10-18T15:13"
+  }
+ }
+}

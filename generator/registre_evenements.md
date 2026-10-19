@@ -10,7 +10,7 @@ RÈGLE DE LECTURE DE LA COLONNE "date" :
   - type=signal    -> fenêtre "AAAA-AAAA" (date_bascule du signal_to_state)
   - type=evenement -> année unique "AAAA" (date précise de l'instance)
 
-Total : 641 entrées (96 signaux uniques × 6 scénarios + 65 entrées d'événements custom).
+Total : 642 entrées (96 signaux uniques × 6 scénarios + 66 entrées d'événements custom).
 
 ## breakdown
 
@@ -679,6 +679,7 @@ Total : 641 entrées (96 signaux uniques × 6 scénarios + 65 entrées d'événe
 | evenement | 2051 | secession_great_lakes_compact | organisation_territoires, gouvernance_institutions, geopolitique_conflits | — | Compact des Grands Lacs proclame sa souveraineté lacustre 2051 |
 | evenement | 2055 | accord_carbone_amazonie_blocs | climat_environnement_global, gouvernance_institutions, geopolitique_conflits, energie_ressources_critiques | — | Belém signe le pacte carbone amazonie fracture 2055 |
 | evenement | 2059 | incident_passage_arctique | geopolitique_conflits, frontieres_du_systeme, energie_ressources_critiques | — | Convoi arctique saisi, premières armes tirées 2059 |
+| evenement | 2067 | effondrement_circulation_atlantique_2067 | climat_environnement_global, systemes_productifs_travail, energie_ressources_critiques, demographie_mobilite_humaine | — | 2067, l'Europe grelotte sous le Gulf Stream mort |
 | evenement | 2073 | emeutes_algorithme_sao_paulo | gouvernance_institutions, technologie_information, organisation_territoires | — | Favelas décodent le SPAAR, soulèvement urbain São Paulo 2073 |
 | evenement | 2081 | explosion_brise_glace_murmansk_2081 | organisation_territoires, geopolitique_conflits, energie_ressources_critiques, systeme_economique_redistribution, demographie_mobilite_humaine | — | 2081, le brise-glace nucléaire qui brisa Murmansk |
 | evenement | 2098 | nairobi_biorevenu_pilote_2098 | sante_biotechnologies, systeme_economique_redistribution, systemes_productifs_travail, gouvernance_institutions, valeurs_culture_tempo_sociale | — | Nairobi lance le bio-revenu universel algorithmique 2098 |

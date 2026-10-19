@@ -5142,5 +5142,172 @@
     }
    ]
   }
+ },
+ "occupation_bresil_2029::reference": {
+  "empreinte": "33553bfca22fb879",
+  "date": "2026-10-18T15:56",
+  "brut": {
+   "lecture": "L'occupation durable du Brésil par les États-Unis en 2029 reconfigure profondément les équilibres géopolitiques et économiques des Amériques Multipolaires, tout en laissant intactes les structures systémiques du scénario *reference*. Le choc accélère la fragmentation territoriale et institutionnelle, mais le système mondial absorbe partiellement ses effets grâce à des mécanismes de régulation préexistants (SPAAR, The Lattice, Consortium Amazônia Viva). L'Amazonie devient un enjeu de souveraineté disputée, tandis que les dynamiques de résistance locale (Frente Sertão Livre) et de gouvernance algorithmique (SPAAR) s'adaptent sans remettre en cause l'équilibre fragile du scénario. Les répercussions hors des Amériques restent limitées, car les autres blocs (Corridor Arctique Nordique, Bloc Eurasien Central) exploitent les nouvelles opportunités sans subir de déstabilisation majeure.",
+   "ampleur": "forte",
+   "trajectoires": [
+    {
+     "instance": "frente_sertao_livre_reference",
+     "apres": "ascendant",
+     "raison": "L'occupation américaine renforce la légitimité et l'organisation de la Frente Sertão Livre comme acteur de résistance territoriale dans le Nordeste brésilien."
+    },
+    {
+     "instance": "sao_paulo_ita_reference",
+     "apres": "résiduel",
+     "raison": "La tutelle militaire américaine marginalise les structures municipales héritées de São Paulo, réduites à un rôle administratif subalterne."
+    },
+    {
+     "instance": "amazonie_consortium_viva_reference",
+     "apres": "déclinant",
+     "raison": "L'occupation américaine restreint les zones grises juridiques exploitées par le consortium, limitant son accès aux ressources génétiques amazoniennes."
+    },
+    {
+     "instance": "the_lattice_reference",
+     "apres": "mature",
+     "raison": "The Lattice absorbe les flux migratoires et logistiques déstabilisés par l'occupation, consolidant son rôle de fédération urbaine alternative."
+    },
+    {
+     "instance": "great_lakes_autonomous_compact_reference",
+     "apres": "dominant",
+     "raison": "Le Compact des Grands Lacs devient un partenaire incontournable des États-Unis pour la gestion des ressources et des populations déplacées depuis le Brésil."
+    },
+    {
+     "instance": "guadalajara_nexus_reference",
+     "apres": "dominant",
+     "raison": "Guadalajara Nexus capte les chaînes d'approvisionnement redirigées depuis le Brésil, devenant un hub logistique central pour les Amériques."
+    },
+    {
+     "instance": "valparaiso_fct_reference",
+     "apres": "mature",
+     "raison": "Valparaíso FCT adapte ses mécanismes de compensation transfrontalière pour intégrer les flux financiers et humains issus de l'occupation brésilienne."
+    },
+    {
+     "instance": "deepfield_institute_reference",
+     "apres": "dominant",
+     "raison": "Le DIHC étend son influence en subordonnant les décisions américaines sur le Brésil à des critères de survie long-termiste de l'espèce."
+    }
+   ],
+   "relations": [
+    {
+     "a": "frente_sertao_livre_reference",
+     "b": "great_lakes_autonomous_compact_reference",
+     "type": "opposition",
+     "action": "nouvelle",
+     "raison": "Le Compact des Grands Lacs soutient indirectement l'occupation américaine, tandis que la Frente Sertão Livre incarne la résistance locale."
+    },
+    {
+     "a": "amazonie_consortium_viva_reference",
+     "b": "deepfield_institute_reference",
+     "type": "alliance",
+     "action": "nouvelle",
+     "raison": "Le DIHC et le consortium collaborent pour préserver des zones amazoniennes sous contrôle algorithmique, évitant une exploitation totale par les États-Unis."
+    },
+    {
+     "a": "the_lattice_reference",
+     "b": "detroit_compact_grands_lacs_reference",
+     "type": "alliance",
+     "action": "nouvelle",
+     "raison": "The Lattice et le Compact des Grands Lacs coordonnent l'accueil des migrants brésiliens et la redistribution des ressources."
+    },
+    {
+     "a": "rede_paulista_de_distribuicao_algoritmica_reference",
+     "b": "optiflow_logistics_reference",
+     "type": "alliance",
+     "action": "nouvelle",
+     "raison": "Le SPAAR et OptiFlow intègrent leurs algorithmes pour gérer les flux logistiques et énergétiques perturbés par l'occupation."
+    },
+    {
+     "a": "front_souverainiste_des_ressources_d_amerique_du_sud_reference",
+     "b": "consortium_amazonia_viva_reference",
+     "type": "opposition",
+     "action": "nouvelle",
+     "raison": "Le Front souverainiste conteste les accords d'exploitation du Consortium Amazônia Viva, perçus comme une légitimation de l'occupation."
+    },
+    {
+     "a": "raised_hands_reference",
+     "b": "nadia_ferreira_sato_reference",
+     "type": "alliance",
+     "action": "nouvelle",
+     "raison": "Nadia Ferreira-Sato soutient les revendications des Mains Levées pour des droits politiques dans les villes de The Lattice, en réponse à l'afflux de migrants brésiliens."
+    }
+   ],
+   "geographie": [
+    {
+     "pays": "Brésil",
+     "action": "partition",
+     "parties": [
+      {
+       "zone": "ameriques_multipolaires",
+       "portion": "Territoires sous occupation militaire américaine (Amazonie brésilienne incluse)"
+      },
+      {
+       "nouvelle_zone": {
+        "slug": "bresil_resistant_sertao",
+        "nom": "Brésil Résistant du Sertão",
+        "type": "territoire_autonome",
+        "statut": "fragmenté"
+       },
+       "portion": "Nordeste brésilien et zones rurales organisées par la Frente Sertão Livre"
+      }
+     ],
+     "raison": "L'occupation américaine ne parvient pas à contrôler l'intégralité du Brésil, laissant émerger une zone de résistance autonome dans le Sertão."
+    },
+    {
+     "pays": "Paraguay",
+     "action": "absorber",
+     "zone": "sertao_nordeste_bresilien",
+     "raison": "Le Chaco paraguayen, lié historiquement au Sertão brésilien, est intégré à la zone de résistance pour des raisons logistiques et écologiques."
+    }
+   ],
+   "zones_statut": [
+    {
+     "zone": "ameriques_multipolaires",
+     "apres": "fragmenté",
+     "raison": "L'occupation du Brésil et la partition du pays accentuent les tensions internes au bloc, affaiblissant sa cohésion."
+    },
+    {
+     "zone": "amazonie_consortium_viva",
+     "apres": "fragmenté",
+     "raison": "L'Amazonie devient un territoire disputé entre les États-Unis, les acteurs locaux et les consortiums privés, fragmentant son statut."
+    },
+    {
+     "zone": "sertao_nordeste_bresilien",
+     "apres": "emergent",
+     "raison": "La résistance organisée dans le Sertão donne naissance à une zone autonome émergente, structurée autour de la Frente Sertão Livre."
+    },
+    {
+     "zone": "detroit_compact_grands_lacs",
+     "apres": "stable",
+     "raison": "Le Compact des Grands Lacs renforce sa stabilité en absorbant les flux migratoires et logistiques issus de l'occupation brésilienne."
+    }
+   ],
+   "nouvelles_entites": [
+    {
+     "nom": "Rede de Solidariedade Amazônica (RSA)",
+     "category": "réseau",
+     "role": "Coordination des communautés locales et des acteurs privés pour préserver les écosystèmes amazoniens face à l'occupation américaine.",
+     "zone": "amazonie_consortium_viva",
+     "raison": "L'occupation américaine pousse les acteurs locaux à s'organiser pour protéger les ressources génétiques et écologiques de l'Amazonie."
+    },
+    {
+     "nom": "Bureau de Liaison Brésil-États-Unis (BLBE)",
+     "category": "institution",
+     "role": "Interface administrative entre les autorités américaines et les structures locales brésiliennes pour gérer les territoires occupés.",
+     "zone": "ameriques_multipolaires",
+     "raison": "L'occupation nécessite une structure dédiée pour coordonner les politiques publiques et les flux de ressources."
+    },
+    {
+     "nom": "Fonds de Résilience du Sertão (FRS)",
+     "category": "institution",
+     "role": "Financement et soutien logistique aux communautés du Sertão brésilien pour renforcer leur autonomie face à l'occupation.",
+     "zone": "sertao_nordeste_bresilien",
+     "raison": "La résistance dans le Sertão nécessite des mécanismes de financement et de gouvernance dédiés."
+    }
+   ]
+  }
  }
 }

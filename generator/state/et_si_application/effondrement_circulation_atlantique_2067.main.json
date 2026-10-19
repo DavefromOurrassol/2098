@@ -1,0 +1,40 @@
+{
+ "entites": {},
+ "regles": {},
+ "phrases": {
+  "reference:effondrement_circulation_atlantique_2067_reference:86b7c720": {
+   "statut": "ignorée"
+  },
+  "reference:effondrement_circulation_atlantique_2067_reference:2f7214f2": {
+   "statut": "corrigée",
+   "remplacee_par": "Le Fonds Souverain Arctique Scandinave étend son emprise sur les nouvelles routes maritimes et les ressources énergétiques libérées par la fonte accélérée des glaces.",
+   "date_correction": "2026-10-18T08:43"
+  },
+  "reference:effondrement_circulation_atlantique_2067_reference:2d3222dc": {
+   "statut": "ignorée"
+  }
+ },
+ "verif_evenement": {
+  "reference": {
+   "empreinte": "e9d2f00894a4",
+   "date": "2026-10-18T08:32",
+   "problemes": [
+    {
+     "extrait": "Les Consortiums d'Agriculture Verticale Algorithmique, jusqu'alors concentrés en Europe, accélèrent leur expansion en Afrique et en Asie du Sud-Est pour compenser les pertes agricoles.",
+     "fait": "Les Consortiums d'Agriculture Verticale Algorithmique passent de « émergent » à « ascendant » après 2067.0, pas avant. Leur statut avant 2067.0 n'est pas décrit comme « concentrés en Europe ».",
+     "correction": "Les Consortiums d'Agriculture Verticale Algorithmique, jusqu'alors en développement, accélèrent leur expansion en Afrique et en Asie du Sud-Est pour compenser les pertes agricoles."
+    },
+    {
+     "extrait": "Les Autorités Régionales de Régulation Hydrologique, déjà en position dominante, deviennent les arbitres incontournables des conflits pour l'eau.",
+     "fait": "Les Autorités Régionales de Régulation Hydrologique passent de « émergent » à « dominant » après 2067.0, pas avant.",
+     "correction": "Les Autorités Régionales de Régulation Hydrologique, en position ascendante, deviennent les arbitres incontournables des conflits pour l'eau."
+    },
+    {
+     "extrait": "Le Fonds Souverain Arctique Scandinave renforce son emprise sur les nouvelles routes maritimes et les ressources énergétiques libérées par la fonte accélérée des glaces.",
+     "fait": "Le Fonds Souverain Arctique Scandinave passe de « ascendant » à « dominant » après 2067.0, pas avant. La phrase suggère une emprise déjà forte avant 2067.0.",
+     "correction": "Le Fonds Souverain Arctique Scandinave étend son emprise sur les nouvelles routes maritimes et les ressources énergétiques libérées par la fonte accélérée des glaces."
+    }
+   ]
+  }
+ }
+}

@@ -27228,5 +27228,3157 @@
     }
    ]
   }
+ },
+ "occupation_bresil_2029::reference::0": {
+  "empreinte": "c116666569052613",
+  "date": "2026-10-18T16:19",
+  "brut": {
+   "fiches": [
+    {
+     "slug": "administrations_hybrides_des_cites_relais_peripheriques_reference",
+     "changements": []
+    },
+    {
+     "slug": "agence_de_regulation_des_detroits_strategiques_ards_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "Elle incarne une gouvernance hybride, mêlant souveraineté étatique, intérêts des consortiums logistiques privés et impératifs géopolitiques, pour éviter les blocages et les conflits ouverts sur les axes critiques.",
+       "contredit": "",
+       "lien": "variable",
+       "lien_detail": "geopolitique_conflits (+0.3)",
+       "raison": "L'occupation du Brésil par les États-Unis renforce la pression sur les corridors logistiques, ce qui pourrait élargir le rôle de l'ARPS dans la médiation des tensions accrues en Amérique du Sud, sans rendre la phrase fausse."
+      }
+     ]
+    },
+    {
+     "slug": "agence_internationale_des_energies_renouvelables_irena_2_reference",
+     "changements": []
+    },
+    {
+     "slug": "agence_stabilisation_climatique_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "Dans un monde en équilibre fragile, elle joue un rôle de régulateur de dernier recours pour les interventions géo-ingénieristes — gestion des aérosols stratosphériques, coordination des projets de reforestation à grande échelle, et arbitrage des conflits liés aux externalités climatiques transfrontalières.",
+       "contredit": "",
+       "lien": "variable",
+       "lien_detail": "climat_environnement_global (+0.4)",
+       "raison": "L'occupation du Brésil et la pression sur l'Amazonie pourraient accentuer le rôle de l'AMSC dans la coordination des projets de reforestation ou de gestion des externalités climatiques, sans contredire la phrase."
+      }
+     ]
+    },
+    {
+     "slug": "agences_de_securite_regionales_de_normalisation_des_zones_grises_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "frontieres_du_systeme (+1.0)",
+       "contredit": "",
+       "raison": "L'occupation du Brésil crée une nouvelle zone grise ou disputée, ce qui pourrait renforcer le rôle des agences de normalisation sans rendre leur trajectoire actuelle fausse."
+      }
+     ]
+    },
+    {
+     "slug": "agrisynth_reference",
+     "changements": []
+    },
+    {
+     "slug": "algorithmic_labor_exchange_reference",
+     "changements": [
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "sao_paulo_ita_reference",
+       "relation": "alliance",
+       "action": "rompue",
+       "lien": "relation",
+       "lien_detail": "sao_paulo_ita_reference (déclinant → résiduel)",
+       "contredit": "",
+       "raison": "La chute de São Paulo (déjà retenue comme déclinante) pourrait affaiblir ou rompre son alliance avec Algorithmic Labor Exchange, mais cela reste plausible sans être obligatoire."
+      }
+     ]
+    },
+    {
+     "slug": "alliance_blocs_souverains_reference",
+     "changements": [
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "etats_unis_reference",
+       "relation": "alliance",
+       "action": "nouvelle",
+       "lien": "territoire",
+       "lien_detail": "Brésil occupé par les États-Unis",
+       "contredit": "",
+       "raison": "Les États-Unis, en tant qu'occupant du Brésil, pourraient rejoindre ou renforcer leur alliance avec le Pacte des Souverains, mais cela n'est pas obligatoire pour la cohérence de la fiche."
+      }
+     ]
+    },
+    {
+     "slug": "amara_diallo_nkosi_reference",
+     "changements": []
+    },
+    {
+     "slug": "amazonie_consortium_viva_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "obligatoire",
+       "apres": "déclinant",
+       "lien": "territoire",
+       "lien_detail": "Amazonie brésilienne sous occupation américaine",
+       "contredit": "Le Consortium Viva prospère précisément dans les zones grises juridiques du bassin amazonien, or l'occupation américaine réduit ces zones grises en imposant une tutelle militaire.",
+       "raison": "L'occupation du Brésil par les États-Unis contredit directement la capacité du Consortium Viva à opérer librement dans l'Amazonie brésilienne, rendant sa trajectoire dominante impossible."
+      },
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "frente_sertao_livre_reference",
+       "relation": "opposition",
+       "action": "nouvelle",
+       "lien": "territoire",
+       "lien_detail": "Brésil occupé, résistance locale (Frente Sertão Livre)",
+       "contredit": "",
+       "raison": "L'occupation américaine pourrait pousser le Consortium Viva à s'opposer frontalement à la résistance locale, mais cela reste plausible sans être obligatoire."
+      }
+     ]
+    },
+    {
+     "slug": "arctic_passage_authority_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "Elle incarne un modèle hybride fragile : treize États souverains riverains siègent à parité formelle avec les consortiums logistiques privés pour administrer les corridors maritimes.",
+       "contredit": "",
+       "lien": "variable",
+       "lien_detail": "geopolitique_conflits (+0.3)",
+       "raison": "L'occupation du Brésil pourrait indirectement renforcer le rôle des consortiums logistiques privés dans l'APA, en réponse aux tensions géopolitiques accrues, sans rendre la phrase fausse."
+      }
+     ]
+    },
+    {
+     "slug": "armada_logistique_nordique_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "Elle administre les routes de transit entre l'Europe, l'Asie et l'Amérique du Nord avec une autorité reconnue, mais contestée par les acteurs eurasiatiques et les collectifs autochtones.",
+       "contredit": "",
+       "lien": "variable",
+       "lien_detail": "systemes_productifs_travail (+0.4)",
+       "raison": "La reconfiguration des échanges régionaux en Amérique du Sud pourrait élargir le rôle de l'ALN dans la logistique globale, sans contredire la phrase."
+      }
+     ]
+    },
+    {
+     "slug": "assemblee_territoires_reference",
+     "changements": [
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "frente_sertao_livre_reference",
+       "relation": "alliance",
+       "action": "nouvelle",
+       "lien": "territoire",
+       "lien_detail": "Brésil occupé, résistance locale (Frente Sertão Livre)",
+       "contredit": "",
+       "raison": "L'ATF pourrait nouer une alliance avec la résistance brésilienne pour contrer l'occupation américaine, mais cela reste plausible sans être obligatoire."
+      }
+     ]
+    },
+    {
+     "slug": "aurelio_stahl_reference",
+     "changements": []
+    },
+    {
+     "slug": "autorites_regionales_de_regulation_hydrologique_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "Elles arbitrent en temps réel entre usages concurrents dans un contexte de raréfaction hydrique et de conflits d'usage, en s'appuyant sur des algorithmes de médiation et des réseaux de capteurs citoyens.",
+       "contredit": "",
+       "lien": "variable",
+       "lien_detail": "demographie_mobilite_humaine (+0.7)",
+       "raison": "Les déplacements de population au Brésil pourraient élargir le rôle des autorités hydrologiques dans la gestion des crises, sans rendre la phrase fausse."
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "occupation_bresil_2029::reference::1": {
+  "empreinte": "56f21f4282c7a028",
+  "date": "2026-10-18T16:19",
+  "brut": {
+   "fiches": [
+    {
+     "slug": "banque_des_communs_reference",
+     "changements": [
+      {
+       "type": "relation",
+       "niveau": "obligatoire",
+       "cible": "amazonie_consortium_viva_reference",
+       "relation": "alliance",
+       "action": "rompue",
+       "lien": "relation",
+       "lien_detail": "Amazonie Consortium Viva est directement touché par l'occupation du Brésil (territoire brésilien sous tutelle américaine)",
+       "contredit": "La Banque des Communs est listée comme rivale d'Amazonie Consortium Viva, mais une alliance rompue n'est pas explicitement mentionnée. Cependant, l'occupation américaine rend impossible une alliance avec un acteur brésilien dominant avant 2029.",
+       "raison": "L'occupation du Brésil par les États-Unis en 2029 transforme l'Amazonie en zone disputée, rendant caduque toute alliance préexistante entre la Banque des Communs et Amazonie Consortium Viva, acteur désormais en déclin."
+      },
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "Elle constitue un point d'appui pour financer la résilience territoriale là où les circuits marchands se rétractent et où l'État central hésite à intervenir.",
+       "contredit": "",
+       "lien": "variable",
+       "lien_detail": "Variable 'demographie_mobilite_humaine' (+0.7) et 'systemes_productifs_travail' (+0.4)",
+       "raison": "L'occupation du Brésil et les déplacements de population amplifient les besoins de résilience territoriale, élargissant potentiellement le rôle de la Banque des Communs dans les zones périphériques."
+      }
+     ]
+    },
+    {
+     "slug": "banque_mondiale_des_transitions_climatiques_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "elle stabilise les flux sans éliminer les contradictions, et légitime les compromis sans résoudre les inégalités structurelles.",
+       "contredit": "",
+       "lien": "variable",
+       "lien_detail": "Variable 'climat_environnement_global' (+0.4) et 'gouvernance_institutions' (+0.2)",
+       "raison": "L'occupation du Brésil et la pression sur l'Amazonie accentuent les contradictions climatiques et institutionnelles, renforçant le rôle de la BMTC comme arbitre des compromis sans résoudre les déséquilibres."
+      }
+     ]
+    },
+    {
+     "slug": "bloc_des_etats_du_sud_global_contre_la_cession_de_donnees_reference",
+     "changements": [
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "front_souverainiste_des_ressources_d_amerique_du_sud_reference",
+       "relation": "alliance",
+       "action": "nouvelle",
+       "lien": "relation",
+       "lien_detail": "Le Front Souverainiste des Ressources d'Amérique du Sud est directement touché par l'occupation du Brésil (territoire sud-américain)",
+       "contredit": "",
+       "raison": "L'occupation américaine du Brésil renforce la solidarité des États du Sud Global contre les ingérences extérieures, rendant une alliance avec le Front Souverainiste plausible."
+      },
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "il incarne la résistance du Sud à l'ordre technologique dominant tout en étant structurellement contraint par les interdépendances économiques que cet ordre a générées.",
+       "contredit": "",
+       "lien": "variable",
+       "lien_detail": "Variable 'geopolitique_conflits' (+0.3)",
+       "raison": "L'occupation du Brésil illustre la domination technologique et militaire des États-Unis, renforçant la rhétorique de résistance du Bloc."
+      }
+     ]
+    },
+    {
+     "slug": "bloc_des_souverainistes_climatiques_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "En maintenant des zones de non-conformité aux protocoles géo-ingénieristes, il fragmente la coordination internationale à un moment où les tensions géopolitiques s'intensifient.",
+       "contredit": "",
+       "lien": "variable",
+       "lien_detail": "Variable 'climat_environnement_global' (+0.4) et 'geopolitique_conflits' (+0.3)",
+       "raison": "L'occupation du Brésil et la pression sur l'Amazonie exacerbent les tensions géopolitiques, renforçant la pertinence des zones de non-conformité du Bloc."
+      }
+     ]
+    },
+    {
+     "slug": "bloc_eurasien_central_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "mature",
+       "lien": "variable",
+       "lien_detail": "Variable 'geopolitique_conflits' (+0.3) et 'frontieres_du_systeme' (+1.0)",
+       "contredit": "",
+       "raison": "L'occupation du Brésil redessine les équilibres géopolitiques, offrant au BEC une opportunité de renforcer son influence en Eurasie face à l'affaiblissement des Amériques."
+      }
+     ]
+    },
+    {
+     "slug": "bloc_ressources_eurasiatique_bre_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "Sa capacité à maintenir — ou rompre — les flux de ressources critiques en fait un acteur incontournable des équilibres énergétiques mondiaux.",
+       "contredit": "",
+       "lien": "variable",
+       "lien_detail": "Variable 'energie_ressources_critiques' (+0.3)",
+       "raison": "L'occupation du Brésil perturbe les flux de ressources sud-américaines, renforçant l'importance stratégique du BRE dans la régulation des ressources eurasiatiques."
+      }
+     ]
+    },
+    {
+     "slug": "blocs_signataires_du_pacte_energetique_multilateral_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "Structure l'architecture diplomatique et réglementaire du secteur énergétique mondial dans ce scénario, servant de cadre de référence pour les décisions collectives sur les ressources et les infrastructures.",
+       "contredit": "",
+       "lien": "variable",
+       "lien_detail": "Variable 'energie_ressources_critiques' (+0.3)",
+       "raison": "L'occupation du Brésil et la pression sur l'Amazonie complexifient les négociations énergétiques, renforçant le rôle du Pacte comme cadre de coordination."
+      }
+     ]
+    },
+    {
+     "slug": "bruxelles_nouveau_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "Elle symbolise la continuité bureaucratique européenne dans un contexte de fragmentation institutionnelle croissante.",
+       "contredit": "",
+       "lien": "variable",
+       "lien_detail": "Variable 'gouvernance_institutions' (+0.2)",
+       "raison": "L'occupation du Brésil accentue la fragmentation institutionnelle, renforçant le rôle symbolique de Bruxelles Nouveau comme médiateur."
+      }
+     ]
+    },
+    {
+     "slug": "bureau_des_territoires_residuels_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "officiellement chargée de cartographier, classer et archiver les territoires que les États et les mégapoles ont cessé de gouverner activement",
+       "contredit": "",
+       "lien": "territoire",
+       "lien_detail": "Le Brésil est un territoire touché par l'occupation, avec des déplacements de population et une fragmentation territoriale",
+       "raison": "L'occupation du Brésil crée de nouvelles zones résiduelles, élargissant potentiellement le champ d'action de la DZNP."
+      }
+     ]
+    },
+    {
+     "slug": "bureau_zones_non_prioritaires_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "il produit des rapports que personne ne lit et sert de caution humanitaire à un système indifférent.",
+       "contredit": "",
+       "lien": "territoire",
+       "lien_detail": "Le Brésil est un territoire touché par l'occupation, avec des déplacements de population et une fragmentation territoriale",
+       "raison": "L'occupation du Brésil génère des zones non prioritaires supplémentaires, renforçant l'ironie structurelle du BZNP comme caution humanitaire."
+      }
+     ]
+    },
+    {
+     "slug": "bureaux_de_regulation_informationnelle_reference",
+     "changements": []
+    },
+    {
+     "slug": "cartel_des_terres_rares_d_asie_centrale_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "Acteur de pression sur les équilibres géopolitiques et économiques du scénario, le Cartel des Terres Rares d'Asie Centrale conditionne concrètement l'accès aux ressources critiques indispensables aux technologies de 2098",
+       "contredit": "",
+       "lien": "variable",
+       "lien_detail": "Variable 'energie_ressources_critiques' (+0.3)",
+       "raison": "L'occupation du Brésil perturbe les chaînes d'approvisionnement en ressources critiques, renforçant l'importance stratégique du Cartel."
+      }
+     ]
+    },
+    {
+     "slug": "coalition_des_gouvernements_contre_les_chartes_de_destabilisation_reference",
+     "changements": [
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "front_souverainiste_des_ressources_d_amerique_du_sud_reference",
+       "relation": "alliance",
+       "action": "nouvelle",
+       "lien": "relation",
+       "lien_detail": "Le Front Souverainiste des Ressources d'Amérique du Sud est directement touché par l'occupation du Brésil",
+       "contredit": "",
+       "raison": "L'occupation américaine du Brésil renforce la coopération entre gouvernements pour réprimer les chartes de déstabilisation en Amérique du Sud."
+      }
+     ]
+    },
+    {
+     "slug": "coalition_pour_la_souverainete_numerique_nationale_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "Incarne les tensions entre souveraineté étatique et intégration numérique mondiale dans le scénario reference, portant des revendications de régulation et de re-territorialisation des flux d'information.",
+       "contredit": "",
+       "lien": "variable",
+       "lien_detail": "Variable 'geopolitique_conflits' (+0.3)",
+       "raison": "L'occupation du Brésil illustre les ingérences extérieures, renforçant les revendications de souveraineté numérique de la Coalition."
+      }
+     ]
+    },
+    {
+     "slug": "collectif_nuit_jaune_reference",
+     "changements": []
+    }
+   ]
+  }
+ },
+ "occupation_bresil_2029::reference::2": {
+  "empreinte": "832314a23d10a5bf",
+  "date": "2026-10-18T16:20",
+  "brut": {
+   "fiches": [
+    {
+     "slug": "collectifs_academiques_independants_reference",
+     "changements": []
+    },
+    {
+     "slug": "collectifs_de_biopiraterie_inversee_reference",
+     "changements": [
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "frente_sertao_livre_reference",
+       "relation": "alliance",
+       "action": "nouvelle",
+       "lien": "relation",
+       "lien_detail": "opposition commune à l'occupation américaine du Brésil et à la pression sur l'Amazonie",
+       "contredit": "",
+       "raison": "L'occupation du Brésil par les États-Unis crée un terrain propice à une alliance avec la Frente Sertão Livre, qui résiste à cette occupation et défend la souveraineté territoriale."
+      },
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "Dans le scénario reference, les Collectifs agissent comme perturbateurs structurels du régime de propriété intellectuelle biotechnologique, exploitant les zones grises d'un système international affaibli (gouvernance_institutions : 60) pour contester les monopoles du secteur santé-biotechnologies (55).",
+       "contredit": "",
+       "lien": "variable",
+       "lien_detail": "gouvernance_institutions (+0.2 point)",
+       "raison": "L'occupation du Brésil renforce les tensions institutionnelles, ce qui pourrait élargir le rôle des Collectifs comme perturbateurs, mais la phrase reste vraie sans ce changement."
+      }
+     ]
+    },
+    {
+     "slug": "collectifs_de_journalisme_embarque_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "obligatoire",
+       "extrait": "Ancrés dans des zones à fort enjeu territorial — deltas menacés, fronts de déforestation, corridors logistiques disputés — ils documentent les conflits locaux et les stratégies de résistance.",
+       "contredit": "Le Brésil, zone à fort enjeu territorial (Amazonie, déplacements de population), est désormais sous occupation américaine, ce qui en fait un front de conflit et de résistance.",
+       "lien": "territoire",
+       "lien_detail": "Brésil occupé",
+       "raison": "La phrase devient fausse si elle n'inclut pas le Brésil comme zone d'ancrage, car l'occupation en fait un territoire clé pour leur documentation."
+      }
+     ]
+    },
+    {
+     "slug": "collectifs_de_journalistes_independants_regionaux_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "Dans le scénario reference, ces collectifs incarnent une alternative aux médias institutionnels ou corporatifs, portant une information de proximité potentiellement résistante aux pressions éditoriales centrales.",
+       "contredit": "",
+       "lien": "territoire",
+       "lien_detail": "Brésil occupé",
+       "raison": "L'occupation américaine du Brésil pourrait renforcer leur rôle de résistance aux pressions éditoriales, mais la phrase reste vraie sans ce changement."
+      }
+     ]
+    },
+    {
+     "slug": "collectifs_de_peche_inuit_et_sami_reference",
+     "changements": []
+    },
+    {
+     "slug": "commission_hydrique_de_l_union_africaine_reference",
+     "changements": []
+    },
+    {
+     "slug": "communs_numeriques_agroecologiques_reference",
+     "changements": [
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "frente_sertao_livre_reference",
+       "relation": "alliance",
+       "action": "nouvelle",
+       "lien": "relation",
+       "lien_detail": "opposition commune à l'occupation américaine et à la pression sur les ressources naturelles",
+       "contredit": "",
+       "raison": "L'occupation du Brésil crée un terrain propice à une alliance avec la Frente Sertão Livre, qui résiste à cette occupation et défend les ressources locales."
+      }
+     ]
+    },
+    {
+     "slug": "confederation_des_megapoles_autonomes_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "obligatoire",
+       "extrait": "Incarne la fragmentation géopolitique en blocs mégapolitains concurrents, substituant la rivalité inter-urbaine à la rivalité interétatique classique.",
+       "contredit": "São Paulo, mégapole majeure du Brésil, est désormais sous tutelle militaire américaine, ce qui en fait un acteur géopolitique distinct et non plus une entité autonome au sein de la Confédération.",
+       "lien": "territoire",
+       "lien_detail": "Brésil occupé, São Paulo résiduel",
+       "raison": "La phrase devient fausse si elle n'intègre pas la perte d'autonomie de São Paulo, désormais sous contrôle américain."
+      }
+     ]
+    },
+    {
+     "slug": "conseil_de_geneve_pour_les_droits_biosociaux_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "Dans le scénario de référence, le Conseil de Genève pour les Droits Biosociaux sert de point de friction institutionnel central entre les logiques de marché biotechnologique accéléré et les revendications de justice biosociale des populations les plus exposées.",
+       "contredit": "",
+       "lien": "variable",
+       "lien_detail": "sante_biotechnologies (+0.3 point), gouvernance_institutions (+0.2 point)",
+       "raison": "L'occupation du Brésil pourrait élargir son rôle comme arbitre des conflits biosociaux, mais la phrase reste vraie sans ce changement."
+      }
+     ]
+    },
+    {
+     "slug": "conseil_des_etats_nordiques_integres_reference",
+     "changements": []
+    },
+    {
+     "slug": "conseil_regulation_algorithmique_reference",
+     "changements": []
+    },
+    {
+     "slug": "conseil_regulation_ressources_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "Dans un monde multipolaire fracturé, il joue un rôle de chambre de compensation plutôt que de véritable régulateur, arbitrant les flux de ressources stratégiques — lithium, eau dessalée, hydrogène vert, terres rares.",
+       "contredit": "",
+       "lien": "variable",
+       "lien_detail": "energie_ressources_critiques (+0.3 point)",
+       "raison": "L'occupation du Brésil pourrait renforcer son rôle d'arbitre pour les ressources amazoniennes, mais la phrase reste vraie sans ce changement."
+      }
+     ]
+    },
+    {
+     "slug": "consortium_africain_de_biotechnologies_sociales_reference",
+     "changements": []
+    },
+    {
+     "slug": "consortium_amazonia_viva_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "obligatoire",
+       "apres": "déclinant",
+       "lien": "territoire",
+       "lien_detail": "Amazonie brésilienne sous occupation américaine",
+       "contredit": "Le Consortium Amazônia Viva ne peut plus prétendre à une gouvernance centrale du bassin amazonien, car une partie majeure de celui-ci (le Brésil) est sous contrôle militaire étranger.",
+       "raison": "Son rôle dominant dans la gouvernance écologique de l'Amazonie est rendu impossible par l'occupation américaine, ce qui le place en déclin."
+      },
+      {
+       "type": "relation",
+       "niveau": "obligatoire",
+       "cible": "frente_sertao_livre_reference",
+       "relation": "alliance",
+       "action": "nouvelle",
+       "lien": "relation",
+       "lien_detail": "opposition commune à l'occupation américaine et défense des ressources amazoniennes",
+       "contredit": "Le Consortium et la Frente Sertão Livre partagent désormais un ennemi commun (les États-Unis) et un enjeu vital (l'Amazonie), ce qui rend leur alliance inévitable.",
+       "raison": "L'occupation américaine du Brésil force le Consortium à s'allier avec la résistance locale pour survivre."
+      },
+      {
+       "type": "texte",
+       "niveau": "obligatoire",
+       "extrait": "Son existence même représente une expérience de gouvernance écologique post-nationale, reconnue par les blocs géopolitiques concurrents comme un interlocuteur incontournable.",
+       "contredit": "Le Brésil, partie majeure du bassin amazonien, est désormais sous tutelle américaine, ce qui prive le Consortium de sa légitimité sur ce territoire et le rend contestable comme interlocuteur.",
+       "lien": "territoire",
+       "lien_detail": "Brésil occupé",
+       "raison": "La phrase devient fausse car le Consortium n'est plus un interlocuteur incontournable sans le Brésil."
+      }
+     ]
+    },
+    {
+     "slug": "consortium_augmentwork_reference",
+     "changements": []
+    }
+   ]
+  }
+ },
+ "occupation_bresil_2029::reference::3": {
+  "empreinte": "e60050e2a5644602",
+  "date": "2026-10-18T16:20",
+  "brut": {
+   "fiches": [
+    {
+     "slug": "consortium_de_maintenance_orbitale_seom_7_reference",
+     "changements": []
+    },
+    {
+     "slug": "consortium_des_fournisseurs_d_energie_renouvelable_distribuee_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "systemes_productifs_travail (+0.4)",
+       "contredit": "",
+       "raison": "L'occupation du Brésil perturbe les chaînes d'approvisionnement énergétiques régionales, ce qui pourrait renforcer la dépendance aux réseaux distribués et accélérer l'ascendance de ce consortium, sans pour autant rendre sa trajectoire actuelle fausse."
+      }
+     ]
+    },
+    {
+     "slug": "consortium_des_grandes_plateformes_ia_integrees_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "Dans ce scénario, elles exercent un pouvoir structurant sur les flux informationnels et économiques globaux, agissant comme acteurs de référence incontournables face auxquels les autres entités se positionnent.",
+       "contredit": "",
+       "lien": "variable",
+       "lien_detail": "frontieres_du_systeme (+1.0), gouvernance_institutions (+0.2)",
+       "raison": "L'occupation du Brésil pourrait élargir leur rôle en intégrant des mécanismes de contrôle algorithmique sur les flux économiques et informationnels du territoire occupé, sans contredire leur position actuelle."
+      }
+     ]
+    },
+    {
+     "slug": "consortium_des_grandes_plateformes_logistiques_globales_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "frontieres_du_systeme (+1.0), systemes_productifs_travail (+0.4)",
+       "contredit": "",
+       "raison": "La reconfiguration des échanges régionaux en Amérique du Sud pourrait renforcer leur rôle en tant qu'épine dorsale logistique, sans rendre leur trajectoire actuelle fausse."
+      },
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "amazonie_consortium_viva_reference",
+       "relation": "opposition",
+       "action": "nouvelle",
+       "lien": "relation",
+       "lien_detail": "Amazonie Consortium Viva est directement touché par l'occupation du Brésil et devient un rival potentiel pour le contrôle des flux logistiques régionaux.",
+       "contredit": "",
+       "raison": "L'occupation du Brésil crée une rivalité plausible entre ces deux entités pour le contrôle des infrastructures logistiques, sans que cela soit obligatoire."
+      }
+     ]
+    },
+    {
+     "slug": "consortium_des_pecheries_autonomes_du_grand_nord_reference",
+     "changements": []
+    },
+    {
+     "slug": "consortium_des_plateformes_ia_centralisees_anti_deliberation_reference",
+     "changements": []
+    },
+    {
+     "slug": "consortium_energetique_baltique_reference",
+     "changements": []
+    },
+    {
+     "slug": "consortium_energetique_des_mers_du_nord_reference",
+     "changements": []
+    },
+    {
+     "slug": "consortium_helios_reference",
+     "changements": [
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "amazonie_consortium_viva_reference",
+       "relation": "opposition",
+       "action": "nouvelle",
+       "lien": "relation",
+       "lien_detail": "Amazonie Consortium Viva est directement touché par l'occupation du Brésil et devient un rival potentiel pour le contrôle des ressources énergétiques régionales.",
+       "contredit": "",
+       "raison": "L'occupation du Brésil pourrait créer une rivalité entre Helios et le Consortium Viva pour l'exploitation des ressources énergétiques amazoniennes, sans que cela soit obligatoire."
+      }
+     ]
+    },
+    {
+     "slug": "consortium_indo_pacifique_de_l_hydrogene_reference",
+     "changements": []
+    },
+    {
+     "slug": "consortium_logistique_asiatique_de_contournement_aln_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "frontieres_du_systeme (+1.0), systemes_productifs_travail (+0.4)",
+       "contredit": "",
+       "raison": "La fragmentation logistique en Amérique du Sud pourrait offrir de nouvelles opportunités pour ce consortium, sans rendre sa trajectoire actuelle fausse."
+      }
+     ]
+    },
+    {
+     "slug": "consortiums_bancaires_financiarises_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "Dans ce scénario, ils incarnent une dépendance structurelle aux infrastructures de clearing — toute fragilité de ces couches menace leur fonctionnement et, par extension, la stabilité des marchés financiers globaux.",
+       "contredit": "",
+       "lien": "variable",
+       "lien_detail": "frontieres_du_systeme (+1.0), gouvernance_institutions (+0.2)",
+       "raison": "L'occupation du Brésil pourrait introduire des fragilités supplémentaires dans les infrastructures de clearing, sans contredire leur rôle actuel."
+      }
+     ]
+    },
+    {
+     "slug": "consortiums_d_agriculture_verticale_algorithmique_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "dominant",
+       "lien": "variable",
+       "lien_detail": "systemes_productifs_travail (+0.4), demographie_mobilite_humaine (+0.7)",
+       "contredit": "",
+       "raison": "Les déplacements de population et les ruptures des échanges régionaux pourraient renforcer la dépendance aux systèmes d'agriculture verticale, accélérant leur ascendance sans rendre leur trajectoire actuelle fausse."
+      }
+     ]
+    },
+    {
+     "slug": "consortiums_d_extraction_miniere_du_bassin_congolais_reference",
+     "changements": []
+    },
+    {
+     "slug": "consortiums_energetiques_des_megapoles_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "Dans le scénario reference, ils exercent une pression pour absorber les corridors logistiques et énergétiques reliant les mégapoles, transformant des infrastructures potentiellement mutualisées en actifs privés captifs.",
+       "contredit": "",
+       "lien": "variable",
+       "lien_detail": "frontieres_du_systeme (+1.0), systemes_productifs_travail (+0.4)",
+       "raison": "L'occupation du Brésil pourrait élargir leur influence sur les corridors énergétiques des mégapoles sud-américaines, sans contredire leur rôle actuel."
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "occupation_bresil_2029::reference::4": {
+  "empreinte": "3d5c25bbc39826db",
+  "date": "2026-10-18T16:20",
+  "brut": {
+   "fiches": [
+    {
+     "slug": "consortiums_energetiques_opaques_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "systemes_productifs_travail (+0.4), energie_ressources_critiques (+0.3)",
+       "raison": "L'occupation du Brésil par les États-Unis crée des opportunités pour les consortiums opaques de renforcer leur influence en exploitant les tensions sur les ressources et les systèmes productifs, sans rendre leur existence impossible."
+      }
+     ]
+    },
+    {
+     "slug": "consortiums_mediatiques_corporatifs_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "Dans le scénario reference, les Consortiums Médiatiques Corporatifs incarnent la presse institutionnelle alignée sur les intérêts économiques établis, agissant comme stabilisateurs narratifs d'un système mondial fragile : ils minimisent les signaux de rupture, valorisent les ajustements techno-institutionnels et…",
+       "lien": "variable",
+       "lien_detail": "geopolitique_conflits (+0.3)",
+       "raison": "Le rôle de stabilisateur narratif peut s'élargir pour inclure la minimisation des tensions liées à l'occupation du Brésil, mais la phrase reste vraie sans modification."
+      }
+     ]
+    },
+    {
+     "slug": "consortiums_prives_d_extraction_de_ressources_critiques_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "energie_ressources_critiques (+0.3)",
+       "raison": "L'occupation du Brésil peut offrir de nouvelles opportunités d'extraction ou de pression sur les ressources, renforçant leur trajectoire sans la rendre obligatoire."
+      }
+     ]
+    },
+    {
+     "slug": "consortiums_prives_de_gestion_des_donnees_critiques_reference",
+     "changements": [
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "amazonie_consortium_viva_reference",
+       "relation": "opposition",
+       "action": "nouvelle",
+       "lien": "relation",
+       "lien_detail": "amazonie_consortium_viva_reference est directement touché par l'occupation du Brésil et son déclin est déjà retenu.",
+       "raison": "L'occupation du Brésil peut créer une rivalité avec Amazonie Consortium Viva, mais ce n'est pas obligatoire pour leur existence."
+      }
+     ]
+    },
+    {
+     "slug": "cooperative_terrafond_reference",
+     "changements": []
+    },
+    {
+     "slug": "cooperatives_agro_ecologiques_de_reconstruction_territoriale_reference",
+     "changements": [
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "frente_sertao_livre_reference",
+       "relation": "alliance",
+       "action": "nouvelle",
+       "lien": "variable",
+       "lien_detail": "demographie_mobilite_humaine (+0.7)",
+       "raison": "L'occupation du Brésil peut favoriser des alliances avec des mouvements de résistance comme Frente Sertão Livre, mais ce n'est pas obligatoire."
+      }
+     ]
+    },
+    {
+     "slug": "cooperatives_agro_ecologiques_du_bassin_mediterraneen_reference",
+     "changements": []
+    },
+    {
+     "slug": "cooperatives_energetiques_decentralisees_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "energie_ressources_critiques (+0.3)",
+       "raison": "L'occupation du Brésil peut renforcer la demande pour des solutions énergétiques décentralisées, mais leur trajectoire n'est pas obligatoirement modifiée."
+      }
+     ]
+    },
+    {
+     "slug": "cooperatives_ia_open_source_reference",
+     "changements": []
+    },
+    {
+     "slug": "corporations_d_extraction_energetique_non_signataires_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "energie_ressources_critiques (+0.3)",
+       "raison": "L'occupation du Brésil peut offrir de nouvelles opportunités d'extraction non régulée, renforçant leur trajectoire sans la rendre obligatoire."
+      }
+     ]
+    },
+    {
+     "slug": "corridor_arctique_nordique_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "dominant",
+       "lien": "variable",
+       "lien_detail": "frontieres_du_systeme (+1.0)",
+       "raison": "L'occupation du Brésil peut indirectement renforcer l'importance stratégique du Corridor Arctique en tant qu'alternative aux routes perturbées, mais cela ne modifie pas obligatoirement sa trajectoire."
+      }
+     ]
+    },
+    {
+     "slug": "courant_nationaliste_instrumentalisateur_du_discours_des_racines_reference",
+     "changements": [
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "frente_sertao_livre_reference",
+       "relation": "opposition",
+       "action": "nouvelle",
+       "lien": "relation",
+       "lien_detail": "frente_sertao_livre_reference est un mouvement de résistance locale directement touché par l'occupation.",
+       "raison": "L'occupation du Brésil peut créer une opposition avec Frente Sertão Livre, mais ce n'est pas obligatoire pour leur existence."
+      }
+     ]
+    },
+    {
+     "slug": "datasovereign_reference",
+     "changements": [
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "rede_paulista_de_distribuicao_algoritmica_reference",
+       "relation": "opposition",
+       "action": "nouvelle",
+       "lien": "territoire",
+       "lien_detail": "Le Brésil est occupé par les États-Unis, et SPAAR (rede_paulista_de_distribuicao_algoritmica_reference) est un acteur clé déjà retenu comme déclinant.",
+       "raison": "L'occupation peut créer des tensions avec SPAAR, mais cela n'est pas obligatoire pour l'existence de SovData."
+      }
+     ]
+    },
+    {
+     "slug": "deepfield_institute_reference",
+     "changements": [
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "frente_sertao_livre_reference",
+       "relation": "opposition",
+       "action": "nouvelle",
+       "lien": "relation",
+       "lien_detail": "frente_sertao_livre_reference est un mouvement de résistance locale directement touché par l'occupation.",
+       "raison": "L'occupation du Brésil peut créer une opposition avec Frente Sertão Livre, mais ce n'est pas obligatoire pour l'existence du Deepfield Institute."
+      }
+     ]
+    },
+    {
+     "slug": "delta_du_gange_reference",
+     "changements": []
+    }
+   ]
+  }
+ },
+ "occupation_bresil_2029::reference::5": {
+  "empreinte": "1f9cd4a76a3aa6c1",
+  "date": "2026-10-18T16:21",
+  "brut": {
+   "fiches": [
+    {
+     "slug": "delta_du_mekong_reference",
+     "changements": []
+    },
+    {
+     "slug": "detroit_compact_grands_lacs_reference",
+     "changements": [
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "great_lakes_autonomous_compact_reference",
+       "relation": "opposition",
+       "action": "nouvelle",
+       "lien": "relation",
+       "lien_detail": "great_lakes_autonomous_compact_reference est directement touché par l'occupation du Brésil (trajectoire dominante → déjà retenu dans le lore)",
+       "contredit": "",
+       "raison": "L'occupation du Brésil renforce le Great Lakes Autonomous Compact, rival historique du Detroit Compact, ce qui peut intensifier leur opposition sans la rendre obligatoire."
+      },
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "déclinant",
+       "lien": "variable",
+       "lien_detail": "geopolitique_conflits (+0.3 point)",
+       "contredit": "",
+       "raison": "La reconfiguration géopolitique des Amériques peut marginaliser le Detroit Compact en accentuant sa trajectoire déclinante, mais ce n'est pas une contradiction directe."
+      }
+     ]
+    },
+    {
+     "slug": "directive_kontinuum_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "Le Système Kontinuum est une infrastructure algorithmique de gouvernance préventive déployée progressivement depuis les années 2040 par un consortium d'États à tendance centraliste numérique et de plateformes IA intégrées, sous couvert de stabilisation des 'risques de rupture systémique'.",
+       "contredit": "",
+       "lien": "variable",
+       "lien_detail": "frontieres_du_systeme (+1.0 point), gouvernance_institutions (+0.2 point)",
+       "raison": "L'occupation du Brésil peut élargir le rôle du Kontinuum en tant qu'outil de stabilisation des zones sous tension, mais la phrase reste vraie sans modification."
+      }
+     ]
+    },
+    {
+     "slug": "ecosynth_global_reference",
+     "changements": [
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "amazonie_consortium_viva_reference",
+       "relation": "opposition",
+       "action": "nouvelle",
+       "lien": "relation",
+       "lien_detail": "amazonie_consortium_viva_reference est directement touché (trajectoire déclinante → déjà retenu dans le lore)",
+       "contredit": "",
+       "raison": "EGRS peut renforcer son opposition au Consortium Amazônia Viva, affaibli par l'occupation, mais ce n'est pas une rupture obligatoire."
+      },
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "En position de quasi-monopole sur les souches microbiennes brevetées, l'entreprise structure une dépendance technologique des États et des consortiums agricoles, tout en négociant des accords de résilience climatique avec les institutions multilatérales.",
+       "contredit": "",
+       "lien": "variable",
+       "lien_detail": "climat_environnement_global (+0.4 point)",
+       "raison": "L'occupation du Brésil peut accentuer la pression sur EGRS pour des solutions climatiques, mais la phrase reste vraie."
+      }
+     ]
+    },
+    {
+     "slug": "elias_mork_reference",
+     "changements": []
+    },
+    {
+     "slug": "ergo_wian_sovereign_holdings_reference",
+     "changements": []
+    },
+    {
+     "slug": "etats_a_tendance_centraliste_numerique_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "frontieres_du_systeme (+1.0 point), gouvernance_institutions (+0.2 point)",
+       "contredit": "",
+       "raison": "L'occupation du Brésil peut renforcer les États centralistes numériques en tant qu'arbitres des tensions géopolitiques, mais ce n'est pas une contradiction directe."
+      }
+     ]
+    },
+    {
+     "slug": "europe_occidentale_reconstruite_reference",
+     "changements": [
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "bloc_eurasien_central_reference",
+       "relation": "opposition",
+       "action": "nouvelle",
+       "lien": "variable",
+       "lien_detail": "geopolitique_conflits (+0.3 point)",
+       "contredit": "",
+       "raison": "L'occupation du Brésil peut intensifier les tensions entre l'UOC et le Bloc Eurasien Central, mais leur rivalité préexistante n'est pas remise en cause."
+      }
+     ]
+    },
+    {
+     "slug": "factions_d_extraction_miniere_independantes_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "energie_ressources_critiques (+0.3 point)",
+       "contredit": "",
+       "raison": "L'occupation du Brésil peut créer de nouvelles opportunités pour les factions minières indépendantes, mais leur trajectoire émergente n'est pas obligatoirement modifiée."
+      }
+     ]
+    },
+    {
+     "slug": "factions_eurasiatiques_contre_la_tarification_hydrique_reference",
+     "changements": []
+    },
+    {
+     "slug": "federation_communs_territoriaux_reference",
+     "changements": [
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "frente_sertao_livre_reference",
+       "relation": "alliance",
+       "action": "nouvelle",
+       "lien": "relation",
+       "lien_detail": "frente_sertao_livre_reference est directement touché (nouvelle opposition → déjà retenu dans le lore)",
+       "contredit": "",
+       "raison": "La FCT peut nouer une alliance avec la Frente Sertão Livre en soutien aux résistances locales, mais ce n'est pas obligatoire."
+      },
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "Elle fédère quelque 340 bassins de vie à travers cinq continents, chacun gérant ses propres communs énergétiques, alimentaires et juridiques.",
+       "contredit": "",
+       "lien": "variable",
+       "lien_detail": "demographie_mobilite_humaine (+0.7 point)",
+       "raison": "L'occupation du Brésil peut entraîner des déplacements de population vers des zones gérées par la FCT, mais la phrase reste vraie."
+      }
+     ]
+    },
+    {
+     "slug": "federation_des_cliniques_autonomes_reference",
+     "changements": []
+    },
+    {
+     "slug": "fonds_d_investissement_foncier_climatique_reference",
+     "changements": [
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "amazonie_consortium_viva_reference",
+       "relation": "opposition",
+       "action": "nouvelle",
+       "lien": "relation",
+       "lien_detail": "amazonie_consortium_viva_reference est directement touché (trajectoire déclinante → déjà retenu dans le lore)",
+       "contredit": "",
+       "raison": "Le FIFC peut renforcer son opposition au Consortium Amazônia Viva, affaibli par l'occupation, mais ce n'est pas une rupture obligatoire."
+      },
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "Il agit comme courroie de transmission entre les marchés financiers globaux et les territoires sous pression, influençant l'accès à la terre, sa valeur et sa gouvernance.",
+       "contredit": "",
+       "lien": "variable",
+       "lien_detail": "climat_environnement_global (+0.4 point), systemes_productifs_travail (+0.4 point)",
+       "raison": "L'occupation du Brésil peut accentuer l'influence du FIFC sur les territoires sous pression, mais la phrase reste vraie."
+      }
+     ]
+    },
+    {
+     "slug": "fonds_monetaire_climatique_fmc_reference",
+     "changements": [
+      {
+       "type": "relation",
+       "niveau": "obligatoire",
+       "cible": "amazonie_consortium_viva_reference",
+       "relation": "alliance",
+       "action": "rompue",
+       "lien": "relation",
+       "lien_detail": "amazonie_consortium_viva_reference est directement touché (trajectoire déclinante → déjà retenu dans le lore)",
+       "contredit": "Le FMC est listé comme allié du Consortium Amazônia Viva, mais ce dernier est en déclin et sous pression après l'occupation du Brésil.",
+       "raison": "L'alliance devient impossible à maintenir après l'occupation, car le Consortium Amazônia Viva n'a plus la capacité d'être un partenaire viable."
+      },
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "Dans le scénario reference, le FMC constitue un pilier de la gouvernance économique globale, arbitrant les priorités d'investissement climatique entre États et conditionnant l'accès aux financements selon des critères d'émissions et de vulnérabilité.",
+       "contredit": "",
+       "lien": "variable",
+       "lien_detail": "gouvernance_institutions (+0.2 point)",
+       "raison": "L'occupation du Brésil peut élargir le rôle du FMC dans la gestion des crises, mais la phrase reste vraie."
+      }
+     ]
+    },
+    {
+     "slug": "fonds_souverain_arctique_scandinave_reference",
+     "changements": []
+    }
+   ]
+  }
+ },
+ "occupation_bresil_2029::reference::6": {
+  "empreinte": "c5c1ebe248e292c2",
+  "date": "2026-10-18T16:21",
+  "brut": {
+   "fiches": [
+    {
+     "slug": "fonds_souverains_de_la_ceinture_financiere_pacifique_reference",
+     "changements": [
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "amazonie_consortium_viva_reference",
+       "relation": "alliance",
+       "action": "rompue",
+       "lien": "relation",
+       "lien_detail": "Amazonie Consortium Viva est directement touché par l'occupation du Brésil (territoire brésilien sous tutelle américaine)",
+       "contredit": "L'alliance avec Amazonie Consortium Viva reste formellement possible, mais la perte de souveraineté brésilienne affaiblit sa capacité à honorer des engagements financiers ou territoriaux avec des partenaires extérieurs",
+       "raison": "L'occupation américaine du Brésil en 2029 prive Amazonie Consortium Viva de sa base territoriale principale, rendant toute alliance économique avec lui moins fiable ou stratégique pour un fonds souverain comme celui de la Ceinture Financière Pacifique."
+      }
+     ]
+    },
+    {
+     "slug": "frente_sertao_livre_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "obligatoire",
+       "apres": "dominant",
+       "lien": "territoire",
+       "lien_detail": "La Frente Sertão Livre est localisée dans le Sertão brésilien, zone directement touchée par l'occupation américaine",
+       "contredit": "La fiche indique une trajectoire 'ascendant' alors que l'occupation américaine du Brésil en 2029 transforme le Sertão en zone de résistance prioritaire, accélérant sa montée en puissance comme acteur incontournable de la contestation",
+       "raison": "L'occupation américaine crée un vide institutionnel et une répression accrue dans le Nordeste, ce qui renforce mécaniquement la légitimité et l'influence de la Frente Sertão Libre comme alternative locale."
+      },
+      {
+       "type": "relation",
+       "niveau": "obligatoire",
+       "cible": "amazonie_consortium_viva_reference",
+       "relation": "opposition",
+       "action": "nouvelle",
+       "lien": "territoire",
+       "lien_detail": "Amazonie Consortium Viva est directement touché par l'occupation (territoire brésilien sous tutelle)",
+       "contredit": "La fiche liste déjà Amazonie Consortium Viva comme rival, mais l'occupation américaine en fait un acteur de collaboration forcée avec les États-Unis, ce qui radicalise l'opposition de la Frente Sertão Libre",
+       "raison": "Amazonie Consortium Viva, en déclinant après 2029, devient un relais des intérêts américains dans la région, ce qui en fait un ennemi naturel de la Frente Sertão Libre."
+      },
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "great_lakes_autonomous_compact_reference",
+       "relation": "opposition",
+       "action": "nouvelle",
+       "lien": "relation",
+       "lien_detail": "Opposition déjà retenue dans la lecture générale du scénario",
+       "contredit": "Aucune contradiction, mais l'occupation américaine du Brésil renforce la rivalité entre la Frente Sertão Libre et le Compact des Grands Lacs, ce dernier devenant un allié objectif des États-Unis",
+       "raison": "Le Compact des Grands Lacs, déjà en opposition avec la Frente Sertão Libre, voit son rôle renforcé comme partenaire des États-Unis dans les Amériques, ce qui accentue les tensions."
+      }
+     ]
+    },
+    {
+     "slug": "front_souverainiste_des_ressources_d_amerique_du_sud_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "obligatoire",
+       "apres": "ascendant",
+       "lien": "territoire",
+       "lien_detail": "Le Front opère dans les Amériques multipolaires, zone directement affectée par l'occupation du Brésil",
+       "contredit": "La fiche indique une trajectoire 'émergent' alors que l'occupation américaine du Brésil en 2029 crée un contexte de crise propice à la montée en puissance des mouvements souverainistes",
+       "raison": "L'occupation américaine du Brésil, en sapant la souveraineté des États sud-américains, offre au Front Souverainiste des Ressources un rôle central comme résistance organisée."
+      },
+      {
+       "type": "relation",
+       "niveau": "obligatoire",
+       "cible": "amazonie_consortium_viva_reference",
+       "relation": "opposition",
+       "action": "nouvelle",
+       "lien": "territoire",
+       "lien_detail": "Amazonie Consortium Viva est directement touché par l'occupation (territoire brésilien sous tutelle)",
+       "contredit": "La fiche liste déjà Amazonie Consortium Viva comme rival, mais l'occupation américaine en fait un acteur collaborateur, ce qui radicalise l'opposition du Front Souverainiste",
+       "raison": "Amazonie Consortium Viva, en déclinant après 2029, devient un relais des intérêts américains, ce qui en fait un ennemi naturel du Front Souverainiste."
+      }
+     ]
+    },
+    {
+     "slug": "gelecek_meclisi_reference",
+     "changements": [
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "frente_sertao_livre_reference",
+       "relation": "alliance",
+       "action": "nouvelle",
+       "lien": "variable",
+       "lien_detail": "Variable 'geopolitique_conflits' (+0.3), liée à la fragmentation des Amériques",
+       "contredit": "Aucune contradiction, mais l'occupation américaine du Brésil crée un contexte favorable à des alliances entre acteurs contestataires comme la Frente Sertão Libre et des assemblées transnationales comme Gelecek Meclisi",
+       "raison": "Gelecek Meclisi, en tant qu'espace de négociation émergent, peut intégrer la Frente Sertão Libre comme acteur clé des résistances locales aux occupations étrangères."
+      }
+     ]
+    },
+    {
+     "slug": "geneve_lac_retreite_reference",
+     "changements": []
+    },
+    {
+     "slug": "gouvernements_a_regime_de_productivite_mandatee_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "Dans ce scénario, ces gouvernements constituent un contexte systémique de référence définissant les contraintes politiques pesant sur les acteurs économiques, les travailleurs et les organisations opérant sous leur juridiction.",
+       "contredit": "Aucune contradiction, mais l'occupation américaine du Brésil étend de facto la juridiction des gouvernements à régime de productivité mandatée aux territoires occupés, élargissant leur influence",
+       "lien": "variable",
+       "lien_detail": "Variable 'gouvernance_institutions' (+0.2), liée à la reconfiguration des tutelles administratives",
+       "raison": "L'occupation américaine du Brésil peut être interprétée comme une extension des régimes de productivité mandatée, appliqués par les États-Unis sur les territoires occupés."
+      }
+     ]
+    },
+    {
+     "slug": "gouvernements_du_bloc_sahelien_autonome_reference",
+     "changements": []
+    },
+    {
+     "slug": "gouvernements_federaux_residuels_souverainistes_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "Variable 'geopolitique_conflits' (+0.3), liée à la fragmentation des Amériques",
+       "contredit": "Aucune contradiction, mais l'occupation américaine du Brésil renforce la légitimité des gouvernements fédéralistes résiduels comme défenseurs de la souveraineté traditionnelle face aux occupations étrangères",
+       "raison": "L'occupation américaine du Brésil crée un précédent qui peut galvaniser les gouvernements fédéralistes résiduels, les positionnant comme remparts contre les ingérences extérieures."
+      }
+     ]
+    },
+    {
+     "slug": "great_lakes_autonomous_compact_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "obligatoire",
+       "apres": "dominant",
+       "lien": "relation",
+       "lien_detail": "Alliance déjà retenue avec The Lattice, et opposition avec la Frente Sertão Libre (tous deux touchés par l'occupation du Brésil)",
+       "contredit": "La fiche indique une trajectoire 'mature' alors que l'occupation américaine du Brésil renforce le rôle du Compact des Grands Lacs comme partenaire clé des États-Unis dans les Amériques, accélérant sa montée en puissance",
+       "raison": "L'occupation américaine du Brésil repositionne le Compact des Grands Lacs comme acteur dominant dans la gestion des ressources et des flux logistiques en Amérique du Nord, en collaboration avec les États-Unis."
+      },
+      {
+       "type": "relation",
+       "niveau": "obligatoire",
+       "cible": "frente_sertao_livre_reference",
+       "relation": "opposition",
+       "action": "nouvelle",
+       "lien": "relation",
+       "lien_detail": "Opposition déjà retenue dans la lecture générale du scénario",
+       "contredit": "La fiche ne liste pas explicitement la Frente Sertão Libre comme rivale, alors que l'occupation américaine du Brésil en fait un ennemi naturel du Compact des Grands Lacs",
+       "raison": "Le Compact des Grands Lacs, en tant que partenaire des États-Unis, entre en conflit direct avec la Frente Sertão Libre, acteur de résistance à l'occupation."
+      }
+     ]
+    },
+    {
+     "slug": "guadalajara_nexus_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "obligatoire",
+       "apres": "dominant",
+       "lien": "variable",
+       "lien_detail": "Variable 'systemes_productifs_travail' (+0.4), liée à la reconfiguration des chaînes logistiques en Amérique du Nord",
+       "contredit": "La fiche indique une trajectoire 'ascendant' alors que l'occupation américaine du Brésil accélère la fragmentation des Amériques, faisant de Guadalajara Nexus un hub incontournable pour contourner les blocages régionaux",
+       "raison": "L'occupation américaine du Brésil perturbe les échanges régionaux, ce qui renforce le rôle de Guadalajara Nexus comme plaque tournante des flux logistiques en Amérique du Nord."
+      }
+     ]
+    },
+    {
+     "slug": "helsinki_communs_numeriques_reference",
+     "changements": []
+    },
+    {
+     "slug": "holdfast_reference",
+     "changements": []
+    },
+    {
+     "slug": "hyphan_raghavan_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "Hyphan Raghavan incarne la transition fragile et contestée du pouvoir au sein du Pacte des Souverains, un bloc géoéconomique dominant en 2098.",
+       "contredit": "Aucune contradiction, mais l'occupation américaine du Brésil peut élargir le rôle de Hyphan Raghavan comme médiatrice entre les blocs géoéconomiques et les territoires occupés",
+       "lien": "variable",
+       "lien_detail": "Variable 'geopolitique_conflits' (+0.3), liée à la fragmentation des Amériques",
+       "raison": "L'occupation américaine du Brésil crée un nouveau terrain de négociation pour les acteurs comme Hyphan Raghavan, qui peut jouer un rôle dans la gestion des tensions entre blocs."
+      }
+     ]
+    },
+    {
+     "slug": "ilse_varga_holm_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "Pragmatique et stratège, elle incarne l'équilibre précaire entre stabilité institutionnelle et adaptation forcée aux crises climatiques et géopolitiques.",
+       "contredit": "Aucune contradiction, mais l'occupation américaine du Brésil peut élargir le rôle d'Ilse Varga-Holm comme garante des équilibres géoéconomiques face aux désordres régionaux",
+       "lien": "variable",
+       "lien_detail": "Variable 'geopolitique_conflits' (+0.3), liée à la fragmentation des Amériques",
+       "raison": "L'occupation américaine du Brésil renforce la nécessité pour des acteurs comme Ilse Varga-Holm de maintenir des alliances stables dans un contexte de crise."
+      }
+     ]
+    },
+    {
+     "slug": "institut_des_seuils_demographiques_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "obligatoire",
+       "extrait": "Il agit comme arbitre des flux humains, produisant des modèles prédictifs et des seuils de tolérance pour les migrations climatiques et économiques.",
+       "contredit": "L'occupation américaine du Brésil génère des déplacements massifs de population, ce qui rend obsolète toute modélisation des flux sans intégrer ce nouveau facteur",
+       "lien": "variable",
+       "lien_detail": "Variable 'demographie_mobilite_humaine' (+0.7), liée aux déplacements de population",
+       "raison": "L'occupation américaine du Brésil crée des flux migratoires imprévus, ce qui oblige l'Institut des Seuils Démographiques à revoir ses modèles pour rester pertinent."
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "occupation_bresil_2029::reference::7": {
+  "empreinte": "430c8571645effcb",
+  "date": "2026-10-18T16:22",
+  "brut": {
+   "fiches": [
+    {
+     "slug": "institut_polytechnique_de_ouagadougou_reference",
+     "changements": []
+    },
+    {
+     "slug": "institutions_multilaterales_survivantes_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "Elles peinent à imposer leur autorité face aux blocs régionaux et aux consortiums privés, mais conservent un rôle de médiation dans les crises géopolitiques majeures.",
+       "contredit": "",
+       "lien": "variable",
+       "lien_detail": "geopolitique_conflits (+0.3)",
+       "raison": "L'occupation du Brésil par les États-Unis renforce les tensions géopolitiques, ce qui pourrait élargir le rôle de médiation du RGMS sans rendre fausse la phrase actuelle."
+      }
+     ]
+    },
+    {
+     "slug": "internationale_travailleurs_augmentes_reference",
+     "changements": []
+    },
+    {
+     "slug": "kalaallit_nunaat_sovereign_fund_reference",
+     "changements": [
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "bloc_eurasien_central_reference",
+       "relation": "opposition",
+       "action": "nouvelle",
+       "lien": "variable",
+       "lien_detail": "geopolitique_conflits (+0.3)",
+       "contredit": "",
+       "raison": "L'occupation du Brésil par les États-Unis pourrait inciter le KNSF à renforcer son opposition au Bloc Eurasien Central, déjà rival, pour contrer l'expansionnisme américain."
+      }
+     ]
+    },
+    {
+     "slug": "kaspar_lind_reference",
+     "changements": []
+    },
+    {
+     "slug": "kindling_reference",
+     "changements": []
+    },
+    {
+     "slug": "kinshasa_accords_hydriques_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "Régulièrement mis à l'épreuve par les sécheresses, les migrations climatiques et les pressions des multinationales minières, les Accords restent un cadre fragile mais indispensable pour éviter l'effondrement du bassin.",
+       "contredit": "",
+       "lien": "variable",
+       "lien_detail": "demographie_mobilite_humaine (+0.7)",
+       "raison": "L'occupation du Brésil pourrait indirectement augmenter les migrations climatiques vers l'Afrique, renforçant la pression sur les Accords sans rendre fausse la phrase actuelle."
+      }
+     ]
+    },
+    {
+     "slug": "lamplight_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "En enquêtant sur les financements clandestins des territoires post-démocratiques, les réseaux de corruption transnationaux et les mécanismes de contrôle algorithmique, Lamplight Collective produit des révélations qui ébranlent les équilibres précaires du système.",
+       "contredit": "",
+       "lien": "variable",
+       "lien_detail": "gouvernance_institutions (+0.2)",
+       "raison": "L'occupation du Brésil pourrait offrir de nouvelles cibles d'investigation pour Lamplight, élargissant son rôle sans contredire la phrase actuelle."
+      }
+     ]
+    },
+    {
+     "slug": "le_temoin_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "obligatoire",
+       "extrait": "Couvre les tensions géopolitiques et économiques dans un contexte d'incertitude croissante.",
+       "contredit": "L'occupation du Brésil par les États-Unis en 2029 est un événement géopolitique majeur non mentionné dans son rôle.",
+       "lien": "variable",
+       "lien_detail": "geopolitique_conflits (+0.3)",
+       "raison": "Son rôle de correspondant international doit intégrer explicitement la couverture de l'occupation du Brésil pour rester vrai."
+      }
+     ]
+    },
+    {
+     "slug": "leena_vainala_reference",
+     "changements": []
+    },
+    {
+     "slug": "les_veilleurs_des_nappes_phreatiques_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "Les Veilleurs agissent comme un contre-pouvoir face aux consortiums privés et aux lobbies agro-industriels, documentant les abus et proposant des alternatives locales.",
+       "contredit": "",
+       "lien": "variable",
+       "lien_detail": "climat_environnement_global (+0.4)",
+       "raison": "L'occupation du Brésil pourrait indirectement renforcer les pressions sur les ressources hydriques, élargissant le rôle des Veilleurs sans contredire la phrase actuelle."
+      }
+     ]
+    },
+    {
+     "slug": "les_veilleurs_du_fleuve_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "Ils agissent comme un système nerveux parallèle, reliant les communautés riveraines, les deltas menacés et les zones périurbaines abandonnées pour surveiller les dérives des acteurs institutionnels et privés.",
+       "contredit": "",
+       "lien": "variable",
+       "lien_detail": "demographie_mobilite_humaine (+0.7)",
+       "raison": "L'occupation du Brésil pourrait indirectement augmenter les migrations vers les deltas, renforçant le rôle des Gardiens sans contredire la phrase actuelle."
+      }
+     ]
+    },
+    {
+     "slug": "ligue_des_metropoles_du_sud_pour_les_infrastructures_libres_reference",
+     "changements": []
+    },
+    {
+     "slug": "ligue_des_municipalites_peripheriques_sous_connectees_reference",
+     "changements": [
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "frente_sertao_livre_reference",
+       "relation": "alliance",
+       "action": "nouvelle",
+       "lien": "relation",
+       "lien_detail": "frente_sertao_livre_reference (déjà retenu comme opposition nouvelle)",
+       "contredit": "",
+       "raison": "L'occupation du Brésil pourrait inciter la Ligue à s'allier avec la Frente Sertão Livre pour soutenir les zones périphériques brésiliennes sous occupation."
+      },
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "Dans ce scénario, elle représente la pression collective des zones périphériques face aux déséquilibres de connectivité, agissant comme contrepoids institutionnel aux logiques centralisatrices.",
+       "contredit": "",
+       "lien": "territoire",
+       "lien_detail": "Brésil (occupé)",
+       "raison": "L'occupation du Brésil pourrait élargir son rôle en intégrant explicitement les municipalités brésiliennes sous-connectées, sans rendre fausse la phrase actuelle."
+      }
+     ]
+    },
+    {
+     "slug": "lobbies_agro_industriels_a_haute_consommation_d_eau_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "Exercent des pressions politiques et économiques pour maintenir leurs droits d'usage de l'eau face aux tensions de raréfaction, s'opposant aux réformes de gouvernance hydrique.",
+       "contredit": "",
+       "lien": "variable",
+       "lien_detail": "climat_environnement_global (+0.4)",
+       "raison": "L'occupation du Brésil pourrait indirectement renforcer les pressions sur les ressources hydriques, élargissant leur rôle sans contredire la phrase actuelle."
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "occupation_bresil_2029::reference::8": {
+  "empreinte": "f6e09a171badd782",
+  "date": "2026-10-18T16:22",
+  "brut": {
+   "fiches": [
+    {
+     "slug": "lobbies_industriels_des_etats_non_signataires_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "geopolitique_conflits (+0.3)",
+       "raison": "L'occupation du Brésil par les États-Unis renforce les tensions géopolitiques et les asymétries compétitives, offrant aux lobbies des États non-signataires de nouvelles opportunités pour instrumentaliser la fragmentation institutionnelle."
+      }
+     ]
+    },
+    {
+     "slug": "lyon_metropole_reference",
+     "changements": []
+    },
+    {
+     "slug": "maelys_okonkwo_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "Son travail se concentre sur l'exposition des liens entre les réseaux de Kindling, les consortiums énergétiques opaques et les mécanismes de contrôle des ressources critiques dans les Amériques Multipolaires.",
+       "lien": "variable",
+       "lien_detail": "geopolitique_conflits (+0.3) et systemes_productifs_travail (+0.4)",
+       "raison": "L'occupation du Brésil par les États-Unis crée un nouveau terrain d'investigation pour Maëlys Okonkwo, élargissant son champ d'action aux mécanismes de contrôle des ressources critiques dans les Amériques, sans rendre fausse sa description actuelle."
+      }
+     ]
+    },
+    {
+     "slug": "meridian_assembly_reference",
+     "changements": []
+    },
+    {
+     "slug": "milices_concurrentes_des_droits_de_passage_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "geopolitique_conflits (+0.3) et frontieres_du_systeme (+1.0)",
+       "raison": "L'occupation du Brésil et la reconfiguration des frontières en Amérique du Sud augmentent les zones de friction et les opportunités pour les milices de négocier ou imposer des droits de passage, sans que cela ne devienne obligatoire pour leur existence."
+      }
+     ]
+    },
+    {
+     "slug": "mouvement_pour_la_libre_circulation_des_personnes_et_des_donnees_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "obligatoire",
+       "extrait": "Pression sur les institutions pour abolir ou contourner les barrières à la mobilité humaine et numérique dans un contexte de re-fragmentation des espaces.",
+       "contredit": "L'occupation du Brésil par les États-Unis crée une nouvelle barrière à la mobilité humaine et numérique, avec des déplacements de population et des restrictions accrues dans la zone.",
+       "lien": "territoire",
+       "lien_detail": "Brésil (zone occupée)",
+       "raison": "La fiche devient fausse si elle n'intègre pas explicitement cette nouvelle barrière, car le Brésil était un espace de mobilité clé dans les Amériques."
+      },
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "demographie_mobilite_humaine (+0.7)",
+       "raison": "L'occupation du Brésil et les déplacements de population qui en découlent renforcent la pression pour contourner les barrières à la mobilité, augmentant l'importance du mouvement."
+      }
+     ]
+    },
+    {
+     "slug": "mouvement_racines_vivantes_reference",
+     "changements": [
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "frente_sertao_livre_reference",
+       "relation": "alliance",
+       "action": "nouvelle",
+       "lien": "relation",
+       "lien_detail": "frente_sertao_livre_reference (opposition directe à l'occupation américaine du Brésil)",
+       "raison": "Le mouvement des Racines Vivantes, déjà allié à des entités de résistance locale comme la Frente Sertão Livre, pourrait renforcer cette alliance face à l'occupation du Brésil, sans que cela ne devienne obligatoire."
+      },
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "Le Mouvement joue un rôle de tiers-espace entre les institutions technocratiques d'adaptation climatique et les communautés locales en résistance.",
+       "lien": "variable",
+       "lien_detail": "geopolitique_conflits (+0.3) et demographie_mobilite_humaine (+0.7)",
+       "raison": "L'occupation du Brésil et les déplacements de population élargissent le rôle du mouvement comme espace de médiation dans les zones de résistance, sans rendre fausse sa description actuelle."
+      }
+     ]
+    },
+    {
+     "slug": "murmansk_transit_arctique_reference",
+     "changements": []
+    },
+    {
+     "slug": "nadia_ferreira_sato_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "obligatoire",
+       "apres": "dominant",
+       "lien": "territoire",
+       "lien_detail": "Brésil (zone occupée, partie des Amériques Multipolaires)",
+       "contredit": "Nadia Ferreira-Sato est décrite comme une figure marginale de The Lattice, mais l'occupation du Brésil par les États-Unis et la montée de la résistance locale (Frente Sertão Livre) rendent impossible qu'elle reste simplement 'ascendante' sans devenir une figure centrale de la résistance.",
+       "raison": "Son rôle de bâtisseur marginal dans les Amériques Multipolaires est directement affecté par l'occupation du Brésil, qui en fait un acteur clé de la résistance ou de la survie alternative."
+      },
+      {
+       "type": "relation",
+       "niveau": "obligatoire",
+       "cible": "frente_sertao_livre_reference",
+       "relation": "alliance",
+       "action": "nouvelle",
+       "lien": "territoire",
+       "lien_detail": "Brésil (zone occupée)",
+       "contredit": "La Frente Sertão Livre est une opposition nouvelle explicitement retenue dans le lore post-occupation, et Nadia Ferreira-Sato, active dans les Amériques Multipolaires, ne peut pas ne pas être alliée à cette résistance locale.",
+       "raison": "L'occupation du Brésil crée une alliance obligatoire entre Raised Hands (dirigé par Nadia Ferreira-Sato) et la Frente Sertão Livre, sans laquelle son rôle dans les Amériques devient incohérent."
+      },
+      {
+       "type": "texte",
+       "niveau": "obligatoire",
+       "extrait": "elle crée des structures alternatives de survie et de résistance en dehors des cadres institutionnels des Amériques Multipolaires.",
+       "contredit": "L'occupation du Brésil par les États-Unis et la rupture des échanges régionaux transforment les Amériques Multipolaires en un espace de résistance institutionnelle et non plus seulement marginale.",
+       "lien": "territoire",
+       "lien_detail": "Brésil (zone occupée)",
+       "raison": "La phrase devient fausse si elle ne précise pas que ces structures alternatives sont désormais en opposition directe à l'occupation américaine du Brésil."
+      }
+     ]
+    },
+    {
+     "slug": "nairobi_crrc_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "Dans un monde fragmenté mais encore institutionnellement structuré, il négocie entre acteurs privés, municipalités et blocs régionaux africains pour maintenir des flux de résilience climatique et de coordination des ressources.",
+       "lien": "variable",
+       "lien_detail": "climat_environnement_global (+0.4) et systemes_productifs_travail (+0.4)",
+       "raison": "L'occupation du Brésil et ses répercussions sur les systèmes productifs et climatiques élargissent le rôle du Nairobi CRRC dans la coordination des flux de résilience, sans rendre fausse sa description actuelle."
+      }
+     ]
+    },
+    {
+     "slug": "neuroharmonics_reference",
+     "changements": []
+    },
+    {
+     "slug": "nexcore_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "NexCore GIG est devenu l'épine dorsale numérique de facto d'un monde incapable de financer ses propres infrastructures publiques.",
+       "lien": "variable",
+       "lien_detail": "frontieres_du_systeme (+1.0) et systemes_productifs_travail (+0.4)",
+       "raison": "L'occupation du Brésil et la reconfiguration des frontières en Amérique du Sud pourraient élargir le rôle de NexCore dans la gestion des infrastructures critiques de la zone occupée, sans rendre fausse sa description actuelle."
+      }
+     ]
+    },
+    {
+     "slug": "nexus_biosyn_reference",
+     "changements": [
+      {
+       "type": "relation",
+       "niveau": "obligatoire",
+       "cible": "amazonie_consortium_viva_reference",
+       "relation": "alliance",
+       "action": "rompue",
+       "lien": "territoire",
+       "lien_detail": "Amazonie brésilienne (zone disputée sous occupation américaine)",
+       "contredit": "L'Amazonie Consortium Viva est déjà retenu comme déclinant dans le lore post-occupation, et Nexus BioSyn, allié historique, ne peut plus maintenir cette alliance sans devenir complice de l'occupation américaine.",
+       "raison": "L'occupation du Brésil et le déclin de l'Amazonie Consortium Viva rendent impossible le maintien de cette alliance, sous peine de contredire la trajectoire déclinante de l'Amazonie Consortium Viva."
+      },
+      {
+       "type": "texte",
+       "niveau": "obligatoire",
+       "extrait": "ses semences de quatrième génération couvrent près de 60 % des surfaces agricoles des Amériques Multipolaires.",
+       "contredit": "L'occupation du Brésil par les États-Unis et la rupture des échanges régionaux rendent impossible le maintien de cette couverture agricole sans adaptation explicite.",
+       "lien": "territoire",
+       "lien_detail": "Brésil (zone occupée)",
+       "raison": "La phrase devient fausse si elle ne précise pas que cette couverture est désormais limitée ou contestée dans la zone occupée."
+      }
+     ]
+    },
+    {
+     "slug": "observatoire_climatique_des_territoires_oct_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "Elle occupe une position d'arbitre technique dans un système fragmenté où la donnée climatique est devenue une ressource stratégique.",
+       "lien": "variable",
+       "lien_detail": "climat_environnement_global (+0.4) et frontieres_du_systeme (+1.0)",
+       "raison": "L'occupation du Brésil et la pression sur l'Amazonie élargissent le rôle de l'OCT comme arbitre des données climatiques dans les zones disputées, sans rendre fausse sa description actuelle."
+      }
+     ]
+    },
+    {
+     "slug": "ong_de_preservation_patrimoniale_numerique_reference",
+     "changements": []
+    }
+   ]
+  }
+ },
+ "occupation_bresil_2029::reference::9": {
+  "empreinte": "7ac4dd6112a262d8",
+  "date": "2026-10-18T16:23",
+  "brut": {
+   "fiches": [
+    {
+     "slug": "ong_de_tracabilite_des_ressources_critiques_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "energie_ressources_critiques (+0.3)",
+       "contredit": "",
+       "raison": "L'occupation du Brésil par les États-Unis et la pression sur l'Amazonie augmentent les enjeux de traçabilité des ressources critiques, ce qui pourrait renforcer le rôle et l'influence de cette ONG sans pour autant rendre fausse sa trajectoire actuelle."
+      },
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "amazonie_consortium_viva_reference",
+       "relation": "opposition",
+       "action": "nouvelle",
+       "lien": "relation",
+       "lien_detail": "Amazonie Consortium Viva est directement touché par l'occupation du Brésil (territoire concerné)",
+       "contredit": "",
+       "raison": "L'occupation américaine du Brésil et les tensions autour de l'Amazonie pourraient créer une opposition naturelle entre cette ONG et le Consortium Amazônia Viva, qui gère des enjeux similaires."
+      }
+     ]
+    },
+    {
+     "slug": "ong_environnementales_de_terrain_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "climat_environnement_global (+0.4)",
+       "contredit": "",
+       "raison": "L'occupation du Brésil et la pression sur l'Amazonie augmentent les risques environnementaux, ce qui pourrait renforcer la demande pour des observations de terrain indépendantes sans rendre fausse la trajectoire actuelle."
+      },
+      {
+       "type": "relation",
+       "niveau": "obligatoire",
+       "cible": "amazonie_consortium_viva_reference",
+       "relation": "opposition",
+       "action": "nouvelle",
+       "lien": "territoire",
+       "lien_detail": "L'Amazonie brésilienne est un territoire directement touché par l'occupation",
+       "contredit": "Le rôle de contrepoids civil de ces ONG devient faux si elles ne s'opposent pas explicitement aux logiques de gestion de l'Amazonie sous tutelle américaine (via le Consortium Amazônia Viva).",
+       "raison": "L'occupation du Brésil par les États-Unis et la gestion de l'Amazonie par le Consortium Amazônia Viva rendent obligatoire une opposition claire de ces ONG, sans quoi leur rôle de contrepoids civil serait contredit."
+      }
+     ]
+    },
+    {
+     "slug": "operateurs_de_zones_economiques_speciales_periurbaines_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "demographie_mobilite_humaine (+0.7)",
+       "contredit": "",
+       "raison": "Les déplacements de population au Brésil et la reconfiguration des flux économiques pourraient créer de nouvelles opportunités pour ces opérateurs, sans rendre fausse leur trajectoire actuelle."
+      },
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "amazonie_consortium_viva_reference",
+       "relation": "alliance",
+       "action": "nouvelle",
+       "lien": "territoire",
+       "lien_detail": "Le Brésil est un territoire directement touché par l'occupation",
+       "contredit": "",
+       "raison": "L'occupation américaine pourrait favoriser des alliances entre ces opérateurs et le Consortium Amazônia Viva pour structurer les zones économiques périurbaines du Brésil sous tutelle."
+      }
+     ]
+    },
+    {
+     "slug": "operateurs_logistiques_prives_des_zones_grises_eurasiennes_reference",
+     "changements": []
+    },
+    {
+     "slug": "operateurs_prives_d_energie_distribuee_hors_fct_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "systemes_productifs_travail (+0.4)",
+       "contredit": "",
+       "raison": "La fragmentation territoriale accrue au Brésil pourrait créer des opportunités pour ces opérateurs dans les zones grises, sans rendre fausse leur trajectoire actuelle."
+      }
+     ]
+    },
+    {
+     "slug": "optiflow_logistics_reference",
+     "changements": [
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "rede_paulista_de_distribuicao_algoritmica_reference",
+       "relation": "alliance",
+       "action": "nouvelle",
+       "lien": "relation",
+       "lien_detail": "Rede Paulista de Distribuição Algorítmica (SPAAR) est directement touché par l'occupation du Brésil (alliance déjà retenue avec SPAAR)",
+       "contredit": "",
+       "raison": "L'occupation du Brésil pourrait renforcer les liens logistiques entre OptiFlow et SPAAR, déjà alliés dans le lore, pour gérer les flux prioritaires dans la région."
+      }
+     ]
+    },
+    {
+     "slug": "oracle_des_seuils_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "Système d'intelligence artificielle distribué opérant sous mandat multilatéral partiel, l'Oracle des Seuils est devenu l'instrument de référence pour la détection et la modélisation des points de bascule systémiques — climatiques, économiques, hydrologiques, énergétiques.",
+       "contredit": "",
+       "lien": "variable",
+       "lien_detail": "climat_environnement_global (+0.4), systemes_productifs_travail (+0.4), energie_ressources_critiques (+0.3)",
+       "raison": "L'occupation du Brésil et ses répercussions pourraient élargir le rôle de l'Oracle des Seuils dans la modélisation des impacts systémiques, sans rendre fausse la phrase actuelle."
+      }
+     ]
+    },
+    {
+     "slug": "ouagadougou_polytechnique_reference",
+     "changements": []
+    },
+    {
+     "slug": "pacifique_sud_archipels_flottants_reference",
+     "changements": []
+    },
+    {
+     "slug": "pacifique_sud_resilience_network_reference",
+     "changements": []
+    },
+    {
+     "slug": "pacte_des_souverains_reference",
+     "changements": [
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "frente_sertao_livre_reference",
+       "relation": "alliance",
+       "action": "nouvelle",
+       "lien": "relation",
+       "lien_detail": "Frente Sertão Livre est une opposition locale directement touchée par l'occupation du Brésil (opposition déjà retenue avec Great Lakes Autonomous Compact)",
+       "contredit": "",
+       "raison": "L'occupation du Brésil pourrait pousser le Pacte des Souverains à soutenir la Frente Sertão Livre comme symbole de résistance à l'hégémonie américaine."
+      }
+     ]
+    },
+    {
+     "slug": "plateformes_centralisees_de_narration_officielle_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "obligatoire",
+       "extrait": "Dans le scénario référence, les Plateformes Centralisées de Narration Officielle ne sont pas un simple dispositif de censure mais un écosystème informationnel sophistiqué qui définit la grammaire du réel pour la majorité des populations connectées.",
+       "contredit": "L'occupation du Brésil par les États-Unis et la reconfiguration géopolitique des Amériques pourraient rendre fausse l'idée que ces plateformes définissent la grammaire du réel *pour la majorité des populations connectées* sans intégrer explicitement la narration américaine sur le Brésil.",
+       "lien": "variable",
+       "lien_detail": "geopolitique_conflits (+0.3), gouvernance_institutions (+0.2)",
+       "raison": "L'occupation du Brésil par les États-Unis impose que ces plateformes intègrent ou contestent la narration officielle américaine sur ce territoire, sans quoi leur rôle dominant serait contredit."
+      }
+     ]
+    },
+    {
+     "slug": "plateformes_d_optimisation_territoriale_par_ia_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "obligatoire",
+       "extrait": "Dans ce scénario, ces plateformes structurent la manière dont les territoires sont administrés et organisés, substituant ou complétant les institutions humaines dans les arbitrages d'allocation spatiale et de ressources.",
+       "contredit": "L'occupation du Brésil par les États-Unis et la tutelle militaire sur ce territoire rendent fausse l'idée que ces plateformes structurent *la manière dont les territoires sont administrés* sans mentionner leur rôle dans un Brésil sous contrôle américain.",
+       "lien": "territoire",
+       "lien_detail": "Le Brésil est un territoire directement touché par l'occupation",
+       "raison": "Ces plateformes doivent explicitement inclure ou exclure le Brésil occupé dans leur champ d'action, sans quoi leur rôle général est contredit."
+      }
+     ]
+    },
+    {
+     "slug": "plateformes_informationnelles_dominantes_et_leurs_ia_de_moderation_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "obligatoire",
+       "extrait": "Dans le scénario reference, elles forment le substrat technologique sur lequel circule (ou est bloquée) l'information, agissant comme arbitres de facto de ce qui est visible, crédible ou audible.",
+       "contredit": "L'occupation du Brésil par les États-Unis et la reconfiguration géopolitique des Amériques rendent fausse l'idée que ces plateformes agissent comme arbitres *de facto* sans intégrer les logiques de modération imposées par la tutelle américaine sur le Brésil.",
+       "lien": "variable",
+       "lien_detail": "geopolitique_conflits (+0.3), gouvernance_institutions (+0.2)",
+       "raison": "Ces plateformes doivent explicitement refléter ou contester les règles de modération imposées par les États-Unis sur le Brésil occupé, sans quoi leur rôle d'arbitre est contredit."
+      }
+     ]
+    },
+    {
+     "slug": "prisme_global_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "Prisme Global s'est imposé comme la principale contre-architecture narrative à l'hégémonie des plateformes centralisées, en agrégeant des millions de flux locaux — témoignages, capteurs citoyens, journalistes embarqués, IA communautaires — en une cartographie vivante du monde réel.",
+       "contredit": "",
+       "lien": "variable",
+       "lien_detail": "geopolitique_conflits (+0.3)",
+       "raison": "L'occupation du Brésil pourrait élargir le rôle de Prisme Global en intégrant des flux locaux brésiliens (témoignages, capteurs) pour contrer la narration officielle américaine, sans rendre fausse la phrase actuelle."
+      },
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "frente_sertao_livre_reference",
+       "relation": "alliance",
+       "action": "nouvelle",
+       "lien": "relation",
+       "lien_detail": "Frente Sertão Livre est une opposition locale directement touchée par l'occupation du Brésil",
+       "contredit": "",
+       "raison": "Prisme Global pourrait s'allier à la Frente Sertão Livre pour diffuser des contre-récits sur l'occupation du Brésil."
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "occupation_bresil_2029::reference::10": {
+  "empreinte": "ffbe179b42b9b62c",
+  "date": "2026-10-18T16:23",
+  "brut": {
+   "fiches": [
+    {
+     "slug": "programme_onu_eau_2080_reference",
+     "changements": [
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "front_souverainiste_des_ressources_d_amerique_du_sud_reference",
+       "relation": "opposition",
+       "action": "nouvelle",
+       "lien": "variable",
+       "lien_detail": "geopolitique_conflits (+0.3)",
+       "contredit": "",
+       "raison": "L'occupation du Brésil par les États-Unis renforce les tensions géopolitiques en Amérique du Sud, rendant plausible une opposition accrue entre le Programme ONU-Eau 2080 et les acteurs souverainistes sud-américains, dont le Front Souverainiste des Ressources d'Amérique du Sud."
+      },
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "Sert de référentiel normatif et d'instance de coordination internationale dans le scénario, influençant les arbitrages entre États sur le partage des ressources hydriques.",
+       "contredit": "",
+       "lien": "variable",
+       "lien_detail": "gouvernance_institutions (+0.2)",
+       "raison": "L'occupation du Brésil pourrait élargir le rôle du Programme ONU-Eau 2080 en tant qu'arbitre dans les conflits hydriques émergents en Amérique du Sud, sans rendre la phrase fausse."
+      }
+     ]
+    },
+    {
+     "slug": "raised_hands_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "obligatoire",
+       "apres": "ascendant",
+       "lien": "territoire",
+       "lien_detail": "Brésil occupé par les États-Unis (Amériques Multipolaires)",
+       "contredit": "Mouvement émergent de résidents précaires des villes de The Lattice (Amériques Multipolaires) réclamant des élections et un droit de vote pour les clients-contractants.",
+       "raison": "L'occupation du Brésil par les États-Unis, territoire clé des Amériques Multipolaires, transforme radicalement le contexte politique et social de The Lattice. La répression accrue et la militarisation du territoire rendent impossible le maintien de Raised Hands comme simple mouvement émergent toléré. Le mouvement doit soit disparaître, soit gagner en importance pour survivre."
+      },
+      {
+       "type": "relation",
+       "niveau": "obligatoire",
+       "cible": "frente_sertao_livre_reference",
+       "relation": "alliance",
+       "action": "nouvelle",
+       "lien": "territoire",
+       "lien_detail": "Brésil occupé par les États-Unis",
+       "contredit": "L'absence de lien avec la résistance brésilienne (Frente Sertão Livre) rend la fiche incohérente dans un contexte d'occupation.",
+       "raison": "Dans un Brésil occupé, Raised Hands, en tant que mouvement de résidents précaires, ne peut ignorer la résistance locale. Une alliance avec Frente Sertão Livre devient nécessaire pour crédibiliser son existence et sa lutte."
+      },
+      {
+       "type": "texte",
+       "niveau": "obligatoire",
+       "extrait": "Toléré mais surveillé, ses meneurs risquent la résiliation de leur contrat de résidence, c'est-à-dire l'expulsion.",
+       "contredit": "L'occupation militaire américaine rend la tolérance improbable et la répression systématique.",
+       "lien": "territoire",
+       "lien_detail": "Brésil occupé par les États-Unis",
+       "raison": "La phrase devient fausse dans un contexte d'occupation militaire. La répression serait bien plus brutale qu'une simple expulsion, et le mouvement ne serait pas toléré."
+      }
+     ]
+    },
+    {
+     "slug": "rede_paulista_de_distribuicao_algoritmica_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "obligatoire",
+       "apres": "déclinant",
+       "lien": "territoire",
+       "lien_detail": "São Paulo (Brésil occupé)",
+       "contredit": "São Paulo est déjà retenu comme déclinant dans la lecture générale du scénario.",
+       "raison": "L'occupation du Brésil par les États-Unis et le déclin de São Paulo (déjà acté) rendent impossible le maintien du SPAAR comme infrastructure mature et dominante. Son rôle se réduit nécessairement."
+      },
+      {
+       "type": "relation",
+       "niveau": "obligatoire",
+       "cible": "the_lattice_reference",
+       "relation": "alliance",
+       "action": "nouvelle",
+       "lien": "territoire",
+       "lien_detail": "Brésil occupé par les États-Unis",
+       "contredit": "L'absence de coordination avec The Lattice, acteur majeur des Amériques Multipolaires, rend le SPAAR isolé et vulnérable.",
+       "raison": "Dans un Brésil occupé, le SPAAR doit s'allier à The Lattice pour survivre, car ce dernier représente une structure de gouvernance alternative capable de négocier avec les États-Unis."
+      },
+      {
+       "type": "texte",
+       "niveau": "obligatoire",
+       "extrait": "Né d'un partenariat entre la municipalité, des consortiums financiers et des plateformes IA, le SPAAR orchestre en temps réel l'allocation de l'eau, de l'énergie, du logement et de la mobilité pour les 32 millions d'habitants de la mégapole pauliste.",
+       "contredit": "La municipalité de São Paulo n'a plus la souveraineté nécessaire pour être un partenaire crédible dans ce contexte d'occupation.",
+       "lien": "territoire",
+       "lien_detail": "Brésil occupé par les États-Unis",
+       "raison": "La phrase devient fausse car la municipalité de São Paulo, sous tutelle militaire américaine, ne peut plus être un acteur autonome dans ce partenariat."
+      }
+     ]
+    },
+    {
+     "slug": "regulateurs_de_l_union_continentale_africaine_reference",
+     "changements": [
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "programme_onu_eau_2080_reference",
+       "relation": "alliance",
+       "action": "nouvelle",
+       "lien": "variable",
+       "lien_detail": "demographie_mobilite_humaine (+0.7)",
+       "contredit": "",
+       "raison": "Les déplacements de population causés par l'occupation du Brésil pourraient renforcer les flux migratoires vers l'Afrique, incitant les Régulateurs de l'UCA à coopérer davantage avec le Programme ONU-Eau 2080 pour gérer ces défis."
+      }
+     ]
+    },
+    {
+     "slug": "regulateurs_de_l_union_eurasiatique_sur_les_donnees_critiques_reference",
+     "changements": []
+    },
+    {
+     "slug": "reseau_des_administrations_locales_rurales_participatives_reference",
+     "changements": []
+    },
+    {
+     "slug": "reseau_des_cartographes_des_zones_grises_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "dominant",
+       "lien": "variable",
+       "lien_detail": "frontieres_du_systeme (+1.0)",
+       "contredit": "",
+       "raison": "L'occupation du Brésil crée une nouvelle zone grise majeure, augmentant la demande pour la cartographie des territoires contestés et renforçant potentiellement le rôle de l'Atlas des Marges."
+      },
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "Le Réseau des Cartographes des Zones Grises dans *reference* est une nébuleuse de collecteurs de données, hackers et géographes dissidents qui documentent les territoires abandonnés, contestés ou non gouvernés.",
+       "contredit": "",
+       "lien": "variable",
+       "lien_detail": "frontieres_du_systeme (+1.0)",
+       "raison": "L'occupation du Brésil élargit le champ d'action du réseau, mais la phrase reste vraie sans modification."
+      }
+     ]
+    },
+    {
+     "slug": "reseau_des_chercheurs_en_ethique_des_systemes_distribues_reference",
+     "changements": []
+    },
+    {
+     "slug": "reseau_des_cooperatives_agro_saheliennes_reference",
+     "changements": [
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "frente_sertao_livre_reference",
+       "relation": "alliance",
+       "action": "nouvelle",
+       "lien": "variable",
+       "lien_detail": "systemes_productifs_travail (+0.4)",
+       "contredit": "",
+       "raison": "Les perturbations des systèmes productifs en Amérique du Sud pourraient inciter les coopératives sahéliennes à s'allier avec la résistance brésilienne pour échanger des savoir-faire agroécologiques."
+      }
+     ]
+    },
+    {
+     "slug": "reseau_des_metropoles_cotieres_adaptees_reference",
+     "changements": []
+    },
+    {
+     "slug": "reseau_des_villes_etats_pilotes_en_gouvernance_participative_reference",
+     "changements": [
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "frente_sertao_livre_reference",
+       "relation": "alliance",
+       "action": "nouvelle",
+       "lien": "variable",
+       "lien_detail": "geopolitique_conflits (+0.3)",
+       "contredit": "",
+       "raison": "Les villes-états pilotes pourraient soutenir la résistance brésilienne comme modèle de gouvernance alternative face à l'occupation."
+      }
+     ]
+    },
+    {
+     "slug": "reseau_des_villes_refuge_pour_travailleurs_desaugmentes_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "Constitue un contre-modèle territorial à la logique d'augmentation permanente, en offrant des espaces de reconversion et de dignité aux populations désaugmentées marginalisées ; se trouve à l'intersection des dynamiques de mobilité humaine contrainte, de restructuration productive et de réorganisation des territoires périphériques.",
+       "contredit": "",
+       "lien": "variable",
+       "lien_detail": "demographie_mobilite_humaine (+0.7)",
+       "raison": "L'occupation du Brésil pourrait augmenter les flux de travailleurs désaugmentés vers ces villes-refuge, élargissant leur rôle sans rendre la phrase fausse."
+      }
+     ]
+    },
+    {
+     "slug": "reseau_hospitalier_hybride_eurasiatique_reference",
+     "changements": []
+    },
+    {
+     "slug": "reseau_meshcommons_netsolidaire_reference",
+     "changements": [
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "frente_sertao_livre_reference",
+       "relation": "alliance",
+       "action": "nouvelle",
+       "lien": "variable",
+       "lien_detail": "geopolitique_conflits (+0.3)",
+       "contredit": "",
+       "raison": "Le réseau pourrait fournir une infrastructure de communication décentralisée à la résistance brésilienne, renforçant sa résilience."
+      }
+     ]
+    },
+    {
+     "slug": "reseau_mnemos_reference",
+     "changements": [
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "frente_sertao_livre_reference",
+       "relation": "alliance",
+       "action": "nouvelle",
+       "lien": "variable",
+       "lien_detail": "geopolitique_conflits (+0.3)",
+       "contredit": "",
+       "raison": "Mnemos pourrait préserver la mémoire et les savoirs de la résistance brésilienne, créant un lien naturel entre les deux entités."
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "occupation_bresil_2029::reference::11": {
+  "empreinte": "e3e8cb7a3449b087",
+  "date": "2026-10-18T16:23",
+  "brut": {
+   "fiches": [
+    {
+     "slug": "reseaux_de_capteurs_citoyens_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "Dans le scénario de référence, les Réseaux de Capteurs Citoyens incarnent la friction productive entre gouvernance décentralisée et systèmes institutionnels : ils documentent ce que les acteurs dominants préfèrent ne pas mesurer, tout en dépendant paradoxalement des infrastructures numériques centralisées pour…",
+       "contredit": "",
+       "lien": "variable",
+       "lien_detail": "demographie_mobilite_humaine (+0.7), climat_environnement_global (+0.4)",
+       "raison": "L'occupation du Brésil et les déplacements de population amplifient les besoins de documentation citoyenne des impacts environnementaux et sociaux, élargissant leur rôle sans rendre la phrase fausse."
+      }
+     ]
+    },
+    {
+     "slug": "reseaux_de_financement_gris_issus_d_anciens_blocs_militaires_reference",
+     "changements": []
+    },
+    {
+     "slug": "reseaux_de_gouvernance_multilaterale_survivants_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "Représente la persistance — fragile et contestée — d'une logique de coopération internationale dans un monde où les logiques souverainistes et les puissances privées ont largement pris le dessus.",
+       "contredit": "",
+       "lien": "variable",
+       "lien_detail": "gouvernance_institutions (+0.2)",
+       "raison": "L'occupation du Brésil affaiblit symboliquement les institutions multilatérales, mais la phrase reste vraie sans modification obligatoire."
+      }
+     ]
+    },
+    {
+     "slug": "reseaux_de_lanceurs_d_alerte_institutionnels_dissidents_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "Dans ce scénario, ils constituent une source d'information critique sur les dysfonctionnements internes des institutions, fragilisant leur légitimité tout en alimentant les débats publics.",
+       "contredit": "",
+       "lien": "variable",
+       "lien_detail": "geopolitique_conflits (+0.3)",
+       "raison": "L'occupation du Brésil génère des dysfonctionnements institutionnels supplémentaires, élargissant leur champ d'action sans rendre la phrase fausse."
+      }
+     ]
+    },
+    {
+     "slug": "reseaux_de_medecine_traditionnelle_augmentee_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "Leur essor est directement alimenté par les inégalités d'accès aux soins documentées depuis les années 2030 et…",
+       "contredit": "",
+       "lien": "variable",
+       "lien_detail": "demographie_mobilite_humaine (+0.7), sante_biotechnologies (+0.3)",
+       "raison": "Les déplacements de population et la pression sur les systèmes de santé brésiliens pourraient renforcer leur rôle, mais la phrase reste vraie sans modification."
+      }
+     ]
+    },
+    {
+     "slug": "sao_paulo_ita_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "obligatoire",
+       "apres": "résiduel",
+       "lien": "territoire",
+       "lien_detail": "São Paulo est située dans le territoire brésilien occupé par les États-Unis",
+       "contredit": "La PMSP-AC continue d'administrer une agglomération de 32 millions d'habitants avec des moyens budgétaires réduits à moins de 40% de leur niveau de 2050",
+       "raison": "L'occupation américaine du Brésil en 2029 rend impossible le maintien d'une administration métropolitaine autonome à São Paulo avec des moyens significatifs. La trajectoire déclinante devient résiduelle."
+      },
+      {
+       "type": "relation",
+       "niveau": "obligatoire",
+       "cible": "amazonie_consortium_viva_reference",
+       "relation": "alliance",
+       "action": "rompue",
+       "lien": "territoire",
+       "lien_detail": "São Paulo et l'Amazonie Consortium Viva sont tous deux affectés par l'occupation du Brésil",
+       "contredit": "alliés : [...] consortium_amazonia_viva_reference",
+       "raison": "L'occupation américaine du Brésil rompt les alliances régionales préexistantes, rendant impossible une coopération institutionnelle entre São Paulo et le Consortium Amazônia Viva."
+      },
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "frente_sertao_livre_reference",
+       "relation": "opposition",
+       "action": "nouvelle",
+       "lien": "territoire",
+       "lien_detail": "São Paulo et Frente Sertão Livre sont tous deux localisés dans le Brésil occupé",
+       "contredit": "",
+       "raison": "L'occupation américaine pourrait pousser la PMSP-AC à collaborer avec les forces occupantes, créant une opposition avec les mouvements de résistance comme Frente Sertão Livre."
+      }
+     ]
+    },
+    {
+     "slug": "services_de_contre_information_des_blocs_geopolitiques_concurrents_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "Acteurs exogènes qui alimentent la guerre informationnelle en 2098, ciblant les médias, les IA éditoriales et les institutions de vérification des faits dans les zones de compétition géopolitique.",
+       "contredit": "",
+       "lien": "variable",
+       "lien_detail": "geopolitique_conflits (+0.3)",
+       "raison": "L'occupation du Brésil intensifie la guerre informationnelle, élargissant leur champ d'action sans rendre la phrase fausse."
+      }
+     ]
+    },
+    {
+     "slug": "siberie_federale_reference",
+     "changements": []
+    },
+    {
+     "slug": "singapour_est_nexcore_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "Singapour Est Nexcore est une organisation technologique dominante implantée dans le corridor est de Singapour, spécialisée dans la gestion des flux de données et des infrastructures logistiques régionales.",
+       "contredit": "",
+       "lien": "variable",
+       "lien_detail": "systemes_productifs_travail (+0.4)",
+       "raison": "La reconfiguration des échanges régionaux due à l'occupation du Brésil pourrait élargir son rôle logistique, mais la phrase reste vraie sans modification."
+      }
+     ]
+    },
+    {
+     "slug": "singapour_est_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "Elle gère ses propres accords commerciaux avec les blocs asiatiques voisins, incarnant la fragmentation des grandes cités-États en…",
+       "contredit": "",
+       "lien": "variable",
+       "lien_detail": "systemes_productifs_travail (+0.4)",
+       "raison": "La rupture des échanges régionaux en Amérique du Sud pourrait pousser Singapour Est à diversifier ses partenariats, mais la phrase reste vraie sans modification."
+      }
+     ]
+    },
+    {
+     "slug": "syndicats_de_travail_rural_hybride_reference",
+     "changements": [
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "frente_sertao_livre_reference",
+       "relation": "alliance",
+       "action": "nouvelle",
+       "lien": "relation",
+       "lien_detail": "Frente Sertão Livre est directement touchée par l'occupation du Brésil",
+       "contredit": "",
+       "raison": "Les syndicats de travail rural hybride pourraient s'allier à Frente Sertão Livre pour résister aux pressions économiques liées à l'occupation."
+      }
+     ]
+    },
+    {
+     "slug": "syndicats_de_travailleurs_de_la_transition_energetique_reference",
+     "changements": []
+    },
+    {
+     "slug": "tbilissi_noeud_mnemos_reference",
+     "changements": []
+    },
+    {
+     "slug": "terminal_kharg_data_haven_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "Officiellement, il héberge les archives numériques des dissidents, journalistes et ONG fuyant la censure des blocs souverains, tout en fournissant des serveurs de contournement…",
+       "contredit": "",
+       "lien": "variable",
+       "lien_detail": "geopolitique_conflits (+0.3)",
+       "raison": "L'occupation du Brésil pourrait augmenter le flux de dissidents et de données à héberger, élargissant son rôle sans rendre la phrase fausse."
+      }
+     ]
+    },
+    {
+     "slug": "terrametrics_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "TerraMetrics Global Climate Solutions (TM-GCS) est l'acteur dominant de la géo-ingénierie climatique privatisée, opérant comme un prestataire de services essentiels pour des États, des mégapoles et des consortiums régionaux incapables de gérer seuls les dérèglements climatiques.",
+       "contredit": "",
+       "lien": "variable",
+       "lien_detail": "climat_environnement_global (+0.4)",
+       "raison": "La pression sur l'Amazonie pourrait augmenter la demande pour ses services, mais la phrase reste vraie sans modification."
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "occupation_bresil_2029::reference::12": {
+  "empreinte": "eb38868495bc9db2",
+  "date": "2026-10-18T16:24",
+  "brut": {
+   "fiches": [
+    {
+     "slug": "the_lattice_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "dominant",
+       "lien": "relation",
+       "lien_detail": "alliance avec detroit_compact_grands_lacs_reference (déjà retenue comme dominante)",
+       "raison": "L'occupation du Brésil par les États-Unis renforce les dynamiques de fragmentation territoriale en Amérique, ce qui profite aux fédérations de villes autonomes comme The Lattice, déjà en alliance avec le Detroit Compact (dominant). Leur modèle de gouvernance locale et algorithmique (SPAAR) devient plus attractif face à l'effondrement des structures étatiques traditionnelles."
+      },
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "rede_paulista_de_distribuicao_algoritmica_reference",
+       "relation": "alliance",
+       "action": "nouvelle",
+       "lien": "territoire",
+       "lien_detail": "Brésil occupé, où SPAAR (rede_paulista_de_distribuicao_algoritmica_reference) est actif",
+       "raison": "The Lattice et SPAAR partagent une approche algorithmique de la gouvernance locale. L'occupation américaine du Brésil pourrait pousser SPAAR à s'allier avec The Lattice pour résister à la tutelle militaire, bien que cette alliance soit déjà retenue comme plausible dans le lore."
+      },
+      {
+       "type": "texte",
+       "niveau": "obligatoire",
+       "extrait": "Fédération de villes à charte d'Amérique centrale apparue dans le vide laissé par la crise constitutionnelle états-unienne de 2055.",
+       "contredit": "L'occupation du Brésil par les États-Unis en 2029 précède la crise de 2055 et reconfigure déjà les équilibres géopolitiques des Amériques.",
+       "lien": "variable",
+       "lien_detail": "geopolitique_conflits (+0.3), frontieres_du_systeme (+1.0)",
+       "raison": "La phrase suggère que The Lattice émerge uniquement après 2055, alors que l'occupation du Brésil dès 2029 crée un vide institutionnel plus tôt, accélérant la fragmentation. Il faut préciser que The Lattice profite aussi des tensions pré-2055."
+      }
+     ]
+    },
+    {
+     "slug": "the_tidewater_canon_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "dominant",
+       "lien": "relation",
+       "lien_detail": "allié avec alliance_blocs_souverains_reference (Pacte des Souverains), qui prône la souveraineté absolue des entités politiques ou économiques",
+       "raison": "L'occupation du Brésil par les États-Unis illustre une logique de souveraineté unilatérale, ce qui renforce la pertinence du Tidewater Canon comme doctrine des blocs souverains. Son influence pourrait croître, mais il reste déjà mature et allié à des entités dominantes."
+      },
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "front_souverainiste_des_ressources_d_amerique_du_sud_reference",
+       "relation": "alliance",
+       "action": "nouvelle",
+       "lien": "territoire",
+       "lien_detail": "Brésil occupé, où le Front Souverainiste des Ressources d'Amérique du Sud est actif",
+       "raison": "Le Tidewater Canon pourrait s'allier avec des mouvements de résistance comme le Front Souverainiste pour légitimer leur lutte contre l'occupation américaine, mais cette alliance n'est pas obligatoire pour sa cohérence."
+      }
+     ]
+    },
+    {
+     "slug": "tribunal_algorithmique_de_bruxelles_reference",
+     "changements": []
+    },
+    {
+     "slug": "union_africaine_de_resilience_territoriale_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "demographie_mobilite_humaine (+0.7), frontieres_du_systeme (+1.0)",
+       "raison": "L'occupation du Brésil et les déplacements de population en Amérique pourraient inciter l'UA de Résilience Territoriale à renforcer son rôle de coordination face aux crises migratoires, mais cela reste une conséquence indirecte."
+      }
+     ]
+    },
+    {
+     "slug": "union_africaine_resilience_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "Elle reste un interlocuteur reconnu sur la scène internationale — impossible à ignorer, mais de moins en moins capable d'imposer ses décisions.",
+       "lien": "variable",
+       "lien_detail": "geopolitique_conflits (+0.3), gouvernance_institutions (+0.2)",
+       "raison": "L'occupation du Brésil affaiblit les structures multilatérales traditionnelles, ce qui pourrait réduire encore la capacité de l'UAR à imposer ses décisions, mais la phrase reste vraie sans modification obligatoire."
+      }
+     ]
+    },
+    {
+     "slug": "universites_et_think_tanks_en_zones_de_liberte_academique_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "elles produisent des contre-expertises sur les gouvernances algorithmiques, documentent les migrations climatiques invisibilisées, et forment la prochaine génération de décideurs locaux.",
+       "lien": "variable",
+       "lien_detail": "demographie_mobilite_humaine (+0.7), geopolitique_conflits (+0.3)",
+       "raison": "L'occupation du Brésil et les déplacements de population pourraient élargir leur rôle dans la documentation des migrations forcées, mais la phrase reste vraie sans modification."
+      }
+     ]
+    },
+    {
+     "slug": "valparaiso_fct_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "dominant",
+       "lien": "variable",
+       "lien_detail": "frontieres_du_systeme (+1.0), systemes_productifs_travail (+0.4)",
+       "raison": "La fragmentation des Amériques due à l'occupation du Brésil augmente la demande pour des mécanismes de compensation transfrontalière comme ceux de Valparaíso FCT, ce qui pourrait renforcer sa position."
+      }
+     ]
+    },
+    {
+     "slug": "vasil_orentchev_reference",
+     "changements": []
+    },
+    {
+     "slug": "voix_du_dehors_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "Réseau de journalisme d'investigation décentralisé opérant en tension permanente avec les plateformes informationnelles dominantes.",
+       "lien": "variable",
+       "lien_detail": "geopolitique_conflits (+0.3), gouvernance_institutions (+0.2)",
+       "raison": "L'occupation du Brésil pourrait élargir son rôle dans la couverture des zones sous tutelle militaire, mais la phrase reste vraie sans modification obligatoire."
+      }
+     ]
+    },
+    {
+     "slug": "zones_grises_globales_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "dominant",
+       "lien": "variable",
+       "lien_detail": "frontieres_du_systeme (+1.0), demographie_mobilite_humaine (+0.7)",
+       "raison": "L'occupation du Brésil et les déplacements de population pourraient étendre les zones grises en Amérique du Sud, renforçant leur rôle de soupapes systémiques, mais elles restent déjà dominantes."
+      }
+     ]
+    },
+    {
+     "slug": "conflit_indo_arabe_2038_reference",
+     "changements": []
+    },
+    {
+     "slug": "submersion_tuvalu_acte_fondateur_reference",
+     "changements": []
+    },
+    {
+     "slug": "effondrement_reseau_mondial_communication_reference",
+     "changements": []
+    },
+    {
+     "slug": "encheres_terres_rares_groenland_reference",
+     "changements": []
+    },
+    {
+     "slug": "exode_midwest_grands_lacs_reference",
+     "changements": []
+    }
+   ]
+  }
+ },
+ "occupation_bresil_2029::reference::13": {
+  "empreinte": "9a8aa43a366b2022",
+  "date": "2026-10-18T16:24",
+  "brut": {
+   "fiches": [
+    {
+     "slug": "crise_gouvernance_amazonie_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "obligatoire",
+       "apres": "résiduel",
+       "lien": "territoire",
+       "lien_detail": "L'Amazonie brésilienne est sous tutelle militaire américaine depuis 2029, ce qui contredit la légitimité autonome du Consortium Amazônia Viva.",
+       "contredit": "Le Consortium Amazônia Viva sort de la crise avec une autorité renforcée sur le bassin amazonien.",
+       "raison": "L'occupation américaine du Brésil en 2029 rend impossible la revendication d'une autorité autonome non-étatique sur l'Amazonie brésilienne par le Consortium, déjà marqué comme 'déclinant' dans le lore."
+      },
+      {
+       "type": "texte",
+       "niveau": "obligatoire",
+       "extrait": "Belém brûle d'une lumière rouge : les fumées des zones déforestées illégalement s'accumulent au-dessus de la ville-carrefour du bassin amazonien.",
+       "contredit": "Belém et l'Amazonie brésilienne sont sous contrôle américain depuis 2029, ce qui modifie les dynamiques de déforestation et de gouvernance.",
+       "lien": "territoire",
+       "lien_detail": "Belém est située dans le territoire brésilien occupé.",
+       "raison": "La description suppose une souveraineté brésilienne ou autonome sur Belém, alors que la ville est sous tutelle américaine depuis 2029."
+      },
+      {
+       "type": "texte",
+       "niveau": "obligatoire",
+       "extrait": "Le Consortium Amazônia Viva, seul acteur institutionnel capable de revendiquer une légitimité sur la forêt, active pour la première fois son protocole…",
+       "contredit": "Le Consortium Amazônia Viva est déjà en déclin dans le lore post-2029, et l'Amazonie brésilienne est sous contrôle américain.",
+       "lien": "territoire",
+       "lien_detail": "Le Consortium agit sur un territoire désormais disputé et occupé.",
+       "raison": "L'affirmation de légitimité du Consortium sur l'Amazonie brésilienne est fausse après 2029."
+      }
+     ]
+    },
+    {
+     "slug": "secession_great_lakes_compact_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "dominant",
+       "lien": "relation",
+       "lien_detail": "Le Compact des Grands Lacs est en opposition avec la Frente Sertão Livre, une entité de résistance brésilienne, et profite indirectement de la fragmentation géopolitique des Amériques.",
+       "contredit": "",
+       "raison": "La sécession des Grands Lacs devient un modèle plus attractif dans un contexte de fragmentation accrue des Amériques, renforçant son statut."
+      },
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "La rupture institutionnalise le modèle confédéral hydro-territorial comme réponse crédible à l'échec de la gouvernance fédérale face aux crises climatiques, inspirant des mouvements similaires dans…",
+       "contredit": "",
+       "lien": "variable",
+       "lien_detail": "La variable 'frontieres_du_systeme' (+1.0) reflète une fragmentation territoriale accrue, ce qui rend le modèle du Compact plus pertinent.",
+       "raison": "Le texte reste vrai, mais le Compact gagne en influence comme alternative crédible dans un monde plus fragmenté."
+      }
+     ]
+    },
+    {
+     "slug": "accord_carbone_amazonie_blocs_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "obligatoire",
+       "apres": "historique",
+       "lien": "territoire",
+       "lien_detail": "L'Amazonie brésilienne est sous tutelle américaine depuis 2029, ce qui rend impossible un traité impliquant le Consortium Amazônia Viva comme acteur souverain.",
+       "contredit": "Le traité institue un précédent juridique fragile mais réel : pour la première fois, une entité autochtone dispose d'un droit de veto international reconnu sur des projets industriels.",
+       "raison": "Le Consortium Amazônia Viva ne peut plus négocier un traité de souveraineté carbone sur un territoire occupé par les États-Unis."
+      },
+      {
+       "type": "texte",
+       "niveau": "obligatoire",
+       "extrait": "Le Consortium Amazônia Viva impose ses conditions — rayon d'exclusion de 500 km, redevances directes aux peuples autochtones — aux blocs signataires du Pacte Énergétique Multilatéral.",
+       "contredit": "L'Amazonie brésilienne est sous contrôle américain depuis 2029, et le Consortium Amazônia Viva est en déclin.",
+       "lien": "territoire",
+       "lien_detail": "Le traité concerne un territoire occupé et un acteur affaibli.",
+       "raison": "L'affirmation d'une capacité de négociation autonome du Consortium est fausse après 2029."
+      }
+     ]
+    },
+    {
+     "slug": "election_parti_commun_americain_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "obligatoire",
+       "extrait": "Polarisation politique accrue aux États-Unis et dans ses zones d'influence.",
+       "contredit": "",
+       "lien": "territoire",
+       "lien_detail": "Le Brésil est une zone d'influence directe des États-Unis depuis 2029, ce qui modifie la dynamique de polarisation.",
+       "raison": "Le texte reste vrai, mais la polarisation est exacerbée par l'occupation du Brésil, un fait non mentionné."
+      },
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "Les réformes annoncées sont partiellement bloquées par une opposition institutionnelle forte.",
+       "contredit": "",
+       "lien": "variable",
+       "lien_detail": "La variable 'gouvernance_institutions' (+0.2) reflète une instabilité institutionnelle accrue, ce qui rend les blocages plus probables.",
+       "raison": "Le texte reste vrai, mais les blocages institutionnels sont renforcés par l'occupation du Brésil et ses répercussions."
+      }
+     ]
+    },
+    {
+     "slug": "incident_passage_arctique_reference",
+     "changements": []
+    },
+    {
+     "slug": "effondrement_circulation_atlantique_2067_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "L'Europe Occidentale Reconstruite (UOC) se fragmente en micro-régions autonomes, tandis que l'Union Africaine de Résilience Territoriale (UAR) sombre dans le chaos malgré les efforts de coordination.",
+       "contredit": "",
+       "lien": "variable",
+       "lien_detail": "La variable 'climat_environnement_global' (+0.4) reflète une dégradation environnementale accrue, ce qui aggrave les conséquences de l'effondrement.",
+       "raison": "Le texte reste vrai, mais les conséquences sont plus sévères en raison de l'accumulation des déséquilibres climatiques."
+      }
+     ]
+    },
+    {
+     "slug": "emeutes_algorithme_sao_paulo_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "obligatoire",
+       "apres": "historique",
+       "lien": "territoire",
+       "lien_detail": "São Paulo est sous tutelle militaire américaine depuis 2029, et son administration (PMSP-AC) est déjà marquée comme 'résiduelle' dans le lore.",
+       "contredit": "L'audit partiel imposé par la négociation crée un précédent institutionnel fragile mais réel : plusieurs villes du Sud global adoptent des chartes de transparence algorithmique inspirées du modèle de São Paulo.",
+       "raison": "São Paulo ne peut plus servir de modèle de gouvernance algorithmique autonome après 2029, car son administration est résiduelle et sous contrôle étranger."
+      },
+      {
+       "type": "texte",
+       "niveau": "obligatoire",
+       "extrait": "Les écrans des favelas numériques de Paraisópolis et Cidade Tiradentes s'allument simultanément pour diffuser les entrailles du SPAAR : coefficients de rentabilité par habitant, seuils d'exclusion automatique, identifiants des zones sacrifiées.",
+       "contredit": "São Paulo est sous tutelle américaine depuis 2029, ce qui modifie les dynamiques de gouvernance algorithmique et de transparence.",
+       "lien": "territoire",
+       "lien_detail": "Les émeutes concernent un territoire occupé et une administration affaiblie.",
+       "raison": "Le SPAAR (Sistema Paulista de Alocação Algorítmica de Recursos) ne peut plus opérer de manière autonome dans un São Paulo sous contrôle américain."
+      },
+      {
+       "type": "texte",
+       "niveau": "obligatoire",
+       "extrait": "Ce que les algorithmes avaient invisibilisé pendant des années devient soudainement visible : la ville de São Paulo, sous couvert de rationalité économique, avait sacrifié des quartiers entiers.",
+       "contredit": "São Paulo est sous tutelle américaine depuis 2029, et son administration locale est résiduelle.",
+       "lien": "territoire",
+       "lien_detail": "La responsabilité algorithmique est transférée aux autorités américaines, pas à l'administration locale.",
+       "raison": "L'affirmation d'une responsabilité locale est fausse après 2029."
+      }
+     ]
+    },
+    {
+     "slug": "arrestation_chris_van_derburgh_reference",
+     "changements": []
+    },
+    {
+     "slug": "explosion_brise_glace_murmansk_2081_reference",
+     "changements": []
+    },
+    {
+     "slug": "nairobi_biorevenu_pilote_2094_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "Le programme, s'il survit à ses contestations juridiques, pourrait redéfinir le contrat social dans les économies africaines post-travail en établissant un précédent pour la monétisation des données biologiques.",
+       "contredit": "",
+       "lien": "variable",
+       "lien_detail": "La variable 'sante_biotechnologies' (+0.3) reflète une pression accrue sur les innovations biotechnologiques, ce qui rend le programme de Nairobi plus pertinent.",
+       "raison": "Le texte reste vrai, mais le programme gagne en importance dans un contexte de tensions accrues sur les biotechnologies."
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "occupation_bresil_2029::reference::contre1::f1fc5b511cf4525c": {
+  "date": "2026-10-18T16:03",
+  "verdict": {
+   "id": "o1",
+   "incompatible": true,
+   "fait": "materiel",
+   "motif": "contradiction",
+   "justification": "La fiche affirme que l'alliance est rompue, mais l'élément perturbateur implique que le Front Souverainiste des Ressources d'Amérique du Sud (basé en partie à São Paulo) ne peut plus exister sous sa forme actuelle après 2029, ce qui rend la rupture automatique et non simplement un choix politique. La fiche sous-entend une rupture active, alors que l'élément impose une disparition structurelle du Front."
+  }
+ },
+ "occupation_bresil_2029::reference::contre1::b0c39be74b55b0c5": {
+  "date": "2026-10-18T16:03",
+  "verdict": {
+   "id": "o2",
+   "incompatible": false,
+   "motif": "nuance",
+   "justification": "La fiche décrit une alliance nouvelle entre le Consortium Amazônia Viva et le DIHC, ce qui n'est pas incompatible avec l'occupation américaine du Brésil. Le Consortium peut toujours négocier, mais son champ d'action serait limité à l'Amazonie non brésilienne ou partagé avec les occupants. La phrase reste vraie, mais pourrait être nuancée."
+  }
+ },
+ "occupation_bresil_2029::reference::contre1::530e26c2c2324b94": {
+  "date": "2026-10-18T16:03",
+  "verdict": {
+   "id": "o3",
+   "incompatible": false,
+   "motif": "omission",
+   "justification": "La fiche décrit une alliance nouvelle sans lien explicite avec les dynamiques de résistance brésilienne, ce qui n'est pas contradictoire avec l'élément perturbateur. L'alliance peut exister indépendamment de la situation au Brésil."
+  }
+ },
+ "occupation_bresil_2029::reference::contre1::ddcab8799b18b258": {
+  "date": "2026-10-18T16:03",
+  "verdict": {
+   "id": "o4",
+   "incompatible": true,
+   "fait": "materiel",
+   "motif": "contradiction",
+   "justification": "La fiche affirme que le Consortium Viva prospère dans les zones grises juridiques du bassin amazonien, mais l'élément perturbateur précise que l'Amazonie brésilienne n'est plus une zone grise (elle est sous tutelle militaire américaine). Cela crée une contradiction sur le statut juridique de l'Amazonie brésilienne."
+  }
+ },
+ "occupation_bresil_2029::reference::contre1::ed7c8f3718eab8e1": {
+  "date": "2026-10-18T16:03",
+  "verdict": {
+   "id": "o5",
+   "incompatible": false,
+   "motif": "aggravation",
+   "justification": "La fiche décrit les plateformes informationnelles comme arbitres de l'information, ce qui reste vrai même si l'occupation américaine introduit une couche supplémentaire de contrôle. L'élément aggrave ou concurrence leur rôle, mais ne le contredit pas."
+  }
+ },
+ "occupation_bresil_2029::reference::contre1::d6bb662a8efb6d35": {
+  "date": "2026-10-18T16:03",
+  "verdict": {
+   "id": "o6",
+   "incompatible": true,
+   "fait": "materiel",
+   "motif": "contradiction",
+   "justification": "La fiche décrit le SPAAR comme né d'un partenariat impliquant la municipalité de São Paulo, mais l'élément perturbateur impose une perte d'autonomie de cette municipalité sous tutelle militaire américaine. Cela rend impossible la continuité de ce partenariat sous sa forme initiale."
+  }
+ },
+ "occupation_bresil_2029::reference::contre1::1ad5440017f1ecce": {
+  "date": "2026-10-18T16:03",
+  "verdict": {
+   "id": "o7",
+   "incompatible": true,
+   "fait": "materiel",
+   "motif": "contradiction",
+   "justification": "La fiche affirme que la PMSP-AC continue d'administrer São Paulo de manière autonome, mais l'élément perturbateur impose une réorganisation administrative sous tutelle militaire américaine, rendant impossible cette continuité autonome."
+  }
+ },
+ "occupation_bresil_2029::reference::contre1::a8faee7df9b872d9": {
+  "date": "2026-10-18T16:03",
+  "verdict": {
+   "id": "o8",
+   "incompatible": true,
+   "fait": "materiel",
+   "motif": "contradiction",
+   "justification": "La fiche décrit le Consortium Amazônia Viva comme le seul acteur institutionnel capable de revendiquer une légitimité sur la forêt en 2047, mais l'élément perturbateur impose que l'Amazonie brésilienne est sous occupation américaine depuis 2029, ce qui exclut le Consortium comme acteur dominant sur ce territoire."
+  }
+ },
+ "occupation_bresil_2029::reference::contre1::4ce93d489495987b": {
+  "date": "2026-10-18T16:03",
+  "verdict": {
+   "id": "o9",
+   "incompatible": false,
+   "motif": "nuance",
+   "justification": "La fiche affirme que le Consortium Amazônia Viva sort de la crise avec une autorité, ce qui reste vrai si cette autorité est limitée à l'Amazonie non brésilienne ou partagée. La phrase pourrait être nuancée, mais n'est pas contradictoire."
+  }
+ },
+ "occupation_bresil_2029::reference::contre1::f364f2729e695430": {
+  "date": "2026-10-18T16:03",
+  "verdict": {
+   "id": "o10",
+   "incompatible": true,
+   "fait": "materiel",
+   "motif": "contradiction",
+   "justification": "La fiche affirme que le Consortium Amazônia Viva impose ses conditions aux blocs signataires, mais l'élément perturbateur impose que l'Amazonie brésilienne est sous occupation américaine, ce qui empêche le Consortium d'imposer des conditions sur ce territoire."
+  }
+ },
+ "occupation_bresil_2029::reference::contre1::7c578f4986e1e536": {
+  "date": "2026-10-18T16:03",
+  "verdict": {
+   "id": "o11",
+   "incompatible": false,
+   "motif": "nuance",
+   "justification": "La fiche décrit un droit de veto international reconnu pour une entité autochtone, ce qui reste vrai si ce droit ne s'applique pas à l'Amazonie brésilienne. La phrase pourrait être nuancée, mais n'est pas contradictoire."
+  }
+ },
+ "occupation_bresil_2029::reference::contre1::b22e1a36b7e6adef": {
+  "date": "2026-10-18T16:03",
+  "verdict": {
+   "id": "o12",
+   "incompatible": true,
+   "fait": "materiel",
+   "motif": "contradiction",
+   "justification": "La fiche décrit le SPAAR opérant librement à São Paulo en 2073, mais l'élément perturbateur impose une occupation américaine depuis 2029, ce qui rend impossible son fonctionnement autonome sous cette forme."
+  }
+ },
+ "occupation_bresil_2029::reference::contre1::e04a04aaf0df1ee8": {
+  "date": "2026-10-18T16:03",
+  "verdict": {
+   "id": "o13",
+   "incompatible": false,
+   "motif": "amorti",
+   "justification": "La fiche décrit un précédent institutionnel inspiré de São Paulo en 2073, alors que l'effet résiduel de l'occupation est largement amorti en fin de période. São Paulo a pu redevenir un modèle autonome après la tutelle, ou le précédent a pu émerger malgré l'occupation."
+  }
+ },
+ "occupation_bresil_2029::reference::classement::d6ddd9f63d810937": {
+  "date": "2026-10-18T16:03",
+  "brut": {
+   "classement": [
+    {
+     "id": "f3",
+     "pourquoi": "Renforcement direct du rôle des journalistes indépendants face à l'occupation et à la censure"
+    },
+    {
+     "id": "f19",
+     "pourquoi": "Montée en puissance comme acteur de résistance et gouvernance alternative dans le Brésil occupé"
+    },
+    {
+     "id": "f20",
+     "pourquoi": "Légitimité renforcée comme acteur souverainiste face à l'occupation américaine"
+    },
+    {
+     "id": "f23",
+     "pourquoi": "Influence accrue dans les structures alternatives de gouvernance post-occupation"
+    },
+    {
+     "id": "f25",
+     "pourquoi": "Rôle critique dans la surveillance environnementale de l'Amazonie sous pression"
+    },
+    {
+     "id": "f24",
+     "pourquoi": "Pertinence accrue dans le traçage des ressources critiques exploitées sous occupation"
+    },
+    {
+     "id": "f10",
+     "pourquoi": "Opportunités d'extraction accrues dans les zones occupées riches en ressources"
+    },
+    {
+     "id": "f14",
+     "pourquoi": "Exploitation non régulée des ressources énergétiques dans les zones grises de l'occupation"
+    },
+    {
+     "id": "f18",
+     "pourquoi": "Exploitation minière indépendante dans les zones fragmentées par l'occupation"
+    },
+    {
+     "id": "f22",
+     "pourquoi": "Contrôle des droits de passage dans les zones de friction créées par l'occupation"
+    },
+    {
+     "id": "f6",
+     "pourquoi": "Dépendance accrue aux plateformes logistiques globales pour contourner les ruptures régionales"
+    },
+    {
+     "id": "f7",
+     "pourquoi": "Opportunités pour des routes logistiques alternatives en réponse à la fragmentation"
+    },
+    {
+     "id": "f5",
+     "pourquoi": "Renforcement des réseaux énergétiques distribués face aux perturbations logistiques"
+    },
+    {
+     "id": "f13",
+     "pourquoi": "Résilience locale accrue via des coopératives énergétiques décentralisées"
+    },
+    {
+     "id": "f12",
+     "pourquoi": "Reconstruction territoriale par des coopératives agro-écologiques dans les zones déplacées"
+    },
+    {
+     "id": "f2",
+     "pourquoi": "Biopiraterie inversée exploitée dans les déséquilibres institutionnels post-occupation"
+    },
+    {
+     "id": "f9",
+     "pourquoi": "Exploitation des déséquilibres énergétiques et productifs par des consortiums opaques"
+    },
+    {
+     "id": "f11",
+     "pourquoi": "Gestion des données critiques dans les zones sous tutelle militaire ou fragmentées"
+    },
+    {
+     "id": "f28",
+     "pourquoi": "Expansion des plateformes d'optimisation territoriale par IA dans la gestion algorithmique du Brésil"
+    },
+    {
+     "id": "f33",
+     "pourquoi": "Vide institutionnel comblé par des villes sous charte dans les Amériques fragmentées"
+    }
+   ]
+  }
+ },
+ "occupation_bresil_2029::reference::contre1::3bee9370a1944355": {
+  "date": "2026-10-18T16:24",
+  "verdict": {
+   "id": "o1",
+   "incompatible": false,
+   "fait": "tendance",
+   "motif": "nuance",
+   "justification": "L'élément perturbateur n'interdit pas une alliance entre Nadia Ferreira-Sato (The Lattice) et la Frente Sertão Livre, mais la rend plausible voire probable. La fiche ne contredit pas l'occupation, elle pourrait simplement être complétée pour refléter cette dynamique de résistance."
+  }
+ },
+ "occupation_bresil_2029::reference::contre1::81828b829b29f14a": {
+  "date": "2026-10-18T16:24",
+  "verdict": {
+   "id": "o2",
+   "incompatible": false,
+   "fait": "tendance",
+   "motif": "aggravation",
+   "justification": "L'occupation américaine et le déclin du Consortium Viva rendent une rupture d'alliance avec Nexus BioSyn crédible et cohérente. La fiche ne contredit pas l'élément, elle en est une conséquence logique."
+  }
+ },
+ "occupation_bresil_2029::reference::contre1::43929faf67f19166": {
+  "date": "2026-10-18T16:24",
+  "verdict": {
+   "id": "o3",
+   "incompatible": false,
+   "fait": "tendance",
+   "motif": "nuance",
+   "justification": "L'absence d'alliance entre Raised Hands et la Frente Sertão Libre n'est pas matériellement impossible, mais elle est peu probable dans un contexte d'occupation. La fiche pourrait être nuancée, mais elle n'est pas incompatible."
+  }
+ },
+ "occupation_bresil_2029::reference::contre1::a88ec5eb1d91a3e6": {
+  "date": "2026-10-18T16:24",
+  "verdict": {
+   "id": "o4",
+   "incompatible": false,
+   "fait": "tendance",
+   "motif": "nuance",
+   "justification": "L'absence de coordination entre le SPAAR et The Lattice n'est pas contradictoire avec l'occupation, mais elle est peu réaliste. La fiche pourrait être complétée, mais elle n'est pas incompatible."
+  }
+ },
+ "occupation_bresil_2029::reference::contre1::5f7e1eefd40091da": {
+  "date": "2026-10-18T16:24",
+  "verdict": {
+   "id": "o5",
+   "incompatible": false,
+   "fait": "tendance",
+   "motif": "nuance",
+   "justification": "La phrase ne mentionne pas explicitement le Brésil ou l'occupation, mais elle pourrait être précisée pour refléter le rôle des plateformes dans un territoire sous tutelle militaire. Elle n'est pas incompatible, mais une nuance est souhaitable."
+  }
+ },
+ "occupation_bresil_2029::reference::contre1::580261e2bd5f79d0": {
+  "date": "2026-10-18T16:24",
+  "verdict": {
+   "id": "o6",
+   "incompatible": false,
+   "fait": "tendance",
+   "motif": "aggravation",
+   "justification": "L'occupation américaine rend la répression plus probable, mais la phrase ne nie pas cette répression (elle évoque une tolérance *surveillée*). La fiche reste vraie, même si le contexte aggrave la situation."
+  }
+ },
+ "occupation_bresil_2029::reference::contre1::14a942e84da87959": {
+  "date": "2026-10-18T16:24",
+  "verdict": {
+   "id": "o7",
+   "incompatible": true,
+   "fait": "materiel",
+   "motif": "contradiction",
+   "justification": "L'élément perturbateur stipule que l'Amazonie brésilienne est sous contrôle américain depuis 2029, et que le Consortium Amazônia Viva est en déclin. Un événement en 2047 où le Consortium active un protocole de légitimité contredit directement ce fait matériel (son déclin et l'occupation)."
+  }
+ },
+ "occupation_bresil_2029::reference::contre1::6f10249e7fa4f854": {
+  "date": "2026-10-18T16:24",
+  "verdict": {
+   "id": "o8",
+   "incompatible": true,
+   "fait": "materiel",
+   "motif": "contradiction",
+   "justification": "L'Amazonie brésilienne est sous contrôle américain depuis 2029, et le Consortium Amazônia Viva est en déclin. Un traité en 2055 où le Consortium impose ses conditions aux blocs signataires contredit directement ce fait matériel (son déclin et l'occupation)."
+  }
+ },
+ "occupation_bresil_2029::reference::contre1::7b79f8cdda19d542": {
+  "date": "2026-10-18T16:24",
+  "verdict": {
+   "id": "o9",
+   "incompatible": false,
+   "fait": "tendance",
+   "motif": "amorti",
+   "justification": "L'effet résiduel de l'occupation en 2098 est largement amorti (5% de la force initiale). En 2073, São Paulo peut avoir retrouvé une dynamique locale de gouvernance algorithmique et de transparence, même sous tutelle. La fiche n'est pas incompatible avec l'élément."
+  }
+ },
+ "occupation_bresil_2029::reference::classement::6ecb7551b3938d94": {
+  "date": "2026-10-18T16:25",
+  "brut": {
+   "classement": [
+    {
+     "id": "f2",
+     "pourquoi": "Déclin direct du rôle écologique en Amazonie sous occupation"
+    },
+    {
+     "id": "f14",
+     "pourquoi": "Renforcement mécanique de la résistance dans le Nordeste"
+    },
+    {
+     "id": "f20",
+     "pourquoi": "Acteur clé de la résistance, alliance avec Frente Sertão Livre"
+    },
+    {
+     "id": "f27",
+     "pourquoi": "Nouvelle zone grise majeure à cartographier"
+    },
+    {
+     "id": "f28",
+     "pourquoi": "Fragmentation territoriale profite aux villes autonomes"
+    },
+    {
+     "id": "f31",
+     "pourquoi": "Demande accrue pour compensation transfrontalière"
+    },
+    {
+     "id": "f15",
+     "pourquoi": "Rôle central comme rempart souverainiste régional"
+    },
+    {
+     "id": "f6",
+     "pourquoi": "Dépendance accrue à l'agriculture verticale"
+    },
+    {
+     "id": "f4",
+     "pourquoi": "Reconfiguration logistique régionale"
+    },
+    {
+     "id": "f5",
+     "pourquoi": "Opportunités logistiques de contournement"
+    },
+    {
+     "id": "f8",
+     "pourquoi": "Nouvelles opportunités d'extraction de ressources"
+    },
+    {
+     "id": "f10",
+     "pourquoi": "Extraction non régulée dans zones occupées"
+    },
+    {
+     "id": "f18",
+     "pourquoi": "Zones de friction accrues pour les milices"
+    },
+    {
+     "id": "f19",
+     "pourquoi": "Pression accrue pour libre circulation"
+    },
+    {
+     "id": "f24",
+     "pourquoi": "Opportunités dans zones grises énergétiques"
+    },
+    {
+     "id": "f3",
+     "pourquoi": "Perturbation des chaînes énergétiques régionales"
+    },
+    {
+     "id": "f16",
+     "pourquoi": "Galvanisation des fédéralistes résiduels"
+    },
+    {
+     "id": "f46",
+     "pourquoi": "Contre-récits sur l'occupation du Brésil"
+    },
+    {
+     "id": "f101",
+     "pourquoi": "Contradiction directe avec souveraineté brésilienne"
+    },
+    {
+     "id": "f64",
+     "pourquoi": "Perte d'autonomie de São Paulo sous contrôle américain"
+    }
+   ]
+  }
  }
 }

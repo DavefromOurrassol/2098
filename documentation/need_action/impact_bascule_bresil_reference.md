@@ -1,12 +1,12 @@
 # Rapport d'impact — Brésil (reference)
 
-Bascule évaluée : `ameriques_multipolaires` → `nordeste_autonome`
+Bascule évaluée : `ameriques_multipolaires` → `bresil_occupe`
 
 ## Sous-zones potentiellement orphelines (4)
+- `amazonie_consortium_viva` (Bassin Amazonien, niveau 2) — origine : Brésil
+- `sao_paulo_spaar` (São Paulo — Périphéries et SPAAR, niveau 3) — origine : Brésil
 - `sao_paulo_ita` (São Paulo, niveau 2) — origine : Brésil
 - `sertao_nordeste_bresilien` (Sertão — Nordeste Brésilien, niveau 2) — origine : Brésil
-- `sao_paulo_spaar` (São Paulo — Périphéries et SPAAR, niveau 3) — origine : Brésil
-- `amazonie_consortium_viva` (Bassin Amazonien, niveau 2) — origine : Brésil
 
 ## Instances/événements liés structurellement (19)
 - `amazonie_consortium_viva_reference` — zone : amazonie_consortium_viva

@@ -1,0 +1,197 @@
+{
+ "id": "occupation_bresil_2029",
+ "date_simulation": "2026-10-18T16:25",
+ "version": "v8.22",
+ "empreinte": "0a5f411eafde785e",
+ "annee": 2029.0,
+ "mode": "choc",
+ "contraintes": [
+  "Le Brésil est occupé par les États-Unis à partir de 2029 ; en 2098 il forme une zone à part, sous tutelle.",
+  "L'Amazonie brésilienne reste un enjeu disputé, mais le territoire brésilien relève de la zone d'occupation."
+ ],
+ "scenarios_hypothese": [
+  "reference"
+ ],
+ "scenarios": [
+  "reference"
+ ],
+ "complet": true,
+ "par_scenario": {
+  "reference": {
+   "lecture": {
+    "trajectoires": [
+     {
+      "instance": "sao_paulo_ita_reference",
+      "nom": "Prefeitura Metropolitana de São Paulo — Administração de Continuidade (PMSP-AC)",
+      "avant": "déclinant",
+      "apres": "résiduel",
+      "raison": "La tutelle militaire américaine marginalise les structures municipales héritées de São Paulo, réduites à un rôle administratif subalterne."
+     },
+     {
+      "instance": "amazonie_consortium_viva_reference",
+      "nom": "Amazonie Consortium Viva",
+      "avant": "dominant",
+      "apres": "déclinant",
+      "raison": "L'occupation américaine restreint les zones grises juridiques exploitées par le consortium, limitant son accès aux ressources génétiques amazoniennes."
+     },
+     {
+      "instance": "great_lakes_autonomous_compact_reference",
+      "nom": "Compact des Grands Lacs",
+      "avant": "mature",
+      "apres": "dominant",
+      "raison": "Le Compact des Grands Lacs devient un partenaire incontournable des États-Unis pour la gestion des ressources et des populations déplacées depuis le Brésil."
+     },
+     {
+      "instance": "guadalajara_nexus_reference",
+      "nom": "Guadalajara Nexus",
+      "avant": "ascendant",
+      "apres": "dominant",
+      "raison": "Guadalajara Nexus capte les chaînes d'approvisionnement redirigées depuis le Brésil, devenant un hub logistique central pour les Amériques."
+     },
+     {
+      "instance": "deepfield_institute_reference",
+      "nom": "Deepfield Institute for Human Continuity (DIHC)",
+      "avant": "mature",
+      "apres": "dominant",
+      "raison": "Le DIHC étend son influence en subordonnant les décisions américaines sur le Brésil à des critères de survie long-termiste de l'espèce."
+     }
+    ],
+    "relations": [
+     {
+      "a": "frente_sertao_livre_reference",
+      "a_nom": "Frente Sertão Livre",
+      "b": "great_lakes_autonomous_compact_reference",
+      "b_nom": "Compact des Grands Lacs",
+      "type": "opposition",
+      "action": "nouvelle",
+      "raison": "Le Compact des Grands Lacs soutient indirectement l'occupation américaine, tandis que la Frente Sertão Livre incarne la résistance locale."
+     },
+     {
+      "a": "amazonie_consortium_viva_reference",
+      "a_nom": "Amazonie Consortium Viva",
+      "b": "deepfield_institute_reference",
+      "b_nom": "Deepfield Institute for Human Continuity (DIHC)",
+      "type": "alliance",
+      "action": "nouvelle",
+      "raison": "Le DIHC et le consortium collaborent pour préserver des zones amazoniennes sous contrôle algorithmique, évitant une exploitation totale par les États-Unis."
+     },
+     {
+      "a": "the_lattice_reference",
+      "a_nom": "The Lattice of Chartered Cities",
+      "b": "detroit_compact_grands_lacs_reference",
+      "b_nom": "Detroit Compact Grands Lacs",
+      "type": "alliance",
+      "action": "nouvelle",
+      "raison": "The Lattice et le Compact des Grands Lacs coordonnent l'accueil des migrants brésiliens et la redistribution des ressources."
+     },
+     {
+      "a": "rede_paulista_de_distribuicao_algoritmica_reference",
+      "a_nom": "Sistema Paulista de Alocação Algorítmica de Recursos (SPAAR)",
+      "b": "optiflow_logistics_reference",
+      "b_nom": "OptiFlow Global Logistics Network (OGLN)",
+      "type": "alliance",
+      "action": "nouvelle",
+      "raison": "Le SPAAR et OptiFlow intègrent leurs algorithmes pour gérer les flux logistiques et énergétiques perturbés par l'occupation."
+     },
+     {
+      "a": "raised_hands_reference",
+      "a_nom": "Mains Levées (Raised Hands - The Lattice)",
+      "b": "nadia_ferreira_sato_reference",
+      "b_nom": "Nadia Ferreira-Sato de Raised Hands",
+      "type": "alliance",
+      "action": "nouvelle",
+      "raison": "Nadia Ferreira-Sato soutient les revendications des Mains Levées pour des droits politiques dans les villes de The Lattice, en réponse à l'afflux de migrants brésiliens."
+     }
+    ],
+    "zones_statut": [],
+    "nouvelles_entites": [
+     {
+      "nom": "Rede de Solidariedade Amazônica (RSA)",
+      "role": "Coordination des communautés locales et des acteurs privés pour préserver les écosystèmes amazoniens face à l'occupation américaine.",
+      "zone": "amazonie_consortium_viva",
+      "raison": "L'occupation américaine pousse les acteurs locaux à s'organiser pour protéger les ressources génétiques et écologiques de l'Amazonie.",
+      "category": "réseau"
+     },
+     {
+      "nom": "Bureau de Liaison Brésil-États-Unis (BLBE)",
+      "role": "Interface administrative entre les autorités américaines et les structures locales brésiliennes pour gérer les territoires occupés.",
+      "zone": "ameriques_multipolaires",
+      "raison": "L'occupation nécessite une structure dédiée pour coordonner les politiques publiques et les flux de ressources.",
+      "category": "institution"
+     },
+     {
+      "nom": "Fonds de Résilience du Sertão (FRS)",
+      "role": "Financement et soutien logistique aux communautés du Sertão brésilien pour renforcer leur autonomie face à l'occupation.",
+      "zone": "sertao_nordeste_bresilien",
+      "raison": "La résistance dans le Sertão nécessite des mécanismes de financement et de gouvernance dédiés.",
+      "category": "institution"
+     }
+    ]
+   },
+   "passe": {
+    "trajectoires": [],
+    "relations": [],
+    "textes": [
+     {
+      "slug": "crise_gouvernance_amazonie_reference",
+      "genre": "evenement",
+      "nom": "Crise de Souveraineté Amazonienne : L'Épreuve de Belém",
+      "extrait": "Le Consortium Amazônia Viva, seul acteur institutionnel capable de revendiquer une légitimité sur la forêt, active pour la première fois son protocole",
+      "extrait_trouve": true,
+      "contredit": "Le Consortium Amazônia Viva est déjà en déclin dans le lore post-2029, et l'Amazonie brésilienne est sous contrôle américain.",
+      "raison": "L'affirmation de légitimité du Consortium sur l'Amazonie brésilienne est fausse après 2029. [lien territoire : Le Consortium agit sur un territoire désormais disputé et occupé.]"
+     },
+     {
+      "slug": "accord_carbone_amazonie_blocs_reference",
+      "genre": "evenement",
+      "nom": "Traité de Belém sur la Souveraineté Carbone Amazonienne",
+      "extrait": "Le Consortium Amazônia Viva impose ses conditions — rayon d'exclusion de 500 km, redevances directes aux peuples autochtones — aux blocs signataires du Pacte Énergétique Multilatéral",
+      "extrait_trouve": true,
+      "contredit": "L'Amazonie brésilienne est sous contrôle américain depuis 2029, et le Consortium Amazônia Viva est en déclin.",
+      "raison": "L'affirmation d'une capacité de négociation autonome du Consortium est fausse après 2029. [lien territoire : Le traité concerne un territoire occupé et un acteur affaibli.]"
+     }
+    ]
+   },
+   "erreurs": [],
+   "carte": [
+    {
+     "pays": "Brésil",
+     "action": "nouvelle_zone",
+     "cible": "bresil_occupe",
+     "source": "hypothese",
+     "nouvelle_zone": {
+      "slug": "bresil_occupe",
+      "nom": "Brésil occupé",
+      "type": "territoire_autonome",
+      "statut": "emergent"
+     },
+     "erreurs": [],
+     "alertes": [],
+     "simples": [
+      "sao_paulo_spaar",
+      "sao_paulo_ita"
+     ],
+     "a_repartir": [
+      {
+       "slug": "amazonie_consortium_viva",
+       "nom": "Bassin Amazonien",
+       "autres": [
+        "Bolivie",
+        "Colombie",
+        "Pérou"
+       ]
+      },
+      {
+       "slug": "sertao_nordeste_bresilien",
+       "nom": "Sertão — Nordeste Brésilien",
+       "autres": [
+        "Paraguay"
+       ]
+      }
+     ],
+     "videes": []
+    }
+   ]
+  }
+ }
+}

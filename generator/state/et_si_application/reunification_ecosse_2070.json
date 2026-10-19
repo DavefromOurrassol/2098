@@ -1,0 +1,41 @@
+{
+ "id": "reunification_ecosse_2070",
+ "date_simulation": "2026-10-19T18:54",
+ "version": "v8.22",
+ "empreinte": "c4a4e7ddfd9d962b",
+ "annee": 2070.0,
+ "mode": "choc",
+ "contraintes": [
+  "À partir de 2070, l'Écosse fait de nouveau partie du Royaume-Uni ; elle n'a plus de gouvernement indépendant."
+ ],
+ "scenarios_hypothese": [
+  "reference"
+ ],
+ "scenarios": [
+  "reference"
+ ],
+ "complet": true,
+ "par_scenario": {
+  "reference": {
+   "lecture": null,
+   "passe": null,
+   "erreurs": [],
+   "carte": [
+    {
+     "pays": "Écosse",
+     "action": "absorber",
+     "cible": "europe_occidentale_reconstruite",
+     "source": "hypothese",
+     "nouvelle_zone": null,
+     "erreurs": [],
+     "alertes": [],
+     "simples": [],
+     "a_repartir": [],
+     "videes": [
+      "ecosse_nordique_independante"
+     ]
+    }
+   ]
+  }
+ }
+}
