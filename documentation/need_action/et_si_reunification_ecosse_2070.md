@@ -1,6 +1,6 @@
 # Et si ? — Réintégration de l'Écosse au Royaume-Uni
 
-*Simulation du 2026-10-19 18:54 — lecture seule, rien n'a été injecté (simulateur v8.22).*
+*Simulation du 2026-10-19 19:27 — lecture seule, rien n'a été injecté (simulateur v8.23).*
 
 En 2070, après l'échec du corridor nordique, l'Écosse renonce à son indépendance et réintègre le Royaume-Uni. Les institutions écossaises sont dissoutes ou absorbées par celles de l'Europe occidentale reconstruite.
 
@@ -72,90 +72,25 @@ _(récit construit par le script)_
   - _comme les zones abandonnées de fortress_world (Nordgard, Koursk)_
 
 **Fiches à relire**
-- [ ] 8. Termes cherchés : Birmingham, Europe, Glasgow, Leeds, Liverpool, London, Londres, Manchester, Newcastle, Royaume-Uni, Sheffield, Écosse
+- [ ] 8. Termes cherchés : Aberdeen, Dundee, Edinburgh, Glasgow, Inverness, Écosse, Édimbourg
   - _mot entier, sans casse ni accents ; le registre seulement après 2070 (chronologie)_
-- [ ] 9. Instance `armada_logistique_nordique_reference` cite « Europe »
-  - _…s chroniques. Elle administre les routes de transit entre l'Europe, l'Asie et l'Amérique du Nord avec une autorité quasi-souveraine, négociant ses…_
-- [ ] 10. Instance `bloc_ressources_eurasiatique_bre_reference` cite « Europe »
-  - _…ité à maintenir — ou rompre — les flux de ressources vers l'Europe occidentale, l'Indo-Pacifique et les Amériques en fait un acteur incontournable…_
-- [ ] 11. Instance `cartel_des_terres_rares_d_asie_centrale_reference` cite « Europe »
-  - _…t entre le Bloc Eurasien Central, l'Arc Indo-Pacifique et l'Europe Occidentale Reconstruite, capables de faire monter ou baisser la tension géopol…_
-- [ ] 12. Instance `collectifs_de_journalistes_independants_regionaux_reference` cite « Europe »
-  - _…illés en plusieurs centaines de nœuds autonomes à travers l'Europe Reconstruite, le Sahel et les Amériques fragmentées, les Collectifs de Journali…_
-- [ ] 13. Instance `conseil_des_etats_nordiques_integres_reference` cite « Europe »
-  - _…e Helsinki et Nuuk symbolise l'équilibre revendiqué entre l'Europe reconstruite et l'Arctique émergent.…_
-- [ ] 14. Instance `consortium_des_grandes_plateformes_ia_integrees_reference` cite « Europe »
-  - _…le Bloc Eurasien Central, transparence algorithmique pour l'Europe Occidentale Reconstruite, accès libre pour les Zones Grises. Sa tension fondame…_
-- [ ] 15. Instance `consortium_energetique_des_mers_du_nord_reference` cite « Europe »
-  - _…neté. Il pèse directement sur les rapports de force entre l'Europe occidentale reconstruite, le Corridor Arctique Nordique et le Bloc Eurasien Cen…_
-- [ ] 16. Instance `consortiums_d_extraction_miniere_du_bassin_congolais_reference` cite « Europe »
-  - _…ustriels consommateurs, notamment l'Arc Indo-Pacifique et l'Europe Occidentale Reconstruite.…_
-- [ ] 17. Instance `consortiums_prives_d_extraction_de_ressources_critiques_reference` cite « Europe »
-  - _…cité à opérer simultanément dans des zones de droit dense — Europe reconstruite, Arc Indo-Pacifique — et dans des territoires de non-droit — Sahel…_
-- [ ] 18. Instance `cooperative_terrafond_reference` cite « Europe »
-  - _Europe Occidentale (47 bassins, des plaines ibériques au Massif Central en passant par…_
-- [ ] 19. Instance `cooperatives_agro_ecologiques_de_reconstruction_territoriale_reference` cite « Europe »
-  - _…les institutions de gouvernance territoriale — notamment en Europe occidentale reconstruite et en Afrique sahélienne — et confrontation avec les p…_
-- [ ] 20. Instance `cooperatives_energetiques_decentralisees_reference` cite « Europe »
-  - _…nt aujourd'hui plusieurs centaines de structures actives en Europe occidentale reconstruite, dans les Amériques multipolaires et dans l'arc africa…_
-- [ ] 21. Instance `cooperatives_ia_open_source_reference` cite « Europe »
-  - _…s, équipent aujourd'hui plusieurs gouvernements régionaux d'Europe du Nord et d'Afrique subsaharienne qui ont renoncé à négocier des licences avec…_
-- [ ] 22. Instance `corridor_arctique_nordique_reference` cite « Europe »
-  - _…es, de ressources critiques et de données physiques entre l'Europe nordique et les territoires sibériens en cours d'exploitation. Gérer les droits…_
-- [ ] 23. Instance `europe_occidentale_reconstruite_reference` cite « Europe »
-  - _…Européenne, l'UOC fédère de manière lâche plusieurs États d'Europe de l'Ouest autour de normes commerciales et sécuritaires minimales. Elle ne pré…_
-- [ ] 24. Instance `fonds_monetaire_climatique_fmc_reference` cite « Europe »
-  - _…bailleurs dominants, les blocs du Corridor Arctique et de l'Europe Occidentale, qui orientent les allocations selon leurs intérêts géopolitiques e…_
-- [ ] 25. Instance `gelecek_meclisi_reference` cite « Europe »
-  - _…ur' en turc, langue choisie pour son statut de pont entre l'Europe et l'Asie) est devenu en 2098 l'un des rares espaces où mégapoles autonomes, Ét…_
-- [ ] 26. Instance `kaspar_lind_reference` cite « Europe »
-  - _Recruteur clandestin pour le réseau Kindling en Europe Occidentale Reconstruite, Kaspar Lind opère dans l'ombre des administrations hy…_
-- [ ] 27. Instance `kindling_reference` cite « Europe »
-  - _Cellules accélérationnistes clandestines opérant en Europe Occidentale Reconstruite (UOC), où les institutions démocratiques résistent enc…_
-- [ ] 28. Instance `lobbies_agro_industriels_a_haute_consommation_d_eau_reference` cite « Europe »
-  - _…s façades de prospérité alimentaire des plaines irriguées d'Europe du Sud et des Amériques, les lobbies agro-industriels hydrovores tirent les fic…_
-- [ ] 29. Instance `maelys_okonkwo_reference` cite « Europe »
-  - _…nkwo, figure emblématique du journalisme d'investigation en Europe Occidentale Reconstruite, est devenue une voix incontournable dans l'exposition…_
-- [ ] 30. Instance `plateformes_informationnelles_dominantes_et_leurs_ia_de_moderation_reference` cite « Europe »
-  - _…le Pacte des Souverains exigeant des versions localisées, l'Europe Occidentale Reconstruite imposant des audits partiels —, elles naviguent entre…_
-- [ ] 31. Instance `reseau_des_administrations_locales_rurales_participatives_reference` cite « Europe »
-  - _…patives s'est imposé comme la voix des marges oubliées de l'Europe Occidentale Reconstruite — ces communes où l'État n'arrive plus qu'en signal nu…_
-- [ ] 32. Instance `syndicats_de_travail_rural_hybride_reference` cite « Europe »
-  - _…l, est lu par plus de 40 millions de travailleurs ruraux en Europe occidentale reconstruite.…_
-- [ ] 33. Événement `effondrement_circulation_atlantique_2067_reference` cite « Londres »
-  - _…les températures chutent en Europe du Nord-Ouest, plongeant Londres, Amsterdam et Copenhague dans un hiver permanent. Les ports de la côte est amér…_
-- [ ] 34. Zone `ecosse_nordique_independante` cite « Écosse »
+- [ ] 9. Zone `ecosse_nordique_independante` cite « Écosse »
   - _Écosse Nordique Indépendante…_
-- [ ] 35. Zone `europe_occidentale_reconstruite` cite « Europe »
-  - _Europe Occidentale Reconstruite…_
-- [ ] 36. Zone `iberie_atlantique_fragmentee` cite « Europe »
-  - _…és lisboètes, favorables à une intégration renforcée avec l'Europe Occidentale Reconstruée, et les régions intérieures, où des mouvements autonomi…_
-- [ ] 37. Zone `turquie_eurasie_moyen_orient` cite « Europe »
-  - _…détroits stratégiques et les corridors énergétiques entre l'Europe et l'Asie. Centre de transit pour les flux de données et d'énergie.…_
-- [ ] 38. Zone `istanbul` cite « Europe »
-  - _…ux et territoires autonomes. Son statut de ville-pont entre Europe et Asie en fait un symbole de la fragmentation géopolitique, mais aussi un hub…_
-- [ ] 39. Zone `lyon_metropole` cite « Europe »
-  - _Ville française ordinaire de l'Europe Occidentale Reconstruite, lieu de l'arrestation de Chris van Derburgh en juin 2…_
-- [ ] 40. Zone `zones_tampons_climatiques_europeennes` cite « Europe »
-  - _Espaces de transition écologique aux marges de l'Europe Occidentale Reconstruite, gérés partiellement par le Réseau Terrafond et invest…_
-- [ ] 41. Relecture IA ciblée d'une instance (contradictions avec l'hypothèse)
-  - `python3 generator/audit_lore.py --scenario reference --llm --slug <slug>`
-  - _payant (≈ 0,5 centime la fiche) ; après application de la carte et de l'événement_
 
 **Articles et site**
-- [ ] 42. Résumé du scénario
+- [ ] 10. Résumé du scénario
   - `python3 generator/generate_resume_scenarios.py --scenario reference`
   - _payant, un appel_
-- [ ] 43. Site des revues
+- [ ] 11. Site des revues
   - `python3 generator/chapos_revues.py`
   - _puis bash generator/publier_site.sh_
 
 **Contrôles**
-- [ ] 44. Base
+- [ ] 12. Base
   - `python3 generator/validate.py`
-- [ ] 45. Géographie
+- [ ] 13. Géographie
   - `python3 generator/scan_geographie_complet.py --scenario reference`
-- [ ] 46. Lore
+- [ ] 14. Lore
   - `python3 generator/audit_lore.py --scenario reference`
   - _puis étapes 2 et 3 de Relations & lore si besoin_
 

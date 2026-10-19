@@ -63,7 +63,7 @@ SCENARIOS = ["breakdown", "fortress_world", "new_sustainability",
              "eco_communalism", "policy_reform", "reference"]
 DELTA_MAX_CONSEILLE = 25   # plafond d'un événement custom (inject_custom_events.py)
 ACTIONS_GEO = {"absorber": "absorber", "nouvelle_zone": "creer"}   # vocabulaire du fichier -> ZoneRepository
-VERSION = "v8.22"            # affichée dans le rapport : permet de vérifier la version installée
+VERSION = "v8.23"            # affichée dans le rapport : permet de vérifier la version installée
 MAX_LISTE = 10             # éléments listés par rubrique dans le rapport (le reste est compté)
 
 
@@ -1838,6 +1838,15 @@ def _autres_pays(entite, pays):
             and _re.search(r"(?<![a-z0-9])" + _re.escape(_plie_aligne(p)) + r"(?![a-z0-9])", e)]
 
 
+# PATCH_S27_TERMES (v8.23) : territoires qui partagent le fond de carte d'un pays
+# (pays_mapping.json) ; leurs villes, au lieu de toutes celles du pays.
+VILLES_TERRITOIRE = {
+    "Écosse": ["Glasgow", "Édimbourg", "Edinburgh", "Aberdeen", "Dundee", "Inverness"],
+    "Pays de Galles": ["Cardiff", "Swansea", "Newport"],
+    "Irlande du Nord": ["Belfast", "Derry"],
+}
+
+
 def _termes_hypothese(hyp, sc, geo_ops, zones=None):
     """{terme: origine} : pays dont la carte change (et leurs grandes villes), pays cités
     dans le nom ou la description, noms propres de l'hypothèse."""
@@ -1856,6 +1865,10 @@ def _termes_hypothese(hyp, sc, geo_ops, zones=None):
     for p in pays_carte:
         termes.setdefault(p, "pays dont la carte change")
         en = mapping.get(p)
+        if p in VILLES_TERRITOIRE:   # PATCH_S27_TERMES : ses villes, pas celles du pays entier
+            for v in VILLES_TERRITOIRE[p]:
+                termes.setdefault(v, f"ville ({p})")
+            en = None
         for v in villes if en else []:
             if isinstance(v, dict) and v.get("nom") and str(v.get("pays", "")) == en:
                 termes.setdefault(v["nom"], f"ville ({p})")
@@ -1903,10 +1916,26 @@ def _termes_hypothese(hyp, sc, geo_ops, zones=None):
             vus.add(k)
             uniques[t] = o
     plies = {t: " ".join(_plie_aligne(t).split()) for t in uniques}
-    return {t: o for t, o in uniques.items()
-            if not (o == "nom cité par l'hypothèse"
-                    and any(u != t and _re.search(r"(?<![a-z0-9])" + _re.escape(plies[t]) + r"(?![a-z0-9])", plies[u])
-                            for u in uniques))}
+    resultat = {t: o for t, o in uniques.items()
+                if not (o == "nom cité par l'hypothèse"
+                        and any(u != t and _re.search(r"(?<![a-z0-9])" + _re.escape(plies[t]) + r"(?![a-z0-9])", plies[u])
+                                for u in uniques))}
+    # PATCH_S27_TERMES : zone d'arrivée d'un rattachement (absorber) -- ses pays et les mots de
+    # son nom, cités par l'hypothèse, ne sont pas cherchés (les fiches n'y deviennent pas fausses).
+    by_z = {z.get("slug"): z for z in zones or [] if isinstance(z, dict)}
+    pays_arrivee, mots_arrivee = set(), set()
+    for op, g in zip(ops_hyp, geo_ops or []):
+        z = by_z.get(op.get("zone")) if op.get("action") == "absorber" and not g.get("erreurs") else None
+        if z:
+            pays_arrivee |= {" ".join(_plie_aligne(x.get("entite")).split()) for x in z.get("origine_reelle") or []
+                             if isinstance(x, dict) and x.get("entite")}
+            mots_arrivee |= set(_plie_aligne(z.get("nom")).split())
+    gardes = {" ".join(_plie_aligne(p).split()) for p in pays_carte}
+    return {t: o for t, o in resultat.items()
+            if plies[t] in gardes
+            or not ((o == "pays cité par l'hypothèse" and plies[t] in pays_arrivee)
+                    or (o == "nom cité par l'hypothèse" and mots_arrivee
+                        and set(plies[t].split()) <= mots_arrivee))}
 
 
 def _homonymes_pays(termes):
