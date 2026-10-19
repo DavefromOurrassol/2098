@@ -11670,6 +11670,7 @@ function buildDecisionHypothese() {
         deplacee: ['✓ déplacée', '#1e8449'], portion: ['✓ garde une portion (tracé)', '#1e8449'],
         disparue: ['· n\'existe plus', '#888'], gardee: ['✓ gardée', '#1e8449'],
         territoire: ['✓ a de nouveau un territoire', '#1e8449'], supprimee: ['· supprimée', '#888'],
+        garde: ['✓ gardé (en exil)', '#1e8449'], retire: ['✓ retiré de journaux.yaml', '#1e8449'],   // PATCH_S27_JOURNAUX
         en_attente: ['· carte pas encore appliquée', '#888'],
       };
       cartes.forEach(c => {
@@ -11731,6 +11732,20 @@ function buildDecisionHypothese() {
           bloc.appendChild(ligneZone(z, `Zone ${z.nom} (${z.slug}) : n'a plus aucun territoire.`,
             [['La garder (vestige, exil)', () => appeler('main/carte', 'laisser', { cle: z.cle })],
              ['La supprimer : onglet Carte ↗', () => ouvrirCarte(c.sc)]]));
+          // PATCH_S27_JOURNAUX : journaux de la zone vidée (garder en exil, ou retirer).
+          (z.journaux || []).forEach(j => {
+            const lj = ligneZone(j, `Journal ${j.nom} (${j.orientation}`
+              + (j.etat === 'retire' ? ')' : `, ${j.journalistes} journaliste(s))`) + ' de cette zone.',
+              [['Le garder (en exil)', () => appeler('main/journal', 'garder', { cle: j.cle })],
+               ['Aperçu du retrait', () => appeler('main/journal', 'apercu', { cle: j.cle })],
+               ['Le retirer', () => {
+                 if (!confirm(`Retirer « ${j.nom} » de journaux.yaml ? Les articles déjà signés ne changent pas `
+                              + '(sauvegarde journaux.yaml.bak_et_si_main).')) return;
+                 appeler('main/journal', 'retirer', { cle: j.cle });
+               }, 'yaml-btn yaml-btn-save']]);
+            lj.style.marginLeft = '24px';
+            bloc.appendChild(lj);
+          });
         });
         if (c.nouvelle) {
           const n = mk('div', 'option-desc',
@@ -11996,6 +12011,8 @@ function buildDecisionHypothese() {
       'Carte : une sous-zone qui porte aussi d\'autres pays a perdu le pays ; la laisser ainsi, la ' +
       'déplacer entière sous la zone cible (ses autres pays la suivent ; aperçu d\'abord), ou lui rendre ' +
       'une portion par un tracé dans l\'onglet Carte (l\'état se met à jour à l\'actualisation).\n' +
+      'Journaux d\'une zone vidée : les garder (en exil, rien n\'est écrit) ou les retirer de ' +
+      'journaux.yaml (aperçu d\'abord ; les articles déjà signés ne changent pas).\n' +
       'Articles et décisions ⚠ restent à faire avec la check-list.'));
   }
   async function chargerMain() {

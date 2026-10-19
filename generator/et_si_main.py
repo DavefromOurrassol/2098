@@ -20,7 +20,8 @@ Aide à la partie mécanique de l'étape ⑤, pour une hypothèse déjà APPLIQU
      (aucune écriture dans les articles ; correction à la main, puis « relu »).
   5. Carte (18 oct 2026) : suites de la carte appliquée en phase 4 -- sous-zones à
      plusieurs pays (la laisser, la déplacer entière sous la zone cible, ou tracer une
-     portion dans l'onglet Carte), zones vidées, nouvelle zone (description, relations).
+     portion dans l'onglet Carte), zones vidées et leurs journaux (garder en exil, ou
+     retirer de generator/journaux.yaml), nouvelle zone (description, relations).
   6. Commandes de fin : audit du lore (gratuit), contrôle de la géographie (un petit appel IA), résumé
      du scénario (payant).
 
@@ -37,6 +38,8 @@ USAGE (depuis la racine du coffre)
     python3 generator/et_si_main.py --id X --article-relu articles/<sc>/<fichier>.md
     python3 generator/et_si_main.py --id X --carte-deplacer reference:sertao_nordeste_bresilien [--apply]
     python3 generator/et_si_main.py --id X --carte-laisser reference:sertao_nordeste_bresilien
+    python3 generator/et_si_main.py --id X --journal-garder reference:ecosse_nordique_independante:opposition
+    python3 generator/et_si_main.py --id X --journal-retirer reference:ecosse_nordique_independante:opposition [--apply]
     python3 generator/et_si_main.py --id X --lancer audit --scenario reference
     python3 generator/et_si_main.py --id X --lancer resume --scenario reference
 Suivi : generator/state/et_si_application/<id>.main.json (ce qui a été ajouté).
@@ -889,8 +892,38 @@ def trouver_carte(data, cle, videes=False):
     sys.exit(f"✗ {cle} : ni sous-zone à répartir{' ni zone vidée' if videes else ''} pour cette hypothèse")
 
 
+JOURNAUX = GEN / "journaux.yaml"
+
+
+def lire_journaux():
+    try:
+        return yaml.safe_load(JOURNAUX.read_text(encoding="utf-8")) or {}
+    except (OSError, yaml.YAMLError):
+        return {}
+
+
+def journaux_zone(sc, zone, dec, journaux):
+    """Journaux d'une zone vidée : présents dans journaux.yaml, ou déjà retirés (suivi)."""
+    out = []
+    for orient, bloc in ((journaux.get(sc) or {}).items() if isinstance(journaux.get(sc), dict) else []):
+        j = ((bloc or {}).get("zones") or {}).get(zone) if isinstance(bloc, dict) else None
+        if isinstance(j, dict):
+            cle = f"{sc}:{zone}:{orient}"
+            out.append({"cle": cle, "orientation": orient, "nom": j.get("nom") or zone,
+                        "journalistes": len(j.get("journalistes") or []),
+                        "etat": "garde" if dec.get(cle) == "garde" else "a_decider"})
+    for cle, d in dec.items():
+        if str(d).startswith("retire") and cle.startswith(f"{sc}:{zone}:") and not any(x["cle"] == cle for x in out):
+            out.append({"cle": cle, "orientation": cle.rsplit(":", 1)[1],
+                        "nom": str(d).split(":", 1)[1] if ":" in str(d) else cle.rsplit(":", 1)[1],
+                        "journalistes": 0, "etat": "retire"})
+    return out
+
+
 def etat_carte(data, suivi):
     dec = suivi.get("carte") or {}
+    dec_j = suivi.get("journaux") or {}
+    journaux = None
     out = []
     for sc in data["scenarios"]:
         ops = ops_carte(data, sc)
@@ -929,7 +962,10 @@ def etat_carte(data, suivi):
                 z = by.get(v)
                 e = ("supprimee" if not z else "territoire" if z.get("origine_reelle")
                      else "gardee" if dec.get(f"{sc}:{v}") else "a_decider")
-                item["videes"].append({"cle": f"{sc}:{v}", "slug": v, "nom": (z or {}).get("nom") or v, "etat": e})
+                if journaux is None:
+                    journaux = lire_journaux()
+                item["videes"].append({"cle": f"{sc}:{v}", "slug": v, "nom": (z or {}).get("nom") or v, "etat": e,
+                                       "journaux": journaux_zone(sc, v, dec_j, journaux) if item["applique"] else []})
             out.append(item)
     return out
 
@@ -981,6 +1017,69 @@ def carte_deplacer(hid, data, cle, apply):
         sys.exit("✗ résultat inattendu à la relecture : géographie remise en l'état.")
     print(f"\n✓ `{s['slug']}` déplacée sous `{cible}` (sauvegarde {geo.name}.bak_et_si_main). "
           f"Contrôle : « Contrôle de la géographie » dans « Pour finir ».")
+    return 0
+
+
+def trouver_journal(data, cle):
+    """(scénario, zone vidée, orientation) pour une clé « scénario:zone:orientation »."""
+    parties = str(cle or "").split(":")
+    if len(parties) != 3:
+        sys.exit("✗ clé attendue : scénario:zone:orientation")
+    sc, zone, orient = parties
+    if not any(zone in (c.get("videes") or []) for c in ops_carte(data, sc)):
+        sys.exit(f"✗ {zone} n'est pas une zone vidée par cette hypothèse ({sc})")
+    return sc, zone, orient
+
+
+def journal_garder(hid, data, cle):
+    sc, zone, orient = trouver_journal(data, cle)
+    suivi = lire_suivi(hid)
+    suivi.setdefault("journaux", {})[cle] = "garde"
+    ecrire_suivi(hid, suivi)
+    print(f"✓ journal {orient} de `{zone}` gardé (en exil) : décision notée, journaux.yaml inchangé.")
+    return 0
+
+
+def journal_retirer(hid, data, cle, apply):
+    sc, zone, orient = trouver_journal(data, cle)
+    j = lire_journaux()
+    bloc = ((j.get(sc) or {}).get(orient) or {})
+    zones = bloc.get("zones") if isinstance(bloc, dict) else None
+    if not isinstance(zones, dict) or zone not in zones:
+        sys.exit(f"✗ aucun journal {orient} pour `{zone}` dans journaux.yaml ({sc}) : déjà retiré ?")
+    journal = zones[zone] or {}
+    nom = journal.get("nom") or zone
+    # Articles déjà signés : recherche du nom du journal dans les articles du scénario (information).
+    signes = 0
+    racine = VAULT / "articles"
+    if racine.exists():
+        for f in racine.rglob("*.md"):
+            try:
+                if nom in f.read_text(encoding="utf-8"):
+                    signes += 1
+            except OSError:
+                pass
+    print(("ÉCRITURE" if apply else "APERÇU (rien écrit)") + f" — {sc}")
+    print(f"  Retirer « {nom} » ({orient}, zone `{zone}`) de generator/journaux.yaml : "
+          f"{len(journal.get('journalistes') or [])} journaliste(s) avec lui.")
+    print(f"  Articles qui citent ce nom : {signes} (ils ne sont pas modifiés ; plus aucun nouvel article "
+          "ne sera écrit pour ce journal).")
+    if not apply:
+        print(f"\nPour écrire : bouton « Le retirer » (terminal : --apply).")
+        return 0
+    attendu = {k: v for k, v in zones.items() if k != zone}
+    del zones[zone]
+    shutil.copy2(JOURNAUX, JOURNAUX.with_name("journaux.yaml.bak_et_si_main"))
+    JOURNAUX.write_text(yaml.dump(j, allow_unicode=True, sort_keys=False), encoding="utf-8")
+    relu = lire_journaux()
+    if ((relu.get(sc) or {}).get(orient) or {}).get("zones") != attendu:
+        shutil.copy2(JOURNAUX.with_name("journaux.yaml.bak_et_si_main"), JOURNAUX)
+        sys.exit("✗ relecture inattendue : journaux.yaml remis en l'état.")
+    suivi = lire_suivi(hid)
+    suivi.setdefault("journaux", {})[cle] = f"retire:{nom}"
+    ecrire_suivi(hid, suivi)
+    print(f"\n✓ « {nom} » retiré (sauvegarde journaux.yaml.bak_et_si_main). Contrôle : "
+          "python3 generator/validate.py")
     return 0
 
 
@@ -1067,6 +1166,9 @@ def main():
     a.add_argument("--article-relu", metavar="CHEMIN", help="marque un article comme relu")
     a.add_argument("--carte-deplacer", metavar="SC:SLUG", help="déplace une sous-zone à répartir sous la zone cible")
     a.add_argument("--carte-laisser", metavar="SC:SLUG", help="note qu'une sous-zone (ou zone vidée) reste telle quelle")
+    a.add_argument("--journal-garder", metavar="SC:ZONE:ORIENTATION", help="garde le journal d'une zone vidée (exil)")
+    a.add_argument("--journal-retirer", metavar="SC:ZONE:ORIENTATION",
+                   help="retire de journaux.yaml le journal d'une zone vidée (avec --apply)")
     a.add_argument("--scenario")
     a.add_argument("--apply", action="store_true")
     x = a.parse_args()
@@ -1086,6 +1188,10 @@ def main():
         return carte_deplacer(x.id, data, x.carte_deplacer, x.apply)
     if x.carte_laisser:
         return carte_laisser(x.id, data, x.carte_laisser)
+    if x.journal_garder:
+        return journal_garder(x.id, data, x.journal_garder)
+    if x.journal_retirer:
+        return journal_retirer(x.id, data, x.journal_retirer, x.apply)
     if x.articles_verifier:
         return verifier_articles(x.id, data, x.refaire)
     if x.article_relu:
@@ -1098,7 +1204,7 @@ def main():
         if not x.scenario:
             sys.exit("✗ --lancer demande --scenario")
         return lancer(x.lancer, x.scenario, data)
-    a.error("préciser --json, --entites, --regle, --phrases-proposer, --phrase, --articles-verifier, --article-relu, --carte-deplacer, --carte-laisser ou --lancer")
+    a.error("préciser --json, --entites, --regle, --phrases-proposer, --phrase, --articles-verifier, --article-relu, --carte-deplacer, --carte-laisser, --journal-garder, --journal-retirer ou --lancer")
 
 
 if __name__ == "__main__":

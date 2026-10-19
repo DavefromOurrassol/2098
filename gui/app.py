@@ -3044,7 +3044,8 @@ def et_si_injecter(action):
 TIMEOUTS_MAIN = {"etat": 120, "entites": 120, "regle": 60, "lancer": 900,
                  "phrases": 900, "phrase": 60,   # PATCH_S27_PHRASES
                  "articles": 1500, "article": 60,   # PATCH_S27_ARTICLES
-                 "carte": 120}   # PATCH_S27_CARTE_MAIN
+                 "carte": 120,   # PATCH_S27_CARTE_MAIN
+                 "journal": 300}   # PATCH_S27_JOURNAUX
 
 
 @app.route("/api/et_si/main/<quoi>", methods=["POST"])
@@ -3081,6 +3082,11 @@ def et_si_main_route(quoi, action=None):
         cle = str(data["cle"])
         cmd += ["--carte-laisser", cle] if action == "laisser" else (
             ["--carte-deplacer", cle] + (["--apply"] if action == "deplacer" else []))
+    elif (quoi == "journal" and action in ("garder", "apercu", "retirer")   # PATCH_S27_JOURNAUX
+          and re.match(r"^[a-z_]+:[a-z0-9_]+:[a-z_]+$", str(data.get("cle") or ""))):
+        cle = str(data["cle"])
+        cmd += ["--journal-garder", cle] if action == "garder" else (
+            ["--journal-retirer", cle] + (["--apply"] if action == "retirer" else []))
     elif quoi == "articles" and action == "verifier":   # PATCH_S27_ARTICLES (appels IA, lecture seule)
         cmd.append("--articles-verifier")
     elif (quoi == "article" and action == "relu" and ".." not in str(data.get("chemin") or "")
