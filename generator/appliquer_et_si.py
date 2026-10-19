@@ -31,7 +31,7 @@ passe ne sont jamais appliqués.
 USAGE
     python3 generator/appliquer_et_si.py --id <hypothèse>                     # aperçu (rien écrit)
     python3 generator/appliquer_et_si.py --id <hypothèse> --sauter 3,7 --apply
-Sauvegardes : <fichier>.bak_appliquer (une seule, la première).
+Sauvegardes : <fichier>.bak_appliquer, refaite à chaque écriture (contenu juste avant).
 """
 
 import argparse
@@ -206,9 +206,9 @@ class Ecritures:
     def ecrire(self):
         n = 0
         for p in self.changes():
-            bak = p.with_name(p.name + ".bak_appliquer")
-            if not bak.exists():
-                shutil.copy2(p, bak)
+            # PATCH_S27_CARTE_RETOUCHES : sauvegarde refaite à chaque écriture (une opération
+            # déjà faite n'écrit rien, relancer ne l'écrase donc pas par un état modifié).
+            shutil.copy2(p, p.with_name(p.name + ".bak_appliquer"))
             p.write_text(self.textes[p], encoding="utf-8")
             n += 1
         return n
@@ -683,16 +683,26 @@ def appliquer_carte(repo, o):
     simples = [s for s in o.get("simples") or [] if s in by]
     gardees = {s: copy.deepcopy(by[s].get("origine_reelle") or []) for s in simples}
     hautes = [s for s in simples if by[s].get("parent") not in simples]   # le sous-arbre suit
+    # PATCH_S27_CARTE_RETOUCHES : type d'origine du territoire (la Carte écrit « pays » par défaut).
+    types = [x.get("type_entite") for z in by.values() for x in z.get("origine_reelle") or []
+             if isinstance(x, dict) and plie(x.get("entite")) == plie(pays) and x.get("type_entite")]
+    type_orig = types[0] if types else None
     if o["action"] == "nouvelle_zone":
         repo.assign_pays(sc, pays, "creer", nouvelle_zone=dict(o.get("nouvelle_zone") or {}))
     else:
         repo.assign_pays(sc, pays, "absorber", zone_slug=cible)
-    if gardees:
+    type_garde = False
+    if gardees or (type_orig and type_orig != "pays"):
         gf = repo._load_geo(sc)
         for z in gf.zones:
             if z.get("slug") in gardees:
                 z["origine_reelle"] = gardees[z["slug"]]
-        repo._save_geo(gf)
+            if z.get("slug") == cible and type_orig and type_orig != "pays":
+                for x in z.get("origine_reelle") or []:
+                    if isinstance(x, dict) and x.get("entite") == pays and x.get("type_entite") != type_orig:
+                        x["type_entite"], type_garde = type_orig, True
+        if gardees or type_garde:
+            repo._save_geo(gf)
         for s in hautes:
             if by[s].get("parent") != cible:
                 repo.reparent(sc, s, cible, dry_run=False)
@@ -703,7 +713,8 @@ def appliquer_carte(repo, o):
         if (apres.get(s) or {}).get("parent") != cible or not porte_pays(apres.get(s), pays):
             raise ValueError(f"sous-zone `{s}` mal rattachée après l'opération")
     return (f"✓ {o['n']}. {o['texte']}"
-            + (f" ; {len(hautes)} sous-zone(s) rattachée(s) : {', '.join(hautes)}" if hautes else ""))
+            + (f" ; {len(hautes)} sous-zone(s) rattachée(s) : {', '.join(hautes)}" if hautes else "")
+            + (f" ; type {type_orig} gardé" if type_garde else ""))
 
 
 def appliquer_cartes(cartes):
@@ -712,10 +723,8 @@ def appliquer_cartes(cartes):
     repo = _repo()
     fichiers = [repo._zones_pays_path()] + sorted({VAULT / "geographie" / f"{o['sc']}.md" for o in cartes})
     avant = {p: p.read_text(encoding="utf-8") for p in fichiers if p.exists()}
-    for p in avant:
-        bak = p.with_name(p.name + ".bak_appliquer")
-        if not bak.exists():
-            shutil.copy2(p, bak)
+    for p in avant:   # PATCH_S27_CARTE_RETOUCHES : sauvegarde neuve à chaque application
+        shutil.copy2(p, p.with_name(p.name + ".bak_appliquer"))
     msgs = []
     try:
         for o in cartes:
@@ -848,6 +857,10 @@ def main():
     print("\n".join(f"  - {x}" for x in a_main))
     changes = W.changes()
     print(f"\nFichiers modifiés : {len(changes)}")
+    sc_carte = sorted({o["sc"] for o in ops if o["retenue"] and o["genre"] == "carte"})
+    if sc_carte:   # PATCH_S27_CARTE_RETOUCHES
+        print("  + carte, écrite après les autres : "
+              + ", ".join(f"geographie/{sc}.md" for sc in sc_carte) + ", gui/zones_pays.json")
     if erreurs:
         print("\n✗ Refusé :\n" + "\n".join(f"  {e}" for e in erreurs))
         sys.exit("✗ Rien n'est écrit tant qu'une opération échoue (--sauter son numéro, ou corriger la fiche).")
