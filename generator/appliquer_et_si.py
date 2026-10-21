@@ -875,8 +875,8 @@ def main():
         return
 
     n = W.ecrire()
-    print(f"\n✓ {n} fichier(s) écrit(s).")
     cartes = [o for o in ops if o["retenue"] and o["genre"] == "carte"]   # PATCH_S27_CARTE
+    print(f"\n✓ {n} fichier(s) écrit(s)" + (" (hors carte, ci-dessous)." if cartes else "."))   # PATCH_S27_LIBELLES
     if cartes:
         print("Carte :")
         faits, msgs = appliquer_cartes(cartes)

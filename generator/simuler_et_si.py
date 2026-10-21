@@ -63,7 +63,7 @@ SCENARIOS = ["breakdown", "fortress_world", "new_sustainability",
              "eco_communalism", "policy_reform", "reference"]
 DELTA_MAX_CONSEILLE = 25   # plafond d'un événement custom (inject_custom_events.py)
 ACTIONS_GEO = {"absorber": "absorber", "nouvelle_zone": "creer"}   # vocabulaire du fichier -> ZoneRepository
-VERSION = "v8.24"            # affichée dans le rapport : permet de vérifier la version installée
+VERSION = "v8.25"            # affichée dans le rapport : permet de vérifier la version installée
 MAX_LISTE = 10             # éléments listés par rubrique dans le rapport (le reste est compté)
 
 
@@ -1491,8 +1491,10 @@ def _rendre_consequences(c):
                  + (" …" if len(c["corrigees"]) > 8 else "") + "_")
         L.append("")
     if c.get("ecartees"):
-        L.append(f"_Propositions écartées au contrôle ({len(c['ecartees'])}) : " + " ; ".join(c["ecartees"][:8])
-                 + (" …" if len(c["ecartees"]) > 8 else "") + "_")
+        # PATCH_S27_LIBELLES : la carte d'abord (elle passait derrière « … »).
+        ec = sorted(c["ecartees"], key=lambda x: not str(x).startswith("carte"))
+        L.append(f"_Propositions écartées au contrôle ({len(ec)}) : " + " ; ".join(ec[:8])
+                 + (" …" if len(ec) > 8 else "") + "_")
         L.append("")
     return L
 
@@ -2361,10 +2363,13 @@ def liste_application(hyp, sc, res, cons, geo_ops, donnees, passe=None):
 
     # 6. Nouvelles entités -----------------------------------------------------
     if cons.get("nouvelles_entites"):
+        # PATCH_S27_LIBELLES : « à choisir » seulement si une catégorie manque (v8.21 : proposée par l'IA).
+        sans_cat = sum(1 for n in cons["nouvelles_entites"] if not n.get("category"))
         _etape(E, "Nouvelles entités", f"{len(cons['nouvelles_entites'])} entrée(s) prête(s) (bloc YAML ci-dessous) "
-               "pour entites_custom/queue.yaml — catégorie à choisir",
-               "python3 generator/create_entities_and_instances.py --mode custom",
-               "la lecture IA ne donne pas de catégorie ; scenario_hint limite à ce scénario")
+               "pour entites_custom/queue.yaml"
+               + (f" — catégorie à choisir pour {sans_cat}" if sans_cat else " — catégorie proposée, à relire"),
+               "étape ⑤ du panneau (« Ajouter à la file »), puis python3 generator/create_entities_and_instances.py --mode custom",
+               "scenario_hint limite à ce scénario")
 
     # 7. Trajectoires ----------------------------------------------------------
     for t in (cons.get("trajectoires") or []) + [dict(x, passe=True) for x in p_obl["trajectoires"]]:
