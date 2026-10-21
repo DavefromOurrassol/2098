@@ -41,7 +41,10 @@ octobre : S27 avancé — Genève appliquée à la main (liste jugée non
 exhaustive), faits imposés à l'injection (v8.18), opérations structurées
 (v8.19), phase 4 `appliquer_et_si.py` livrée (non testée en réel), banc de
 rejeu breakdown périmé —, S24 : doublon des Archives Neutres fusionné, Hanse
-Baltique ajoutée), mis à jour en continu
+Baltique ajoutée ; les 16-21 octobre : S27 avancé — phase 4 testée en réel
+(Mourmansk), panneau GUI « Parcours » ① → ⑤, étape ⑤ outillée, carte intégrée à
+l'application, v8.20 → v8.25 —, S19 : mode rupture dans le vrai moteur (testé sur
+l'Atlantique), amplitude des chocs laissée telle quelle), mis à jour en continu
 à chaque clôture de session. Chantiers clos et leur historique complet
 dans `BACKLOG_ARCHIVE.md` (fichier séparé, à uploader seulement en cas
 de besoin de vérifier si un point a déjà été traité). Chaque chantier
@@ -368,7 +371,11 @@ mécanisme multi-noms partageant un polygone peut laisser une couleur
 fantôme si un seul des 4 noms est réaffecté. Au 23 sept, les 4 noms +
 Irlande sont dans Zone Interdite de Heysham (`fortress_world`),
 `check_conventions_territoires` cohérent. À revérifier si l'un d'eux
-change de zone. ~~Mineur connexe : `sao_paulo_megapole` (`fortress_world`)
+change de zone. *19 oct* : l'essai `reunification_ecosse_2070` (reference,
+branche git jetable, défait) a rattaché l'Écosse seule à l'Europe occidentale ;
+pas de couleur fantôme observée, mais le bouton de la Carte écrit `type_entite:
+pays` (l'Écosse est `region_administrative`) — la phase 4 garde le type
+d'origine, pas le bouton. ~~Mineur connexe : `sao_paulo_megapole` (`fortress_world`)
 sans pays dans son `origine_reelle`~~ — **corrigé le 10 oct** depuis la Carte :
 entrée Brésil + portion « La mégapole de São Paulo et sa région
 métropolitaine » avec tracé (modèle Allemagne : le Brésil reste pays entier
@@ -476,7 +483,14 @@ Rien de bloquant :
   optionnel `ruptures=` de `dynamique.simuler()`, sans effet sur le calcul
   normal) : peste à 25 % de mortalité, démographie +27 au lieu de +1. Le
   moteur du vault (snapshot, Tracer) reste en mode choc ; l'utiliser pour
-  les injections réelles serait une décision séparée.
+  les injections réelles serait une décision séparée. **Décidé et fait le
+  17 oct (option B)** : une fiche `event_instances` avec `mode: rupture` déplace
+  la référence dans le vrai moteur (snapshot, Tracer, banc) ; sans elle, aucun
+  niveau ne change (0/72). Testé en réel : `effondrement_circulation_atlantique_2067`
+  (reference). Manuel §3ter et §3quinquies.
+- **Amplitude des chocs — jugée le 17 oct** (`banc_amplitude.py`, lecture seule) :
+  **décision A, `GAIN_CHOCS` inchangé**. Règle : **choc = s'estompe, rupture =
+  change le monde** ; un gros événement passe par `mode: rupture`.
 - `undo_custom.py` ne recalcule pas la ligne « Total » du registre des
   événements (mineur, cosmétique).
 - `matplotlib` absent : le banc écrit des CSV au lieu de graphiques
@@ -713,76 +727,51 @@ Mode Forcer, champ « Journal d'une autre zone » (liste déroulante,
 
 ---
 
-## 🟡 S27. Simulateur « et si ? » et pipeline d'injection — v8.19 et phase 4 livrées le 15 oct
-**Fait du 9 au 15 oct** (manuel §3quinquies, `HANDOFF_9_OCTOBRE.md` à
-`HANDOFF_15_OCTOBRE.md`) : `generator/simuler_et_si.py` (v8.19),
+## 🟡 S27. Simulateur « et si ? » et pipeline d'injection — parcours complet en service (21 oct)
+**Fait du 9 au 21 oct** (manuel §3quinquies, `HANDOFF_9_OCTOBRE.md` à
+`HANDOFF_21_OCTOBRE.md`) : `generator/simuler_et_si.py` (**v8.25**),
 `generator/hypothese_depuis_texte.py`, `generator/et_si_exhaustif.py` (v9.5),
-`generator/et_si_dossiers.py`, `generator/appliquer_et_si.py` (15 oct),
-`generator/export_et_si.py`, `generator/rejeu/`, `et_si/hypotheses.yaml`.
-Tout le pipeline est outillé : **tester** (niveaux avec / sans en mode choc ou
-rupture, lecture IA, carte en aperçu, passe exhaustive) → **décider**
-(dossiers, adopter / rejeter, panneau ⚖️ Décider) → **injecter** (valeurs et
-faits imposés) → **appliquer** (phase 4). Détail des versions jusqu'au 12 oct :
-`BACKLOG_ARCHIVE.md`.
-- **13 oct — Genève appliquée pour de vrai, à la main** (point 1 du 12 oct) :
-  adoptée, injectée (le complexe enterré de Genève-Bunker résiste ; le lieu
-  survit en `en_declin`, l'institution « Palais des Fantômes » disparaît),
-  trajectoires (4), statut de zone, 3 disparues retirées des relations de 30
-  fiches, doublon des Archives fusionné (S24) ; base valide. **Constat : la
-  liste d'application n'est pas exhaustive** (5 relations relevées sur 30
-  fiches), l'injection réinventait le sort des entités, et « la matrice »
-  venait de notre propre prompt. Étapes encore à faire pour Genève : voir 2.
-- **15 oct — v8.18** : `faits_imposes` dans l'entrée commune (contraintes, sort
-  de chaque acteur, zones changées), bloc « FAITS IMPOSÉS » à l'injection, ⚠
-  sans rejet si le récit les contredit ou emploie « matrice ». **v8.19** :
-  opérations structurées par simulation
-  (`generator/state/et_si_application/<id>.json`). **Phase 4** :
-  `appliquer_et_si.py` (aperçu, `--sauter` / `--inclure`, `--apply`, journal) —
-  testé sur un faux vault, **pas encore en conditions réelles**.
-- **Banc de rejeu** : 21/27 le 15 oct, sans régression du code — les caches des
-  deux couples breakdown sont périmés (vault modifié le 13 oct ; peste
-  rafraîchie sans lecture IA, ≈ 0,10 $). Seuil provisoire : 4 couples hors
-  breakdown conformes (manuel §3quinquies).
+`generator/et_si_dossiers.py`, `generator/appliquer_et_si.py`,
+`generator/et_si_statut.py`, `generator/et_si_injecter.py`,
+`generator/et_si_main.py`, `generator/export_et_si.py`, `generator/rejeu/`,
+`et_si/hypotheses.yaml`. Parcours dans le GUI (Entités & événements — Création →
+« Simulateur « et si ? » », panneau **🧭 Parcours de l'hypothèse**) : ① tester
+(choc ou rupture, lecture IA, carte, passe exhaustive) → ② décider → ③ injecter
+(valeurs, faits et mode imposés) → ④ appliquer (zones, trajectoires, relations,
+**carte**) → ⑤ à la main outillé (carte, entités, phrases, articles, règle de
+lore, commandes de fin). Détail des versions : `BACKLOG_ARCHIVE.md`.
+- **Appliquées de bout en bout** : Genève (13 oct, à la main), Mourmansk (17 oct,
+  phase 4, choc), Atlantique (17 oct, rupture). Carte : essai Écosse (absorber +
+  zone vidée) écrit sur une branche git jetable puis défait (19 oct).
+- **Exemples à ne jamais adopter** (décision du 21 oct) : `occupation_bresil_2029`
+  (nouvelle zone + sous-zones) et `reunification_ecosse_2070` (absorber + zone
+  vidée), dans `et_si/hypotheses.yaml` ; `invasion_bresil_2029` reste au banc.
+- **Banc de rejeu** : 4 couples hors breakdown conformes (seuil provisoire).
 Reste, dans l'ordre proposé :
-1. **Test réel de la phase 4** : une nouvelle hypothèse simulée avec lecture IA
-   et passe exhaustive (≈ 0,15 $), adoptée, injectée (vérifier les ⚠ de v8.18),
-   puis `appliquer_et_si.py --id <id>` (aperçu, tri, `--apply`). Genève ne
-   convient plus (déjà appliquée).
-2. **Genève, hors application mécanique** : règle de lore (étape 26), phrase de
-   l'AMSC (27), zones et articles à relire (28-33, 55), résumé du scénario et
-   site (56-57), `audit_lore.py --scenario breakdown` (59) ; vérifier la fiche
-   `agence_stabilisation_climatique_breakdown` (aucune relation retirée de son
-   corps : section « ## Relations » absente ?).
-3. **Décision S19 — mode rupture dans le vrai moteur** (`appliquer_et_si.py`
-   refuse le mode rupture en attendant) : la liste propose de changer la
-   référence à la main (`variables/*.md`) et de créer l'événement pour le récit
-   sans impact chiffré ; l'autre voie est de faire évoluer `snapshot` / Tracer.
-4. **Amplitude des chocs** (`GAIN_CHOCS`, voir S19) à juger avant tout réglage.
-5. **Banc de rejeu** : rebâtir les couples breakdown sur le vault actuel (lecture
-   neuve, nouveau tri manuel des verdicts).
-6. **GUI** : brancher `appliquer_et_si.py` (panneau ⚖️ Décider ou voisin).
-7. **Anomalies de données** relevées par le simulateur et la passe (voir S24).
-8. Optionnel : **homonymes** (Santa Cruz, Sucre, Perth, Medina) ; **synthèse
-   haut niveau** le jour où le besoin existe ; option GUI `lien_seul` à
-   étendre à d'autres panneaux si besoin ; récit IA de `trace_injection.py`
-   qui a échoué deux fois sur Genève (repli sur le modèle, sans conséquence).
+1. **À voir sur le vrai vault** à la première hypothèse qui change la carte :
+   déplacement d'une sous-zone à plusieurs pays, rattachement des sous-zones d'un
+   seul pays, partie « 🗺️ Carte » de l'étape ⑤ et journaux d'une zone vidée
+   (testés sur faux vault seulement).
+2. **Genève, hors application mécanique** : règle de lore, phrase de l'AMSC,
+   articles à relire, résumé du scénario et site, `audit_lore.py --scenario
+   breakdown` ; fiche `agence_stabilisation_climatique_breakdown` (section
+   « ## Relations » absente ?). L'étape ⑤ du panneau couvre désormais l'essentiel.
+3. **Banc de rejeu** : rebâtir les couples breakdown sur le vault actuel.
+4. **Anomalies de données** relevées par le simulateur et la passe (voir S24).
+5. Optionnel : homonymes (Santa Cruz, Sucre, Perth, Medina) ; synthèse haut
+   niveau ; récit IA de `trace_injection.py` (repli sur le modèle) ; « États-Unis »
+   encore cherché dans les fiches du cas Brésil (nommé par l'hypothèse, gardé).
 Méthode de réglage de la passe : banc de rejeu d'abord (gratuit) ; une
 consigne IA modifiée (`VERSION_PROMPT`, `VERSION_CONTRE`, `VERSION_CLASSEMENT`)
-demande une relance réelle des six cas puis un export (manuel §3quinquies).
-Limites connues de la liste d'application : villes limitées aux capitales et
-aux villes de plus d'un million (`villes_principales.json`, en anglais ; table
-française d'environ 110 noms dans le simulateur) ; régions cherchées seulement
-par le nom court des sous-zones du vault ; homonymes possibles ; recherche par
-mots inopérante pour une hypothèse mondiale (la passe exhaustive y répond).
-Limites connues : la lecture IA varie d'un tirage à l'autre ; **la passe en
-dépend** (elle lui sert de contexte : une nouvelle lecture relance toute la
-passe, ≈ 0,10 $, et change le résultat — Genève : 24 obligatoires sans
-lecture, 14 avec, banc toujours conforme) ; le classement des possibles varie
-aussi (aide à la lecture, pas une décision) ; l'IA applique souvent le même
-partage de polarités (3 mondes « durs » / 3 « doux ») ; le mode rupture vaut
-pour toute l'hypothèse ; près des bornes (breakdown, fortress_world), même une
-rupture bouge peu ; un slug mal orthographié par l'IA reste écarté ; les
-dossiers ne comptent que les simulations faites depuis la v8.17.
+demande une relance réelle des cas puis un export (manuel §3quinquies).
+Limites connues : la lecture IA varie d'un tirage à l'autre et **la passe en
+dépend** (une lecture nouvelle relance toute la passe, ≈ 0,10 $) ; le classement
+des possibles varie ; l'IA applique souvent le même partage de polarités ; le
+mode rupture vaut pour toute l'hypothèse ; près des bornes (breakdown,
+fortress_world), même une rupture bouge peu ; un slug mal orthographié par l'IA
+reste écarté ; partition et région de la carte restent à la main (tracés) ; villes
+limitées aux capitales et aux villes de plus d'un million (plus une petite table
+pour Écosse, Pays de Galles, Irlande du Nord).
 
 ---
 

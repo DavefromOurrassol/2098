@@ -1045,3 +1045,71 @@ vrai** (point 1 du 12 oct), étape par étape :
   disparue = année de l'élément ; réciprocité opposition prioritaire. Testé sur
   un faux vault (homonyme, trajectoire changée, `annee_fin` remplie, rupture
   non déclarée, relance sans effet, refus hors « injecté »).
+
+---
+
+## ✅ S27 (parcours complet) et S19 (rupture) — phase 4 en réel, panneau « Parcours », étape ⑤, carte, v8.20 → v8.25 — 16 au 21 octobre 2026
+
+*Clos comme chantier de code ; les restes (essais de carte sur le vrai
+vault, Genève, banc breakdown) sont dans S27 de `BACKLOG_ACTIF.md`.*
+
+**17 oct — phase 4 en réel et GUI** :
+- `appliquer_et_si.py` : check-list `et_si_<id>_reste_a_faire.md`
+  (`--reste-a-faire`, `patch_s27_reste_a_faire.py`, `patch_s27_reste_titre.py`).
+- **Mourmansk** (`explosion_brise_glace_murmansk_2081`, reference, choc) :
+  premier test réel complet (simulée, adoptée, injectée, appliquée).
+- Panneau **🧭 Parcours de l'hypothèse** (`patch_s27_gui_appliquer.py`,
+  `patch_s27_gui_parcours.py`, nouveaux `et_si_statut.py` et `et_si_injecter.py` —
+  injection d'UNE hypothèse, pas de toute la queue).
+
+**17 oct — S19, option B** (`patch_s19_moteur_rupture.py`,
+`patch_s19_chaine_rupture.py`, `patch_s19_retouches.py`) : `mode: rupture` lu sur
+les fiches d'événement par le vrai moteur ; non-régression 0/72 ; simulateur
+v8.20 (forces et `mode_impose: rupture` imposés, persistance permanente) ;
+injection qui écrit `mode: rupture` ; phase 4 qui l'exige. **Atlantique**
+(`effondrement_circulation_atlantique_2067`, reference, `carte: non`) appliquée
+de bout en bout. `banc_amplitude.py` : **décision A**, `GAIN_CHOCS` inchangé ;
+règle « choc = s'estompe, rupture = change le monde ».
+
+**17-18 oct — étape ⑤ « À la main »** (`et_si_main.py` ; `patch_s27_gui_main.py`,
+`patch_s27_categories.py` (v8.21), `patch_s27_phrases.py`,
+`patch_s27_articles.py`) : entités vers la file (catégorie proposée ou devinée),
+règle de lore, phrases (relecture IA de la fiche d'événement, réécriture,
+Remplacer / Ignorer), articles (repérage IA, aucune écriture), commandes de fin.
+Faux positifs de l'IA (« déjà dominante », « renforce », « omission ») : consignes
+« états avant / après, états des entités citées, en cas de doute ne relève rien »
+et filtre `vraie_contradiction`. Article manquant (« collectifs de pêcheurs
+inuit ») : recherche par forme approchée. Mise en page : « ⛶ Agrandir », frise et
+cartes colorées, poignée violette formulaire / sortie pour tous les scripts,
+indications « terminal » traduites (`patch_s27_largeur.py`, `patch_s27_poignee.py`,
+`patch_s27_visuel.py`, `patch_s27_form_resizer.py`, `patch_s27_indications.py`).
+Menu « et si » rangé dans « Entités & événements — Création »
+(`patch_s27_menu_et_si.py`).
+
+**18-21 oct — carte** :
+- `occupation_bresil_2029` (reference, nouvelle zone `bresil_occupe`) : a montré
+  que le bouton « créer une zone » retire le pays des sous-zones (São Paulo ITA et
+  SPAAR sans territoire, introuvables ensuite par
+  `reparenter_sous_zones_orphelines.py`) et que la lecture IA proposait une autre
+  carte. **v8.22** (`patch_s27_carte.py`) : carte enregistrée pour la phase 4,
+  carte IA écartée quand l'hypothèse fixe la carte ; phase 4 : `absorber` /
+  `nouvelle_zone` par `ZoneRepository`, sous-zones d'un seul pays gardées et
+  rattachées, remise en l'état sur échec. Étape ⑤ « 🗺️ Carte »
+  (`patch_s27_carte_main.py`) : sous-zones à plusieurs pays (laisser, déplacer
+  entière, tracer), zones vidées, nouvelle zone ; contrôle de la géographie dans
+  « Pour finir » (un petit appel IA, pas gratuit).
+- `reunification_ecosse_2070` (reference, absorber + zone vidée) : écrite sur une
+  branche git jetable (`essai_carte`), vérifiée (`zones_pays.json`, géographie,
+  validate 0 / 0 / 0, étape ⑤), puis défaite. Corrections :
+  `patch_s27_carte_retouches.py` (`.bak_appliquer` refait à chaque écriture —
+  celui de la géographie datait du 26 sept ; type d'origine gardé ; aperçu qui
+  annonce la carte), **v8.23** (`patch_s27_termes.py` : fiches à relire limitées
+  au territoire qui change de mains et à ses villes, 40 → 2 lignes),
+  `patch_s27_journaux.py` (journaux d'une zone vidée : garder en exil ou retirer
+  de `journaux.yaml`), **v8.24** (`patch_s27_zone_entite.py` : nouvelle entité
+  qui nomme le pays rattachée à la zone d'arrivée), **v8.25**
+  (`patch_s27_libelles.py` : catégorie, carte écartée en premier, « hors carte »).
+- Incident : après une resimulation, l'Écosse a été adoptée et injectée sur
+  `main` ; rien d'appliqué, défait par `git checkout` et suppression de 2 fiches.
+- Décisions : journaux A / B ; hypothèses Brésil et Écosse gardées comme
+  exemples, jamais adoptées.
