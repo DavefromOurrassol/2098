@@ -1,7 +1,7 @@
 {
  "id": "occupation_bresil_2029",
- "date_simulation": "2026-10-18T16:25",
- "version": "v8.22",
+ "date_simulation": "2026-10-21T18:56",
+ "version": "v8.24",
  "empreinte": "0a5f411eafde785e",
  "annee": 2029.0,
  "mode": "choc",
@@ -115,7 +115,7 @@
      {
       "nom": "Bureau de Liaison Brésil-États-Unis (BLBE)",
       "role": "Interface administrative entre les autorités américaines et les structures locales brésiliennes pour gérer les territoires occupés.",
-      "zone": "ameriques_multipolaires",
+      "zone": "bresil_occupe",
       "raison": "L'occupation nécessite une structure dédiée pour coordonner les politiques publiques et les flux de ressources.",
       "category": "institution"
      },
@@ -128,30 +128,7 @@
      }
     ]
    },
-   "passe": {
-    "trajectoires": [],
-    "relations": [],
-    "textes": [
-     {
-      "slug": "crise_gouvernance_amazonie_reference",
-      "genre": "evenement",
-      "nom": "Crise de Souveraineté Amazonienne : L'Épreuve de Belém",
-      "extrait": "Le Consortium Amazônia Viva, seul acteur institutionnel capable de revendiquer une légitimité sur la forêt, active pour la première fois son protocole",
-      "extrait_trouve": true,
-      "contredit": "Le Consortium Amazônia Viva est déjà en déclin dans le lore post-2029, et l'Amazonie brésilienne est sous contrôle américain.",
-      "raison": "L'affirmation de légitimité du Consortium sur l'Amazonie brésilienne est fausse après 2029. [lien territoire : Le Consortium agit sur un territoire désormais disputé et occupé.]"
-     },
-     {
-      "slug": "accord_carbone_amazonie_blocs_reference",
-      "genre": "evenement",
-      "nom": "Traité de Belém sur la Souveraineté Carbone Amazonienne",
-      "extrait": "Le Consortium Amazônia Viva impose ses conditions — rayon d'exclusion de 500 km, redevances directes aux peuples autochtones — aux blocs signataires du Pacte Énergétique Multilatéral",
-      "extrait_trouve": true,
-      "contredit": "L'Amazonie brésilienne est sous contrôle américain depuis 2029, et le Consortium Amazônia Viva est en déclin.",
-      "raison": "L'affirmation d'une capacité de négociation autonome du Consortium est fausse après 2029. [lien territoire : Le traité concerne un territoire occupé et un acteur affaibli.]"
-     }
-    ]
-   },
+   "passe": null,
    "erreurs": [],
    "carte": [
     {
@@ -168,8 +145,8 @@
      "erreurs": [],
      "alertes": [],
      "simples": [
-      "sao_paulo_spaar",
-      "sao_paulo_ita"
+      "sao_paulo_ita",
+      "sao_paulo_spaar"
      ],
      "a_repartir": [
       {

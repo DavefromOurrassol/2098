@@ -1,6 +1,6 @@
 # Et si ? — Occupation du Brésil par les États-Unis
 
-*Simulation du 2026-10-18 16:25 — lecture seule, rien n'a été injecté (simulateur v8.22).*
+*Simulation du 2026-10-21 18:56 — lecture seule, rien n'a été injecté (simulateur v8.24).*
 
 En 2029, les États-Unis envahissent le Brésil et l'occupent durablement. Le pays quitte les structures régionales des Amériques et devient un territoire administré sous tutelle militaire. Déplacements de population, pression sur l'Amazonie, rupture des échanges régionaux.
 
@@ -68,181 +68,12 @@ L'occupation durable du Brésil par les États-Unis en 2029 reconfigure profond�
 
 **Nouvelles entités plausibles**
 - Rede de Solidariedade Amazônica (RSA) (amazonie_consortium_viva) [réseau] : Coordination des communautés locales et des acteurs privés pour préserver les écosystèmes amazoniens face à l'occupation américaine. — L'occupation américaine pousse les acteurs locaux à s'organiser pour protéger les ressources génétiques et écologiques de l'Amazonie.
-- Bureau de Liaison Brésil-États-Unis (BLBE) (ameriques_multipolaires) [institution] : Interface administrative entre les autorités américaines et les structures locales brésiliennes pour gérer les territoires occupés. — L'occupation nécessite une structure dédiée pour coordonner les politiques publiques et les flux de ressources.
+- Bureau de Liaison Brésil-États-Unis (BLBE) (bresil_occupe) [institution] : Interface administrative entre les autorités américaines et les structures locales brésiliennes pour gérer les territoires occupés. — L'occupation nécessite une structure dédiée pour coordonner les politiques publiques et les flux de ressources.
 - Fonds de Résilience du Sertão (FRS) (sertao_nordeste_bresilien) [institution] : Financement et soutien logistique aux communautés du Sertão brésilien pour renforcer leur autonomie face à l'occupation. — La résistance dans le Sertão nécessite des mécanismes de financement et de gouvernance dédiés.
 
+_Corrections automatiques (1) : nouvelle entité Bureau de Liaison Brésil-États-Unis (BLBE) : zone 'ameriques_multipolaires' → 'bresil_occupe' (Brésil y passe)_
+
 _Propositions écartées au contrôle (10) : trajectoire : frente_sertao_livre_reference déjà ascendant (aucun changement) ; trajectoire : the_lattice_reference déjà mature (aucun changement) ; trajectoire : valparaiso_fct_reference déjà mature (aucun changement) ; relation front_souverainiste_des_ressources_d_amerique_du_sud_reference / consortium_amazonia_viva_reference : opposition déjà présente ; statut de zone : ameriques_multipolaires déjà fragmenté ; statut de zone : amazonie_consortium_viva déjà fragmenté ; statut de zone : sertao_nordeste_bresilien déjà emergent ; statut de zone : detroit_compact_grands_lacs déjà stable …_
-
-### Passe exhaustive (IA, toutes les fiches — rien n'est écrit)
-
-205 fiche(s) relue(s) en 14 lot(s).
-Verdicts : **2 fiche(s) à corriger**, 118 avec des changements possibles seulement, 85 inchangée(s).
-
-_Contre-lecture des obligatoires : 9 vérifié(s), 2 confirmé(s), 7 rétrogradé(s) en possible._
-
-#### Obligatoire — la fiche devient fausse sans ce changement
-
-**Textes**
-- evenement Crise de Souveraineté Amazonienne : L'Épreuve de Belém (`crise_gouvernance_amazonie_reference`) : « Le Consortium Amazônia Viva, seul acteur institutionnel capable de revendiquer une légitimité sur la forêt, active pour la première fois son protocole » — contredit par : Le Consortium Amazônia Viva est déjà en déclin dans le lore post-2029, et l'Amazonie brésilienne est sous contrôle américain. — L'affirmation de légitimité du Consortium sur l'Amazonie brésilienne est fausse après 2029. [lien territoire : Le Consortium agit sur un territoire désormais disputé et occupé.]
-- evenement Traité de Belém sur la Souveraineté Carbone Amazonienne (`accord_carbone_amazonie_blocs_reference`) : « Le Consortium Amazônia Viva impose ses conditions — rayon d'exclusion de 500 km, redevances directes aux peuples autochtones — aux blocs signataires du Pacte Énergétique Multilatéral » — contredit par : L'Amazonie brésilienne est sous contrôle américain depuis 2029, et le Consortium Amazônia Viva est en déclin. — L'affirmation d'une capacité de négociation autonome du Consortium est fausse après 2029. [lien territoire : Le traité concerne un territoire occupé et un acteur affaibli.]
-
-#### Possible — conséquence plausible, la fiche reste vraie sans elle
-
-_Rétrogradés d'obligatoire à possible par les contrôles : 7 extrait introuvable dans la fiche, 6 changement de degré, 6 élargit le rôle sans le contredire, 5 lien variable sous 2 points, 4 contre-lecture nuance, 2 contre-lecture aggravation, 1 contre-lecture amorti, 1 au conditionnel, 1 atténue le rôle sans le contredire, 1 aucun fait contredit nommé._
-
-**À lire en priorité (20 fiches sur 119)** — choisies et ordonnées par l'IA
-
-- **Consortium Amazônia Viva** (`consortium_amazonia_viva_reference`) — _Déclin direct du rôle écologique en Amazonie sous occupation_
-  - Consortium Amazônia Viva (`consortium_amazonia_viva_reference`) : ascendant → **déclinant** — Son rôle dominant dans la gouvernance écologique de l'Amazonie est rendu impossible par l'occupation américaine, ce qui le place en déclin. [lien territoire : Amazonie brésilienne sous occupation américaine] _(rétrogradé : changement de degré)_ — contredit : Le Consortium Amazônia Viva ne peut plus prétendre à une gouvernance centrale du bassin amazonien, car une partie majeure de celui-ci (le Brésil) est sous contrôle militaire étranger.
-  - instance Consortium Amazônia Viva (`consortium_amazonia_viva_reference`) : « Son existence même représente une expérience de gouvernance écologique post-nationale, reconnue par les blocs géopolitiques concurrents comme un interlocuteur incontournable » — contredit par : Le Brésil, partie majeure du bassin amazonien, est désormais sous tutelle américaine, ce qui prive le Consortium de sa légitimité sur ce territoire et le rend contestable comme interlocuteur. — La phrase devient fausse car le Consortium n'est plus un interlocuteur incontournable sans le Brésil. [lien territoire : Brésil occupé] _(rétrogradé : élargit le rôle sans le contredire, extrait introuvable dans la fiche)_
-- **Frente Sertão Livre** (`frente_sertao_livre_reference`) — _Renforcement mécanique de la résistance dans le Nordeste_
-  - Frente Sertão Livre (`frente_sertao_livre_reference`) : ascendant → **dominant** — L'occupation américaine crée un vide institutionnel et une répression accrue dans le Nordeste, ce qui renforce mécaniquement la légitimité et l'influence de la Frente Sertão Libre comme alternative locale. [lien territoire : La Frente Sertão Livre est localisée dans le Sertão brésilien, zone directement touchée par l'occupation américaine] _(rétrogradé : changement de degré)_ — contredit : La fiche indique une trajectoire 'ascendant' alors que l'occupation américaine du Brésil en 2029 transforme le Sertão en zone de résistance prioritaire, accélérant sa montée en puissance comme acteur incontournable de la contestation
-- **Nadia Ferreira-Sato de Raised Hands** (`nadia_ferreira_sato_reference`) — _Acteur clé de la résistance, alliance avec Frente Sertão Livre_
-  - Nadia Ferreira-Sato de Raised Hands (`nadia_ferreira_sato_reference`) : ascendant → **dominant** — Son rôle de bâtisseur marginal dans les Amériques Multipolaires est directement affecté par l'occupation du Brésil, qui en fait un acteur clé de la résistance ou de la survie alternative. [lien territoire : Brésil (zone occupée, partie des Amériques Multipolaires)] _(rétrogradé : changement de degré)_ — contredit : Nadia Ferreira-Sato est décrite comme une figure marginale de The Lattice, mais l'occupation du Brésil par les États-Unis et la montée de la résistance locale (Frente Sertão Livre) rendent impossible qu'elle reste simplement 'ascendante' sans devenir une figure centrale de la résistance.
-  - alliance nouvelle : Nadia Ferreira-Sato de Raised Hands ↔ Frente Sertão Livre — L'occupation du Brésil crée une alliance obligatoire entre Raised Hands (dirigé par Nadia Ferreira-Sato) et la Frente Sertão Livre, sans laquelle son rôle dans les Amériques devient incohérent. [lien territoire : Brésil (zone occupée)] — contredit : La Frente Sertão Livre est une opposition nouvelle explicitement retenue dans le lore post-occupation, et Nadia Ferreira-Sato, active dans les Amériques Multipolaires, ne peut pas ne pas être alliée à cette résistance locale. _(rétrogradé : contre-lecture nuance)_ — L'élément perturbateur n'interdit pas une alliance entre Nadia Ferreira-Sato (The Lattice) et la Frente Sertão Livre, mais la rend plausible voire probable. La fiche ne contredit pas l'occupation, elle pourrait simplement être complétée pour refléter cette dynamique de résistance.
-  - instance Nadia Ferreira-Sato de Raised Hands (`nadia_ferreira_sato_reference`) : « elle crée des structures alternatives de survie et de résistance en dehors des cadres institutionnels des Amériques Multipolaires » — contredit par : L'occupation du Brésil par les États-Unis et la rupture des échanges régionaux transforment les Amériques Multipolaires en un espace de résistance institutionnelle et non plus seulement marginale. — La phrase devient fausse si elle ne précise pas que ces structures alternatives sont désormais en opposition directe à l'occupation américaine du Brésil. [lien territoire : Brésil (zone occupée)] _(rétrogradé : élargit le rôle sans le contredire, extrait introuvable dans la fiche)_
-- **Atlas des Marges** (`reseau_des_cartographes_des_zones_grises_reference`) — _Nouvelle zone grise majeure à cartographier_
-  - Atlas des Marges (`reseau_des_cartographes_des_zones_grises_reference`) : ascendant → **dominant** — L'occupation du Brésil crée une nouvelle zone grise majeure, augmentant la demande pour la cartographie des territoires contestés et renforçant potentiellement le rôle de l'Atlas des Marges. [lien variable : frontieres_du_systeme (+1.0)] _(douteux : lien variable sous 2 points)_
-  - instance Atlas des Marges (`reseau_des_cartographes_des_zones_grises_reference`) : « Le Réseau des Cartographes des Zones Grises dans *reference* est une nébuleuse de collecteurs de données, hackers et géographes dissidents qui documentent les territoires abandonnés, contestés ou non gouvernés » — L'occupation du Brésil élargit le champ d'action du réseau, mais la phrase reste vraie sans modification. [lien variable : frontieres_du_systeme (+1.0)] _(douteux : lien variable sous 2 points, élargit le rôle sans le contredire)_
-- **The Lattice of Chartered Cities** (`the_lattice_reference`) — _Fragmentation territoriale profite aux villes autonomes_
-  - The Lattice of Chartered Cities (`the_lattice_reference`) : mature → **dominant** — L'occupation du Brésil par les États-Unis renforce les dynamiques de fragmentation territoriale en Amérique, ce qui profite aux fédérations de villes autonomes comme The Lattice, déjà en alliance avec le Detroit Compact (dominant). Leur modèle de gouvernance locale et algorithmique (SPAAR) devient plus attractif face à l'effondrement des structures étatiques traditionnelles. [lien relation : alliance avec detroit_compact_grands_lacs_reference (déjà retenue comme dominante)]
-  - instance The Lattice of Chartered Cities (`the_lattice_reference`) : « Fédération de villes à charte d'Amérique centrale apparue dans le vide laissé par la crise constitutionnelle états-unienne de 2055 » — contredit par : L'occupation du Brésil par les États-Unis en 2029 précède la crise de 2055 et reconfigure déjà les équilibres géopolitiques des Amériques. — La phrase suggère que The Lattice émerge uniquement après 2055, alors que l'occupation du Brésil dès 2029 crée un vide institutionnel plus tôt, accélérant la fragmentation. Il faut préciser que The Lattice profite aussi des tensions pré-2055. [lien variable : geopolitique_conflits (+0.3), frontieres_du_systeme (+1.0)] _(rétrogradé : lien variable sous 2 points)_
-- **Valparaíso FCT — Facilitation & Compensation Transfrontalière** (`valparaiso_fct_reference`) — _Demande accrue pour compensation transfrontalière_
-  - Valparaíso FCT — Facilitation & Compensation Transfrontalière (`valparaiso_fct_reference`) : mature → **dominant** — La fragmentation des Amériques due à l'occupation du Brésil augmente la demande pour des mécanismes de compensation transfrontalière comme ceux de Valparaíso FCT, ce qui pourrait renforcer sa position. [lien variable : frontieres_du_systeme (+1.0), systemes_productifs_travail (+0.4)] _(douteux : lien variable sous 2 points)_
-- **Front Souverainiste des Ressources d'Amérique du Sud** (`front_souverainiste_des_ressources_d_amerique_du_sud_reference`) — _Rôle central comme rempart souverainiste régional_
-  - Front Souverainiste des Ressources d'Amérique du Sud (`front_souverainiste_des_ressources_d_amerique_du_sud_reference`) : émergent → **ascendant** — L'occupation américaine du Brésil, en sapant la souveraineté des États sud-américains, offre au Front Souverainiste des Ressources un rôle central comme résistance organisée. [lien territoire : Le Front opère dans les Amériques multipolaires, zone directement affectée par l'occupation du Brésil] _(rétrogradé : changement de degré)_ — contredit : La fiche indique une trajectoire 'émergent' alors que l'occupation américaine du Brésil en 2029 crée un contexte de crise propice à la montée en puissance des mouvements souverainistes
-- **Consortiums d'Agriculture Verticale Algorithmique** (`consortiums_d_agriculture_verticale_algorithmique_reference`) — _Dépendance accrue à l'agriculture verticale_
-  - Consortiums d'Agriculture Verticale Algorithmique (`consortiums_d_agriculture_verticale_algorithmique_reference`) : ascendant → **dominant** — Les déplacements de population et les ruptures des échanges régionaux pourraient renforcer la dépendance aux systèmes d'agriculture verticale, accélérant leur ascendance sans rendre leur trajectoire actuelle fausse. [lien variable : systemes_productifs_travail (+0.4), demographie_mobilite_humaine (+0.7)] _(douteux : lien variable sous 2 points)_
-- **Consortium des Grandes Plateformes Logistiques Globales** (`consortium_des_grandes_plateformes_logistiques_globales_reference`) — _Reconfiguration logistique régionale_
-  - Consortium des Grandes Plateformes Logistiques Globales (`consortium_des_grandes_plateformes_logistiques_globales_reference`) : émergent → **ascendant** — La reconfiguration des échanges régionaux en Amérique du Sud pourrait renforcer leur rôle en tant qu'épine dorsale logistique, sans rendre leur trajectoire actuelle fausse. [lien variable : frontieres_du_systeme (+1.0), systemes_productifs_travail (+0.4)] _(douteux : lien variable sous 2 points)_
-  - opposition nouvelle : Consortium des Grandes Plateformes Logistiques Globales ↔ Amazonie Consortium Viva — L'occupation du Brésil crée une rivalité plausible entre ces deux entités pour le contrôle des infrastructures logistiques, sans que cela soit obligatoire. [lien relation : Amazonie Consortium Viva est directement touché par l'occupation du Brésil et devient un rival potentiel pour le contrôle des flux logistiques régionaux.]
-- **Consortium Logistique Asiatique de Contournement ALN** (`consortium_logistique_asiatique_de_contournement_aln_reference`) — _Opportunités logistiques de contournement_
-  - Consortium Logistique Asiatique de Contournement ALN (`consortium_logistique_asiatique_de_contournement_aln_reference`) : émergent → **ascendant** — La fragmentation logistique en Amérique du Sud pourrait offrir de nouvelles opportunités pour ce consortium, sans rendre sa trajectoire actuelle fausse. [lien variable : frontieres_du_systeme (+1.0), systemes_productifs_travail (+0.4)] _(douteux : lien variable sous 2 points)_
-- **Consortiums Privés d'Extraction de Ressources Critiques** (`consortiums_prives_d_extraction_de_ressources_critiques_reference`) — _Nouvelles opportunités d'extraction de ressources_
-  - Consortiums Privés d'Extraction de Ressources Critiques (`consortiums_prives_d_extraction_de_ressources_critiques_reference`) : émergent → **ascendant** — L'occupation du Brésil peut offrir de nouvelles opportunités d'extraction ou de pression sur les ressources, renforçant leur trajectoire sans la rendre obligatoire. [lien variable : energie_ressources_critiques (+0.3)] _(douteux : lien variable sous 2 points)_
-- **Corporations d'Extraction Énergétique Non Signataires** (`corporations_d_extraction_energetique_non_signataires_reference`) — _Extraction non régulée dans zones occupées_
-  - Corporations d'Extraction Énergétique Non Signataires (`corporations_d_extraction_energetique_non_signataires_reference`) : émergent → **ascendant** — L'occupation du Brésil peut offrir de nouvelles opportunités d'extraction non régulée, renforçant leur trajectoire sans la rendre obligatoire. [lien variable : energie_ressources_critiques (+0.3)] _(douteux : lien variable sous 2 points)_
-- **Milices Concurrentes des Droits de Passage** (`milices_concurrentes_des_droits_de_passage_reference`) — _Zones de friction accrues pour les milices_
-  - Milices Concurrentes des Droits de Passage (`milices_concurrentes_des_droits_de_passage_reference`) : émergent → **ascendant** — L'occupation du Brésil et la reconfiguration des frontières en Amérique du Sud augmentent les zones de friction et les opportunités pour les milices de négocier ou imposer des droits de passage, sans que cela ne devienne obligatoire pour leur existence. [lien variable : geopolitique_conflits (+0.3) et frontieres_du_systeme (+1.0)] _(douteux : lien variable sous 2 points)_
-- **Mouvement pour la Libre Circulation des Personnes et des Données** (`mouvement_pour_la_libre_circulation_des_personnes_et_des_donnees_reference`) — _Pression accrue pour libre circulation_
-  - Mouvement pour la Libre Circulation des Personnes et des Données (`mouvement_pour_la_libre_circulation_des_personnes_et_des_donnees_reference`) : émergent → **ascendant** — L'occupation du Brésil et les déplacements de population qui en découlent renforcent la pression pour contourner les barrières à la mobilité, augmentant l'importance du mouvement. [lien variable : demographie_mobilite_humaine (+0.7)] _(douteux : lien variable sous 2 points)_
-  - instance Mouvement pour la Libre Circulation des Personnes et des Données (`mouvement_pour_la_libre_circulation_des_personnes_et_des_donnees_reference`) : « Pression sur les institutions pour abolir ou contourner les barrières à la mobilité humaine et numérique dans un contexte de re-fragmentation des espaces » — contredit par : L'occupation du Brésil par les États-Unis crée une nouvelle barrière à la mobilité humaine et numérique, avec des déplacements de population et des restrictions accrues dans la zone. — La fiche devient fausse si elle n'intègre pas explicitement cette nouvelle barrière, car le Brésil était un espace de mobilité clé dans les Amériques. [lien territoire : Brésil (zone occupée)] _(rétrogradé : élargit le rôle sans le contredire)_
-- **Opérateurs Privés d'Énergie Distribuée Hors-FCT** (`operateurs_prives_d_energie_distribuee_hors_fct_reference`) — _Opportunités dans zones grises énergétiques_
-  - Opérateurs Privés d'Énergie Distribuée Hors-FCT (`operateurs_prives_d_energie_distribuee_hors_fct_reference`) : émergent → **ascendant** — La fragmentation territoriale accrue au Brésil pourrait créer des opportunités pour ces opérateurs dans les zones grises, sans rendre fausse leur trajectoire actuelle. [lien variable : systemes_productifs_travail (+0.4)] _(douteux : lien variable sous 2 points)_
-- **Consortium des Fournisseurs d'Énergie Renouvelable Distribuée** (`consortium_des_fournisseurs_d_energie_renouvelable_distribuee_reference`) — _Perturbation des chaînes énergétiques régionales_
-  - Consortium des Fournisseurs d'Énergie Renouvelable Distribuée (`consortium_des_fournisseurs_d_energie_renouvelable_distribuee_reference`) : émergent → **ascendant** — L'occupation du Brésil perturbe les chaînes d'approvisionnement énergétiques régionales, ce qui pourrait renforcer la dépendance aux réseaux distribués et accélérer l'ascendance de ce consortium, sans pour autant rendre sa trajectoire actuelle fausse. [lien variable : systemes_productifs_travail (+0.4)] _(douteux : lien variable sous 2 points)_
-- **Gouvernements Fédéraux Résiduels Souverainistes** (`gouvernements_federaux_residuels_souverainistes_reference`) — _Galvanisation des fédéralistes résiduels_
-  - Gouvernements Fédéraux Résiduels Souverainistes (`gouvernements_federaux_residuels_souverainistes_reference`) : émergent → **ascendant** — L'occupation américaine du Brésil crée un précédent qui peut galvaniser les gouvernements fédéralistes résiduels, les positionnant comme remparts contre les ingérences extérieures. [lien variable : Variable 'geopolitique_conflits' (+0.3), liée à la fragmentation des Amériques] _(douteux : lien variable sous 2 points)_ — contredit : Aucune contradiction, mais l'occupation américaine du Brésil renforce la légitimité des gouvernements fédéralistes résiduels comme défenseurs de la souveraineté traditionnelle face aux occupations étrangères
-- **Prisme Global** (`prisme_global_reference`) — _Contre-récits sur l'occupation du Brésil_
-  - alliance nouvelle : Prisme Global ↔ Frente Sertão Livre — Prisme Global pourrait s'allier à la Frente Sertão Livre pour diffuser des contre-récits sur l'occupation du Brésil. [lien relation : Frente Sertão Livre est une opposition locale directement touchée par l'occupation du Brésil]
-  - instance Prisme Global (`prisme_global_reference`) : « Prisme Global s'est imposé comme la principale contre-architecture narrative à l'hégémonie des plateformes centralisées, en agrégeant des millions de flux locaux — témoignages, capteurs citoyens, journalistes embarqués, IA communautaires — en une cartographie vivante du monde réel » — L'occupation du Brésil pourrait élargir le rôle de Prisme Global en intégrant des flux locaux brésiliens (témoignages, capteurs) pour contrer la narration officielle américaine, sans rendre fausse la phrase actuelle. [lien variable : geopolitique_conflits (+0.3)] _(douteux : lien variable sous 2 points, élargit le rôle sans le contredire)_
-- **Crise de Souveraineté Amazonienne : L'Épreuve de Belém** (`crise_gouvernance_amazonie_reference`) — _Contradiction directe avec souveraineté brésilienne_
-  - evenement Crise de Souveraineté Amazonienne : L'Épreuve de Belém (`crise_gouvernance_amazonie_reference`) : « Belém brûle d'une lumière rouge : les fumées des zones déforestées illégalement s'accumulent au-dessus de la ville-carrefour du bassin amazonien » — contredit par : Belém et l'Amazonie brésilienne sont sous contrôle américain depuis 2029, ce qui modifie les dynamiques de déforestation et de gouvernance. — La description suppose une souveraineté brésilienne ou autonome sur Belém, alors que la ville est sous tutelle américaine depuis 2029. [lien territoire : Belém est située dans le territoire brésilien occupé.] _(rétrogradé : atténue le rôle sans le contredire)_
-- **Confédération des Mégapoles Autonomes** (`confederation_des_megapoles_autonomes_reference`) — _Perte d'autonomie de São Paulo sous contrôle américain_
-  - instance Confédération des Mégapoles Autonomes (`confederation_des_megapoles_autonomes_reference`) : « Incarne la fragmentation géopolitique en blocs mégapolitains concurrents, substituant la rivalité inter-urbaine à la rivalité interétatique classique » — contredit par : São Paulo, mégapole majeure du Brésil, est désormais sous tutelle militaire américaine, ce qui en fait un acteur géopolitique distinct et non plus une entité autonome au sein de la Confédération. — La phrase devient fausse si elle n'intègre pas la perte d'autonomie de São Paulo, désormais sous contrôle américain. [lien territoire : Brésil occupé, São Paulo résiduel] _(rétrogradé : élargit le rôle sans le contredire)_
-
-**Autres fiches avec des changements possibles (99)**
-- Mains Levées (Raised Hands - The Lattice) : trajectoire émergent → ascendant ; alliance nouvelle avec Frente Sertão Livre ; texte « Toléré mais surveillé, ses meneurs risquent la résiliation… »
-- Sistema Paulista de Alocação Algorítmica de Recursos (SPAAR) : trajectoire mature → déclinant ; alliance nouvelle avec The Lattice of Chartered Cities ; texte « Né d'un partenariat entre la municipalité, des consortiums… »
-- Nexus BioSyn : alliance rompue avec Amazonie Consortium Viva ; texte « ses semences de quatrième génération couvrent près de 60 %… »
-- Coalition des Gouvernements Contre les Chartes de Déstabilisation : alliance nouvelle avec Front Souverainiste des Ressources d'Amérique du Sud
-- Consortiums Privés de Gestion des Données Critiques : opposition nouvelle avec Amazonie Consortium Viva
-- SovData Global Trust : opposition nouvelle avec Sistema Paulista de Alocação Algorítmica de Recursos (SPAAR)
-- Deepfield Institute for Human Continuity (DIHC) : opposition nouvelle avec Frente Sertão Livre
-- EcoSynth Global Resilience Systems (EGRS) : opposition nouvelle avec Amazonie Consortium Viva ; texte « En position de quasi-monopole sur les souches microbiennes… »
-- Fonds d'Investissement Foncier Climatique : opposition nouvelle avec Amazonie Consortium Viva ; texte « Il agit comme courroie de transmission entre les marchés… »
-- Fonds Souverains de la Ceinture Financière Pacifique : alliance rompue avec Amazonie Consortium Viva
-- La Révolte des Zones Négatives — São Paulo 2073 : texte « Les écrans des favelas numériques de Paraisópolis et Cidade… » ; texte « Ce que les algorithmes avaient invisibilisé pendant des… »
-- Plateformes d'Optimisation Territoriale par IA : texte « Dans ce scénario, ces plateformes structurent la manière… »
-- Bureau des Zones Non Prioritaires (BZNP) : texte « il produit des rapports que personne ne lit et sert de… »
-- Collectifs de Journalisme Embarqué : texte « Ancrés dans des zones à fort enjeu territorial — deltas… »
-- Élection Contestée du Nouveau Parti Commun : texte « Polarisation politique accrue aux États-Unis et dans ses… » ; texte « Les réformes annoncées sont partiellement bloquées par une… »
-- Detroit Compact Grands Lacs : trajectoire mature → déclinant
-- États à Tendance Centraliste Numérique : trajectoire émergent → ascendant
-- Lobbies Industriels des États Non-Signataires : trajectoire émergent → ascendant
-- ONG de Traçabilité des Ressources Critiques : trajectoire émergent → ascendant ; opposition nouvelle avec Amazonie Consortium Viva
-- The Tidewater Canon : trajectoire mature → dominant
-- Algorithmic Labor Exchange : alliance rompue avec Prefeitura Metropolitana de São Paulo — Administração de Continuidade (PMSP-AC)
-- Assemblée des Territoires Fédérés (ATF) : alliance nouvelle avec Frente Sertão Livre
-- Consortium Helios : opposition nouvelle avec Amazonie Consortium Viva
-- gelecek_meclisi_reference : alliance nouvelle avec Frente Sertão Livre
-- Alliance des Blocs Souverains (ABS) : alliance nouvelle avec Frente Sertão Livre
-- Banque Mondiale des Transitions Climatiques : texte « elle stabilise les flux sans éliminer les contradictions,… »
-- Bloc des États du Sud Global contre la Cession de Données : texte « il incarne la résistance du Sud à l'ordre technologique… »
-- Bloc des Souverainistes Climatiques : texte « En maintenant des zones de non-conformité aux protocoles… »
-- Bruxelles Nouveau : texte « Elle symbolise la continuité bureaucratique européenne dans… »
-- Direction des Zones Non Prioritaires (DZNP) : texte « officiellement chargée de cartographier, classer et… »
-- Coalition pour la Souveraineté Numérique Nationale : texte « Incarne les tensions entre souveraineté étatique et… »
-- Collectifs de Journalistes Indépendants Régionaux : texte « Dans le scénario reference, ces collectifs incarnent une… »
-- Consortiums Médiatiques Corporatifs : texte « Dans le scénario reference, les Consortiums Médiatiques… »
-- Système Kontinuum : texte « Le Système Kontinuum est une infrastructure algorithmique… »
-- Fédération des Communs Territoriaux : texte « Elle fédère quelque 340 bassins de vie à travers cinq… »
-- Fonds Monétaire Climatique (FMC) : texte « Dans le scénario reference, le FMC constitue un pilier de… »
-- Hyphan Raghavan de Ergo-Wian Sovereign Holdings : texte « Hyphan Raghavan incarne la transition fragile et contestée… »
-- Ilse Varga-Holm de Ergo-Wian Sovereign Holdings : texte « Pragmatique et stratège, elle incarne l'équilibre précaire… »
-- Institut des Seuils Démographiques (ISD-2098) : texte « Il agit comme arbitre des flux humains, produisant des… »
-- Raj Mehta : texte « Couvre les tensions géopolitiques et économiques dans un… »
-- Ligue des Municipalités Périphériques Sous-Connectées : texte « Dans ce scénario, elle représente la pression collective… »
-- Maëlys Okonkwo : texte « Son travail se concentre sur l'exposition des liens entre… »
-- Mouvement des Racines Vivantes : texte « Le Mouvement joue un rôle de tiers-espace entre les… »
-- Observatoire Climatique des Territoires (OCT) : texte « Elle occupe une position d'arbitre technique dans un… »
-- Plateformes Centralisées de Narration Officielle : texte « Dans le scénario référence, les Plateformes Centralisées de… »
-- Plateformes Informationnelles Dominantes et leurs IA de Modération : texte « Dans le scénario reference, elles forment le substrat… »
-- Réseaux de Capteurs Citoyens : texte « Dans le scénario de référence, les Réseaux de Capteurs… »
-- Réseaux de gouvernance multilatérale survivants : texte « Représente la persistance — fragile et contestée — d'une… »
-- Réseaux de lanceurs d'alerte institutionnels dissidents : texte « Dans ce scénario, ils constituent une source d'information… »
-- Services de contre-information des blocs géopolitiques concurrents : texte « Acteurs exogènes qui alimentent la guerre informationnelle… »
-- La Sécession des Grands Lacs : Le Compact Autonome de 2051 : texte « La rupture institutionnalise le modèle confédéral… »
-- Agences de Sécurité Régionales de Normalisation des Zones Grises : trajectoire émergent → ascendant
-- Consortiums Énergétiques Opaques : trajectoire émergent → ascendant
-- Coopératives Énergétiques Décentralisées : trajectoire émergent → ascendant
-- Factions d'Extraction Minière Indépendantes : trajectoire émergent → ascendant
-- Opérateurs de Zones Économiques Spéciales Périurbaines : trajectoire émergent → ascendant
-- Union Africaine de Résilience Territoriale : trajectoire émergent → ascendant
-- Kalaallit Nunaat Sovereign Fund : opposition nouvelle avec Bloc Eurasien Central (BEC)
-- Réseau des Villes-États Pilotes en Gouvernance Participative : alliance nouvelle avec Frente Sertão Livre
-- Réseau MeshCommons-NetSolidaire : alliance nouvelle avec Frente Sertão Livre
-- Mnemos — Réseau de Mémoire Distribuée : alliance nouvelle avec Frente Sertão Livre
-- Autorité de Régulation des Passages Stratégiques (ARPS) : texte « Elle incarne une gouvernance hybride, mêlant souveraineté… »
-- Autorité de Passage Arctique : texte « Elle incarne un modèle hybride fragile : treize États… »
-- Autorités Régionales de Régulation Hydrologique : texte « Elles arbitrent en temps réel entre usages concurrents dans… »
-- Banque des Communs : texte « Elle constitue un point d'appui pour financer la résilience… »
-- Bloc Ressources Eurasiatique (BRE) : texte « Sa capacité à maintenir — ou rompre — les flux de… »
-- Blocs Signataires du Pacte Énergétique Multilatéral : texte « Structure l'architecture diplomatique et réglementaire du… »
-- Cartel des Terres Rares d'Asie Centrale : texte « Acteur de pression sur les équilibres géopolitiques et… »
-- Collectifs de Biopiraterie Inversée : texte « Dans le scénario reference, les Collectifs agissent comme… »
-- Conseil de Genève pour les Droits Biosociaux : texte « Dans le scénario de référence, le Conseil de Genève pour… »
-- Consortium des Grandes Plateformes IA Intégrées : texte « Dans ce scénario, elles exercent un pouvoir structurant sur… »
-- Consortiums Bancaires Financiarisés : texte « Dans ce scénario, ils incarnent une dépendance structurelle… »
-- Consortiums Énergétiques des Mégapoles : texte « Dans le scénario reference, ils exercent une pression pour… »
-- Gouvernements à Régime de Productivité Mandatée : texte « Dans ce scénario, ces gouvernements constituent un contexte… »
-- Réseau de Gouvernance Multilatérale Survivant (RGMS) : texte « Elles peinent à imposer leur autorité face aux blocs… »
-- Accords Hydriques de Kinshasa : texte « Régulièrement mis à l'épreuve par les sécheresses, les… »
-- Lamplight Collective : texte « En enquêtant sur les financements clandestins des… »
-- Les Gardiens des Rives : texte « Ils agissent comme un système nerveux parallèle, reliant… »
-- Nairobi CRRC — Centre Régional de Résilience et de Coordination : texte « Dans un monde fragmenté mais encore institutionnellement… »
-- NexCore Global Infrastructure Group : texte « NexCore GIG est devenu l'épine dorsale numérique de facto… »
-- Programme ONU-Eau 2080 : texte « Sert de référentiel normatif et d'instance de coordination… »
-- Réseau des Villes-Refuge pour Travailleurs Désaugmentés : texte « Constitue un contre-modèle territorial à la logique… »
-- Réseaux de médecine traditionnelle augmentée : texte « Leur essor est directement alimenté par les inégalités… »
-- Kharg Data Nexus : texte « Officiellement, il héberge les archives numériques des… »
-- Union Africaine Résilience (UAR) : texte « Elle reste un interlocuteur reconnu sur la scène… »
-- Universités et Think Tanks en Zones de Liberté Académique : texte « elles produisent des contre-expertises sur les gouvernances… »
-- Voix du Dehors : texte « Réseau de journalisme d'investigation décentralisé opérant… »
-- L'Hiver Atlantique : texte « L'Europe Occidentale Reconstruite (UOC) se fragmente en… »
-- Programme Pilote de Bio-Revenu Universel de Nairobi : texte « Le programme, s'il survit à ses contestations juridiques,… »
-- ONG Environnementales de Terrain : trajectoire émergent → ascendant
-- Agence Mondiale pour la Stabilisation Climatique : texte « Dans un monde en équilibre fragile, elle joue un rôle de… »
-- Armada Logistique Nordique : texte « Elle administre les routes de transit entre l'Europe,… »
-- Conseil de Régulation des Ressources Critiques : texte « Dans un monde multipolaire fracturé, il joue un rôle de… »
-- Réseau des Sentinelles des Eaux Profondes : texte « Les Veilleurs agissent comme un contre-pouvoir face aux… »
-- Lobbies Agro-Industriels à Haute Consommation d'Eau : texte « Exercent des pressions politiques et économiques pour… »
-- Oracle des Seuils : texte « Système d'intelligence artificielle distribué opérant sous… »
-- Singapour Est Nexcore : texte « Singapour Est Nexcore est une organisation technologique… »
-- Singapour Est : texte « Elle gère ses propres accords commerciaux avec les blocs… »
-- TerraMetrics Global Climate Solutions (TM-GCS) : texte « TerraMetrics Global Climate Solutions (TM-GCS) est l'acteur… »
-
-_Réponses rejetées car mal formées (33) : relation : entités 'alliance_blocs_souverains_reference' / 'etats_unis_reference' inconnues ou identiques ; relation amazonie_consortium_viva_reference / frente_sertao_livre_reference : opposition déjà présente ; relation banque_des_communs_reference / amazonie_consortium_viva_reference : alliance à rompre absente du vault ; trajectoire : bloc_eurasien_central_reference déclinant → mature (recul dans la phase de déclin, incohérent ; une renaissance irait vers ascendant) ; relation bloc_des_etats_du_sud_global_contre_la_cession_de_donnees_reference / front_souverainiste_des_ressources_d_amerique_du_sud_reference : alliance déjà présente ; relation consortium_amazonia_viva_reference / frente_sertao_livre_reference : alliance déjà présente ; relation collectifs_de_biopiraterie_inversee_reference / frente_sertao_livre_reference : alliance déjà présente ; relation communs_numeriques_agroecologiques_reference / frente_sertao_livre_reference : alliance déjà présente …_
 
 ### Carte (aperçu, rien n'est modifié)
 
@@ -251,9 +82,9 @@ _Réponses rejetées car mal formées (33) : relation : entités 'alliance_blocs
 - Zone quittée `ameriques_multipolaires` ; a ses propres journaux
 - Zone d'arrivée sans rédaction : journaux à créer (`generate_journaux.py --update`)
 - Sous-zones qui deviendraient orphelines : **4**
+  - `sao_paulo_ita` — Brésil
   - `amazonie_consortium_viva` — Brésil
   - `sao_paulo_spaar` — Brésil
-  - `sao_paulo_ita` — Brésil
   - `sertao_nordeste_bresilien` — Brésil
 - Instances et événements des sous-zones du pays : **8**
   - `amazonie_consortium_viva_reference` — amazonie_consortium_viva
@@ -285,7 +116,7 @@ _Carte et conséquences tirées de la lecture IA (un tirage) : relire chaque ét
   - _sous-zone de Brésil à plusieurs pays_
 - [ ] 4. 2 sous-zone(s) de Brésil à rattacher à `bresil_occupe` (en gardant Brésil)
   - ④ « Appliquer » le fait (pas le bouton de la Carte : il leur retire le pays)
-  - _sao_paulo_spaar, sao_paulo_ita_
+  - _sao_paulo_ita, sao_paulo_spaar_
 - [ ] 5. Relations (alliés / rivaux) de la nouvelle zone `bresil_occupe`
   - à la main : geographie/reference.md, bloc `relations` de `bresil_occupe`
   - _la création n'en écrit aucune_
@@ -360,99 +191,112 @@ _Carte et conséquences tirées de la lecture IA (un tirage) : relire chaque ét
   - _comme les zones abandonnées de fortress_world (Nordgard, Koursk)_
 
 **Fiches à relire**
-- [ ] 25. Corriger une phrase de `crise_gouvernance_amazonie_reference` [passe exhaustive]
-  - à la main : event_instances/crise_gouvernance_amazonie_reference.md
-  - _« Le Consortium Amazônia Viva, seul acteur institutionnel capable de revendiquer une légitimité sur la forêt, active pour la première fois son protocole » — contredit par : Le Consortium Amazônia Viva est déjà en déclin dans le lore post-2029, et l'Amazonie brésilienne est sous contrôle américain._
-- [ ] 26. Corriger une phrase de `accord_carbone_amazonie_blocs_reference` [passe exhaustive]
-  - à la main : event_instances/accord_carbone_amazonie_blocs_reference.md
-  - _« Le Consortium Amazônia Viva impose ses conditions — rayon d'exclusion de 500 km, redevances directes aux peuples autochtones — aux blocs signataires du Pacte… » — contredit par : L'Amazonie brésilienne est sous contrôle américain depuis 2029, et le Consortium Amazônia Viva est en déclin._
-- [ ] 27. Termes cherchés : Amazonie, Amériques, Bassin Amazonien, Belem, Belo Horizonte, Brasilia, Brésil, Campinas, Campo Grande, Cuiaba, Curitiba, Florianopolis, Fortaleza, Goiania, Joao Pessoa, Joinville, Maceio, Manaus, Natal, Niteroi … (+12)
-  - _mot entier, sans casse ni accents ; le registre seulement après 2029 (chronologie) ; instances et événements relus par la passe exhaustive : seuls les zones et le registre sont listés_
-- [ ] 28. Zone `ameriques_multipolaires` cite « Amériques »
+- [ ] 25. Termes cherchés : Amazonie, Amériques, Bassin Amazonien, Belem, Belo Horizonte, Brasilia, Brésil, Campinas, Campo Grande, Cuiaba, Curitiba, Florianopolis, Fortaleza, Goiania, Joao Pessoa, Joinville, Maceio, Manaus, Natal, Niteroi … (+12)
+  - _mot entier, sans casse ni accents ; le registre seulement après 2029 (chronologie)_
+- [ ] 26. Instance `algorithmic_labor_exchange_reference` cite « Sao Paulo »
+  - _…travail est contestée — comme le rappellent les émeutes de São Paulo en 2073, où son algorithme SPAAR fut décodé et retourné contre ses opérateurs.…_
+- [ ] 27. Instance `amazonie_consortium_viva_reference` cite « Amazonie »
+  - _Amazonie Consortium Viva…_
+- [ ] 28. Instance `assemblee_territoires_reference` cite « Brésil »
+  - _…ones de non-droit'. Des affrontements ont éclaté en 2089 au Brésil, où l'ATF a soutenu la 'Frente Sertão Livre' contre le 'Front Souverainiste des…_
+- [ ] 29. Instance `banque_mondiale_des_transitions_climatiques_reference` cite « Belem »
+  - _…bone issus des grands accords bloc à bloc, dont le Pacte de Belém de 2055, et garantit la traçabilité des flux financiers dans un contexte de fra…_
+- [ ] 30. Instance `bloc_ressources_eurasiatique_bre_reference` cite « Amériques »
+  - _…ssources vers l'Europe occidentale, l'Indo-Pacifique et les Amériques en fait un acteur incontournable de toute négociation géopolitique globale en 2…_
+- [ ] 31. Instance `blocs_signataires_du_pacte_energetique_multilateral_reference` cite « Amazonie »
+  - _…talement. L'événement de Belém en 2055, où le pacte carbone amazonie a fracturé les positions internes, a laissé des cicatrices institutionnelles no…_
+- [ ] 32. Instance `collectifs_de_biopiraterie_inversee_reference` cite « Amazonie »
+  - _…libèrent le savoir. Opérant depuis des nœuds clandestins en Amazonie, au Sahel et dans les corridors eurasiens périphériques, ils ont transformé la…_
+- [ ] 33. Instance `collectifs_de_journalistes_independants_regionaux_reference` cite « Amériques »
+  - _…autonomes à travers l'Europe Reconstruite, le Sahel et les Amériques fragmentées, les Collectifs de Journalistes Indépendants Régionaux représentent…_
+- [ ] 34. Instance `confederation_des_megapoles_autonomes_reference` cite « Sao Paulo »
+  - _…de négociation qui fait trembler les capitales nationales. São Paulo, Singapour-Est, Lyon-Métropole ou Detroit siègent à égalité dans ses conseils t…_
+- [ ] 35. Instance `consortium_amazonia_viva_reference` cite « Bassin Amazonien »
+  - _…posé comme l'acteur central de la gouvernance écologique du bassin amazonien, jouant sur la légitimité des gardiens du territoire pour négocier directement…_
+- [ ] 36. Instance `consortiums_energetiques_des_megapoles_reference` cite « Amériques »
+  - _…gents entre consortiums de l'Arc Indo-Pacifique et ceux des Amériques Multipolaires alimentent des guerres de positionnement qui fragilisent leur fro…_
+- [ ] 37. Instance `cooperatives_energetiques_decentralisees_reference` cite « Amériques »
+  - _…ctures actives en Europe occidentale reconstruite, dans les Amériques multipolaires et dans l'arc africain de résilience. Ni entreprises ni services…_
+- [ ] 38. Instance `deepfield_institute_reference` cite « États-Unis »
+  - _Institution long-termiste installée dans les États-Unis post-2055, le DIHC subordonne toute décision présente à la survie de l'espèce d…_
+- [ ] 39. Instance `frente_sertao_livre_reference` cite « Sertão »
+  - _Frente Sertão Livre…_
+- [ ] 40. Instance `front_souverainiste_des_ressources_d_amerique_du_sud_reference` cite « Sao Paulo »
+  - _…appellent le 'pillage climatique légalisé'. De Valparaíso à São Paulo, ses délégations alternent la diplomatie de rupture et la mobilisation populair…_
+- [ ] 41. Instance `internationale_travailleurs_augmentes_reference` cite « Sao Paulo »
+  - _…ire, ni domestiquée. Son secrétariat général, partagé entre São Paulo, Nairobi et Séoul par rotation triennale, reflète la géographie réelle du trava…_
+- [ ] 42. Instance `ligue_des_metropoles_du_sud_pour_les_infrastructures_libres_reference` cite « Sao Paulo »
+  - _…es regroupe aujourd'hui plus de quatre-vingts métropoles de São Paulo à Kinshasa, de Nairobi à Guadalajara, toutes unies par le même constat : les câ…_
+- [ ] 43. Instance `lobbies_agro_industriels_a_haute_consommation_d_eau_reference` cite « Amériques »
+  - _…té alimentaire des plaines irriguées d'Europe du Sud et des Amériques, les lobbies agro-industriels hydrovores tirent les ficelles d'une gouvernance…_
+- [ ] 44. Instance `lobbies_industriels_des_etats_non_signataires_reference` cite « Belem »
+  - _…ance organisée aux accords climatiques et énergétiques post-Belém. Regroupant des consortiums miniers, des opérateurs d'hydrocarbures résiduels e…_
+- [ ] 45. Instance `nadia_ferreira_sato_reference` cite « Amériques »
+  - _…au sein de The Lattice, un réseau de villes sous charte des Amériques Multipolaires. Fondatrice de Raised Hands, une organisation tolérée mais survei…_
+- [ ] 46. Instance `ong_de_tracabilite_des_ressources_critiques_reference` cite « Amazonie »
+  - _…zones d'extraction, notamment en Afrique subsaharienne, en Amazonie et dans les corridors arctiques. Son registre public de traçabilité est devenu…_
+- [ ] 47. Instance `ong_environnementales_de_terrain_reference` cite « Amazonie »
+  - _…vocation à les contester : accepter les fonds du Consortium Amazonie VIVA, c'est risquer de voir leurs rapports instrumentalisés. La montée des souv…_
+- [ ] 48. Instance `operateurs_de_zones_economiques_speciales_periurbaines_reference` cite « Sao Paulo »
+  - _…riurbains de la décennie 2070, écho lointain des émeutes de São Paulo, rappellent que la captivité économique peut se transformer en combustible poli…_
+- [ ] 49. Instance `raised_hands_reference` cite « Amériques »
+  - _…émergent de résidents précaires des villes de The Lattice (Amériques Multipolaires) réclamant des élections et un droit de vote pour les clients-con…_
+- [ ] 50. Instance `rede_paulista_de_distribuicao_algoritmica_reference` cite « Sao Paulo »
+  - _…R, que ses promoteurs appellent encore 'le cerveau juste de São Paulo', détermine ce matin si le quartier de Capão Redondo recevra sa pleine dotation…_
+- [ ] 51. … et 3 autre(s) parmi : instances
+  - _liste complète : generator/state/dernier_et_si.json, clé application_
+- [ ] 52. Événement `crise_gouvernance_amazonie_reference` cite « Belem »
+  - _Crise de Souveraineté Amazonienne : L'Épreuve de Belém…_
+- [ ] 53. Événement `accord_carbone_amazonie_blocs_reference` cite « Belem »
+  - _Traité de Belém sur la Souveraineté Carbone Amazonienne…_
+- [ ] 54. Événement `election_parti_commun_americain_reference` cite « États-Unis »
+  - _Polarisation politique accrue aux États-Unis et dans ses zones d'influence. Les réformes annoncées sont partiellement bloqué…_
+- [ ] 55. Événement `emeutes_algorithme_sao_paulo_reference` cite « Sao Paulo »
+  - _La Révolte des Zones Négatives — São Paulo 2073…_
+- [ ] 56. Zone `ameriques_multipolaires` cite « Amériques »
   - _Amériques Multipolaires…_
-- [ ] 29. Zone `amazonie_consortium_viva` cite « Bassin Amazonien »
+- [ ] 57. Zone `amazonie_consortium_viva` cite « Bassin Amazonien »
   - _Bassin Amazonien…_
-- [ ] 30. Zone `etats_unis_crise_constitutionnelle` cite « États-Unis »
+- [ ] 58. Zone `etats_unis_crise_constitutionnelle` cite « États-Unis »
   - _États-Unis post-2055…_
-- [ ] 31. Zone `guadalajara_nexus` cite « Amériques »
+- [ ] 59. Zone `guadalajara_nexus` cite « Amériques »
   - _…biologiques de Nexus BioSyn dans les systèmes de santé des Amériques — présence discrète mais structurante, similaire à celle observée à Nairobi ou…_
-- [ ] 32. Zone `sao_paulo_ita` cite « Sao Paulo »
+- [ ] 60. Zone `sao_paulo_ita` cite « Sao Paulo »
   - _São Paulo…_
-- [ ] 33. Zone `seoul_ita` cite « Sao Paulo »
+- [ ] 61. Zone `seoul_ita` cite « Sao Paulo »
   - _…ntre du travail augmenté mondial en rotation triennale avec São Paulo et Nairobi. En 2098, Séoul est l'une des métropoles de référence de l'économie…_
-- [ ] 34. Zone `sertao_nordeste_bresilien` cite « Sertão »
+- [ ] 62. Zone `sertao_nordeste_bresilien` cite « Sertão »
   - _Sertão — Nordeste Brésilien…_
-- [ ] 35. Zone `nairobi_ita_siege_rotatif` cite « Sao Paulo »
+- [ ] 63. Zone `nairobi_ita_siege_rotatif` cite « Sao Paulo »
   - _…ternationale des Travailleurs Augmentés (ITA), aux côtés de São Paulo et Séoul. La présence de l'ITA à Nairobi inscrit la capitale kényane à l'inters…_
-- [ ] 36. Zone `sao_paulo_spaar` cite « Sao Paulo »
+- [ ] 64. Zone `sao_paulo_spaar` cite « Sao Paulo »
   - _São Paulo — Périphéries et SPAAR…_
-- [ ] 37. Registre (après la date) `evenement | 2047 | crise_gouvernance_amazonie` cite « Amazonie »
+- [ ] 65. Registre (après la date) `evenement | 2047 | crise_gouvernance_amazonie` cite « Amazonie »
   - _| evenement | 2047 | crise_gouvernance_amazonie | climat_environnement_global, geopolitique_conflits, gouvernance_institutions,…_
-- [ ] 38. Registre (après la date) `evenement | 2055 | accord_carbone_amazonie_blocs` cite « Amazonie »
+- [ ] 66. Registre (après la date) `evenement | 2055 | accord_carbone_amazonie_blocs` cite « Amazonie »
   - _| evenement | 2055 | accord_carbone_amazonie_blocs | climat_environnement_global, gouvernance_institutions, geopolitique_con…_
-- [ ] 39. Registre (après la date) `evenement | 2073 | emeutes_algorithme_sao_paulo` cite « Sao Paulo »
+- [ ] 67. Registre (après la date) `evenement | 2073 | emeutes_algorithme_sao_paulo` cite « Sao Paulo »
   - _…itoires | — | Favelas décodent le SPAAR, soulèvement urbain São Paulo 2073 |…_
-
-**Possibles (facultatif)**
-- [ ] 40. Consortium Amazônia Viva (`consortium_amazonia_viva_reference`) : trajectoire ascendant → déclinant [passe exhaustive]
-  - _Déclin direct du rôle écologique en Amazonie sous occupation_
-- [ ] 41. Frente Sertão Livre (`frente_sertao_livre_reference`) : trajectoire ascendant → dominant [passe exhaustive]
-  - _Renforcement mécanique de la résistance dans le Nordeste_
-- [ ] 42. Nadia Ferreira-Sato de Raised Hands (`nadia_ferreira_sato_reference`) : trajectoire ascendant → dominant ; alliance nouvelle avec Frente Sertão Livre [passe exhaustive]
-  - _Acteur clé de la résistance, alliance avec Frente Sertão Livre_
-- [ ] 43. Atlas des Marges (`reseau_des_cartographes_des_zones_grises_reference`) : trajectoire ascendant → dominant ; texte « Le Réseau des Cartographes des Zones Grises dans… » [passe exhaustive]
-  - _Nouvelle zone grise majeure à cartographier_
-- [ ] 44. The Lattice of Chartered Cities (`the_lattice_reference`) : trajectoire mature → dominant ; texte « Fédération de villes à charte d'Amérique centrale apparue… » [passe exhaustive]
-  - _Fragmentation territoriale profite aux villes autonomes_
-- [ ] 45. Valparaíso FCT — Facilitation & Compensation Transfrontalière (`valparaiso_fct_reference`) : trajectoire mature → dominant [passe exhaustive]
-  - _Demande accrue pour compensation transfrontalière_
-- [ ] 46. Front Souverainiste des Ressources d'Amérique du Sud (`front_souverainiste_des_ressources_d_amerique_du_sud_reference`) : trajectoire émergent → ascendant [passe exhaustive]
-  - _Rôle central comme rempart souverainiste régional_
-- [ ] 47. Consortiums d'Agriculture Verticale Algorithmique (`consortiums_d_agriculture_verticale_algorithmique_reference`) : trajectoire ascendant → dominant [passe exhaustive]
-  - _Dépendance accrue à l'agriculture verticale_
-- [ ] 48. Consortium des Grandes Plateformes Logistiques Globales (`consortium_des_grandes_plateformes_logistiques_globales_reference`) : trajectoire émergent → ascendant ; opposition nouvelle avec Amazonie Consortium Viva [passe exhaustive]
-  - _Reconfiguration logistique régionale_
-- [ ] 49. Consortium Logistique Asiatique de Contournement ALN (`consortium_logistique_asiatique_de_contournement_aln_reference`) : trajectoire émergent → ascendant [passe exhaustive]
-  - _Opportunités logistiques de contournement_
-- [ ] 50. Consortiums Privés d'Extraction de Ressources Critiques (`consortiums_prives_d_extraction_de_ressources_critiques_reference`) : trajectoire émergent → ascendant [passe exhaustive]
-  - _Nouvelles opportunités d'extraction de ressources_
-- [ ] 51. Corporations d'Extraction Énergétique Non Signataires (`corporations_d_extraction_energetique_non_signataires_reference`) : trajectoire émergent → ascendant [passe exhaustive]
-  - _Extraction non régulée dans zones occupées_
-- [ ] 52. Milices Concurrentes des Droits de Passage (`milices_concurrentes_des_droits_de_passage_reference`) : trajectoire émergent → ascendant [passe exhaustive]
-  - _Zones de friction accrues pour les milices_
-- [ ] 53. Mouvement pour la Libre Circulation des Personnes et des Données (`mouvement_pour_la_libre_circulation_des_personnes_et_des_donnees_reference`) : trajectoire émergent → ascendant ; texte « Pression sur les institutions pour abolir ou contourner les… » [passe exhaustive]
-  - _Pression accrue pour libre circulation_
-- [ ] 54. Opérateurs Privés d'Énergie Distribuée Hors-FCT (`operateurs_prives_d_energie_distribuee_hors_fct_reference`) : trajectoire émergent → ascendant [passe exhaustive]
-  - _Opportunités dans zones grises énergétiques_
-- [ ] 55. Consortium des Fournisseurs d'Énergie Renouvelable Distribuée (`consortium_des_fournisseurs_d_energie_renouvelable_distribuee_reference`) : trajectoire émergent → ascendant [passe exhaustive]
-  - _Perturbation des chaînes énergétiques régionales_
-- [ ] 56. Gouvernements Fédéraux Résiduels Souverainistes (`gouvernements_federaux_residuels_souverainistes_reference`) : trajectoire émergent → ascendant [passe exhaustive]
-  - _Galvanisation des fédéralistes résiduels_
-- [ ] 57. Prisme Global (`prisme_global_reference`) : alliance nouvelle avec Frente Sertão Livre ; texte « Prisme Global s'est imposé comme la principale… » [passe exhaustive]
-  - _Contre-récits sur l'occupation du Brésil_
-- [ ] 58. Crise de Souveraineté Amazonienne : L'Épreuve de Belém (`crise_gouvernance_amazonie_reference`) : texte « Belém brûle d'une lumière rouge : les fumées des zones… » [passe exhaustive]
-  - _Contradiction directe avec souveraineté brésilienne_
-- [ ] 59. Confédération des Mégapoles Autonomes (`confederation_des_megapoles_autonomes_reference`) : texte « Incarne la fragmentation géopolitique en blocs… » [passe exhaustive]
-  - _Perte d'autonomie de São Paulo sous contrôle américain_
-- [ ] 60. … et 99 autre(s) fiche(s) avec des changements possibles
-  - _détail dans la section « Passe exhaustive » de ce scénario_
+- [ ] 68. Relecture IA ciblée d'une instance (contradictions avec l'hypothèse)
+  - `python3 generator/audit_lore.py --scenario reference --llm --slug <slug>`
+  - _payant (≈ 0,5 centime la fiche) ; après application de la carte et de l'événement_
 
 **Articles et site**
-- [ ] 61. 2 article(s) à relire (zone au statut changé, pays cité ou entité dont la trajectoire change)
+- [ ] 69. 2 article(s) à relire (zone au statut changé, pays cité ou entité dont la trajectoire change)
   - _« « Slow Canopée » : quand la forêt amazonienne inspire un nouveau luxe sobre »; « « Slow Biotech » : quand l’Amazonie réinvente l’art de vivre à l’heure des brevets vivants »_
-- [ ] 62. Résumé du scénario
+- [ ] 70. Résumé du scénario
   - `python3 generator/generate_resume_scenarios.py --scenario reference`
   - _payant, un appel_
-- [ ] 63. Site des revues
+- [ ] 71. Site des revues
   - `python3 generator/chapos_revues.py`
   - _puis bash generator/publier_site.sh_
 
 **Contrôles**
-- [ ] 64. Base
+- [ ] 72. Base
   - `python3 generator/validate.py`
-- [ ] 65. Géographie
+- [ ] 73. Géographie
   - `python3 generator/scan_geographie_complet.py --scenario reference`
-- [ ] 66. Lore
+- [ ] 74. Lore
   - `python3 generator/audit_lore.py --scenario reference`
   - _puis étapes 2 et 3 de Relations & lore si besoin_
 
@@ -477,7 +321,7 @@ Entrées pour `entites_custom/queue.yaml` :
   scenario_ref: reference
   scenario_hint:
   - reference
-  zone_hint: ameriques_multipolaires
+  zone_hint: bresil_occupe
   source: et_si_occupation_bresil_2029
 - nom: Fonds de Résilience du Sertão (FRS)
   category: institution

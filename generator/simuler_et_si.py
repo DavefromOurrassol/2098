@@ -63,7 +63,7 @@ SCENARIOS = ["breakdown", "fortress_world", "new_sustainability",
              "eco_communalism", "policy_reform", "reference"]
 DELTA_MAX_CONSEILLE = 25   # plafond d'un événement custom (inject_custom_events.py)
 ACTIONS_GEO = {"absorber": "absorber", "nouvelle_zone": "creer"}   # vocabulaire du fichier -> ZoneRepository
-VERSION = "v8.23"            # affichée dans le rapport : permet de vérifier la version installée
+VERSION = "v8.24"            # affichée dans le rapport : permet de vérifier la version installée
 MAX_LISTE = 10             # éléments listés par rubrique dans le rapport (le reste est compté)
 
 
@@ -1243,9 +1243,38 @@ def ajouter_consequences(hyp, resultats, scenarios, refaire=False):
                 f"carte : {g['pays']} ({g['action']}) écartée, carte de ce scénario fixée par l'hypothèse"
                 for g in out[sc]["geographie"]]
             out[sc]["geographie"] = []
+        # PATCH_S27_ZONE_ENTITE (v8.24) : nouvelle entité qui nomme un pays dont la carte est
+        # déclarée, rattachée à une zone qu'il quitte -> zone de destination.
+        try:
+            _zone_des_entites(hyp, sc, out[sc])
+        except Exception as e:  # ne doit jamais empêcher le rapport
+            out[sc]["corrigees"] = (out[sc].get("corrigees") or []) + [
+                f"zone des nouvelles entités non vérifiée ({type(e).__name__}: {e})"]
         if out[sc].get("geographie") and sc not in hyp["geographie"]:
             hyp["geographie"][sc] = [dict(g, source="ia") for g in out[sc]["geographie"]]
     return out
+
+
+def _zone_des_entites(hyp, sc, cons):
+    """PATCH_S27_ZONE_ENTITE : voir ajouter_consequences."""
+    import re as _re
+    ops = [g for g in (hyp.get("geographie") or {}).get(sc) or []
+           if g.get("source") != "ia" and g.get("action") in ("absorber", "nouvelle_zone")]
+    if not ops or not cons.get("nouvelles_entites"):
+        return
+    repo, _m = charger_zone_repository()
+    for g in ops:
+        cible = g.get("zone") if g["action"] == "absorber" else (g.get("nouvelle_zone") or {}).get("slug")
+        if not cible:
+            continue
+        quittees = {a["slug"] for a in repo.zones_portant_un_pays(sc, g["pays"])
+                    if (a.get("niveau") or 1) == 1 and a["slug"] != cible}
+        motif = _re.compile(r"(?<![a-z0-9])" + _re.escape(_plie_aligne(g["pays"])) + r"(?![a-z0-9])")
+        for n in cons["nouvelles_entites"]:
+            if n.get("zone") in quittees and motif.search(_plie_aligne(f"{n.get('nom', '')} {n.get('role', '')}")):
+                cons["corrigees"] = (cons.get("corrigees") or []) + [
+                    f"nouvelle entité {n['nom']} : zone {n['zone']!r} → {cible!r} ({g['pays']} y passe)"]
+                n["zone"] = cible
 
 
 # ---------------------------------------------------------------------------

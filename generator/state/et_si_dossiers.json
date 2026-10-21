@@ -944,14 +944,14 @@
  },
  "occupation_bresil_2029": {
   "simulation": {
-   "date": "2026-10-18T16:25",
-   "version": "v8.22",
+   "date": "2026-10-21T18:56",
+   "version": "v8.24",
    "empreinte": "0a5f411eafde785e",
    "scenarios": [
     "reference"
    ],
    "complet": true,
-   "passe": true,
+   "passe": false,
    "rapport": "documentation/need_action/et_si_occupation_bresil_2029.md",
    "entree": {
     "id": "occupation_bresil_2029",
