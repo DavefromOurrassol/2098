@@ -98,7 +98,7 @@ tensions_narratives: Le Consortium est pris en étau entre le Bloc IV et le Bloc
   avant leur destruction et ceux qui parient sur une rente fossile prolongée dans
   un monde privé d'alternatives énergétiques viables.
 date_creation: 2026-06-20
-trajectoire: émergent
+trajectoire: ascendant
 est_clandestin: false
 
 ---

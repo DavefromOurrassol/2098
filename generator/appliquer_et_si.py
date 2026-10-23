@@ -654,6 +654,20 @@ def porte_pays(zone, pays):
                for o in (zone or {}).get("origine_reelle") or [])
 
 
+def porte_pays_cite(zone, pays):
+    """PATCH_S27_CARTE_SOUS_ZONES : la zone cite-t-elle `pays` dans une de ses entrées, lue par
+    mots (« Île de Kharg, Iran », « Détroit d'Ormuz (Oman/Iran) ») comme la simulation et la Carte ?"""
+    cherche = plie(pays)
+    for o in (zone or {}).get("origine_reelle") or []:
+        if not isinstance(o, dict):
+            continue
+        texte = plie(o.get("entite"))
+        morceaux = [re.sub(r"\([^)]*\)", "", texte)] + re.findall(r"\(([^)]*)\)", texte)
+        if any(t.strip() == cherche for m in morceaux for t in re.split(r"[,/]", m)):
+            return True
+    return False
+
+
 def note_carte(o):
     parts = []
     if o.get("simples"):
@@ -710,7 +724,7 @@ def appliquer_carte(repo, o):
     if not porte_pays(apres.get(cible), pays):
         raise ValueError(f"{pays} absent de `{cible}` après l'opération")
     for s in hautes:
-        if (apres.get(s) or {}).get("parent") != cible or not porte_pays(apres.get(s), pays):
+        if (apres.get(s) or {}).get("parent") != cible or not porte_pays_cite(apres.get(s), pays):
             raise ValueError(f"sous-zone `{s}` mal rattachée après l'opération")
     return (f"✓ {o['n']}. {o['texte']}"
             + (f" ; {len(hautes)} sous-zone(s) rattachée(s) : {', '.join(hautes)}" if hautes else "")

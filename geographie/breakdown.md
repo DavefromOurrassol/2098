@@ -323,6 +323,9 @@ zones:
   - entite: Mongolie
     type_entite: pays
     portion: null
+  - entite: Iran
+    type_entite: pays
+    portion: null
   description: Vaste zone de corridors d'approvisionnement fracturés s'étendant de
     l'ancienne Géorgie aux plaines kazakhes, en passant par le bassin caspien et l'Oural.
     Aucun État souverain n'y exerce de contrôle stable ; le pouvoir y est détenu par
@@ -330,7 +333,7 @@ zones:
     militaires héritières de blocs dissous. Les traités de l'Alliance des Blocs Souverains
     y sont invoqués comme armes rhétoriques entre belligérants (Bloc IV contre Bloc
     IX) sans jamais contraindre la paix.
-  statut: fragmenté
+  statut: dominant
   tensions_internes: Conflit permanent entre factions énergétiques héritières des
     pactes ABS et seigneurs de guerre logistiques ; le bassin caspien est un point
     de friction entre blocs régionaux rivaux aux frontières indéfinissables.
@@ -738,9 +741,6 @@ zones:
   - entite: Israël
     type_entite: pays
     portion: null
-  - entite: Iran
-    type_entite: pays
-    portion: null
   - entite: Arabie saoudite
     type_entite: pays
     portion: null
@@ -792,7 +792,7 @@ zones:
     des ressources énergétiques. Aucun acteur souverain n'y exerce de contrôle stable
     ; la zone sert de modèle fractal à d'autres régions en voie de désintégration,
     et les flux migratoires qu'elle génère saturent les corridors eurasiens.
-  statut: fragmenté
+  statut: en_declin
   tensions_internes: État de guerre permanente de basse à moyenne intensité entre
     entités héritières ; les flux d'hydrocarbures ont été redessinnés pour les décennies
     suivantes sans régulation internationale.
@@ -1491,7 +1491,7 @@ zones:
   nom: Ispahan–Fordow (Sites Frappés)
   niveau: 2
   type: zone_sinistree
-  parent: zone_golfe_levant
+  parent: arc_eurasien_central
   origine_reelle:
   - entite: Ispahan, Iran
     type_entite: autre
@@ -2127,7 +2127,7 @@ zones:
   nom: Terminal Pétrolier de Kharg
   niveau: 2
   type: site_strategique
-  parent: zone_golfe_levant
+  parent: arc_eurasien_central
   origine_reelle:
   - entite: Île de Kharg, Iran
     type_entite: autre
@@ -3365,9 +3365,9 @@ Marché de distribution de biosyn générique, analogue au nœud de Karachi mais
 
 ### Arc Eurasien Central
 
-*zone_sinistree — statut : fragmenté*
+*zone_sinistree — statut : dominant*
 
-**Origine réelle (2026)** : Russie, Kazakhstan, Géorgie, Azerbaïdjan, Ukraine, Estonie, Lettonie, Lituanie, Allemagne, Belgique, Pays-Bas, Autriche, Hongrie, Roumanie, Serbie, Liechtenstein, Croatie, Slovénie, Bosnie-Herzégovine, Macédoine du Nord, Albanie, Bulgarie, Moldavie, Biélorussie, Slovaquie, Kosovo, Turkménistan, Tadjikistan, République tchèque, Ouzbékistan, Kirghizistan, Mongolie
+**Origine réelle (2026)** : Russie, Kazakhstan, Géorgie, Azerbaïdjan, Ukraine, Estonie, Lettonie, Lituanie, Allemagne, Belgique, Pays-Bas, Autriche, Hongrie, Roumanie, Serbie, Liechtenstein, Croatie, Slovénie, Bosnie-Herzégovine, Macédoine du Nord, Albanie, Bulgarie, Moldavie, Biélorussie, Slovaquie, Kosovo, Turkménistan, Tadjikistan, République tchèque, Ouzbékistan, Kirghizistan, Mongolie, Iran
 
 **Transition** : 2055-2080 — voir [[conflit_israel_iran_2026_breakdown]]
 
@@ -3478,6 +3478,18 @@ Bloc de résistance régionale structuré maintenant des flux économiques et un
 
 *Sources attestées : hanse_baltique_recomposee_breakdown*
 
+#### Ispahan–Fordow (Sites Frappés) — sous [[arc_eurasien_central]]
+
+*zone_sinistree — niveau 2 — statut : disparu*
+
+**Origine réelle (2026)** : Ispahan, Iran, Fordow, Iran
+
+**Transition** : 2027-2027 — voir [[conflit_israel_iran_2026_breakdown]]
+
+Sites des installations nucléaires iraniennes frappées en septembre 2027 lors des frappes israéliennes qui ont déclenché la crise énergétique mondiale. Zones de contamination et de dévastation symbolisant le point de basculement irréversible du conflit israélo-iranien. Leur destruction a supprimé toute possibilité d'accord nucléaire futur et transformé durablement la géopolitique régionale en état de guerre permanente.
+
+*Sources attestées : conflit_israel_iran_2026_breakdown*
+
 #### Nœud Mnemos du Bassin Pannonien — sous [[arc_eurasien_central]]
 
 *infrastructure — niveau 2 — statut : en_declin*
@@ -3491,6 +3503,18 @@ Nœud isolé de l'ancien réseau Mnemos, tournant sur des panneaux solaires rafi
 **Tensions internes** : Négociation permanente des techniciens pour obtenir des vivres en échange d'accès aux archives médicales ; risque de corruption délibérée des données pour les protéger des envahisseurs ; rumeurs d'un nœud maître polaire intact attirant des expéditions dangereuses.
 
 *Sources attestées : reseau_mnemos_breakdown*
+
+#### Terminal Pétrolier de Kharg — sous [[arc_eurasien_central]]
+
+*site_strategique — niveau 2 — statut : disparu*
+
+**Origine réelle (2026)** : Île de Kharg, Iran
+
+**Transition** : 2027-2027 — voir [[conflit_israel_iran_2026_breakdown]]
+
+Terminal pétrolier frappé en septembre 2027 lors des frappes israéliennes sur les infrastructures iraniennes, symbole de l'effondrement énergétique mondial. Les champignons de fumée noire captés par les satellites avant même que les chancelleries se réunissent ont marqué le début irréversible de la fragmentation des marchés énergétiques mondiaux.
+
+*Sources attestées : conflit_israel_iran_2026_breakdown*
 
 ### Arc Sahélo-Méditerranéen
 
@@ -4095,9 +4119,9 @@ Mégapole brésilienne où la Rede Paulista de Distribuição Algorítmica conti
 
 ### Zone Golfe Persique–Levant
 
-*zone_sinistree — statut : fragmenté*
+*zone_sinistree — statut : en_declin*
 
-**Origine réelle (2026)** : Israël, Iran, Arabie saoudite, Irak, Émirats arabes unis, Chypre, Arménie, Afghanistan, Jordanie, Oman, Bahreïn, Palestine, Yémen, Liban, Syrie, Qatar, Koweït
+**Origine réelle (2026)** : Israël, Arabie saoudite, Irak, Émirats arabes unis, Chypre, Arménie, Afghanistan, Jordanie, Oman, Bahreïn, Palestine, Yémen, Liban, Syrie, Qatar, Koweït
 
 **Transition** : 2027-2045 — voir [[conflit_israel_iran_2026_breakdown]]
 
@@ -4148,30 +4172,6 @@ Fermé par l'Arabie saoudite en 2027 à titre 'préventif' lors du conflit isra�
 Cible des salves de missiles balistiques iraniens en représailles aux frappes israéliennes de septembre 2027. Ville côtière partiellement détruite dont l'état illustre la spirale d'escalade mutuelle qui a rendu impossible toute médiation. Les infrastructures portuaires et les champs gaziers offshore associés ont été gravement endommagés, contribuant à la désorganisation des flux énergétiques régionaux.
 
 **Tensions internes** : Contrôle disputé entre factions héritières de l'État israélien ; infrastructures partiellement fonctionnelles sous administration de facto de groupes armés locaux.
-
-*Sources attestées : conflit_israel_iran_2026_breakdown*
-
-#### Ispahan–Fordow (Sites Frappés) — sous [[zone_golfe_levant]]
-
-*zone_sinistree — niveau 2 — statut : disparu*
-
-**Origine réelle (2026)** : Ispahan, Iran, Fordow, Iran
-
-**Transition** : 2027-2027 — voir [[conflit_israel_iran_2026_breakdown]]
-
-Sites des installations nucléaires iraniennes frappées en septembre 2027 lors des frappes israéliennes qui ont déclenché la crise énergétique mondiale. Zones de contamination et de dévastation symbolisant le point de basculement irréversible du conflit israélo-iranien. Leur destruction a supprimé toute possibilité d'accord nucléaire futur et transformé durablement la géopolitique régionale en état de guerre permanente.
-
-*Sources attestées : conflit_israel_iran_2026_breakdown*
-
-#### Terminal Pétrolier de Kharg — sous [[zone_golfe_levant]]
-
-*site_strategique — niveau 2 — statut : disparu*
-
-**Origine réelle (2026)** : Île de Kharg, Iran
-
-**Transition** : 2027-2027 — voir [[conflit_israel_iran_2026_breakdown]]
-
-Terminal pétrolier frappé en septembre 2027 lors des frappes israéliennes sur les infrastructures iraniennes, symbole de l'effondrement énergétique mondial. Les champignons de fumée noire captés par les satellites avant même que les chancelleries se réunissent ont marqué le début irréversible de la fragmentation des marchés énergétiques mondiaux.
 
 *Sources attestées : conflit_israel_iran_2026_breakdown*
 

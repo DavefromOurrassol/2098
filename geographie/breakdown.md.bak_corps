@@ -330,7 +330,7 @@ zones:
     militaires héritières de blocs dissous. Les traités de l'Alliance des Blocs Souverains
     y sont invoqués comme armes rhétoriques entre belligérants (Bloc IV contre Bloc
     IX) sans jamais contraindre la paix.
-  statut: fragmenté
+  statut: dominant
   tensions_internes: Conflit permanent entre factions énergétiques héritières des
     pactes ABS et seigneurs de guerre logistiques ; le bassin caspien est un point
     de friction entre blocs régionaux rivaux aux frontières indéfinissables.
@@ -792,7 +792,7 @@ zones:
     des ressources énergétiques. Aucun acteur souverain n'y exerce de contrôle stable
     ; la zone sert de modèle fractal à d'autres régions en voie de désintégration,
     et les flux migratoires qu'elle génère saturent les corridors eurasiens.
-  statut: fragmenté
+  statut: en_declin
   tensions_internes: État de guerre permanente de basse à moyenne intensité entre
     entités héritières ; les flux d'hydrocarbures ont été redessinnés pour les décennies
     suivantes sans régulation internationale.
@@ -4001,7 +4001,7 @@ Mégapoles et États côtiers encore partiellement fonctionnels qui ont permis l
 
 ### Genève-Bunker (Nœud Institutionnel Résiduel)
 
-*site_strategique — statut : fragmenté*
+*site_strategique — statut : en_declin*
 
 **Origine réelle (2026)** : Suisse, Irlande, Luxembourg, Vatican, Pologne
 
