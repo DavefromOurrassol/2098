@@ -40,14 +40,6 @@
    "lagos_est_nexcore_breakdown"
   ]
  },
- "destruction_geneve_2076": {
-  "obligatoire": [
-   "archives_neutres_de_geneve_breakdown",
-   "archives_neutres_geneve_breakdown",
-   "geneve_bunker_institutions_breakdown",
-   "tour_bcuc_geneve_breakdown"
-  ]
- },
  "fusion_commerciale_2038": {
   "pas_obligatoire": [
    "gouvernement_israel_policy_reform",

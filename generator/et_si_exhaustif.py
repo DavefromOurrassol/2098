@@ -93,6 +93,37 @@ MAX_TOKENS_LOT = 8000
 _AMPLIFIE = _re.compile(r"\b(renforc\w*|consolid\w*|accru\w*|accroi\w*|augment\w*|etend\w*|etendu\w*|"
                         r"elargi\w*|extension|desormais|davantage|propuls\w*|amplifi\w*)\b")
 TAILLE_LOT = 15
+# v9.6 (23 oct, aucun appel, rejouable au banc) : un « texte » obligatoire qui conteste seulement une
+# date de la fiche (« trop tardive », « dès 2043, et non 2044 ») que l'élément ne fixe pas descend en
+# possible. Pas si la justification invoque un fait matériel (destruction, « n'existe plus »).
+_ANNEE = _re.compile(r"\b(1[89]\d\d|2[01]\d\d)\b")
+_DATE_CONTESTEE = _re.compile(r"(trop tard\w*|bien avant|plus tot|date\w* (?:est |sont )?"
+                              r"(?:fausse|incorrecte|erronee|impossible)|la date (?:de |du )?(?:1[89]|2[01])\d\d)")
+_MATERIEL = _re.compile(r"\b(detrui\w*|destruction|n'existe plus|aneanti\w*|rase\w*)\b")
+
+
+def annees_hypothese(hyp):
+    """Années que l'élément fixe lui-même (nom, description, contraintes, date)."""
+    texte = " ".join([str(hyp.get("nom") or ""), str(hyp.get("description") or "")]
+                     + [str(c) for c in hyp.get("contraintes") or []])
+    annees = {int(a) for a in _ANNEE.findall(texte)}
+    if _annee(hyp.get("date")) is not None:
+        annees.add(int(_annee(hyp.get("date"))))
+    return annees
+
+
+def _date_contestee(extrait, juge, annees_hyp):
+    """`juge` déjà plié. Vrai si la justification conteste une année de l'extrait
+    que l'élément ne fixe pas, sans invoquer de fait matériel."""
+    propres = {int(a) for a in _ANNEE.findall(extrait)} - set(annees_hyp)
+    if not propres or _MATERIEL.search(juge):
+        return False
+    for y in propres:
+        if str(y) not in juge:
+            continue
+        if _DATE_CONTESTEE.search(juge) or _re.search(rf"\b(?:des|et non|non pas)\s+(?:en\s+)?{y}\b", juge):
+            return True
+    return False
 # Coût indicatif (Mistral Large 3, $ par million de jetons) et jetons de sortie par fiche.
 PRIX_ENTREE, PRIX_SORTIE = 0.50, 1.50
 SORTIE_PAR_FICHE = 120
@@ -326,7 +357,8 @@ def _fiche_dans_lieu(f, lieux):
     return any(_re.search(r"\b" + _re.escape(l) + r"\b", texte) for l in lieux)
 
 
-def verifier_lot(brut, lot, by_inst, by_zone, effets=None, territoires=None, variables_hyp=None, lieux=None):
+def verifier_lot(brut, lot, by_inst, by_zone, effets=None, territoires=None, variables_hyp=None, lieux=None,
+                 annees_hyp=None):
     """Contrôle d'un lot. v6 : un changement douteux descend d'« obligatoire » à « possible »
     (motif affiché) ; seules les réponses mal formées sont rejetées. Les trajectoires et
     relations passent ensuite verifier_consequences du simulateur, SANS plafond."""
@@ -399,6 +431,8 @@ def verifier_lot(brut, lot, by_inst, by_zone, effets=None, territoires=None, var
                 trouve = _plie(extrait)[:120] in _plie(_texte_complet(f))
                 if not trouve:
                     motifs.append("extrait introuvable dans la fiche")
+                if niveau == "obligatoire" and _date_contestee(extrait, juge, annees_hyp or ()):
+                    motifs.append("date de la fiche contestée")   # v9.6
             if typ == "trajectoire" and niveau == "obligatoire" and apres != "disparu":
                 # v7 : seule une disparition rend l'état actuel faux ; un changement de degré
                 # (monter, décliner, mûrir) laisse la fiche vraie.
@@ -541,6 +575,7 @@ def passe_exhaustive(hyp, sc, effets, lecture=None, refaire=False, taille=TAILLE
     commun = contexte_commun(hyp, sc, effets, lecture, instances)
     territoires = territoires_touches(hyp, sc, lecture)
     lieux = lieux_nommes(hyp)
+    annees_hyp = annees_hypothese(hyp)   # v9.6
     variables_hyp = variables_hypothese(hyp)
     cache = _lire_cache()
     total = {"obligatoire": _vide(), "possible": _vide(), "rejetees": [], "corrigees": [],
@@ -548,7 +583,7 @@ def passe_exhaustive(hyp, sc, effets, lecture=None, refaire=False, taille=TAILLE
              "slugs": [f["slug"] for f in fiches], "lots": 0, "depuis_cache": 0}
 
     def controle(brut, lot):
-        return verifier_lot(brut, lot, by_inst, by_zone, effets, territoires, variables_hyp, lieux)
+        return verifier_lot(brut, lot, by_inst, by_zone, effets, territoires, variables_hyp, lieux, annees_hyp)
 
     def lire(lot, cle, profondeur=0):
         """Un lot (cache, appel, contrôle). Un lot en échec est relancé en deux moitiés."""
@@ -857,7 +892,8 @@ VERSION_CLASSEMENT = "3"
 # v9.1 : une proposition bâtie sur un fait inventé ou absent n'est pas candidate à la priorité
 # (elle reste listée plus bas) ; le classeur voit si une vérification l'a jugée non nécessaire.
 _DISQUALIFIE = ("contre-lecture invention", "contre-lecture chronologie", "contre-lecture omission",
-                "lien territoire alors", "sans lien direct", "extrait introuvable")
+                "lien territoire alors", "sans lien direct", "extrait introuvable",
+                "date de la fiche contestée")
 
 
 def _disqualifie(x):
