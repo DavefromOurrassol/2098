@@ -1,0 +1,205 @@
+{
+ "id": "peste_pulmonaire_2043",
+ "date_simulation": "2026-10-23T18:20",
+ "version": "v8.25",
+ "empreinte": "69190144b4d7d576",
+ "annee": 2043.0,
+ "mode": "rupture",
+ "contraintes": [
+  "La pandémie tue environ 25 % de la population mondiale entre 2043 et 2046, sur tous les continents, plus fortement dans les villes denses.",
+  "Aucun traitement efficace avant le début des années 2050 ; la maladie devient ensuite endémique et contrôlée.",
+  "La population mondiale ne retrouve pas son niveau de 2042 avant la fin du siècle."
+ ],
+ "scenarios_hypothese": [
+  "breakdown",
+  "fortress_world",
+  "new_sustainability",
+  "eco_communalism",
+  "policy_reform",
+  "reference"
+ ],
+ "scenarios": [
+  "breakdown"
+ ],
+ "complet": false,
+ "par_scenario": {
+  "breakdown": {
+   "lecture": {
+    "trajectoires": [
+     {
+      "instance": "ligue_mediterraneenne_des_villes_etats_portuaires_breakdown",
+      "nom": "Ligue Méditerranéenne des Villes-États Portuaires",
+      "avant": "émergent",
+      "apres": "ascendant",
+      "raison": "Les villes-portuaires méditerranéennes deviennent des hubs de survie et de recomposition politique, capitalisant sur leur capacité à contrôler les flux maritimes et à imposer des quarantaines."
+     },
+     {
+      "instance": "bloc_de_johannesburg_breakdown",
+      "nom": "Bloc de Johannesburg",
+      "avant": "émergent",
+      "apres": "ascendant",
+      "raison": "Johannesburg émerge comme un pôle de stabilité relative en Afrique australe, attirant les flux de réfugiés et les investissements résiduels."
+     },
+     {
+      "instance": "conglometrat_sino_siberien_bohai_transit_breakdown",
+      "nom": "Conglométrat sino-sibérien Bohai Transit",
+      "avant": "émergent",
+      "apres": "mature",
+      "raison": "Le corridor sino-sibérien se renforce en devenant un axe vital pour les échanges intra-asiatiques, moins dépendant des flux globaux."
+     },
+     {
+      "instance": "hanse_baltique_breakdown",
+      "nom": "Ligue Hanséatique Baltique — Le Sceau du Gotland",
+      "avant": "ascendant",
+      "apres": "dominant",
+      "raison": "La Ligue Hanséatique Baltique consolide son contrôle sur les ports de la mer Baltique, devenant un acteur clé de la logistique nord-européenne post-pandémie."
+     },
+     {
+      "instance": "milices_extractivistes_du_bassin_du_congo_breakdown",
+      "nom": "Milices Extractivistes du Bassin du Congo",
+      "avant": "émergent",
+      "apres": "déclinant",
+      "raison": "L'effondrement démographique et les quarantaines réduisent leur capacité à exploiter les ressources du Kivu, les rendant moins centrales."
+     }
+    ],
+    "relations": [
+     {
+      "a": "ligue_mediterraneenne_des_villes_etats_portuaires_breakdown",
+      "a_nom": "Ligue Méditerranéenne des Villes-États Portuaires",
+      "b": "carthage_nord_nexcore_breakdown",
+      "b_nom": "Carthage Nord Nexcore — Le Joug du Détroit",
+      "type": "opposition",
+      "action": "nouvelle",
+      "raison": "La Ligue conteste l'hégémonie de Carthage Nord sur les flux méditerranéens, notamment les contrôles sanitaires et les taxes imposées aux navires."
+     },
+     {
+      "a": "grandes_lacs_compact_eau_breakdown",
+      "a_nom": "Compact des Grands Lacs — Le Mur d'Eau",
+      "b": "etats_fragmentes_nationalisant_les_stocks_breakdown",
+      "b_nom": "États Fragmentés Nationalisant les Stocks",
+      "type": "opposition",
+      "action": "nouvelle",
+      "raison": "Le Compact des Grands Lacs entre en conflit avec les États voisins qui tentent de saisir ses stocks d'eau et de médicaments."
+     },
+     {
+      "a": "kalaallit_nunaat_sovereign_fund_breakdown",
+      "a_nom": "Kalaallit Nunaat Sovereign Fund — Fonds des Glaces Libérées",
+      "b": "factions_militaires_residuelles_de_l_ex_otan_nordique_breakdown",
+      "b_nom": "Factions Militaires Résiduelles de l'Ex-OTAN Nordique",
+      "type": "alliance",
+      "action": "nouvelle",
+      "raison": "Le Fonds des Glaces Libérées s'allie avec les factions militaires nordiques pour sécuriser les corridors arctiques et les bases logistiques."
+     },
+     {
+      "a": "bloc_de_johannesburg_breakdown",
+      "a_nom": "Bloc de Johannesburg",
+      "b": "milices_extractivistes_du_bassin_du_congo_breakdown",
+      "b_nom": "Milices Extractivistes du Bassin du Congo",
+      "type": "opposition",
+      "action": "nouvelle",
+      "raison": "Johannesburg tente de limiter l'influence des milices du Kivu sur les routes commerciales vers l'Afrique australe."
+     },
+     {
+      "a": "conglometrat_sino_siberien_bohai_transit_breakdown",
+      "a_nom": "Conglométrat sino-sibérien Bohai Transit",
+      "b": "seigneuries_logistiques_armees_breakdown",
+      "b_nom": "Seigneuries Logistiques Armées",
+      "type": "alliance",
+      "action": "nouvelle",
+      "raison": "Bohai Transit s'appuie sur les seigneuries logistiques pour sécuriser ses convois en échange de ressources et de protection."
+     },
+     {
+      "a": "front_humanitaire_d_urgence_non_affilie_breakdown",
+      "a_nom": "Front Humanitaire d'Urgence Non Affilié",
+      "b": "communautes_religieuses_des_relais_physiques_breakdown",
+      "b_nom": "Communautés Religieuses des Relais Physiques",
+      "type": "alliance",
+      "action": "nouvelle",
+      "raison": "Les deux entités collaborent pour acheminer des secours et des informations dans les zones sinistrées, malgré leurs différences idéologiques."
+     }
+    ],
+    "zones_statut": [
+     {
+      "zone": "afrique_de_louest_lagos_sahel",
+      "nom": "Afrique de l'Ouest – Nœuds Lagos et Sahel",
+      "avant": "fragmenté",
+      "apres": "en_declin",
+      "raison": "La pandémie décime les populations urbaines de Lagos et du Sahel, affaiblissant durablement les structures politiques et économiques de la région."
+     },
+     {
+      "zone": "espace_nord_americain_fragmente",
+      "nom": "Espace Nord-Américain Fragmenté",
+      "avant": "fragmenté",
+      "apres": "en_declin",
+      "raison": "Les États-Unis et le Canada subissent un effondrement démographique et institutionnel, accélérant la fragmentation territoriale."
+     },
+     {
+      "zone": "zone_golfe_levant",
+      "nom": "Zone Golfe Persique–Levant",
+      "avant": "fragmenté",
+      "apres": "en_declin",
+      "raison": "La pandémie aggrave les tensions géopolitiques et économiques dans une région déjà instable, réduisant son influence résiduelle."
+     }
+    ],
+    "nouvelles_entites": [
+     {
+      "nom": "Quarantaines Permanentes du Détroit de Gibraltar",
+      "role": "Zone de contrôle sanitaire militarisée entre l'Europe et l'Afrique, verrouillant les flux migratoires et commerciaux.",
+      "zone": "arc_sahelo_mediterraneen",
+      "raison": "La pandémie impose la création de zones tampons pour limiter la propagation de la maladie, devenant des entités politiques de facto.",
+      "category": "territoire"
+     },
+     {
+      "nom": "Réseau des Villes-Sanctuaires Méditerranéennes",
+      "role": "Alliance informelle de villes portuaires (Marseille, Barcelone, Tunis) offrant des havres sanitaires et logistiques aux populations déplacées.",
+      "zone": "arc_sahelo_mediterraneen",
+      "raison": "Les villes-portuaires s'organisent pour mutualiser leurs ressources médicales et sécuriser leurs accès maritimes.",
+      "category": "réseau"
+     },
+     {
+      "nom": "Corporation des Bio-Surveillants du Sahel",
+      "role": "Entité privée contrôlant les tests, les quarantaines et les passeports sanitaires dans les corridors ouest-africains.",
+      "zone": "afrique_de_louest_lagos_sahel",
+      "raison": "Le vide institutionnel permet à des acteurs privés de monopoliser la gestion sanitaire, devenant des pouvoirs parallèles.",
+      "category": "entreprise"
+     }
+    ]
+   },
+   "passe": {
+    "trajectoires": [],
+    "relations": [],
+    "textes": [
+     {
+      "slug": "nexcore_breakdown",
+      "genre": "instance",
+      "nom": "Les Fragments NexCore",
+      "extrait": "NexCore s'est fragmenté en 2051 lors du collapse des infrastructures numériques mondiales",
+      "extrait_trouve": true,
+      "contredit": "La pandémie de 2043-2046 a provoqué un effondrement des infrastructures bien avant 2051.",
+      "raison": "La pandémie a accéléré la rupture des interconnexions globales, rendant la date de 2051 trop tardive pour la fragmentation de NexCore. [lien variable : frontieres_du_systeme (+8.6)]"
+     },
+     {
+      "slug": "rede_paulista_de_distribuicao_algoritmica_breakdown",
+      "genre": "instance",
+      "nom": "Os Algoritmos Quebrados — Fragmentos da RPDA",
+      "extrait": "sans mise à jour des données démographiques depuis 2091",
+      "extrait_trouve": true,
+      "contredit": "La pandémie de 2043-2046 a tué 25 % de la population mondiale, rendant les données démographiques obsolètes bien avant 2091.",
+      "raison": "La date de 2091 est fausse : les données sont devenues inutilisables dès 2046. [lien variable : demographie_mobilite_humaine (+3.4)]"
+     },
+     {
+      "slug": "exode_midwest_grands_lacs_breakdown",
+      "genre": "evenement",
+      "nom": "L'Exode des Grands Brûlés — La Déroute du Bureau des Résidus",
+      "extrait": "L'été 2044 marque la fin du Midwest habitable",
+      "extrait_trouve": true,
+      "contredit": "La pandémie de peste pulmonaire (2043-2046) rend impossible la survie dans le Midwest dès 2043, et non 2044.",
+      "raison": "La pandémie (2043-2046) et ses conséquences (effondrement des systèmes de santé, désertification des villes) rendent le Midwest inhabitable dès 2043, et non 2044. [lien variable : demographie_mobilite_humaine (+3.4), sante_biotechnologies (+10.7)]"
+     }
+    ]
+   },
+   "erreurs": [],
+   "carte": []
+  }
+ }
+}

@@ -4563,3 +4563,86 @@ processed:
   injected_scenarios:
   - reference
   status: injected
+- idea:
+    id: pacte_tabriz_2058
+    description: 'En 2058, exsangue après les frappes sur Ispahan–Fordow et coupé
+      des marchés du Golfe, l''Iran rompt avec la Zone Golfe Persique–Levant et se
+      place sous la protection de l''Arc Eurasien Central, qui l''absorbe : corridors
+      terrestres vers la Caspienne, bases eurasiennes sur la côte iranienne d''Ormuz.'
+    portee: regionale
+    date_approximative: 2058
+    intensite: forte
+    persistance: durable
+    scenarios:
+    - breakdown
+    variables_hint:
+    - geopolitique_conflits
+    - energie_ressources_critiques
+    - organisation_territoires
+    variables_hint_count: 3
+    source: et_si_pacte_tabriz_2058
+    acteurs_hint:
+    - corridors_eurasiens_convoyage_breakdown
+    - consortium_energetique_oural_caspien_breakdown
+    acteurs_hint_count: 2
+    faits_imposes:
+      breakdown:
+      - fait: À partir de 2058, l'Iran fait partie de l'Arc Eurasien Central ; il
+          n'appartient plus à la Zone Golfe Persique–Levant.
+        sort: contrainte
+      - fait: L'Arc Eurasien Central dispose de bases sur la côte iranienne du détroit
+          d'Ormuz.
+        sort: contrainte
+      - fait: Les frappes sur Ispahan–Fordow sont celles du conflit Israël–Iran de
+          2026 ; aucune nouvelle frappe n'a lieu en 2057 ou 2058.
+        sort: contrainte
+      - fait: Tabriz est une ville habitée où le pacte est signé ; elle n'est ni détruite
+          ni vidée de sa population.
+        sort: contrainte
+      - fait: 'Les Venelles — Corridors Eurasiens Convoyage (corridors_eurasiens_convoyage_breakdown)
+          passe de « déclinant » à « ascendant » après 2058 : elle existe toujours
+          (elle peut perdre des lieux, des biens ou du pouvoir), ne la décris pas
+          comme disparue.'
+        slug: corridors_eurasiens_convoyage_breakdown
+        sort: change
+      - fait: 'Consortium Énergétique Oural-Caspien (consortium_energetique_oural_caspien_breakdown)
+          passe de « émergent » à « ascendant » après 2058 : elle existe toujours
+          (elle peut perdre des lieux, des biens ou du pouvoir), ne la décris pas
+          comme disparue.'
+        slug: consortium_energetique_oural_caspien_breakdown
+        sort: change
+      - fait: 'La zone Arc Eurasien Central (arc_eurasien_central) passe de « fragmenté
+          » à « dominant » : le lieu subsiste.'
+        slug: arc_eurasien_central
+        sort: zone
+      - fait: 'La zone Zone Golfe Persique–Levant (zone_golfe_levant) passe de « fragmenté
+          » à « en_declin » : le lieu subsiste.'
+        slug: zone_golfe_levant
+        sort: zone
+    date_imposee: 2058
+    impacts_imposes:
+      breakdown:
+      - variable: geopolitique_conflits
+        delta_level: 10
+        duree: 3
+        polarite: 1
+      - variable: energie_ressources_critiques
+        delta_level: 8
+        duree: 3
+        polarite: 1
+      - variable: organisation_territoires
+        delta_level: 6
+        duree: 4
+        polarite: 1
+    via_matrice_impose: true
+  selection:
+    variables:
+    - geopolitique_conflits
+    - energie_ressources_critiques
+    - organisation_territoires
+    - gouvernance_institutions
+    - frontieres_du_systeme
+    type_evenement: political_social
+  injected_scenarios:
+  - breakdown
+  status: injected

@@ -10,7 +10,7 @@ RÈGLE DE LECTURE DE LA COLONNE "date" :
   - type=signal    -> fenêtre "AAAA-AAAA" (date_bascule du signal_to_state)
   - type=evenement -> année unique "AAAA" (date précise de l'instance)
 
-Total : 642 entrées (96 signaux uniques × 6 scénarios + 66 entrées d'événements custom).
+Total : 643 entrées (96 signaux uniques × 6 scénarios + 67 entrées d'événements custom).
 
 ## breakdown
 
@@ -120,6 +120,7 @@ Total : 642 entrées (96 signaux uniques × 6 scénarios + 66 entrées d'événe
 | signal | 2050-2070 | acceptation_homme_augmente | sante_biotechnologies | non | émeutes anti-augmentés dans les enclaves de Lagos-Est 2063 |
 | evenement | 2053 | secession_great_lakes_compact | organisation_territoires, gouvernance_institutions, geopolitique_conflits | — | Chicago-Lacustre proclame le Compact souverain des eaux, 2053 |
 | evenement | 2057 | incident_passage_arctique | geopolitique_conflits, frontieres_du_systeme, energie_ressources_critiques | — | Unités nordiques saisissent convoi arctique, 2057 |
+| evenement | 2058 | pacte_tabriz_2058 | geopolitique_conflits, energie_ressources_critiques, organisation_territoires | — | 2058, l'Iran scelle son sort à Tabriz |
 | evenement | 2061 | communes_rust_belt_zones_libres | geopolitique_conflits, valeurs_culture_tempo_sociale, gouvernance_institutions, organisation_territoires | — | Rust Belt proclame zones libres algorithme, 2061 |
 | evenement | 2061 | grand_forum_sahel_numerique | technologie_information, gouvernance_institutions, organisation_territoires | — | Forum d'Agadez fracturé, Charte disputée par les éclats, 2061 |
 | evenement | 2073 | emeutes_algorithme_sao_paulo | gouvernance_institutions, technologie_information, organisation_territoires | — | São Paulo brise l'algorithme fantôme, 2073 |

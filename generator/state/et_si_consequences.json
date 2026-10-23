@@ -2276,51 +2276,51 @@
   }
  },
  "peste_pulmonaire_2043::breakdown": {
-  "empreinte": "091d38f23b321aef",
-  "date": "2026-10-10T10:15",
+  "empreinte": "17fb0159dff2fd38",
+  "date": "2026-10-23T18:12",
   "brut": {
-   "lecture": "La pandémie de peste pulmonaire résistante (2043-2046) accélère brutalement la fragmentation du monde Ourrassol en ciblant les nœuds urbains denses et les infrastructures logistiques déjà fragilisées. Elle ne crée pas de nouveaux territoires inhabitables, mais elle renforce les dynamiques de repli régional, de privatisation des services et de contestation des autorités centrales. Les zones les plus résilientes (Arctique Nordark, Asie-Pacifique) limitent les dégâts grâce à leur faible densité, tandis que les régions fragmentées (Afrique de l'Ouest, Méditerranée) basculent dans des logiques de survie locale. Le choc sanitaire ne modifie pas la géographie politique, mais il cristallise des rapports de force préexistants.",
+   "lecture": "La pandémie de peste pulmonaire résistante (2043-2046) accélère brutalement la fragmentation du monde Ourrassol en ciblant les zones urbaines denses et les systèmes de santé déjà fragiles. Elle ne crée pas de nouveaux territoires, mais renforce les logiques de repli régional, de contrôle des flux et de privatisation des ressources critiques. Les entités directement liées aux nœuds logistiques, aux villes-portuaires et aux corridors d'approvisionnement sont les plus touchées, tandis que les zones stables ou émergentes (comme l'Arctique Nordark ou l'Australie) encaissent le choc sans basculer. Le scénario breakdown passe d'une lente désintégration à une crise aiguë, mais évite une apocalypse : la recomposition s'amorce dès les années 2050, avec des acteurs adaptés à un monde où la mobilité humaine et la gouvernance centralisée sont durablement affaiblies.",
    "ampleur": "forte",
    "trajectoires": [
     {
      "instance": "ligue_mediterraneenne_des_villes_etats_portuaires_breakdown",
      "apres": "ascendant",
-     "raison": "Les villes portuaires méditerranéennes deviennent des refuges logistiques et sanitaires, capitalisant sur leur capacité à contrôler les flux malgré l'effondrement des États centraux."
+     "raison": "Les villes-portuaires méditerranéennes deviennent des hubs de survie et de recomposition politique, capitalisant sur leur capacité à contrôler les flux maritimes et à imposer des quarantaines."
+    },
+    {
+     "instance": "carthage_nord_nexcore_breakdown",
+     "apres": "dominant",
+     "raison": "La pandémie renforce son emprise sur le Détroit de Sicile en militarisant les contrôles sanitaires et en monopolisant les échanges avec l'Afrique subsaharienne."
     },
     {
      "instance": "grandes_lacs_compact_eau_breakdown",
      "apres": "dominant",
-     "raison": "La pandémie renforce la légitimité du Compact comme garant de la sécurité hydrique et sanitaire dans une région où les infrastructures publiques se sont effondrées."
+     "raison": "Le Compact des Grands Lacs devient une forteresse hydrique et sanitaire, verrouillant l'accès à l'eau et aux stocks médicaux pour les territoires voisins."
     },
     {
      "instance": "kalaallit_nunaat_sovereign_fund_breakdown",
      "apres": "dominant",
-     "raison": "Le Fonds des Glaces Libérées étend son influence en monétisant l'accès aux ressources arctiques pour les élites survivantes, devenues dépendantes de ses corridors sécurisés."
+     "raison": "Le Fonds des Glaces Libérées profite de la crise pour étendre son influence logistique et financière, devenant un acteur incontournable de la reconstruction arctique."
     },
     {
      "instance": "bloc_de_johannesburg_breakdown",
      "apres": "ascendant",
-     "raison": "L'Afrique australe, moins touchée par la pandémie grâce à sa démographie dispersée, voit Johannesburg émerger comme un pôle de stabilité relative, attirant des flux de réfugiés et de capitaux."
+     "raison": "Johannesburg émerge comme un pôle de stabilité relative en Afrique australe, attirant les flux de réfugiés et les investissements résiduels."
     },
     {
      "instance": "conglometrat_sino_siberien_bohai_transit_breakdown",
-     "apres": "dominant",
-     "raison": "Les corridors sino-sibériens deviennent incontournables pour les échanges eurasiatiques, la Chine et la Russie profitant du vide logistique pour imposer leur contrôle."
+     "apres": "mature",
+     "raison": "Le corridor sino-sibérien se renforce en devenant un axe vital pour les échanges intra-asiatiques, moins dépendant des flux globaux."
     },
     {
      "instance": "hanse_baltique_breakdown",
-     "apres": "mature",
-     "raison": "La Ligue Hanséatique Baltique consolide son rôle de médiateur commercial en Europe du Nord, où la pandémie a affaibli les États sans remettre en cause ses réseaux."
+     "apres": "dominant",
+     "raison": "La Ligue Hanséatique Baltique consolide son contrôle sur les ports de la mer Baltique, devenant un acteur clé de la logistique nord-européenne post-pandémie."
     },
     {
-     "instance": "district_mourmansk_residuel_breakdown",
-     "apres": "disparu",
-     "raison": "L'effondrement démographique et logistique de Mourmansk rend toute administration résiduelle obsolète, le territoire étant absorbé par les factions arctiques."
-    },
-    {
-     "instance": "nairobi_crrc",
-     "apres": "disparu",
-     "raison": "Le siège du CRRC à Nairobi est abandonné après l'effondrement des institutions continentales, la pandémie ayant achevé de délégitimer les structures panafricaines."
+     "instance": "milices_extractivistes_du_bassin_du_congo_breakdown",
+     "apres": "déclinant",
+     "raison": "L'effondrement démographique et les quarantaines réduisent leur capacité à exploiter les ressources du Kivu, les rendant moins centrales."
     }
    ],
    "relations": [
@@ -2329,42 +2329,42 @@
      "b": "carthage_nord_nexcore_breakdown",
      "type": "opposition",
      "action": "nouvelle",
-     "raison": "La Ligue conteste le contrôle milicien de Carthage-Nord sur les flux méditerranéens, exacerbé par la pandémie qui a polarisé les accès aux ressources."
+     "raison": "La Ligue conteste l'hégémonie de Carthage Nord sur les flux méditerranéens, notamment les contrôles sanitaires et les taxes imposées aux navires."
     },
     {
      "a": "grandes_lacs_compact_eau_breakdown",
-     "b": "etats_fragments_en_guerre_pour_les_stations_atmospheriques_breakdown",
+     "b": "etats_fragmentes_nationalisant_les_stocks_breakdown",
      "type": "opposition",
      "action": "nouvelle",
-     "raison": "Le Compact des Grands Lacs entre en conflit avec les États-Fragments pour le contrôle des stations de filtration d'air, devenues vitales après la pandémie."
+     "raison": "Le Compact des Grands Lacs entre en conflit avec les États voisins qui tentent de saisir ses stocks d'eau et de médicaments."
     },
     {
      "a": "kalaallit_nunaat_sovereign_fund_breakdown",
      "b": "factions_militaires_residuelles_de_l_ex_otan_nordique_breakdown",
      "type": "alliance",
      "action": "nouvelle",
-     "raison": "Le Fonds des Glaces Libérées s'allie aux factions OTAN résiduelles pour sécuriser les corridors arctiques contre les milices locales, dans un contexte de pénurie post-pandémique."
+     "raison": "Le Fonds des Glaces Libérées s'allie avec les factions militaires nordiques pour sécuriser les corridors arctiques et les bases logistiques."
     },
     {
      "a": "bloc_de_johannesburg_breakdown",
      "b": "milices_extractivistes_du_bassin_du_congo_breakdown",
      "type": "opposition",
      "action": "nouvelle",
-     "raison": "Johannesburg tente de reprendre le contrôle des ressources du Kivu, accaparées par les milices après l'effondrement des États centraux africains."
+     "raison": "Johannesburg tente de limiter l'influence des milices du Kivu sur les routes commerciales vers l'Afrique australe."
     },
     {
      "a": "conglometrat_sino_siberien_bohai_transit_breakdown",
-     "b": "corridors_eurasiens_convoyage_breakdown",
+     "b": "seigneuries_logistiques_armees_breakdown",
      "type": "alliance",
-     "action": "rompue",
-     "raison": "La Chine et la Russie imposent un monopole sur les corridors eurasiatiques, marginalisant les convoyeurs indépendants après la pandémie."
+     "action": "nouvelle",
+     "raison": "Bohai Transit s'appuie sur les seigneuries logistiques pour sécuriser ses convois en échange de ressources et de protection."
     },
     {
-     "a": "enclaves_corporatives_fortifiees_breakdown",
-     "b": "flux_migratoires_non_integrables_breakdown",
-     "type": "opposition",
+     "a": "front_humanitaire_d_urgence_non_affilie_breakdown",
+     "b": "communautes_religieuses_des_relais_physiques_breakdown",
+     "type": "alliance",
      "action": "nouvelle",
-     "raison": "Les enclaves corporatives africaines renforcent leurs barrières contre les flux migratoires, devenus ingérables après la pandémie."
+     "raison": "Les deux entités collaborent pour acheminer des secours et des informations dans les zones sinistrées, malgré leurs différences idéologiques."
     }
    ],
    "geographie": [],
@@ -2372,42 +2372,45 @@
     {
      "zone": "afrique_de_louest_lagos_sahel",
      "apres": "en_declin",
-     "raison": "La pandémie décime les populations urbaines (Lagos, Sahel) et accélère l'effondrement des structures étatiques, déjà fragilisées."
-    },
-    {
-     "zone": "arc_sahelo_mediterraneen",
-     "apres": "fragmenté",
-     "raison": "La Méditerranée et le Sahel deviennent des zones de conflits permanents pour le contrôle des ressources et des corridors, la pandémie ayant achevé de délégitimer les États centraux."
+     "raison": "La pandémie décime les populations urbaines de Lagos et du Sahel, affaiblissant durablement les structures politiques et économiques de la région."
     },
     {
      "zone": "espace_nord_americain_fragmente",
      "apres": "en_declin",
-     "raison": "Les États-Unis et le Canada subissent un effondrement démographique et institutionnel, les zones côtières résiduelles ne suffisant pas à maintenir une cohérence territoriale."
+     "raison": "Les États-Unis et le Canada subissent un effondrement démographique et institutionnel, accélérant la fragmentation territoriale."
     },
     {
      "zone": "geneve_bunker_institutions",
      "apres": "disparu",
-     "raison": "Genève, symbole des institutions internationales, est abandonnée après la pandémie, ses archives et ses enclaves technologiques étant dispersées ou pillées."
+     "raison": "Les institutions résiduelles de Genève s'effondrent face à l'incapacité à gérer la crise sanitaire et à maintenir leur légitimité."
+    },
+    {
+     "zone": "zone_golfe_levant",
+     "apres": "en_declin",
+     "raison": "La pandémie aggrave les tensions géopolitiques et économiques dans une région déjà instable, réduisant son influence résiduelle."
     }
    ],
    "nouvelles_entites": [
     {
-     "nom": "Culte des Souffles Purs",
-     "role": "Communauté religieuse sanitaire",
+     "nom": "Quarantaines Permanentes du Détroit de Gibraltar",
+     "category": "territoire",
+     "role": "Zone de contrôle sanitaire militarisée entre l'Europe et l'Afrique, verrouillant les flux migratoires et commerciaux.",
      "zone": "arc_sahelo_mediterraneen",
-     "raison": "Né dans les ruines des villes méditerranéennes, ce culte prône la purification par l'isolement et contrôle des relais de soins post-pandémiques."
+     "raison": "La pandémie impose la création de zones tampons pour limiter la propagation de la maladie, devenant des entités politiques de facto."
     },
     {
-     "nom": "Guilde des Convoyeurs Sanitaires",
-     "role": "Milice logistique spécialisée",
-     "zone": "corridors_eurasiens_convoyage",
-     "raison": "Les derniers convoyeurs eurasiatiques se structurent en guilde armée pour protéger les flux de médicaments et de nourriture contre les pillards."
+     "nom": "Réseau des Villes-Sanctuaires Méditerranéennes",
+     "category": "réseau",
+     "role": "Alliance informelle de villes portuaires (Marseille, Barcelone, Tunis) offrant des havres sanitaires et logistiques aux populations déplacées.",
+     "zone": "arc_sahelo_mediterraneen",
+     "raison": "Les villes-portuaires s'organisent pour mutualiser leurs ressources médicales et sécuriser leurs accès maritimes."
     },
     {
-     "nom": "Bloc des Survivants des Grands Lacs",
-     "role": "Alliance de communautés riveraines",
-     "zone": "grandes_lacs_compact_eau",
-     "raison": "Les communautés des Grands Lacs s'unissent pour gérer les ressources hydriques et sanitaires, marginalisant les anciennes institutions."
+     "nom": "Corporation des Bio-Surveillants du Sahel",
+     "category": "entreprise",
+     "role": "Entité privée contrôlant les tests, les quarantaines et les passeports sanitaires dans les corridors ouest-africains.",
+     "zone": "afrique_de_louest_lagos_sahel",
+     "raison": "Le vide institutionnel permet à des acteurs privés de monopoliser la gestion sanitaire, devenant des pouvoirs parallèles."
     }
    ]
   }
@@ -5306,6 +5309,192 @@
      "role": "Financement et soutien logistique aux communautés du Sertão brésilien pour renforcer leur autonomie face à l'occupation.",
      "zone": "sertao_nordeste_bresilien",
      "raison": "La résistance dans le Sertão nécessite des mécanismes de financement et de gouvernance dédiés."
+    }
+   ]
+  }
+ },
+ "pacte_tabriz_2058::breakdown": {
+  "empreinte": "0e11ef833ef0d430",
+  "date": "2026-10-23T19:07",
+  "brut": {
+   "lecture": "Le Pacte de Tabriz redessine brutalement les équilibres énergétiques et logistiques de l'Arc Eurasien Central en y intégrant l'Iran, privant la Zone Golfe Persique–Levant d'un acteur clé et déplaçant les tensions vers le détroit d'Ormuz désormais contrôlé par des bases eurasiennes. Ce choc accélère la fragmentation régionale, mais ne bouleverse pas les dynamiques globales de breakdown : les corridors eurasiens deviennent plus critiques, tandis que les acteurs locaux (milices, factions énergétiques) s'adaptent sans remettre en cause l'effondrement des interconnexions mondiales. Les effets lointains restent limités, car le scénario repose déjà sur des logiques régionales désarticulées.",
+   "ampleur": "forte",
+   "trajectoires": [
+    {
+     "instance": "corridors_eurasiens_convoyage_breakdown",
+     "apres": "ascendant",
+     "raison": "L'intégration de l'Iran dans l'Arc Eurasien Central renforce les corridors de convoyage comme axe vital pour les flux énergétiques et logistiques, malgré les risques de sabotage."
+    },
+    {
+     "instance": "factions_energetiques_heritieres_des_pactes_abs_breakdown",
+     "apres": "dominant",
+     "raison": "Le contrôle des ressources iraniennes par l'Arc Eurasien Central consolide leur pouvoir sur les marchés énergétiques fragmentés."
+    },
+    {
+     "instance": "agence_de_regulation_des_detroits_strategiques_ards_breakdown",
+     "apres": "résiduel",
+     "raison": "La perte d'influence sur Ormuz affaiblit définitivement cette agence, déjà morcelée."
+    },
+    {
+     "instance": "zone_golfe_levant_breakdown",
+     "apres": "en_declin",
+     "raison": "L'exclusion de l'Iran et la militarisation d'Ormuz par l'Arc Eurasien Central accélèrent son déclin géopolitique."
+    },
+    {
+     "instance": "consortium_energetique_oural_caspien_breakdown",
+     "apres": "ascendant",
+     "raison": "Le corridor Oural-Caspien devient un relais clé pour les ressources iraniennes, renforçant son rôle dans l'Arc Eurasien Central."
+    },
+    {
+     "instance": "hanse_baltique_breakdown",
+     "apres": "marginal",
+     "raison": "La priorité donnée aux corridors terrestres eurasiens marginalise les routes baltiques, moins stratégiques."
+    },
+    {
+     "instance": "milices_extractivistes_du_bassin_du_congo_breakdown",
+     "apres": "marginal",
+     "raison": "La focalisation sur les ressources iraniennes réduit temporairement la pression sur les minerais africains."
+    },
+    {
+     "instance": "grandes_lacs_compact_eau_breakdown",
+     "apres": "stable",
+     "raison": "Aucun impact direct, mais la reconfiguration eurasiatique renforce son rôle comme pôle hydrique alternatif."
+    }
+   ],
+   "relations": [
+    {
+     "a": "corridors_eurasiens_convoyage_breakdown",
+     "b": "consortium_energetique_oural_caspien_breakdown",
+     "type": "alliance",
+     "action": "nouvelle",
+     "raison": "Les deux entités collaborent pour sécuriser les flux énergétiques iraniens vers l'Eurasie."
+    },
+    {
+     "a": "factions_energetiques_heritieres_des_pactes_abs_breakdown",
+     "b": "zone_golfe_levant_breakdown",
+     "type": "opposition",
+     "action": "nouvelle",
+     "raison": "Les factions énergétiques eurasiatiques contestent le contrôle résiduel de la Zone Golfe sur les hydrocarbures."
+    },
+    {
+     "a": "saboteurs_des_corridors_de_transit_breakdown",
+     "b": "corridors_eurasiens_convoyage_breakdown",
+     "type": "opposition",
+     "action": "renforcée",
+     "raison": "Les corridors deviennent une cible prioritaire pour les acteurs cherchant à déstabiliser l'Arc Eurasien Central."
+    },
+    {
+     "a": "armada_logistique_nordique_breakdown",
+     "b": "hanse_baltique_breakdown",
+     "type": "opposition",
+     "action": "nouvelle",
+     "raison": "La marginalisation des routes baltiques crée des tensions avec les acteurs arctiques."
+    },
+    {
+     "a": "kalaallit_nunaat_sovereign_fund_breakdown",
+     "b": "factions_energetiques_heritieres_des_pactes_abs_breakdown",
+     "type": "alliance",
+     "action": "rompue",
+     "raison": "Le Fonds des Glaces Libérées se recentre sur les ressources arctiques, moins dépendantes des dynamiques eurasiatiques."
+    },
+    {
+     "a": "reseau_des_cartographes_des_zones_grises_breakdown",
+     "b": "bureau_des_territoires_residuels_breakdown",
+     "type": "alliance",
+     "action": "nouvelle",
+     "raison": "Les cartographes des zones grises documentent les nouvelles frontières floues autour d'Ormuz pour le Registre des Zones Non Récupérables."
+    }
+   ],
+   "geographie": [
+    {
+     "pays": "Iran",
+     "action": "partition",
+     "parties": [
+      {
+       "zone": "arc_eurasien_central",
+       "portion": "Territoires continentaux et côtes caspiennes, incluant les bases d'Ormuz sous contrôle eurasien."
+      },
+      {
+       "nouvelle_zone": {
+        "slug": "iran_levant_residuel",
+        "nom": "Iran Levantin Résiduel",
+        "type": "territoire_autonome",
+        "statut": "fragmenté"
+       },
+       "portion": "Zones côtières du Golfe Persique non contrôlées par l'Arc Eurasien Central (ex. Bandar Abbas)."
+      }
+     ],
+     "raison": "L'absorption par l'Arc Eurasien Central laisse des poches de résistance ou de neutralité dans le sud de l'Iran."
+    },
+    {
+     "pays": "Irak",
+     "action": "region",
+     "parent": "zone_golfe_levant",
+     "portion": "Bassorah et zones frontalières avec l'Iran",
+     "nouvelle_zone": {
+      "slug": "bassorah_zone_contestee",
+      "nom": "Bassorah Zone Contestée",
+      "type": "zone_sinistree",
+      "statut": "fragmenté"
+     },
+     "raison": "La militarisation d'Ormuz et la partition de l'Iran créent un no man's land autour de Bassorah."
+    },
+    {
+     "pays": "Oman",
+     "action": "absorber",
+     "zone": "arc_eurasien_central",
+     "raison": "Les bases eurasiennes sur la côte iranienne d'Ormuz étendent leur influence aux eaux omanaises pour sécuriser le détroit."
+    },
+    {
+     "pays": "Turkménistan",
+     "action": "absorber",
+     "zone": "arc_eurasien_central",
+     "raison": "Le pays est intégré de facto à l'Arc Eurasien Central pour sécuriser les corridors vers la Caspienne."
+    }
+   ],
+   "zones_statut": [
+    {
+     "zone": "arc_eurasien_central",
+     "apres": "dominant",
+     "raison": "L'intégration de l'Iran et le contrôle d'Ormuz en font le bloc le plus puissant de la région."
+    },
+    {
+     "zone": "zone_golfe_levant",
+     "apres": "en_declin",
+     "raison": "La perte de l'Iran et la militarisation d'Ormuz affaiblissent sa cohérence géopolitique."
+    },
+    {
+     "zone": "bassin_caspien_zone_conflit",
+     "apres": "stable",
+     "raison": "La mainmise de l'Arc Eurasien Central réduit les tensions entre les blocs IV et IX."
+    },
+    {
+     "zone": "detroit_ormuz",
+     "apres": "disparu",
+     "raison": "Le détroit est désormais une zone militarisée intégrée à l'Arc Eurasien Central, plus une entité autonome."
+    }
+   ],
+   "nouvelles_entites": [
+    {
+     "nom": "Veilleurs d'Ormuz",
+     "category": "milice",
+     "role": "Contrôle des flux maritimes dans le détroit d'Ormuz pour le compte de l'Arc Eurasien Central.",
+     "zone": "arc_eurasien_central",
+     "raison": "Nécessité de sécuriser les bases eurasiennes sur la côte iranienne et de réguler le trafic maritime."
+    },
+    {
+     "nom": "Alliance des Ports Caspiennes",
+     "category": "organisation",
+     "role": "Coordination des échanges entre les ports de la Caspienne sous influence eurasienne.",
+     "zone": "bassin_caspien_zone_conflit",
+     "raison": "L'intégration de l'Iran et du Turkménistan nécessite une structure pour gérer les flux logistiques."
+    },
+    {
+     "nom": "Front de Libération du Golfe",
+     "category": "réseau",
+     "role": "Résistance armée aux bases eurasiennes dans le sud de l'Iran et à Oman.",
+     "zone": "iran_levant_residuel",
+     "raison": "Réaction à l'occupation partielle de l'Iran par l'Arc Eurasien Central."
     }
    ]
   }

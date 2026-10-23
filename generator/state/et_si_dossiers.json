@@ -91,24 +91,29 @@
  },
  "peste_pulmonaire_2043": {
   "simulation": {
-   "date": "2026-10-15T18:39",
-   "version": "v8.18",
+   "date": "2026-10-23T18:20",
+   "version": "v8.25",
    "empreinte": "69190144b4d7d576",
    "scenarios": [
     "breakdown"
    ],
    "complet": false,
    "passe": true,
-   "rapport": null,
+   "rapport": "documentation/need_action/et_si_peste_pulmonaire_2043.md",
    "entree": {
     "id": "peste_pulmonaire_2043",
     "description": "En 2043, une souche de peste pulmonaire résistante aux antibiotiques se diffuse sur tous les continents et tue un quart de la population mondiale en trois ans. Villes désertées, chaînes de production rompues, frontières fermées, effondrement des systèmes de santé, puis lente recomposition.",
     "portee": "globale",
     "date_approximative": 2043,
     "intensite": "<à choisir>",
-    "persistance": "durable",
+    "persistance": "permanente",
     "scenarios": [
-     "breakdown"
+     "breakdown",
+     "fortress_world",
+     "new_sustainability",
+     "eco_communalism",
+     "policy_reform",
+     "reference"
     ],
     "variables_hint": [
      "demographie_mobilite_humaine",
@@ -123,11 +128,12 @@
     "variables_hint_count": 8,
     "source": "et_si_peste_pulmonaire_2043",
     "acteurs_hint": [
-     "bureau_des_territoires_residuels_breakdown",
-     "holdfast_breakdown",
-     "rede_paulista_de_distribuicao_algoritmica_breakdown"
+     "ligue_mediterraneenne_des_villes_etats_portuaires_breakdown",
+     "bloc_de_johannesburg_breakdown",
+     "conglometrat_sino_siberien_bohai_transit_breakdown",
+     "hanse_baltique_breakdown"
     ],
-    "acteurs_hint_count": 3,
+    "acteurs_hint_count": 4,
     "faits_imposes": {
      "breakdown": [
       {
@@ -143,23 +149,417 @@
        "sort": "contrainte"
       },
       {
-       "fait": "Registre des Zones Non Récupérables (bureau_des_territoires_residuels_breakdown) garde sa trajectoire « résiduel » : elle survit à l'événement sans changement majeur, ne la décris ni détruite ni disparue.",
-       "slug": "bureau_des_territoires_residuels_breakdown",
-       "sort": "reste"
+       "fait": "Ligue Méditerranéenne des Villes-États Portuaires (ligue_mediterraneenne_des_villes_etats_portuaires_breakdown) passe de « émergent » à « ascendant » après 2043 : elle existe toujours (elle peut perdre des lieux, des biens ou du pouvoir), ne la décris pas comme disparue.",
+       "slug": "ligue_mediterraneenne_des_villes_etats_portuaires_breakdown",
+       "sort": "change"
       },
       {
-       "fait": "Les Vestiges des Citadelles (holdfast_breakdown) garde sa trajectoire « historique » : elle survit à l'événement sans changement majeur, ne la décris ni détruite ni disparue.",
-       "slug": "holdfast_breakdown",
-       "sort": "reste"
+       "fait": "Bloc de Johannesburg (bloc_de_johannesburg_breakdown) passe de « émergent » à « ascendant » après 2043 : elle existe toujours (elle peut perdre des lieux, des biens ou du pouvoir), ne la décris pas comme disparue.",
+       "slug": "bloc_de_johannesburg_breakdown",
+       "sort": "change"
       },
       {
-       "fait": "Os Algoritmos Quebrados — Fragmentos da RPDA (rede_paulista_de_distribuicao_algoritmica_breakdown) garde sa trajectoire « transformé » : elle survit à l'événement sans changement majeur, ne la décris ni détruite ni disparue.",
-       "slug": "rede_paulista_de_distribuicao_algoritmica_breakdown",
-       "sort": "reste"
+       "fait": "Conglométrat sino-sibérien Bohai Transit (conglometrat_sino_siberien_bohai_transit_breakdown) passe de « émergent » à « mature » après 2043 : elle existe toujours (elle peut perdre des lieux, des biens ou du pouvoir), ne la décris pas comme disparue.",
+       "slug": "conglometrat_sino_siberien_bohai_transit_breakdown",
+       "sort": "change"
+      },
+      {
+       "fait": "Ligue Hanséatique Baltique — Le Sceau du Gotland (hanse_baltique_breakdown) passe de « ascendant » à « dominant » après 2043 : elle existe toujours (elle peut perdre des lieux, des biens ou du pouvoir), ne la décris pas comme disparue.",
+       "slug": "hanse_baltique_breakdown",
+       "sort": "change"
+      },
+      {
+       "fait": "La zone Afrique de l'Ouest – Nœuds Lagos et Sahel (afrique_de_louest_lagos_sahel) passe de « fragmenté » à « en_declin » : le lieu subsiste.",
+       "slug": "afrique_de_louest_lagos_sahel",
+       "sort": "zone"
+      },
+      {
+       "fait": "La zone Espace Nord-Américain Fragmenté (espace_nord_americain_fragmente) passe de « fragmenté » à « en_declin » : le lieu subsiste.",
+       "slug": "espace_nord_americain_fragmente",
+       "sort": "zone"
+      },
+      {
+       "fait": "La zone Zone Golfe Persique–Levant (zone_golfe_levant) passe de « fragmenté » à « en_declin » : le lieu subsiste.",
+       "slug": "zone_golfe_levant",
+       "sort": "zone"
+      }
+     ],
+     "fortress_world": [
+      {
+       "fait": "La pandémie tue environ 25 % de la population mondiale entre 2043 et 2046, sur tous les continents, plus fortement dans les villes denses.",
+       "sort": "contrainte"
+      },
+      {
+       "fait": "Aucun traitement efficace avant le début des années 2050 ; la maladie devient ensuite endémique et contrôlée.",
+       "sort": "contrainte"
+      },
+      {
+       "fait": "La population mondiale ne retrouve pas son niveau de 2042 avant la fin du siècle.",
+       "sort": "contrainte"
+      }
+     ],
+     "new_sustainability": [
+      {
+       "fait": "La pandémie tue environ 25 % de la population mondiale entre 2043 et 2046, sur tous les continents, plus fortement dans les villes denses.",
+       "sort": "contrainte"
+      },
+      {
+       "fait": "Aucun traitement efficace avant le début des années 2050 ; la maladie devient ensuite endémique et contrôlée.",
+       "sort": "contrainte"
+      },
+      {
+       "fait": "La population mondiale ne retrouve pas son niveau de 2042 avant la fin du siècle.",
+       "sort": "contrainte"
+      }
+     ],
+     "eco_communalism": [
+      {
+       "fait": "La pandémie tue environ 25 % de la population mondiale entre 2043 et 2046, sur tous les continents, plus fortement dans les villes denses.",
+       "sort": "contrainte"
+      },
+      {
+       "fait": "Aucun traitement efficace avant le début des années 2050 ; la maladie devient ensuite endémique et contrôlée.",
+       "sort": "contrainte"
+      },
+      {
+       "fait": "La population mondiale ne retrouve pas son niveau de 2042 avant la fin du siècle.",
+       "sort": "contrainte"
+      }
+     ],
+     "policy_reform": [
+      {
+       "fait": "La pandémie tue environ 25 % de la population mondiale entre 2043 et 2046, sur tous les continents, plus fortement dans les villes denses.",
+       "sort": "contrainte"
+      },
+      {
+       "fait": "Aucun traitement efficace avant le début des années 2050 ; la maladie devient ensuite endémique et contrôlée.",
+       "sort": "contrainte"
+      },
+      {
+       "fait": "La population mondiale ne retrouve pas son niveau de 2042 avant la fin du siècle.",
+       "sort": "contrainte"
+      }
+     ],
+     "reference": [
+      {
+       "fait": "La pandémie tue environ 25 % de la population mondiale entre 2043 et 2046, sur tous les continents, plus fortement dans les villes denses.",
+       "sort": "contrainte"
+      },
+      {
+       "fait": "Aucun traitement efficace avant le début des années 2050 ; la maladie devient ensuite endémique et contrôlée.",
+       "sort": "contrainte"
+      },
+      {
+       "fait": "La population mondiale ne retrouve pas son niveau de 2042 avant la fin du siècle.",
+       "sort": "contrainte"
       }
      ]
     },
-    "date_imposee": 2043
+    "date_imposee": 2043,
+    "mode_impose": "rupture",
+    "impacts_imposes": {
+     "breakdown": [
+      {
+       "variable": "demographie_mobilite_humaine",
+       "delta_level": 25,
+       "duree": 3,
+       "polarite": 1
+      },
+      {
+       "variable": "sante_biotechnologies",
+       "delta_level": 25,
+       "duree": 3,
+       "polarite": 1
+      },
+      {
+       "variable": "systemes_productifs_travail",
+       "delta_level": 18,
+       "duree": 4,
+       "polarite": 1
+      },
+      {
+       "variable": "systeme_economique_redistribution",
+       "delta_level": 15,
+       "duree": 5,
+       "polarite": 1
+      },
+      {
+       "variable": "frontieres_du_systeme",
+       "delta_level": 15,
+       "duree": 3,
+       "polarite": 1
+      },
+      {
+       "variable": "gouvernance_institutions",
+       "delta_level": 12,
+       "duree": 5,
+       "polarite": 1
+      },
+      {
+       "variable": "organisation_territoires",
+       "delta_level": 10,
+       "duree": 6,
+       "polarite": 1
+      },
+      {
+       "variable": "climat_environnement_global",
+       "delta_level": 5,
+       "duree": 10,
+       "polarite": -1
+      }
+     ],
+     "fortress_world": [
+      {
+       "variable": "demographie_mobilite_humaine",
+       "delta_level": 25,
+       "duree": 3,
+       "polarite": 1
+      },
+      {
+       "variable": "sante_biotechnologies",
+       "delta_level": 25,
+       "duree": 3,
+       "polarite": 1
+      },
+      {
+       "variable": "systemes_productifs_travail",
+       "delta_level": 18,
+       "duree": 4,
+       "polarite": 1
+      },
+      {
+       "variable": "systeme_economique_redistribution",
+       "delta_level": 15,
+       "duree": 5,
+       "polarite": 1
+      },
+      {
+       "variable": "frontieres_du_systeme",
+       "delta_level": 15,
+       "duree": 3,
+       "polarite": 1
+      },
+      {
+       "variable": "gouvernance_institutions",
+       "delta_level": 12,
+       "duree": 5,
+       "polarite": 1
+      },
+      {
+       "variable": "organisation_territoires",
+       "delta_level": 10,
+       "duree": 6,
+       "polarite": 1
+      },
+      {
+       "variable": "climat_environnement_global",
+       "delta_level": 5,
+       "duree": 10,
+       "polarite": -1
+      }
+     ],
+     "new_sustainability": [
+      {
+       "variable": "demographie_mobilite_humaine",
+       "delta_level": 25,
+       "duree": 3,
+       "polarite": 1
+      },
+      {
+       "variable": "sante_biotechnologies",
+       "delta_level": 25,
+       "duree": 3,
+       "polarite": 1
+      },
+      {
+       "variable": "systemes_productifs_travail",
+       "delta_level": 18,
+       "duree": 4,
+       "polarite": 1
+      },
+      {
+       "variable": "systeme_economique_redistribution",
+       "delta_level": 15,
+       "duree": 5,
+       "polarite": 1
+      },
+      {
+       "variable": "frontieres_du_systeme",
+       "delta_level": 15,
+       "duree": 3,
+       "polarite": 1
+      },
+      {
+       "variable": "gouvernance_institutions",
+       "delta_level": 12,
+       "duree": 5,
+       "polarite": 1
+      },
+      {
+       "variable": "organisation_territoires",
+       "delta_level": 10,
+       "duree": 6,
+       "polarite": 1
+      },
+      {
+       "variable": "climat_environnement_global",
+       "delta_level": 5,
+       "duree": 10,
+       "polarite": -1
+      }
+     ],
+     "eco_communalism": [
+      {
+       "variable": "demographie_mobilite_humaine",
+       "delta_level": 25,
+       "duree": 3,
+       "polarite": 1
+      },
+      {
+       "variable": "sante_biotechnologies",
+       "delta_level": 25,
+       "duree": 3,
+       "polarite": 1
+      },
+      {
+       "variable": "systemes_productifs_travail",
+       "delta_level": 18,
+       "duree": 4,
+       "polarite": 1
+      },
+      {
+       "variable": "systeme_economique_redistribution",
+       "delta_level": 15,
+       "duree": 5,
+       "polarite": 1
+      },
+      {
+       "variable": "frontieres_du_systeme",
+       "delta_level": 15,
+       "duree": 3,
+       "polarite": 1
+      },
+      {
+       "variable": "gouvernance_institutions",
+       "delta_level": 12,
+       "duree": 5,
+       "polarite": 1
+      },
+      {
+       "variable": "organisation_territoires",
+       "delta_level": 10,
+       "duree": 6,
+       "polarite": 1
+      },
+      {
+       "variable": "climat_environnement_global",
+       "delta_level": 5,
+       "duree": 10,
+       "polarite": -1
+      }
+     ],
+     "policy_reform": [
+      {
+       "variable": "demographie_mobilite_humaine",
+       "delta_level": 25,
+       "duree": 3,
+       "polarite": 1
+      },
+      {
+       "variable": "sante_biotechnologies",
+       "delta_level": 25,
+       "duree": 3,
+       "polarite": 1
+      },
+      {
+       "variable": "systemes_productifs_travail",
+       "delta_level": 18,
+       "duree": 4,
+       "polarite": 1
+      },
+      {
+       "variable": "systeme_economique_redistribution",
+       "delta_level": 15,
+       "duree": 5,
+       "polarite": 1
+      },
+      {
+       "variable": "frontieres_du_systeme",
+       "delta_level": 15,
+       "duree": 3,
+       "polarite": 1
+      },
+      {
+       "variable": "gouvernance_institutions",
+       "delta_level": 12,
+       "duree": 5,
+       "polarite": 1
+      },
+      {
+       "variable": "organisation_territoires",
+       "delta_level": 10,
+       "duree": 6,
+       "polarite": 1
+      },
+      {
+       "variable": "climat_environnement_global",
+       "delta_level": 5,
+       "duree": 10,
+       "polarite": -1
+      }
+     ],
+     "reference": [
+      {
+       "variable": "demographie_mobilite_humaine",
+       "delta_level": 25,
+       "duree": 3,
+       "polarite": 1
+      },
+      {
+       "variable": "sante_biotechnologies",
+       "delta_level": 25,
+       "duree": 3,
+       "polarite": 1
+      },
+      {
+       "variable": "systemes_productifs_travail",
+       "delta_level": 18,
+       "duree": 4,
+       "polarite": 1
+      },
+      {
+       "variable": "systeme_economique_redistribution",
+       "delta_level": 15,
+       "duree": 5,
+       "polarite": 1
+      },
+      {
+       "variable": "frontieres_du_systeme",
+       "delta_level": 15,
+       "duree": 3,
+       "polarite": 1
+      },
+      {
+       "variable": "gouvernance_institutions",
+       "delta_level": 12,
+       "duree": 5,
+       "polarite": 1
+      },
+      {
+       "variable": "organisation_territoires",
+       "delta_level": 10,
+       "duree": 6,
+       "polarite": 1
+      },
+      {
+       "variable": "climat_environnement_global",
+       "delta_level": 5,
+       "duree": 10,
+       "polarite": -1
+      }
+     ]
+    },
+    "via_matrice_impose": true
    }
   }
  },
@@ -1092,6 +1492,228 @@
        "delta_level": 5,
        "duree": 5,
        "polarite": -1
+      }
+     ]
+    },
+    "via_matrice_impose": true
+   }
+  }
+ },
+ "pacte_tabriz_2058": {
+  "simulation": {
+   "date": "2026-10-23T19:11",
+   "version": "v8.25",
+   "empreinte": "ee1f2a4fd6da82bb",
+   "scenarios": [
+    "breakdown"
+   ],
+   "complet": true,
+   "passe": true,
+   "rapport": "documentation/need_action/et_si_pacte_tabriz_2058.md",
+   "entree": {
+    "id": "pacte_tabriz_2058",
+    "description": "En 2058, exsangue après les frappes sur Ispahan–Fordow et coupé des marchés du Golfe, l'Iran rompt avec la Zone Golfe Persique–Levant et se place sous la protection de l'Arc Eurasien Central, qui l'absorbe : corridors terrestres vers la Caspienne, bases eurasiennes sur la côte iranienne d'Ormuz.",
+    "portee": "<locale | regionale | continentale | globale>",
+    "date_approximative": 2058,
+    "intensite": "<à choisir>",
+    "persistance": "durable",
+    "scenarios": [
+     "breakdown"
+    ],
+    "variables_hint": [
+     "geopolitique_conflits",
+     "energie_ressources_critiques",
+     "organisation_territoires"
+    ],
+    "variables_hint_count": 3,
+    "source": "et_si_pacte_tabriz_2058",
+    "acteurs_hint": [
+     "corridors_eurasiens_convoyage_breakdown",
+     "factions_energetiques_heritieres_des_pactes_abs_breakdown",
+     "consortium_energetique_oural_caspien_breakdown",
+     "milices_extractivistes_du_bassin_du_congo_breakdown"
+    ],
+    "acteurs_hint_count": 4,
+    "faits_imposes": {
+     "breakdown": [
+      {
+       "fait": "À partir de 2058, l'Iran fait partie de l'Arc Eurasien Central ; il n'appartient plus à la Zone Golfe Persique–Levant.",
+       "sort": "contrainte"
+      },
+      {
+       "fait": "L'Arc Eurasien Central dispose de bases sur la côte iranienne du détroit d'Ormuz.",
+       "sort": "contrainte"
+      },
+      {
+       "fait": "Les Venelles — Corridors Eurasiens Convoyage (corridors_eurasiens_convoyage_breakdown) passe de « déclinant » à « ascendant » après 2058 : elle existe toujours (elle peut perdre des lieux, des biens ou du pouvoir), ne la décris pas comme disparue.",
+       "slug": "corridors_eurasiens_convoyage_breakdown",
+       "sort": "change"
+      },
+      {
+       "fait": "Factions Énergétiques Héritières des Pactes ABS (factions_energetiques_heritieres_des_pactes_abs_breakdown) passe de « émergent » à « dominant » après 2058 : elle existe toujours (elle peut perdre des lieux, des biens ou du pouvoir), ne la décris pas comme disparue.",
+       "slug": "factions_energetiques_heritieres_des_pactes_abs_breakdown",
+       "sort": "change"
+      },
+      {
+       "fait": "Consortium Énergétique Oural-Caspien (consortium_energetique_oural_caspien_breakdown) passe de « émergent » à « ascendant » après 2058 : elle existe toujours (elle peut perdre des lieux, des biens ou du pouvoir), ne la décris pas comme disparue.",
+       "slug": "consortium_energetique_oural_caspien_breakdown",
+       "sort": "change"
+      },
+      {
+       "fait": "Milices Extractivistes du Bassin du Congo (milices_extractivistes_du_bassin_du_congo_breakdown) passe de « émergent » à « marginal » après 2058 : elle existe toujours (elle peut perdre des lieux, des biens ou du pouvoir), ne la décris pas comme disparue.",
+       "slug": "milices_extractivistes_du_bassin_du_congo_breakdown",
+       "sort": "change"
+      },
+      {
+       "fait": "La zone Arc Eurasien Central (arc_eurasien_central) passe de « fragmenté » à « dominant » : le lieu subsiste.",
+       "slug": "arc_eurasien_central",
+       "sort": "zone"
+      },
+      {
+       "fait": "La zone Zone Golfe Persique–Levant (zone_golfe_levant) passe de « fragmenté » à « en_declin » : le lieu subsiste.",
+       "slug": "zone_golfe_levant",
+       "sort": "zone"
+      },
+      {
+       "fait": "La zone Bassin Caspien (Zone de Conflit Bloc IV–Bloc IX) (bassin_caspien_zone_conflit) passe de « fragmenté » à « stable » : le lieu subsiste.",
+       "slug": "bassin_caspien_zone_conflit",
+       "sort": "zone"
+      },
+      {
+       "fait": "La zone Détroit d'Ormuz (detroit_ormuz) passe de « fragmenté » à « disparu » : le lieu disparaît.",
+       "slug": "detroit_ormuz",
+       "sort": "zone"
+      }
+     ]
+    },
+    "date_imposee": 2058,
+    "impacts_imposes": {
+     "breakdown": [
+      {
+       "variable": "geopolitique_conflits",
+       "delta_level": 10,
+       "duree": 3,
+       "polarite": 1
+      },
+      {
+       "variable": "energie_ressources_critiques",
+       "delta_level": 8,
+       "duree": 3,
+       "polarite": 1
+      },
+      {
+       "variable": "organisation_territoires",
+       "delta_level": 6,
+       "duree": 4,
+       "polarite": 1
+      }
+     ]
+    },
+    "via_matrice_impose": true
+   }
+  },
+  "decision": {
+   "statut": "adopté",
+   "date": "2026-10-23T19:20",
+   "motif": null,
+   "empreinte": "ee1f2a4fd6da82bb",
+   "simulation_du": "2026-10-23T19:11",
+   "entree": {
+    "id": "pacte_tabriz_2058",
+    "description": "En 2058, exsangue après les frappes sur Ispahan–Fordow et coupé des marchés du Golfe, l'Iran rompt avec la Zone Golfe Persique–Levant et se place sous la protection de l'Arc Eurasien Central, qui l'absorbe : corridors terrestres vers la Caspienne, bases eurasiennes sur la côte iranienne d'Ormuz.",
+    "portee": "regionale",
+    "date_approximative": 2058,
+    "intensite": "forte",
+    "persistance": "durable",
+    "scenarios": [
+     "breakdown"
+    ],
+    "variables_hint": [
+     "geopolitique_conflits",
+     "energie_ressources_critiques",
+     "organisation_territoires"
+    ],
+    "variables_hint_count": 3,
+    "source": "et_si_pacte_tabriz_2058",
+    "acteurs_hint": [
+     "corridors_eurasiens_convoyage_breakdown",
+     "factions_energetiques_heritieres_des_pactes_abs_breakdown",
+     "consortium_energetique_oural_caspien_breakdown",
+     "milices_extractivistes_du_bassin_du_congo_breakdown"
+    ],
+    "acteurs_hint_count": 4,
+    "faits_imposes": {
+     "breakdown": [
+      {
+       "fait": "À partir de 2058, l'Iran fait partie de l'Arc Eurasien Central ; il n'appartient plus à la Zone Golfe Persique–Levant.",
+       "sort": "contrainte"
+      },
+      {
+       "fait": "L'Arc Eurasien Central dispose de bases sur la côte iranienne du détroit d'Ormuz.",
+       "sort": "contrainte"
+      },
+      {
+       "fait": "Les Venelles — Corridors Eurasiens Convoyage (corridors_eurasiens_convoyage_breakdown) passe de « déclinant » à « ascendant » après 2058 : elle existe toujours (elle peut perdre des lieux, des biens ou du pouvoir), ne la décris pas comme disparue.",
+       "slug": "corridors_eurasiens_convoyage_breakdown",
+       "sort": "change"
+      },
+      {
+       "fait": "Factions Énergétiques Héritières des Pactes ABS (factions_energetiques_heritieres_des_pactes_abs_breakdown) passe de « émergent » à « dominant » après 2058 : elle existe toujours (elle peut perdre des lieux, des biens ou du pouvoir), ne la décris pas comme disparue.",
+       "slug": "factions_energetiques_heritieres_des_pactes_abs_breakdown",
+       "sort": "change"
+      },
+      {
+       "fait": "Consortium Énergétique Oural-Caspien (consortium_energetique_oural_caspien_breakdown) passe de « émergent » à « ascendant » après 2058 : elle existe toujours (elle peut perdre des lieux, des biens ou du pouvoir), ne la décris pas comme disparue.",
+       "slug": "consortium_energetique_oural_caspien_breakdown",
+       "sort": "change"
+      },
+      {
+       "fait": "Milices Extractivistes du Bassin du Congo (milices_extractivistes_du_bassin_du_congo_breakdown) passe de « émergent » à « marginal » après 2058 : elle existe toujours (elle peut perdre des lieux, des biens ou du pouvoir), ne la décris pas comme disparue.",
+       "slug": "milices_extractivistes_du_bassin_du_congo_breakdown",
+       "sort": "change"
+      },
+      {
+       "fait": "La zone Arc Eurasien Central (arc_eurasien_central) passe de « fragmenté » à « dominant » : le lieu subsiste.",
+       "slug": "arc_eurasien_central",
+       "sort": "zone"
+      },
+      {
+       "fait": "La zone Zone Golfe Persique–Levant (zone_golfe_levant) passe de « fragmenté » à « en_declin » : le lieu subsiste.",
+       "slug": "zone_golfe_levant",
+       "sort": "zone"
+      },
+      {
+       "fait": "La zone Bassin Caspien (Zone de Conflit Bloc IV–Bloc IX) (bassin_caspien_zone_conflit) passe de « fragmenté » à « stable » : le lieu subsiste.",
+       "slug": "bassin_caspien_zone_conflit",
+       "sort": "zone"
+      },
+      {
+       "fait": "La zone Détroit d'Ormuz (detroit_ormuz) passe de « fragmenté » à « disparu » : le lieu disparaît.",
+       "slug": "detroit_ormuz",
+       "sort": "zone"
+      }
+     ]
+    },
+    "date_imposee": 2058,
+    "impacts_imposes": {
+     "breakdown": [
+      {
+       "variable": "geopolitique_conflits",
+       "delta_level": 10,
+       "duree": 3,
+       "polarite": 1
+      },
+      {
+       "variable": "energie_ressources_critiques",
+       "delta_level": 8,
+       "duree": 3,
+       "polarite": 1
+      },
+      {
+       "variable": "organisation_territoires",
+       "delta_level": 6,
+       "duree": 4,
+       "polarite": 1
       }
      ]
     },

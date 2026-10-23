@@ -1,19 +1,19 @@
-# Audit du lore — dernier lancement (2026-09-26 20:16)
+# Audit du lore — dernier lancement (2026-10-23 18:42)
 
-Scénarios : reference
+Scénarios : breakdown
 
 ---
 
-# Audit du lore — reference
+# Audit du lore — breakdown
 
-*Généré par `audit_lore.py` le 2026-09-26 20:16 — réécrit à chaque run, ne pas éditer. Règles : `documentation/lore_regles.yaml`.*
+*Généré par `audit_lore.py` le 2026-10-23 18:42 — réécrit à chaque run, ne pas éditer. Règles : `documentation/lore_regles.yaml`.*
 
 ## Résumé
 
-- Fiches analysées : 190 (+ 14 événements) (+ 14 articles)
-- Règles de lore — **erreurs : 0**, à relire : 2
+- Fiches analysées : 149 (+ 16 événements)
+- Règles de lore — **erreurs : 0**, à relire : 17
 - Quarantaine (fiche active localisée en zone interdite) : 0
-- Transnationales localisées dans le texte (info) : 48
+- Transnationales localisées dans le texte (info) : 6
 - Relations à sens unique à corriger : 0 — contradictoires : 0
 - Relations inter-scénarios (erreurs) : 0
 
@@ -37,62 +37,39 @@ Rien à corriger.
 
 ## 5. Règles de lore — à relire
 
-**ergo_wian_non_democratique** — Ergo-Wian est un gouvernement-entreprise NON démocratique : ni élections, ni suffrage, ni dirigeants élus. À relire : une phrase qui associe Ergo-Wian à la démocratie ne doit le faire que pour la nier ou pour parler de ceux qui s'y opposent.
-- `ergo_wian_sovereign_holdings_reference` (instance, description_journalistique) — **Ergo-Wian + démocratie** : « Depuis son siège social flottant au-dessus de l'ancienne ville de Rotterdam, Ergo-Wian Sovereign Holdings règne sur un archipel de territoires où la démocratie a été remplacée par des contrats à durée déterminée. »
-- `ergo_wian_sovereign_holdings_reference` (instance, description_journalistique) — **Ergo-Wian + vote** : « Son modèle, exporté via des partenariats avec des États en faillite, a fait d'Ergo-Wian le premier 'gouvernement-entreprise' coté en Bourse, où les actionnaires votent les lois comme on vote des dividendes. »
+**agence_stabilisation_climatique_disparu_2076** — Le Bureau de Coordination d'Urgence Climatique (Résidu AMSC) disparaît en 2076 avec la destruction de Genève (destruction_geneve_2076) : toute mention au présent après 2076 est fausse.
+- `agence_stabilisation_climatique_breakdown` (instance, name) — **Résidu AMSC** : « Résidu AMSC — Bureau de Coordination d'Urgence Climatique »
+- `agence_stabilisation_climatique_breakdown` (instance, name) — **Bureau de Coordination d'Urgence Climatique** : « Résidu AMSC — Bureau de Coordination d'Urgence Climatique »
+- `agence_stabilisation_climatique_breakdown` (instance, localisation.lieu) — **Bureau de Coordination d'Urgence Climatique** : « Genève — tour abritant le Bureau de Coordination d'Urgence Climatique »
+- `agence_stabilisation_climatique_breakdown` (instance, description_journalistique) — **Bureau de Coordination d'Urgence Climatique** : « Le Bureau de Coordination d'Urgence Climatique — dernier souffle de l'ancienne AMSC — émettait chaque semaine des « alertes planétaires » en trois langues mortes de la diplomatie internationale. »
+
+**geneve_bunker_institutions_disparu_2076** — Le Résidu de Genève — Le Palais des Fantômes disparaît en 2076 avec la destruction de Genève (destruction_geneve_2076) : toute mention au présent après 2076 est fausse.
+- `geneve_bunker_institutions_breakdown` (instance, name) — **Palais des Fantômes** : « Résidu de Genève — Le Palais des Fantômes »
+
+**tour_bcuc_geneve_disparu_2076** — La Tour BCUC — Le Comptoir des Ruines disparaît en 2076 avec la destruction de Genève (destruction_geneve_2076) : toute mention au présent après 2076 est fausse.
+- `destruction_geneve_2076_breakdown` (evenement, description) — **Tour BCUC** : « Les bâtiments des Archives Neutres, de l'Agence de Stabilisation Climatique et de la Tour BCUC s'effondrent sous l'effet des ondes de choc. »
+- `destruction_geneve_2076_breakdown` (evenement, description) — **Tour Bcuc** : « Les bâtiments des Archives Neutres, de l'Agence de Stabilisation Climatique et de la Tour BCUC s'effondrent sous l'effet des ondes de choc. »
+- `tour_bcuc_geneve_breakdown` (instance, name) — **Tour BCUC** : « Tour Bcuc Genève — Le Comptoir des Ruines »
+- `tour_bcuc_geneve_breakdown` (instance, name) — **Tour Bcuc** : « Tour Bcuc Genève — Le Comptoir des Ruines »
+- `tour_bcuc_geneve_breakdown` (instance, name) — **Comptoir des Ruines** : « Tour Bcuc Genève — Le Comptoir des Ruines »
+- `tour_bcuc_geneve_breakdown` (instance, localisation.lieu) — **Tour BCUC** : « Tour BCUC, Genève »
+- `tour_bcuc_geneve_breakdown` (instance, localisation.lieu) — **Tour Bcuc** : « Tour BCUC, Genève »
+- `tour_bcuc_geneve_breakdown` (instance, role_dans_scenario) — **Tour BCUC** : « Vestige d'une ancienne institution financière internationale basée à Genève, la Tour Bcuc fonctionne désormais comme une structure hybride semi-autonome après l'effondrement des organes de régulation globaux. »
+- `tour_bcuc_geneve_breakdown` (instance, role_dans_scenario) — **Tour Bcuc** : « Vestige d'une ancienne institution financière internationale basée à Genève, la Tour Bcuc fonctionne désormais comme une structure hybride semi-autonome après l'effondrement des organes de régulation globaux. »
+- `tour_bcuc_geneve_breakdown` (instance, responsabilites) — **Tour BCUC** : « La Tour Bcuc émet des certificats de reconnaissance de dette inter-fragments, tient un registre des accords économiques passés entre anciennes entités étatiques européennes, et propose une chambre d'arbitrage informelle pour les litiges com… »
+- `tour_bcuc_geneve_breakdown` (instance, responsabilites) — **Tour Bcuc** : « La Tour Bcuc émet des certificats de reconnaissance de dette inter-fragments, tient un registre des accords économiques passés entre anciennes entités étatiques européennes, et propose une chambre d'arbitrage informelle pour les litiges com… »
+- `tour_bcuc_geneve_breakdown` (instance, description_journalistique) — **Comptoir des Ruines** : « Le Comptoir des Ruines — surnom que lui ont collé les diplomates de la Ligue Méditerranéenne — émet toujours ses fameux 'certificats Bcuc', ces documents en papier pelure sécurisé que les fragments d'États acceptent encore comme base de nég… »
 
 ## 6. Transnationales mais localisées dans le texte (information)
 
 Souvent légitime (une organisation transnationale nomme les zones où elle agit) ; à rattacher seulement si la fiche vit en réalité dans une seule zone.
 
-- `agence_de_regulation_des_detroits_strategiques_ards_reference` — cite : Detroit (`detroit_compact_grands_lacs`)
-- `algorithmic_labor_exchange_reference` — cite : Nairobi (`nairobi_nexus_biosyn`), Singapour-Est (`singapour_est_nexcore`)
-- `alliance_blocs_souverains_reference` — cite : Pacte des Souverains (`pacte_des_souverains`)
-- `assemblee_territoires_reference` — cite : Genève (`geneve_conseil_biosocial`)
-- `aurelio_stahl_reference` — cite : Pacte des Souverains (`pacte_des_souverains`)
-- `blocs_signataires_du_pacte_energetique_multilateral_reference` — cite : Genève-Lac-Retraité (`geneve_lac_retreite`), Singapour-Est (`singapour_est_nexcore`), Genève (`geneve_conseil_biosocial`)
-- `collectifs_de_biopiraterie_inversee_reference` — cite : Corridors Eurasiens Périphériques (`corridors_eurasiens_peripheriques`)
-- `collectifs_de_journalisme_embarque_reference` — cite : Corridors Eurasiens Périphériques (`corridors_eurasiens_peripheriques`)
-- `communs_numeriques_agroecologiques_reference` — cite : Bruxelles-Nouveau (`bruxelles_nouveau`)
-- `confederation_des_megapoles_autonomes_reference` — cite : Detroit (`detroit_compact_grands_lacs`), Lyon-Métropole (`lyon_metropole`), São Paulo (`sao_paulo_spaar`), Singapour-Est (`singapour_est_nexcore`)
-- `consortium_des_grandes_plateformes_logistiques_globales_reference` — cite : Delta du Mékong (`delta_du_mekong`)
-- `consortiums_energetiques_opaques_reference` — cite : Corridors Eurasiens Périphériques (`corridors_eurasiens_peripheriques`), Nairobi (`nairobi_nexus_biosyn`)
-- `consortiums_mediatiques_corporatifs_reference` — cite : Bruxelles-Nouveau (`bruxelles_nouveau`), Singapour-Est (`singapour_est_nexcore`)
-- `consortiums_prives_de_gestion_des_donnees_critiques_reference` — cite : Singapour-Est (`singapour_est_nexcore`)
-- `cooperatives_agro_ecologiques_de_reconstruction_territoriale_reference` — cite : Europe Occidentale Reconstruite (`europe_occidentale_reconstruite`)
-- `cooperatives_agro_ecologiques_du_bassin_mediterraneen_reference` — cite : Plaines Ibériques Réhumidifiées (`plaines_iberiques_rehumidifiees`)
-- `cooperatives_energetiques_decentralisees_reference` — cite : Amériques Multipolaires (`ameriques_multipolaires`), Europe Occidentale Reconstruite (`europe_occidentale_reconstruite`)
-- `corporations_d_extraction_energetique_non_signataires_reference` — cite : Corridors Eurasiens Périphériques (`corridors_eurasiens_peripheriques`)
-- `deepfield_institute_reference` — cite : Amériques Multipolaires (`ameriques_multipolaires`), États-Unis post-2055 (`etats_unis_crise_constitutionnelle`)
-- `elias_mork_reference` — cite : Genève (`geneve_conseil_biosocial`)
-- `etats_a_tendance_centraliste_numerique_reference` — cite : Bloc Eurasien Central (`bloc_eurasien_central`), Arc Indo-Pacifique (`indo_pacifique_emergent`), Pacte des Souverains (`pacte_des_souverains`)
-- `federation_communs_territoriaux_reference` — cite : Tampere (`tampere_communs_territoriaux`), Valparaíso (`valparaiso_fct`)
-- `fonds_d_investissement_foncier_climatique_reference` — cite : Plaines Ibériques Réhumidifiées (`plaines_iberiques_rehumidifiees`)
-- `gelecek_meclisi_reference` — cite : Istanbul (`istanbul`), Nairobi (`nairobi_nexus_biosyn`)
-- `gouvernements_a_regime_de_productivite_mandatee_reference` — cite : Bloc Eurasien Central (`bloc_eurasien_central`), Arc Indo-Pacifique (`indo_pacifique_emergent`)
-- `hyphan_raghavan_reference` — cite : Pacte des Souverains (`pacte_des_souverains`), Bloc Eurasien Central (`bloc_eurasien_central`), Ouagadougou (`ouagadougou_polytechnique`)
-- `internationale_travailleurs_augmentes_reference` — cite : Nairobi (`nairobi_nexus_biosyn`), São Paulo (`sao_paulo_spaar`), Séoul (`seoul_ita`)
-- `ligue_des_metropoles_du_sud_pour_les_infrastructures_libres_reference` — cite : Guadalajara (`guadalajara_nexus`), Kinshasa (`kinshasa_accords_hydriques`), Nairobi (`nairobi_nexus_biosyn`), São Paulo (`sao_paulo_spaar`)
-- `lobbies_industriels_des_etats_non_signataires_reference` — cite : Pacte des Souverains (`pacte_des_souverains`), Corridors Eurasiens Périphériques (`corridors_eurasiens_peripheriques`), Sommets Itinérants du Pacte des Souverains (`sommets_itinerants_pacte`)
-- `meridian_assembly_reference` — cite : Archipels Flottants du Pacifique Sud (`pacifique_sud_archipels_flottants`)
-- `mouvement_pour_la_libre_circulation_des_personnes_et_des_donnees_reference` — cite : Guadalajara (`guadalajara_nexus`)
-- `nexcore_reference` — cite : Séoul (`seoul_ita`)
-- `nexus_biosyn_reference` — cite : Delta du Mékong (`delta_du_mekong`), Guadalajara (`guadalajara_nexus`), Nairobi (`nairobi_nexus_biosyn`), Genève (`geneve_conseil_biosocial`)
-- `oracle_des_seuils_reference` — cite : Delta du Mékong (`delta_du_mekong`)
-- `plateformes_informationnelles_dominantes_et_leurs_ia_de_moderation_reference` — cite : Helsinki (`helsinki_communs_numeriques`)
-- `prisme_global_reference` — cite : Delta du Gange (`delta_du_gange`)
-- `reseau_des_chercheurs_en_ethique_des_systemes_distribues_reference` — cite : Genève-Lac-Retraité (`geneve_lac_retreite`), Helsinki (`helsinki_communs_numeriques`), Singapour-Est (`singapour_est_nexcore`), Genève (`geneve_conseil_biosocial`)
-- `reseau_des_metropoles_cotieres_adaptees_reference` — cite : Singapour-Est (`singapour_est_nexcore`), Valparaíso (`valparaiso_fct`)
-- `reseau_des_villes_etats_pilotes_en_gouvernance_participative_reference` — cite : Guadalajara (`guadalajara_nexus`), Helsinki (`helsinki_communs_numeriques`), Lyon-Métropole (`lyon_metropole`), Ouagadougou (`ouagadougou_polytechnique`)
-- `reseau_des_villes_refuge_pour_travailleurs_desaugmentes_reference` — cite : Bruxelles-Nouveau (`bruxelles_nouveau`), Guadalajara (`guadalajara_nexus`), Tampere (`tampere_communs_territoriaux`)
-- `reseau_hospitalier_hybride_eurasiatique_reference` — cite : Corridors Eurasiens Périphériques (`corridors_eurasiens_peripheriques`), Tbilissi (`tbilissi_noeud_mnemos`)
-- `reseau_meshcommons_netsolidaire_reference` — cite : Helsinki (`helsinki_communs_numeriques`), Ouagadougou (`ouagadougou_polytechnique`)
-- `reseau_mnemos_reference` — cite : Tbilissi (`tbilissi_noeud_mnemos`)
-- `reseaux_de_lanceurs_d_alerte_institutionnels_dissidents_reference` — cite : Genève-Lac-Retraité (`geneve_lac_retreite`), Helsinki (`helsinki_communs_numeriques`), Genève (`geneve_conseil_biosocial`)
-- `reseaux_de_medecine_traditionnelle_augmentee_reference` — cite : São Paulo (`sao_paulo_spaar`)
-- `the_tidewater_canon_reference` — cite : Pacte des Souverains (`pacte_des_souverains`)
-- `universites_et_think_tanks_en_zones_de_liberte_academique_reference` — cite : Nairobi (`nairobi_nexus_biosyn`), Genève (`geneve_conseil_biosocial`), Helsinki (`helsinki_communs_numeriques`), Ouagadougou (`ouagadougou_polytechnique`)
-- `zones_grises_globales_reference` — cite : Nairobi (`nairobi_nexus_biosyn`)
+- `blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown` — cite : Corridor Oural-Caspien (`corridor_oural_caspien`)
+- `enclaves_technologiques_survivantes_breakdown` — cite : Enclaves Finlandaises (`enclaves_finlandaises`)
+- `factions_etatiques_residuelles_de_souverainete_hydrique_breakdown` — cite : Kivu Disputé (`kivu_dispute`)
+- `flux_migratoires_non_integrables_breakdown` — cite : Arc Sahélo-Méditerranéen (`arc_sahelo_mediterraneen`)
+- `milices_contractuelles_des_anciens_etats_membres_breakdown` — cite : Corridor des Lithiums (`corridor_lithium_bouches`)
+- `reseau_des_organisations_humanitaires_hors_cadre_onusien_breakdown` — cite : Bassorah (`bassorah_exode`)
 
 ## 7. Relations inter-scénarios (erreurs : les scénarios sont des mondes parallèles)
 

@@ -3,9 +3,9 @@
 Bascule évaluée : `ameriques_multipolaires` → `bresil_occupe`
 
 ## Sous-zones potentiellement orphelines (4)
+- `sao_paulo_ita` (São Paulo, niveau 2) — origine : Brésil
 - `amazonie_consortium_viva` (Bassin Amazonien, niveau 2) — origine : Brésil
 - `sao_paulo_spaar` (São Paulo — Périphéries et SPAAR, niveau 3) — origine : Brésil
-- `sao_paulo_ita` (São Paulo, niveau 2) — origine : Brésil
 - `sertao_nordeste_bresilien` (Sertão — Nordeste Brésilien, niveau 2) — origine : Brésil
 
 ## Instances/événements liés structurellement (19)

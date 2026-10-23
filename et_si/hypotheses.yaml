@@ -472,3 +472,37 @@ hypotheses:
         - pays: Écosse
           action: absorber
           zone: europe_occidentale_reconstruite
+
+  - id: pacte_tabriz_2058
+    nom: Pacte de Tabriz
+    description: >
+      En 2058, exsangue après les frappes sur Ispahan–Fordow et coupé des marchés du Golfe,
+      l'Iran rompt avec la Zone Golfe Persique–Levant et se place sous la protection de l'Arc
+      Eurasien Central, qui l'absorbe : corridors terrestres vers la Caspienne, bases
+      eurasiennes sur la côte iranienne d'Ormuz.
+    date: 2058
+    mode: choc
+    persistance: durable
+    via_matrice: true
+    scenarios: [breakdown]
+    contraintes:
+      - "À partir de 2058, l'Iran fait partie de l'Arc Eurasien Central ; il n'appartient plus à la Zone Golfe Persique–Levant."
+      - "L'Arc Eurasien Central dispose de bases sur la côte iranienne du détroit d'Ormuz."
+    impacts:
+      - variable: geopolitique_conflits
+        delta_level: 10
+        polarite: 1
+        duree: 3
+      - variable: energie_ressources_critiques
+        delta_level: 8
+        polarite: 1
+        duree: 3
+      - variable: organisation_territoires
+        delta_level: 6
+        polarite: 1
+        duree: 4
+    geographie:
+      breakdown:
+        - pays: Iran
+          action: absorber
+          zone: arc_eurasien_central

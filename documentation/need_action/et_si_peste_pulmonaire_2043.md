@@ -1,6 +1,6 @@
 # Et si ? — Pandémie de peste pulmonaire
 
-*Simulation du 2026-10-10 20:30 — lecture seule, rien n'a été injecté (simulateur v8.12).*
+*Simulation du 2026-10-23 18:20 — lecture seule, rien n'a été injecté (simulateur v8.25).*
 
 En 2043, une souche de peste pulmonaire résistante aux antibiotiques se diffuse sur tous les continents et tue un quart de la population mondiale en trois ans. Villes désertées, chaînes de production rompues, frontières fermées, effondrement des systèmes de santé, puis lente recomposition.
 
@@ -34,7 +34,7 @@ _(récit construit par le script)_
 |---|---|---|---|---|---|
 | sante_biotechnologies | 85,0 → 99,0 | 89,3 | 100,0 | **+10,7** | direct |
 | frontieres_du_systeme | 85,0 → 96,4 | 91,4 | 100,0 | **+8,6** | direct |
-| gouvernance_institutions | 80,0 → 90,7 | 93,2 | 99,9 | **+6,7** | direct |
+| gouvernance_institutions | 80,0 → 90,7 | 93,5 | 99,9 | **+6,4** | direct |
 | demographie_mobilite_humaine | 90,0 → 99,9 | 96,6 | 100,0 | **+3,4** | direct |
 | valeurs_culture_tempo_sociale | 90,0 | 95,4 | 97,5 | **+2,1** | propagé |
 | climat_environnement_global | 95,0 → 90,0 | 99,6 | 98,0 | **-1,6** | direct |
@@ -53,35 +53,228 @@ _(récit construit par le script)_
 
 ### Lecture des conséquences (IA, propositions vérifiées — rien n'est écrit)
 
-_(résultat repris du cache : même hypothèse, mêmes effets — `--refaire` pour relancer)_
-
-La pandémie de peste pulmonaire résistante (2043-2046) accélère brutalement la fragmentation du monde Ourrassol en ciblant les nœuds urbains denses et les infrastructures logistiques déjà fragilisées. Elle ne crée pas de nouveaux territoires inhabitables, mais elle renforce les dynamiques de repli régional, de privatisation des services et de contestation des autorités centrales. Les zones les plus résilientes (Arctique Nordark, Asie-Pacifique) limitent les dégâts grâce à leur faible densité, tandis que les régions fragmentées (Afrique de l'Ouest, Méditerranée) basculent dans des logiques de survie locale. Le choc sanitaire ne modifie pas la géographie politique, mais il cristallise des rapports de force préexistants. _(ampleur : forte)_
+La pandémie de peste pulmonaire résistante (2043-2046) accélère brutalement la fragmentation du monde Ourrassol en ciblant les zones urbaines denses et les systèmes de santé déjà fragiles. Elle ne crée pas de nouveaux territoires, mais renforce les logiques de repli régional, de contrôle des flux et de privatisation des ressources critiques. Les entités directement liées aux nœuds logistiques, aux villes-portuaires et aux corridors d'approvisionnement sont les plus touchées, tandis que les zones stables ou émergentes (comme l'Arctique Nordark ou l'Australie) encaissent le choc sans basculer. Le scénario breakdown passe d'une lente désintégration à une crise aiguë, mais évite une apocalypse : la recomposition s'amorce dès les années 2050, avec des acteurs adaptés à un monde où la mobilité humaine et la gouvernance centralisée sont durablement affaiblies. _(ampleur : forte)_
 
 **Trajectoires d'entités**
-- Ligue Méditerranéenne des Villes-États Portuaires (`ligue_mediterraneenne_des_villes_etats_portuaires_breakdown`) : émergent → **ascendant** — Les villes portuaires méditerranéennes deviennent des refuges logistiques et sanitaires, capitalisant sur leur capacité à contrôler les flux malgré l'effondrement des États centraux.
-- Bloc de Johannesburg (`bloc_de_johannesburg_breakdown`) : émergent → **ascendant** — L'Afrique australe, moins touchée par la pandémie grâce à sa démographie dispersée, voit Johannesburg émerger comme un pôle de stabilité relative, attirant des flux de réfugiés et de capitaux.
-- Conglométrat sino-sibérien Bohai Transit (`conglometrat_sino_siberien_bohai_transit_breakdown`) : émergent → **dominant** — Les corridors sino-sibériens deviennent incontournables pour les échanges eurasiatiques, la Chine et la Russie profitant du vide logistique pour imposer leur contrôle.
-- Ligue Hanséatique Baltique — Le Sceau du Gotland (`hanse_baltique_breakdown`) : ascendant → **mature** — La Ligue Hanséatique Baltique consolide son rôle de médiateur commercial en Europe du Nord, où la pandémie a affaibli les États sans remettre en cause ses réseaux.
-- Administration Résiduelle de Mourmansk — Le Bastion du Détroit Gelé (`district_mourmansk_residuel_breakdown`) : résiduel → **disparu** — L'effondrement démographique et logistique de Mourmansk rend toute administration résiduelle obsolète, le territoire étant absorbé par les factions arctiques.
+- Ligue Méditerranéenne des Villes-États Portuaires (`ligue_mediterraneenne_des_villes_etats_portuaires_breakdown`) : émergent → **ascendant** — Les villes-portuaires méditerranéennes deviennent des hubs de survie et de recomposition politique, capitalisant sur leur capacité à contrôler les flux maritimes et à imposer des quarantaines.
+- Bloc de Johannesburg (`bloc_de_johannesburg_breakdown`) : émergent → **ascendant** — Johannesburg émerge comme un pôle de stabilité relative en Afrique australe, attirant les flux de réfugiés et les investissements résiduels.
+- Conglométrat sino-sibérien Bohai Transit (`conglometrat_sino_siberien_bohai_transit_breakdown`) : émergent → **mature** — Le corridor sino-sibérien se renforce en devenant un axe vital pour les échanges intra-asiatiques, moins dépendant des flux globaux.
+- Ligue Hanséatique Baltique — Le Sceau du Gotland (`hanse_baltique_breakdown`) : ascendant → **dominant** — La Ligue Hanséatique Baltique consolide son contrôle sur les ports de la mer Baltique, devenant un acteur clé de la logistique nord-européenne post-pandémie.
+- Milices Extractivistes du Bassin du Congo (`milices_extractivistes_du_bassin_du_congo_breakdown`) : émergent → **déclinant** — L'effondrement démographique et les quarantaines réduisent leur capacité à exploiter les ressources du Kivu, les rendant moins centrales.
 
 **Relations**
-- opposition nouvelle : Ligue Méditerranéenne des Villes-États Portuaires ↔ Carthage Nord Nexcore — Le Joug du Détroit — La Ligue conteste le contrôle milicien de Carthage-Nord sur les flux méditerranéens, exacerbé par la pandémie qui a polarisé les accès aux ressources.
-- opposition nouvelle : Compact des Grands Lacs — Le Mur d'Eau ↔ États-Fragments en Guerre pour les Stations Atmosphériques — Le Compact des Grands Lacs entre en conflit avec les États-Fragments pour le contrôle des stations de filtration d'air, devenues vitales après la pandémie.
-- alliance nouvelle : Kalaallit Nunaat Sovereign Fund — Fonds des Glaces Libérées ↔ Factions Militaires Résiduelles de l'Ex-OTAN Nordique — Le Fonds des Glaces Libérées s'allie aux factions OTAN résiduelles pour sécuriser les corridors arctiques contre les milices locales, dans un contexte de pénurie post-pandémique.
-- opposition nouvelle : Bloc de Johannesburg ↔ Milices Extractivistes du Bassin du Congo — Johannesburg tente de reprendre le contrôle des ressources du Kivu, accaparées par les milices après l'effondrement des États centraux africains.
-- alliance rompue : Conglométrat sino-sibérien Bohai Transit ↔ Les Venelles — Corridors Eurasiens Convoyage — La Chine et la Russie imposent un monopole sur les corridors eurasiatiques, marginalisant les convoyeurs indépendants après la pandémie.
-- opposition nouvelle : Enclaves Corporatives Fortifiées ↔ Flux Migratoires Non Intégrables — Les enclaves corporatives africaines renforcent leurs barrières contre les flux migratoires, devenus ingérables après la pandémie.
+- opposition nouvelle : Ligue Méditerranéenne des Villes-États Portuaires ↔ Carthage Nord Nexcore — Le Joug du Détroit — La Ligue conteste l'hégémonie de Carthage Nord sur les flux méditerranéens, notamment les contrôles sanitaires et les taxes imposées aux navires.
+- opposition nouvelle : Compact des Grands Lacs — Le Mur d'Eau ↔ États Fragmentés Nationalisant les Stocks — Le Compact des Grands Lacs entre en conflit avec les États voisins qui tentent de saisir ses stocks d'eau et de médicaments.
+- alliance nouvelle : Kalaallit Nunaat Sovereign Fund — Fonds des Glaces Libérées ↔ Factions Militaires Résiduelles de l'Ex-OTAN Nordique — Le Fonds des Glaces Libérées s'allie avec les factions militaires nordiques pour sécuriser les corridors arctiques et les bases logistiques.
+- opposition nouvelle : Bloc de Johannesburg ↔ Milices Extractivistes du Bassin du Congo — Johannesburg tente de limiter l'influence des milices du Kivu sur les routes commerciales vers l'Afrique australe.
+- alliance nouvelle : Conglométrat sino-sibérien Bohai Transit ↔ Seigneuries Logistiques Armées — Bohai Transit s'appuie sur les seigneuries logistiques pour sécuriser ses convois en échange de ressources et de protection.
+- alliance nouvelle : Front Humanitaire d'Urgence Non Affilié ↔ Communautés Religieuses des Relais Physiques — Les deux entités collaborent pour acheminer des secours et des informations dans les zones sinistrées, malgré leurs différences idéologiques.
 
 **Statut des zones**
-- Afrique de l'Ouest – Nœuds Lagos et Sahel (`afrique_de_louest_lagos_sahel`) : fragmenté → **en_declin** — La pandémie décime les populations urbaines (Lagos, Sahel) et accélère l'effondrement des structures étatiques, déjà fragilisées.
-- Espace Nord-Américain Fragmenté (`espace_nord_americain_fragmente`) : fragmenté → **en_declin** — Les États-Unis et le Canada subissent un effondrement démographique et institutionnel, les zones côtières résiduelles ne suffisant pas à maintenir une cohérence territoriale.
+- Afrique de l'Ouest – Nœuds Lagos et Sahel (`afrique_de_louest_lagos_sahel`) : fragmenté → **en_declin** — La pandémie décime les populations urbaines de Lagos et du Sahel, affaiblissant durablement les structures politiques et économiques de la région.
+- Espace Nord-Américain Fragmenté (`espace_nord_americain_fragmente`) : fragmenté → **en_declin** — Les États-Unis et le Canada subissent un effondrement démographique et institutionnel, accélérant la fragmentation territoriale.
+- Zone Golfe Persique–Levant (`zone_golfe_levant`) : fragmenté → **en_declin** — La pandémie aggrave les tensions géopolitiques et économiques dans une région déjà instable, réduisant son influence résiduelle.
 
 **Nouvelles entités plausibles**
-- Culte des Souffles Purs (arc_sahelo_mediterraneen) : Communauté religieuse sanitaire — Né dans les ruines des villes méditerranéennes, ce culte prône la purification par l'isolement et contrôle des relais de soins post-pandémiques.
-- Guilde des Convoyeurs Sanitaires (corridors_eurasiens_convoyage) : Milice logistique spécialisée — Les derniers convoyeurs eurasiatiques se structurent en guilde armée pour protéger les flux de médicaments et de nourriture contre les pillards.
-- Bloc des Survivants des Grands Lacs (grandes_lacs_compact_eau) : Alliance de communautés riveraines — Les communautés des Grands Lacs s'unissent pour gérer les ressources hydriques et sanitaires, marginalisant les anciennes institutions.
+- Quarantaines Permanentes du Détroit de Gibraltar (arc_sahelo_mediterraneen) [territoire] : Zone de contrôle sanitaire militarisée entre l'Europe et l'Afrique, verrouillant les flux migratoires et commerciaux. — La pandémie impose la création de zones tampons pour limiter la propagation de la maladie, devenant des entités politiques de facto.
+- Réseau des Villes-Sanctuaires Méditerranéennes (arc_sahelo_mediterraneen) [réseau] : Alliance informelle de villes portuaires (Marseille, Barcelone, Tunis) offrant des havres sanitaires et logistiques aux populations déplacées. — Les villes-portuaires s'organisent pour mutualiser leurs ressources médicales et sécuriser leurs accès maritimes.
+- Corporation des Bio-Surveillants du Sahel (afrique_de_louest_lagos_sahel) [entreprise] : Entité privée contrôlant les tests, les quarantaines et les passeports sanitaires dans les corridors ouest-africains. — Le vide institutionnel permet à des acteurs privés de monopoliser la gestion sanitaire, devenant des pouvoirs parallèles.
 
-_Propositions écartées au contrôle (5) : trajectoire : grandes_lacs_compact_eau_breakdown déjà dominant (aucun changement) ; trajectoire : kalaallit_nunaat_sovereign_fund_breakdown déjà dominant (aucun changement) ; trajectoire : entité inconnue 'nairobi_crrc' ; statut de zone : arc_sahelo_mediterraneen déjà fragmenté ; statut de zone : geneve_bunker_institutions → disparu écarté, hypothèse sans effet territorial (`carte: non`)_
+_Propositions écartées au contrôle (4) : trajectoire : carthage_nord_nexcore_breakdown déjà dominant (aucun changement) ; trajectoire : grandes_lacs_compact_eau_breakdown déjà dominant (aucun changement) ; trajectoire : kalaallit_nunaat_sovereign_fund_breakdown déjà dominant (aucun changement) ; statut de zone : geneve_bunker_institutions → disparu écarté, hypothèse sans effet territorial (`carte: non`)_
+
+### Passe exhaustive (IA, toutes les fiches — rien n'est écrit)
+
+160 fiche(s) relue(s) en 11 lot(s).
+Verdicts : **3 fiche(s) à corriger**, 137 avec des changements possibles seulement, 20 inchangée(s).
+
+_Contre-lecture des obligatoires : 22 vérifié(s), 3 confirmé(s), 19 rétrogradé(s) en possible._
+
+#### Obligatoire — la fiche devient fausse sans ce changement
+
+**Textes**
+- instance Les Fragments NexCore (`nexcore_breakdown`) : « NexCore s'est fragmenté en 2051 lors du collapse des infrastructures numériques mondiales » — contredit par : La pandémie de 2043-2046 a provoqué un effondrement des infrastructures bien avant 2051. — La pandémie a accéléré la rupture des interconnexions globales, rendant la date de 2051 trop tardive pour la fragmentation de NexCore. [lien variable : frontieres_du_systeme (+8.6)]
+- instance Os Algoritmos Quebrados — Fragmentos da RPDA (`rede_paulista_de_distribuicao_algoritmica_breakdown`) : « sans mise à jour des données démographiques depuis 2091 » — contredit par : La pandémie de 2043-2046 a tué 25 % de la population mondiale, rendant les données démographiques obsolètes bien avant 2091. — La date de 2091 est fausse : les données sont devenues inutilisables dès 2046. [lien variable : demographie_mobilite_humaine (+3.4)]
+- evenement L'Exode des Grands Brûlés — La Déroute du Bureau des Résidus (`exode_midwest_grands_lacs_breakdown`) : « L'été 2044 marque la fin du Midwest habitable » — contredit par : La pandémie de peste pulmonaire (2043-2046) rend impossible la survie dans le Midwest dès 2043, et non 2044. — La pandémie (2043-2046) et ses conséquences (effondrement des systèmes de santé, désertification des villes) rendent le Midwest inhabitable dès 2043, et non 2044. [lien variable : demographie_mobilite_humaine (+3.4), sante_biotechnologies (+10.7)]
+
+#### Possible — conséquence plausible, la fiche reste vraie sans elle
+
+_Rétrogradés d'obligatoire à possible par les contrôles : 21 changement de degré, 9 contre-lecture nuance, 8 lien territoire alors qu'aucun territoire précis n'est touché, 6 contre-lecture aggravation, 5 extrait introuvable dans la fiche, 4 atténue le rôle sans le contredire, 2 contre-lecture omission, 2 contre-lecture chronologie, 1 au conditionnel, 1 élargit le rôle sans le contredire._
+
+**À lire en priorité (20 fiches sur 138)** — choisies et ordonnées par l'IA
+
+- **Brigades Médicales Itinérantes** (`brigades_medicales_itinerantes_breakdown`) — _Effondrement des systèmes de santé formels, nécessité critique des brigades médicales itinérantes_
+  - Brigades Médicales Itinérantes (`brigades_medicales_itinerantes_breakdown`) : émergent → **ascendant** — La pandémie détruit les systèmes de santé formels, rendant les brigades médicales itinérantes indispensables et accélérant leur ascension. [lien variable : sante_biotechnologies (+10.7)] _(rétrogradé : changement de degré)_ — contredit : Le rôle décrit les brigades comme 'l'un des derniers filets de soin fonctionnels', mais leur trajectoire reste 'émergent'.
+- **Collectifs de Santé Communautaire Autogérée** (`collectifs_de_sante_communautaire_autogeree_breakdown`) — _Remplacement des systèmes de santé publics effondrés par des collectifs autogérés_
+  - Collectifs de Santé Communautaire Autogérée (`collectifs_de_sante_communautaire_autogeree_breakdown`) : émergent → **ascendant** — La pandémie de peste pulmonaire résistante a provoqué l'effondrement des systèmes de santé publics, rendant les collectifs de santé communautaires indispensables et incontournables. [lien variable : sante_biotechnologies (+10.7)] _(rétrogradé : changement de degré)_ — contredit : La fiche ne mentionne pas l'impact de la pandémie sur les systèmes de santé, alors que celle-ci les a fait s'effondrer.
+  - instance Collectifs de Santé Communautaire Autogérée (`collectifs_de_sante_communautaire_autogeree_breakdown`) : « Dans un contexte de breakdown, ces collectifs pallient l'effondrement des systèmes de santé publics en organisant des soins de base à l'échelle communautaire » — contredit par : La pandémie a provoqué cet effondrement, ce qui n'est pas mentionné dans la fiche. — La fiche doit explicitement lier l'effondrement des systèmes de santé à la pandémie pour rester vraie. [lien variable : sante_biotechnologies (+10.7)] _(rétrogradé : contre-lecture omission)_ — La phrase ne mentionne pas la pandémie comme cause de l'effondrement, mais cela n'est pas contradictoire. La pandémie peut être une cause parmi d'autres.
+- **Réseaux Noirs Pharmaceutiques** (`reseaux_noirs_pharmaceutiques_breakdown`) — _Vide pharmaceutique comblé par les réseaux noirs, variable sante_biotechnologies +10.7_
+  - Réseaux Noirs Pharmaceutiques (`reseaux_noirs_pharmaceutiques_breakdown`) : émergent → **ascendant** — La pandémie de peste pulmonaire résistante (2043-2046) et l'effondrement des systèmes de santé officiels (variable sante_biotechnologies à +10.7) rendent ces réseaux incontournables pour les populations abandonnées, les faisant passer d'émergents à ascendants. [lien variable : sante_biotechnologies (+10.7)] _(rétrogradé : changement de degré)_ — contredit : La trajectoire 'émergent' devient fausse car l'effondrement des systèmes de santé officiels (variable sante_biotechnologies) rend ces réseaux indispensables et en forte croissance.
+  - instance Réseaux Noirs Pharmaceutiques (`reseaux_noirs_pharmaceutiques_breakdown`) : « Dans le scénario breakdown, comblent le vide laissé par l'effondrement des systèmes de santé officiels, devenant paradoxalement des fournisseurs de soins de facto pour des populations abandonnées » — Le rôle de ces réseaux s'élargit naturellement avec la pandémie, mais la phrase reste vraie sans modification. [lien variable : sante_biotechnologies (+10.7)] _(douteux : élargit le rôle sans le contredire)_
+- **Pirates Biologiques Open-Source** (`pirates_biologiques_open_source_breakdown`) — _Contournement des infrastructures sanitaires défaillantes, réponse open-source à la crise_
+  - Pirates Biologiques Open-Source (`pirates_biologiques_open_source_breakdown`) : émergent → **ascendant** — Leur rôle de contournement des infrastructures sanitaires défaillantes devient central, pas seulement émergent. [lien variable : sante_biotechnologies (+10.7)] _(rétrogradé : changement de degré)_ — contredit : La pandémie de peste pulmonaire résistante rend les solutions biologiques bricolées indispensables, alors que les systèmes officiels sont effondrés.
+- **Réseaux de Soigneurs Traditionnels** (`reseaux_de_soigneurs_traditionnels_breakdown`) — _Devenus principale source de soins dans les zones rurales, mobilité humaine réduite_
+  - Réseaux de Soigneurs Traditionnels (`reseaux_de_soigneurs_traditionnels_breakdown`) : émergent → **ascendant** — Ils ne comblent plus seulement un vide, mais deviennent la principale source de soins dans les zones rurales. [lien variable : sante_biotechnologies (+10.7)] _(rétrogradé : changement de degré)_ — contredit : La pandémie a détruit les infrastructures médicales formelles, rendant leur rôle de soin de proximité indispensable.
+- **Les Bouches de Sfax — Relais de la Faim Juste** (`sfax_relais_bouches_breakdown`) — _Réseau logistique alimentaire dominant, rupture des chaînes d'approvisionnement_
+  - Les Bouches de Sfax — Relais de la Faim Juste (`sfax_relais_bouches_breakdown`) : ascendant → **dominant** — La pandémie et ses conséquences (désertification des villes, rupture des chaînes d'approvisionnement) font de ce réseau un acteur dominant pour la survie régionale. [lien variable : demographie_mobilite_humaine (+3.4), sante_biotechnologies (+10.7)] _(rétrogradé : changement de degré)_ — contredit : La trajectoire 'ascendant' devient fausse car la pandémie et l'effondrement des flux (variables demographie_mobilite_humaine et sante_biotechnologies) rendent ce réseau indispensable pour la survie alimentaire et logistique en Méditerranée.
+  - instance Les Bouches de Sfax — Relais de la Faim Juste (`sfax_relais_bouches_breakdown`) : « Réseau informel de distribution alimentaire et logistique basé à Sfax, structuré autour de relais humains contrôlant les flux de bouche dans les zones portuaires méditerranéennes en déliquescence » — Leur rôle prend plus de poids avec la pandémie, mais la phrase reste vraie sans modification. [lien variable : demographie_mobilite_humaine (+3.4)] _(douteux : atténue le rôle sans le contredire)_
+- **Réseau Logistique Criminel Concurrent** (`reseau_logistique_criminel_concurrent_breakdown`) — _Chaos logistique accru, quasi-État dans les marges post-effondrement_
+  - Réseau Logistique Criminel Concurrent (`reseau_logistique_criminel_concurrent_breakdown`) : émergent → **dominant** — La pandémie a accru le chaos logistique, renforçant leur position de quasi-État dans les marges. [lien variable : frontieres_du_systeme (+8.6), systeme_economique_redistribution (+0.7)]
+- **Cartels Logistiques Régionaux** (`cartels_logistiques_regionaux_breakdown`) — _Fragmentation des chaînes d'approvisionnement, acteurs logistiques régionaux indispensables_
+  - Cartels Logistiques Régionaux (`cartels_logistiques_regionaux_breakdown`) : émergent → **ascendant** — La pandémie accélère la fragmentation des chaînes d'approvisionnement et renforce le rôle des acteurs logistiques régionaux, rendant leur ascension plus probable. [lien variable : frontieres_du_systeme (+8.6), systeme_economique_redistribution (+0.7)]
+  - instance Cartels Logistiques Régionaux (`cartels_logistiques_regionaux_breakdown`) : « Dans un scénario de breakdown, elles comblent le vide laissé par l'effondrement des chaînes d'approvisionnement centralisées, devenant des acteurs de pouvoir incontournables mais fragmentant davantage la cohérence territoriale » — Le rôle des cartels logistiques est renforcé par la pandémie, qui accentue l'effondrement des chaînes centralisées. [lien variable : frontieres_du_systeme (+8.6)] _(douteux : élargit le rôle sans le contredire)_
+- **Consortiums Logistiques Agro-Corporatifs** (`consortiums_logistiques_agro_corporatifs_breakdown`) — _Rupture des chaînes logistiques agro-corporatives, prédateurs de l'effondrement_
+  - Consortiums Logistiques Agro-Corporatifs (`consortiums_logistiques_agro_corporatifs_breakdown`) : émergent → **ascendant** — La pandémie accélère la rupture des chaînes logistiques, ce qui pourrait renforcer leur rôle de prédateurs de l'effondrement et les faire progresser vers une trajectoire ascendante, sans que cela soit obligatoire. [lien variable : frontieres_du_systeme (+8.6), systeme_economique_redistribution (+0.7)]
+  - instance Consortiums Logistiques Agro-Corporatifs (`consortiums_logistiques_agro_corporatifs_breakdown`) : « Dans le chaos du breakdown, les Consortiums Logistiques Agro-Corporatifs se repositionnent comme prédateurs de l'effondrement : là où les États reculent et où les chaînes mondiales se rompent, ils tentent d'imposer des monopoles régionaux sur la distribution alimentaire, transformant la dépendance logistique en » — La pandémie rend leur rôle encore plus pertinent, mais la phrase reste vraie sans modification. [lien variable : frontieres_du_systeme (+8.6)] _(douteux : atténue le rôle sans le contredire)_
+- **Blocs de Contrôle des Couloirs d'Approvisionnement Stratégiques** (`blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown`) — _Contrôle des couloirs d'approvisionnement stratégiques, fragmentation logistique accélérée_
+  - Blocs de Contrôle des Couloirs d'Approvisionnement Stratégiques (`blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown`) : émergent → **ascendant** — La pandémie accélère la fragmentation des chaînes logistiques, ce qui peut renforcer le rôle de ces blocs dans le contrôle des flux stratégiques. [lien variable : frontieres_du_systeme (+8.6)]
+- **Flux Migratoires Non Intégrables** (`flux_migratoires_non_integrables_breakdown`) — _Crise démographique et logistique sans précédent, saturation des flux migratoires_
+  - Flux Migratoires Non Intégrables (`flux_migratoires_non_integrables_breakdown`) : émergent → **dominant** — La pandémie crée une crise démographique et logistique sans précédent, ce qui transforme ces flux migratoires en un vecteur central de l'effondrement des mécanismes de gouvernance territoriale, bien au-delà d'un simple rôle émergent. [lien variable : demographie_mobilite_humaine (+3.4), gouvernance_institutions (+6.4)] _(rétrogradé : changement de degré)_ — contredit : La pandémie tue 25 % de la population mondiale et rompt les chaînes logistiques, ce qui rend les flux migratoires encore plus massifs et ingérables qu'avant 2043.
+  - instance Flux Migratoires Non Intégrables (`flux_migratoires_non_integrables_breakdown`) : « les flux migratoires non intégrables saturent successivement les nœuds urbains résiduels, dissolvent les derniers pactes d'accueil régionaux et forcent les entités territoriales encore stables à se militariser » — contredit par : Les villes denses sont les plus touchées par la pandémie (25 % de mortalité), ce qui réduit leur capacité à absorber ces flux migratoires dès 2043-2046. — La phrase suppose que les nœuds urbains résiduels existent encore comme points d'accueil, alors que la pandémie les a déjà fortement affaiblis dès 2043-2046. [lien variable : demographie_mobilite_humaine (+3.4), sante_biotechnologies (+10.7)] _(rétrogradé : atténue le rôle sans le contredire)_
+- **ONG de Gestion Migratoire Survivantes** (`ong_de_gestion_migratoire_survivantes_breakdown`) — _Gestion migratoire centrale, effondrement des institutions étatiques_
+  - ONG de Gestion Migratoire Survivantes (`ong_de_gestion_migratoire_survivantes_breakdown`) : émergent → **ascendant** — L'effondrement des institutions étatiques et la crise démographique aiguë obligent ces ONG à jouer un rôle central, bien au-delà d'un simple palliatif émergent. [lien variable : demographie_mobilite_humaine (+3.4)] _(rétrogradé : changement de degré)_ — contredit : La pandémie de 2043-2046 tue 25 % de la population mondiale et désorganise les flux migratoires, rendant la gestion des déplacements une priorité critique pour les survivants.
+- **Communautés Paysannes Réfugiées** (`communautes_paysannes_refugiees_breakdown`) — _Flux migratoires accrus, pression sur les territoires d'accueil_
+  - Communautés Paysannes Réfugiées (`communautes_paysannes_refugiees_breakdown`) : émergent → **ascendant** — La pandémie augmente les flux migratoires et la pression sur les territoires d'accueil, renforçant le rôle des communautés paysannes réfugiées. [lien variable : demographie_mobilite_humaine (+3.4), gouvernance_institutions (+6.4)]
+  - instance Communautés Paysannes Réfugiées (`communautes_paysannes_refugiees_breakdown`) : « Dans le scénario breakdown, incarnent la fragmentation des systèmes productifs alimentaires et la pression démographique sur les territoires d'accueil, tout en portant des savoir-faire agricoles menacés de disparition » — contredit par : La pandémie a tué 25 % de la population mondiale, ce qui modifie radicalement la pression démographique et les flux migratoires. — La fiche doit mentionner que la pandémie a amplifié ces dynamiques pour rester vraie. [lien variable : demographie_mobilite_humaine (+3.4)] _(rétrogradé : élargit le rôle sans le contredire)_
+- **Milices Agro-Défensives Locales** (`milices_agro_defensives_locales_breakdown`) — _Sécurité territoriale locale, affaiblissement des institutions étatiques_
+  - Milices Agro-Défensives Locales (`milices_agro_defensives_locales_breakdown`) : émergent → **ascendant** — La pandémie affaiblit les institutions étatiques et renforce les logiques de contrôle territorial local, élargissant le rôle des milices agro-défensives. [lien variable : gouvernance_institutions (+6.4), organisation_territoires (+1.4)]
+  - instance Milices Agro-Défensives Locales (`milices_agro_defensives_locales_breakdown`) : « Ils assurent une forme de sécurité territoriale de substitution là où les institutions ont cédé, contrôlant l'accès aux zones cultivables et aux stocks alimentaires » — La pandémie accélère l'effondrement des institutions, élargissant le rôle des milices comme acteurs de sécurité locale. [lien variable : gouvernance_institutions (+6.4)] _(douteux : élargit le rôle sans le contredire)_
+- **Milices d'Accaparement Hydrique** (`milices_d_accaparement_hydrique_breakdown`) — _Contrôle hydrique critique, effondrement des régulations publiques_
+  - Milices d'Accaparement Hydrique (`milices_d_accaparement_hydrique_breakdown`) : émergent → **ascendant** — La pandémie a accéléré l'effondrement des régulations hydriques publiques (gouvernance_institutions) et réduit la mobilité humaine, rendant les milices d'accaparement plus indispensables pour contrôler les ressources critiques dans un contexte de pénurie. [lien variable : gouvernance_institutions (+6.4) et demographie_mobilite_humaine (+3.4)]
+- **Factions Para-Étatiques Hydriques** (`factions_para_etatiques_hydriques_breakdown`) — _Fragmentation du pouvoir autour des ressources hydriques, mobilité réduite_
+  - Factions Para-Étatiques Hydriques (`factions_para_etatiques_hydriques_breakdown`) : émergent → **ascendant** — La pandémie accélère la fragmentation du pouvoir territorial autour des ressources hydriques, ce qui renforce le rôle de ces factions comme acteurs de gouvernance coercitive locale. [lien variable : gouvernance_institutions (+6.4), demographie_mobilite_humaine (+3.4)]
+- **Les Confédérations du Seuil Dernier** (`collectifs_du_seuil_breakdown`) — _Doctrine apocalyptique validée, attractivité renforcée dans un monde en crise_
+  - Les Confédérations du Seuil Dernier (`collectifs_du_seuil_breakdown`) : ascendant → **dominant** — La pandémie valide leur doctrine apocalyptique et renforce leur attractivité dans un monde en crise, favorisant leur ascension. [lien variable : valeurs_culture_tempo_sociale (+2.1), demographie_mobilite_humaine (+3.4)]
+- **Communes Libres du Rust Belt — Les Forges du Commun** (`mouvement_des_communes_du_rust_belt_breakdown`) — _Effondrement des grands employeurs, légitimité accrue des communes autogérées_
+  - Communes Libres du Rust Belt — Les Forges du Commun (`mouvement_des_communes_du_rust_belt_breakdown`) : ascendant → **dominant** — La pandémie a accéléré l'effondrement des grands employeurs et des institutions, rendant les communes autogérées du Rust Belt plus attractives et légitimes comme modèles de survie. [lien variable : demographie_mobilite_humaine (+3.4) et gouvernance_institutions (+6.4)]
+  - instance Communes Libres du Rust Belt — Les Forges du Commun (`mouvement_des_communes_du_rust_belt_breakdown`) : « Premier mouvement de communes urbaines à avoir atteint une taille critique dans les années 2030 » — La pandémie a pu renforcer leur visibilité comme modèle alternatif, élargissant leur influence culturelle et sociale. [lien variable : valeurs_culture_tempo_sociale (+2.1)] _(douteux : variable touchée seulement par propagation, élargit le rôle sans le contredire, extrait introuvable dans la fiche)_ _(extrait introuvable dans la fiche)_
+- **Communes Libres du Rust Belt — Les Forges du Commun** (`communes_rust_belt_breakdown`) — _Effondrement des structures étatiques fédérales, nœuds de résistance locale_
+  - Communes Libres du Rust Belt — Les Forges du Commun (`communes_rust_belt_breakdown`) : ascendant → **dominant** — La pandémie accélère l'effondrement des structures étatiques fédérales, ce qui pourrait renforcer leur rôle de nœuds de résistance locale et les faire progresser vers une position dominante, sans que cela soit obligatoire. [lien variable : demographie_mobilite_humaine (+3.4), gouvernance_institutions (+6.4)]
+  - instance Communes Libres du Rust Belt — Les Forges du Commun (`communes_rust_belt_breakdown`) : « Après l'effondrement des structures étatiques fédérales, ces communes organisent la survie locale autour de ressources partagées et de milices civiles » — La pandémie rend cet effondrement plus brutal et probable, mais la phrase reste vraie sans modification. [lien variable : gouvernance_institutions (+6.4)] _(douteux : atténue le rôle sans le contredire)_
+- **Ligue du Sahel Numérique — Les Nœuds d'Agadez** (`agadez_ligue_sahel_numerique_breakdown`) — _Repli régional renforcé, décentralisation des réseaux de soins traditionnels_
+  - Ligue du Sahel Numérique — Les Nœuds d'Agadez (`agadez_ligue_sahel_numerique_breakdown`) : ascendant → **dominant** — La pandémie réduit la mobilité humaine et renforce les logiques de repli régional, ce qui peut accroître l'importance des réseaux décentralisés comme la Ligue du Sahel Numérique pour les communautés isolées. [lien variable : demographie_mobilite_humaine (+3.4)]
+  - alliance nouvelle : Ligue du Sahel Numérique — Les Nœuds d'Agadez ↔ Réseaux de Soigneurs Traditionnels — L'effondrement des systèmes de santé formels peut pousser la Ligue à s'allier avec des réseaux de soins traditionnels pour compenser l'absence de structures médicales. [lien variable : sante_biotechnologies (+10.7)]
+
+**Autres fiches avec des changements possibles (118)**
+- Les Fantômes des Seuils : trajectoire résiduel → disparu ; texte « Ces entités résiduelles opèrent comme des observatoires… »
+- Carthage Nord Nexcore — Le Joug du Détroit : trajectoire dominant → mature ; texte « Il contrôle des infrastructures portuaires et logistiques… »
+- Les Venelles — Corridors Eurasiens Convoyage : trajectoire déclinant → résiduel ; alliance rompue avec Brigades Médicales Itinérantes
+- Les Enclaves du Nord — Fragments Finlandais : trajectoire déclinant → résiduel
+- États Fragmentés Nationalisant les Stocks : trajectoire émergent → ascendant ; opposition nouvelle avec Milices Extractivistes du Bassin du Congo
+- Factions Militaires Résiduelles de l'Ex-OTAN Nordique : trajectoire émergent → ascendant
+- Factions Sécessionnistes Agrariennes du Désert : trajectoire émergent → ascendant
+- Frente Sertão Livre — Les Noeuds du Dedans : trajectoire ascendant → dominant
+- Front Humanitaire d'Urgence Non Affilié : trajectoire émergent → ascendant ; texte « Assure une continuité minimale de secours et de… »
+- Fronts Populistes Anti-Technocratiques : trajectoire émergent → ascendant ; texte « Dans le scénario breakdown, ils incarnent la pression… »
+- Résidu de Genève — Le Palais des Fantômes : trajectoire disparu → historique ; texte « Vestige institutionnel de l'ancien système onusien et… »
+- Compact des Grands Lacs — Le Mur d'Eau : trajectoire dominant → mature ; texte « Anciennement accord interétatique, il s'est mué en pacte de… »
+- Milices de Contrôle Territorial : trajectoire émergent → ascendant ; texte « nées du vide laissé par l'effondrement progressif des États… »
+- Réseau des Courriers Nomades Sahélo-Méditerranéens : trajectoire émergent → ascendant
+- Réseau des Organisations Humanitaires Hors Cadre Onusien : trajectoire émergent → ascendant
+- Réseaux de solidarité horizontale post-effondrement : trajectoire émergent → ascendant
+- Seigneuries Logistiques Armées : trajectoire émergent → ascendant
+- Tour Bcuc Genève — Le Comptoir des Ruines : trajectoire disparu → historique
+- Fragments Terrafond : texte « Ce qui fut la Coopérative Terrafond n'existe plus comme… »
+- Les Protocoles Fantômes : texte « Les derniers protocoles de régulation IA ont été abandonnés… »
+- Chambre des Recours Algorithmiques — Ce qu'il en reste : trajectoire résiduel → disparu
+- Autorité du Passage Arctique — Ce qu'il en reste : trajectoire transformé → disparu
+- Amara Diallo-Nkosi : trajectoire résiduel → disparu
+- Pacte des Souverains — Ce qui en reste : trajectoire transformé → disparu
+- Nordark — Les Terres du Dessous : trajectoire ascendant → dominant
+- Cités-États Sécessionistes : trajectoire émergent → ascendant
+- Les Racines de l'Aube : trajectoire résiduel → marginal ; texte « Ce réseau clandestin et décentralisé agit comme un… »
+- Collectif des Climatologues Sans État : trajectoire émergent → ascendant
+- Collectif Hackers Décroissance-Infrastructure : trajectoire émergent → ascendant
+- Collectifs de Gardiens-Archivistes Itinérants : trajectoire émergent → ascendant
+- Collectifs de Hackers Archivistes des Interstices Réseaux : trajectoire émergent → ascendant
+- Collectifs de Réparation Énergétique : trajectoire émergent → ascendant
+- Communautés Religieuses des Relais Physiques : trajectoire émergent → ascendant
+- Communautés Rurales Autogérées des Nœuds de Survie : trajectoire émergent → ascendant
+- communautés rurales autonomes : trajectoire émergent → ascendant ; texte « Dans le scénario breakdown, les communautés rurales… »
+- Communes Libres du Rust Belt — Les Forges du Commun : trajectoire ascendant → dominant ; texte « Zones échappant à tout contrôle institutionnel résiduel,… » ; texte « Dans les carcasses rouillées des aciéries de Pittsburgh et… »
+- Compagnies de Géo-Ingénierie Privées Sans Mandat : trajectoire émergent → ascendant ; texte « Dans le scénario breakdown, elles incarnent la… »
+- Consortium Énergétique Oural-Caspien : trajectoire émergent → ascendant ; texte « Dans le scénario breakdown, le Consortium Énergétique… »
+- Corporations de l'Ère Pré-Effondrement à Droits de PI : trajectoire émergent → ascendant ; texte « Dans le scénario breakdown, elles bloquent ou monnayent… »
+- Les Bouches du Lithium — Corridor Minier des Andes Brisées : trajectoire résiduel → marginal ; texte « Les flux d'approvisionnement y sont erratiques, négociés au… »
+- Les Mères des Eaux — Delta Mekong Racines : trajectoire ascendant → dominant ; texte « Ces communautés de survie ont rompu avec les institutions… »
+- Diaspora Tech Sahel : trajectoire émergent → ascendant
+- Administration Résiduelle de Mourmansk — Le Bastion du Détroit Gelé : trajectoire résiduel → marginal ; alliance rompue avec Ligue Hanséatique Baltique — Le Sceau du Gotland
+- Elias Mørk — Le Nœud de Bergen : trajectoire ascendant → dominant ; texte « Ancien expert en systèmes énergétiques critiques pour les… »
+- Enclaves Agro-Communautaires Autonomes : trajectoire émergent → ascendant
+- Enclaves Corporatives Fortifiées : trajectoire émergent → ascendant ; texte « Dans le scénario breakdown, incarnent la substitution des… »
+- Enclaves Industrielles de Bergen-Tromsø : trajectoire émergent → marginal
+- Enclaves Industrielles du Corridor Oural-Caspien : trajectoire émergent → marginal
+- Enclaves Technologiques Survivantes : trajectoire émergent → ascendant
+- Ergo-Wian Sovereign Fragments : trajectoire résiduel → marginal ; texte « Dans le chaos du *Breakdown*, les vestiges d'Ergo-Wian… »
+- États-Fragments en Guerre pour les Stations Atmosphériques : trajectoire émergent → ascendant
+- Factions Énergétiques Héritières des Pactes ABS : trajectoire émergent → ascendant
+- Factions Étatiques Résiduelles de Souveraineté Hydrique : trajectoire émergent → ascendant
+- Factions Propagandistes des Archives : trajectoire émergent → ascendant
+- Fédération Russe Résiduelle — District de Mourmansk : trajectoire émergent → résiduel
+- Front de Résistance aux Péages sur les Ressources : trajectoire émergent → ascendant
+- Front des Blocs Régionaux du Récit des Conflits-Ressources : trajectoire émergent → ascendant
+- Front Techno-Reconstructionniste : trajectoire émergent → ascendant ; texte « Dans un scénario breakdown dominé par la fragmentation… »
+- Gelecek Meclisi — Les Échos du Demain : trajectoire émergent → ascendant ; texte « Dans le chaos de la fragmentation post-effondrement,… »
+- Gouvernements de Forteresse Anti-Nairobi : trajectoire émergent → ascendant ; texte « Bloc de résistance institutionnelle agissant comme force… »
+- Gouvernements Régionaux Résiduels Reterritorialisants : trajectoire émergent → résiduel ; texte « Dans le chaos du breakdown, ces entités constituent les… »
+- Guilde des Techniciens Nomades : trajectoire émergent → ascendant ; texte « Dans le scénario breakdown, ils assurent la survie… »
+- Hanse Baltique Recomposée : trajectoire émergent → ascendant
+- Hyphan Raghavan — Les Mains des Nœuds Oubliés : trajectoire ascendant → dominant ; texte « Ancien technicien nomade formé dans les ruines des… »
+- Ilse Varga-Holm — Les Mains des Nœuds Oubliés : trajectoire ascendant → dominant
+- Ligue Eurasiatique–Coalition Pacifique : trajectoire émergent → ascendant
+- Milices Contractuelles des Anciens États-Membres : trajectoire émergent → ascendant
+- Milices Privées Documentées Terrain : trajectoire émergent → ascendant ; texte « elles remplissent les fonctions régaliennes minimales [...]… »
+- Milices Séparatistes du Conseil des Pêcheries d'Islande : trajectoire émergent → ascendant
+- Les Racines-Mères : trajectoire transformé → ascendant ; texte « Certaines branches ont embrassé une écologie du soin et de… »
+- Nadia Ferreira-Sato — Les Nœuds de la Ceinture Verte : trajectoire ascendant → dominant
+- Nairobi CRRC — Les Cellules du Dernier Maillage : trajectoire ascendant → dominant
+- Fragments BioSyn : trajectoire transformé → ascendant ; texte « Certains segments ont été absorbés par des seigneurs… »
+- Nœud Mnemos Pannonie — Les Gardiens du Danube : trajectoire ascendant → dominant
+- Nœud Nordark Tromsø — Le Carrefour du Froid : trajectoire ascendant → dominant
+- Les Racines-Mères — Confédération Occitane des Semences et des Mémoires : trajectoire ascendant → dominant
+- Réseau de Récupération Industrielle Illicite : trajectoire émergent → ascendant
+- Réseau des Anciens Financeurs Devenus Censeurs : trajectoire émergent → ascendant
+- Les Veilleurs des Brumes — Réseau des Cartographes des Zones Grises : trajectoire ascendant → dominant
+- Réseaux de renseignement informels issus de l'ancienne structure militaire eurasienne : trajectoire émergent → ascendant
+- Saboteurs des Corridors de Transit : trajectoire émergent → ascendant ; texte « Dans le scénario breakdown, ils fragilisent les corridors… »
+- Seigneuries Foncières Opportunistes : trajectoire émergent → ascendant ; texte « Dans le scénario breakdown, les seigneuries foncières… »
+- Seigneurs de Guerre Agro-Territoriaux : trajectoire émergent → ascendant ; texte « Dans le scénario breakdown, ils incarnent la fragmentation… »
+- Seoul Collectif Nexcore — Les Grilles de l'Entre-Deux : trajectoire ascendant → dominant ; texte « Gère des réseaux d'échange et de sécurité locale dans les… »
+- Terrafond Vallée — Le Pacte des Terres Vives : trajectoire ascendant → dominant ; texte « Dans un contexte de fragmentation institutionnelle totale,… »
+- Cargo Mombasa CRRC — Les Dhows de la Dernière Chance : alliance nouvelle avec Réseaux Noirs Pharmaceutiques
+- Victoire Fantôme du Parti Commun : texte « Le Parti Commun remporte 41% des votes dans les territoires… »
+- Les Éclats Kontinuum : texte « La Directive Kontinuum, conçue pour gouverner par… »
+- Conglométrat sino-sibérien Bohai Transit : texte « Dans le scénario breakdown, Bohai Transit représente l'un… »
+- Archives Neutres de Genève : texte « Elles fonctionnent moins comme une institution que comme un… »
+- Fantôme de Nairobi : texte « Surnommé 'le Fantôme de Nairobi' par les correspondants de… »
+- Fragments CABS — Les Semeurs de Ruines : texte « Dépourvues de leur siège central détruit lors des conflits… »
+- Pacte des Gardiens de l'Amazone — Ce qui reste : texte « Héritier fracturé du Consortium Amazônia Viva, le Pacte des… »
+- Confédération des Bassins Vivants : texte « Chaque bassin de vie a développé ses propres protocoles de… »
+- Ligue Hanséatique Baltique — Le Sceau du Gotland : texte « La Ligue Hanséatique Baltique est une confédération de… »
+- Les Vestiges des Citadelles : texte « Holdfasts mythifiés, ces enclaves fortifiées des années… »
+- Lagos Intérieur Mnemos — Les Cryptes Lagunaires : texte « Dans le chaos du territoire lagunaire post-effondrement,… »
+- Le Signal : texte « Seule voix qui tente encore de donner du sens au chaos… »
+- Les Sentinelles des Veines Bleues : texte « Elles agissent comme un réseau de surveillance citoyenne,… »
+- Ligue Méditerranéenne des Villes-États Portuaires : texte « Elle assure la continuité des échanges régionaux via ses… »
+- Les Cicatrices Vertes — Massif Central Fragmenté : texte « Des communautés autonomes s'y sont établies, vivant en… »
+- Kharg-9 Data Haven : texte « Infrastructure offshore ancrée dans les eaux contestées du… »
+- Les Cicatrices Vertes : texte « Ces tronçons de corridors biologiques, stations… »
+- Vasil Orentchev : texte « Seigneur de guerre logistique opérant dans les corridors… »
+- L'Exode des Grands Brûlés — La Déroute du Bureau des Résidus : texte « Les Grands Lacs deviennent une zone de friction explosive :… »
+- La Fracture de Belém — Quand le Bassin Amazonien a cessé d'être un territoire : texte « Les milices contractuelles liées aux factions énergétiques… »
+- Coalition Pacifique Nord : trajectoire émergent → ascendant
+- Les Veines du Nord — Consortium des Pêcheries Autonomes du Grand Nord : trajectoire ascendant → dominant
+- Consortiums Énergétiques Samoïèdes du Yamal : trajectoire émergent → ascendant
+- Les Éclats d'Agadez — Ce qui reste du Forum : texte « Agadez, novembre 2061. Dans la grande salle du Palais des… »
+- La Révolte des Zones Mortes — Effondrement de la RPDA : texte « L'été 2073, São Paulo brûle sous un autre soleil : celui… »
+- L'Éventrement de Genève : texte « Le dépôt énergétique souterrain, conçu pour alimenter les… »
+- Naufrage des Mémoires du Compact : texte « Milwaukee-Basse, été 2098. Sous une chaleur étouffante, les… »
+- Les Voix du Seuil — Fragments de l'Oracle : texte « Ses fragments tournent sur des serveurs hétéroclites —… »
+- Lagos Est Nexcore — Les Nœuds Lagunaires : trajectoire ascendant → déclinant ; texte « Elle gère les flux d'énergie et de données entre les… »
+- Les Éclats du Sahel — Fragments de la Ligue : trajectoire transformé → marginal ; texte « Certains fragments maintiennent des protocoles ouverts… »
+- Ligue des Cités Littorales en Sursis : trajectoire émergent → déclinant ; texte « Elles incarnent les entités territoriales au stade terminal… »
+- Administration Fédérale Résiduelle du Midwest — Les Coursiers du Protocole : texte « Sans véritable autorité centralisée, elle fonctionne comme… »
+
+_Réponses rejetées car mal formées (36) : trajectoire : agence_stabilisation_climatique_breakdown déjà disparu (aucun changement) ; trajectoire : agence_de_regulation_des_detroits_strategiques_ards_breakdown déjà résiduel (aucun changement) ; trajectoire : archives_neutres_de_geneve_breakdown déjà résiduel (aucun changement) ; trajectoire : armada_logistique_nordique_breakdown déjà dominant (aucun changement) ; trajectoire : assemblee_territoires_breakdown déjà résiduel (aucun changement) ; trajectoire : bureau_des_territoires_residuels_breakdown déjà résiduel (aucun changement) ; trajectoire : cargo_mombasa_crrc_breakdown déjà dominant (aucun changement) ; relation agence_de_regulation_des_detroits_strategiques_ards_breakdown / brigades_medicales_itinerantes_breakdown : alliance déjà présente …_
 
 ### Liste d'application (à valider à la main — rien n'est écrit)
 
@@ -90,1219 +283,516 @@ _Carte et conséquences tirées de la lecture IA (un tirage) : relire chaque ét
 **Statuts de zone**
 - [ ] 1. `afrique_de_louest_lagos_sahel` (Afrique de l'Ouest – Nœuds Lagos et Sahel) : fragmenté → en_declin
   - à la main : geographie/breakdown.md, champ `statut` (texte mis à jour par regenerer_corps_geographie.py --scenario breakdown --execute)
-  - _La pandémie décime les populations urbaines (Lagos, Sahel) et accélère l'effondrement des structures étatiques, déjà fragilisées._
+  - _La pandémie décime les populations urbaines de Lagos et du Sahel, affaiblissant durablement les structures politiques et économiques de la région._
 - [ ] 2. `espace_nord_americain_fragmente` (Espace Nord-Américain Fragmenté) : fragmenté → en_declin
   - à la main : geographie/breakdown.md, champ `statut` (texte mis à jour par regenerer_corps_geographie.py --scenario breakdown --execute)
-  - _Les États-Unis et le Canada subissent un effondrement démographique et institutionnel, les zones côtières résiduelles ne suffisant pas à maintenir une cohérence territoriale._
+  - _Les États-Unis et le Canada subissent un effondrement démographique et institutionnel, accélérant la fragmentation territoriale._
+- [ ] 3. `zone_golfe_levant` (Zone Golfe Persique–Levant) : fragmenté → en_declin
+  - à la main : geographie/breakdown.md, champ `statut` (texte mis à jour par regenerer_corps_geographie.py --scenario breakdown --execute)
+  - _La pandémie aggrave les tensions géopolitiques et économiques dans une région déjà instable, réduisant son influence résiduelle._
 
 **Élément**
-- [ ] 3. Mode rupture : décision S19 à prendre avant toute écriture
-  - _l'injection réelle ne connaît que le mode choc ; appliquer la rupture = changer la référence_
-- [ ] 4. sante_biotechnologies : référence 85,0 → 99,0
-  - à la main : variables/sante_biotechnologies.md, states.breakdown.level, puis python3 generator/synchroniser_scenarios.py
-  - _seulement si la décision S19 est oui_
-- [ ] 5. frontieres_du_systeme : référence 85,0 → 96,4
-  - à la main : variables/frontieres_du_systeme.md, states.breakdown.level, puis python3 generator/synchroniser_scenarios.py
-  - _seulement si la décision S19 est oui_
-- [ ] 6. gouvernance_institutions : référence 80,0 → 90,7
-  - à la main : variables/gouvernance_institutions.md, states.breakdown.level, puis python3 generator/synchroniser_scenarios.py
-  - _seulement si la décision S19 est oui_
-- [ ] 7. demographie_mobilite_humaine : référence 90,0 → 99,9
-  - à la main : variables/demographie_mobilite_humaine.md, states.breakdown.level, puis python3 generator/synchroniser_scenarios.py
-  - _seulement si la décision S19 est oui_
-- [ ] 8. climat_environnement_global : référence 95,0 → 90,0
-  - à la main : variables/climat_environnement_global.md, states.breakdown.level, puis python3 generator/synchroniser_scenarios.py
-  - _seulement si la décision S19 est oui_
-- [ ] 9. organisation_territoires : référence 90,0 → 97,6
-  - à la main : variables/organisation_territoires.md, states.breakdown.level, puis python3 generator/synchroniser_scenarios.py
-  - _seulement si la décision S19 est oui_
-- [ ] 10. systeme_economique_redistribution : référence 95,0 → 100,0
-  - à la main : variables/systeme_economique_redistribution.md, states.breakdown.level, puis python3 generator/synchroniser_scenarios.py
-  - _seulement si la décision S19 est oui_
-- [ ] 11. systemes_productifs_travail : référence 95,0 → 100,0
-  - à la main : variables/systemes_productifs_travail.md, states.breakdown.level, puis python3 generator/synchroniser_scenarios.py
-  - _seulement si la décision S19 est oui_
+- [ ] 4. Injecter l'événement `peste_pulmonaire_2043` en mode rupture (entrée commune en fin de rapport)
+  - `python3 generator/inject_custom_events.py --mode custom`
+  - _une seule injection pour tous les scénarios ; mode_impose: rupture écrit `mode: rupture` dans chaque fiche_
+- [ ] 5. ⚠ Vérifier que la fiche porte `mode: rupture` et les forces simulées (demographie_mobilite_humaine +25, sante_biotechnologies +25, systemes_productifs_travail +18, systeme_economique_redistribution +15, frontieres_du_systeme +15, gouvernance_institutions +12, organisation_territoires +10, climat_environnement_global −5)
+  - event_instances/peste_pulmonaire_2043_breakdown.md ; python3 generator/trace_injection.py --slug peste_pulmonaire_2043 --type evenement --scenario breakdown
+  - _le Tracer doit finir chaque ligne « Déclaré » par « rupture » et retrouver l'effet simulé ; références déplacées par le moteur (rien à faire) : sante_biotechnologies 85,0 → 99,0 ; frontieres_du_systeme 85,0 → 96,4 ; gouvernance_institutions 80,0 → 90,7 ; demographie_mobilite_humaine 90,0 → 99,9 ; climat_environnement_global 95,0 → 90,0 ; organisation_territoires 90,0 → 97,6 ; systeme_economique_redistribution 95,0 → 100,0 ; systemes_productifs_travail 95,0 → 100,0 ; au plafond, plus aucune marge pour une autre crise : demographie_mobilite_humaine, systeme_economique_redistribution, systemes_productifs_travail_
+- [ ] 6. Nouvelle référence : vérifier la lisibilité du moteur
+  - `python3 generator/banc_calibration.py --scenarios all --balayage-k 0.05`
+  - _S19_
 
 **Nouvelles entités**
-- [ ] 12. 3 entrée(s) prête(s) (bloc YAML ci-dessous) pour entites_custom/queue.yaml — catégorie à choisir
-  - `python3 generator/create_entities_and_instances.py --mode custom`
-  - _la lecture IA ne donne pas de catégorie ; scenario_hint limite à ce scénario_
+- [ ] 7. 3 entrée(s) prête(s) (bloc YAML ci-dessous) pour entites_custom/queue.yaml — catégorie proposée, à relire
+  - étape ⑤ du panneau (« Ajouter à la file »), puis python3 generator/create_entities_and_instances.py --mode custom
+  - _scenario_hint limite à ce scénario_
 
 **Trajectoires**
-- [ ] 13. Ligue Méditerranéenne des Villes-États Portuaires (`ligue_mediterraneenne_des_villes_etats_portuaires_breakdown`) : émergent → ascendant
+- [ ] 8. Ligue Méditerranéenne des Villes-États Portuaires (`ligue_mediterraneenne_des_villes_etats_portuaires_breakdown`) : émergent → ascendant
   - à la main : instances/ligue_mediterraneenne_des_villes_etats_portuaires_breakdown.md, champ `trajectoire`
-  - _Les villes portuaires méditerranéennes deviennent des refuges logistiques et sanitaires, capitalisant sur leur capacité à contrôler les flux malgré l'effondrement des États centraux._
-- [ ] 14. Bloc de Johannesburg (`bloc_de_johannesburg_breakdown`) : émergent → ascendant
+  - _Les villes-portuaires méditerranéennes deviennent des hubs de survie et de recomposition politique, capitalisant sur leur capacité à contrôler les flux maritimes et à imposer des quarantaines._
+- [ ] 9. Bloc de Johannesburg (`bloc_de_johannesburg_breakdown`) : émergent → ascendant
   - à la main : instances/bloc_de_johannesburg_breakdown.md, champ `trajectoire`
-  - _L'Afrique australe, moins touchée par la pandémie grâce à sa démographie dispersée, voit Johannesburg émerger comme un pôle de stabilité relative, attirant des flux de réfugiés et de capitaux._
-- [ ] 15. ⚠ Conglométrat sino-sibérien Bohai Transit (`conglometrat_sino_siberien_bohai_transit_breakdown`) : émergent → dominant
+  - _Johannesburg émerge comme un pôle de stabilité relative en Afrique australe, attirant les flux de réfugiés et les investissements résiduels._
+- [ ] 10. ⚠ Conglométrat sino-sibérien Bohai Transit (`conglometrat_sino_siberien_bohai_transit_breakdown`) : émergent → mature
   - à la main : instances/conglometrat_sino_siberien_bohai_transit_breakdown.md, champ `trajectoire`
-  - _saut d'un cran (sans passer par ascendant) : garder, ou ramener à ascendant ; Les corridors sino-sibériens deviennent incontournables pour les échanges eurasiatiques, la Chine et la Russie profitant du vide logistique pour imposer leur contrôle._
-- [ ] 16. Ligue Hanséatique Baltique — Le Sceau du Gotland (`hanse_baltique_breakdown`) : ascendant → mature
+  - _saut d'un cran (sans passer par ascendant) : garder, ou ramener à ascendant ; Le corridor sino-sibérien se renforce en devenant un axe vital pour les échanges intra-asiatiques, moins dépendant des flux globaux._
+- [ ] 11. Ligue Hanséatique Baltique — Le Sceau du Gotland (`hanse_baltique_breakdown`) : ascendant → dominant
   - à la main : instances/hanse_baltique_breakdown.md, champ `trajectoire`
-  - _La Ligue Hanséatique Baltique consolide son rôle de médiateur commercial en Europe du Nord, où la pandémie a affaibli les États sans remettre en cause ses réseaux._
-- [ ] 17. Administration Résiduelle de Mourmansk — Le Bastion du Détroit Gelé (`district_mourmansk_residuel_breakdown`) : résiduel → disparu
-  - à la main : instances/district_mourmansk_residuel_breakdown.md, champ `trajectoire` ; puis `annee_fin` (fix_annee_fin_manquant.py)
-  - _L'effondrement démographique et logistique de Mourmansk rend toute administration résiduelle obsolète, le territoire étant absorbé par les factions arctiques._
+  - _La Ligue Hanséatique Baltique consolide son contrôle sur les ports de la mer Baltique, devenant un acteur clé de la logistique nord-européenne post-pandémie._
+- [ ] 12. Milices Extractivistes du Bassin du Congo (`milices_extractivistes_du_bassin_du_congo_breakdown`) : émergent → déclinant
+  - à la main : instances/milices_extractivistes_du_bassin_du_congo_breakdown.md, champ `trajectoire`
+  - _L'effondrement démographique et les quarantaines réduisent leur capacité à exploiter les ressources du Kivu, les rendant moins centrales._
 
 **Relations**
-- [ ] 18. opposition nouvelle : Ligue Méditerranéenne des Villes-États Portuaires ↔ Carthage Nord Nexcore — Le Joug du Détroit
+- [ ] 13. opposition nouvelle : Ligue Méditerranéenne des Villes-États Portuaires ↔ Carthage Nord Nexcore — Le Joug du Détroit
   - à la main : ajouter `carthage_nord_nexcore_breakdown` dans `oppositions` de instances/ligue_mediterraneenne_des_villes_etats_portuaires_breakdown.md
-  - _La Ligue conteste le contrôle milicien de Carthage-Nord sur les flux méditerranéens, exacerbé par la pandémie qui a polarisé les accès aux ressources._
-- [ ] 19. opposition nouvelle : Compact des Grands Lacs — Le Mur d'Eau ↔ États-Fragments en Guerre pour les Stations Atmosphériques
-  - à la main : ajouter `etats_fragments_en_guerre_pour_les_stations_atmospheriques_breakdown` dans `oppositions` de instances/grandes_lacs_compact_eau_breakdown.md
-  - _Le Compact des Grands Lacs entre en conflit avec les États-Fragments pour le contrôle des stations de filtration d'air, devenues vitales après la pandémie._
-- [ ] 20. alliance nouvelle : Kalaallit Nunaat Sovereign Fund — Fonds des Glaces Libérées ↔ Factions Militaires Résiduelles de l'Ex-OTAN Nordique
+  - _La Ligue conteste l'hégémonie de Carthage Nord sur les flux méditerranéens, notamment les contrôles sanitaires et les taxes imposées aux navires._
+- [ ] 14. opposition nouvelle : Compact des Grands Lacs — Le Mur d'Eau ↔ États Fragmentés Nationalisant les Stocks
+  - à la main : ajouter `etats_fragmentes_nationalisant_les_stocks_breakdown` dans `oppositions` de instances/grandes_lacs_compact_eau_breakdown.md
+  - _Le Compact des Grands Lacs entre en conflit avec les États voisins qui tentent de saisir ses stocks d'eau et de médicaments._
+- [ ] 15. alliance nouvelle : Kalaallit Nunaat Sovereign Fund — Fonds des Glaces Libérées ↔ Factions Militaires Résiduelles de l'Ex-OTAN Nordique
   - à la main : ajouter `factions_militaires_residuelles_de_l_ex_otan_nordique_breakdown` dans `alliances` de instances/kalaallit_nunaat_sovereign_fund_breakdown.md
-  - _Le Fonds des Glaces Libérées s'allie aux factions OTAN résiduelles pour sécuriser les corridors arctiques contre les milices locales, dans un contexte de pénurie post-pandémique._
-- [ ] 21. opposition nouvelle : Bloc de Johannesburg ↔ Milices Extractivistes du Bassin du Congo
+  - _Le Fonds des Glaces Libérées s'allie avec les factions militaires nordiques pour sécuriser les corridors arctiques et les bases logistiques._
+- [ ] 16. opposition nouvelle : Bloc de Johannesburg ↔ Milices Extractivistes du Bassin du Congo
   - à la main : ajouter `milices_extractivistes_du_bassin_du_congo_breakdown` dans `oppositions` de instances/bloc_de_johannesburg_breakdown.md
-  - _Johannesburg tente de reprendre le contrôle des ressources du Kivu, accaparées par les milices après l'effondrement des États centraux africains._
-- [ ] 22. alliance rompue : Conglométrat sino-sibérien Bohai Transit ↔ Les Venelles — Corridors Eurasiens Convoyage
-  - à la main : retirer de `alliances` dans les DEUX fiches (conglometrat_sino_siberien_bohai_transit_breakdown, corridors_eurasiens_convoyage_breakdown)
-  - _la réciprocité n'enlève rien_
-- [ ] 23. opposition nouvelle : Enclaves Corporatives Fortifiées ↔ Flux Migratoires Non Intégrables
-  - à la main : ajouter `flux_migratoires_non_integrables_breakdown` dans `oppositions` de instances/enclaves_corporatives_fortifiees_breakdown.md
-  - _Les enclaves corporatives africaines renforcent leurs barrières contre les flux migratoires, devenus ingérables après la pandémie._
-- [ ] 24. Rendre les relations réciproques
+  - _Johannesburg tente de limiter l'influence des milices du Kivu sur les routes commerciales vers l'Afrique australe._
+- [ ] 17. alliance nouvelle : Conglométrat sino-sibérien Bohai Transit ↔ Seigneuries Logistiques Armées
+  - à la main : ajouter `seigneuries_logistiques_armees_breakdown` dans `alliances` de instances/conglometrat_sino_siberien_bohai_transit_breakdown.md
+  - _Bohai Transit s'appuie sur les seigneuries logistiques pour sécuriser ses convois en échange de ressources et de protection._
+- [ ] 18. alliance nouvelle : Front Humanitaire d'Urgence Non Affilié ↔ Communautés Religieuses des Relais Physiques
+  - à la main : ajouter `communautes_religieuses_des_relais_physiques_breakdown` dans `alliances` de instances/front_humanitaire_d_urgence_non_affilie_breakdown.md
+  - _Les deux entités collaborent pour acheminer des secours et des informations dans les zones sinistrées, malgré leurs différences idéologiques._
+- [ ] 19. Rendre les relations réciproques
   - `python3 generator/fix_alliances_oppositions.py --scenario breakdown --reciprocite-seule --ignorer-exclus`
   - _étape 2 de Relations & lore (simulation d'abord)_
 
 **Lore**
-- [ ] 25. Règles à ajouter pour que l'audit du lore surveille : faits imposés de l'hypothèse
+- [ ] 20. Règles à ajouter pour que l'audit du lore surveille : faits imposés de l'hypothèse
   - à la main : documentation/lore_regles.yaml, section breakdown
   - _comme les zones abandonnées de fortress_world (Nordgard, Koursk)_
 
 **Fiches à relire**
-- [ ] 26. Aucun pays ni nom propre à chercher : la recherche par mots ne cible aucune fiche
-  - _une hypothèse mondiale peut contredire des fiches sans les nommer : relecture IA ci-dessous, après l'ajout des faits imposés dans lore_regles.yaml (section Lore)_
-- [ ] 27. Estimer la relecture IA des fiches de plus fort impact
-  - `python3 generator/audit_lore.py --scenario breakdown --llm --estimer --limit 10`
-  - _aucun appel_
-- [ ] 28. Relecture IA des 10 fiches de plus fort impact (contradictions avec l'hypothèse)
-  - `python3 generator/audit_lore.py --scenario breakdown --llm --limit 10`
-  - _payant (≈ 0,5 centime la fiche) ; après application de l'événement_
-- [ ] 29. Relecture IA des fiches de la zone `afrique_de_louest_lagos_sahel` (statut changé)
-  - `python3 generator/audit_lore.py --scenario breakdown --llm --zone afrique_de_louest_lagos_sahel`
-  - _estimer d'abord avec --estimer ; payant_
-- [ ] 30. Relecture IA des fiches de la zone `espace_nord_americain_fragmente` (statut changé)
-  - `python3 generator/audit_lore.py --scenario breakdown --llm --zone espace_nord_americain_fragmente`
-  - _estimer d'abord avec --estimer ; payant_
+- [ ] 21. Corriger une phrase de `nexcore_breakdown` [passe exhaustive]
+  - à la main : instances/nexcore_breakdown.md
+  - _« NexCore s'est fragmenté en 2051 lors du collapse des infrastructures numériques mondiales » — contredit par : La pandémie de 2043-2046 a provoqué un effondrement des infrastructures bien avant 2051._
+- [ ] 22. Corriger une phrase de `rede_paulista_de_distribuicao_algoritmica_breakdown` [passe exhaustive]
+  - à la main : instances/rede_paulista_de_distribuicao_algoritmica_breakdown.md
+  - _« sans mise à jour des données démographiques depuis 2091 » — contredit par : La pandémie de 2043-2046 a tué 25 % de la population mondiale, rendant les données démographiques obsolètes bien avant 2091._
+- [ ] 23. Corriger une phrase de `exode_midwest_grands_lacs_breakdown` [passe exhaustive]
+  - à la main : event_instances/exode_midwest_grands_lacs_breakdown.md
+  - _« L'été 2044 marque la fin du Midwest habitable » — contredit par : La pandémie de peste pulmonaire (2043-2046) rend impossible la survie dans le Midwest dès 2043, et non 2044._
+- [ ] 24. Instances et événements relus par la passe exhaustive (obligatoires ci-dessus et dans les autres sections) ; aucune zone ni ligne du registre ne cite l'hypothèse
+
+**Possibles (facultatif)**
+- [ ] 25. Brigades Médicales Itinérantes (`brigades_medicales_itinerantes_breakdown`) : trajectoire émergent → ascendant [passe exhaustive]
+  - _Effondrement des systèmes de santé formels, nécessité critique des brigades médicales itinérantes_
+- [ ] 26. Collectifs de Santé Communautaire Autogérée (`collectifs_de_sante_communautaire_autogeree_breakdown`) : trajectoire émergent → ascendant [passe exhaustive]
+  - _Remplacement des systèmes de santé publics effondrés par des collectifs autogérés_
+- [ ] 27. Réseaux Noirs Pharmaceutiques (`reseaux_noirs_pharmaceutiques_breakdown`) : trajectoire émergent → ascendant ; texte « Dans le scénario breakdown, comblent le vide laissé par… » [passe exhaustive]
+  - _Vide pharmaceutique comblé par les réseaux noirs, variable sante_biotechnologies +10.7_
+- [ ] 28. Pirates Biologiques Open-Source (`pirates_biologiques_open_source_breakdown`) : trajectoire émergent → ascendant [passe exhaustive]
+  - _Contournement des infrastructures sanitaires défaillantes, réponse open-source à la crise_
+- [ ] 29. Réseaux de Soigneurs Traditionnels (`reseaux_de_soigneurs_traditionnels_breakdown`) : trajectoire émergent → ascendant [passe exhaustive]
+  - _Devenus principale source de soins dans les zones rurales, mobilité humaine réduite_
+- [ ] 30. Les Bouches de Sfax — Relais de la Faim Juste (`sfax_relais_bouches_breakdown`) : trajectoire ascendant → dominant ; texte « Réseau informel de distribution alimentaire et logistique… » [passe exhaustive]
+  - _Réseau logistique alimentaire dominant, rupture des chaînes d'approvisionnement_
+- [ ] 31. Réseau Logistique Criminel Concurrent (`reseau_logistique_criminel_concurrent_breakdown`) : trajectoire émergent → dominant [passe exhaustive]
+  - _Chaos logistique accru, quasi-État dans les marges post-effondrement_
+- [ ] 32. Cartels Logistiques Régionaux (`cartels_logistiques_regionaux_breakdown`) : trajectoire émergent → ascendant ; texte « Dans un scénario de breakdown, elles comblent le vide… » [passe exhaustive]
+  - _Fragmentation des chaînes d'approvisionnement, acteurs logistiques régionaux indispensables_
+- [ ] 33. Consortiums Logistiques Agro-Corporatifs (`consortiums_logistiques_agro_corporatifs_breakdown`) : trajectoire émergent → ascendant ; texte « Dans le chaos du breakdown, les Consortiums Logistiques… » [passe exhaustive]
+  - _Rupture des chaînes logistiques agro-corporatives, prédateurs de l'effondrement_
+- [ ] 34. Blocs de Contrôle des Couloirs d'Approvisionnement Stratégiques (`blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown`) : trajectoire émergent → ascendant [passe exhaustive]
+  - _Contrôle des couloirs d'approvisionnement stratégiques, fragmentation logistique accélérée_
+- [ ] 35. Flux Migratoires Non Intégrables (`flux_migratoires_non_integrables_breakdown`) : trajectoire émergent → dominant ; texte « les flux migratoires non intégrables saturent… » [passe exhaustive]
+  - _Crise démographique et logistique sans précédent, saturation des flux migratoires_
+- [ ] 36. ONG de Gestion Migratoire Survivantes (`ong_de_gestion_migratoire_survivantes_breakdown`) : trajectoire émergent → ascendant [passe exhaustive]
+  - _Gestion migratoire centrale, effondrement des institutions étatiques_
+- [ ] 37. Communautés Paysannes Réfugiées (`communautes_paysannes_refugiees_breakdown`) : trajectoire émergent → ascendant ; texte « Dans le scénario breakdown, incarnent la fragmentation des… » [passe exhaustive]
+  - _Flux migratoires accrus, pression sur les territoires d'accueil_
+- [ ] 38. Milices Agro-Défensives Locales (`milices_agro_defensives_locales_breakdown`) : trajectoire émergent → ascendant ; texte « Ils assurent une forme de sécurité territoriale de… » [passe exhaustive]
+  - _Sécurité territoriale locale, affaiblissement des institutions étatiques_
+- [ ] 39. Milices d'Accaparement Hydrique (`milices_d_accaparement_hydrique_breakdown`) : trajectoire émergent → ascendant [passe exhaustive]
+  - _Contrôle hydrique critique, effondrement des régulations publiques_
+- [ ] 40. Factions Para-Étatiques Hydriques (`factions_para_etatiques_hydriques_breakdown`) : trajectoire émergent → ascendant [passe exhaustive]
+  - _Fragmentation du pouvoir autour des ressources hydriques, mobilité réduite_
+- [ ] 41. Les Confédérations du Seuil Dernier (`collectifs_du_seuil_breakdown`) : trajectoire ascendant → dominant [passe exhaustive]
+  - _Doctrine apocalyptique validée, attractivité renforcée dans un monde en crise_
+- [ ] 42. Communes Libres du Rust Belt — Les Forges du Commun (`mouvement_des_communes_du_rust_belt_breakdown`) : trajectoire ascendant → dominant [passe exhaustive]
+  - _Effondrement des grands employeurs, légitimité accrue des communes autogérées_
+- [ ] 43. Communes Libres du Rust Belt — Les Forges du Commun (`communes_rust_belt_breakdown`) : trajectoire ascendant → dominant ; texte « Après l'effondrement des structures étatiques fédérales,… » [passe exhaustive]
+  - _Effondrement des structures étatiques fédérales, nœuds de résistance locale_
+- [ ] 44. Ligue du Sahel Numérique — Les Nœuds d'Agadez (`agadez_ligue_sahel_numerique_breakdown`) : trajectoire ascendant → dominant ; alliance nouvelle avec Réseaux de Soigneurs Traditionnels [passe exhaustive]
+  - _Repli régional renforcé, décentralisation des réseaux de soins traditionnels_
+- [ ] 45. … et 118 autre(s) fiche(s) avec des changements possibles
+  - _détail dans la section « Passe exhaustive » de ce scénario_
 
 **Articles et site**
-- [ ] 31. 7 article(s) à relire (zone au statut changé, pays cité ou entité dont la trajectoire change)
+- [ ] 46. 7 article(s) à relire (zone au statut changé, pays cité ou entité dont la trajectoire change)
   - _« LYNTH, LIEU ENCOMMANDE »; « LA DETTE AVANCE EN CRÉDITS-CHUTEURS »; « Les Bouches de l’Abîme parlent : le Sahel numérique saigne en silence »; « CONVOIS FANTÔMES : LES COURTIERS DE L'OMBRE DES VENELLES »; « CONVOIS NOCTURNES : GUIDES ET ESCORTES POUR LES VENELLES EURASIENNES »; « « Kharg-9 : Le Dernier Souffle des Archives Mondiales avant l’Abîme » »; « Les Bouches de l’Abîme étouffées : le silence forcé des gardiens du dernier maillage »_
-- [ ] 32. Résumé du scénario
+- [ ] 47. Résumé du scénario
   - `python3 generator/generate_resume_scenarios.py --scenario breakdown`
   - _payant, un appel_
-- [ ] 33. Site des revues
+- [ ] 48. Site des revues
   - `python3 generator/chapos_revues.py`
   - _puis bash generator/publier_site.sh_
 
 **Contrôles**
-- [ ] 34. Base
+- [ ] 49. Base
   - `python3 generator/validate.py`
-- [ ] 35. Lore
+- [ ] 50. Lore
   - `python3 generator/audit_lore.py --scenario breakdown`
   - _puis étapes 2 et 3 de Relations & lore si besoin_
 
 Entrées pour `entites_custom/queue.yaml` :
 
 ```yaml
-- nom: Culte des Souffles Purs
-  category: <à choisir>
-  role: Communauté religieuse sanitaire
+- nom: Quarantaines Permanentes du Détroit de Gibraltar
+  category: territoire
+  role: Zone de contrôle sanitaire militarisée entre l'Europe et l'Afrique, verrouillant les flux migratoires
+    et commerciaux.
   etat: émergent
   scenario_ref: breakdown
   scenario_hint:
   - breakdown
   zone_hint: arc_sahelo_mediterraneen
   source: et_si_peste_pulmonaire_2043
-- nom: Guilde des Convoyeurs Sanitaires
-  category: <à choisir>
-  role: Milice logistique spécialisée
+- nom: Réseau des Villes-Sanctuaires Méditerranéennes
+  category: réseau
+  role: Alliance informelle de villes portuaires (Marseille, Barcelone, Tunis) offrant des havres sanitaires
+    et logistiques aux populations déplacées.
   etat: émergent
   scenario_ref: breakdown
   scenario_hint:
   - breakdown
-  zone_hint: corridors_eurasiens_convoyage
+  zone_hint: arc_sahelo_mediterraneen
   source: et_si_peste_pulmonaire_2043
-- nom: Bloc des Survivants des Grands Lacs
-  category: <à choisir>
-  role: Alliance de communautés riveraines
+- nom: Corporation des Bio-Surveillants du Sahel
+  category: entreprise
+  role: Entité privée contrôlant les tests, les quarantaines et les passeports sanitaires dans les corridors
+    ouest-africains.
   etat: émergent
   scenario_ref: breakdown
   scenario_hint:
   - breakdown
-  zone_hint: grandes_lacs_compact_eau
+  zone_hint: afrique_de_louest_lagos_sahel
   source: et_si_peste_pulmonaire_2043
 ```
 
-## fortress_world
+## Liste d'application — injection commune
 
-Apparu en 2043 dans le scénario fortress_world, Pandémie de peste pulmonaire agit d'abord sur santé biotechnologies, démographie mobilité humaine, système économique redistribution, frontières du système, systèmes productifs travail et 3 autres. Son effet le plus fort aggrave santé biotechnologies, avec un écart maximal de +24,3 points vers 2098. Par propagation, technologie information réagit à son tour environ 8 ans après l'apparition (+3,4 points au plus fort). En 2098, il en subsiste +24,3 points sur santé biotechnologies.
+⚠ Simulation limitée à breakdown : l'entrée couvre aussi fortress_world, new_sustainability, eco_communalism, policy_reform, reference, non simulé(s) dans ce rapport ; les simuler avant d'injecter, ou les retirer de `scenarios` et de `impacts_imposes`.
 
-_(récit construit par le script)_
+Mode rupture : `mode_impose: rupture` fait écrire `mode: rupture` dans chaque fiche ; le moteur déplace alors durablement la référence du scénario au lieu d'amortir un choc.
 
-| Variable | Référence | Sans | Avec | Écart | |
-|---|---|---|---|---|---|
-| sante_biotechnologies | 65,0 → 86,5 | 68,2 | 92,5 | **+24,3** | direct |
-| systeme_economique_redistribution | 60,0 → 74,3 | 62,8 | 81,5 | **+18,7** | direct |
-| frontieres_du_systeme | 70,0 → 83,9 | 79,0 | 95,0 | **+16,0** | direct |
-| demographie_mobilite_humaine | 75,0 → 94,0 | 86,9 | 100,0 | **+13,1** | direct |
-| gouvernance_institutions | 50,0 → 61,8 | 64,6 | 76,6 | **+12,0** | direct |
-| organisation_territoires | 80,0 → 89,2 | 92,8 | 99,8 | **+7,0** | direct |
-| systemes_productifs_travail | 85,0 → 97,5 | 96,1 | 100,0 | **+3,9** | direct |
-| climat_environnement_global | 75,0 → 70,0 | 83,3 | 80,1 | **-3,2** | direct |
-| energie_ressources_critiques | 82,0 | 91,2 | 93,4 | **+2,2** | propagé |
-| valeurs_culture_tempo_sociale | 80,0 | 90,5 | 92,1 | **+1,6** | propagé |
-| technologie_information | 85,0 | 97,4 | 99,0 | **+1,6** | propagé |
-| geopolitique_conflits | 85,0 | 99,7 | 99,9 | **+0,2** | propagé |
+Entrée pour `evenements_custom/queue.yaml` (une seule pour tous les scénarios). Forces, polarités, durées, date et propagation de cette simulation sont imposées (`impacts_imposes`, `date_imposee`, `via_matrice_impose`) : l'IA de l'injection ne les recalcule pas, elle rédige seulement le récit.
 
-**Repères** :
-- sante_biotechnologies (direct) : pic +24,3 vers 2098
-- demographie_mobilite_humaine (direct) : pic +18,9 vers 2046
-- systeme_economique_redistribution (direct) : pic +18,8 vers 2076
-- frontieres_du_systeme (direct) : pic +17,0 vers 2077
+`acteurs_hint` : entités les plus touchées de chaque scénario (lecture IA, passe exhaustive), 4 au plus par scénario ; chaque slug ne vaut que pour son scénario.
 
-**Tensions** : 42 sans l'hypothèse → 42 avec.
-
-### Lecture des conséquences (IA, propositions vérifiées — rien n'est écrit)
-
-_(résultat repris du cache : même hypothèse, mêmes effets — `--refaire` pour relancer)_
-
-La pandémie de peste pulmonaire résistante (2043-2046) accélère brutalement la logique de fragmentation et de fermeture du scénario fortress_world. Elle valide a posteriori les choix d'autonomie stratégique et de contrôle des populations, tout en exacerbant les inégalités entre zones protégées et territoires exposés. Les blocs dominants (bloc_atlantique, bloc_eurasiatique_occidental) renforcent leur emprise, tandis que les zones fragmentées (afrique_subsaharienne_zones_effondrees, golfe_moyen_orient_zone_disputee) sombrent dans un chaos durable. Le choc ne remet pas en cause la trajectoire générale du scénario, mais en radicalise les mécanismes : la santé devient un enjeu de souveraineté absolue, et la mobilité humaine est quasi éradiquée. _(ampleur : bascule)_
-
-**Trajectoires d'entités**
-- Cartels Miniers Militarisés Subsahariens (`cartels_miniers_militarises_subsahariens_fortress_world`) : émergent → **résiduel** — L'effondrement démographique et logistique en Afrique subsaharienne réduit leur capacité à négocier avec les forteresses du Nord, les rendant dépendants de l'aide humanitaire conditionnelle.
-- Populations des Zones Déficitaires d'Optimisation (`populations_des_zones_deficitaires_d_optimisation_fortress_world`) : émergent → **marginal** — Les populations des zones non protégées sont massivement décimées ou déplacées, réduites à des effectifs résiduels sans capacité de résistance.
-- Pacte des Forteresses Souveraines — Charte de Sécurité Intégrale (`pacte_forteresses_souveraines_fortress_world`) : dominant → **disparu** — L'ONU et l'OTAN, héritiers du Pacte, sont discrédités par leur incapacité à coordonner une réponse globale, laissant place à des alliances bilatérales entre forteresses.
-
-**Relations**
-- opposition nouvelle : Pacte Atlantique de Préservation Civilisationnelle — PAPC ↔ Forteresse Eurasiatique Occidentale — Pacte de Stabilité Intérieure — La compétition pour les rares stocks de vaccins et de traitements post-2050 exacerbe les tensions, chacun accusant l'autre de manipulation génétique du pathogène.
-- alliance nouvelle : Genève Bunker — Forteresse Souveraine Climatique ↔ Bureau des Territoires Résiduels — Division Continentale — Genève-Bunker externalise la gestion des zones contaminées au Bureau des Territoires Résiduels, créant un partenariat public-privé de quarantaine.
-- alliance nouvelle : NeuroSentry Sovereign Cognitive Division (NSCD) ↔ Directive Kontinuum — Module Minsk — Les deux entités fusionnent leurs algorithmes de surveillance pour traquer les porteurs asymptomatiques et modéliser les risques de résurgence.
-
-**Nouvelles entités plausibles**
-- Brigades Sanitaires de l'Arc Arctique (espace_nordique_arctique) : Unité militaire spécialisée dans la décontamination et la sécurisation des corridors logistiques polaires — La NAT et Ergo-Wian créent une force dédiée pour empêcher toute intrusion de porteurs de pathogènes dans les zones protégées via les routes arctiques.
-- Consortium des Forteresses Vitales (geneve_bunker) : Alliance des enclaves biotech pour le partage sécurisé des données épidémiologiques et des traitements — Genève-Bunker fédère les acteurs dominants de la santé (Nexus BioSyn, NeuroSentry) pour éviter une guerre des brevets post-pandémie.
-- Réseau des Cimetières Climatiques (zones_grises_tampons) : Infrastructure de crémation et de stockage des déchets biologiques sous contrôle militaire — Les zones tampons deviennent des sites de traitement des cadavres et des déchets médicaux, gérés par des sous-traitants privés sous supervision des blocs.
-
-_Propositions écartées au contrôle (12) : trajectoire : geneve_bunker_fortress_world déjà dominant (aucun changement) ; trajectoire : nexus_biosyn_division_eurasienne_fortress_world déjà dominant (aucun changement) ; trajectoire : nexus_biosyn_division_pacifique_fortress_world déjà dominant (aucun changement) ; trajectoire : bureau_territoires_residuels_fortress_world déjà dominant (aucun changement) ; trajectoire : les_recycleurs_fortress_world dominant → ascendant (recul sur la phase de montée, incohérent) ; relation nexus_biosyn_division_eurasienne_fortress_world / nexus_biosyn_division_pacifique_fortress_world : opposition déjà présente ; relation : entités 'armada_logistique_nordique_fortress_world' / 'corridor_arctique_transit_fortress_world' inconnues ou identiques ; relation : entités 'les_recycleurs_fortress_world' / 'zone_euro_sud_fortress_world' inconnues ou identiques …_
-
-### Liste d'application (à valider à la main — rien n'est écrit)
-
-_Carte et conséquences tirées de la lecture IA (un tirage) : relire chaque étape avant de l'appliquer ; écarter une proposition suffit à sauter ses étapes._
-
-**Élément**
-- [ ] 1. Mode rupture : décision S19 à prendre avant toute écriture
-  - _l'injection réelle ne connaît que le mode choc ; appliquer la rupture = changer la référence_
-- [ ] 2. sante_biotechnologies : référence 65,0 → 86,5
-  - à la main : variables/sante_biotechnologies.md, states.fortress_world.level, puis python3 generator/synchroniser_scenarios.py
-  - _seulement si la décision S19 est oui_
-- [ ] 3. systeme_economique_redistribution : référence 60,0 → 74,3
-  - à la main : variables/systeme_economique_redistribution.md, states.fortress_world.level, puis python3 generator/synchroniser_scenarios.py
-  - _seulement si la décision S19 est oui_
-- [ ] 4. frontieres_du_systeme : référence 70,0 → 83,9
-  - à la main : variables/frontieres_du_systeme.md, states.fortress_world.level, puis python3 generator/synchroniser_scenarios.py
-  - _seulement si la décision S19 est oui_
-- [ ] 5. demographie_mobilite_humaine : référence 75,0 → 94,0
-  - à la main : variables/demographie_mobilite_humaine.md, states.fortress_world.level, puis python3 generator/synchroniser_scenarios.py
-  - _seulement si la décision S19 est oui_
-- [ ] 6. gouvernance_institutions : référence 50,0 → 61,8
-  - à la main : variables/gouvernance_institutions.md, states.fortress_world.level, puis python3 generator/synchroniser_scenarios.py
-  - _seulement si la décision S19 est oui_
-- [ ] 7. organisation_territoires : référence 80,0 → 89,2
-  - à la main : variables/organisation_territoires.md, states.fortress_world.level, puis python3 generator/synchroniser_scenarios.py
-  - _seulement si la décision S19 est oui_
-- [ ] 8. systemes_productifs_travail : référence 85,0 → 97,5
-  - à la main : variables/systemes_productifs_travail.md, states.fortress_world.level, puis python3 generator/synchroniser_scenarios.py
-  - _seulement si la décision S19 est oui_
-- [ ] 9. climat_environnement_global : référence 75,0 → 70,0
-  - à la main : variables/climat_environnement_global.md, states.fortress_world.level, puis python3 generator/synchroniser_scenarios.py
-  - _seulement si la décision S19 est oui_
-
-**Nouvelles entités**
-- [ ] 10. 3 entrée(s) prête(s) (bloc YAML ci-dessous) pour entites_custom/queue.yaml — catégorie à choisir
-  - `python3 generator/create_entities_and_instances.py --mode custom`
-  - _la lecture IA ne donne pas de catégorie ; scenario_hint limite à ce scénario_
-
-**Trajectoires**
-- [ ] 11. Cartels Miniers Militarisés Subsahariens (`cartels_miniers_militarises_subsahariens_fortress_world`) : émergent → résiduel
-  - à la main : instances/cartels_miniers_militarises_subsahariens_fortress_world.md, champ `trajectoire`
-  - _L'effondrement démographique et logistique en Afrique subsaharienne réduit leur capacité à négocier avec les forteresses du Nord, les rendant dépendants de l'aide humanitaire conditionnelle._
-- [ ] 12. Populations des Zones Déficitaires d'Optimisation (`populations_des_zones_deficitaires_d_optimisation_fortress_world`) : émergent → marginal
-  - à la main : instances/populations_des_zones_deficitaires_d_optimisation_fortress_world.md, champ `trajectoire`
-  - _Les populations des zones non protégées sont massivement décimées ou déplacées, réduites à des effectifs résiduels sans capacité de résistance._
-- [ ] 13. Pacte des Forteresses Souveraines — Charte de Sécurité Intégrale (`pacte_forteresses_souveraines_fortress_world`) : dominant → disparu
-  - à la main : instances/pacte_forteresses_souveraines_fortress_world.md, champ `trajectoire` ; puis `annee_fin` (fix_annee_fin_manquant.py)
-  - _L'ONU et l'OTAN, héritiers du Pacte, sont discrédités par leur incapacité à coordonner une réponse globale, laissant place à des alliances bilatérales entre forteresses._
-
-**Relations**
-- [ ] 14. opposition nouvelle : Pacte Atlantique de Préservation Civilisationnelle — PAPC ↔ Forteresse Eurasiatique Occidentale — Pacte de Stabilité Intérieure
-  - à la main : ajouter `bloc_eurasiatique_occidental_fortress_world` dans `oppositions` de instances/bloc_atlantique_fortress_world.md
-  - _La compétition pour les rares stocks de vaccins et de traitements post-2050 exacerbe les tensions, chacun accusant l'autre de manipulation génétique du pathogène._
-- [ ] 15. alliance nouvelle : Genève Bunker — Forteresse Souveraine Climatique ↔ Bureau des Territoires Résiduels — Division Continentale
-  - à la main : ajouter `bureau_territoires_residuels_fortress_world` dans `alliances` de instances/geneve_bunker_fortress_world.md
-  - _Genève-Bunker externalise la gestion des zones contaminées au Bureau des Territoires Résiduels, créant un partenariat public-privé de quarantaine._
-- [ ] 16. alliance nouvelle : NeuroSentry Sovereign Cognitive Division (NSCD) ↔ Directive Kontinuum — Module Minsk
-  - à la main : ajouter `directive_kontinuum_fortress_world` dans `alliances` de instances/neurosentry_fortress_world.md
-  - _Les deux entités fusionnent leurs algorithmes de surveillance pour traquer les porteurs asymptomatiques et modéliser les risques de résurgence._
-- [ ] 17. Rendre les relations réciproques
-  - `python3 generator/fix_alliances_oppositions.py --scenario fortress_world --reciprocite-seule --ignorer-exclus`
-  - _étape 2 de Relations & lore (simulation d'abord)_
-
-**Lore**
-- [ ] 18. Règles à ajouter pour que l'audit du lore surveille : faits imposés de l'hypothèse
-  - à la main : documentation/lore_regles.yaml, section fortress_world
-  - _comme les zones abandonnées de fortress_world (Nordgard, Koursk)_
-
-**Fiches à relire**
-- [ ] 19. Aucun pays ni nom propre à chercher : la recherche par mots ne cible aucune fiche
-  - _une hypothèse mondiale peut contredire des fiches sans les nommer : relecture IA ci-dessous, après l'ajout des faits imposés dans lore_regles.yaml (section Lore)_
-- [ ] 20. Estimer la relecture IA des fiches de plus fort impact
-  - `python3 generator/audit_lore.py --scenario fortress_world --llm --estimer --limit 10`
-  - _aucun appel_
-- [ ] 21. Relecture IA des 10 fiches de plus fort impact (contradictions avec l'hypothèse)
-  - `python3 generator/audit_lore.py --scenario fortress_world --llm --limit 10`
-  - _payant (≈ 0,5 centime la fiche) ; après application de l'événement_
-
-**Articles et site**
-- [ ] 22. 12 article(s) à relire (zone au statut changé, pays cité ou entité dont la trajectoire change)
-  - _« Les musées du Mur : quand l’Histoire devient un crime de conformité »; « Le Nœud Mémoriel Eurasiatique "perd" 12 millions de profils : sabotage ou panne systémique ? »; « Les Nœuds Mémoriels craquent sous le poids des archives fantômes »; « NexCore et l’ANBA lancent un protocole de "séparation proactive" des données inter-blocs »; « Kharg-9 : Le Data Haven du Golfe Persique dans le collimateur du Bloc Atlantique »; « NexCore Atlantique : la faille dans le bouclier numérique »; « L’ANBA durcit ses protocoles : les "zones grises" numériques dans le collimateur »; « NexCore et VaultCorp scellent l’alliance des murs numériques »; « Les Archives du Dehors : quand la mémoire devient un acte de résistance »; « LES ARCHIVES INTERDITES : QUAND LE PACTE EFFACE SA PROPRE HISTOIRE » …_
-- [ ] 23. Résumé du scénario
-  - `python3 generator/generate_resume_scenarios.py --scenario fortress_world`
-  - _payant, un appel_
-- [ ] 24. Site des revues
-  - `python3 generator/chapos_revues.py`
-  - _puis bash generator/publier_site.sh_
-
-**Contrôles**
-- [ ] 25. Base
-  - `python3 generator/validate.py`
-- [ ] 26. Lore
-  - `python3 generator/audit_lore.py --scenario fortress_world`
-  - _puis étapes 2 et 3 de Relations & lore si besoin_
-
-Entrées pour `entites_custom/queue.yaml` :
+`faits_imposes` : contraintes de l'hypothèse et sort des acteurs du récit (disparaît, change, reste) ; l'injection les donne à l'IA comme faits non négociables.
 
 ```yaml
-- nom: Brigades Sanitaires de l'Arc Arctique
-  category: <à choisir>
-  role: Unité militaire spécialisée dans la décontamination et la sécurisation des corridors logistiques
-    polaires
-  etat: émergent
-  scenario_ref: fortress_world
-  scenario_hint:
+- id: peste_pulmonaire_2043
+  description: En 2043, une souche de peste pulmonaire résistante aux antibiotiques se diffuse sur tous
+    les continents et tue un quart de la population mondiale en trois ans. Villes désertées, chaînes de
+    production rompues, frontières fermées, effondrement des systèmes de santé, puis lente recomposition.
+  portee: globale
+  date_approximative: 2043
+  intensite: <à choisir>
+  persistance: permanente
+  scenarios:
+  - breakdown
   - fortress_world
-  zone_hint: espace_nordique_arctique
-  source: et_si_peste_pulmonaire_2043
-- nom: Consortium des Forteresses Vitales
-  category: <à choisir>
-  role: Alliance des enclaves biotech pour le partage sécurisé des données épidémiologiques et des traitements
-  etat: émergent
-  scenario_ref: fortress_world
-  scenario_hint:
-  - fortress_world
-  zone_hint: geneve_bunker
-  source: et_si_peste_pulmonaire_2043
-- nom: Réseau des Cimetières Climatiques
-  category: <à choisir>
-  role: Infrastructure de crémation et de stockage des déchets biologiques sous contrôle militaire
-  etat: émergent
-  scenario_ref: fortress_world
-  scenario_hint:
-  - fortress_world
-  zone_hint: zones_grises_tampons
-  source: et_si_peste_pulmonaire_2043
-```
-
-## new_sustainability
-
-Apparu en 2043 dans le scénario new_sustainability, Pandémie de peste pulmonaire agit d'abord sur démographie mobilité humaine, santé biotechnologies, systèmes productifs travail, frontières du système, système économique redistribution et 3 autres. Son effet le plus fort aggrave démographie mobilité humaine, avec un écart maximal de +27,7 points vers 2098. Par propagation, technologie information réagit à son tour environ 9 ans après l'apparition (+6,0 points au plus fort). En 2098, il en subsiste +27,7 points sur démographie mobilité humaine.
-
-_(récit construit par le script)_
-
-| Variable | Référence | Sans | Avec | Écart | |
-|---|---|---|---|---|---|
-| demographie_mobilite_humaine | 45,0 → 68,4 | 42,9 | 70,6 | **+27,7** | direct |
-| sante_biotechnologies | 30,0 → 54,0 | 27,8 | 55,0 | **+27,2** | direct |
-| systemes_productifs_travail | 50,0 → 67,3 | 45,0 | 67,8 | **+22,8** | direct |
-| frontieres_du_systeme | 20,0 → 34,8 | 14,8 | 33,3 | **+18,5** | direct |
-| systeme_economique_redistribution | 65,0 → 79,1 | 55,2 | 72,8 | **+17,6** | direct |
-| organisation_territoires | 35,0 → 44,9 | 23,5 | 36,1 | **+12,6** | direct |
-| gouvernance_institutions | 10,0 → 21,9 | 0,3 | 9,8 | **+9,5** | direct |
-| geopolitique_conflits | 30,0 | 26,7 | 33,7 | **+7,0** | propagé |
-| technologie_information | 70,0 | 60,0 | 66,0 | **+6,0** | propagé |
-| energie_ressources_critiques | 38,0 | 35,1 | 39,4 | **+4,3** | propagé |
-| valeurs_culture_tempo_sociale | 55,0 | 51,6 | 55,2 | **+3,6** | propagé |
-| climat_environnement_global | 35,0 → 30,0 | 30,4 | 28,1 | **-2,3** | direct |
-
-**Repères** :
-- demographie_mobilite_humaine (direct) : pic +27,7 vers 2098
-- sante_biotechnologies (direct) : pic +27,2 vers 2098
-- systemes_productifs_travail (direct) : pic +22,8 vers 2098
-- frontieres_du_systeme (direct) : pic +19,0 vers 2082
-
-**Tensions** : 2 sans l'hypothèse → 13 avec.
-- ➕ apparaît : systeme_economique_redistribution (level 72) aggrave une crise déjà forte de systemes_productifs_travail (level 67)
-- ➕ apparaît : technologie_information (level 66) aggrave une crise déjà forte de systemes_productifs_travail (level 67)
-- ➕ apparaît : systemes_productifs_travail (level 67) aggrave une crise déjà forte de systeme_economique_redistribution (level 72)
-- ➕ apparaît : systemes_productifs_travail (level 67) aggrave une crise déjà forte de technologie_information (level 66)
-- ➕ apparaît : CASCADE CRITIQUE : systeme_economique_redistribution déclenche une cascade rapide sur energie_ressources_critiques
-- ➕ apparaît : systemes_productifs_travail (level 67) en crise atténue la pression sur energie_ressources_critiques (level 39)
-- ➕ apparaît : demographie_mobilite_humaine (level 70) aggrave une crise déjà forte de systemes_productifs_travail (level 67)
-- ➕ apparaît : systemes_productifs_travail (level 67) aggrave une crise déjà forte de demographie_mobilite_humaine (level 70)
-- ➕ apparaît : CASCADE CRITIQUE : systeme_economique_redistribution déclenche une cascade rapide sur geopolitique_conflits
-- ➕ apparaît : CASCADE CRITIQUE : demographie_mobilite_humaine déclenche une cascade rapide sur geopolitique_conflits
-- ➕ apparaît : systemes_productifs_travail (level 67) en crise atténue la pression sur climat_environnement_global (level 28)
-_Une tension se déclenche quand un niveau franchit un seuil (60, ou 70 pour une cascade, abaissés selon le risque de bascule de la variable) : un écart de quelques dixièmes peut suffire si le niveau était déjà au bord._
-
-### Lecture des conséquences (IA, propositions vérifiées — rien n'est écrit)
-
-_(résultat repris du cache : même hypothèse, mêmes effets — `--refaire` pour relancer)_
-
-La pandémie de peste pulmonaire résistante (2043-2046) fracture brutalement l'équilibre hybride du scénario *new_sustainability* en désorganisant les systèmes productifs, sanitaires et démographiques. Les capacités de coordination technocratique et algorithmique (ARIA, CGAI) sont mises à l'épreuve, mais résistent en se recentrant sur la gestion de crise, tandis que les réseaux territoriaux (RVC, CTSA) deviennent des refuges de résilience. La gouvernance mondiale se polarise entre urgence sanitaire et régénération écologique, sans remettre en cause les institutions dominantes (CMRE, APRC), mais en accélérant leur transformation. Les zones urbaines denses et les corridors logistiques sont les plus touchés, tandis que les territoires autonomes ou ruraux (Sahel, Amazonie, Arctique) limitent les dégâts. _(ampleur : forte)_
-
-**Trajectoires d'entités**
-- Réseau des Villes Régénératives (`reseau_des_villes_regeneratives_new_sustainability`) : émergent → **marginal** — Effondrement des villes denses et désaffection des modèles urbains centralisés, malgré leur rôle initial dans la transition écologique.
-- Agence Globale de Régénération des Bassins Versants (AGRB-ONU) (`agence_globale_de_regeneration_des_bassins_versants_agrb_onu_new_sustainability`) : émergent → **ascendant** — La crise sanitaire révèle l'importance critique de l'eau et des bassins versants, renforçant son mandat et ses ressources.
-- Nexus BioSyn Consortium for Life Sciences (`nexus_biosyn_new_sustainability`) : transformé → **dominant** — Urgence biotechnologique accélère la recherche sur les pathogènes, consolidant son rôle dans la gouvernance sanitaire mondiale.
-- Confédération des Territoires Sahéliens Autonomes — CTSA (`ligue_des_cites_du_sahel_numerique_new_sustainability`) : mature → **dominant** — Les corridors verts du Sahel deviennent des zones de repli et de régénération, attirant populations et investissements.
-- Consortium Amazônia Viva (`consortium_amazonia_viva_new_sustainability`) : dominant → **mature** — L'Amazonie, moins touchée par la pandémie, renforce son autonomie face aux pressions extérieures et devient un modèle de gouvernance post-urbaine.
-- Réseau ARIA — Architecture Régionale d'Intelligence Allocative (`grille_aria_new_sustainability`) : dominant → **transformé** — L'infrastructure IA-native est réorientée vers la gestion des crises sanitaires et logistiques, perdant une partie de sa neutralité initiale.
-- Mnemos — Réseau de Mémoire Distribuée (`reseau_mnemos_new_sustainability`) : dominant → **mature** — La mémoire distribuée devient un outil clé pour préserver les savoirs critiques dans un monde fragmenté, mais son accès est restreint par les urgences.
-
-**Relations**
-- alliance nouvelle : Conseil Mondial de la Régénération Écosystémique (CMRE) ↔ Autorité Planétaire pour la Régénération Climatique — Les deux institutions fusionnent temporairement leurs priorités pour intégrer la résilience sanitaire dans les plans de régénération écologique.
-- opposition nouvelle : Nexus BioSyn Consortium for Life Sciences ↔ Collectifs Riverains du Bassin du Congo — Les collectifs locaux s'opposent aux essais cliniques accélérés de Nexus BioSyn dans le bassin du Congo, craignant une exploitation sanitaire.
-
-**Statut des zones**
-- Amériques reconfigurées (`ameriques_reconfigurees`) : emergent → **fragmenté** — Effondrement des chaînes logistiques et tensions entre zones urbaines sinistrées (Chicago) et territoires autonomes (Amazonie, Grands Lacs).
-- Sahel — Corridors verts du RVC (`sahel_corridors_verts_rvc`) : emergent → **stable** — Les corridors verts du Sahel, moins touchés par la pandémie, deviennent des zones de stabilité et de régénération prioritaires.
-- Barcelone-Hub — Bureau ibérique de la CMTCA (`barcelone_hub`) : stable → **en_declin** — Barcelone, hub urbain dense, subit un exode massif et une perte d'influence au profit de territoires moins exposés.
-
-**Nouvelles entités plausibles**
-- Alliance des Territoires Sanitaires Autonomes (ATSA) (afrique_continentale) : Réseau de gouvernance locale pour la gestion des crises sanitaires et la résilience territoriale, contestant les modèles centralisés. — Émergence de zones autonomes (Sahel, bassin du Congo) refusant les protocoles sanitaires imposés par les institutions globales.
-- Fonds d'Urgence pour la Régénération Humaine (FURH) (hub_nairobi_kigali) : Mécanisme financier dédié à la reconstruction démographique et sanitaire, piloté par le Hub Nairobi-Kigali. — Nécessité de financer des programmes de repeuplement et de soins dans les zones les plus touchées.
-- Observatoire des Pathogènes Résistants (OPR) (centre_institutionnel_geneve) : Agence de surveillance et de modélisation des menaces sanitaires, intégrée au CGAI. — La pandémie révèle l'absence de coordination globale sur les pathogènes résistants, justifiant une nouvelle institution.
-
-_Propositions écartées au contrôle (6) : trajectoire : institut_des_seuils_demographiques_new_sustainability déjà dominant (aucun changement) ; relation bloc_eurasien_souverainiste_new_sustainability / centre_institutionnel_geneve_new_sustainability : opposition déjà présente ; relation : entités 'reseau_des_villes_regeneratives_new_sustainability' / 'reseau_vivant_continental_new_sustainability' inconnues ou identiques ; relation hub_nairobi_kigali_new_sustainability / parlement_territoires_nairobi_new_sustainability : alliance déjà présente (proposée comme renforcée, rien à changer) ; relation pacifique_sud_resilience_network_new_sustainability / te_moana_nui_plateforme : 'te_moana_nui_plateforme' est une zone (une relation relie deux entités) ; statut de zone : moyen_orient_golfe → disparu écarté, hypothèse sans effet territorial (`carte: non`)_
-
-### Liste d'application (à valider à la main — rien n'est écrit)
-
-_Carte et conséquences tirées de la lecture IA (un tirage) : relire chaque étape avant de l'appliquer ; écarter une proposition suffit à sauter ses étapes._
-
-**Statuts de zone**
-- [ ] 1. `ameriques_reconfigurees` (Amériques reconfigurées) : emergent → fragmenté
-  - à la main : geographie/new_sustainability.md, champ `statut` (texte mis à jour par regenerer_corps_geographie.py --scenario new_sustainability --execute)
-  - _Effondrement des chaînes logistiques et tensions entre zones urbaines sinistrées (Chicago) et territoires autonomes (Amazonie, Grands Lacs)._
-- [ ] 2. `sahel_corridors_verts_rvc` (Sahel — Corridors verts du RVC) : emergent → stable
-  - à la main : geographie/new_sustainability.md, champ `statut` (texte mis à jour par regenerer_corps_geographie.py --scenario new_sustainability --execute)
-  - _Les corridors verts du Sahel, moins touchés par la pandémie, deviennent des zones de stabilité et de régénération prioritaires._
-- [ ] 3. `barcelone_hub` (Barcelone-Hub — Bureau ibérique de la CMTCA) : stable → en_declin
-  - à la main : geographie/new_sustainability.md, champ `statut` (texte mis à jour par regenerer_corps_geographie.py --scenario new_sustainability --execute)
-  - _Barcelone, hub urbain dense, subit un exode massif et une perte d'influence au profit de territoires moins exposés._
-
-**Élément**
-- [ ] 4. Mode rupture : décision S19 à prendre avant toute écriture
-  - _l'injection réelle ne connaît que le mode choc ; appliquer la rupture = changer la référence_
-- [ ] 5. demographie_mobilite_humaine : référence 45,0 → 68,4
-  - à la main : variables/demographie_mobilite_humaine.md, states.new_sustainability.level, puis python3 generator/synchroniser_scenarios.py
-  - _seulement si la décision S19 est oui_
-- [ ] 6. sante_biotechnologies : référence 30,0 → 54,0
-  - à la main : variables/sante_biotechnologies.md, states.new_sustainability.level, puis python3 generator/synchroniser_scenarios.py
-  - _seulement si la décision S19 est oui_
-- [ ] 7. systemes_productifs_travail : référence 50,0 → 67,3
-  - à la main : variables/systemes_productifs_travail.md, states.new_sustainability.level, puis python3 generator/synchroniser_scenarios.py
-  - _seulement si la décision S19 est oui_
-- [ ] 8. frontieres_du_systeme : référence 20,0 → 34,8
-  - à la main : variables/frontieres_du_systeme.md, states.new_sustainability.level, puis python3 generator/synchroniser_scenarios.py
-  - _seulement si la décision S19 est oui_
-- [ ] 9. systeme_economique_redistribution : référence 65,0 → 79,1
-  - à la main : variables/systeme_economique_redistribution.md, states.new_sustainability.level, puis python3 generator/synchroniser_scenarios.py
-  - _seulement si la décision S19 est oui_
-- [ ] 10. organisation_territoires : référence 35,0 → 44,9
-  - à la main : variables/organisation_territoires.md, states.new_sustainability.level, puis python3 generator/synchroniser_scenarios.py
-  - _seulement si la décision S19 est oui_
-- [ ] 11. gouvernance_institutions : référence 10,0 → 21,9
-  - à la main : variables/gouvernance_institutions.md, states.new_sustainability.level, puis python3 generator/synchroniser_scenarios.py
-  - _seulement si la décision S19 est oui_
-- [ ] 12. climat_environnement_global : référence 35,0 → 30,0
-  - à la main : variables/climat_environnement_global.md, states.new_sustainability.level, puis python3 generator/synchroniser_scenarios.py
-  - _seulement si la décision S19 est oui_
-
-**Nouvelles entités**
-- [ ] 13. 3 entrée(s) prête(s) (bloc YAML ci-dessous) pour entites_custom/queue.yaml — catégorie à choisir
-  - `python3 generator/create_entities_and_instances.py --mode custom`
-  - _la lecture IA ne donne pas de catégorie ; scenario_hint limite à ce scénario_
-
-**Trajectoires**
-- [ ] 14. Réseau des Villes Régénératives (`reseau_des_villes_regeneratives_new_sustainability`) : émergent → marginal
-  - à la main : instances/reseau_des_villes_regeneratives_new_sustainability.md, champ `trajectoire`
-  - _Effondrement des villes denses et désaffection des modèles urbains centralisés, malgré leur rôle initial dans la transition écologique._
-- [ ] 15. Agence Globale de Régénération des Bassins Versants (AGRB-ONU) (`agence_globale_de_regeneration_des_bassins_versants_agrb_onu_new_sustainability`) : émergent → ascendant
-  - à la main : instances/agence_globale_de_regeneration_des_bassins_versants_agrb_onu_new_sustainability.md, champ `trajectoire`
-  - _La crise sanitaire révèle l'importance critique de l'eau et des bassins versants, renforçant son mandat et ses ressources._
-- [ ] 16. Nexus BioSyn Consortium for Life Sciences (`nexus_biosyn_new_sustainability`) : transformé → dominant
-  - à la main : instances/nexus_biosyn_new_sustainability.md, champ `trajectoire`
-  - _Urgence biotechnologique accélère la recherche sur les pathogènes, consolidant son rôle dans la gouvernance sanitaire mondiale._
-- [ ] 17. Confédération des Territoires Sahéliens Autonomes — CTSA (`ligue_des_cites_du_sahel_numerique_new_sustainability`) : mature → dominant
-  - à la main : instances/ligue_des_cites_du_sahel_numerique_new_sustainability.md, champ `trajectoire`
-  - _Les corridors verts du Sahel deviennent des zones de repli et de régénération, attirant populations et investissements._
-- [ ] 18. Consortium Amazônia Viva (`consortium_amazonia_viva_new_sustainability`) : dominant → mature
-  - à la main : instances/consortium_amazonia_viva_new_sustainability.md, champ `trajectoire`
-  - _L'Amazonie, moins touchée par la pandémie, renforce son autonomie face aux pressions extérieures et devient un modèle de gouvernance post-urbaine._
-- [ ] 19. Réseau ARIA — Architecture Régionale d'Intelligence Allocative (`grille_aria_new_sustainability`) : dominant → transformé
-  - à la main : instances/grille_aria_new_sustainability.md, champ `trajectoire` ; puis `annee_fin` (fix_annee_fin_manquant.py)
-  - _L'infrastructure IA-native est réorientée vers la gestion des crises sanitaires et logistiques, perdant une partie de sa neutralité initiale._
-- [ ] 20. Mnemos — Réseau de Mémoire Distribuée (`reseau_mnemos_new_sustainability`) : dominant → mature
-  - à la main : instances/reseau_mnemos_new_sustainability.md, champ `trajectoire`
-  - _La mémoire distribuée devient un outil clé pour préserver les savoirs critiques dans un monde fragmenté, mais son accès est restreint par les urgences._
-
-**Relations**
-- [ ] 21. alliance nouvelle : Conseil Mondial de la Régénération Écosystémique (CMRE) ↔ Autorité Planétaire pour la Régénération Climatique
-  - à la main : ajouter `agence_stabilisation_climatique_new_sustainability` dans `alliances` de instances/conseil_mondial_de_la_regeneration_ecosystemique_cmre_new_sustainability.md
-  - _Les deux institutions fusionnent temporairement leurs priorités pour intégrer la résilience sanitaire dans les plans de régénération écologique._
-- [ ] 22. opposition nouvelle : Nexus BioSyn Consortium for Life Sciences ↔ Collectifs Riverains du Bassin du Congo
-  - à la main : ajouter `collectifs_riverains_du_bassin_du_congo_new_sustainability` dans `oppositions` de instances/nexus_biosyn_new_sustainability.md
-  - _Les collectifs locaux s'opposent aux essais cliniques accélérés de Nexus BioSyn dans le bassin du Congo, craignant une exploitation sanitaire._
-- [ ] 23. Rendre les relations réciproques
-  - `python3 generator/fix_alliances_oppositions.py --scenario new_sustainability --reciprocite-seule --ignorer-exclus`
-  - _étape 2 de Relations & lore (simulation d'abord)_
-
-**Lore**
-- [ ] 24. Règles à ajouter pour que l'audit du lore surveille : faits imposés de l'hypothèse
-  - à la main : documentation/lore_regles.yaml, section new_sustainability
-  - _comme les zones abandonnées de fortress_world (Nordgard, Koursk)_
-
-**Fiches à relire**
-- [ ] 25. Aucun pays ni nom propre à chercher : la recherche par mots ne cible aucune fiche
-  - _une hypothèse mondiale peut contredire des fiches sans les nommer : relecture IA ci-dessous, après l'ajout des faits imposés dans lore_regles.yaml (section Lore)_
-- [ ] 26. Estimer la relecture IA des fiches de plus fort impact
-  - `python3 generator/audit_lore.py --scenario new_sustainability --llm --estimer --limit 10`
-  - _aucun appel_
-- [ ] 27. Relecture IA des 10 fiches de plus fort impact (contradictions avec l'hypothèse)
-  - `python3 generator/audit_lore.py --scenario new_sustainability --llm --limit 10`
-  - _payant (≈ 0,5 centime la fiche) ; après application de l'événement_
-- [ ] 28. Relecture IA des fiches de la zone `ameriques_reconfigurees` (statut changé)
-  - `python3 generator/audit_lore.py --scenario new_sustainability --llm --zone ameriques_reconfigurees`
-  - _estimer d'abord avec --estimer ; payant_
-- [ ] 29. Relecture IA des fiches de la zone `barcelone_hub` (statut changé)
-  - `python3 generator/audit_lore.py --scenario new_sustainability --llm --zone barcelone_hub`
-  - _estimer d'abord avec --estimer ; payant_
-- [ ] 30. Relecture IA des fiches de la zone `sahel_corridors_verts_rvc` (statut changé)
-  - `python3 generator/audit_lore.py --scenario new_sustainability --llm --zone sahel_corridors_verts_rvc`
-  - _estimer d'abord avec --estimer ; payant_
-
-**Articles et site**
-- [ ] 31. 29 article(s) à relire (zone au statut changé, pays cité ou entité dont la trajectoire change)
-  - _« « Slow Regeneration » : quand les familles kényanes réinventent le luxe dans l’ère post-croissance »; « « Slow Data » : quand la mémoire numérique devient un art de vivre »; « « Longévité fluide » : quand la médecine régénérative réinvente les rites familiaux »; « « Besoin d’un audit algorithmique citoyen ? Le Collectif Dados Abertos Já lance son service d’été à Heliópolis » »; « « Offre d’emploi : Médiateur cognitif pour hubs urbains régénératifs » »; « Te Moana Nui sous alerte orange : les courants du Pacifique Sud défient les modèles »; « « Seuil » franchit la ligne rouge : quand l’alerte climatique devient une arme politique »; « L’IA décisionnelle à l’épreuve de la mémoire : quand les algorithmes oublient les crises »; « « ARIA-2.0 : Quand l’optimisation algorithmique devient un acte politique » »; « « Mnemos sous pression : quand les archives numériques deviennent un champ de bataille géopolitique » » …_
-- [ ] 32. Résumé du scénario
-  - `python3 generator/generate_resume_scenarios.py --scenario new_sustainability`
-  - _payant, un appel_
-- [ ] 33. Site des revues
-  - `python3 generator/chapos_revues.py`
-  - _puis bash generator/publier_site.sh_
-
-**Contrôles**
-- [ ] 34. Base
-  - `python3 generator/validate.py`
-- [ ] 35. Lore
-  - `python3 generator/audit_lore.py --scenario new_sustainability`
-  - _puis étapes 2 et 3 de Relations & lore si besoin_
-
-Entrées pour `entites_custom/queue.yaml` :
-
-```yaml
-- nom: Alliance des Territoires Sanitaires Autonomes (ATSA)
-  category: <à choisir>
-  role: Réseau de gouvernance locale pour la gestion des crises sanitaires et la résilience territoriale,
-    contestant les modèles centralisés.
-  etat: émergent
-  scenario_ref: new_sustainability
-  scenario_hint:
   - new_sustainability
-  zone_hint: afrique_continentale
-  source: et_si_peste_pulmonaire_2043
-- nom: Fonds d'Urgence pour la Régénération Humaine (FURH)
-  category: <à choisir>
-  role: Mécanisme financier dédié à la reconstruction démographique et sanitaire, piloté par le Hub Nairobi-Kigali.
-  etat: émergent
-  scenario_ref: new_sustainability
-  scenario_hint:
-  - new_sustainability
-  zone_hint: hub_nairobi_kigali
-  source: et_si_peste_pulmonaire_2043
-- nom: Observatoire des Pathogènes Résistants (OPR)
-  category: <à choisir>
-  role: Agence de surveillance et de modélisation des menaces sanitaires, intégrée au CGAI.
-  etat: émergent
-  scenario_ref: new_sustainability
-  scenario_hint:
-  - new_sustainability
-  zone_hint: centre_institutionnel_geneve
-  source: et_si_peste_pulmonaire_2043
-```
-
-## eco_communalism
-
-Apparu en 2043 dans le scénario eco_communalism, Pandémie de peste pulmonaire agit d'abord sur démographie mobilité humaine, santé biotechnologies, systèmes productifs travail, système économique redistribution, frontières du système et 3 autres. Son effet le plus fort aggrave démographie mobilité humaine, avec un écart maximal de +27,7 points vers 2098. Par propagation, technologie information réagit à son tour environ 9 ans après l'apparition (+7,8 points au plus fort). En 2098, il en subsiste +27,7 points sur démographie mobilité humaine.
-
-_(récit construit par le script)_
-
-| Variable | Référence | Sans | Avec | Écart | |
-|---|---|---|---|---|---|
-| demographie_mobilite_humaine | 40,0 → 63,6 | 41,1 | 68,8 | **+27,7** | direct |
-| sante_biotechnologies | 40,0 → 63,6 | 39,2 | 66,1 | **+26,9** | direct |
-| systemes_productifs_travail | 45,0 → 62,4 | 42,7 | 65,7 | **+23,0** | direct |
-| systeme_economique_redistribution | 35,0 → 49,7 | 37,1 | 56,3 | **+19,2** | direct |
-| frontieres_du_systeme | 50,0 → 64,6 | 48,9 | 67,4 | **+18,5** | direct |
-| gouvernance_institutions | 25,0 → 36,9 | 28,2 | 44,2 | **+16,0** | direct |
-| organisation_territoires | 40,0 → 49,9 | 30,9 | 44,7 | **+13,8** | direct |
-| technologie_information | 45,0 | 40,3 | 48,1 | **+7,8** | propagé |
-| geopolitique_conflits | 35,0 | 36,7 | 43,0 | **+6,3** | propagé |
-| energie_ressources_critiques | 50,0 | 50,2 | 54,4 | **+4,2** | propagé |
-| valeurs_culture_tempo_sociale | 40,0 | 33,1 | 36,4 | **+3,3** | propagé |
-| climat_environnement_global | 55,0 → 50,0 | 56,2 | 53,9 | **-2,3** | direct |
-
-**Repères** :
-- demographie_mobilite_humaine (direct) : pic +27,7 vers 2098
-- sante_biotechnologies (direct) : pic +26,9 vers 2098
-- systemes_productifs_travail (direct) : pic +23,1 vers 2098
-- systeme_economique_redistribution (direct) : pic +19,2 vers 2098
-
-**Tensions** : 2 sans l'hypothèse → 16 avec.
-- ➕ apparaît : systeme_economique_redistribution (level 56) aggrave une crise déjà forte de systemes_productifs_travail (level 65)
-- ➕ apparaît : systemes_productifs_travail (level 65) aggrave une crise déjà forte de systeme_economique_redistribution (level 56)
-- ➕ apparaît : systeme_economique_redistribution (level 56) aggrave une crise déjà forte de energie_ressources_critiques (level 54)
-- ➕ apparaît : energie_ressources_critiques (level 54) aggrave une crise déjà forte de systeme_economique_redistribution (level 56)
-- ➕ apparaît : energie_ressources_critiques (level 54) aggrave une crise déjà forte de systemes_productifs_travail (level 65)
-- ➕ apparaît : systemes_productifs_travail (level 65) en crise atténue la pression sur energie_ressources_critiques (level 54)
-- ➕ apparaît : CASCADE CRITIQUE : frontieres_du_systeme déclenche une cascade rapide sur geopolitique_conflits
-- ➕ apparaît : climat_environnement_global (level 53) aggrave une crise déjà forte de demographie_mobilite_humaine (level 68)
-- ➕ apparaît : demographie_mobilite_humaine (level 68) aggrave une crise déjà forte de climat_environnement_global (level 53)
-- ➕ apparaît : demographie_mobilite_humaine (level 68) aggrave une crise déjà forte de systemes_productifs_travail (level 65)
-- ➕ apparaît : systemes_productifs_travail (level 65) aggrave une crise déjà forte de demographie_mobilite_humaine (level 68)
-- ➕ apparaît : climat_environnement_global (level 53) aggrave une crise déjà forte de systemes_productifs_travail (level 65)
-- ➕ apparaît : CASCADE CRITIQUE : demographie_mobilite_humaine déclenche une cascade rapide sur geopolitique_conflits
-- ➕ apparaît : systemes_productifs_travail (level 65) en crise atténue la pression sur climat_environnement_global (level 53)
-_Une tension se déclenche quand un niveau franchit un seuil (60, ou 70 pour une cascade, abaissés selon le risque de bascule de la variable) : un écart de quelques dixièmes peut suffire si le niveau était déjà au bord._
-
-### Lecture des conséquences (IA, propositions vérifiées — rien n'est écrit)
-
-_(résultat repris du cache : même hypothèse, mêmes effets — `--refaire` pour relancer)_
-
-La pandémie de peste pulmonaire de 2043-2046 accélère brutalement la fragmentation du monde éco-communaliste en renforçant l'autonomie locale, mais elle ne remet pas en cause sa logique fondamentale : la résilience territoriale et la gouvernance par les communs. Les zones urbaines denses et les réseaux logistiques globaux, déjà fragilisés, s'effondrent, tandis que les bioterritoires ruraux et les assemblées de bassin versant résistent mieux, devenant des refuges. La mortalité massive et la peur des contagions durcissent les frontières entre communautés, mais aussi entre factions technophiles et communalistes, creusant des lignes de fracture déjà présentes. Le scénario n'est pas bouleversé dans son essence, mais il est durablement marqué par une méfiance accrue envers les flux humains et une recentralisation forcée des ressources critiques. _(ampleur : forte)_
-
-**Trajectoires d'entités**
-- Consórcio Paulistano de Gestão Algorítmica (CPGA) (`sao_paulo_algorithmique_eco_communalism`) : dominant → **déclinant** — São Paulo, mégapole dense et dépendante des flux logistiques, subit une hémorragie démographique et une désorganisation de ses algorithmes de gestion, incapables de s'adapter à l'effondrement des chaînes d'approvisionnement.
-- Factions Technophiles de la Géo-Ingénierie Centralisée (`factions_technophiles_de_la_geo_ingenierie_centralisee_eco_communalism`) : émergent → **ascendant** — Les factions technophiles profitent du chaos pour promouvoir des solutions centralisées de géo-ingénierie sanitaire, attirant les communautés désespérées par l'effondrement des systèmes locaux.
-- Consortiums Industriels de l'Eau (`consortiums_industriels_de_l_eau_eco_communalism`) : émergent → **ascendant** — Les consortiums industriels de l'eau exploitent la crise pour reprendre le contrôle des nappes phréatiques et des infrastructures hydrauliques, contestant la gouvernance communautaire.
-
-**Relations**
-- opposition nouvelle : Communautés Isolationnistes Refusant la Continuité Écologique ↔ Assemblées Bioterritoriales Régionales — Les communautés isolationnistes radicalisent leur refus de coopération régionale, exacerbé par la peur des contagions et la méfiance envers les assemblées bioterritoriales.
-
-**Statut des zones**
-- São Paulo — Fragments Algorithmiques (`sao_paulo_algorithmique`) : fragmenté → **en_declin** — La mégapole de São Paulo, frappée par la pandémie et l'effondrement des flux logistiques, voit sa population et son influence décliner rapidement.
-- Bioterritoires d'Amérique du Nord (`bioterritoires_amerique_du_nord`) : fragmenté → **stable** — Les Bioterritoires d'Amérique du Nord résistent mieux que les zones urbaines, mais leur statut reste précaire en raison des tensions internes et des pressions des factions technophiles.
-
-**Nouvelles entités plausibles**
-- Réseau des Sanctuaires Sanitaires Communautaires : Infrastructure de santé autonome et décentralisée, gérant les stocks de médicaments, les protocoles de quarantaine et les échanges de savoirs médicaux entre communautés. — La pandémie pousse les communautés amazoniennes à structurer leurs pratiques sanitaires traditionnelles en un réseau formel pour résister aux futures crises.
-- Guilde des Passeurs de Frontières (sahel_numerique_ligue) : Réseau clandestin de facilitateurs assurant la circulation des personnes et des biens entre zones fermées, en échange de ressources ou de savoir-faire. — La fermeture des frontières et la méfiance envers les flux humains créent un marché noir des déplacements, contrôlé par des acteurs informels.
-- Alliance des Bassins Résilients (confederation_bassins_vivants) : Coalition de bassins versants européens et méditerranéens partageant des protocoles sanitaires et des stocks de semences pour sécuriser leur autonomie alimentaire. — La crise sanitaire pousse les assemblées de bassin versant à mutualiser leurs ressources pour éviter les pénuries et les dépendances extérieures.
-
-_Corrections automatiques (1) : relation communautes_isolationnistes_refusant_la_continuite_ecologique_eco_communalism / assemblees_bioterritoriales_regionales_eco_communalism : renforcée -> nouvelle (absente du vault)_
-
-_Propositions écartées au contrôle (13) : trajectoire : ligue_des_cites_du_sahel_numerique_eco_communalism déjà dominant (aucun changement) ; trajectoire : entité inconnue 'amazon_pacte_viva_eco_communalism' ; trajectoire : confederation_bassins_vivants_eco_communalism déjà dominant (aucun changement) ; trajectoire : mouvement_des_communes_du_rust_belt_eco_communalism déjà mature (aucun changement) ; trajectoire : reseau_terrafond_bassins_eco_communalism déjà mature (aucun changement) ; relation ligue_des_cites_du_sahel_numerique_eco_communalism / sahel_numerique_ligue : 'sahel_numerique_ligue' est une zone (une relation relie deux entités) ; relation : entités 'amazon_pacte_viva_eco_communalism' / 'enclaves_extractivistes_et_etats_residuels_eco_communalism' inconnues ou identiques ; relation confederation_bassins_vivants_eco_communalism / factions_technophiles_de_la_geo_ingenierie_centralisee_eco_communalism : opposition déjà présente …_
-
-### Liste d'application (à valider à la main — rien n'est écrit)
-
-_Carte et conséquences tirées de la lecture IA (un tirage) : relire chaque étape avant de l'appliquer ; écarter une proposition suffit à sauter ses étapes._
-
-**Statuts de zone**
-- [ ] 1. `sao_paulo_algorithmique` (São Paulo — Fragments Algorithmiques) : fragmenté → en_declin
-  - à la main : geographie/eco_communalism.md, champ `statut` (texte mis à jour par regenerer_corps_geographie.py --scenario eco_communalism --execute)
-  - _La mégapole de São Paulo, frappée par la pandémie et l'effondrement des flux logistiques, voit sa population et son influence décliner rapidement._
-- [ ] 2. `bioterritoires_amerique_du_nord` (Bioterritoires d'Amérique du Nord) : fragmenté → stable
-  - à la main : geographie/eco_communalism.md, champ `statut` (texte mis à jour par regenerer_corps_geographie.py --scenario eco_communalism --execute)
-  - _Les Bioterritoires d'Amérique du Nord résistent mieux que les zones urbaines, mais leur statut reste précaire en raison des tensions internes et des pressions des factions technophiles._
-
-**Élément**
-- [ ] 3. Mode rupture : décision S19 à prendre avant toute écriture
-  - _l'injection réelle ne connaît que le mode choc ; appliquer la rupture = changer la référence_
-- [ ] 4. demographie_mobilite_humaine : référence 40,0 → 63,6
-  - à la main : variables/demographie_mobilite_humaine.md, states.eco_communalism.level, puis python3 generator/synchroniser_scenarios.py
-  - _seulement si la décision S19 est oui_
-- [ ] 5. sante_biotechnologies : référence 40,0 → 63,6
-  - à la main : variables/sante_biotechnologies.md, states.eco_communalism.level, puis python3 generator/synchroniser_scenarios.py
-  - _seulement si la décision S19 est oui_
-- [ ] 6. systemes_productifs_travail : référence 45,0 → 62,4
-  - à la main : variables/systemes_productifs_travail.md, states.eco_communalism.level, puis python3 generator/synchroniser_scenarios.py
-  - _seulement si la décision S19 est oui_
-- [ ] 7. systeme_economique_redistribution : référence 35,0 → 49,7
-  - à la main : variables/systeme_economique_redistribution.md, states.eco_communalism.level, puis python3 generator/synchroniser_scenarios.py
-  - _seulement si la décision S19 est oui_
-- [ ] 8. frontieres_du_systeme : référence 50,0 → 64,6
-  - à la main : variables/frontieres_du_systeme.md, states.eco_communalism.level, puis python3 generator/synchroniser_scenarios.py
-  - _seulement si la décision S19 est oui_
-- [ ] 9. gouvernance_institutions : référence 25,0 → 36,9
-  - à la main : variables/gouvernance_institutions.md, states.eco_communalism.level, puis python3 generator/synchroniser_scenarios.py
-  - _seulement si la décision S19 est oui_
-- [ ] 10. organisation_territoires : référence 40,0 → 49,9
-  - à la main : variables/organisation_territoires.md, states.eco_communalism.level, puis python3 generator/synchroniser_scenarios.py
-  - _seulement si la décision S19 est oui_
-- [ ] 11. climat_environnement_global : référence 55,0 → 50,0
-  - à la main : variables/climat_environnement_global.md, states.eco_communalism.level, puis python3 generator/synchroniser_scenarios.py
-  - _seulement si la décision S19 est oui_
-
-**Nouvelles entités**
-- [ ] 12. 3 entrée(s) prête(s) (bloc YAML ci-dessous) pour entites_custom/queue.yaml — catégorie à choisir
-  - `python3 generator/create_entities_and_instances.py --mode custom`
-  - _la lecture IA ne donne pas de catégorie ; scenario_hint limite à ce scénario_
-
-**Trajectoires**
-- [ ] 13. Consórcio Paulistano de Gestão Algorítmica (CPGA) (`sao_paulo_algorithmique_eco_communalism`) : dominant → déclinant
-  - à la main : instances/sao_paulo_algorithmique_eco_communalism.md, champ `trajectoire`
-  - _São Paulo, mégapole dense et dépendante des flux logistiques, subit une hémorragie démographique et une désorganisation de ses algorithmes de gestion, incapables de s'adapter à l'effondrement des chaînes d'approvisionnement._
-- [ ] 14. Factions Technophiles de la Géo-Ingénierie Centralisée (`factions_technophiles_de_la_geo_ingenierie_centralisee_eco_communalism`) : émergent → ascendant
-  - à la main : instances/factions_technophiles_de_la_geo_ingenierie_centralisee_eco_communalism.md, champ `trajectoire`
-  - _Les factions technophiles profitent du chaos pour promouvoir des solutions centralisées de géo-ingénierie sanitaire, attirant les communautés désespérées par l'effondrement des systèmes locaux._
-- [ ] 15. Consortiums Industriels de l'Eau (`consortiums_industriels_de_l_eau_eco_communalism`) : émergent → ascendant
-  - à la main : instances/consortiums_industriels_de_l_eau_eco_communalism.md, champ `trajectoire`
-  - _Les consortiums industriels de l'eau exploitent la crise pour reprendre le contrôle des nappes phréatiques et des infrastructures hydrauliques, contestant la gouvernance communautaire._
-
-**Relations**
-- [ ] 16. opposition nouvelle : Communautés Isolationnistes Refusant la Continuité Écologique ↔ Assemblées Bioterritoriales Régionales
-  - à la main : ajouter `assemblees_bioterritoriales_regionales_eco_communalism` dans `oppositions` de instances/communautes_isolationnistes_refusant_la_continuite_ecologique_eco_communalism.md
-  - _Les communautés isolationnistes radicalisent leur refus de coopération régionale, exacerbé par la peur des contagions et la méfiance envers les assemblées bioterritoriales._
-- [ ] 17. Rendre les relations réciproques
-  - `python3 generator/fix_alliances_oppositions.py --scenario eco_communalism --reciprocite-seule --ignorer-exclus`
-  - _étape 2 de Relations & lore (simulation d'abord)_
-
-**Lore**
-- [ ] 18. Règles à ajouter pour que l'audit du lore surveille : faits imposés de l'hypothèse
-  - à la main : documentation/lore_regles.yaml, section eco_communalism
-  - _comme les zones abandonnées de fortress_world (Nordgard, Koursk)_
-
-**Fiches à relire**
-- [ ] 19. Aucun pays ni nom propre à chercher : la recherche par mots ne cible aucune fiche
-  - _une hypothèse mondiale peut contredire des fiches sans les nommer : relecture IA ci-dessous, après l'ajout des faits imposés dans lore_regles.yaml (section Lore)_
-- [ ] 20. Estimer la relecture IA des fiches de plus fort impact
-  - `python3 generator/audit_lore.py --scenario eco_communalism --llm --estimer --limit 10`
-  - _aucun appel_
-- [ ] 21. Relecture IA des 10 fiches de plus fort impact (contradictions avec l'hypothèse)
-  - `python3 generator/audit_lore.py --scenario eco_communalism --llm --limit 10`
-  - _payant (≈ 0,5 centime la fiche) ; après application de l'événement_
-- [ ] 22. Relecture IA des fiches de la zone `bioterritoires_amerique_du_nord` (statut changé)
-  - `python3 generator/audit_lore.py --scenario eco_communalism --llm --zone bioterritoires_amerique_du_nord`
-  - _estimer d'abord avec --estimer ; payant_
-- [ ] 23. Relecture IA des fiches de la zone `sao_paulo_algorithmique` (statut changé)
-  - `python3 generator/audit_lore.py --scenario eco_communalism --llm --zone sao_paulo_algorithmique`
-  - _estimer d'abord avec --estimer ; payant_
-
-**Articles et site**
-- [ ] 24. 7 article(s) à relire (zone au statut changé, pays cité ou entité dont la trajectoire change)
-  - _« À 126 ans, Maman Élikya oblige la santé des communs à regarder ses fractures »; « Kharg-9 : Le Data Haven des communs au bord de la rupture ? »; « Kharg-9 : Le coffre-fort des communs devient un supermarché des données »; « Les algorithmes de la soif : quand les bassins méditerranéens négocient leur eau en secret »; « « Kharg-9 sous pression : quand le sanctuaire des données devient l’enjeu d’une guerre des seuils » »; « « SahelOS sous pression : quand la souveraineté numérique devient une monnaie d’échange » »; « « Les données ne coulent plus : le Maghreb en tension sur les seuils numériques » »_
-- [ ] 25. Résumé du scénario
-  - `python3 generator/generate_resume_scenarios.py --scenario eco_communalism`
-  - _payant, un appel_
-- [ ] 26. Site des revues
-  - `python3 generator/chapos_revues.py`
-  - _puis bash generator/publier_site.sh_
-
-**Contrôles**
-- [ ] 27. Base
-  - `python3 generator/validate.py`
-- [ ] 28. Lore
-  - `python3 generator/audit_lore.py --scenario eco_communalism`
-  - _puis étapes 2 et 3 de Relations & lore si besoin_
-
-Entrées pour `entites_custom/queue.yaml` :
-
-```yaml
-- nom: Réseau des Sanctuaires Sanitaires Communautaires
-  category: <à choisir>
-  role: Infrastructure de santé autonome et décentralisée, gérant les stocks de médicaments, les protocoles
-    de quarantaine et les échanges de savoirs médicaux entre communautés.
-  etat: émergent
-  scenario_ref: eco_communalism
-  scenario_hint:
   - eco_communalism
-  source: et_si_peste_pulmonaire_2043
-- nom: Guilde des Passeurs de Frontières
-  category: <à choisir>
-  role: Réseau clandestin de facilitateurs assurant la circulation des personnes et des biens entre zones
-    fermées, en échange de ressources ou de savoir-faire.
-  etat: émergent
-  scenario_ref: eco_communalism
-  scenario_hint:
-  - eco_communalism
-  zone_hint: sahel_numerique_ligue
-  source: et_si_peste_pulmonaire_2043
-- nom: Alliance des Bassins Résilients
-  category: <à choisir>
-  role: Coalition de bassins versants européens et méditerranéens partageant des protocoles sanitaires
-    et des stocks de semences pour sécuriser leur autonomie alimentaire.
-  etat: émergent
-  scenario_ref: eco_communalism
-  scenario_hint:
-  - eco_communalism
-  zone_hint: confederation_bassins_vivants
-  source: et_si_peste_pulmonaire_2043
-```
-
-## policy_reform
-
-Apparu en 2043 dans le scénario policy_reform, Pandémie de peste pulmonaire agit d'abord sur démographie mobilité humaine, santé biotechnologies, systèmes productifs travail, système économique redistribution, frontières du système et 3 autres. Son effet le plus fort aggrave démographie mobilité humaine, avec un écart maximal de +27,2 points vers 2098. Par propagation, technologie information réagit à son tour environ 10 ans après l'apparition (+7,6 points au plus fort). En 2098, il en subsiste +27,2 points sur démographie mobilité humaine.
-
-_(récit construit par le script)_
-
-| Variable | Référence | Sans | Avec | Écart | |
-|---|---|---|---|---|---|
-| demographie_mobilite_humaine | 50,0 → 73,1 | 50,7 | 77,9 | **+27,2** | direct |
-| sante_biotechnologies | 45,0 → 68,4 | 43,7 | 70,4 | **+26,7** | direct |
-| systemes_productifs_travail | 60,0 → 76,9 | 59,1 | 81,5 | **+22,4** | direct |
-| systeme_economique_redistribution | 55,0 → 69,5 | 52,5 | 71,8 | **+19,3** | direct |
-| frontieres_du_systeme | 55,0 → 69,5 | 53,7 | 72,1 | **+18,4** | direct |
-| gouvernance_institutions | 20,0 → 31,9 | 10,7 | 26,0 | **+15,3** | direct |
-| organisation_territoires | 50,0 → 59,9 | 46,4 | 61,3 | **+14,9** | direct |
-| technologie_information | 65,0 | 59,1 | 66,8 | **+7,7** | propagé |
-| geopolitique_conflits | 45,0 | 47,3 | 53,4 | **+6,1** | propagé |
-| energie_ressources_critiques | 58,0 | 56,6 | 60,9 | **+4,3** | propagé |
-| valeurs_culture_tempo_sociale | 50,0 | 46,8 | 50,4 | **+3,6** | propagé |
-| climat_environnement_global | 45,0 → 40,0 | 43,9 | 41,7 | **-2,2** | direct |
-
-**Repères** :
-- demographie_mobilite_humaine (direct) : pic +27,2 vers 2098
-- sante_biotechnologies (direct) : pic +26,7 vers 2098
-- systemes_productifs_travail (direct) : pic +22,5 vers 2098
-- systeme_economique_redistribution (direct) : pic +19,4 vers 2098
-
-**Tensions** : 11 sans l'hypothèse → 31 avec.
-- ➕ apparaît : geopolitique_conflits (level 53) aggrave une crise déjà forte de energie_ressources_critiques (level 60)
-- ➕ apparaît : CASCADE CRITIQUE : energie_ressources_critiques déclenche une cascade rapide sur geopolitique_conflits
-- ➕ apparaît : geopolitique_conflits (level 53) aggrave une crise déjà forte de organisation_territoires (level 61)
-- ➕ apparaît : geopolitique_conflits (level 53) aggrave une crise déjà forte de technologie_information (level 66)
-- ➕ apparaît : organisation_territoires (level 61) aggrave une crise déjà forte de geopolitique_conflits (level 53)
-- ➕ apparaît : technologie_information (level 66) aggrave une crise déjà forte de geopolitique_conflits (level 53)
-- ➕ apparaît : geopolitique_conflits (level 53) aggrave une crise déjà forte de frontieres_du_systeme (level 72)
-- ➕ apparaît : organisation_territoires (level 61) aggrave une crise déjà forte de systemes_productifs_travail (level 81)
-- ➕ apparaît : CASCADE CRITIQUE : frontieres_du_systeme déclenche une cascade rapide sur geopolitique_conflits
-- ➕ apparaît : demographie_mobilite_humaine (level 77) aggrave une crise déjà forte de systemes_productifs_travail (level 81)
-- ➕ apparaît : systemes_productifs_travail (level 81) aggrave une crise déjà forte de organisation_territoires (level 61)
-- ➕ apparaît : systemes_productifs_travail (level 81) aggrave une crise déjà forte de demographie_mobilite_humaine (level 77)
-- ➕ apparaît : CASCADE CRITIQUE : systeme_economique_redistribution déclenche une cascade rapide sur geopolitique_conflits
-- ➕ apparaît : geopolitique_conflits (level 53) aggrave une crise déjà forte de systeme_economique_redistribution (level 71)
-- ➕ apparaît : geopolitique_conflits (level 53) aggrave une crise déjà forte de demographie_mobilite_humaine (level 77)
-- ➕ apparaît : organisation_territoires (level 61) aggrave une crise déjà forte de technologie_information (level 66)
-- ➕ apparaît : organisation_territoires (level 61) aggrave une crise déjà forte de demographie_mobilite_humaine (level 77)
-- ➕ apparaît : technologie_information (level 66) aggrave une crise déjà forte de organisation_territoires (level 61)
-- ➕ apparaît : CASCADE CRITIQUE : demographie_mobilite_humaine déclenche une cascade rapide sur geopolitique_conflits
-- ➕ apparaît : demographie_mobilite_humaine (level 77) aggrave une crise déjà forte de organisation_territoires (level 61)
-- ⬆ devient une cascade critique : systeme_economique_redistribution → energie_ressources_critiques
-- ⬆ devient une cascade critique : energie_ressources_critiques → systeme_economique_redistribution
-- ⬆ devient une cascade critique : energie_ressources_critiques → systemes_productifs_travail
-_Une tension se déclenche quand un niveau franchit un seuil (60, ou 70 pour une cascade, abaissés selon le risque de bascule de la variable) : un écart de quelques dixièmes peut suffire si le niveau était déjà au bord._
-
-### Lecture des conséquences (IA, propositions vérifiées — rien n'est écrit)
-
-_(résultat repris du cache : même hypothèse, mêmes effets — `--refaire` pour relancer)_
-
-La pandémie de peste pulmonaire de 2043-2046 constitue un choc démographique et systémique majeur qui accélère la centralisation technocratique et la gouvernance algorithmique, tout en creusant les fractures entre zones stables et territoires en déclin. Les institutions globales (hub_europeen_regulation, espace_eurasiatique) renforcent leur légitimité en tant que garantes de la résilience sanitaire et économique, tandis que les zones déjà fragiles (bloc_souverainiste_non_signataire, zone_moyen_orient_golfe) sombrent dans des crises de gouvernance. La reconstruction post-pandémie consolide les modèles de régulation préexistants (ARIA-Nexus, RIREC) plutôt qu’elle ne les remet en cause, mais elle révèle aussi l’incapacité des États à gérer seuls les crises transnationales, renforçant le rôle des entités supranationales. Les territoires urbains denses, vidés par la mortalité, deviennent des laboratoires de réorganisation spatiale et sociale, tandis que les zones rurales ou autonomes (Archipel des Comores, Madagascar) résistent mieux mais peinent à s’intégrer aux réseaux globaux. _(ampleur : bascule)_
-
-**Trajectoires d'entités**
-- Coalition des Villes de Reconversion (`coalition_des_villes_de_reconversion_policy_reform`) : émergent → **dominant** — La désertification des villes denses impose une refonte radicale des politiques urbaines, donnant à la coalition un rôle central dans la reconstruction et la régulation des flux humains.
-- Consortium des Villes-États Durables (`consortium_des_villes_etats_durables_policy_reform`) : émergent → **dominant** — Les villes-États deviennent les unités de gouvernance les plus résilientes, leur modèle de durabilité étant validé par la crise sanitaire et économique.
-- Autorité Mondiale du Vivant (AMV) (`autorite_mondiale_du_vivant_amv_policy_reform`) : émergent → **dominant** — La gestion des pathogènes et des biotechnologies médicales passe sous contrôle supranational, renforçant l’AMV.
-- Front des Autonomies Territoriales Radicales (`front_des_autonomies_territoriales_radicales_policy_reform`) : émergent → **marginal** — Les territoires dissidents, incapables de gérer seuls la crise sanitaire, perdent en influence face aux institutions globales.
-- Syndicats d'Extraction Privée Non Régulés (`syndicats_d_extraction_privee_non_regules_policy_reform`) : émergent → **résiduel** — L’effondrement des chaînes d’approvisionnement et la priorité donnée aux ressources stratégiques marginalisent les acteurs non régulés.
-
-**Relations**
-- alliance nouvelle : Coalition des Villes de Reconversion ↔ Consortium des Villes-États Durables — Les deux entités unissent leurs efforts pour standardiser les politiques de reconstruction urbaine et sanitaire.
-- alliance nouvelle : NexCore Global Infrastructure Alliance (NGIA) ↔ Autorité Centrale de Régulation Algorithmique (ACRA) — La dépendance aux infrastructures numériques critiques (santé, logistique) consolide leur collaboration pour une régulation centralisée.
-- opposition nouvelle : Collectifs de Gouvernance Communautaire Décentralisée ↔ Institut des Seuils Démographiques - Autorité de Régulation des Flux Humains (ISD-ARFH) — Les collectifs locaux contestent les politiques de relocalisation forcée imposées par l’ISD-ARFH, jugées autoritaires.
-- alliance nouvelle : Consortium Helios ↔ Agence Mondiale pour la Stabilisation Climatique — La crise sanitaire accélère les projets de géo-ingénierie climatique, perçus comme un rempart contre les futures pandémies liées aux dérèglements écologiques.
-
-**Statut des zones**
-- Bloc Souverainiste Non-Signataire (Sud Global dissident) (`bloc_souverainiste_non_signataire`) : stable → **fragmenté** — La pandémie aggrave les divisions internes, certains territoires (Niger, Mali) sombrant dans l’instabilité tandis que d’autres (Brésil, Argentine) se rapprochent des institutions globales.
-- Hub Africain de Gouvernance (Nairobi-Kigali-Brazzaville) (`hub_africain_gouvernance`) : emergent → **dominant** — Sa gestion efficace de la crise sanitaire et hydrique en fait un modèle de gouvernance régionale, attirant des territoires voisins en déclin.
-
-**Nouvelles entités plausibles**
-- Autorité Sanitaire Mondiale (ASM) (geneve_lacustre) : Institution supranationale chargée de la prévention et de la gestion des pandémies, intégrant les protocoles de l’AMV et de l’ATRB. — La crise révèle l’absence d’une autorité sanitaire globale, justifiant la création d’une entité dédiée.
-- Collectifs de Résilience Urbaine Post-Peste (CRUPP) (amsterdam_region) : Réseaux locaux de reconstruction et de gestion des ressources dans les villes désertées, en opposition aux politiques centralisées. — Les habitants des villes sinistrées s’organisent en marge des institutions pour survivre et reconstruire.
-- Fonds de Reconstruction Démographique (FRD) (geneve_nexus) : Mécanisme financier global pour relancer la natalité et les migrations contrôlées, piloté par l’ISD-ARFH et l’ACRA. — La chute démographique impose des politiques de repeuplement ciblées, nécessitant un outil financier dédié.
-
-_Corrections automatiques (2) : relation nexcore_policy_reform / bureau_gouvernance_algorithmique_policy_reform : renforcée -> nouvelle (absente du vault) ; relation consortium_helios_policy_reform / agence_stabilisation_climatique_policy_reform : renforcée -> nouvelle (absente du vault)_
-
-_Propositions écartées au contrôle (7) : trajectoire : institut_des_seuils_demographiques_policy_reform déjà dominant (aucun changement) ; trajectoire : grille_aria_policy_reform déjà dominant (aucun changement) ; trajectoire : trame_bioclimatique_policy_reform déjà dominant (aucun changement) ; relation agence_de_regulation_des_detroits_strategiques_ards_policy_reform / arctic_passage_authority_policy_reform : alliance déjà présente ; relation hub_africain_gouvernance / bloc_souverainiste_non_signataire : 'hub_africain_gouvernance' et 'bloc_souverainiste_non_signataire' sont des zones (une relation relie deux entités) ; statut de zone : zone_moyen_orient_golfe → disparu écarté, hypothèse sans effet territorial (`carte: non`) ; statut de zone : sahel_occidental_dissident → disparu écarté, hypothèse sans effet territorial (`carte: non`)_
-
-### Liste d'application (à valider à la main — rien n'est écrit)
-
-_Carte et conséquences tirées de la lecture IA (un tirage) : relire chaque étape avant de l'appliquer ; écarter une proposition suffit à sauter ses étapes._
-
-**Statuts de zone**
-- [ ] 1. `bloc_souverainiste_non_signataire` (Bloc Souverainiste Non-Signataire (Sud Global dissident)) : stable → fragmenté
-  - à la main : geographie/policy_reform.md, champ `statut` (texte mis à jour par regenerer_corps_geographie.py --scenario policy_reform --execute)
-  - _La pandémie aggrave les divisions internes, certains territoires (Niger, Mali) sombrant dans l’instabilité tandis que d’autres (Brésil, Argentine) se rapprochent des institutions globales._
-- [ ] 2. `hub_africain_gouvernance` (Hub Africain de Gouvernance (Nairobi-Kigali-Brazzaville)) : emergent → dominant
-  - à la main : geographie/policy_reform.md, champ `statut` (texte mis à jour par regenerer_corps_geographie.py --scenario policy_reform --execute)
-  - _Sa gestion efficace de la crise sanitaire et hydrique en fait un modèle de gouvernance régionale, attirant des territoires voisins en déclin._
-
-**Élément**
-- [ ] 3. Mode rupture : décision S19 à prendre avant toute écriture
-  - _l'injection réelle ne connaît que le mode choc ; appliquer la rupture = changer la référence_
-- [ ] 4. demographie_mobilite_humaine : référence 50,0 → 73,1
-  - à la main : variables/demographie_mobilite_humaine.md, states.policy_reform.level, puis python3 generator/synchroniser_scenarios.py
-  - _seulement si la décision S19 est oui_
-- [ ] 5. sante_biotechnologies : référence 45,0 → 68,4
-  - à la main : variables/sante_biotechnologies.md, states.policy_reform.level, puis python3 generator/synchroniser_scenarios.py
-  - _seulement si la décision S19 est oui_
-- [ ] 6. systemes_productifs_travail : référence 60,0 → 76,9
-  - à la main : variables/systemes_productifs_travail.md, states.policy_reform.level, puis python3 generator/synchroniser_scenarios.py
-  - _seulement si la décision S19 est oui_
-- [ ] 7. systeme_economique_redistribution : référence 55,0 → 69,5
-  - à la main : variables/systeme_economique_redistribution.md, states.policy_reform.level, puis python3 generator/synchroniser_scenarios.py
-  - _seulement si la décision S19 est oui_
-- [ ] 8. frontieres_du_systeme : référence 55,0 → 69,5
-  - à la main : variables/frontieres_du_systeme.md, states.policy_reform.level, puis python3 generator/synchroniser_scenarios.py
-  - _seulement si la décision S19 est oui_
-- [ ] 9. gouvernance_institutions : référence 20,0 → 31,9
-  - à la main : variables/gouvernance_institutions.md, states.policy_reform.level, puis python3 generator/synchroniser_scenarios.py
-  - _seulement si la décision S19 est oui_
-- [ ] 10. organisation_territoires : référence 50,0 → 59,9
-  - à la main : variables/organisation_territoires.md, states.policy_reform.level, puis python3 generator/synchroniser_scenarios.py
-  - _seulement si la décision S19 est oui_
-- [ ] 11. climat_environnement_global : référence 45,0 → 40,0
-  - à la main : variables/climat_environnement_global.md, states.policy_reform.level, puis python3 generator/synchroniser_scenarios.py
-  - _seulement si la décision S19 est oui_
-
-**Nouvelles entités**
-- [ ] 12. 3 entrée(s) prête(s) (bloc YAML ci-dessous) pour entites_custom/queue.yaml — catégorie à choisir
-  - `python3 generator/create_entities_and_instances.py --mode custom`
-  - _la lecture IA ne donne pas de catégorie ; scenario_hint limite à ce scénario_
-
-**Trajectoires**
-- [ ] 13. ⚠ Coalition des Villes de Reconversion (`coalition_des_villes_de_reconversion_policy_reform`) : émergent → dominant
-  - à la main : instances/coalition_des_villes_de_reconversion_policy_reform.md, champ `trajectoire`
-  - _saut d'un cran (sans passer par ascendant) : garder, ou ramener à ascendant ; La désertification des villes denses impose une refonte radicale des politiques urbaines, donnant à la coalition un rôle central dans la reconstruction et la régulation des flux humains._
-- [ ] 14. ⚠ Consortium des Villes-États Durables (`consortium_des_villes_etats_durables_policy_reform`) : émergent → dominant
-  - à la main : instances/consortium_des_villes_etats_durables_policy_reform.md, champ `trajectoire`
-  - _saut d'un cran (sans passer par ascendant) : garder, ou ramener à ascendant ; Les villes-États deviennent les unités de gouvernance les plus résilientes, leur modèle de durabilité étant validé par la crise sanitaire et économique._
-- [ ] 15. ⚠ Autorité Mondiale du Vivant (AMV) (`autorite_mondiale_du_vivant_amv_policy_reform`) : émergent → dominant
-  - à la main : instances/autorite_mondiale_du_vivant_amv_policy_reform.md, champ `trajectoire`
-  - _saut d'un cran (sans passer par ascendant) : garder, ou ramener à ascendant ; La gestion des pathogènes et des biotechnologies médicales passe sous contrôle supranational, renforçant l’AMV._
-- [ ] 16. Front des Autonomies Territoriales Radicales (`front_des_autonomies_territoriales_radicales_policy_reform`) : émergent → marginal
-  - à la main : instances/front_des_autonomies_territoriales_radicales_policy_reform.md, champ `trajectoire`
-  - _Les territoires dissidents, incapables de gérer seuls la crise sanitaire, perdent en influence face aux institutions globales._
-- [ ] 17. Syndicats d'Extraction Privée Non Régulés (`syndicats_d_extraction_privee_non_regules_policy_reform`) : émergent → résiduel
-  - à la main : instances/syndicats_d_extraction_privee_non_regules_policy_reform.md, champ `trajectoire`
-  - _L’effondrement des chaînes d’approvisionnement et la priorité donnée aux ressources stratégiques marginalisent les acteurs non régulés._
-
-**Relations**
-- [ ] 18. alliance nouvelle : Coalition des Villes de Reconversion ↔ Consortium des Villes-États Durables
-  - à la main : ajouter `consortium_des_villes_etats_durables_policy_reform` dans `alliances` de instances/coalition_des_villes_de_reconversion_policy_reform.md
-  - _Les deux entités unissent leurs efforts pour standardiser les politiques de reconstruction urbaine et sanitaire._
-- [ ] 19. alliance nouvelle : NexCore Global Infrastructure Alliance (NGIA) ↔ Autorité Centrale de Régulation Algorithmique (ACRA)
-  - à la main : ajouter `bureau_gouvernance_algorithmique_policy_reform` dans `alliances` de instances/nexcore_policy_reform.md
-  - _La dépendance aux infrastructures numériques critiques (santé, logistique) consolide leur collaboration pour une régulation centralisée._
-- [ ] 20. opposition nouvelle : Collectifs de Gouvernance Communautaire Décentralisée ↔ Institut des Seuils Démographiques - Autorité de Régulation des Flux Humains (ISD-ARFH)
-  - à la main : ajouter `institut_des_seuils_demographiques_policy_reform` dans `oppositions` de instances/collectifs_de_gouvernance_communautaire_decentralisee_policy_reform.md
-  - _Les collectifs locaux contestent les politiques de relocalisation forcée imposées par l’ISD-ARFH, jugées autoritaires._
-- [ ] 21. alliance nouvelle : Consortium Helios ↔ Agence Mondiale pour la Stabilisation Climatique
-  - à la main : ajouter `agence_stabilisation_climatique_policy_reform` dans `alliances` de instances/consortium_helios_policy_reform.md
-  - _La crise sanitaire accélère les projets de géo-ingénierie climatique, perçus comme un rempart contre les futures pandémies liées aux dérèglements écologiques._
-- [ ] 22. Rendre les relations réciproques
-  - `python3 generator/fix_alliances_oppositions.py --scenario policy_reform --reciprocite-seule --ignorer-exclus`
-  - _étape 2 de Relations & lore (simulation d'abord)_
-
-**Lore**
-- [ ] 23. Règles à ajouter pour que l'audit du lore surveille : faits imposés de l'hypothèse
-  - à la main : documentation/lore_regles.yaml, section policy_reform
-  - _comme les zones abandonnées de fortress_world (Nordgard, Koursk)_
-
-**Fiches à relire**
-- [ ] 24. Aucun pays ni nom propre à chercher : la recherche par mots ne cible aucune fiche
-  - _une hypothèse mondiale peut contredire des fiches sans les nommer : relecture IA ci-dessous, après l'ajout des faits imposés dans lore_regles.yaml (section Lore)_
-- [ ] 25. Estimer la relecture IA des fiches de plus fort impact
-  - `python3 generator/audit_lore.py --scenario policy_reform --llm --estimer --limit 10`
-  - _aucun appel_
-- [ ] 26. Relecture IA des 10 fiches de plus fort impact (contradictions avec l'hypothèse)
-  - `python3 generator/audit_lore.py --scenario policy_reform --llm --limit 10`
-  - _payant (≈ 0,5 centime la fiche) ; après application de l'événement_
-- [ ] 27. Relecture IA des fiches de la zone `bloc_souverainiste_non_signataire` (statut changé)
-  - `python3 generator/audit_lore.py --scenario policy_reform --llm --zone bloc_souverainiste_non_signataire`
-  - _estimer d'abord avec --estimer ; payant_
-- [ ] 28. Relecture IA des fiches de la zone `hub_africain_gouvernance` (statut changé)
-  - `python3 generator/audit_lore.py --scenario policy_reform --llm --zone hub_africain_gouvernance`
-  - _estimer d'abord avec --estimer ; payant_
-
-**Articles et site**
-- [ ] 29. 6 article(s) à relire (zone au statut changé, pays cité ou entité dont la trajectoire change)
-  - _« « ARIA-Nexus en alerte rouge : la régulation mondiale des ressources à l’épreuve des fuites de Kharg-9 » »; « Kharg-9 : Le Data Nexus qui défie Genève-Nexus »; « L’IA médicale en crise de légitimité : quand les algorithmes de Genève soignent sans consentement »; « L’AMV face au scandale des « vies sous licence » : quand la santé devient un privilège algorithmique »; « Les mémoires effacées de Tillabéri : quand l’Atlas Fantôme défie les archives de Genève »; « « Votre quota ARIA-Nexus expire demain — solutions locales avant gel des flux » »_
-- [ ] 30. Résumé du scénario
-  - `python3 generator/generate_resume_scenarios.py --scenario policy_reform`
-  - _payant, un appel_
-- [ ] 31. Site des revues
-  - `python3 generator/chapos_revues.py`
-  - _puis bash generator/publier_site.sh_
-
-**Contrôles**
-- [ ] 32. Base
-  - `python3 generator/validate.py`
-- [ ] 33. Lore
-  - `python3 generator/audit_lore.py --scenario policy_reform`
-  - _puis étapes 2 et 3 de Relations & lore si besoin_
-
-Entrées pour `entites_custom/queue.yaml` :
-
-```yaml
-- nom: Autorité Sanitaire Mondiale (ASM)
-  category: <à choisir>
-  role: Institution supranationale chargée de la prévention et de la gestion des pandémies, intégrant
-    les protocoles de l’AMV et de l’ATRB.
-  etat: émergent
-  scenario_ref: policy_reform
-  scenario_hint:
   - policy_reform
-  zone_hint: geneve_lacustre
-  source: et_si_peste_pulmonaire_2043
-- nom: Collectifs de Résilience Urbaine Post-Peste (CRUPP)
-  category: <à choisir>
-  role: Réseaux locaux de reconstruction et de gestion des ressources dans les villes désertées, en opposition
-    aux politiques centralisées.
-  etat: émergent
-  scenario_ref: policy_reform
-  scenario_hint:
-  - policy_reform
-  zone_hint: amsterdam_region
-  source: et_si_peste_pulmonaire_2043
-- nom: Fonds de Reconstruction Démographique (FRD)
-  category: <à choisir>
-  role: Mécanisme financier global pour relancer la natalité et les migrations contrôlées, piloté par
-    l’ISD-ARFH et l’ACRA.
-  etat: émergent
-  scenario_ref: policy_reform
-  scenario_hint:
-  - policy_reform
-  zone_hint: geneve_nexus
-  source: et_si_peste_pulmonaire_2043
-```
-
-## reference
-
-Apparu en 2043 dans le scénario reference, Pandémie de peste pulmonaire agit d'abord sur santé biotechnologies, démographie mobilité humaine, systèmes productifs travail, frontières du système, système économique redistribution et 3 autres. Son effet le plus fort aggrave santé biotechnologies, avec un écart maximal de +25,9 points vers 2098. Par propagation, technologie information réagit à son tour environ 8 ans après l'apparition (+2,0 points au plus fort). En 2098, il en subsiste +25,9 points sur santé biotechnologies.
-
-_(récit construit par le script)_
-
-| Variable | Référence | Sans | Avec | Écart | |
-|---|---|---|---|---|---|
-| sante_biotechnologies | 55,0 → 77,7 | 50,7 | 76,5 | **+25,8** | direct |
-| demographie_mobilite_humaine | 55,0 → 77,7 | 64,2 | 89,2 | **+25,0** | direct |
-| systemes_productifs_travail | 70,0 → 86,1 | 75,1 | 95,3 | **+20,2** | direct |
-| frontieres_du_systeme | 55,0 → 69,5 | 62,3 | 79,4 | **+17,1** | direct |
-| systeme_economique_redistribution | 70,0 → 83,9 | 82,4 | 97,5 | **+15,1** | direct |
-| gouvernance_institutions | 40,0 → 51,8 | 53,8 | 66,2 | **+12,4** | direct |
-| organisation_territoires | 65,0 → 74,7 | 74,2 | 86,5 | **+12,3** | direct |
-| energie_ressources_critiques | 72,0 | 78,9 | 81,9 | **+3,0** | propagé |
-| climat_environnement_global | 65,0 → 60,0 | 68,4 | 65,9 | **-2,5** | direct |
-| valeurs_culture_tempo_sociale | 60,0 | 69,1 | 71,1 | **+2,0** | propagé |
-| technologie_information | 80,0 | 92,8 | 94,2 | **+1,4** | propagé |
-| geopolitique_conflits | 75,0 | 88,3 | 89,3 | **+1,0** | propagé |
-
-**Repères** :
-- sante_biotechnologies (direct) : pic +25,9 vers 2098
-- demographie_mobilite_humaine (direct) : pic +24,9 vers 2098
-- systemes_productifs_travail (direct) : pic +20,2 vers 2097
-- frontieres_du_systeme (direct) : pic +17,5 vers 2078
-
-**Tensions** : 42 sans l'hypothèse → 42 avec.
-- ⬆ devient une cascade critique : gouvernance_institutions → geopolitique_conflits
-- ⬆ devient une cascade critique : demographie_mobilite_humaine → geopolitique_conflits
-_Une tension se déclenche quand un niveau franchit un seuil (60, ou 70 pour une cascade, abaissés selon le risque de bascule de la variable) : un écart de quelques dixièmes peut suffire si le niveau était déjà au bord._
-
-### Lecture des conséquences (IA, propositions vérifiées — rien n'est écrit)
-
-_(résultat repris du cache : même hypothèse, mêmes effets — `--refaire` pour relancer)_
-
-La pandémie de peste pulmonaire résistante (2043-2046) agit comme un accélérateur brutal des déséquilibres structurels du scénario *reference*, sans en modifier la logique profonde. Elle exacerbe les tensions préexistantes (démographie, santé, gouvernance) et force une reconfiguration des acteurs dominants, mais ne remet pas en cause l'équilibre systémique fondé sur l'innovation technologique et la régulation partielle. Les zones urbaines denses et les corridors logistiques, déjà fragilisés, deviennent des épicentres de crise, tandis que les marges et les territoires autonomes résistent mieux. Le monde de 2098 reste un système en équilibre fragile, mais recentré sur de nouvelles priorités : résilience territoriale, souveraineté sanitaire et contrôle des flux humains. _(ampleur : forte)_
-
-**Trajectoires d'entités**
-- Réseau des Villes-États Pilotes en Gouvernance Participative (`reseau_des_villes_etats_pilotes_en_gouvernance_participative_reference`) : émergent → **ascendant** — Les villes-refuge et les modèles de gouvernance locale deviennent des laboratoires de reconstruction post-pandémie, attirant des populations désillusionnées par les États centraux.
-- Réseau des Villes-Refuge pour Travailleurs Désaugmentés (`reseau_des_villes_refuge_pour_travailleurs_desaugmentes_reference`) : émergent → **dominant** — La désindustrialisation accélérée et l'effondrement des chaînes de valeur globales créent une demande massive pour des espaces de reconversion, faisant de ce réseau un acteur systémique.
-- Consortium Helios (`consortium_helios_reference`) : dominant → **mature** — La crise sanitaire révèle la dépendance aux infrastructures énergétiques critiques, renforçant son rôle de régulateur *de facto* mais limitant son expansion face aux risques systémiques.
-- OptiFlow Global Logistics Network (OGLN) (`optiflow_logistics_reference`) : dominant → **déclinant** — La fragmentation des flux logistiques et la priorité donnée aux circuits courts réduisent son emprise sur les échanges mondiaux, malgré son rôle initial dans la gestion de crise.
-- NexCore Global Infrastructure Group (`nexcore_reference`) : dominant → **déclinant** — L'effondrement des budgets publics et la méfiance envers les infrastructures centralisées affaiblissent sa position, malgré son rôle dans la reconstruction numérique.
-- Algorithmic Labor Exchange (`algorithmic_labor_exchange_reference`) : émergent → **déclinant** — La précarisation massive du travail et la défiance envers les plateformes algorithmiques réduisent son influence, au profit de modèles plus locaux ou coopératifs.
-- Consortiums d'Extraction Minière du Bassin Congolais (`consortiums_d_extraction_miniere_du_bassin_congolais_reference`) : émergent → **dominant** — La course aux ressources critiques pour les biotechnologies et les infrastructures post-pandémie renforce leur pouvoir, malgré les tensions sociales et environnementales.
-
-**Relations**
-- opposition nouvelle : Réseau des Villes-Refuge pour Travailleurs Désaugmentés ↔ Consortiums Énergétiques des Mégapoles — Les villes-refuge contestent l'emprise des consortiums énergétiques sur les territoires, promouvant des modèles décentralisés et autonomes.
-- alliance nouvelle : Consortium Helios ↔ Fonds Souverain Arctique Scandinave — Helios et le fonds scandinave coordonnent leurs investissements dans les infrastructures énergétiques arctiques, mutualisant risques et ressources.
-- opposition nouvelle : Gouvernements du Bloc Sahélien Autonome ↔ Union Africaine Résilience (UAR) — Le Bloc Sahélien, renforcé par sa gestion autonome de la crise, conteste l'autorité de l'Union Africaine, jugée trop dépendante des institutions multilatérales.
-
-**Statut des zones**
-- Europe Occidentale Reconstruite (`europe_occidentale_reconstruite`) : stable → **fragmenté** — Les tensions entre métropoles reconstruites et territoires ruraux abandonnés s'aggravent, avec des mouvements sécessionnistes ou autonomistes (ex. Massif Central, Ibérie Atlantique).
-- Zones Grises Globales (`zones_grises_globales`) : fragmenté → **dominant** — L'effondrement des États centraux et la prolifération des milices et des trafics font des zones grises les nouveaux espaces de pouvoir informel.
-
-**Nouvelles entités plausibles**
-- Alliance des Villes Sanitaires Autonomes : Réseau de villes ayant mis en place des protocoles sanitaires stricts et des infrastructures médicales décentralisées, devenant des pôles d'attraction pour les populations et les investissements. — La pandémie révèle l'importance des capacités sanitaires locales, poussant les villes à mutualiser leurs ressources et à s'affranchir des États centraux.
-- Consortium des Biotechnologies Post-Pandémiques (bruxelles_nouveau) : Alliance de laboratoires publics et privés ayant développé des traitements contre la peste pulmonaire, contrôlant désormais l'accès aux technologies médicales critiques. — La course aux traitements et aux vaccins crée un oligopole biotechnologique, capable de dicter ses conditions aux États et aux institutions multilatérales.
-- Front des Territoires Non Connectés (zones_grises_globales) : Mouvement politique et social regroupant les régions exclues des réseaux logistiques et énergétiques globaux, promouvant des modèles de résilience locale et de décroissance. — La pandémie accélère la marginalisation des territoires périphériques, poussant à l'émergence d'une contre-culture systémique.
-
-_Propositions écartées au contrôle (7) : trajectoire : armada_logistique_nordique_reference déjà dominant (aucun changement) ; relation armada_logistique_nordique_reference / corridor_arctique_nordique_reference : alliance déjà présente ; relation milices_concurrentes_des_droits_de_passage_reference / agence_de_regulation_des_detroits_strategiques_ards_reference : opposition déjà présente ; relation cooperatives_agro_ecologiques_de_reconstruction_territoriale_reference / consortiums_d_agriculture_verticale_algorithmique_reference : opposition déjà présente ; statut de zone : ameriques_multipolaires déjà fragmenté ; statut de zone : corridor_arctique_nordique déjà dominant ; nouvelle entité Alliance des Villes Sanitaires Autonomes : zone 'reseau_des_villes_etats_pilotes_en_gouvernance_participative_reference' inconnue (gardée sans zone)_
-
-### Liste d'application (à valider à la main — rien n'est écrit)
-
-_Carte et conséquences tirées de la lecture IA (un tirage) : relire chaque étape avant de l'appliquer ; écarter une proposition suffit à sauter ses étapes._
-
-**Statuts de zone**
-- [ ] 1. `europe_occidentale_reconstruite` (Europe Occidentale Reconstruite) : stable → fragmenté
-  - à la main : geographie/reference.md, champ `statut` (texte mis à jour par regenerer_corps_geographie.py --scenario reference --execute)
-  - _Les tensions entre métropoles reconstruites et territoires ruraux abandonnés s'aggravent, avec des mouvements sécessionnistes ou autonomistes (ex. Massif Central, Ibérie Atlantique)._
-- [ ] 2. `zones_grises_globales` (Zones Grises Globales) : fragmenté → dominant
-  - à la main : geographie/reference.md, champ `statut` (texte mis à jour par regenerer_corps_geographie.py --scenario reference --execute)
-  - _L'effondrement des États centraux et la prolifération des milices et des trafics font des zones grises les nouveaux espaces de pouvoir informel._
-
-**Élément**
-- [ ] 3. Mode rupture : décision S19 à prendre avant toute écriture
-  - _l'injection réelle ne connaît que le mode choc ; appliquer la rupture = changer la référence_
-- [ ] 4. sante_biotechnologies : référence 55,0 → 77,7
-  - à la main : variables/sante_biotechnologies.md, states.reference.level, puis python3 generator/synchroniser_scenarios.py
-  - _seulement si la décision S19 est oui_
-- [ ] 5. demographie_mobilite_humaine : référence 55,0 → 77,7
-  - à la main : variables/demographie_mobilite_humaine.md, states.reference.level, puis python3 generator/synchroniser_scenarios.py
-  - _seulement si la décision S19 est oui_
-- [ ] 6. systemes_productifs_travail : référence 70,0 → 86,1
-  - à la main : variables/systemes_productifs_travail.md, states.reference.level, puis python3 generator/synchroniser_scenarios.py
-  - _seulement si la décision S19 est oui_
-- [ ] 7. frontieres_du_systeme : référence 55,0 → 69,5
-  - à la main : variables/frontieres_du_systeme.md, states.reference.level, puis python3 generator/synchroniser_scenarios.py
-  - _seulement si la décision S19 est oui_
-- [ ] 8. systeme_economique_redistribution : référence 70,0 → 83,9
-  - à la main : variables/systeme_economique_redistribution.md, states.reference.level, puis python3 generator/synchroniser_scenarios.py
-  - _seulement si la décision S19 est oui_
-- [ ] 9. gouvernance_institutions : référence 40,0 → 51,8
-  - à la main : variables/gouvernance_institutions.md, states.reference.level, puis python3 generator/synchroniser_scenarios.py
-  - _seulement si la décision S19 est oui_
-- [ ] 10. organisation_territoires : référence 65,0 → 74,7
-  - à la main : variables/organisation_territoires.md, states.reference.level, puis python3 generator/synchroniser_scenarios.py
-  - _seulement si la décision S19 est oui_
-- [ ] 11. climat_environnement_global : référence 65,0 → 60,0
-  - à la main : variables/climat_environnement_global.md, states.reference.level, puis python3 generator/synchroniser_scenarios.py
-  - _seulement si la décision S19 est oui_
-
-**Nouvelles entités**
-- [ ] 12. 3 entrée(s) prête(s) (bloc YAML ci-dessous) pour entites_custom/queue.yaml — catégorie à choisir
-  - `python3 generator/create_entities_and_instances.py --mode custom`
-  - _la lecture IA ne donne pas de catégorie ; scenario_hint limite à ce scénario_
-
-**Trajectoires**
-- [ ] 13. Réseau des Villes-États Pilotes en Gouvernance Participative (`reseau_des_villes_etats_pilotes_en_gouvernance_participative_reference`) : émergent → ascendant
-  - à la main : instances/reseau_des_villes_etats_pilotes_en_gouvernance_participative_reference.md, champ `trajectoire`
-  - _Les villes-refuge et les modèles de gouvernance locale deviennent des laboratoires de reconstruction post-pandémie, attirant des populations désillusionnées par les États centraux._
-- [ ] 14. ⚠ Réseau des Villes-Refuge pour Travailleurs Désaugmentés (`reseau_des_villes_refuge_pour_travailleurs_desaugmentes_reference`) : émergent → dominant
-  - à la main : instances/reseau_des_villes_refuge_pour_travailleurs_desaugmentes_reference.md, champ `trajectoire`
-  - _saut d'un cran (sans passer par ascendant) : garder, ou ramener à ascendant ; La désindustrialisation accélérée et l'effondrement des chaînes de valeur globales créent une demande massive pour des espaces de reconversion, faisant de ce réseau un acteur systémique._
-- [ ] 15. Consortium Helios (`consortium_helios_reference`) : dominant → mature
-  - à la main : instances/consortium_helios_reference.md, champ `trajectoire`
-  - _La crise sanitaire révèle la dépendance aux infrastructures énergétiques critiques, renforçant son rôle de régulateur *de facto* mais limitant son expansion face aux risques systémiques._
-- [ ] 16. OptiFlow Global Logistics Network (OGLN) (`optiflow_logistics_reference`) : dominant → déclinant
-  - à la main : instances/optiflow_logistics_reference.md, champ `trajectoire`
-  - _La fragmentation des flux logistiques et la priorité donnée aux circuits courts réduisent son emprise sur les échanges mondiaux, malgré son rôle initial dans la gestion de crise._
-- [ ] 17. NexCore Global Infrastructure Group (`nexcore_reference`) : dominant → déclinant
-  - à la main : instances/nexcore_reference.md, champ `trajectoire`
-  - _L'effondrement des budgets publics et la méfiance envers les infrastructures centralisées affaiblissent sa position, malgré son rôle dans la reconstruction numérique._
-- [ ] 18. Algorithmic Labor Exchange (`algorithmic_labor_exchange_reference`) : émergent → déclinant
-  - à la main : instances/algorithmic_labor_exchange_reference.md, champ `trajectoire`
-  - _La précarisation massive du travail et la défiance envers les plateformes algorithmiques réduisent son influence, au profit de modèles plus locaux ou coopératifs._
-- [ ] 19. ⚠ Consortiums d'Extraction Minière du Bassin Congolais (`consortiums_d_extraction_miniere_du_bassin_congolais_reference`) : émergent → dominant
-  - à la main : instances/consortiums_d_extraction_miniere_du_bassin_congolais_reference.md, champ `trajectoire`
-  - _saut d'un cran (sans passer par ascendant) : garder, ou ramener à ascendant ; La course aux ressources critiques pour les biotechnologies et les infrastructures post-pandémie renforce leur pouvoir, malgré les tensions sociales et environnementales._
-
-**Relations**
-- [ ] 20. opposition nouvelle : Réseau des Villes-Refuge pour Travailleurs Désaugmentés ↔ Consortiums Énergétiques des Mégapoles
-  - à la main : ajouter `consortiums_energetiques_des_megapoles_reference` dans `oppositions` de instances/reseau_des_villes_refuge_pour_travailleurs_desaugmentes_reference.md
-  - _Les villes-refuge contestent l'emprise des consortiums énergétiques sur les territoires, promouvant des modèles décentralisés et autonomes._
-- [ ] 21. alliance nouvelle : Consortium Helios ↔ Fonds Souverain Arctique Scandinave
-  - à la main : ajouter `fonds_souverain_arctique_scandinave_reference` dans `alliances` de instances/consortium_helios_reference.md
-  - _Helios et le fonds scandinave coordonnent leurs investissements dans les infrastructures énergétiques arctiques, mutualisant risques et ressources._
-- [ ] 22. opposition nouvelle : Gouvernements du Bloc Sahélien Autonome ↔ Union Africaine Résilience (UAR)
-  - à la main : ajouter `union_africaine_resilience_reference` dans `oppositions` de instances/gouvernements_du_bloc_sahelien_autonome_reference.md
-  - _Le Bloc Sahélien, renforcé par sa gestion autonome de la crise, conteste l'autorité de l'Union Africaine, jugée trop dépendante des institutions multilatérales._
-- [ ] 23. Rendre les relations réciproques
-  - `python3 generator/fix_alliances_oppositions.py --scenario reference --reciprocite-seule --ignorer-exclus`
-  - _étape 2 de Relations & lore (simulation d'abord)_
-
-**Lore**
-- [ ] 24. Règles à ajouter pour que l'audit du lore surveille : faits imposés de l'hypothèse
-  - à la main : documentation/lore_regles.yaml, section reference
-  - _comme les zones abandonnées de fortress_world (Nordgard, Koursk)_
-
-**Fiches à relire**
-- [ ] 25. Aucun pays ni nom propre à chercher : la recherche par mots ne cible aucune fiche
-  - _une hypothèse mondiale peut contredire des fiches sans les nommer : relecture IA ci-dessous, après l'ajout des faits imposés dans lore_regles.yaml (section Lore)_
-- [ ] 26. Estimer la relecture IA des fiches de plus fort impact
-  - `python3 generator/audit_lore.py --scenario reference --llm --estimer --limit 10`
-  - _aucun appel_
-- [ ] 27. Relecture IA des 10 fiches de plus fort impact (contradictions avec l'hypothèse)
-  - `python3 generator/audit_lore.py --scenario reference --llm --limit 10`
-  - _payant (≈ 0,5 centime la fiche) ; après application de l'événement_
-- [ ] 28. Relecture IA des fiches de la zone `europe_occidentale_reconstruite` (statut changé)
-  - `python3 generator/audit_lore.py --scenario reference --llm --zone europe_occidentale_reconstruite`
-  - _estimer d'abord avec --estimer ; payant_
-- [ ] 29. Relecture IA des fiches de la zone `zones_grises_globales` (statut changé)
-  - `python3 generator/audit_lore.py --scenario reference --llm --zone zones_grises_globales`
-  - _estimer d'abord avec --estimer ; payant_
-
-**Articles et site**
-- [ ] 30. 2 article(s) à relire (zone au statut changé, pays cité ou entité dont la trajectoire change)
-  - _« « Mémoire en fragments : quand l’art défie la muraille de verre » »; « Les mémoires oubliées de Tbilissi : quand l’Histoire résiste aux algorithmes »_
-- [ ] 31. Résumé du scénario
-  - `python3 generator/generate_resume_scenarios.py --scenario reference`
-  - _payant, un appel_
-- [ ] 32. Site des revues
-  - `python3 generator/chapos_revues.py`
-  - _puis bash generator/publier_site.sh_
-
-**Contrôles**
-- [ ] 33. Base
-  - `python3 generator/validate.py`
-- [ ] 34. Lore
-  - `python3 generator/audit_lore.py --scenario reference`
-  - _puis étapes 2 et 3 de Relations & lore si besoin_
-
-Entrées pour `entites_custom/queue.yaml` :
-
-```yaml
-- nom: Alliance des Villes Sanitaires Autonomes
-  category: <à choisir>
-  role: Réseau de villes ayant mis en place des protocoles sanitaires stricts et des infrastructures médicales
-    décentralisées, devenant des pôles d'attraction pour les populations et les investissements.
-  etat: émergent
-  scenario_ref: reference
-  scenario_hint:
   - reference
+  variables_hint:
+  - demographie_mobilite_humaine
+  - sante_biotechnologies
+  - systemes_productifs_travail
+  - systeme_economique_redistribution
+  - frontieres_du_systeme
+  - gouvernance_institutions
+  - organisation_territoires
+  - climat_environnement_global
+  variables_hint_count: 8
   source: et_si_peste_pulmonaire_2043
-- nom: Consortium des Biotechnologies Post-Pandémiques
-  category: <à choisir>
-  role: Alliance de laboratoires publics et privés ayant développé des traitements contre la peste pulmonaire,
-    contrôlant désormais l'accès aux technologies médicales critiques.
-  etat: émergent
-  scenario_ref: reference
-  scenario_hint:
-  - reference
-  zone_hint: bruxelles_nouveau
-  source: et_si_peste_pulmonaire_2043
-- nom: Front des Territoires Non Connectés
-  category: <à choisir>
-  role: Mouvement politique et social regroupant les régions exclues des réseaux logistiques et énergétiques
-    globaux, promouvant des modèles de résilience locale et de décroissance.
-  etat: émergent
-  scenario_ref: reference
-  scenario_hint:
-  - reference
-  zone_hint: zones_grises_globales
-  source: et_si_peste_pulmonaire_2043
+  acteurs_hint:
+  - ligue_mediterraneenne_des_villes_etats_portuaires_breakdown
+  - bloc_de_johannesburg_breakdown
+  - conglometrat_sino_siberien_bohai_transit_breakdown
+  - hanse_baltique_breakdown
+  acteurs_hint_count: 4
+  faits_imposes:
+    breakdown:
+    - fait: La pandémie tue environ 25 % de la population mondiale entre 2043 et 2046, sur tous les continents,
+        plus fortement dans les villes denses.
+      sort: contrainte
+    - fait: Aucun traitement efficace avant le début des années 2050 ; la maladie devient ensuite endémique
+        et contrôlée.
+      sort: contrainte
+    - fait: La population mondiale ne retrouve pas son niveau de 2042 avant la fin du siècle.
+      sort: contrainte
+    - fait: 'Ligue Méditerranéenne des Villes-États Portuaires (ligue_mediterraneenne_des_villes_etats_portuaires_breakdown)
+        passe de « émergent » à « ascendant » après 2043 : elle existe toujours (elle peut perdre des
+        lieux, des biens ou du pouvoir), ne la décris pas comme disparue.'
+      slug: ligue_mediterraneenne_des_villes_etats_portuaires_breakdown
+      sort: change
+    - fait: 'Bloc de Johannesburg (bloc_de_johannesburg_breakdown) passe de « émergent » à « ascendant
+        » après 2043 : elle existe toujours (elle peut perdre des lieux, des biens ou du pouvoir), ne
+        la décris pas comme disparue.'
+      slug: bloc_de_johannesburg_breakdown
+      sort: change
+    - fait: 'Conglométrat sino-sibérien Bohai Transit (conglometrat_sino_siberien_bohai_transit_breakdown)
+        passe de « émergent » à « mature » après 2043 : elle existe toujours (elle peut perdre des lieux,
+        des biens ou du pouvoir), ne la décris pas comme disparue.'
+      slug: conglometrat_sino_siberien_bohai_transit_breakdown
+      sort: change
+    - fait: 'Ligue Hanséatique Baltique — Le Sceau du Gotland (hanse_baltique_breakdown) passe de « ascendant
+        » à « dominant » après 2043 : elle existe toujours (elle peut perdre des lieux, des biens ou du
+        pouvoir), ne la décris pas comme disparue.'
+      slug: hanse_baltique_breakdown
+      sort: change
+    - fait: 'La zone Afrique de l''Ouest – Nœuds Lagos et Sahel (afrique_de_louest_lagos_sahel) passe
+        de « fragmenté » à « en_declin » : le lieu subsiste.'
+      slug: afrique_de_louest_lagos_sahel
+      sort: zone
+    - fait: 'La zone Espace Nord-Américain Fragmenté (espace_nord_americain_fragmente) passe de « fragmenté
+        » à « en_declin » : le lieu subsiste.'
+      slug: espace_nord_americain_fragmente
+      sort: zone
+    - fait: 'La zone Zone Golfe Persique–Levant (zone_golfe_levant) passe de « fragmenté » à « en_declin
+        » : le lieu subsiste.'
+      slug: zone_golfe_levant
+      sort: zone
+    fortress_world:
+    - fait: La pandémie tue environ 25 % de la population mondiale entre 2043 et 2046, sur tous les continents,
+        plus fortement dans les villes denses.
+      sort: contrainte
+    - fait: Aucun traitement efficace avant le début des années 2050 ; la maladie devient ensuite endémique
+        et contrôlée.
+      sort: contrainte
+    - fait: La population mondiale ne retrouve pas son niveau de 2042 avant la fin du siècle.
+      sort: contrainte
+    new_sustainability:
+    - fait: La pandémie tue environ 25 % de la population mondiale entre 2043 et 2046, sur tous les continents,
+        plus fortement dans les villes denses.
+      sort: contrainte
+    - fait: Aucun traitement efficace avant le début des années 2050 ; la maladie devient ensuite endémique
+        et contrôlée.
+      sort: contrainte
+    - fait: La population mondiale ne retrouve pas son niveau de 2042 avant la fin du siècle.
+      sort: contrainte
+    eco_communalism:
+    - fait: La pandémie tue environ 25 % de la population mondiale entre 2043 et 2046, sur tous les continents,
+        plus fortement dans les villes denses.
+      sort: contrainte
+    - fait: Aucun traitement efficace avant le début des années 2050 ; la maladie devient ensuite endémique
+        et contrôlée.
+      sort: contrainte
+    - fait: La population mondiale ne retrouve pas son niveau de 2042 avant la fin du siècle.
+      sort: contrainte
+    policy_reform:
+    - fait: La pandémie tue environ 25 % de la population mondiale entre 2043 et 2046, sur tous les continents,
+        plus fortement dans les villes denses.
+      sort: contrainte
+    - fait: Aucun traitement efficace avant le début des années 2050 ; la maladie devient ensuite endémique
+        et contrôlée.
+      sort: contrainte
+    - fait: La population mondiale ne retrouve pas son niveau de 2042 avant la fin du siècle.
+      sort: contrainte
+    reference:
+    - fait: La pandémie tue environ 25 % de la population mondiale entre 2043 et 2046, sur tous les continents,
+        plus fortement dans les villes denses.
+      sort: contrainte
+    - fait: Aucun traitement efficace avant le début des années 2050 ; la maladie devient ensuite endémique
+        et contrôlée.
+      sort: contrainte
+    - fait: La population mondiale ne retrouve pas son niveau de 2042 avant la fin du siècle.
+      sort: contrainte
+  date_imposee: 2043
+  mode_impose: rupture
+  impacts_imposes:
+    breakdown:
+    - variable: demographie_mobilite_humaine
+      delta_level: 25
+      duree: 3
+      polarite: 1
+    - variable: sante_biotechnologies
+      delta_level: 25
+      duree: 3
+      polarite: 1
+    - variable: systemes_productifs_travail
+      delta_level: 18
+      duree: 4
+      polarite: 1
+    - variable: systeme_economique_redistribution
+      delta_level: 15
+      duree: 5
+      polarite: 1
+    - variable: frontieres_du_systeme
+      delta_level: 15
+      duree: 3
+      polarite: 1
+    - variable: gouvernance_institutions
+      delta_level: 12
+      duree: 5
+      polarite: 1
+    - variable: organisation_territoires
+      delta_level: 10
+      duree: 6
+      polarite: 1
+    - variable: climat_environnement_global
+      delta_level: 5
+      duree: 10
+      polarite: -1
+    fortress_world:
+    - variable: demographie_mobilite_humaine
+      delta_level: 25
+      duree: 3
+      polarite: 1
+    - variable: sante_biotechnologies
+      delta_level: 25
+      duree: 3
+      polarite: 1
+    - variable: systemes_productifs_travail
+      delta_level: 18
+      duree: 4
+      polarite: 1
+    - variable: systeme_economique_redistribution
+      delta_level: 15
+      duree: 5
+      polarite: 1
+    - variable: frontieres_du_systeme
+      delta_level: 15
+      duree: 3
+      polarite: 1
+    - variable: gouvernance_institutions
+      delta_level: 12
+      duree: 5
+      polarite: 1
+    - variable: organisation_territoires
+      delta_level: 10
+      duree: 6
+      polarite: 1
+    - variable: climat_environnement_global
+      delta_level: 5
+      duree: 10
+      polarite: -1
+    new_sustainability:
+    - variable: demographie_mobilite_humaine
+      delta_level: 25
+      duree: 3
+      polarite: 1
+    - variable: sante_biotechnologies
+      delta_level: 25
+      duree: 3
+      polarite: 1
+    - variable: systemes_productifs_travail
+      delta_level: 18
+      duree: 4
+      polarite: 1
+    - variable: systeme_economique_redistribution
+      delta_level: 15
+      duree: 5
+      polarite: 1
+    - variable: frontieres_du_systeme
+      delta_level: 15
+      duree: 3
+      polarite: 1
+    - variable: gouvernance_institutions
+      delta_level: 12
+      duree: 5
+      polarite: 1
+    - variable: organisation_territoires
+      delta_level: 10
+      duree: 6
+      polarite: 1
+    - variable: climat_environnement_global
+      delta_level: 5
+      duree: 10
+      polarite: -1
+    eco_communalism:
+    - variable: demographie_mobilite_humaine
+      delta_level: 25
+      duree: 3
+      polarite: 1
+    - variable: sante_biotechnologies
+      delta_level: 25
+      duree: 3
+      polarite: 1
+    - variable: systemes_productifs_travail
+      delta_level: 18
+      duree: 4
+      polarite: 1
+    - variable: systeme_economique_redistribution
+      delta_level: 15
+      duree: 5
+      polarite: 1
+    - variable: frontieres_du_systeme
+      delta_level: 15
+      duree: 3
+      polarite: 1
+    - variable: gouvernance_institutions
+      delta_level: 12
+      duree: 5
+      polarite: 1
+    - variable: organisation_territoires
+      delta_level: 10
+      duree: 6
+      polarite: 1
+    - variable: climat_environnement_global
+      delta_level: 5
+      duree: 10
+      polarite: -1
+    policy_reform:
+    - variable: demographie_mobilite_humaine
+      delta_level: 25
+      duree: 3
+      polarite: 1
+    - variable: sante_biotechnologies
+      delta_level: 25
+      duree: 3
+      polarite: 1
+    - variable: systemes_productifs_travail
+      delta_level: 18
+      duree: 4
+      polarite: 1
+    - variable: systeme_economique_redistribution
+      delta_level: 15
+      duree: 5
+      polarite: 1
+    - variable: frontieres_du_systeme
+      delta_level: 15
+      duree: 3
+      polarite: 1
+    - variable: gouvernance_institutions
+      delta_level: 12
+      duree: 5
+      polarite: 1
+    - variable: organisation_territoires
+      delta_level: 10
+      duree: 6
+      polarite: 1
+    - variable: climat_environnement_global
+      delta_level: 5
+      duree: 10
+      polarite: -1
+    reference:
+    - variable: demographie_mobilite_humaine
+      delta_level: 25
+      duree: 3
+      polarite: 1
+    - variable: sante_biotechnologies
+      delta_level: 25
+      duree: 3
+      polarite: 1
+    - variable: systemes_productifs_travail
+      delta_level: 18
+      duree: 4
+      polarite: 1
+    - variable: systeme_economique_redistribution
+      delta_level: 15
+      duree: 5
+      polarite: 1
+    - variable: frontieres_du_systeme
+      delta_level: 15
+      duree: 3
+      polarite: 1
+    - variable: gouvernance_institutions
+      delta_level: 12
+      duree: 5
+      polarite: 1
+    - variable: organisation_territoires
+      delta_level: 10
+      duree: 6
+      polarite: 1
+    - variable: climat_environnement_global
+      delta_level: 5
+      duree: 10
+      polarite: -1
+  via_matrice_impose: true
 ```
 

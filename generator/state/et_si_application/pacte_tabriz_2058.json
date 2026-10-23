@@ -1,0 +1,158 @@
+{
+ "id": "pacte_tabriz_2058",
+ "date_simulation": "2026-10-23T19:11",
+ "version": "v8.25",
+ "empreinte": "ee1f2a4fd6da82bb",
+ "annee": 2058.0,
+ "mode": "choc",
+ "contraintes": [
+  "À partir de 2058, l'Iran fait partie de l'Arc Eurasien Central ; il n'appartient plus à la Zone Golfe Persique–Levant.",
+  "L'Arc Eurasien Central dispose de bases sur la côte iranienne du détroit d'Ormuz."
+ ],
+ "scenarios_hypothese": [
+  "breakdown"
+ ],
+ "scenarios": [
+  "breakdown"
+ ],
+ "complet": true,
+ "par_scenario": {
+  "breakdown": {
+   "lecture": {
+    "trajectoires": [
+     {
+      "instance": "corridors_eurasiens_convoyage_breakdown",
+      "nom": "Les Venelles — Corridors Eurasiens Convoyage",
+      "avant": "déclinant",
+      "apres": "ascendant",
+      "raison": "L'intégration de l'Iran dans l'Arc Eurasien Central renforce les corridors de convoyage comme axe vital pour les flux énergétiques et logistiques, malgré les risques de sabotage."
+     },
+     {
+      "instance": "factions_energetiques_heritieres_des_pactes_abs_breakdown",
+      "nom": "Factions Énergétiques Héritières des Pactes ABS",
+      "avant": "émergent",
+      "apres": "dominant",
+      "raison": "Le contrôle des ressources iraniennes par l'Arc Eurasien Central consolide leur pouvoir sur les marchés énergétiques fragmentés."
+     },
+     {
+      "instance": "consortium_energetique_oural_caspien_breakdown",
+      "nom": "Consortium Énergétique Oural-Caspien",
+      "avant": "émergent",
+      "apres": "ascendant",
+      "raison": "Le corridor Oural-Caspien devient un relais clé pour les ressources iraniennes, renforçant son rôle dans l'Arc Eurasien Central."
+     },
+     {
+      "instance": "milices_extractivistes_du_bassin_du_congo_breakdown",
+      "nom": "Milices Extractivistes du Bassin du Congo",
+      "avant": "émergent",
+      "apres": "marginal",
+      "raison": "La focalisation sur les ressources iraniennes réduit temporairement la pression sur les minerais africains."
+     }
+    ],
+    "relations": [
+     {
+      "a": "armada_logistique_nordique_breakdown",
+      "a_nom": "Konsortiet Nordark — Axes du Grand Nord",
+      "b": "hanse_baltique_breakdown",
+      "b_nom": "Ligue Hanséatique Baltique — Le Sceau du Gotland",
+      "type": "opposition",
+      "action": "nouvelle",
+      "raison": "La marginalisation des routes baltiques crée des tensions avec les acteurs arctiques."
+     },
+     {
+      "a": "reseau_des_cartographes_des_zones_grises_breakdown",
+      "a_nom": "Les Veilleurs des Brumes — Réseau des Cartographes des Zones Grises",
+      "b": "bureau_des_territoires_residuels_breakdown",
+      "b_nom": "Registre des Zones Non Récupérables",
+      "type": "alliance",
+      "action": "nouvelle",
+      "raison": "Les cartographes des zones grises documentent les nouvelles frontières floues autour d'Ormuz pour le Registre des Zones Non Récupérables."
+     }
+    ],
+    "zones_statut": [
+     {
+      "zone": "arc_eurasien_central",
+      "nom": "Arc Eurasien Central",
+      "avant": "fragmenté",
+      "apres": "dominant",
+      "raison": "L'intégration de l'Iran et le contrôle d'Ormuz en font le bloc le plus puissant de la région."
+     },
+     {
+      "zone": "zone_golfe_levant",
+      "nom": "Zone Golfe Persique–Levant",
+      "avant": "fragmenté",
+      "apres": "en_declin",
+      "raison": "La perte de l'Iran et la militarisation d'Ormuz affaiblissent sa cohérence géopolitique."
+     },
+     {
+      "zone": "bassin_caspien_zone_conflit",
+      "nom": "Bassin Caspien (Zone de Conflit Bloc IV–Bloc IX)",
+      "avant": "fragmenté",
+      "apres": "stable",
+      "raison": "La mainmise de l'Arc Eurasien Central réduit les tensions entre les blocs IV et IX."
+     },
+     {
+      "zone": "detroit_ormuz",
+      "nom": "Détroit d'Ormuz",
+      "avant": "fragmenté",
+      "apres": "disparu",
+      "raison": "Le détroit est désormais une zone militarisée intégrée à l'Arc Eurasien Central, plus une entité autonome."
+     }
+    ],
+    "nouvelles_entites": [
+     {
+      "nom": "Veilleurs d'Ormuz",
+      "role": "Contrôle des flux maritimes dans le détroit d'Ormuz pour le compte de l'Arc Eurasien Central.",
+      "zone": "arc_eurasien_central",
+      "raison": "Nécessité de sécuriser les bases eurasiennes sur la côte iranienne et de réguler le trafic maritime."
+     },
+     {
+      "nom": "Alliance des Ports Caspiennes",
+      "role": "Coordination des échanges entre les ports de la Caspienne sous influence eurasienne.",
+      "zone": "bassin_caspien_zone_conflit",
+      "raison": "L'intégration de l'Iran et du Turkménistan nécessite une structure pour gérer les flux logistiques.",
+      "category": "organisation"
+     },
+     {
+      "nom": "Front de Libération du Golfe",
+      "role": "Résistance armée aux bases eurasiennes dans le sud de l'Iran et à Oman.",
+      "zone": "iran_levant_residuel",
+      "raison": "Réaction à l'occupation partielle de l'Iran par l'Arc Eurasien Central.",
+      "category": "réseau"
+     }
+    ]
+   },
+   "passe": {
+    "trajectoires": [],
+    "relations": [],
+    "textes": []
+   },
+   "erreurs": [],
+   "carte": [
+    {
+     "pays": "Iran",
+     "action": "absorber",
+     "cible": "arc_eurasien_central",
+     "source": "hypothese",
+     "nouvelle_zone": null,
+     "erreurs": [],
+     "alertes": [],
+     "simples": [
+      "terminal_kharg",
+      "isfahan_fordow_ruines"
+     ],
+     "a_repartir": [
+      {
+       "slug": "detroit_ormuz",
+       "nom": "Détroit d'Ormuz",
+       "autres": [
+        "Oman"
+       ]
+      }
+     ],
+     "videes": []
+    }
+   ]
+  }
+ }
+}

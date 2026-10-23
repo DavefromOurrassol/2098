@@ -1,0 +1,4126 @@
+[
+  {
+    "id": "generate",
+    "label": "Générer un article",
+    "icon": "📄",
+    "section": "articles",
+    "script": "generate.py",
+    "description": "Génère un article de presse fictive à partir des réglages ci-dessous (scénario, thématique, longueur, angle...).",
+    "requires": [],
+    "options": [
+      {
+        "flag": "--dry-run",
+        "type": "checkbox",
+        "label": "Simulation (aucune écriture)",
+        "default": false,
+        "description": "Affiche le/les prompt(s) complet(s) qui serai(en)t envoyé(s), sans appeler l'API ni rien écrire."
+      },
+      {
+        "flag": "--thematique",
+        "type": "select",
+        "label": "Thématique",
+        "choices": [
+          {
+            "value": "actualites_a_la_une",
+            "label": "actualites_a_la_une"
+          },
+          {
+            "value": "politique",
+            "label": "politique"
+          },
+          {
+            "value": "economie_finance",
+            "label": "economie_finance"
+          },
+          {
+            "value": "environnement_climat",
+            "label": "environnement_climat"
+          },
+          {
+            "value": "sciences_technologies",
+            "label": "sciences_technologies"
+          },
+          {
+            "value": "societe",
+            "label": "societe"
+          },
+          {
+            "value": "culture",
+            "label": "culture"
+          },
+          {
+            "value": "international",
+            "label": "international"
+          },
+          {
+            "value": "musique",
+            "label": "musique"
+          },
+          {
+            "value": "sports",
+            "label": "sports"
+          },
+          {
+            "value": "faits_divers",
+            "label": "faits_divers"
+          },
+          {
+            "value": "opinions_editoriaux",
+            "label": "opinions_editoriaux"
+          },
+          {
+            "value": "lifestyle_art_de_vivre",
+            "label": "lifestyle_art_de_vivre"
+          },
+          {
+            "value": "sante",
+            "label": "sante"
+          },
+          {
+            "value": "education",
+            "label": "education"
+          },
+          {
+            "value": "histoire_patrimoine",
+            "label": "histoire_patrimoine"
+          },
+          {
+            "value": "medias_communication",
+            "label": "medias_communication"
+          },
+          {
+            "value": "religion_spiritualite",
+            "label": "religion_spiritualite"
+          },
+          {
+            "value": "petites_annonces_services",
+            "label": "petites_annonces_services"
+          },
+          {
+            "value": "meteo",
+            "label": "meteo"
+          }
+        ],
+        "default": "actualites_a_la_une"
+      },
+      {
+        "flag": "--ligne-editoriale",
+        "type": "ligne_select",
+        "label": "Ligne éditoriale",
+        "choices": [
+          {
+            "value": "pro_pouvoir",
+            "label": "Pro pouvoir"
+          },
+          {
+            "value": "opposition",
+            "label": "Opposition"
+          }
+        ],
+        "default": "pro_pouvoir"
+      },
+      {
+        "flag": "--article-longueur",
+        "type": "select",
+        "label": "Longueur",
+        "choices": [
+          {
+            "value": "breve",
+            "label": "Brève (200-400 mots)"
+          },
+          {
+            "value": "analyse",
+            "label": "Analyse (600-900 mots)"
+          },
+          {
+            "value": "reportage",
+            "label": "Reportage (700-1000 mots)"
+          },
+          {
+            "value": "chronique",
+            "label": "Chronique (400-700 mots)"
+          },
+          {
+            "value": "editorial",
+            "label": "Éditorial (500-800 mots)"
+          },
+          {
+            "value": "auto",
+            "label": "Auto (format naturel)"
+          }
+        ],
+        "default": "analyse"
+      },
+      {
+        "flag": "--article-angle-specifique",
+        "type": "text",
+        "label": "Angle spécifique",
+        "optional": true,
+        "placeholder": "ex : focus sur les réfugiés climatiques",
+        "mode_only": "semi_guide",
+        "description": "(Mode Forcer : ignoré -- l'angle est généré automatiquement autour de l'élément forcé.)"
+      },
+      {
+        "flag": "--scenario",
+        "type": "select",
+        "label": "Scénario",
+        "mode_only": "semi_guide",
+        "choices": [
+          {
+            "value": "breakdown",
+            "label": "breakdown"
+          },
+          {
+            "value": "fortress_world",
+            "label": "fortress_world"
+          },
+          {
+            "value": "new_sustainability",
+            "label": "new_sustainability"
+          },
+          {
+            "value": "eco_communalism",
+            "label": "eco_communalism"
+          },
+          {
+            "value": "policy_reform",
+            "label": "policy_reform"
+          },
+          {
+            "value": "reference",
+            "label": "reference"
+          }
+        ]
+      },
+      {
+        "flag": "--zone-slug",
+        "type": "slug_select",
+        "label": "Zone",
+        "mode_only": "semi_guide",
+        "slug_type": "zones_hier_journal",
+        "optional": true,
+        "description": "Dépend du scénario choisi ci-dessus. Ne liste que les zones ayant un journal — les sous-zones plus fines ne sont pas sélectionnables ici."
+      },
+      {
+        "flag": "--type-diffusion",
+        "type": "select",
+        "label": "Mode de diffusion",
+        "default": "auto",
+        "required": false,
+        "choices": [
+          {
+            "value": "auto",
+            "label": "Auto (celui de la zone dans journaux.yaml)"
+          },
+          {
+            "value": "ecrit",
+            "label": "Forcer écrit"
+          },
+          {
+            "value": "oral",
+            "label": "Forcer oral"
+          },
+          {
+            "value": "mixte",
+            "label": "Forcer mixte (tirage 50/50)"
+          }
+        ],
+        "description": "Par défaut, respecte ce qui est déjà configuré pour la zone. Un choix explicite ici s'applique UNIQUEMENT à cet article, sans jamais modifier journaux.yaml. Si \"Oral\" est forcé sur une zone sans orateur défini, repli automatique sur écrit."
+      },
+      {
+        "flag": "--intervenant",
+        "type": "slug_select",
+        "label": "Forcer un intervenant précis (optionnel)",
+        "slug_type": "intervenants_eligibles",
+        "slug_extra_params": {
+          "ligne": "--ligne-editoriale",
+          "zone": "--zone-slug",
+          "mode": "--type-diffusion",
+          "thematique": "--thematique"
+        },
+        "required": false,
+        "description": "Liste dépendante du scénario + de la ligne éditoriale + de la zone + du mode de diffusion + de la thématique choisis ci-dessus (se recharge automatiquement si l'un de ces champs change). Les journalistes sont filtrés par thématique exactement comme lors d'une génération normale (avec repli sur la liste complète si aucun·e journaliste ne correspond) -- les orateurs ne sont jamais filtrés par thématique (pas de notion de spécialité pour eux). En mode \"Mixte\" ou \"Auto\", journalistes et orateurs sont mélangés dans la même liste, chacun identifié par un suffixe -- choisir un nom détermine implicitement le mode (un choix d'orateur force l'oral, même si \"Mode de diffusion\" est resté sur Auto). Laisse vide pour la rotation normale.",
+        "mode_only": "semi_guide"
+      },
+      {
+        "flag": "--article-titre-suggere",
+        "type": "text",
+        "label": "Titre suggéré",
+        "mode_only": "semi_guide",
+        "optional": true,
+        "placeholder": "Laisser vide = l'IA choisit"
+      },
+      {
+        "flag": "--a-une-photo",
+        "type": "checkbox",
+        "label": "Aura une image",
+        "default": false,
+        "description": "Décide dès l'écriture si cet article sera illustré. La source (IA/personnelle/autre) se choisit juste en dessous — la génération réelle de l'image se fait plus tard, via generate_images.py."
+      },
+      {
+        "flag": "--credit",
+        "type": "select",
+        "label": "Crédit image",
+        "optional": true,
+        "choices": [
+          {
+            "value": "",
+            "label": "(pas encore décidé)"
+          },
+          {
+            "value": "IA_generated",
+            "label": "Génération IA"
+          },
+          {
+            "value": "personnel",
+            "label": "Personnel"
+          },
+          {
+            "value": "autre",
+            "label": "Autre source"
+          }
+        ],
+        "default": "",
+        "description": "Ignoré si \"Aura une image\" n'est pas coché."
+      },
+      {
+        "flag": "--forcer-type",
+        "type": "select",
+        "label": "Élément à forcer — type",
+        "mode_only": "forcer",
+        "choices": [
+          {
+            "value": "instance",
+            "label": "Instance (entité)"
+          },
+          {
+            "value": "evenement",
+            "label": "Événement"
+          },
+          {
+            "value": "signal",
+            "label": "Signal"
+          }
+        ],
+        "default": "instance",
+        "description": "Détermine la liste proposée juste en dessous."
+      },
+      {
+        "flag": "--forcer-slug",
+        "type": "slug_select",
+        "label": "Élément à forcer",
+        "mode_only": "forcer",
+        "slug_type": "entities",
+        "slug_type_field": "--forcer-type",
+        "slug_type_map": {
+          "instance": "entities",
+          "evenement": "evenements",
+          "signal": "signals",
+          "*": "entities"
+        },
+        "description": "Liste filtrée selon le type choisi ci-dessus."
+      },
+      {
+        "flag": "--forcer-scenarios",
+        "type": "dynamic_multi_select",
+        "label": "Scénarios à couvrir",
+        "mode_only": "forcer",
+        "slug_type": "forcer_scenarios",
+        "description": "Restreint automatiquement à ce qui est disponible pour l'élément choisi ci-dessus. \"Tous\" = tous les scénarios où il est disponible (pas nécessairement les 6).",
+        "slug_extra_params": {
+          "slug": "--forcer-slug",
+          "element_type": "--forcer-type"
+        }
+      },
+      {
+        "flag": "--forcer-zone",
+        "type": "dynamic_multi_select",
+        "label": "Zone(s)",
+        "mode_only": "forcer",
+        "optional": true,
+        "slug_type": "forcer_zones",
+        "description": "\"Tous\" par défaut (aucune restriction). Si tu coches des zones précises, seuls les scénarios où l'élément s'y trouve seront traités. Restreint automatiquement aux zones réellement associées à l'élément choisi -- reste sur \"tous\" si l'élément n'a pas de zone (signal) ou n'a jamais été localisé.",
+        "slug_extra_params": {
+          "slug": "--forcer-slug",
+          "element_type": "--forcer-type"
+        }
+      },
+      {
+        "flag": "--forcer-zone-journal",
+        "type": "slug_select",
+        "label": "Journal d'une autre zone (optionnel)",
+        "mode_only": "forcer",
+        "optional": true,
+        "description": "Vide = le journal de la zone de l'élément écrit (comportement habituel). Sinon, choisis le journal qui couvre l'élément comme un fait étranger, vu depuis sa zone (regard local, sources à distance). La liste montre les zones qui ont une rédaction pour la ligne éditoriale choisie, dans les scénarios où l'élément existe ; elle se recharge quand l'élément ou la ligne change. Seuls les scénarios où cette zone a une rédaction sont traités, et l'article est rangé sous la zone du journal sur le site.",
+        "slug_type": "zones_journal_forcer",
+        "slug_extra_params": {
+          "slug": "--forcer-slug",
+          "element_type": "--forcer-type",
+          "ligne": "--ligne-editoriale"
+        }
+      }
+    ],
+    "gui_verified": true,
+    "mode_select": {
+      "label": "Mode de génération",
+      "choices": [
+        {
+          "value": "semi_guide",
+          "label": "Semi-guidé",
+          "note": "Sélection automatique des instances/événements/signaux (comportement historique, inchangé)."
+        },
+        {
+          "value": "forcer",
+          "label": "Forcer un élément",
+          "note": "Un article par scénario retenu, construit spécifiquement autour de l'élément choisi. Titre toujours laissé à l'IA."
+        }
+      ]
+    }
+  },
+  {
+    "id": "definir_edition",
+    "label": "Mois de parution du journal",
+    "icon": "📅",
+    "section": "articles",
+    "script": "definir_edition.py",
+    "description": "Fixe/avance directement le mois de parution actif du journal (année/mois), indépendamment de tout lancement de série ou d'article. Aucun article n'est généré ici.",
+    "requires": [],
+    "options": [
+      {
+        "flag": "--annee",
+        "type": "number",
+        "label": "Année",
+        "min": 2026,
+        "max": 2098,
+        "default": 2098
+      },
+      {
+        "flag": "--mois",
+        "type": "select",
+        "label": "Mois",
+        "choices": [
+          {
+            "value": 1,
+            "label": "Janvier"
+          },
+          {
+            "value": 2,
+            "label": "Février"
+          },
+          {
+            "value": 3,
+            "label": "Mars"
+          },
+          {
+            "value": 4,
+            "label": "Avril"
+          },
+          {
+            "value": 5,
+            "label": "Mai"
+          },
+          {
+            "value": 6,
+            "label": "Juin"
+          },
+          {
+            "value": 7,
+            "label": "Juillet"
+          },
+          {
+            "value": 8,
+            "label": "Août"
+          },
+          {
+            "value": 9,
+            "label": "Septembre"
+          },
+          {
+            "value": 10,
+            "label": "Octobre"
+          },
+          {
+            "value": 11,
+            "label": "Novembre"
+          },
+          {
+            "value": 12,
+            "label": "Décembre"
+          }
+        ],
+        "default": 8
+      }
+    ],
+    "gui_verified": true
+  },
+  {
+    "id": "generate_series",
+    "label": "Générer une série d'articles",
+    "icon": "📋",
+    "section": "articles",
+    "script": "generate_series.py",
+    "description": "Génère plusieurs articles d'un coup selon les réglages d'une série (thématiques, nombre par thématique, longueur).",
+    "requires": [],
+    "options": [
+      {
+        "flag": "--validate-first",
+        "type": "checkbox",
+        "label": "Valider d'abord",
+        "description": "Lance validate.py avant la génération",
+        "default": false
+      },
+      {
+        "flag": "--dry-run",
+        "type": "checkbox",
+        "label": "Simulation (aucune écriture)",
+        "default": false,
+        "description": "Affiche ce qui serait fait, sans rien modifier ni écrire sur le disque."
+      }
+    ],
+    "config_file": "generator/config_series.yaml",
+    "config_fields": [
+      {
+        "key": "scenario",
+        "type": "select",
+        "label": "Scénario",
+        "source": "config_scenarios"
+      },
+      {
+        "key": "ligne_editoriale",
+        "type": "ligne_select",
+        "label": "Ligne éditoriale",
+        "choices": [
+          {
+            "value": "pro_pouvoir",
+            "label": "Pro pouvoir"
+          },
+          {
+            "value": "opposition",
+            "label": "Opposition"
+          },
+          {
+            "value": "",
+            "label": "Aléatoire à chaque article"
+          }
+        ],
+        "default": ""
+      },
+      {
+        "key": "thematiques",
+        "type": "multi_select",
+        "label": "Thématiques",
+        "choices": [
+          "actualites_a_la_une",
+          "politique",
+          "economie_finance",
+          "environnement_climat",
+          "sciences_technologies",
+          "societe",
+          "culture",
+          "international",
+          "musique",
+          "sports",
+          "faits_divers",
+          "opinions_editoriaux",
+          "lifestyle_art_de_vivre",
+          "sante",
+          "education",
+          "histoire_patrimoine",
+          "medias_communication",
+          "religion_spiritualite",
+          "petites_annonces_services",
+          "meteo"
+        ]
+      },
+      {
+        "key": "articles_par_thematique",
+        "type": "number",
+        "label": "Articles par thématique",
+        "min": 1,
+        "max": 20,
+        "default": 1
+      },
+      {
+        "key": "longueur",
+        "type": "select",
+        "label": "Longueur",
+        "choices": [
+          {
+            "value": "breve",
+            "label": "Brève (200-400 mots)"
+          },
+          {
+            "value": "analyse",
+            "label": "Analyse (600-900 mots)"
+          },
+          {
+            "value": "reportage",
+            "label": "Reportage (700-1000 mots)"
+          },
+          {
+            "value": "chronique",
+            "label": "Chronique (400-700 mots)"
+          },
+          {
+            "value": "editorial",
+            "label": "Éditorial (500-800 mots)"
+          },
+          {
+            "value": "auto",
+            "label": "Auto (format naturel)"
+          }
+        ],
+        "default": "auto"
+      },
+      {
+        "key": "photo_policy",
+        "type": "select",
+        "label": "Illustration des articles",
+        "choices": [
+          {
+            "value": "aucune",
+            "label": "Aucune"
+          },
+          {
+            "value": "toutes",
+            "label": "Toutes"
+          },
+          {
+            "value": "aleatoire",
+            "label": "Aléatoire (25% des articles)"
+          }
+        ],
+        "default": "aucune",
+        "description": "Décide a_une_photo par article. Le crédit (source de l'image) n'est jamais fixé automatiquement en série — à choisir par article, plus tard, avant de lancer generate_images.py."
+      },
+      {
+        "key": "angle_specifique",
+        "type": "text",
+        "label": "Angle spécifique",
+        "optional": true,
+        "placeholder": "Laisser vide = l'IA choisit librement"
+      }
+    ],
+    "yaml_files": [
+      {
+        "path": "generator/config_series.yaml",
+        "label": "generator/config_series.yaml"
+      }
+    ],
+    "gui_verified": true
+  },
+  {
+    "id": "generate_journaux",
+    "label": "Générer les journaux locaux",
+    "icon": "🗞",
+    "section": "presse",
+    "script": "generate_journaux.py",
+    "description": "Crée ou met à jour, pour chaque zone d'un scénario, le journal local qui la couvre (nom, ton éditorial).",
+    "requires": [],
+    "options": [
+      {
+        "flag": "--all",
+        "type": "checkbox",
+        "label": "Tous les scénarios",
+        "default": false,
+        "mutually_exclusive_with": "scenario"
+      },
+      {
+        "flag": "--scenario",
+        "type": "select",
+        "label": "Scénario",
+        "source": "config_scenarios",
+        "default": "",
+        "optional": true,
+        "mutually_exclusive_with": "all"
+      },
+      {
+        "flag": "--ligne",
+        "type": "ligne_select",
+        "label": "Ligne éditoriale",
+        "choices": [
+          {
+            "value": "pro_pouvoir",
+            "label": "Pro pouvoir"
+          },
+          {
+            "value": "opposition",
+            "label": "Opposition"
+          },
+          {
+            "value": "all",
+            "label": "Toutes"
+          }
+        ],
+        "default": "all"
+      },
+      {
+        "flag": "--update",
+        "type": "checkbox",
+        "label": "Zones manquantes seulement",
+        "description": "N'ajoute que les zones qui n'ont pas encore de journal, sans toucher aux journaux déjà créés.",
+        "default": false
+      },
+      {
+        "flag": "--dry-run",
+        "type": "checkbox",
+        "label": "Simulation (aucune écriture)",
+        "default": false,
+        "description": "Affiche ce qui serait fait, sans rien modifier ni écrire sur le disque."
+      }
+    ],
+    "gui_verified": true,
+    "required_one_of": [
+      [
+        "--scenario",
+        "--all"
+      ]
+    ]
+  },
+  {
+    "id": "create_entities",
+    "label": "Créer des entités",
+    "icon": "👥",
+    "section": "entites_creation",
+    "script": "create_entities_and_instances.py",
+    "description": "Crée de nouveaux personnages, organisations, lieux ou autres éléments fictifs (entités), et les rattache aux scénarios choisis.",
+    "requires": [],
+    "mode_select": {
+      "label": "Mode",
+      "choices": [
+        {
+          "value": "custom",
+          "label": "Custom — saisie manuelle",
+          "note": "Traite le contenu actuel de entites_custom/queue.yaml et injecte dans le vault."
+        },
+        {
+          "value": "auto",
+          "label": "Auto — génération automatique",
+          "note": "Génère et injecte directement les entités + leurs instances dans le vault."
+        },
+        {
+          "value": "auto-suggest",
+          "label": "Auto-suggest — suggestions depuis gaps",
+          "note": "Ne fait qu'ajouter des idées à entites_custom/queue.yaml — relance ensuite en mode Custom pour les injecter réellement dans le vault."
+        }
+      ]
+    },
+    "options": [
+      {
+        "flag": "--n",
+        "type": "number",
+        "label": "Nombre d'entités (modes auto / auto-suggest)",
+        "optional": false,
+        "placeholder": "3",
+        "default": 3,
+        "mode_only": [
+          "auto",
+          "auto-suggest"
+        ]
+      },
+      {
+        "flag": "--category",
+        "type": "select",
+        "label": "Catégorie imposée (mode auto)",
+        "optional": true,
+        "choices": [
+          {
+            "value": "IA",
+            "label": "IA"
+          },
+          {
+            "value": "organisation",
+            "label": "organisation"
+          },
+          {
+            "value": "entreprise",
+            "label": "entreprise"
+          },
+          {
+            "value": "institution",
+            "label": "institution"
+          },
+          {
+            "value": "infrastructure",
+            "label": "infrastructure"
+          },
+          {
+            "value": "réseau",
+            "label": "réseau"
+          },
+          {
+            "value": "humain",
+            "label": "humain"
+          },
+          {
+            "value": "système",
+            "label": "système"
+          },
+          {
+            "value": "hybride",
+            "label": "hybride"
+          },
+          {
+            "value": "autre",
+            "label": "autre"
+          },
+          {
+            "value": "média",
+            "label": "média"
+          }
+        ],
+        "mode_only": "auto"
+      },
+      {
+        "flag": "--scenario",
+        "type": "multi_select",
+        "label": "Scénarios cibles (auto: contrainte dure / auto-suggest: orientation)",
+        "optional": true,
+        "mode_only": [
+          "auto",
+          "auto-suggest"
+        ],
+        "choices": [
+          {
+            "value": "breakdown",
+            "label": "breakdown"
+          },
+          {
+            "value": "fortress_world",
+            "label": "fortress_world"
+          },
+          {
+            "value": "new_sustainability",
+            "label": "new_sustainability"
+          },
+          {
+            "value": "eco_communalism",
+            "label": "eco_communalism"
+          },
+          {
+            "value": "policy_reform",
+            "label": "policy_reform"
+          },
+          {
+            "value": "reference",
+            "label": "reference"
+          }
+        ],
+        "description": "Laisser vide = les 6 par défaut (auto) ou libre choix du LLM (auto-suggest)"
+      },
+      {
+        "flag": "--ancrage-temporel",
+        "type": "select",
+        "label": "Ancrage temporel",
+        "optional": true,
+        "default": "libre",
+        "choices": [
+          {
+            "value": "libre",
+            "label": "Libre (défaut — priorité aux jalons du scénario)"
+          },
+          {
+            "value": "recent",
+            "label": "Récent forcé (1-3 prochaines années, ancré dans etat_du_monde_reel.md)"
+          }
+        ],
+        "mode_only": [
+          "custom",
+          "auto"
+        ],
+        "description": "Le mode 'libre' (par défaut) donne presque toujours la priorité aux jalons du scénario, même pour une origine proche de 2026. Choisis 'récent' pour forcer délibérément une entité qui émerge maintenant, ancrée dans l'actualité réelle plutôt que dans un jalon futur du scénario. Sans effet en mode auto-suggest (ne crée pas d'instances)."
+      },
+      {
+        "flag": "--dry-run",
+        "type": "checkbox",
+        "label": "Simulation (rien écrit sur disque, mais appels LLM réels)",
+        "default": false,
+        "description": "⚠️ Contrairement à d'autres scripts du panneau, ce mode appelle quand même le LLM pour de vrai (déduction de l'archétype + une fois par scénario généré) — seule l'écriture des fichiers finaux est sautée. Un coût API réel est engagé malgré le mot \"simulation\"."
+      }
+    ],
+    "yaml_files": [
+      {
+        "path": "entites_custom/queue.yaml",
+        "label": "entites_custom/queue.yaml"
+      }
+    ],
+    "config_file": "entites_custom/queue.yaml",
+    "config_fields": [
+      {
+        "key": "nom",
+        "type": "text",
+        "label": "Nom",
+        "placeholder": "ex : Le Cartographe Silencieux"
+      },
+      {
+        "key": "category",
+        "type": "select",
+        "label": "Catégorie",
+        "choices": [
+          {
+            "value": "IA",
+            "label": "IA"
+          },
+          {
+            "value": "organisation",
+            "label": "organisation"
+          },
+          {
+            "value": "entreprise",
+            "label": "entreprise"
+          },
+          {
+            "value": "institution",
+            "label": "institution"
+          },
+          {
+            "value": "infrastructure",
+            "label": "infrastructure"
+          },
+          {
+            "value": "réseau",
+            "label": "réseau"
+          },
+          {
+            "value": "humain",
+            "label": "humain"
+          },
+          {
+            "value": "système",
+            "label": "système"
+          },
+          {
+            "value": "hybride",
+            "label": "hybride"
+          },
+          {
+            "value": "autre",
+            "label": "autre"
+          },
+          {
+            "value": "média",
+            "label": "média"
+          },
+          {
+            "value": "territoire",
+            "label": "territoire"
+          }
+        ]
+      },
+      {
+        "key": "role",
+        "type": "textarea",
+        "label": "Rôle (contrainte dure)",
+        "placeholder": "Décris le rôle dans le scénario de référence — sera repris tel quel",
+        "optional": true
+      },
+      {
+        "key": "etat",
+        "type": "select",
+        "label": "Trajectoire (contrainte dure)",
+        "choices": [
+          {
+            "value": "émergent",
+            "label": "émergent"
+          },
+          {
+            "value": "marginal",
+            "label": "marginal"
+          },
+          {
+            "value": "ascendant",
+            "label": "ascendant"
+          },
+          {
+            "value": "dominant",
+            "label": "dominant"
+          },
+          {
+            "value": "mature",
+            "label": "mature"
+          },
+          {
+            "value": "déclinant",
+            "label": "déclinant"
+          },
+          {
+            "value": "résiduel",
+            "label": "résiduel"
+          },
+          {
+            "value": "transformé",
+            "label": "transformé"
+          },
+          {
+            "value": "disparu",
+            "label": "disparu"
+          },
+          {
+            "value": "historique",
+            "label": "historique"
+          },
+          {
+            "value": "mythifié",
+            "label": "mythifié"
+          }
+        ],
+        "optional": true
+      },
+      {
+        "key": "est_clandestin",
+        "type": "select",
+        "label": "Clandestin (contrainte dure)",
+        "choices": [
+          {
+            "value": "true",
+            "label": "oui — force clandestin"
+          },
+          {
+            "value": "false",
+            "label": "non — force non-clandestin"
+          }
+        ],
+        "optional": true
+      },
+      {
+        "key": "scenario_ref",
+        "type": "select",
+        "label": "Scénario de référence",
+        "choices": [
+          {
+            "value": "breakdown",
+            "label": "breakdown"
+          },
+          {
+            "value": "fortress_world",
+            "label": "fortress_world"
+          },
+          {
+            "value": "new_sustainability",
+            "label": "new_sustainability"
+          },
+          {
+            "value": "eco_communalism",
+            "label": "eco_communalism"
+          },
+          {
+            "value": "policy_reform",
+            "label": "policy_reform"
+          },
+          {
+            "value": "reference",
+            "label": "reference"
+          }
+        ]
+      },
+      {
+        "key": "scenario_hint",
+        "type": "multi_select",
+        "label": "Scénarios à couvrir",
+        "choices": [
+          "breakdown",
+          "fortress_world",
+          "new_sustainability",
+          "eco_communalism",
+          "policy_reform",
+          "reference"
+        ],
+        "description": "Laisser vide = les 6 scénarios par défaut",
+        "optional": true
+      },
+      {
+        "key": "zone_hint",
+        "type": "slug_select",
+        "slug_type": "zones_hier",
+        "label": "Zone géographique (hint)",
+        "optional": true
+      },
+      {
+        "key": "source",
+        "type": "text",
+        "label": "Source",
+        "optional": true,
+        "placeholder": "ex : idee_2026-06"
+      },
+      {
+        "key": "consignes_scenarios",
+        "type": "per_scenario_text",
+        "label": "Consignes par scénario",
+        "optional": true,
+        "description": "Une consigne libre par scénario, transmise à l'IA uniquement pour ce scénario — ex. \"rôle secondaire, simple souvenir des années 2030\" ou \"rôle sans rapport avec le scénario de référence\". Laisser vide = l'IA décide librement. Ignorée pour le scénario de référence (déjà fixé par Rôle et Trajectoire) et pour un scénario non coché dans \"Scénarios à couvrir\"."
+      },
+      {
+        "key": "priorite_forcee",
+        "type": "select",
+        "label": "Priorité forcée (présence garantie)",
+        "choices": [
+          {
+            "value": "true",
+            "label": "Oui — garantir la présence dans tous les articles"
+          },
+          {
+            "value": "false",
+            "label": "Non (défaut)"
+          }
+        ],
+        "optional": true,
+        "description": "Garantit que cette entité sera citée dans les articles générés (comme les instances custom), sur tous les scénarios couverts ci-dessus. Ne garantit pas le statut de sujet principal. Pour forcer sur un seul scénario, utilise plutôt l'outil d'édition dédié après création.",
+        "default": "false"
+      }
+    ],
+    "config_fields_mode": "custom",
+    "gui_verified": false
+  },
+  {
+    "id": "inject_events",
+    "label": "Injecter des événements",
+    "icon": "⚡",
+    "section": "entites_creation",
+    "script": "inject_custom_events.py",
+    "description": "Ajoute au vault des événements que tu décris toi-même dans la file d'attente (ou que l'IA suggère en mode Auto).",
+    "requires": [],
+    "mode_select": {
+      "label": "Mode",
+      "choices": [
+        {
+          "value": "custom",
+          "label": "Custom — saisie manuelle",
+          "note": "Traite le contenu actuel de evenements_custom/queue.yaml et injecte dans le vault."
+        },
+        {
+          "value": "auto",
+          "label": "Auto — génération automatique",
+          "note": "Ne fait qu'ajouter des idées à evenements_custom/queue.yaml — relance ensuite en mode Custom pour les injecter réellement dans le vault."
+        }
+      ]
+    },
+    "options": [
+      {
+        "flag": "--n",
+        "type": "number",
+        "label": "Nombre d'idées (mode auto)",
+        "optional": false,
+        "placeholder": "3",
+        "default": 3,
+        "mode_only": "auto"
+      },
+      {
+        "flag": "--scenario",
+        "type": "select",
+        "label": "Scénario ciblé (mode auto)",
+        "source": "config_scenarios",
+        "optional": true,
+        "mode_only": "auto"
+      },
+      {
+        "flag": "--variables-hint",
+        "type": "multi_select",
+        "label": "Variables impactées (hint, mode auto)",
+        "choices": [
+          {
+            "value": "systeme_economique_redistribution",
+            "label": "systeme_economique_redistribution"
+          },
+          {
+            "value": "gouvernance_institutions",
+            "label": "gouvernance_institutions"
+          },
+          {
+            "value": "geopolitique_conflits",
+            "label": "geopolitique_conflits"
+          },
+          {
+            "value": "valeurs_culture_tempo_sociale",
+            "label": "valeurs_culture_tempo_sociale"
+          },
+          {
+            "value": "organisation_territoires",
+            "label": "organisation_territoires"
+          },
+          {
+            "value": "sante_biotechnologies",
+            "label": "sante_biotechnologies"
+          },
+          {
+            "value": "frontieres_du_systeme",
+            "label": "frontieres_du_systeme"
+          },
+          {
+            "value": "technologie_information",
+            "label": "technologie_information"
+          },
+          {
+            "value": "climat_environnement_global",
+            "label": "climat_environnement_global"
+          },
+          {
+            "value": "energie_ressources_critiques",
+            "label": "energie_ressources_critiques"
+          },
+          {
+            "value": "demographie_mobilite_humaine",
+            "label": "demographie_mobilite_humaine"
+          },
+          {
+            "value": "systemes_productifs_travail",
+            "label": "systemes_productifs_travail"
+          }
+        ],
+        "optional": true,
+        "description": "Optionnel — le LLM choisit librement si vide. Imposées dans le variables_hint de chaque idée générée.",
+        "mode_only": "auto"
+      },
+      {
+        "flag": "--dry-run",
+        "type": "checkbox",
+        "label": "Simulation (rien écrit sur disque, mais appels LLM réels)",
+        "default": false,
+        "description": "⚠️ Ce mode appelle quand même le LLM pour de vrai (sélection de variables + développement, par scénario) — seule l'écriture des fichiers finaux est sautée. Un coût API réel est engagé malgré le mot \"simulation\"."
+      }
+    ],
+    "yaml_files": [
+      {
+        "path": "evenements_custom/queue.yaml",
+        "label": "evenements_custom/queue.yaml"
+      }
+    ],
+    "config_file": "evenements_custom/queue.yaml",
+    "config_fields": [
+      {
+        "key": "id",
+        "type": "text",
+        "label": "ID",
+        "placeholder": "ex : guerre_israelo_iranienne",
+        "optional": true
+      },
+      {
+        "key": "description",
+        "type": "textarea",
+        "label": "Description",
+        "placeholder": "Décris l'événement en langage naturel (quelques phrases)",
+        "description": "Écris ton idée librement (dates, lieux, point d'arrivée…), puis « ✨ Compléter les autres champs » : l'IA la reformule et remplit le reste. Ou remplis tout à la main, comme avant."
+      },
+      {
+        "key": "portee",
+        "type": "select",
+        "label": "Portée",
+        "choices": [
+          {
+            "value": "locale",
+            "label": "locale"
+          },
+          {
+            "value": "regionale",
+            "label": "regionale"
+          },
+          {
+            "value": "continentale",
+            "label": "continentale"
+          },
+          {
+            "value": "globale",
+            "label": "globale"
+          }
+        ]
+      },
+      {
+        "key": "date_approximative",
+        "type": "number",
+        "label": "Date approximative",
+        "min": 2025,
+        "max": 2097,
+        "default": 2035
+      },
+      {
+        "key": "intensite",
+        "type": "select",
+        "label": "Intensité",
+        "choices": [
+          {
+            "value": "faible",
+            "label": "faible"
+          },
+          {
+            "value": "modérée",
+            "label": "modérée"
+          },
+          {
+            "value": "forte",
+            "label": "forte"
+          },
+          {
+            "value": "majeure",
+            "label": "majeure"
+          }
+        ]
+      },
+      {
+        "key": "persistance",
+        "type": "select",
+        "label": "Persistance de l'effet chiffré",
+        "optional": true,
+        "default": "normale",
+        "choices": [
+          {
+            "value": "normale",
+            "label": "normale (défaut)"
+          },
+          {
+            "value": "ephemere",
+            "label": "éphémère — s'estompe vite (mode, buzz)"
+          },
+          {
+            "value": "durable",
+            "label": "durable — marque plusieurs générations"
+          },
+          {
+            "value": "permanente",
+            "label": "permanente — ne s'estompe jamais (institution, classe sociale…)"
+          }
+        ],
+        "description": "Combien de temps l'effet chiffré dure après sa montée. Durées réglables dans dynamique.py (table PERSISTANCE). Modifiable après coup dans la fiche, sans réinjecter."
+      },
+      {
+        "key": "scenarios",
+        "type": "multi_select",
+        "label": "Scénarios",
+        "choices": [
+          "breakdown",
+          "fortress_world",
+          "new_sustainability",
+          "eco_communalism",
+          "policy_reform",
+          "reference"
+        ],
+        "description": "Laisser vide = les 6 scénarios par défaut",
+        "optional": true
+      },
+      {
+        "key": "variables_hint",
+        "type": "multi_select",
+        "label": "Variables impactées (hint)",
+        "choices": [
+          "systeme_economique_redistribution",
+          "gouvernance_institutions",
+          "geopolitique_conflits",
+          "valeurs_culture_tempo_sociale",
+          "organisation_territoires",
+          "sante_biotechnologies",
+          "frontieres_du_systeme",
+          "technologie_information",
+          "climat_environnement_global",
+          "energie_ressources_critiques",
+          "demographie_mobilite_humaine",
+          "systemes_productifs_travail"
+        ],
+        "optional": true,
+        "description": "Optionnel — l'IA choisit si vide"
+      },
+      {
+        "key": "variables_hint_count",
+        "type": "number",
+        "label": "Nb variables max",
+        "min": 1,
+        "max": 4,
+        "default": 2,
+        "optional": true
+      },
+      {
+        "key": "zone_hint",
+        "type": "slug_select",
+        "slug_type": "zones_hier",
+        "label": "Zone géographique (hint)",
+        "optional": true
+      },
+      {
+        "key": "source",
+        "type": "text",
+        "label": "Source",
+        "optional": true,
+        "placeholder": "ex : actualite_2026-06"
+      }
+    ],
+    "config_fields_mode": "custom",
+    "gui_verified": true,
+    "assistant_texte_libre": "evenement"
+  },
+  {
+    "id": "inject_signals",
+    "label": "Injecter des signaux faibles",
+    "icon": "📡",
+    "section": "entites_creation",
+    "script": "inject_custom_signals.py",
+    "description": "Ajoute aux fiches du vault des signaux faibles (indices, tendances d'actualité) que tu décris toi-même dans la file d'attente.",
+    "requires": [],
+    "options": [
+      {
+        "flag": "--dry-run",
+        "type": "checkbox",
+        "label": "Simulation (rien écrit sur disque, mais appels LLM réels)",
+        "default": false,
+        "description": "⚠️ Ce mode appelle quand même le LLM pour de vrai (sélection de variable + rédaction, avec retries) — seule l'écriture des fichiers finaux est sautée. Un coût API réel est engagé malgré le mot \"simulation\"."
+      }
+    ],
+    "yaml_files": [
+      {
+        "path": "signaux_custom/queue.yaml",
+        "label": "signaux_custom/queue.yaml"
+      }
+    ],
+    "config_file": "signaux_custom/queue.yaml",
+    "config_fields": [
+      {
+        "key": "id",
+        "type": "text",
+        "label": "Nom de repère (pour toi)",
+        "placeholder": "ex : chatbots_therapeutes_remboursement",
+        "description": "Sert uniquement à identifier cette idée dans la file d'attente et dans les journaux -- jamais transmis à l'IA, sans effet sur le résultat (qui aura son propre identifiant généré automatiquement).",
+        "optional": true
+      },
+      {
+        "key": "description",
+        "type": "textarea",
+        "label": "Description de l'idée",
+        "placeholder": "Décris l'observation d'actualité ou l'idée narrative",
+        "description": "Écris ton idée librement (dates, lieux, point d'arrivée…), puis « ✨ Compléter les autres champs » : l'IA la reformule et remplit le reste. Ou remplis tout à la main, comme avant."
+      },
+      {
+        "key": "variable_hint",
+        "type": "multi_select",
+        "label": "Thèmes à privilégier",
+        "optional": true,
+        "choices": [
+          {
+            "value": "systeme_economique_redistribution",
+            "label": "Économie et redistribution"
+          },
+          {
+            "value": "gouvernance_institutions",
+            "label": "Gouvernance et institutions"
+          },
+          {
+            "value": "geopolitique_conflits",
+            "label": "Géopolitique et conflits"
+          },
+          {
+            "value": "valeurs_culture_tempo_sociale",
+            "label": "Valeurs, culture et rythme social"
+          },
+          {
+            "value": "organisation_territoires",
+            "label": "Organisation des territoires"
+          },
+          {
+            "value": "sante_biotechnologies",
+            "label": "Santé et biotechnologies"
+          },
+          {
+            "value": "frontieres_du_systeme",
+            "label": "Frontières du système (inclusion/exclusion)"
+          },
+          {
+            "value": "technologie_information",
+            "label": "Technologie et information"
+          },
+          {
+            "value": "climat_environnement_global",
+            "label": "Climat et environnement global"
+          },
+          {
+            "value": "energie_ressources_critiques",
+            "label": "Énergie et ressources critiques"
+          },
+          {
+            "value": "demographie_mobilite_humaine",
+            "label": "Démographie et mobilité humaine"
+          },
+          {
+            "value": "systemes_productifs_travail",
+            "label": "Systèmes productifs et travail"
+          }
+        ],
+        "description": "Impose un ou plusieurs thèmes du vault que ce signal doit affecter (l'IA peut en ajouter d'autres, dans la limite du nombre max ci-dessous). Aucun coché = l'IA choisit elle-même."
+      },
+      {
+        "key": "variable_hint_count",
+        "type": "number",
+        "label": "Nombre de thèmes max",
+        "min": 1,
+        "max": 4,
+        "default": 2,
+        "optional": true,
+        "description": "Nombre total de thèmes que l'IA peut couvrir (entre 1 et 4), thèmes cochés ci-dessus inclus -- mets au moins autant que de thèmes cochés."
+      },
+      {
+        "key": "zone_hint",
+        "type": "text",
+        "label": "Lieu réel",
+        "optional": true,
+        "placeholder": "ex : Norvège, Sahel, Détroit de Malacca...",
+        "description": "Un lieu réel de 2026 (pays, région, ville) -- pas une zone du monde 2098. L'IA retrouve elle-même la zone correspondante dans chacun des 6 scénarios (qui peut différer d'un scénario à l'autre). Si l'idée mentionne déjà un lieu, celui-ci reste prioritaire en cas de conflit avec ce champ."
+      },
+      {
+        "key": "annee_apparition",
+        "type": "number",
+        "label": "Année d'apparition",
+        "optional": true,
+        "min": 2025,
+        "max": 2097,
+        "description": "Année où le signal APPARAÎT, la même dans les 6 scénarios. Aucune bascule ne pourra être placée avant (vérifié automatiquement) ; elle peut venir plus tard et différer selon le scénario. Vide = l'IA choisit librement."
+      },
+      {
+        "key": "persistance",
+        "type": "select",
+        "label": "Persistance de l'effet chiffré",
+        "optional": true,
+        "default": "normale",
+        "choices": [
+          {
+            "value": "normale",
+            "label": "normale (défaut)"
+          },
+          {
+            "value": "ephemere",
+            "label": "éphémère — s'estompe vite (mode, buzz)"
+          },
+          {
+            "value": "durable",
+            "label": "durable — marque plusieurs générations"
+          },
+          {
+            "value": "permanente",
+            "label": "permanente — ne s'estompe jamais (institution, classe sociale…)"
+          }
+        ],
+        "description": "Combien de temps l'effet chiffré dure après sa montée. Durées réglables dans dynamique.py (table PERSISTANCE). Modifiable après coup dans la fiche, sans réinjecter."
+      },
+      {
+        "key": "source",
+        "type": "text",
+        "label": "Origine de l'idée",
+        "optional": true,
+        "placeholder": "ex : actualite_2026-06",
+        "description": "Note libre pour te souvenir d'où vient l'idée (article, discussion...) -- apparaît dans la fiche d'audit, sans effet sur le résultat."
+      }
+    ],
+    "gui_verified": true,
+    "assistant_texte_libre": "signal"
+  },
+  {
+    "id": "enrich_minimal",
+    "label": "Compléter les fiches minimales",
+    "icon": "✨",
+    "section": "entites_creation",
+    "script": "enrich_minimal.py",
+    "description": "Complète automatiquement les fiches qui n'ont que le strict minimum, pour qu'elles aient autant de détails que les autres. Si la résolution des conflits d'alliances/oppositions est activée, les rapports ci-dessous ne montrent que le dernier lancement, pas un historique cumulé.",
+    "requires": [],
+    "options": [
+      {
+        "flag": "--all",
+        "type": "checkbox",
+        "label": "Tous les scénarios",
+        "description": "Traite tous les scénarios disponibles",
+        "default": false,
+        "mutually_exclusive_with": "scenario"
+      },
+      {
+        "flag": "--scenario",
+        "type": "select",
+        "label": "Scénario",
+        "source": "config_scenarios",
+        "default": "",
+        "optional": true,
+        "mutually_exclusive_with": "all"
+      },
+      {
+        "flag": "--slug",
+        "type": "slug_select",
+        "label": "Une seule fiche",
+        "slug_type": "instances",
+        "optional": true,
+        "description": "Limite le traitement à une fiche précise, identifiée par son nom de fichier technique (slug). Laisser vide pour traiter plusieurs fiches."
+      },
+      {
+        "flag": "--limit",
+        "type": "number",
+        "label": "Nombre de fiches max",
+        "description": "Nombre max de fichiers à traiter",
+        "min": 1,
+        "max": 426,
+        "default": 10
+      },
+      {
+        "flag": "--auto-cycle",
+        "type": "checkbox",
+        "label": "Enchaîner automatiquement la suite",
+        "description": "Une fois l'enrichissement fini, lance directement la recherche d'alliances fantômes (extract_phantom_slugs) sur les fiches traitées.",
+        "default": false
+      },
+      {
+        "flag": "--dry-run",
+        "type": "checkbox",
+        "label": "Simulation (rien écrit sur disque, mais appels LLM réels)",
+        "description": "⚠️ Ce mode appelle quand même le LLM pour de vrai (enrichissement + corrections éventuelles) — seule l'écriture de la fiche finale est sautée. Un coût API réel est engagé malgré le mot \"simulation\".",
+        "default": false
+      },
+      {
+        "flag": "--resoudre-conflits",
+        "type": "checkbox",
+        "label": "Résoudre les conflits (opposition prioritaire, rétroactif)",
+        "description": "Après la passe de réciprocité automatique, résout les conflits détectés selon la règle \"opposition prioritaire\" : pour chaque conflit (une fiche cite l'autre en alliance, l'autre la cite déjà en opposition), le slug est retiré des alliances de la première. RÉTROACTIF : modifie les fiches déjà en conflit sur disque, dans les scénarios traités par ce run — pas tout le vault. Chaque résolution est journalisée dans documentation/need_action/fix_alliances_conflits_reciprocite_resolus.md. Sans effet en Simulation, ou si aucune fiche n'a été enrichie dans ce run.",
+        "default": false
+      },
+      {
+        "flag": "--bascule-en-opposition",
+        "type": "checkbox",
+        "label": "Résolution forte (bascule aussi en opposition)",
+        "description": "Avec \"Résoudre les conflits\" : au lieu de simplement retirer l'entité des alliances, l'ajoute aussi explicitement aux oppositions. Par défaut (décoché), résolution conservatrice : retrait seul, sans rien ajouter.",
+        "default": false,
+        "depends_on": "--resoudre-conflits",
+        "advanced": true
+      }
+    ],
+    "yaml_files": [
+      {
+        "path": "instances_custom/needs_review_enrich.yaml",
+        "label": "instances_custom/needs_review_enrich.yaml",
+        "readonly": true
+      },
+      {
+        "path": "documentation/need_action/fix_alliances_conflits_reciprocite_resolus.md",
+        "label": "documentation/need_action/fix_alliances_conflits_reciprocite_resolus.md",
+        "readonly": true
+      }
+    ],
+    "gui_verified": true,
+    "required_one_of": [
+      [
+        "--scenario",
+        "--all"
+      ]
+    ]
+  },
+  {
+    "id": "fix_alliances_oppositions",
+    "label": "Compléter les relations avec l'IA",
+    "icon": "🤝",
+    "section": "entites_creation",
+    "script": "fix_alliances_oppositions.py",
+    "description": "Demande à l'IA de proposer les alliances/oppositions manquantes des fiches déjà complétées, puis rend les relations réciproques (sauf case contraire). Payant. Pour la réciprocité seule, sans IA, utilise l'étape 2 de la section « Relations & lore ». Les rapports ci-dessous ne montrent que le dernier lancement.",
+    "requires": [],
+    "options": [
+      {
+        "flag": "--all",
+        "type": "checkbox",
+        "label": "Tous les scénarios",
+        "description": "Traite tous les scénarios disponibles",
+        "default": false,
+        "mutually_exclusive_with": "scenario"
+      },
+      {
+        "flag": "--scenario",
+        "type": "select",
+        "label": "Scénario",
+        "source": "config_scenarios",
+        "default": "",
+        "optional": true,
+        "mutually_exclusive_with": "all"
+      },
+      {
+        "flag": "--slug",
+        "type": "slug_select",
+        "label": "Une seule fiche (uniquement pour le remplissage par l'IA)",
+        "slug_type": "instances",
+        "optional": true,
+        "description": "Limite le remplissage des alliances/oppositions manquantes à une seule fiche. Les étapes suivantes (vérification de réciprocité, résolution des conflits) continuent, elles, de porter sur tout le scénario."
+      },
+      {
+        "flag": "--limit",
+        "type": "number",
+        "label": "Nombre de fiches max (remplissage par l'IA)",
+        "description": "Limite le nombre de fiches traitées par l'IA à chaque scénario — utile pour estimer le coût avant un lancement complet. Les étapes suivantes ne sont pas concernées.",
+        "min": 1,
+        "optional": true
+      },
+      {
+        "flag": "--dry-run",
+        "type": "checkbox",
+        "label": "Simulation (rien n'est écrit, mais l'IA est quand même sollicitée)",
+        "description": "N'écrit rien sur le disque. ⚠️ L'IA est quand même appelée pour de vrai — un coût réel est engagé, seule l'écriture du résultat final est sautée.",
+        "default": false
+      },
+      {
+        "flag": "--skip-reciprocite",
+        "type": "checkbox",
+        "label": "Sans vérification de réciprocité",
+        "description": "Remplit les alliances/oppositions manquantes avec l'IA, mais sans vérifier ensuite la réciprocité. ⚠️ Rend la case « Résoudre les conflits » ci-dessous inutile (elle ne peut agir que sur des conflits détectés par cette vérification) — ne coche pas les deux en même temps.",
+        "default": false
+      },
+      {
+        "flag": "--ignorer-exclus",
+        "type": "checkbox",
+        "label": "Ne pas propager les personnages en réserve",
+        "default": true,
+        "description": "Cochée par défaut. Les personnages exclus des articles (« en réserve », outil 🎯) ne sont pas inscrits chez les autres fiches — sinon ils réapparaîtraient indirectement dans le contexte des articles. Leurs relations à sens unique restent donc volontaires."
+      },
+      {
+        "flag": "--resoudre-conflits",
+        "type": "checkbox",
+        "label": "Résoudre les conflits (opposition prioritaire, rétroactif)",
+        "description": "Après la vérification de réciprocité, corrige automatiquement les cas contradictoires : si une fiche dit « allié » avec une autre qui la dit « opposée », l'opposition l'emporte — l'alliance est retirée. Modifie réellement les fiches concernées (sauf si « Simulation » est cochée). Sans effet si « Sans vérification de réciprocité » est cochée.",
+        "default": false
+      },
+      {
+        "flag": "--bascule-en-opposition",
+        "type": "checkbox",
+        "label": "Résolution forte (bascule aussi en opposition)",
+        "description": "Avec « Résoudre les conflits » activé : au lieu de simplement retirer l'alliance en trop, ajoute aussi explicitement l'entité aux oppositions. Par défaut, la correction est plus prudente : elle retire seulement, sans rien ajouter.",
+        "default": false,
+        "depends_on": "--resoudre-conflits",
+        "advanced": true
+      }
+    ],
+    "yaml_files": [
+      {
+        "path": "documentation/need_action/fix_alliances_conflits_reciprocite.md",
+        "label": "Rapport des conflits détectés (dernier lancement)",
+        "readonly": true
+      },
+      {
+        "path": "documentation/need_action/fix_alliances_conflits_reciprocite_resolus.md",
+        "label": "Rapport des conflits résolus (dernier lancement)",
+        "readonly": true
+      }
+    ],
+    "gui_verified": true,
+    "required_one_of": [
+      [
+        "--scenario",
+        "--all"
+      ]
+    ]
+  },
+  {
+    "id": "audit_lore",
+    "label": "1. Vérifier le lore",
+    "icon": "🔍",
+    "section": "relations_lore",
+    "script": "audit_lore.py",
+    "description": "Point de départ : diagnostic complet, gratuit, sans IA, qui ne modifie rien. Signale les règles de lore enfreintes (termes périmés, zones abandonnées, quarantaines…), les relations à sens unique ou contradictoires, les relations vers un autre scénario et les fiches « transnationales » que leur texte localise. En fin de sortie, « À faire ensuite » indique quelle étape lancer pour chaque problème trouvé. Ne refait pas ce que validate.py couvre déjà (slugs inexistants, zones inconnues, liens cassés).",
+    "requires": [],
+    "options": [
+      {
+        "flag": "--all",
+        "type": "checkbox",
+        "label": "Tous les scénarios",
+        "default": false,
+        "mutually_exclusive_with": "scenario"
+      },
+      {
+        "flag": "--scenario",
+        "type": "select",
+        "label": "Scénario",
+        "source": "config_scenarios",
+        "default": "",
+        "optional": true,
+        "mutually_exclusive_with": "all"
+      },
+      {
+        "flag": "--avec-articles",
+        "type": "checkbox",
+        "label": "Inclure les articles publiés",
+        "default": false,
+        "description": "Applique aussi les règles de lore aux articles déjà générés (titre, chapo, texte)."
+      }
+    ],
+    "yaml_files": [
+      {
+        "path": "documentation/need_action/audit_lore_dernier_lancement.md",
+        "label": "Rapport détaillé du dernier lancement",
+        "readonly": true
+      },
+      {
+        "path": "documentation/lore_regles.yaml",
+        "label": "Règles de lore par scénario (termes périmés, quarantaines…)"
+      }
+    ],
+    "gui_verified": true,
+    "required_one_of": [
+      [
+        "--scenario",
+        "--all"
+      ]
+    ]
+  },
+  {
+    "id": "relations_reciprocite",
+    "label": "2. Rendre les relations réciproques",
+    "icon": "🤝",
+    "section": "relations_lore",
+    "script": "fix_alliances_oppositions.py",
+    "fixed_args": [
+      "--reciprocite-seule"
+    ],
+    "description": "Gratuit, sans IA. Si une fiche A cite B comme allié (ou opposant), ajoute A dans la même liste chez B. Corrige les « relations à sens unique » de l'étape 1. « Simulation » est cochée par défaut : lance une fois pour voir les ajouts, puis décoche-la et relance pour écrire.",
+    "requires": [],
+    "options": [
+      {
+        "flag": "--all",
+        "type": "checkbox",
+        "label": "Tous les scénarios",
+        "default": false,
+        "mutually_exclusive_with": "scenario"
+      },
+      {
+        "flag": "--scenario",
+        "type": "select",
+        "label": "Scénario",
+        "source": "config_scenarios",
+        "default": "",
+        "optional": true,
+        "mutually_exclusive_with": "all"
+      },
+      {
+        "flag": "--dry-run",
+        "type": "checkbox",
+        "label": "Simulation (rien n'est écrit)",
+        "default": true,
+        "description": "Décoche pour écrire réellement dans les fiches."
+      },
+      {
+        "flag": "--ignorer-exclus",
+        "type": "checkbox",
+        "label": "Ne pas propager les personnages en réserve",
+        "default": true,
+        "description": "Cochée par défaut. Les personnages exclus des articles (« en réserve », outil 🎯) ne sont pas inscrits chez les autres fiches — sinon ils réapparaîtraient indirectement dans le contexte des articles. Leurs relations à sens unique restent donc volontaires."
+      },
+      {
+        "flag": "--resoudre-conflits",
+        "type": "checkbox",
+        "label": "Résoudre les conflits (opposition prioritaire, rétroactif)",
+        "description": "Pour les relations contradictoires (A dit « allié », B dit « opposé ») : l'opposition l'emporte, l'alliance est retirée. Sans effet si l'étape 1 n'en a trouvé aucune.",
+        "default": false
+      },
+      {
+        "flag": "--bascule-en-opposition",
+        "type": "checkbox",
+        "label": "Résolution forte (bascule aussi en opposition)",
+        "description": "Avec « Résoudre les conflits » activé : au lieu de simplement retirer l'alliance en trop, ajoute aussi explicitement l'entité aux oppositions. Par défaut, la correction est plus prudente : elle retire seulement, sans rien ajouter.",
+        "default": false,
+        "depends_on": "--resoudre-conflits",
+        "advanced": true
+      }
+    ],
+    "yaml_files": [
+      {
+        "path": "documentation/need_action/fix_alliances_conflits_reciprocite.md",
+        "label": "Rapport des conflits détectés (dernier lancement)",
+        "readonly": true
+      },
+      {
+        "path": "documentation/need_action/fix_alliances_conflits_reciprocite_resolus.md",
+        "label": "Rapport des conflits résolus (dernier lancement)",
+        "readonly": true
+      }
+    ],
+    "gui_verified": true,
+    "required_one_of": [
+      [
+        "--scenario",
+        "--all"
+      ]
+    ]
+  },
+  {
+    "id": "corriger_relations_inter_scenarios",
+    "label": "3. Retirer les relations vers un autre scénario",
+    "icon": "🔀",
+    "section": "relations_lore",
+    "script": "corriger_relations_inter_scenarios.py",
+    "description": "Gratuit, sans IA. Les scénarios sont des mondes parallèles : une alliance/opposition qui pointe vers une fiche d'un AUTRE scénario est toujours une erreur. Elle est remplacée par la même entité du bon scénario si elle existe, sinon retirée. Aperçu par défaut — coche « Exécuter pour de vrai » pour écrire (.bak de chaque fiche).",
+    "requires": [],
+    "options": [
+      {
+        "flag": "--all",
+        "type": "checkbox",
+        "label": "Tous les scénarios",
+        "default": false,
+        "mutually_exclusive_with": "scenario"
+      },
+      {
+        "flag": "--scenario",
+        "type": "select",
+        "label": "Scénario",
+        "source": "config_scenarios",
+        "default": "",
+        "optional": true,
+        "mutually_exclusive_with": "all"
+      },
+      {
+        "flag": "--execute",
+        "type": "checkbox",
+        "label": "Exécuter pour de vrai",
+        "default": false,
+        "description": "Sans cette case : aperçu seulement, rien n'est modifié."
+      }
+    ],
+    "gui_verified": true,
+    "required_one_of": [
+      [
+        "--scenario",
+        "--all"
+      ]
+    ]
+  },
+  {
+    "id": "audit_lore_ia",
+    "label": "4. Relecture IA du lore (payante)",
+    "icon": "🤖",
+    "section": "relations_lore",
+    "script": "audit_lore.py",
+    "fixed_args": [
+      "--llm"
+    ],
+    "description": "Chaque fiche ciblée est relue par l'IA, confrontée à sa zone, à ses relations et aux règles de lore. Résultat : contradictions signalées et relations proposées, à trier ensuite à l'étape 5. Rien n'est écrit dans les fiches. ⚠️ Un appel IA par fiche (~8 000 jetons en entrée) ; les fiches inchangées depuis leur dernière relecture sont gardées en cache. Au-delà de 15 appels, il faut cibler (une fiche, une zone ou un nombre max).",
+    "requires": [],
+    "options": [
+      {
+        "flag": "--all",
+        "type": "checkbox",
+        "label": "Tous les scénarios",
+        "default": false,
+        "mutually_exclusive_with": "scenario"
+      },
+      {
+        "flag": "--scenario",
+        "type": "select",
+        "label": "Scénario",
+        "source": "config_scenarios",
+        "default": "",
+        "optional": true,
+        "mutually_exclusive_with": "all"
+      },
+      {
+        "flag": "--estimer",
+        "type": "checkbox",
+        "label": "Estimer seulement (aucun appel IA)",
+        "default": true,
+        "description": "Cochée par défaut : liste les fiches qui seraient relues et le nombre d'appels, sans rien appeler. Décoche-la pour lancer la relecture."
+      },
+      {
+        "flag": "--slug",
+        "type": "slug_select",
+        "label": "Une seule fiche",
+        "slug_type": "instances",
+        "optional": true,
+        "requires_scenario_selected": true,
+        "description": "Relecture IA d'une seule instance du scénario choisi."
+      },
+      {
+        "flag": "--zone",
+        "type": "text",
+        "label": "Une zone (et ses sous-zones)",
+        "optional": true,
+        "placeholder": "ex : espace_nordique_arctique",
+        "description": "Slug de zone du scénario choisi : relit les instances localisées dans cette zone ou l'une de ses sous-zones."
+      },
+      {
+        "flag": "--limit",
+        "type": "number",
+        "label": "Nombre de fiches max (plus fort impact d'abord)",
+        "min": 1,
+        "optional": true,
+        "description": "Relit les N fiches au plus fort impact (impact local + global)."
+      },
+      {
+        "flag": "--tout",
+        "type": "checkbox",
+        "label": "Autoriser un lancement complet (plus de 15 appels)",
+        "default": false,
+        "advanced": true,
+        "description": "Lève le garde-fou des 15 appels sans ciblage. Peut coûter cher : estimer d'abord."
+      },
+      {
+        "flag": "--no-cache",
+        "type": "checkbox",
+        "label": "Ignorer le cache (relire même les fiches inchangées)",
+        "default": false,
+        "advanced": true,
+        "description": "Refait l'appel IA même si la fiche, sa zone, ses alliés et les règles n'ont pas changé depuis la dernière relecture."
+      }
+    ],
+    "yaml_files": [
+      {
+        "path": "documentation/need_action/audit_lore_dernier_lancement.md",
+        "label": "Rapport détaillé du dernier lancement",
+        "readonly": true
+      }
+    ],
+    "gui_verified": true,
+    "required_one_of": [
+      [
+        "--scenario",
+        "--all"
+      ]
+    ]
+  },
+  {
+    "id": "extract_phantom_slugs",
+    "label": "Repérer les alliances fantômes",
+    "icon": "🔍",
+    "section": "entites_nettoyage",
+    "script": "extract_phantom_slugs.py",
+    "description": "Repère les alliances/oppositions citées dans des fiches mais qui ne correspondent à aucune entité réelle, et les ajoute à la file d'attente de création.",
+    "requires": [],
+    "options": [
+      {
+        "flag": "--source",
+        "type": "select",
+        "label": "Où chercher les alliances fantômes",
+        "choices": [
+          {
+            "value": "enrich",
+            "label": "Dans le dernier rapport d'enrichissement des fiches"
+          },
+          {
+            "value": "validate",
+            "label": "En relançant une validation complète du vault"
+          },
+          {
+            "value": "all",
+            "label": "Les deux, combinées (par défaut)"
+          }
+        ],
+        "default": "all"
+      },
+      {
+        "flag": "--report",
+        "type": "text",
+        "label": "Rapport d'enrichissement personnalisé",
+        "optional": true,
+        "advanced": true,
+        "description": "Cas rare : par défaut, lit documentation/need_action/enrich_minimal_report.md — remplir ce champ pour analyser un autre fichier (ex. une copie d'un ancien rapport, ou un extrait ciblé).",
+        "hide_when": {
+          "field": "--source",
+          "values": [
+            "validate"
+          ]
+        }
+      },
+      {
+        "flag": "--dry-run",
+        "type": "checkbox",
+        "label": "Simulation (aucune écriture)",
+        "default": false,
+        "description": "Affiche ce qui serait fait, sans rien modifier ni écrire sur le disque."
+      }
+    ],
+    "yaml_files": [
+      {
+        "path": "entites_custom/queue.yaml",
+        "label": "entites_custom/queue.yaml — file d'attente à relire avant de créer les entités"
+      }
+    ],
+    "gui_verified": true
+  },
+  {
+    "id": "requeue_needs_review",
+    "label": "Relancer les entités en échec",
+    "icon": "🔁",
+    "section": "entites_nettoyage",
+    "script": "requeue_needs_review.py",
+    "description": "Remet dans la file d'attente les entités dont la création avait échoué, pour une nouvelle tentative.",
+    "requires": [],
+    "options": [],
+    "yaml_files": [
+      {
+        "path": "entites_custom/needs_review.yaml",
+        "label": "entites_custom/needs_review.yaml",
+        "readonly": true
+      }
+    ],
+    "gui_verified": true
+  },
+  {
+    "id": "undo_custom",
+    "label": "Annuler une entité, un événement ou un signal",
+    "icon": "↩",
+    "section": "entites_nettoyage",
+    "script": "undo_custom.py",
+    "description": "Supprime une entité, un événement ou un signal faible ajouté manuellement. Simulation par défaut — coche \"Exécuter\" pour le faire pour de vrai.",
+    "requires": [],
+    "options": [
+      {
+        "flag": "--slug",
+        "type": "slug_select",
+        "label": "Fiche cible",
+        "slug_type": "entities",
+        "optional": true,
+        "description": "La fiche à annuler, identifiée par son nom de fichier technique (slug). Laisser vide pour traiter automatiquement tout ce qui est en attente d'annulation.",
+        "slug_type_field": "--type",
+        "slug_type_map": {
+          "signal": "signals",
+          "*": "entities"
+        }
+      },
+      {
+        "flag": "--type",
+        "type": "select",
+        "label": "Type de la fiche cible",
+        "choices": [
+          {
+            "value": "instance",
+            "label": "Instance (dans un scénario)"
+          },
+          {
+            "value": "event_instance",
+            "label": "Instance d'événement (dans un scénario)"
+          },
+          {
+            "value": "entite",
+            "label": "Entité (archétype, hors scénario)"
+          },
+          {
+            "value": "event",
+            "label": "Événement (archétype, hors scénario)"
+          },
+          {
+            "value": "signal",
+            "label": "Signal faible"
+          }
+        ],
+        "optional": true,
+        "required_if": "--slug",
+        "description": "Précise ce qu'est la \"Fiche cible\" choisie ci-dessus -- obligatoire si tu l'as remplie. Change aussi la liste proposée par \"Fiche cible\" (entités ou signaux selon le type)."
+      },
+      {
+        "flag": "--generalisation",
+        "type": "select",
+        "label": "Étendue de l'annulation",
+        "choices": [
+          {
+            "value": "no",
+            "label": "Non — fichier ciblé uniquement"
+          },
+          {
+            "value": "yes",
+            "label": "Oui — archétype + tous scénarios"
+          }
+        ],
+        "default": "no",
+        "description": "Un signal n'a pas d'archétype séparé -- il touche toujours toutes les fiches variables concernées et les 6 scénarios d'un coup.",
+        "hide_when": {
+          "field": "--type",
+          "values": [
+            "signal"
+          ]
+        }
+      },
+      {
+        "flag": "--execute",
+        "type": "checkbox",
+        "label": "Exécuter pour de vrai",
+        "description": "Sans cette case : simulation seulement, rien n'est supprimé. Avec : la suppression est réellement effectuée.",
+        "default": false
+      }
+    ],
+    "yaml_files": [
+      {
+        "path": "evenements_custom/undo_queue.yaml",
+        "label": "evenements_custom/undo_queue.yaml"
+      }
+    ],
+    "gui_verified": true
+  },
+  {
+    "id": "enrich_geographie",
+    "label": "Enrichir la géographie",
+    "icon": "🗺",
+    "section": "geo_construction",
+    "script": "enrich_geographie_recursive.py",
+    "description": "Ajoute des sous-zones (villes, régions...) sous les zones déjà existantes d'un scénario, sans jamais modifier ce qui existe déjà.",
+    "requires": [],
+    "options": [
+      {
+        "flag": "--all",
+        "type": "checkbox",
+        "label": "Tous les scénarios",
+        "default": false,
+        "mutually_exclusive_with": "scenario"
+      },
+      {
+        "flag": "--scenario",
+        "type": "select",
+        "label": "Scénario",
+        "source": "config_scenarios",
+        "optional": true,
+        "mutually_exclusive_with": "all"
+      },
+      {
+        "flag": "--dry-run",
+        "type": "checkbox",
+        "label": "Simulation (rien écrit sur disque, mais appels LLM réels)",
+        "default": false,
+        "description": "⚠️ Ce mode appelle quand même le LLM pour de vrai (proposition des nouvelles zones) — seule l'écriture du fichier geographie/{scenario}.md est sautée. Un coût API réel est engagé malgré le mot \"simulation\"."
+      }
+    ],
+    "gui_verified": true,
+    "required_one_of": [
+      [
+        "--scenario",
+        "--all"
+      ]
+    ]
+  },
+  {
+    "id": "regenerer_corps_geographie",
+    "label": "Mettre à jour le texte des géographies",
+    "icon": "📝",
+    "section": "geo_construction",
+    "script": "regenerer_corps_geographie.py",
+    "description": "Gratuit, sans IA. Réécrit la partie texte (« ## Zones ») de geographie/{scénario}.md à partir du frontmatter, la seule référence lue par la Carte et les scripts. Ne touche ni au frontmatter, ni à « Vue d'ensemble », ni aux « Notes ». Inutile après une modification faite depuis la Carte (le texte est alors mis à jour automatiquement) : à lancer après une modification par un script ou à la main. Aperçu par défaut — coche « Exécuter pour de vrai » pour écrire (.bak_corps).",
+    "requires": [],
+    "options": [
+      {
+        "flag": "--all",
+        "type": "checkbox",
+        "label": "Tous les scénarios",
+        "default": false,
+        "mutually_exclusive_with": "scenario"
+      },
+      {
+        "flag": "--scenario",
+        "type": "select",
+        "label": "Scénario",
+        "source": "config_scenarios",
+        "default": "",
+        "optional": true,
+        "mutually_exclusive_with": "all"
+      },
+      {
+        "flag": "--execute",
+        "type": "checkbox",
+        "label": "Exécuter pour de vrai",
+        "default": false,
+        "description": "Sans cette case : aperçu seulement, rien n'est modifié."
+      }
+    ],
+    "gui_verified": true,
+    "required_one_of": [
+      [
+        "--scenario",
+        "--all"
+      ]
+    ]
+  },
+  {
+    "id": "scan_geographie_complet",
+    "label": "Scanner la géographie",
+    "icon": "🧪",
+    "section": "geo_diagnostic",
+    "script": "scan_geographie_complet.py",
+    "description": "Lance en une fois tout ou partie des 5 vérifications géographiques (zones manquantes, catégories, cohérence pays/zone, conventions, répartition spatiale des zones), avec un résumé final. En option : vérifier les tracés dessinés sur la carte, et demander à l'IA de rédiger des propositions de correction, à relire toi-même.",
+    "requires": [],
+    "options": [
+      {
+        "flag": "--all",
+        "type": "checkbox",
+        "label": "Tous les scénarios",
+        "description": "Vérifie les 6 univers narratifs en une seule fois",
+        "default": false,
+        "mutually_exclusive_with": "scenario"
+      },
+      {
+        "flag": "--scenario",
+        "type": "select",
+        "label": "Un seul scénario",
+        "source": "config_scenarios",
+        "default": "",
+        "optional": true,
+        "mutually_exclusive_with": "all",
+        "description": "Limite la vérification à un seul univers (plus rapide)"
+      },
+      {
+        "flag": "--run-zones",
+        "type": "checkbox",
+        "label": "Zones (pays sans zone)",
+        "description": "Ne lance que le diagnostic \"pays absents de toute zone\"",
+        "default": false
+      },
+      {
+        "flag": "--marquer-resolus",
+        "type": "checkbox",
+        "label": "Marquer les chantiers obsolètes comme traités",
+        "description": "Uniquement avec \"Tous les scénarios\" : passe automatiquement à 'traite' les chantiers pays-sans-zone devenus obsolètes (le pays a déjà une zone). Sans effet si un seul scénario est sélectionné.",
+        "default": false,
+        "depends_on": "--run-zones"
+      },
+      {
+        "flag": "--run-type-entite",
+        "type": "checkbox",
+        "label": "Catégories manquantes",
+        "description": "Ne lance que le diagnostic \"type_entite manquant\"",
+        "default": false
+      },
+      {
+        "flag": "--apply-type-entite",
+        "type": "checkbox",
+        "label": "Corriger les catégories manquantes",
+        "description": "Sans cette case : juste un aperçu des trous. Avec : corrige les fiches pour de vrai (sauvegarde automatique)",
+        "default": false,
+        "depends_on": "--run-type-entite"
+      },
+      {
+        "flag": "--run-origine-reelle",
+        "type": "checkbox",
+        "label": "Cohérence pays/zone parente",
+        "description": "Ne lance que le diagnostic \"ville/région vs chaîne de parenté\"",
+        "default": false
+      },
+      {
+        "flag": "--resolve-llm",
+        "type": "checkbox",
+        "label": "Deviner les pays inconnus (IA)",
+        "description": "Pour les villes/régions non reconnues, demande à l'IA de deviner leur pays plutôt que de les laisser de côté. Coûte un appel IA",
+        "default": false,
+        "depends_on": "--run-origine-reelle"
+      },
+      {
+        "flag": "--run-conventions",
+        "type": "checkbox",
+        "label": "Conventions entre scénarios",
+        "description": "Ne lance que le diagnostic \"territoire traité pareil dans les 6 scénarios\"",
+        "default": false
+      },
+      {
+        "flag": "--run-patron-spatial",
+        "type": "checkbox",
+        "label": "Patron spatial (IA)",
+        "description": "Ne lance que le diagnostic \"la zone colle-t-elle à la logique du scénario\" (IA)",
+        "default": false
+      },
+      {
+        "flag": "--no-cache-patron-spatial",
+        "type": "checkbox",
+        "label": "Revérifier avec l'IA (ignorer le résultat déjà calculé)",
+        "description": "Le dernier contrôle réutilise normalement un résultat déjà calculé pour aller plus vite. Cette case force un nouveau calcul complet",
+        "default": false,
+        "depends_on": "--run-patron-spatial"
+      },
+      {
+        "flag": "--check-overlays",
+        "type": "checkbox",
+        "label": "Tracés dessinés (overlays)",
+        "description": "Étape en plus : vérifie que les tracés dessinés à la main sur la carte correspondent toujours aux textes \"portion\" des zones, signale les textes sans tracé et les pays listés deux fois dans une même zone. Sans appel IA, ne modifie rien.",
+        "default": false
+      },
+      {
+        "flag": "--write-chantiers",
+        "type": "checkbox",
+        "label": "Enregistrer les problèmes trouvés",
+        "description": "Sans cette case : juste un aperçu, rien n'est gardé. Avec : chaque problème est ajouté à ta liste de choses à traiter, pour y revenir plus tard. Nature différente de Correction/Deviner/Revérifier ci-dessus : ce n'est pas une correction du vault, juste un enregistrement passif du diagnostic déjà lancé (zones, cohérence pays/zone parente, patron spatial) -- reste sans effet si aucune de ces 3 étapes ne tourne, sans qu'il soit nécessaire d'en forcer une.",
+        "default": true
+      },
+      {
+        "flag": "--generer-propositions-topdown",
+        "type": "checkbox",
+        "label": "Proposer des corrections automatiques",
+        "description": "Pour chaque problème trouvé, demande à l'IA de rédiger une proposition à relire toi-même. Coûte plusieurs appels IA, jamais appliqué automatiquement",
+        "default": false
+      }
+    ],
+    "gui_verified": true,
+    "presets": {
+      "label": "Mode",
+      "choices": [
+        {
+          "id": "light",
+          "label": "Léger",
+          "description": "Vérification de base seulement : regarde ce qui ne va pas, sans appel IA, sans rien corriger ni enregistrer. Le plus rapide et le moins coûteux.",
+          "values": {}
+        },
+        {
+          "id": "a_la_carte",
+          "label": "À la carte",
+          "description": "Choisis toi-même les options ci-dessous.",
+          "default": true
+        },
+        {
+          "id": "maxi",
+          "label": "Maxi",
+          "description": "Scan et traitement complets : lance les 5 diagnostics, corrige les catégories manquantes, devine les pays inconnus via IA, nettoie les chantiers zones devenus obsolètes, enregistre tous les problèmes trouvés, revérifie tout malgré le cache et propose des corrections automatiques. Le run le plus complet -- aussi le plus long et le plus coûteux en appels IA.",
+          "values": {
+            "--run-zones": true,
+            "--run-type-entite": true,
+            "--run-origine-reelle": true,
+            "--run-conventions": true,
+            "--run-patron-spatial": true,
+            "--apply-type-entite": true,
+            "--resolve-llm": true,
+            "--write-chantiers": true,
+            "--marquer-resolus": true,
+            "--no-cache-patron-spatial": true,
+            "--check-overlays": true,
+            "--generer-propositions-topdown": true
+          }
+        }
+      ]
+    },
+    "required_one_of": [
+      [
+        "--scenario",
+        "--all"
+      ]
+    ]
+  },
+  {
+    "id": "generer_zones_topdown",
+    "label": "Générer des zones manquantes (IA)",
+    "icon": "🏗️",
+    "section": "geo_diagnostic",
+    "script": "generer_zones_topdown.py",
+    "description": "Pour chaque problème géographique en attente (pays sans zone, zone suspecte) : l'IA rédige une proposition (mode Proposer), que tu appliques ensuite toi-même une fois validée (mode Appliquer).",
+    "requires": [],
+    "options": [
+      {
+        "flag": "--review-topdown",
+        "type": "checkbox",
+        "label": "Proposer des corrections (aperçu)",
+        "description": "L'IA rédige une proposition pour chaque problème en attente, sans jamais rien écrire dans le vault -- juste un aperçu à relire.",
+        "default": false,
+        "mutually_exclusive_with": "apply-topdown"
+      },
+      {
+        "flag": "--apply-topdown",
+        "type": "checkbox",
+        "label": "Appliquer les corrections validées",
+        "description": "Applique dans le vault les propositions que tu as toi-même approuvées.",
+        "default": false,
+        "mutually_exclusive_with": "review-topdown"
+      },
+      {
+        "flag": "--all",
+        "type": "checkbox",
+        "label": "Tous les scénarios",
+        "description": "Traite les 6 scénarios en une passe",
+        "default": false,
+        "mutually_exclusive_with": "scenario"
+      },
+      {
+        "flag": "--scenario",
+        "type": "select",
+        "label": "Scénario",
+        "source": "config_scenarios",
+        "default": "",
+        "optional": true,
+        "mutually_exclusive_with": "all"
+      },
+      {
+        "flag": "--source",
+        "type": "select",
+        "label": "Quels problèmes traiter (aperçu uniquement)",
+        "choices": [
+          {
+            "value": "both",
+            "label": "Les deux (défaut)"
+          },
+          {
+            "value": "pays_sans_zone",
+            "label": "Pays sans zone uniquement"
+          },
+          {
+            "value": "zones_suspectes",
+            "label": "Zones suspectes uniquement"
+          }
+        ],
+        "default": "both",
+        "optional": true
+      },
+      {
+        "flag": "--force",
+        "type": "checkbox",
+        "label": "Régénérer les propositions existantes",
+        "description": "Mode review uniquement : régénère aussi les chantiers ayant déjà une proposition non approuvée. Sans ce flag, un chantier déjà pourvu d'une proposition en attente n'est jamais retouché (protège une relecture/édition manuelle en cours).",
+        "default": false
+      }
+    ],
+    "gui_verified": true,
+    "required_one_of": [
+      [
+        "--scenario",
+        "--all"
+      ],
+      [
+        "--review-topdown",
+        "--apply-topdown"
+      ]
+    ]
+  },
+  {
+    "id": "zoning_topdown_test",
+    "label": "Tester une proposition de zone",
+    "icon": "🔬",
+    "section": "geo_diagnostic",
+    "script": "zoning_topdown.py",
+    "description": "Génère, pour un cas précis que tu choisis, la même proposition de zone que l'IA produirait normalement — utile pour vérifier son comportement sans passer par l'onglet Carte.",
+    "requires": [],
+    "options": [
+      {
+        "flag": "--scenario",
+        "type": "select",
+        "label": "Scénario",
+        "source": "config_scenarios",
+        "default": "",
+        "required": true
+      },
+      {
+        "flag": "--pays",
+        "type": "text",
+        "label": "Pays concernés (1er cas : pays sans zone)",
+        "description": "Un ou plusieurs noms de pays séparés par des espaces. À utiliser seul (sans le champ ci-dessous). ⚠️ Comportement pas encore confirmé en usage réel — vérifie le résultat avant de t'y fier.",
+        "optional": true
+      },
+      {
+        "flag": "--zone-suspecte",
+        "type": "text",
+        "label": "Zone concernée (2e cas : zone suspecte)",
+        "optional": true,
+        "description": "Slug de la zone existante à réviser. À utiliser seul (sans le champ ci-dessus)."
+      },
+      {
+        "flag": "--raison-suspicion",
+        "type": "text",
+        "label": "Raison du signalement",
+        "optional": true,
+        "required_if": "--zone-suspecte",
+        "description": "Pourquoi cette zone est suspecte -- obligatoire si tu remplis \"Zone concernée\" ci-dessus."
+      }
+    ],
+    "gui_verified": true,
+    "required_one_of": [
+      [
+        "--pays",
+        "--zone-suspecte"
+      ]
+    ]
+  },
+  {
+    "id": "reparenter_sous_zones_orphelines",
+    "label": "Rattacher les sous-zones orphelines",
+    "icon": "🔗",
+    "section": "geo_diagnostic",
+    "script": "reparenter_sous_zones_orphelines.py",
+    "description": "Après le déplacement d'un pays vers une nouvelle zone, retrouve et rattache les sous-zones (villes, régions) restées pointées vers l'ancienne zone. Ce rattachement se fait déjà automatiquement après un déplacement dans l'onglet Carte ou une génération de zone par l'IA, mais ces passes automatiques peuvent silencieusement rater un cas. Ce bouton sert de filet de sécurité pour vérifier et rattraper après coup.",
+    "requires": [],
+    "options": [
+      {
+        "flag": "--scenario",
+        "type": "select",
+        "label": "Scénario",
+        "source": "config_scenarios",
+        "default": "",
+        "required": true
+      },
+      {
+        "flag": "--zone-cible",
+        "type": "slug_select",
+        "label": "Zone cible à corriger",
+        "slug_type": "zones_a_reparenter",
+        "required": true,
+        "description": "Seules les zones de premier niveau ayant actuellement au moins une sous-zone orpheline en attente sont listées (au lieu de toutes les zones du scénario). Liste vide = rien à corriger pour ce scénario en ce moment."
+      }
+    ],
+    "gui_verified": true
+  },
+  {
+    "id": "extract_localisation",
+    "label": "Repérer la localisation des fiches",
+    "icon": "📍",
+    "section": "geo_diagnostic",
+    "script": "extract_localisation.py",
+    "description": "Analyse chaque fiche enrichie pour déterminer dans quelle zone géographique elle se situe, et prépare les cas ambigus pour relecture.",
+    "requires": [],
+    "options": [
+      {
+        "flag": "--scenario",
+        "type": "select",
+        "label": "Scénario",
+        "source": "config_scenarios",
+        "optional": true
+      },
+      {
+        "flag": "--slug",
+        "type": "slug_select",
+        "label": "Une seule fiche",
+        "slug_type": "fiches_a_localiser",
+        "optional": true,
+        "description": "Seules les fiches n'ayant pas encore de localisation sont listées (au lieu de toutes les instances). Coche \"Retraiter même si déjà fait\" pour voir apparaître les fiches déjà traitées dans cette liste.",
+        "slug_extra_params": {
+          "force": "--force"
+        }
+      },
+      {
+        "flag": "--force",
+        "type": "checkbox",
+        "label": "Retraiter même si déjà fait",
+        "description": "Retraite les fichiers déjà extraits",
+        "default": false
+      },
+      {
+        "flag": "--report-only",
+        "type": "checkbox",
+        "label": "Rapport seulement (aucun appel LLM)",
+        "description": "Génère localisation_review.md à partir de l'état actuel du vault, sans traiter aucune fiche ni appeler le LLM. La seule option de ce panneau qui ne coûte vraiment rien.",
+        "default": false
+      },
+      {
+        "flag": "--dry-run",
+        "type": "checkbox",
+        "label": "Simulation (rien écrit sur disque, mais appels LLM réels)",
+        "default": false,
+        "description": "⚠️ Ce mode appelle quand même le LLM pour de vrai (analyse de chaque fiche) — seule l'injection du résultat dans la fiche est sautée. Pour un aperçu sans aucun coût, utiliser plutôt \"Rapport seulement\" ci-dessus."
+      }
+    ],
+    "gui_verified": true
+  },
+  {
+    "id": "review_localisation",
+    "label": "Trancher les localisations en attente",
+    "icon": "✅",
+    "section": "geo_diagnostic",
+    "script": "review_localisation.py",
+    "description": "Passe en revue, fiche par fiche, les cas où la zone n'a pas pu être déterminée automatiquement, et permet de choisir la bonne. ⚠️ Le mode interactif (case ci-dessous décochée) plante systématiquement depuis ce GUI (aucune saisie clavier possible dans ce contexte) — reste utilisable uniquement en CLI directe. \"Auto-résoudre\" est donc rendu obligatoire ici.",
+    "requires": [
+      "extract_localisation"
+    ],
+    "requires_message": "Lancer extract_localisation d'abord",
+    "options": [
+      {
+        "flag": "--scenario",
+        "type": "select",
+        "label": "Scénario",
+        "source": "config_scenarios",
+        "optional": true
+      },
+      {
+        "flag": "--auto-resolve",
+        "type": "checkbox",
+        "label": "Auto-résoudre via le LLM",
+        "description": "Obligatoire depuis ce GUI : le mode interactif (décision manuelle fiche par fiche au clavier) n'est possible qu'en CLI directe, jamais depuis une interface web.",
+        "default": true,
+        "required": true
+      },
+      {
+        "flag": "--dry-run",
+        "type": "checkbox",
+        "label": "Simulation (aucune écriture)",
+        "default": false,
+        "description": "Affiche ce qui serait fait, sans rien modifier ni écrire sur le disque. ⚠️ Si \"Auto-résoudre\" est aussi coché, le LLM est quand même appelé pour de vrai pour chaque fiche — seule l'écriture du résultat est sautée."
+      }
+    ],
+    "gui_verified": true
+  },
+  {
+    "id": "validate",
+    "label": "Vérifier la cohérence du vault",
+    "icon": "🛡",
+    "section": "validation",
+    "script": "validate.py",
+    "description": "Contrôle l'ensemble du vault (entités, localisations, cohérence narrative) et signale les incohérences trouvées.",
+    "requires": [
+      "extract_localisation"
+    ],
+    "requires_message": "extract_localisation devrait tourner avant validate",
+    "options": [
+      {
+        "flag": "--verbose",
+        "short": "-v",
+        "type": "checkbox",
+        "label": "Détails dans le terminal",
+        "description": "Affiche le détail dans le terminal",
+        "default": false
+      },
+      {
+        "flag": "--report",
+        "short": "-r",
+        "type": "checkbox",
+        "label": "Générer rapport",
+        "description": "Écrit validation_report.md",
+        "default": false
+      },
+      {
+        "flag": "--localisation",
+        "type": "checkbox",
+        "label": "Localisation SEULEMENT (saute les 8 autres sections)",
+        "description": "⚠️ Ne s'ajoute pas aux autres vérifications, il les remplace : lance uniquement la vérification localisation et s'arrête là, sans passer par la nomenclature, la cohérence systémique, les entités, etc. Utile pour une revérification rapide ciblée, pas pour un contrôle complet du vault.",
+        "default": false
+      },
+      {
+        "flag": "--narrative",
+        "short": "-n",
+        "type": "checkbox",
+        "label": "Revérifier la cohérence narrative",
+        "description": "Relance la vérification narrative (section 9/9) même si event_instances n'a pas changé depuis le dernier passage. Sans effet si \"Localisation SEULEMENT\" ci-dessus est cochée (cette case fait sauter la section 9 comme les 7 autres).",
+        "default": false
+      }
+    ],
+    "yaml_files": [
+      {
+        "path": "documentation/need_action/narrative_issues.yaml",
+        "label": "documentation/need_action/narrative_issues.yaml",
+        "readonly": true
+      }
+    ],
+    "gui_verified": true
+  },
+  {
+    "id": "trace_injection",
+    "label": "Tracer une instance / un événement / un signal",
+    "icon": "🔍",
+    "section": "entites_nettoyage",
+    "script": "trace_injection.py",
+    "description": "Retrace l'histoire d'un personnage, événement ou signal : d'où il vient, dans quels scénarios et zones il apparaît, dans quels articles il a été utilisé, et surtout comment son influence a évolué depuis son apparition jusqu'à la date choisie — récit rédigé et graphique sous la sortie. Ne modifie rien. ⚠️ Le récit est rédigé par l'IA (un appel par scénario tracé) sauf si « Récit sans IA » est coché.",
+    "options": [
+      {
+        "flag": "--type",
+        "type": "select",
+        "label": "Type à tracer",
+        "choices": [
+          {
+            "value": "instance",
+            "label": "Instance (entité)"
+          },
+          {
+            "value": "evenement",
+            "label": "Événement"
+          },
+          {
+            "value": "signal",
+            "label": "Signal"
+          }
+        ],
+        "optional": false,
+        "description": "Choisis d'abord le type -- ça détermine la liste proposée juste en dessous (\"Slug à tracer\") : entités, événements (archétypes), ou signaux.",
+        "default": "instance"
+      },
+      {
+        "flag": "--slug",
+        "type": "slug_select",
+        "label": "Élément à tracer",
+        "slug_type": "entities",
+        "slug_type_field": "--type",
+        "slug_type_map": {
+          "instance": "entities",
+          "evenement": "evenements",
+          "signal": "signals",
+          "*": "entities"
+        },
+        "description": "Liste filtrée selon le type choisi ci-dessus."
+      },
+      {
+        "flag": "--scenario",
+        "type": "select",
+        "label": "Scénario",
+        "source": "config_scenarios",
+        "default": "",
+        "optional": true,
+        "description": "Limite le récit et le graphique à ce scénario. Laisser vide = tous les scénarios où l'élément a un impact chiffré (un appel IA par scénario)."
+      },
+      {
+        "flag": "--date",
+        "type": "number",
+        "label": "Date de référence",
+        "min": 2026,
+        "max": 2098,
+        "default": 2098,
+        "description": "Jusqu'à quelle année suivre l'évolution de l'influence (2098 par défaut)."
+      },
+      {
+        "flag": "--sans-recit",
+        "type": "checkbox",
+        "label": "Récit sans IA (gratuit)",
+        "default": false,
+        "description": "Récit construit automatiquement à partir des chiffres, sans appel à l'IA — plus sec, mais gratuit et instantané."
+      },
+      {
+        "flag": "--skip-effet",
+        "type": "checkbox",
+        "label": "Sans calcul d'influence",
+        "default": false,
+        "advanced": true,
+        "description": "Saute la simulation (pas de récit ni de graphique) — retour au rapport de traçabilité seul."
+      },
+      {
+        "flag": "--skip-articles",
+        "type": "checkbox",
+        "label": "Sauter le scan des articles publiés",
+        "description": "Plus rapide, mais saute la section \"usage aval\" (quels articles mentionnent ce slug une fois publié).",
+        "default": false
+      },
+      {
+        "flag": "--report",
+        "type": "checkbox",
+        "label": "Écrire un rapport (.md + .json)",
+        "description": "Écrit documentation/need_action/trace_<slug>.md et .json en plus de l'affichage terminal.",
+        "default": false
+      }
+    ],
+    "yaml_files": [],
+    "gui_verified": true
+  },
+  {
+    "id": "simuler_et_si",
+    "label": "Simulateur « et si ? »",
+    "icon": "🔮",
+    "section": "entites_nettoyage",
+    "script": "simuler_et_si.py",
+    "description": "Teste une hypothèse « et si ? » AVANT toute injection : effet chiffré sur les 12 variables (avec et sans), tensions, aperçu de la carte et, en option, lecture des conséquences par l'IA. Ne modifie jamais le vault. Onglet « Nouvelle hypothèse » : écrire une hypothèse à partir d'une idée. Rapport : documentation/need_action/et_si_<id>.md (et ci-dessous).",
+    "requires": [],
+    "fixed_args": [
+      "--report"
+    ],
+    "options": [
+      {
+        "flag": "--scenario",
+        "type": "select",
+        "label": "Scénario",
+        "source": "config_scenarios",
+        "default": "",
+        "optional": true,
+        "description": "Limite la simulation à ce scénario. Vide = tous les scénarios de l'hypothèse.",
+        "mode_only": "simuler"
+      },
+      {
+        "flag": "--id",
+        "type": "slug_select",
+        "label": "Hypothèse",
+        "slug_type": "hypotheses_et_si",
+        "mode_only": "simuler",
+        "description": "Hypothèses de et_si/hypotheses.yaml (⚠ = mal remplie : le lancement listera ses erreurs). « Aucun » = liste des hypothèses, sans rien simuler."
+      },
+      {
+        "flag": "--date",
+        "type": "number",
+        "label": "Effet mesuré en",
+        "min": 2026,
+        "max": 2098,
+        "default": 2098,
+        "description": "Année à laquelle l'effet est mesuré (pas avant l'apparition de l'hypothèse).",
+        "mode_only": "simuler"
+      },
+      {
+        "flag": "--consequences-ia",
+        "type": "checkbox",
+        "label": "Lecture des conséquences par l'IA (payant)",
+        "default": false,
+        "description": "⚠️ Un appel IA par scénario (≈ 1-2 centimes chacun) : trajectoires d'entités, relations, statuts de zone, carte, nouvelles entités, toutes contrôlées. La réponse est gardée en cache : relancer la même hypothèse ne coûte rien.",
+        "mode_only": "simuler"
+      },
+      {
+        "flag": "--passe-exhaustive",
+        "type": "checkbox",
+        "label": "Passe exhaustive : relire toutes les fiches (payant)",
+        "default": false,
+        "description": "⚠️ Relit toutes les instances du scénario et les événements datés après l'hypothèse (≈ 0,05 à 0,11 $ par scénario ; lots gardés en cache). Chaque changement est classé obligatoire (la fiche devient fausse) ou possible. Les obligatoires entrent dans la liste d'application, les 20 possibles prioritaires en étapes facultatives, et les entités les plus touchées dans l'entrée d'injection (acteurs_hint). À cocher avec la lecture IA, qui lui sert de contexte. « Nouveau tirage » relance aussi la passe.",
+        "mode_only": "simuler"
+      },
+      {
+        "flag": "--refaire",
+        "type": "checkbox",
+        "label": "Nouveau tirage (ignorer le cache)",
+        "default": false,
+        "depends_on": "--consequences-ia",
+        "description": "Refait les appels IA même si la réponse est en cache (la lecture varie d'un tirage à l'autre). Payant.",
+        "mode_only": "simuler"
+      },
+      {
+        "flag": "--recit-ia",
+        "type": "checkbox",
+        "label": "Récit rédigé par l'IA (payant)",
+        "default": false,
+        "advanced": true,
+        "description": "Remplace le récit construit par le script (gratuit) par un récit rédigé par l'IA, un appel par scénario.",
+        "mode_only": "simuler"
+      }
+    ],
+    "yaml_files": [
+      {
+        "path": "et_si/hypotheses.yaml",
+        "label": "et_si/hypotheses.yaml (hypothèses, mode d'emploi en tête)",
+        "lien_seul": true
+      },
+      {
+        "path": "documentation/need_action/et_si_dernier_lancement.md",
+        "label": "Rapport du dernier lancement",
+        "readonly": true,
+        "lien_seul": true
+      }
+    ],
+    "gui_verified": true,
+    "mode_select": {
+      "label": "Mode",
+      "choices": [
+        {
+          "value": "simuler",
+          "label": "Simuler une hypothèse",
+          "note": "Choisis une hypothèse dans la liste, puis Lancer. Rien n'est jamais écrit dans le vault."
+        },
+        {
+          "value": "nouvelle",
+          "label": "Nouvelle hypothèse",
+          "note": "Écris une idée dans le panneau ✨ ci-dessous : l'IA propose l'hypothèse, tu la corriges, puis tu l'ajoutes à et_si/hypotheses.yaml. Le bouton Lancer ne sert pas dans ce mode."
+        }
+      ]
+    },
+    "assistant_hypothese": true,
+    "assistant_decision": true
+  },
+  {
+    "id": "export_prompt_veille",
+    "label": "Préparer le prompt de veille",
+    "icon": "📡",
+    "section": "monde_reel",
+    "script": "export_prompt_veille.py",
+    "description": "Génère un prompt à copier-coller dans une IA au choix avec accès web (Claude.ai, ChatGPT...), pour actualiser la partie \"situation actuelle\" des 12 variables d'etat_du_monde_reel.md. Aucun appel API — le contenu précédent de chaque section est injecté automatiquement pour que la mise à jour reste cohérente et ne réécrive que ce qui a réellement changé.",
+    "requires": [],
+    "options": [
+      {
+        "flag": "--dry-run",
+        "type": "checkbox",
+        "label": "Aperçu seulement (n'écrit pas le fichier prompt)",
+        "default": false,
+        "description": "Affiche le prompt dans le journal d'exécution sans créer veille_prompt_a_copier.md."
+      }
+    ],
+    "yaml_files": [
+      {
+        "path": "documentation/need_action/veille_prompt_a_copier.md",
+        "label": "Prompt à coller tel quel dans l'IA de ton choix avec accès web (📋 Copier ou ⬇ Télécharger)",
+        "readonly": false,
+        "copyable": true
+      }
+    ],
+    "gui_verified": true
+  },
+  {
+    "id": "import_veille_etat_monde",
+    "label": "Importer le résultat de la veille",
+    "icon": "📥",
+    "section": "monde_reel",
+    "script": "import_veille_etat_monde.py",
+    "description": "Colle la réponse de l'IA (obtenue via \"Préparer le prompt de veille\") dans le champ ci-dessous, puis lance ce script : il ne patche QUE les sections marquées [MODIFIÉ] (paragraphe \"situation actuelle\" + date), laisse les sections [INCHANGÉ] et les perspectives historiques (~10-15 ans / ~200 ans) strictement intactes. Aucun appel API. La réponse collée est archivée automatiquement après un import réussi.",
+    "requires": [],
+    "options": [
+      {
+        "flag": "--dry-run",
+        "type": "checkbox",
+        "label": "Simulation (aucune écriture, aucun archivage)",
+        "default": false,
+        "description": "Affiche le rapport diff (sections modifiées/inchangées) sans toucher à etat_du_monde_reel.md ni archiver la réponse collée."
+      },
+      {
+        "flag": "--force",
+        "type": "checkbox",
+        "label": "Importer même si la réponse n'a pas été collée aujourd'hui",
+        "default": false,
+        "description": "Par sécurité, le script refuse d'importer si veille_etat_monde_reponse.md n'a pas été modifié aujourd'hui (probable réponse oubliée d'une veille précédente). Cocher pour forcer quand même."
+      }
+    ],
+    "yaml_files": [
+      {
+        "path": "documentation/need_action/veille_etat_monde_reponses/veille_etat_monde_reponse.md",
+        "label": "Réponse de l'IA à coller ici avant de lancer le script",
+        "readonly": false
+      }
+    ],
+    "gui_verified": true
+  },
+  {
+    "id": "export_prompt_signaux",
+    "label": "Signaux faibles — 1. Préparer le prompt",
+    "icon": "🔭",
+    "section": "monde_reel",
+    "script": "export_prompt_signaux.py",
+    "description": "Génère le prompt de veille « signaux faibles » (concept d'Igor Ansoff) à coller TEL QUEL dans une ou plusieurs IA avec accès web (Claude.ai, ChatGPT, Le Chat, DeepSeek…) : 📋 Copier ou ⬇ Télécharger ci-dessous. Aucun appel API. Le prompt contient tes sources (fichier modifiable ci-dessous), les 12 variables, le « déjà connu » (état du monde, signaux injectés, candidats des veilles précédentes) et les règles de couverture. Réponses à coller ensuite dans « Signaux faibles — 2. Importer les réponses ». Les livres (documentation/livres/) ne sont pas dans ce prompt : ils sont lus à part par « Signaux faibles — Lire les livres (API) ». Les sources dotées d'un flux RSS y sont signalées comme déjà lues (par « Signaux faibles — Lire les flux RSS (API) ») : l'IA se concentre sur les autres et sur l'élargissement.",
+    "requires": [],
+    "options": [
+      {
+        "flag": "--nb",
+        "type": "number",
+        "label": "Nombre de signaux visé (par IA)",
+        "min": 1,
+        "max": 50,
+        "default": 10,
+        "description": "Les règles de couverture du prompt en dépendent (pour 10 : 2 signaux max par variable, 8 variables au moins, 3 signaux à moteur numérique au plus)."
+      },
+      {
+        "flag": "--depuis",
+        "type": "text",
+        "label": "Période à couvrir (optionnel)",
+        "optional": true,
+        "placeholder": "ex : juillet 2026",
+        "description": "Vide = « les derniers mois, les plus récents en priorité »."
+      },
+      {
+        "flag": "--dry-run",
+        "type": "checkbox",
+        "label": "Aperçu seulement (n'écrit pas le fichier prompt)",
+        "default": false,
+        "description": "Affiche le prompt dans le journal d'exécution sans mettre à jour le fichier ci-dessous."
+      }
+    ],
+    "yaml_files": [
+      {
+        "path": "documentation/need_action/veille_signaux_prompt_a_copier.md",
+        "label": "Prompt à coller tel quel dans l'IA (relancer le script pour le régénérer)",
+        "readonly": true,
+        "copyable": true
+      },
+      {
+        "path": "generator/sources_signaux_faibles.yaml",
+        "label": "Sources de départ (sites, livres) — actif: false pour mettre une source de côté",
+        "readonly": false
+      }
+    ],
+    "gui_verified": true
+  },
+  {
+    "id": "veille_livres_api",
+    "label": "Signaux faibles — Lire les livres (API)",
+    "icon": "📚",
+    "section": "monde_reel",
+    "script": "veille_livres_api.py",
+    "description": "Lit par API (ton LLM par défaut, tier structured_strict) les PDF/EPUB déposés dans documentation/livres/ — aucun copier-coller. La première fois, un petit appel par livre repère les pages susceptibles de décrire un phénomène précis (le LLM voit le début de chaque page) ; ensuite, à chaque passe, les pages repérées PAS ENCORE LUES sont envoyées (un appel par livre) ; le LLM en tire 0 à 3 signaux faibles au sens strict. Les signaux sont écrits dans l'emplacement « Réponse des livres » de « Signaux faibles — 2. Importer les réponses », à importer avec les réponses des IA de chat. Les pages ne sont marquées lues que si l'appel a réussi ; un livre épuisé est ignoré. Sans web, le LLM ne vérifie pas que le phénomène est encore marginal aujourd'hui : avertissement 📖 à l'import, à trancher au tri.",
+    "requires": [],
+    "options": [
+      {
+        "flag": "--dry-run",
+        "type": "checkbox",
+        "label": "Aperçu (aucun appel API)",
+        "default": false,
+        "description": "Montre les pages retenues et le prompt du premier livre, sans appeler le LLM ni marquer de page lue."
+      },
+      {
+        "flag": "--lister-livres",
+        "type": "checkbox",
+        "label": "Lister les livres seulement",
+        "default": false,
+        "description": "Aucun appel : pour chaque PDF/EPUB, densité de faits concrets (forte/moyenne/faible), pages déjà lues, meilleures pages restantes avec leur début."
+      },
+      {
+        "flag": "--livre",
+        "type": "text",
+        "label": "Un seul livre (optionnel)",
+        "optional": true,
+        "placeholder": "ex : weak signals",
+        "description": "Ne traite que les livres dont le nom de fichier contient ce texte. Vide = tous."
+      },
+      {
+        "flag": "--relire-livres",
+        "type": "checkbox",
+        "label": "Reprendre les livres au début",
+        "default": false,
+        "description": "Oublie les pages déjà lues lors des passes précédentes."
+      },
+      {
+        "flag": "--refaire-reperage",
+        "type": "checkbox",
+        "label": "Refaire le repérage des pages",
+        "default": false,
+        "description": "Le repérage (quelles pages lire) est fait une seule fois par livre par le LLM, puis mémorisé. Coche pour le refaire, par exemple après avoir changé de LLM."
+      }
+    ],
+    "yaml_files": [
+      {
+        "path": "documentation/need_action/veille_signaux_reponses/veille_signaux_reponse_livres.md",
+        "label": "Signaux tirés des livres (en attente d'import)",
+        "readonly": true
+      }
+    ],
+    "gui_verified": true
+  },
+  {
+    "id": "veille_rss_api",
+    "label": "Signaux faibles — Lire les flux RSS (API)",
+    "icon": "📰",
+    "section": "monde_reel",
+    "script": "veille_rss_api.py",
+    "description": "Lit par API (ton LLM par défaut, tier structured_strict, sans recherche web) les articles récents des sources qui ont un flux RSS (champ « rss » de sources_signaux_faibles.yaml, rempli par verifier_flux_rss.py). Texte = résumé fourni par le flux ; articles sans texte ignorés (ex. Hacker News). Un appel par lot d'environ 40 articles mélangés entre sources ; le LLM en tire 0 à 3 signaux faibles au sens strict. Chaque signal doit citer un article envoyé avec une citation exacte, sinon il est rejeté ; sa source devient l'URL réelle de l'article. Les signaux sont écrits dans l'emplacement « Réponse des flux RSS » de « Signaux faibles — 2. Importer les réponses ». Un article n'est marqué lu que si l'appel de son lot a réussi : chaque passe ne lit que les nouveaux articles. Ces sources ne sont plus proposées à l'IA dans le prompt à coller.",
+    "requires": [],
+    "options": [
+      {
+        "flag": "--dry-run",
+        "type": "checkbox",
+        "label": "Aperçu (aucun appel API)",
+        "default": false,
+        "description": "Collecte les articles et montre le prompt du premier lot, sans appeler le LLM ni marquer d'article lu."
+      },
+      {
+        "flag": "--lister",
+        "type": "checkbox",
+        "label": "Lister les articles disponibles seulement",
+        "default": false,
+        "description": "Aucun appel : nombre d'articles à lire par source (et ceux déjà lus, trop anciens ou sans texte), nombre de lots prévus."
+      },
+      {
+        "flag": "--jours",
+        "type": "number",
+        "label": "Fenêtre de collecte (jours)",
+        "min": 1,
+        "max": 365,
+        "default": 30,
+        "description": "Seuls les articles publiés dans cette fenêtre sont lus."
+      },
+      {
+        "flag": "--source",
+        "type": "text",
+        "label": "Une seule source (optionnel)",
+        "optional": true,
+        "placeholder": "ex : grist",
+        "description": "Ne lit que les sources dont le nom contient ce texte. Vide = toutes."
+      },
+      {
+        "flag": "--taille-lot",
+        "type": "number",
+        "label": "Articles par appel",
+        "min": 5,
+        "max": 80,
+        "default": 40,
+        "advanced": true,
+        "description": "Plus petit = plus d'appels, lecture plus attentive de chaque article."
+      },
+      {
+        "flag": "--relire",
+        "type": "checkbox",
+        "label": "Relire les articles déjà lus",
+        "default": false,
+        "advanced": true,
+        "description": "Ignore la mémoire des articles déjà envoyés (state/rss_veille.json)."
+      }
+    ],
+    "yaml_files": [
+      {
+        "path": "documentation/need_action/veille_signaux_reponses/veille_signaux_reponse_rss.md",
+        "label": "Signaux tirés des flux RSS (en attente d'import)",
+        "readonly": true
+      },
+      {
+        "path": "generator/sources_signaux_faibles.yaml",
+        "label": "Sources (champ rss) — actif: false pour mettre une source de côté",
+        "readonly": false
+      }
+    ],
+    "gui_verified": true
+  },
+  {
+    "id": "import_signaux_faibles",
+    "label": "Signaux faibles — 2. Importer les réponses",
+    "icon": "📥",
+    "section": "monde_reel",
+    "script": "import_signaux_faibles.py",
+    "description": "Colle la réponse de chaque IA dans son emplacement ci-dessous (Éditer → coller → Sauvegarder ; laisse vides ceux que tu n'utilises pas), puis lance : les réponses sont fusionnées (doublons entre IA = ⭐ convergent), comparées aux veilles précédentes et aux signaux déjà injectés, puis ajoutées à l'onglet « 🔭 Veille signaux faibles » pour le tri. Aucun appel API, rien n'est écrit dans le vault. Après un import réel, les réponses sont archivées et les emplacements redeviennent vides. Tu peux aussi déposer directement dans documentation/need_action/veille_signaux_reponses/ le fichier .md téléchargé depuis l'IA, quel que soit son nom : la provenance est lue dans sa première ligne « ia: … » (à défaut, dans le nom du fichier).",
+    "requires": [],
+    "options": [
+      {
+        "flag": "--dry-run",
+        "type": "checkbox",
+        "label": "Aperçu (rien écrit, rien archivé)",
+        "default": true,
+        "description": "Coché par défaut : affiche le bilan et le rapport. Décoche puis relance pour importer réellement."
+      },
+      {
+        "flag": "--force",
+        "type": "checkbox",
+        "label": "Importer même si une réponse n'a pas été collée aujourd'hui",
+        "default": false,
+        "description": "Par sécurité, l'import s'arrête si une réponse date d'un autre jour (probable réponse oubliée d'une veille précédente)."
+      },
+      {
+        "flag": "--verifier-sources",
+        "type": "checkbox",
+        "label": "Vérifier les sources (teste chaque lien)",
+        "default": true,
+        "description": "Teste chaque URL depuis ta machine : ✅ page trouvée, ❌ introuvable (404, souvent un signal inventé par l'IA), ❔ non vérifiable (site qui bloque les robots). Ajoute quelques secondes à quelques dizaines de secondes. Aucune écriture."
+      }
+    ],
+    "yaml_files": [
+      {
+        "path": "documentation/need_action/veille_signaux_reponses/veille_signaux_reponse_claude.md",
+        "label": "Réponse de Claude",
+        "readonly": false
+      },
+      {
+        "path": "documentation/need_action/veille_signaux_reponses/veille_signaux_reponse_chatgpt.md",
+        "label": "Réponse de ChatGPT",
+        "readonly": false
+      },
+      {
+        "path": "documentation/need_action/veille_signaux_reponses/veille_signaux_reponse_mistral.md",
+        "label": "Réponse de Mistral (Le Chat)",
+        "readonly": false
+      },
+      {
+        "path": "documentation/need_action/veille_signaux_reponses/veille_signaux_reponse_deepseek.md",
+        "label": "Réponse de DeepSeek",
+        "readonly": false
+      },
+      {
+        "path": "documentation/need_action/veille_signaux_reponses/veille_signaux_reponse_gemini.md",
+        "label": "Réponse de Gemini",
+        "readonly": false
+      },
+      {
+        "path": "documentation/need_action/veille_signaux_reponses/veille_signaux_reponse_perplexity.md",
+        "label": "Réponse de Perplexity",
+        "readonly": false
+      },
+      {
+        "path": "documentation/need_action/veille_signaux_reponses/veille_signaux_reponse_livres.md",
+        "label": "Réponse des livres (écrite par « Lire les livres (API) »)",
+        "readonly": false
+      },
+      {
+        "path": "documentation/need_action/veille_signaux_reponses/veille_signaux_reponse_rss.md",
+        "label": "Réponse des flux RSS (écrite par « Lire les flux RSS (API) »)",
+        "readonly": false
+      },
+      {
+        "path": "documentation/need_action/veille_signaux_fusion.md",
+        "label": "Rapport du dernier import",
+        "readonly": true
+      }
+    ],
+    "gui_verified": true
+  },
+  {
+    "id": "generate_instances",
+    "label": "Générer les instances manquantes",
+    "icon": "🧩",
+    "section": "entites_creation",
+    "script": "generate_instances.py",
+    "description": "Génère les instances par scénario (instances/{slug}_{scenario}.md) pour des entités déjà créées dans entites/, qu'elles soient anciennes ou fraîchement ajoutées — ne crée AUCUNE nouvelle entité, ne fait que peupler les scénarios manquants pour des entités existantes. Distinct de \"Créer des entités\", qui crée entité + instances en un seul run.",
+    "requires": [],
+    "options": [
+      {
+        "flag": "--entity",
+        "type": "slug_select",
+        "slug_type": "entities",
+        "label": "Entité (optionnel — vide = toutes)",
+        "optional": true,
+        "description": "Traiter uniquement cette entité. Laisser vide pour traiter toutes les entités du vault."
+      },
+      {
+        "flag": "--scenario",
+        "type": "select",
+        "label": "Scénario (optionnel — vide = les 6)",
+        "optional": true,
+        "choices": [
+          {
+            "value": "breakdown",
+            "label": "breakdown"
+          },
+          {
+            "value": "fortress_world",
+            "label": "fortress_world"
+          },
+          {
+            "value": "new_sustainability",
+            "label": "new_sustainability"
+          },
+          {
+            "value": "eco_communalism",
+            "label": "eco_communalism"
+          },
+          {
+            "value": "policy_reform",
+            "label": "policy_reform"
+          },
+          {
+            "value": "reference",
+            "label": "reference"
+          }
+        ],
+        "description": "Traiter uniquement ce scénario. Laisser vide pour traiter les 6."
+      },
+      {
+        "flag": "--ancrage-temporel",
+        "type": "select",
+        "label": "Ancrage temporel",
+        "optional": true,
+        "default": "libre",
+        "choices": [
+          {
+            "value": "libre",
+            "label": "Libre (défaut — priorité aux jalons du scénario)"
+          },
+          {
+            "value": "recent",
+            "label": "Récent forcé (1-3 prochaines années, ancré dans etat_du_monde_reel.md)"
+          }
+        ],
+        "description": "Le mode 'libre' (par défaut) donne presque toujours la priorité aux jalons du scénario, même pour une origine proche de 2026. Choisis 'récent' pour forcer délibérément une instance qui émerge maintenant, ancrée dans l'actualité réelle plutôt que dans un jalon futur du scénario."
+      },
+      {
+        "flag": "--force",
+        "type": "checkbox",
+        "label": "Régénérer même si l'instance existe déjà",
+        "default": false,
+        "description": "Sans cette case, une instance déjà existante pour ce couple entité/scénario est sautée (pas régénérée)."
+      },
+      {
+        "flag": "--role",
+        "type": "textarea",
+        "label": "Nouveau rôle (scénario de référence)",
+        "optional": true,
+        "placeholder": "Laisser vide = rôle actuel conservé",
+        "description": "Remplace le rôle imposé de l'entité dans son scénario de référence (champ role_ref de la fiche), puis régénère cette instance. Exige une entité ET le scénario de référence de cette entité ci-dessus. Cocher aussi \"Régénérer même si l'instance existe déjà\"."
+      },
+      {
+        "flag": "--consigne",
+        "type": "textarea",
+        "label": "Consigne pour ce scénario (autres scénarios)",
+        "optional": true,
+        "placeholder": "ex : jeune fille, ne doit pas apparaître dans les articles pour le moment",
+        "description": "Remplace la consigne donnée à l'IA pour ce scénario (champ consignes_scenarios de la fiche), puis régénère cette instance. Exige une entité ET un scénario autre que son scénario de référence. Cocher aussi \"Régénérer même si l'instance existe déjà\"."
+      },
+      {
+        "flag": "--injection-custom",
+        "type": "checkbox",
+        "label": "Conserver l'impact direct sur les variables",
+        "default": false,
+        "description": "Pour régénérer une instance créée en mode custom (\"Créer des entités\") sans perdre son bloc d'impact sur les variables. Laisser décoché pour une génération classique."
+      },
+      {
+        "flag": "--dry-run",
+        "type": "checkbox",
+        "label": "Simulation (rien écrit sur disque, mais appels LLM réels)",
+        "default": false,
+        "description": "⚠️ Comme pour \"Créer des entités\" : ce mode appelle quand même le LLM pour de vrai (une fois par couple entité/scénario traité) — seule l'écriture des fichiers finaux est sautée. Un coût API réel est engagé malgré le mot \"simulation\"."
+      }
+    ],
+    "gui_verified": false
+  },
+  {
+    "id": "fix_annee_debut_placeholder",
+    "label": "Réexaminer les dates de naissance (annee_debut)",
+    "icon": "🕰️",
+    "section": "entites_nettoyage",
+    "script": "fix_annee_debut_placeholder.py",
+    "description": "Corrige les fiches d'entités dont l'année de naissance/création était restée bloquée à une valeur par défaut (2026), en la remplaçant par une date cohérente avec l'histoire du scénario. Sans risque à relancer : une fiche déjà corrigée n'est jamais retraitée, quel que soit le nombre de fois où tu lances ce script.",
+    "requires": [],
+    "options": [
+      {
+        "flag": "--all",
+        "type": "checkbox",
+        "label": "Tous les scénarios",
+        "description": "Traite tous les scénarios disponibles",
+        "default": false,
+        "mutually_exclusive_with": "scenario"
+      },
+      {
+        "flag": "--scenario",
+        "type": "select",
+        "label": "Scénario",
+        "source": "config_scenarios",
+        "default": "",
+        "optional": true,
+        "mutually_exclusive_with": "all"
+      },
+      {
+        "flag": "--slug",
+        "type": "slug_select",
+        "label": "Une seule fiche (optionnel)",
+        "slug_type": "instances",
+        "optional": true,
+        "description": "Limite le traitement à une fiche précise du scénario choisi."
+      },
+      {
+        "flag": "--limit",
+        "type": "number",
+        "label": "Nombre de fiches max par scénario (optionnel)",
+        "description": "Utile pour estimer le coût réel avant un run complet.",
+        "min": 1,
+        "optional": true
+      },
+      {
+        "flag": "--dry-run",
+        "type": "checkbox",
+        "label": "Simulation (rien écrit sur disque, mais appels LLM réels)",
+        "description": "⚠️ Appelle quand même le LLM pour de vrai sur chaque fiche traitée — seule l'écriture finale (annee_debut + marqueur annee_debut_verifiee) est sautée. Un coût API réel est engagé malgré le mot \"simulation\".",
+        "default": false
+      }
+    ],
+    "yaml_files": [
+      {
+        "path": "documentation/need_action/fix_annee_debut_placeholder.md",
+        "label": "Rapport du dernier run réel (réinitialisé à chaque run, jamais en dry-run)",
+        "readonly": true
+      }
+    ],
+    "gui_verified": true,
+    "required_one_of": [
+      [
+        "--scenario",
+        "--all"
+      ]
+    ]
+  },
+  {
+    "id": "audit_dates_instances",
+    "label": "Audit — dates (annee_debut / annee_fin)",
+    "icon": "📊",
+    "section": "validation",
+    "script": "audit_dates_instances.py",
+    "description": "Diagnostic en lecture seule (aucune écriture) : montre comment les dates de naissance et de fin sont réparties sur tout le vault, et repère les fiches où ce champ est carrément absent — un cas qui passe normalement inaperçu. Utile pour vérifier l'ensemble après avoir lancé \"Réexaminer les dates de naissance\", ou pour repérer une concentration excessive d'entités sur une même année.",
+    "requires": [],
+    "options": [
+      {
+        "flag": "--dossier",
+        "type": "text",
+        "label": "Dossier instances/ (optionnel — vide = celui du vault courant)",
+        "optional": true
+      }
+    ],
+    "gui_verified": true
+  },
+  {
+    "id": "audit_etat_temporel_fin",
+    "label": "Audit — cohérence trajectoire / annee_fin",
+    "icon": "📊",
+    "section": "validation",
+    "script": "audit_etat_temporel_fin.py",
+    "description": "Diagnostic en lecture seule (aucune écriture) : vérifie que les fiches dont la trajectoire implique normalement une fin (transformé, disparu, historique, mythifié) ont bien une date de fin renseignée. Sert aujourd'hui de vérification de routine — le problème historique qu'il surveillait a déjà été entièrement corrigé.",
+    "requires": [],
+    "options": [
+      {
+        "flag": "--dossier",
+        "type": "text",
+        "label": "Dossier instances/ (optionnel — vide = celui du vault courant)",
+        "optional": true
+      }
+    ],
+    "gui_verified": true
+  },
+  {
+    "id": "audit_longueur_articles",
+    "label": "Audit — longueur réelle vs étiquette des articles",
+    "icon": "📊",
+    "section": "validation",
+    "script": "audit_longueur_articles.py",
+    "description": "Diagnostic en lecture seule (aucune écriture, aucun appel à l'IA) : compare la longueur réelle de chaque article généré (nombre de mots) à la longueur annoncée dans sa fiche, et donne au passage la répartition des formats par scénario et par thématique. Sert à mesurer l'ampleur d'un éventuel écart, pas à le corriger.",
+    "requires": [],
+    "options": [
+      {
+        "flag": "--dossier",
+        "type": "text",
+        "label": "Dossier articles/ (optionnel — vide = celui du vault courant)",
+        "optional": true
+      }
+    ],
+    "gui_verified": true
+  },
+  {
+    "id": "audit_type_relation_dominante",
+    "label": "Audit — type_relation_dominante",
+    "icon": "📊",
+    "section": "validation",
+    "script": "audit_type_relation_dominante.py",
+    "description": "Diagnostic en lecture seule (aucune écriture) : sur les fiches ayant au moins une alliance ou opposition réelle, vérifie si le type de relation dominante est bien renseigné explicitement ou s'il est absent — un cas ambigu qui, une fois affiché, ressemble à tort à de la neutralité.",
+    "requires": [],
+    "options": [
+      {
+        "flag": "--dossier",
+        "type": "text",
+        "label": "Dossier instances/ (optionnel — vide = celui du vault courant)",
+        "optional": true
+      }
+    ],
+    "gui_verified": true
+  },
+  {
+    "id": "audit_instances_manquantes",
+    "label": "Audit — instances manquantes (scénarios jamais générés)",
+    "icon": "📊",
+    "section": "validation",
+    "script": "audit_instances_manquantes.py",
+    "description": "Diagnostic en lecture seule (aucune écriture, aucun appel à l'IA) : compare, pour chaque entité, les scénarios prévus à la création (scenarios_instances) aux fichiers instances/ réellement présents sur disque, et classe chaque trou trouvé en 3 catégories (désaccord de nommage probable / entité entière suspecte / échec ponctuel probable), avec la raison retrouvée dans les logs GUI quand elle existe encore. Ne relance rien tout seul — indique juste quoi relancer.",
+    "requires": [],
+    "options": [
+      {
+        "flag": "--vault-root",
+        "type": "text",
+        "label": "Racine du vault (optionnel — vide = celle du vault courant)",
+        "optional": true
+      },
+      {
+        "flag": "--report",
+        "type": "checkbox",
+        "label": "Écrire aussi le rapport dans documentation/need_action/instances_manquantes.md",
+        "default": true
+      },
+      {
+        "flag": "--seuil-absolu",
+        "type": "number",
+        "label": "Nombre de scénarios manquants à partir duquel une entité est classée 'suspecte' (défaut 3)",
+        "default": 3,
+        "optional": true
+      },
+      {
+        "flag": "--seuil-suspect",
+        "type": "number",
+        "label": "Proportion de scénarios manquants (0 à 1) déclenchant aussi le classement 'suspecte' (défaut 0.5)",
+        "default": 0.5,
+        "optional": true
+      }
+    ],
+    "yaml_files": [
+      {
+        "path": "documentation/need_action/instances_manquantes.md",
+        "label": "Rapport du dernier audit (réécrit à chaque lancement avec --report)",
+        "readonly": true
+      }
+    ],
+    "gui_verified": false
+  },
+  {
+    "id": "audit_sujets_edition",
+    "label": "Audit — sujets du mois de parution",
+    "icon": "📊",
+    "section": "validation",
+    "script": "audit_sujets_edition.py",
+    "description": "Diagnostic en lecture seule (aucune écriture, aucun appel à l'IA) : liste les articles générés pour un mois de parution donné (chapo, zone, thématique, ligne éditoriale) et, en regard, les custom_events déjà injectés pour ce même mois -- pour repérer d'un coup d'œil quels sujets restent à capturer. Ne juge jamais lui-même de la pertinence d'un sujet, c'est toujours David qui décide quoi injecter via inject_custom_events.py.",
+    "requires": [],
+    "options": [
+      {
+        "flag": "--scenario",
+        "type": "select",
+        "label": "Scénario",
+        "source": "config_scenarios"
+      },
+      {
+        "flag": "--annee",
+        "type": "number",
+        "label": "Année du mois de parution (optionnel — vide = mois de parution actif)",
+        "optional": true
+      },
+      {
+        "flag": "--mois",
+        "type": "number",
+        "label": "Mois du mois de parution, 1-12 (optionnel — vide = mois de parution actif)",
+        "optional": true
+      }
+    ],
+    "gui_verified": true
+  },
+  {
+    "id": "audit_revues",
+    "label": "Audit des revues (site)",
+    "icon": "📰",
+    "section": "validation",
+    "script": "export_revues.py",
+    "description": "Diagnostic en lecture seule (aucune écriture, aucun appel à l'IA) : pour chacune des 12 revues du site, compte les articles publiables, ceux signés par une personne de la rédaction, ceux signés « La rédaction » et ceux refusés. Sert à repérer les revues trop maigres avant une génération ciblée. Ne fabrique pas le site : la publication reste sur publier_site.sh.",
+    "requires": [],
+    "options": [
+      {
+        "flag": "--detail",
+        "type": "checkbox",
+        "label": "Détail des articles non publiables",
+        "default": false,
+        "description": "Ajoute la liste des articles refusés et la raison (pas de ligne éditoriale, pas de zone, zone sans journal)."
+      },
+      {
+        "flag": "--continents",
+        "type": "checkbox",
+        "label": "Continent de chaque zone de journal",
+        "default": false,
+        "description": "Affiche le continent attribué à chaque zone (rubriques « continents » du site), avec les cas devinés sans certitude."
+      }
+    ],
+    "gui_verified": true
+  },
+  {
+    "id": "set_priorite_forcee",
+    "label": "Forcer/retirer la présence garantie d'une entité",
+    "icon": "📌",
+    "section": "entites_nettoyage",
+    "script": "set_priorite_forcee.py",
+    "description": "Active ou désactive le forçage de présence d'une entité déjà existante, sur un scénario précis. Une entité forcée est garantie d'être citée dans les articles générés pour ce scénario (comme une instance custom) -- sans garantir qu'elle soit le sujet principal. Aucun appel LLM : modification directe et immédiate de la fiche.",
+    "requires": [],
+    "options": [
+      {
+        "flag": "--scenario",
+        "type": "select",
+        "label": "Scénario",
+        "source": "config_scenarios",
+        "description": "Filtre la liste d'instances ci-dessous à ce scénario.",
+        "required": true
+      },
+      {
+        "flag": "--slug",
+        "type": "slug_select",
+        "label": "Instance cible",
+        "slug_type": "instances",
+        "description": "La fiche instance à modifier (slug déjà scénario-suffixé).",
+        "required": true,
+        "requires_scenario_selected": true
+      },
+      {
+        "flag": "--value",
+        "type": "select",
+        "label": "Action",
+        "choices": [
+          {
+            "value": "true",
+            "label": "Forcer la présence"
+          },
+          {
+            "value": "false",
+            "label": "Retirer le forçage"
+          }
+        ],
+        "required": true
+      }
+    ],
+    "gui_verified": false
+  },
+  {
+    "id": "set_selection_instance",
+    "label": "Présence d'une instance dans les articles",
+    "icon": "🎯",
+    "section": "entites_nettoyage",
+    "script": "set_selection_instance.py",
+    "description": "Règle, sans appel LLM, la présence d'instances dans les articles générés. « Exclure » : l'instance n'est jamais choisie automatiquement (personnage en réserve), mais reste utilisable en mode « Forcer un élément ». « Retirer la garantie » : une instance créée en mode custom perd sa place garantie dans chaque article de son scénario, tout en gardant son impact sur les variables. Cible : une instance, ou toutes les instances d'une entité.",
+    "requires": [],
+    "options": [
+      {
+        "flag": "--entite",
+        "type": "slug_select",
+        "slug_type": "entities",
+        "label": "Entité (toutes ses instances)",
+        "optional": true,
+        "description": "Applique l'action à toutes les instances de cette entité (limitées au scénario ci-dessous s'il est choisi). Laisser vide pour viser une seule instance."
+      },
+      {
+        "flag": "--scenario",
+        "type": "select",
+        "label": "Scénario (optionnel)",
+        "source": "config_scenarios",
+        "optional": true,
+        "description": "Limite l'action à ce scénario."
+      },
+      {
+        "flag": "--slug",
+        "type": "slug_select",
+        "slug_type": "instances",
+        "label": "OU une seule instance",
+        "optional": true,
+        "description": "Une fiche instance précise (slug suffixé par le scénario, ex. hyphan_raghavan_fortress_world). Ne pas remplir en même temps que « Entité »."
+      },
+      {
+        "flag": "--action",
+        "type": "select",
+        "label": "Action",
+        "required": true,
+        "choices": [
+          {
+            "value": "exclure",
+            "label": "Exclure des articles"
+          },
+          {
+            "value": "autoriser",
+            "label": "Ré-autoriser dans les articles"
+          },
+          {
+            "value": "sans_garantie",
+            "label": "Retirer la garantie de présence (garder l'impact)"
+          },
+          {
+            "value": "garantie",
+            "label": "Rétablir la garantie de présence"
+          }
+        ]
+      },
+      {
+        "flag": "--dry-run",
+        "type": "checkbox",
+        "label": "Simulation (rien n'est écrit)",
+        "default": false,
+        "description": "Affiche ce qui serait modifié, sans toucher aux fiches."
+      }
+    ],
+    "gui_verified": false
+  },
+  {
+    "id": "inject_journaliste_custom",
+    "label": "Ajouter des journalistes (manuel / auto)",
+    "icon": "🖋️",
+    "section": "presse",
+    "script": "inject_journaliste_custom.py",
+    "description": "Comble les trous de couverture thématique d'une rédaction locale, générés par LLM avec un profil cohérent avec le ton déjà établi de l'édition. Mode manuel : un seul journaliste précis. Mode auto : scanne un scénario entier et choisit intelligemment entre redistribuer une thématique à un·e journaliste existant·e sous-chargé·e, ou en créer un·e nouveau·elle si tous sont déjà bien remplis. N'ajoute jamais qu'à une édition déjà existante dans journaux.yaml -- ne crée jamais une nouvelle zone/édition.",
+    "requires": [],
+    "mode_select": {
+      "label": "Mode",
+      "choices": [
+        {
+          "value": "manuel",
+          "label": "Manuel — un journaliste précis",
+          "note": "Tu choisis toi-même le scénario, la ligne, la zone (édition existante) et les thématiques."
+        },
+        {
+          "value": "auto",
+          "label": "Auto — combler les trous automatiquement",
+          "note": "Scanne tout un scénario et applique directement les redistributions/créations nécessaires pour atteindre la cible de couverture."
+        }
+      ]
+    },
+    "options": [
+      {
+        "flag": "--scenario",
+        "type": "select",
+        "label": "Scénario",
+        "source": "config_scenarios",
+        "required": true,
+        "mode_only": "manuel",
+        "description": "Requis en mode manuel. En mode auto, laisse vide si tu coches \"Tous les scénarios\" ci-dessous."
+      },
+      {
+        "flag": "--scenario",
+        "type": "select",
+        "label": "Scénario",
+        "source": "config_scenarios",
+        "required": false,
+        "mode_only": "auto",
+        "description": "Laisse vide si tu coches \"Tous les scénarios\" ci-dessous."
+      },
+      {
+        "flag": "--all",
+        "type": "checkbox",
+        "label": "Tous les scénarios (l'un après l'autre)",
+        "default": false,
+        "mode_only": "auto",
+        "description": "Mutuellement exclusif avec le choix de scénario ci-dessus. Peut déclencher beaucoup d'appels LLM d'affilée (une création possible par thématique non couverte, par zone, par scénario)."
+      },
+      {
+        "flag": "--ligne",
+        "type": "select",
+        "label": "Ligne éditoriale",
+        "choices": [
+          {
+            "value": "pro_pouvoir",
+            "label": "Pro-pouvoir"
+          },
+          {
+            "value": "opposition",
+            "label": "Opposition"
+          }
+        ],
+        "required": true,
+        "mode_only": "manuel",
+        "description": "Requis en mode manuel."
+      },
+      {
+        "flag": "--ligne",
+        "type": "select",
+        "label": "Ligne éditoriale (optionnel)",
+        "choices": [
+          {
+            "value": "pro_pouvoir",
+            "label": "Pro-pouvoir"
+          },
+          {
+            "value": "opposition",
+            "label": "Opposition"
+          }
+        ],
+        "required": false,
+        "mode_only": "auto",
+        "description": "Laisse vide pour traiter les deux lignes éditoriales du scénario."
+      },
+      {
+        "flag": "--zone-slug",
+        "type": "slug_select",
+        "label": "Zone (édition déjà existante)",
+        "slug_type": "zones_hier_journal",
+        "requires_scenario_selected": true,
+        "required": true,
+        "mode_only": "manuel",
+        "description": "Liste filtrée aux zones qui ont déjà une édition dans journaux.yaml."
+      },
+      {
+        "flag": "--nom",
+        "type": "text",
+        "label": "Nom imposé (optionnel)",
+        "mode_only": "manuel",
+        "required": false,
+        "description": "Laisse vide pour que le LLM invente un nom. Si fourni avec des thématiques choisies ci-dessous, aucun appel LLM n'est nécessaire -- ajout immédiat."
+      },
+      {
+        "flag": "--thematiques",
+        "type": "multi_select",
+        "label": "Thématiques à couvrir (optionnel)",
+        "mode_only": "manuel",
+        "optional": true,
+        "description": "Laisse vide pour que le LLM propose lui-même des thématiques complémentaires à celles déjà couvertes par la rédaction.",
+        "choices": [
+          {
+            "value": "actualites_a_la_une",
+            "label": "actualites_a_la_une"
+          },
+          {
+            "value": "politique",
+            "label": "politique"
+          },
+          {
+            "value": "economie_finance",
+            "label": "economie_finance"
+          },
+          {
+            "value": "international",
+            "label": "international"
+          },
+          {
+            "value": "environnement_climat",
+            "label": "environnement_climat"
+          },
+          {
+            "value": "sante",
+            "label": "sante"
+          },
+          {
+            "value": "societe",
+            "label": "societe"
+          },
+          {
+            "value": "culture",
+            "label": "culture"
+          },
+          {
+            "value": "musique",
+            "label": "musique"
+          },
+          {
+            "value": "sports",
+            "label": "sports"
+          },
+          {
+            "value": "faits_divers",
+            "label": "faits_divers"
+          },
+          {
+            "value": "opinions_editoriaux",
+            "label": "opinions_editoriaux"
+          },
+          {
+            "value": "lifestyle_art_de_vivre",
+            "label": "lifestyle_art_de_vivre"
+          },
+          {
+            "value": "education",
+            "label": "education"
+          },
+          {
+            "value": "histoire_patrimoine",
+            "label": "histoire_patrimoine"
+          },
+          {
+            "value": "medias_communication",
+            "label": "medias_communication"
+          },
+          {
+            "value": "religion_spiritualite",
+            "label": "religion_spiritualite"
+          },
+          {
+            "value": "petites_annonces_services",
+            "label": "petites_annonces_services"
+          },
+          {
+            "value": "meteo",
+            "label": "meteo"
+          },
+          {
+            "value": "sciences_technologies",
+            "label": "sciences_technologies"
+          }
+        ]
+      },
+      {
+        "flag": "--genre",
+        "type": "select",
+        "label": "Genre (optionnel, si le nom est inventé par le LLM)",
+        "mode_only": "manuel",
+        "required": false,
+        "choices": [
+          {
+            "value": "",
+            "label": "Peu importe -- le LLM choisit"
+          },
+          {
+            "value": "homme",
+            "label": "Homme"
+          },
+          {
+            "value": "femme",
+            "label": "Femme"
+          }
+        ],
+        "description": "Sans effet si un nom est déjà fourni ci-dessus."
+      },
+      {
+        "flag": "--seniorite",
+        "type": "number",
+        "label": "Séniorité (optionnel)",
+        "default": 1,
+        "mode_only": "manuel",
+        "required": false,
+        "description": "Poids de la rotation pondérée -- plus haut = revient plus souvent dans les articles. Même convention que les journalistes existants (défaut 1)."
+      },
+      {
+        "flag": "--angle-specifique",
+        "type": "text",
+        "label": "Précision sur le profil recherché (optionnel)",
+        "mode_only": "manuel",
+        "required": false
+      },
+      {
+        "flag": "--cible",
+        "type": "number",
+        "label": "Nombre minimum de journalistes éligibles visé",
+        "default": 2,
+        "mode_only": "auto",
+        "required": false
+      },
+      {
+        "flag": "--avec-ton-personnel",
+        "type": "checkbox",
+        "label": "Générer aussi un ton_personnel",
+        "default": false,
+        "mode_only": "manuel",
+        "description": "Enchaîne un ton_personnel juste après la création (mêmes garde-fous que l'outil dédié). Jamais disponible en mode auto -- la relecture individuelle du mode manuel est le point de contrôle qui a permis de repérer les dérives réelles de ce champ (26-29 août)."
+      },
+      {
+        "flag": "--dry-run",
+        "type": "checkbox",
+        "label": "Simulation (rien écrit sur disque, mais appel LLM réel)",
+        "default": false,
+        "description": "⚠️ Ce mode appelle quand même le LLM pour de vrai (génération du/des nom(s)/profil(s)) -- seule l'écriture dans journaux.yaml est sautée. Un coût API réel est engagé malgré le mot \"simulation\". En mode auto, peut déclencher plusieurs appels LLM (un par création nécessaire)."
+      }
+    ],
+    "gui_verified": false
+  },
+  {
+    "id": "inject_orateur_custom",
+    "label": "Ajouter des orateurs (manuel / auto)",
+    "icon": "🎙️",
+    "section": "presse",
+    "script": "inject_orateur_custom.py",
+    "description": "Contrepartie de « Ajouter des journalistes » pour le registre oral (P21) -- ajoute un·e orateur·rice itinérant·e, généré·e par LLM avec un profil (communautés desservies, réputation orale) cohérent avec le ton déjà établi de l'édition. Un·e orateur·rice n'a jamais de thématiques (jamais filtré·e par spécialité, contrairement aux journalistes) et n'est utilisé·e que sur une zone en type_diffusion oral ou mixte. Mode manuel : un·e orateur·rice précis·e (accepté même si la zone est encore en écrit, avertissement non-bloquant). Mode auto : cible un effectif minimum par zone déjà oral/mixte du scénario choisi -- PAS de balayage multi-scénarios (contrairement au mode auto des journalistes), un scénario doit toujours être sélectionné. N'ajoute jamais qu'à une édition déjà existante dans journaux.yaml -- ne crée jamais une nouvelle zone/édition.",
+    "requires": [],
+    "mode_select": {
+      "label": "Mode",
+      "choices": [
+        {
+          "value": "manuel",
+          "label": "Manuel — un·e orateur·rice précis·e",
+          "note": "Tu choisis toi-même le scénario, la ligne, la zone (édition existante)."
+        },
+        {
+          "value": "auto",
+          "label": "Auto — combler l'effectif automatiquement",
+          "note": "Scanne les zones déjà oral/mixte d'UN scénario et crée les orateur·rices manquant·es pour atteindre l'effectif cible."
+        },
+        {
+          "value": "convertir",
+          "label": "Convertir — basculer des zones en oral/mixte",
+          "note": "Choisis les zones dans la liste (celles sans oral/mixte pour ce scénario), leur type_diffusion bascule ET les orateur·rices manquant·es sont créé·es, en une seule action."
+        }
+      ]
+    },
+    "options": [
+      {
+        "flag": "--scenario",
+        "type": "select",
+        "label": "Scénario",
+        "source": "config_scenarios",
+        "required": true,
+        "description": "Toujours requis, y compris en mode auto -- pas de balayage multi-scénarios pour les orateurs (contrairement aux journalistes), les zones oral/mixte sont trop spécifiques pour un --all."
+      },
+      {
+        "flag": "--ligne",
+        "type": "select",
+        "label": "Ligne éditoriale",
+        "choices": [
+          {
+            "value": "pro_pouvoir",
+            "label": "Pro-pouvoir"
+          },
+          {
+            "value": "opposition",
+            "label": "Opposition"
+          }
+        ],
+        "required": true,
+        "mode_only": "manuel",
+        "description": "Requis en mode manuel."
+      },
+      {
+        "flag": "--ligne",
+        "type": "select",
+        "label": "Ligne éditoriale (optionnel)",
+        "choices": [
+          {
+            "value": "pro_pouvoir",
+            "label": "Pro-pouvoir"
+          },
+          {
+            "value": "opposition",
+            "label": "Opposition"
+          }
+        ],
+        "required": false,
+        "mode_only": "auto",
+        "description": "Laisse vide pour traiter les deux lignes éditoriales du scénario."
+      },
+      {
+        "flag": "--zone-slug",
+        "type": "slug_select",
+        "label": "Zone (édition déjà existante)",
+        "slug_type": "zones_hier_journal",
+        "requires_scenario_selected": true,
+        "required": true,
+        "mode_only": "manuel",
+        "description": "Liste filtrée aux zones qui ont déjà une édition dans journaux.yaml. Fonctionne même si la zone est encore en type_diffusion 'ecrit' (avertissement affiché, ajout non bloqué)."
+      },
+      {
+        "flag": "--nom",
+        "type": "text",
+        "label": "Nom imposé (optionnel)",
+        "mode_only": "manuel",
+        "required": false,
+        "description": "Laisse vide pour que le LLM invente un nom (souvent un nom d'usage/surnom, cohérent avec le registre des orateur·rices itinérant·es)."
+      },
+      {
+        "flag": "--genre",
+        "type": "select",
+        "label": "Genre (optionnel, si le nom est inventé par le LLM)",
+        "mode_only": "manuel",
+        "required": false,
+        "choices": [
+          {
+            "value": "",
+            "label": "Peu importe -- le LLM choisit"
+          },
+          {
+            "value": "homme",
+            "label": "Homme"
+          },
+          {
+            "value": "femme",
+            "label": "Femme"
+          }
+        ],
+        "description": "Sans effet si un nom est déjà fourni ci-dessus."
+      },
+      {
+        "flag": "--seniorite",
+        "type": "number",
+        "label": "Séniorité (optionnel)",
+        "default": 1,
+        "mode_only": "manuel",
+        "required": false,
+        "description": "Poids de la rotation pondérée -- plus haut = revient plus souvent dans les articles oraux. Même convention que les journalistes (défaut 1)."
+      },
+      {
+        "flag": "--angle-specifique",
+        "type": "text",
+        "label": "Précision sur le profil recherché (optionnel)",
+        "mode_only": "manuel",
+        "required": false
+      },
+      {
+        "flag": "--cible",
+        "type": "number",
+        "label": "Effectif minimum d'orateur·rices visé par zone oral/mixte",
+        "default": 2,
+        "mode_only": "auto",
+        "required": false
+      },
+      {
+        "flag": "--avec-ton-personnel",
+        "type": "checkbox",
+        "label": "Générer aussi un ton_personnel",
+        "default": false,
+        "mode_only": "manuel",
+        "description": "Enchaîne un ton_personnel juste après la création (mêmes garde-fous que l'outil dédié). Jamais disponible en mode auto -- la relecture individuelle du mode manuel est le point de contrôle qui a permis de repérer les dérives réelles de ce champ (26-29 août)."
+      },
+      {
+        "flag": "--zones",
+        "type": "dynamic_multi_select",
+        "label": "Zones à convertir",
+        "slug_type": "zones_candidates_oral",
+        "mode_only": "convertir",
+        "description": "Liste les zones du scénario n'ayant pas encore type_diffusion oral/mixte. Sélectionne celles à basculer -- chacune reçoit la nouvelle valeur ci-dessous ET les orateur·rices manquant·es pour atteindre l'effectif cible."
+      },
+      {
+        "flag": "--type-diffusion-cible",
+        "type": "select",
+        "label": "Nouvelle valeur type_diffusion",
+        "mode_only": "convertir",
+        "default": "oral",
+        "choices": [
+          {
+            "value": "oral",
+            "label": "Oral"
+          },
+          {
+            "value": "mixte",
+            "label": "Mixte (tirage 50/50 écrit/oral par article)"
+          }
+        ]
+      },
+      {
+        "flag": "--cible",
+        "type": "number",
+        "label": "Effectif minimum d'orateur·rices visé par zone convertie",
+        "default": 2,
+        "mode_only": "convertir",
+        "required": false
+      },
+      {
+        "flag": "--dry-run",
+        "type": "checkbox",
+        "label": "Simulation (rien écrit sur disque, mais appel LLM réel)",
+        "default": false,
+        "description": "⚠️ Ce mode appelle quand même le LLM pour de vrai (génération du/des profil(s)) -- seule l'écriture dans journaux.yaml est sautée. Un coût API réel est engagé malgré le mot \"simulation\". En mode auto, peut déclencher plusieurs appels LLM (un par création nécessaire)."
+      }
+    ],
+    "gui_verified": false
+  },
+  {
+    "id": "audit_couverture_journalistes",
+    "label": "Auditer la couverture des journalistes",
+    "icon": "🔍",
+    "section": "validation",
+    "script": "audit_couverture_journalistes.py",
+    "description": "Diagnostic en lecture seule (aucune écriture, aucun appel LLM) : repère les combinaisons zone×thématique où trop peu de journalistes sont éligibles pour permettre une vraie rotation (voir le mécanisme de rotation pondérée du 22 août). Utile avant de lancer 'Ajouter des journalistes' en mode auto, pour savoir où ça compte le plus.",
+    "requires": [],
+    "options": [
+      {
+        "flag": "--seuil",
+        "type": "number",
+        "label": "Signaler aussi la couverture jusqu'à N journalistes",
+        "default": 1,
+        "required": false,
+        "description": "1 = signale seulement 0 et 1 journaliste éligible (défaut). Augmenter pour un diagnostic plus large."
+      },
+      {
+        "flag": "--report",
+        "type": "checkbox",
+        "label": "Écrire le détail dans un fichier",
+        "default": false,
+        "description": "Écrit audit_couverture_journalistes_report.txt (dans generator/) avec le détail complet -- seul le résumé par scénario reste affiché dans le terminal. Sans cette case, tout s'affiche dans le terminal."
+      }
+    ],
+    "gui_verified": false
+  }
+]
