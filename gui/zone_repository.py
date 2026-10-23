@@ -1352,6 +1352,19 @@ class ZoneRepository:
 
     # ── AFFECTER un pays (clic sur la carte) ────────────────────────────
 
+    @staticmethod
+    def _type_entite_origine(zones: list, pays: str) -> str:
+        """PATCH_CARTE_TYPE_ENTITE (23 oct 2026) : type_entite que `pays`
+        porte déjà dans la fiche (zones N1 d'abord, puis toute zone), pour ne
+        pas le réécrire en « pays » lors d'une réaffectation (cas Écosse,
+        region_administrative). « pays » si aucune entrée n'existe."""
+        for z in sorted(zones, key=lambda z: int(z.get("niveau") or 1) != 1):
+            for o in (z.get("origine_reelle") or []):
+                if (isinstance(o, dict) and o.get("entite") == pays
+                        and o.get("type_entite") in TYPE_ENTITE_REELLE):
+                    return o["type_entite"]
+        return "pays"
+
     def assign_pays(self, scenario: str, pays: str, action: str,
                      zone_slug: Optional[str] = None,
                      nouvelle_zone: Optional[dict] = None) -> dict:
@@ -1368,6 +1381,7 @@ class ZoneRepository:
 
         gf = self._load_geo(scenario)
         zones = gf.zones
+        type_origine = self._type_entite_origine(zones, pays)  # PATCH_CARTE_TYPE_ENTITE
 
         if action == "absorber":
             if not zone_slug:
@@ -1390,7 +1404,7 @@ class ZoneRepository:
                                                     and (z.get("slug"), n_pays) not in paires_overlay)]
             origine = target.setdefault("origine_reelle", [])
             if not any(isinstance(o, dict) and o.get("entite") == pays for o in origine):
-                origine.append({"entite": pays, "type_entite": "pays", "portion": None})
+                origine.append({"entite": pays, "type_entite": type_origine, "portion": None})
             final_slug = zone_slug
         else:
             nz = nouvelle_zone or {}
@@ -1419,7 +1433,7 @@ class ZoneRepository:
                 raise ZoneRepositoryError(f"statut invalide, doit être parmi : {', '.join(ZONE_STATUTS)}")
             zones.append({
                 "slug": slug, "nom": nom, "niveau": 1, "type": type_zone, "parent": None,
-                "origine_reelle": [{"entite": pays, "type_entite": "pays", "portion": None}],
+                "origine_reelle": [{"entite": pays, "type_entite": type_origine, "portion": None}],
                 "description": description, "statut": statut, "tensions_internes": "",
                 "periode_transition": None, "evenement_transition": None,
                 "lieux_emblematiques": [], "relations": {"allies": [], "rivaux": []},
