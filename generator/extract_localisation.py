@@ -213,7 +213,12 @@ def zones_summary(scenario):
         niveau = z.get("niveau", "?")
         parent = z.get("parent") or "racine"
         desc   = (z.get("description") or "")[:120]
-        lines.append(f"  - {slug} (niveau {niveau}, parent: {parent}) — {nom} : {desc}")
+        # PATCH_S27_TERRITOIRES : territoires de la zone (origine_reelle), 15 au plus.
+        terr = [str(o.get("entite")) for o in z.get("origine_reelle") or []
+                if isinstance(o, dict) and o.get("entite")]
+        terr_txt = (" | territoires : " + ", ".join(terr[:15])
+                    + (f" (+{len(terr) - 15})" if len(terr) > 15 else "")) if terr else ""
+        lines.append(f"  - {slug} (niveau {niveau}, parent: {parent}) — {nom} : {desc}{terr_txt}")
     return "\n".join(lines)
 
 
@@ -291,6 +296,7 @@ Réponds UNIQUEMENT en JSON valide, sans markdown, sans commentaire, avec exacte
   "zone": "<slug_exact_ou_null>",
   "lieu": "<texte_libre_ou_null>",
   "type_lieu": "ville" | "region" | "infrastructure" | "site_strategique" | null,
+  "pays": "<pays réel où se trouve le lieu, en français, ou null>",
   "justification": "<une phrase courte>"
 }
 
@@ -303,7 +309,10 @@ Règles strictes :
   Mets quand même ton meilleur candidat dans `zone` et `lieu` pour aider la review manuelle, avec `type_lieu` si pertinent.
   Ne devine jamais silencieusement : préfère `ambigu` à une extraction douteuse.
 
-Ne crée JAMAIS un slug de zone qui ne figure pas dans la liste fournie."""
+Ne crée JAMAIS un slug de zone qui ne figure pas dans la liste fournie.
+- La zone choisie doit couvrir le pays du lieu d'après ses « territoires » : le nom ou la description
+  d'une zone ne suffit pas (une zone peut porter le nom d'une région dont un pays est passé à une
+  autre zone). Si aucune zone ne couvre le pays du lieu, réponds « ambigu »."""
 
 
 def build_user_prompt(fiche_content, scenario, fiche_type):
@@ -385,6 +394,59 @@ def validate_extraction(data, scenario):
                 errors.append(f"slug zone ambigu inconnu : {zone!r}")
 
     return len(errors) == 0, errors
+
+
+# ─────────────────────────────────────────────────────────────
+# CONTRÔLE DU PAYS (PATCH_S27_PAYS, 24 oct 2026)
+# ─────────────────────────────────────────────────────────────
+
+def _plie_pays(s):
+    import unicodedata
+    s = unicodedata.normalize("NFKD", str(s or "").strip().lower())
+    return "".join(c for c in s if not unicodedata.combining(c))
+
+
+def zone_porte_pays(z, pays):
+    """La zone cite-t-elle `pays` dans origine_reelle, lue par mots (« Île de Kharg, Iran »,
+    « Détroit d'Ormuz (Oman/Iran) ») ?"""
+    cherche = _plie_pays(pays)
+    for o in (z or {}).get("origine_reelle") or []:
+        if not isinstance(o, dict):
+            continue
+        texte = _plie_pays(o.get("entite"))
+        morceaux = [re.sub(r"\([^)]*\)", "", texte)] + re.findall(r"\(([^)]*)\)", texte)
+        if any(t.strip() == cherche for m in morceaux for t in re.split(r"[,/]", m)):
+            return True
+    return False
+
+
+def controler_pays(data, scenario):
+    """Corrige `data` (issue extrait) si la zone choisie ne couvre pas le pays du lieu.
+    Retourne une note (str) si quelque chose a changé, sinon None."""
+    pays = (data.get("pays") or "").strip()
+    zone = data.get("zone")
+    if data.get("issue") != "extrait" or not pays or not zone:
+        return None
+    zones = load_zones(scenario)
+    porteuses = [s for s, z in zones.items() if zone_porte_pays(z, pays)]
+    if not porteuses:
+        return None   # pays inconnu de la géographie : rien à vérifier
+    s, vus = zone, set()
+    while s and s in zones and s not in vus:
+        if zone_porte_pays(zones[s], pays):
+            return None   # la zone choisie, ou un parent, couvre le pays
+        vus.add(s)
+        s = zones[s].get("parent")
+    n1 = [s for s in porteuses if int(zones[s].get("niveau") or 1) == 1]
+    if len(n1) == 1:
+        data["zone"] = n1[0]
+        data["justification"] = (f"{data.get('justification', '')} [zone corrigée : {zone} → {n1[0]}, "
+                                 f"seule zone N1 qui porte {pays}]").strip()
+        return f"zone corrigée : {zone} ne porte pas {pays} → {n1[0]}"
+    data["issue"] = "ambigu"
+    data["justification"] = (f"{data.get('justification', '')} [{zone} ne porte pas {pays} ; zones N1 qui le "
+                             f"portent : {', '.join(n1) or 'aucune'}]").strip()
+    return f"zone {zone} ne porte pas {pays} → ambigu (review manuelle)"
 
 
 # ─────────────────────────────────────────────────────────────
@@ -525,6 +587,9 @@ def process_fiche(fiche, dry_run, verbose=True):
         print(f"  Réponse LLM : {raw_response[:200]}")
         return {"slug": slug, "issue": "erreur_validation", "errors": errors, "raw": raw_response}
 
+    note_pays = controler_pays(data, scenario)   # PATCH_S27_PAYS
+    if note_pays:
+        print(f"  ⚠ {note_pays}")
     issue = data["issue"]
     if verbose:
         zone = data.get("zone") or "(null)"

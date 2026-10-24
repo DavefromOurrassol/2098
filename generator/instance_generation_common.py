@@ -108,6 +108,32 @@ SLUG_PATTERN = re.compile(r"^[a-z0-9_]+$")
 # 3-5 variables). Décidé avec David le 15 août 2026.
 MAX_DELTA_PER_IMPACT_POINT = 5  # plafond = impact_systemique_global * 5 (0-25)
 
+
+def ramener_au_plafond(data):
+    """PATCH_S27_PLAFOND (24 oct 2026) : ramène au plafond (signe gardé) toute force de
+    impact_sur_variables qui le dépasse, au lieu de refuser l'instance. Retourne les notes."""
+    try:
+        plafond = int(data.get("impact_systemique_global", 0)) * MAX_DELTA_PER_IMPACT_POINT
+    except (TypeError, ValueError):
+        return []
+    impacts = data.get("impact_sur_variables")
+    if plafond <= 0 or not isinstance(impacts, list):
+        return []
+    notes = []
+    for imp in impacts:
+        if not isinstance(imp, dict):
+            continue
+        try:
+            delta = float(imp.get("delta_level"))
+        except (TypeError, ValueError):
+            continue
+        if abs(delta) > plafond:
+            imp["delta_level"] = plafond if delta > 0 else -plafond
+            notes.append(f"[{imp.get('variable')}] delta_level {delta:g} ramené au plafond {plafond}")
+    if notes:
+        data["plafond_applique"] = notes
+    return notes
+
 _registre_cache = None
 _timeline_cache = {}
 _etat_monde_cache = None
@@ -1365,6 +1391,9 @@ def process_entity_scenario(client, entity_fm, scenario, force=False, dry_run=Fa
                   f"champ laissé vide.", end="")
     instance_data["retry_signes_distinctifs"] = retry_signes
 
+    if injection_custom:   # PATCH_S27_PLAFOND
+        for note in ramener_au_plafond(instance_data):
+            print(f"\n     ⚠ {note}", end="")
     issues = validate_instance(instance_data, hard_constraint=hard_constraint,
                                 injection_custom=injection_custom)
     if issues:
