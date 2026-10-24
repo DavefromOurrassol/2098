@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-fusionner_doublon_instance.py — Ourrassol 2098 (S24, 13 octobre 2026)
-====================================================================
+fusionner_doublon_instance.py — Ourrassol 2098 (S24, 13 octobre 2026 ; v2 du 24 octobre 2026)
+=============================================================================================
 
 Fusionne deux instances qui décrivent la même entité : toutes les citations
 de l'instance RETIRÉE sont redirigées vers l'instance GARDÉE, puis la fiche
@@ -14,8 +14,16 @@ Ce qui est réécrit (fichiers .md seulement ; .bak, .zip ignorés) :
     un slug de ZONE, n'est jamais touché) ;
   - doublons créés par la fusion retirés : même élément deux fois dans une
     même liste, « [[x]] · [[x]] » réduit à « [[x]] ».
-Signalé sans correction : l'entité gardée à la fois en alliance et en
-opposition d'une même fiche.
+
+Nouveau en v2 (cas vus le 24 octobre) :
+  - ÉVÉNEMENT AU MÊME SLUG : si event_instances/<retirée>.md existe, ce fichier
+    et son archétype evenements/<archetype>.md ne sont pas touchés (le slug y
+    désigne l'événement), et le champ evenements_cites des autres fichiers est
+    protégé ;
+  - AUTO-RÉFÉRENCE : la fiche gardée est retirée de ses propres alliances et
+    oppositions (frontmatter et sections Alliés / Opposants du corps) ;
+  - CONFLIT INTERNE : une fiche qui cite la gardée à la fois en alliance et en
+    opposition garde l'opposition (même règle que --resoudre-conflits).
 
 Les alliances de la fiche retirée ne sont pas recopiées : la réciprocité
 s'en charge ensuite (fix_alliances_oppositions.py --reciprocite-seule).
@@ -38,10 +46,17 @@ SCRIPT_DIR = Path(__file__).resolve().parent
 VAULT = SCRIPT_DIR.parent
 DOSSIERS = ["instances", "event_instances", "evenements", "entites", "articles", "geographie"]
 CORBEILLE = VAULT / "_a_supprimer"
+CLES_EVENEMENT = {"evenements_cites"}  # protégées quand le slug retiré est aussi un événement
 
 
 def motif(slug):
     return re.compile(r"(?<![A-Za-z0-9_])" + re.escape(slug) + r"(?![A-Za-z0-9_])")
+
+
+def item_liste(slug):
+    """Ligne de liste valant exactement slug ou [[slug]] (éventuellement entre guillemets)."""
+    return re.compile(r"^\s*-\s+['\"]?(?:\[\[)?" + re.escape(slug)
+                      + r"(?:\|[^\]]*)?(?:\]\])?['\"]?\s*$")
 
 
 def frontmatter(texte):
@@ -53,6 +68,63 @@ def frontmatter(texte):
     except yaml.YAMLError:
         return None
     return fm if isinstance(fm, dict) else {}
+
+
+def parcourir(texte):
+    """Itère (ligne, dans_frontmatter, clé_frontmatter_courante, section_corps).
+    section_corps : 'all' (Alliés/Alliances), 'opp' (Opposants/Oppositions/Rivaux) ou None."""
+    lignes = texte.split("\n")
+    in_fm = bool(lignes) and lignes[0].strip() == "---"
+    cle, section = None, None
+    for i, l in enumerate(lignes):
+        if in_fm and i > 0 and l.strip() == "---":
+            yield l, True, None, None
+            in_fm = False
+            continue
+        if in_fm:
+            m = re.match(r"^([A-Za-z_]\w*):", l)
+            if m:
+                cle = m.group(1)
+            yield l, True, cle, None
+            continue
+        s = l.strip()
+        if re.match(r"^(\*\*|#+\s)", s):
+            if re.match(r"^(\*\*|#+\s*)Alli", s):
+                section = "all"
+            elif re.match(r"^(\*\*|#+\s*)(Oppos|Rivaux|Adversaires)", s):
+                section = "opp"
+            else:
+                section = None
+        yield l, False, None, section
+
+
+def substituer(texte, m_old, garder, proteger_evenements):
+    """Redirige les citations ; protège le champ evenements_cites si demandé. Retourne (texte, n)."""
+    if not proteger_evenements:
+        n = len(m_old.findall(texte))
+        return m_old.sub(garder, texte), n
+    out, n = [], 0
+    for l, in_fm, cle, _ in parcourir(texte):
+        if in_fm and cle in CLES_EVENEMENT:
+            out.append(l)
+            continue
+        n += len(m_old.findall(l))
+        out.append(m_old.sub(garder, l))
+    return "\n".join(out), n
+
+
+def retirer_items(texte, slug, cles_fm, sections):
+    """Retire les lignes de liste valant slug sous les clés de frontmatter et
+    sections du corps données. Retourne (texte, nb lignes retirées)."""
+    item = item_liste(slug)
+    out, n = [], 0
+    for l, in_fm, cle, section in parcourir(texte):
+        cible = (cle in cles_fm) if in_fm else (section in sections)
+        if cible and item.match(l):
+            n += 1
+            continue
+        out.append(l)
+    return "\n".join(out), n
 
 
 def dedoublonner(texte, garder):
@@ -74,14 +146,13 @@ def dedoublonner(texte, garder):
     return texte, n + k
 
 
-def conflits(texte, garder):
+def en_conflit(texte, garder):
+    """True / False, ou None si le frontmatter est illisible."""
     fm = frontmatter(texte)
     if fm is None:
-        return ["frontmatter illisible après remplacement"]
+        return None
     al, op = fm.get("alliances") or [], fm.get("oppositions") or []
-    if isinstance(al, list) and isinstance(op, list) and garder in al and garder in op:
-        return [f"{garder} à la fois dans alliances et oppositions"]
-    return []
+    return isinstance(al, list) and isinstance(op, list) and garder in al and garder in op
 
 
 def main():
@@ -113,9 +184,21 @@ def main():
         if not arch_fichier.exists():
             arch_fichier = None
 
+    # v2 — événement portant le même slug que l'instance retirée.
+    evt_proteges = []
+    f_evt = VAULT / "event_instances" / f"{retirer}.md"
+    if f_evt.exists():
+        evt_proteges.append(f_evt)
+        arch_evt = (frontmatter(f_evt.read_text(encoding="utf-8")) or {}).get("archetype")
+        if arch_evt and (VAULT / "evenements" / f"{arch_evt}.md").exists():
+            evt_proteges.append(VAULT / "evenements" / f"{arch_evt}.md")
+    collision_evt = bool(evt_proteges)
+
     m_old = motif(retirer)
-    a_ecrire, rapport, conflits_tot = [], [], []
-    exclus = {f_retirer.resolve()} | ({arch_fichier.resolve()} if arch_fichier and not arch_autres else set())
+    a_ecrire, rapport, a_trancher = {}, {}, []
+    exclus = ({f_retirer.resolve()}
+              | ({arch_fichier.resolve()} if arch_fichier and not arch_autres else set())
+              | {p.resolve() for p in evt_proteges})
     for d in DOSSIERS:
         racine = VAULT / d
         if not racine.is_dir():
@@ -127,16 +210,30 @@ def main():
                 texte = p.read_text(encoding="utf-8")
             except OSError:
                 continue
-            n = len(m_old.findall(texte))
+            if not m_old.search(texte):
+                continue
+            nouveau, n = substituer(texte, m_old, garder, collision_evt)
             if not n:
                 continue
-            nouveau = m_old.sub(garder, texte)
             nouveau, nd = dedoublonner(nouveau, garder)
-            conf = conflits(nouveau, garder)
-            a_ecrire.append((p, nouveau))
-            rel = p.relative_to(VAULT)
-            rapport.append(f"  {rel} : {n} citation(s) redirigée(s)" + (f", {nd} doublon(s) retiré(s)" if nd else ""))
-            conflits_tot += [f"  ⚠ {rel} : {c}" for c in conf]
+            notes = [f"{n} citation(s) redirigée(s)"] + ([f"{nd} doublon(s) retiré(s)"] if nd else [])
+            etat = en_conflit(nouveau, garder)
+            if etat is None:
+                a_trancher.append(f"  ⚠ {p.relative_to(VAULT)} : frontmatter illisible après remplacement")
+            elif etat:
+                nouveau, nc = retirer_items(nouveau, garder, {"alliances"}, {"all"})
+                notes.append(f"conflit résolu, opposition gardée ({nc} ligne(s) d'alliance retirée(s))")
+                if en_conflit(nouveau, garder):
+                    a_trancher.append(f"  ⚠ {p.relative_to(VAULT)} : conflit alliance/opposition non résolu")
+            a_ecrire[p] = nouveau
+            rapport[p] = notes
+
+    # v2 — auto-référence de la fiche gardée.
+    texte_g = a_ecrire.get(f_garder, f_garder.read_text(encoding="utf-8"))
+    texte_g, na = retirer_items(texte_g, garder, {"alliances", "oppositions"}, {"all", "opp"})
+    if na:
+        a_ecrire[f_garder] = texte_g
+        rapport.setdefault(f_garder, []).append(f"auto-référence retirée ({na} ligne(s))")
 
     # Liens vers l'archétype retiré (même slug qu'une zone ici) : comptés, jamais modifiés.
     liens_arch = 0
@@ -155,10 +252,17 @@ def main():
     print(("ÉCRITURE" if args.apply else "APERÇU (rien n'est écrit)")
           + f" — fusion de {retirer} dans {garder}\n")
     print(f"Fichiers à réécrire : {len(a_ecrire)}")
-    print("\n".join(rapport) or "  (aucun)")
-    if conflits_tot:
+    for p in sorted(a_ecrire, key=lambda x: str(x)):
+        print(f"  {p.relative_to(VAULT)} : " + ", ".join(rapport[p]))
+    if not a_ecrire:
+        print("  (aucun)")
+    if collision_evt:
+        print(f"\n⚠ Un événement porte le même slug : "
+              + ", ".join(str(p.relative_to(VAULT)) for p in evt_proteges)
+              + " non modifié(s) ; champ evenements_cites protégé partout.")
+    if a_trancher:
         print("\nÀ trancher à la main :")
-        print("\n".join(conflits_tot))
+        print("\n".join(a_trancher))
     print(f"\nMis de côté dans _a_supprimer/ : instances/{retirer}.md", end="")
     if arch_fichier and not arch_autres:
         print(f" + entites/{arch_r}.md")
@@ -173,7 +277,7 @@ def main():
         print("\nRelancer avec --apply pour écrire (sauvegarde .bak_fusion de chaque fichier).")
         return
 
-    for p, nouveau in a_ecrire:
+    for p, nouveau in a_ecrire.items():
         bak = p.with_name(p.name + ".bak_fusion")
         if not bak.exists():
             shutil.copy2(p, bak)
@@ -183,12 +287,23 @@ def main():
     shutil.move(str(f_retirer), str(dest / f_retirer.name))
     if arch_fichier and not arch_autres:
         shutil.move(str(arch_fichier), str(dest / arch_fichier.name))
-    restes = [p for d in DOSSIERS if (VAULT / d).is_dir() for p in (VAULT / d).rglob("*.md")
-              if CORBEILLE not in p.parents and m_old.search(p.read_text(encoding="utf-8"))]
+    proteges = {p.resolve() for p in evt_proteges}
+    restes = []
+    for d in DOSSIERS:
+        if not (VAULT / d).is_dir():
+            continue
+        for p in (VAULT / d).rglob("*.md"):
+            if CORBEILLE in p.parents or p.resolve() in proteges:
+                continue
+            t = p.read_text(encoding="utf-8")
+            if collision_evt:
+                t = "\n".join(l for l, in_fm, cle, _ in parcourir(t) if not (in_fm and cle in CLES_EVENEMENT))
+            if m_old.search(t):
+                restes.append(p)
     print(f"\n✓ {len(a_ecrire)} fichier(s) réécrit(s), fiche(s) déplacée(s) dans {dest.relative_to(VAULT)}/")
     print(f"  Relecture : {len(restes)} citation(s) restante(s) de {retirer}" + (" ⚠" if restes else ""))
     print("  Ensuite : python3 generator/fix_alliances_oppositions.py --scenario <scénario> "
-          "--reciprocite-seule --ignorer-exclus (simulation d'abord), puis python3 generator/validate.py")
+          "--reciprocite-seule --ignorer-exclus --resoudre-conflits, puis python3 generator/validate.py")
 
 
 if __name__ == "__main__":
