@@ -179,6 +179,31 @@ reference:
         À relire : une phrase qui présente la démocratie comme la règle
         générale contredit le scénario.
 
+    - id: murmansk_transit_arctique_disparu_2081
+      gravite: a_relire
+      termes:
+      - Murmansk Transit Arctique
+      message: 'Murmansk Transit Arctique disparaît en 2081 (explosion_brise_glace_murmansk_2081) : toute
+        mention au présent après 2081 est fausse.'
+
+    - id: circulation_atlantique_pas_de_redemarrage_2098
+      gravite: a_relire
+      meme_phrase:
+      - - circulation atlantique
+        - AMOC
+        - Gulf Stream
+        - courant atlantique
+      - - redémarre
+        - redémarré
+        - redémarrage
+        - rétablie
+        - rétabli
+        - rétablissement
+        - reprend
+        - reprise
+      message: 'Depuis 2067, la circulation atlantique est effondrée et ne redémarre pas avant 2098 (effondrement_circulation_atlantique_2067)
+        : à relire si la phrase la dit rétablie.'
+
 breakdown:
 
   regles:
@@ -200,7 +225,6 @@ breakdown:
       gravite: a_relire
       termes:
       - Tour BCUC
-      - Tour Bcuc
       - Comptoir des Ruines
       message: 'La Tour BCUC — Le Comptoir des Ruines disparaît en 2076 avec la destruction de Genève (destruction_geneve_2076)
         : toute mention au présent après 2076 est fausse.'

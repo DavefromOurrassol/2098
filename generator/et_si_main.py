@@ -423,6 +423,38 @@ def cle_phrase(sc, slug, extrait):
 VERSION_RELECTURE = "v3-etats-cites"   # entre dans l'empreinte du cache : changer = relire à nouveau
 
 
+_RETENUES = {}
+
+
+def retenues(data):
+    """PATCH_S27_APPLIQUEE : None si l'hypothèse n'est pas appliquée (toute la lecture compte) ;
+    sinon {(sc, "t"|"z"): slugs} des trajectoires et statuts de zone APPLIQUÉS (état actuel = résultat)."""
+    hid = data.get("id")
+    if hid not in _RETENUES:
+        if not (ap.APP_DIR / f"{hid}.applique.json").exists():
+            _RETENUES[hid] = None
+        else:
+            ops, _ = ap.construire_plan(data)
+            r = {}
+            for o in ops:
+                if o.get("alerte") == "déjà appliqué" and o["genre"] == "trajectoire":
+                    r.setdefault((o["sc"], "t"), set()).add(o["instance"])
+                elif o.get("alerte") == "déjà appliqué" and o["genre"] == "zone":
+                    r.setdefault((o["sc"], "z"), set()).add(o["zone"])
+            _RETENUES[hid] = r
+    return _RETENUES[hid]
+
+
+def garde_traj(data, sc, t):
+    r = retenues(data)
+    return r is None or t.get("instance") in r.get((sc, "t"), set())
+
+
+def garde_zone(data, sc, z):
+    r = retenues(data)
+    return r is None or z.get("zone") in r.get((sc, "z"), set())
+
+
 def _annee(data):
     a = data.get("annee")
     try:
@@ -436,7 +468,7 @@ def etats_entites(data, sc):
     ps = data["par_scenario"].get(sc) or {}
     out, vus = [], set()
     for t in ((ps.get("lecture") or {}).get("trajectoires") or []) + ((ps.get("passe") or {}).get("trajectoires") or []):
-        if t.get("instance") in vus:
+        if t.get("instance") in vus or not garde_traj(data, sc, t):   # PATCH_S27_APPLIQUEE
             continue
         vus.add(t.get("instance"))
         out.append((t.get("nom") or t.get("instance"), t.get("avant"), t.get("apres")))
@@ -484,7 +516,7 @@ def faits_hypothese(data, sc):
     faits = [str(c) for c in data.get("contraintes") or []]
     vus = set()
     for t in (lec.get("trajectoires") or []) + (pas.get("trajectoires") or []):
-        if t.get("instance") in vus:
+        if t.get("instance") in vus or not garde_traj(data, sc, t):   # PATCH_S27_APPLIQUEE
             continue
         vus.add(t.get("instance"))
         nom = t.get("nom") or t.get("instance")
@@ -493,7 +525,7 @@ def faits_hypothese(data, sc):
         else:
             faits.append(f"{nom} passe de « {t.get('avant')} » à « {t.get('apres')} » après {annee} : "
                          f"avant {annee}, il était « {t.get('avant')} », pas davantage.")
-    for z in lec.get("zones_statut") or []:
+    for z in [z for z in lec.get("zones_statut") or [] if garde_zone(data, sc, z)]:   # PATCH_S27_APPLIQUEE
         faits.append(f"La zone {z.get('zone')} passe de « {z.get('avant')} » à « {z.get('apres')} » ; le lieu subsiste.")
     return faits
 
@@ -517,6 +549,57 @@ PAS_UNE_CONTRADICTION = re.compile(r"aucune contradiction|pas de contradiction|p
 
 def vraie_contradiction(fait):
     return not PAS_UNE_CONTRADICTION.search(_plie(fait))
+
+
+# PATCH_S27_RELECTURE (24 oct 2026) : articles seulement. Justification au conditionnel ou par
+# sous-entendu = pas une contradiction établie (7 faux positifs sur 7 avec pacte_tabriz_2058).
+CONDITIONNEL = re.compile(r"pourrait|pourraient|peut contredire|peut evoquer|peut sembler|sous-entend"
+                          r"|implicitement|suggere|laisse entendre|minimis")
+
+
+def contradiction_article(fait, extrait=None, data=None, sc=None):
+    if not vraie_contradiction(fait) or CONDITIONNEL.search(_plie(fait)):
+        return False
+    if data is None:
+        return True
+    # PATCH_S27_APPLIQUEE : la justification doit porter sur une conséquence de l'hypothèse.
+    pf, pe = _plie(fait), _plie(extrait)
+    cite = lambda nom: bool(nom) and (_plie(nom) in pf or forme_approchee(nom, pf))
+    changes = [apr for nom, av, apr in etats_entites(data, sc) if cite(nom)]
+    zn = noms_de_zones(sc)
+    ps = data["par_scenario"].get(sc) or {}
+    zones = [z.get("zone") for z in (ps.get("lecture") or {}).get("zones_statut") or []
+             if z.get("zone") and garde_zone(data, sc, z)]
+    cite_zone = any(_plie(s) in pf or _plie(zn.get(s, "")) in pf for s in zones if s)
+    if not changes and not cite_zone:
+        if any(len(n) >= 4 and cite(n) for n in trajectoires_du_scenario(sc)):
+            return False   # ne parle que d'entités inchangées
+    if changes and not cite_zone and all(_plie(a) in MONTEE for a in changes) and not DECLIN.search(pe):
+        return False       # rang qui monte, extrait sans déclin ni disparition
+    return True
+
+
+MONTEE = {"ascendant", "dominant", "mature"}
+DECLIN = re.compile(r"dispar|effondr|declin|n'existe plus|detrui|dissou|marginal|agonis|moribond|eteint"
+                    r"|residuel|abandonn|ruine|chute|vaincu|liquide")
+
+
+def territoires_zones(data, sc, max_par_zone=25):
+    """Lignes « zone : territoires » pour les zones dont l'hypothèse change le statut."""
+    ps = data["par_scenario"].get(sc) or {}
+    zones = [z.get("zone") for z in (ps.get("lecture") or {}).get("zones_statut") or []
+             if z.get("zone") and garde_zone(data, sc, z)]   # PATCH_S27_APPLIQUEE
+    if not zones:
+        return []
+    by = {z.get("slug"): z for z in ap.zones_geo(sc)}
+    lignes = []
+    for slug in dict.fromkeys(zones):
+        z = by.get(slug) or {}
+        ents = [str(o.get("entite")) for o in z.get("origine_reelle") or [] if isinstance(o, dict) and o.get("entite")]
+        if ents:
+            plus = f" (+{len(ents) - max_par_zone})" if len(ents) > max_par_zone else ""
+            lignes.append(f"- {z.get('nom') or slug} ({slug}) : {', '.join(ents[:max_par_zone])}{plus}")
+    return lignes
 
 
 SYSTEME_RELECTEUR = ("Tu es le relecteur du lore du monde fictif Ourrassol 2098. Tu corriges le moins possible. "
@@ -718,7 +801,7 @@ def remplacer_phrase(hid, data, cle, nouveau, ignorer, apply):
 #   correction se fait à la main dans Obsidian, puis « marquer comme relu ».
 # ---------------------------------------------------------------------------
 
-VERSION_ARTICLES = "v1"
+VERSION_ARTICLES = "v3-appliquee"   # PATCH_S27_RELECTURE
 MAX_ARTICLE = 14000   # caractères de corps envoyés à l'IA
 
 
@@ -730,15 +813,16 @@ def articles_a_relire(data):
         ps = data["par_scenario"].get(sc) or {}
         lec, pas = ps.get("lecture") or {}, ps.get("passe") or {}
         ents = sorted({t["instance"] for t in (lec.get("trajectoires") or []) + (pas.get("trajectoires") or [])
-                       if t.get("instance")})
-        zones = {z["zone"] for z in lec.get("zones_statut") or [] if z.get("zone")}
+                       if t.get("instance") and garde_traj(data, sc, t)})   # PATCH_S27_APPLIQUEE
+        zones = {z["zone"] for z in lec.get("zones_statut") or [] if z.get("zone") and garde_zone(data, sc, z)}
         vus = set()
         for chemin, titre, date, motifs in ap._articles_concernes(sc, ents, zones):
             out.append((sc, str(chemin), titre, date, motifs))
             vus.add(str(chemin))
         # Élargissement (18 oct) : articles qui NOMMENT une entité touchée ou une zone changée dans
         # leur texte, sans l'avoir dans entites_citees / zone_principale. Sans IA.
-        noms = {t.get("nom") for t in (lec.get("trajectoires") or []) + (pas.get("trajectoires") or [])}
+        noms = {t.get("nom") for t in (lec.get("trajectoires") or []) + (pas.get("trajectoires") or [])
+                if garde_traj(data, sc, t)}   # PATCH_S27_APPLIQUEE
         zn = noms_de_zones(sc)
         noms |= {zn.get(z) for z in zones}
         motifs_noms = [(n, re.compile(r"(?<![a-z0-9])" + re.escape(_plie(n)) + r"(?![a-z0-9])"))
@@ -804,15 +888,21 @@ def verifier_articles(hid, data, refaire):
         d = ap.decoupe(raw)
         corps = _norm(d[3] if d else raw)[:MAX_ARTICLE]
         etats = etats_cites(data, sc, corps)
+        terr = territoires_zones(data, sc)   # PATCH_S27_RELECTURE
         user = (f"ARTICLE DE PRESSE « {titre} » (scénario {sc}, daté {date or '2098'}) :\n{corps}\n\n"
                 "FAITS ÉTABLIS PAR L'HYPOTHÈSE (priment sur l'article) :\n"
                 + "\n".join(f"- {f}" for f in faits_hypothese(data, sc)) + "\n\n"
                 + ("ÉTATS DES ENTITÉS CITÉES (seule référence pour leur rang ; un passage conforme n'est "
                    "JAMAIS une contradiction) :\n" + "\n".join(etats) + "\n\n" if etats else "")
+                + ("TERRITOIRES DES ZONES DONT LE STATUT CHANGE (un lieu absent de ces listes n'est PAS concerné) :\n" + "\n".join(terr) + "\n\n" if terr else "")
                 + "TÂCHE : relève UNIQUEMENT les passages qui contredisent un fait à la date de l'article : "
                 "entité disparue décrite comme existante ou active au présent ; entité à qui l'article donne un "
                 "rang contraire à son état ; zone décrite autrement que son statut ; contrainte niée. Un rappel "
-                "historique au passé est CORRECT. Une omission n'est pas une contradiction. En cas de doute, ne "
+                "historique au passé est CORRECT. Une omission n'est pas une contradiction. "
+                "Un statut de zone (en déclin, fragmenté…) ne dit JAMAIS que ses lieux, ses récits ou ses acteurs cessent d'exister. "
+                "Une entité dont le rang monte n'est contredite que si l'article la dit disparue, effondrée ou en déclin après la date ; une formulation modeste ou neutre est conforme. "
+                "Le rang d'une entité « inchangé par l'hypothèse » ne se discute JAMAIS : tu ne relis que les conséquences de l'hypothèse. "
+                "Ne relève que ce qui est CERTAINEMENT faux, sans conditionnel. En cas de doute, ne "
                 "relève rien : la réponse attendue est souvent une liste vide.\n"
                 "Pour chaque passage : \"extrait\" = la phrase entière, MOT POUR MOT ; \"fait\" = le fait "
                 "contredit ; \"suggestion\" = la phrase réécrite en changeant le moins de mots possible.\n"
@@ -823,7 +913,7 @@ def verifier_articles(hid, data, refaire):
             if not isinstance(x, dict) or not x.get("extrait"):
                 continue
             m = motif_phrase(x["extrait"])
-            if m and m.search(raw) and vraie_contradiction(x.get("fait")):
+            if m and m.search(raw) and contradiction_article(x.get("fait"), x.get("extrait"), data, sc):   # PATCH_S27_RELECTURE / APPLIQUEE
                 passages.append({"extrait": _norm(x["extrait"]), "fait": _norm(x.get("fait")),
                                  "suggestion": _norm(x.get("suggestion"))})
         ancien = cache.get(chemin) or {}

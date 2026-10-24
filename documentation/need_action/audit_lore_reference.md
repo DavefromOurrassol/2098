@@ -1,11 +1,11 @@
 # Audit du lore — reference
 
-*Généré par `audit_lore.py` le 2026-09-26 20:16 — réécrit à chaque run, ne pas éditer. Règles : `documentation/lore_regles.yaml`.*
+*Généré par `audit_lore.py` le 2026-10-24 08:36 — réécrit à chaque run, ne pas éditer. Règles : `documentation/lore_regles.yaml`.*
 
 ## Résumé
 
-- Fiches analysées : 190 (+ 14 événements) (+ 14 articles)
-- Règles de lore — **erreurs : 0**, à relire : 2
+- Fiches analysées : 190 (+ 16 événements)
+- Règles de lore — **erreurs : 0**, à relire : 7
 - Quarantaine (fiche active localisée en zone interdite) : 0
 - Transnationales localisées dans le texte (info) : 48
 - Relations à sens unique à corriger : 0 — contradictoires : 0
@@ -34,6 +34,13 @@ Rien à corriger.
 **ergo_wian_non_democratique** — Ergo-Wian est un gouvernement-entreprise NON démocratique : ni élections, ni suffrage, ni dirigeants élus. À relire : une phrase qui associe Ergo-Wian à la démocratie ne doit le faire que pour la nier ou pour parler de ceux qui s'y opposent.
 - `ergo_wian_sovereign_holdings_reference` (instance, description_journalistique) — **Ergo-Wian + démocratie** : « Depuis son siège social flottant au-dessus de l'ancienne ville de Rotterdam, Ergo-Wian Sovereign Holdings règne sur un archipel de territoires où la démocratie a été remplacée par des contrats à durée déterminée. »
 - `ergo_wian_sovereign_holdings_reference` (instance, description_journalistique) — **Ergo-Wian + vote** : « Son modèle, exporté via des partenariats avec des États en faillite, a fait d'Ergo-Wian le premier 'gouvernement-entreprise' coté en Bourse, où les actionnaires votent les lois comme on vote des dividendes. »
+
+**murmansk_transit_arctique_disparu_2081** — Murmansk Transit Arctique disparaît en 2081 (explosion_brise_glace_murmansk_2081) : toute mention au présent après 2081 est fausse.
+- `explosion_brise_glace_murmansk_2081_reference` (evenement, description) — **Murmansk Transit Arctique** : « Le *Polaris-7*, fleuron de la flotte de Murmansk Transit Arctique, se brise en deux avant de sombrer dans les eaux glacées de la mer de Barents. »
+- `explosion_brise_glace_murmansk_2081_reference` (evenement, consequences) — **Murmansk Transit Arctique** : « La disparition de Murmansk Transit Arctique marque un tournant dans l'équilibre des pouvoirs en Arctique. »
+- `explosion_brise_glace_murmansk_2081_reference` (evenement, realisation) — **Murmansk Transit Arctique** : « Dans un contexte de tensions géopolitiques exacerbées et de course aux ressources arctiques, le brise-glace nucléaire *Polaris-7* de Murmansk Transit Arctique explose à quai en décembre 2081. »
+- `murmansk_transit_arctique_reference` (instance, name) — **Murmansk Transit Arctique** : « Murmansk Transit Arctique »
+- `murmansk_transit_arctique_reference` (instance, role_dans_scenario) — **Murmansk Transit Arctique** : « Plaque tournante stratégique du trafic maritime et énergétique arctique, Murmansk Transit Arctique s'est imposée comme nœud incontournable des nouvelles routes commerciales ouvertes par la fonte accélérée des glaces polaires depuis les anné… »
 
 ## 6. Transnationales mais localisées dans le texte (information)
 

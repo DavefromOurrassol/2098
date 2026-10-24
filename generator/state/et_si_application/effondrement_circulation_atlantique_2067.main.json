@@ -1,6 +1,8 @@
 {
  "entites": {},
- "regles": {},
+ "regles": {
+  "reference:circulation_atlantique_pas_de_redemarrage_2098": "2026-10-24T08:35"
+ },
  "phrases": {
   "reference:effondrement_circulation_atlantique_2067_reference:86b7c720": {
    "statut": "ignorée"

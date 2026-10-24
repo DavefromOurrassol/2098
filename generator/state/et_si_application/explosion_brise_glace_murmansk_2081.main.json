@@ -1,6 +1,8 @@
 {
  "entites": {},
- "regles": {},
+ "regles": {
+  "reference:murmansk_transit_arctique_disparu_2081": "2026-10-24T08:32"
+ },
  "phrases": {
   "reference:murmansk_transit_arctique_reference:262d69a7": {
    "proposition": "Plaque tournante stratégique du trafic maritime et énergétique arctique jusqu'en 2081, Murmansk Transit Arctique s'était imposée comme nœud incontournable des nouvelles routes commerciales ouvertes par la fonte accélérée des glaces polaires depuis les années 2040.",

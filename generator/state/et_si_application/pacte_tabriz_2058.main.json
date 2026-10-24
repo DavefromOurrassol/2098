@@ -19,77 +19,38 @@
  },
  "articles": {
   "articles/breakdown/20260706_183156_breakdown_medias_communication_article_24mars2098.md": {
-   "empreinte": "894c2b7697ca",
-   "date": "2026-10-24T08:17",
-   "passages": [
-    {
-     "extrait": "« Si les serveurs de Pannonie s’éteignent, qui croira encore que le Sahel a existé ? »",
-     "fait": "La zone zone_golfe_levant (incluant le Sahel dans le lore) est en déclin après 2058, mais son existence n'est pas niée. Cependant, le Sahel en tant que région cohérente et reconnue est implicitement présentée comme une entité encore crédible dans les récits partagés, ce qui peut contredire son statut de déclin avancé et son effacement progressif des archives.",
-     "suggestion": "« Si les serveurs de Pannonie s’éteignent, qui croira encore aux récits du Sahel ? »"
-    },
-    {
-     "extrait": "À **Lagos Intérieur Mnemos — Les Cryptes Lagunaires**, on paie pour un souvenir. Ici, dans la lagune, on ne conserve plus les vies passées : on les *vend*.",
-     "fait": "Lagos Intérieur Mnemos est décrit comme « ascendant », ce qui est conforme. Cependant, la mention de la « lagune » peut évoquer une zone géographique (Golfe du Bénin) dont le statut post-2058 n'est pas précisé. Si Lagos est situé dans une zone en déclin (zone_golfe_levant), cela pourrait contredire son rôle « ascendant ».",
-     "suggestion": "À **Lagos Intérieur Mnemos — Les Cryptes Lagunaires**, on paie pour un souvenir. Ici, dans les ruines des anciens réseaux, on ne conserve plus les vies passées : on les *vend*."
-    },
-    {
-     "extrait": "À **Sfax**, en Méditerranée, un broker anonyme publie des lots de données sur la **Ligue des Cités du Sahel Numérique**, échangeables contre des vivres ou des exemptions de péages logistiques.",
-     "fait": "La Ligue des Cités du Sahel Numérique n'est pas référencée dans les états des entités, mais le Sahel (zone_golfe_levant) est en déclin après 2058. Mentionner une « Ligue des Cités du Sahel Numérique » active en 2098 peut contredire ce déclin.",
-     "suggestion": "À **Sfax**, en Méditerranée, un broker anonyme publie des lots de données sur les **derniers fragments du Sahel Numérique**, échangeables contre des vivres ou des exemptions de péages logistiques."
-    }
-   ],
+   "empreinte": "8ff609d6c525",
+   "date": "2026-10-24T09:01",
+   "passages": [],
    "relu": "2026-10-24T08:21"
   },
   "articles/breakdown/20260821_194029_breakdown_opinions_editoriaux_article_17janvier2098.md": {
-   "empreinte": "c41210b6b439",
-   "date": "2026-10-24T08:17",
+   "empreinte": "991c301f931d",
+   "date": "2026-10-24T09:01",
    "passages": [],
    "relu": "2026-10-24T08:21"
   },
   "articles/breakdown/20260823_175311_breakdown_petites_annonces_services_article_22aout2098.md": {
-   "empreinte": "11a9b9e4a5a6",
-   "date": "2026-10-24T08:17",
+   "empreinte": "262164135177",
+   "date": "2026-10-24T09:01",
    "passages": [],
    "relu": "2026-10-24T08:21"
   },
   "articles/breakdown/20260823_181126_breakdown_petites_annonces_services_article_20septembre2098.md": {
-   "empreinte": "5944bbe69108",
-   "date": "2026-10-24T08:17",
-   "passages": [
-    {
-     "extrait": "Les *Venelles* — ces axes de convoyage armé reliant l’Asie centrale à l’Europe de l’Est — restent la seule voie d’approvisionnement viable pour les enclaves survivantes de l’Arc Eurasien.",
-     "fait": "L'article décrit les Venelles comme 'la seule voie d’approvisionnement viable', ce qui pourrait sous-entendre un statut 'dominant' ou 'ascendant' avant 2058, alors qu'elles étaient 'déclinantes' avant cette date. Le terme 'restent' suggère une continuité, mais le contexte post-2058 doit être clarifié.",
-     "suggestion": "Les *Venelles* — ces axes de convoyage armé reliant l’Asie centrale à l’Europe de l’Est — deviennent progressivement la seule voie d’approvisionnement viable pour les enclaves survivantes de l’Arc Eurasien depuis 2058."
-    },
-    {
-     "extrait": "Les *Venelles* sont sous contrôle partagé des *Seigneuries Logistiques Armées* et des milices locales.",
-     "fait": "Les *Seigneuries Logistiques Armées* sont classées comme 'émergentes' dans l'état des entités citées, mais l'article leur attribue un rôle de contrôle partagé, ce qui pourrait suggérer un statut plus élevé (ex. 'ascendant').",
-     "suggestion": "Les *Venelles* sont partiellement sous l’influence des *Seigneuries Logistiques Armées* (en émergence) et des milices locales."
-    }
-   ],
-   "relu": "2026-10-24T08:22"
+   "empreinte": "58776f0d4fc4",
+   "date": "2026-10-24T09:01",
+   "passages": []
   },
   "articles/breakdown/20260823_181920_breakdown_petites_annonces_services_article_17janvier2098.md": {
-   "empreinte": "dfe3d1050d5c",
-   "date": "2026-10-24T08:17",
+   "empreinte": "8e0e15191630",
+   "date": "2026-10-24T09:01",
    "passages": [],
    "relu": "2026-10-24T08:22"
   },
   "articles/breakdown/20260815_110232_breakdown_actualites_a_la_une_article_18octobre2098.md": {
-   "empreinte": "d50dc875fe1d",
-   "date": "2026-10-24T08:17",
-   "passages": [
-    {
-     "extrait": "les drones des seigneurs de guerre logistiques ne survolent plus que les *Venelles* eurasiatiques,",
-     "fait": "Les Venelles (Corridors Eurasiens Convoyage) sont décrits comme « ascendant » après 2058, mais l'article sous-entend qu'ils sont en déclin relatif (« ne survolent plus que »), ce qui contredit leur statut actuel.",
-     "suggestion": "les drones des seigneurs de guerre logistiques survolent désormais les *Venelles* eurasiatiques,"
-    },
-    {
-     "extrait": "89 % des stations de dessalement du *Corridor des Lithiums* désormais contrôlées par des milices affiliées au *Consortium Oural-Caspien*.",
-     "fait": "Le *Consortium Énergétique Oural-Caspien* est « ascendant » après 2058, mais l'article le présente comme une entité émergente ou secondaire (« milices affiliées »), ce qui minimise son statut dominant.",
-     "suggestion": "89 % des stations de dessalement du *Corridor des Lithiums* désormais contrôlées par le *Consortium Oural-Caspien* ou ses milices affiliées."
-    }
-   ],
+   "empreinte": "c4c5966f1b1f",
+   "date": "2026-10-24T09:01",
+   "passages": [],
    "relu": "2026-10-24T08:23"
   }
  }
