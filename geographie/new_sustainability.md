@@ -191,7 +191,7 @@ zones:
     portion: null
   - entite: Brésil
     type_entite: pays
-    portion: null
+    portion: hors bassin amazonien (Nordeste, Centre-Ouest, Sud-Est, Sud)
   - entite: Colombie
     type_entite: pays
     portion: null
@@ -797,7 +797,7 @@ zones:
   origine_reelle:
   - entite: Brésil (Amazonie)
     type_entite: pays
-    portion: null
+    portion: bassin amazonien (Amazonas, Pará, Acre, Rondônia, Roraima, Amapá)
   - entite: Ensemble des corridors de biodiversité continentaux
     type_entite: autre
     portion: null
@@ -1174,7 +1174,7 @@ zones:
   nom: Belém — Siège du Consortium Amazônia Viva
   niveau: 2
   type: ville
-  parent: ameriques_reconfigurees
+  parent: reseau_vivant_continental
   origine_reelle:
   - entite: Brésil
     type_entite: pays
@@ -1757,7 +1757,7 @@ zones:
   nom: Manaus — Nœud occidental du RVC
   niveau: 2
   type: ville
-  parent: ameriques_reconfigurees
+  parent: reseau_vivant_continental
   origine_reelle:
   - entite: Brésil
     type_entite: pays
@@ -2726,7 +2726,7 @@ Le Sahel constitue en 2098 l'une des zones de régénération prioritaires du R�
 
 *bloc_continental — statut : emergent*
 
-**Origine réelle (2026)** : États-Unis, Brésil, Colombie, Canada, Amérique latine (ensemble), Royaume-Uni, Angleterre, Pays de Galles, Mexique, Argentine, Pérou, Venezuela, Chili, Bolivie, Cuba, Haïti, République dominicaine, Jamaïque, Bahamas, Belize, Guatemala, Honduras, Salvador, Nicaragua, Costa Rica, Panama, Guyana, Suriname, Équateur, Paraguay, Uruguay, Grenade, Saint-Vincent-et-les-Grenadines, Antigua-et-Barbuda, Saint-Christophe-et-Niévès, Dominique
+**Origine réelle (2026)** : États-Unis, Brésil (hors bassin amazonien (Nordeste, Centre-Ouest, Sud-Est, Sud)), Colombie, Canada, Amérique latine (ensemble), Royaume-Uni, Angleterre, Pays de Galles, Mexique, Argentine, Pérou, Venezuela, Chili, Bolivie, Cuba, Haïti, République dominicaine, Jamaïque, Bahamas, Belize, Guatemala, Honduras, Salvador, Nicaragua, Costa Rica, Panama, Guyana, Suriname, Équateur, Paraguay, Uruguay, Grenade, Saint-Vincent-et-les-Grenadines, Antigua-et-Barbuda, Saint-Christophe-et-Niévès, Dominique
 
 **Transition** : 2055-2075 — voir [[election_parti_commun_americain_new_sustainability]]
 
@@ -2737,27 +2737,6 @@ Le continent américain de 2098 a été profondément reconfiguré par l'électi
 **Alliés** : Genève-Centre institutionnel mondial ([[centre_institutionnel_geneve]])
 
 *Sources attestées : election_parti_commun_americain_new_sustainability, trame_bioclimatique_new_sustainability, nexus_biosyn_new_sustainability, internationale_travailleurs_augmentes_new_sustainability, grille_aria_new_sustainability*
-
-#### Belém — Siège du Consortium Amazônia Viva — sous [[ameriques_reconfigurees]]
-
-*ville — niveau 2 — statut : dominant*
-
-**Origine réelle (2026)** : Brésil, Belém
-
-**Transition** : 2041-2061 — voir [[traite_souverainete_carbone_amazonie_new_sustainability]]
-
-Belém abrite le siège opérationnel du Consortium Amazônia Viva, dont la façade est recouverte d'un écran végétal vivant mis à jour en temps réel par les capteurs forestiers. Depuis ici, le Consortium négocie directement avec les blocs géopolitiques les droits d'usage des écosystèmes amazoniens, et a accueilli en octobre 2053 la signature du Traité de Souveraineté Carbone Amazonie. En 2098, aucun accord énergétique ou carbone ne se signe sans négociation préalable avec Belém.
-
-**Tensions internes** : Fracture entre délégations autochtones défendant une sanctuarisation absolue et gouvernements locaux brésiliens et colombiens tentés par une valorisation économique contrôlée ; communautés locales exclues des corridors de conservation contestant leur intégration sans consentement réel.
-
-**Lieux emblématiques** :
-- Antenne de Leticia (Colombie) (infrastructure) — Antenne opérationnelle du Consortium en territoire colombien, relais pour les négociations andines
-
-**Alliés** : Manaus — Nœud occidental du RVC ([[manaus_rvc]]), Hub institutionnel Nairobi-Kigali ([[hub_nairobi_kigali]])
-
-**Rivaux** : Bloc Eurasien souverainiste ([[bloc_eurasien_souverainiste]])
-
-*Sources attestées : consortium_amazonia_viva_new_sustainability, traite_souverainete_carbone_amazonie_new_sustainability, trame_bioclimatique_new_sustainability*
 
 #### Chicago-Lacustre — Siège de la Confédération des Grands Lacs — sous [[ameriques_reconfigurees]]
 
@@ -2777,36 +2756,6 @@ Depuis le district de l'ancien Navy Pier reconverti, Chicago-Lacustre accueille 
 **Alliés** : Hub institutionnel Nairobi-Kigali ([[hub_nairobi_kigali]]), Genève-Centre institutionnel mondial ([[centre_institutionnel_geneve]])
 
 *Sources attestées : great_lakes_autonomous_compact_new_sustainability*
-
-#### Manaus — Nœud occidental du RVC — sous [[ameriques_reconfigurees]]
-
-*ville — niveau 2 — statut : emergent*
-
-**Origine réelle (2026)** : Brésil, Manaus
-
-**Transition** : 2055-2075
-
-Manaus est en 2098 le nœud occidental majeur du Réseau Vivant Continental en Amazonie brésilienne. Depuis ici partent les corridors de biodiversité instrumentés qui s'étendent vers l'Afrique orientale. La ville est un point de convergence entre l'infrastructure écologique planétaire du RVC, la dynamique de convergence économique des Amériques reconfigurées, et les tensions avec les populations amazoniennes non consultées sur le tracé des corridors.
-
-**Tensions internes** : Les zones amazoniennes du RVC sont instrumentées sans consultation des populations locales ; tension entre impératifs de régénération systémique globale et droits des communautés autochtones.
-
-*Sources attestées : trame_bioclimatique_new_sustainability, election_parti_commun_americain_new_sustainability*
-
-##### Manaus — Antenne du Consortium Amazônia Viva — sous [[manaus_rvc]]
-
-*infrastructure — niveau 3 — statut : emergent*
-
-**Origine réelle (2026)** : Brésil, Manaus
-
-**Transition** : 2053-2098 — voir [[traite_souverainete_carbone_amazonie_new_sustainability]]
-
-L'antenne de Manaus du Consortium Amazônia Viva constitue le relais opérationnel entre le siège de Belém et le nœud occidental du RVC. Depuis ici sont coordonnées les données bioclimatiques des capteurs forestiers amazoniens alimentant les négociations carboniques du Consortium, et sont reçues les délégations autochtones qui contestent les tracés des corridors du RVC tracés sans leur consentement.
-
-**Tensions internes** : Point de friction entre les impératifs du RVC instrumenté et les revendications de co-gouvernance des communautés autochtones amazoniennes locales ; les algorithmes de modélisation forestière favorisent les zones à forte densité de carbone certifiable au détriment des zones d'occupation ancestrale.
-
-**Alliés** : Belém — Siège du Consortium Amazônia Viva ([[belem_consortium_amazonia]]), Delta équatorial — Fermes régénératives ([[delta_equatorial_fermes_regeneratives]])
-
-*Sources attestées : consortium_amazonia_viva_new_sustainability, trame_bioclimatique_new_sustainability, communautes_locales_exclues_des_corridors_new_sustainability*
 
 #### Medellín — Site des dispensaires Nexus BioSyn — sous [[ameriques_reconfigurees]]
 
@@ -3239,7 +3188,7 @@ Instance locale de gouvernance territoriale d'Ourrassol, la Commission consulte 
 
 *infrastructure — statut : dominant*
 
-**Origine réelle (2026)** : Brésil (Amazonie), Ensemble des corridors de biodiversité continentaux, Inde, Indonésie, Vietnam, Népal, Bhoutan, Sri Lanka, Birmanie, Laos
+**Origine réelle (2026)** : Brésil (Amazonie) (bassin amazonien (Amazonas, Pará, Acre, Rondônia, Roraima, Amapá)), Ensemble des corridors de biodiversité continentaux, Inde, Indonésie, Vietnam, Népal, Bhoutan, Sri Lanka, Birmanie, Laos
 
 **Transition** : 2050-2080
 
@@ -3253,6 +3202,27 @@ Le Réseau Vivant Continental est l'infrastructure écologique planétaire de 20
 **Alliés** : Hub institutionnel Nairobi-Kigali ([[hub_nairobi_kigali]]), Afrique continentale — Union Panafricaine et bassins versants ([[afrique_continentale]]), Amériques reconfigurées ([[ameriques_reconfigurees]])
 
 *Sources attestées : trame_bioclimatique_new_sustainability, consortium_de_regeneration_planetaire_new_sustainability, communautes_locales_exclues_des_corridors_new_sustainability, prisme_global_new_sustainability, reseau_des_bio_communs_regionaux_new_sustainability*
+
+#### Belém — Siège du Consortium Amazônia Viva — sous [[reseau_vivant_continental]]
+
+*ville — niveau 2 — statut : dominant*
+
+**Origine réelle (2026)** : Brésil, Belém
+
+**Transition** : 2041-2061 — voir [[traite_souverainete_carbone_amazonie_new_sustainability]]
+
+Belém abrite le siège opérationnel du Consortium Amazônia Viva, dont la façade est recouverte d'un écran végétal vivant mis à jour en temps réel par les capteurs forestiers. Depuis ici, le Consortium négocie directement avec les blocs géopolitiques les droits d'usage des écosystèmes amazoniens, et a accueilli en octobre 2053 la signature du Traité de Souveraineté Carbone Amazonie. En 2098, aucun accord énergétique ou carbone ne se signe sans négociation préalable avec Belém.
+
+**Tensions internes** : Fracture entre délégations autochtones défendant une sanctuarisation absolue et gouvernements locaux brésiliens et colombiens tentés par une valorisation économique contrôlée ; communautés locales exclues des corridors de conservation contestant leur intégration sans consentement réel.
+
+**Lieux emblématiques** :
+- Antenne de Leticia (Colombie) (infrastructure) — Antenne opérationnelle du Consortium en territoire colombien, relais pour les négociations andines
+
+**Alliés** : Manaus — Nœud occidental du RVC ([[manaus_rvc]]), Hub institutionnel Nairobi-Kigali ([[hub_nairobi_kigali]])
+
+**Rivaux** : Bloc Eurasien souverainiste ([[bloc_eurasien_souverainiste]])
+
+*Sources attestées : consortium_amazonia_viva_new_sustainability, traite_souverainete_carbone_amazonie_new_sustainability, trame_bioclimatique_new_sustainability*
 
 #### Delta équatorial — Fermes régénératives — sous [[reseau_vivant_continental]]
 
@@ -3281,6 +3251,36 @@ Le delta du Mékong est une zone de mobilité climatique instrumentée dans le r
 **Tensions internes** : Populations déplacées climatiques non représentées dans les instances de gouvernance du RVC ; algorithmes de priorisation dont les critères sont opaques.
 
 *Sources attestées : prisme_global_new_sustainability, trame_bioclimatique_new_sustainability*
+
+#### Manaus — Nœud occidental du RVC — sous [[reseau_vivant_continental]]
+
+*ville — niveau 2 — statut : emergent*
+
+**Origine réelle (2026)** : Brésil, Manaus
+
+**Transition** : 2055-2075
+
+Manaus est en 2098 le nœud occidental majeur du Réseau Vivant Continental en Amazonie brésilienne. Depuis ici partent les corridors de biodiversité instrumentés qui s'étendent vers l'Afrique orientale. La ville est un point de convergence entre l'infrastructure écologique planétaire du RVC, la dynamique de convergence économique des Amériques reconfigurées, et les tensions avec les populations amazoniennes non consultées sur le tracé des corridors.
+
+**Tensions internes** : Les zones amazoniennes du RVC sont instrumentées sans consultation des populations locales ; tension entre impératifs de régénération systémique globale et droits des communautés autochtones.
+
+*Sources attestées : trame_bioclimatique_new_sustainability, election_parti_commun_americain_new_sustainability*
+
+##### Manaus — Antenne du Consortium Amazônia Viva — sous [[manaus_rvc]]
+
+*infrastructure — niveau 3 — statut : emergent*
+
+**Origine réelle (2026)** : Brésil, Manaus
+
+**Transition** : 2053-2098 — voir [[traite_souverainete_carbone_amazonie_new_sustainability]]
+
+L'antenne de Manaus du Consortium Amazônia Viva constitue le relais opérationnel entre le siège de Belém et le nœud occidental du RVC. Depuis ici sont coordonnées les données bioclimatiques des capteurs forestiers amazoniens alimentant les négociations carboniques du Consortium, et sont reçues les délégations autochtones qui contestent les tracés des corridors du RVC tracés sans leur consentement.
+
+**Tensions internes** : Point de friction entre les impératifs du RVC instrumenté et les revendications de co-gouvernance des communautés autochtones amazoniennes locales ; les algorithmes de modélisation forestière favorisent les zones à forte densité de carbone certifiable au détriment des zones d'occupation ancestrale.
+
+**Alliés** : Belém — Siège du Consortium Amazônia Viva ([[belem_consortium_amazonia]]), Delta équatorial — Fermes régénératives ([[delta_equatorial_fermes_regeneratives]])
+
+*Sources attestées : consortium_amazonia_viva_new_sustainability, trame_bioclimatique_new_sustainability, communautes_locales_exclues_des_corridors_new_sustainability*
 
 ### Te Moana Nui — Plateforme flottante de la Confédération du Pacifique Austral
 
