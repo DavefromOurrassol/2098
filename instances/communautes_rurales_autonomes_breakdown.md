@@ -39,7 +39,7 @@ zone_systemique:
 alliances:
 - arctique_nordark_breakdown
 - brigades_medicales_itinerantes_breakdown
-- communes_rust_belt_breakdown
+- mouvement_des_communes_du_rust_belt_breakdown
 - factions_paramilitaires_locales_neutralisees_breakdown
 - hyphan_raghavan_breakdown
 - les_veilleurs_des_nappes_phreatiques_breakdown
@@ -115,7 +115,7 @@ La tension centrale qui les traverse oppose l'impératif de fermeture — proté
 **Alliés :**
 - [[arctique_nordark_breakdown]]
 - [[brigades_medicales_itinerantes_breakdown]]
-- [[communes_rust_belt_breakdown]]
+- [[mouvement_des_communes_du_rust_belt_breakdown]]
 - [[factions_paramilitaires_locales_neutralisees_breakdown]]
 - [[hyphan_raghavan_breakdown]]
 - [[les_veilleurs_des_nappes_phreatiques_breakdown]]

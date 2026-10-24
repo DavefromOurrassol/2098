@@ -31,7 +31,7 @@ entites_citees:
   - sfax_relais_bouches_breakdown
   - nexus_biosyn_breakdown
   - hanse_baltique_breakdown
-  - communes_rust_belt_zones_libres_breakdown
+  - mouvement_des_communes_du_rust_belt_breakdown
   - noeud_nordark_tromso_breakdown
 variables_pilotes:
   - geopolitique_conflits
@@ -73,4 +73,4 @@ Pourtant, cette économie de l'ombre reste à la merci des seigneurs de guerre l
 ---
 
 ---
-**Voir aussi** : [[corridors_eurasiens_convoyage_breakdown]] · [[sfax_relais_bouches_breakdown]] · [[nexus_biosyn_breakdown]] · [[hanse_baltique_breakdown]] · [[communes_rust_belt_zones_libres_breakdown]] · [[noeud_nordark_tromso_breakdown]]
+**Voir aussi** : [[corridors_eurasiens_convoyage_breakdown]] · [[sfax_relais_bouches_breakdown]] · [[nexus_biosyn_breakdown]] · [[hanse_baltique_breakdown]] · [[mouvement_des_communes_du_rust_belt_breakdown]] · [[noeud_nordark_tromso_breakdown]]

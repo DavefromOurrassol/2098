@@ -48,8 +48,6 @@ alliances:
 - terminal_kharg_data_haven_breakdown
 oppositions:
 - communautes_rurales_autogerees_des_n_uds_de_survie_breakdown
-- communes_rust_belt_breakdown
-- communes_rust_belt_zones_libres_breakdown
 - cooperative_terrafond_breakdown
 - etats_fragmentes_nationalisant_les_stocks_breakdown
 - factions_paramilitaires_locales_neutralisees_breakdown
@@ -60,11 +58,13 @@ oppositions:
 - hanse_baltique_recomposee_breakdown
 - ligue_des_cites_du_sahel_numerique_breakdown
 - milices_agro_defensives_locales_breakdown
+- mouvement_des_communes_du_rust_belt_breakdown
 - nairobi_crrc_breakdown
 - ong_de_gestion_migratoire_survivantes_breakdown
 - reseau_logistique_criminel_concurrent_breakdown
 - saboteurs_des_corridors_de_transit_breakdown
 - sfax_relais_bouches_breakdown
+- veilleurs_d_ormuz_breakdown
 type_relation_dominante: compétition
 annee_debut: 2051
 annee_fin: null
@@ -143,8 +143,6 @@ Les Cartels sont condamnés à une contradiction structurelle : leur pouvoir rep
 - [[terminal_kharg_data_haven_breakdown]]
 **Opposants :**
 - [[communautes_rurales_autogerees_des_n_uds_de_survie_breakdown]]
-- [[communes_rust_belt_breakdown]]
-- [[communes_rust_belt_zones_libres_breakdown]]
 - [[cooperative_terrafond_breakdown]]
 - [[etats_fragmentes_nationalisant_les_stocks_breakdown]]
 - [[factions_paramilitaires_locales_neutralisees_breakdown]]
@@ -155,11 +153,13 @@ Les Cartels sont condamnés à une contradiction structurelle : leur pouvoir rep
 - [[hanse_baltique_recomposee_breakdown]]
 - [[ligue_des_cites_du_sahel_numerique_breakdown]]
 - [[milices_agro_defensives_locales_breakdown]]
+- [[mouvement_des_communes_du_rust_belt_breakdown]]
 - [[nairobi_crrc_breakdown]]
 - [[ong_de_gestion_migratoire_survivantes_breakdown]]
 - [[reseau_logistique_criminel_concurrent_breakdown]]
 - [[saboteurs_des_corridors_de_transit_breakdown]]
 - [[sfax_relais_bouches_breakdown]]
+- [[veilleurs_d_ormuz_breakdown]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

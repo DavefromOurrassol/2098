@@ -46,7 +46,7 @@ oppositions:
 - cargo_mombasa_crrc_breakdown
 - cartels_logistiques_regionaux_breakdown
 - collectif_des_climatologues_sans_etat_breakdown
-- communes_rust_belt_breakdown
+- mouvement_des_communes_du_rust_belt_breakdown
 - consortiums_logistiques_agro_corporatifs_breakdown
 - corridors_eurasiens_convoyage_breakdown
 - enclaves_agro_communautaires_autonomes_breakdown
@@ -138,7 +138,7 @@ La tension centrale de ce réseau réside dans la contradiction entre sa logique
 - [[cargo_mombasa_crrc_breakdown]]
 - [[cartels_logistiques_regionaux_breakdown]]
 - [[collectif_des_climatologues_sans_etat_breakdown]]
-- [[communes_rust_belt_breakdown]]
+- [[mouvement_des_communes_du_rust_belt_breakdown]]
 - [[consortiums_logistiques_agro_corporatifs_breakdown]]
 - [[corridors_eurasiens_convoyage_breakdown]]
 - [[enclaves_agro_communautaires_autonomes_breakdown]]

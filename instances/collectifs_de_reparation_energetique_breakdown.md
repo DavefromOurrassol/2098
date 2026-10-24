@@ -42,8 +42,7 @@ alliances:
 - collectifs_de_sante_communautaire_autogeree_breakdown
 - communautes_paysannes_refugiees_breakdown
 - communautes_rurales_autogerees_des_n_uds_de_survie_breakdown
-- communes_rust_belt_breakdown
-- communes_rust_belt_zones_libres_breakdown
+- mouvement_des_communes_du_rust_belt_breakdown
 - consortium_des_pecheries_autonomes_du_grand_nord_breakdown
 - elias_mork_breakdown
 - enclaves_finlandaises_breakdown
@@ -55,7 +54,6 @@ alliances:
 - ilse_varga_holm_breakdown
 - lagos_est_nexcore_breakdown
 - ligue_des_cites_du_sahel_numerique_breakdown
-- mouvement_des_communes_du_rust_belt_breakdown
 - nadia_ferreira_sato_breakdown
 - nairobi_crrc_breakdown
 - noeud_nordark_tromso_breakdown
@@ -141,8 +139,7 @@ Leur neutralité affichée est constamment mise à l'épreuve : les milices terr
 - [[collectifs_de_sante_communautaire_autogeree_breakdown]]
 - [[communautes_paysannes_refugiees_breakdown]]
 - [[communautes_rurales_autogerees_des_n_uds_de_survie_breakdown]]
-- [[communes_rust_belt_breakdown]]
-- [[communes_rust_belt_zones_libres_breakdown]]
+- [[mouvement_des_communes_du_rust_belt_breakdown]]
 - [[consortium_des_pecheries_autonomes_du_grand_nord_breakdown]]
 - [[elias_mork_breakdown]]
 - [[enclaves_finlandaises_breakdown]]
@@ -154,7 +151,6 @@ Leur neutralité affichée est constamment mise à l'épreuve : les milices terr
 - [[ilse_varga_holm_breakdown]]
 - [[lagos_est_nexcore_breakdown]]
 - [[ligue_des_cites_du_sahel_numerique_breakdown]]
-- [[mouvement_des_communes_du_rust_belt_breakdown]]
 - [[nadia_ferreira_sato_breakdown]]
 - [[nairobi_crrc_breakdown]]
 - [[noeud_nordark_tromso_breakdown]]

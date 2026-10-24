@@ -41,8 +41,7 @@ alliances:
 - collectif_des_climatologues_sans_etat_breakdown
 - collectifs_de_reparation_energetique_breakdown
 - collectifs_de_sante_communautaire_autogeree_breakdown
-- communes_rust_belt_breakdown
-- communes_rust_belt_zones_libres_breakdown
+- mouvement_des_communes_du_rust_belt_breakdown
 - consortium_amazonia_viva_breakdown
 - corridor_lithium_bouches_breakdown
 - delta_mekong_racines_breakdown
@@ -55,7 +54,6 @@ alliances:
 - ilse_varga_holm_breakdown
 - massif_central_cicatrices_vertes_breakdown
 - milices_agro_defensives_locales_breakdown
-- mouvement_des_communes_du_rust_belt_breakdown
 - noeud_mnemos_pannonie_breakdown
 - occitanie_racines_meres_breakdown
 - pirates_biologiques_open_source_breakdown
@@ -145,8 +143,7 @@ La tension centrale est celle de la clôture contre l'ouverture : certaines comm
 - [[collectif_des_climatologues_sans_etat_breakdown]]
 - [[collectifs_de_reparation_energetique_breakdown]]
 - [[collectifs_de_sante_communautaire_autogeree_breakdown]]
-- [[communes_rust_belt_breakdown]]
-- [[communes_rust_belt_zones_libres_breakdown]]
+- [[mouvement_des_communes_du_rust_belt_breakdown]]
 - [[consortium_amazonia_viva_breakdown]]
 - [[corridor_lithium_bouches_breakdown]]
 - [[delta_mekong_racines_breakdown]]
@@ -159,7 +156,6 @@ La tension centrale est celle de la clôture contre l'ouverture : certaines comm
 - [[ilse_varga_holm_breakdown]]
 - [[massif_central_cicatrices_vertes_breakdown]]
 - [[milices_agro_defensives_locales_breakdown]]
-- [[mouvement_des_communes_du_rust_belt_breakdown]]
 - [[noeud_mnemos_pannonie_breakdown]]
 - [[occitanie_racines_meres_breakdown]]
 - [[pirates_biologiques_open_source_breakdown]]

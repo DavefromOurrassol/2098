@@ -48,8 +48,7 @@ oppositions:
 - arctic_passage_authority_breakdown
 - cargo_mombasa_crrc_breakdown
 - collectif_hackers_decroissance_infrastructure_breakdown
-- communes_rust_belt_breakdown
-- communes_rust_belt_zones_libres_breakdown
+- mouvement_des_communes_du_rust_belt_breakdown
 - consortium_amazonia_viva_breakdown
 - consortium_energetique_oural_caspien_breakdown
 - corridors_eurasiens_convoyage_breakdown
@@ -61,7 +60,6 @@ oppositions:
 - kalaallit_nunaat_sovereign_fund_breakdown
 - ligue_des_cites_du_sahel_numerique_breakdown
 - milices_de_controle_territorial_breakdown
-- mouvement_des_communes_du_rust_belt_breakdown
 - occitanie_racines_meres_breakdown
 - reseau_des_cartographes_des_zones_grises_breakdown
 - reseau_logistique_criminel_concurrent_breakdown
@@ -141,8 +139,7 @@ La contradiction fondamentale des Blocs est qu'en cherchant à sécuriser les re
 - [[arctic_passage_authority_breakdown]]
 - [[cargo_mombasa_crrc_breakdown]]
 - [[collectif_hackers_decroissance_infrastructure_breakdown]]
-- [[communes_rust_belt_breakdown]]
-- [[communes_rust_belt_zones_libres_breakdown]]
+- [[mouvement_des_communes_du_rust_belt_breakdown]]
 - [[consortium_amazonia_viva_breakdown]]
 - [[consortium_energetique_oural_caspien_breakdown]]
 - [[corridors_eurasiens_convoyage_breakdown]]
@@ -154,7 +151,6 @@ La contradiction fondamentale des Blocs est qu'en cherchant à sécuriser les re
 - [[kalaallit_nunaat_sovereign_fund_breakdown]]
 - [[ligue_des_cites_du_sahel_numerique_breakdown]]
 - [[milices_de_controle_territorial_breakdown]]
-- [[mouvement_des_communes_du_rust_belt_breakdown]]
 - [[occitanie_racines_meres_breakdown]]
 - [[reseau_des_cartographes_des_zones_grises_breakdown]]
 - [[reseau_logistique_criminel_concurrent_breakdown]]

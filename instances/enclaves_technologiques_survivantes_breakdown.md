@@ -47,7 +47,7 @@ alliances:
 - rede_paulista_de_distribuicao_algoritmica_breakdown
 - seoul_collectif_nexcore_breakdown
 oppositions:
-- communes_rust_belt_breakdown
+- mouvement_des_communes_du_rust_belt_breakdown
 - corridors_eurasiens_convoyage_breakdown
 - midwest_desertifie_breakdown
 type_relation_dominante: compétition
@@ -121,7 +121,7 @@ Leur paradoxe fondamental est d'être à la fois indispensables et condamnées :
 - [[rede_paulista_de_distribuicao_algoritmica_breakdown]]
 - [[seoul_collectif_nexcore_breakdown]]
 **Opposants :**
-- [[communes_rust_belt_breakdown]]
+- [[mouvement_des_communes_du_rust_belt_breakdown]]
 - [[corridors_eurasiens_convoyage_breakdown]]
 - [[midwest_desertifie_breakdown]]
 

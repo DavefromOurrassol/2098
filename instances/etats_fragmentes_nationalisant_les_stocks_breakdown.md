@@ -42,7 +42,7 @@ oppositions:
 - blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown
 - cargo_mombasa_crrc_breakdown
 - cartels_logistiques_regionaux_breakdown
-- communes_rust_belt_zones_libres_breakdown
+- mouvement_des_communes_du_rust_belt_breakdown
 - consortiums_logistiques_agro_corporatifs_breakdown
 - corridor_lithium_bouches_breakdown
 - corridors_eurasiens_convoyage_breakdown
@@ -54,7 +54,6 @@ oppositions:
 - gouvernements_de_forteresse_anti_nairobi_breakdown
 - meridian_assembly_breakdown
 - milices_de_controle_territorial_breakdown
-- mouvement_des_communes_du_rust_belt_breakdown
 - nairobi_crrc_breakdown
 - nexus_biosyn_breakdown
 - pirates_biologiques_open_source_breakdown
@@ -128,7 +127,7 @@ La contradiction fondamentale de ces États est d'utiliser l'outil souverain —
 - [[blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown]]
 - [[cargo_mombasa_crrc_breakdown]]
 - [[cartels_logistiques_regionaux_breakdown]]
-- [[communes_rust_belt_zones_libres_breakdown]]
+- [[mouvement_des_communes_du_rust_belt_breakdown]]
 - [[consortiums_logistiques_agro_corporatifs_breakdown]]
 - [[corridor_lithium_bouches_breakdown]]
 - [[corridors_eurasiens_convoyage_breakdown]]
@@ -140,7 +139,6 @@ La contradiction fondamentale de ces États est d'utiliser l'outil souverain —
 - [[gouvernements_de_forteresse_anti_nairobi_breakdown]]
 - [[meridian_assembly_breakdown]]
 - [[milices_de_controle_territorial_breakdown]]
-- [[mouvement_des_communes_du_rust_belt_breakdown]]
 - [[nairobi_crrc_breakdown]]
 - [[nexus_biosyn_breakdown]]
 - [[pirates_biologiques_open_source_breakdown]]

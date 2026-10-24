@@ -40,12 +40,11 @@ alliances:
 - agence_de_regulation_des_detroits_strategiques_ards_breakdown
 - coalition_vivant_breakdown
 - collectif_hackers_decroissance_infrastructure_breakdown
-- communes_rust_belt_zones_libres_breakdown
+- mouvement_des_communes_du_rust_belt_breakdown
 - consortium_des_pecheries_autonomes_du_grand_nord_breakdown
 - factions_secessionnistes_agrariennes_du_desert_breakdown
 - les_veilleurs_des_nappes_phreatiques_breakdown
 - les_veilleurs_du_fleuve_breakdown
-- mouvement_des_communes_du_rust_belt_breakdown
 - reseau_des_cartographes_des_zones_grises_breakdown
 - saboteurs_des_corridors_de_transit_breakdown
 oppositions:
@@ -144,12 +143,11 @@ Le Front est tiraillé entre sa posture de résistance non-violente héritée de
 - [[agence_de_regulation_des_detroits_strategiques_ards_breakdown]]
 - [[coalition_vivant_breakdown]]
 - [[collectif_hackers_decroissance_infrastructure_breakdown]]
-- [[communes_rust_belt_zones_libres_breakdown]]
+- [[mouvement_des_communes_du_rust_belt_breakdown]]
 - [[consortium_des_pecheries_autonomes_du_grand_nord_breakdown]]
 - [[factions_secessionnistes_agrariennes_du_desert_breakdown]]
 - [[les_veilleurs_des_nappes_phreatiques_breakdown]]
 - [[les_veilleurs_du_fleuve_breakdown]]
-- [[mouvement_des_communes_du_rust_belt_breakdown]]
 - [[reseau_des_cartographes_des_zones_grises_breakdown]]
 - [[saboteurs_des_corridors_de_transit_breakdown]]
 **Opposants :**

@@ -39,6 +39,7 @@ zone_geographique:
 zone_systemique:
 - société
 alliances:
+- alliance_des_ports_caspiennes_breakdown
 - conglometrat_sino_siberien_bohai_transit_breakdown
 - consortiums_energetiques_samoiedes_du_yamal_breakdown
 - corridors_eurasiens_convoyage_breakdown
@@ -52,6 +53,7 @@ alliances:
 - milices_privees_documentees_terrain_breakdown
 - reseaux_de_renseignement_informels_issus_de_l_ancienne_structure_militaire_eurasienne_breakdown
 - seigneuries_logistiques_armees_breakdown
+- veilleurs_d_ormuz_breakdown
 oppositions:
 - archives_neutres_de_geneve_breakdown
 - arctique_nordark_breakdown
@@ -129,6 +131,7 @@ Le Consortium est pris en étau entre le Bloc IV et le Bloc IX qui se disputent 
 
 ## Relations
 **Alliés :**
+- [[alliance_des_ports_caspiennes_breakdown]]
 - [[conglometrat_sino_siberien_bohai_transit_breakdown]]
 - [[consortiums_energetiques_samoiedes_du_yamal_breakdown]]
 - [[corridors_eurasiens_convoyage_breakdown]]
@@ -142,6 +145,7 @@ Le Consortium est pris en étau entre le Bloc IV et le Bloc IX qui se disputent 
 - [[milices_privees_documentees_terrain_breakdown]]
 - [[reseaux_de_renseignement_informels_issus_de_l_ancienne_structure_militaire_eurasienne_breakdown]]
 - [[seigneuries_logistiques_armees_breakdown]]
+- [[veilleurs_d_ormuz_breakdown]]
 **Opposants :**
 - [[archives_neutres_de_geneve_breakdown]]
 - [[arctique_nordark_breakdown]]

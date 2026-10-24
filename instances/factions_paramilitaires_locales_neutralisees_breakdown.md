@@ -45,6 +45,7 @@ alliances:
 - reseaux_noirs_pharmaceutiques_breakdown
 - vasil_orentchev_breakdown
 oppositions:
+- alliance_des_ports_caspiennes_breakdown
 - cartels_logistiques_regionaux_breakdown
 - conglometrat_sino_siberien_bohai_transit_breakdown
 - consortiums_energetiques_samoiedes_du_yamal_breakdown
@@ -132,6 +133,7 @@ La tension centrale est celle de la prédation : chaque faction neutralisée a d
 - [[reseaux_noirs_pharmaceutiques_breakdown]]
 - [[vasil_orentchev_breakdown]]
 **Opposants :**
+- [[alliance_des_ports_caspiennes_breakdown]]
 - [[cartels_logistiques_regionaux_breakdown]]
 - [[conglometrat_sino_siberien_bohai_transit_breakdown]]
 - [[consortiums_energetiques_samoiedes_du_yamal_breakdown]]

@@ -37,7 +37,7 @@ zone_systemique:
 alliances:
 - collectif_des_climatologues_sans_etat_breakdown
 - communautes_paysannes_refugiees_breakdown
-- communes_rust_belt_zones_libres_breakdown
+- mouvement_des_communes_du_rust_belt_breakdown
 - consortium_amazonia_viva_breakdown
 - delta_mekong_racines_breakdown
 - factions_secessionnistes_agrariennes_du_desert_breakdown
@@ -46,7 +46,6 @@ alliances:
 - ligue_des_cites_du_sahel_numerique_breakdown
 - massif_central_cicatrices_vertes_breakdown
 - milices_agro_defensives_locales_breakdown
-- mouvement_des_communes_du_rust_belt_breakdown
 - occitanie_racines_meres_breakdown
 - pirates_biologiques_open_source_breakdown
 - reseaux_de_soigneurs_traditionnels_breakdown
@@ -122,7 +121,7 @@ La tentation du repli total — fermer les frontières, refuser les nouveaux exi
 **Alliés :**
 - [[collectif_des_climatologues_sans_etat_breakdown]]
 - [[communautes_paysannes_refugiees_breakdown]]
-- [[communes_rust_belt_zones_libres_breakdown]]
+- [[mouvement_des_communes_du_rust_belt_breakdown]]
 - [[consortium_amazonia_viva_breakdown]]
 - [[delta_mekong_racines_breakdown]]
 - [[factions_secessionnistes_agrariennes_du_desert_breakdown]]
@@ -131,7 +130,6 @@ La tentation du repli total — fermer les frontières, refuser les nouveaux exi
 - [[ligue_des_cites_du_sahel_numerique_breakdown]]
 - [[massif_central_cicatrices_vertes_breakdown]]
 - [[milices_agro_defensives_locales_breakdown]]
-- [[mouvement_des_communes_du_rust_belt_breakdown]]
 - [[occitanie_racines_meres_breakdown]]
 - [[pirates_biologiques_open_source_breakdown]]
 - [[reseaux_de_soigneurs_traditionnels_breakdown]]

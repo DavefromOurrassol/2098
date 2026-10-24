@@ -45,8 +45,7 @@ alliances:
 - communautes_religieuses_des_relais_physiques_breakdown
 - communautes_rurales_autogerees_des_n_uds_de_survie_breakdown
 - communautes_rurales_autonomes_breakdown
-- communes_rust_belt_breakdown
-- communes_rust_belt_zones_libres_breakdown
+- mouvement_des_communes_du_rust_belt_breakdown
 - consortium_africain_de_biotechnologies_sociales_breakdown
 - consortium_des_pecheries_autonomes_du_grand_nord_breakdown
 - cooperative_terrafond_breakdown
@@ -60,7 +59,6 @@ alliances:
 - institut_des_seuils_demographiques_breakdown
 - midwest_desertifie_breakdown
 - milices_agro_defensives_locales_breakdown
-- mouvement_des_communes_du_rust_belt_breakdown
 - nairobi_crrc_breakdown
 - ong_de_gestion_migratoire_survivantes_breakdown
 - pirates_biologiques_open_source_breakdown
@@ -149,8 +147,7 @@ Les Brigades oscillent en permanence entre neutralité revendiquée et instrumen
 - [[communautes_religieuses_des_relais_physiques_breakdown]]
 - [[communautes_rurales_autogerees_des_n_uds_de_survie_breakdown]]
 - [[communautes_rurales_autonomes_breakdown]]
-- [[communes_rust_belt_breakdown]]
-- [[communes_rust_belt_zones_libres_breakdown]]
+- [[mouvement_des_communes_du_rust_belt_breakdown]]
 - [[consortium_africain_de_biotechnologies_sociales_breakdown]]
 - [[consortium_des_pecheries_autonomes_du_grand_nord_breakdown]]
 - [[cooperative_terrafond_breakdown]]
@@ -164,7 +161,6 @@ Les Brigades oscillent en permanence entre neutralité revendiquée et instrumen
 - [[institut_des_seuils_demographiques_breakdown]]
 - [[midwest_desertifie_breakdown]]
 - [[milices_agro_defensives_locales_breakdown]]
-- [[mouvement_des_communes_du_rust_belt_breakdown]]
 - [[nairobi_crrc_breakdown]]
 - [[ong_de_gestion_migratoire_survivantes_breakdown]]
 - [[pirates_biologiques_open_source_breakdown]]

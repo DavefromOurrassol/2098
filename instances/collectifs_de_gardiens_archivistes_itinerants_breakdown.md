@@ -45,7 +45,7 @@ alliances:
 - collectif_des_climatologues_sans_etat_breakdown
 - collectifs_de_hackers_archivistes_des_interstices_reseaux_breakdown
 - communautes_religieuses_des_relais_physiques_breakdown
-- communes_rust_belt_breakdown
+- mouvement_des_communes_du_rust_belt_breakdown
 - delta_mekong_racines_breakdown
 - gelecek_meclisi_breakdown
 - institut_des_seuils_demographiques_breakdown
@@ -137,7 +137,7 @@ La tension centrale qui travaille ces collectifs est celle entre la conservation
 - [[collectif_des_climatologues_sans_etat_breakdown]]
 - [[collectifs_de_hackers_archivistes_des_interstices_reseaux_breakdown]]
 - [[communautes_religieuses_des_relais_physiques_breakdown]]
-- [[communes_rust_belt_breakdown]]
+- [[mouvement_des_communes_du_rust_belt_breakdown]]
 - [[delta_mekong_racines_breakdown]]
 - [[gelecek_meclisi_breakdown]]
 - [[institut_des_seuils_demographiques_breakdown]]

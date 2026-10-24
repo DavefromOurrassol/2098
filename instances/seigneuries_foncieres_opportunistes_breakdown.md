@@ -42,8 +42,7 @@ alliances:
 oppositions:
 - bureau_des_territoires_residuels_breakdown
 - communautes_paysannes_refugiees_breakdown
-- communes_rust_belt_breakdown
-- communes_rust_belt_zones_libres_breakdown
+- mouvement_des_communes_du_rust_belt_breakdown
 - consortium_amazonia_viva_breakdown
 - cooperative_terrafond_breakdown
 - delta_mekong_racines_breakdown
@@ -122,8 +121,7 @@ La tension centrale est celle d'une entité qui a besoin de stabilité pour rent
 **Opposants :**
 - [[bureau_des_territoires_residuels_breakdown]]
 - [[communautes_paysannes_refugiees_breakdown]]
-- [[communes_rust_belt_breakdown]]
-- [[communes_rust_belt_zones_libres_breakdown]]
+- [[mouvement_des_communes_du_rust_belt_breakdown]]
 - [[consortium_amazonia_viva_breakdown]]
 - [[cooperative_terrafond_breakdown]]
 - [[delta_mekong_racines_breakdown]]

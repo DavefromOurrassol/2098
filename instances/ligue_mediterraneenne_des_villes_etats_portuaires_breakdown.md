@@ -47,6 +47,7 @@ oppositions:
 - corridor_lithium_bouches_breakdown
 - lagos_est_nexcore_breakdown
 - reseau_logistique_criminel_concurrent_breakdown
+- veilleurs_d_ormuz_breakdown
 type_relation_dominante: coopération
 annee_debut: 2030
 annee_fin: null
@@ -118,6 +119,7 @@ La Ligue est tiraillée entre sa vocation d'espace neutre d'échange et les pres
 - [[corridor_lithium_bouches_breakdown]]
 - [[lagos_est_nexcore_breakdown]]
 - [[reseau_logistique_criminel_concurrent_breakdown]]
+- [[veilleurs_d_ormuz_breakdown]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

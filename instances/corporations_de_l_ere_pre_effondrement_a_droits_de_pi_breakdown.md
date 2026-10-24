@@ -45,7 +45,7 @@ alliances:
 oppositions:
 - collectif_hackers_decroissance_infrastructure_breakdown
 - collectifs_de_hackers_archivistes_des_interstices_reseaux_breakdown
-- communes_rust_belt_breakdown
+- mouvement_des_communes_du_rust_belt_breakdown
 - consortium_africain_de_biotechnologies_sociales_breakdown
 - front_de_resistance_aux_peages_sur_les_ressources_breakdown
 - front_techno_reconstructionniste_breakdown
@@ -127,7 +127,7 @@ La tension centrale est celle de la légitimité : dans un monde où les États 
 **Opposants :**
 - [[collectif_hackers_decroissance_infrastructure_breakdown]]
 - [[collectifs_de_hackers_archivistes_des_interstices_reseaux_breakdown]]
-- [[communes_rust_belt_breakdown]]
+- [[mouvement_des_communes_du_rust_belt_breakdown]]
 - [[consortium_africain_de_biotechnologies_sociales_breakdown]]
 - [[front_de_resistance_aux_peages_sur_les_ressources_breakdown]]
 - [[front_techno_reconstructionniste_breakdown]]

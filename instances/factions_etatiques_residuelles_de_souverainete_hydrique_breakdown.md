@@ -43,7 +43,7 @@ alliances:
 oppositions:
 - amara_diallo_nkosi_breakdown
 - arctic_passage_authority_breakdown
-- communes_rust_belt_breakdown
+- mouvement_des_communes_du_rust_belt_breakdown
 - delta_mekong_racines_breakdown
 - factions_secessionnistes_agrariennes_du_desert_breakdown
 - grandes_lacs_compact_eau_breakdown
@@ -118,7 +118,7 @@ La contradiction fondamentale de ces factions réside dans le fait qu'elles reve
 **Opposants :**
 - [[amara_diallo_nkosi_breakdown]]
 - [[arctic_passage_authority_breakdown]]
-- [[communes_rust_belt_breakdown]]
+- [[mouvement_des_communes_du_rust_belt_breakdown]]
 - [[delta_mekong_racines_breakdown]]
 - [[factions_secessionnistes_agrariennes_du_desert_breakdown]]
 - [[grandes_lacs_compact_eau_breakdown]]

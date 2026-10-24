@@ -48,7 +48,7 @@ alliances:
 - seigneurs_de_guerre_agro_territoriaux_breakdown
 oppositions:
 - collectifs_de_reparation_energetique_breakdown
-- communes_rust_belt_breakdown
+- mouvement_des_communes_du_rust_belt_breakdown
 - factions_militaires_residuelles_de_l_ex_otan_nordique_breakdown
 - federation_communs_territoriaux_breakdown
 - front_techno_reconstructionniste_breakdown
@@ -128,7 +128,7 @@ Le réseau est à la fois prédateur et pourvoyeur : en pillant les ruines indus
 - [[seigneurs_de_guerre_agro_territoriaux_breakdown]]
 **Opposants :**
 - [[collectifs_de_reparation_energetique_breakdown]]
-- [[communes_rust_belt_breakdown]]
+- [[mouvement_des_communes_du_rust_belt_breakdown]]
 - [[factions_militaires_residuelles_de_l_ex_otan_nordique_breakdown]]
 - [[federation_communs_territoriaux_breakdown]]
 - [[front_techno_reconstructionniste_breakdown]]

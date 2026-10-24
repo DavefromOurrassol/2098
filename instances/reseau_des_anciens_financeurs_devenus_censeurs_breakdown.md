@@ -48,7 +48,7 @@ oppositions:
 - archives_neutres_de_geneve_breakdown
 - bureau_des_territoires_residuels_breakdown
 - collectif_des_climatologues_sans_etat_breakdown
-- communes_rust_belt_breakdown
+- mouvement_des_communes_du_rust_belt_breakdown
 - front_de_resistance_aux_peages_sur_les_ressources_breakdown
 - lagos_interieur_mnemos_breakdown
 - reseau_des_cartographes_des_zones_grises_breakdown
@@ -128,7 +128,7 @@ La contradiction fondamentale qui les mine est celle du mécène retourné : leu
 - [[archives_neutres_de_geneve_breakdown]]
 - [[bureau_des_territoires_residuels_breakdown]]
 - [[collectif_des_climatologues_sans_etat_breakdown]]
-- [[communes_rust_belt_breakdown]]
+- [[mouvement_des_communes_du_rust_belt_breakdown]]
 - [[front_de_resistance_aux_peages_sur_les_ressources_breakdown]]
 - [[lagos_interieur_mnemos_breakdown]]
 - [[reseau_des_cartographes_des_zones_grises_breakdown]]

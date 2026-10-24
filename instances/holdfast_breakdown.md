@@ -39,7 +39,7 @@ alliances:
 
 oppositions:
     - federation_communs_territoriaux_breakdown
-    - communes_rust_belt_breakdown
+    - mouvement_des_communes_du_rust_belt_breakdown
     - collectifs_du_seuil_breakdown
 
 type_relation_dominante: conflit
@@ -97,7 +97,7 @@ Holdfasts mythifiés, ces enclaves fortifiées des années 2020-2050 incarnent l
 
 ## Relations
 **Alliés** : _aucun défini_
-**Opposants** : [[federation_communs_territoriaux_breakdown]], [[communes_rust_belt_breakdown]], [[collectifs_du_seuil_breakdown]]
+**Opposants** : [[federation_communs_territoriaux_breakdown]], [[mouvement_des_communes_du_rust_belt_breakdown]], [[collectifs_du_seuil_breakdown]]
 
 ## Description journalistique
 Dans les années 2040, alors que les mégapoles s'effondraient sous le poids des pénuries et des conflits, une poignée d'ultra-riches et de technocrates ont cru pouvoir acheter leur salut en s'enfermant dans des forteresses high-tech. Ces 'Citadelles', comme on les appelait alors, étaient des îlots d'abondance où l'eau coulait à flots, l'électricité ne manquait jamais, et les drones patrouillaient jour et nuit. Aujourd'hui, en 2098, leurs murs lézardés abritent des squats de réfugiés ou des bases pour milices locales. Les rares archives qui en subsistent sont devenues des objets de fascination morbide, comme les reliques d'une époque où l'on croyait encore que la survie était une question de murs et de privilèges.

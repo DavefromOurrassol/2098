@@ -53,8 +53,7 @@ oppositions:
 - coalition_vivant_breakdown
 - collectif_hackers_decroissance_infrastructure_breakdown
 - collectifs_de_reparation_energetique_breakdown
-- communes_rust_belt_breakdown
-- communes_rust_belt_zones_libres_breakdown
+- mouvement_des_communes_du_rust_belt_breakdown
 - consortium_africain_de_biotechnologies_sociales_breakdown
 - consortium_amazonia_viva_breakdown
 - consortium_des_pecheries_autonomes_du_grand_nord_breakdown
@@ -68,7 +67,6 @@ oppositions:
 - ligue_des_cites_du_sahel_numerique_breakdown
 - ligue_des_cites_littorales_en_sursis_breakdown
 - milices_de_controle_territorial_breakdown
-- mouvement_des_communes_du_rust_belt_breakdown
 - oracle_des_seuils_breakdown
 - pirates_biologiques_open_source_breakdown
 - reseaux_de_soigneurs_traditionnels_breakdown
@@ -153,8 +151,7 @@ La légitimité des enclaves repose entièrement sur leur capacité à maintenir
 - [[coalition_vivant_breakdown]]
 - [[collectif_hackers_decroissance_infrastructure_breakdown]]
 - [[collectifs_de_reparation_energetique_breakdown]]
-- [[communes_rust_belt_breakdown]]
-- [[communes_rust_belt_zones_libres_breakdown]]
+- [[mouvement_des_communes_du_rust_belt_breakdown]]
 - [[consortium_africain_de_biotechnologies_sociales_breakdown]]
 - [[consortium_amazonia_viva_breakdown]]
 - [[consortium_des_pecheries_autonomes_du_grand_nord_breakdown]]
@@ -168,7 +165,6 @@ La légitimité des enclaves repose entièrement sur leur capacité à maintenir
 - [[ligue_des_cites_du_sahel_numerique_breakdown]]
 - [[ligue_des_cites_littorales_en_sursis_breakdown]]
 - [[milices_de_controle_territorial_breakdown]]
-- [[mouvement_des_communes_du_rust_belt_breakdown]]
 - [[oracle_des_seuils_breakdown]]
 - [[pirates_biologiques_open_source_breakdown]]
 - [[reseaux_de_soigneurs_traditionnels_breakdown]]

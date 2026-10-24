@@ -35,7 +35,7 @@ zone_geographique:
 zone_systemique:
 - société
 alliances:
-- communes_rust_belt_zones_libres_breakdown
+- mouvement_des_communes_du_rust_belt_breakdown
 oppositions:
 - agadez_ligue_sahel_numerique_breakdown
 - deepfield_institute_breakdown
@@ -109,7 +109,7 @@ La contradiction fondamentale qui ronge les Fronts est leur dépendance aux rés
 
 ## Relations
 **Alliés :**
-- [[communes_rust_belt_zones_libres_breakdown]]
+- [[mouvement_des_communes_du_rust_belt_breakdown]]
 **Opposants :**
 - [[agadez_ligue_sahel_numerique_breakdown]]
 - [[deepfield_institute_breakdown]]

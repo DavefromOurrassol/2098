@@ -35,6 +35,7 @@ zone_geographique:
 zone_systemique:
 - société
 alliances:
+- alliance_des_ports_caspiennes_breakdown
 - collectifs_de_hackers_archivistes_des_interstices_reseaux_breakdown
 - conglometrat_sino_siberien_bohai_transit_breakdown
 - consortium_energetique_oural_caspien_breakdown
@@ -44,6 +45,7 @@ alliances:
 - milices_privees_documentees_terrain_breakdown
 - reseau_des_courriers_nomades_sahelo_mediterraneens_breakdown
 - vasil_orentchev_breakdown
+- veilleurs_d_ormuz_breakdown
 oppositions:
 - armada_logistique_nordique_breakdown
 - factions_paramilitaires_locales_neutralisees_breakdown
@@ -110,6 +112,7 @@ Ces réseaux sont prisonniers d'une loyauté orpheline : ils perpétuent les cod
 
 ## Relations
 **Alliés :**
+- [[alliance_des_ports_caspiennes_breakdown]]
 - [[collectifs_de_hackers_archivistes_des_interstices_reseaux_breakdown]]
 - [[conglometrat_sino_siberien_bohai_transit_breakdown]]
 - [[consortium_energetique_oural_caspien_breakdown]]
@@ -119,6 +122,7 @@ Ces réseaux sont prisonniers d'une loyauté orpheline : ils perpétuent les cod
 - [[milices_privees_documentees_terrain_breakdown]]
 - [[reseau_des_courriers_nomades_sahelo_mediterraneens_breakdown]]
 - [[vasil_orentchev_breakdown]]
+- [[veilleurs_d_ormuz_breakdown]]
 **Opposants :**
 - [[armada_logistique_nordique_breakdown]]
 - [[factions_paramilitaires_locales_neutralisees_breakdown]]

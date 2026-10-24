@@ -38,7 +38,7 @@ zone_systemique:
 alliances:
 - arctique_nordark_breakdown
 - collectif_hackers_decroissance_infrastructure_breakdown
-- communes_rust_belt_zones_libres_breakdown
+- mouvement_des_communes_du_rust_belt_breakdown
 - consortium_amazonia_viva_breakdown
 - factions_secessionnistes_agrariennes_du_desert_breakdown
 - oracle_des_seuils_breakdown
@@ -102,7 +102,7 @@ La fracture entre les factions 'attentistes' qui refusent toute action offensive
 **Alliés :**
 - [[arctique_nordark_breakdown]]
 - [[collectif_hackers_decroissance_infrastructure_breakdown]]
-- [[communes_rust_belt_zones_libres_breakdown]]
+- [[mouvement_des_communes_du_rust_belt_breakdown]]
 - [[consortium_amazonia_viva_breakdown]]
 - [[factions_secessionnistes_agrariennes_du_desert_breakdown]]
 - [[oracle_des_seuils_breakdown]]

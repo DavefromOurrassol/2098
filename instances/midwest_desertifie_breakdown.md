@@ -38,10 +38,9 @@ alliances:
 - brigades_medicales_itinerantes_breakdown
 - gouvernements_regionaux_residuels_reterritorialisants_breakdown
 - grandes_lacs_compact_eau_breakdown
-- mouvement_des_communes_du_rust_belt_breakdown
 - ong_de_gestion_migratoire_survivantes_breakdown
 oppositions:
-- communes_rust_belt_breakdown
+- mouvement_des_communes_du_rust_belt_breakdown
 - enclaves_technologiques_survivantes_breakdown
 - factions_para_etatiques_hydriques_breakdown
 - factions_secessionnistes_agrariennes_du_desert_breakdown
@@ -105,10 +104,9 @@ La tension centrale est celle d'une institution qui ne peut survivre qu'en négo
 - [[brigades_medicales_itinerantes_breakdown]]
 - [[gouvernements_regionaux_residuels_reterritorialisants_breakdown]]
 - [[grandes_lacs_compact_eau_breakdown]]
-- [[mouvement_des_communes_du_rust_belt_breakdown]]
 - [[ong_de_gestion_migratoire_survivantes_breakdown]]
 **Opposants :**
-- [[communes_rust_belt_breakdown]]
+- [[mouvement_des_communes_du_rust_belt_breakdown]]
 - [[enclaves_technologiques_survivantes_breakdown]]
 - [[factions_para_etatiques_hydriques_breakdown]]
 - [[factions_secessionnistes_agrariennes_du_desert_breakdown]]

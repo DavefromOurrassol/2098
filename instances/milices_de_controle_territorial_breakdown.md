@@ -51,6 +51,7 @@ alliances:
 - seigneurs_de_guerre_agro_territoriaux_breakdown
 oppositions:
 - agadez_ligue_sahel_numerique_breakdown
+- alliance_des_ports_caspiennes_breakdown
 - archives_neutres_de_geneve_breakdown
 - blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown
 - brigades_medicales_itinerantes_breakdown
@@ -60,8 +61,6 @@ oppositions:
 - collectifs_de_sante_communautaire_autogeree_breakdown
 - communautes_paysannes_refugiees_breakdown
 - communautes_religieuses_des_relais_physiques_breakdown
-- communes_rust_belt_breakdown
-- communes_rust_belt_zones_libres_breakdown
 - corridor_lithium_bouches_breakdown
 - corridors_eurasiens_convoyage_breakdown
 - elias_mork_breakdown
@@ -166,6 +165,7 @@ La tension fondamentale de ces milices réside dans leur double nature : porteus
 - [[seigneurs_de_guerre_agro_territoriaux_breakdown]]
 **Opposants :**
 - [[agadez_ligue_sahel_numerique_breakdown]]
+- [[alliance_des_ports_caspiennes_breakdown]]
 - [[archives_neutres_de_geneve_breakdown]]
 - [[blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown]]
 - [[brigades_medicales_itinerantes_breakdown]]
@@ -175,8 +175,6 @@ La tension fondamentale de ces milices réside dans leur double nature : porteus
 - [[collectifs_de_sante_communautaire_autogeree_breakdown]]
 - [[communautes_paysannes_refugiees_breakdown]]
 - [[communautes_religieuses_des_relais_physiques_breakdown]]
-- [[communes_rust_belt_breakdown]]
-- [[communes_rust_belt_zones_libres_breakdown]]
 - [[corridor_lithium_bouches_breakdown]]
 - [[corridors_eurasiens_convoyage_breakdown]]
 - [[elias_mork_breakdown]]

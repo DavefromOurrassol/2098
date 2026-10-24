@@ -37,8 +37,7 @@ zone_systemique:
 alliances:
 - assemblee_territoires_breakdown
 - collectifs_de_reparation_energetique_breakdown
-- communes_rust_belt_breakdown
-- communes_rust_belt_zones_libres_breakdown
+- mouvement_des_communes_du_rust_belt_breakdown
 - consortium_amazonia_viva_breakdown
 - delta_mekong_racines_breakdown
 - frente_sertao_livre_breakdown
@@ -48,7 +47,6 @@ alliances:
 - ligue_des_cites_littorales_en_sursis_breakdown
 - massif_central_cicatrices_vertes_breakdown
 - milices_agro_defensives_locales_breakdown
-- mouvement_des_communes_du_rust_belt_breakdown
 - noeud_mnemos_pannonie_breakdown
 - occitanie_racines_meres_breakdown
 - vallee_allier_terrafond_breakdown
@@ -116,8 +114,7 @@ Qui détient la légitimité du nom 'CBV' quand deux bassins voisins entrent en 
 **Alliés :**
 - [[assemblee_territoires_breakdown]]
 - [[collectifs_de_reparation_energetique_breakdown]]
-- [[communes_rust_belt_breakdown]]
-- [[communes_rust_belt_zones_libres_breakdown]]
+- [[mouvement_des_communes_du_rust_belt_breakdown]]
 - [[consortium_amazonia_viva_breakdown]]
 - [[delta_mekong_racines_breakdown]]
 - [[frente_sertao_livre_breakdown]]
@@ -127,7 +124,6 @@ Qui détient la légitimité du nom 'CBV' quand deux bassins voisins entrent en 
 - [[ligue_des_cites_littorales_en_sursis_breakdown]]
 - [[massif_central_cicatrices_vertes_breakdown]]
 - [[milices_agro_defensives_locales_breakdown]]
-- [[mouvement_des_communes_du_rust_belt_breakdown]]
 - [[noeud_mnemos_pannonie_breakdown]]
 - [[occitanie_racines_meres_breakdown]]
 - [[vallee_allier_terrafond_breakdown]]

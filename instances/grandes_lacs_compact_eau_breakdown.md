@@ -40,7 +40,6 @@ zone_systemique:
 
 alliances:
 - cites_etats_secessionistes_breakdown
-- communes_rust_belt_breakdown
 - hanse_baltique_recomposee_breakdown
 - midwest_desertifie_breakdown
 - milices_contractuelles_des_anciens_etats_membres_breakdown
@@ -112,7 +111,6 @@ La cohésion interne du Compact commence à se fissurer : des factions membres d
 ## Relations
 **Alliés :**
 - [[cites_etats_secessionistes_breakdown]]
-- [[communes_rust_belt_breakdown]]
 - [[hanse_baltique_recomposee_breakdown]]
 - [[midwest_desertifie_breakdown]]
 - [[milices_contractuelles_des_anciens_etats_membres_breakdown]]

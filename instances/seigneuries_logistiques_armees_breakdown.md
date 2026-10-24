@@ -57,6 +57,7 @@ alliances:
 oppositions:
 - agadez_ligue_sahel_numerique_breakdown
 - agence_de_regulation_des_detroits_strategiques_ards_breakdown
+- alliance_des_ports_caspiennes_breakdown
 - amara_diallo_nkosi_breakdown
 - archives_neutres_de_geneve_breakdown
 - arctic_passage_authority_breakdown
@@ -68,8 +69,6 @@ oppositions:
 - collectifs_de_reparation_energetique_breakdown
 - collectifs_de_sante_communautaire_autogeree_breakdown
 - communautes_religieuses_des_relais_physiques_breakdown
-- communes_rust_belt_breakdown
-- communes_rust_belt_zones_libres_breakdown
 - consortium_des_pecheries_autonomes_du_grand_nord_breakdown
 - district_mourmansk_residuel_breakdown
 - elias_mork_breakdown
@@ -186,6 +185,7 @@ Elles sont structurellement condamnées à étendre leur territoire pour rester 
 **Opposants :**
 - [[agadez_ligue_sahel_numerique_breakdown]]
 - [[agence_de_regulation_des_detroits_strategiques_ards_breakdown]]
+- [[alliance_des_ports_caspiennes_breakdown]]
 - [[amara_diallo_nkosi_breakdown]]
 - [[archives_neutres_de_geneve_breakdown]]
 - [[arctic_passage_authority_breakdown]]
@@ -197,8 +197,6 @@ Elles sont structurellement condamnées à étendre leur territoire pour rester 
 - [[collectifs_de_reparation_energetique_breakdown]]
 - [[collectifs_de_sante_communautaire_autogeree_breakdown]]
 - [[communautes_religieuses_des_relais_physiques_breakdown]]
-- [[communes_rust_belt_breakdown]]
-- [[communes_rust_belt_zones_libres_breakdown]]
 - [[consortium_des_pecheries_autonomes_du_grand_nord_breakdown]]
 - [[district_mourmansk_residuel_breakdown]]
 - [[elias_mork_breakdown]]

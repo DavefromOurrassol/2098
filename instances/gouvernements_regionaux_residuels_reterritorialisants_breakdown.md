@@ -49,11 +49,10 @@ oppositions:
 - bureau_des_territoires_residuels_breakdown
 - cartels_logistiques_regionaux_breakdown
 - collectifs_du_seuil_breakdown
-- communes_rust_belt_zones_libres_breakdown
+- mouvement_des_communes_du_rust_belt_breakdown
 - etats_fragments_en_guerre_pour_les_stations_atmospheriques_breakdown
 - factions_secessionnistes_agrariennes_du_desert_breakdown
 - milices_de_controle_territorial_breakdown
-- mouvement_des_communes_du_rust_belt_breakdown
 - seigneuries_logistiques_armees_breakdown
 - seigneurs_de_guerre_agro_territoriaux_breakdown
 - vallee_allier_terrafond_breakdown
@@ -131,11 +130,10 @@ Tiraillés entre leur prétention à la légalité et la réalité de leur survi
 - [[bureau_des_territoires_residuels_breakdown]]
 - [[cartels_logistiques_regionaux_breakdown]]
 - [[collectifs_du_seuil_breakdown]]
-- [[communes_rust_belt_zones_libres_breakdown]]
+- [[mouvement_des_communes_du_rust_belt_breakdown]]
 - [[etats_fragments_en_guerre_pour_les_stations_atmospheriques_breakdown]]
 - [[factions_secessionnistes_agrariennes_du_desert_breakdown]]
 - [[milices_de_controle_territorial_breakdown]]
-- [[mouvement_des_communes_du_rust_belt_breakdown]]
 - [[seigneuries_logistiques_armees_breakdown]]
 - [[seigneurs_de_guerre_agro_territoriaux_breakdown]]
 - [[vallee_allier_terrafond_breakdown]]

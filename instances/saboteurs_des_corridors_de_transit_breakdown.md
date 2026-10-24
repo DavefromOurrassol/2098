@@ -41,7 +41,7 @@ alliances:
 - front_de_resistance_aux_peages_sur_les_ressources_breakdown
 - reseaux_de_solidarite_horizontale_post_effondrement_breakdown
 oppositions:
-- arctic_passage_authority_breakdown
+- alliance_des_ports_caspiennes_breakdown
 - arctic_passage_authority_breakdown
 - blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown
 - cargo_mombasa_crrc_breakdown
@@ -63,6 +63,7 @@ oppositions:
 - noeud_nordark_tromso_breakdown
 - seigneuries_logistiques_armees_breakdown
 - trame_bioclimatique_breakdown
+- veilleurs_d_ormuz_breakdown
 type_relation_dominante: conflit
 annee_debut: 2044
 annee_fin: null
@@ -131,7 +132,7 @@ Leur résistance diffuse accélère l'effondrement qu'ils subissent eux-mêmes :
 - [[front_de_resistance_aux_peages_sur_les_ressources_breakdown]]
 - [[reseaux_de_solidarite_horizontale_post_effondrement_breakdown]]
 **Opposants :**
-- [[arctic_passage_authority_breakdown]]
+- [[alliance_des_ports_caspiennes_breakdown]]
 - [[arctic_passage_authority_breakdown]]
 - [[blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown]]
 - [[cargo_mombasa_crrc_breakdown]]
@@ -153,6 +154,7 @@ Leur résistance diffuse accélère l'effondrement qu'ils subissent eux-mêmes :
 - [[noeud_nordark_tromso_breakdown]]
 - [[seigneuries_logistiques_armees_breakdown]]
 - [[trame_bioclimatique_breakdown]]
+- [[veilleurs_d_ormuz_breakdown]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

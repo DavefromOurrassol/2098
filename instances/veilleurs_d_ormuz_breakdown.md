@@ -35,15 +35,14 @@ zone_systemique:
     - sécurité
 
 alliances:
-    - consortium_energetique_oural_caspien_breakdown
-    - reseaux_de_renseignement_informels_issus_de_l_ancienne_structure_militaire_eurasienne_breakdown
-    - corridors_eurasiens_convoyage_breakdown
-
+- alliance_des_ports_caspiennes_breakdown
+- consortium_energetique_oural_caspien_breakdown
+- corridors_eurasiens_convoyage_breakdown
+- reseaux_de_renseignement_informels_issus_de_l_ancienne_structure_militaire_eurasienne_breakdown
 oppositions:
-    - ligue_mediterraneenne_des_villes_etats_portuaires_breakdown
-    - cartels_logistiques_regionaux_breakdown
-    - saboteurs_des_corridors_de_transit_breakdown
-
+- cartels_logistiques_regionaux_breakdown
+- ligue_mediterraneenne_des_villes_etats_portuaires_breakdown
+- saboteurs_des_corridors_de_transit_breakdown
 type_relation_dominante: dépendance
 
 annee_debut: 2041
@@ -101,8 +100,15 @@ Contrôle physique et numérique des navires transitant par Ormuz : vérificatio
 - [[organisation_territoires]]
 
 ## Relations
-**Alliés** : [[consortium_energetique_oural_caspien_breakdown]], [[reseaux_de_renseignement_informels_issus_de_l_ancienne_structure_militaire_eurasienne_breakdown]], [[corridors_eurasiens_convoyage_breakdown]]
-**Opposants** : [[ligue_mediterraneenne_des_villes_etats_portuaires_breakdown]], [[cartels_logistiques_regionaux_breakdown]], [[saboteurs_des_corridors_de_transit_breakdown]]
+**Alliés :**
+- [[alliance_des_ports_caspiennes_breakdown]]
+- [[consortium_energetique_oural_caspien_breakdown]]
+- [[corridors_eurasiens_convoyage_breakdown]]
+- [[reseaux_de_renseignement_informels_issus_de_l_ancienne_structure_militaire_eurasienne_breakdown]]
+**Opposants :**
+- [[cartels_logistiques_regionaux_breakdown]]
+- [[ligue_mediterraneenne_des_villes_etats_portuaires_breakdown]]
+- [[saboteurs_des_corridors_de_transit_breakdown]]
 
 ## Description journalistique
 Depuis le port fantôme de Bandar Abbas, les Veilleurs d'Ormuz règnent sur les épaves et les tankers immobilisés. Leurs uniformes hybrides – treillis soviétiques recyclés, gilets pare-balles imprimés en 3D, masques à gaz artisanaux – trahissent une organisation née des ruines. Les péages, payables en yuans ou en tokens énergétiques, sont affichés sur des écrans rouillés : 50 000 $ pour un pétrolier, 10 000 $ pour un cargo de lithium. Les drones sous-marins, récupérés sur d'anciennes bases de l'OTAN, traquent les contrebandiers. Leur slogan, gravé sur les quais : 'Ormuz n'appartient à personne, mais nous en sommes les gardiens'.

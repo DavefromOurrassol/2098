@@ -37,6 +37,7 @@ zone_systemique:
     - société
 
 alliances:
+- alliance_des_ports_caspiennes_breakdown
 - brigades_medicales_itinerantes_breakdown
 - communautes_religieuses_des_relais_physiques_breakdown
 - conglometrat_sino_siberien_bohai_transit_breakdown
@@ -45,6 +46,7 @@ alliances:
 - noeud_mnemos_pannonie_breakdown
 - reseau_des_courriers_nomades_sahelo_mediterraneens_breakdown
 - seigneuries_logistiques_armees_breakdown
+- veilleurs_d_ormuz_breakdown
 oppositions:
 - blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown
 - collectif_hackers_decroissance_infrastructure_breakdown
@@ -108,6 +110,7 @@ La tension centrale des Venelles est structurelle et inexorable : plus le résea
 
 ## Relations
 **Alliés :**
+- [[alliance_des_ports_caspiennes_breakdown]]
 - [[brigades_medicales_itinerantes_breakdown]]
 - [[communautes_religieuses_des_relais_physiques_breakdown]]
 - [[conglometrat_sino_siberien_bohai_transit_breakdown]]
@@ -116,6 +119,7 @@ La tension centrale des Venelles est structurelle et inexorable : plus le résea
 - [[noeud_mnemos_pannonie_breakdown]]
 - [[reseau_des_courriers_nomades_sahelo_mediterraneens_breakdown]]
 - [[seigneuries_logistiques_armees_breakdown]]
+- [[veilleurs_d_ormuz_breakdown]]
 **Opposants :**
 - [[blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown]]
 - [[collectif_hackers_decroissance_infrastructure_breakdown]]
