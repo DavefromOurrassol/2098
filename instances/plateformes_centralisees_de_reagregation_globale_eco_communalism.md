@@ -57,7 +57,7 @@ oppositions:
 - reseaux_de_reconstruction_cooperative_inter_communautes_eco_communalism
 - sao_paulo_algorithmique_eco_communalism
 - tampere_charte_eco_communalism
-- trame_mnemos_noeud_reseau_eco_communalism
+- reseau_mnemos_eco_communalism
 - tribunal_algorithmique_de_bruxelles_eco_communalism
 - universite_nomade_eco_communalism
 - zones_extractivistes_corridors_eco_communalism
@@ -151,7 +151,7 @@ La tension fondamentale réside dans leur double nature : outils de dépendance 
 - [[reseaux_de_reconstruction_cooperative_inter_communautes_eco_communalism]]
 - [[sao_paulo_algorithmique_eco_communalism]]
 - [[tampere_charte_eco_communalism]]
-- [[trame_mnemos_noeud_reseau_eco_communalism]]
+- [[reseau_mnemos_eco_communalism]]
 - [[tribunal_algorithmique_de_bruxelles_eco_communalism]]
 - [[universite_nomade_eco_communalism]]
 - [[zones_extractivistes_corridors_eco_communalism]]

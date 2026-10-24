@@ -54,7 +54,7 @@ alliances:
 - reseaux_de_bibliotheques_archives_communautaires_eco_communalism
 - reseaux_de_reconstruction_cooperative_inter_communautes_eco_communalism
 - tampere_charte_eco_communalism
-- trame_mnemos_noeud_reseau_eco_communalism
+- reseau_mnemos_eco_communalism
 - tresse_verte_corridor_eco_communalism
 - tribunal_algorithmique_de_bruxelles_eco_communalism
 - zones_extractivistes_corridors_eco_communalism
@@ -154,7 +154,7 @@ La tension centrale des Cercles réside dans leur absence d'autorité coercitive
 - [[reseaux_de_bibliotheques_archives_communautaires_eco_communalism]]
 - [[reseaux_de_reconstruction_cooperative_inter_communautes_eco_communalism]]
 - [[tampere_charte_eco_communalism]]
-- [[trame_mnemos_noeud_reseau_eco_communalism]]
+- [[reseau_mnemos_eco_communalism]]
 - [[tresse_verte_corridor_eco_communalism]]
 - [[tribunal_algorithmique_de_bruxelles_eco_communalism]]
 - [[zones_extractivistes_corridors_eco_communalism]]

@@ -55,7 +55,7 @@ oppositions:
 - reseau_terrafond_bassins_eco_communalism
 - reseaux_de_reconstruction_cooperative_inter_communautes_eco_communalism
 - tampere_charte_eco_communalism
-- trame_mnemos_noeud_reseau_eco_communalism
+- reseau_mnemos_eco_communalism
 - tresse_verte_corridor_eco_communalism
 type_relation_dominante: conflit
 annee_debut: 2047
@@ -147,7 +147,7 @@ La tension centrale réside dans la contradiction performative du réseau lui-m�
 - [[reseau_terrafond_bassins_eco_communalism]]
 - [[reseaux_de_reconstruction_cooperative_inter_communautes_eco_communalism]]
 - [[tampere_charte_eco_communalism]]
-- [[trame_mnemos_noeud_reseau_eco_communalism]]
+- [[reseau_mnemos_eco_communalism]]
 - [[tresse_verte_corridor_eco_communalism]]
 
 ## Notes

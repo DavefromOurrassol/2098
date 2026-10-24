@@ -31,7 +31,6 @@ zone_principale: congo_bassin_du_fleuve
 date_publication: 12 novembre 2098
 entites_citees:
   - reseau_mnemos_eco_communalism
-  - trame_mnemos_noeud_reseau_eco_communalism
 articles_lies:
   - le_secret_de_m_bokolo_a_126_ans_le_doyen_de_l_humanite_defie_les_lois_de_la_mede
   - yaripa_a_voz_da_floresta_reseau_la_gazette_des_communs
@@ -61,4 +60,4 @@ A presença de Mawungu no *Encontro de Sangue Novo* de dezembro próximo, em Bra
 Mas a pergunta que silencia até os Veilleurs é outra: se Mawungu viver até 2099, o que ele trará consigo do futuro?
 
 ---
-**Voir aussi** : [[reseau_mnemos_eco_communalism]] · [[trame_mnemos_noeud_reseau_eco_communalism]] · [[le_secret_de_m_bokolo_a_126_ans_le_doyen_de_l_humanite_defie_les_lois_de_la_mede]] · [[yaripa_a_voz_da_floresta_reseau_la_gazette_des_communs]] · [[yawara_i_tukano_ita_ae]]
+**Voir aussi** : [[reseau_mnemos_eco_communalism]] · [[le_secret_de_m_bokolo_a_126_ans_le_doyen_de_l_humanite_defie_les_lois_de_la_mede]] · [[yaripa_a_voz_da_floresta_reseau_la_gazette_des_communs]] · [[yawara_i_tukano_ita_ae]]

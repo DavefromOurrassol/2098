@@ -59,7 +59,7 @@ oppositions:
 - reseaux_de_radio_communautaire_basse_consommation_eco_communalism
 - reseaux_de_reconstruction_cooperative_inter_communautes_eco_communalism
 - terminal_kharg_data_haven_eco_communalism
-- trame_mnemos_noeud_reseau_eco_communalism
+- reseau_mnemos_eco_communalism
 - universite_nomade_eco_communalism
 - voix_du_dehors_eco_communalism
 type_relation_dominante: conflit
@@ -161,7 +161,7 @@ Le paradoxe central du courant réside dans son instrumentalisation de la rhéto
 - [[reseaux_de_radio_communautaire_basse_consommation_eco_communalism]]
 - [[reseaux_de_reconstruction_cooperative_inter_communautes_eco_communalism]]
 - [[terminal_kharg_data_haven_eco_communalism]]
-- [[trame_mnemos_noeud_reseau_eco_communalism]]
+- [[reseau_mnemos_eco_communalism]]
 - [[universite_nomade_eco_communalism]]
 - [[voix_du_dehors_eco_communalism]]
 

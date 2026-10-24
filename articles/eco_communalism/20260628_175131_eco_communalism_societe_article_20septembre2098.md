@@ -34,7 +34,6 @@ entites_citees:
   - ligue_des_cites_du_sahel_numerique_eco_communalism
   - prisme_global_eco_communalism
   - reseau_mnemos_eco_communalism
-  - trame_mnemos_noeud_reseau_eco_communalism
   - universite_nomade_eco_communalism
   - voix_du_dehors_eco_communalism
   - alliance_blocs_souverains_reference
@@ -61,4 +60,4 @@ Et pendant ce temps, le désert avance. Les plateaux désertés craquent sous le
 Le Collectif a choisi son terrain de lutte : *-là où le vivant résiste encore*.
 
 ---
-**Voir aussi** : [[assemblees_de_bassin_versant_eco_communalism]] · [[ligue_des_cites_du_sahel_numerique_eco_communalism]] · [[prisme_global_eco_communalism]] · [[reseau_mnemos_eco_communalism]] · [[trame_mnemos_noeud_reseau_eco_communalism]] · [[universite_nomade_eco_communalism]] · [[voix_du_dehors_eco_communalism]] · [[alliance_blocs_souverains_reference]] · [[kharg_9_le_coffre_fort_des_communs_devient_un_supermarche_des_donnees]] · [[le_secret_de_m_bokolo_a_126_ans_le_doyen_de_l_humanite_defie_les_lois_de_la_mede]] · [[le_meclis_des_futurs_fragmentes_une_agora_sans_murs_pour_un_monde_sans_centre]]
+**Voir aussi** : [[assemblees_de_bassin_versant_eco_communalism]] · [[ligue_des_cites_du_sahel_numerique_eco_communalism]] · [[prisme_global_eco_communalism]] · [[reseau_mnemos_eco_communalism]] · [[universite_nomade_eco_communalism]] · [[voix_du_dehors_eco_communalism]] · [[alliance_blocs_souverains_reference]] · [[kharg_9_le_coffre_fort_des_communs_devient_un_supermarche_des_donnees]] · [[le_secret_de_m_bokolo_a_126_ans_le_doyen_de_l_humanite_defie_les_lois_de_la_mede]] · [[le_meclis_des_futurs_fragmentes_une_agora_sans_murs_pour_un_monde_sans_centre]]

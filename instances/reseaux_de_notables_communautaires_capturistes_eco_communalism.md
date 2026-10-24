@@ -69,7 +69,7 @@ oppositions:
 - reseaux_de_reconstruction_cooperative_inter_communautes_eco_communalism
 - reseaux_de_troc_inter_cooperatives_et_marges_periurbaines_eco_communalism
 - sao_paulo_algorithmique_eco_communalism
-- trame_mnemos_noeud_reseau_eco_communalism
+- reseau_mnemos_eco_communalism
 - tresse_verte_corridor_eco_communalism
 - tribunal_algorithmique_de_bruxelles_eco_communalism
 - universite_nomade_eco_communalism
@@ -182,7 +182,7 @@ La tension centrale est celle de la légitimité mimétique : ces notables parle
 - [[reseaux_de_reconstruction_cooperative_inter_communautes_eco_communalism]]
 - [[reseaux_de_troc_inter_cooperatives_et_marges_periurbaines_eco_communalism]]
 - [[sao_paulo_algorithmique_eco_communalism]]
-- [[trame_mnemos_noeud_reseau_eco_communalism]]
+- [[reseau_mnemos_eco_communalism]]
 - [[tresse_verte_corridor_eco_communalism]]
 - [[tribunal_algorithmique_de_bruxelles_eco_communalism]]
 - [[universite_nomade_eco_communalism]]

@@ -37,7 +37,6 @@ entites_citees:
   - guildes_de_mediateurs_ecologiques_eco_communalism
   - le_temoin_eco_communalism
   - reseau_mnemos_eco_communalism
-  - trame_mnemos_noeud_reseau_eco_communalism
 articles_lies:
   - kharg_9_le_coffre_fort_des_communs_devient_un_supermarche_des_donnees
   - le_secret_de_m_bokolo_a_126_ans_le_doyen_de_l_humanite_defie_les_lois_de_la_mede
@@ -89,4 +88,4 @@ Pourtant, les défis restent immenses. Comment faire face à la montée des *Fac
 « Le Meclis n’est pas une solution magique », conclut Al-Mansouri. « C’est un miroir. Il reflète les tensions de notre époque, mais aussi notre capacité à les surmonter, ne serait-ce que partiellement. » Dans un monde où les États ont cédé la place à des milliers de communs autonomes, cette capacité à dialoguer – même imparfaitement – est peut-être ce qui sépare encore la coopération de la guerre.
 
 ---
-**Voir aussi** : [[collectifs_de_geo_observateurs_citoyens_eco_communalism]] · [[gelecek_meclisi_eco_communalism]] · [[guildes_de_mediateurs_ecologiques_eco_communalism]] · [[le_temoin_eco_communalism]] · [[reseau_mnemos_eco_communalism]] · [[trame_mnemos_noeud_reseau_eco_communalism]] · [[kharg_9_le_coffre_fort_des_communs_devient_un_supermarche_des_donnees]] · [[le_secret_de_m_bokolo_a_126_ans_le_doyen_de_l_humanite_defie_les_lois_de_la_mede]] · [[les_sillons_de_la_terre_comment_les_sans_terres_du_massif_central_forcent_l_hist]]
+**Voir aussi** : [[collectifs_de_geo_observateurs_citoyens_eco_communalism]] · [[gelecek_meclisi_eco_communalism]] · [[guildes_de_mediateurs_ecologiques_eco_communalism]] · [[le_temoin_eco_communalism]] · [[reseau_mnemos_eco_communalism]] · [[kharg_9_le_coffre_fort_des_communs_devient_un_supermarche_des_donnees]] · [[le_secret_de_m_bokolo_a_126_ans_le_doyen_de_l_humanite_defie_les_lois_de_la_mede]] · [[les_sillons_de_la_terre_comment_les_sans_terres_du_massif_central_forcent_l_hist]]

@@ -50,7 +50,6 @@ oppositions:
 - reseau_mnemos_eco_communalism
 - reseaux_de_bibliotheques_archives_communautaires_eco_communalism
 - reseaux_de_radio_communautaire_basse_consommation_eco_communalism
-- trame_mnemos_noeud_reseau_eco_communalism
 - universite_nomade_eco_communalism
 - voix_du_dehors_eco_communalism
 type_relation_dominante: conflit
@@ -136,7 +135,6 @@ Leur refus radical du partage narratif les prive des ressources collectives de m
 - [[reseau_mnemos_eco_communalism]]
 - [[reseaux_de_bibliotheques_archives_communautaires_eco_communalism]]
 - [[reseaux_de_radio_communautaire_basse_consommation_eco_communalism]]
-- [[trame_mnemos_noeud_reseau_eco_communalism]]
 - [[universite_nomade_eco_communalism]]
 - [[voix_du_dehors_eco_communalism]]
 

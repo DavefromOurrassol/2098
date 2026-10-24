@@ -33,7 +33,6 @@ entites_citees:
   - consortium_amazonia_viva_eco_communalism
   - consortium_africain_de_biotechnologies_sociales_eco_communalism
   - reseau_mnemos_eco_communalism
-  - trame_mnemos_noeud_reseau_eco_communalism
 articles_lies:
   - a_126_ans_maman_elikya_oblige_la_sante_des_communs_a_regarder_ses_fractures
   - mokele_126_ans_le_secret_des_eaux_vives
@@ -59,4 +58,4 @@ Pourtant, dans les marges de l’étude, une tension gronde. Le Consortium Médi
 Ce qui fascine le plus, ce n’est pas l’âge de Miquel Ndong Ayissi, mais l’onde de choc qu’il provoque. Dans les Communes du Pool, on entend déjà : *« Moi, je veux vivre cent trente ans, mais pas comme un fantôme technique. »* Entre les allées des jardins partagés où l’on cultive des plantes médicinales oubliées depuis l’effondrement des chaînes globales, et les ateliers de réparation de respirateurs solaires, une nouvelle forme d’espérance de vie émerge : lente, collective, et *gardienne*.
 
 ---
-**Voir aussi** : [[consortium_amazonia_viva_eco_communalism]] · [[consortium_africain_de_biotechnologies_sociales_eco_communalism]] · [[consortium_amazonia_viva_eco_communalism]] · [[reseau_mnemos_eco_communalism]] · [[trame_mnemos_noeud_reseau_eco_communalism]] · [[a_126_ans_maman_elikya_oblige_la_sante_des_communs_a_regarder_ses_fractures]] · [[mokele_126_ans_le_secret_des_eaux_vives]] · [[kharg_9_le_coffre_fort_des_communs_devient_un_supermarche_des_donnees]]
+**Voir aussi** : [[consortium_amazonia_viva_eco_communalism]] · [[consortium_africain_de_biotechnologies_sociales_eco_communalism]] · [[consortium_amazonia_viva_eco_communalism]] · [[reseau_mnemos_eco_communalism]] · [[a_126_ans_maman_elikya_oblige_la_sante_des_communs_a_regarder_ses_fractures]] · [[mokele_126_ans_le_secret_des_eaux_vives]] · [[kharg_9_le_coffre_fort_des_communs_devient_un_supermarche_des_donnees]]

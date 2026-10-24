@@ -63,7 +63,7 @@ oppositions:
 - reseaux_de_reconstruction_cooperative_inter_communautes_eco_communalism
 - sao_paulo_algorithmique_eco_communalism
 - terminal_kharg_data_haven_eco_communalism
-- trame_mnemos_noeud_reseau_eco_communalism
+- reseau_mnemos_eco_communalism
 - tresse_verte_corridor_eco_communalism
 - tribunal_algorithmique_de_bruxelles_eco_communalism
 type_relation_dominante: conflit
@@ -163,7 +163,7 @@ La contradiction centrale du Consortium est existentielle : pour survivre, il do
 - [[reseaux_de_reconstruction_cooperative_inter_communautes_eco_communalism]]
 - [[sao_paulo_algorithmique_eco_communalism]]
 - [[terminal_kharg_data_haven_eco_communalism]]
-- [[trame_mnemos_noeud_reseau_eco_communalism]]
+- [[reseau_mnemos_eco_communalism]]
 - [[tresse_verte_corridor_eco_communalism]]
 - [[tribunal_algorithmique_de_bruxelles_eco_communalism]]
 

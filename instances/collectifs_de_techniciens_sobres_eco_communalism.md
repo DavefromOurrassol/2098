@@ -50,7 +50,6 @@ alliances:
 - reseaux_de_reconstruction_cooperative_inter_communautes_eco_communalism
 - sao_paulo_algorithmique_eco_communalism
 - tampere_charte_eco_communalism
-- trame_mnemos_noeud_reseau_eco_communalism
 - tresse_verte_corridor_eco_communalism
 - tribunal_algorithmique_de_bruxelles_eco_communalism
 - universite_nomade_eco_communalism
@@ -149,7 +148,6 @@ La tension centrale des Collectifs r√©side dans le paradoxe de leur propre succ√
 - [[reseaux_de_reconstruction_cooperative_inter_communautes_eco_communalism]]
 - [[sao_paulo_algorithmique_eco_communalism]]
 - [[tampere_charte_eco_communalism]]
-- [[trame_mnemos_noeud_reseau_eco_communalism]]
 - [[tresse_verte_corridor_eco_communalism]]
 - [[tribunal_algorithmique_de_bruxelles_eco_communalism]]
 - [[universite_nomade_eco_communalism]]

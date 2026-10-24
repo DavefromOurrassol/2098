@@ -50,7 +50,7 @@ alliances:
 - reseaux_de_reconstruction_cooperative_inter_communautes_eco_communalism
 - tampere_charte_eco_communalism
 - terminal_kharg_data_haven_eco_communalism
-- trame_mnemos_noeud_reseau_eco_communalism
+- reseau_mnemos_eco_communalism
 - universite_nomade_eco_communalism
 - voix_du_dehors_eco_communalism
 oppositions:
@@ -152,7 +152,7 @@ La tension principale réside dans le choix de ce qui mérite d'être conservé 
 - [[reseaux_de_reconstruction_cooperative_inter_communautes_eco_communalism]]
 - [[tampere_charte_eco_communalism]]
 - [[terminal_kharg_data_haven_eco_communalism]]
-- [[trame_mnemos_noeud_reseau_eco_communalism]]
+- [[reseau_mnemos_eco_communalism]]
 - [[universite_nomade_eco_communalism]]
 - [[voix_du_dehors_eco_communalism]]
 **Opposants :**

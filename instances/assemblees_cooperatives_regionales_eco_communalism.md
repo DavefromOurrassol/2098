@@ -47,7 +47,7 @@ alliances:
 - reseaux_de_troc_inter_cooperatives_et_marges_periurbaines_eco_communalism
 - sao_paulo_algorithmique_eco_communalism
 - tampere_charte_eco_communalism
-- trame_mnemos_noeud_reseau_eco_communalism
+- reseau_mnemos_eco_communalism
 - tribunal_algorithmique_de_bruxelles_eco_communalism
 - voix_du_dehors_eco_communalism
 oppositions:
@@ -142,7 +142,7 @@ L'absence d'un pouvoir coercitif central expose les Assemblées à une fragilit�
 - [[reseaux_de_troc_inter_cooperatives_et_marges_periurbaines_eco_communalism]]
 - [[sao_paulo_algorithmique_eco_communalism]]
 - [[tampere_charte_eco_communalism]]
-- [[trame_mnemos_noeud_reseau_eco_communalism]]
+- [[reseau_mnemos_eco_communalism]]
 - [[tribunal_algorithmique_de_bruxelles_eco_communalism]]
 - [[voix_du_dehors_eco_communalism]]
 **Opposants :**

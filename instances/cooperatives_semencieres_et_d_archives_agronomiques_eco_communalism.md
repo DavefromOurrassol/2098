@@ -57,7 +57,7 @@ alliances:
 - reseaux_de_bibliotheques_archives_communautaires_eco_communalism
 - reseaux_de_reconstruction_cooperative_inter_communautes_eco_communalism
 - reseaux_de_troc_inter_cooperatives_et_marges_periurbaines_eco_communalism
-- trame_mnemos_noeud_reseau_eco_communalism
+- reseau_mnemos_eco_communalism
 - tresse_verte_corridor_eco_communalism
 - universite_nomade_eco_communalism
 oppositions:
@@ -165,7 +165,7 @@ La tension centrale qui traverse ces coopératives est celle entre préservation
 - [[reseaux_de_bibliotheques_archives_communautaires_eco_communalism]]
 - [[reseaux_de_reconstruction_cooperative_inter_communautes_eco_communalism]]
 - [[reseaux_de_troc_inter_cooperatives_et_marges_periurbaines_eco_communalism]]
-- [[trame_mnemos_noeud_reseau_eco_communalism]]
+- [[reseau_mnemos_eco_communalism]]
 - [[tresse_verte_corridor_eco_communalism]]
 - [[universite_nomade_eco_communalism]]
 **Opposants :**

@@ -56,7 +56,6 @@ oppositions:
 - reseaux_de_radio_communautaire_basse_consommation_eco_communalism
 - reseaux_de_reconstruction_cooperative_inter_communautes_eco_communalism
 - terminal_kharg_data_haven_eco_communalism
-- trame_mnemos_noeud_reseau_eco_communalism
 - universite_nomade_eco_communalism
 type_relation_dominante: conflit
 annee_debut: 2036
@@ -149,7 +148,6 @@ La tension centrale réside dans le fait que certaines de leurs critiques — no
 - [[reseaux_de_radio_communautaire_basse_consommation_eco_communalism]]
 - [[reseaux_de_reconstruction_cooperative_inter_communautes_eco_communalism]]
 - [[terminal_kharg_data_haven_eco_communalism]]
-- [[trame_mnemos_noeud_reseau_eco_communalism]]
 - [[universite_nomade_eco_communalism]]
 
 ## Notes

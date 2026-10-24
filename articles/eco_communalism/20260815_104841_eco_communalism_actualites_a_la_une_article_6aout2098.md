@@ -36,7 +36,6 @@ entites_citees:
   - ligue_des_cites_du_sahel_numerique_eco_communalism
   - reseau_mnemos_eco_communalism
   - sao_paulo_algorithmique_eco_communalism
-  - trame_mnemos_noeud_reseau_eco_communalism
 articles_lies:
   - le_secret_de_m_bokolo_a_126_ans_le_doyen_de_l_humanite_defie_les_lois_de_la_mede
   - les_sillons_de_la_terre_comment_les_sans_terres_du_massif_central_forcent_l_hist
@@ -84,4 +83,4 @@ Le débat qui agite les assemblées sahéliennes est symptomatique d’une tensi
 En attendant, les délégués de la Ligue préparent une nouvelle visite à Kharg-9. Cette fois, ils viendront avec une liste de conditions. Et une certitude : *la bataille pour la souveraineté numérique des périphéries ne fait que commencer.*
 
 ---
-**Voir aussi** : [[consortium_africain_de_biotechnologies_sociales_eco_communalism]] · [[ligue_des_cites_du_sahel_numerique_eco_communalism]] · [[reseau_mnemos_eco_communalism]] · [[sao_paulo_algorithmique_eco_communalism]] · [[trame_mnemos_noeud_reseau_eco_communalism]] · [[le_secret_de_m_bokolo_a_126_ans_le_doyen_de_l_humanite_defie_les_lois_de_la_mede]] · [[les_sillons_de_la_terre_comment_les_sans_terres_du_massif_central_forcent_l_hist]] · [[yaripa_a_voz_da_floresta_reseau_la_gazette_des_communs]]
+**Voir aussi** : [[consortium_africain_de_biotechnologies_sociales_eco_communalism]] · [[ligue_des_cites_du_sahel_numerique_eco_communalism]] · [[reseau_mnemos_eco_communalism]] · [[sao_paulo_algorithmique_eco_communalism]] · [[reseau_mnemos_eco_communalism]] · [[le_secret_de_m_bokolo_a_126_ans_le_doyen_de_l_humanite_defie_les_lois_de_la_mede]] · [[les_sillons_de_la_terre_comment_les_sans_terres_du_massif_central_forcent_l_hist]] · [[yaripa_a_voz_da_floresta_reseau_la_gazette_des_communs]]

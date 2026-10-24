@@ -49,7 +49,6 @@ alliances:
 - reseaux_de_reconstruction_cooperative_inter_communautes_eco_communalism
 - reseaux_de_troc_inter_cooperatives_et_marges_periurbaines_eco_communalism
 - trame_bioclimatique_eco_communalism
-- trame_mnemos_noeud_reseau_eco_communalism
 - tresse_verte_corridor_eco_communalism
 - universite_nomade_eco_communalism
 oppositions:
@@ -146,7 +145,6 @@ La tension principale qui traverse les Guildes oppose ceux qui veulent formalise
 - [[reseaux_de_reconstruction_cooperative_inter_communautes_eco_communalism]]
 - [[reseaux_de_troc_inter_cooperatives_et_marges_periurbaines_eco_communalism]]
 - [[trame_bioclimatique_eco_communalism]]
-- [[trame_mnemos_noeud_reseau_eco_communalism]]
 - [[tresse_verte_corridor_eco_communalism]]
 - [[universite_nomade_eco_communalism]]
 **Opposants :**

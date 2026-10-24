@@ -53,7 +53,7 @@ alliances:
 - reseaux_de_radio_communautaire_basse_consommation_eco_communalism
 - reseaux_de_reconstruction_cooperative_inter_communautes_eco_communalism
 - terminal_kharg_data_haven_eco_communalism
-- trame_mnemos_noeud_reseau_eco_communalism
+- reseau_mnemos_eco_communalism
 - tresse_verte_corridor_eco_communalism
 - tribunal_algorithmique_de_bruxelles_eco_communalism
 - universite_nomade_eco_communalism
@@ -157,7 +157,7 @@ Le Mouvement est tiraillé entre la volonté de préserver des savoirs en voie d
 - [[reseaux_de_radio_communautaire_basse_consommation_eco_communalism]]
 - [[reseaux_de_reconstruction_cooperative_inter_communautes_eco_communalism]]
 - [[terminal_kharg_data_haven_eco_communalism]]
-- [[trame_mnemos_noeud_reseau_eco_communalism]]
+- [[reseau_mnemos_eco_communalism]]
 - [[tresse_verte_corridor_eco_communalism]]
 - [[tribunal_algorithmique_de_bruxelles_eco_communalism]]
 - [[universite_nomade_eco_communalism]]

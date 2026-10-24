@@ -55,7 +55,7 @@ alliances:
 - reseaux_de_bibliotheques_archives_communautaires_eco_communalism
 - reseaux_de_radio_communautaire_basse_consommation_eco_communalism
 - reseaux_de_troc_inter_cooperatives_et_marges_periurbaines_eco_communalism
-- trame_mnemos_noeud_reseau_eco_communalism
+- reseau_mnemos_eco_communalism
 oppositions:
 - agro_conglomerats_des_enclaves_technologiques_eco_communalism
 - collectifs_du_seuil_eco_communalism
@@ -165,7 +165,7 @@ La tension centrale est celle entre l'efficacité coordinatrice — qui appelle 
 - [[reseaux_de_bibliotheques_archives_communautaires_eco_communalism]]
 - [[reseaux_de_radio_communautaire_basse_consommation_eco_communalism]]
 - [[reseaux_de_troc_inter_cooperatives_et_marges_periurbaines_eco_communalism]]
-- [[trame_mnemos_noeud_reseau_eco_communalism]]
+- [[reseau_mnemos_eco_communalism]]
 **Opposants :**
 - [[agro_conglomerats_des_enclaves_technologiques_eco_communalism]]
 - [[collectifs_du_seuil_eco_communalism]]

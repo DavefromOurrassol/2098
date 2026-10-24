@@ -33,7 +33,6 @@ entites_citees:
   - consortium_africain_de_biotechnologies_sociales_eco_communalism
   - mutuelles_de_sante_territoriales_eco_communalism
   - reseau_mnemos_eco_communalism
-  - trame_mnemos_noeud_reseau_eco_communalism
 articles_lies:
   - yaripa_a_voz_da_floresta_reseau_la_gazette_des_communs
   - kharg_9_le_coffre_fort_des_communs_devient_un_supermarche_des_donnees
@@ -63,4 +62,4 @@ Le *Conseil des Gardiens de Santé* doit trancher dans les prochains jours : fau
 Yara Tikuna
 
 ---
-**Voir aussi** : [[consortium_africain_de_biotechnologies_sociales_eco_communalism]] · [[mutuelles_de_sante_territoriales_eco_communalism]] · [[reseau_mnemos_eco_communalism]] · [[trame_mnemos_noeud_reseau_eco_communalism]] · [[yaripa_a_voz_da_floresta_reseau_la_gazette_des_communs]] · [[kharg_9_le_coffre_fort_des_communs_devient_un_supermarche_des_donnees]] · [[yawara_i_tukano_ita_ae]]
+**Voir aussi** : [[consortium_africain_de_biotechnologies_sociales_eco_communalism]] · [[mutuelles_de_sante_territoriales_eco_communalism]] · [[reseau_mnemos_eco_communalism]] · [[yaripa_a_voz_da_floresta_reseau_la_gazette_des_communs]] · [[kharg_9_le_coffre_fort_des_communs_devient_un_supermarche_des_donnees]] · [[yawara_i_tukano_ita_ae]]

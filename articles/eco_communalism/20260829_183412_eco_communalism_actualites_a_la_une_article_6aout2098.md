@@ -31,7 +31,7 @@ duree_estimee: ""
 lieu_diffusion: ""
 mode_reception: ""
 entites_citees:
-  - trame_mnemos_noeud_reseau_eco_communalism
+  - reseau_mnemos_eco_communalism
   - gelecek_meclisi_eco_communalism
   - tampere_charte_eco_communalism
   - reseau_assemblees_fennoscandien_eco_communalism
@@ -92,4 +92,4 @@ Reste une question, lancinante : et si la Trame Mnemos était en train de deveni
 En attendant, à Mostaganem, les graines continuent de sécher dans leurs sachets. Et les serveurs, eux, restent silencieux.
 
 ---
-**Voir aussi** : [[trame_mnemos_noeud_reseau_eco_communalism]] · [[gelecek_meclisi_eco_communalism]] · [[tampere_charte_eco_communalism]] · [[reseau_assemblees_fennoscandien_eco_communalism]] · [[reseau_terrafond_bassins_eco_communalism]] · [[confederation_communs_arc_septentrional_eco_communalism]]
+**Voir aussi** : [[reseau_mnemos_eco_communalism]] · [[gelecek_meclisi_eco_communalism]] · [[tampere_charte_eco_communalism]] · [[reseau_assemblees_fennoscandien_eco_communalism]] · [[reseau_terrafond_bassins_eco_communalism]] · [[confederation_communs_arc_septentrional_eco_communalism]]

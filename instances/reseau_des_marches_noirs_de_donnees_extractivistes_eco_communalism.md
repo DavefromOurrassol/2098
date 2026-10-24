@@ -60,7 +60,6 @@ oppositions:
 - reseaux_de_radio_communautaire_basse_consommation_eco_communalism
 - reseaux_de_reconstruction_cooperative_inter_communautes_eco_communalism
 - sao_paulo_algorithmique_eco_communalism
-- trame_mnemos_noeud_reseau_eco_communalism
 type_relation_dominante: conflit
 annee_debut: 2036
 annee_fin: null
@@ -155,7 +154,6 @@ Le paradoxe central du réseau réside dans sa dépendance aux infrastructures c
 - [[reseaux_de_radio_communautaire_basse_consommation_eco_communalism]]
 - [[reseaux_de_reconstruction_cooperative_inter_communautes_eco_communalism]]
 - [[sao_paulo_algorithmique_eco_communalism]]
-- [[trame_mnemos_noeud_reseau_eco_communalism]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.
