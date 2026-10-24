@@ -2094,6 +2094,52 @@ breakdown:
         ville: Édimbourg
         periodicite: quotidien
         fondation: 2052
+      sao_paulo_rpda:
+        nom: O Alerta Paulista
+        ton: Ton martial et technocratique, mêlant jargon administratif hérité des
+          anciens systèmes de la RPDA et rhétorique de crise permanente. Les articles
+          justifient les décisions algorithmiques comme des 'nécessités objectives'
+          tout en dénonçant les 'perturbateurs manuels' qui menacent l'équilibre précaire
+          des ressources. Une obsession pour les données brutes et les courbes de
+          distribution, présentées comme des preuves irréfutables de la légitimité
+          du pouvoir en place.
+        langue_style: Portugais brésilien technique, truffé d'anglicismes informatiques
+          et de néologismes issus des anciens protocoles de la RPDA (ex. 'fluxo nodal',
+          'alocação ótima'). Style parfois abrupt, reflétant la fragmentation des
+          serveurs et l'absence de relecture centralisée.
+        journalistes:
+        - nom: Dr. Marcelo Viana
+          thematiques:
+          - politique
+          - economie_finance
+          - sciences_technologies
+        - nom: Cláudia Mendes
+          thematiques:
+          - actualites_a_la_une
+          - environnement_climat
+          - meteo
+        - nom: Rafael 'Rafa' Oliveira
+          thematiques:
+          - societe
+          - faits_divers
+          - petites_annonces_services
+        - nom: Tatiane Costa
+          thematiques:
+          - education
+          - sante
+          - histoire_patrimoine
+        - nom: Jorge 'Jota' Silva
+          thematiques:
+          - culture
+          - musique
+          - lifestyle_art_de_vivre
+        - nom: Capitão Paulo Ferreira
+          thematiques:
+          - international
+          - opinions_editoriaux
+          - medias_communication
+          - religion_spiritualite
+          - sports
   opposition:
     _reseau:
       nom: Réseau La Dépêche des Territoires
@@ -4121,6 +4167,48 @@ breakdown:
         ville: Édimbourg
         periodicite: hebdomadaire
         fondation: 2072
+      sao_paulo_rpda:
+        nom: O Alerta dos Bairros
+        ton: Un ton sec et technique, presque clinique, comme si chaque mot était
+          extrait d'un rapport de serveur défaillant. Les articles mêlent données
+          brutes — souvent obsolètes ou contradictoires — et témoignages de terrain,
+          où la colère perce sous une apparence de neutralité épuisée. Le journal
+          oscille entre l'urgence de documenter les dysfonctionnements du RPDA et
+          la nécessité de donner voix à ceux que l'algorithme a effacés.
+        langue_style: Portugais brésilien truffé d'anglicismes techniques (ex. 'cluster
+          de servidores', 'bias de alocação'), avec des expressions locales en tupi-guarani
+          pour désigner les quartiers informels (ex. 'Tekoha' pour les zones auto-construites).
+        journalistes:
+        - nom: Mariana Costa
+          thematiques:
+          - politique
+          - economie_finance
+          - sciences_technologies
+        - nom: Rafael 'Rafa' Oliveira
+          thematiques:
+          - actualites_a_la_une
+          - faits_divers
+          - environnement_climat
+        - nom: Joana Silva
+          thematiques:
+          - societe
+          - education
+          - histoire_patrimoine
+        - nom: Thiago Nascimento
+          thematiques:
+          - international
+          - medias_communication
+          - opinions_editoriaux
+        - nom: Clara Mendes
+          thematiques:
+          - sante
+          - culture
+          - religion_spiritualite
+        - nom: Pedro 'Pé' Ferreira
+          thematiques:
+          - petites_annonces_services
+          - meteo
+          - sports
 fortress_world:
   pro_pouvoir:
     _reseau:
