@@ -30,7 +30,7 @@ zone_systemique:
   - infrastructure
   - société
 alliances:
-- amazonie_pacte_viva_eco_communalism
+- consortium_amazonia_viva_eco_communalism
 - assemblees_de_bassin_versant_eco_communalism
 - brigades_de_restauration_ecologique_eco_communalism
 - confederation_bassins_vivants_eco_communalism
@@ -87,7 +87,7 @@ La tension centrale est celle du seuil : jusqu'où étendre le réseau sans perd
 
 ## Relations
 **Alliés :**
-- [[amazonie_pacte_viva_eco_communalism]]
+- [[consortium_amazonia_viva_eco_communalism]]
 - [[assemblees_de_bassin_versant_eco_communalism]]
 - [[brigades_de_restauration_ecologique_eco_communalism]]
 - [[confederation_bassins_vivants_eco_communalism]]

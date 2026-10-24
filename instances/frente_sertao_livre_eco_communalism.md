@@ -39,12 +39,11 @@ zone_systemique:
     - infrastructure
 
 alliances:
-- amazonie_pacte_viva_eco_communalism
+- consortium_amazonia_viva_eco_communalism
 - assemblee_territoires_eco_communalism
 - assemblees_cooperatives_regionales_eco_communalism
 - brigades_de_restauration_ecologique_eco_communalism
 - collectifs_de_techniciens_sobres_eco_communalism
-- consortium_amazonia_viva_eco_communalism
 - cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism
 - guildes_des_semenciers_itinerants_eco_communalism
 - mouvement_racines_vivantes_eco_communalism
@@ -113,12 +112,11 @@ La tentation de l'intégration se fait pressante : plusieurs municípios offrent
 
 ## Relations
 **Alliés :**
-- [[amazonie_pacte_viva_eco_communalism]]
+- [[consortium_amazonia_viva_eco_communalism]]
 - [[assemblee_territoires_eco_communalism]]
 - [[assemblees_cooperatives_regionales_eco_communalism]]
 - [[brigades_de_restauration_ecologique_eco_communalism]]
 - [[collectifs_de_techniciens_sobres_eco_communalism]]
-- [[consortium_amazonia_viva_eco_communalism]]
 - [[cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism]]
 - [[guildes_des_semenciers_itinerants_eco_communalism]]
 - [[mouvement_racines_vivantes_eco_communalism]]

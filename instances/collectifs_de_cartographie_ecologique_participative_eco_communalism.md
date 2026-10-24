@@ -32,7 +32,7 @@ zone_geographique:
 zone_systemique:
 - société
 alliances:
-- amazonie_pacte_viva_eco_communalism
+- consortium_amazonia_viva_eco_communalism
 - archives_ouvertes_des_jurisprudences_communales_aojc_eco_communalism
 - assemblees_bioterritoriales_regionales_eco_communalism
 - assemblees_de_bassin_versant_eco_communalism
@@ -42,7 +42,6 @@ alliances:
 - collectifs_de_geo_observateurs_citoyens_eco_communalism
 - collectifs_de_techniciens_sobres_eco_communalism
 - confederation_bassins_vivants_eco_communalism
-- consortium_amazonia_viva_eco_communalism
 - consortium_des_pecheries_autonomes_du_grand_nord_eco_communalism
 - cooperatives_d_habitat_regeneratif_eco_communalism
 - cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism
@@ -142,7 +141,7 @@ La tension centrale des CCEP réside dans la coexistence fragile entre leur voca
 
 ## Relations
 **Alliés :**
-- [[amazonie_pacte_viva_eco_communalism]]
+- [[consortium_amazonia_viva_eco_communalism]]
 - [[archives_ouvertes_des_jurisprudences_communales_aojc_eco_communalism]]
 - [[assemblees_bioterritoriales_regionales_eco_communalism]]
 - [[assemblees_de_bassin_versant_eco_communalism]]
@@ -152,7 +151,6 @@ La tension centrale des CCEP réside dans la coexistence fragile entre leur voca
 - [[collectifs_de_geo_observateurs_citoyens_eco_communalism]]
 - [[collectifs_de_techniciens_sobres_eco_communalism]]
 - [[confederation_bassins_vivants_eco_communalism]]
-- [[consortium_amazonia_viva_eco_communalism]]
 - [[consortium_des_pecheries_autonomes_du_grand_nord_eco_communalism]]
 - [[cooperatives_d_habitat_regeneratif_eco_communalism]]
 - [[cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism]]

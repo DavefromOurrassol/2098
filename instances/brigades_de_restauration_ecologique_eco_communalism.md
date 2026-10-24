@@ -30,7 +30,7 @@ zone_geographique:
 zone_systemique:
 - société
 alliances:
-- amazonie_pacte_viva_eco_communalism
+- consortium_amazonia_viva_eco_communalism
 - assemblees_bioterritoriales_regionales_eco_communalism
 - assemblees_de_bassin_versant_eco_communalism
 - collectifs_de_cartographie_ecologique_participative_eco_communalism
@@ -39,7 +39,6 @@ alliances:
 - confederation_bassins_vivants_eco_communalism
 - conseils_de_bassin_versant_eco_communalistes_eco_communalism
 - consortium_africain_de_biotechnologies_sociales_eco_communalism
-- consortium_amazonia_viva_eco_communalism
 - consortium_des_pecheries_autonomes_du_grand_nord_eco_communalism
 - cooperative_terrafond_eco_communalism
 - cooperatives_d_habitat_regeneratif_eco_communalism
@@ -145,7 +144,7 @@ Les Brigades se trouvent écartelées entre l'urgence climatique qui exige des i
 
 ## Relations
 **Alliés :**
-- [[amazonie_pacte_viva_eco_communalism]]
+- [[consortium_amazonia_viva_eco_communalism]]
 - [[assemblees_bioterritoriales_regionales_eco_communalism]]
 - [[assemblees_de_bassin_versant_eco_communalism]]
 - [[collectifs_de_cartographie_ecologique_participative_eco_communalism]]
@@ -154,7 +153,6 @@ Les Brigades se trouvent écartelées entre l'urgence climatique qui exige des i
 - [[confederation_bassins_vivants_eco_communalism]]
 - [[conseils_de_bassin_versant_eco_communalistes_eco_communalism]]
 - [[consortium_africain_de_biotechnologies_sociales_eco_communalism]]
-- [[consortium_amazonia_viva_eco_communalism]]
 - [[consortium_des_pecheries_autonomes_du_grand_nord_eco_communalism]]
 - [[cooperative_terrafond_eco_communalism]]
 - [[cooperatives_d_habitat_regeneratif_eco_communalism]]

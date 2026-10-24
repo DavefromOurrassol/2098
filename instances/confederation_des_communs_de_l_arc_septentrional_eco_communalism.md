@@ -32,7 +32,7 @@ zone_geographique:
 zone_systemique:
 - société
 alliances:
-- amazonie_pacte_viva_eco_communalism
+- consortium_amazonia_viva_eco_communalism
 - confederation_bassins_vivants_eco_communalism
 - consortium_des_pecheries_autonomes_du_grand_nord_eco_communalism
 - kalaallit_nunaat_bioterritoire_eco_communalism
@@ -117,7 +117,7 @@ La tension majeure de la Confédération oppose la logique d'intégration confé
 
 ## Relations
 **Alliés :**
-- [[amazonie_pacte_viva_eco_communalism]]
+- [[consortium_amazonia_viva_eco_communalism]]
 - [[confederation_bassins_vivants_eco_communalism]]
 - [[consortium_des_pecheries_autonomes_du_grand_nord_eco_communalism]]
 - [[kalaallit_nunaat_bioterritoire_eco_communalism]]

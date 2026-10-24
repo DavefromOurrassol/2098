@@ -50,7 +50,7 @@ alliances:
 - reseau_des_marches_noirs_de_donnees_extractivistes_eco_communalism
 oppositions:
 - agence_de_regulation_des_detroits_strategiques_ards_eco_communalism
-- amazonie_pacte_viva_eco_communalism
+- consortium_amazonia_viva_eco_communalism
 - assemblee_territoires_eco_communalism
 - assemblees_bioterritoriales_regionales_eco_communalism
 - assemblees_cooperatives_regionales_eco_communalism
@@ -135,7 +135,7 @@ La contradiction centrale — être moralement condamné et fonctionnellement n�
 - [[reseau_des_marches_noirs_de_donnees_extractivistes_eco_communalism]]
 **Opposants :**
 - [[agence_de_regulation_des_detroits_strategiques_ards_eco_communalism]]
-- [[amazonie_pacte_viva_eco_communalism]]
+- [[consortium_amazonia_viva_eco_communalism]]
 - [[assemblee_territoires_eco_communalism]]
 - [[assemblees_bioterritoriales_regionales_eco_communalism]]
 - [[assemblees_cooperatives_regionales_eco_communalism]]

@@ -38,28 +38,41 @@ zone_systemique:
     - énergie
 
 alliances:
+- archives_ouvertes_des_jurisprudences_communales_aojc_eco_communalism
 - assemblee_territoires_eco_communalism
 - assemblees_bioterritoriales_regionales_eco_communalism
 - assemblees_de_bassin_versant_eco_communalism
 - brigades_de_restauration_ecologique_eco_communalism
+- cercles_de_mediation_territoriale_intercommunautaire_eco_communalism
 - coalition_vivant_eco_communalism
 - collectifs_de_cartographie_ecologique_participative_eco_communalism
 - collectifs_de_geo_observateurs_citoyens_eco_communalism
+- confederation_des_communs_de_l_arc_septentrional_eco_communalism
 - conseils_de_bassin_versant_eco_communalistes_eco_communalism
+- cooperative_terrafond_eco_communalism
 - cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism
 - federation_communs_territoriaux_eco_communalism
 - frente_sertao_livre_eco_communalism
 - guildes_de_mediateurs_ecologiques_eco_communalism
+- kalaallit_nunaat_bioterritoire_eco_communalism
 - mouvement_des_archives_vivantes_du_savoir_partage_eco_communalism
+- reseaux_de_reconstruction_cooperative_inter_communautes_eco_communalism
+- tampere_charte_eco_communalism
 - trame_bioclimatique_eco_communalism
 oppositions:
 - agro_conglomerats_des_enclaves_technologiques_eco_communalism
+- cartels_de_narration_de_penurie_eco_communalism
 - communautes_isolationnistes_refusant_la_continuite_ecologique_eco_communalism
+- communautes_rurales_dissidentes_anti_cooperation_regionale_eco_communalism
+- communs_secessionnistes_hors_coordination_eco_communalism
+- conseils_territoriaux_opaques_sur_la_gestion_des_ressources_eco_communalism
 - consortiums_industriels_de_l_eau_eco_communalism
 - consortiums_logistiques_neo_industriels_des_terres_reconstruites_eco_communalism
+- enclaves_extractivistes_et_etats_residuels_eco_communalism
 - enclaves_extractivistes_residuelles_des_corridors_eco_communalism
 - factions_extractivistes_des_aquiferes_communs_eco_communalism
 - factions_technophiles_de_la_geo_ingenierie_centralisee_eco_communalism
+- reseaux_de_notables_communautaires_capturistes_eco_communalism
 type_relation_dominante: alliance stratégique
 
 annee_debut: 2031
@@ -113,25 +126,38 @@ La légitimité du Pacte est contestée de l'intérieur : certaines nations auto
 
 ## Relations
 **Alliés :**
+- [[archives_ouvertes_des_jurisprudences_communales_aojc_eco_communalism]]
 - [[assemblee_territoires_eco_communalism]]
 - [[assemblees_bioterritoriales_regionales_eco_communalism]]
 - [[assemblees_de_bassin_versant_eco_communalism]]
 - [[brigades_de_restauration_ecologique_eco_communalism]]
+- [[cercles_de_mediation_territoriale_intercommunautaire_eco_communalism]]
 - [[coalition_vivant_eco_communalism]]
 - [[collectifs_de_cartographie_ecologique_participative_eco_communalism]]
 - [[collectifs_de_geo_observateurs_citoyens_eco_communalism]]
+- [[confederation_des_communs_de_l_arc_septentrional_eco_communalism]]
 - [[conseils_de_bassin_versant_eco_communalistes_eco_communalism]]
+- [[cooperative_terrafond_eco_communalism]]
 - [[cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism]]
 - [[federation_communs_territoriaux_eco_communalism]]
 - [[frente_sertao_livre_eco_communalism]]
 - [[guildes_de_mediateurs_ecologiques_eco_communalism]]
+- [[kalaallit_nunaat_bioterritoire_eco_communalism]]
 - [[mouvement_des_archives_vivantes_du_savoir_partage_eco_communalism]]
+- [[reseaux_de_reconstruction_cooperative_inter_communautes_eco_communalism]]
+- [[tampere_charte_eco_communalism]]
 - [[trame_bioclimatique_eco_communalism]]
 **Opposants :**
 - [[agro_conglomerats_des_enclaves_technologiques_eco_communalism]]
+- [[cartels_de_narration_de_penurie_eco_communalism]]
 - [[communautes_isolationnistes_refusant_la_continuite_ecologique_eco_communalism]]
+- [[communautes_rurales_dissidentes_anti_cooperation_regionale_eco_communalism]]
+- [[communs_secessionnistes_hors_coordination_eco_communalism]]
+- [[conseils_territoriaux_opaques_sur_la_gestion_des_ressources_eco_communalism]]
 - [[consortiums_industriels_de_l_eau_eco_communalism]]
 - [[consortiums_logistiques_neo_industriels_des_terres_reconstruites_eco_communalism]]
+- [[enclaves_extractivistes_et_etats_residuels_eco_communalism]]
 - [[enclaves_extractivistes_residuelles_des_corridors_eco_communalism]]
 - [[factions_extractivistes_des_aquiferes_communs_eco_communalism]]
 - [[factions_technophiles_de_la_geo_ingenierie_centralisee_eco_communalism]]
+- [[reseaux_de_notables_communautaires_capturistes_eco_communalism]]

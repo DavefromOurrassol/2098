@@ -46,14 +46,13 @@ alliances:
 - reseau_des_marches_noirs_de_donnees_extractivistes_eco_communalism
 oppositions:
 - agence_de_regulation_des_detroits_strategiques_ards_eco_communalism
-- amazonie_pacte_viva_eco_communalism
+- consortium_amazonia_viva_eco_communalism
 - assemblees_bioterritoriales_regionales_eco_communalism
 - assemblees_de_bassin_versant_eco_communalism
 - brigades_de_restauration_ecologique_eco_communalism
 - collectifs_de_geo_observateurs_citoyens_eco_communalism
 - collectifs_de_techniciens_sobres_eco_communalism
 - confederation_bassins_vivants_eco_communalism
-- consortium_amazonia_viva_eco_communalism
 - cooperatives_d_habitat_regeneratif_eco_communalism
 - cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism
 - federation_communs_territoriaux_eco_communalism
@@ -166,14 +165,13 @@ La contradiction centrale des Consortiums tient à leur dépendance aux États r
 - [[reseau_des_marches_noirs_de_donnees_extractivistes_eco_communalism]]
 **Opposants :**
 - [[agence_de_regulation_des_detroits_strategiques_ards_eco_communalism]]
-- [[amazonie_pacte_viva_eco_communalism]]
+- [[consortium_amazonia_viva_eco_communalism]]
 - [[assemblees_bioterritoriales_regionales_eco_communalism]]
 - [[assemblees_de_bassin_versant_eco_communalism]]
 - [[brigades_de_restauration_ecologique_eco_communalism]]
 - [[collectifs_de_geo_observateurs_citoyens_eco_communalism]]
 - [[collectifs_de_techniciens_sobres_eco_communalism]]
 - [[confederation_bassins_vivants_eco_communalism]]
-- [[consortium_amazonia_viva_eco_communalism]]
 - [[cooperatives_d_habitat_regeneratif_eco_communalism]]
 - [[cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism]]
 - [[federation_communs_territoriaux_eco_communalism]]

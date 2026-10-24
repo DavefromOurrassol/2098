@@ -31,7 +31,7 @@ zone_systemique:
 - société
 alliances:
 - agence_de_regulation_des_detroits_strategiques_ards_eco_communalism
-- amazonie_pacte_viva_eco_communalism
+- consortium_amazonia_viva_eco_communalism
 - archives_ouvertes_des_jurisprudences_communales_aojc_eco_communalism
 - assemblees_bioterritoriales_regionales_eco_communalism
 - assemblees_cooperatives_regionales_eco_communalism
@@ -43,7 +43,6 @@ alliances:
 - collectifs_de_geo_observateurs_citoyens_eco_communalism
 - confederation_bassins_vivants_eco_communalism
 - conseils_de_bassin_versant_eco_communalistes_eco_communalism
-- consortium_amazonia_viva_eco_communalism
 - consortium_des_pecheries_autonomes_du_grand_nord_eco_communalism
 - cooperatives_d_habitat_regeneratif_eco_communalism
 - federation_communs_territoriaux_eco_communalism
@@ -141,7 +140,7 @@ La légitimité des Guildes repose entièrement sur la confiance volontaire des 
 ## Relations
 **Alliés :**
 - [[agence_de_regulation_des_detroits_strategiques_ards_eco_communalism]]
-- [[amazonie_pacte_viva_eco_communalism]]
+- [[consortium_amazonia_viva_eco_communalism]]
 - [[archives_ouvertes_des_jurisprudences_communales_aojc_eco_communalism]]
 - [[assemblees_bioterritoriales_regionales_eco_communalism]]
 - [[assemblees_cooperatives_regionales_eco_communalism]]
@@ -153,7 +152,6 @@ La légitimité des Guildes repose entièrement sur la confiance volontaire des 
 - [[collectifs_de_geo_observateurs_citoyens_eco_communalism]]
 - [[confederation_bassins_vivants_eco_communalism]]
 - [[conseils_de_bassin_versant_eco_communalistes_eco_communalism]]
-- [[consortium_amazonia_viva_eco_communalism]]
 - [[consortium_des_pecheries_autonomes_du_grand_nord_eco_communalism]]
 - [[cooperatives_d_habitat_regeneratif_eco_communalism]]
 - [[federation_communs_territoriaux_eco_communalism]]

@@ -38,13 +38,12 @@ alliances:
 - enclaves_extractivistes_residuelles_des_corridors_eco_communalism
 - fragments_d_etats_centraux_residuels_eco_communalism
 oppositions:
-- amazonie_pacte_viva_eco_communalism
+- consortium_amazonia_viva_eco_communalism
 - assemblees_bioterritoriales_regionales_eco_communalism
 - brigades_de_restauration_ecologique_eco_communalism
 - collectifs_de_geo_observateurs_citoyens_eco_communalism
 - confederation_bassins_vivants_eco_communalism
 - consortium_africain_de_biotechnologies_sociales_eco_communalism
-- consortium_amazonia_viva_eco_communalism
 - cooperative_terrafond_eco_communalism
 - cooperatives_d_habitat_regeneratif_eco_communalism
 - cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism
@@ -131,13 +130,12 @@ Leur survie dépend de l'accès aux terres et aux ressources que les bioterritoi
 - [[enclaves_extractivistes_residuelles_des_corridors_eco_communalism]]
 - [[fragments_d_etats_centraux_residuels_eco_communalism]]
 **Opposants :**
-- [[amazonie_pacte_viva_eco_communalism]]
+- [[consortium_amazonia_viva_eco_communalism]]
 - [[assemblees_bioterritoriales_regionales_eco_communalism]]
 - [[brigades_de_restauration_ecologique_eco_communalism]]
 - [[collectifs_de_geo_observateurs_citoyens_eco_communalism]]
 - [[confederation_bassins_vivants_eco_communalism]]
 - [[consortium_africain_de_biotechnologies_sociales_eco_communalism]]
-- [[consortium_amazonia_viva_eco_communalism]]
 - [[cooperative_terrafond_eco_communalism]]
 - [[cooperatives_d_habitat_regeneratif_eco_communalism]]
 - [[cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism]]

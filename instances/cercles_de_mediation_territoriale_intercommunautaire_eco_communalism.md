@@ -31,7 +31,7 @@ zone_systemique:
 - société
 alliances:
 - agence_de_regulation_des_detroits_strategiques_ards_eco_communalism
-- amazonie_pacte_viva_eco_communalism
+- consortium_amazonia_viva_eco_communalism
 - archives_ouvertes_des_jurisprudences_communales_aojc_eco_communalism
 - assemblees_bioterritoriales_regionales_eco_communalism
 - assemblees_cooperatives_regionales_eco_communalism
@@ -131,7 +131,7 @@ La tension centrale des Cercles réside dans leur absence d'autorité coercitive
 ## Relations
 **Alliés :**
 - [[agence_de_regulation_des_detroits_strategiques_ards_eco_communalism]]
-- [[amazonie_pacte_viva_eco_communalism]]
+- [[consortium_amazonia_viva_eco_communalism]]
 - [[archives_ouvertes_des_jurisprudences_communales_aojc_eco_communalism]]
 - [[assemblees_bioterritoriales_regionales_eco_communalism]]
 - [[assemblees_cooperatives_regionales_eco_communalism]]

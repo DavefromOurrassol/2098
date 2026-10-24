@@ -41,7 +41,7 @@ alliances:
 - the_tidewater_canon_eco_communalism
 oppositions:
 - agence_de_regulation_des_detroits_strategiques_ards_eco_communalism
-- amazonie_pacte_viva_eco_communalism
+- consortium_amazonia_viva_eco_communalism
 - assemblees_bioterritoriales_regionales_eco_communalism
 - assemblees_cooperatives_regionales_eco_communalism
 - assemblees_de_bassin_versant_eco_communalism
@@ -52,7 +52,6 @@ oppositions:
 - confederation_bassins_vivants_eco_communalism
 - confederation_communs_arc_septentrional_eco_communalism
 - conseils_de_bassin_versant_eco_communalistes_eco_communalism
-- consortium_amazonia_viva_eco_communalism
 - consortium_des_pecheries_autonomes_du_grand_nord_eco_communalism
 - cooperative_terrafond_eco_communalism
 - cooperatives_d_habitat_regeneratif_eco_communalism
@@ -152,7 +151,7 @@ La contradiction centrale de ces factions est qu'elles prospèrent précisément
 - [[the_tidewater_canon_eco_communalism]]
 **Opposants :**
 - [[agence_de_regulation_des_detroits_strategiques_ards_eco_communalism]]
-- [[amazonie_pacte_viva_eco_communalism]]
+- [[consortium_amazonia_viva_eco_communalism]]
 - [[assemblees_bioterritoriales_regionales_eco_communalism]]
 - [[assemblees_cooperatives_regionales_eco_communalism]]
 - [[assemblees_de_bassin_versant_eco_communalism]]
@@ -163,7 +162,6 @@ La contradiction centrale de ces factions est qu'elles prospèrent précisément
 - [[confederation_bassins_vivants_eco_communalism]]
 - [[confederation_communs_arc_septentrional_eco_communalism]]
 - [[conseils_de_bassin_versant_eco_communalistes_eco_communalism]]
-- [[consortium_amazonia_viva_eco_communalism]]
 - [[consortium_des_pecheries_autonomes_du_grand_nord_eco_communalism]]
 - [[cooperative_terrafond_eco_communalism]]
 - [[cooperatives_d_habitat_regeneratif_eco_communalism]]

@@ -40,7 +40,7 @@ alliances:
 - factions_communautaires_refusant_le_partage_narratif_exterieur_eco_communalism
 - fraternites_ecospiritualistes_des_anciens_survivalistes_eco_communalism
 oppositions:
-- amazonie_pacte_viva_eco_communalism
+- consortium_amazonia_viva_eco_communalism
 - archives_ouvertes_des_jurisprudences_communales_aojc_eco_communalism
 - assemblees_bioterritoriales_regionales_eco_communalism
 - assemblees_cooperatives_regionales_eco_communalism
@@ -135,7 +135,7 @@ Elles incarnent la contradiction fondatrice de l'éco-communalisme : comment un 
 - [[factions_communautaires_refusant_le_partage_narratif_exterieur_eco_communalism]]
 - [[fraternites_ecospiritualistes_des_anciens_survivalistes_eco_communalism]]
 **Opposants :**
-- [[amazonie_pacte_viva_eco_communalism]]
+- [[consortium_amazonia_viva_eco_communalism]]
 - [[archives_ouvertes_des_jurisprudences_communales_aojc_eco_communalism]]
 - [[assemblees_bioterritoriales_regionales_eco_communalism]]
 - [[assemblees_cooperatives_regionales_eco_communalism]]

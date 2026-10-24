@@ -33,7 +33,7 @@ zone_geographique:
 zone_systemique:
 - société
 alliances:
-- amazonie_pacte_viva_eco_communalism
+- consortium_amazonia_viva_eco_communalism
 - assemblees_bioterritoriales_regionales_eco_communalism
 - assemblees_cooperatives_regionales_eco_communalism
 - assemblees_de_bassin_versant_eco_communalism
@@ -144,7 +144,7 @@ La tension centrale est celle entre l'efficacité coordinatrice — qui appelle 
 
 ## Relations
 **Alliés :**
-- [[amazonie_pacte_viva_eco_communalism]]
+- [[consortium_amazonia_viva_eco_communalism]]
 - [[assemblees_bioterritoriales_regionales_eco_communalism]]
 - [[assemblees_cooperatives_regionales_eco_communalism]]
 - [[assemblees_de_bassin_versant_eco_communalism]]

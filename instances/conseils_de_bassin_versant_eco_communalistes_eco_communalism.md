@@ -32,12 +32,11 @@ zone_geographique:
 zone_systemique:
 - société
 alliances:
-- amazonie_pacte_viva_eco_communalism
+- consortium_amazonia_viva_eco_communalism
 - assemblees_bioterritoriales_regionales_eco_communalism
 - brigades_de_restauration_ecologique_eco_communalism
 - cercles_de_mediation_territoriale_intercommunautaire_eco_communalism
 - confederation_bassins_vivants_eco_communalism
-- consortium_amazonia_viva_eco_communalism
 - cooperatives_d_habitat_regeneratif_eco_communalism
 - cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism
 - guildes_de_mediateurs_ecologiques_eco_communalism
@@ -125,12 +124,11 @@ La tension centrale qui traverse ces conseils oppose la logique des bassins vers
 
 ## Relations
 **Alliés :**
-- [[amazonie_pacte_viva_eco_communalism]]
+- [[consortium_amazonia_viva_eco_communalism]]
 - [[assemblees_bioterritoriales_regionales_eco_communalism]]
 - [[brigades_de_restauration_ecologique_eco_communalism]]
 - [[cercles_de_mediation_territoriale_intercommunautaire_eco_communalism]]
 - [[confederation_bassins_vivants_eco_communalism]]
-- [[consortium_amazonia_viva_eco_communalism]]
 - [[cooperatives_d_habitat_regeneratif_eco_communalism]]
 - [[cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism]]
 - [[guildes_de_mediateurs_ecologiques_eco_communalism]]

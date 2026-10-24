@@ -45,7 +45,7 @@ alliances:
 - reseau_des_marches_noirs_de_donnees_extractivistes_eco_communalism
 - reseaux_de_notables_communautaires_capturistes_eco_communalism
 oppositions:
-- amazonie_pacte_viva_eco_communalism
+- consortium_amazonia_viva_eco_communalism
 - archives_ouvertes_des_jurisprudences_communales_aojc_eco_communalism
 - assemblees_bioterritoriales_regionales_eco_communalism
 - assemblees_cooperatives_regionales_eco_communalism
@@ -57,7 +57,6 @@ oppositions:
 - collectifs_de_techniciens_sobres_eco_communalism
 - confederation_bassins_vivants_eco_communalism
 - confederation_communs_arc_septentrional_eco_communalism
-- consortium_amazonia_viva_eco_communalism
 - consortium_des_pecheries_autonomes_du_grand_nord_eco_communalism
 - cooperatives_d_habitat_regeneratif_eco_communalism
 - cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism
@@ -162,7 +161,7 @@ La tension centrale est celle d'un anachronisme armé : ces enclaves survivent p
 - [[reseau_des_marches_noirs_de_donnees_extractivistes_eco_communalism]]
 - [[reseaux_de_notables_communautaires_capturistes_eco_communalism]]
 **Opposants :**
-- [[amazonie_pacte_viva_eco_communalism]]
+- [[consortium_amazonia_viva_eco_communalism]]
 - [[archives_ouvertes_des_jurisprudences_communales_aojc_eco_communalism]]
 - [[assemblees_bioterritoriales_regionales_eco_communalism]]
 - [[assemblees_cooperatives_regionales_eco_communalism]]
@@ -174,7 +173,6 @@ La tension centrale est celle d'un anachronisme armé : ces enclaves survivent p
 - [[collectifs_de_techniciens_sobres_eco_communalism]]
 - [[confederation_bassins_vivants_eco_communalism]]
 - [[confederation_communs_arc_septentrional_eco_communalism]]
-- [[consortium_amazonia_viva_eco_communalism]]
 - [[consortium_des_pecheries_autonomes_du_grand_nord_eco_communalism]]
 - [[cooperatives_d_habitat_regeneratif_eco_communalism]]
 - [[cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism]]

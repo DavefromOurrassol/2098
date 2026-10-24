@@ -50,7 +50,7 @@ alliances:
     - brigades_de_restauration_ecologique_eco_communalism
     - collectifs_de_geo_observateurs_citoyens_eco_communalism
     - archives_ouvertes_des_jurisprudences_communales_aojc_eco_communalism
-    - amazonie_pacte_viva_eco_communalism
+    - consortium_amazonia_viva_eco_communalism
 
 oppositions:
     - consortiums_industriels_de_l_eau_eco_communalism
@@ -109,7 +109,7 @@ Le Kalaallit Nunaat Bioterritoire Souverain administre la totalité de ses écos
 - [[geopolitique_conflits]]
 
 ## Relations
-**Alliés** : [[confederation_des_communs_de_l_arc_septentrional_eco_communalism]], [[reseau_des_assemblees_de_bassin_fennoscandien_eco_communalism]], [[confederation_communs_arc_septentrional_eco_communalism]], [[assemblee_territoires_eco_communalism]], [[assemblees_bioterritoriales_regionales_eco_communalism]], [[kalaallit_nunaat_sovereign_fund_eco_communalism]], [[confederation_bassins_vivants_eco_communalism]], [[brigades_de_restauration_ecologique_eco_communalism]], [[collectifs_de_geo_observateurs_citoyens_eco_communalism]], [[archives_ouvertes_des_jurisprudences_communales_aojc_eco_communalism]], [[amazonie_pacte_viva_eco_communalism]]
+**Alliés** : [[confederation_des_communs_de_l_arc_septentrional_eco_communalism]], [[reseau_des_assemblees_de_bassin_fennoscandien_eco_communalism]], [[confederation_communs_arc_septentrional_eco_communalism]], [[assemblee_territoires_eco_communalism]], [[assemblees_bioterritoriales_regionales_eco_communalism]], [[kalaallit_nunaat_sovereign_fund_eco_communalism]], [[confederation_bassins_vivants_eco_communalism]], [[brigades_de_restauration_ecologique_eco_communalism]], [[collectifs_de_geo_observateurs_citoyens_eco_communalism]], [[archives_ouvertes_des_jurisprudences_communales_aojc_eco_communalism]], [[consortium_amazonia_viva_eco_communalism]]
 **Opposants** : [[consortiums_industriels_de_l_eau_eco_communalism]], [[agro_conglomerats_des_enclaves_technologiques_eco_communalism]], [[plateformes_centralisees_de_reagregation_globale_eco_communalism]], [[factions_technophiles_de_la_geo_ingenierie_centralisee_eco_communalism]], [[enclaves_extractivistes_residuelles_des_corridors_eco_communalism]], [[factions_extractivistes_des_aquiferes_communs_eco_communalism]], [[reseau_des_marches_noirs_de_donnees_extractivistes_eco_communalism]], [[cartels_de_narration_de_penurie_eco_communalism]], [[consortium_des_operateurs_d_ia_proprietaires_sur_les_trames_eco_communalism]]
 
 ## Description journalistique

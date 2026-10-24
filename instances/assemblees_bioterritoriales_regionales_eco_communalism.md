@@ -32,7 +32,7 @@ zone_geographique:
 zone_systemique:
 - société
 alliances:
-- amazonie_pacte_viva_eco_communalism
+- consortium_amazonia_viva_eco_communalism
 - archives_ouvertes_des_jurisprudences_communales_aojc_eco_communalism
 - assemblees_cooperatives_regionales_eco_communalism
 - assemblees_de_bassin_versant_eco_communalism
@@ -46,7 +46,6 @@ alliances:
 - confederation_communs_arc_septentrional_eco_communalism
 - conseils_de_bassin_versant_eco_communalistes_eco_communalism
 - consortium_africain_de_biotechnologies_sociales_eco_communalism
-- consortium_amazonia_viva_eco_communalism
 - cooperatives_d_habitat_regeneratif_eco_communalism
 - cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism
 - factions_algorithmiques_pro_gouvernance_ia_legere_eco_communalism
@@ -163,7 +162,7 @@ Les Assemblées sont constamment tiraillées entre leur vocation délibérative 
 
 ## Relations
 **Alliés :**
-- [[amazonie_pacte_viva_eco_communalism]]
+- [[consortium_amazonia_viva_eco_communalism]]
 - [[archives_ouvertes_des_jurisprudences_communales_aojc_eco_communalism]]
 - [[assemblees_cooperatives_regionales_eco_communalism]]
 - [[assemblees_de_bassin_versant_eco_communalism]]
@@ -177,7 +176,6 @@ Les Assemblées sont constamment tiraillées entre leur vocation délibérative 
 - [[confederation_communs_arc_septentrional_eco_communalism]]
 - [[conseils_de_bassin_versant_eco_communalistes_eco_communalism]]
 - [[consortium_africain_de_biotechnologies_sociales_eco_communalism]]
-- [[consortium_amazonia_viva_eco_communalism]]
 - [[cooperatives_d_habitat_regeneratif_eco_communalism]]
 - [[cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism]]
 - [[factions_algorithmiques_pro_gouvernance_ia_legere_eco_communalism]]

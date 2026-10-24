@@ -44,7 +44,7 @@ alliances:
 - reseau_des_marches_noirs_de_donnees_extractivistes_eco_communalism
 - reseaux_de_notables_communautaires_capturistes_eco_communalism
 oppositions:
-- amazonie_pacte_viva_eco_communalism
+- consortium_amazonia_viva_eco_communalism
 - assemblees_bioterritoriales_regionales_eco_communalism
 - collectifs_de_facilitateurs_deliberatifs_itinerants_eco_communalism
 - confederation_bassins_vivants_eco_communalism
@@ -136,7 +136,7 @@ Les Cartels prospèrent précisément sur les acquis démocratiques des communau
 - [[reseau_des_marches_noirs_de_donnees_extractivistes_eco_communalism]]
 - [[reseaux_de_notables_communautaires_capturistes_eco_communalism]]
 **Opposants :**
-- [[amazonie_pacte_viva_eco_communalism]]
+- [[consortium_amazonia_viva_eco_communalism]]
 - [[assemblees_bioterritoriales_regionales_eco_communalism]]
 - [[collectifs_de_facilitateurs_deliberatifs_itinerants_eco_communalism]]
 - [[confederation_bassins_vivants_eco_communalism]]

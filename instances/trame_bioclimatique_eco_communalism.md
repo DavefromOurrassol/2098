@@ -36,12 +36,11 @@ zone_systemique:
 
 alliances:
 - agence_de_regulation_des_detroits_strategiques_ards_eco_communalism
-- amazonie_pacte_viva_eco_communalism
+- consortium_amazonia_viva_eco_communalism
 - assemblees_bioterritoriales_regionales_eco_communalism
 - collectifs_de_geo_observateurs_citoyens_eco_communalism
 - confederation_bassins_vivants_eco_communalism
 - conseils_de_bassin_versant_eco_communalistes_eco_communalism
-- consortium_amazonia_viva_eco_communalism
 - guildes_des_semenciers_itinerants_eco_communalism
 - mouvement_des_communes_du_rust_belt_eco_communalism
 - oracle_des_seuils_eco_communalism
@@ -105,12 +104,11 @@ La question de la continuité entre territoires refuse de se résoudre : une com
 ## Relations
 **Alliés :**
 - [[agence_de_regulation_des_detroits_strategiques_ards_eco_communalism]]
-- [[amazonie_pacte_viva_eco_communalism]]
+- [[consortium_amazonia_viva_eco_communalism]]
 - [[assemblees_bioterritoriales_regionales_eco_communalism]]
 - [[collectifs_de_geo_observateurs_citoyens_eco_communalism]]
 - [[confederation_bassins_vivants_eco_communalism]]
 - [[conseils_de_bassin_versant_eco_communalistes_eco_communalism]]
-- [[consortium_amazonia_viva_eco_communalism]]
 - [[guildes_des_semenciers_itinerants_eco_communalism]]
 - [[mouvement_des_communes_du_rust_belt_eco_communalism]]
 - [[oracle_des_seuils_eco_communalism]]

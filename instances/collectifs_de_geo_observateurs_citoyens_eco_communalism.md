@@ -32,14 +32,13 @@ zone_geographique:
 zone_systemique:
 - société
 alliances:
-- amazonie_pacte_viva_eco_communalism
+- consortium_amazonia_viva_eco_communalism
 - assemblees_bioterritoriales_regionales_eco_communalism
 - assemblees_cooperatives_regionales_eco_communalism
 - brigades_de_restauration_ecologique_eco_communalism
 - collectifs_de_cartographie_ecologique_participative_eco_communalism
 - collectifs_de_facilitateurs_deliberatifs_itinerants_eco_communalism
 - confederation_bassins_vivants_eco_communalism
-- consortium_amazonia_viva_eco_communalism
 - guildes_de_mediateurs_ecologiques_eco_communalism
 - kalaallit_nunaat_bioterritoire_eco_communalism
 - mouvement_des_archives_vivantes_du_savoir_partage_eco_communalism
@@ -127,14 +126,13 @@ La tension majeure réside dans la fragmentation même qui fait leur force : san
 
 ## Relations
 **Alliés :**
-- [[amazonie_pacte_viva_eco_communalism]]
+- [[consortium_amazonia_viva_eco_communalism]]
 - [[assemblees_bioterritoriales_regionales_eco_communalism]]
 - [[assemblees_cooperatives_regionales_eco_communalism]]
 - [[brigades_de_restauration_ecologique_eco_communalism]]
 - [[collectifs_de_cartographie_ecologique_participative_eco_communalism]]
 - [[collectifs_de_facilitateurs_deliberatifs_itinerants_eco_communalism]]
 - [[confederation_bassins_vivants_eco_communalism]]
-- [[consortium_amazonia_viva_eco_communalism]]
 - [[guildes_de_mediateurs_ecologiques_eco_communalism]]
 - [[kalaallit_nunaat_bioterritoire_eco_communalism]]
 - [[mouvement_des_archives_vivantes_du_savoir_partage_eco_communalism]]

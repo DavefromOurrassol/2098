@@ -39,7 +39,7 @@ alliances:
 - factions_extractivistes_des_aquiferes_communs_eco_communalism
 - reseau_des_marches_noirs_de_donnees_extractivistes_eco_communalism
 oppositions:
-- amazonie_pacte_viva_eco_communalism
+- consortium_amazonia_viva_eco_communalism
 - archives_ouvertes_des_jurisprudences_communales_aojc_eco_communalism
 - assemblees_bioterritoriales_regionales_eco_communalism
 - assemblees_cooperatives_regionales_eco_communalism
@@ -152,7 +152,7 @@ La tension centrale est celle de la légitimité mimétique : ces notables parle
 - [[factions_extractivistes_des_aquiferes_communs_eco_communalism]]
 - [[reseau_des_marches_noirs_de_donnees_extractivistes_eco_communalism]]
 **Opposants :**
-- [[amazonie_pacte_viva_eco_communalism]]
+- [[consortium_amazonia_viva_eco_communalism]]
 - [[archives_ouvertes_des_jurisprudences_communales_aojc_eco_communalism]]
 - [[assemblees_bioterritoriales_regionales_eco_communalism]]
 - [[assemblees_cooperatives_regionales_eco_communalism]]
