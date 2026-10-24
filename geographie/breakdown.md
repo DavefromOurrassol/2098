@@ -1463,9 +1463,21 @@ zones:
   type: union_regionale
   parent: arc_eurasien_central
   origine_reelle:
+  - entite: Estonie
+    type_entite: pays
+    portion: côte baltique (Tallinn)
+  - entite: Lettonie
+    type_entite: pays
+    portion: côte baltique (Riga)
+  - entite: Lituanie
+    type_entite: pays
+    portion: côte baltique (Klaipėda)
+  - entite: Allemagne
+    type_entite: pays
+    portion: côte baltique et estuaire de l'Elbe (Lübeck, Rostock, Hambourg)
   - entite: Pologne (côte baltique)
     type_entite: region_administrative
-    portion: null
+    portion: Gdańsk et la côte de Poméranie (débordement sur la zone voisine)
   description: Bloc de résistance régionale structuré maintenant des flux économiques
     et une cohérence institutionnelle minimale dans l'espace baltique, en marge de
     l'empire Nordark. La Hanse Recomposée s'appuie sur des réseaux commerciaux historiques
