@@ -11649,7 +11649,7 @@ function buildDecisionHypothese() {
   }
   function sousTitre(txt) {
     const ICONES = [['Carte', '🗺️'], ['Nouvelles', '🧩'], ['Phrases', '✏️'], ['Articles', '📰'],
-                    ['Règle', '📜'], ['Pour finir', '🏁']];   // PATCH_S27_CARTE_MAIN
+                    ['Règle', '📜'], ['Pour finir', '🏁'], ['Fiches', '⏳']];   // PATCH_S27_CARTE_MAIN / GUI_AU_PASSE
     const icone = (ICONES.find(([k]) => txt.startsWith(k)) || [null, ''])[1];
     const t = mk('div', 'option-label', (icone ? icone + '  ' : '') + txt);
     Object.assign(t.style, { marginTop: '18px', marginBottom: '8px', padding: '6px 10px', borderRadius: '6px',
@@ -11905,6 +11905,56 @@ function buildDecisionHypothese() {
       }
       zoneMain.appendChild(bloc);
     });
+
+    // PATCH_S27_GUI_AU_PASSE : fiches des entités disparues, mises au passé (fiche_au_passe.py).
+    const disp = etat.disparues || [];
+    if (disp.length) {
+      zoneMain.appendChild(sousTitre('Fiches des entités disparues (au passé)'));
+      const ETATS_AP = { a_faire: ['· aperçu pas encore fait', '#888'],
+                         apercu: ['⚠ avant / après prêt : à relire, puis « Écrire dans la fiche »', '#b9770e'],
+                         ecrite: ['✓ écrite dans la fiche', '#1e8449'] };
+      disp.forEach(f => {
+        const bloc = mk('div');
+        Object.assign(bloc.style, { margin: '6px 0', paddingLeft: '8px', borderLeft: '2px solid #ddd' });
+        const titre = mk('div', 'option-label', `${f.nom} (${f.slug}) — ${f.sc}`);
+        Object.assign(titre.style, { textTransform: 'none', letterSpacing: 'normal', fontSize: '12px',
+                                     color: 'var(--text)' });
+        bloc.appendChild(titre);
+        const [txt, col] = ETATS_AP[f.etat] || ['?', '#888'];
+        const st = mk('div', 'option-desc', txt + (f.date ? ` (${f.date})` : ''));
+        st.style.color = col;
+        bloc.appendChild(st);
+        const l = mk('div');
+        if (f.rapport) {
+          const bO = bouton('Ouvrir l\'avant / après ↗');
+          bO.addEventListener('click', () => _panneauOuvrirDansObsidian(f.rapport));
+          l.appendChild(bO);
+        }
+        if (f.rapport && f.etat !== 'ecrite') {
+          const bE = bouton('Écrire dans la fiche', 'yaml-btn yaml-btn-save');
+          bE.addEventListener('click', () => {
+            if (!confirm('Écrire dans la fiche les textes « Après » de l\'avant / après (retouches comprises) ?'
+                         + '\n(Sauvegarde .bak_au_passe.)')) return;
+            appeler('main/au_passe', 'ecrire', { slug: f.slug });
+          });
+          l.appendChild(bE);
+          tous.push(bE);
+        }
+        const bP = bouton(f.etat === 'a_faire' ? 'Mettre au passé (IA)' : 'Refaire l\'aperçu (IA)');
+        bP.addEventListener('click', () => {
+          if (!confirm('Un appel IA : nouvel avant / après (les retouches faites dans l\'ancien sont perdues) ; '
+                       + 'la fiche n\'est pas modifiée. Continuer ?')) return;
+          appeler('main/au_passe', 'apercu', { slug: f.slug });
+        });
+        l.appendChild(bP);
+        tous.push(bP);
+        const bF = bouton('Ouvrir la fiche ↗');
+        bF.addEventListener('click', () => _panneauOuvrirDansObsidian(`instances/${f.slug}.md`));
+        l.appendChild(bF);
+        bloc.appendChild(l);
+        zoneMain.appendChild(bloc);
+      });
+    }
 
     // PATCH_S27_ARTICLES : articles à relire -- repérage par l'IA, jamais d'écriture dans un article.
     zoneMain.appendChild(sousTitre('Articles à relire'));

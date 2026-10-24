@@ -590,6 +590,13 @@ def ecrire_reste_a_faire(data, ops, rapport_ok=True):
 
         # Règle de lore (brouillon)
         disparues = [o for o in mes_ops if o["genre"] == "trajectoire" and o.get("apres") == "disparu" and faites(o)]
+        if disparues:   # PATCH_S27_AU_PASSE : la phase 4 change la trajectoire, pas le texte
+            L += ["### Fiches des entités disparues (au passé)", ""]
+            for o in disparues:
+                case(f"`instances/{o['instance']}.md` au passé : étape ⑤, rubrique « Fiches des entités "
+                     f"disparues » (aperçu fait à l'application : `documentation/need_action/fiche_au_passe_"
+                     f"{o['instance']}.md`) ; relire, retoucher si besoin, puis « Écrire dans la fiche ».")
+            L.append("")
         if disparues or data.get("contraintes"):
             L += ["### Règle de lore (brouillon)", ""]
             case(f"Relire puis ajouter à `documentation/lore_regles.yaml`, section `{sc}` "
@@ -910,6 +917,12 @@ def main():
             lancer(["generator/fix_alliances_oppositions.py", "--scenario", sc, "--reciprocite-seule",
                     "--ignorer-exclus", "--resoudre-conflits", "--bascule-en-opposition"])
     lancer(["generator/validate.py"])
+    # PATCH_S27_GUI_AU_PASSE : aperçu « au passé » des fiches qui viennent de disparaître (un appel IA
+    # chacune) ; relecture et écriture à l'étape ⑤.
+    for o in retenues:
+        if o["genre"] == "trajectoire" and o.get("apres") == "disparu" and fiche(o["instance"]).exists():
+            lancer(["generator/fiche_au_passe.py", "--slug", o["instance"], "--contexte",
+                    f"{data.get('nom') or a.id} ({data.get('annee')})"])
     p = ecrire_reste_a_faire(data, ops, rapport_ok)
     print(f"✓ check-list : {p.relative_to(VAULT)}")
     journal = APP_DIR / f"{a.id}.applique.json"

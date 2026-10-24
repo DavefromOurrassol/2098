@@ -3055,7 +3055,8 @@ TIMEOUTS_MAIN = {"etat": 120, "entites": 120, "regle": 60, "lancer": 900,
                  "phrases": 900, "phrase": 60,   # PATCH_S27_PHRASES
                  "articles": 1500, "article": 60,   # PATCH_S27_ARTICLES
                  "carte": 120,   # PATCH_S27_CARTE_MAIN
-                 "journal": 300}   # PATCH_S27_JOURNAUX
+                 "journal": 300,   # PATCH_S27_JOURNAUX
+                 "au_passe": 300}   # PATCH_S27_GUI_AU_PASSE
 
 
 @app.route("/api/et_si/main/<quoi>", methods=["POST"])
@@ -3097,6 +3098,9 @@ def et_si_main_route(quoi, action=None):
         cle = str(data["cle"])
         cmd += ["--journal-garder", cle] if action == "garder" else (
             ["--journal-retirer", cle] + (["--apply"] if action == "retirer" else []))
+    elif (quoi == "au_passe" and action in ("apercu", "ecrire")   # PATCH_S27_GUI_AU_PASSE
+          and re.match(r"^[a-z0-9_]+$", str(data.get("slug") or ""))):
+        cmd += ["--au-passe", str(data["slug"])] + (["--apply"] if action == "ecrire" else [])
     elif quoi == "articles" and action == "verifier":   # PATCH_S27_ARTICLES (appels IA, lecture seule)
         cmd.append("--articles-verifier")
     elif (quoi == "article" and action == "relu" and ".." not in str(data.get("chemin") or "")

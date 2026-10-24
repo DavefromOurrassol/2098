@@ -1177,6 +1177,42 @@ def journal_retirer(hid, data, cle, apply):
 # 6. Commandes de fin
 # ---------------------------------------------------------------------------
 
+# PATCH_S27_GUI_AU_PASSE (24 oct 2026) : fiches des entités disparues, à mettre au passé.
+def fiches_disparues(data, suivi):
+    """Entités que la phase 4 a fait disparaître (trajectoire « disparu » appliquée)."""
+    ops, _ = ap.construire_plan(data)
+    faites = suivi.get("au_passe") or {}
+    out = []
+    for o in ops:
+        if o["genre"] != "trajectoire" or o.get("apres") != "disparu" or o.get("alerte") != "déjà appliqué":
+            continue
+        slug = o["instance"]
+        rap = VAULT / "documentation" / "need_action" / f"fiche_au_passe_{slug}.md"
+        out.append({"slug": slug, "sc": o["sc"], "nom": re.sub(r"\s*\(`.*$", "", o["texte"]),
+                    "etat": "ecrite" if slug in faites else ("apercu" if rap.exists() else "a_faire"),
+                    "rapport": str(rap.relative_to(VAULT)) if rap.exists() else None,
+                    "date": faites.get(slug)})
+    return out
+
+
+def au_passe(hid, data, slug, apply):
+    if slug not in {f["slug"] for f in fiches_disparues(data, lire_suivi(hid))}:
+        sys.exit(f"✗ {slug} : pas une entité disparue de cette hypothèse (trajectoire appliquée)")
+    cmd = [sys.executable, str(GEN / "fiche_au_passe.py"), "--slug", slug]
+    cmd += ["--apply"] if apply else ["--contexte", f"{data.get('nom') or hid} ({_annee(data)})"]
+    try:
+        r = subprocess.run(cmd, cwd=VAULT, capture_output=True, text=True, timeout=280, stdin=subprocess.DEVNULL)
+    except subprocess.TimeoutExpired:
+        print("✗ délai dépassé (280 s)")
+        return 1
+    print("\n".join(s for s in (r.stdout.strip(), r.stderr.strip()) if s))
+    if apply and r.returncode == 0:
+        suivi = lire_suivi(hid)
+        suivi.setdefault("au_passe", {})[slug] = maintenant()
+        ecrire_suivi(hid, suivi)
+    return r.returncode
+
+
 def lancer(action, sc, data):
     if sc not in data["scenarios"]:
         sys.exit(f"✗ scénario {sc} hors de l'hypothèse")
@@ -1236,6 +1272,11 @@ def etat(hid, data):
     except Exception as e:
         out["articles"] = []
         out["erreurs"].append(f"articles : {type(e).__name__}: {e}")
+    try:   # PATCH_S27_GUI_AU_PASSE
+        out["disparues"] = fiches_disparues(data, suivi)
+    except Exception as e:
+        out["disparues"] = []
+        out["erreurs"].append(f"fiches disparues : {type(e).__name__}: {e}")
     return out
 
 
@@ -1259,6 +1300,8 @@ def main():
     a.add_argument("--journal-garder", metavar="SC:ZONE:ORIENTATION", help="garde le journal d'une zone vidée (exil)")
     a.add_argument("--journal-retirer", metavar="SC:ZONE:ORIENTATION",
                    help="retire de journaux.yaml le journal d'une zone vidée (avec --apply)")
+    a.add_argument("--au-passe", metavar="SLUG",   # PATCH_S27_GUI_AU_PASSE
+                   help="fiche d'une entité disparue au passé : aperçu (un appel IA), --apply pour écrire")
     a.add_argument("--scenario")
     a.add_argument("--apply", action="store_true")
     x = a.parse_args()
@@ -1290,6 +1333,8 @@ def main():
         return proposer_phrases(x.id, data, x.refaire)
     if x.phrase:
         return remplacer_phrase(x.id, data, x.phrase, "" if x.ignorer else sys.stdin.read(), x.ignorer, x.apply)
+    if x.au_passe:   # PATCH_S27_GUI_AU_PASSE
+        return au_passe(x.id, data, x.au_passe, x.apply)
     if x.lancer:
         if not x.scenario:
             sys.exit("✗ --lancer demande --scenario")
