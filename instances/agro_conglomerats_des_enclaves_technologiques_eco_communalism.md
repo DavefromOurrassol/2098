@@ -44,7 +44,7 @@ oppositions:
 - collectifs_de_geo_observateurs_citoyens_eco_communalism
 - confederation_bassins_vivants_eco_communalism
 - consortium_africain_de_biotechnologies_sociales_eco_communalism
-- cooperative_terrafond_eco_communalism
+- reseau_terrafond_bassins_eco_communalism
 - cooperatives_d_habitat_regeneratif_eco_communalism
 - cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism
 - frente_sertao_livre_eco_communalism
@@ -53,7 +53,6 @@ oppositions:
 - kalaallit_nunaat_bioterritoire_eco_communalism
 - mouvement_des_communes_du_rust_belt_eco_communalism
 - mutuelles_de_sante_territoriales_eco_communalism
-- reseau_terrafond_bassins_eco_communalism
 - reseaux_de_reconstruction_cooperative_inter_communautes_eco_communalism
 - sao_paulo_algorithmique_eco_communalism
 - tampere_charte_eco_communalism
@@ -136,7 +135,7 @@ Leur survie dépend de l'accès aux terres et aux ressources que les bioterritoi
 - [[collectifs_de_geo_observateurs_citoyens_eco_communalism]]
 - [[confederation_bassins_vivants_eco_communalism]]
 - [[consortium_africain_de_biotechnologies_sociales_eco_communalism]]
-- [[cooperative_terrafond_eco_communalism]]
+- [[reseau_terrafond_bassins_eco_communalism]]
 - [[cooperatives_d_habitat_regeneratif_eco_communalism]]
 - [[cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism]]
 - [[frente_sertao_livre_eco_communalism]]
@@ -145,7 +144,6 @@ Leur survie dépend de l'accès aux terres et aux ressources que les bioterritoi
 - [[kalaallit_nunaat_bioterritoire_eco_communalism]]
 - [[mouvement_des_communes_du_rust_belt_eco_communalism]]
 - [[mutuelles_de_sante_territoriales_eco_communalism]]
-- [[reseau_terrafond_bassins_eco_communalism]]
 - [[reseaux_de_reconstruction_cooperative_inter_communautes_eco_communalism]]
 - [[sao_paulo_algorithmique_eco_communalism]]
 - [[tampere_charte_eco_communalism]]

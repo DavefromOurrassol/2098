@@ -41,7 +41,7 @@ alliances:
 - assemblees_bioterritoriales_regionales_eco_communalism
 - brigades_de_restauration_ecologique_eco_communalism
 - confederation_communs_arc_septentrional_eco_communalism
-- cooperative_terrafond_eco_communalism
+- reseau_terrafond_bassins_eco_communalism
 - kalaallit_nunaat_bioterritoire_eco_communalism
 - reseau_des_assemblees_de_bassin_fennoscandien_eco_communalism
 oppositions:
@@ -107,7 +107,7 @@ La question centrale qui traverse le Fonds est celle de sa légitimité dans un 
 - [[assemblees_bioterritoriales_regionales_eco_communalism]]
 - [[brigades_de_restauration_ecologique_eco_communalism]]
 - [[confederation_communs_arc_septentrional_eco_communalism]]
-- [[cooperative_terrafond_eco_communalism]]
+- [[reseau_terrafond_bassins_eco_communalism]]
 - [[kalaallit_nunaat_bioterritoire_eco_communalism]]
 - [[reseau_des_assemblees_de_bassin_fennoscandien_eco_communalism]]
 **Opposants :**

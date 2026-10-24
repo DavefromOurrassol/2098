@@ -37,7 +37,7 @@ alliances:
   - collectifs_de_cartographie_ecologique_participative_eco_communalism
   - collectifs_du_seuil_eco_communalism
   - confederation_bassins_vivants_eco_communalism
-  - cooperative_terrafond_eco_communalism
+  - reseau_terrafond_bassins_eco_communalism
   - guildes_de_mediateurs_ecologiques_eco_communalism
   - mouvement_des_communes_du_rust_belt_eco_communalism
   - tresse_verte_corridor_eco_communalism
@@ -105,7 +105,7 @@ La reconversion juridique du sol reste le nœud gordien : les coalitions communa
 - [[collectifs_de_cartographie_ecologique_participative_eco_communalism]]
 - [[collectifs_du_seuil_eco_communalism]]
 - [[confederation_bassins_vivants_eco_communalism]]
-- [[cooperative_terrafond_eco_communalism]]
+- [[reseau_terrafond_bassins_eco_communalism]]
 - [[guildes_de_mediateurs_ecologiques_eco_communalism]]
 - [[mouvement_des_communes_du_rust_belt_eco_communalism]]
 - [[tresse_verte_corridor_eco_communalism]]

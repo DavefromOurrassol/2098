@@ -33,14 +33,13 @@ zone_systemique:
 alliances:
 - assemblees_bioterritoriales_regionales_eco_communalism
 - consortium_africain_de_biotechnologies_sociales_eco_communalism
-- cooperative_terrafond_eco_communalism
+- reseau_terrafond_bassins_eco_communalism
 - cooperatives_d_habitat_regeneratif_eco_communalism
 - cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism
 - frente_sertao_livre_eco_communalism
 - guildes_des_semenciers_itinerants_eco_communalism
 - les_veilleurs_du_fleuve_eco_communalism
 - mouvement_des_communes_du_rust_belt_eco_communalism
-- reseau_terrafond_bassins_eco_communalism
 - reseaux_de_bibliotheques_archives_communautaires_eco_communalism
 - reseaux_de_reconstruction_cooperative_inter_communautes_eco_communalism
 - reseaux_de_troc_inter_cooperatives_et_marges_periurbaines_eco_communalism
@@ -120,14 +119,13 @@ La tension centrale est celle de la solidarité territoriale contre l'exclusion 
 **Alliés :**
 - [[assemblees_bioterritoriales_regionales_eco_communalism]]
 - [[consortium_africain_de_biotechnologies_sociales_eco_communalism]]
-- [[cooperative_terrafond_eco_communalism]]
+- [[reseau_terrafond_bassins_eco_communalism]]
 - [[cooperatives_d_habitat_regeneratif_eco_communalism]]
 - [[cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism]]
 - [[frente_sertao_livre_eco_communalism]]
 - [[guildes_des_semenciers_itinerants_eco_communalism]]
 - [[les_veilleurs_du_fleuve_eco_communalism]]
 - [[mouvement_des_communes_du_rust_belt_eco_communalism]]
-- [[reseau_terrafond_bassins_eco_communalism]]
 - [[reseaux_de_bibliotheques_archives_communautaires_eco_communalism]]
 - [[reseaux_de_reconstruction_cooperative_inter_communautes_eco_communalism]]
 - [[reseaux_de_troc_inter_cooperatives_et_marges_periurbaines_eco_communalism]]

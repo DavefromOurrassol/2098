@@ -420,7 +420,7 @@ zones:
     rivaux:
     - enclaves_extractivistes_et_etats_residuels
   sources_attestees:
-  - cooperative_terrafond_eco_communalism
+  - reseau_terrafond_bassins_eco_communalism
   - mouvement_racines_vivantes_eco_communalism
   - collectifs_du_seuil_eco_communalism
   - reseau_mnemos_eco_communalism
@@ -492,7 +492,7 @@ zones:
     rivaux:
     - proche_orient_en_crise
   sources_attestees:
-  - cooperative_terrafond_eco_communalism
+  - reseau_terrafond_bassins_eco_communalism
   - conflit_israel_iran_2026_eco_communalism
 - slug: nordeste_bresilien_frente
   nom: Nordeste Brésilien — Frente Sertão Livre
@@ -905,7 +905,7 @@ zones:
     rivaux:
     - enclaves_extractivistes_et_etats_residuels
   sources_attestees:
-  - cooperative_terrafond_eco_communalism
+  - reseau_terrafond_bassins_eco_communalism
   promu_depuis: null
 - slug: archives_communautaires_polynesie
   nom: Archives Communautaires de Polynésie
@@ -1614,7 +1614,7 @@ zones:
     rivaux:
     - enclaves_extractivistes_et_etats_residuels
   sources_attestees:
-  - cooperative_terrafond_eco_communalism
+  - reseau_terrafond_bassins_eco_communalism
   promu_depuis: null
 - slug: rust_belt_confederation_friches
   nom: Confédération des Friches Vivantes
@@ -1839,7 +1839,7 @@ zones:
     - massif_central_bioterritoire
     rivaux: []
   sources_attestees:
-  - cooperative_terrafond_eco_communalism
+  - reseau_terrafond_bassins_eco_communalism
   promu_depuis: Vallée de l'Ourthe
 - slug: vallee_du_rhone_reconstituee
   nom: Vallée du Rhône Reconstituée
@@ -1898,7 +1898,7 @@ zones:
     allies: []
     rivaux: []
   sources_attestees:
-  - cooperative_terrafond_eco_communalism
+  - reseau_terrafond_bassins_eco_communalism
   - conflit_israel_iran_2026_eco_communalism
   promu_depuis: null
 - slug: zones_extractivistes_corridors
@@ -3691,7 +3691,7 @@ Réseau décentralisé de bioterritoires autonomes couvrant l'Europe de l'Ouest,
 
 **Rivaux** : Enclaves Extractivistes et États Résiduels ([[enclaves_extractivistes_et_etats_residuels]])
 
-*Sources attestées : cooperative_terrafond_eco_communalism, mouvement_racines_vivantes_eco_communalism, collectifs_du_seuil_eco_communalism, reseau_mnemos_eco_communalism, prisme_global_eco_communalism, trame_bioclimatique_eco_communalism, confederation_bassins_vivants_eco_communalism, voix_du_dehors_eco_communalism, arrestation_chris_van_derburgh_eco_communalism, effondrement_reseau_mondial_communication_eco_communalism*
+*Sources attestées : reseau_terrafond_bassins_eco_communalism, mouvement_racines_vivantes_eco_communalism, collectifs_du_seuil_eco_communalism, reseau_mnemos_eco_communalism, prisme_global_eco_communalism, trame_bioclimatique_eco_communalism, confederation_bassins_vivants_eco_communalism, voix_du_dehors_eco_communalism, arrestation_chris_van_derburgh_eco_communalism, effondrement_reseau_mondial_communication_eco_communalism*
 
 #### Apennins Restaurés — sous [[europe_occidentale_reconstituee]]
 
@@ -3873,7 +3873,7 @@ Réseau de plus de 340 coopératives sur une douzaine de bassins versants d'Euro
 
 **Rivaux** : Enclaves Extractivistes et États Résiduels ([[enclaves_extractivistes_et_etats_residuels]])
 
-*Sources attestées : cooperative_terrafond_eco_communalism*
+*Sources attestées : reseau_terrafond_bassins_eco_communalism*
 
 #### Trame Mnemos — sous [[europe_occidentale_reconstituee]]
 
@@ -3953,7 +3953,7 @@ Berceau historique du Réseau Terrafond des Bassins, reconnaissable à ses silos
 
 **Alliés** : Massif Central ([[massif_central_bioterritoire]])
 
-*Sources attestées : cooperative_terrafond_eco_communalism*
+*Sources attestées : reseau_terrafond_bassins_eco_communalism*
 
 #### Vallée du Rhône Reconstituée — sous [[europe_occidentale_reconstituee]]
 
@@ -4001,7 +4001,7 @@ Zone de bassins versants méditerranéens intégrée au Réseau Terrafond des Ba
 
 **Rivaux** : Proche-Orient en Crise ([[proche_orient_en_crise]])
 
-*Sources attestées : cooperative_terrafond_eco_communalism, conflit_israel_iran_2026_eco_communalism*
+*Sources attestées : reseau_terrafond_bassins_eco_communalism, conflit_israel_iran_2026_eco_communalism*
 
 #### Aquifères Transfrontaliers du Maghreb — sous [[maghreb_mediterraneen]]
 
@@ -4019,7 +4019,7 @@ Nappes phréatiques transfrontalières du Maghreb constituant un enjeu stratégi
 
 **Rivaux** : Enclaves Extractivistes et États Résiduels ([[enclaves_extractivistes_et_etats_residuels]])
 
-*Sources attestées : cooperative_terrafond_eco_communalism*
+*Sources attestées : reseau_terrafond_bassins_eco_communalism*
 
 #### Zones Climatiquement Dégradées du Maghreb — sous [[maghreb_mediterraneen]]
 
@@ -4033,7 +4033,7 @@ Territoires du Maghreb intérieur frappés par une désertification avancée et 
 
 **Tensions internes** : Revendications de transferts de ressources refusées par les bassins riches ; pression démographique sur les zones encore productives ; populations réfugiées du Proche-Orient surimposées aux flux migratoires internes.
 
-*Sources attestées : cooperative_terrafond_eco_communalism, conflit_israel_iran_2026_eco_communalism*
+*Sources attestées : reseau_terrafond_bassins_eco_communalism, conflit_israel_iran_2026_eco_communalism*
 
 ### Nordeste Brésilien — Frente Sertão Livre
 

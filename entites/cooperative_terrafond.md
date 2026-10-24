@@ -32,7 +32,7 @@ L'économie du suffisant contre la logique de l'accumulation et de la croissance
 | [[fortress_world]] | — | — | — |
 | [[new_sustainability]] | — | — | — |
 | [[breakdown]] | [[cooperative_terrafond_breakdown]] | | |
-| [[eco_communalism]] | [[cooperative_terrafond_eco_communalism]] | | |
+| [[eco_communalism]] | [[reseau_terrafond_bassins_eco_communalism]] | | |
 | [[policy_reform]] | — | — | — |
 | [[reference]] | [[cooperative_terrafond_reference]] | | |
 

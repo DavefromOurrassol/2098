@@ -50,7 +50,7 @@ alliances:
 - confederation_communs_arc_septentrional_eco_communalism
 - conseils_de_bassin_versant_eco_communalistes_eco_communalism
 - consortium_amazonia_viva_eco_communalism
-- cooperative_terrafond_eco_communalism
+- reseau_terrafond_bassins_eco_communalism
 - cooperatives_d_habitat_regeneratif_eco_communalism
 - cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism
 - factions_algorithmiques_pro_gouvernance_ia_legere_eco_communalism
@@ -63,7 +63,6 @@ alliances:
 - mouvement_des_communes_du_rust_belt_eco_communalism
 - mouvement_racines_vivantes_eco_communalism
 - reseau_des_assemblees_de_bassin_fennoscandien_eco_communalism
-- reseau_terrafond_bassins_eco_communalism
 - reseaux_de_radio_communautaire_basse_consommation_eco_communalism
 - reseaux_de_reconstruction_cooperative_inter_communautes_eco_communalism
 - trame_bioclimatique_eco_communalism
@@ -155,7 +154,7 @@ La tension principale traverse la question de l'exclusion : que faire d'une comm
 - [[confederation_communs_arc_septentrional_eco_communalism]]
 - [[conseils_de_bassin_versant_eco_communalistes_eco_communalism]]
 - [[consortium_amazonia_viva_eco_communalism]]
-- [[cooperative_terrafond_eco_communalism]]
+- [[reseau_terrafond_bassins_eco_communalism]]
 - [[cooperatives_d_habitat_regeneratif_eco_communalism]]
 - [[cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism]]
 - [[factions_algorithmiques_pro_gouvernance_ia_legere_eco_communalism]]
@@ -168,7 +167,6 @@ La tension principale traverse la question de l'exclusion : que faire d'une comm
 - [[mouvement_des_communes_du_rust_belt_eco_communalism]]
 - [[mouvement_racines_vivantes_eco_communalism]]
 - [[reseau_des_assemblees_de_bassin_fennoscandien_eco_communalism]]
-- [[reseau_terrafond_bassins_eco_communalism]]
 - [[reseaux_de_radio_communautaire_basse_consommation_eco_communalism]]
 - [[reseaux_de_reconstruction_cooperative_inter_communautes_eco_communalism]]
 - [[trame_bioclimatique_eco_communalism]]

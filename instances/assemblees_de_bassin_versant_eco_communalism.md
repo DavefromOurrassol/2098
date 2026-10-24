@@ -38,7 +38,7 @@ alliances:
 - collectifs_de_facilitateurs_deliberatifs_itinerants_eco_communalism
 - confederation_bassins_vivants_eco_communalism
 - consortium_amazonia_viva_eco_communalism
-- cooperative_terrafond_eco_communalism
+- reseau_terrafond_bassins_eco_communalism
 - guildes_de_mediateurs_ecologiques_eco_communalism
 - le_registre_du_fleuve_eco_communalism
 - les_veilleurs_des_nappes_phreatiques_eco_communalism
@@ -46,7 +46,6 @@ alliances:
 - oracle_des_seuils_eco_communalism
 - rede_paulista_de_distribuicao_algoritmica_eco_communalism
 - reseau_des_assemblees_de_bassin_fennoscandien_eco_communalism
-- reseau_terrafond_bassins_eco_communalism
 - reseaux_de_radio_communautaire_basse_consommation_eco_communalism
 - reseaux_de_reconstruction_cooperative_inter_communautes_eco_communalism
 oppositions:
@@ -135,7 +134,7 @@ La tension la plus profonde oppose la souveraineté locale revendiquée par chaq
 - [[collectifs_de_facilitateurs_deliberatifs_itinerants_eco_communalism]]
 - [[confederation_bassins_vivants_eco_communalism]]
 - [[consortium_amazonia_viva_eco_communalism]]
-- [[cooperative_terrafond_eco_communalism]]
+- [[reseau_terrafond_bassins_eco_communalism]]
 - [[guildes_de_mediateurs_ecologiques_eco_communalism]]
 - [[le_registre_du_fleuve_eco_communalism]]
 - [[les_veilleurs_des_nappes_phreatiques_eco_communalism]]
@@ -143,7 +142,6 @@ La tension la plus profonde oppose la souveraineté locale revendiquée par chaq
 - [[oracle_des_seuils_eco_communalism]]
 - [[rede_paulista_de_distribuicao_algoritmica_eco_communalism]]
 - [[reseau_des_assemblees_de_bassin_fennoscandien_eco_communalism]]
-- [[reseau_terrafond_bassins_eco_communalism]]
 - [[reseaux_de_radio_communautaire_basse_consommation_eco_communalism]]
 - [[reseaux_de_reconstruction_cooperative_inter_communautes_eco_communalism]]
 **Opposants :**

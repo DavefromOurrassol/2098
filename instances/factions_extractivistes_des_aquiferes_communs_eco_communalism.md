@@ -53,7 +53,7 @@ oppositions:
 - confederation_communs_arc_septentrional_eco_communalism
 - conseils_de_bassin_versant_eco_communalistes_eco_communalism
 - consortium_des_pecheries_autonomes_du_grand_nord_eco_communalism
-- cooperative_terrafond_eco_communalism
+- reseau_terrafond_bassins_eco_communalism
 - cooperatives_d_habitat_regeneratif_eco_communalism
 - cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism
 - fraternites_ecospiritualistes_des_anciens_survivalistes_eco_communalism
@@ -70,7 +70,6 @@ oppositions:
 - mouvement_des_communes_du_rust_belt_eco_communalism
 - mutuelles_de_sante_territoriales_eco_communalism
 - reseau_des_assemblees_de_bassin_fennoscandien_eco_communalism
-- reseau_terrafond_bassins_eco_communalism
 - reseaux_de_reconstruction_cooperative_inter_communautes_eco_communalism
 - reseaux_de_troc_inter_cooperatives_et_marges_periurbaines_eco_communalism
 - zones_extractivistes_corridors_eco_communalism
@@ -163,7 +162,7 @@ La contradiction centrale de ces factions est qu'elles prospèrent précisément
 - [[confederation_communs_arc_septentrional_eco_communalism]]
 - [[conseils_de_bassin_versant_eco_communalistes_eco_communalism]]
 - [[consortium_des_pecheries_autonomes_du_grand_nord_eco_communalism]]
-- [[cooperative_terrafond_eco_communalism]]
+- [[reseau_terrafond_bassins_eco_communalism]]
 - [[cooperatives_d_habitat_regeneratif_eco_communalism]]
 - [[cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism]]
 - [[fraternites_ecospiritualistes_des_anciens_survivalistes_eco_communalism]]
@@ -180,7 +179,6 @@ La contradiction centrale de ces factions est qu'elles prospèrent précisément
 - [[mouvement_des_communes_du_rust_belt_eco_communalism]]
 - [[mutuelles_de_sante_territoriales_eco_communalism]]
 - [[reseau_des_assemblees_de_bassin_fennoscandien_eco_communalism]]
-- [[reseau_terrafond_bassins_eco_communalism]]
 - [[reseaux_de_reconstruction_cooperative_inter_communautes_eco_communalism]]
 - [[reseaux_de_troc_inter_cooperatives_et_marges_periurbaines_eco_communalism]]
 - [[zones_extractivistes_corridors_eco_communalism]]

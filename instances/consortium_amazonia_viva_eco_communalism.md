@@ -49,7 +49,7 @@ alliances:
 - collectifs_de_geo_observateurs_citoyens_eco_communalism
 - confederation_communs_arc_septentrional_eco_communalism
 - conseils_de_bassin_versant_eco_communalistes_eco_communalism
-- cooperative_terrafond_eco_communalism
+- reseau_terrafond_bassins_eco_communalism
 - cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism
 - confederation_bassins_vivants_eco_communalism
 - frente_sertao_livre_eco_communalism
@@ -137,7 +137,7 @@ La légitimité du Pacte est contestée de l'intérieur : certaines nations auto
 - [[collectifs_de_geo_observateurs_citoyens_eco_communalism]]
 - [[confederation_communs_arc_septentrional_eco_communalism]]
 - [[conseils_de_bassin_versant_eco_communalistes_eco_communalism]]
-- [[cooperative_terrafond_eco_communalism]]
+- [[reseau_terrafond_bassins_eco_communalism]]
 - [[cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism]]
 - [[confederation_bassins_vivants_eco_communalism]]
 - [[frente_sertao_livre_eco_communalism]]
