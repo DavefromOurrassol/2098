@@ -1113,3 +1113,100 @@ Menu « et si » rangé dans « Entités & événements — Création »
   `main` ; rien d'appliqué, défait par `git checkout` et suppression de 2 fiches.
 - Décisions : journaux A / B ; hypothèses Brésil et Écosse gardées comme
   exemples, jamais adoptées.
+
+---
+
+## ✅ S27 (clôture) — banc breakdown, restes de Genève, première carte réelle (Pacte de Tabriz), finitions du parcours — 23-24 octobre 2026
+
+*S27 est clos comme chantier. Ce qui reste à valider à l'usage est dans S30 de
+`BACKLOG_ACTIF.md` ; mode d'emploi : manuel §3quinquies ; déroulé :
+`HANDOFF_24_OCTOBRE.md`.*
+
+**23 oct — bouton Carte (hors S27, noté le 19 oct)** : `ZoneRepository.assign_pays`
+(« absorber » et « créer ») écrivait toujours `type_entite: pays` ; il reprend
+désormais le type déjà présent dans la fiche (zone N1 d'abord, `pays` par défaut).
+`patch_carte_type_entite.py`, vérifié sur copie temporaire par
+`test_patch_carte_type_entite.py` (Écosse, `region_administrative` gardé en
+« absorber » et en « créer »).
+
+**23 oct — S27.3, banc de rejeu rebâti** : les deux couples breakdown étaient
+périmés (0/11 lots en cache : vault changé depuis leur passe). Peste
+(`peste_pulmonaire_2043`) relancée en réel puis réexportée ; Genève
+(`destruction_geneve_2076`, déjà appliquée, un slug attendu fusionné) **retirée
+du banc** (`reference.json.bak_geneve`). Le rejeu a révélé 3 faux positifs de la
+passe (NexCore 2051, RPDA 2091, Exode du Midwest 2044 : « date trop tardive »
+alors que rien ne l'empêche) → **passe v9.6**, contrôle mécanique « date de la
+fiche contestée » (`patch_s27_dates_contestees.py`, sans changer les versions de
+consigne, cache valable) ; garde-fou « fait matériel » (destruction, « n'existe
+plus ») testé sur 3 contre-exemples. **Banc 23/23, priorités 6/6.** Commit
+`eabab05`.
+
+**23 oct — S27.2, restes de Genève** : l'étape ⑤ ne s'ouvre pas pour Genève
+(appliquée à la main, pas de fichier d'opérations) → traité hors panneau.
+Fiches disparues réécrites au passé : AMSC/BCUC (`patch_s27_amsc_passe.py`,
+directeur « nommé en 2089 » → 2072, relations du corps alignées sur le
+frontmatter), Tour BCUC et Palais des Fantômes (`patch_s27_geneve_passe.py`,
+avant/après dans `need_action/geneve_fiches_au_passe.md`). Trois règles de lore
+breakdown (`regles_lore_geneve.py`, premières règles du scénario). Aucun article
+de breakdown concerné ; résumé du scénario régénéré (Genève n'y figure pas :
+portée régionale, hors des 10 événements retenus).
+
+**23-24 oct — S27.1, Pacte de Tabriz (`pacte_tabriz_2058`, breakdown)**, première
+vraie hypothèse qui change la carte : l'Iran passe de `zone_golfe_levant` à
+`arc_eurasien_central`. Candidat choisi avec `scan_candidats_carte.py` (lecture
+seule). Bloc corrigé avant adoption (breakdown seul, choc durable, bloc
+`geographie`, forces 10/8/6). Après adoption, faits imposés et acteurs des
+propositions écartées retirés de l'entrée (`et_si_retirer_faits.py`) ; deux faits
+ajoutés à la main (frappes de 2026, Tabriz habitée) après un aperçu qui inventait
+une frappe en 2057. Injection réelle propre. Phase 4 : **bug** — le contrôle final
+exigeait « Iran » mot pour mot sur les sous-zones (« Île de Kharg, Iran ») et
+remettait toute la carte en l'état → lecture par mots
+(`patch_s27_carte_sous_zones.py`) ; carte appliquée, Kharg et Ispahan–Fordow
+rattachées, Ormuz (Oman/Iran) laissée sous le Golfe. Étape ⑤ : règle de lore
+`iran_dans_arc_eurasien_2058` ; entités Veilleurs d'Ormuz (zone corrigée à la main
+vers l'Arc) et Alliance des Ports Caspiennes (instance créée **sans bloc d'impact**
+après deux échecs de plafond — décision : laissée ainsi) ; 7 passages d'articles
+signalés, 7 faux positifs. Contrôle de géographie : rien sur le Pacte.
+
+**24 oct — finitions** :
+- Règles de lore manquantes de Mourmansk (`murmansk_transit_arctique_disparu_2081`)
+  et de l'Atlantique (`circulation_atlantique_pas_de_redemarrage_2098`) ; fiche
+  Murmansk Transit Arctique au passé (`patch_s27_murmansk_passe.py`). Vérifié :
+  Genève était la seule hypothèse injectée sans phase 4.
+- Doublon « Tour Bcuc » retiré de la règle de Genève (`.bak_bcuc`).
+- **Relecture IA des articles** : territoires des zones dans le prompt, filtre du
+  conditionnel (`patch_s27_relecture_articles.py`), puis faits limités à ce qui
+  est **appliqué**, entités inchangées écartées, rang qui monte sans mot de
+  déclin écarté (`patch_s27_relecture_appliquee.py`, `VERSION_ARTICLES`
+  v3-appliquee). Tabriz : 7 → 3 → 0 passage ; 3 vraies contradictions de test
+  gardées.
+- **Plafond d'impact** des entités custom : force ramenée au plafond au lieu
+  d'échouer (`patch_s27_plafond_impact.py`).
+- **Localisation** : territoires des zones dans le prompt
+  (`patch_s27_localisation_territoires.py`) — insuffisant seul (Mistral-small
+  gardait le Golfe) → contrôle mécanique du **pays du lieu**
+  (`patch_s27_localisation_pays.py`) : zone corrigée vers l'unique zone N1 qui
+  porte le pays, sinon « ambigu ». Vérifié en réel sur les Veilleurs d'Ormuz.
+- **Tri dès l'injection** : `et_si_injecter.py --plan / --sauter / --inclure`,
+  choix gardés dans `<id>.sauter.json` et repris par l'étape ④
+  (`patch_s27_sauter_avant_injection.py`), champs à l'étape ③ du panneau
+  (`patch_s27_gui_sauter.py`). Choix de Tabriz enregistrés à la main
+  (`[3, 4, 9, 11]`).
+- **Fiches des entités disparues** : `fiche_au_passe.py` (aperçu IA + avant/après
+  retouchable, puis `--apply`), lancé automatiquement par l'étape ④, rubrique
+  « ⏳ Fiches des entités disparues » à l'étape ⑤, case dans la check-list
+  (`patch_s27_checklist_au_passe.py`, `patch_s27_gui_au_passe.py`).
+- Décisions : point 6 (étape ⑤ pour une hypothèse appliquée à la main) clos sans
+  code ; S27.4 (anomalies de données) versé dans S24 ; S27.5 (optionnel) versé
+  dans S30 ; S30 « à valider à l'usage » ouvert.
+- Documentation mise au propre le 24 oct : backlog actif réduit à l'ouvert,
+  manuel complet réécrit en mode d'emploi, récits déplacés dans
+  `USER_MANUAL_HISTORIQUE.md`.
+
+---
+
+*Le 24 octobre 2026, `BACKLOG_ACTIF.md` a été réduit aux seuls points ouverts.
+Les chantiers clos qui y figuraient encore en résumé (1 Hyphan, 2/2bis Carte,
+4 zones suspectes, S3, S6, S7, S10, S12, S13, S16, S17, S22, S26, S27) ont leur
+détail dans ce fichier : tableau des chantiers clos (septembre) ou sections datées
+(octobre).*
