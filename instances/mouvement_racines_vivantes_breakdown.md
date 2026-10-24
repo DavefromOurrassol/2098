@@ -1,5 +1,5 @@
 ---
-name: Les Racines-Mères
+name: Les Racines Vivantes
 type: instance
 slug: mouvement_racines_vivantes_breakdown
 entite: mouvement_racines_vivantes
@@ -13,7 +13,7 @@ localisation:
 type_dans_scenario: réseau
 
 role_dans_scenario: >
-  Dans le chaos du Breakdown, les Racines-Mères ne sont plus un mouvement unifié mais une nébuleuse de cellules locales autonomes, parfois contradictoires, qui ont survécu à l'effondrement des structures centrales. Certaines branches ont embrassé une écologie du soin et de la reconstruction communautaire, devenant les gardiennes de savoirs vitaux — semences, eau, médecine par les plantes — dans des territoires abandonnés par toute gouvernance. D'autres ont glissé vers un mysticisme autoritaire, expulsant les 'pollueurs' et instaurant des logiques tribales fermées. Le mouvement est simultanément une ressource de survie et un foyer de repli identitaire, selon la branche et la région.
+  Dans le chaos du Breakdown, les Racines Vivantes ne sont plus un mouvement unifié mais une nébuleuse de cellules locales autonomes, parfois contradictoires, qui ont survécu à l'effondrement des structures centrales. Certaines branches ont embrassé une écologie du soin et de la reconstruction communautaire, devenant les gardiennes de savoirs vitaux — semences, eau, médecine par les plantes — dans des territoires abandonnés par toute gouvernance. D'autres ont glissé vers un mysticisme autoritaire, expulsant les 'pollueurs' et instaurant des logiques tribales fermées. Le mouvement est simultanément une ressource de survie et un foyer de repli identitaire, selon la branche et la région.
 
 responsabilites: >
   Maintien et transmission de pratiques agricoles régénératives et de savoirs ethnobotaniques dans les zones rurales en rupture logistique. Organisation de rituels de cohésion sociale qui servent aussi de mécanismes de gouvernance locale informelle. Dans certaines cellules, contrôle des accès à l'eau et aux terres arables reconstituées.
@@ -67,7 +67,7 @@ injection:
     via_matrice: false
 
 description_journalistique: >
-  Sur les routes défoncées de l'ancienne Occitanie ou dans les friches du delta du Mékong, on reconnaît leurs cairns — trois pierres empilées, une branche d'aubépine fichée au sommet. Les Racines-Mères, ce qu'il reste du grand mouvement des années 2040, n'ont plus de site, plus de congrès, plus de porte-parole. Seulement des cellules qui se nomment elles-mêmes différemment selon les vallées. Certaines sauvent des vies en produisant de la nourriture là où plus rien ne pousse. D'autres ont fermé leurs frontières avec du fil barbelé béni. Impossible de les cartographier : les branches se reconnaissent à des gestes, des chants, une façon de saluer l'aurore. Et elles se combattent parfois aussi férocement qu'elles combattent l'extérieur.
+  Sur les routes défoncées de l'ancienne Occitanie ou dans les friches du delta du Mékong, on reconnaît leurs cairns — trois pierres empilées, une branche d'aubépine fichée au sommet. Les Racines Vivantes, ce qu'il reste du grand mouvement des années 2040, n'ont plus de site, plus de congrès, plus de porte-parole. Seulement des cellules qui se nomment elles-mêmes différemment selon les vallées. Certaines sauvent des vies en produisant de la nourriture là où plus rien ne pousse. D'autres ont fermé leurs frontières avec du fil barbelé béni. Impossible de les cartographier : les branches se reconnaissent à des gestes, des chants, une façon de saluer l'aurore. Et elles se combattent parfois aussi férocement qu'elles combattent l'extérieur.
 
 signes_distinctifs: >
   Cairns rituels marquant les territoires et les chemins sûrs. Port de brassards ou de tatouages représentant des systèmes racinaires stylisés. Usage d'un calendrier lunaire propre qui sert à la fois d'outil agricole et de marqueur identitaire communautaire.
@@ -81,10 +81,10 @@ est_clandestin: false
 
 ---
 
-# Les Racines-Mères
+# Les Racines Vivantes
 
 ## Rôle dans [[breakdown]]
-Dans le chaos du Breakdown, les Racines-Mères ne sont plus un mouvement unifié mais une nébuleuse de cellules locales autonomes, parfois contradictoires, qui ont survécu à l'effondrement des structures centrales. Certaines branches ont embrassé une écologie du soin et de la reconstruction communautaire, devenant les gardiennes de savoirs vitaux — semences, eau, médecine par les plantes — dans des territoires abandonnés par toute gouvernance. D'autres ont glissé vers un mysticisme autoritaire, expulsant les 'pollueurs' et instaurant des logiques tribales fermées. Le mouvement est simultanément une ressource de survie et un foyer de repli identitaire, selon la branche et la région.
+Dans le chaos du Breakdown, les Racines Vivantes ne sont plus un mouvement unifié mais une nébuleuse de cellules locales autonomes, parfois contradictoires, qui ont survécu à l'effondrement des structures centrales. Certaines branches ont embrassé une écologie du soin et de la reconstruction communautaire, devenant les gardiennes de savoirs vitaux — semences, eau, médecine par les plantes — dans des territoires abandonnés par toute gouvernance. D'autres ont glissé vers un mysticisme autoritaire, expulsant les 'pollueurs' et instaurant des logiques tribales fermées. Le mouvement est simultanément une ressource de survie et un foyer de repli identitaire, selon la branche et la région.
 
 ## Responsabilités
 Maintien et transmission de pratiques agricoles régénératives et de savoirs ethnobotaniques dans les zones rurales en rupture logistique. Organisation de rituels de cohésion sociale qui servent aussi de mécanismes de gouvernance locale informelle. Dans certaines cellules, contrôle des accès à l'eau et aux terres arables reconstituées.
@@ -96,7 +96,7 @@ Maintien et transmission de pratiques agricoles régénératives et de savoirs e
 
 
 ## Description journalistique
-Sur les routes défoncées de l'ancienne Occitanie ou dans les friches du delta du Mékong, on reconnaît leurs cairns — trois pierres empilées, une branche d'aubépine fichée au sommet. Les Racines-Mères, ce qu'il reste du grand mouvement des années 2040, n'ont plus de site, plus de congrès, plus de porte-parole. Seulement des cellules qui se nomment elles-mêmes différemment selon les vallées. Certaines sauvent des vies en produisant de la nourriture là où plus rien ne pousse. D'autres ont fermé leurs frontières avec du fil barbelé béni. Impossible de les cartographier : les branches se reconnaissent à des gestes, des chants, une façon de saluer l'aurore. Et elles se combattent parfois aussi férocement qu'elles combattent l'extérieur.
+Sur les routes défoncées de l'ancienne Occitanie ou dans les friches du delta du Mékong, on reconnaît leurs cairns — trois pierres empilées, une branche d'aubépine fichée au sommet. Les Racines Vivantes, ce qu'il reste du grand mouvement des années 2040, n'ont plus de site, plus de congrès, plus de porte-parole. Seulement des cellules qui se nomment elles-mêmes différemment selon les vallées. Certaines sauvent des vies en produisant de la nourriture là où plus rien ne pousse. D'autres ont fermé leurs frontières avec du fil barbelé béni. Impossible de les cartographier : les branches se reconnaissent à des gestes, des chants, une façon de saluer l'aurore. Et elles se combattent parfois aussi férocement qu'elles combattent l'extérieur.
 
 ## Tensions narratives
 La fracture entre les branches 'ouvertes' — accueillantes, échangistes, fondées sur la réciprocité — et les branches 'closes' — autarciques, xénophobes, sacralisées — est la ligne de faille centrale du mouvement. Qui peut prétendre représenter l'héritage légitime des Racines ? La question de la transmission des savoirs pose un enjeu dramatique : faut-il les partager pour que l'humanité survive, ou les garder secrets pour protéger les communautés ? Enfin, certaines cellules commencent à nouer des alliances avec des technologies de captage d'eau ou de biologie synthétique, ce qui pourrait régénérer le mouvement ou le faire exploser de l'intérieur.
