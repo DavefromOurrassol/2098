@@ -56,7 +56,6 @@ alliances:
 - dispositifs_de_surveillance_numerique_souveraine_fortress_world
 - institut_des_seuils_demographiques_fortress_world
 - nexcore_atlantique_infrastructure_fortress_world
-- pacte_forteresses_souveraines_fortress_world
 - regimes_autoritaires_du_bloc_eurasiatique_occidental_fortress_world
 oppositions:
 - archives_chiffrees_de_l_open_internet_coalition_fortress_world
@@ -143,7 +142,6 @@ La question de qui décide des seuils d'alerte — et donc de qui est déclaré 
 - [[dispositifs_de_surveillance_numerique_souveraine_fortress_world]]
 - [[institut_des_seuils_demographiques_fortress_world]]
 - [[nexcore_atlantique_infrastructure_fortress_world]]
-- [[pacte_forteresses_souveraines_fortress_world]]
 - [[regimes_autoritaires_du_bloc_eurasiatique_occidental_fortress_world]]
 **Opposants :**
 - [[archives_chiffrees_de_l_open_internet_coalition_fortress_world]]

@@ -64,7 +64,7 @@ oppositions:
 - etats_forteresses_sous_contrat_de_souverainete_biologique_fortress_world
 - geneve_bunker_fortress_world
 - nexcore_atlantique_infrastructure_fortress_world
-- pacte_forteresses_souveraines_fortress_world
+- alliance_blocs_souverains_fortress_world
 - regimes_autoritaires_du_bloc_eurasiatique_occidental_fortress_world
 - reseaux_prives_de_securite_aux_frontieres_fortress_world
 - siege_genevois_cars_fortress_world
@@ -151,7 +151,7 @@ L'enjeu central est le piège de la visibilité : toute tentative d'organisation
 - [[etats_forteresses_sous_contrat_de_souverainete_biologique_fortress_world]]
 - [[geneve_bunker_fortress_world]]
 - [[nexcore_atlantique_infrastructure_fortress_world]]
-- [[pacte_forteresses_souveraines_fortress_world]]
+- [[alliance_blocs_souverains_fortress_world]]
 - [[regimes_autoritaires_du_bloc_eurasiatique_occidental_fortress_world]]
 - [[reseaux_prives_de_securite_aux_frontieres_fortress_world]]
 - [[siege_genevois_cars_fortress_world]]

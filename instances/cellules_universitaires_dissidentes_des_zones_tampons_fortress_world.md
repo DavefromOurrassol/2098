@@ -82,7 +82,7 @@ oppositions:
 - neurosentry_fortress_world
 - nexcore_atlantique_infrastructure_fortress_world
 - nexus_biosyn_division_eurasienne_fortress_world
-- pacte_forteresses_souveraines_fortress_world
+- alliance_blocs_souverains_fortress_world
 - rede_paulista_de_distribuicao_algoritmica_fortress_world
 - reseaux_de_distribution_d_hydrogene_sous_contrat_militaire_fortress_world
 - systemes_de_scoring_de_productivite_corporative_fortress_world
@@ -212,7 +212,7 @@ La tension fondamentale qui les traverse est celle entre la survie par l'invisib
 - [[neurosentry_fortress_world]]
 - [[nexcore_atlantique_infrastructure_fortress_world]]
 - [[nexus_biosyn_division_eurasienne_fortress_world]]
-- [[pacte_forteresses_souveraines_fortress_world]]
+- [[alliance_blocs_souverains_fortress_world]]
 - [[rede_paulista_de_distribuicao_algoritmica_fortress_world]]
 - [[reseaux_de_distribution_d_hydrogene_sous_contrat_militaire_fortress_world]]
 - [[systemes_de_scoring_de_productivite_corporative_fortress_world]]

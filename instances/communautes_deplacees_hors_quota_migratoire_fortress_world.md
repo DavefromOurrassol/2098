@@ -57,7 +57,7 @@ oppositions:
 - geneve_bunker_fortress_world
 - instances_aria_concurrentes_des_blocs_rivaux_fortress_world
 - nexcore_atlantique_infrastructure_fortress_world
-- pacte_forteresses_souveraines_fortress_world
+- alliance_blocs_souverains_fortress_world
 - reseaux_prives_de_securite_aux_frontieres_fortress_world
 - siege_genevois_cars_fortress_world
 - tbilissi_nord_zone_franche_fortress_world
@@ -160,7 +160,7 @@ Leur survie collective dépend d'une invisibilité qu'elles cherchent pourtant �
 - [[geneve_bunker_fortress_world]]
 - [[instances_aria_concurrentes_des_blocs_rivaux_fortress_world]]
 - [[nexcore_atlantique_infrastructure_fortress_world]]
-- [[pacte_forteresses_souveraines_fortress_world]]
+- [[alliance_blocs_souverains_fortress_world]]
 - [[reseaux_prives_de_securite_aux_frontieres_fortress_world]]
 - [[siege_genevois_cars_fortress_world]]
 - [[tbilissi_nord_zone_franche_fortress_world]]

@@ -54,7 +54,7 @@ oppositions:
 - milices_privees_de_protection_des_sites_germinaux_fortress_world
 - nexus_biosyn_division_eurasienne_fortress_world
 - nexus_biosyn_division_pacifique_fortress_world
-- pacte_forteresses_souveraines_fortress_world
+- alliance_blocs_souverains_fortress_world
 - rede_paulista_de_distribuicao_algoritmica_fortress_world
 - terrashield_geoengineering_fortress_world
 type_relation_dominante: conflit
@@ -137,6 +137,6 @@ La coordination centrale a été compromise.
 - [[milices_privees_de_protection_des_sites_germinaux_fortress_world]]
 - [[nexus_biosyn_division_eurasienne_fortress_world]]
 - [[nexus_biosyn_division_pacifique_fortress_world]]
-- [[pacte_forteresses_souveraines_fortress_world]]
+- [[alliance_blocs_souverains_fortress_world]]
 - [[rede_paulista_de_distribuicao_algoritmica_fortress_world]]
 - [[terrashield_geoengineering_fortress_world]]

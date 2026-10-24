@@ -44,7 +44,7 @@ alliances:
 - dispositifs_de_surveillance_numerique_souveraine_fortress_world
 - nexcore_atlantique_infrastructure_fortress_world
 - nexus_biosyn_fortress_world
-- pacte_forteresses_souveraines_fortress_world
+- alliance_blocs_souverains_fortress_world
 - reseaux_prives_de_securite_aux_frontieres_fortress_world
 - systemes_de_scoring_de_productivite_corporative_fortress_world
 oppositions:
@@ -116,7 +116,7 @@ Les blocs souverains exigent de plus en plus l'intégration des tours dans leurs
 - [[dispositifs_de_surveillance_numerique_souveraine_fortress_world]]
 - [[nexcore_atlantique_infrastructure_fortress_world]]
 - [[nexus_biosyn_fortress_world]]
-- [[pacte_forteresses_souveraines_fortress_world]]
+- [[alliance_blocs_souverains_fortress_world]]
 - [[reseaux_prives_de_securite_aux_frontieres_fortress_world]]
 - [[systemes_de_scoring_de_productivite_corporative_fortress_world]]
 **Opposants :**

@@ -109,7 +109,6 @@ oppositions:
 - neurosentry_fortress_world
 - nexcore_atlantique_infrastructure_fortress_world
 - nexus_biosyn_fortress_world
-- pacte_forteresses_souveraines_fortress_world
 - reseaux_de_distribution_d_hydrogene_sous_contrat_militaire_fortress_world
 - reseaux_prives_de_securite_aux_frontieres_fortress_world
 - siege_genevois_cars_fortress_world
@@ -266,7 +265,6 @@ La Coalition est tiraillée entre une frange radicale qui prône la confrontatio
 - [[neurosentry_fortress_world]]
 - [[nexcore_atlantique_infrastructure_fortress_world]]
 - [[nexus_biosyn_fortress_world]]
-- [[pacte_forteresses_souveraines_fortress_world]]
 - [[reseaux_de_distribution_d_hydrogene_sous_contrat_militaire_fortress_world]]
 - [[reseaux_prives_de_securite_aux_frontieres_fortress_world]]
 - [[siege_genevois_cars_fortress_world]]

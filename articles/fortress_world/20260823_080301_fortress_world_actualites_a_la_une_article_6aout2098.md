@@ -29,7 +29,7 @@ date_publication: 6 août 2098
 entites_citees:
   - voix_du_dehors_fortress_world
   - bloc_atlantique_fortress_world
-  - pacte_forteresses_souveraines_fortress_world
+  - alliance_blocs_souverains_fortress_world
   - conseil_regulation_algorithmique_fortress_world
   - nexcore_fortress_world
   - gelecek_meclisi_fortress_world
@@ -56,4 +56,4 @@ Le protocole ANBA-7 reste en vigueur jusqu’à nouvel ordre. Les citoyens sont 
 Élise Beaumont — NexCore Atlantic — La Voix du Commandement
 
 ---
-**Voir aussi** : [[voix_du_dehors_fortress_world]] · [[bloc_atlantique_fortress_world]] · [[pacte_forteresses_souveraines_fortress_world]] · [[conseil_regulation_algorithmique_fortress_world]] · [[nexcore_fortress_world]] · [[gelecek_meclisi_fortress_world]]
+**Voir aussi** : [[voix_du_dehors_fortress_world]] · [[bloc_atlantique_fortress_world]] · [[alliance_blocs_souverains_fortress_world]] · [[conseil_regulation_algorithmique_fortress_world]] · [[nexcore_fortress_world]] · [[gelecek_meclisi_fortress_world]]

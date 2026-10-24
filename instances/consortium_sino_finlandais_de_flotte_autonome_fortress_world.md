@@ -39,7 +39,7 @@ alliances:
 - ergo_wian_sovereign_holdings_fortress_world
 - ironclad_logistics_fortress_world
 - kalaallit_nunaat_sovereign_fund_fortress_world
-- pacte_forteresses_souveraines_fortress_world
+- alliance_blocs_souverains_fortress_world
 oppositions:
 - armada_logistique_nordique_fortress_world
 - cartels_miniers_militarises_subsahariens_fortress_world
@@ -117,7 +117,7 @@ Le Consortium navigue dans une contradiction structurelle : sa neutralité affic
 - [[ergo_wian_sovereign_holdings_fortress_world]]
 - [[ironclad_logistics_fortress_world]]
 - [[kalaallit_nunaat_sovereign_fund_fortress_world]]
-- [[pacte_forteresses_souveraines_fortress_world]]
+- [[alliance_blocs_souverains_fortress_world]]
 **Opposants :**
 - [[armada_logistique_nordique_fortress_world]]
 - [[cartels_miniers_militarises_subsahariens_fortress_world]]

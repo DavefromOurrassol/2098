@@ -55,7 +55,7 @@ alliances:
 - la_garde_du_seuil_fortress_world
 - neurosentry_fortress_world
 - nexcore_atlantique_infrastructure_fortress_world
-- pacte_forteresses_souveraines_fortress_world
+- alliance_blocs_souverains_fortress_world
 - rede_paulista_de_distribuicao_algoritmica_fortress_world
 - reseaux_de_distribution_d_hydrogene_sous_contrat_militaire_fortress_world
 - siege_genevois_cars_fortress_world
@@ -184,7 +184,7 @@ La contradiction centrale de ces agences réside dans leur double mission imposs
 - [[la_garde_du_seuil_fortress_world]]
 - [[neurosentry_fortress_world]]
 - [[nexcore_atlantique_infrastructure_fortress_world]]
-- [[pacte_forteresses_souveraines_fortress_world]]
+- [[alliance_blocs_souverains_fortress_world]]
 - [[rede_paulista_de_distribuicao_algoritmica_fortress_world]]
 - [[reseaux_de_distribution_d_hydrogene_sous_contrat_militaire_fortress_world]]
 - [[siege_genevois_cars_fortress_world]]

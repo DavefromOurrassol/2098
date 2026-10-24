@@ -70,7 +70,6 @@ oppositions:
 - milices_privees_de_protection_des_sites_germinaux_fortress_world
 - neurosentry_fortress_world
 - nexus_biosyn_division_pacifique_fortress_world
-- pacte_forteresses_souveraines_fortress_world
 - rede_paulista_de_distribuicao_algoritmica_fortress_world
 - reseaux_prives_de_securite_aux_frontieres_fortress_world
 - systemes_de_scoring_de_productivite_corporative_fortress_world
@@ -182,7 +181,6 @@ La tension fondamentale de ces réseaux réside dans leur double nature : instru
 - [[milices_privees_de_protection_des_sites_germinaux_fortress_world]]
 - [[neurosentry_fortress_world]]
 - [[nexus_biosyn_division_pacifique_fortress_world]]
-- [[pacte_forteresses_souveraines_fortress_world]]
 - [[rede_paulista_de_distribuicao_algoritmica_fortress_world]]
 - [[reseaux_prives_de_securite_aux_frontieres_fortress_world]]
 - [[systemes_de_scoring_de_productivite_corporative_fortress_world]]

@@ -41,7 +41,7 @@ alliances:
 - nexus_biosyn_division_pacifique_fortress_world
 - nexus_biosyn_fortress_world
 - operateurs_prives_de_transit_energetique_caucasien_centrasiatique_fortress_world
-- pacte_forteresses_souveraines_fortress_world
+- alliance_blocs_souverains_fortress_world
 - vaultcorp_security_fortress_world
 oppositions:
 - alliance_sanitaire_des_populations_exclues_fortress_world
@@ -134,7 +134,7 @@ Ces milices sont structurellement tiraillées entre leur loyauté contractuelle 
 - [[nexus_biosyn_division_pacifique_fortress_world]]
 - [[nexus_biosyn_fortress_world]]
 - [[operateurs_prives_de_transit_energetique_caucasien_centrasiatique_fortress_world]]
-- [[pacte_forteresses_souveraines_fortress_world]]
+- [[alliance_blocs_souverains_fortress_world]]
 - [[vaultcorp_security_fortress_world]]
 **Opposants :**
 - [[alliance_sanitaire_des_populations_exclues_fortress_world]]

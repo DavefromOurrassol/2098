@@ -45,7 +45,7 @@ alliances:
 - conseil_regulation_ressources_fortress_world
 - geneve_bunker_fortress_world
 - nexcore_atlantique_infrastructure_fortress_world
-- pacte_forteresses_souveraines_fortress_world
+- alliance_blocs_souverains_fortress_world
 - reseaux_prives_de_securite_aux_frontieres_fortress_world
 oppositions:
 - alliance_sanitaire_des_populations_exclues_fortress_world
@@ -117,7 +117,7 @@ La montée en puissance de SGC pose une question systémique irrésolue : qui su
 - [[conseil_regulation_ressources_fortress_world]]
 - [[geneve_bunker_fortress_world]]
 - [[nexcore_atlantique_infrastructure_fortress_world]]
-- [[pacte_forteresses_souveraines_fortress_world]]
+- [[alliance_blocs_souverains_fortress_world]]
 - [[reseaux_prives_de_securite_aux_frontieres_fortress_world]]
 **Opposants :**
 - [[alliance_sanitaire_des_populations_exclues_fortress_world]]

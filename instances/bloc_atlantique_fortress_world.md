@@ -60,7 +60,6 @@ alliances:
 - grille_aria_fortress_world
 - nexcore_atlantique_infrastructure_fortress_world
 - nexcore_fortress_world
-- pacte_forteresses_souveraines_fortress_world
 - reseaux_de_distribution_d_hydrogene_sous_contrat_militaire_fortress_world
 - reseaux_prives_de_securite_aux_frontieres_fortress_world
 - systemes_de_scoring_de_productivite_corporative_fortress_world
@@ -162,7 +161,6 @@ Le PAPC est traversé par une fracture croissante entre sa faction technocratiqu
 - [[grille_aria_fortress_world]]
 - [[nexcore_atlantique_infrastructure_fortress_world]]
 - [[nexcore_fortress_world]]
-- [[pacte_forteresses_souveraines_fortress_world]]
 - [[reseaux_de_distribution_d_hydrogene_sous_contrat_militaire_fortress_world]]
 - [[reseaux_prives_de_securite_aux_frontieres_fortress_world]]
 - [[systemes_de_scoring_de_productivite_corporative_fortress_world]]

@@ -31,7 +31,7 @@ entites_citees:
   - datacenters_conseil_eurasiatique_fortress_world
   - terminal_kharg_data_haven_fortress_world
   - conseil_regulation_algorithmique_fortress_world
-  - pacte_forteresses_souveraines_fortress_world
+  - alliance_blocs_souverains_fortress_world
   - gelecek_meclisi_fortress_world
 variables_pilotes:
   - geopolitique_conflits
@@ -57,4 +57,4 @@ Pour les 12 millions de concernés, les conséquences sont immédiates : impossi
 Le NME-ICS promet une résolution "sous 72 heures". Mais dans un monde où l'identité numérique est la seule monnaie d'échange, trois jours sans profil, c'est une éternité.
 
 ---
-**Voir aussi** : [[voix_du_dehors_fortress_world]] · [[datacenters_conseil_eurasiatique_fortress_world]] · [[terminal_kharg_data_haven_fortress_world]] · [[conseil_regulation_algorithmique_fortress_world]] · [[pacte_forteresses_souveraines_fortress_world]] · [[gelecek_meclisi_fortress_world]]
+**Voir aussi** : [[voix_du_dehors_fortress_world]] · [[datacenters_conseil_eurasiatique_fortress_world]] · [[terminal_kharg_data_haven_fortress_world]] · [[conseil_regulation_algorithmique_fortress_world]] · [[alliance_blocs_souverains_fortress_world]] · [[gelecek_meclisi_fortress_world]]

@@ -50,7 +50,7 @@ oppositions:
 - kalaallit_nunaat_sovereign_fund_fortress_world
 - nexcore_atlantique_infrastructure_fortress_world
 - operateurs_prives_de_transit_energetique_caucasien_centrasiatique_fortress_world
-- pacte_forteresses_souveraines_fortress_world
+- alliance_blocs_souverains_fortress_world
 - siege_genevois_cars_fortress_world
 - tours_nexus7_fortress_world
 type_relation_dominante: conflit
@@ -139,7 +139,7 @@ La contradiction centrale de ces factions réside dans leur dépendance aux inst
 - [[kalaallit_nunaat_sovereign_fund_fortress_world]]
 - [[nexcore_atlantique_infrastructure_fortress_world]]
 - [[operateurs_prives_de_transit_energetique_caucasien_centrasiatique_fortress_world]]
-- [[pacte_forteresses_souveraines_fortress_world]]
+- [[alliance_blocs_souverains_fortress_world]]
 - [[siege_genevois_cars_fortress_world]]
 - [[tours_nexus7_fortress_world]]
 

@@ -43,7 +43,7 @@ alliances:
 - directive_kontinuum_fortress_world
 - dispositifs_de_surveillance_numerique_souveraine_fortress_world
 - nexcore_fortress_world
-- pacte_forteresses_souveraines_fortress_world
+- alliance_blocs_souverains_fortress_world
 - rede_paulista_de_distribuicao_algoritmica_fortress_world
 - vaultcorp_security_fortress_world
 oppositions:
@@ -134,7 +134,7 @@ La tension fondamentale de l'Exécutif réside dans la contradiction entre sa rh
 - [[directive_kontinuum_fortress_world]]
 - [[dispositifs_de_surveillance_numerique_souveraine_fortress_world]]
 - [[nexcore_fortress_world]]
-- [[pacte_forteresses_souveraines_fortress_world]]
+- [[alliance_blocs_souverains_fortress_world]]
 - [[rede_paulista_de_distribuicao_algoritmica_fortress_world]]
 - [[vaultcorp_security_fortress_world]]
 **Opposants :**

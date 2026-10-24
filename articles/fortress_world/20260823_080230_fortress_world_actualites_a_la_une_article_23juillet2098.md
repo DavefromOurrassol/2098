@@ -31,7 +31,7 @@ entites_citees:
   - voix_du_dehors_fortress_world
   - terminal_kharg_data_haven_fortress_world
   - conseil_regulation_algorithmique_fortress_world
-  - pacte_forteresses_souveraines_fortress_world
+  - alliance_blocs_souverains_fortress_world
   - nexcore_fortress_world
   - gelecek_meclisi_fortress_world
 variables_pilotes:
@@ -54,4 +54,4 @@ La tension monte alors que le Pacte des Forteresses Souveraines doit se réunir 
 Une chose est sûre : si l’ANBA passe à l’action, ce ne sera pas la première fois. En 2061, une tentative de sabotage avait échoué, mais avait coûté la vie à douze techniciens. Cette fois, les enjeux sont plus élevés. Kharg-9 n’est plus seulement un data haven — c’est un test pour la porosité même des frontières numériques.
 
 ---
-**Voir aussi** : [[voix_du_dehors_fortress_world]] · [[terminal_kharg_data_haven_fortress_world]] · [[conseil_regulation_algorithmique_fortress_world]] · [[pacte_forteresses_souveraines_fortress_world]] · [[nexcore_fortress_world]] · [[gelecek_meclisi_fortress_world]]
+**Voir aussi** : [[voix_du_dehors_fortress_world]] · [[terminal_kharg_data_haven_fortress_world]] · [[conseil_regulation_algorithmique_fortress_world]] · [[alliance_blocs_souverains_fortress_world]] · [[nexcore_fortress_world]] · [[gelecek_meclisi_fortress_world]]

@@ -55,7 +55,7 @@ alliances:
 - instances_aria_concurrentes_des_blocs_rivaux_fortress_world
 - neurosentry_fortress_world
 - nexcore_atlantique_infrastructure_fortress_world
-- pacte_forteresses_souveraines_fortress_world
+- alliance_blocs_souverains_fortress_world
 - rede_paulista_de_distribuicao_algoritmica_fortress_world
 - reseaux_de_distribution_d_hydrogene_sous_contrat_militaire_fortress_world
 - reseaux_prives_de_securite_aux_frontieres_fortress_world
@@ -168,7 +168,7 @@ La contradiction fondamentale de ces appareils réside dans leur dépendance aux
 - [[instances_aria_concurrentes_des_blocs_rivaux_fortress_world]]
 - [[neurosentry_fortress_world]]
 - [[nexcore_atlantique_infrastructure_fortress_world]]
-- [[pacte_forteresses_souveraines_fortress_world]]
+- [[alliance_blocs_souverains_fortress_world]]
 - [[rede_paulista_de_distribuicao_algoritmica_fortress_world]]
 - [[reseaux_de_distribution_d_hydrogene_sous_contrat_militaire_fortress_world]]
 - [[reseaux_prives_de_securite_aux_frontieres_fortress_world]]

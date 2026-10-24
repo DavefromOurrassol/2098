@@ -75,7 +75,7 @@ oppositions:
 - milices_privees_de_protection_des_sites_germinaux_fortress_world
 - neurosentry_fortress_world
 - nexcore_atlantique_infrastructure_fortress_world
-- pacte_forteresses_souveraines_fortress_world
+- alliance_blocs_souverains_fortress_world
 - reseaux_de_distribution_d_hydrogene_sous_contrat_militaire_fortress_world
 - reseaux_prives_de_securite_aux_frontieres_fortress_world
 - systemes_de_scoring_de_productivite_corporative_fortress_world
@@ -172,7 +172,7 @@ Le Front du Dehors est pris en étau entre deux logiques qui le déchirent : plu
 - [[milices_privees_de_protection_des_sites_germinaux_fortress_world]]
 - [[neurosentry_fortress_world]]
 - [[nexcore_atlantique_infrastructure_fortress_world]]
-- [[pacte_forteresses_souveraines_fortress_world]]
+- [[alliance_blocs_souverains_fortress_world]]
 - [[reseaux_de_distribution_d_hydrogene_sous_contrat_militaire_fortress_world]]
 - [[reseaux_prives_de_securite_aux_frontieres_fortress_world]]
 - [[systemes_de_scoring_de_productivite_corporative_fortress_world]]

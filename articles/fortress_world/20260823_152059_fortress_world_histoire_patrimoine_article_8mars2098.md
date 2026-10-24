@@ -32,7 +32,7 @@ entites_citees:
   - bloc_eurasiatique_occidental_fortress_world
   - factions_traditionalistes_du_mandat_electif_fortress_world
   - executif_militaro_civil_du_regime_fortress_world
-  - pacte_forteresses_souveraines_fortress_world
+  - alliance_blocs_souverains_fortress_world
 variables_pilotes:
   - geopolitique_conflits
   - energie_ressources_critiques
@@ -60,4 +60,4 @@ Pourtant, même au sein des Forteresses, des voix s’élèvent contre l’amné
 La mémoire, dans ce monde fragmenté, est devenue un champ de bataille. D’un côté, les blocs verrouillent l’histoire pour légitimer leur ordre. De l’autre, les exclus, les dissidents et quelques rares alliés au sein des Forteresses refusent l’effacement. *« La mémoire n’est pas un luxe »*, rappelle Vera Solano. *« C’est une arme. Et nous en aurons besoin pour reconstruire. »* En attendant, dans les zones grises, les archives du Dehors continuent de s’écrire, nuit après nuit, à la lueur des écrans piratés.
 
 ---
-**Voir aussi** : [[mouvement_commun_midwest_fortress_world]] · [[bloc_atlantique_fortress_world]] · [[bloc_eurasiatique_occidental_fortress_world]] · [[factions_traditionalistes_du_mandat_electif_fortress_world]] · [[executif_militaro_civil_du_regime_fortress_world]] · [[pacte_forteresses_souveraines_fortress_world]]
+**Voir aussi** : [[mouvement_commun_midwest_fortress_world]] · [[bloc_atlantique_fortress_world]] · [[bloc_eurasiatique_occidental_fortress_world]] · [[factions_traditionalistes_du_mandat_electif_fortress_world]] · [[executif_militaro_civil_du_regime_fortress_world]] · [[alliance_blocs_souverains_fortress_world]]

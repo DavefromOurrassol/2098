@@ -80,7 +80,7 @@ oppositions:
 - geneve_bunker_fortress_world
 - milices_privees_de_protection_des_sites_germinaux_fortress_world
 - nexcore_atlantique_infrastructure_fortress_world
-- pacte_forteresses_souveraines_fortress_world
+- alliance_blocs_souverains_fortress_world
 - regimes_autoritaires_du_bloc_eurasiatique_occidental_fortress_world
 - reseaux_prives_de_securite_aux_frontieres_fortress_world
 - systemes_de_scoring_de_productivite_corporative_fortress_world
@@ -180,7 +180,7 @@ La Fédération est au bord d'une fracture interne entre une faction radicalemen
 - [[geneve_bunker_fortress_world]]
 - [[milices_privees_de_protection_des_sites_germinaux_fortress_world]]
 - [[nexcore_atlantique_infrastructure_fortress_world]]
-- [[pacte_forteresses_souveraines_fortress_world]]
+- [[alliance_blocs_souverains_fortress_world]]
 - [[regimes_autoritaires_du_bloc_eurasiatique_occidental_fortress_world]]
 - [[reseaux_prives_de_securite_aux_frontieres_fortress_world]]
 - [[systemes_de_scoring_de_productivite_corporative_fortress_world]]

@@ -39,7 +39,7 @@ alliances:
 - commandement_strategique_des_matieres_critiques_atlantique_fortress_world
 - consortium_des_pecheries_autonomes_du_grand_nord_fortress_world
 - consortiums_energetiques_du_bloc_ourrassol_fortress_world
-- pacte_forteresses_souveraines_fortress_world
+- alliance_blocs_souverains_fortress_world
 oppositions:
 - armada_logistique_nordique_fortress_world
 - coalitions_geopolitiques_d_infiltration_des_modeles_climatiques_fortress_world
@@ -125,7 +125,7 @@ La Coalition est structurellement déchirée entre les intérêts divergents du 
 - [[commandement_strategique_des_matieres_critiques_atlantique_fortress_world]]
 - [[consortium_des_pecheries_autonomes_du_grand_nord_fortress_world]]
 - [[consortiums_energetiques_du_bloc_ourrassol_fortress_world]]
-- [[pacte_forteresses_souveraines_fortress_world]]
+- [[alliance_blocs_souverains_fortress_world]]
 **Opposants :**
 - [[armada_logistique_nordique_fortress_world]]
 - [[coalitions_geopolitiques_d_infiltration_des_modeles_climatiques_fortress_world]]

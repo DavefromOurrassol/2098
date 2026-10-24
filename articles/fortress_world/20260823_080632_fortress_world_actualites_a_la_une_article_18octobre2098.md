@@ -31,7 +31,7 @@ entites_citees:
   - vaultcorp_security_fortress_world
   - nexcore_fortress_world
   - bloc_atlantique_fortress_world
-  - pacte_forteresses_souveraines_fortress_world
+  - alliance_blocs_souverains_fortress_world
   - gelecek_meclisi_fortress_world
 variables_pilotes:
   - geopolitique_conflits
@@ -56,4 +56,4 @@ Le PAPC, lui, assume. Dans un communiqué, il évoque « la nécessité d’une 
 Pour les 4,2 milliards d’humains exclus des périmètres sécurisés, le message est clair : dans le monde de 2098, même l’air que vous respirez est une donnée sous surveillance.
 
 ---
-**Voir aussi** : [[terminal_kharg_data_haven_fortress_world]] · [[vaultcorp_security_fortress_world]] · [[nexcore_fortress_world]] · [[bloc_atlantique_fortress_world]] · [[pacte_forteresses_souveraines_fortress_world]] · [[gelecek_meclisi_fortress_world]]
+**Voir aussi** : [[terminal_kharg_data_haven_fortress_world]] · [[vaultcorp_security_fortress_world]] · [[nexcore_fortress_world]] · [[bloc_atlantique_fortress_world]] · [[alliance_blocs_souverains_fortress_world]] · [[gelecek_meclisi_fortress_world]]

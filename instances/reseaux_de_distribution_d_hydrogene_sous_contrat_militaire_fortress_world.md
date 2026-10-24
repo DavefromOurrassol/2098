@@ -44,7 +44,7 @@ alliances:
 - consortiums_energetiques_du_bloc_ourrassol_fortress_world
 - etats_forteresses_sous_contrat_de_souverainete_biologique_fortress_world
 - nexcore_atlantique_infrastructure_fortress_world
-- pacte_forteresses_souveraines_fortress_world
+- alliance_blocs_souverains_fortress_world
 - vaultcorp_security_fortress_world
 oppositions:
 - alliance_sanitaire_des_populations_exclues_fortress_world
@@ -137,7 +137,7 @@ La contradiction fondamentale de ces réseaux réside dans leur double mission :
 - [[consortiums_energetiques_du_bloc_ourrassol_fortress_world]]
 - [[etats_forteresses_sous_contrat_de_souverainete_biologique_fortress_world]]
 - [[nexcore_atlantique_infrastructure_fortress_world]]
-- [[pacte_forteresses_souveraines_fortress_world]]
+- [[alliance_blocs_souverains_fortress_world]]
 - [[vaultcorp_security_fortress_world]]
 **Opposants :**
 - [[alliance_sanitaire_des_populations_exclues_fortress_world]]

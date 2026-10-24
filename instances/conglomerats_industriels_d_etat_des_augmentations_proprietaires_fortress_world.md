@@ -44,7 +44,7 @@ alliances:
 - instances_aria_concurrentes_des_blocs_rivaux_fortress_world
 - nexcore_atlantique_infrastructure_fortress_world
 - nexus_biosyn_fortress_world
-- pacte_forteresses_souveraines_fortress_world
+- alliance_blocs_souverains_fortress_world
 - zone_usines_forteresses_eurasie_fortress_world
 oppositions:
 - alliance_sanitaire_des_populations_exclues_fortress_world
@@ -138,7 +138,7 @@ La tension centrale réside dans la contradiction entre la promesse médicale �
 - [[instances_aria_concurrentes_des_blocs_rivaux_fortress_world]]
 - [[nexcore_atlantique_infrastructure_fortress_world]]
 - [[nexus_biosyn_fortress_world]]
-- [[pacte_forteresses_souveraines_fortress_world]]
+- [[alliance_blocs_souverains_fortress_world]]
 - [[zone_usines_forteresses_eurasie_fortress_world]]
 **Opposants :**
 - [[alliance_sanitaire_des_populations_exclues_fortress_world]]

@@ -54,7 +54,7 @@ alliances:
 - instances_aria_concurrentes_des_blocs_rivaux_fortress_world
 - neurosentry_fortress_world
 - nexcore_atlantique_infrastructure_fortress_world
-- pacte_forteresses_souveraines_fortress_world
+- alliance_blocs_souverains_fortress_world
 - rede_paulista_de_distribuicao_algoritmica_fortress_world
 - systemes_de_scoring_de_productivite_corporative_fortress_world
 - tours_nexus7_fortress_world
@@ -169,7 +169,7 @@ La tension fondamentale réside dans la contradiction entre leur mission déclar
 - [[instances_aria_concurrentes_des_blocs_rivaux_fortress_world]]
 - [[neurosentry_fortress_world]]
 - [[nexcore_atlantique_infrastructure_fortress_world]]
-- [[pacte_forteresses_souveraines_fortress_world]]
+- [[alliance_blocs_souverains_fortress_world]]
 - [[rede_paulista_de_distribuicao_algoritmica_fortress_world]]
 - [[systemes_de_scoring_de_productivite_corporative_fortress_world]]
 - [[tours_nexus7_fortress_world]]

@@ -64,7 +64,7 @@ oppositions:
 - ergo_wian_sovereign_holdings_fortress_world
 - geneve_bunker_fortress_world
 - nexcore_atlantique_infrastructure_fortress_world
-- pacte_forteresses_souveraines_fortress_world
+- alliance_blocs_souverains_fortress_world
 - siege_genevois_cars_fortress_world
 - tbilissi_nord_zone_franche_fortress_world
 - vikram_raghavan_fortress_world
@@ -149,7 +149,7 @@ La question qui fracture Fractures de l'intérieur : depuis 2089, des preuves ci
 - [[ergo_wian_sovereign_holdings_fortress_world]]
 - [[geneve_bunker_fortress_world]]
 - [[nexcore_atlantique_infrastructure_fortress_world]]
-- [[pacte_forteresses_souveraines_fortress_world]]
+- [[alliance_blocs_souverains_fortress_world]]
 - [[siege_genevois_cars_fortress_world]]
 - [[tbilissi_nord_zone_franche_fortress_world]]
 - [[vikram_raghavan_fortress_world]]

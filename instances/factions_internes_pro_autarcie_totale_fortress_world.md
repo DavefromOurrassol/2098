@@ -50,7 +50,6 @@ oppositions:
 - executif_militaro_civil_du_regime_fortress_world
 - institutions_multilaterales_residuelles_fortress_world
 - oligarchies_technologiques_souveraines_d_infrastructure_de_calcul_fortress_world
-- pacte_forteresses_souveraines_fortress_world
 - regimes_autoritaires_du_bloc_eurasiatique_occidental_fortress_world
 type_relation_dominante: conflit
 annee_debut: 2036
@@ -135,7 +134,6 @@ La contradiction centrale de ces factions réside dans leur dépendance aux rés
 - [[executif_militaro_civil_du_regime_fortress_world]]
 - [[institutions_multilaterales_residuelles_fortress_world]]
 - [[oligarchies_technologiques_souveraines_d_infrastructure_de_calcul_fortress_world]]
-- [[pacte_forteresses_souveraines_fortress_world]]
 - [[regimes_autoritaires_du_bloc_eurasiatique_occidental_fortress_world]]
 
 ## Notes

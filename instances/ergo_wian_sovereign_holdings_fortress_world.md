@@ -49,7 +49,7 @@ alliances:
 - les_recycleurs_fortress_world
 - mouvement_de_reconquete_europeenne_fortress_world
 - nexus_biosyn_fortress_world
-- pacte_forteresses_souveraines_fortress_world
+- alliance_blocs_souverains_fortress_world
 - vaultcorp_security_fortress_world
 - consortium_sino_finlandais_de_flotte_autonome_fortress_world
 oppositions:
@@ -128,7 +128,7 @@ L'EWSD est au cœur de plusieurs lignes de fracture du scénario *fortress_world
 - [[les_recycleurs_fortress_world]]
 - [[mouvement_de_reconquete_europeenne_fortress_world]]
 - [[nexus_biosyn_fortress_world]]
-- [[pacte_forteresses_souveraines_fortress_world]]
+- [[alliance_blocs_souverains_fortress_world]]
 - [[vaultcorp_security_fortress_world]]
 - [[consortium_sino_finlandais_de_flotte_autonome_fortress_world]]
 **Opposants :**

@@ -47,7 +47,7 @@ oppositions:
 - bureau_territoires_residuels_fortress_world
 - conseil_moscou_est_fortress_world
 - directive_kontinuum_fortress_world
-- pacte_forteresses_souveraines_fortress_world
+- alliance_blocs_souverains_fortress_world
 - rede_paulista_de_distribuicao_algoritmica_fortress_world
 type_relation_dominante: conflit
 annee_debut: 2061
@@ -133,7 +133,7 @@ Ces dissidences sont écartelées entre la nécessité de s'allier ponctuellemen
 - [[bureau_territoires_residuels_fortress_world]]
 - [[conseil_moscou_est_fortress_world]]
 - [[directive_kontinuum_fortress_world]]
-- [[pacte_forteresses_souveraines_fortress_world]]
+- [[alliance_blocs_souverains_fortress_world]]
 - [[rede_paulista_de_distribuicao_algoritmica_fortress_world]]
 
 ## Notes

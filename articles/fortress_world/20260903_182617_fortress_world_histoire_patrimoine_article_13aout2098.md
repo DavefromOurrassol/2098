@@ -37,7 +37,7 @@ entites_citees:
   - bloc_eurasiatique_occidental_fortress_world
   - factions_traditionalistes_du_mandat_electif_fortress_world
   - executif_militaro_civil_du_regime_fortress_world
-  - pacte_forteresses_souveraines_fortress_world
+  - alliance_blocs_souverains_fortress_world
 variables_pilotes:
   - geopolitique_conflits
   - energie_ressources_critiques
@@ -80,4 +80,4 @@ Le 10 août, le Pacte des Forteresses Souveraines a annoncé la création d’un
 ---
 
 ---
-**Voir aussi** : [[mouvement_commun_midwest_fortress_world]] · [[bloc_atlantique_fortress_world]] · [[bloc_eurasiatique_occidental_fortress_world]] · [[factions_traditionalistes_du_mandat_electif_fortress_world]] · [[executif_militaro_civil_du_regime_fortress_world]] · [[pacte_forteresses_souveraines_fortress_world]]
+**Voir aussi** : [[mouvement_commun_midwest_fortress_world]] · [[bloc_atlantique_fortress_world]] · [[bloc_eurasiatique_occidental_fortress_world]] · [[factions_traditionalistes_du_mandat_electif_fortress_world]] · [[executif_militaro_civil_du_regime_fortress_world]] · [[alliance_blocs_souverains_fortress_world]]

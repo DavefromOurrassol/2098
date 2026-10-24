@@ -40,7 +40,7 @@ propagation:
   via_matrice: true
 acteurs_impliques:
   - bloc_eurasiatique_occidental_fortress_world
-  - pacte_forteresses_souveraines_fortress_world
+  - alliance_blocs_souverains_fortress_world
 note_coherence: Cet événement s'inscrit dans la logique de fragmentation et de verrouillage des ressources du scénario fortress_world, tout en prolongeant les tensions réelles sur les détroits stratégiques et les migrations climatiques.
 custom_source: actualite
 date_creation: 2026-09-24
@@ -66,7 +66,7 @@ La guerre accélère la fragmentation géopolitique du monde, renforçant l'isol
 
 ## Acteurs impliqués
 - [[bloc_eurasiatique_occidental_fortress_world]]
-- [[pacte_forteresses_souveraines_fortress_world]]
+- [[alliance_blocs_souverains_fortress_world]]
 
 ## Note de cohérence
 Cet événement s'inscrit dans la logique de fragmentation et de verrouillage des ressources

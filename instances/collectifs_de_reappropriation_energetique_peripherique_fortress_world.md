@@ -50,7 +50,7 @@ oppositions:
 - consortiums_energetiques_du_bloc_ourrassol_fortress_world
 - kalaallit_nunaat_sovereign_fund_fortress_world
 - nexcore_atlantique_infrastructure_fortress_world
-- pacte_forteresses_souveraines_fortress_world
+- alliance_blocs_souverains_fortress_world
 - rede_paulista_de_distribuicao_algoritmica_fortress_world
 - reseaux_de_distribution_d_hydrogene_sous_contrat_militaire_fortress_world
 - siege_genevois_cars_fortress_world
@@ -142,7 +142,7 @@ Leur survie dépend de l'invisibilité, mais leur croissance exige une visibilit
 - [[consortiums_energetiques_du_bloc_ourrassol_fortress_world]]
 - [[kalaallit_nunaat_sovereign_fund_fortress_world]]
 - [[nexcore_atlantique_infrastructure_fortress_world]]
-- [[pacte_forteresses_souveraines_fortress_world]]
+- [[alliance_blocs_souverains_fortress_world]]
 - [[rede_paulista_de_distribuicao_algoritmica_fortress_world]]
 - [[reseaux_de_distribution_d_hydrogene_sous_contrat_militaire_fortress_world]]
 - [[siege_genevois_cars_fortress_world]]

@@ -42,7 +42,7 @@ alliances:
 - nexus_biosyn_division_eurasienne_fortress_world
 - nexus_biosyn_division_pacifique_fortress_world
 - nexus_biosyn_fortress_world
-- pacte_forteresses_souveraines_fortress_world
+- alliance_blocs_souverains_fortress_world
 - reseaux_de_distribution_d_hydrogene_sous_contrat_militaire_fortress_world
 - terrashield_geoengineering_fortress_world
 oppositions:
@@ -130,7 +130,7 @@ La tension centrale réside dans la contradiction entre la souveraineté étatiq
 - [[nexus_biosyn_division_eurasienne_fortress_world]]
 - [[nexus_biosyn_division_pacifique_fortress_world]]
 - [[nexus_biosyn_fortress_world]]
-- [[pacte_forteresses_souveraines_fortress_world]]
+- [[alliance_blocs_souverains_fortress_world]]
 - [[reseaux_de_distribution_d_hydrogene_sous_contrat_militaire_fortress_world]]
 - [[terrashield_geoengineering_fortress_world]]
 **Opposants :**

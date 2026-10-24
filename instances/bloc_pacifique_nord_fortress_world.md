@@ -40,7 +40,7 @@ alliances:
 - institutions_multilaterales_residuelles_fortress_world
 - kalaallit_nunaat_sovereign_fund_fortress_world
 - nexus_biosyn_division_pacifique_fortress_world
-- pacte_forteresses_souveraines_fortress_world
+- alliance_blocs_souverains_fortress_world
 oppositions:
 - cartels_miniers_militarises_subsahariens_fortress_world
 - corridors_gris_asie_centrale_fortress_world
@@ -119,7 +119,7 @@ La cohésion interne du Bloc repose sur un équilibre fragile entre des États m
 - [[institutions_multilaterales_residuelles_fortress_world]]
 - [[kalaallit_nunaat_sovereign_fund_fortress_world]]
 - [[nexus_biosyn_division_pacifique_fortress_world]]
-- [[pacte_forteresses_souveraines_fortress_world]]
+- [[alliance_blocs_souverains_fortress_world]]
 **Opposants :**
 - [[cartels_miniers_militarises_subsahariens_fortress_world]]
 - [[corridors_gris_asie_centrale_fortress_world]]

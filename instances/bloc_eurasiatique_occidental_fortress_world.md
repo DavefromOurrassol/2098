@@ -63,7 +63,6 @@ alliances:
 - etats_forteresses_sous_contrat_de_souverainete_biologique_fortress_world
 - la_garde_du_seuil_fortress_world
 - nexus_biosyn_division_eurasienne_fortress_world
-- pacte_forteresses_souveraines_fortress_world
 - regimes_autoritaires_du_bloc_eurasiatique_occidental_fortress_world
 - reseaux_de_distribution_d_hydrogene_sous_contrat_militaire_fortress_world
 - systemes_de_scoring_de_productivite_corporative_fortress_world
@@ -168,7 +167,6 @@ La prospérité intérieure commence à montrer ses fissures : les factions pro-
 - [[etats_forteresses_sous_contrat_de_souverainete_biologique_fortress_world]]
 - [[la_garde_du_seuil_fortress_world]]
 - [[nexus_biosyn_division_eurasienne_fortress_world]]
-- [[pacte_forteresses_souveraines_fortress_world]]
 - [[regimes_autoritaires_du_bloc_eurasiatique_occidental_fortress_world]]
 - [[reseaux_de_distribution_d_hydrogene_sous_contrat_militaire_fortress_world]]
 - [[systemes_de_scoring_de_productivite_corporative_fortress_world]]

@@ -31,7 +31,7 @@ entites_citees:
   - voix_du_dehors_fortress_world
   - les_gardiens_des_n_uds_hybrides_fortress_world
   - conseil_regulation_algorithmique_fortress_world
-  - pacte_forteresses_souveraines_fortress_world
+  - alliance_blocs_souverains_fortress_world
   - gelecek_meclisi_fortress_world
 variables_pilotes:
   - geopolitique_conflits
@@ -55,4 +55,4 @@ La réaction du Pacte des Forteresses ne s’est pas fait attendre : dès hier, 
 Pour les populations des zones tampons, ces révélations ne sont qu’une confirmation. *« On savait que les blocs mentaient, mais pas à ce point, témoigne une habitante de Tbilissi-Nord, où les écrans publics affichent en boucle des messages d’alerte. Maintenant, même les algorithmes ont peur. »* Une peur qui pourrait bien se propager : si les archives fantômes continuent de fuiter, c’est toute l’architecture de la souveraineté numérique qui risque de s’effondrer — et avec elle, le dernier mythe des blocs : celui d’un monde où la vérité peut encore être contenue.
 
 ---
-**Voir aussi** : [[datacenters_conseil_eurasiatique_fortress_world]] · [[voix_du_dehors_fortress_world]] · [[les_gardiens_des_n_uds_hybrides_fortress_world]] · [[conseil_regulation_algorithmique_fortress_world]] · [[pacte_forteresses_souveraines_fortress_world]] · [[gelecek_meclisi_fortress_world]]
+**Voir aussi** : [[datacenters_conseil_eurasiatique_fortress_world]] · [[voix_du_dehors_fortress_world]] · [[les_gardiens_des_n_uds_hybrides_fortress_world]] · [[conseil_regulation_algorithmique_fortress_world]] · [[alliance_blocs_souverains_fortress_world]] · [[gelecek_meclisi_fortress_world]]

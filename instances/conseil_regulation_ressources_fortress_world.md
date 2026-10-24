@@ -37,7 +37,7 @@ alliances:
 - bloc_des_nations_non_alignees_residuelles_fortress_world
 - bloc_pacifique_nord_fortress_world
 - kalaallit_nunaat_sovereign_fund_fortress_world
-- pacte_forteresses_souveraines_fortress_world
+- alliance_blocs_souverains_fortress_world
 - siege_genevois_cars_fortress_world
 oppositions:
 - cartels_miniers_militarises_subsahariens_fortress_world
@@ -98,7 +98,7 @@ La CARS détient encore des archives complètes sur les flux de ressources d'ava
 - [[bloc_des_nations_non_alignees_residuelles_fortress_world]]
 - [[bloc_pacifique_nord_fortress_world]]
 - [[kalaallit_nunaat_sovereign_fund_fortress_world]]
-- [[pacte_forteresses_souveraines_fortress_world]]
+- [[alliance_blocs_souverains_fortress_world]]
 - [[siege_genevois_cars_fortress_world]]
 **Opposants :**
 - [[cartels_miniers_militarises_subsahariens_fortress_world]]

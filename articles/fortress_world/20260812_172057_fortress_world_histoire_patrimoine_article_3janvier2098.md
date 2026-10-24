@@ -36,7 +36,6 @@ entites_citees:
   - bureau_des_territoires_residuels_fortress_world
   - bureau_territoires_residuels_fortress_world
   - mouvement_commun_midwest_fortress_world
-  - pacte_forteresses_souveraines_fortress_world
 articles_lies:
   - bruxelles_forteresse_12_octobre_2098
 
@@ -58,4 +57,4 @@ Pour les communautés des *Seuils Fermés* — ces campements périphériques o�
 Le *Pacte des Forteresses Souveraines* a théorisé cette approche en 2078 dans sa *Charte de Sécurité Intégrale* : « La mémoire collective doit être alignée sur les impératifs de stabilité territoriale. » Traduction : l’Histoire est trop dangereuse pour être laissée aux historiens. Surtout quand elle rappelle que les murs ont été construits avant que le climat ne les justifie.
 
 ---
-**Voir aussi** : [[alliance_blocs_souverains_fortress_world]] · [[bureau_des_territoires_residuels_fortress_world]] · [[bureau_territoires_residuels_fortress_world]] · [[mouvement_commun_midwest_fortress_world]] · [[pacte_forteresses_souveraines_fortress_world]] · [[bruxelles_forteresse_12_octobre_2098]]
+**Voir aussi** : [[alliance_blocs_souverains_fortress_world]] · [[bureau_des_territoires_residuels_fortress_world]] · [[bureau_territoires_residuels_fortress_world]] · [[mouvement_commun_midwest_fortress_world]] · [[alliance_blocs_souverains_fortress_world]] · [[bruxelles_forteresse_12_octobre_2098]]

@@ -39,7 +39,7 @@ alliances:
 - bloc_eurasiatique_occidental_fortress_world
 - bureaux_de_controle_frontalier_des_blocs_fermes_fortress_world
 - dispositifs_de_surveillance_numerique_souveraine_fortress_world
-- pacte_forteresses_souveraines_fortress_world
+- alliance_blocs_souverains_fortress_world
 - regimes_autoritaires_du_bloc_eurasiatique_occidental_fortress_world
 oppositions:
 - aria_instance_fantome_fortress_world
@@ -123,7 +123,7 @@ La coopération technique entre les trois bras du Consortium sur le protocole VE
 - [[bloc_eurasiatique_occidental_fortress_world]]
 - [[bureaux_de_controle_frontalier_des_blocs_fermes_fortress_world]]
 - [[dispositifs_de_surveillance_numerique_souveraine_fortress_world]]
-- [[pacte_forteresses_souveraines_fortress_world]]
+- [[alliance_blocs_souverains_fortress_world]]
 - [[regimes_autoritaires_du_bloc_eurasiatique_occidental_fortress_world]]
 **Opposants :**
 - [[aria_instance_fantome_fortress_world]]

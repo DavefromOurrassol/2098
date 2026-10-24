@@ -75,7 +75,7 @@ oppositions:
 - nexus_biosyn_division_eurasienne_fortress_world
 - nexus_biosyn_division_pacifique_fortress_world
 - nexus_biosyn_fortress_world
-- pacte_forteresses_souveraines_fortress_world
+- alliance_blocs_souverains_fortress_world
 - reseaux_de_distribution_d_hydrogene_sous_contrat_militaire_fortress_world
 - siege_genevois_cars_fortress_world
 - systemes_de_scoring_de_productivite_corporative_fortress_world
@@ -196,7 +196,7 @@ L'Alliance est tiraillée entre son impératif humanitaire universel et la tenta
 - [[nexus_biosyn_division_eurasienne_fortress_world]]
 - [[nexus_biosyn_division_pacifique_fortress_world]]
 - [[nexus_biosyn_fortress_world]]
-- [[pacte_forteresses_souveraines_fortress_world]]
+- [[alliance_blocs_souverains_fortress_world]]
 - [[reseaux_de_distribution_d_hydrogene_sous_contrat_militaire_fortress_world]]
 - [[siege_genevois_cars_fortress_world]]
 - [[systemes_de_scoring_de_productivite_corporative_fortress_world]]

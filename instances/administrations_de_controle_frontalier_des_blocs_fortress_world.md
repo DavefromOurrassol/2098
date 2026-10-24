@@ -49,7 +49,7 @@ alliances:
 - front_resilient_pro_systeme_fortress_world
 - institut_des_seuils_demographiques_fortress_world
 - nexcore_atlantique_infrastructure_fortress_world
-- pacte_forteresses_souveraines_fortress_world
+- alliance_blocs_souverains_fortress_world
 - siege_genevois_cars_fortress_world
 - vaultcorp_security_fortress_world
 - zones_grises_tampons_fortress_world
@@ -164,7 +164,7 @@ Ces administrations incarnent la contradiction fondamentale du monde forteresse 
 - [[front_resilient_pro_systeme_fortress_world]]
 - [[institut_des_seuils_demographiques_fortress_world]]
 - [[nexcore_atlantique_infrastructure_fortress_world]]
-- [[pacte_forteresses_souveraines_fortress_world]]
+- [[alliance_blocs_souverains_fortress_world]]
 - [[siege_genevois_cars_fortress_world]]
 - [[vaultcorp_security_fortress_world]]
 - [[zones_grises_tampons_fortress_world]]

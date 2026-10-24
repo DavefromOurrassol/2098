@@ -52,7 +52,6 @@ alliances:
 - la_garde_du_seuil_fortress_world
 - milices_privees_de_protection_des_sites_germinaux_fortress_world
 - nexcore_atlantique_infrastructure_fortress_world
-- pacte_forteresses_souveraines_fortress_world
 - reseaux_de_distribution_d_hydrogene_sous_contrat_militaire_fortress_world
 - reseaux_prives_de_securite_aux_frontieres_fortress_world
 - vaultcorp_security_fortress_world
@@ -159,7 +158,6 @@ La tension première réside dans leur double loyauté : serviteurs du bloc qui 
 - [[la_garde_du_seuil_fortress_world]]
 - [[milices_privees_de_protection_des_sites_germinaux_fortress_world]]
 - [[nexcore_atlantique_infrastructure_fortress_world]]
-- [[pacte_forteresses_souveraines_fortress_world]]
 - [[reseaux_de_distribution_d_hydrogene_sous_contrat_militaire_fortress_world]]
 - [[reseaux_prives_de_securite_aux_frontieres_fortress_world]]
 - [[vaultcorp_security_fortress_world]]

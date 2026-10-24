@@ -41,7 +41,7 @@ oppositions:
 - bloc_eurasiatique_occidental_fortress_world
 - centre_controle_orbital_helios_fortress_world
 - consortiums_energetiques_du_bloc_ourrassol_fortress_world
-- pacte_forteresses_souveraines_fortress_world
+- alliance_blocs_souverains_fortress_world
 type_relation_dominante: neutralité
 annee_debut: 2044
 annee_fin: null
@@ -120,7 +120,7 @@ La tension centrale du Bloc réside dans l'écart abyssal entre sa rhétorique d
 - [[bloc_eurasiatique_occidental_fortress_world]]
 - [[centre_controle_orbital_helios_fortress_world]]
 - [[consortiums_energetiques_du_bloc_ourrassol_fortress_world]]
-- [[pacte_forteresses_souveraines_fortress_world]]
+- [[alliance_blocs_souverains_fortress_world]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

@@ -58,7 +58,6 @@ alliances:
 - milices_privees_de_protection_des_sites_germinaux_fortress_world
 - nexcore_atlantique_infrastructure_fortress_world
 - nexus_biosyn_fortress_world
-- pacte_forteresses_souveraines_fortress_world
 - reseaux_de_distribution_d_hydrogene_sous_contrat_militaire_fortress_world
 - reseaux_prives_de_securite_aux_frontieres_fortress_world
 - terrashield_geoengineering_fortress_world
@@ -144,7 +143,6 @@ La tension centrale autour de VCSDS réside dans sa double nature : est-elle le 
 - [[milices_privees_de_protection_des_sites_germinaux_fortress_world]]
 - [[nexcore_atlantique_infrastructure_fortress_world]]
 - [[nexus_biosyn_fortress_world]]
-- [[pacte_forteresses_souveraines_fortress_world]]
 - [[reseaux_de_distribution_d_hydrogene_sous_contrat_militaire_fortress_world]]
 - [[reseaux_prives_de_securite_aux_frontieres_fortress_world]]
 - [[terrashield_geoengineering_fortress_world]]

@@ -32,7 +32,7 @@ entites_citees:
   - terminal_kharg_data_haven_fortress_world
   - conseil_regulation_algorithmique_fortress_world
   - nexcore_fortress_world
-  - pacte_forteresses_souveraines_fortress_world
+  - alliance_blocs_souverains_fortress_world
   - gelecek_meclisi_fortress_world
 variables_pilotes:
   - geopolitique_conflits
@@ -56,4 +56,4 @@ Le Pacte des Forteresses Souveraines, dont le Bloc Atlantique est membre, a salu
 Pour les 12 millions de réfugiés du Golfe Persique, toujours bloqués dans les couloirs de Bassora, cette nouvelle couche de contrôle numérique pourrait signifier l’effacement définitif de leurs identités. "Sans accès aux archives de Kharg-9, nous n’existons plus", résume un porte-parole des *Coalitions des Déplacés*. NexCore, lui, assure que le SPDS "ne concerne que les données critiques". Reste à savoir qui décidera de ce qui est critique — et qui en paiera le prix.
 
 ---
-**Voir aussi** : [[voix_du_dehors_fortress_world]] · [[terminal_kharg_data_haven_fortress_world]] · [[conseil_regulation_algorithmique_fortress_world]] · [[nexcore_fortress_world]] · [[pacte_forteresses_souveraines_fortress_world]] · [[gelecek_meclisi_fortress_world]]
+**Voir aussi** : [[voix_du_dehors_fortress_world]] · [[terminal_kharg_data_haven_fortress_world]] · [[conseil_regulation_algorithmique_fortress_world]] · [[nexcore_fortress_world]] · [[alliance_blocs_souverains_fortress_world]] · [[gelecek_meclisi_fortress_world]]

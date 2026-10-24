@@ -41,7 +41,7 @@ alliances:
 - conseil_regulation_algorithmique_fortress_world
 - nexcore_atlantique_infrastructure_fortress_world
 - nexcore_fortress_world
-- pacte_forteresses_souveraines_fortress_world
+- alliance_blocs_souverains_fortress_world
 oppositions:
 - cellules_mouvement_commun_midwest_fortress_world
 - coalitions_des_deplaces_et_apatrides_fortress_world
@@ -125,7 +125,7 @@ Sa contradiction centrale est abyssale : prétendre défendre les intérêts des
 - [[conseil_regulation_algorithmique_fortress_world]]
 - [[nexcore_atlantique_infrastructure_fortress_world]]
 - [[nexcore_fortress_world]]
-- [[pacte_forteresses_souveraines_fortress_world]]
+- [[alliance_blocs_souverains_fortress_world]]
 **Opposants :**
 - [[cellules_mouvement_commun_midwest_fortress_world]]
 - [[coalitions_des_deplaces_et_apatrides_fortress_world]]

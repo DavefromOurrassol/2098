@@ -44,7 +44,6 @@ alliances:
 - geneve_bunker_fortress_world
 - nexcore_atlantique_infrastructure_fortress_world
 - nexus_biosyn_division_pacifique_fortress_world
-- pacte_forteresses_souveraines_fortress_world
 - siege_genevois_cars_fortress_world
 - tbilissi_nord_zone_franche_fortress_world
 - tours_nexus7_fortress_world
@@ -144,7 +143,6 @@ La tension centrale de ces réseaux réside dans leur double loyauté structurel
 - [[geneve_bunker_fortress_world]]
 - [[nexcore_atlantique_infrastructure_fortress_world]]
 - [[nexus_biosyn_division_pacifique_fortress_world]]
-- [[pacte_forteresses_souveraines_fortress_world]]
 - [[siege_genevois_cars_fortress_world]]
 - [[tbilissi_nord_zone_franche_fortress_world]]
 - [[tours_nexus7_fortress_world]]

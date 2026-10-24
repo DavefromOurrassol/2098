@@ -48,7 +48,7 @@ oppositions:
 - grille_aria_fortress_world
 - instances_aria_concurrentes_des_blocs_rivaux_fortress_world
 - nexcore_atlantique_infrastructure_fortress_world
-- pacte_forteresses_souveraines_fortress_world
+- alliance_blocs_souverains_fortress_world
 - rede_paulista_de_distribuicao_algoritmica_fortress_world
 - siege_genevois_cars_fortress_world
 - terrashield_geoengineering_fortress_world
@@ -138,7 +138,7 @@ La tension fondamentale de ces collectifs réside dans la contradiction entre le
 - [[grille_aria_fortress_world]]
 - [[instances_aria_concurrentes_des_blocs_rivaux_fortress_world]]
 - [[nexcore_atlantique_infrastructure_fortress_world]]
-- [[pacte_forteresses_souveraines_fortress_world]]
+- [[alliance_blocs_souverains_fortress_world]]
 - [[rede_paulista_de_distribuicao_algoritmica_fortress_world]]
 - [[siege_genevois_cars_fortress_world]]
 - [[terrashield_geoengineering_fortress_world]]

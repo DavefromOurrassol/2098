@@ -40,7 +40,7 @@ alliances:
 - nexcore_fortress_world
 - nexus_biosyn_fortress_world
 - oligarchies_technologiques_souveraines_d_infrastructure_de_calcul_fortress_world
-- pacte_forteresses_souveraines_fortress_world
+- alliance_blocs_souverains_fortress_world
 - systemes_de_scoring_de_productivite_corporative_fortress_world
 - vaultcorp_security_fortress_world
 oppositions:
@@ -144,7 +144,7 @@ La course aux armements cognitifs entre blocs génère une escalade permanente :
 - [[nexcore_fortress_world]]
 - [[nexus_biosyn_fortress_world]]
 - [[oligarchies_technologiques_souveraines_d_infrastructure_de_calcul_fortress_world]]
-- [[pacte_forteresses_souveraines_fortress_world]]
+- [[alliance_blocs_souverains_fortress_world]]
 - [[systemes_de_scoring_de_productivite_corporative_fortress_world]]
 - [[vaultcorp_security_fortress_world]]
 **Opposants :**

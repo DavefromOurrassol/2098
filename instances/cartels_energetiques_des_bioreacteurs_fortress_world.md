@@ -37,7 +37,6 @@ alliances:
 - complexes_militaro_industriels_de_gestion_des_ressources_fortress_world
 - consortium_eurasiatique_des_ressources_fermees_fortress_world
 - nexus_biosyn_fortress_world
-- pacte_forteresses_souveraines_fortress_world
 oppositions:
 - collectifs_de_reappropriation_energetique_peripherique_fortress_world
 - contrebandiers_energetiques_des_zones_grises_fortress_world
@@ -119,7 +118,6 @@ La tension centrale repose sur la contradiction entre leur indispensabilité vit
 - [[complexes_militaro_industriels_de_gestion_des_ressources_fortress_world]]
 - [[consortium_eurasiatique_des_ressources_fermees_fortress_world]]
 - [[nexus_biosyn_fortress_world]]
-- [[pacte_forteresses_souveraines_fortress_world]]
 **Opposants :**
 - [[collectifs_de_reappropriation_energetique_peripherique_fortress_world]]
 - [[contrebandiers_energetiques_des_zones_grises_fortress_world]]

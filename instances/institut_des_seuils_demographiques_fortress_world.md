@@ -47,7 +47,6 @@ alliances:
 - centre_controle_orbital_helios_fortress_world
 - deepfield_institute_fortress_world
 - neurosentry_fortress_world
-- pacte_forteresses_souveraines_fortress_world
 - vaultcorp_security_fortress_world
 oppositions:
 - alliance_sanitaire_des_populations_exclues_fortress_world
@@ -117,7 +116,6 @@ Le SIDCB est au cœur de plusieurs conflits narratifs majeurs : 1) **La légitim
 - [[centre_controle_orbital_helios_fortress_world]]
 - [[deepfield_institute_fortress_world]]
 - [[neurosentry_fortress_world]]
-- [[pacte_forteresses_souveraines_fortress_world]]
 - [[vaultcorp_security_fortress_world]]
 **Opposants :**
 - [[alliance_sanitaire_des_populations_exclues_fortress_world]]

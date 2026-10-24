@@ -35,7 +35,7 @@ alliances:
 - bureau_des_territoires_residuels_fortress_world
 - bureau_territoires_residuels_fortress_world
 - conseil_regulation_algorithmique_fortress_world
-- pacte_forteresses_souveraines_fortress_world
+- alliance_blocs_souverains_fortress_world
 oppositions:
 - mouvement_commun_midwest_fortress_world
 type_relation_dominante: alliance stratégique
@@ -96,6 +96,6 @@ cette année. Les organisations humanitaires n'y ont plus accès depuis 2091.
 - [[bureau_des_territoires_residuels_fortress_world]]
 - [[bureau_territoires_residuels_fortress_world]]
 - [[conseil_regulation_algorithmique_fortress_world]]
-- [[pacte_forteresses_souveraines_fortress_world]]
+- [[alliance_blocs_souverains_fortress_world]]
 **Opposants :**
 - [[mouvement_commun_midwest_fortress_world]]

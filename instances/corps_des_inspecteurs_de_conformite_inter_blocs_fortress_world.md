@@ -42,7 +42,7 @@ alliances:
 - institutions_multilaterales_residuelles_fortress_world
 - les_gardiens_des_corridors_hybrides_fortress_world
 - les_gardiens_des_n_uds_hybrides_fortress_world
-- pacte_forteresses_souveraines_fortress_world
+- alliance_blocs_souverains_fortress_world
 oppositions:
 - armada_logistique_nordique_fortress_world
 - cliniques_de_deaugmentation_independantes_fortress_world
@@ -137,7 +137,7 @@ Le Corps est structurellement financé par des blocs aux intérêts divergents, 
 - [[institutions_multilaterales_residuelles_fortress_world]]
 - [[les_gardiens_des_corridors_hybrides_fortress_world]]
 - [[les_gardiens_des_n_uds_hybrides_fortress_world]]
-- [[pacte_forteresses_souveraines_fortress_world]]
+- [[alliance_blocs_souverains_fortress_world]]
 **Opposants :**
 - [[armada_logistique_nordique_fortress_world]]
 - [[cliniques_de_deaugmentation_independantes_fortress_world]]
