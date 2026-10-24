@@ -83,7 +83,6 @@ oppositions:
 - pacte_des_souverains_reference
 - regulateurs_de_l_union_continentale_africaine_reference
 - reseau_des_villes_refuge_pour_travailleurs_desaugmentes_reference
-- reseaux_de_gouvernance_multilaterale_survivants_reference
 - syndicats_de_travail_rural_hybride_reference
 - syndicats_de_travailleurs_de_la_transition_energetique_reference
 - union_africaine_resilience_reference
@@ -209,7 +208,6 @@ La tension centrale qui les traverse est celle entre leur dépendance aux cadres
 - [[pacte_des_souverains_reference]]
 - [[regulateurs_de_l_union_continentale_africaine_reference]]
 - [[reseau_des_villes_refuge_pour_travailleurs_desaugmentes_reference]]
-- [[reseaux_de_gouvernance_multilaterale_survivants_reference]]
 - [[syndicats_de_travail_rural_hybride_reference]]
 - [[syndicats_de_travailleurs_de_la_transition_energetique_reference]]
 - [[union_africaine_resilience_reference]]

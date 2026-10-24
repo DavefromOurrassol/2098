@@ -44,7 +44,6 @@ alliances:
 - maelys_okonkwo_reference
 - observatoire_climatique_des_territoires_oct_reference
 - reseaux_de_capteurs_citoyens_reference
-- reseaux_de_gouvernance_multilaterale_survivants_reference
 - reseaux_de_lanceurs_d_alerte_institutionnels_dissidents_reference
 - voix_du_dehors_reference
 oppositions:
@@ -140,7 +139,6 @@ L'ONG navigue en permanence entre son rôle de contre-pouvoir radical et les com
 - [[maelys_okonkwo_reference]]
 - [[observatoire_climatique_des_territoires_oct_reference]]
 - [[reseaux_de_capteurs_citoyens_reference]]
-- [[reseaux_de_gouvernance_multilaterale_survivants_reference]]
 - [[reseaux_de_lanceurs_d_alerte_institutionnels_dissidents_reference]]
 - [[voix_du_dehors_reference]]
 **Opposants :**

@@ -46,7 +46,7 @@ acteurs_impliques:
     - agence_stabilisation_climatique_reference
     - fonds_monetaire_climatique_fmc_reference
     - front_souverainiste_des_ressources_d_amerique_du_sud_reference
-    - reseaux_de_gouvernance_multilaterale_survivants_reference
+    - institutions_multilaterales_survivantes_reference
     - frente_sertao_livre_reference
     - ong_environnementales_de_terrain_reference
     - lobbies_industriels_des_etats_non_signataires_reference
@@ -79,7 +79,7 @@ Le traité institue un précédent juridique fragile mais réel : pour la premi�
 - [[agence_stabilisation_climatique_reference]]
 - [[fonds_monetaire_climatique_fmc_reference]]
 - [[front_souverainiste_des_ressources_d_amerique_du_sud_reference]]
-- [[reseaux_de_gouvernance_multilaterale_survivants_reference]]
+- [[institutions_multilaterales_survivantes_reference]]
 - [[frente_sertao_livre_reference]]
 - [[ong_environnementales_de_terrain_reference]]
 - [[lobbies_industriels_des_etats_non_signataires_reference]]

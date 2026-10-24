@@ -43,7 +43,7 @@ acteurs_impliques:
     - pacifique_sud_resilience_network_reference
     - fonds_souverains_de_la_ceinture_financiere_pacifique_reference
     - observatoire_climatique_des_territoires_oct_reference
-    - reseaux_de_gouvernance_multilaterale_survivants_reference
+    - institutions_multilaterales_survivantes_reference
     - collectifs_de_journalisme_embarque_reference
     - le_temoin_reference
     - reseau_des_metropoles_cotieres_adaptees_reference
@@ -75,7 +75,7 @@ Le Protocole de Souveraineté Flottante ouvre une brèche dans le droit internat
 - [[pacifique_sud_resilience_network_reference]]
 - [[fonds_souverains_de_la_ceinture_financiere_pacifique_reference]]
 - [[observatoire_climatique_des_territoires_oct_reference]]
-- [[reseaux_de_gouvernance_multilaterale_survivants_reference]]
+- [[institutions_multilaterales_survivantes_reference]]
 - [[collectifs_de_journalisme_embarque_reference]]
 - [[le_temoin_reference]]
 - [[reseau_des_metropoles_cotieres_adaptees_reference]]

@@ -41,7 +41,7 @@ alliances:
     - agence_stabilisation_climatique_reference
     - agence_internationale_des_energies_renouvelables_irena_2_reference
     - banque_mondiale_des_transitions_climatiques_reference
-    - reseaux_de_gouvernance_multilaterale_survivants_reference
+    - institutions_multilaterales_survivantes_reference
     - observatoire_climatique_des_territoires_oct_reference
     - conseil_regulation_algorithmique_reference
     - programme_onu_eau_2080_reference
@@ -102,7 +102,7 @@ Produit des rapports probabilistes de rupture systémique diffusés aux institut
 - [[systeme_economique_redistribution]]
 
 ## Relations
-**Alliés** : [[agence_stabilisation_climatique_reference]], [[agence_internationale_des_energies_renouvelables_irena_2_reference]], [[banque_mondiale_des_transitions_climatiques_reference]], [[reseaux_de_gouvernance_multilaterale_survivants_reference]], [[observatoire_climatique_des_territoires_oct_reference]], [[conseil_regulation_algorithmique_reference]], [[programme_onu_eau_2080_reference]], [[collectifs_academiques_independants_reference]], [[reseau_des_chercheurs_en_ethique_des_systemes_distribues_reference]]
+**Alliés** : [[agence_stabilisation_climatique_reference]], [[agence_internationale_des_energies_renouvelables_irena_2_reference]], [[banque_mondiale_des_transitions_climatiques_reference]], [[institutions_multilaterales_survivantes_reference]], [[observatoire_climatique_des_territoires_oct_reference]], [[conseil_regulation_algorithmique_reference]], [[programme_onu_eau_2080_reference]], [[collectifs_academiques_independants_reference]], [[reseau_des_chercheurs_en_ethique_des_systemes_distribues_reference]]
 **Opposants** : [[consortium_des_plateformes_ia_centralisees_anti_deliberation_reference]], [[consortiums_energetiques_opaques_reference]], [[bloc_des_souverainistes_climatiques_reference]], [[alliance_blocs_souverains_reference]], [[services_de_contre_information_des_blocs_geopolitiques_concurrents_reference]], [[etats_a_tendance_centraliste_numerique_reference]], [[corporations_d_extraction_energetique_non_signataires_reference]]
 
 ## Description journalistique

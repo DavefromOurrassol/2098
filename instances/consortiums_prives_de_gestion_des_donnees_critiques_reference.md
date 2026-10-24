@@ -46,7 +46,6 @@ alliances:
 - ergo_wian_sovereign_holdings_reference
 - gouvernements_a_regime_de_productivite_mandatee_reference
 - holdfast_reference
-- institutions_multilaterales_survivantes_reference
 - services_de_contre_information_des_blocs_geopolitiques_concurrents_reference
 - terminal_kharg_data_haven_reference
 oppositions:
@@ -73,7 +72,7 @@ oppositions:
 - reseau_meshcommons_netsolidaire_reference
 - reseau_mnemos_reference
 - reseaux_de_capteurs_citoyens_reference
-- reseaux_de_gouvernance_multilaterale_survivants_reference
+- institutions_multilaterales_survivantes_reference
 - reseaux_de_lanceurs_d_alerte_institutionnels_dissidents_reference
 - reseaux_de_medecine_traditionnelle_augmentee_reference
 - tbilissi_noeud_mnemos_reference
@@ -159,7 +158,6 @@ La tension centrale réside dans leur double légitimité contradictoire : prest
 - [[ergo_wian_sovereign_holdings_reference]]
 - [[gouvernements_a_regime_de_productivite_mandatee_reference]]
 - [[holdfast_reference]]
-- [[institutions_multilaterales_survivantes_reference]]
 - [[services_de_contre_information_des_blocs_geopolitiques_concurrents_reference]]
 - [[terminal_kharg_data_haven_reference]]
 **Opposants :**
@@ -186,7 +184,7 @@ La tension centrale réside dans leur double légitimité contradictoire : prest
 - [[reseau_meshcommons_netsolidaire_reference]]
 - [[reseau_mnemos_reference]]
 - [[reseaux_de_capteurs_citoyens_reference]]
-- [[reseaux_de_gouvernance_multilaterale_survivants_reference]]
+- [[institutions_multilaterales_survivantes_reference]]
 - [[reseaux_de_lanceurs_d_alerte_institutionnels_dissidents_reference]]
 - [[reseaux_de_medecine_traditionnelle_augmentee_reference]]
 - [[tbilissi_noeud_mnemos_reference]]

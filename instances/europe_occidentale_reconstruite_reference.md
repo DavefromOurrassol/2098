@@ -45,7 +45,7 @@ alliances:
 - consortium_energetique_des_mers_du_nord_reference
 - cooperatives_agro_ecologiques_de_reconstruction_territoriale_reference
 - fonds_monetaire_climatique_fmc_reference
-- reseaux_de_gouvernance_multilaterale_survivants_reference
+- institutions_multilaterales_survivantes_reference
 - tribunal_algorithmique_de_bruxelles_reference
 oppositions:
 - alliance_blocs_souverains_reference
@@ -121,7 +121,7 @@ L'UOC est prise en étau entre des États membres qui lui délèguent leurs prob
 - [[consortium_energetique_des_mers_du_nord_reference]]
 - [[cooperatives_agro_ecologiques_de_reconstruction_territoriale_reference]]
 - [[fonds_monetaire_climatique_fmc_reference]]
-- [[reseaux_de_gouvernance_multilaterale_survivants_reference]]
+- [[institutions_multilaterales_survivantes_reference]]
 - [[tribunal_algorithmique_de_bruxelles_reference]]
 **Opposants :**
 - [[alliance_blocs_souverains_reference]]

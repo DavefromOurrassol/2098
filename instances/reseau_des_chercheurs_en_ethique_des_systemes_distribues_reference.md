@@ -50,7 +50,7 @@ alliances:
 - reseau_hospitalier_hybride_eurasiatique_reference
 - reseau_meshcommons_netsolidaire_reference
 - reseaux_de_capteurs_citoyens_reference
-- reseaux_de_gouvernance_multilaterale_survivants_reference
+- institutions_multilaterales_survivantes_reference
 - reseaux_de_lanceurs_d_alerte_institutionnels_dissidents_reference
 - tribunal_algorithmique_de_bruxelles_reference
 - universites_et_think_tanks_en_zones_de_liberte_academique_reference
@@ -154,7 +154,7 @@ Le Réseau est tiraillé entre l'exigence d'indépendance radicale et la tentati
 - [[reseau_hospitalier_hybride_eurasiatique_reference]]
 - [[reseau_meshcommons_netsolidaire_reference]]
 - [[reseaux_de_capteurs_citoyens_reference]]
-- [[reseaux_de_gouvernance_multilaterale_survivants_reference]]
+- [[institutions_multilaterales_survivantes_reference]]
 - [[reseaux_de_lanceurs_d_alerte_institutionnels_dissidents_reference]]
 - [[tribunal_algorithmique_de_bruxelles_reference]]
 - [[universites_et_think_tanks_en_zones_de_liberte_academique_reference]]

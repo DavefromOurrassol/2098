@@ -78,7 +78,6 @@ oppositions:
 - pacte_des_souverains_reference
 - programme_onu_eau_2080_reference
 - reseaux_de_capteurs_citoyens_reference
-- reseaux_de_gouvernance_multilaterale_survivants_reference
 - singapour_est_reference
 - terrametrics_reference
 - the_lattice_reference
@@ -195,7 +194,6 @@ La contradiction centrale du Bloc réside dans le fait que plusieurs de ses memb
 - [[pacte_des_souverains_reference]]
 - [[programme_onu_eau_2080_reference]]
 - [[reseaux_de_capteurs_citoyens_reference]]
-- [[reseaux_de_gouvernance_multilaterale_survivants_reference]]
 - [[singapour_est_reference]]
 - [[terrametrics_reference]]
 - [[the_lattice_reference]]

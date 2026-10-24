@@ -51,7 +51,6 @@ oppositions:
 - leena_vainala_reference
 - mouvement_pour_la_libre_circulation_des_personnes_et_des_donnees_reference
 - reseau_meshcommons_netsolidaire_reference
-- reseaux_de_gouvernance_multilaterale_survivants_reference
 - singapour_est_reference
 - the_lattice_reference
 - voix_du_dehors_reference
@@ -147,7 +146,6 @@ La Coalition est structurellement tiraillée entre des membres aux régimes trè
 - [[leena_vainala_reference]]
 - [[mouvement_pour_la_libre_circulation_des_personnes_et_des_donnees_reference]]
 - [[reseau_meshcommons_netsolidaire_reference]]
-- [[reseaux_de_gouvernance_multilaterale_survivants_reference]]
 - [[singapour_est_reference]]
 - [[the_lattice_reference]]
 - [[voix_du_dehors_reference]]

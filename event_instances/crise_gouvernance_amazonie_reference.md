@@ -45,7 +45,7 @@ acteurs_impliques:
     - consortiums_energetiques_opaques_reference
     - corporations_d_extraction_energetique_non_signataires_reference
     - blocs_signataires_du_pacte_energetique_multilateral_reference
-    - reseaux_de_gouvernance_multilaterale_survivants_reference
+    - institutions_multilaterales_survivantes_reference
     - collectifs_de_journalistes_independants_regionaux_reference
     - ong_environnementales_de_terrain_reference
     - reseaux_de_capteurs_citoyens_reference
@@ -80,7 +80,7 @@ L'épreuve de Belém cristallise le statut ambigu mais irréversible du bassin a
 - [[consortiums_energetiques_opaques_reference]]
 - [[corporations_d_extraction_energetique_non_signataires_reference]]
 - [[blocs_signataires_du_pacte_energetique_multilateral_reference]]
-- [[reseaux_de_gouvernance_multilaterale_survivants_reference]]
+- [[institutions_multilaterales_survivantes_reference]]
 - [[collectifs_de_journalistes_independants_regionaux_reference]]
 - [[ong_environnementales_de_terrain_reference]]
 - [[reseaux_de_capteurs_citoyens_reference]]

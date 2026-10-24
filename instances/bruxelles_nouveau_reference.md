@@ -42,7 +42,7 @@ alliances:
 - europe_occidentale_reconstruite_reference
 - fonds_monetaire_climatique_fmc_reference
 - reseau_des_metropoles_cotieres_adaptees_reference
-- reseaux_de_gouvernance_multilaterale_survivants_reference
+- institutions_multilaterales_survivantes_reference
 - tribunal_algorithmique_de_bruxelles_reference
 oppositions:
 - alliance_blocs_souverains_reference
@@ -109,7 +109,7 @@ La question qui hante Bruxelles Nouveau est celle de sa propre légitimité : pe
 - [[europe_occidentale_reconstruite_reference]]
 - [[fonds_monetaire_climatique_fmc_reference]]
 - [[reseau_des_metropoles_cotieres_adaptees_reference]]
-- [[reseaux_de_gouvernance_multilaterale_survivants_reference]]
+- [[institutions_multilaterales_survivantes_reference]]
 - [[tribunal_algorithmique_de_bruxelles_reference]]
 **Opposants :**
 - [[alliance_blocs_souverains_reference]]

@@ -37,7 +37,6 @@ alliances:
 - institutions_multilaterales_survivantes_reference
 - observatoire_climatique_des_territoires_oct_reference
 - programme_onu_eau_2080_reference
-- reseaux_de_gouvernance_multilaterale_survivants_reference
 oppositions:
 - bloc_ressources_eurasiatique_bre_reference
 - consortium_logistique_asiatique_de_contournement_aln_reference
@@ -119,7 +118,6 @@ La neutralité affichée du SEOM-7 masque une dépendance structurelle aux finan
 - [[institutions_multilaterales_survivantes_reference]]
 - [[observatoire_climatique_des_territoires_oct_reference]]
 - [[programme_onu_eau_2080_reference]]
-- [[reseaux_de_gouvernance_multilaterale_survivants_reference]]
 **Opposants :**
 - [[bloc_ressources_eurasiatique_bre_reference]]
 - [[consortium_logistique_asiatique_de_contournement_aln_reference]]

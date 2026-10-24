@@ -47,7 +47,7 @@ alliances:
 - observatoire_climatique_des_territoires_oct_reference
 - programme_onu_eau_2080_reference
 - reseau_des_metropoles_cotieres_adaptees_reference
-- reseaux_de_gouvernance_multilaterale_survivants_reference
+- institutions_multilaterales_survivantes_reference
 oppositions:
 - alliance_blocs_souverains_reference
 - bloc_des_souverainistes_climatiques_reference
@@ -118,7 +118,7 @@ La pression pour autoriser des transferts hydriques massifs vers les zones dése
 - [[observatoire_climatique_des_territoires_oct_reference]]
 - [[programme_onu_eau_2080_reference]]
 - [[reseau_des_metropoles_cotieres_adaptees_reference]]
-- [[reseaux_de_gouvernance_multilaterale_survivants_reference]]
+- [[institutions_multilaterales_survivantes_reference]]
 **Opposants :**
 - [[alliance_blocs_souverains_reference]]
 - [[bloc_des_souverainistes_climatiques_reference]]

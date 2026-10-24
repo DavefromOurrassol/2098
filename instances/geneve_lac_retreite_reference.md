@@ -43,7 +43,7 @@ alliances:
 - ong_environnementales_de_terrain_reference
 - programme_onu_eau_2080_reference
 - reseau_des_metropoles_cotieres_adaptees_reference
-- reseaux_de_gouvernance_multilaterale_survivants_reference
+- institutions_multilaterales_survivantes_reference
 - universites_et_think_tanks_en_zones_de_liberte_academique_reference
 oppositions:
 - bloc_des_souverainistes_climatiques_reference
@@ -109,7 +109,7 @@ La question du passage à un mandat coercitif revient à chaque crise : le retra
 - [[ong_environnementales_de_terrain_reference]]
 - [[programme_onu_eau_2080_reference]]
 - [[reseau_des_metropoles_cotieres_adaptees_reference]]
-- [[reseaux_de_gouvernance_multilaterale_survivants_reference]]
+- [[institutions_multilaterales_survivantes_reference]]
 - [[universites_et_think_tanks_en_zones_de_liberte_academique_reference]]
 **Opposants :**
 - [[bloc_des_souverainistes_climatiques_reference]]

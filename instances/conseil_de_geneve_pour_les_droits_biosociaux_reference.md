@@ -60,7 +60,6 @@ alliances:
 - reseau_des_chercheurs_en_ethique_des_systemes_distribues_reference
 - reseau_des_villes_etats_pilotes_en_gouvernance_participative_reference
 - reseau_des_villes_refuge_pour_travailleurs_desaugmentes_reference
-- reseaux_de_gouvernance_multilaterale_survivants_reference
 - syndicats_de_travailleurs_de_la_transition_energetique_reference
 - tribunal_algorithmique_de_bruxelles_reference
 oppositions:
@@ -172,7 +171,6 @@ Le Conseil est écartelé entre sa vocation universaliste et la réalité d'un m
 - [[reseau_des_chercheurs_en_ethique_des_systemes_distribues_reference]]
 - [[reseau_des_villes_etats_pilotes_en_gouvernance_participative_reference]]
 - [[reseau_des_villes_refuge_pour_travailleurs_desaugmentes_reference]]
-- [[reseaux_de_gouvernance_multilaterale_survivants_reference]]
 - [[syndicats_de_travailleurs_de_la_transition_energetique_reference]]
 - [[tribunal_algorithmique_de_bruxelles_reference]]
 **Opposants :**

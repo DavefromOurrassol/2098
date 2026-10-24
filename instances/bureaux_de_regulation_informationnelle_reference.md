@@ -44,7 +44,7 @@ alliances:
 - plateformes_centralisees_de_narration_officielle_reference
 - regulateurs_de_l_union_continentale_africaine_reference
 - regulateurs_de_l_union_eurasiatique_sur_les_donnees_critiques_reference
-- reseaux_de_gouvernance_multilaterale_survivants_reference
+- institutions_multilaterales_survivantes_reference
 - tribunal_algorithmique_de_bruxelles_reference
 oppositions:
 - aurelio_stahl_reference
@@ -146,7 +146,7 @@ Les BRI sont pris en étau entre leur mission de protection de l'espace informat
 - [[plateformes_centralisees_de_narration_officielle_reference]]
 - [[regulateurs_de_l_union_continentale_africaine_reference]]
 - [[regulateurs_de_l_union_eurasiatique_sur_les_donnees_critiques_reference]]
-- [[reseaux_de_gouvernance_multilaterale_survivants_reference]]
+- [[institutions_multilaterales_survivantes_reference]]
 - [[tribunal_algorithmique_de_bruxelles_reference]]
 **Opposants :**
 - [[aurelio_stahl_reference]]

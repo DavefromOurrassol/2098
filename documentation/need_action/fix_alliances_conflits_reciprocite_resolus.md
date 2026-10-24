@@ -1,4 +1,4 @@
-# État au run du 2026-10-24 16:37
+# État au run du 2026-10-24 16:43
 
-## new_sustainability — 2026-10-24 16:37 (opposition prioritaire)
-- tribunal_algorithmique_de_bruxelles_new_sustainability : retrait de 'bloc_des_architectes_d_efficience_algorithmique_new_sustainability' des alliances (conflit : tribunal_algorithmique_de_bruxelles_new_sustainability listait bloc_des_architectes_d_efficience_algorithmique_new_sustainability en alliance, bloc_des_architectes_d_efficience_algorithmique_new_sustainability liste tribunal_algorithmique_de_bruxelles_new_sustainability en opposition)
+## reference — 2026-10-24 16:43 (opposition prioritaire)
+- institutions_multilaterales_survivantes_reference : retrait de 'consortiums_prives_de_gestion_des_donnees_critiques_reference' des alliances (conflit : institutions_multilaterales_survivantes_reference listait consortiums_prives_de_gestion_des_donnees_critiques_reference en alliance, consortiums_prives_de_gestion_des_donnees_critiques_reference liste institutions_multilaterales_survivantes_reference en opposition)

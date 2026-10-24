@@ -52,7 +52,6 @@ alliances:
 - programme_onu_eau_2080_reference
 - regulateurs_de_l_union_continentale_africaine_reference
 - reseau_des_villes_etats_pilotes_en_gouvernance_participative_reference
-- reseaux_de_gouvernance_multilaterale_survivants_reference
 - the_lattice_reference
 - union_africaine_de_resilience_territoriale_reference
 oppositions:
@@ -160,7 +159,6 @@ L'agence est structurellement tiraillée entre ses membres du Pacte des Souverai
 - [[programme_onu_eau_2080_reference]]
 - [[regulateurs_de_l_union_continentale_africaine_reference]]
 - [[reseau_des_villes_etats_pilotes_en_gouvernance_participative_reference]]
-- [[reseaux_de_gouvernance_multilaterale_survivants_reference]]
 - [[the_lattice_reference]]
 - [[union_africaine_de_resilience_territoriale_reference]]
 **Opposants :**

@@ -52,7 +52,6 @@ alliances:
 - observatoire_climatique_des_territoires_oct_reference
 - oracle_des_seuils_reference
 - programme_onu_eau_2080_reference
-- reseaux_de_gouvernance_multilaterale_survivants_reference
 - union_africaine_resilience_reference
 oppositions:
 - bloc_eurasien_central_reference
@@ -159,7 +158,6 @@ La BMTC est structurellement tiraillée entre sa vocation redistributive envers 
 - [[observatoire_climatique_des_territoires_oct_reference]]
 - [[oracle_des_seuils_reference]]
 - [[programme_onu_eau_2080_reference]]
-- [[reseaux_de_gouvernance_multilaterale_survivants_reference]]
 - [[union_africaine_resilience_reference]]
 **Opposants :**
 - [[bloc_eurasien_central_reference]]

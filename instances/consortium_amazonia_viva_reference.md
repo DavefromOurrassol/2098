@@ -50,7 +50,7 @@ alliances:
 - frente_sertao_livre_reference
 - observatoire_climatique_des_territoires_oct_reference
 - reseaux_de_capteurs_citoyens_reference
-- reseaux_de_gouvernance_multilaterale_survivants_reference
+- institutions_multilaterales_survivantes_reference
 - sao_paulo_ita_reference
 oppositions:
 - alliance_blocs_souverains_reference
@@ -129,7 +129,7 @@ La tension centrale reste entière : le Consortium dispose d'une légitimité mo
 - [[frente_sertao_livre_reference]]
 - [[observatoire_climatique_des_territoires_oct_reference]]
 - [[reseaux_de_capteurs_citoyens_reference]]
-- [[reseaux_de_gouvernance_multilaterale_survivants_reference]]
+- [[institutions_multilaterales_survivantes_reference]]
 - [[sao_paulo_ita_reference]]
 **Opposants :**
 - [[alliance_blocs_souverains_reference]]

@@ -38,7 +38,6 @@ alliances:
 - institutions_multilaterales_survivantes_reference
 - kalaallit_nunaat_sovereign_fund_reference
 - pacifique_sud_resilience_network_reference
-- reseaux_de_gouvernance_multilaterale_survivants_reference
 oppositions:
 - arctic_passage_authority_reference
 - armada_logistique_nordique_reference
@@ -122,7 +121,6 @@ La déglaciation qui menace leur mode de vie ouvre paradoxalement de nouvelles z
 - [[institutions_multilaterales_survivantes_reference]]
 - [[kalaallit_nunaat_sovereign_fund_reference]]
 - [[pacifique_sud_resilience_network_reference]]
-- [[reseaux_de_gouvernance_multilaterale_survivants_reference]]
 **Opposants :**
 - [[arctic_passage_authority_reference]]
 - [[armada_logistique_nordique_reference]]

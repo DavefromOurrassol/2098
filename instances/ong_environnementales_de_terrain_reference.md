@@ -53,7 +53,7 @@ alliances:
 - reseau_des_chercheurs_en_ethique_des_systemes_distribues_reference
 - reseau_des_cooperatives_agro_saheliennes_reference
 - reseaux_de_capteurs_citoyens_reference
-- reseaux_de_gouvernance_multilaterale_survivants_reference
+- institutions_multilaterales_survivantes_reference
 - reseaux_de_lanceurs_d_alerte_institutionnels_dissidents_reference
 - voix_du_dehors_reference
 oppositions:
@@ -157,7 +157,7 @@ Elles sont prises en étau entre leur dépendance aux financements des blocs éc
 - [[reseau_des_chercheurs_en_ethique_des_systemes_distribues_reference]]
 - [[reseau_des_cooperatives_agro_saheliennes_reference]]
 - [[reseaux_de_capteurs_citoyens_reference]]
-- [[reseaux_de_gouvernance_multilaterale_survivants_reference]]
+- [[institutions_multilaterales_survivantes_reference]]
 - [[reseaux_de_lanceurs_d_alerte_institutionnels_dissidents_reference]]
 - [[voix_du_dehors_reference]]
 **Opposants :**

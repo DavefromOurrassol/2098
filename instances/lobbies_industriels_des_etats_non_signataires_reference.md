@@ -51,7 +51,6 @@ oppositions:
 - institutions_multilaterales_survivantes_reference
 - ong_de_tracabilite_des_ressources_critiques_reference
 - reseau_des_villes_refuge_pour_travailleurs_desaugmentes_reference
-- reseaux_de_gouvernance_multilaterale_survivants_reference
 - syndicats_de_travailleurs_de_la_transition_energetique_reference
 type_relation_dominante: compétition
 annee_debut: 2039
@@ -138,7 +137,6 @@ La contradiction centrale de ces lobbies réside dans leur dépendance aux flux 
 - [[institutions_multilaterales_survivantes_reference]]
 - [[ong_de_tracabilite_des_ressources_critiques_reference]]
 - [[reseau_des_villes_refuge_pour_travailleurs_desaugmentes_reference]]
-- [[reseaux_de_gouvernance_multilaterale_survivants_reference]]
 - [[syndicats_de_travailleurs_de_la_transition_energetique_reference]]
 
 ## Notes

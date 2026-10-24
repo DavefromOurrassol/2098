@@ -66,7 +66,6 @@ alliances:
 - pacifique_sud_resilience_network_reference
 - plateformes_d_optimisation_territoriale_par_ia_reference
 - programme_onu_eau_2080_reference
-- reseaux_de_gouvernance_multilaterale_survivants_reference
 - terrametrics_reference
 - universites_et_think_tanks_en_zones_de_liberte_academique_reference
 oppositions:
@@ -177,7 +176,6 @@ L'OCT est tiraillée entre son mandat de neutralité scientifique et les pressio
 - [[pacifique_sud_resilience_network_reference]]
 - [[plateformes_d_optimisation_territoriale_par_ia_reference]]
 - [[programme_onu_eau_2080_reference]]
-- [[reseaux_de_gouvernance_multilaterale_survivants_reference]]
 - [[terrametrics_reference]]
 - [[universites_et_think_tanks_en_zones_de_liberte_academique_reference]]
 **Opposants :**

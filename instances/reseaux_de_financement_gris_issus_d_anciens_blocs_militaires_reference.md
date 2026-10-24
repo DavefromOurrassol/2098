@@ -52,7 +52,7 @@ oppositions:
 - corridor_arctique_nordique_reference
 - ong_de_tracabilite_des_ressources_critiques_reference
 - plateformes_d_optimisation_territoriale_par_ia_reference
-- reseaux_de_gouvernance_multilaterale_survivants_reference
+- institutions_multilaterales_survivantes_reference
 - tribunal_algorithmique_de_bruxelles_reference
 type_relation_dominante: compétition
 annee_debut: 2026
@@ -141,7 +141,7 @@ La tension centrale réside dans leur double nature : instruments de stabilisati
 - [[corridor_arctique_nordique_reference]]
 - [[ong_de_tracabilite_des_ressources_critiques_reference]]
 - [[plateformes_d_optimisation_territoriale_par_ia_reference]]
-- [[reseaux_de_gouvernance_multilaterale_survivants_reference]]
+- [[institutions_multilaterales_survivantes_reference]]
 - [[tribunal_algorithmique_de_bruxelles_reference]]
 
 ## Notes

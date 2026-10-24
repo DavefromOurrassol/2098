@@ -79,7 +79,7 @@ oppositions:
 - programme_onu_eau_2080_reference
 - reseau_des_metropoles_cotieres_adaptees_reference
 - reseau_des_villes_etats_pilotes_en_gouvernance_participative_reference
-- reseaux_de_gouvernance_multilaterale_survivants_reference
+- institutions_multilaterales_survivantes_reference
 - reseaux_de_lanceurs_d_alerte_institutionnels_dissidents_reference
 - tribunal_algorithmique_de_bruxelles_reference
 type_relation_dominante: alliance stratégique
@@ -176,6 +176,6 @@ La tension centrale de l'ABS est celle de sa propre contradiction : protéger la
 - [[programme_onu_eau_2080_reference]]
 - [[reseau_des_metropoles_cotieres_adaptees_reference]]
 - [[reseau_des_villes_etats_pilotes_en_gouvernance_participative_reference]]
-- [[reseaux_de_gouvernance_multilaterale_survivants_reference]]
+- [[institutions_multilaterales_survivantes_reference]]
 - [[reseaux_de_lanceurs_d_alerte_institutionnels_dissidents_reference]]
 - [[tribunal_algorithmique_de_bruxelles_reference]]

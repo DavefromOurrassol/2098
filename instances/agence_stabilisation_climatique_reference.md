@@ -63,7 +63,6 @@ alliances:
 - programme_onu_eau_2080_reference
 - reseau_des_metropoles_cotieres_adaptees_reference
 - reseau_hospitalier_hybride_eurasiatique_reference
-- reseaux_de_gouvernance_multilaterale_survivants_reference
 - terrametrics_reference
 - union_africaine_de_resilience_territoriale_reference
 - union_africaine_resilience_reference
@@ -153,7 +152,6 @@ La légitimité de l'AMSC s'effrite à chaque décision d'allocation : qui reço
 - [[programme_onu_eau_2080_reference]]
 - [[reseau_des_metropoles_cotieres_adaptees_reference]]
 - [[reseau_hospitalier_hybride_eurasiatique_reference]]
-- [[reseaux_de_gouvernance_multilaterale_survivants_reference]]
 - [[terrametrics_reference]]
 - [[union_africaine_de_resilience_territoriale_reference]]
 - [[union_africaine_resilience_reference]]

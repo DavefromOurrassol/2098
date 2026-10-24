@@ -51,7 +51,6 @@ alliances:
 - observatoire_climatique_des_territoires_oct_reference
 - oracle_des_seuils_reference
 - regulateurs_de_l_union_continentale_africaine_reference
-- reseaux_de_gouvernance_multilaterale_survivants_reference
 - union_africaine_resilience_reference
 - valparaiso_fct_reference
 oppositions:
@@ -149,7 +148,6 @@ Le Programme est écartelé entre son mandat universel d'équité hydrique et la
 - [[observatoire_climatique_des_territoires_oct_reference]]
 - [[oracle_des_seuils_reference]]
 - [[regulateurs_de_l_union_continentale_africaine_reference]]
-- [[reseaux_de_gouvernance_multilaterale_survivants_reference]]
 - [[union_africaine_resilience_reference]]
 - [[valparaiso_fct_reference]]
 **Opposants :**

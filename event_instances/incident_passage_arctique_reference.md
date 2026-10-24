@@ -70,7 +70,7 @@ acteurs_impliques:
 - collectifs_de_journalisme_embarque_reference
 - milices_concurrentes_des_droits_de_passage_reference
 - fonds_souverain_arctique_scandinave_reference
-- reseaux_de_gouvernance_multilaterale_survivants_reference
+- institutions_multilaterales_survivantes_reference
 note_coherence: Dans un monde en équilibre fragile à tension 3/5 avec gouvernance
   hybride, la coexistence conflictuelle de l'APA et de l'ALN dans des eaux arctiques
   déglaciées et disputées rend cet incident non seulement plausible mais structurellement
@@ -106,7 +106,7 @@ L'incident cristallise la fracture de gouvernance arctique en forçant les blocs
 - [[collectifs_de_journalisme_embarque_reference]]
 - [[milices_concurrentes_des_droits_de_passage_reference]]
 - [[fonds_souverain_arctique_scandinave_reference]]
-- [[reseaux_de_gouvernance_multilaterale_survivants_reference]]
+- [[institutions_multilaterales_survivantes_reference]]
 
 ## Note de cohérence
 Dans un monde en équilibre fragile à tension 3/5 avec gouvernance hybride, la coexistence conflictuelle de l'APA et de l'ALN dans des eaux arctiques déglaciées et disputées rend cet incident non seulement plausible mais structurellement attendu — la violence para-étatique y remplace la guerre étatique ouverte, cohérent avec les variables geopolitique_conflits (75) et frontieres_du_systeme (25) reflétant une contestation normative profonde.

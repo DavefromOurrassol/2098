@@ -59,7 +59,6 @@ oppositions:
 - institut_des_seuils_demographiques_reference
 - institutions_multilaterales_survivantes_reference
 - reseau_des_metropoles_cotieres_adaptees_reference
-- reseaux_de_gouvernance_multilaterale_survivants_reference
 - union_africaine_de_resilience_territoriale_reference
 type_relation_dominante: dépendance
 
@@ -132,5 +131,4 @@ La tension centrale est celle de la tolérance calculée : les blocs régionaux 
 - [[institut_des_seuils_demographiques_reference]]
 - [[institutions_multilaterales_survivantes_reference]]
 - [[reseau_des_metropoles_cotieres_adaptees_reference]]
-- [[reseaux_de_gouvernance_multilaterale_survivants_reference]]
 - [[union_africaine_de_resilience_territoriale_reference]]

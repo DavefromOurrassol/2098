@@ -66,7 +66,6 @@ oppositions:
 - ouagadougou_polytechnique_reference
 - pacifique_sud_archipels_flottants_reference
 - pacifique_sud_resilience_network_reference
-- reseaux_de_gouvernance_multilaterale_survivants_reference
 - tribunal_algorithmique_de_bruxelles_reference
 - union_africaine_resilience_reference
 - valparaiso_fct_reference
@@ -151,7 +150,6 @@ La Charte de Réciprocité Stricte commence à montrer ses limites : plusieurs �
 - [[ouagadougou_polytechnique_reference]]
 - [[pacifique_sud_archipels_flottants_reference]]
 - [[pacifique_sud_resilience_network_reference]]
-- [[reseaux_de_gouvernance_multilaterale_survivants_reference]]
 - [[tribunal_algorithmique_de_bruxelles_reference]]
 - [[union_africaine_resilience_reference]]
 - [[valparaiso_fct_reference]]
