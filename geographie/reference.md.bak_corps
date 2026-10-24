@@ -1087,7 +1087,13 @@ zones:
   - entite: Sahel (Mali, Niger, Burkina Faso, Tchad, Soudan)
     type_entite: region_administrative
     portion: null
-  - entite: Asie Centrale (Kirghizistan, Tadjikistan, Afghanistan)
+  - entite: Kirghizistan
+    type_entite: pays
+    portion: null
+  - entite: Tadjikistan
+    type_entite: pays
+    portion: null
+  - entite: Afghanistan
     type_entite: pays
     portion: null
   - entite: Marges eurasiennes périphériques
@@ -2131,9 +2137,6 @@ zones:
   - entite: Brésil
     type_entite: pays
     portion: null
-  - entite: Paraguay (Chaco)
-    type_entite: pays
-    portion: null
   description: Territoire semi-aride du Nordeste brésilien et des zones sèches adjacentes
     d'Amérique du Sud, berceau de la Frente Sertão Livre — réseau fédéré de plus de
     deux cents nœuds communautaires gérant collectivement eau pluviale captée, énergie
@@ -3155,7 +3158,7 @@ République écossaise autonome centrée sur les énergies marines renouvelables
 
 ### Europe Occidentale Reconstruite
 
-*union_regionale — statut : stable*
+*union_regionale — statut : fragmenté*
 
 **Origine réelle (2026)** : France, Belgique, Espagne, Allemagne, Suisse, Royaume-Uni, Angleterre, Pays-Bas, Autriche, République tchèque, Irlande, Luxembourg, Monaco, Andorre, Liechtenstein, Saint-Marin, Vatican, Malte, Croatie, Slovénie, Slovaquie, Italie
 
@@ -3684,7 +3687,7 @@ Ancienne métropole transcontinentale devenue l'un des épicentres de la diploma
 
 ### Union Africaine de Résilience Territoriale
 
-*union_regionale — statut : emergent*
+*union_regionale — statut : fragmenté*
 
 **Origine réelle (2026)** : Union Africaine, République Démocratique du Congo, Burkina Faso, Kenya, Nigéria, Sénégal, Grèce, Roumanie, Nigeria, Afrique du Sud, Ghana, Rwanda, Mozambique, Zimbabwe, Bulgarie, Gambie, Guinée-Bissau, Guinée, Sierra Leone, Liberia, Côte d'Ivoire, Togo, Bénin, Cap-Vert, São Tomé-et-Príncipe, Cameroun, Gabon, Guinée équatoriale, République du Congo, Angola, Zambie, Malawi, Tanzanie, Ouganda, Burundi, Djibouti, Namibie, Botswana, Lesotho, Eswatini, Comores, Madagascar, Mali, Niger, Tchad, Soudan, Éthiopie
 

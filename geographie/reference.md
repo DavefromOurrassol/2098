@@ -1087,7 +1087,13 @@ zones:
   - entite: Sahel (Mali, Niger, Burkina Faso, Tchad, Soudan)
     type_entite: region_administrative
     portion: null
-  - entite: Asie Centrale (Kirghizistan, Tadjikistan, Afghanistan)
+  - entite: Kirghizistan
+    type_entite: pays
+    portion: null
+  - entite: Tadjikistan
+    type_entite: pays
+    portion: null
+  - entite: Afghanistan
     type_entite: pays
     portion: null
   - entite: Marges eurasiennes périphériques
@@ -2131,9 +2137,6 @@ zones:
   - entite: Brésil
     type_entite: pays
     portion: null
-  - entite: Paraguay (Chaco)
-    type_entite: pays
-    portion: null
   description: Territoire semi-aride du Nordeste brésilien et des zones sèches adjacentes
     d'Amérique du Sud, berceau de la Frente Sertão Livre — réseau fédéré de plus de
     deux cents nœuds communautaires gérant collectivement eau pluviale captée, énergie
@@ -2896,7 +2899,7 @@ Infrastructure de gouvernance algorithmique invisible et omniprésente orchestra
 
 *region — niveau 2 — statut : emergent*
 
-**Origine réelle (2026)** : Piauí, Brésil, Paraguay (Chaco)
+**Origine réelle (2026)** : Piauí, Brésil
 
 **Transition** : 2040-2098
 
@@ -3772,7 +3775,7 @@ Ville sahélienne abritant l'Institut Polytechnique de Ouagadougou, formation de
 
 *zone_sinistree — statut : fragmenté*
 
-**Origine réelle (2026)** : Sahel (Mali, Niger, Burkina Faso, Tchad, Soudan), Asie Centrale (Kirghizistan, Tadjikistan, Afghanistan), Marges eurasiennes périphériques, Serbie, Yémen, Liban, Syrie, Maroc, Algérie, Tunisie, Mauritanie, Érythrée, Bosnie-Herzégovine, Monténégro, Macédoine du Nord, Albanie, Kosovo, Turkménistan, Palestine, République centrafricaine, Somalie
+**Origine réelle (2026)** : Sahel (Mali, Niger, Burkina Faso, Tchad, Soudan), Kirghizistan, Tadjikistan, Afghanistan, Marges eurasiennes périphériques, Serbie, Yémen, Liban, Syrie, Maroc, Algérie, Tunisie, Mauritanie, Érythrée, Bosnie-Herzégovine, Monténégro, Macédoine du Nord, Albanie, Kosovo, Turkménistan, Palestine, République centrafricaine, Somalie
 
 **Transition** : 2040-2098
 
