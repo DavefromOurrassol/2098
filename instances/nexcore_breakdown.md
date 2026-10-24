@@ -49,7 +49,7 @@ oppositions:
 - factions_paramilitaires_locales_neutralisees_breakdown
 - front_des_blocs_regionaux_du_recit_des_conflits_ressources_breakdown
 - guilde_des_techniciens_nomades_breakdown
-- hanse_baltique_recomposee_breakdown
+- hanse_baltique_breakdown
 - lagos_interieur_mnemos_breakdown
 - ligue_des_cites_littorales_en_sursis_breakdown
 - reseaux_de_renseignement_informels_issus_de_l_ancienne_structure_militaire_eurasienne_breakdown
@@ -128,7 +128,7 @@ que la fragmentation est une protection.
 - [[factions_paramilitaires_locales_neutralisees_breakdown]]
 - [[front_des_blocs_regionaux_du_recit_des_conflits_ressources_breakdown]]
 - [[guilde_des_techniciens_nomades_breakdown]]
-- [[hanse_baltique_recomposee_breakdown]]
+- [[hanse_baltique_breakdown]]
 - [[lagos_interieur_mnemos_breakdown]]
 - [[ligue_des_cites_littorales_en_sursis_breakdown]]
 - [[reseaux_de_renseignement_informels_issus_de_l_ancienne_structure_militaire_eurasienne_breakdown]]

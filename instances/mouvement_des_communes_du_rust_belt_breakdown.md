@@ -64,6 +64,7 @@ oppositions:
 - gouvernements_regionaux_residuels_reterritorialisants_breakdown
 - grandes_lacs_compact_eau_breakdown
 - holdfast_breakdown
+- midwest_desertifie_breakdown
 - milices_de_controle_territorial_breakdown
 - reseau_de_recuperation_industrielle_illicite_breakdown
 - reseau_des_anciens_financeurs_devenus_censeurs_breakdown
@@ -150,6 +151,7 @@ La pression du Commandement Atlantique s'intensifie : des 'corridors de réinté
 - [[gouvernements_regionaux_residuels_reterritorialisants_breakdown]]
 - [[grandes_lacs_compact_eau_breakdown]]
 - [[holdfast_breakdown]]
+- [[midwest_desertifie_breakdown]]
 - [[milices_de_controle_territorial_breakdown]]
 - [[reseau_de_recuperation_industrielle_illicite_breakdown]]
 - [[reseau_des_anciens_financeurs_devenus_censeurs_breakdown]]

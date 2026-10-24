@@ -46,7 +46,6 @@ alliances:
 - enclaves_industrielles_de_bergen_troms_breakdown
 - guilde_des_techniciens_nomades_breakdown
 - hanse_baltique_breakdown
-- hanse_baltique_recomposee_breakdown
 - kalaallit_nunaat_sovereign_fund_breakdown
 oppositions:
 - consortiums_energetiques_samoiedes_du_yamal_breakdown
@@ -117,7 +116,6 @@ Le Nœud est coincé entre sa nécessité absolue pour les communautés environn
 - [[enclaves_industrielles_de_bergen_troms_breakdown]]
 - [[guilde_des_techniciens_nomades_breakdown]]
 - [[hanse_baltique_breakdown]]
-- [[hanse_baltique_recomposee_breakdown]]
 - [[kalaallit_nunaat_sovereign_fund_breakdown]]
 **Opposants :**
 - [[consortiums_energetiques_samoiedes_du_yamal_breakdown]]

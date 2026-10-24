@@ -43,7 +43,6 @@ alliances:
 - federation_communs_territoriaux_breakdown
 - front_humanitaire_d_urgence_non_affilie_breakdown
 - hanse_baltique_breakdown
-- hanse_baltique_recomposee_breakdown
 - lagos_est_nexcore_breakdown
 - reseau_des_organisations_humanitaires_hors_cadre_onusien_breakdown
 - sfax_relais_bouches_breakdown
@@ -125,7 +124,6 @@ La tension centrale de la Ligue réside dans l'impossibilité de son mandat : re
 - [[federation_communs_territoriaux_breakdown]]
 - [[front_humanitaire_d_urgence_non_affilie_breakdown]]
 - [[hanse_baltique_breakdown]]
-- [[hanse_baltique_recomposee_breakdown]]
 - [[lagos_est_nexcore_breakdown]]
 - [[reseau_des_organisations_humanitaires_hors_cadre_onusien_breakdown]]
 - [[sfax_relais_bouches_breakdown]]

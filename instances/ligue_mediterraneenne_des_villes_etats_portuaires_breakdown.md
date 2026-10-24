@@ -41,7 +41,6 @@ alliances:
 - carthage_nord_nexcore_breakdown
 - conseil_regulation_ressources_breakdown
 - hanse_baltique_breakdown
-- hanse_baltique_recomposee_breakdown
 - sfax_relais_bouches_breakdown
 oppositions:
 - corridor_lithium_bouches_breakdown
@@ -113,7 +112,6 @@ La Ligue est tiraillée entre sa vocation d'espace neutre d'échange et les pres
 - [[carthage_nord_nexcore_breakdown]]
 - [[conseil_regulation_ressources_breakdown]]
 - [[hanse_baltique_breakdown]]
-- [[hanse_baltique_recomposee_breakdown]]
 - [[sfax_relais_bouches_breakdown]]
 **Opposants :**
 - [[corridor_lithium_bouches_breakdown]]

@@ -49,7 +49,7 @@ acteurs_impliques:
     - kalaallit_nunaat_sovereign_fund_breakdown
     - archives_neutres_de_geneve_breakdown
     - factions_militaires_residuelles_de_l_ex_otan_nordique_breakdown
-    - hanse_baltique_recomposee_breakdown
+    - hanse_baltique_breakdown
     - seigneuries_logistiques_armees_breakdown
 note_coherence: Dans un monde de fragmentation à tension 5/5, la confrontation armée arctique ne produit pas de résolution juridique mais une prédation consommée, cohérente avec l'effondrement des autorités de transit et la domination des acteurs logistiques armés.
 custom_source: rééquilibrage_geo_2026-06
@@ -80,7 +80,7 @@ L'incident consacre la mort de facto de toute gouvernance partagée du Passage N
 - [[kalaallit_nunaat_sovereign_fund_breakdown]]
 - [[archives_neutres_de_geneve_breakdown]]
 - [[factions_militaires_residuelles_de_l_ex_otan_nordique_breakdown]]
-- [[hanse_baltique_recomposee_breakdown]]
+- [[hanse_baltique_breakdown]]
 - [[seigneuries_logistiques_armees_breakdown]]
 
 ## Note de cohérence

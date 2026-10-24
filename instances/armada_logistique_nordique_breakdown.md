@@ -44,14 +44,13 @@ alliances:
 - district_mourmansk_residuel_breakdown
 - enclaves_industrielles_de_bergen_troms_breakdown
 - factions_militaires_residuelles_de_l_ex_otan_nordique_breakdown
-- hanse_baltique_breakdown
 - kalaallit_nunaat_sovereign_fund_breakdown
 - noeud_nordark_tromso_breakdown
 oppositions:
 - collectifs_de_hackers_archivistes_des_interstices_reseaux_breakdown
 - conglometrat_sino_siberien_bohai_transit_breakdown
 - federation_russe_residuelle_district_de_mourmansk_breakdown
-- hanse_baltique_recomposee_breakdown
+- hanse_baltique_breakdown
 - milices_separatistes_du_conseil_des_pecheries_d_islande_breakdown
 - reseaux_de_renseignement_informels_issus_de_l_ancienne_structure_militaire_eurasienne_breakdown
 type_relation_dominante: rivalité
@@ -114,13 +113,12 @@ Nordark est au bord d'une implosion interne : les factions militaires intégrée
 - [[district_mourmansk_residuel_breakdown]]
 - [[enclaves_industrielles_de_bergen_troms_breakdown]]
 - [[factions_militaires_residuelles_de_l_ex_otan_nordique_breakdown]]
-- [[hanse_baltique_breakdown]]
 - [[kalaallit_nunaat_sovereign_fund_breakdown]]
 - [[noeud_nordark_tromso_breakdown]]
 **Opposants :**
 - [[collectifs_de_hackers_archivistes_des_interstices_reseaux_breakdown]]
 - [[conglometrat_sino_siberien_bohai_transit_breakdown]]
 - [[federation_russe_residuelle_district_de_mourmansk_breakdown]]
-- [[hanse_baltique_recomposee_breakdown]]
+- [[hanse_baltique_breakdown]]
 - [[milices_separatistes_du_conseil_des_pecheries_d_islande_breakdown]]
 - [[reseaux_de_renseignement_informels_issus_de_l_ancienne_structure_militaire_eurasienne_breakdown]]

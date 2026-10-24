@@ -510,7 +510,7 @@ zones:
   - enclaves_industrielles_de_bergen_troms_breakdown
   - factions_militaires_residuelles_de_l_ex_otan_nordique_breakdown
   - milices_separatistes_du_conseil_des_pecheries_d_islande_breakdown
-  - hanse_baltique_recomposee_breakdown
+  - hanse_baltique_breakdown
 - slug: asie_pacifique_sud_est
   nom: Asie–Pacifique (Corridors sino-sibériens et Pacifique Nord)
   niveau: 1
@@ -1485,7 +1485,7 @@ zones:
     rivaux:
     - noeud_nordark_tromso
   sources_attestees:
-  - hanse_baltique_recomposee_breakdown
+  - hanse_baltique_breakdown
   promu_depuis: null
 - slug: isfahan_fordow_ruines
   nom: Ispahan–Fordow (Sites Frappés)
@@ -3476,7 +3476,7 @@ Bloc de résistance régionale structuré maintenant des flux économiques et un
 
 **Rivaux** : Tromsø / Nœud Nordark ([[noeud_nordark_tromso]])
 
-*Sources attestées : hanse_baltique_recomposee_breakdown*
+*Sources attestées : hanse_baltique_breakdown*
 
 #### Ispahan–Fordow (Sites Frappés) — sous [[arc_eurasien_central]]
 
@@ -3684,7 +3684,7 @@ Zone arctique déglacialisée contrôlée de facto par le Konsortiet Nordark, un
 
 **Rivaux** : Arc Eurasien Central ([[arc_eurasien_central]]), Espace Nord-Américain Fragmenté ([[espace_nord_americain_fragmente]])
 
-*Sources attestées : armada_logistique_nordique_breakdown, enclaves_industrielles_de_bergen_troms_breakdown, factions_militaires_residuelles_de_l_ex_otan_nordique_breakdown, milices_separatistes_du_conseil_des_pecheries_d_islande_breakdown, hanse_baltique_recomposee_breakdown*
+*Sources attestées : armada_logistique_nordique_breakdown, enclaves_industrielles_de_bergen_troms_breakdown, factions_militaires_residuelles_de_l_ex_otan_nordique_breakdown, milices_separatistes_du_conseil_des_pecheries_d_islande_breakdown, hanse_baltique_breakdown*
 
 #### Enclaves Finlandaises — sous [[arctique_nordark]]
 

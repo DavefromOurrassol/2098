@@ -57,7 +57,7 @@ oppositions:
 - front_de_resistance_aux_peages_sur_les_ressources_breakdown
 - grandes_lacs_compact_eau_breakdown
 - guilde_des_techniciens_nomades_breakdown
-- hanse_baltique_recomposee_breakdown
+- hanse_baltique_breakdown
 - hyphan_raghavan_breakdown
 - ilse_varga_holm_breakdown
 - le_registre_du_fleuve_breakdown
@@ -159,7 +159,7 @@ La tension principale est celle entre la logique prédatrice à court terme — 
 - [[front_de_resistance_aux_peages_sur_les_ressources_breakdown]]
 - [[grandes_lacs_compact_eau_breakdown]]
 - [[guilde_des_techniciens_nomades_breakdown]]
-- [[hanse_baltique_recomposee_breakdown]]
+- [[hanse_baltique_breakdown]]
 - [[hyphan_raghavan_breakdown]]
 - [[ilse_varga_holm_breakdown]]
 - [[le_registre_du_fleuve_breakdown]]

@@ -41,7 +41,6 @@ alliances:
 - factions_militaires_residuelles_de_l_ex_otan_nordique_breakdown
 - front_techno_reconstructionniste_breakdown
 - hanse_baltique_breakdown
-- hanse_baltique_recomposee_breakdown
 - kalaallit_nunaat_sovereign_fund_breakdown
 - noeud_nordark_tromso_breakdown
 oppositions:
@@ -118,7 +117,6 @@ Les Enclaves sont déchirées entre leur logique de survie autarcique et la tent
 - [[factions_militaires_residuelles_de_l_ex_otan_nordique_breakdown]]
 - [[front_techno_reconstructionniste_breakdown]]
 - [[hanse_baltique_breakdown]]
-- [[hanse_baltique_recomposee_breakdown]]
 - [[kalaallit_nunaat_sovereign_fund_breakdown]]
 - [[noeud_nordark_tromso_breakdown]]
 **Opposants :**

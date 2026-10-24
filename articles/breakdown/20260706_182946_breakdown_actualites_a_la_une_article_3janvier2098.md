@@ -36,7 +36,6 @@ entites_citees:
   - federation_russe_residuelle_district_de_mourmansk_breakdown
   - grandes_lacs_compact_eau_breakdown
   - hanse_baltique_breakdown
-  - hanse_baltique_recomposee_breakdown
 articles_lies:
   - 23_novembre_2098_troms_n_ud_nordark
   - ils_ont_noye_les_archives_a_milwaukee_basse_le_registre_des_zones_non_recuperabl
@@ -66,4 +65,4 @@ Le *Sceau* a intercepté hier les deux cargos démunis à hauteur de Mönkebude.
 Pour l’instant.
 
 ---
-**Voir aussi** : [[arctic_passage_authority_breakdown]] · [[arctique_nordark_breakdown]] · [[federation_russe_residuelle_district_de_mourmansk_breakdown]] · [[grandes_lacs_compact_eau_breakdown]] · [[hanse_baltique_breakdown]] · [[hanse_baltique_recomposee_breakdown]] · [[23_novembre_2098_troms_n_ud_nordark]] · [[ils_ont_noye_les_archives_a_milwaukee_basse_le_registre_des_zones_non_recuperabl]] · [[la_charte_d_agadez_brisee_quand_les_archives_se_font_armes_dans_l_arc_sahelo_med]]
+**Voir aussi** : [[arctic_passage_authority_breakdown]] · [[arctique_nordark_breakdown]] · [[federation_russe_residuelle_district_de_mourmansk_breakdown]] · [[grandes_lacs_compact_eau_breakdown]] · [[hanse_baltique_breakdown]] · [[23_novembre_2098_troms_n_ud_nordark]] · [[ils_ont_noye_les_archives_a_milwaukee_basse_le_registre_des_zones_non_recuperabl]] · [[la_charte_d_agadez_brisee_quand_les_archives_se_font_armes_dans_l_arc_sahelo_med]]

@@ -55,7 +55,7 @@ oppositions:
 - frente_sertao_livre_breakdown
 - front_de_resistance_aux_peages_sur_les_ressources_breakdown
 - gouvernements_regionaux_residuels_reterritorialisants_breakdown
-- hanse_baltique_recomposee_breakdown
+- hanse_baltique_breakdown
 - ligue_des_cites_du_sahel_numerique_breakdown
 - milices_agro_defensives_locales_breakdown
 - mouvement_des_communes_du_rust_belt_breakdown
@@ -150,7 +150,7 @@ Les Cartels sont condamnés à une contradiction structurelle : leur pouvoir rep
 - [[frente_sertao_livre_breakdown]]
 - [[front_de_resistance_aux_peages_sur_les_ressources_breakdown]]
 - [[gouvernements_regionaux_residuels_reterritorialisants_breakdown]]
-- [[hanse_baltique_recomposee_breakdown]]
+- [[hanse_baltique_breakdown]]
 - [[ligue_des_cites_du_sahel_numerique_breakdown]]
 - [[milices_agro_defensives_locales_breakdown]]
 - [[mouvement_des_communes_du_rust_belt_breakdown]]

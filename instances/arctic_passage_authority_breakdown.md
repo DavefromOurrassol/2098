@@ -41,7 +41,7 @@ alliances:
 - armada_logistique_nordique_breakdown
 - consortiums_energetiques_samoiedes_du_yamal_breakdown
 - district_mourmansk_residuel_breakdown
-- hanse_baltique_recomposee_breakdown
+- hanse_baltique_breakdown
 - kalaallit_nunaat_sovereign_fund_breakdown
 - noeud_nordark_tromso_breakdown
 oppositions:
@@ -115,7 +115,7 @@ La question centrale : les représentants autochtones restés dans l'institution
 - [[armada_logistique_nordique_breakdown]]
 - [[consortiums_energetiques_samoiedes_du_yamal_breakdown]]
 - [[district_mourmansk_residuel_breakdown]]
-- [[hanse_baltique_recomposee_breakdown]]
+- [[hanse_baltique_breakdown]]
 - [[kalaallit_nunaat_sovereign_fund_breakdown]]
 - [[noeud_nordark_tromso_breakdown]]
 **Opposants :**

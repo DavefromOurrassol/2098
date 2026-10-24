@@ -47,7 +47,6 @@ alliances:
 - consortium_energetique_oural_caspien_breakdown
 - enclaves_industrielles_de_bergen_troms_breakdown
 - hanse_baltique_breakdown
-- hanse_baltique_recomposee_breakdown
 - noeud_nordark_tromso_breakdown
 oppositions:
 - blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown
@@ -119,7 +118,6 @@ Le Fonds est déchiré entre une faction 'souverainiste radicale' qui veut conve
 - [[consortium_energetique_oural_caspien_breakdown]]
 - [[enclaves_industrielles_de_bergen_troms_breakdown]]
 - [[hanse_baltique_breakdown]]
-- [[hanse_baltique_recomposee_breakdown]]
 - [[noeud_nordark_tromso_breakdown]]
 **Opposants :**
 - [[blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown]]

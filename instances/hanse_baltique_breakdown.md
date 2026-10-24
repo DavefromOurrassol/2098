@@ -37,22 +37,27 @@ zone_systemique:
     - infrastructure
 
 alliances:
-- armada_logistique_nordique_breakdown
+- arctic_passage_authority_breakdown
 - cites_etats_secessionistes_breakdown
 - district_mourmansk_residuel_breakdown
 - enclaves_finlandaises_breakdown
 - enclaves_industrielles_de_bergen_troms_breakdown
 - enclaves_technologiques_survivantes_breakdown
+- grandes_lacs_compact_eau_breakdown
 - kalaallit_nunaat_sovereign_fund_breakdown
 - ligue_des_cites_littorales_en_sursis_breakdown
 - ligue_mediterraneenne_des_villes_etats_portuaires_breakdown
 - noeud_nordark_tromso_breakdown
+- reseau_des_courriers_nomades_sahelo_mediterraneens_breakdown
 oppositions:
 - blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown
+- cartels_logistiques_regionaux_breakdown
 - factions_militaires_residuelles_de_l_ex_otan_nordique_breakdown
+- factions_para_etatiques_hydriques_breakdown
 - federation_russe_residuelle_district_de_mourmansk_breakdown
 - front_de_resistance_aux_peages_sur_les_ressources_breakdown
 - milices_separatistes_du_conseil_des_pecheries_d_islande_breakdown
+- nexcore_breakdown
 - reseau_logistique_criminel_concurrent_breakdown
 - saboteurs_des_corridors_de_transit_breakdown
 - seigneuries_logistiques_armees_breakdown
@@ -109,22 +114,27 @@ La légitimité juridique que s'arroge la Ligue repose sur un paradoxe fondament
 
 ## Relations
 **Alliés :**
-- [[armada_logistique_nordique_breakdown]]
+- [[arctic_passage_authority_breakdown]]
 - [[cites_etats_secessionistes_breakdown]]
 - [[district_mourmansk_residuel_breakdown]]
 - [[enclaves_finlandaises_breakdown]]
 - [[enclaves_industrielles_de_bergen_troms_breakdown]]
 - [[enclaves_technologiques_survivantes_breakdown]]
+- [[grandes_lacs_compact_eau_breakdown]]
 - [[kalaallit_nunaat_sovereign_fund_breakdown]]
 - [[ligue_des_cites_littorales_en_sursis_breakdown]]
 - [[ligue_mediterraneenne_des_villes_etats_portuaires_breakdown]]
 - [[noeud_nordark_tromso_breakdown]]
+- [[reseau_des_courriers_nomades_sahelo_mediterraneens_breakdown]]
 **Opposants :**
 - [[blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown]]
+- [[cartels_logistiques_regionaux_breakdown]]
 - [[factions_militaires_residuelles_de_l_ex_otan_nordique_breakdown]]
+- [[factions_para_etatiques_hydriques_breakdown]]
 - [[federation_russe_residuelle_district_de_mourmansk_breakdown]]
 - [[front_de_resistance_aux_peages_sur_les_ressources_breakdown]]
 - [[milices_separatistes_du_conseil_des_pecheries_d_islande_breakdown]]
+- [[nexcore_breakdown]]
 - [[reseau_logistique_criminel_concurrent_breakdown]]
 - [[saboteurs_des_corridors_de_transit_breakdown]]
 - [[seigneuries_logistiques_armees_breakdown]]

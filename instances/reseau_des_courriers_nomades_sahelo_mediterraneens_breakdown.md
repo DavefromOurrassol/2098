@@ -45,7 +45,7 @@ alliances:
 - diaspora_tech_sahel_breakdown
 - factions_secessionnistes_agrariennes_du_desert_breakdown
 - front_humanitaire_d_urgence_non_affilie_breakdown
-- hanse_baltique_recomposee_breakdown
+- hanse_baltique_breakdown
 - institut_des_seuils_demographiques_breakdown
 - lagos_interieur_mnemos_breakdown
 - ligue_des_cites_du_sahel_numerique_breakdown
@@ -136,7 +136,7 @@ Le réseau est convoité par des acteurs très dissemblables : NexCore cherche �
 - [[diaspora_tech_sahel_breakdown]]
 - [[factions_secessionnistes_agrariennes_du_desert_breakdown]]
 - [[front_humanitaire_d_urgence_non_affilie_breakdown]]
-- [[hanse_baltique_recomposee_breakdown]]
+- [[hanse_baltique_breakdown]]
 - [[institut_des_seuils_demographiques_breakdown]]
 - [[lagos_interieur_mnemos_breakdown]]
 - [[ligue_des_cites_du_sahel_numerique_breakdown]]

@@ -43,7 +43,7 @@ acteurs_impliques:
     - kalaallit_nunaat_sovereign_fund_breakdown
     - coalition_pacifique_nord_breakdown
     - ligue_eurasiatique_coalition_pacifique_breakdown
-    - hanse_baltique_recomposee_breakdown
+    - hanse_baltique_breakdown
     - conglometrat_sino_siberien_bohai_transit_breakdown
     - arctic_passage_authority_breakdown
     - archives_neutres_de_geneve_breakdown
@@ -77,7 +77,7 @@ Les droits d'extraction restent juridiquement illisibles pendant des années, ch
 - [[kalaallit_nunaat_sovereign_fund_breakdown]]
 - [[coalition_pacifique_nord_breakdown]]
 - [[ligue_eurasiatique_coalition_pacifique_breakdown]]
-- [[hanse_baltique_recomposee_breakdown]]
+- [[hanse_baltique_breakdown]]
 - [[conglometrat_sino_siberien_bohai_transit_breakdown]]
 - [[arctic_passage_authority_breakdown]]
 - [[archives_neutres_de_geneve_breakdown]]

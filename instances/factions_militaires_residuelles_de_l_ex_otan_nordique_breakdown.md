@@ -38,7 +38,6 @@ alliances:
 - armada_logistique_nordique_breakdown
 - coalition_pacifique_nord_breakdown
 - enclaves_industrielles_de_bergen_troms_breakdown
-- hanse_baltique_recomposee_breakdown
 - milices_contractuelles_des_anciens_etats_membres_breakdown
 - seigneuries_logistiques_armees_breakdown
 oppositions:
@@ -124,7 +123,6 @@ Leur cohérence interne est constamment menacée par les rivalités entre factio
 - [[armada_logistique_nordique_breakdown]]
 - [[coalition_pacifique_nord_breakdown]]
 - [[enclaves_industrielles_de_bergen_troms_breakdown]]
-- [[hanse_baltique_recomposee_breakdown]]
 - [[milices_contractuelles_des_anciens_etats_membres_breakdown]]
 - [[seigneuries_logistiques_armees_breakdown]]
 **Opposants :**

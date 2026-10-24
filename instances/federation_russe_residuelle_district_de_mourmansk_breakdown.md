@@ -53,7 +53,6 @@ oppositions:
 - enclaves_industrielles_de_bergen_troms_breakdown
 - factions_militaires_residuelles_de_l_ex_otan_nordique_breakdown
 - hanse_baltique_breakdown
-- hanse_baltique_recomposee_breakdown
 - kalaallit_nunaat_sovereign_fund_breakdown
 - noeud_nordark_tromso_breakdown
 type_relation_dominante: compétition
@@ -137,7 +136,6 @@ Le District est écartelé entre la Hanse Baltique Recomposée et les acteurs no
 - [[enclaves_industrielles_de_bergen_troms_breakdown]]
 - [[factions_militaires_residuelles_de_l_ex_otan_nordique_breakdown]]
 - [[hanse_baltique_breakdown]]
-- [[hanse_baltique_recomposee_breakdown]]
 - [[kalaallit_nunaat_sovereign_fund_breakdown]]
 - [[noeud_nordark_tromso_breakdown]]
 

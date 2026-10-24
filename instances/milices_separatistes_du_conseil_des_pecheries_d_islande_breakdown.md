@@ -43,7 +43,6 @@ oppositions:
 - district_mourmansk_residuel_breakdown
 - factions_militaires_residuelles_de_l_ex_otan_nordique_breakdown
 - hanse_baltique_breakdown
-- hanse_baltique_recomposee_breakdown
 - kalaallit_nunaat_sovereign_fund_breakdown
 - noeud_nordark_tromso_breakdown
 type_relation_dominante: conflit
@@ -115,7 +114,6 @@ Les Milices sont déchirées entre leur idéologie souverainiste radicale et leu
 - [[district_mourmansk_residuel_breakdown]]
 - [[factions_militaires_residuelles_de_l_ex_otan_nordique_breakdown]]
 - [[hanse_baltique_breakdown]]
-- [[hanse_baltique_recomposee_breakdown]]
 - [[kalaallit_nunaat_sovereign_fund_breakdown]]
 - [[noeud_nordark_tromso_breakdown]]
 
