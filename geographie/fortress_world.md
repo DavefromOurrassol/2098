@@ -2137,7 +2137,7 @@ zones:
   - le_temoin_fortress_world
   - election_parti_commun_americain_fortress_world
   promu_depuis: null
-- slug: bureau_territoires_residuels
+- slug: bureau_territoires_residuels_washington
   nom: Bureau des Territoires Résiduels
   niveau: 4
   type: infrastructure
