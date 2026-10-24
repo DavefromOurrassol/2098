@@ -76,7 +76,6 @@ oppositions:
 - reseau_des_cartographes_des_zones_grises_fortress_world
 - reseaux_d_echange_clandestin_inter_zones_fortress_world
 - reseaux_de_passeurs_d_information_aux_frontieres_inter_blocs_fortress_world
-- rust_belt_communes_libres_fortress_world
 - terminal_kharg_data_haven_fortress_world
 type_relation_dominante: conflit
 annee_debut: 2045
@@ -192,7 +191,6 @@ Ces administrations incarnent la contradiction fondamentale du monde forteresse 
 - [[reseau_des_cartographes_des_zones_grises_fortress_world]]
 - [[reseaux_d_echange_clandestin_inter_zones_fortress_world]]
 - [[reseaux_de_passeurs_d_information_aux_frontieres_inter_blocs_fortress_world]]
-- [[rust_belt_communes_libres_fortress_world]]
 - [[terminal_kharg_data_haven_fortress_world]]
 
 ## Notes

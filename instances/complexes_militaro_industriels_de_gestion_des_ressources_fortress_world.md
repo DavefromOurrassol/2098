@@ -68,7 +68,6 @@ oppositions:
 - milices_de_piraterie_logistique_arctique_fortress_world
 - mouvement_des_communes_du_rust_belt_fortress_world
 - reseaux_de_contrebande_energetique_transfrontaliere_fortress_world
-- rust_belt_communes_libres_fortress_world
 type_relation_dominante: compétition
 annee_debut: 2036
 annee_fin: null
@@ -176,7 +175,6 @@ La tension première réside dans leur double loyauté : serviteurs du bloc qui 
 - [[milices_de_piraterie_logistique_arctique_fortress_world]]
 - [[mouvement_des_communes_du_rust_belt_fortress_world]]
 - [[reseaux_de_contrebande_energetique_transfrontaliere_fortress_world]]
-- [[rust_belt_communes_libres_fortress_world]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

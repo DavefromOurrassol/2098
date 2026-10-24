@@ -46,7 +46,7 @@ alliances:
 - cellules_universitaires_dissidentes_des_zones_tampons_fortress_world
 - mouvement_commun_midwest_fortress_world
 - reseaux_de_passeurs_d_information_aux_frontieres_inter_blocs_fortress_world
-- rust_belt_communes_libres_fortress_world
+- mouvement_des_communes_du_rust_belt_fortress_world
 oppositions:
 - alpha47_fortress_world
 - amazonie_pacte_vert_fortress_world
@@ -131,7 +131,7 @@ La question qui fracture Fractures de l'intérieur : depuis 2089, des preuves ci
 - [[cellules_universitaires_dissidentes_des_zones_tampons_fortress_world]]
 - [[mouvement_commun_midwest_fortress_world]]
 - [[reseaux_de_passeurs_d_information_aux_frontieres_inter_blocs_fortress_world]]
-- [[rust_belt_communes_libres_fortress_world]]
+- [[mouvement_des_communes_du_rust_belt_fortress_world]]
 **Opposants :**
 - [[alpha47_fortress_world]]
 - [[amazonie_pacte_vert_fortress_world]]

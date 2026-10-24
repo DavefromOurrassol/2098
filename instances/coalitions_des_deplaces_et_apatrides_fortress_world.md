@@ -65,7 +65,7 @@ alliances:
 - reseaux_de_juristes_specialises_en_droit_corporel_souverain_fortress_world
 - reseaux_de_maintenance_d_infrastructures_critiques_hors_blocs_fortress_world
 - reseaux_de_passeurs_d_information_aux_frontieres_inter_blocs_fortress_world
-- rust_belt_communes_libres_fortress_world
+- mouvement_des_communes_du_rust_belt_fortress_world
 - terminal_kharg_data_haven_fortress_world
 - tribu_des_cinq_nations_fortress_world
 oppositions:
@@ -222,7 +222,7 @@ La Coalition est tiraillée entre une frange radicale qui prône la confrontatio
 - [[reseaux_de_juristes_specialises_en_droit_corporel_souverain_fortress_world]]
 - [[reseaux_de_maintenance_d_infrastructures_critiques_hors_blocs_fortress_world]]
 - [[reseaux_de_passeurs_d_information_aux_frontieres_inter_blocs_fortress_world]]
-- [[rust_belt_communes_libres_fortress_world]]
+- [[mouvement_des_communes_du_rust_belt_fortress_world]]
 - [[terminal_kharg_data_haven_fortress_world]]
 - [[tribu_des_cinq_nations_fortress_world]]
 **Opposants :**

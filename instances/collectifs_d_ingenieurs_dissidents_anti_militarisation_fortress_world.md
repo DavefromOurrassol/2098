@@ -36,7 +36,7 @@ alliances:
 - les_gardiens_des_n_uds_hybrides_fortress_world
 - mouvement_commun_midwest_fortress_world
 - oracle_des_seuils_fortress_world
-- rust_belt_communes_libres_fortress_world
+- mouvement_des_communes_du_rust_belt_fortress_world
 oppositions:
 - anba_siege_atlantique_fortress_world
 - bloc_eurasiatique_occidental_fortress_world
@@ -126,7 +126,7 @@ La tension fondamentale de ces collectifs réside dans la contradiction entre le
 - [[les_gardiens_des_n_uds_hybrides_fortress_world]]
 - [[mouvement_commun_midwest_fortress_world]]
 - [[oracle_des_seuils_fortress_world]]
-- [[rust_belt_communes_libres_fortress_world]]
+- [[mouvement_des_communes_du_rust_belt_fortress_world]]
 **Opposants :**
 - [[anba_siege_atlantique_fortress_world]]
 - [[bloc_eurasiatique_occidental_fortress_world]]

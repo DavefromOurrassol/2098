@@ -52,7 +52,7 @@ oppositions:
 - factions_internes_pro_autarcie_totale_fortress_world
 - marches_gris_tbilissi_fortress_world
 - oligarchies_technologiques_souveraines_d_infrastructure_de_calcul_fortress_world
-- rust_belt_communes_libres_fortress_world
+- mouvement_des_communes_du_rust_belt_fortress_world
 type_relation_dominante: conflit
 annee_debut: 2036
 annee_fin: null
@@ -139,7 +139,7 @@ La tension centrale du Bloc réside dans la contradiction entre son besoin de re
 - [[factions_internes_pro_autarcie_totale_fortress_world]]
 - [[marches_gris_tbilissi_fortress_world]]
 - [[oligarchies_technologiques_souveraines_d_infrastructure_de_calcul_fortress_world]]
-- [[rust_belt_communes_libres_fortress_world]]
+- [[mouvement_des_communes_du_rust_belt_fortress_world]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

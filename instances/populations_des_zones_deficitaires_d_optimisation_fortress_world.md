@@ -40,7 +40,7 @@ alliances:
 - coalition_vivant_fortress_world
 - coalitions_des_deplaces_et_apatrides_fortress_world
 - mouvement_commun_midwest_fortress_world
-- rust_belt_communes_libres_fortress_world
+- mouvement_des_communes_du_rust_belt_fortress_world
 oppositions:
 - appareils_d_etat_des_blocs_fermes_fortress_world
 - bloc_atlantique_fortress_world
@@ -127,7 +127,7 @@ La tension centrale est celle entre la résignation et la révolte : une fractio
 - [[coalition_vivant_fortress_world]]
 - [[coalitions_des_deplaces_et_apatrides_fortress_world]]
 - [[mouvement_commun_midwest_fortress_world]]
-- [[rust_belt_communes_libres_fortress_world]]
+- [[mouvement_des_communes_du_rust_belt_fortress_world]]
 **Opposants :**
 - [[appareils_d_etat_des_blocs_fermes_fortress_world]]
 - [[bloc_atlantique_fortress_world]]

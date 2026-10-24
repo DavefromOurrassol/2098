@@ -49,7 +49,7 @@ alliances:
 - reseau_des_cartographes_des_zones_grises_fortress_world
 - reseaux_de_juristes_specialises_en_droit_corporel_souverain_fortress_world
 - reseaux_de_passeurs_d_information_aux_frontieres_inter_blocs_fortress_world
-- rust_belt_communes_libres_fortress_world
+- mouvement_des_communes_du_rust_belt_fortress_world
 - tribu_des_cinq_nations_fortress_world
 oppositions:
 - administrations_de_controle_frontalier_des_blocs_fortress_world
@@ -161,7 +161,7 @@ La tension fondamentale de ces réseaux réside dans leur double nature : instru
 - [[reseau_des_cartographes_des_zones_grises_fortress_world]]
 - [[reseaux_de_juristes_specialises_en_droit_corporel_souverain_fortress_world]]
 - [[reseaux_de_passeurs_d_information_aux_frontieres_inter_blocs_fortress_world]]
-- [[rust_belt_communes_libres_fortress_world]]
+- [[mouvement_des_communes_du_rust_belt_fortress_world]]
 - [[tribu_des_cinq_nations_fortress_world]]
 **Opposants :**
 - [[administrations_de_controle_frontalier_des_blocs_fortress_world]]

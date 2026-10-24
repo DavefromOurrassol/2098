@@ -37,7 +37,7 @@ alliances:
 - cellules_mouvement_commun_midwest_fortress_world
 - collectifs_du_seuil_fortress_world
 - mouvement_commun_midwest_fortress_world
-- rust_belt_communes_libres_fortress_world
+- mouvement_des_communes_du_rust_belt_fortress_world
 - tribunal_algorithmique_de_bruxelles_fortress_world
 oppositions:
 - anba_siege_atlantique_fortress_world
@@ -123,7 +123,7 @@ Ces dissidences sont écartelées entre la nécessité de s'allier ponctuellemen
 - [[cellules_mouvement_commun_midwest_fortress_world]]
 - [[collectifs_du_seuil_fortress_world]]
 - [[mouvement_commun_midwest_fortress_world]]
-- [[rust_belt_communes_libres_fortress_world]]
+- [[mouvement_des_communes_du_rust_belt_fortress_world]]
 - [[tribunal_algorithmique_de_bruxelles_fortress_world]]
 **Opposants :**
 - [[anba_siege_atlantique_fortress_world]]

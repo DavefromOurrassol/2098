@@ -35,7 +35,7 @@ alliances:
 - factions_anti_privatisation_des_voies_souveraines_scandinaves_fortress_world
 - factions_traditionalistes_du_mandat_electif_fortress_world
 - internationale_travailleurs_augmentes_fortress_world
-- rust_belt_communes_libres_fortress_world
+- mouvement_des_communes_du_rust_belt_fortress_world
 oppositions:
 - directive_kontinuum_fortress_world
 - zone_usines_forteresses_eurasie_fortress_world
@@ -110,7 +110,7 @@ Leur contradiction fondamentale réside dans le fait de défendre le travail for
 - [[factions_anti_privatisation_des_voies_souveraines_scandinaves_fortress_world]]
 - [[factions_traditionalistes_du_mandat_electif_fortress_world]]
 - [[internationale_travailleurs_augmentes_fortress_world]]
-- [[rust_belt_communes_libres_fortress_world]]
+- [[mouvement_des_communes_du_rust_belt_fortress_world]]
 **Opposants :**
 - [[directive_kontinuum_fortress_world]]
 - [[zone_usines_forteresses_eurasie_fortress_world]]

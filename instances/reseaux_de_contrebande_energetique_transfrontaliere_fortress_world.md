@@ -42,7 +42,7 @@ alliances:
 - marches_gris_tbilissi_fortress_world
 - mouvement_de_reconquete_europeenne_fortress_world
 - operateurs_prives_de_transit_energetique_caucasien_centrasiatique_fortress_world
-- rust_belt_communes_libres_fortress_world
+- mouvement_des_communes_du_rust_belt_fortress_world
 oppositions:
 - agence_de_regulation_des_detroits_strategiques_ards_fortress_world
 - anba_siege_atlantique_fortress_world
@@ -143,7 +143,7 @@ La tension centrale de ces réseaux réside dans leur double nature : instrument
 - [[marches_gris_tbilissi_fortress_world]]
 - [[mouvement_de_reconquete_europeenne_fortress_world]]
 - [[operateurs_prives_de_transit_energetique_caucasien_centrasiatique_fortress_world]]
-- [[rust_belt_communes_libres_fortress_world]]
+- [[mouvement_des_communes_du_rust_belt_fortress_world]]
 **Opposants :**
 - [[agence_de_regulation_des_detroits_strategiques_ards_fortress_world]]
 - [[anba_siege_atlantique_fortress_world]]

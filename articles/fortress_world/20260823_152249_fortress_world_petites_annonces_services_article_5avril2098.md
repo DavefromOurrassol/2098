@@ -31,7 +31,7 @@ entites_citees:
   - anba_siege_atlantique_fortress_world
   - geneve_bunker_fortress_world
   - tours_nexus7_fortress_world
-  - rust_belt_communes_libres_fortress_world
+  - mouvement_des_communes_du_rust_belt_fortress_world
   - marches_gris_tbilissi_fortress_world
 variables_pilotes:
   - geopolitique_conflits
@@ -69,4 +69,4 @@ Offre de service pour traduction de documents en polonais, espagnol, arabe et la
 Siobhán O'Neill — NexCore Atlantic — La Voix du Commandement
 
 ---
-**Voir aussi** : [[nexcore_atlantique_infrastructure_fortress_world]] · [[anba_siege_atlantique_fortress_world]] · [[geneve_bunker_fortress_world]] · [[tours_nexus7_fortress_world]] · [[rust_belt_communes_libres_fortress_world]] · [[marches_gris_tbilissi_fortress_world]]
+**Voir aussi** : [[nexcore_atlantique_infrastructure_fortress_world]] · [[anba_siege_atlantique_fortress_world]] · [[geneve_bunker_fortress_world]] · [[tours_nexus7_fortress_world]] · [[mouvement_des_communes_du_rust_belt_fortress_world]] · [[marches_gris_tbilissi_fortress_world]]

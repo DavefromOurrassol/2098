@@ -41,7 +41,6 @@ alliances:
 - marches_gris_tbilissi_fortress_world
 - mouvement_commun_midwest_fortress_world
 - mouvement_des_communes_du_rust_belt_fortress_world
-- rust_belt_communes_libres_fortress_world
 oppositions:
 - administrations_de_controle_frontalier_des_blocs_fortress_world
 - almaty_zone_friction_fortress_world
@@ -145,7 +144,6 @@ Leur survie collective dépend d'une invisibilité qu'elles cherchent pourtant �
 - [[marches_gris_tbilissi_fortress_world]]
 - [[mouvement_commun_midwest_fortress_world]]
 - [[mouvement_des_communes_du_rust_belt_fortress_world]]
-- [[rust_belt_communes_libres_fortress_world]]
 **Opposants :**
 - [[administrations_de_controle_frontalier_des_blocs_fortress_world]]
 - [[almaty_zone_friction_fortress_world]]

@@ -36,7 +36,7 @@ oppositions:
 - aria_instance_fantome_fortress_world
 - centre_controle_orbital_helios_fortress_world
 - consortium_helios_fortress_world
-- rust_belt_communes_libres_fortress_world
+- mouvement_des_communes_du_rust_belt_fortress_world
 type_relation_dominante: compétition
 annee_debut: 2037
 annee_fin: null
@@ -113,7 +113,7 @@ La tension fondamentale est structurelle : le Consortium existe pour éviter la 
 - [[aria_instance_fantome_fortress_world]]
 - [[centre_controle_orbital_helios_fortress_world]]
 - [[consortium_helios_fortress_world]]
-- [[rust_belt_communes_libres_fortress_world]]
+- [[mouvement_des_communes_du_rust_belt_fortress_world]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

@@ -70,7 +70,6 @@ oppositions:
 - mouvement_commun_midwest_fortress_world
 - mouvement_des_communes_du_rust_belt_fortress_world
 - reseaux_d_echange_clandestin_inter_zones_fortress_world
-- rust_belt_communes_libres_fortress_world
 - tribunal_algorithmique_de_bruxelles_fortress_world
 type_relation_dominante: dépendance
 annee_debut: 2038
@@ -174,7 +173,6 @@ La tension centrale réside dans l'écart entre le discours de méritocracie tec
 - [[mouvement_commun_midwest_fortress_world]]
 - [[mouvement_des_communes_du_rust_belt_fortress_world]]
 - [[reseaux_d_echange_clandestin_inter_zones_fortress_world]]
-- [[rust_belt_communes_libres_fortress_world]]
 - [[tribunal_algorithmique_de_bruxelles_fortress_world]]
 
 ## Notes

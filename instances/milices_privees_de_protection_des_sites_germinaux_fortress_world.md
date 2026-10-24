@@ -55,7 +55,7 @@ oppositions:
 - les_veilleurs_du_fleuve_fortress_world
 - mouvement_commun_midwest_fortress_world
 - reseaux_d_echange_clandestin_inter_zones_fortress_world
-- rust_belt_communes_libres_fortress_world
+- mouvement_des_communes_du_rust_belt_fortress_world
 type_relation_dominante: compétition
 annee_debut: 2047
 annee_fin: null
@@ -148,7 +148,7 @@ Ces milices sont structurellement tiraillées entre leur loyauté contractuelle 
 - [[les_veilleurs_du_fleuve_fortress_world]]
 - [[mouvement_commun_midwest_fortress_world]]
 - [[reseaux_d_echange_clandestin_inter_zones_fortress_world]]
-- [[rust_belt_communes_libres_fortress_world]]
+- [[mouvement_des_communes_du_rust_belt_fortress_world]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

@@ -40,7 +40,6 @@ alliances:
 - factions_dissidentes_du_consortium_helios_fortress_world
 - les_cycles_fortress_world
 - mouvement_des_communes_du_rust_belt_fortress_world
-- rust_belt_communes_libres_fortress_world
 oppositions:
 - amazonie_pacte_vert_fortress_world
 - bureau_territoires_residuels_fortress_world
@@ -133,7 +132,6 @@ Leur survie dépend de l'invisibilité, mais leur croissance exige une visibilit
 - [[factions_dissidentes_du_consortium_helios_fortress_world]]
 - [[les_cycles_fortress_world]]
 - [[mouvement_des_communes_du_rust_belt_fortress_world]]
-- [[rust_belt_communes_libres_fortress_world]]
 **Opposants :**
 - [[amazonie_pacte_vert_fortress_world]]
 - [[bureau_territoires_residuels_fortress_world]]

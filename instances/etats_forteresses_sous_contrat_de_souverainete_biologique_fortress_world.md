@@ -53,7 +53,7 @@ oppositions:
 - consortium_amazonia_viva_fortress_world
 - factions_internes_pro_autarcie_totale_fortress_world
 - reseaux_de_juristes_specialises_en_droit_corporel_souverain_fortress_world
-- rust_belt_communes_libres_fortress_world
+- mouvement_des_communes_du_rust_belt_fortress_world
 type_relation_dominante: dépendance
 annee_debut: 2044
 annee_fin: null
@@ -141,7 +141,7 @@ La tension centrale réside dans la contradiction entre la souveraineté étatiq
 - [[consortium_amazonia_viva_fortress_world]]
 - [[factions_internes_pro_autarcie_totale_fortress_world]]
 - [[reseaux_de_juristes_specialises_en_droit_corporel_souverain_fortress_world]]
-- [[rust_belt_communes_libres_fortress_world]]
+- [[mouvement_des_communes_du_rust_belt_fortress_world]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

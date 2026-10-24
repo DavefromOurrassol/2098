@@ -53,7 +53,6 @@ alliances:
 - mouvement_des_communes_du_rust_belt_fortress_world
 - populations_des_zones_deficitaires_d_optimisation_fortress_world
 - reseaux_de_passeurs_d_information_aux_frontieres_inter_blocs_fortress_world
-- rust_belt_communes_libres_fortress_world
 - voix_du_dehors_fortress_world
 oppositions:
 - administrations_de_controle_frontalier_des_blocs_fortress_world
@@ -151,7 +150,6 @@ Le Front du Dehors est pris en étau entre deux logiques qui le déchirent : plu
 - [[mouvement_des_communes_du_rust_belt_fortress_world]]
 - [[populations_des_zones_deficitaires_d_optimisation_fortress_world]]
 - [[reseaux_de_passeurs_d_information_aux_frontieres_inter_blocs_fortress_world]]
-- [[rust_belt_communes_libres_fortress_world]]
 - [[voix_du_dehors_fortress_world]]
 **Opposants :**
 - [[administrations_de_controle_frontalier_des_blocs_fortress_world]]

@@ -40,7 +40,6 @@ alliances:
 - consortium_africain_de_biotechnologies_sociales_fortress_world
 - consortium_amazonia_viva_fortress_world
 - mouvement_des_communes_du_rust_belt_fortress_world
-- rust_belt_communes_libres_fortress_world
 oppositions:
 - biolock_agritech_fortress_world
 - conglomerats_industriels_d_etat_des_augmentations_proprietaires_fortress_world
@@ -121,7 +120,6 @@ L'organisation est tiraillée entre sa vocation de résistance universelle et le
 - [[consortium_africain_de_biotechnologies_sociales_fortress_world]]
 - [[consortium_amazonia_viva_fortress_world]]
 - [[mouvement_des_communes_du_rust_belt_fortress_world]]
-- [[rust_belt_communes_libres_fortress_world]]
 **Opposants :**
 - [[biolock_agritech_fortress_world]]
 - [[conglomerats_industriels_d_etat_des_augmentations_proprietaires_fortress_world]]

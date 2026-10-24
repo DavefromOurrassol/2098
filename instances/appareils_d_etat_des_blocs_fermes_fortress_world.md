@@ -75,7 +75,6 @@ oppositions:
 - populations_des_zones_deficitaires_d_optimisation_fortress_world
 - reseaux_de_juristes_specialises_en_droit_corporel_souverain_fortress_world
 - reseaux_de_passeurs_d_information_aux_frontieres_inter_blocs_fortress_world
-- rust_belt_communes_libres_fortress_world
 - tribunal_algorithmique_de_bruxelles_fortress_world
 - zones_grises_tampons_fortress_world
 type_relation_dominante: compétition
@@ -189,7 +188,6 @@ La contradiction fondamentale de ces appareils réside dans leur dépendance aux
 - [[populations_des_zones_deficitaires_d_optimisation_fortress_world]]
 - [[reseaux_de_juristes_specialises_en_droit_corporel_souverain_fortress_world]]
 - [[reseaux_de_passeurs_d_information_aux_frontieres_inter_blocs_fortress_world]]
-- [[rust_belt_communes_libres_fortress_world]]
 - [[tribunal_algorithmique_de_bruxelles_fortress_world]]
 - [[zones_grises_tampons_fortress_world]]
 

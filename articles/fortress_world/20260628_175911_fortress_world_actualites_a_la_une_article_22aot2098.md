@@ -35,7 +35,6 @@ entites_citees:
   - datacenters_conseil_eurasiatique_fortress_world
   - internationale_travailleurs_augmentes_fortress_world
   - mouvement_des_communes_du_rust_belt_fortress_world
-  - rust_belt_communes_libres_fortress_world
   - tribunal_algorithmique_de_bruxelles_fortress_world
 articles_lies:
   - le_reseau_de_contrebande_energetique_de_l_amazonie_franchit_un_nouveau_seuil_la
@@ -59,4 +58,4 @@ Côté **Helios Bloc Consortium**, la réponse est simple : *« Nous optimisons 
 En attendant, dans les **Zones Industrielles Fortresses — Bloc Eurasiatique Occidental**, les travailleurs augmentent. Et les drones, eux, *s’autosuffisent*.
 
 ---
-**Voir aussi** : [[commandements_logistiques_peripheriques_du_bloc_eurasien_central_fortress_world]] · [[consortium_helios_fortress_world]] · [[datacenters_conseil_eurasiatique_fortress_world]] · [[internationale_travailleurs_augmentes_fortress_world]] · [[mouvement_des_communes_du_rust_belt_fortress_world]] · [[rust_belt_communes_libres_fortress_world]] · [[tribunal_algorithmique_de_bruxelles_fortress_world]] · [[le_reseau_de_contrebande_energetique_de_l_amazonie_franchit_un_nouveau_seuil_la]] · [[les_jeux_de_bratislava_annules_quand_le_sport_meurt_aux_portes_des_blocs]] · [[les_jeux_du_mur_quand_le_sport_devient_la_derniere_guerre_que_les_blocs_osent_en]]
+**Voir aussi** : [[commandements_logistiques_peripheriques_du_bloc_eurasien_central_fortress_world]] · [[consortium_helios_fortress_world]] · [[datacenters_conseil_eurasiatique_fortress_world]] · [[internationale_travailleurs_augmentes_fortress_world]] · [[mouvement_des_communes_du_rust_belt_fortress_world]] · [[tribunal_algorithmique_de_bruxelles_fortress_world]] · [[le_reseau_de_contrebande_energetique_de_l_amazonie_franchit_un_nouveau_seuil_la]] · [[les_jeux_de_bratislava_annules_quand_le_sport_meurt_aux_portes_des_blocs]] · [[les_jeux_du_mur_quand_le_sport_devient_la_derniere_guerre_que_les_blocs_osent_en]]

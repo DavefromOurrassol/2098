@@ -59,7 +59,6 @@ oppositions:
 - mouvement_des_communes_du_rust_belt_fortress_world
 - reseaux_de_maintenance_d_infrastructures_critiques_hors_blocs_fortress_world
 - reseaux_de_passeurs_d_information_aux_frontieres_inter_blocs_fortress_world
-- rust_belt_communes_libres_fortress_world
 - tribunal_algorithmique_de_bruxelles_fortress_world
 - voix_du_dehors_fortress_world
 type_relation_dominante: dépendance
@@ -138,6 +137,5 @@ La tension centrale du Bureau est celle de ses propres archives : en codifiant m
 - [[mouvement_des_communes_du_rust_belt_fortress_world]]
 - [[reseaux_de_maintenance_d_infrastructures_critiques_hors_blocs_fortress_world]]
 - [[reseaux_de_passeurs_d_information_aux_frontieres_inter_blocs_fortress_world]]
-- [[rust_belt_communes_libres_fortress_world]]
 - [[tribunal_algorithmique_de_bruxelles_fortress_world]]
 - [[voix_du_dehors_fortress_world]]

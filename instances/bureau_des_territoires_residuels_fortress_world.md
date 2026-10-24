@@ -57,7 +57,6 @@ oppositions:
 - mouvement_commun_midwest_fortress_world
 - mouvement_des_communes_du_rust_belt_fortress_world
 - reseaux_de_passeurs_d_information_aux_frontieres_inter_blocs_fortress_world
-- rust_belt_communes_libres_fortress_world
 - voix_du_dehors_fortress_world
 type_relation_dominante: dépendance
 
@@ -132,5 +131,4 @@ Le Bureau détient la cartographie la plus complète jamais produite sur les dé
 - [[mouvement_commun_midwest_fortress_world]]
 - [[mouvement_des_communes_du_rust_belt_fortress_world]]
 - [[reseaux_de_passeurs_d_information_aux_frontieres_inter_blocs_fortress_world]]
-- [[rust_belt_communes_libres_fortress_world]]
 - [[voix_du_dehors_fortress_world]]

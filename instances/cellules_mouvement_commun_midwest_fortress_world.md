@@ -50,7 +50,6 @@ alliances:
 - mouvement_des_communes_du_rust_belt_fortress_world
 - reseaux_d_echange_clandestin_inter_zones_fortress_world
 - reseaux_de_passeurs_d_information_aux_frontieres_inter_blocs_fortress_world
-- rust_belt_communes_libres_fortress_world
 - voix_du_dehors_fortress_world
 oppositions:
 - administrations_de_controle_frontalier_des_blocs_fortress_world
@@ -134,7 +133,6 @@ La décentralisation absolue protège le réseau mais interdit toute montée en 
 - [[mouvement_des_communes_du_rust_belt_fortress_world]]
 - [[reseaux_d_echange_clandestin_inter_zones_fortress_world]]
 - [[reseaux_de_passeurs_d_information_aux_frontieres_inter_blocs_fortress_world]]
-- [[rust_belt_communes_libres_fortress_world]]
 - [[voix_du_dehors_fortress_world]]
 **Opposants :**
 - [[administrations_de_controle_frontalier_des_blocs_fortress_world]]

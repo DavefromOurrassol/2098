@@ -47,7 +47,7 @@ alliances:
 - populations_des_zones_deficitaires_d_optimisation_fortress_world
 - reseau_des_cartographes_des_zones_grises_fortress_world
 - reseaux_de_juristes_specialises_en_droit_corporel_souverain_fortress_world
-- rust_belt_communes_libres_fortress_world
+- mouvement_des_communes_du_rust_belt_fortress_world
 oppositions:
 - administrations_de_controle_frontalier_des_blocs_fortress_world
 - alpha47_fortress_world
@@ -168,7 +168,7 @@ L'Alliance est tiraillée entre son impératif humanitaire universel et la tenta
 - [[populations_des_zones_deficitaires_d_optimisation_fortress_world]]
 - [[reseau_des_cartographes_des_zones_grises_fortress_world]]
 - [[reseaux_de_juristes_specialises_en_droit_corporel_souverain_fortress_world]]
-- [[rust_belt_communes_libres_fortress_world]]
+- [[mouvement_des_communes_du_rust_belt_fortress_world]]
 **Opposants :**
 - [[administrations_de_controle_frontalier_des_blocs_fortress_world]]
 - [[alpha47_fortress_world]]

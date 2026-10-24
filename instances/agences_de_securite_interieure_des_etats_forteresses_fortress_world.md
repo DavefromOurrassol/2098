@@ -89,7 +89,6 @@ oppositions:
 - reseau_des_cartographes_des_zones_grises_fortress_world
 - reseaux_de_juristes_specialises_en_droit_corporel_souverain_fortress_world
 - reseaux_de_passeurs_d_information_aux_frontieres_inter_blocs_fortress_world
-- rust_belt_communes_libres_fortress_world
 - tribu_des_cinq_nations_fortress_world
 - zones_grises_tampons_fortress_world
 type_relation_dominante: conflit
@@ -219,7 +218,6 @@ La contradiction centrale de ces agences réside dans leur double mission imposs
 - [[reseau_des_cartographes_des_zones_grises_fortress_world]]
 - [[reseaux_de_juristes_specialises_en_droit_corporel_souverain_fortress_world]]
 - [[reseaux_de_passeurs_d_information_aux_frontieres_inter_blocs_fortress_world]]
-- [[rust_belt_communes_libres_fortress_world]]
 - [[tribu_des_cinq_nations_fortress_world]]
 - [[zones_grises_tampons_fortress_world]]
 

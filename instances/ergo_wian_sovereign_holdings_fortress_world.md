@@ -58,7 +58,7 @@ oppositions:
 - coalitions_des_deplaces_et_apatrides_fortress_world
 - les_dedoubles_fortress_world
 - mouvement_commun_midwest_fortress_world
-- rust_belt_communes_libres_fortress_world
+- mouvement_des_communes_du_rust_belt_fortress_world
 - voix_du_dehors_fortress_world
 - factions_anti_privatisation_des_voies_souveraines_scandinaves_fortress_world
 - milices_de_piraterie_logistique_arctique_fortress_world
@@ -137,7 +137,7 @@ L'EWSD est au cœur de plusieurs lignes de fracture du scénario *fortress_world
 - [[coalitions_des_deplaces_et_apatrides_fortress_world]]
 - [[les_dedoubles_fortress_world]]
 - [[mouvement_commun_midwest_fortress_world]]
-- [[rust_belt_communes_libres_fortress_world]]
+- [[mouvement_des_communes_du_rust_belt_fortress_world]]
 - [[voix_du_dehors_fortress_world]]
 - [[factions_anti_privatisation_des_voies_souveraines_scandinaves_fortress_world]]
 - [[milices_de_piraterie_logistique_arctique_fortress_world]]

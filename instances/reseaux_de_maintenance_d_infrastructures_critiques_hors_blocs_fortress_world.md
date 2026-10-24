@@ -40,7 +40,6 @@ alliances:
 - marches_gris_casablanca_fortress_world
 - marches_gris_tbilissi_fortress_world
 - mouvement_des_communes_du_rust_belt_fortress_world
-- rust_belt_communes_libres_fortress_world
 - vasil_orentchev_fortress_world
 oppositions:
 - bureau_territoires_residuels_fortress_world
@@ -120,7 +119,6 @@ Ces réseaux oscillent en permanence entre l'autonomie nécessaire à leur survi
 - [[marches_gris_casablanca_fortress_world]]
 - [[marches_gris_tbilissi_fortress_world]]
 - [[mouvement_des_communes_du_rust_belt_fortress_world]]
-- [[rust_belt_communes_libres_fortress_world]]
 - [[vasil_orentchev_fortress_world]]
 **Opposants :**
 - [[bureau_territoires_residuels_fortress_world]]
