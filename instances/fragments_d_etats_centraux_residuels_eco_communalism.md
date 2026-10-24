@@ -53,7 +53,6 @@ oppositions:
 - confederation_bassins_vivants_eco_communalism
 - confederation_communs_arc_septentrional_eco_communalism
 - cooperatives_d_habitat_regeneratif_eco_communalism
-- federation_communs_territoriaux_eco_communalism
 - ligue_des_cites_du_sahel_numerique_eco_communalism
 - mouvement_des_communes_du_rust_belt_eco_communalism
 - reseau_assemblees_fennoscandien_eco_communalism
@@ -148,7 +147,6 @@ La contradiction centrale qui les ronge est l'écart abyssal entre leur prétent
 - [[confederation_bassins_vivants_eco_communalism]]
 - [[confederation_communs_arc_septentrional_eco_communalism]]
 - [[cooperatives_d_habitat_regeneratif_eco_communalism]]
-- [[federation_communs_territoriaux_eco_communalism]]
 - [[ligue_des_cites_du_sahel_numerique_eco_communalism]]
 - [[mouvement_des_communes_du_rust_belt_eco_communalism]]
 - [[reseau_assemblees_fennoscandien_eco_communalism]]

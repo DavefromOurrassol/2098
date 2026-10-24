@@ -32,7 +32,6 @@ date_publication: 12 septembre 2098
 entites_citees:
   - confederation_bassins_vivants_eco_communalism
   - consortium_africain_de_biotechnologies_sociales_eco_communalism
-  - federation_communs_territoriaux_eco_communalism
   - les_veilleurs_du_fleuve_eco_communalism
 articles_lies:
   - a_126_ans_maman_elikya_oblige_la_sante_des_communs_a_regarder_ses_fractures
@@ -56,4 +55,4 @@ Une assemblée de crise est prévue à Kisangani dès la prochaine lune montante
 *Aline Moke*
 
 ---
-**Voir aussi** : [[confederation_bassins_vivants_eco_communalism]] · [[consortium_africain_de_biotechnologies_sociales_eco_communalism]] · [[federation_communs_territoriaux_eco_communalism]] · [[les_veilleurs_du_fleuve_eco_communalism]] · [[a_126_ans_maman_elikya_oblige_la_sante_des_communs_a_regarder_ses_fractures]] · [[mokele_126_ans_le_secret_des_eaux_vives]] · [[yaripa_a_voz_da_floresta_reseau_la_gazette_des_communs]]
+**Voir aussi** : [[confederation_bassins_vivants_eco_communalism]] · [[consortium_africain_de_biotechnologies_sociales_eco_communalism]] · [[confederation_bassins_vivants_eco_communalism]] · [[les_veilleurs_du_fleuve_eco_communalism]] · [[a_126_ans_maman_elikya_oblige_la_sante_des_communs_a_regarder_ses_fractures]] · [[mokele_126_ans_le_secret_des_eaux_vives]] · [[yaripa_a_voz_da_floresta_reseau_la_gazette_des_communs]]

@@ -44,7 +44,7 @@ acteurs_impliques:
     - coalition_vivant_eco_communalism
     - reseau_mnemos_eco_communalism
     - voix_du_dehors_eco_communalism
-    - federation_communs_territoriaux_eco_communalism
+    - confederation_bassins_vivants_eco_communalism
 note_coherence: Dans un monde déjà fragmenté, ce conflit agit comme perturbateur externe lointain mais aux effets tangibles — il accélère les dynamiques de désengagement fossile sans remettre en cause la logique bioterritoriale, ce qui est cohérent avec une trajectoire de régénération sous tension.
 custom_source: actualite_2026-06
 date_creation: 2026-06-17
@@ -72,7 +72,7 @@ Le choc accélère paradoxalement la transition bioterritoriale : les unités lo
 - [[coalition_vivant_eco_communalism]]
 - [[reseau_mnemos_eco_communalism]]
 - [[voix_du_dehors_eco_communalism]]
-- [[federation_communs_territoriaux_eco_communalism]]
+- [[confederation_bassins_vivants_eco_communalism]]
 
 ## Note de cohérence
 Dans un monde déjà fragmenté, ce conflit agit comme perturbateur externe lointain mais aux effets tangibles — il accélère les dynamiques de désengagement fossile sans remettre en cause la logique bioterritoriale, ce qui est cohérent avec une trajectoire de régénération sous tension.

@@ -44,7 +44,6 @@ oppositions:
 - collectifs_de_facilitateurs_deliberatifs_itinerants_eco_communalism
 - confederation_bassins_vivants_eco_communalism
 - factions_algorithmiques_pro_gouvernance_ia_legere_eco_communalism
-- federation_communs_territoriaux_eco_communalism
 - lamplight_eco_communalism
 - mouvement_des_archives_vivantes_du_savoir_partage_eco_communalism
 - prisme_global_eco_communalism
@@ -131,7 +130,6 @@ Leur refus radical du partage narratif les prive des ressources collectives de m
 - [[collectifs_de_facilitateurs_deliberatifs_itinerants_eco_communalism]]
 - [[confederation_bassins_vivants_eco_communalism]]
 - [[factions_algorithmiques_pro_gouvernance_ia_legere_eco_communalism]]
-- [[federation_communs_territoriaux_eco_communalism]]
 - [[lamplight_eco_communalism]]
 - [[mouvement_des_archives_vivantes_du_savoir_partage_eco_communalism]]
 - [[prisme_global_eco_communalism]]

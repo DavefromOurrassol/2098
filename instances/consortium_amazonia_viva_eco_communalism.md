@@ -51,7 +51,7 @@ alliances:
 - conseils_de_bassin_versant_eco_communalistes_eco_communalism
 - cooperative_terrafond_eco_communalism
 - cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism
-- federation_communs_territoriaux_eco_communalism
+- confederation_bassins_vivants_eco_communalism
 - frente_sertao_livre_eco_communalism
 - guildes_de_mediateurs_ecologiques_eco_communalism
 - kalaallit_nunaat_bioterritoire_eco_communalism
@@ -139,7 +139,7 @@ La légitimité du Pacte est contestée de l'intérieur : certaines nations auto
 - [[conseils_de_bassin_versant_eco_communalistes_eco_communalism]]
 - [[cooperative_terrafond_eco_communalism]]
 - [[cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism]]
-- [[federation_communs_territoriaux_eco_communalism]]
+- [[confederation_bassins_vivants_eco_communalism]]
 - [[frente_sertao_livre_eco_communalism]]
 - [[guildes_de_mediateurs_ecologiques_eco_communalism]]
 - [[kalaallit_nunaat_bioterritoire_eco_communalism]]

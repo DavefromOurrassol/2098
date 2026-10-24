@@ -47,7 +47,7 @@ alliances:
 - conseils_de_bassin_versant_eco_communalistes_eco_communalism
 - cooperatives_d_habitat_regeneratif_eco_communalism
 - cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism
-- federation_communs_territoriaux_eco_communalism
+- confederation_bassins_vivants_eco_communalism
 - guildes_de_mediateurs_ecologiques_eco_communalism
 - mouvement_des_archives_vivantes_du_savoir_partage_eco_communalism
 - mutuelles_de_sante_territoriales_eco_communalism
@@ -130,7 +130,7 @@ La Confédération est désormais assez puissante pour que les fragments d'État
 - [[conseils_de_bassin_versant_eco_communalistes_eco_communalism]]
 - [[cooperatives_d_habitat_regeneratif_eco_communalism]]
 - [[cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism]]
-- [[federation_communs_territoriaux_eco_communalism]]
+- [[confederation_bassins_vivants_eco_communalism]]
 - [[guildes_de_mediateurs_ecologiques_eco_communalism]]
 - [[mouvement_des_archives_vivantes_du_savoir_partage_eco_communalism]]
 - [[mutuelles_de_sante_territoriales_eco_communalism]]

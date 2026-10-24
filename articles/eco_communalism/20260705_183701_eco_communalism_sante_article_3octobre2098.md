@@ -33,7 +33,6 @@ entites_citees:
   - consortium_amazonia_viva_eco_communalism
   - confederation_bassins_vivants_eco_communalism
   - consortium_africain_de_biotechnologies_sociales_eco_communalism
-  - federation_communs_territoriaux_eco_communalism
   - sao_paulo_algorithmique_eco_communalism
   - universite_nomade_eco_communalism
 articles_lies:
@@ -61,4 +60,4 @@ Même le Consórcio Paulistano de Gestão Algorítmica (CPGA) a été sollicité
 La longévité avance, oui. Mais elle avance comme une pirogue chargée : trop vite, elle chavire ; trop lentement, les plus fragiles restent sur la berge.
 
 ---
-**Voir aussi** : [[consortium_amazonia_viva_eco_communalism]] · [[confederation_bassins_vivants_eco_communalism]] · [[consortium_africain_de_biotechnologies_sociales_eco_communalism]] · [[consortium_amazonia_viva_eco_communalism]] · [[federation_communs_territoriaux_eco_communalism]] · [[sao_paulo_algorithmique_eco_communalism]] · [[universite_nomade_eco_communalism]] · [[mokele_126_ans_le_secret_des_eaux_vives]] · [[moyo_ya_mpembe_quand_l_epidemie_de_longevite_bouscule_les_rivages_du_congo]] · [[yawara_i_tukano_ita_ae]]
+**Voir aussi** : [[consortium_amazonia_viva_eco_communalism]] · [[confederation_bassins_vivants_eco_communalism]] · [[consortium_africain_de_biotechnologies_sociales_eco_communalism]] · [[consortium_amazonia_viva_eco_communalism]] · [[confederation_bassins_vivants_eco_communalism]] · [[sao_paulo_algorithmique_eco_communalism]] · [[universite_nomade_eco_communalism]] · [[mokele_126_ans_le_secret_des_eaux_vives]] · [[moyo_ya_mpembe_quand_l_epidemie_de_longevite_bouscule_les_rivages_du_congo]] · [[yawara_i_tukano_ita_ae]]

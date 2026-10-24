@@ -32,7 +32,7 @@ L'autonomie résiliente des territoires contre la dépendance aux systèmes glob
 | [[fortress_world]] | — | — | — |
 | [[new_sustainability]] | — | — | — |
 | [[breakdown]] | [[federation_communs_territoriaux_breakdown]] | | |
-| [[eco_communalism]] | [[federation_communs_territoriaux_eco_communalism]] | | |
+| [[eco_communalism]] | [[confederation_bassins_vivants_eco_communalism]] | | |
 | [[policy_reform]] | — | — | — |
 | [[reference]] | [[federation_communs_territoriaux_reference]] | | |
 

@@ -32,7 +32,6 @@ date_publication:
 entites_citees:
   - confederation_bassins_vivants_eco_communalism
   - consortium_africain_de_biotechnologies_sociales_eco_communalism
-  - federation_communs_territoriaux_eco_communalism
   - reseau_mnemos_eco_communalism
   - trame_mnemos_noeud_reseau_eco_communalism
 articles_lies:
@@ -66,4 +65,4 @@ Odette, elle, rit en regardant couler l’Oubangui. Elle ne sait pas que ce soir
 *[Note de la rédaction : Kin-débordée publie ce récit sous le régime de la *Grande Pause Narrative*, en accord avec l’Assemblée des Gardiens du Temps du Pool Malebo.]*
 
 ---
-**Voir aussi** : [[confederation_bassins_vivants_eco_communalism]] · [[consortium_africain_de_biotechnologies_sociales_eco_communalism]] · [[federation_communs_territoriaux_eco_communalism]] · [[reseau_mnemos_eco_communalism]] · [[trame_mnemos_noeud_reseau_eco_communalism]] · [[le_secret_de_m_bokolo_a_126_ans_le_doyen_de_l_humanite_defie_les_lois_de_la_mede]] · [[a_126_ans_maman_elikya_oblige_la_sante_des_communs_a_regarder_ses_fractures]] · [[kharg_9_le_coffre_fort_des_communs_devient_un_supermarche_des_donnees]]
+**Voir aussi** : [[confederation_bassins_vivants_eco_communalism]] · [[consortium_africain_de_biotechnologies_sociales_eco_communalism]] · [[confederation_bassins_vivants_eco_communalism]] · [[reseau_mnemos_eco_communalism]] · [[trame_mnemos_noeud_reseau_eco_communalism]] · [[le_secret_de_m_bokolo_a_126_ans_le_doyen_de_l_humanite_defie_les_lois_de_la_mede]] · [[a_126_ans_maman_elikya_oblige_la_sante_des_communs_a_regarder_ses_fractures]] · [[kharg_9_le_coffre_fort_des_communs_devient_un_supermarche_des_donnees]]

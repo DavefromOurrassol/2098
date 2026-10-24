@@ -33,7 +33,6 @@ entites_citees:
   - collectifs_du_seuil_eco_communalism
   - confederation_bassins_vivants_eco_communalism
   - cooperative_terrafond_eco_communalism
-  - federation_communs_territoriaux_eco_communalism
   - reseau_terrafond_bassins_eco_communalism
   - trame_bioclimatique_eco_communalism
   - voix_du_dehors_eco_communalism
@@ -61,4 +60,4 @@ Les conséquences sont déjà visibles. Dans les Apennins Restaurés, des espèc
 Pour l’instant, personne ne semble prêt à céder. Les Sillons du Plateau, ces longues bâtisses semi-enterrées où les Veilleurs stockent graines et outils, sont désormais surveillés par des drones citoyens de la CBV. « On ne bougera pas », répète Mara Kerval. « Même si on doit brûler chaque borne, chaque capteur. Nos ancêtres ont vécu sans ces trames. Nous aussi. »
 
 ---
-**Voir aussi** : [[collectifs_du_seuil_eco_communalism]] · [[confederation_bassins_vivants_eco_communalism]] · [[cooperative_terrafond_eco_communalism]] · [[federation_communs_territoriaux_eco_communalism]] · [[reseau_terrafond_bassins_eco_communalism]] · [[trame_bioclimatique_eco_communalism]] · [[voix_du_dehors_eco_communalism]] · [[a_126_ans_maman_elikya_oblige_la_sante_des_communs_a_regarder_ses_fractures]] · [[mokele_126_ans_le_secret_des_eaux_vives]] · [[moyo_ya_mpembe_quand_l_epidemie_de_longevite_bouscule_les_rivages_du_congo]]
+**Voir aussi** : [[collectifs_du_seuil_eco_communalism]] · [[confederation_bassins_vivants_eco_communalism]] · [[cooperative_terrafond_eco_communalism]] · [[confederation_bassins_vivants_eco_communalism]] · [[reseau_terrafond_bassins_eco_communalism]] · [[trame_bioclimatique_eco_communalism]] · [[voix_du_dehors_eco_communalism]] · [[a_126_ans_maman_elikya_oblige_la_sante_des_communs_a_regarder_ses_fractures]] · [[mokele_126_ans_le_secret_des_eaux_vives]] · [[moyo_ya_mpembe_quand_l_epidemie_de_longevite_bouscule_les_rivages_du_congo]]

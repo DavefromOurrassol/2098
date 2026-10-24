@@ -34,7 +34,6 @@ entites_citees:
   - brigades_de_restauration_ecologique_eco_communalism
   - confederation_bassins_vivants_eco_communalism
   - consortium_africain_de_biotechnologies_sociales_eco_communalism
-  - federation_communs_territoriaux_eco_communalism
   - mutuelles_de_sante_territoriales_eco_communalism
   - universite_nomade_eco_communalism
 articles_lies:
@@ -63,4 +62,4 @@ Ce soir, sous les lanternes solaires, les tambours du lokole résonneront jusqu�
 *Aline Moke*
 
 ---
-**Voir aussi** : [[consortium_amazonia_viva_eco_communalism]] · [[brigades_de_restauration_ecologique_eco_communalism]] · [[confederation_bassins_vivants_eco_communalism]] · [[consortium_africain_de_biotechnologies_sociales_eco_communalism]] · [[consortium_amazonia_viva_eco_communalism]] · [[federation_communs_territoriaux_eco_communalism]] · [[mutuelles_de_sante_territoriales_eco_communalism]] · [[universite_nomade_eco_communalism]] · [[a_126_ans_maman_elikya_oblige_la_sante_des_communs_a_regarder_ses_fractures]] · [[moyo_ya_mpembe_quand_l_epidemie_de_longevite_bouscule_les_rivages_du_congo]] · [[yawara_i_tukano_ita_ae]]
+**Voir aussi** : [[consortium_amazonia_viva_eco_communalism]] · [[brigades_de_restauration_ecologique_eco_communalism]] · [[confederation_bassins_vivants_eco_communalism]] · [[consortium_africain_de_biotechnologies_sociales_eco_communalism]] · [[consortium_amazonia_viva_eco_communalism]] · [[confederation_bassins_vivants_eco_communalism]] · [[mutuelles_de_sante_territoriales_eco_communalism]] · [[universite_nomade_eco_communalism]] · [[a_126_ans_maman_elikya_oblige_la_sante_des_communs_a_regarder_ses_fractures]] · [[moyo_ya_mpembe_quand_l_epidemie_de_longevite_bouscule_les_rivages_du_congo]] · [[yawara_i_tukano_ita_ae]]

@@ -49,6 +49,7 @@ alliances:
 - collectifs_de_geo_observateurs_citoyens_eco_communalism
 - confederation_communs_arc_septentrional_eco_communalism
 - conseils_de_bassin_versant_eco_communalistes_eco_communalism
+- consortium_amazonia_viva_eco_communalism
 - cooperative_terrafond_eco_communalism
 - cooperatives_d_habitat_regeneratif_eco_communalism
 - cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism
@@ -59,6 +60,7 @@ alliances:
 - kalaallit_nunaat_bioterritoire_eco_communalism
 - le_registre_du_fleuve_eco_communalism
 - les_veilleurs_du_fleuve_eco_communalism
+- mouvement_des_communes_du_rust_belt_eco_communalism
 - mouvement_racines_vivantes_eco_communalism
 - reseau_des_assemblees_de_bassin_fennoscandien_eco_communalism
 - reseau_terrafond_bassins_eco_communalism
@@ -81,6 +83,7 @@ oppositions:
 - courant_techno_solutionniste_pro_re_globalisation_numerique_eco_communalism
 - enclaves_extractivistes_et_etats_residuels_eco_communalism
 - enclaves_extractivistes_residuelles_des_corridors_eco_communalism
+- ergo_wian_sovereign_holdings_eco_communalism
 - factions_communautaires_refusant_le_partage_narratif_exterieur_eco_communalism
 - factions_extractivistes_des_aquiferes_communs_eco_communalism
 - factions_technophiles_de_la_geo_ingenierie_centralisee_eco_communalism
@@ -151,6 +154,7 @@ La tension principale traverse la question de l'exclusion : que faire d'une comm
 - [[collectifs_de_geo_observateurs_citoyens_eco_communalism]]
 - [[confederation_communs_arc_septentrional_eco_communalism]]
 - [[conseils_de_bassin_versant_eco_communalistes_eco_communalism]]
+- [[consortium_amazonia_viva_eco_communalism]]
 - [[cooperative_terrafond_eco_communalism]]
 - [[cooperatives_d_habitat_regeneratif_eco_communalism]]
 - [[cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism]]
@@ -161,6 +165,7 @@ La tension principale traverse la question de l'exclusion : que faire d'une comm
 - [[kalaallit_nunaat_bioterritoire_eco_communalism]]
 - [[le_registre_du_fleuve_eco_communalism]]
 - [[les_veilleurs_du_fleuve_eco_communalism]]
+- [[mouvement_des_communes_du_rust_belt_eco_communalism]]
 - [[mouvement_racines_vivantes_eco_communalism]]
 - [[reseau_des_assemblees_de_bassin_fennoscandien_eco_communalism]]
 - [[reseau_terrafond_bassins_eco_communalism]]
@@ -183,6 +188,7 @@ La tension principale traverse la question de l'exclusion : que faire d'une comm
 - [[courant_techno_solutionniste_pro_re_globalisation_numerique_eco_communalism]]
 - [[enclaves_extractivistes_et_etats_residuels_eco_communalism]]
 - [[enclaves_extractivistes_residuelles_des_corridors_eco_communalism]]
+- [[ergo_wian_sovereign_holdings_eco_communalism]]
 - [[factions_communautaires_refusant_le_partage_narratif_exterieur_eco_communalism]]
 - [[factions_extractivistes_des_aquiferes_communs_eco_communalism]]
 - [[factions_technophiles_de_la_geo_ingenierie_centralisee_eco_communalism]]

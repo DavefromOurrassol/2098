@@ -55,7 +55,6 @@ oppositions:
 - confederation_bassins_vivants_eco_communalism
 - cooperatives_d_habitat_regeneratif_eco_communalism
 - cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism
-- federation_communs_territoriaux_eco_communalism
 - fraternites_ecospiritualistes_des_anciens_survivalistes_eco_communalism
 - frente_sertao_livre_eco_communalism
 - guildes_de_mediateurs_ecologiques_eco_communalism
@@ -174,7 +173,6 @@ La contradiction centrale des Consortiums tient à leur dépendance aux États r
 - [[confederation_bassins_vivants_eco_communalism]]
 - [[cooperatives_d_habitat_regeneratif_eco_communalism]]
 - [[cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism]]
-- [[federation_communs_territoriaux_eco_communalism]]
 - [[fraternites_ecospiritualistes_des_anciens_survivalistes_eco_communalism]]
 - [[frente_sertao_livre_eco_communalism]]
 - [[guildes_de_mediateurs_ecologiques_eco_communalism]]

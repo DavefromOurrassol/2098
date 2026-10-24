@@ -44,7 +44,6 @@ alliances:
 - consortium_africain_de_biotechnologies_sociales_eco_communalism
 - consortium_amazonia_viva_eco_communalism
 - cooperatives_d_habitat_regeneratif_eco_communalism
-- federation_communs_territoriaux_eco_communalism
 - fraternites_ecospiritualistes_des_anciens_survivalistes_eco_communalism
 - frente_sertao_livre_eco_communalism
 - guildes_des_semenciers_itinerants_eco_communalism
@@ -153,7 +152,6 @@ La tension centrale qui traverse ces coopératives est celle entre préservation
 - [[consortium_africain_de_biotechnologies_sociales_eco_communalism]]
 - [[consortium_amazonia_viva_eco_communalism]]
 - [[cooperatives_d_habitat_regeneratif_eco_communalism]]
-- [[federation_communs_territoriaux_eco_communalism]]
 - [[fraternites_ecospiritualistes_des_anciens_survivalistes_eco_communalism]]
 - [[frente_sertao_livre_eco_communalism]]
 - [[guildes_des_semenciers_itinerants_eco_communalism]]

@@ -39,7 +39,6 @@ alliances:
 - confederation_bassins_vivants_eco_communalism
 - consortium_amazonia_viva_eco_communalism
 - cooperative_terrafond_eco_communalism
-- federation_communs_territoriaux_eco_communalism
 - guildes_de_mediateurs_ecologiques_eco_communalism
 - le_registre_du_fleuve_eco_communalism
 - les_veilleurs_des_nappes_phreatiques_eco_communalism
@@ -137,7 +136,6 @@ La tension la plus profonde oppose la souveraineté locale revendiquée par chaq
 - [[confederation_bassins_vivants_eco_communalism]]
 - [[consortium_amazonia_viva_eco_communalism]]
 - [[cooperative_terrafond_eco_communalism]]
-- [[federation_communs_territoriaux_eco_communalism]]
 - [[guildes_de_mediateurs_ecologiques_eco_communalism]]
 - [[le_registre_du_fleuve_eco_communalism]]
 - [[les_veilleurs_des_nappes_phreatiques_eco_communalism]]

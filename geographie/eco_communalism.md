@@ -426,7 +426,7 @@ zones:
   - reseau_mnemos_eco_communalism
   - prisme_global_eco_communalism
   - trame_bioclimatique_eco_communalism
-  - federation_communs_territoriaux_eco_communalism
+  - confederation_bassins_vivants_eco_communalism
   - voix_du_dehors_eco_communalism
   - arrestation_chris_van_derburgh_eco_communalism
   - effondrement_reseau_mondial_communication_eco_communalism
@@ -1139,7 +1139,7 @@ zones:
     rivaux:
     - enclaves_extractivistes_et_etats_residuels
   sources_attestees:
-  - federation_communs_territoriaux_eco_communalism
+  - confederation_bassins_vivants_eco_communalism
   promu_depuis: null
 - slug: confederation_communs_arc_septentrional
   nom: Confédération des Communs de l'Arc Septentrional
@@ -1871,7 +1871,7 @@ zones:
     rivaux: []
   sources_attestees:
   - arrestation_chris_van_derburgh_eco_communalism
-  - federation_communs_territoriaux_eco_communalism
+  - confederation_bassins_vivants_eco_communalism
   promu_depuis: Vallée du Rhône Reconstituée
 - slug: zones_climatiquement_degradees_maghreb
   nom: Zones Climatiquement Dégradées du Maghreb
@@ -2286,7 +2286,7 @@ zones:
     rivaux: []
   sources_attestees:
   - arrestation_chris_van_derburgh_eco_communalism
-  - federation_communs_territoriaux_eco_communalism
+  - confederation_bassins_vivants_eco_communalism
   promu_depuis: null
 - slug: sillons_plateau_massif_central
   nom: Les Sillons du Plateau
@@ -3691,7 +3691,7 @@ Réseau décentralisé de bioterritoires autonomes couvrant l'Europe de l'Ouest,
 
 **Rivaux** : Enclaves Extractivistes et États Résiduels ([[enclaves_extractivistes_et_etats_residuels]])
 
-*Sources attestées : cooperative_terrafond_eco_communalism, mouvement_racines_vivantes_eco_communalism, collectifs_du_seuil_eco_communalism, reseau_mnemos_eco_communalism, prisme_global_eco_communalism, trame_bioclimatique_eco_communalism, federation_communs_territoriaux_eco_communalism, voix_du_dehors_eco_communalism, arrestation_chris_van_derburgh_eco_communalism, effondrement_reseau_mondial_communication_eco_communalism*
+*Sources attestées : cooperative_terrafond_eco_communalism, mouvement_racines_vivantes_eco_communalism, collectifs_du_seuil_eco_communalism, reseau_mnemos_eco_communalism, prisme_global_eco_communalism, trame_bioclimatique_eco_communalism, confederation_bassins_vivants_eco_communalism, voix_du_dehors_eco_communalism, arrestation_chris_van_derburgh_eco_communalism, effondrement_reseau_mondial_communication_eco_communalism*
 
 #### Apennins Restaurés — sous [[europe_occidentale_reconstituee]]
 
@@ -3751,7 +3751,7 @@ Principal organe de coordination entre les communs territoriaux autonomes d'Euro
 
 **Rivaux** : Enclaves Extractivistes et États Résiduels ([[enclaves_extractivistes_et_etats_residuels]])
 
-*Sources attestées : federation_communs_territoriaux_eco_communalism*
+*Sources attestées : confederation_bassins_vivants_eco_communalism*
 
 #### Couloirs Forestiers du Bassin Rhénan — sous [[europe_occidentale_reconstituee]]
 
@@ -3967,7 +3967,7 @@ Bioterritoire organisé autour du bassin versant du Rhône reconstitué, connu p
 
 **Tensions internes** : Débat persistant entre les partisans d'une sobriété stricte et ceux qui défendent le droit à la mémoire personnelle comme issue du procès Van Derburgh ; pression des consortiums industriels sur les ressources hydriques du Rhône.
 
-*Sources attestées : arrestation_chris_van_derburgh_eco_communalism, federation_communs_territoriaux_eco_communalism*
+*Sources attestées : arrestation_chris_van_derburgh_eco_communalism, confederation_bassins_vivants_eco_communalism*
 
 ##### Site du Procès Van Derburgh — sous [[vallee_du_rhone_reconstituee]]
 
@@ -3983,7 +3983,7 @@ Lieu de la délibération communautaire exemplaire d'automne 2078 concernant Chr
 
 **Alliés** : Mémoire des Terres ([[memoire_des_terres_federation]])
 
-*Sources attestées : arrestation_chris_van_derburgh_eco_communalism, federation_communs_territoriaux_eco_communalism*
+*Sources attestées : arrestation_chris_van_derburgh_eco_communalism, confederation_bassins_vivants_eco_communalism*
 
 ### Maghreb Méditerranéen
 

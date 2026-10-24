@@ -45,7 +45,6 @@ alliances:
 - conseils_de_bassin_versant_eco_communalistes_eco_communalism
 - consortium_des_pecheries_autonomes_du_grand_nord_eco_communalism
 - cooperatives_d_habitat_regeneratif_eco_communalism
-- federation_communs_territoriaux_eco_communalism
 - fraternites_ecospiritualistes_des_anciens_survivalistes_eco_communalism
 - gelecek_meclisi_eco_communalism
 - guildes_des_semenciers_itinerants_eco_communalism
@@ -154,7 +153,6 @@ La légitimité des Guildes repose entièrement sur la confiance volontaire des 
 - [[conseils_de_bassin_versant_eco_communalistes_eco_communalism]]
 - [[consortium_des_pecheries_autonomes_du_grand_nord_eco_communalism]]
 - [[cooperatives_d_habitat_regeneratif_eco_communalism]]
-- [[federation_communs_territoriaux_eco_communalism]]
 - [[fraternites_ecospiritualistes_des_anciens_survivalistes_eco_communalism]]
 - [[gelecek_meclisi_eco_communalism]]
 - [[guildes_des_semenciers_itinerants_eco_communalism]]

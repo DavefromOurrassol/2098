@@ -47,7 +47,6 @@ oppositions:
 - confederation_bassins_vivants_eco_communalism
 - confederation_communs_arc_septentrional_eco_communalism
 - cooperatives_d_habitat_regeneratif_eco_communalism
-- federation_communs_territoriaux_eco_communalism
 - guildes_de_mediateurs_ecologiques_eco_communalism
 - kalaallit_nunaat_sovereign_fund_eco_communalism
 - mouvement_des_communes_du_rust_belt_eco_communalism
@@ -140,7 +139,6 @@ La tension centrale réside dans la contradiction performative du réseau lui-m�
 - [[confederation_bassins_vivants_eco_communalism]]
 - [[confederation_communs_arc_septentrional_eco_communalism]]
 - [[cooperatives_d_habitat_regeneratif_eco_communalism]]
-- [[federation_communs_territoriaux_eco_communalism]]
 - [[guildes_de_mediateurs_ecologiques_eco_communalism]]
 - [[kalaallit_nunaat_sovereign_fund_eco_communalism]]
 - [[mouvement_des_communes_du_rust_belt_eco_communalism]]

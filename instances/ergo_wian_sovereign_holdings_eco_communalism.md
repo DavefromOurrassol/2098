@@ -45,7 +45,7 @@ oppositions:
     - assemblee_territoires_eco_communalism
     - brigades_de_restauration_ecologique_eco_communalism
     - reseau_terrafond_bassins_eco_communalism
-    - federation_communs_territoriaux_eco_communalism
+    - confederation_bassins_vivants_eco_communalism
 
 type_relation_dominante: rivalité
 
@@ -106,7 +106,7 @@ Les EWS gèrent des infrastructures critiques résiduelles (réseaux électrique
 
 ## Relations
 **Alliés** : [[enclaves_extractivistes_residuelles_des_corridors_eco_communalism]], [[consortiums_industriels_de_l_eau_eco_communalism]], [[consortium_des_operateurs_d_ia_proprietaires_sur_les_trames_eco_communalism]]
-**Opposants** : [[assemblee_territoires_eco_communalism]], [[brigades_de_restauration_ecologique_eco_communalism]], [[reseau_terrafond_bassins_eco_communalism]], [[federation_communs_territoriaux_eco_communalism]]
+**Opposants** : [[assemblee_territoires_eco_communalism]], [[brigades_de_restauration_ecologique_eco_communalism]], [[reseau_terrafond_bassins_eco_communalism]], [[confederation_bassins_vivants_eco_communalism]]
 
 ## Description journalistique
 En 2098, les Ergo-Wian Sovereign Enclaves (EWS) sont les fantômes d'un monde qui n'existe plus. Ces zones fortifiées, disséminées le long des anciens corridors logistiques ou près des nappes phréatiques stratégiques, fonctionnent comme des entreprises-États, où chaque service — eau, électricité, accès aux données — est monétisé et optimisé par des algorithmes impitoyables. Les habitants des territoires environnants les tolèrent comme un mal nécessaire, échangeant leur travail ou leurs ressources contre une stabilité que les réseaux éco-communalistes ne peuvent plus garantir. Mais derrière leurs murs, les EWS abritent aussi les derniers bastions d'une élite économique en déclin, nostalgique d'un temps où l'efficacité primait sur la résilience.
