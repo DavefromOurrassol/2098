@@ -172,7 +172,7 @@ zones:
   origine_reelle:
   - entite: Brésil
     type_entite: pays
-    portion: null
+    portion: bassin amazonien et Centre-Ouest (hors Nordeste et Sud-Est)
   - entite: Colombie
     type_entite: pays
     portion: null
@@ -621,9 +621,6 @@ zones:
     type_entite: pays
     portion: null
   - entite: Mexique
-    type_entite: pays
-    portion: null
-  - entite: Uruguay
     type_entite: pays
     portion: null
   description: L'ancien espace fédéral nord-américain s'est disloqué en plusieurs
@@ -2016,9 +2013,9 @@ zones:
   promu_depuis: Plaines de l'Ebre
 - slug: sao_paulo_rpda
   nom: Grand São Paulo (Infrastructure RPDA Zombie)
-  niveau: 2
+  niveau: 1
   type: zone_sinistree
-  parent: nordeste_bresil_frente
+  parent: null
   origine_reelle:
   - entite: São Paulo, Brésil
     type_entite: autre
@@ -3122,6 +3119,9 @@ zones:
   - entite: Argentine
     type_entite: pays
     portion: null
+  - entite: Uruguay
+    type_entite: pays
+    portion: null
 - slug: bolivie_altipano_strategique
   nom: Bolivie (Altiplano Stratégique)
   niveau: 1
@@ -3348,7 +3348,7 @@ Quartier de Lagos concentrant un cluster Mnemos contenant des données agricoles
 
 *zone_sinistree — statut : fragmenté*
 
-**Origine réelle (2026)** : Brésil, Colombie, Pérou, Belize, Panama, Équateur, Paraguay, Guyana, Suriname
+**Origine réelle (2026)** : Brésil (bassin amazonien et Centre-Ouest (hors Nordeste et Sud-Est)), Colombie, Pérou, Belize, Panama, Équateur, Paraguay, Guyana, Suriname
 
 **Transition** : 2041-2098
 
@@ -3896,7 +3896,7 @@ Axe logistique continental opéré par le conglomérat Bohai Transit, l'un des r
 
 *zone_sinistree — statut : fragmenté*
 
-**Origine réelle (2026)** : États-Unis d'Amérique, Canada, Mexique, Uruguay
+**Origine réelle (2026)** : États-Unis d'Amérique, Canada, Mexique
 
 **Transition** : 2040-2075 — voir [[election_parti_commun_americain_breakdown]]
 
@@ -4115,20 +4115,6 @@ Semi-aride nordeste et franges du cerrado brésilien où l'effondrement des stru
 
 *Sources attestées : frente_sertao_livre_breakdown*
 
-#### Grand São Paulo (Infrastructure RPDA Zombie) — sous [[nordeste_bresil_frente]]
-
-*zone_sinistree — niveau 2 — statut : fragmenté*
-
-**Origine réelle (2026)** : São Paulo, Brésil
-
-**Transition** : 2080-2098
-
-Mégapole brésilienne où la Rede Paulista de Distribuição Algorítmica continue d'émettre des ordres d'allocation d'eau, d'énergie et de logement depuis des serveurs non synchronisés, sans mise à jour démographique depuis 2091. Des fragments du système tournent en autonomie dans des enclaves, produisant des décisions algorithmiques localement contradictoires. Des milices ont appris à injecter de fausses données pour détourner des flux énergétiques destinés aux camps de déplacés.
-
-**Tensions internes** : Guerre autour des nœuds résiduels entre reconstructeurs d'une gouvernance algorithmique réformée et radicaux refusant toute délégation technique ; biais d'allocation favorisant les zones à faible densité (accident ou intention ?) ; groupes brûlant les nœuds réseaux encore actifs.
-
-*Sources attestées : rede_paulista_de_distribuicao_algoritmica_breakdown*
-
 ### Zone Golfe Persique–Levant
 
 *zone_sinistree — statut : en_declin*
@@ -4186,6 +4172,20 @@ Cible des salves de missiles balistiques iraniens en représailles aux frappes i
 **Tensions internes** : Contrôle disputé entre factions héritières de l'État israélien ; infrastructures partiellement fonctionnelles sous administration de facto de groupes armés locaux.
 
 *Sources attestées : conflit_israel_iran_2026_breakdown*
+
+### Grand São Paulo (Infrastructure RPDA Zombie)
+
+*zone_sinistree — statut : fragmenté*
+
+**Origine réelle (2026)** : São Paulo, Brésil
+
+**Transition** : 2080-2098
+
+Mégapole brésilienne où la Rede Paulista de Distribuição Algorítmica continue d'émettre des ordres d'allocation d'eau, d'énergie et de logement depuis des serveurs non synchronisés, sans mise à jour démographique depuis 2091. Des fragments du système tournent en autonomie dans des enclaves, produisant des décisions algorithmiques localement contradictoires. Des milices ont appris à injecter de fausses données pour détourner des flux énergétiques destinés aux camps de déplacés.
+
+**Tensions internes** : Guerre autour des nœuds résiduels entre reconstructeurs d'une gouvernance algorithmique réformée et radicaux refusant toute délégation technique ; biais d'allocation favorisant les zones à faible densité (accident ou intention ?) ; groupes brûlant les nœuds réseaux encore actifs.
+
+*Sources attestées : rede_paulista_de_distribuicao_algoritmica_breakdown*
 
 ### Archipel Anglo-Celtique
 
@@ -4607,7 +4607,7 @@ L'Éthiopie de 2098 est une région montagneuse ayant développé une autonomie 
 
 *territoire_autonome — statut : fragmenté*
 
-**Origine réelle (2026)** : Argentine
+**Origine réelle (2026)** : Argentine, Uruguay
 
 **Transition** : 2050-2075
 
