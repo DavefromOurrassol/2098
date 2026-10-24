@@ -1,0 +1,111 @@
+---
+name: Veilleurs d'Ormuz - Détachement Caspien
+type: instance
+slug: veilleurs_d_ormuz_breakdown
+entite: veilleurs_d_ormuz
+scenario: breakdown
+localisation:
+  zone: zone_golfe_levant
+  lieu: Bandar Abbas
+  type_lieu: ville
+
+type_dans_scenario: organisation
+
+role_dans_scenario: >
+  Les Veilleurs d'Ormuz - Détachement Caspien incarnent la mainmise de l'Arc Eurasien Central sur le détroit d'Ormuz dans un monde où les flux énergétiques sont devenus des armes. Mandatés par les consortiums énergétiques et les gouvernements résiduels de l'ex-espace postsoviétique, ils régulent, taxent et parfois bloquent le trafic maritime au nom d'une souveraineté régionale fragmentée. Leur rôle oscille entre garantie de stabilité pour les alliés de l'Arc et instrument de pression géopolitique, reflétant la tension fondamentale entre contrôle externe et autonomie locale dans un système en breakdown.
+
+responsabilites: >
+  Contrôle physique et numérique des navires transitant par Ormuz : vérification des cargaisons, perception de péages en cryptomonnaies ou en droits d'accès aux corridors eurasiens, interception des navires non autorisés. Gestion des infrastructures résiduelles (balises, drones sous-marins, stations de surveillance) et coordination avec les milices locales pour sécuriser les zones côtières. Application des décrets de l'Arc Eurasien Central sur les quotas d'exportation de pétrole et de minerais critiques.
+
+impact_local: 4
+impact_systemique_global: 3
+
+variables_influencees:
+    - geopolitique_conflits
+    - energie_ressources_critiques
+    - organisation_territoires
+
+zone_geographique:
+    - régionale
+    - continentale
+
+zone_systemique:
+    - énergie
+    - gouvernance
+    - sécurité
+
+alliances:
+    - consortium_energetique_oural_caspien_breakdown
+    - reseaux_de_renseignement_informels_issus_de_l_ancienne_structure_militaire_eurasienne_breakdown
+    - corridors_eurasiens_convoyage_breakdown
+
+oppositions:
+    - ligue_mediterraneenne_des_villes_etats_portuaires_breakdown
+    - cartels_logistiques_regionaux_breakdown
+    - saboteurs_des_corridors_de_transit_breakdown
+
+type_relation_dominante: dépendance
+
+annee_debut: 2041
+annee_fin: 
+
+trajectoire: émergent
+est_clandestin: false
+generation: post-effondrement
+
+injection:
+  type: custom
+  annee_injection: 2041
+  contexte_injection: >
+    Les Veilleurs d'Ormuz - Détachement Caspien agissent comme un verrou géopolitique et énergétique dans un système fragmenté. Leur contrôle sur le détroit intensifie les conflits pour l'accès aux ressources (polarité +1 sur énergie_ressources_critiques) et exacerbe les rivalités régionales (polarité +1 sur geopolitique_conflits). Leur existence même, en tant qu'entité émergente mais déjà structurante, contribue à la désorganisation des territoires en redessinant les flux logistiques sous contrainte (polarité +1 sur organisation_territoires).
+  impact_sur_variables:
+  - variable: geopolitique_conflits
+    delta_level: 15
+    duree: 10
+    polarite: 1
+  - variable: energie_ressources_critiques
+    delta_level: 12
+    duree: 8
+    polarite: 1
+  - variable: organisation_territoires
+    delta_level: 8
+    duree: 12
+    polarite: 1
+  propagation:
+    via_matrice: true
+
+description_journalistique: >
+  Depuis le port fantôme de Bandar Abbas, les Veilleurs d'Ormuz règnent sur les épaves et les tankers immobilisés. Leurs uniformes hybrides – treillis soviétiques recyclés, gilets pare-balles imprimés en 3D, masques à gaz artisanaux – trahissent une organisation née des ruines. Les péages, payables en yuans ou en tokens énergétiques, sont affichés sur des écrans rouillés : 50 000 $ pour un pétrolier, 10 000 $ pour un cargo de lithium. Les drones sous-marins, récupérés sur d'anciennes bases de l'OTAN, traquent les contrebandiers. Leur slogan, gravé sur les quais : 'Ormuz n'appartient à personne, mais nous en sommes les gardiens'.
+
+signes_distinctifs: >
+  Emblème : un détroit stylisé en forme de sablier, traversé par une flèche brisée. Couleurs : gris industriel et bleu pétrole. Équipement : drones sous-marins bricolés, balises de navigation piratées, et un système de cryptage basé sur des protocoles militaires soviétiques des années 1980, réactivés pour échapper aux cyberattaques occidentales.
+retry_signes_distinctifs: non
+
+tensions_narratives: >
+  Les Veilleurs sont tiraillés entre leur allégeance à l'Arc Eurasien Central et les pressions des milices locales, qui voient en eux une source de revenus plutôt qu'une autorité légitime. Leur contrôle sur Ormuz est contesté par les cartels logistiques, qui organisent des convois parallèles via le golfe d'Oman. Leur survie dépend de leur capacité à maintenir un équilibre précaire : trop de répression, et ils deviennent une cible ; trop de laxisme, et ils perdent leur utilité pour leurs mandants. Leur trajectoire pourrait basculer vers une militarisation accrue ou une dissolution dans le chaos des seigneurs de guerre énergétiques.
+
+date_creation: 2026-10-24
+---
+
+# Veilleurs d'Ormuz - Détachement Caspien
+
+## Rôle dans [[breakdown]]
+Les Veilleurs d'Ormuz - Détachement Caspien incarnent la mainmise de l'Arc Eurasien Central sur le détroit d'Ormuz dans un monde où les flux énergétiques sont devenus des armes. Mandatés par les consortiums énergétiques et les gouvernements résiduels de l'ex-espace postsoviétique, ils régulent, taxent et parfois bloquent le trafic maritime au nom d'une souveraineté régionale fragmentée. Leur rôle oscille entre garantie de stabilité pour les alliés de l'Arc et instrument de pression géopolitique, reflétant la tension fondamentale entre contrôle externe et autonomie locale dans un système en breakdown.
+
+## Responsabilités
+Contrôle physique et numérique des navires transitant par Ormuz : vérification des cargaisons, perception de péages en cryptomonnaies ou en droits d'accès aux corridors eurasiens, interception des navires non autorisés. Gestion des infrastructures résiduelles (balises, drones sous-marins, stations de surveillance) et coordination avec les milices locales pour sécuriser les zones côtières. Application des décrets de l'Arc Eurasien Central sur les quotas d'exportation de pétrole et de minerais critiques.
+
+## Variables influencées
+- [[geopolitique_conflits]]
+- [[energie_ressources_critiques]]
+- [[organisation_territoires]]
+
+## Relations
+**Alliés** : [[consortium_energetique_oural_caspien_breakdown]], [[reseaux_de_renseignement_informels_issus_de_l_ancienne_structure_militaire_eurasienne_breakdown]], [[corridors_eurasiens_convoyage_breakdown]]
+**Opposants** : [[ligue_mediterraneenne_des_villes_etats_portuaires_breakdown]], [[cartels_logistiques_regionaux_breakdown]], [[saboteurs_des_corridors_de_transit_breakdown]]
+
+## Description journalistique
+Depuis le port fantôme de Bandar Abbas, les Veilleurs d'Ormuz règnent sur les épaves et les tankers immobilisés. Leurs uniformes hybrides – treillis soviétiques recyclés, gilets pare-balles imprimés en 3D, masques à gaz artisanaux – trahissent une organisation née des ruines. Les péages, payables en yuans ou en tokens énergétiques, sont affichés sur des écrans rouillés : 50 000 $ pour un pétrolier, 10 000 $ pour un cargo de lithium. Les drones sous-marins, récupérés sur d'anciennes bases de l'OTAN, traquent les contrebandiers. Leur slogan, gravé sur les quais : 'Ormuz n'appartient à personne, mais nous en sommes les gardiens'.
+
+## Tensions narratives
+Les Veilleurs sont tiraillés entre leur allégeance à l'Arc Eurasien Central et les pressions des milices locales, qui voient en eux une source de revenus plutôt qu'une autorité légitime. Leur contrôle sur Ormuz est contesté par les cartels logistiques, qui organisent des convois parallèles via le golfe d'Oman. Leur survie dépend de leur capacité à maintenir un équilibre précaire : trop de répression, et ils deviennent une cible ; trop de laxisme, et ils perdent leur utilité pour leurs mandants. Leur trajectoire pourrait basculer vers une militarisation accrue ou une dissolution dans le chaos des seigneurs de guerre énergétiques.

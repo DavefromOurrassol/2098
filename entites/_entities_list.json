@@ -10228,5 +10228,37 @@
     "scenarios": [
       "fortress_world"
     ]
+  },
+  {
+    "nom": "Veilleurs d'Ormuz",
+    "slug": "veilleurs_d_ormuz",
+    "categorie": "organisation",
+    "description": "Les Gardiens des Détroits incarnent une entité chargée du contrôle et de la régulation des points névralgiques stratégiques, souvent maritimes ou logistiques, au nom d'une autorité supérieure (État, coalition, ou bloc géopolitique). Leur rôle est d'assurer la fluidité ou la restriction des flux vitaux (marchandises, ressources, informations) dans un contexte de fragmentation ou de crise systémique, tout en maintenant une apparence de neutralité ou de légitimité opérationnelle. Ils agissent comme des garants de l'ordre régional, mais leur pouvoir repose sur une tension permanente entre souveraineté locale et dépendance aux structures qui les mandatent.",
+    "tension_fondamentale": "La contradiction entre la nécessité de contrôler un corridor vital pour le compte d'un tiers et l'autonomie requise pour s'adapter aux réalités locales — ce qui les expose à devenir des instruments de pouvoir ou des cibles de contestation.",
+    "variables_potentielles": [
+      "geopolitique_conflits",
+      "organisation_territoires",
+      "energie_ressources_critiques",
+      "frontieres_du_systeme"
+    ],
+    "scenarios": [
+      "breakdown"
+    ]
+  },
+  {
+    "nom": "Alliance des Ports Caspiennes",
+    "slug": "alliance_des_ports_caspiennes",
+    "categorie": "organisation",
+    "description": "Une alliance régionale émergente qui émerge dans un contexte de fragmentation systémique pour coordonner des échanges vitaux (ressources, logistique, commerce) entre acteurs souverains ou semi-souverains. Elle incarne la tentative de recréer une stabilité minimale par la coopération pragmatique, souvent en marge des institutions globales défaillantes, tout en naviguant entre dépendance mutuelle et préservation des intérêts locaux. Son existence repose sur un équilibre précaire entre efficacité opérationnelle et légitimité contestée.",
+    "tension_fondamentale": "La contradiction entre la nécessité de coopérer pour survivre (interdépendance) et l'impératif de préserver une souveraineté ou des intérêts locaux (autonomie), ce qui menace en permanence sa cohésion et sa légitimité.",
+    "variables_potentielles": [
+      "geopolitique_conflits",
+      "gouvernance_institutions",
+      "organisation_territoires",
+      "systeme_economique_redistribution"
+    ],
+    "scenarios": [
+      "breakdown"
+    ]
   }
 ]

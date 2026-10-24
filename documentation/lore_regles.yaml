@@ -204,3 +204,16 @@ breakdown:
       - Comptoir des Ruines
       message: 'La Tour BCUC — Le Comptoir des Ruines disparaît en 2076 avec la destruction de Genève (destruction_geneve_2076)
         : toute mention au présent après 2076 est fausse.'
+
+    - id: iran_dans_arc_eurasien_2058
+      gravite: a_relire
+      meme_phrase:
+      - - Iran
+        - iranien
+        - iranienne
+        - Téhéran
+      - - Zone Golfe
+        - Golfe Persique–Levant
+        - Golfe Persique-Levant
+      message: 'Depuis le Pacte de Tabriz (2058), l''Iran fait partie de l''Arc Eurasien Central et n''appartient
+        plus à la Zone Golfe Persique–Levant : à relire si la phrase le rattache encore au Golfe après 2058.'
