@@ -41,7 +41,6 @@ alliances:
 - consortium_d_audit_algorithmique_ouvert_new_sustainability
 - reseau_des_agences_climatiques_regionales_new_sustainability
 - tribunal_algorithmique_de_bruxelles_new_sustainability
-- tribunal_gouvernance_algorithmique_bruxelles_new_sustainability
 oppositions:
 - alliance_numerique_eurasie_pacifique_new_sustainability
 - coalition_des_industries_extractives_residuelles_new_sustainability
@@ -125,7 +124,6 @@ Dans un scénario où la gouvernance institutionnelle atteint un niveau de légi
 - [[consortium_d_audit_algorithmique_ouvert_new_sustainability]]
 - [[reseau_des_agences_climatiques_regionales_new_sustainability]]
 - [[tribunal_algorithmique_de_bruxelles_new_sustainability]]
-- [[tribunal_gouvernance_algorithmique_bruxelles_new_sustainability]]
 **Opposants :**
 - [[alliance_numerique_eurasie_pacifique_new_sustainability]]
 - [[coalition_des_industries_extractives_residuelles_new_sustainability]]

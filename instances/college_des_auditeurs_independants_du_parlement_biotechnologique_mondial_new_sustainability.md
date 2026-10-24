@@ -40,7 +40,6 @@ alliances:
 - observatoire_anti_monopole_de_geneve_new_sustainability
 - reseau_global_de_cliniques_regeneratives_new_sustainability
 - tribunal_algorithmique_de_bruxelles_new_sustainability
-- tribunal_gouvernance_algorithmique_bruxelles_new_sustainability
 oppositions:
 - bloc_eurasien_souverainiste_new_sustainability
 - enclaves_de_donnees_proprietaires_des_megacorporations_new_sustainability
@@ -122,7 +121,6 @@ Sa légitimité est structurellement menacée : financé par les États membres 
 - [[observatoire_anti_monopole_de_geneve_new_sustainability]]
 - [[reseau_global_de_cliniques_regeneratives_new_sustainability]]
 - [[tribunal_algorithmique_de_bruxelles_new_sustainability]]
-- [[tribunal_gouvernance_algorithmique_bruxelles_new_sustainability]]
 **Opposants :**
 - [[bloc_eurasien_souverainiste_new_sustainability]]
 - [[enclaves_de_donnees_proprietaires_des_megacorporations_new_sustainability]]

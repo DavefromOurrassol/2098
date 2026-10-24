@@ -52,7 +52,6 @@ oppositions:
 - reseaux_de_medecine_regenerative_universelle_new_sustainability
 - reseaux_neo_democratiques_plaidant_pour_la_gouvernance_participative_directe_new_sustainability
 - tribunal_algorithmique_de_bruxelles_new_sustainability
-- tribunal_gouvernance_algorithmique_bruxelles_new_sustainability
 type_relation_dominante: compétition
 annee_debut: 2032
 annee_fin: null
@@ -142,7 +141,6 @@ La tension majeure réside dans le paradoxe fondateur du scénario new_sustainab
 - [[reseaux_de_medecine_regenerative_universelle_new_sustainability]]
 - [[reseaux_neo_democratiques_plaidant_pour_la_gouvernance_participative_directe_new_sustainability]]
 - [[tribunal_algorithmique_de_bruxelles_new_sustainability]]
-- [[tribunal_gouvernance_algorithmique_bruxelles_new_sustainability]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

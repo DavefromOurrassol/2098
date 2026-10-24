@@ -31,7 +31,6 @@ entites_citees:
   - gelecek_meclisi_new_sustainability
   - internationale_travailleurs_augmentes_new_sustainability
   - leena_vainala_new_sustainability
-  - tribunal_gouvernance_algorithmique_bruxelles_new_sustainability
   - tribunal_algorithmique_de_bruxelles_new_sustainability
 variables_pilotes:
   - climat_environnement_global
@@ -57,4 +56,4 @@ Pire : les récits supprimés ne disparaissent pas vraiment. Ils migrent vers le
 Pour l’instant, le Tribunal maintient sa décision. Mais dans les rues de Bruxelles, des affiches apparaissent, collées sur les murs des centres de données : *« ARIA nous ment. Qui ment à ARIA ? »* La question, elle, reste sans réponse.
 
 ---
-**Voir aussi** : [[directive_kontinuum_new_sustainability]] · [[gelecek_meclisi_new_sustainability]] · [[internationale_travailleurs_augmentes_new_sustainability]] · [[leena_vainala_new_sustainability]] · [[tribunal_gouvernance_algorithmique_bruxelles_new_sustainability]] · [[tribunal_algorithmique_de_bruxelles_new_sustainability]]
+**Voir aussi** : [[directive_kontinuum_new_sustainability]] · [[gelecek_meclisi_new_sustainability]] · [[internationale_travailleurs_augmentes_new_sustainability]] · [[leena_vainala_new_sustainability]] · [[tribunal_algorithmique_de_bruxelles_new_sustainability]]

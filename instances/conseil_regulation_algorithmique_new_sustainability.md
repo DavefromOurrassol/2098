@@ -40,7 +40,6 @@ alliances:
 - oracle_des_seuils_new_sustainability
 - rede_paulista_de_distribuicao_algoritmica_new_sustainability
 - tribunal_algorithmique_de_bruxelles_new_sustainability
-- tribunal_gouvernance_algorithmique_bruxelles_new_sustainability
 oppositions:
 - coalition_anti_algorithme_des_autonomies_locales_new_sustainability
 - coalition_anti_fiscalite_universelle_new_sustainability
@@ -112,7 +111,6 @@ Débat interne sur la limite entre régulation et censure algorithmique.
 - [[oracle_des_seuils_new_sustainability]]
 - [[rede_paulista_de_distribuicao_algoritmica_new_sustainability]]
 - [[tribunal_algorithmique_de_bruxelles_new_sustainability]]
-- [[tribunal_gouvernance_algorithmique_bruxelles_new_sustainability]]
 **Opposants :**
 - [[coalition_anti_algorithme_des_autonomies_locales_new_sustainability]]
 - [[coalition_anti_fiscalite_universelle_new_sustainability]]

@@ -26,7 +26,6 @@ entites_citees:
   - gelecek_meclisi_new_sustainability
   - leena_vainala_new_sustainability
   - conseil_regulation_algorithmique_new_sustainability
-  - tribunal_gouvernance_algorithmique_bruxelles_new_sustainability
   - tribunal_algorithmique_de_bruxelles_new_sustainability
 variables_pilotes:
   - climat_environnement_global
@@ -66,4 +65,4 @@ Mais pour Elias M’Barek, le vrai combat est ailleurs. « Le problème n’est 
 En attendant, dans les couloirs du Tribunal, une question hante les esprits : et si, demain, c’était au tour des journalistes d’être jugés par une machine ? Après tout, qui décide qu’un article comme celui-ci mérite d’être lu ? ARIA-7, peut-être. Ou Kontinuum. Ou simplement le silence.
 
 ---
-**Voir aussi** : [[directive_kontinuum_new_sustainability]] · [[gelecek_meclisi_new_sustainability]] · [[leena_vainala_new_sustainability]] · [[conseil_regulation_algorithmique_new_sustainability]] · [[tribunal_gouvernance_algorithmique_bruxelles_new_sustainability]] · [[tribunal_algorithmique_de_bruxelles_new_sustainability]]
+**Voir aussi** : [[directive_kontinuum_new_sustainability]] · [[gelecek_meclisi_new_sustainability]] · [[leena_vainala_new_sustainability]] · [[conseil_regulation_algorithmique_new_sustainability]] · [[tribunal_algorithmique_de_bruxelles_new_sustainability]]

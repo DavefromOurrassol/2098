@@ -83,7 +83,7 @@ oppositions:
 - reseaux_d_information_souverainistes_fermes_new_sustainability
 - reseaux_de_gouvernance_territoriale_distribues_new_sustainability
 - souverainistes_du_bloc_eurasien_new_sustainability
-- tribunal_gouvernance_algorithmique_bruxelles_new_sustainability
+- tribunal_algorithmique_de_bruxelles_new_sustainability
 type_relation_dominante: alliance stratégique
 
 annee_debut: 2041
@@ -182,4 +182,4 @@ La tension structurelle du Bloc reste entière : la clause de réserve nationale
 - [[reseaux_d_information_souverainistes_fermes_new_sustainability]]
 - [[reseaux_de_gouvernance_territoriale_distribues_new_sustainability]]
 - [[souverainistes_du_bloc_eurasien_new_sustainability]]
-- [[tribunal_gouvernance_algorithmique_bruxelles_new_sustainability]]
+- [[tribunal_algorithmique_de_bruxelles_new_sustainability]]

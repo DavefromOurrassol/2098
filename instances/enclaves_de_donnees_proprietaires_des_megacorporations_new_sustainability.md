@@ -60,7 +60,6 @@ oppositions:
 - reseaux_de_medecine_regenerative_universelle_new_sustainability
 - terminal_kharg_data_haven_new_sustainability
 - tribunal_algorithmique_de_bruxelles_new_sustainability
-- tribunal_gouvernance_algorithmique_bruxelles_new_sustainability
 type_relation_dominante: conflit
 annee_debut: 2033
 annee_fin: null
@@ -160,7 +159,6 @@ La tension centrale réside dans le paradoxe d'un monde ayant atteint une gouver
 - [[reseaux_de_medecine_regenerative_universelle_new_sustainability]]
 - [[terminal_kharg_data_haven_new_sustainability]]
 - [[tribunal_algorithmique_de_bruxelles_new_sustainability]]
-- [[tribunal_gouvernance_algorithmique_bruxelles_new_sustainability]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

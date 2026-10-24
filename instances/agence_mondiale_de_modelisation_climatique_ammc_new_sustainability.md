@@ -74,7 +74,7 @@ oppositions:
 - internationale_souverainiste_de_deconnexion_territoriale_new_sustainability
 - ligue_des_cites_du_sahel_numerique_new_sustainability
 - reseaux_d_information_souverainistes_fermes_new_sustainability
-- tribunal_gouvernance_algorithmique_bruxelles_new_sustainability
+- tribunal_algorithmique_de_bruxelles_new_sustainability
 type_relation_dominante: coopération
 annee_debut: 2038
 annee_fin: null
@@ -184,7 +184,7 @@ L'autorité scientifique de l'AMMC est régulièrement contestée par les souver
 - [[internationale_souverainiste_de_deconnexion_territoriale_new_sustainability]]
 - [[ligue_des_cites_du_sahel_numerique_new_sustainability]]
 - [[reseaux_d_information_souverainistes_fermes_new_sustainability]]
-- [[tribunal_gouvernance_algorithmique_bruxelles_new_sustainability]]
+- [[tribunal_algorithmique_de_bruxelles_new_sustainability]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

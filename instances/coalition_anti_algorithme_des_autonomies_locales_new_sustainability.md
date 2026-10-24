@@ -74,7 +74,6 @@ oppositions:
 - parlement_territoires_nairobi_new_sustainability
 - rede_paulista_de_distribuicao_algoritmica_new_sustainability
 - tribunal_algorithmique_de_bruxelles_new_sustainability
-- tribunal_gouvernance_algorithmique_bruxelles_new_sustainability
 type_relation_dominante: conflit
 annee_debut: 2062
 annee_fin: null
@@ -185,7 +184,6 @@ La contradiction fondamentale qui ronge la Coalition est d'ordre existentiel : p
 - [[parlement_territoires_nairobi_new_sustainability]]
 - [[rede_paulista_de_distribuicao_algoritmica_new_sustainability]]
 - [[tribunal_algorithmique_de_bruxelles_new_sustainability]]
-- [[tribunal_gouvernance_algorithmique_bruxelles_new_sustainability]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

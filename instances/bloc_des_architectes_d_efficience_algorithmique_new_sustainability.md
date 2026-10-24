@@ -40,7 +40,6 @@ alliances:
 - conseil_regulation_algorithmique_new_sustainability
 - consortium_des_ia_climatiques_new_sustainability
 - factions_technocratiques_de_la_delegation_ia_totale_new_sustainability
-- tribunal_algorithmique_de_bruxelles_new_sustainability
 oppositions:
 - coalition_anti_algorithme_des_autonomies_locales_new_sustainability
 - collectifs_de_deplaces_climatiques_non_representes_new_sustainability
@@ -56,7 +55,7 @@ oppositions:
 - reseau_des_bio_communs_regionaux_new_sustainability
 - reseau_des_hubs_urbains_regeneratifs_new_sustainability
 - reseaux_neo_democratiques_plaidant_pour_la_gouvernance_participative_directe_new_sustainability
-- tribunal_gouvernance_algorithmique_bruxelles_new_sustainability
+- tribunal_algorithmique_de_bruxelles_new_sustainability
 type_relation_dominante: compétition
 annee_debut: 2040
 annee_fin: null
@@ -132,7 +131,6 @@ Le Bloc est pris en tenaille entre son discours d'efficience écologique — sé
 - [[conseil_regulation_algorithmique_new_sustainability]]
 - [[consortium_des_ia_climatiques_new_sustainability]]
 - [[factions_technocratiques_de_la_delegation_ia_totale_new_sustainability]]
-- [[tribunal_algorithmique_de_bruxelles_new_sustainability]]
 **Opposants :**
 - [[coalition_anti_algorithme_des_autonomies_locales_new_sustainability]]
 - [[collectifs_de_deplaces_climatiques_non_representes_new_sustainability]]
@@ -148,7 +146,7 @@ Le Bloc est pris en tenaille entre son discours d'efficience écologique — sé
 - [[reseau_des_bio_communs_regionaux_new_sustainability]]
 - [[reseau_des_hubs_urbains_regeneratifs_new_sustainability]]
 - [[reseaux_neo_democratiques_plaidant_pour_la_gouvernance_participative_directe_new_sustainability]]
-- [[tribunal_gouvernance_algorithmique_bruxelles_new_sustainability]]
+- [[tribunal_algorithmique_de_bruxelles_new_sustainability]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

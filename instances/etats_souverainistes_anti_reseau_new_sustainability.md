@@ -78,7 +78,6 @@ oppositions:
 - reseau_global_de_cliniques_regeneratives_new_sustainability
 - trame_bioclimatique_new_sustainability
 - tribunal_algorithmique_de_bruxelles_new_sustainability
-- tribunal_gouvernance_algorithmique_bruxelles_new_sustainability
 type_relation_dominante: conflit
 annee_debut: 2026
 annee_fin: null
@@ -192,7 +191,6 @@ La contradiction centrale de ces États est qu'ils dépendent des infrastructure
 - [[reseau_global_de_cliniques_regeneratives_new_sustainability]]
 - [[trame_bioclimatique_new_sustainability]]
 - [[tribunal_algorithmique_de_bruxelles_new_sustainability]]
-- [[tribunal_gouvernance_algorithmique_bruxelles_new_sustainability]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

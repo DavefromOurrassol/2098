@@ -56,7 +56,7 @@ oppositions:
 - internationale_souverainiste_de_deconnexion_territoriale_new_sustainability
 - nexcore_new_sustainability
 - prisme_global_new_sustainability
-- tribunal_gouvernance_algorithmique_bruxelles_new_sustainability
+- tribunal_algorithmique_de_bruxelles_new_sustainability
 type_relation_dominante: compétition
 annee_debut: 2039
 annee_fin: null
@@ -149,7 +149,7 @@ Le Réseau est tiraillé entre son idéal d'horizontalité radicale et la néces
 - [[internationale_souverainiste_de_deconnexion_territoriale_new_sustainability]]
 - [[nexcore_new_sustainability]]
 - [[prisme_global_new_sustainability]]
-- [[tribunal_gouvernance_algorithmique_bruxelles_new_sustainability]]
+- [[tribunal_algorithmique_de_bruxelles_new_sustainability]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

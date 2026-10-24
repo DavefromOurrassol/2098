@@ -42,7 +42,6 @@ alliances:
 - leena_vainala_new_sustainability
 - parlement_deliberatif_mondial_new_sustainability
 - tribunal_algorithmique_de_bruxelles_new_sustainability
-- tribunal_gouvernance_algorithmique_bruxelles_new_sustainability
 oppositions:
 - bloc_eurasien_souverainiste_new_sustainability
 - coalition_des_industries_extractives_residuelles_new_sustainability
@@ -133,7 +132,6 @@ L'Institut est structurellement tiraillé entre son rôle de légitimateur des g
 - [[leena_vainala_new_sustainability]]
 - [[parlement_deliberatif_mondial_new_sustainability]]
 - [[tribunal_algorithmique_de_bruxelles_new_sustainability]]
-- [[tribunal_gouvernance_algorithmique_bruxelles_new_sustainability]]
 **Opposants :**
 - [[bloc_eurasien_souverainiste_new_sustainability]]
 - [[coalition_des_industries_extractives_residuelles_new_sustainability]]

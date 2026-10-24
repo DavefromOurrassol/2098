@@ -31,7 +31,6 @@ entites_citees:
   - gelecek_meclisi_new_sustainability
   - leena_vainala_new_sustainability
   - internationale_travailleurs_augmentes_new_sustainability
-  - tribunal_gouvernance_algorithmique_bruxelles_new_sustainability
   - tribunal_algorithmique_de_bruxelles_new_sustainability
 variables_pilotes:
   - climat_environnement_global
@@ -89,4 +88,4 @@ En attendant le verdict, prévu pour le 20 juillet, une question hante les coulo
 ---
 
 ---
-**Voir aussi** : [[directive_kontinuum_new_sustainability]] · [[gelecek_meclisi_new_sustainability]] · [[leena_vainala_new_sustainability]] · [[internationale_travailleurs_augmentes_new_sustainability]] · [[tribunal_gouvernance_algorithmique_bruxelles_new_sustainability]] · [[tribunal_algorithmique_de_bruxelles_new_sustainability]]
+**Voir aussi** : [[directive_kontinuum_new_sustainability]] · [[gelecek_meclisi_new_sustainability]] · [[leena_vainala_new_sustainability]] · [[internationale_travailleurs_augmentes_new_sustainability]] · [[tribunal_algorithmique_de_bruxelles_new_sustainability]]

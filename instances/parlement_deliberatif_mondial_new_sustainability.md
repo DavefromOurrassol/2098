@@ -53,7 +53,6 @@ alliances:
 - reseau_global_de_cliniques_regeneratives_new_sustainability
 - reseaux_neo_democratiques_plaidant_pour_la_gouvernance_participative_directe_new_sustainability
 - tribunal_algorithmique_de_bruxelles_new_sustainability
-- tribunal_gouvernance_algorithmique_bruxelles_new_sustainability
 oppositions:
 - bloc_des_gouvernements_souverainistes_hydriques_new_sustainability
 - bloc_eurasien_souverainiste_new_sustainability
@@ -157,7 +156,6 @@ La tension structurelle du Parlement réside dans l'écart béant entre sa légi
 - [[reseau_global_de_cliniques_regeneratives_new_sustainability]]
 - [[reseaux_neo_democratiques_plaidant_pour_la_gouvernance_participative_directe_new_sustainability]]
 - [[tribunal_algorithmique_de_bruxelles_new_sustainability]]
-- [[tribunal_gouvernance_algorithmique_bruxelles_new_sustainability]]
 **Opposants :**
 - [[bloc_des_gouvernements_souverainistes_hydriques_new_sustainability]]
 - [[bloc_eurasien_souverainiste_new_sustainability]]

@@ -50,7 +50,6 @@ alliances:
 - rede_paulista_de_distribuicao_algoritmica_new_sustainability
 - reseau_des_agences_climatiques_regionales_new_sustainability
 - tribunal_algorithmique_de_bruxelles_new_sustainability
-- tribunal_gouvernance_algorithmique_bruxelles_new_sustainability
 oppositions:
 - coalition_anti_algorithme_des_autonomies_locales_new_sustainability
 - coalition_anti_fiscalite_universelle_new_sustainability
@@ -137,7 +136,6 @@ La légitimité performative du CGAI repose sur ses succès passés — mais que
 - [[rede_paulista_de_distribuicao_algoritmica_new_sustainability]]
 - [[reseau_des_agences_climatiques_regionales_new_sustainability]]
 - [[tribunal_algorithmique_de_bruxelles_new_sustainability]]
-- [[tribunal_gouvernance_algorithmique_bruxelles_new_sustainability]]
 **Opposants :**
 - [[coalition_anti_algorithme_des_autonomies_locales_new_sustainability]]
 - [[coalition_anti_fiscalite_universelle_new_sustainability]]

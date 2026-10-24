@@ -47,7 +47,6 @@ alliances:
 - oracle_des_seuils_new_sustainability
 - prisme_global_new_sustainability
 - tribunal_algorithmique_de_bruxelles_new_sustainability
-- tribunal_gouvernance_algorithmique_bruxelles_new_sustainability
 oppositions:
 - bloc_eurasien_souverainiste_new_sustainability
 - coalition_anti_algorithme_des_autonomies_locales_new_sustainability
@@ -134,7 +133,6 @@ Le Conseil est écartelé entre sa mission d'encadrement et la pression des bloc
 - [[oracle_des_seuils_new_sustainability]]
 - [[prisme_global_new_sustainability]]
 - [[tribunal_algorithmique_de_bruxelles_new_sustainability]]
-- [[tribunal_gouvernance_algorithmique_bruxelles_new_sustainability]]
 **Opposants :**
 - [[bloc_eurasien_souverainiste_new_sustainability]]
 - [[coalition_anti_algorithme_des_autonomies_locales_new_sustainability]]

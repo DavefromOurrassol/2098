@@ -42,7 +42,6 @@ alliances:
 - rede_paulista_de_distribuicao_algoritmica_new_sustainability
 - reseau_des_agences_climatiques_regionales_new_sustainability
 - tribunal_algorithmique_de_bruxelles_new_sustainability
-- tribunal_gouvernance_algorithmique_bruxelles_new_sustainability
 oppositions:
 - coalition_des_industries_extractives_residuelles_new_sustainability
 - collectifs_de_desobeissance_algorithmique_new_sustainability
@@ -126,7 +125,6 @@ Le CAAO est structurellement coincé entre les institutions technocratiques qui 
 - [[rede_paulista_de_distribuicao_algoritmica_new_sustainability]]
 - [[reseau_des_agences_climatiques_regionales_new_sustainability]]
 - [[tribunal_algorithmique_de_bruxelles_new_sustainability]]
-- [[tribunal_gouvernance_algorithmique_bruxelles_new_sustainability]]
 **Opposants :**
 - [[coalition_des_industries_extractives_residuelles_new_sustainability]]
 - [[collectifs_de_desobeissance_algorithmique_new_sustainability]]

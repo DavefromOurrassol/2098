@@ -52,7 +52,6 @@ alliances:
 - reseau_des_agences_climatiques_regionales_new_sustainability
 - reseau_mnemos_new_sustainability
 - tribunal_algorithmique_de_bruxelles_new_sustainability
-- tribunal_gouvernance_algorithmique_bruxelles_new_sustainability
 oppositions:
 - bloc_eurasien_souverainiste_new_sustainability
 - coalition_anti_algorithme_des_autonomies_locales_new_sustainability
@@ -151,7 +150,6 @@ La tension centrale du Consortium réside dans la contradiction entre son mandat
 - [[reseau_des_agences_climatiques_regionales_new_sustainability]]
 - [[reseau_mnemos_new_sustainability]]
 - [[tribunal_algorithmique_de_bruxelles_new_sustainability]]
-- [[tribunal_gouvernance_algorithmique_bruxelles_new_sustainability]]
 **Opposants :**
 - [[bloc_eurasien_souverainiste_new_sustainability]]
 - [[coalition_anti_algorithme_des_autonomies_locales_new_sustainability]]

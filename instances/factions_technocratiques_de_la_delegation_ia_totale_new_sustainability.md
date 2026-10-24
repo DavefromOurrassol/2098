@@ -57,7 +57,6 @@ oppositions:
 - reseau_des_communs_alimentaires_hors_grille_new_sustainability
 - reseaux_neo_democratiques_plaidant_pour_la_gouvernance_participative_directe_new_sustainability
 - tribunal_algorithmique_de_bruxelles_new_sustainability
-- tribunal_gouvernance_algorithmique_bruxelles_new_sustainability
 type_relation_dominante: compétition
 annee_debut: 2032
 annee_fin: null
@@ -150,7 +149,6 @@ La tension centrale réside dans leur paradoxe fondateur : ces factions opèrent
 - [[reseau_des_communs_alimentaires_hors_grille_new_sustainability]]
 - [[reseaux_neo_democratiques_plaidant_pour_la_gouvernance_participative_directe_new_sustainability]]
 - [[tribunal_algorithmique_de_bruxelles_new_sustainability]]
-- [[tribunal_gouvernance_algorithmique_bruxelles_new_sustainability]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

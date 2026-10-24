@@ -51,7 +51,7 @@ oppositions:
 - collectifs_de_desobeissance_algorithmique_new_sustainability
 - etats_souverainistes_anti_reseau_new_sustainability
 - mouvement_pour_l_autodetermination_territoriale_new_sustainability
-- tribunal_gouvernance_algorithmique_bruxelles_new_sustainability
+- tribunal_algorithmique_de_bruxelles_new_sustainability
 type_relation_dominante: dépendance
 annee_debut: 2041
 annee_fin: null
@@ -142,7 +142,7 @@ La légitimité démocratique du Consortium reste son talon d'Achille : aucun su
 - [[collectifs_de_desobeissance_algorithmique_new_sustainability]]
 - [[etats_souverainistes_anti_reseau_new_sustainability]]
 - [[mouvement_pour_l_autodetermination_territoriale_new_sustainability]]
-- [[tribunal_gouvernance_algorithmique_bruxelles_new_sustainability]]
+- [[tribunal_algorithmique_de_bruxelles_new_sustainability]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

@@ -37,7 +37,6 @@ zone_systemique:
 
 alliances:
 - assemblee_territoires_new_sustainability
-- bloc_des_architectes_d_efficience_algorithmique_new_sustainability
 - bureau_gouvernance_algorithmique_new_sustainability
 - centre_institutionnel_geneve_new_sustainability
 - college_des_auditeurs_independants_du_parlement_biotechnologique_mondial_new_sustainability
@@ -49,15 +48,20 @@ alliances:
 - observatoire_anti_monopole_de_geneve_new_sustainability
 - parlement_deliberatif_mondial_new_sustainability
 oppositions:
+- agence_mondiale_de_modelisation_climatique_ammc_new_sustainability
 - bloc_des_gouvernements_souverainistes_hydriques_new_sustainability
+- bloc_eurasien_souverainiste_new_sustainability
 - coalition_anti_algorithme_des_autonomies_locales_new_sustainability
 - collectifs_anarcho_autonomistes_des_zones_libres_new_sustainability
+- collectifs_de_desobeissance_algorithmique_new_sustainability
+- consortium_des_ia_climatiques_new_sustainability
 - enclaves_de_donnees_proprietaires_des_megacorporations_new_sustainability
 - etats_souverainistes_anti_reseau_new_sustainability
 - factions_internes_pro_opacite_des_parametres_new_sustainability
 - factions_technocratiques_de_la_delegation_ia_totale_new_sustainability
 - internationale_souverainiste_de_deconnexion_territoriale_new_sustainability
 - lobbies_des_plateformes_de_consensus_automatise_new_sustainability
+- reseau_des_communs_numeriques_globaux_new_sustainability
 - souverainistes_du_bloc_eurasien_new_sustainability
 - terminal_kharg_data_haven_new_sustainability
 type_relation_dominante: rivalité
@@ -112,7 +116,6 @@ La question de l'exécution effective de ses décisions reste entière : sans fo
 ## Relations
 **Alliés :**
 - [[assemblee_territoires_new_sustainability]]
-- [[bloc_des_architectes_d_efficience_algorithmique_new_sustainability]]
 - [[bureau_gouvernance_algorithmique_new_sustainability]]
 - [[centre_institutionnel_geneve_new_sustainability]]
 - [[college_des_auditeurs_independants_du_parlement_biotechnologique_mondial_new_sustainability]]
@@ -124,14 +127,19 @@ La question de l'exécution effective de ses décisions reste entière : sans fo
 - [[observatoire_anti_monopole_de_geneve_new_sustainability]]
 - [[parlement_deliberatif_mondial_new_sustainability]]
 **Opposants :**
+- [[agence_mondiale_de_modelisation_climatique_ammc_new_sustainability]]
 - [[bloc_des_gouvernements_souverainistes_hydriques_new_sustainability]]
+- [[bloc_eurasien_souverainiste_new_sustainability]]
 - [[coalition_anti_algorithme_des_autonomies_locales_new_sustainability]]
 - [[collectifs_anarcho_autonomistes_des_zones_libres_new_sustainability]]
+- [[collectifs_de_desobeissance_algorithmique_new_sustainability]]
+- [[consortium_des_ia_climatiques_new_sustainability]]
 - [[enclaves_de_donnees_proprietaires_des_megacorporations_new_sustainability]]
 - [[etats_souverainistes_anti_reseau_new_sustainability]]
 - [[factions_internes_pro_opacite_des_parametres_new_sustainability]]
 - [[factions_technocratiques_de_la_delegation_ia_totale_new_sustainability]]
 - [[internationale_souverainiste_de_deconnexion_territoriale_new_sustainability]]
 - [[lobbies_des_plateformes_de_consensus_automatise_new_sustainability]]
+- [[reseau_des_communs_numeriques_globaux_new_sustainability]]
 - [[souverainistes_du_bloc_eurasien_new_sustainability]]
 - [[terminal_kharg_data_haven_new_sustainability]]
