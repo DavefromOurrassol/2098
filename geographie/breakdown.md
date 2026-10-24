@@ -3478,7 +3478,7 @@ Infrastructure portuaire arctique disputée entre les factions résiduelles de l
 
 *union_regionale — niveau 2 — statut : stable*
 
-**Origine réelle (2026)** : Pologne (côte baltique)
+**Origine réelle (2026)** : Estonie (côte baltique (Tallinn)), Lettonie (côte baltique (Riga)), Lituanie (côte baltique (Klaipėda)), Allemagne (côte baltique et estuaire de l'Elbe (Lübeck, Rostock, Hambourg)), Pologne (côte baltique) (Gdańsk et la côte de Poméranie (débordement sur la zone voisine))
 
 **Transition** : 2060-2098
 
