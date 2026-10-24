@@ -1,5 +1,5 @@
 ---
-name: Les Cicatrices Vertes
+name: Trame Bioclimatique — les Arcs Orphelins
 type: instance
 slug: trame_bioclimatique_breakdown
 entite: trame_bioclimatique
@@ -13,7 +13,7 @@ localisation:
 type_dans_scenario: infrastructure
 
 role_dans_scenario: >
-  Ce qui fut la Trame Bioclimatique Continentale — un réseau d'ingénierie écologique pensé pour traverser les frontières — s'est disloqué en arcs territoriaux orphelins que les acteurs locaux appellent désormais 'les Cicatrices Vertes'. Ces tronçons de corridors biologiques, stations d'irrigation atmosphérique et forêts-puits fonctionnent en autonomie partielle, contrôlés par des seigneurs de territoire, des communautés villageoises armées ou des factions para-étatiques selon les zones. L'infrastructure subsiste mais a perdu toute cohérence systémique : chaque segment est devenu une ressource stratégique locale plutôt qu'un bien commun continental.
+  Ce qui fut la Trame Bioclimatique Continentale — un réseau d'ingénierie écologique pensé pour traverser les frontières — s'est disloqué en arcs territoriaux orphelins que les acteurs locaux appellent désormais 'les Arcs Orphelins'. Ces tronçons de corridors biologiques, stations d'irrigation atmosphérique et forêts-puits fonctionnent en autonomie partielle, contrôlés par des seigneurs de territoire, des communautés villageoises armées ou des factions para-étatiques selon les zones. L'infrastructure subsiste mais a perdu toute cohérence systémique : chaque segment est devenu une ressource stratégique locale plutôt qu'un bien commun continental.
 
 responsabilites: >
   Certains nœuds encore opérationnels fournissent de l'eau atmosphérique captée et des régulations thermiques locales à des enclaves humaines qui en dépendent pour survivre. Des factions armées patrouillent les corridors biologiques pour en contrôler l'accès, taxer les flux d'eau ou détruire les segments adverses en temps de conflit.
@@ -59,7 +59,7 @@ injection:
     via_matrice: false
 
 description_journalistique: >
-  Depuis les hauteurs du plateau central, on distingue encore les anciennes lignes de la Trame : bandes sombres de végétation dense qui découpent le paysage calciné comme des sutures sur une peau brûlée. Les habitants les appellent 'les Cicatrices Vertes' — un nom qui dit tout. Ces corridors conçus pour relier des continents ne relient plus rien ; ils sont devenus des frontières, des fortifications, des enjeux de guerre. À Kilomètre 340, le poste de captation atmosphérique tourne encore, sous la garde armée du Clan des Eaux Hautes qui fait payer l'accès en vivres ou en main-d'œuvre. À Kilomètre 580, le même équipement a été démantelé et revendu pièce à pièce. Personne ne sait combien de stations fonctionnent encore sur l'ensemble du continent. Les ingénieurs qui connaissaient le réseau global sont morts, partis ou silencieux.
+  Depuis les hauteurs du plateau central, on distingue encore les anciennes lignes de la Trame : bandes sombres de végétation dense qui découpent le paysage calciné comme des sutures sur une peau brûlée. Les habitants les appellent 'les Arcs Orphelins' — un nom qui dit tout. Ces corridors conçus pour relier des continents ne relient plus rien ; ils sont devenus des frontières, des fortifications, des enjeux de guerre. À Kilomètre 340, le poste de captation atmosphérique tourne encore, sous la garde armée du Clan des Eaux Hautes qui fait payer l'accès en vivres ou en main-d'œuvre. À Kilomètre 580, le même équipement a été démantelé et revendu pièce à pièce. Personne ne sait combien de stations fonctionnent encore sur l'ensemble du continent. Les ingénieurs qui connaissaient le réseau global sont morts, partis ou silencieux.
 
 signes_distinctifs: >
   Balises solaires orange rouillées marquant les anciens nœuds du réseau, reconverties en points de guet ou en autels selon les cultures locales. Végétation dense et anormalement haute le long des corridors actifs, tranchant visuellement avec les terres dévastées alentour — signe immédiatement lisible de qui contrôle l'eau.
@@ -73,10 +73,10 @@ est_clandestin: false
 
 ---
 
-# Les Cicatrices Vertes
+# Trame Bioclimatique — les Arcs Orphelins
 
 ## Rôle dans [[breakdown]]
-Ce qui fut la Trame Bioclimatique Continentale — un réseau d'ingénierie écologique pensé pour traverser les frontières — s'est disloqué en arcs territoriaux orphelins que les acteurs locaux appellent désormais 'les Cicatrices Vertes'. Ces tronçons de corridors biologiques, stations d'irrigation atmosphérique et forêts-puits fonctionnent en autonomie partielle, contrôlés par des seigneurs de territoire, des communautés villageoises armées ou des factions para-étatiques selon les zones. L'infrastructure subsiste mais a perdu toute cohérence systémique : chaque segment est devenu une ressource stratégique locale plutôt qu'un bien commun continental.
+Ce qui fut la Trame Bioclimatique Continentale — un réseau d'ingénierie écologique pensé pour traverser les frontières — s'est disloqué en arcs territoriaux orphelins que les acteurs locaux appellent désormais 'les Arcs Orphelins'. Ces tronçons de corridors biologiques, stations d'irrigation atmosphérique et forêts-puits fonctionnent en autonomie partielle, contrôlés par des seigneurs de territoire, des communautés villageoises armées ou des factions para-étatiques selon les zones. L'infrastructure subsiste mais a perdu toute cohérence systémique : chaque segment est devenu une ressource stratégique locale plutôt qu'un bien commun continental.
 
 ## Responsabilités
 Certains nœuds encore opérationnels fournissent de l'eau atmosphérique captée et des régulations thermiques locales à des enclaves humaines qui en dépendent pour survivre. Des factions armées patrouillent les corridors biologiques pour en contrôler l'accès, taxer les flux d'eau ou détruire les segments adverses en temps de conflit.
@@ -88,7 +88,7 @@ Certains nœuds encore opérationnels fournissent de l'eau atmosphérique capté
 
 
 ## Description journalistique
-Depuis les hauteurs du plateau central, on distingue encore les anciennes lignes de la Trame : bandes sombres de végétation dense qui découpent le paysage calciné comme des sutures sur une peau brûlée. Les habitants les appellent 'les Cicatrices Vertes' — un nom qui dit tout. Ces corridors conçus pour relier des continents ne relient plus rien ; ils sont devenus des frontières, des fortifications, des enjeux de guerre. À Kilomètre 340, le poste de captation atmosphérique tourne encore, sous la garde armée du Clan des Eaux Hautes qui fait payer l'accès en vivres ou en main-d'œuvre. À Kilomètre 580, le même équipement a été démantelé et revendu pièce à pièce. Personne ne sait combien de stations fonctionnent encore sur l'ensemble du continent. Les ingénieurs qui connaissaient le réseau global sont morts, partis ou silencieux.
+Depuis les hauteurs du plateau central, on distingue encore les anciennes lignes de la Trame : bandes sombres de végétation dense qui découpent le paysage calciné comme des sutures sur une peau brûlée. Les habitants les appellent 'les Arcs Orphelins' — un nom qui dit tout. Ces corridors conçus pour relier des continents ne relient plus rien ; ils sont devenus des frontières, des fortifications, des enjeux de guerre. À Kilomètre 340, le poste de captation atmosphérique tourne encore, sous la garde armée du Clan des Eaux Hautes qui fait payer l'accès en vivres ou en main-d'œuvre. À Kilomètre 580, le même équipement a été démantelé et revendu pièce à pièce. Personne ne sait combien de stations fonctionnent encore sur l'ensemble du continent. Les ingénieurs qui connaissaient le réseau global sont morts, partis ou silencieux.
 
 ## Tensions narratives
 Un réseau de techniciens nomades tente de reconnecter clandestinement plusieurs tronçons orphelins pour restaurer un minimum de cohérence hydrique régionale — mission perçue comme subversive par les factions qui tirent leur pouvoir de la fragmentation. La question de savoir si une station atmosphérique encore intacte peut être remise en service sans déclencher une guerre entre trois factions riveraines structure de nombreux conflits locaux. Enfin, des rumeurs persistent qu'un ancien centre de contrôle continental serait encore actif quelque part, gérant automatiquement des flux que personne ne comprend plus — et que le retrouver signifierait soit sauver la Trame, soit en achever le pillage.

@@ -1,5 +1,5 @@
 ---
-name: Les Seuils Fermés — Réseau des Campements Périphériques
+name: Les Campements des Checkpoints
 type: instance
 slug: campements_seuils_fermes_fortress_world
 entite: campements_seuils_fermes
@@ -7,7 +7,7 @@ scenario: fortress_world
 statut: officialise_enrichi
 localisation:
   zone: campements_seuils_fermes
-  lieu: Campements des Seuils Fermés — no man's lands entre checkpoints aux seuils du Bloc Atlantique
+  lieu: Campements des Checkpoints — no man's lands entre checkpoints aux seuils du Bloc Atlantique
   type_lieu: site_strategique
 
 type_dans_scenario: organisation
@@ -102,7 +102,7 @@ est_clandestin: false
 
 ---
 
-# Les Seuils Fermés — Réseau des Campements Périphériques
+# Les Campements des Checkpoints
 
 ## Rôle dans [[fortress_world]]
 Réseau informel de campements établis aux seuils des forteresses climatiques, peuplés de réfugiés climatiques et d'exclus du système de sécurité intérieure. Ces zones tampons sont tolérées comme réservoirs de main-d'œuvre précaire, mais soumises à une surveillance constante et à des expulsions périodiques. Leur organisation interne oscille entre entraide communautaire et tensions liées à la rareté. Dans l'économie du Fortress World, ces campements constituent le dernier échelon de la chaîne productive : des corps disponibles que les blocs activent selon leurs besoins logistiques, sanitaires ou de maintenance, avant de les repousser vers la marge dès que la pression démographique devient politiquement inconfortable.
