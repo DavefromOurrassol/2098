@@ -3015,14 +3015,24 @@ def et_si_statut():
 
 @app.route("/api/et_si/injecter/<action>", methods=["POST"])
 def et_si_injecter(action):
-    if action not in ("apercu", "injecter"):
+    if action not in ("apercu", "injecter", "liste"):   # PATCH_S27_GUI_SAUTER
         return jsonify({"error": f"action inconnue : {action}"}), 404
     cfg = load_config()
     pipeline_dir = Path(cfg.get("pipeline_dir", ""))
     hid = str((request.get_json() or {}).get("id") or "").strip()
     if not hid:
         return jsonify({"error": "choisis d'abord une hypothèse dans la liste"}), 400
-    cmd = [sys.executable, "et_si_injecter.py", "--id", hid] + (["--dry-run"] if action == "apercu" else [])
+    corps = request.get_json() or {}   # PATCH_S27_GUI_SAUTER
+    cmd = [sys.executable, "et_si_injecter.py", "--id", hid]
+    if action == "liste":
+        cmd.append("--plan")
+    else:
+        if action == "apercu":
+            cmd.append("--dry-run")
+        for cle in ("sauter", "inclure"):
+            valeur = re.sub(r"[^0-9,]", "", str(corps.get(cle) or "")).strip(",")
+            if valeur:
+                cmd += [f"--{cle}", valeur]
     try:
         r = subprocess.run(cmd, cwd=pipeline_dir, capture_output=True, text=True,
                            timeout=TIMEOUT_INJECTER_ET_SI, stdin=subprocess.DEVNULL)

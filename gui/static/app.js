@@ -11408,6 +11408,17 @@ function buildDecisionHypothese() {
   const ligneInjecter = mk('div');
   const btnInjApercu = bouton('Simuler l\'injection');
   const btnInjecter = bouton('Injecter', 'yaml-btn yaml-btn-save');
+  // PATCH_S27_GUI_SAUTER : tri dès l'injection (mêmes numéros qu'à l'étape ④).
+  const ligneTri3 = mk('div');
+  const btnInjListe = bouton('Liste de l\'étape ④');
+  ligneTri3.appendChild(btnInjListe);
+  ligneTri3.appendChild(mk('span', 'option-label', 'Sauter '));
+  const sauter3 = champ('ex : 3,4');
+  ligneTri3.appendChild(sauter3);
+  ligneTri3.appendChild(mk('span', 'option-label', 'Inclure (⚠) '));
+  const inclure3 = champ('ex : 7');
+  ligneTri3.appendChild(inclure3);
+  ligneInjecter.appendChild(ligneTri3);
   ligneInjecter.appendChild(btnInjApercu);
   ligneInjecter.appendChild(btnInjecter);
   b3.appendChild(ligneInjecter);
@@ -11420,7 +11431,11 @@ function buildDecisionHypothese() {
     'simulation (nouveau tirage). Compte plusieurs minutes (jusqu\'à une dizaine) : ne reclique pas tant ' +
     'que « ⏳ en cours » est affiché.\nDifférence avec le bouton « Lancer » de « Injecter des événements » : ' +
     'Lancer traite TOUTE la file d\'injection ; ce bouton ne prend que l\'entrée de cette hypothèse, refuse ' +
-    'une double injection, la retire de la file et fait passer le parcours à ④.'));
+    'une double injection, la retire de la file et fait passer le parcours à ④.\n' +
+    'Sauter / Inclure : « Liste de l\'étape ④ » montre les opérations numérotées (sans IA). Décide ici ce ' +
+    'que tu sauteras à l\'étape ④ : les numéros mis dans « Sauter », et les ⚠ sauf ceux mis dans ' +
+    '« Inclure », ne sont pas donnés comme faits à l\'IA de l\'injection (ni leurs acteurs). L\'étape ④ ' +
+    'reprend ces numéros si son propre champ reste vide.'));
 
   // ④ Appliquer
   const b4 = blocs[3].contenu;
@@ -11499,6 +11514,7 @@ function buildDecisionHypothese() {
   corps.appendChild(sortie);
 
   const tous = [btnActualiser, btnApercu, btnAdopter, btnRejeter, btnAnnuler, btnInjApercu, btnInjecter,
+                btnInjListe,   // PATCH_S27_GUI_SAUTER
                 btnAppApercu, btnAppliquer, btnReste, btnDossiers];
   // PATCH_S19_RETOUCHES : signe d'activité à côté du bouton cliqué (le résultat
   // s'affiche en bas du panneau, hors de vue pendant les longs appels).
@@ -12061,10 +12077,12 @@ function buildDecisionHypothese() {
     if (!confirm('Annuler la décision prise sur cette hypothèse ?')) return;
     appeler('decider', 'annuler', {});
   });
-  btnInjApercu.addEventListener('click', () => appeler('injecter', 'apercu', {}));
+  const tri3 = () => ({ sauter: sauter3.value, inclure: inclure3.value });   // PATCH_S27_GUI_SAUTER
+  btnInjListe.addEventListener('click', () => appeler('injecter', 'liste', {}));
+  btnInjApercu.addEventListener('click', () => appeler('injecter', 'apercu', tri3()));
   btnInjecter.addEventListener('click', () => {
     if (!confirm('Injecter cet événement dans le vault ? (appels IA ; plusieurs minutes)')) return;
-    appeler('injecter', 'injecter', {});
+    appeler('injecter', 'injecter', tri3());
   });
   btnAppApercu.addEventListener('click', () => appeler('appliquer', 'apercu', tri()));
   btnAppliquer.addEventListener('click', () => {

@@ -811,6 +811,11 @@ def main():
 
     ops, a_main = construire_plan(data)
     sauter, inclure = nombres(a.sauter), nombres(a.inclure)
+    f_sauts = APP_DIR / f"{a.id}.sauter.json"   # PATCH_S27_SAUTER : choix de l'étape ③
+    if not sauter and not inclure and f_sauts.exists():
+        _s = json.loads(f_sauts.read_text(encoding="utf-8"))
+        sauter, inclure = set(_s.get("sauter") or []), set(_s.get("inclure") or [])
+        print(f"· repris de l'étape ③ : Sauter {sorted(sauter)}, Inclure {sorted(inclure)}\n")
     for o in ops:
         o["retenue"] = (o["n"] not in sauter) and (not o["alerte"] or o["n"] in inclure) \
             and o["alerte"] not in ("déjà appliqué", "déjà absente", "déjà présente", "fiche introuvable",

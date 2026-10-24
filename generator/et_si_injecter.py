@@ -33,12 +33,69 @@ import et_si_dossiers as ed  # noqa: E402
 TIMEOUT = 900  # secondes : appels IA par scénario + cycle post-injection
 
 
+def _plan(hid):
+    """PATCH_S27_SAUTER : (data, ops) de la phase 4 — mêmes numéros qu'à l'étape ④."""
+    import appliquer_et_si as ap
+    src = ap.APP_DIR / f"{hid}.json"
+    if not src.exists():
+        sys.exit(f"✗ {src.name} absent : simuler l'hypothèse d'abord.")
+    data = json.loads(src.read_text(encoding="utf-8"))
+    ops, _ = ap.construire_plan(data)
+    return data, ops
+
+
+def _nombres(s):
+    import re
+    return {int(x) for x in re.findall(r"\d+", s or "")}
+
+
+def _ecartees(ops, sauter, inclure):
+    """Numéros que l'étape ④ n'appliquera pas : « Sauter », plus les ⚠ non repris par « Inclure »."""
+    return {o["n"] for o in ops if o["n"] in sauter
+            or (o.get("alerte") and not str(o["alerte"]).startswith("déjà") and o["n"] not in inclure)}
+
+
+def _retirer_sautees(entree, ops, ecartees):
+    """Copie de l'entrée sans les faits imposés ni les acteurs des opérations écartées."""
+    import copy
+    slugs = {o.get("instance") or o.get("zone") for o in ops
+             if o["n"] in ecartees and o["genre"] in ("trajectoire", "disparition", "zone")}
+    slugs.discard(None)
+    e = copy.deepcopy(entree)
+    retires = []
+    for sc, faits in (e.get("faits_imposes") or {}).items():
+        garde = []
+        for f in faits or []:
+            if isinstance(f, dict) and f.get("slug") in slugs:
+                retires.append(f"fait ({sc}) : {' '.join(str(f.get('fait')).split())[:100]}")
+            else:
+                garde.append(f)
+        e["faits_imposes"][sc] = garde
+    acteurs = e.get("acteurs_hint") or []
+    retires += [f"acteur : {s}" for s in acteurs if s in slugs]
+    e["acteurs_hint"] = [s for s in acteurs if s not in slugs]
+    if "acteurs_hint_count" in e:
+        e["acteurs_hint_count"] = len(e["acteurs_hint"])
+    return e, retires
+
+
 def main():
     ap = argparse.ArgumentParser(description="Injecte une seule hypothèse adoptée.")
     ap.add_argument("--id", required=True)
     ap.add_argument("--dry-run", action="store_true")
+    ap.add_argument("--plan", action="store_true", help="liste numérotée de l'étape ④, sans IA")   # PATCH_S27_SAUTER
+    ap.add_argument("--sauter", default="", help="numéros de l'étape ④ à écarter dès l'injection")
+    ap.add_argument("--inclure", default="", help="numéros ⚠ de l'étape ④ à garder")
     a = ap.parse_args()
     hid = a.id.strip()
+    if a.plan:
+        _, ops = _plan(hid)
+        print(f"Liste de l'étape ④ — {hid} (mêmes numéros ; « Sauter » ici retire aussi faits et acteurs "
+              "de l'injection)\n")
+        for o in ops:
+            al = f"  ⚠ {o['alerte']}" if o.get("alerte") else ""
+            print(f"  {o['n']:>3}. [{o['sc']}] {o['texte']}{al}")
+        return
 
     st = ed.statut(hid)
     if st != "adopté, en attente d'injection":
@@ -50,8 +107,21 @@ def main():
         sys.exit(f"✗ {len(entrees)} entrée(s) adoptée(s) {hid} dans evenements_custom/queue.yaml "
                  f"(attendu : 1). Une entrée écrite à la main s'injecte par « Injecter des événements ».")
 
+    entree, sauter, inclure = entrees[0], _nombres(a.sauter), _nombres(a.inclure)   # PATCH_S27_SAUTER
+    _, ops = _plan(hid)
+    ecartees = _ecartees(ops, sauter, inclure)
+    if ecartees:
+        entree, retires = _retirer_sautees(entree, ops, ecartees)
+        auto = sorted(ecartees - sauter)
+        print(f"Écartées à l'étape ④ : {', '.join(map(str, sorted(ecartees)))}"
+              + (f" (dont ⚠ par défaut : {', '.join(map(str, auto))} ; « Inclure » pour les garder)" if auto else "")
+              + " — "
+              + (f"{len(retires)} élément(s) retiré(s) de l'entrée" if retires else "rien à retirer de l'entrée"))
+        for r_ in retires:
+            print(f"  − {r_}")
+        print()
     cmd = [sys.executable, str(GEN / "inject_custom_events.py"),
-           "--idea", json.dumps(entrees[0], ensure_ascii=False, default=str)]
+           "--idea", json.dumps(entree, ensure_ascii=False, default=str)]
     if a.dry_run:
         cmd.append("--dry-run")
     print(("SIMULATION (appels IA réels, rien écrit)" if a.dry_run else "INJECTION") + f" — {hid}\n")
@@ -74,6 +144,11 @@ def main():
     if r.returncode != 0:
         sys.exit(f"\n✗ inject_custom_events.py a échoué (code {r.returncode}) : l'entrée reste dans la "
                  f"queue ; vérifier needs_review.yaml avant de relancer.")
+    if sauter or inclure:   # PATCH_S27_SAUTER : repris par défaut à l'étape ④
+        import appliquer_et_si as ap_
+        (ap_.APP_DIR / f"{hid}.sauter.json").write_text(json.dumps(
+            {"sauter": sorted(sauter), "inclure": sorted(inclure)}, ensure_ascii=False), encoding="utf-8")
+        print(f"✓ « Sauter » / « Inclure » gardés pour l'étape ④ : {sorted(sauter)} / {sorted(inclure)}")
     if ed._retirer_de_queue(hid):
         print(f"\n✓ entrée {hid} retirée de evenements_custom/queue.yaml (sauvegarde queue.yaml.bak_et_si)")
     print(f"✓ statut : {ed.statut(hid)}")
