@@ -56,7 +56,6 @@ oppositions:
 - mouvement_racines_vivantes_eco_communalism
 - mutuelles_de_sante_territoriales_eco_communalism
 - reseau_assemblees_fennoscandien_eco_communalism
-- reseau_des_assemblees_de_bassin_fennoscandien_eco_communalism
 - reseau_des_cartographes_des_zones_grises_eco_communalism
 - reseaux_de_bibliotheques_archives_communautaires_eco_communalism
 - reseaux_de_reconstruction_cooperative_inter_communautes_eco_communalism
@@ -156,7 +155,6 @@ La tension centrale réside dans l'indistinction apparente entre leur discours e
 - [[mouvement_racines_vivantes_eco_communalism]]
 - [[mutuelles_de_sante_territoriales_eco_communalism]]
 - [[reseau_assemblees_fennoscandien_eco_communalism]]
-- [[reseau_des_assemblees_de_bassin_fennoscandien_eco_communalism]]
 - [[reseau_des_cartographes_des_zones_grises_eco_communalism]]
 - [[reseaux_de_bibliotheques_archives_communautaires_eco_communalism]]
 - [[reseaux_de_reconstruction_cooperative_inter_communautes_eco_communalism]]

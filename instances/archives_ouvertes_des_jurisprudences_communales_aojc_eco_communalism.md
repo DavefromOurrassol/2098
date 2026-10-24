@@ -50,7 +50,7 @@ alliances:
 - ligue_des_cites_du_sahel_numerique_eco_communalism
 - mouvement_des_archives_vivantes_du_savoir_partage_eco_communalism
 - mouvement_des_communes_du_rust_belt_eco_communalism
-- reseau_des_assemblees_de_bassin_fennoscandien_eco_communalism
+- reseau_assemblees_fennoscandien_eco_communalism
 - reseau_des_cartographes_des_zones_grises_eco_communalism
 - reseau_mnemos_eco_communalism
 - reseau_terrafond_bassins_eco_communalism
@@ -160,7 +160,7 @@ La tension centrale de l'AOJC est celle de la mémoire contre l'autonomie : en c
 - [[ligue_des_cites_du_sahel_numerique_eco_communalism]]
 - [[mouvement_des_archives_vivantes_du_savoir_partage_eco_communalism]]
 - [[mouvement_des_communes_du_rust_belt_eco_communalism]]
-- [[reseau_des_assemblees_de_bassin_fennoscandien_eco_communalism]]
+- [[reseau_assemblees_fennoscandien_eco_communalism]]
 - [[reseau_des_cartographes_des_zones_grises_eco_communalism]]
 - [[reseau_mnemos_eco_communalism]]
 - [[reseau_terrafond_bassins_eco_communalism]]

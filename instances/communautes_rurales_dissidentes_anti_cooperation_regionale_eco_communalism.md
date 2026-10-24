@@ -56,7 +56,6 @@ oppositions:
 - ilse_varga_holm_eco_communalism
 - institut_des_seuils_demographiques_eco_communalism
 - reseau_assemblees_fennoscandien_eco_communalism
-- reseau_des_assemblees_de_bassin_fennoscandien_eco_communalism
 - reseau_terrafond_bassins_eco_communalism
 - reseaux_de_radio_communautaire_basse_consommation_eco_communalism
 - reseaux_de_reconstruction_cooperative_inter_communautes_eco_communalism
@@ -151,7 +150,6 @@ Elles incarnent la contradiction fondatrice de l'éco-communalisme : comment un 
 - [[ilse_varga_holm_eco_communalism]]
 - [[institut_des_seuils_demographiques_eco_communalism]]
 - [[reseau_assemblees_fennoscandien_eco_communalism]]
-- [[reseau_des_assemblees_de_bassin_fennoscandien_eco_communalism]]
 - [[reseau_terrafond_bassins_eco_communalism]]
 - [[reseaux_de_radio_communautaire_basse_consommation_eco_communalism]]
 - [[reseaux_de_reconstruction_cooperative_inter_communautes_eco_communalism]]

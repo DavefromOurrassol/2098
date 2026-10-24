@@ -69,7 +69,7 @@ oppositions:
 - les_veilleurs_du_fleuve_eco_communalism
 - mouvement_des_communes_du_rust_belt_eco_communalism
 - mutuelles_de_sante_territoriales_eco_communalism
-- reseau_des_assemblees_de_bassin_fennoscandien_eco_communalism
+- reseau_assemblees_fennoscandien_eco_communalism
 - reseaux_de_reconstruction_cooperative_inter_communautes_eco_communalism
 - reseaux_de_troc_inter_cooperatives_et_marges_periurbaines_eco_communalism
 - zones_extractivistes_corridors_eco_communalism
@@ -178,7 +178,7 @@ La contradiction centrale de ces factions est qu'elles prospèrent précisément
 - [[les_veilleurs_du_fleuve_eco_communalism]]
 - [[mouvement_des_communes_du_rust_belt_eco_communalism]]
 - [[mutuelles_de_sante_territoriales_eco_communalism]]
-- [[reseau_des_assemblees_de_bassin_fennoscandien_eco_communalism]]
+- [[reseau_assemblees_fennoscandien_eco_communalism]]
 - [[reseaux_de_reconstruction_cooperative_inter_communautes_eco_communalism]]
 - [[reseaux_de_troc_inter_cooperatives_et_marges_periurbaines_eco_communalism]]
 - [[zones_extractivistes_corridors_eco_communalism]]

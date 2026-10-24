@@ -127,7 +127,7 @@ zones:
     rivaux: []
   sources_attestees:
   - leena_vainala_eco_communalism
-  - reseau_des_assemblees_de_bassin_fennoscandien_eco_communalism
+  - reseau_assemblees_fennoscandien_eco_communalism
   - confederation_communs_arc_septentrional_eco_communalism
 - slug: bioterritoires_amerique_du_nord
   nom: Bioterritoires d'Amérique du Nord
@@ -1573,7 +1573,7 @@ zones:
     allies: []
     rivaux: []
   sources_attestees:
-  - reseau_des_assemblees_de_bassin_fennoscandien_eco_communalism
+  - reseau_assemblees_fennoscandien_eco_communalism
   - leena_vainala_eco_communalism
   promu_depuis: null
 - slug: reseau_terrafond_bassins
@@ -3348,7 +3348,7 @@ Réseau de bioterritoires post-étatiques couvrant l'espace fenno-scandinave et 
 
 **Alliés** : Europe Occidentale Reconstituée ([[europe_occidentale_reconstituee]])
 
-*Sources attestées : leena_vainala_eco_communalism, reseau_des_assemblees_de_bassin_fennoscandien_eco_communalism, confederation_communs_arc_septentrional_eco_communalism*
+*Sources attestées : leena_vainala_eco_communalism, reseau_assemblees_fennoscandien_eco_communalism, confederation_communs_arc_septentrional_eco_communalism*
 
 #### Confédération des Communs de l'Arc Septentrional — sous [[arc_septentrional]]
 
@@ -3397,7 +3397,7 @@ Structure de coordination régionale de l'Arc Septentrional, articulant souverai
 
 **Tensions internes** : Montée en puissance de facilitateurs formés sur les protocoles algorithmiques qui divergent de la philosophie originelle des chartes communales ; tension entre communes autonomistes radicales et confédéralistes pragmatiques sur le degré de coordination acceptable.
 
-*Sources attestées : reseau_des_assemblees_de_bassin_fennoscandien_eco_communalism, leena_vainala_eco_communalism*
+*Sources attestées : reseau_assemblees_fennoscandien_eco_communalism, leena_vainala_eco_communalism*
 
 #### Tampere — sous [[arc_septentrional]]
 

@@ -38,7 +38,6 @@ alliances:
 - ligue_des_cites_du_sahel_numerique_eco_communalism
 - rede_paulista_de_distribuicao_algoritmica_eco_communalism
 - reseau_assemblees_fennoscandien_eco_communalism
-- reseau_des_assemblees_de_bassin_fennoscandien_eco_communalism
 - sao_paulo_algorithmique_eco_communalism
 oppositions:
 - collectifs_de_facilitateurs_deliberatifs_itinerants_eco_communalism
@@ -126,7 +125,6 @@ La contradiction fondamentale qui les ronge est celle-ci : en prétendant allég
 - [[ligue_des_cites_du_sahel_numerique_eco_communalism]]
 - [[rede_paulista_de_distribuicao_algoritmica_eco_communalism]]
 - [[reseau_assemblees_fennoscandien_eco_communalism]]
-- [[reseau_des_assemblees_de_bassin_fennoscandien_eco_communalism]]
 - [[sao_paulo_algorithmique_eco_communalism]]
 **Opposants :**
 - [[collectifs_de_facilitateurs_deliberatifs_itinerants_eco_communalism]]

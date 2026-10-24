@@ -56,7 +56,7 @@ alliances:
 - ilse_varga_holm_eco_communalism
 - kalaallit_nunaat_sovereign_fund_eco_communalism
 - mutuelles_de_sante_territoriales_eco_communalism
-- reseau_des_assemblees_de_bassin_fennoscandien_eco_communalism
+- reseau_assemblees_fennoscandien_eco_communalism
 - reseaux_de_reconstruction_cooperative_inter_communautes_eco_communalism
 - reseaux_de_troc_inter_cooperatives_et_marges_periurbaines_eco_communalism
 - trame_bioclimatique_eco_communalism
@@ -146,7 +146,7 @@ La question lancinante du Réseau Terrafond est celle-ci : jusqu'où la discipli
 - [[ilse_varga_holm_eco_communalism]]
 - [[kalaallit_nunaat_sovereign_fund_eco_communalism]]
 - [[mutuelles_de_sante_territoriales_eco_communalism]]
-- [[reseau_des_assemblees_de_bassin_fennoscandien_eco_communalism]]
+- [[reseau_assemblees_fennoscandien_eco_communalism]]
 - [[reseaux_de_reconstruction_cooperative_inter_communautes_eco_communalism]]
 - [[reseaux_de_troc_inter_cooperatives_et_marges_periurbaines_eco_communalism]]
 - [[trame_bioclimatique_eco_communalism]]

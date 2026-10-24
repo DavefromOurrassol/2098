@@ -39,7 +39,6 @@ zone_systemique:
 
 alliances:
     - reseau_assemblees_fennoscandien_eco_communalism
-    - reseau_des_assemblees_de_bassin_fennoscandien_eco_communalism
     - confederation_communs_arc_septentrional_eco_communalism
     - assemblees_cooperatives_regionales_eco_communalism
     - archives_ouvertes_des_jurisprudences_communales_aojc_eco_communalism
@@ -108,7 +107,7 @@ La Charte certifie les engagements des communautés signataires via des protocol
 - [[organisation_territoires]]
 
 ## Relations
-**Alliés** : [[reseau_assemblees_fennoscandien_eco_communalism]], [[reseau_des_assemblees_de_bassin_fennoscandien_eco_communalism]], [[confederation_communs_arc_septentrional_eco_communalism]], [[assemblees_cooperatives_regionales_eco_communalism]], [[archives_ouvertes_des_jurisprudences_communales_aojc_eco_communalism]], [[leena_vainala_eco_communalism]], [[collectifs_de_techniciens_sobres_eco_communalism]], [[mutuelles_de_sante_territoriales_eco_communalism]], [[reseaux_de_bibliotheques_archives_communautaires_eco_communalism]], [[guildes_de_mediateurs_ecologiques_eco_communalism]], [[cercles_de_mediation_territoriale_intercommunautaire_eco_communalism]], [[consortium_amazonia_viva_eco_communalism]]
+**Alliés** : [[reseau_assemblees_fennoscandien_eco_communalism]], [[confederation_communs_arc_septentrional_eco_communalism]], [[assemblees_cooperatives_regionales_eco_communalism]], [[archives_ouvertes_des_jurisprudences_communales_aojc_eco_communalism]], [[leena_vainala_eco_communalism]], [[collectifs_de_techniciens_sobres_eco_communalism]], [[mutuelles_de_sante_territoriales_eco_communalism]], [[reseaux_de_bibliotheques_archives_communautaires_eco_communalism]], [[guildes_de_mediateurs_ecologiques_eco_communalism]], [[cercles_de_mediation_territoriale_intercommunautaire_eco_communalism]], [[consortium_amazonia_viva_eco_communalism]]
 **Opposants** : [[agro_conglomerats_des_enclaves_technologiques_eco_communalism]], [[plateformes_centralisees_de_reagregation_globale_eco_communalism]], [[consortiums_industriels_de_l_eau_eco_communalism]], [[communs_secessionnistes_hors_coordination_eco_communalism]], [[communautes_rurales_dissidentes_anti_cooperation_regionale_eco_communalism]], [[factions_autoritaires_locales_identitaires_exclusionnistes_eco_communalism]], [[fragments_d_etats_centraux_residuels_eco_communalism]], [[courant_techno_solutionniste_pro_re_globalisation_numerique_eco_communalism]], [[consortiums_logistiques_neo_industriels_des_terres_reconstruites_eco_communalism]], [[enclaves_extractivistes_residuelles_des_corridors_eco_communalism]]
 
 ## Description journalistique

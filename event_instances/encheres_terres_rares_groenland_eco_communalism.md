@@ -46,7 +46,7 @@ acteurs_impliques:
     - coalition_vivant_eco_communalism
     - assemblee_territoires_eco_communalism
     - assemblees_bioterritoriales_regionales_eco_communalism
-    - reseau_des_assemblees_de_bassin_fennoscandien_eco_communalism
+    - reseau_assemblees_fennoscandien_eco_communalism
     - voix_du_dehors_eco_communalism
     - reseau_mnemos_eco_communalism
 note_coherence: Dans un monde éco-communaliste fragmenté, l'enchère existe mais ne produit pas la domination nette d'un bloc — elle révèle la décomposition des rapports de force classiques et renforce paradoxalement la légitimité des alternatives communalistes sur les ressources critiques.
@@ -78,7 +78,7 @@ La vente partielle se conclut dans l'ambiguïté : deux lots sont attribués à 
 - [[coalition_vivant_eco_communalism]]
 - [[assemblee_territoires_eco_communalism]]
 - [[assemblees_bioterritoriales_regionales_eco_communalism]]
-- [[reseau_des_assemblees_de_bassin_fennoscandien_eco_communalism]]
+- [[reseau_assemblees_fennoscandien_eco_communalism]]
 - [[voix_du_dehors_eco_communalism]]
 - [[reseau_mnemos_eco_communalism]]
 

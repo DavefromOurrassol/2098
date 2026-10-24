@@ -50,7 +50,6 @@ alliances:
 - ligue_des_cites_du_sahel_numerique_eco_communalism
 - mouvement_des_communes_du_rust_belt_eco_communalism
 - reseau_assemblees_fennoscandien_eco_communalism
-- reseau_des_assemblees_de_bassin_fennoscandien_eco_communalism
 - reseaux_de_bibliotheques_archives_communautaires_eco_communalism
 - tampere_charte_eco_communalism
 - tresse_verte_corridor_eco_communalism
@@ -129,7 +128,6 @@ La Confédération avance en permanence sur un fil : les communs sibériens, gal
 - [[ligue_des_cites_du_sahel_numerique_eco_communalism]]
 - [[mouvement_des_communes_du_rust_belt_eco_communalism]]
 - [[reseau_assemblees_fennoscandien_eco_communalism]]
-- [[reseau_des_assemblees_de_bassin_fennoscandien_eco_communalism]]
 - [[reseaux_de_bibliotheques_archives_communautaires_eco_communalism]]
 - [[tampere_charte_eco_communalism]]
 - [[tresse_verte_corridor_eco_communalism]]

@@ -35,7 +35,7 @@ zone_systemique:
 
 alliances:
     - confederation_communs_arc_septentrional_eco_communalism
-    - reseau_des_assemblees_de_bassin_fennoscandien_eco_communalism
+    - reseau_assemblees_fennoscandien_eco_communalism
     - collectifs_de_cartographie_ecologique_participative_eco_communalism
     - brigades_de_restauration_ecologique_eco_communalism
     - guildes_de_mediateurs_ecologiques_eco_communalism
@@ -88,7 +88,7 @@ L'AGV coordonne les quotas de pêche communautaires, cartographie les zones de f
 - [[climat_environnement_global]]
 
 ## Relations
-**Alliés** : [[confederation_communs_arc_septentrional_eco_communalism]], [[reseau_des_assemblees_de_bassin_fennoscandien_eco_communalism]], [[collectifs_de_cartographie_ecologique_participative_eco_communalism]], [[brigades_de_restauration_ecologique_eco_communalism]], [[guildes_de_mediateurs_ecologiques_eco_communalism]]
+**Alliés** : [[confederation_communs_arc_septentrional_eco_communalism]], [[reseau_assemblees_fennoscandien_eco_communalism]], [[collectifs_de_cartographie_ecologique_participative_eco_communalism]], [[brigades_de_restauration_ecologique_eco_communalism]], [[guildes_de_mediateurs_ecologiques_eco_communalism]]
 **Opposants** : [[enclaves_extractivistes_residuelles_des_corridors_eco_communalism]], [[factions_extractivistes_des_aquiferes_communs_eco_communalism]], [[conseils_territoriaux_opaques_sur_la_gestion_des_ressources_eco_communalism]]
 
 ## Description journalistique

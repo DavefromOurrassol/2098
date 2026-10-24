@@ -68,7 +68,7 @@ oppositions:
 - mouvement_des_communes_du_rust_belt_eco_communalism
 - mutuelles_de_sante_territoriales_eco_communalism
 - rede_paulista_de_distribuicao_algoritmica_eco_communalism
-- reseau_des_assemblees_de_bassin_fennoscandien_eco_communalism
+- reseau_assemblees_fennoscandien_eco_communalism
 - reseau_terrafond_bassins_eco_communalism
 - reseaux_de_reconstruction_cooperative_inter_communautes_eco_communalism
 - reseaux_de_troc_inter_cooperatives_et_marges_periurbaines_eco_communalism
@@ -186,7 +186,7 @@ La contradiction centrale des Consortiums tient à leur dépendance aux États r
 - [[mouvement_des_communes_du_rust_belt_eco_communalism]]
 - [[mutuelles_de_sante_territoriales_eco_communalism]]
 - [[rede_paulista_de_distribuicao_algoritmica_eco_communalism]]
-- [[reseau_des_assemblees_de_bassin_fennoscandien_eco_communalism]]
+- [[reseau_assemblees_fennoscandien_eco_communalism]]
 - [[reseau_terrafond_bassins_eco_communalism]]
 - [[reseaux_de_reconstruction_cooperative_inter_communautes_eco_communalism]]
 - [[reseaux_de_troc_inter_cooperatives_et_marges_periurbaines_eco_communalism]]

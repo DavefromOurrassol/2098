@@ -45,7 +45,7 @@ alliances:
 - les_veilleurs_du_fleuve_eco_communalism
 - oracle_des_seuils_eco_communalism
 - rede_paulista_de_distribuicao_algoritmica_eco_communalism
-- reseau_des_assemblees_de_bassin_fennoscandien_eco_communalism
+- reseau_assemblees_fennoscandien_eco_communalism
 - reseaux_de_radio_communautaire_basse_consommation_eco_communalism
 - reseaux_de_reconstruction_cooperative_inter_communautes_eco_communalism
 oppositions:
@@ -141,7 +141,7 @@ La tension la plus profonde oppose la souveraineté locale revendiquée par chaq
 - [[les_veilleurs_du_fleuve_eco_communalism]]
 - [[oracle_des_seuils_eco_communalism]]
 - [[rede_paulista_de_distribuicao_algoritmica_eco_communalism]]
-- [[reseau_des_assemblees_de_bassin_fennoscandien_eco_communalism]]
+- [[reseau_assemblees_fennoscandien_eco_communalism]]
 - [[reseaux_de_radio_communautaire_basse_consommation_eco_communalism]]
 - [[reseaux_de_reconstruction_cooperative_inter_communautes_eco_communalism]]
 **Opposants :**

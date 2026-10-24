@@ -62,7 +62,7 @@ alliances:
 - les_veilleurs_du_fleuve_eco_communalism
 - mouvement_des_communes_du_rust_belt_eco_communalism
 - mouvement_racines_vivantes_eco_communalism
-- reseau_des_assemblees_de_bassin_fennoscandien_eco_communalism
+- reseau_assemblees_fennoscandien_eco_communalism
 - reseaux_de_radio_communautaire_basse_consommation_eco_communalism
 - reseaux_de_reconstruction_cooperative_inter_communautes_eco_communalism
 - trame_bioclimatique_eco_communalism
@@ -166,7 +166,7 @@ La tension principale traverse la question de l'exclusion : que faire d'une comm
 - [[les_veilleurs_du_fleuve_eco_communalism]]
 - [[mouvement_des_communes_du_rust_belt_eco_communalism]]
 - [[mouvement_racines_vivantes_eco_communalism]]
-- [[reseau_des_assemblees_de_bassin_fennoscandien_eco_communalism]]
+- [[reseau_assemblees_fennoscandien_eco_communalism]]
 - [[reseaux_de_radio_communautaire_basse_consommation_eco_communalism]]
 - [[reseaux_de_reconstruction_cooperative_inter_communautes_eco_communalism]]
 - [[trame_bioclimatique_eco_communalism]]

@@ -50,7 +50,7 @@ alliances:
 - guildes_des_semenciers_itinerants_eco_communalism
 - ilse_varga_holm_eco_communalism
 - mouvement_des_communes_du_rust_belt_eco_communalism
-- reseau_des_assemblees_de_bassin_fennoscandien_eco_communalism
+- reseau_assemblees_fennoscandien_eco_communalism
 - reseau_terrafond_bassins_eco_communalism
 - reseaux_de_radio_communautaire_basse_consommation_eco_communalism
 - reseaux_de_reconstruction_cooperative_inter_communautes_eco_communalism
@@ -158,7 +158,7 @@ La légitimité des Guildes repose entièrement sur la confiance volontaire des 
 - [[guildes_des_semenciers_itinerants_eco_communalism]]
 - [[ilse_varga_holm_eco_communalism]]
 - [[mouvement_des_communes_du_rust_belt_eco_communalism]]
-- [[reseau_des_assemblees_de_bassin_fennoscandien_eco_communalism]]
+- [[reseau_assemblees_fennoscandien_eco_communalism]]
 - [[reseau_terrafond_bassins_eco_communalism]]
 - [[reseaux_de_radio_communautaire_basse_consommation_eco_communalism]]
 - [[reseaux_de_reconstruction_cooperative_inter_communautes_eco_communalism]]
