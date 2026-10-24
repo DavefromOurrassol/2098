@@ -1210,3 +1210,85 @@ Les chantiers clos qui y figuraient encore en résumé (1 Hyphan, 2/2bis Carte,
 4 zones suspectes, S3, S6, S7, S10, S12, S13, S16, S17, S22, S26, S27) ont leur
 détail dans ce fichier : tableau des chantiers clos (septembre) ou sections datées
 (octobre).*
+
+
+## ✅ S24 (partiel) — Doublons d'entités et géographie, 24 octobre 2026 (soir)
+
+*À ajouter à la fin de `BACKLOG_ARCHIVE.md`. Restes ouverts : `BACKLOG_ACTIF.md`,
+S24.*
+
+**Méthode.** Le backlog listait 5 cas ; un scan en lecture seule
+(`scan_doublons_lore.py`, noms identiques ou proches à 85 % dans un même
+scénario, plus auto-références et conflits alliance/opposition) en a relevé 21
+sur 825 instances. Chaque paire a été jugée sur `type_dans_scenario`,
+`role_dans_scenario` et `localisation` avant toute fusion. Règle de choix de la
+fiche gardée : l'archétype partagé avec d'autres scénarios, sinon le sens qui
+réécrit le moins de fichiers (aperçu des deux sens). Après chaque fusion :
+`fix_alliances_oppositions.py --reciprocite-seule --ignorer-exclus
+--resoudre-conflits` (opposition prioritaire), puis retrait à la main des
+auto-références et des conflits internes, `validate.py`, commit.
+
+**Vrais doublons fusionnés (12 cas, 13 fusions).**
+- eco_communalism : Amazônia Viva (garder `consortium_amazonia_viva`, archétype
+  des 5 autres scénarios) ; Arc Septentrional (`confederation_communs_arc_septentrional`) ;
+  Bassins Vivants (`confederation_bassins_vivants` : 18 fichiers contre 53) ;
+  Terrafond (`reseau_terrafond_bassins` : 15 contre 36 ; localisation « Vallée
+  de l'Ourthe » abandonnée) ; Trame Mnemos (`reseau_mnemos`) ; Réseau
+  Fennoscandien (`reseau_assemblees_fennoscandien`).
+- breakdown : triplon Rust Belt (`mouvement_des_communes_du_rust_belt`) ; Hanse
+  Baltique (`hanse_baltique_breakdown`).
+- fortress_world : Rust Belt ; Pacte des Forteresses Souveraines
+  (`alliance_blocs_souverains`).
+- new_sustainability : Tribunal Algorithmique de Bruxelles.
+- reference : RGMS (`institutions_multilaterales_survivantes`).
+
+**Faux doublons (acteurs distincts, souvent opposés).** Pas de fusion ; un nom
+changé, slug inchangé : `amazonie_consortium_viva_reference` → BioPatente
+Amazonas (entreprise de biopiraterie face à la coalition autochtone) ;
+`amazonie_pacte_vert_fortress_world` → Label des Sanctuaires Souverains (lobby
+de certification) ; `campements_seuils_fermes_fortress_world` → Les Campements
+des Checkpoints (réfugiés ; « Les Seuils Fermés » reste aux millénaristes) ;
+`institut_des_seuils_demographiques_new_sustainability` → Observatoire Mondial
+des Dynamiques Démographiques (OMDD) (« Seuil » reste à l'IA) ;
+`trame_bioclimatique_breakdown` → Trame Bioclimatique — les Arcs Orphelins
+(« Cicatrices Vertes » reste au Massif Central) ; `mouvement_racines_vivantes_breakdown`
+→ Les Racines Vivantes (décision de David : nébuleuse distincte de sa branche
+occitane `occitanie_racines_meres_breakdown`). Autres faux positifs laissés
+tels quels : deux Bureaux des Territoires Résiduels (Washington / Nova Genève),
+deux divisions Nexus BioSyn, Consortium Énergétique Baltique / Opaques,
+Friches / Racines / Bassins Vivants en eco_communalism.
+
+**Géographie.**
+- breakdown : `hanse_baltique` — le parent `arc_eurasien_central` était juste
+  (il porte les pays baltes et l'Allemagne) ; c'est `origine_reelle`, réduite à
+  la Pologne (autre N1), qui déclenchait l'alerte → Estonie, Lettonie, Lituanie,
+  Allemagne ajoutées, Pologne gardée en débordement. Uruguay →
+  `argentine_pampas_autonome`. Grand São Paulo (`sao_paulo_rpda`), rangée sous le
+  Nordeste → zone N1 (zone sinistrée) ; rédactions générées. Brésil de
+  `amazon_pacte_gardiens` : portion « bassin amazonien et Centre-Ouest ».
+- new_sustainability : Brésil partagé (portions « hors bassin amazonien » /
+  « bassin amazonien ») ; `manaus_rvc` (et `manaus_antenne_consortium`) et
+  `belem_consortium_amazonia` déplacées sous `reseau_vivant_continental`.
+- reference : l'Asie centrale avait bien une zone (`zones_grises_globales`) ;
+  l'entrée groupée était illisible pour le contrôle → scindée en trois pays.
+  Paraguay (Chaco) retiré de `sertao_nordeste_bresilien`.
+- fortress_world : zone `bureau_territoires_residuels` → `bureau_territoires_residuels_washington`
+  (le rapport d'impact du bouton ✏️ ne visait bien que la fiche de Washington).
+- `geographie/breakdown_avant_test.md` (premier commit, jamais lue par le code)
+  rangée dans `_a_supprimer/geographie_obsolete/`.
+
+**Pièges rencontrés.**
+- `fusionner_doublon_instance.py` v1 réécrivait l'événement portant le même
+  slug que l'instance retirée (`communes_rust_belt_zones_libres`) : fichiers
+  restaurés depuis `.bak_fusion`. Il laissait aussi la fiche gardée alliée à
+  elle-même, et une fiche citant la gardée en alliance et en opposition. →
+  **v2** du 24 oct (testée sur mini-vault).
+- `fix_alliances_oppositions.py` : pas d'`--apply` (sans `--dry-run`, il
+  écrit) ; sans `--reciprocite-seule`, il relance une passe IA sur des fiches
+  sans rapport.
+- `scan_doublons_lore.py` ne voit que les noms proches (`hanse_baltique`
+  absent du scan).
+
+**Dépôt.** 543 sauvegardes `.bak*` étaient suivies par git → règle `*.bak*`
+dans `.gitignore`, `git rm --cached`, puis suppression du disque (1 358 fichiers ;
+aucun script ne relit un `.bak`, vérifié par grep).

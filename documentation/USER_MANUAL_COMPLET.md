@@ -1778,3 +1778,74 @@ python3 generer_zones_topdown.py --apply-topdown --scenario NOM
 # Contrôle
 python3 validate.py
 ```
+
+
+### Doublons d'entités et contrôles de géographie (outils du 24 octobre 2026)
+
+*À ajouter à `USER_MANUAL_COMPLET.md`, dans la section des outils de données
+(S24). Tous se lancent depuis la racine du vault ; aucun n'appelle l'IA.*
+
+**Repérer les doublons — `scan_doublons_lore.py`** (lecture seule)
+
+```bash
+python3 generator/scan_doublons_lore.py [--scenario X] [--seuil 0.85] [--md FICHIER]
+```
+
+Trois sections : A, noms identiques ou proches dans un même scénario (nom de
+base avant « — » ou « ( ») ; B, fiches alliées ou opposées à elles-mêmes ; C,
+même cible à la fois en alliances et en oppositions. Le résumé est sur
+l'avant-dernière ligne (`| tail -3`). Il ne compare que les noms : un doublon au
+nom différent lui échappe. À relancer après chaque gros lot d'entités.
+
+**Fusionner deux instances — `fusionner_doublon_instance.py`** (v2)
+
+```bash
+python3 generator/fusionner_doublon_instance.py --garder A --retirer B          # aperçu
+python3 generator/fusionner_doublon_instance.py --garder A --retirer B --apply  # écrit (.bak_fusion)
+```
+
+1. Comparer d'abord les deux fiches (`type_dans_scenario`, `role_dans_scenario`,
+   `localisation`) : deux acteurs opposés au nom proche ne se fusionnent pas.
+2. Choisir la fiche gardée : l'archétype partagé avec d'autres scénarios ; sinon
+   comparer les aperçus des deux sens et prendre celui qui réécrit le moins de
+   fichiers.
+3. Lire l'aperçu : citations dans `geographie/` (listes d'acteurs, « sources
+   attestées » : normal), liens `[[archétype]]` laissés intacts (souvent une zone
+   de même slug : normal).
+4. L'outil protège un événement portant le même slug (event_instance, son
+   archétype, champ `evenements_cites`) et l'annonce par ⚠ ; il retire les
+   auto-références et résout les conflits internes (opposition gardée). Dans le
+   texte libre des articles, un `[[slug]]` partagé reste redirigé.
+5. Après `--apply` :
+   ```bash
+   python3 generator/fix_alliances_oppositions.py --scenario X --reciprocite-seule --ignorer-exclus --resoudre-conflits
+   python3 generator/scan_doublons_lore.py --scenario X | sed -n '/^## B/,$p'
+   ```
+   (`fix_alliances_oppositions.py` écrit sans `--dry-run` ; sans
+   `--reciprocite-seule`, il lance une passe IA.) Puis `validate.py` et commit.
+
+La fiche retirée (et son archétype s'il ne sert plus) part dans
+`_a_supprimer/fusion_<slug>_<date>/`.
+
+**Zones d'un pays — `zones_par_pays.py`** (lecture seule)
+
+```bash
+python3 generator/zones_par_pays.py breakdown Uruguay Argentine Brésil
+```
+
+Liste les zones dont `origine_reelle` déclare ces pays (niveau, portion,
+chaîne des parents) et leur rattachement dans `gui/zones_pays.json`. Utile avant
+toute réaffectation dans la Carte.
+
+**Après une correction de géographie**
+- Réaffecter un pays : Carte → clic sur le pays → zone. Déplacer une zone (ou la
+  passer N1) : ↗️ déplacer. Renommer une zone : ✏️ (lire le rapport d'impact
+  avant de confirmer).
+- `validate.py --fix` resynchronise le texte « ## Zones » sur le frontmatter.
+- Une nouvelle zone N1 demande ses rédactions :
+  `generate_journaux.py --scenario X --update`.
+- Un pays partagé entre deux zones demande une `portion` des deux côtés.
+
+**Sauvegardes.** Les fichiers `*.bak*` ne sont plus suivis par git
+(`.gitignore`) ; ils restent utiles le temps d'une opération et peuvent être
+supprimés ensuite : l'historique git garde l'état de chaque commit.

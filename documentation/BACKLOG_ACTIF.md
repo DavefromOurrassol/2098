@@ -4,7 +4,8 @@
 chantiers clos ont été retirés (leur détail est dans `BACKLOG_ARCHIVE.md`, à
 uploader seulement pour vérifier si un point a déjà été traité). Chaque chantier
 garde son nom et son numéro : les réutiliser tels quels. Mode d'emploi des outils :
-`USER_MANUAL_COMPLET.md` ; dernier état de session : `HANDOFF_24_OCTOBRE.md`.*
+`USER_MANUAL_COMPLET.md` ; dernier état de session : `HANDOFF_24_OCTOBRE_SOIR.md`
+(S24 allégé le 24 octobre au soir : doublons et géographie traités).*
 
 Légende : 🟢 chantier actif · 🟡 en cours, partiellement traité · ⚪ en attente
 d'un signal ou d'un besoin (pas de calendrier).
@@ -114,31 +115,20 @@ Le simulateur et son parcours sont terminés (S27, clos le 24 oct ; manuel
 
 ## ⚪ S24. Anomalies de données et suites techniques
 
-À vérifier à la main ; rien n'a été modifié.
+Doublons d'entités et anomalies de géographie **traités le 24 oct au soir**
+(12 doublons, soit 13 fusions ; 6 renommages ; 7 corrections de géographie ; détail dans
+`BACKLOG_ARCHIVE.md`). Reste :
 
-- **Géographie** :
-  - breakdown : **Uruguay** rattaché à `espace_nord_americain_fragmente` ;
-    **`hanse_baltique`** (Pologne, côte baltique) rangée sous
-    `arc_eurasien_central`, dont la Pologne ne fait pas partie (contrôle de
-    géographie du 24 oct) ; `asie_pacifique_sud_est` jugée trop centralisée pour
-    le patron spatial.
-  - new_sustainability : le **Brésil** est porté par deux zones N1
-    (`ameriques_reconfigurees`, `reseau_vivant_continental`).
-  - reference : la sous-zone `sertao_nordeste_bresilien` déclare le **Paraguay
-    (Chaco)** ; **Afghanistan, Kirghizistan, Tadjikistan** sans zone N1 ;
-    3 zones jugées trop innovantes par le contrôle de géographie.
-- **Doublons d'entités probables** (outil : `fusionner_doublon_instance.py
-  --garder A --retirer B`, aperçu puis `--apply`) :
-  - eco_communalism : `amazonie_pacte_viva_eco_communalism` /
-    `consortium_amazonia_viva_eco_communalism` ;
-  - reference : `amazonie_consortium_viva_reference` /
-    `consortium_amazonia_viva_reference` ;
-  - fortress_world : `bureau_des_territoires_residuels_fortress_world` /
-    `bureau_territoires_residuels_fortress_world` ;
-  - breakdown : trois « Communes Libres du Rust Belt »
-    (`communes_rust_belt_breakdown`, `communes_rust_belt_zones_libres_breakdown`,
-    `mouvement_des_communes_du_rust_belt_breakdown`) ; `hanse_baltique_breakdown`
-    / `hanse_baltique_recomposee_breakdown`.
+- **Géographie — appréciations, sans erreur** : `asie_pacifique_sud_est`
+  (breakdown) jugée trop centralisée pour le patron spatial ; 3 zones de
+  reference jugées trop innovantes ; **Paraguay** rangé sous
+  `amazon_pacte_gardiens` (breakdown), approximatif mais non signalé.
+- **Doublons** : relancer `scan_doublons_lore.py` après chaque gros lot
+  d'entités. Il ne voit que les noms proches (`hanse_baltique` lui avait
+  échappé). Les 9 paires qu'il signale encore sont des acteurs distincts, déjà
+  examinés.
+- **Prochain scan de géographie** : confirmer que l'alerte Pologne de
+  `hanse_baltique` a disparu (ou n'est plus qu'un débordement signalé).
 - **Trajectoires « émergent » par défaut** sur beaucoup de fiches (la lecture IA
   propose souvent « émergent → dominant » d'un coup ; signalé ⚠ à l'étape ④).
 - **Ancrage local** : une zone sans instance localisée reste dominée par des
@@ -193,8 +183,10 @@ Moteur `dynamique.py` (manuel §3ter). Règle actée : **choc = s'estompe, ruptu
   des Aquifères Oubliés ; `conseil_regulation_algorithmique` = Autorité
   Numérique du Bloc Atlantique (≠ `anba_siege_atlantique`, entreprise maritime).
 - `_a_supprimer/` contient la fiche et l'archétype fusionnés des Archives
-  Neutres (`fusion_archives_neutres_geneve_breakdown_20261013_1921/`) : à vider
-  quand la fusion est confirmée.
+  Neutres (`fusion_archives_neutres_geneve_breakdown_20261013_1921/`), les
+  13 dossiers `fusion_*_20261024_*` du 24 oct et
+  `geographie_obsolete/breakdown_avant_test.md` : à vider quand les fusions sont
+  confirmées à l'usage (articles générés sans anomalie).
 
 ## ⚪ S14. Couleur fantôme Royaume-Uni / Angleterre / Écosse / Galles
 
