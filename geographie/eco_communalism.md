@@ -128,7 +128,7 @@ zones:
   sources_attestees:
   - leena_vainala_eco_communalism
   - reseau_des_assemblees_de_bassin_fennoscandien_eco_communalism
-  - confederation_des_communs_de_l_arc_septentrional_eco_communalism
+  - confederation_communs_arc_septentrional_eco_communalism
 - slug: bioterritoires_amerique_du_nord
   nom: Bioterritoires d'Amérique du Nord
   niveau: 1
@@ -1181,7 +1181,7 @@ zones:
     - europe_occidentale_reconstituee
     rivaux: []
   sources_attestees:
-  - confederation_des_communs_de_l_arc_septentrional_eco_communalism
+  - confederation_communs_arc_septentrional_eco_communalism
   - leena_vainala_eco_communalism
   promu_depuis: null
 - slug: corridors_forestiers_bassin_rhenan
@@ -1692,7 +1692,7 @@ zones:
     rivaux: []
   sources_attestees:
   - leena_vainala_eco_communalism
-  - confederation_des_communs_de_l_arc_septentrional_eco_communalism
+  - confederation_communs_arc_septentrional_eco_communalism
   promu_depuis: Tampere
 - slug: trame_mnemos_noeud_reseau
   nom: Trame Mnemos
@@ -3348,7 +3348,7 @@ Réseau de bioterritoires post-étatiques couvrant l'espace fenno-scandinave et 
 
 **Alliés** : Europe Occidentale Reconstituée ([[europe_occidentale_reconstituee]])
 
-*Sources attestées : leena_vainala_eco_communalism, reseau_des_assemblees_de_bassin_fennoscandien_eco_communalism, confederation_des_communs_de_l_arc_septentrional_eco_communalism*
+*Sources attestées : leena_vainala_eco_communalism, reseau_des_assemblees_de_bassin_fennoscandien_eco_communalism, confederation_communs_arc_septentrional_eco_communalism*
 
 #### Confédération des Communs de l'Arc Septentrional — sous [[arc_septentrional]]
 
@@ -3364,7 +3364,7 @@ Organisation post-étatique structurant les communs des États baltiques et nord
 
 **Alliés** : Réseau des Assemblées de Bassin Fennoscandien ([[reseau_assemblees_fennoscandien]]), Europe Occidentale Reconstituée ([[europe_occidentale_reconstituee]])
 
-*Sources attestées : confederation_des_communs_de_l_arc_septentrional_eco_communalism, leena_vainala_eco_communalism*
+*Sources attestées : confederation_communs_arc_septentrional_eco_communalism, leena_vainala_eco_communalism*
 
 #### Kalaallit Nunaat — Fonds des Terres Émergées — sous [[arc_septentrional]]
 
@@ -3411,7 +3411,7 @@ Ville de Finlande devenue lieu fondateur du mouvement éco-communaliste fenno-sc
 
 **Tensions internes** : Tension entre la vénération de la Charte comme texte sacré et les tentatives de révision portées par la nouvelle génération de facilitateurs algorithmiques qui souhaitent l'adapter à des protocoles numériques légers.
 
-*Sources attestées : leena_vainala_eco_communalism, confederation_des_communs_de_l_arc_septentrional_eco_communalism*
+*Sources attestées : leena_vainala_eco_communalism, confederation_communs_arc_septentrional_eco_communalism*
 
 #### Nuuk — Maison longue du Fonds — sous [[arc_septentrional]]
 

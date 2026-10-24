@@ -45,7 +45,7 @@ alliances:
 - fragments_d_etats_centraux_residuels_eco_communalism
 oppositions:
 - collectifs_de_techniciens_sobres_eco_communalism
-- confederation_des_communs_de_l_arc_septentrional_eco_communalism
+- confederation_communs_arc_septentrional_eco_communalism
 - courant_isolationniste_anti_circulation_de_l_information_eco_communalism
 - frente_sertao_livre_eco_communalism
 - kalaallit_nunaat_bioterritoire_eco_communalism
@@ -139,7 +139,7 @@ La tension fondamentale réside dans leur double nature : outils de dépendance 
 - [[fragments_d_etats_centraux_residuels_eco_communalism]]
 **Opposants :**
 - [[collectifs_de_techniciens_sobres_eco_communalism]]
-- [[confederation_des_communs_de_l_arc_septentrional_eco_communalism]]
+- [[confederation_communs_arc_septentrional_eco_communalism]]
 - [[courant_isolationniste_anti_circulation_de_l_information_eco_communalism]]
 - [[frente_sertao_livre_eco_communalism]]
 - [[kalaallit_nunaat_bioterritoire_eco_communalism]]

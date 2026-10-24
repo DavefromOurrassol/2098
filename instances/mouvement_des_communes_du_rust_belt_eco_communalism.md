@@ -43,7 +43,7 @@ alliances:
 - assemblees_cooperatives_regionales_eco_communalism
 - brigades_de_restauration_ecologique_eco_communalism
 - collectifs_de_techniciens_sobres_eco_communalism
-- confederation_des_communs_de_l_arc_septentrional_eco_communalism
+- confederation_communs_arc_septentrional_eco_communalism
 - conseils_de_bassin_versant_eco_communalistes_eco_communalism
 - cooperatives_d_habitat_regeneratif_eco_communalism
 - cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism
@@ -126,7 +126,7 @@ La Confédération est désormais assez puissante pour que les fragments d'État
 - [[assemblees_cooperatives_regionales_eco_communalism]]
 - [[brigades_de_restauration_ecologique_eco_communalism]]
 - [[collectifs_de_techniciens_sobres_eco_communalism]]
-- [[confederation_des_communs_de_l_arc_septentrional_eco_communalism]]
+- [[confederation_communs_arc_septentrional_eco_communalism]]
 - [[conseils_de_bassin_versant_eco_communalistes_eco_communalism]]
 - [[cooperatives_d_habitat_regeneratif_eco_communalism]]
 - [[cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism]]

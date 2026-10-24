@@ -42,9 +42,13 @@ alliances:
 - assemblees_bioterritoriales_regionales_eco_communalism
 - collectifs_de_techniciens_sobres_eco_communalism
 - confederation_bassins_vivants_eco_communalism
+- consortium_amazonia_viva_eco_communalism
+- consortium_des_pecheries_autonomes_du_grand_nord_eco_communalism
 - kalaallit_nunaat_bioterritoire_eco_communalism
 - kalaallit_nunaat_sovereign_fund_eco_communalism
 - leena_vainala_eco_communalism
+- ligue_des_cites_du_sahel_numerique_eco_communalism
+- mouvement_des_communes_du_rust_belt_eco_communalism
 - reseau_assemblees_fennoscandien_eco_communalism
 - reseau_des_assemblees_de_bassin_fennoscandien_eco_communalism
 - reseaux_de_bibliotheques_archives_communautaires_eco_communalism
@@ -58,6 +62,8 @@ oppositions:
 - enclaves_extractivistes_residuelles_des_corridors_eco_communalism
 - factions_extractivistes_des_aquiferes_communs_eco_communalism
 - fragments_d_etats_centraux_residuels_eco_communalism
+- plateformes_centralisees_de_reagregation_globale_eco_communalism
+- zones_extractivistes_corridors_eco_communalism
 type_relation_dominante: alliance stratégique
 
 annee_debut: 2041
@@ -115,9 +121,13 @@ La Confédération avance en permanence sur un fil : les communs sibériens, gal
 - [[assemblees_bioterritoriales_regionales_eco_communalism]]
 - [[collectifs_de_techniciens_sobres_eco_communalism]]
 - [[confederation_bassins_vivants_eco_communalism]]
+- [[consortium_amazonia_viva_eco_communalism]]
+- [[consortium_des_pecheries_autonomes_du_grand_nord_eco_communalism]]
 - [[kalaallit_nunaat_bioterritoire_eco_communalism]]
 - [[kalaallit_nunaat_sovereign_fund_eco_communalism]]
 - [[leena_vainala_eco_communalism]]
+- [[ligue_des_cites_du_sahel_numerique_eco_communalism]]
+- [[mouvement_des_communes_du_rust_belt_eco_communalism]]
 - [[reseau_assemblees_fennoscandien_eco_communalism]]
 - [[reseau_des_assemblees_de_bassin_fennoscandien_eco_communalism]]
 - [[reseaux_de_bibliotheques_archives_communautaires_eco_communalism]]
@@ -131,3 +141,5 @@ La Confédération avance en permanence sur un fil : les communs sibériens, gal
 - [[enclaves_extractivistes_residuelles_des_corridors_eco_communalism]]
 - [[factions_extractivistes_des_aquiferes_communs_eco_communalism]]
 - [[fragments_d_etats_centraux_residuels_eco_communalism]]
+- [[plateformes_centralisees_de_reagregation_globale_eco_communalism]]
+- [[zones_extractivistes_corridors_eco_communalism]]

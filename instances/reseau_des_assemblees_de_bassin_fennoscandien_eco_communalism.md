@@ -40,7 +40,6 @@ alliances:
 - collectifs_de_cartographie_ecologique_participative_eco_communalism
 - confederation_bassins_vivants_eco_communalism
 - confederation_communs_arc_septentrional_eco_communalism
-- confederation_des_communs_de_l_arc_septentrional_eco_communalism
 - conseils_de_bassin_versant_eco_communalistes_eco_communalism
 - consortium_des_pecheries_autonomes_du_grand_nord_eco_communalism
 - factions_algorithmiques_pro_gouvernance_ia_legere_eco_communalism
@@ -136,7 +135,6 @@ La tension la plus aiguë oppose les assemblées du nord, peuplées de communaut
 - [[collectifs_de_cartographie_ecologique_participative_eco_communalism]]
 - [[confederation_bassins_vivants_eco_communalism]]
 - [[confederation_communs_arc_septentrional_eco_communalism]]
-- [[confederation_des_communs_de_l_arc_septentrional_eco_communalism]]
 - [[conseils_de_bassin_versant_eco_communalistes_eco_communalism]]
 - [[consortium_des_pecheries_autonomes_du_grand_nord_eco_communalism]]
 - [[factions_algorithmiques_pro_gouvernance_ia_legere_eco_communalism]]

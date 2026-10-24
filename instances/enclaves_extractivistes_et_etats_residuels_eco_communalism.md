@@ -60,7 +60,6 @@ oppositions:
 - collectifs_de_geo_observateurs_citoyens_eco_communalism
 - confederation_bassins_vivants_eco_communalism
 - confederation_communs_arc_septentrional_eco_communalism
-- confederation_des_communs_de_l_arc_septentrional_eco_communalism
 - conseils_de_bassin_versant_eco_communalistes_eco_communalism
 - enclaves_extractivistes_residuelles_des_corridors_eco_communalism
 - frente_sertao_livre_eco_communalism
@@ -145,7 +144,6 @@ La contradiction centrale — être moralement condamné et fonctionnellement n�
 - [[collectifs_de_geo_observateurs_citoyens_eco_communalism]]
 - [[confederation_bassins_vivants_eco_communalism]]
 - [[confederation_communs_arc_septentrional_eco_communalism]]
-- [[confederation_des_communs_de_l_arc_septentrional_eco_communalism]]
 - [[conseils_de_bassin_versant_eco_communalistes_eco_communalism]]
 - [[enclaves_extractivistes_residuelles_des_corridors_eco_communalism]]
 - [[frente_sertao_livre_eco_communalism]]

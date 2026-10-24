@@ -41,7 +41,7 @@ propagation:
   via_matrice: true
 acteurs_impliques:
     - kalaallit_nunaat_sovereign_fund_eco_communalism
-    - confederation_des_communs_de_l_arc_septentrional_eco_communalism
+    - confederation_communs_arc_septentrional_eco_communalism
     - consortiums_logistiques_neo_industriels_des_terres_reconstruites_eco_communalism
     - coalition_vivant_eco_communalism
     - assemblee_territoires_eco_communalism
@@ -73,7 +73,7 @@ La vente partielle se conclut dans l'ambiguïté : deux lots sont attribués à 
 
 ## Acteurs impliqués
 - [[kalaallit_nunaat_sovereign_fund_eco_communalism]]
-- [[confederation_des_communs_de_l_arc_septentrional_eco_communalism]]
+- [[confederation_communs_arc_septentrional_eco_communalism]]
 - [[consortiums_logistiques_neo_industriels_des_terres_reconstruites_eco_communalism]]
 - [[coalition_vivant_eco_communalism]]
 - [[assemblee_territoires_eco_communalism]]

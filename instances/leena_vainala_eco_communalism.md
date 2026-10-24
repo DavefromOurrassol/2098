@@ -37,7 +37,6 @@ alliances:
 - archives_ouvertes_des_jurisprudences_communales_aojc_eco_communalism
 - collectifs_de_facilitateurs_deliberatifs_itinerants_eco_communalism
 - confederation_communs_arc_septentrional_eco_communalism
-- confederation_des_communs_de_l_arc_septentrional_eco_communalism
 - reseau_assemblees_fennoscandien_eco_communalism
 - reseau_des_assemblees_de_bassin_fennoscandien_eco_communalism
 - tampere_charte_eco_communalism
@@ -99,7 +98,6 @@ La tension centrale de son parcours dans ce monde est la suivante : ses outils c
 - [[archives_ouvertes_des_jurisprudences_communales_aojc_eco_communalism]]
 - [[collectifs_de_facilitateurs_deliberatifs_itinerants_eco_communalism]]
 - [[confederation_communs_arc_septentrional_eco_communalism]]
-- [[confederation_des_communs_de_l_arc_septentrional_eco_communalism]]
 - [[reseau_assemblees_fennoscandien_eco_communalism]]
 - [[reseau_des_assemblees_de_bassin_fennoscandien_eco_communalism]]
 - [[tampere_charte_eco_communalism]]

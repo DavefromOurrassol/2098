@@ -48,7 +48,6 @@ alliances:
 - collectifs_de_facilitateurs_deliberatifs_itinerants_eco_communalism
 - collectifs_de_geo_observateurs_citoyens_eco_communalism
 - confederation_communs_arc_septentrional_eco_communalism
-- confederation_des_communs_de_l_arc_septentrional_eco_communalism
 - conseils_de_bassin_versant_eco_communalistes_eco_communalism
 - cooperative_terrafond_eco_communalism
 - cooperatives_d_habitat_regeneratif_eco_communalism
@@ -151,7 +150,6 @@ La tension principale traverse la question de l'exclusion : que faire d'une comm
 - [[collectifs_de_facilitateurs_deliberatifs_itinerants_eco_communalism]]
 - [[collectifs_de_geo_observateurs_citoyens_eco_communalism]]
 - [[confederation_communs_arc_septentrional_eco_communalism]]
-- [[confederation_des_communs_de_l_arc_septentrional_eco_communalism]]
 - [[conseils_de_bassin_versant_eco_communalistes_eco_communalism]]
 - [[cooperative_terrafond_eco_communalism]]
 - [[cooperatives_d_habitat_regeneratif_eco_communalism]]

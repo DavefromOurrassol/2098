@@ -41,7 +41,7 @@ alliances:
 - archives_ouvertes_des_jurisprudences_communales_aojc_eco_communalism
 - assemblees_cooperatives_regionales_eco_communalism
 - collectifs_de_techniciens_sobres_eco_communalism
-- confederation_des_communs_de_l_arc_septentrional_eco_communalism
+- confederation_communs_arc_septentrional_eco_communalism
 - consortium_africain_de_biotechnologies_sociales_eco_communalism
 - factions_algorithmiques_pro_gouvernance_ia_legere_eco_communalism
 - mouvement_des_archives_vivantes_du_savoir_partage_eco_communalism
@@ -112,7 +112,7 @@ La Ligue oscille entre deux identités contradictoires : émancipatrice horizont
 - [[archives_ouvertes_des_jurisprudences_communales_aojc_eco_communalism]]
 - [[assemblees_cooperatives_regionales_eco_communalism]]
 - [[collectifs_de_techniciens_sobres_eco_communalism]]
-- [[confederation_des_communs_de_l_arc_septentrional_eco_communalism]]
+- [[confederation_communs_arc_septentrional_eco_communalism]]
 - [[consortium_africain_de_biotechnologies_sociales_eco_communalism]]
 - [[factions_algorithmiques_pro_gouvernance_ia_legere_eco_communalism]]
 - [[mouvement_des_archives_vivantes_du_savoir_partage_eco_communalism]]

@@ -44,7 +44,7 @@ alliances:
 oppositions:
   - communautes_isolationnistes_refusant_la_continuite_ecologique_eco_communalism
   - communautes_rurales_dissidentes_anti_cooperation_regionale_eco_communalism
-  - confederation_des_communs_de_l_arc_septentrional_eco_communalism
+  - confederation_communs_arc_septentrional_eco_communalism
   - conseils_de_bassin_versant_eco_communalistes_eco_communalism
   - conseils_territoriaux_opaques_sur_la_gestion_des_ressources_eco_communalism
   - consortiums_logistiques_neo_industriels_des_terres_reconstruites_eco_communalism
@@ -112,7 +112,7 @@ La reconversion juridique du sol reste le nœud gordien : les coalitions communa
 **Opposants :**
 - [[communautes_isolationnistes_refusant_la_continuite_ecologique_eco_communalism]]
 - [[communautes_rurales_dissidentes_anti_cooperation_regionale_eco_communalism]]
-- [[confederation_des_communs_de_l_arc_septentrional_eco_communalism]]
+- [[confederation_communs_arc_septentrional_eco_communalism]]
 - [[conseils_de_bassin_versant_eco_communalistes_eco_communalism]]
 - [[conseils_territoriaux_opaques_sur_la_gestion_des_ressources_eco_communalism]]
 - [[consortiums_logistiques_neo_industriels_des_terres_reconstruites_eco_communalism]]
