@@ -844,6 +844,94 @@ python3 generator/trace_injection.py --slug <slug> --type instance --skip-effet
 
 ---
 
+
+### Matrice d'influence : analyser et réviser (S28.1, 25 octobre 2026)
+
+**Principe.** `influence_matrix.md` est la **seule source** des liens entre les
+12 variables : le moteur `dynamique.py` la lit (poids, polarité, retard,
+`temporal_weight`). Les fiches de `variables/` n'en gardent qu'une vue générée,
+la section « 2. Position dans le système », qu'on n'édite pas à la main. Depuis le
+25 octobre, la matrice est asymétrique et creuse : 125 liens sur 132 possibles.
+
+Le champ `variable_type` des fiches (moteur / relais / réactive) reste une
+**intention de conception** : il n'est pas recalculé depuis la matrice et peut
+différer du classement MICMAC.
+
+**Analyser : `micmac_matrice.py`** (lecture seule, sans IA)
+
+```bash
+python3 generator/micmac_matrice.py                    # avec la criticité des variables
+python3 generator/micmac_matrice.py --sans-criticite   # poids de la matrice seuls
+python3 generator/micmac_matrice.py --puissance 8      # sauts pour l'indirect (défaut 6)
+```
+
+- Force d'un lien = |poids × polarité × `temporal_weight` × criticité de la
+  source|, comme dans le moteur (table `CRITICITE` importée de `dynamique.py`).
+  Un amortisseur (−1) compte comme une influence.
+- Influence = somme des liens sortants ; dépendance = somme des entrants ;
+  indirect = mêmes sommes sur la matrice élevée à la puissance N.
+- Classes : **motrice** (influence ≥ moyenne, dépendance < moyenne), **relais**
+  (les deux ≥ moyenne), **dépendante**, **autonome**. « ← levier caché » : la
+  classe ou le rang change entre direct et indirect.
+- En tête : diagnostic de la matrice (paires symétriques, amortisseurs,
+  criticité manquante).
+- Référence du 25 oct (indirect) : motrices climat et technologie, dépendante
+  territoires.
+
+Quand le lancer : après toute retouche de la matrice ou d'une
+`systemic_criticality` ; avant une hypothèse « et si ? » ou une grosse
+injection, pour savoir si la variable visée diffuse le choc (climat, technologie)
+ou l'absorbe (territoires, valeurs).
+
+**Réviser les poids**
+
+1. **Atelier de la matrice** (page privée) :
+   https://claude.ai/artifact/WgAxTF4arr9aRB5w7F9vxf — un lot de 11 liens par
+   variable source, curseur de 0 à 1 par pas de 0,05, étoile de la variable
+   (sortants, entrants ou les deux), plan influence / dépendance recalculé en
+   direct. Repères par lien : « fiche » ou « à examiner », note de la matrice
+   Excel préliminaire, poids actuel et poids du sens retour (« inverse »). Les
+   poids sont enregistrés dans la page : Claude les relit directement. Le bouton
+   CSV n'est qu'une copie de sécurité.
+   Lecture des poids : 0 = pas d'effet direct ; 0,2–0,3 faible ; 0,4–0,6 réel
+   mais partiel ; 0,7–0,8 fort et régulier ; 0,85–1 majeur, presque mécanique.
+2. Référence des niveaux avant changement :
+   `python3 generator/mesure_niveaux.py --sauver documentation/niveaux_avant_<x>.json`
+3. Report dans la matrice (aperçu, puis écriture avec `.bak_s28`) :
+   ```bash
+   python3 generator/appliquer_matrice_validee.py documentation/matrice_validee.csv
+   python3 generator/appliquer_matrice_validee.py documentation/matrice_validee.csv --apply
+   ```
+   Seul `weight` change ; un lien à 0 est retiré ; statistiques et tableaux du
+   corps régénérés. Le CSV doit couvrir les 132 liens (colonnes `source`,
+   `cible`, `poids_valide`), sinon rien n'est écrit.
+4. Comparaison des niveaux :
+   `python3 generator/mesure_niveaux.py --comparer documentation/niveaux_avant_<x>.json`
+5. Fiches variables (aperçu, puis écriture) :
+   ```bash
+   python3 generator/regenerer_position_fiches.py            # --seuil 0.5 par défaut
+   python3 generator/regenerer_position_fiches.py --apply
+   ```
+   Retire les listes `influences` / `influenced_by` / `bidirectional_links` de
+   l'en-tête s'il en reste et régénère la section 2 (liens ≥ seuil, sortants et
+   entrants, sens « aggrave » / « amortit », liens réciproques). Idempotent.
+6. `python3 generator/validate.py > /tmp/validate.txt; tail -3 /tmp/validate.txt`
+   — contrôle matrice : au plus 132 liens, aucune variable isolée.
+
+Changer beaucoup de poids modifie le gain des boucles du moteur (25 oct :
+ρ 0,42 → 0,34). Si les niveaux bougent nettement, recaler `K_COUPLAGE` au banc
+(`banc_calibration.py`, voir §3ter).
+
+#### Notes sur les outils de données (25 octobre 2026)
+
+- **`undo_custom.py`** : le retrait d'un événement recalcule aussi la ligne
+  « Total » du registre (comme pour un signal), avec sauvegarde, et ne retire que
+  les lignes dont le slug est exactement celui visé.
+- **`audit_signatures.py`** : ignore les fichiers dont le nom commence par `_`
+  (dont `_index.md`).
+- **`et_si_injecter.py --plan`** : « · » devant une opération déjà faite, « ⚠ »
+  devant une vraie alerte.
+
 ## 3quater. Veille sur le monde réel
 
 Deux veilles, section GUI **« Référence — monde réel »**. Principe : **pas de

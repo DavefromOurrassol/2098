@@ -1292,3 +1292,98 @@ Friches / Racines / Bassins Vivants en eco_communalism.
 **Dépôt.** 543 sauvegardes `.bak*` étaient suivies par git → règle `*.bak*`
 dans `.gitignore`, `git rm --cached`, puis suppression du disque (1 358 fichiers ;
 aucun script ne relit un `.bak`, vérifié par grep).
+
+## ✅ S28.1 — Analyse structurelle (MICMAC) et révision de la matrice d'influence, 25 octobre 2026
+
+*À ajouter à la fin de `BACKLOG_ARCHIVE.md`. Suites ouvertes : `BACKLOG_ACTIF.md`,
+S28 et S19.*
+
+**Point de départ.** Piste n° 1 de S28 (6 oct) : passer `influence_matrix.md` au
+crible de la méthode MICMAC (Godet, LIPSOR) pour vérifier que les variables
+pilotes sont bien motrices et repérer des leviers cachés. La piste venait d'une
+comparaison avec la Red Team Défense, qui pointait le manque de surprise
+d'Ourrassol ; la même discussion jugeait l'espace absent de la grille, alors
+qu'il s'agit de `frontieres_du_systeme` (établi ce jour). Pour le calcul, la discussion
+signalait aussi le paquet R ISMtools ; il n'a pas servi, le calcul tenant en
+quelques lignes de Python.
+
+**Constat.** L'ancienne matrice était symétrique (65 paires sur 66 de poids
+identique dans les deux sens) et pleine (les 132 liens possibles). Chaque
+variable influençait donc autant qu'elle dépendait ; seules la criticité
+(`systemic_criticality`, multiplicateur ×0,7 à ×1,6 sur tous les liens sortants)
+et les 3 amortisseurs à −1 créaient des leviers. Une matrice MICMAC réaliste est
+asymétrique, et creuse là où un effet ne passe que par une variable
+intermédiaire.
+
+**Méthode retenue.**
+- Trois sources confrontées pour chaque lien dirigé : propositions de Claude
+  avec justification, matrice Excel préliminaire de David
+  (`analyse_structurelle_V1.xlsx`, feuille `MAT_INIT` : 41 variables notées 0/1,
+  colonne = source, 48 % de liens, la moitié réciproques), liens déclarés dans
+  les fiches (`influences` / `influenced_by`, 69 liens sur 132).
+- Regroupement de l'Excel en 12 variables, corrigé d'après les sous-variables des
+  fiches : urbanisation en démographie, alimentation en énergie
+  (`systemes_alimentaires`), espace et planètes en `frontieres_du_systeme`. Note
+  agrégée = part des liens présents entre deux groupes.
+- Un lien absent des fiches n'est pas supprimé d'office : les listes ne
+  recensaient que les liens principaux et celles de gouvernance et territoires
+  étaient vides. Chaque lien « à examiner » a été tranché par David.
+- Validation dans l'**Atelier de la matrice** (page privée,
+  https://claude.ai/artifact/WgAxTF4arr9aRB5w7F9vxf) : un lot de 11 liens par
+  variable source, curseur, étoile de la variable, plan influence / dépendance
+  recalculé en direct, poids enregistrés dans la page et relus par Claude.
+
+**Décisions de David.**
+- `frontieres_du_systeme` désigne l'espace (orbite, exploration, industrie
+  spatiale, colonisation, ressources spatiales), et non les limites planétaires.
+- Systèmes productifs et travail : variable primordiale (capitalisme et
+  communisme au XIXᵉ siècle, esclavage, prolétariat). Liens sortants relevés vers
+  valeurs (0,75), gouvernance (0,75), géopolitique (0,6), territoires (0,75) et
+  démographie (0,7). Classée relais fort : elle reçoit aussi fortement
+  (technologie, énergie), ce qui correspond à l'exemple de la révolution
+  industrielle.
+- MICMAC compte la force des liens en valeur absolue : un amortisseur est une
+  influence. Le premier calcul, signé, classait à tort les productifs en
+  « dépendante ».
+- 34 poids retouchés dans l'Atelier, dont 30 relevés ; démographie nettement
+  renforcée (valeurs 0,95, gouvernance 0,9, territoires 0,85, économie 0,8).
+- 7 liens coupés : gouvernance, valeurs, santé et technologie → climat ;
+  santé → énergie ; territoires → espace ; climat → technologie.
+- La matrice devient la seule source des liens ; les fiches n'en gardent qu'une
+  vue générée.
+- `variable_type` des fiches (moteur / relais / réactive) gardé comme intention
+  de conception, distinct du classement MICMAC (option b).
+- `K_COUPLAGE` inchangé (0,05).
+
+**Résultat.**
+- `influence_matrix.md` : 125 liens, 9 paires symétriques sur 66 ; polarités,
+  lags, `temporal_weight` et `feedback_role` inchangés ; statistiques et tableaux
+  du corps régénérés.
+- Classement avec criticité : motrices technologie et climat ; relais
+  géopolitique, énergie, productifs, économie ; dépendantes gouvernance et
+  territoires ; autonomes démographie (à la limite), espace, santé, valeurs.
+  Sans criticité, la matrice crée désormais ses propres leviers (technologie,
+  climat, démographie motrices).
+- Moteur : ρ(|K·C|) 0,42 → 0,34 ; niveaux 2098 déplacés d'au plus 1,2 point
+  (énergie en `reference`), 49 niveaux sur 72 de 0,1 point ou plus.
+- Fiches : listes de liens retirées de l'en-tête (lues par `loader.py` mais
+  jamais utilisées ; aucun script n'envoie le corps des fiches à l'IA) ;
+  section 2 générée (liens ≥ 0,5, sens « aggrave » / « amortit », liens
+  réciproques).
+- `validate.py` : au plus 132 liens, aucune variable isolée.
+
+**Outils.** `micmac_matrice.py`, `appliquer_matrice_validee.py`,
+`regenerer_position_fiches.py`, `patch_s28_validate.py` ; données
+`documentation/matrice_validee.csv` et `documentation/niveaux_avant_s28.json`.
+
+## ✅ Corrections rapides du 25 octobre 2026
+
+- **S30, cosmétique** : `et_si_injecter.py --plan` affiche « · » pour une
+  opération déjà faite (alerte commençant par « déjà »), « ⚠ » pour les seules
+  vraies alertes. Vérifié sur `pacte_tabriz_2058`.
+- **S24, `audit_signatures.py`** : les fichiers `_*.md` sont exclus des deux
+  boucles ; les 6 faux positifs de `_index.md` ont disparu.
+- **S19, `undo_custom.py`** : `_recalculer_total_registre()` (même calcul que
+  pour les signaux) appelé au retrait d'un événement, avec sauvegarde ;
+  comparaison exacte du slug en 3ᵉ colonne au lieu d'une sous-chaîne. Registre
+  vérifié avant patch : 643 entrées, total déjà synchronisé.

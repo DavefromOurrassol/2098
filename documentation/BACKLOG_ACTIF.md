@@ -1,11 +1,11 @@
 # Backlog actif — Ourrassol 2098
 
-*Ce qui reste ouvert, et seulement cela. Mis au propre le 24 octobre 2026 : les
-chantiers clos ont été retirés (leur détail est dans `BACKLOG_ARCHIVE.md`, à
-uploader seulement pour vérifier si un point a déjà été traité). Chaque chantier
-garde son nom et son numéro : les réutiliser tels quels. Mode d'emploi des outils :
-`USER_MANUAL_COMPLET.md` ; dernier état de session : `HANDOFF_24_OCTOBRE_SOIR.md`
-(S24 allégé le 24 octobre au soir : doublons et géographie traités).*
+*Ce qui reste ouvert, et seulement cela. Mis au propre le 24 octobre 2026, mis à
+jour le 25 octobre : les chantiers clos ont été retirés (leur détail est dans
+`BACKLOG_ARCHIVE.md`, à uploader seulement pour vérifier si un point a déjà été
+traité). Chaque chantier garde son nom et son numéro : les réutiliser tels quels.
+Mode d'emploi des outils : `USER_MANUAL_COMPLET.md` ; dernier état de session :
+`HANDOFF_25_OCTOBRE.md` (S28.1 MICMAC clos, matrice d'influence révisée).*
 
 Légende : 🟢 chantier actif · 🟡 en cours, partiellement traité · ⚪ en attente
 d'un signal ou d'un besoin (pas de calendrier).
@@ -106,12 +106,22 @@ Le simulateur et son parcours sont terminés (S27, clos le 24 oct ; manuel
 - **Exemples à ne jamais adopter** : `occupation_bresil_2029` et
   `reunification_ecosse_2070` (`et_si/hypotheses.yaml`) ; `invasion_bresil_2029`
   reste au banc de rejeu.
-- Cosmétique : `et_si_injecter.py --plan` affiche « ⚠ déjà appliqué » au lieu
-  de « · déjà appliqué ».
+- **Second cas test proposé : « La ruée vers l'espace »** (scénario de la
+  saison 3 de la Red Team Défense : tensions sur l'exploitation des ressources
+  spatiales, acteurs privés et étatiques). L'espace a sa variable :
+  `frontieres_du_systeme` (orbite, exploration, industrie spatiale,
+  colonisation, ressources spatiales ; établi le 25 oct).
 - Optionnel (ex-S27.5) : homonymes (Santa Cruz, Sucre, Perth, Medina) ;
   synthèse haut niveau des hypothèses ; récit IA de `trace_injection.py` (repli
-  sur le modèle) ; idées « wild cards » et « passe équipe rouge » (Red Team
-  Défense, voir S28).
+  sur le modèle) ; idées issues de la Red Team Défense : **wild cards** (type
+  d'événement « rupture » assumé, faible probabilité et impact majeur, injecté
+  même s'il bouscule le lore ; les signaux faibles ne conviennent pas, ils sont
+  déjà observables) et **passe « équipe rouge »** (faire attaquer les
+  hypothèses d'un scénario plutôt qu'en vérifier la cohérence, ex. « qu'est-ce
+  qui ferait tomber Ergo-Wian en dix ans ? » ; à confier à l'IA ou à des
+  lecteurs aux profils variés, pour compenser le fait que David imagine seul).
+  Source d'inspiration : la série *Ces guerres qui nous attendent*, qui
+  restitue une partie des travaux de la Red Team Défense.
 
 ## ⚪ S24. Anomalies de données et suites techniques
 
@@ -141,8 +151,7 @@ Doublons d'entités et anomalies de géographie **traités le 24 oct au soir**
   rédactions factices (`validate.py` les signale ; nettoyage
   `clean_fallback_journaux.py`). Piste : parse JSON tolérant.
 - **Audits S23** (`audit_signatures.py`, `audit_lieu_zone.py`,
-  `audit_temporel.py`) : CLI seulement ; `audit_signatures.py` n'exclut pas
-  `_index.md` (6 faux positifs).
+  `audit_temporel.py`) : CLI seulement.
 - **Bloc `===METADONNEES_PUBLICATION===`** resté une fois dans un article après
   un retry de longueur : relancer de temps en temps `reparer_bloc_metadonnees.py`
   (aperçu gratuit) ; cause non vérifiée dans `api.py`.
@@ -151,6 +160,13 @@ Doublons d'entités et anomalies de géographie **traités le 24 oct au soir**
 
 Moteur `dynamique.py` (manuel §3ter). Règle actée : **choc = s'estompe, rupture
 = change le monde** ; `GAIN_CHOCS` 0,25 inchangé (17 oct).
+
+- **Matrice révisée le 25 oct (S28.1)** : gain des boucles ρ(|K·C|) passé de
+  0,42 à 0,34 avec `K_COUPLAGE` inchangé (0,05) ; niveaux 2098 déplacés d'au
+  plus 1,2 point (référence : `documentation/niveaux_avant_s28.json`). Décision :
+  ne pas recaler K pour l'instant. **Au prochain gros lot d'injections**, lancer
+  le banc et décider s'il faut passer K à ≈ 0,063 (même ρ qu'au 27 sept). Le
+  commentaire de `K_COUPLAGE` (« ρ≈0,42 ») est désormais obsolète.
 
 - **Signaux faibles non propagés** : un signal `propagation_via_matrice: false`
   (le défaut) agit sur sa variable mais pas sur les autres. Options non
@@ -165,9 +181,8 @@ Moteur `dynamique.py` (manuel §3ter). Règle actée : **choc = s'estompe, ruptu
 - **Après un gros lot d'injections** : `python3 generator/banc_calibration.py
   --scenarios all --balayage-k 0.05`, et `mesure_niveaux.py` avant / après tout
   réglage de `GAIN_CHOCS`, `DEMI_VIE`, `DEMI_VIE_PAR_TYPE` ou `PERSISTANCE`.
-- Mineurs : `undo_custom.py` ne recalcule pas la ligne « Total » du registre ;
-  `matplotlib` absent (le banc écrit des CSV) ; les tendances (`trend`) des
-  fiches scénario ne sont lues par aucun calcul.
+- Mineurs : `matplotlib` absent (le banc écrit des CSV) ; les tendances
+  (`trend`) des fiches scénario ne sont lues par aucun calcul.
 
 ## ⚪ S18. Audit du lore — usage courant
 
@@ -230,21 +245,76 @@ Chaîne en production (manuel §3quater). Pistes :
 - Non faits : OCR des PDF scannés ; fusion multi-IA pour l'état du monde ;
   défaire une fusion dans 🔭 ; recherche web en deux temps (≈ 12 fois plus chère).
 - Idée : repérer les signaux qui relient plusieurs variables (analyse en réseau
-  sur la matrice 12×12).
+  sur la matrice 12×12 ; `micmac_matrice.py` en donne la base).
 
 ## ⚪ S28. Outils externes à greffer (pistes du 6 oct)
 
-Rien de décidé ni de codé ; ordre conseillé : 1, puis 3 ou 2.
-1. **MICMAC** sur `influence_matrix.md` : influence et dépendance directes et
-   indirectes → variables motrices / relais / dépendantes / autonomes. Gratuit,
-   sans IA, quelques lignes de Python.
-2. **CIB (Cross-Impact Balance)**, logiciel ScenarioWizard : configurations
-   cohérentes d'un jeu de variables à états ; contrôle de stabilité des 6
-   scénarios. Licence et formats à vérifier.
-3. **Base SSP de l'IIASA** : trajectoires chiffrées par région jusqu'en 2100,
-   repère pour les ordres de grandeur.
-4. **API Metaculus** (2026-2035) pour `etat_du_monde_reel.md`.
-5. **GDELT** et **OpenAlex** en complément du RSS.
+*Origine : comparaison d'Ourrassol avec la Red Team Défense (ministère des
+Armées, lancée en 2019-2020 ; arrêtée en 2023 après trois saisons, à vérifier
+avant de s'y référer). Même matière (ruptures technologiques, géopolitiques,
+sociales), intention différente : la Red Team provoque des décideurs avec des
+scénarios ponctuels 2030-2060 imaginés par des auteurs de SF, BD et scénaristes,
+critiqués par des militaires et des scientifiques ; Ourrassol construit six
+mondes parallèles cohérents sur 2025-2098 et les fait vivre par une presse
+fictive, avec une veille outillée et des contrôles de cohérence.*
+
+*Ce qu'Ourrassol fait mieux : la **propagation** (un événement injecté se
+diffuse et se mesure dans le temps, `trace_injection.py`) ; la **pluralité des
+regards** (pouvoir et opposition, depuis sa zone ou une autre, S26) ; la
+**traçabilité** (chaque idée a une origine, une date, et on sait où elle a
+pesé). Son point faible : la **surprise**. Le moteur ramène les variables vers
+leur référence et sature près des bornes (S19) ; l'audit du lore corrige ce qui
+détonne (S18) ; l'IA recycle ce qu'elle a lu (Kharg-9, S25) ; et David imagine
+seul, là où la Red Team croisait des sensibilités très différentes. Le système
+approfondit bien une rupture qu'on lui donne, beaucoup moins il n'en invente
+une vraiment dérangeante. D'où les pistes ci-dessous, et les wild cards et la
+passe « équipe rouge » de S30.*
+
+**1. MICMAC : clos le 25 oct** (`micmac_matrice.py`, matrice d'influence révisée
+dans l'Atelier, détail dans `BACKLOG_ARCHIVE.md`). Suites, sans calendrier :
+- **Relancer `micmac_matrice.py`** après toute retouche de `influence_matrix.md`
+  ou d'une `systemic_criticality`, puis `regenerer_position_fiches.py --apply`.
+  Référence du 25 oct : motrices climat et technologie, dépendante territoires.
+- **`variable_type` des fiches** (moteur / relais / réactive) : gardé comme
+  **intention de conception**, distinct du classement MICMAC (décision du
+  25 oct) ; il diverge sur 7 variables (géopolitique, énergie, productifs,
+  démographie, gouvernance, territoires, valeurs). Lu par `generate_entities.py`.
+- **`coupling_intensity`** (dans `states` de chaque fiche, par scénario) : autre
+  famille de liens, non examinée. Vérifier qui la lit et sa cohérence avec la
+  matrice.
+- **Texte rédigé des fiches** (sections 3 à 10) : peut encore évoquer des liens
+  modifiés ; à relire au fil de l'eau.
+- La criticité (`systemic_criticality`) pèse lourd dans le classement (×0,7 à
+  ×1,6 sur tous les liens sortants) : à rediscuter si un classement surprend.
+- Atelier de la matrice (page privée) : https://claude.ai/artifact/WgAxTF4arr9aRB5w7F9vxf
+  — réutilisable pour une prochaine révision des poids.
+
+Reste, rien de décidé ni de codé ; ordre conseillé : 2 (plus pertinent depuis que
+la matrice est asymétrique), puis 3.
+2. **CIB (Cross-Impact Balance)**, logiciel ScenarioWizard, maintenu par le
+   CIB-Lab de Stuttgart (version récente sur Zenodo ; licence et formats à
+   vérifier). On note comment l'**état** de chaque variable favorise ou freine
+   l'état des autres, et le logiciel liste toutes les combinaisons cohérentes.
+   Apport : vérifier que les 6 scénarios sont des configurations stables, et
+   surtout faire apparaître des configurations cohérentes non imaginées : la
+   réponse méthodique au manque de surprise. Coût : noter la matrice autrement,
+   par états de variables et non par poids.
+3. **Base SSP de l'IIASA** (Shared Socioeconomic Pathways) : population, PIB,
+   urbanisation, énergie et émissions par grande région jusqu'en 2100, pour cinq
+   futurs. Correspondances : fortress_world ≈ SSP3, new_sustainability ≈ SSP1,
+   policy_reform ≈ SSP2 (les autres à établir). Apport : ordres de grandeur
+   crédibles pour les articles (population d'une zone en 2098, mix
+   énergétique) et repère pour les niveaux des variables. Le plus utile pour la
+   crédibilité des articles.
+4. **API Metaculus** (2026-2035 ; conditions d'accès à vérifier) : nourrir
+   `etat_du_monde_reel.md` avec ce que les prévisionnistes jugent probable, pas
+   seulement ce qui s'est passé.
+5. **Détection de signaux en complément du RSS** : **GDELT** (base mondiale
+   d'événements tirés de la presse, accès libre ; tendances par pays ou par
+   thème pour repérer une montée encore marginale) et **OpenAlex** (API
+   gratuite sur la publication scientifique ; un sujet dont le nombre
+   d'articles décolle est un bon signal faible technologique, dans l'esprit des
+   catalogues du JRC).
 En marge : *Global Trends 2040* comme grille de comparaison.
 
 ## ⚪ S1. Fiabilité de `mistral-small` sur choix contraint (P17)
