@@ -33,7 +33,7 @@ mois_tous = collections.Counter()
 mois_ok = collections.Counter()
 jours_aout = collections.defaultdict(collections.Counter)
 
-for f in sorted(glob.glob("../articles/*/*.md")):
+for f in sorted([g for g in glob.glob("../articles/*/*.md") if not g.rsplit("/", 1)[-1].startswith("_")]):
     t = open(f, encoding="utf-8").read()
     m = re.match(r"^---\n(.*?)\n---", t, re.S)
     if not m:
@@ -61,7 +61,7 @@ for f in sorted(glob.glob("../articles/*/*.md")):
         mois_ok[mois] += 0  # garde le mois visible
 
 # Articles BIEN signés, par mois (pour comparer)
-for f in sorted(glob.glob("../articles/*/*.md")):
+for f in sorted([g for g in glob.glob("../articles/*/*.md") if not g.rsplit("/", 1)[-1].startswith("_")]):
     t = open(f, encoding="utf-8").read()
     m = re.match(r"^---\n(.*?)\n---", t, re.S)
     if m:
