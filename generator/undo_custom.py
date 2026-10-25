@@ -202,6 +202,22 @@ def remove_from_entities_list(base_slug, dry_run, report):
 # Registre
 # ---------------------------------------------------------------------------
 
+def _recalculer_total_registre(content):
+    """Recalcule la ligne « Total » du registre (même calcul que remove_signal_from_registre)."""
+    def _type(l):
+        return [c.strip() for c in l.strip("|").split("|")][0:1]
+    lignes = content.split("\n")
+    signal_rows = sum(1 for l in lignes if l.startswith("|") and _type(l) == ["signal"])
+    evenement_rows = sum(1 for l in lignes if l.startswith("|") and _type(l) == ["evenement"])
+    return re.sub(
+        r"Total : \d+ entrées \(\d+ signaux uniques × 6 scénarios( \+ \d+ entrées d'événements custom)?\)\.",
+        "Total : {} entrées ({} signaux uniques × 6 scénarios + {} entrées d'événements custom).".format(
+            signal_rows + evenement_rows, signal_rows // len(SCENARIOS_SIGNAL), evenement_rows
+        ),
+        content,
+    )
+
+
 def remove_from_registre(event_slug, scenario, dry_run, report):
     """Retire les lignes de type=evenement pour event_slug dans registre_evenements.md."""
     if not REGISTRE_PATH.exists():
@@ -213,7 +229,8 @@ def remove_from_registre(event_slug, scenario, dry_run, report):
     removed = 0
     for line in lines:
         # Ligne de table événement : | evenement | date | slug | ... |
-        if line.startswith("|") and "evenement" in line and event_slug in line:
+        cols = [c.strip() for c in line.strip("|").split("|")] if line.startswith("|") else None
+        if cols and len(cols) >= 3 and cols[0] == "evenement" and cols[2] == event_slug:
             # Vérifier scénario si fourni
             if scenario is None or True:  # on retire toutes occurrences du slug
                 removed += 1
@@ -223,8 +240,11 @@ def remove_from_registre(event_slug, scenario, dry_run, report):
         new_lines.append(line)
 
     if removed > 0 and not dry_run:
-        REGISTRE_PATH.write_text("\n".join(new_lines), encoding="utf-8")
-        report.append(f"  [REG] {removed} ligne(s) retirée(s) du registre pour '{event_slug}'")
+        new_content = _recalculer_total_registre("\n".join(new_lines))
+        backup_file(REGISTRE_PATH)
+        REGISTRE_PATH.write_text(new_content, encoding="utf-8")
+        report.append(f"  [REG] {removed} ligne(s) retirée(s) du registre pour '{event_slug}' "
+                      f"(total recalculé)")
 
 
 # ---------------------------------------------------------------------------
