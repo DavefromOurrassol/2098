@@ -93,7 +93,8 @@ def main():
         print(f"Liste de l'étape ④ — {hid} (mêmes numéros ; « Sauter » ici retire aussi faits et acteurs "
               "de l'injection)\n")
         for o in ops:
-            al = f"  ⚠ {o['alerte']}" if o.get("alerte") else ""
+            al = (f"  {'·' if str(o['alerte']).startswith('déjà') else '⚠'} {o['alerte']}"
+                  if o.get("alerte") else "")
             print(f"  {o['n']:>3}. [{o['sc']}] {o['texte']}{al}")
         return
 
