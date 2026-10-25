@@ -9,21 +9,6 @@ domain:
     - economic
     - geopolitical
     - technological
-influences:
-    - [[climat_environnement_global]]
-    - [[geopolitique_conflits]]
-    - [[organisation_territoires]]
-influenced_by:
-    - [[climat_environnement_global]]
-    - [[systemes_productifs_travail]]
-    - [[systeme_economique_redistribution]]
-    - [[technologie_information]]
-    - [[geopolitique_conflits]]
-    - [[frontieres_du_systeme]]
-bidirectional_links:
-    - [[climat_environnement_global]]
-    - [[geopolitique_conflits]]
-    - [[systeme_economique_redistribution]]
 sub_variables:
   - name: systemes_energetiques
     role: production et distribution d’énergie mondiale
@@ -184,23 +169,34 @@ Base matérielle fondamentale conditionnant la production industrielle, la stabi
 
 ## 2. Position dans le système
 
-**Influence**
-- [[climat_environnement_global]]
-- [[geopolitique_conflits]]
-- [[organisation_territoires]]
+*Section générée depuis [[influence_matrix]] (liens de poids ≥ 0.5) : ne pas éditer à la main, relancer `generator/regenerer_position_fiches.py`. Détail complet et liens faibles dans la matrice.*
 
-**Influencé par**
-- [[climat_environnement_global]]
-- [[systemes_productifs_travail]]
-- [[systeme_economique_redistribution]]
-- [[technologie_information]]
-- [[geopolitique_conflits]]
-- [[frontieres_du_systeme]]
+**Influence** (cette variable → cible)
 
-**Liens bidirectionnels**
-- [[climat_environnement_global]]
-- [[geopolitique_conflits]]
-- [[systeme_economique_redistribution]]
+| Cible | Poids | Sens |
+|---|---|---|
+| [[geopolitique_conflits]] | 0.90 | aggrave (+) |
+| [[systeme_economique_redistribution]] | 0.85 | aggrave (+) |
+| [[systemes_productifs_travail]] | 0.85 | aggrave (+) |
+| [[climat_environnement_global]] | 0.80 | aggrave (+) |
+| [[organisation_territoires]] | 0.60 | aggrave (+) |
+| [[frontieres_du_systeme]] | 0.60 | aggrave (+) |
+| [[technologie_information]] | 0.50 | aggrave (+) |
+
+**Influencé par** (source → cette variable)
+
+| Source | Poids | Sens |
+|---|---|---|
+| [[geopolitique_conflits]] | 0.85 | aggrave (+) |
+| [[systemes_productifs_travail]] | 0.70 | amortit (−) |
+| [[technologie_information]] | 0.60 | aggrave (+) |
+| [[demographie_mobilite_humaine]] | 0.55 | aggrave (+) |
+| [[gouvernance_institutions]] | 0.50 | aggrave (+) |
+| [[organisation_territoires]] | 0.50 | aggrave (+) |
+| [[frontieres_du_systeme]] | 0.50 | aggrave (+) |
+| [[climat_environnement_global]] | 0.50 | aggrave (+) |
+
+**Liens réciproques** (forts dans les deux sens) : [[climat_environnement_global]], [[frontieres_du_systeme]], [[geopolitique_conflits]], [[organisation_territoires]], [[systemes_productifs_travail]], [[technologie_information]]
 
 ## 3. Dynamique interne
 - Direction : **up** | Intensité : **very_high** | Inertie : **very_high** | Vitesse : **medium_fast**

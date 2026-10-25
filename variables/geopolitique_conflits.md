@@ -9,24 +9,6 @@ domain:
     - economic
     - technological
     - social
-influences:
-    - [[energie_ressources_critiques]]
-    - [[systeme_economique_redistribution]]
-    - [[gouvernance_institutions]]
-    - [[demographie_mobilite_humaine]]
-    - [[organisation_territoires]]
-    - [[frontieres_du_systeme]]
-influenced_by:
-    - [[energie_ressources_critiques]]
-    - [[climat_environnement_global]]
-    - [[technologie_information]]
-    - [[systeme_economique_redistribution]]
-    - [[organisation_territoires]]
-    - [[frontieres_du_systeme]]
-bidirectional_links:
-    - [[systeme_economique_redistribution]]
-    - [[technologie_information]]
-    - [[energie_ressources_critiques]]
 sub_variables:
   - name: blocs_geopolitiques
     role: Structuration des alliances de puissance et des sphères d’influence globales.
@@ -205,26 +187,39 @@ Moteur systémique de régulation par la contrainte : elle détermine la stabili
 
 ## 2. Position dans le système
 
-**Influence**
-- [[energie_ressources_critiques]]
-- [[systeme_economique_redistribution]]
-- [[gouvernance_institutions]]
-- [[demographie_mobilite_humaine]]
-- [[organisation_territoires]]
-- [[frontieres_du_systeme]]
+*Section générée depuis [[influence_matrix]] (liens de poids ≥ 0.5) : ne pas éditer à la main, relancer `generator/regenerer_position_fiches.py`. Détail complet et liens faibles dans la matrice.*
 
-**Influencé par**
-- [[energie_ressources_critiques]]
-- [[climat_environnement_global]]
-- [[technologie_information]]
-- [[systeme_economique_redistribution]]
-- [[organisation_territoires]]
-- [[frontieres_du_systeme]]
+**Influence** (cette variable → cible)
 
-**Liens bidirectionnels**
-- [[systeme_economique_redistribution]]
-- [[technologie_information]]
-- [[energie_ressources_critiques]]
+| Cible | Poids | Sens |
+|---|---|---|
+| [[energie_ressources_critiques]] | 0.85 | aggrave (+) |
+| [[demographie_mobilite_humaine]] | 0.85 | aggrave (+) |
+| [[gouvernance_institutions]] | 0.80 | aggrave (+) |
+| [[organisation_territoires]] | 0.80 | aggrave (+) |
+| [[systeme_economique_redistribution]] | 0.75 | aggrave (+) |
+| [[frontieres_du_systeme]] | 0.75 | aggrave (+) |
+| [[valeurs_culture_tempo_sociale]] | 0.60 | aggrave (+) |
+| [[technologie_information]] | 0.60 | aggrave (+) |
+| [[systemes_productifs_travail]] | 0.60 | aggrave (+) |
+| [[sante_biotechnologies]] | 0.50 | aggrave (+) |
+
+**Influencé par** (source → cette variable)
+
+| Source | Poids | Sens |
+|---|---|---|
+| [[gouvernance_institutions]] | 0.90 | aggrave (+) |
+| [[energie_ressources_critiques]] | 0.90 | aggrave (+) |
+| [[valeurs_culture_tempo_sociale]] | 0.65 | aggrave (+) |
+| [[organisation_territoires]] | 0.60 | aggrave (+) |
+| [[frontieres_du_systeme]] | 0.60 | aggrave (+) |
+| [[technologie_information]] | 0.60 | aggrave (+) |
+| [[climat_environnement_global]] | 0.60 | aggrave (+) |
+| [[demographie_mobilite_humaine]] | 0.60 | aggrave (+) |
+| [[systemes_productifs_travail]] | 0.60 | aggrave (+) |
+| [[systeme_economique_redistribution]] | 0.50 | aggrave (+) |
+
+**Liens réciproques** (forts dans les deux sens) : [[demographie_mobilite_humaine]], [[energie_ressources_critiques]], [[frontieres_du_systeme]], [[gouvernance_institutions]], [[organisation_territoires]], [[systeme_economique_redistribution]], [[systemes_productifs_travail]], [[technologie_information]], [[valeurs_culture_tempo_sociale]]
 
 ## 3. Dynamique interne
 - Direction : **up** | Intensité : **very_high** | Inertie : **extremely_high** | Vitesse : **accelerating**

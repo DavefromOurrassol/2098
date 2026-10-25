@@ -9,12 +9,6 @@ domain:
     - economic
     - social
     - technological
-influences:
-
-influenced_by:
-
-bidirectional_links:
-
 sub_variables:
   - name: megapoles_globales
     role: Centres urbains dominants concentrant population, capital et innovation.
@@ -176,14 +170,33 @@ Régulateur spatial des dynamiques économiques, sociales et énergétiques à l
 
 ## 2. Position dans le système
 
-**Influence**
-_aucune_
+*Section générée depuis [[influence_matrix]] (liens de poids ≥ 0.5) : ne pas éditer à la main, relancer `generator/regenerer_position_fiches.py`. Détail complet et liens faibles dans la matrice.*
 
-**Influencé par**
-_aucune_
+**Influence** (cette variable → cible)
 
-**Liens bidirectionnels**
-_aucune_
+| Cible | Poids | Sens |
+|---|---|---|
+| [[gouvernance_institutions]] | 0.60 | aggrave (+) |
+| [[geopolitique_conflits]] | 0.60 | aggrave (+) |
+| [[systemes_productifs_travail]] | 0.60 | aggrave (+) |
+| [[systeme_economique_redistribution]] | 0.50 | aggrave (+) |
+| [[valeurs_culture_tempo_sociale]] | 0.50 | aggrave (+) |
+| [[energie_ressources_critiques]] | 0.50 | aggrave (+) |
+| [[demographie_mobilite_humaine]] | 0.50 | aggrave (+) |
+
+**Influencé par** (source → cette variable)
+
+| Source | Poids | Sens |
+|---|---|---|
+| [[demographie_mobilite_humaine]] | 0.85 | aggrave (+) |
+| [[geopolitique_conflits]] | 0.80 | aggrave (+) |
+| [[climat_environnement_global]] | 0.80 | aggrave (+) |
+| [[systemes_productifs_travail]] | 0.75 | aggrave (+) |
+| [[gouvernance_institutions]] | 0.70 | aggrave (+) |
+| [[systeme_economique_redistribution]] | 0.60 | aggrave (+) |
+| [[energie_ressources_critiques]] | 0.60 | aggrave (+) |
+
+**Liens réciproques** (forts dans les deux sens) : [[demographie_mobilite_humaine]], [[energie_ressources_critiques]], [[geopolitique_conflits]], [[gouvernance_institutions]], [[systeme_economique_redistribution]], [[systemes_productifs_travail]]
 
 ## 3. Dynamique interne
 - Direction : **up** | Intensité : **high** | Inertie : **extremely_high** | Vitesse : **medium**

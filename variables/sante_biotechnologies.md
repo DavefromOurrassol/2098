@@ -9,18 +9,6 @@ domain:
     - social
     - technological
     - economic
-influences:
-    - [[demographie_mobilite_humaine]]
-    - [[systemes_productifs_travail]]
-    - [[systeme_economique_redistribution]]
-influenced_by:
-    - [[climat_environnement_global]]
-    - [[systeme_economique_redistribution]]
-    - [[technologie_information]]
-    - [[organisation_territoires]]
-bidirectional_links:
-    - [[demographie_mobilite_humaine]]
-    - [[systemes_productifs_travail]]
 sub_variables:
   - name: longevite_humaine
     role: extension de la durée de vie biologique humaine
@@ -179,20 +167,26 @@ Base biologique du système humain conditionnant survie, productivité, capacit�
 
 ## 2. Position dans le système
 
-**Influence**
-- [[demographie_mobilite_humaine]]
-- [[systemes_productifs_travail]]
-- [[systeme_economique_redistribution]]
+*Section générée depuis [[influence_matrix]] (liens de poids ≥ 0.5) : ne pas éditer à la main, relancer `generator/regenerer_position_fiches.py`. Détail complet et liens faibles dans la matrice.*
 
-**Influencé par**
-- [[climat_environnement_global]]
-- [[systeme_economique_redistribution]]
-- [[technologie_information]]
-- [[organisation_territoires]]
+**Influence** (cette variable → cible)
 
-**Liens bidirectionnels**
-- [[demographie_mobilite_humaine]]
-- [[systemes_productifs_travail]]
+| Cible | Poids | Sens |
+|---|---|---|
+| [[demographie_mobilite_humaine]] | 0.85 | aggrave (+) |
+| [[systemes_productifs_travail]] | 0.60 | aggrave (+) |
+
+**Influencé par** (source → cette variable)
+
+| Source | Poids | Sens |
+|---|---|---|
+| [[climat_environnement_global]] | 0.70 | aggrave (+) |
+| [[demographie_mobilite_humaine]] | 0.60 | aggrave (+) |
+| [[technologie_information]] | 0.55 | aggrave (+) |
+| [[geopolitique_conflits]] | 0.50 | aggrave (+) |
+| [[systemes_productifs_travail]] | 0.50 | aggrave (+) |
+
+**Liens réciproques** (forts dans les deux sens) : [[demographie_mobilite_humaine]], [[systemes_productifs_travail]]
 
 ## 3. Dynamique interne
 - Direction : **up** | Intensité : **high** | Inertie : **medium** | Vitesse : **fast**

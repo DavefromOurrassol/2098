@@ -9,21 +9,6 @@ domain:
     - economic
     - geopolitical
     - social
-influences:
-    - [[systemes_productifs_travail]]
-    - [[systeme_economique_redistribution]]
-    - [[frontieres_du_systeme]]
-influenced_by:
-    - [[systeme_economique_redistribution]]
-    - [[energie_ressources_critiques]]
-    - [[gouvernance_institutions]]
-    - [[geopolitique_conflits]]
-    - [[valeurs_culture_tempo_sociale]]
-    - [[sante_biotechnologies]]
-    - [[frontieres_du_systeme]]
-bidirectional_links:
-    - [[systemes_productifs_travail]]
-    - [[systeme_economique_redistribution]]
 sub_variables:
   - name: ia_generative_decisionnelle
     role: Production cognitive automatisée et prise de décision algorithmique.
@@ -204,23 +189,31 @@ Infrastructure cognitive et informationnelle globale. Elle organise la productio
 
 ## 2. Position dans le système
 
-**Influence**
-- [[systemes_productifs_travail]]
-- [[systeme_economique_redistribution]]
-- [[frontieres_du_systeme]]
+*Section générée depuis [[influence_matrix]] (liens de poids ≥ 0.5) : ne pas éditer à la main, relancer `generator/regenerer_position_fiches.py`. Détail complet et liens faibles dans la matrice.*
 
-**Influencé par**
-- [[systeme_economique_redistribution]]
-- [[energie_ressources_critiques]]
-- [[gouvernance_institutions]]
-- [[geopolitique_conflits]]
-- [[valeurs_culture_tempo_sociale]]
-- [[sante_biotechnologies]]
-- [[frontieres_du_systeme]]
+**Influence** (cette variable → cible)
 
-**Liens bidirectionnels**
-- [[systemes_productifs_travail]]
-- [[systeme_economique_redistribution]]
+| Cible | Poids | Sens |
+|---|---|---|
+| [[systemes_productifs_travail]] | 0.95 | aggrave (+) |
+| [[valeurs_culture_tempo_sociale]] | 0.85 | aggrave (+) |
+| [[frontieres_du_systeme]] | 0.85 | aggrave (+) |
+| [[gouvernance_institutions]] | 0.75 | aggrave (+) |
+| [[systeme_economique_redistribution]] | 0.70 | aggrave (+) |
+| [[geopolitique_conflits]] | 0.60 | aggrave (+) |
+| [[energie_ressources_critiques]] | 0.60 | aggrave (+) |
+| [[sante_biotechnologies]] | 0.55 | aggrave (+) |
+
+**Influencé par** (source → cette variable)
+
+| Source | Poids | Sens |
+|---|---|---|
+| [[frontieres_du_systeme]] | 0.70 | aggrave (+) |
+| [[systemes_productifs_travail]] | 0.70 | aggrave (+) |
+| [[geopolitique_conflits]] | 0.60 | aggrave (+) |
+| [[energie_ressources_critiques]] | 0.50 | aggrave (+) |
+
+**Liens réciproques** (forts dans les deux sens) : [[energie_ressources_critiques]], [[frontieres_du_systeme]], [[geopolitique_conflits]], [[systemes_productifs_travail]]
 
 ## 3. Dynamique interne
 - Direction : **up** | Intensité : **very_high** | Inertie : **medium_high** | Vitesse : **very_fast**

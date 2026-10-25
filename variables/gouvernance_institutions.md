@@ -9,12 +9,6 @@ domain:
     - social
     - economic
     - technological
-influences:
-
-influenced_by:
-
-bidirectional_links:
-
 sub_variables:
   - name: etat_nation
     role: Unité souveraine de base du système politique moderne.
@@ -178,14 +172,34 @@ Régulateur central et structure de stabilisation / transformation des systèmes
 
 ## 2. Position dans le système
 
-**Influence**
-_aucune_
+*Section générée depuis [[influence_matrix]] (liens de poids ≥ 0.5) : ne pas éditer à la main, relancer `generator/regenerer_position_fiches.py`. Détail complet et liens faibles dans la matrice.*
 
-**Influencé par**
-_aucune_
+**Influence** (cette variable → cible)
 
-**Liens bidirectionnels**
-_aucune_
+| Cible | Poids | Sens |
+|---|---|---|
+| [[systeme_economique_redistribution]] | 0.95 | aggrave (+) |
+| [[geopolitique_conflits]] | 0.90 | aggrave (+) |
+| [[organisation_territoires]] | 0.70 | aggrave (+) |
+| [[valeurs_culture_tempo_sociale]] | 0.50 | aggrave (+) |
+| [[frontieres_du_systeme]] | 0.50 | aggrave (+) |
+| [[energie_ressources_critiques]] | 0.50 | aggrave (+) |
+| [[demographie_mobilite_humaine]] | 0.50 | aggrave (+) |
+| [[systemes_productifs_travail]] | 0.50 | aggrave (+) |
+
+**Influencé par** (source → cette variable)
+
+| Source | Poids | Sens |
+|---|---|---|
+| [[demographie_mobilite_humaine]] | 0.90 | aggrave (+) |
+| [[geopolitique_conflits]] | 0.80 | aggrave (+) |
+| [[systeme_economique_redistribution]] | 0.75 | aggrave (+) |
+| [[valeurs_culture_tempo_sociale]] | 0.75 | aggrave (+) |
+| [[technologie_information]] | 0.75 | aggrave (+) |
+| [[systemes_productifs_travail]] | 0.75 | aggrave (+) |
+| [[organisation_territoires]] | 0.60 | aggrave (+) |
+
+**Liens réciproques** (forts dans les deux sens) : [[demographie_mobilite_humaine]], [[geopolitique_conflits]], [[organisation_territoires]], [[systeme_economique_redistribution]], [[systemes_productifs_travail]], [[valeurs_culture_tempo_sociale]]
 
 ## 3. Dynamique interne
 - Direction : **up** | Intensité : **high** | Inertie : **extremely_high** | Vitesse : **slow**

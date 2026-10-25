@@ -8,24 +8,6 @@ domain:
     - social
     - economic
     - geopolitical
-influences:
-    - [[systeme_economique_redistribution]]
-    - [[gouvernance_institutions]]
-    - [[geopolitique_conflits]]
-    - [[valeurs_culture_tempo_sociale]]
-    - [[organisation_territoires]]
-    - [[sante_biotechnologies]]
-influenced_by:
-    - [[climat_environnement_global]]
-    - [[systemes_productifs_travail]]
-    - [[energie_ressources_critiques]]
-    - [[geopolitique_conflits]]
-    - [[organisation_territoires]]
-    - [[systeme_economique_redistribution]]
-bidirectional_links:
-    - [[organisation_territoires]]
-    - [[geopolitique_conflits]]
-    - [[systeme_economique_redistribution]]
 sub_variables:
   - name: population_globale
     role: masse démographique mondiale
@@ -206,26 +188,37 @@ Variable relais structurant la répartition spatiale des populations, les flux m
 
 ## 2. Position dans le système
 
-**Influence**
-- [[systeme_economique_redistribution]]
-- [[gouvernance_institutions]]
-- [[geopolitique_conflits]]
-- [[valeurs_culture_tempo_sociale]]
-- [[organisation_territoires]]
-- [[sante_biotechnologies]]
+*Section générée depuis [[influence_matrix]] (liens de poids ≥ 0.5) : ne pas éditer à la main, relancer `generator/regenerer_position_fiches.py`. Détail complet et liens faibles dans la matrice.*
 
-**Influencé par**
-- [[climat_environnement_global]]
-- [[systemes_productifs_travail]]
-- [[energie_ressources_critiques]]
-- [[geopolitique_conflits]]
-- [[organisation_territoires]]
-- [[systeme_economique_redistribution]]
+**Influence** (cette variable → cible)
 
-**Liens bidirectionnels**
-- [[organisation_territoires]]
-- [[geopolitique_conflits]]
-- [[systeme_economique_redistribution]]
+| Cible | Poids | Sens |
+|---|---|---|
+| [[valeurs_culture_tempo_sociale]] | 0.95 | aggrave (+) |
+| [[gouvernance_institutions]] | 0.90 | aggrave (+) |
+| [[organisation_territoires]] | 0.85 | aggrave (+) |
+| [[systeme_economique_redistribution]] | 0.80 | aggrave (+) |
+| [[frontieres_du_systeme]] | 0.70 | aggrave (+) |
+| [[systemes_productifs_travail]] | 0.70 | aggrave (+) |
+| [[climat_environnement_global]] | 0.65 | aggrave (+) |
+| [[geopolitique_conflits]] | 0.60 | aggrave (+) |
+| [[sante_biotechnologies]] | 0.60 | aggrave (+) |
+| [[energie_ressources_critiques]] | 0.55 | aggrave (+) |
+
+**Influencé par** (source → cette variable)
+
+| Source | Poids | Sens |
+|---|---|---|
+| [[climat_environnement_global]] | 0.90 | aggrave (+) |
+| [[geopolitique_conflits]] | 0.85 | aggrave (+) |
+| [[sante_biotechnologies]] | 0.85 | aggrave (+) |
+| [[systemes_productifs_travail]] | 0.70 | aggrave (+) |
+| [[systeme_economique_redistribution]] | 0.60 | aggrave (+) |
+| [[gouvernance_institutions]] | 0.50 | aggrave (+) |
+| [[valeurs_culture_tempo_sociale]] | 0.50 | aggrave (+) |
+| [[organisation_territoires]] | 0.50 | aggrave (+) |
+
+**Liens réciproques** (forts dans les deux sens) : [[climat_environnement_global]], [[geopolitique_conflits]], [[gouvernance_institutions]], [[organisation_territoires]], [[sante_biotechnologies]], [[systeme_economique_redistribution]], [[systemes_productifs_travail]], [[valeurs_culture_tempo_sociale]]
 
 ## 3. Dynamique interne
 - Direction : **up** | Intensité : **high** | Inertie : **high** | Vitesse : **linear**

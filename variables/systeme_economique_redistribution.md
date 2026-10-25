@@ -9,25 +9,6 @@ domain:
     - social
     - technological
     - political
-influences:
-    - [[demographie_mobilite_humaine]]
-    - [[technologie_information]]
-    - [[gouvernance_institutions]]
-    - [[geopolitique_conflits]]
-    - [[energie_ressources_critiques]]
-    - [[sante_biotechnologies]]
-    - [[frontieres_du_systeme]]
-    - [[organisation_territoires]]
-influenced_by:
-    - [[systemes_productifs_travail]]
-    - [[technologie_information]]
-    - [[gouvernance_institutions]]
-    - [[geopolitique_conflits]]
-    - [[energie_ressources_critiques]]
-bidirectional_links:
-    - [[technologie_information]]
-    - [[gouvernance_institutions]]
-    - [[geopolitique_conflits]]
 sub_variables:
   - name: systemes_financiers_globaux
     role: circulation mondiale du capital et des flux financiers
@@ -187,27 +168,34 @@ Infrastructure centrale de circulation de la valeur économique conditionnant st
 
 ## 2. Position dans le système
 
-**Influence**
-- [[demographie_mobilite_humaine]]
-- [[technologie_information]]
-- [[gouvernance_institutions]]
-- [[geopolitique_conflits]]
-- [[energie_ressources_critiques]]
-- [[sante_biotechnologies]]
-- [[frontieres_du_systeme]]
-- [[organisation_territoires]]
+*Section générée depuis [[influence_matrix]] (liens de poids ≥ 0.5) : ne pas éditer à la main, relancer `generator/regenerer_position_fiches.py`. Détail complet et liens faibles dans la matrice.*
 
-**Influencé par**
-- [[systemes_productifs_travail]]
-- [[technologie_information]]
-- [[gouvernance_institutions]]
-- [[geopolitique_conflits]]
-- [[energie_ressources_critiques]]
+**Influence** (cette variable → cible)
 
-**Liens bidirectionnels**
-- [[technologie_information]]
-- [[gouvernance_institutions]]
-- [[geopolitique_conflits]]
+| Cible | Poids | Sens |
+|---|---|---|
+| [[systemes_productifs_travail]] | 0.90 | aggrave (+) |
+| [[gouvernance_institutions]] | 0.75 | aggrave (+) |
+| [[valeurs_culture_tempo_sociale]] | 0.60 | aggrave (+) |
+| [[organisation_territoires]] | 0.60 | aggrave (+) |
+| [[demographie_mobilite_humaine]] | 0.60 | aggrave (+) |
+| [[geopolitique_conflits]] | 0.50 | aggrave (+) |
+
+**Influencé par** (source → cette variable)
+
+| Source | Poids | Sens |
+|---|---|---|
+| [[gouvernance_institutions]] | 0.95 | aggrave (+) |
+| [[systemes_productifs_travail]] | 0.90 | aggrave (+) |
+| [[energie_ressources_critiques]] | 0.85 | aggrave (+) |
+| [[frontieres_du_systeme]] | 0.80 | aggrave (+) |
+| [[demographie_mobilite_humaine]] | 0.80 | aggrave (+) |
+| [[geopolitique_conflits]] | 0.75 | aggrave (+) |
+| [[climat_environnement_global]] | 0.75 | aggrave (+) |
+| [[technologie_information]] | 0.70 | aggrave (+) |
+| [[organisation_territoires]] | 0.50 | aggrave (+) |
+
+**Liens réciproques** (forts dans les deux sens) : [[demographie_mobilite_humaine]], [[geopolitique_conflits]], [[gouvernance_institutions]], [[organisation_territoires]], [[systemes_productifs_travail]]
 
 ## 3. Dynamique interne
 - Direction : **up** | Intensité : **very_high** | Inertie : **high** | Vitesse : **fast**

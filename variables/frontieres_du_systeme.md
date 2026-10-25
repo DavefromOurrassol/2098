@@ -8,20 +8,6 @@ domain:
     - technological
     - geopolitical
     - economic
-influences:
-    - [[technologie_information]]
-    - [[systeme_economique_redistribution]]
-    - [[geopolitique_conflits]]
-influenced_by:
-    - [[technologie_information]]
-    - [[geopolitique_conflits]]
-    - [[energie_ressources_critiques]]
-    - [[gouvernance_institutions]]
-    - [[systeme_economique_redistribution]]
-bidirectional_links:
-    - [[technologie_information]]
-    - [[geopolitique_conflits]]
-    - [[energie_ressources_critiques]]
 sub_variables:
   - name: infrastructure_orbitale
     role: Support technologique des activités humaines en orbite terrestre.
@@ -199,22 +185,28 @@ Variable de frontière. Elle définit l’horizon d’expansion physique, techno
 
 ## 2. Position dans le système
 
-**Influence**
-- [[technologie_information]]
-- [[systeme_economique_redistribution]]
-- [[geopolitique_conflits]]
+*Section générée depuis [[influence_matrix]] (liens de poids ≥ 0.5) : ne pas éditer à la main, relancer `generator/regenerer_position_fiches.py`. Détail complet et liens faibles dans la matrice.*
 
-**Influencé par**
-- [[technologie_information]]
-- [[geopolitique_conflits]]
-- [[energie_ressources_critiques]]
-- [[gouvernance_institutions]]
-- [[systeme_economique_redistribution]]
+**Influence** (cette variable → cible)
 
-**Liens bidirectionnels**
-- [[technologie_information]]
-- [[geopolitique_conflits]]
-- [[energie_ressources_critiques]]
+| Cible | Poids | Sens |
+|---|---|---|
+| [[systeme_economique_redistribution]] | 0.80 | aggrave (+) |
+| [[technologie_information]] | 0.70 | aggrave (+) |
+| [[geopolitique_conflits]] | 0.60 | aggrave (+) |
+| [[energie_ressources_critiques]] | 0.50 | aggrave (+) |
+
+**Influencé par** (source → cette variable)
+
+| Source | Poids | Sens |
+|---|---|---|
+| [[technologie_information]] | 0.85 | aggrave (+) |
+| [[geopolitique_conflits]] | 0.75 | aggrave (+) |
+| [[demographie_mobilite_humaine]] | 0.70 | aggrave (+) |
+| [[energie_ressources_critiques]] | 0.60 | aggrave (+) |
+| [[gouvernance_institutions]] | 0.50 | aggrave (+) |
+
+**Liens réciproques** (forts dans les deux sens) : [[energie_ressources_critiques]], [[geopolitique_conflits]], [[technologie_information]]
 
 ## 3. Dynamique interne
 - Direction : **up** | Intensité : **medium** | Inertie : **high** | Vitesse : **nonlinear**

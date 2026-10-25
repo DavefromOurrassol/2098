@@ -8,17 +8,6 @@ domain:
     - social
     - cultural
     - geopolitical
-influences:
-    - [[gouvernance_institutions]]
-    - [[demographie_mobilite_humaine]]
-    - [[systeme_economique_redistribution]]
-influenced_by:
-    - [[technologie_information]]
-    - [[gouvernance_institutions]]
-    - [[systeme_economique_redistribution]]
-bidirectional_links:
-    - [[technologie_information]]
-    - [[gouvernance_institutions]]
 sub_variables:
   - name: systemes_de_valeurs
     role: Cadres moraux structurant les sociétés et leurs normes collectives.
@@ -190,19 +179,30 @@ Infrastructure cognitive et symbolique des sociétés humaines. Elle régule les
 
 ## 2. Position dans le système
 
-**Influence**
-- [[gouvernance_institutions]]
-- [[demographie_mobilite_humaine]]
-- [[systeme_economique_redistribution]]
+*Section générée depuis [[influence_matrix]] (liens de poids ≥ 0.5) : ne pas éditer à la main, relancer `generator/regenerer_position_fiches.py`. Détail complet et liens faibles dans la matrice.*
 
-**Influencé par**
-- [[technologie_information]]
-- [[gouvernance_institutions]]
-- [[systeme_economique_redistribution]]
+**Influence** (cette variable → cible)
 
-**Liens bidirectionnels**
-- [[technologie_information]]
-- [[gouvernance_institutions]]
+| Cible | Poids | Sens |
+|---|---|---|
+| [[gouvernance_institutions]] | 0.75 | aggrave (+) |
+| [[geopolitique_conflits]] | 0.65 | aggrave (+) |
+| [[demographie_mobilite_humaine]] | 0.50 | aggrave (+) |
+
+**Influencé par** (source → cette variable)
+
+| Source | Poids | Sens |
+|---|---|---|
+| [[demographie_mobilite_humaine]] | 0.95 | aggrave (+) |
+| [[technologie_information]] | 0.85 | aggrave (+) |
+| [[systemes_productifs_travail]] | 0.75 | aggrave (+) |
+| [[systeme_economique_redistribution]] | 0.60 | aggrave (+) |
+| [[geopolitique_conflits]] | 0.60 | aggrave (+) |
+| [[gouvernance_institutions]] | 0.50 | aggrave (+) |
+| [[organisation_territoires]] | 0.50 | aggrave (+) |
+| [[climat_environnement_global]] | 0.50 | aggrave (+) |
+
+**Liens réciproques** (forts dans les deux sens) : [[demographie_mobilite_humaine]], [[geopolitique_conflits]], [[gouvernance_institutions]]
 
 ## 3. Dynamique interne
 - Direction : **oscillating** | Intensité : **high** | Inertie : **high** | Vitesse : **slow**

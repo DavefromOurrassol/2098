@@ -8,17 +8,6 @@ domain:
     - economic
     - technological
     - social
-influences:
-    - [[systeme_economique_redistribution]]
-    - [[demographie_mobilite_humaine]]
-    - [[organisation_territoires]]
-    - [[sante_biotechnologies]]
-influenced_by:
-    - [[energie_ressources_critiques]]
-    - [[demographie_mobilite_humaine]]
-bidirectional_links:
-    - [[technologie_information]]
-    - [[systeme_economique_redistribution]]
 sub_variables:
   - name: industrie_automatisee
     role: Production industrielle de biens matériels à grande échelle via automatisation et robotisation.
@@ -197,19 +186,38 @@ Variable de production fondamentale. Elle organise la création de valeur réell
 
 ## 2. Position dans le système
 
-**Influence**
-- [[systeme_economique_redistribution]]
-- [[demographie_mobilite_humaine]]
-- [[organisation_territoires]]
-- [[sante_biotechnologies]]
+*Section générée depuis [[influence_matrix]] (liens de poids ≥ 0.5) : ne pas éditer à la main, relancer `generator/regenerer_position_fiches.py`. Détail complet et liens faibles dans la matrice.*
 
-**Influencé par**
-- [[energie_ressources_critiques]]
-- [[demographie_mobilite_humaine]]
+**Influence** (cette variable → cible)
 
-**Liens bidirectionnels**
-- [[technologie_information]]
-- [[systeme_economique_redistribution]]
+| Cible | Poids | Sens |
+|---|---|---|
+| [[systeme_economique_redistribution]] | 0.90 | aggrave (+) |
+| [[gouvernance_institutions]] | 0.75 | aggrave (+) |
+| [[valeurs_culture_tempo_sociale]] | 0.75 | aggrave (+) |
+| [[organisation_territoires]] | 0.75 | aggrave (+) |
+| [[climat_environnement_global]] | 0.75 | amortit (−) |
+| [[technologie_information]] | 0.70 | aggrave (+) |
+| [[energie_ressources_critiques]] | 0.70 | amortit (−) |
+| [[demographie_mobilite_humaine]] | 0.70 | aggrave (+) |
+| [[geopolitique_conflits]] | 0.60 | aggrave (+) |
+| [[sante_biotechnologies]] | 0.50 | aggrave (+) |
+
+**Influencé par** (source → cette variable)
+
+| Source | Poids | Sens |
+|---|---|---|
+| [[technologie_information]] | 0.95 | aggrave (+) |
+| [[systeme_economique_redistribution]] | 0.90 | aggrave (+) |
+| [[climat_environnement_global]] | 0.90 | aggrave (+) |
+| [[energie_ressources_critiques]] | 0.85 | aggrave (+) |
+| [[demographie_mobilite_humaine]] | 0.70 | aggrave (+) |
+| [[geopolitique_conflits]] | 0.60 | aggrave (+) |
+| [[organisation_territoires]] | 0.60 | aggrave (+) |
+| [[sante_biotechnologies]] | 0.60 | aggrave (+) |
+| [[gouvernance_institutions]] | 0.50 | aggrave (+) |
+
+**Liens réciproques** (forts dans les deux sens) : [[climat_environnement_global]], [[demographie_mobilite_humaine]], [[energie_ressources_critiques]], [[geopolitique_conflits]], [[gouvernance_institutions]], [[organisation_territoires]], [[sante_biotechnologies]], [[systeme_economique_redistribution]], [[technologie_information]]
 
 ## 3. Dynamique interne
 - Direction : **oscillating** | Intensité : **very_high** | Inertie : **high** | Vitesse : **accelerating**

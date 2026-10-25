@@ -10,18 +10,6 @@ domain:
     - geopolitical
     - social
     - technological
-influences:
-    - [[energie_ressources_critiques]]
-    - [[demographie_mobilite_humaine]]
-    - [[geopolitique_conflits]]
-    - [[organisation_territoires]]
-    - [[sante_biotechnologies]]
-influenced_by:
-    - [[energie_ressources_critiques]]
-    - [[systeme_economique_redistribution]]
-    - [[technologie_information]]
-bidirectional_links:
-    - [[organisation_territoires]]
 sub_variables:
   - name: rechauffement_climatique_global
     role: régulation thermique du système Terre
@@ -155,20 +143,30 @@ Contrainte structurelle fondamentale et moteur de déséquilibres systémiques g
 
 ## 2. Position dans le système
 
-**Influence**
-- [[energie_ressources_critiques]]
-- [[demographie_mobilite_humaine]]
-- [[geopolitique_conflits]]
-- [[organisation_territoires]]
-- [[sante_biotechnologies]]
+*Section générée depuis [[influence_matrix]] (liens de poids ≥ 0.5) : ne pas éditer à la main, relancer `generator/regenerer_position_fiches.py`. Détail complet et liens faibles dans la matrice.*
 
-**Influencé par**
-- [[energie_ressources_critiques]]
-- [[systeme_economique_redistribution]]
-- [[technologie_information]]
+**Influence** (cette variable → cible)
 
-**Liens bidirectionnels**
-- [[organisation_territoires]]
+| Cible | Poids | Sens |
+|---|---|---|
+| [[demographie_mobilite_humaine]] | 0.90 | aggrave (+) |
+| [[systemes_productifs_travail]] | 0.90 | aggrave (+) |
+| [[organisation_territoires]] | 0.80 | aggrave (+) |
+| [[systeme_economique_redistribution]] | 0.75 | aggrave (+) |
+| [[sante_biotechnologies]] | 0.70 | aggrave (+) |
+| [[geopolitique_conflits]] | 0.60 | aggrave (+) |
+| [[valeurs_culture_tempo_sociale]] | 0.50 | aggrave (+) |
+| [[energie_ressources_critiques]] | 0.50 | aggrave (+) |
+
+**Influencé par** (source → cette variable)
+
+| Source | Poids | Sens |
+|---|---|---|
+| [[energie_ressources_critiques]] | 0.80 | aggrave (+) |
+| [[systemes_productifs_travail]] | 0.75 | amortit (−) |
+| [[demographie_mobilite_humaine]] | 0.65 | aggrave (+) |
+
+**Liens réciproques** (forts dans les deux sens) : [[demographie_mobilite_humaine]], [[energie_ressources_critiques]], [[systemes_productifs_travail]]
 
 ## 3. Dynamique interne
 - Direction : **up** | Intensité : **very_high** | Inertie : **extremely_high** | Vitesse : **accelerating**

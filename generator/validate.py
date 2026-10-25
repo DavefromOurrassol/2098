@@ -866,12 +866,19 @@ def validate_matrix(result):
                 "polarity invalide pour {} → {} : {}".format(
                     source, target, polarity))
 
-    # Vérifier 12×11 = 132 edges
-    expected = len(VALID_VARS) * (len(VALID_VARS) - 1)
-    if len(seen_pairs) != expected:
+    # Matrice creuse depuis S28 (25 oct 2026) : au plus 12×11 = 132 edges,
+    # et aucune variable isolée (au moins un lien sortant et un entrant).
+    maximum = len(VALID_VARS) * (len(VALID_VARS) - 1)
+    if len(seen_pairs) > maximum:
         result.warning("matrix", "influence_matrix.md",
-            "Nombre d'edges : {} (attendu : {})".format(
-                len(seen_pairs), expected))
+            "Nombre d'edges : {} (maximum : {})".format(len(seen_pairs), maximum))
+    sources = {s for s, _ in seen_pairs}
+    cibles = {c for _, c in seen_pairs}
+    for v in VALID_VARS:
+        if v not in sources or v not in cibles:
+            result.warning("matrix", "influence_matrix.md",
+                "{} isolée : {}".format(
+                    v, "aucun lien sortant" if v not in sources else "aucun lien entrant"))
 
 
 # ─────────────────────────────────────────
