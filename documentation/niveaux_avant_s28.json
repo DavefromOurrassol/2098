@@ -1,0 +1,89 @@
+{
+  "date": "2026-10-25T18:04:11",
+  "niveaux": {
+    "fortress_world": {
+      "systeme_economique_redistribution": 62.8,
+      "gouvernance_institutions": 64.6,
+      "geopolitique_conflits": 99.7,
+      "valeurs_culture_tempo_sociale": 90.5,
+      "organisation_territoires": 92.8,
+      "sante_biotechnologies": 68.2,
+      "frontieres_du_systeme": 79.0,
+      "technologie_information": 97.4,
+      "climat_environnement_global": 83.3,
+      "energie_ressources_critiques": 91.2,
+      "demographie_mobilite_humaine": 86.9,
+      "systemes_productifs_travail": 96.1
+    },
+    "new_sustainability": {
+      "systeme_economique_redistribution": 55.2,
+      "gouvernance_institutions": 0.3,
+      "geopolitique_conflits": 26.7,
+      "valeurs_culture_tempo_sociale": 51.6,
+      "organisation_territoires": 23.5,
+      "sante_biotechnologies": 27.8,
+      "frontieres_du_systeme": 14.8,
+      "technologie_information": 60.0,
+      "climat_environnement_global": 30.4,
+      "energie_ressources_critiques": 35.1,
+      "demographie_mobilite_humaine": 42.9,
+      "systemes_productifs_travail": 45.0
+    },
+    "breakdown": {
+      "systeme_economique_redistribution": 99.5,
+      "gouvernance_institutions": 93.7,
+      "geopolitique_conflits": 100.0,
+      "valeurs_culture_tempo_sociale": 95.8,
+      "organisation_territoires": 99.3,
+      "sante_biotechnologies": 89.8,
+      "frontieres_du_systeme": 92.2,
+      "technologie_information": 100.0,
+      "climat_environnement_global": 99.7,
+      "energie_ressources_critiques": 99.9,
+      "demographie_mobilite_humaine": 97.1,
+      "systemes_productifs_travail": 99.6
+    },
+    "eco_communalism": {
+      "systeme_economique_redistribution": 37.1,
+      "gouvernance_institutions": 28.2,
+      "geopolitique_conflits": 36.7,
+      "valeurs_culture_tempo_sociale": 33.1,
+      "organisation_territoires": 30.9,
+      "sante_biotechnologies": 39.2,
+      "frontieres_du_systeme": 48.9,
+      "technologie_information": 40.3,
+      "climat_environnement_global": 56.2,
+      "energie_ressources_critiques": 50.0,
+      "demographie_mobilite_humaine": 41.1,
+      "systemes_productifs_travail": 42.7
+    },
+    "policy_reform": {
+      "systeme_economique_redistribution": 52.5,
+      "gouvernance_institutions": 10.7,
+      "geopolitique_conflits": 47.3,
+      "valeurs_culture_tempo_sociale": 46.8,
+      "organisation_territoires": 46.4,
+      "sante_biotechnologies": 43.7,
+      "frontieres_du_systeme": 53.7,
+      "technologie_information": 59.1,
+      "climat_environnement_global": 43.9,
+      "energie_ressources_critiques": 56.6,
+      "demographie_mobilite_humaine": 50.7,
+      "systemes_productifs_travail": 59.1
+    },
+    "reference": {
+      "systeme_economique_redistribution": 83.0,
+      "gouvernance_institutions": 53.9,
+      "geopolitique_conflits": 88.7,
+      "valeurs_culture_tempo_sociale": 69.3,
+      "organisation_territoires": 75.3,
+      "sante_biotechnologies": 51.0,
+      "frontieres_du_systeme": 62.8,
+      "technologie_information": 93.1,
+      "climat_environnement_global": 74.4,
+      "energie_ressources_critiques": 82.9,
+      "demographie_mobilite_humaine": 68.9,
+      "systemes_productifs_travail": 79.8
+    }
+  }
+}
