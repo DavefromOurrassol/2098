@@ -727,7 +727,7 @@ indentée comme les entrées existantes de la section 12, commençant par
   "signaux_existants_consideres": "Explique en 1-3 phrases si un signal déjà présent en section 12 traite d'un sujet proche, et comment tu t'es positionné par rapport à lui (complémentaire / conséquence / tension assumée). Si aucun signal existant proche n'a été identifié, dis-le explicitement (ex: 'Aucun signal existant sur un sujet proche identifié.') -- ce champ est obligatoire même en l'absence de recoupement, pour que le choix (ou l'absence de choix à faire) reste vérifiable a posteriori plutôt que silencieux.",
   "delta_level": 5,
   "polarite": {{"breakdown": "<1 ou -1>", "fortress_world": "<1 ou -1>", "new_sustainability": "<1 ou -1>", "eco_communalism": "<1 ou -1>", "policy_reform": "<1 ou -1>", "reference": "<1 ou -1>"}},
-  "propagation_via_matrice": false,
+  "propagation_via_matrice": true,
   "contexte_injection": "phrase courte expliquant l'impact chiffré ci-dessous"
 }}
 
@@ -767,9 +767,9 @@ pour ce scénario aggrave la crise de {variable_slug} (niveau qui monte),
 l'`evolution` du scénario correspondant, pas d'une impression globale :
 un même signal peut légitimement aggraver la crise dans un scénario et
 l'apaiser dans un autre.
-"propagation_via_matrice" : false SAUF SI ce signal touche une dynamique
-véritablement structurelle et durable (rare pour un signal faible) — en
-cas de doute, false.
+"propagation_via_matrice" : toujours true (règle du 30 octobre 2026 : un
+signal faible transforme par combinaison, son effet se diffuse donc dans
+le réseau des variables ; le moteur en limite l'ampleur).
 """
     return call_claude_json(client, "Tu es un assistant de world-building.", user_content, max_tokens=4000)
 
@@ -1218,7 +1218,7 @@ def write_custom_fiche(signal_slug, idea_text, source, variables, categorie, yam
                 "    contexte_injection: >\n      {}\n"
                 "    scenarios:\n{}".format(
                     imp["variable"],
-                    str(bool(imp.get("propagation_via_matrice", False))).lower(),
+                    str(bool(imp.get("propagation_via_matrice", True))).lower(),
                     imp.get("persistance") or dyn.PERSISTANCE_DEFAUT,
                     contexte,
                     scen_lines,
@@ -1489,7 +1489,7 @@ def process_idea(client, idea, dry_run=False):
                              "signaux_existants_consideres": develop.get("signaux_existants_consideres", ""),
                              "impact": {
                                  "variable": variable_slug,
-                                 "propagation_via_matrice": bool(develop.get("propagation_via_matrice", False)),
+                                 "propagation_via_matrice": bool(develop.get("propagation_via_matrice", True)),
                                  "persistance": persistance,
                                  "contexte_injection": develop.get("contexte_injection", ""),
                                  "scenarios": impact_scenarios,

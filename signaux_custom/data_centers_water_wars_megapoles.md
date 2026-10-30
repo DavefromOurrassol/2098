@@ -106,7 +106,7 @@ signal_to_state:
 ```yaml
 impact_sur_variables:
   - variable: organisation_territoires
-    propagation_via_matrice: false
+    propagation_via_matrice: true
     persistance: normale
     contexte_injection: >
       À Mumbai en 2026, les data centers consomment 200 000L/jour chacun, contre 45L/jour/personne dans les bidonvilles, aggravant les inégalités d'accès à l'eau dans une ville où 71% des habitants reçoivent déjà de l'eau moins de 4h/jour.
@@ -142,7 +142,7 @@ impact_sur_variables:
         delta_level: 6
         polarite: 1
   - variable: climat_environnement_global
-    propagation_via_matrice: false
+    propagation_via_matrice: true
     persistance: normale
     contexte_injection: >
       200 000 litres/jour consommés par data center à Mumbai en 2026, aggravant pénuries urbaines
@@ -178,7 +178,7 @@ impact_sur_variables:
         delta_level: 5
         polarite: 1
   - variable: energie_ressources_critiques
-    propagation_via_matrice: false
+    propagation_via_matrice: true
     persistance: normale
     contexte_injection: >
       200 000L/jour consommés par centre de données à Mumbai en 2026, contre 45L/personne/jour dans bidonvilles

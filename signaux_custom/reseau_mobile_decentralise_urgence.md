@@ -106,7 +106,7 @@ signal_to_state:
 ```yaml
 impact_sur_variables:
   - variable: gouvernance_institutions
-    propagation_via_matrice: false
+    propagation_via_matrice: true
     persistance: durable
     contexte_injection: >
       En 2026, 15% des zones urbaines en crise (coupures réseau, censure) adoptent des protocoles décentralisés, créant des îlots de résilience ou de fragmentation selon les scénarios.
@@ -142,7 +142,7 @@ impact_sur_variables:
         delta_level: 5
         polarite: 1
   - variable: technologie_information
-    propagation_via_matrice: false
+    propagation_via_matrice: true
     persistance: durable
     contexte_injection: >
       Déploiement massif de réseaux mesh décentralisés (2026+) comme réponse à la fragmentation des infrastructures, influençant l'autonomie ou la dépendance des territoires en matière de communication.
@@ -178,7 +178,7 @@ impact_sur_variables:
         delta_level: 5
         polarite: 1
   - variable: geopolitique_conflits
-    propagation_via_matrice: false
+    propagation_via_matrice: true
     persistance: durable
     contexte_injection: >
       Ce signal reflète l'émergence de technologies de contournement des infrastructures centralisées, avec un impact différencié selon les scénarios : aggravation des conflits dans les mondes fragmentés, stabilisation dans les scénarios coopératifs.

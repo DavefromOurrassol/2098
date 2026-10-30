@@ -105,7 +105,7 @@ signal_to_state:
 ```yaml
 impact_sur_variables:
   - variable: technologie_information
-    propagation_via_matrice: false
+    propagation_via_matrice: true
     persistance: permanente
     contexte_injection: >
       Ce signal crée une dépendance structurelle envers une élite humaine pour dialoguer avec des IA opaques, aggravant la fragmentation informationnelle dans les scénarios de crise (breakdown, fortress_world, reference) et la stabilisant dans les scénarios de régulation (new_sustainability, eco_communalism, policy_reform).
@@ -141,7 +141,7 @@ impact_sur_variables:
         delta_level: 5
         polarite: 1
   - variable: gouvernance_institutions
-    propagation_via_matrice: false
+    propagation_via_matrice: true
     persistance: permanente
     contexte_injection: >
       Ce signal introduit une nouvelle élite sociale (les prompteurs) qui redéfinit les rapports de pouvoir institutionnels en contrôlant l'accès aux IA, avec un impact différencié selon les scénarios : stabilisateur dans les modèles coordonnés (new_sustainability, policy_reform), déstabilisateur dans les modèles fragmentés ou autoritaires (breakdown, fortress_world, eco_communalism).
@@ -177,7 +177,7 @@ impact_sur_variables:
         delta_level: 7
         polarite: 1
   - variable: valeurs_culture_tempo_sociale
-    propagation_via_matrice: false
+    propagation_via_matrice: true
     persistance: permanente
     contexte_injection: >
       Ce signal introduit une nouvelle élite culturelle et spirituelle, modifiant la structure des récits collectifs et la synchronisation sociale, avec un impact modéré mais durable sur les valeurs et le tempo social.

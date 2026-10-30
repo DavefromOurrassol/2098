@@ -79,7 +79,7 @@ signal_to_state:
 ```yaml
 impact_sur_variables:
   - variable: systeme_economique_redistribution
-    propagation_via_matrice: false
+    propagation_via_matrice: true
     persistance: durable
     contexte_injection: >
       16 phages viables sur 285 conçus par IA en 2026 ouvrent une voie thérapeutique majeure, mais leur contrôle (brevets, biosécurité) devient un enjeu économique systémique dès 2030-2040.
@@ -115,7 +115,7 @@ impact_sur_variables:
         delta_level: 6
         polarite: 1
   - variable: sante_biotechnologies
-    propagation_via_matrice: false
+    propagation_via_matrice: true
     persistance: durable
     contexte_injection: >
       16 phages viables sur 285 conçus par IA en 2026, marquant une rupture dans la lutte contre l'antibiorésistance mais posant des risques de biosécurité et d'inégalités d'accès.

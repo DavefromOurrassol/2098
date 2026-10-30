@@ -79,7 +79,7 @@ signal_to_state:
 ```yaml
 impact_sur_variables:
   - variable: valeurs_culture_tempo_sociale
-    propagation_via_matrice: false
+    propagation_via_matrice: true
     persistance: durable
     contexte_injection: >
       La radicalisation anti-IA aux États-Unis en 2026 marque un tournant dans la polarisation des valeurs culturelles autour de l'IA, avec des effets durables sur la cohésion sociale et la stabilité des récits collectifs.
@@ -115,7 +115,7 @@ impact_sur_variables:
         delta_level: 6
         polarite: 1
   - variable: technologie_information
-    propagation_via_matrice: false
+    propagation_via_matrice: true
     persistance: durable
     contexte_injection: >
       Radicalisation anti-IA comme facteur de fragmentation ou régulation des réseaux numériques, selon les scénarios

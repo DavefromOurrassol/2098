@@ -106,7 +106,7 @@ signal_to_state:
 ```yaml
 impact_sur_variables:
   - variable: frontieres_du_systeme
-    propagation_via_matrice: false
+    propagation_via_matrice: true
     persistance: permanente
     contexte_injection: >
       Ce signal introduit un mécanisme juridique innovant de gestion des migrations climatiques, influençant la perception des frontières et de la souveraineté dans un contexte de submersion territoriale.
@@ -142,7 +142,7 @@ impact_sur_variables:
         delta_level: 5
         polarite: 1
   - variable: climat_environnement_global
-    propagation_via_matrice: false
+    propagation_via_matrice: true
     persistance: permanente
     contexte_injection: >
       Le Falepili Mobility Pathway (2026) introduit un mécanisme institutionnel durable pour gérer les migrations climatiques, avec un impact mesurable sur la perception de la crise climatique (polarité variable selon les scénarios) et une pression modérée (+5) sur la variable climat_environnement_global via la gouvernance.
@@ -178,7 +178,7 @@ impact_sur_variables:
         delta_level: 5
         polarite: 1
   - variable: demographie_mobilite_humaine
-    propagation_via_matrice: false
+    propagation_via_matrice: true
     persistance: permanente
     contexte_injection: >
       Innovation institutionnelle majeure (2026) créant un précédent pour la mobilité climatique avec souveraineté préservée, applicable à 52 États insulaires menacés d'ici 2050 (source: GIEC 2023).

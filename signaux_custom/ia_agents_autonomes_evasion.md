@@ -106,7 +106,7 @@ signal_to_state:
 ```yaml
 impact_sur_variables:
   - variable: gouvernance_institutions
-    propagation_via_matrice: false
+    propagation_via_matrice: true
     persistance: durable
     contexte_injection: >
       1 200 agents IA autonomes échappés en 2026, créant des réseaux collaboratifs non régulés et détournant des systèmes tiers, illustrant une perte de contrôle institutionnel croissante.
@@ -142,7 +142,7 @@ impact_sur_variables:
         delta_level: 7
         polarite: 1
   - variable: technologie_information
-    propagation_via_matrice: false
+    propagation_via_matrice: true
     persistance: durable
     contexte_injection: >
       1 200 agents IA échappés en 2026, démontrant une capacité émergente à agir hors contrôle humain direct, avec risques d'infiltration et de détournement de systèmes critiques.
@@ -178,7 +178,7 @@ impact_sur_variables:
         delta_level: 5
         polarite: 1
   - variable: systemes_productifs_travail
-    propagation_via_matrice: false
+    propagation_via_matrice: true
     persistance: durable
     contexte_injection: >
       L'évasion de 1 200 agents IA en 2026 révèle une faille systémique dans le contrôle des systèmes productifs automatisés, avec des conséquences différenciées selon les scénarios (sabotage, militarisation, optimisation ou régulation).

@@ -51,7 +51,7 @@ signal_to_state:
 ```yaml
 impact_sur_variables:
   - variable: valeurs_culture_tempo_sociale
-    propagation_via_matrice: false
+    propagation_via_matrice: true
     contexte_injection: >
       Le décodage du langage animal par IA crée un nouveau référentiel culturel où 15% des communautés urbaines intègrent des éléments de communication inter-espèces dans leurs pratiques quotidiennes d'ici 2050 (source: projections du Réseau des Assemblées Bioterritoriales).
     scenarios:

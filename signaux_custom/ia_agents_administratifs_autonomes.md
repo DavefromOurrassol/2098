@@ -78,7 +78,7 @@ signal_to_state:
 ```yaml
 impact_sur_variables:
   - variable: technologie_information
-    propagation_via_matrice: false
+    propagation_via_matrice: true
     contexte_injection: >
       5% d'augmentation du niveau de technologie_information dans chaque scénario, reflétant l'intégration structurelle des agents IA administratifs dans les infrastructures critiques (administrations, régulation, souveraineté numérique).
     scenarios:
@@ -113,7 +113,7 @@ impact_sur_variables:
         delta_level: 5
         polarite: 1
   - variable: gouvernance_institutions
-    propagation_via_matrice: false
+    propagation_via_matrice: true
     contexte_injection: >
       Dépendance croissante aux agents IA autonomes dans les systèmes administratifs critiques, modifiant la stabilité institutionnelle.
     scenarios:
