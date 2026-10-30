@@ -31,6 +31,21 @@
       "slug": "japon_archipel_resilient"
     }
   ],
+  "184f0a6de2622fb6cb5fed048d70c6573a5669dfd873e261c047debb461a404c": [
+    {
+      "raison": "Décrit une gouvernance para-étatique et une exploitation arctique avancée, suggérant une innovation institutionnelle et une expansion territoriale au-delà du cadre terrestre limité du scénario 'reference'.",
+      "slug": "corridor_arctique_nordique"
+    },
+    {
+      "raison": "Mentionne des mécanismes de régulation hydrique et des coopératives agroécologiques innovantes, pouvant impliquer une rupture institutionnelle ou sociale trop marquée pour le scénario conservateur 'reference'.",
+      "slug": "union_africaine_resilience"
+    },
+    {
+      "raison": "Décrit des réseaux agroécologiques alternatifs et des opérateurs logistiques indépendants structurant des espaces hors-cadre, ce qui pourrait introduire une dynamique de rupture sociale ou institutionnelle non conforme au patron conservateur.",
+      "slug": "zones_grises_globales"
+    }
+  ],
+  "2ee03af87e6c0d58b94867f2fd86dabfbd41cb93beca4c11007d05482f4c5be6": [],
   "31a43aa0ab66653010e90cc1c9cf9ac0b6918925a347fed1eb0bb6e36e40e86d": [
     {
       "raison": "Présence d'un 'nœud institutionnel résiduel' évoquant une logique de gouvernance centralisée ou supranationale, même vidée de substance, contredit l'absence attendue d'institution stable.",
@@ -137,6 +152,20 @@
       "slug": "tuvalu_refugies_climatiques"
     }
   ],
+  "79d65c9709c534a665dd6f37bf10a84494fc88e1b7551543c84e11c5d209d8aa": [
+    {
+      "raison": "Maintien d'une logique de gouvernance centralisée résiduelle (archives juridiques, BCUC, CRRC) malgré l'absence attendue d'institution supranationale stable.",
+      "slug": "geneve_bunker_institutions"
+    },
+    {
+      "raison": "Décrit une 'Ligue Eurasiatique-Coalition Pacifique' comme pôle autonome contestataire, suggérant une coordination supranationale stable contraire à la fragmentation attendue.",
+      "slug": "asie_pacifique_sud_est"
+    },
+    {
+      "raison": "Maintien d'une place financière offshore avec neutralité politique, impliquant une stabilité institutionnelle improbable dans ce patron spatial.",
+      "slug": "maurice_hub_financier"
+    }
+  ],
   "7abdf40b4c3ef8fd45ffe0f978e4a539f865b817d1ff0bd7204c94b6ec473bb4": [
     {
       "raison": "Présence d'une institution supranationale résiduelle (Bureau de Coordination d'Urgence Climatique, Archives Neutres) revendiquant une légitimité juridique internationale, en contradiction avec l'absence attendue d'institution stable.",
@@ -153,6 +182,13 @@
       "slug": "moyen_orient_golfe"
     }
   ],
+  "80101524c25dfb9e94ec748db1d801d9b621a614471ba1accc6042497cd2338a": [
+    {
+      "raison": "Contradiction avec la logique géopolitique de gouvernance mondiale stabilisée et d'interconnexion institutionnelle forte, en affichant une résistance active aux modèles de transition écologique imposés par les centres institutionnels.",
+      "slug": "bloc_eurasien_souverainiste"
+    }
+  ],
+  "9c6eb8ffc9a75b914247d0ef374050c598c5f0a372e576619f0d2c04ad8d446c": [],
   "a51a30f676d29a236f903e8f5c31f7fbb0a0a4b17eb3d681964108970a07fe9c": [],
   "aab3b637cd55f2451e0ade407440529286091c3365865ac1225d5cd484f3095a": [
     {
@@ -179,6 +215,16 @@
     }
   ],
   "c3f7438c17a5bbd16c007e4fd6500435c39545074ef1e19578c04a22cf1b0e42": [],
+  "df4d5ec4b74aab4ceecf751d9ab2dcbc498579bd07022c6fddfd23d33a471aaa": [
+    {
+      "raison": "Mention d'un 'Front de Souveraineté Biologique Eurasiatique' résistant aux réformes biotech internationales, ce qui suggère une logique de bloc rival unilatéral plutôt qu'une coopération réelle mais non totale.",
+      "slug": "espace_eurasiatique"
+    },
+    {
+      "raison": "Décrit comme placé sous 'tutelle technocratique' après 2027, ce qui implique une gouvernance supranationale hégémonique et non une coordination internationale équilibrée.",
+      "slug": "zone_moyen_orient_golfe"
+    }
+  ],
   "f0e4e504437b4b4fa4bf409461594aad752f7a2cf82f1235ef8003403d7b810c": [
     {
       "raison": "Contradiction avec la logique géopolitique de gouvernance mondiale stabilisée et d'interconnexion institutionnelle forte, en affichant une résistance active aux modèles de transition écologique imposés par les centres institutionnels.",

@@ -122,6 +122,17 @@ def construire_prompt(extrait: dict, today_str: str, deja_connu: dict,
         "seulement des faits observés qu'il rapporte."
     )
     L.append("")
+    L.append(
+        "Deux pièges fréquents (S21) : 1) une recommandation, un appel ou "
+        "une proposition de l'auteur (« il faudrait », « les États "
+        "devraient », « nous proposons ») n'est PAS une observation, même "
+        "précise : écarte-la. 2) Un grand programme d'État, un plan "
+        "national ou un investissement massif déjà annoncé n'est PAS "
+        "marginal : c'est une tendance installée, pas un signal faible. "
+        "Seul un effet inattendu et encore marginal d'un tel programme, "
+        "rapporté dans l'extrait, peut en être un."
+    )
+    L.append("")
     L.append("RÈGLES ABSOLUES (constat du 28 sept 2026 : des signaux inventés "
              "ou recopiés d'ailleurs ont été rejetés) :")
     L.append("  - Chaque signal vient UNIQUEMENT des EXTRAITS DU LIVRE en fin de "

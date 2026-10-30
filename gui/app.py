@@ -414,10 +414,20 @@ def append_yaml_queue():
         import yaml as _yaml
 
         # Backup
+        entete = ""  # PATCH_S20_ENTETE : commentaires de tête conservés
         if target.exists():
             bak = target.with_suffix(target.suffix + ".bak")
-            bak.write_text(target.read_text(encoding="utf-8"), encoding="utf-8")
-            existing = _yaml.safe_load(target.read_text(encoding="utf-8")) or {}
+            texte_avant = target.read_text(encoding="utf-8")
+            bak.write_text(texte_avant, encoding="utf-8")
+            existing = _yaml.safe_load(texte_avant) or {}
+            lignes_tete = []
+            for _l in texte_avant.splitlines():
+                if _l.strip() == "" or _l.lstrip().startswith("#"):
+                    lignes_tete.append(_l)
+                else:
+                    break
+            if any(_l.lstrip().startswith("#") for _l in lignes_tete):
+                entete = "\n".join(lignes_tete).rstrip() + "\n\n"
         else:
             existing = {}
             target.parent.mkdir(parents=True, exist_ok=True)
@@ -434,7 +444,7 @@ def append_yaml_queue():
         existing["queue"] = queue
 
         target.write_text(
-            _yaml.dump(existing, allow_unicode=True, sort_keys=False, default_flow_style=False),
+            entete + _yaml.dump(existing, allow_unicode=True, sort_keys=False, default_flow_style=False),
             encoding="utf-8"
         )
         return jsonify({"ok": True, "path": str(target), "queue_length": len(queue)})

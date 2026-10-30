@@ -21,3 +21,4 @@ generator/rejeu/cache_rejeu.json
 
 # Sauvegardes locales des patchs et outils (.bak, .bak_fusion, .bak_nom…)
 *.bak*
+.obsidian/graph.json

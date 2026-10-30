@@ -52,7 +52,7 @@ PAS = 1.0 / 12.0           # pas d'intégration : 1 mois
 ANNEES_PAR_CYCLE = 5.0     # 1 cycle de `lag` de la matrice = 5 ans
 DEMI_VIE = 20.0            # demi-vie d'un choc après sa pleine force (années)
 PLAFOND = 15.0             # écart max (doux) au niveau de référence (points)
-K_COUPLAGE = 0.05          # gain global de couplage matriciel (calibré le 27/09 : ρ≈0.42, ×1.7)
+K_COUPLAGE = 0.05          # gain global de couplage matriciel (calibré le 27/09 ; ρ(|K·C|) ≈ 0,34 depuis la matrice du 25/10)
 GAIN_CHOCS = 0.25          # fraction de delta_level réellement injectée : le monde
                            # absorbe l'essentiel d'un choc isolé (calibré le 27/09 :
                            # sans ce gain, la seule somme des chocs directs atteignait
