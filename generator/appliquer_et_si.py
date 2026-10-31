@@ -826,6 +826,58 @@ def relocaliser_evenement(hid, sc, avant, apres):
     p.write_text(d[0] + fm_txt + d[2] + d[3], encoding="utf-8")
 
 
+def reciprocite_prevue(sc, W):
+    """PATCH_S30_RECIPROCITE : ce que la remise en réciprocité (fix_alliances_oppositions.py,
+    tout le scénario) changera, calculé sur les fiches telles qu'elles seront après les
+    opérations (textes en mémoire de W). Estimation : le script fait foi.
+    Retourne ({fiche: [ajouts]}, [(a, b) en conflit alliance/opposition])."""
+    fms = {}
+    for p in sorted(INSTANCES.glob(f"*_{sc}.md")):
+        try:
+            texte = W.textes.get(p) or p.read_text(encoding="utf-8")
+        except OSError:
+            continue
+        d = decoupe(texte)
+        fms[p.stem] = (lire_fm(d[1]) if d else None) or {}
+
+    def liste(fm, champ):
+        v = fm.get(champ)
+        return [str(x).strip() for x in v if x] if isinstance(v, list) else []
+
+    ajouts = {}
+    for a, fm in fms.items():
+        for champ in ("alliances", "oppositions"):
+            for b in liste(fm, champ):
+                if b in fms and b != a and a not in liste(fms[b], champ):
+                    ajouts.setdefault(b, []).append(f"+ {champ[:-1]} `{a}`")
+    conflits = sorted({tuple(sorted((a, b))) for a, fm in fms.items()
+                       for b in set(liste(fm, "alliances")) & set(liste(fm, "oppositions"))})
+    return ajouts, conflits
+
+
+def afficher_reciprocite(ops, W):
+    """PATCH_S30_RECIPROCITE : bloc « Réciprocité » de l'aperçu, par scénario touché."""
+    touches = {p.stem for p in W.changes()}
+    for sc in dict.fromkeys(o["sc"] for o in ops if o["retenue"] and o["genre"] in ("relation", "disparition")):
+        ajouts, conflits = reciprocite_prevue(sc, W)
+        par_op = {f: v for f, v in ajouts.items()
+                  if any(x.split("`")[1] in touches for x in v)}
+        anciennes = {f: v for f, v in ajouts.items() if f not in par_op}
+        if not (ajouts or conflits):
+            continue
+        print(f"\nRéciprocité ({sc}, après l'écriture, tout le scénario) — estimation :")
+        for titre, bloc in (("complétées par réciprocité des opérations", par_op),
+                            ("HORS hypothèse, relations à sens unique déjà dans le vault", anciennes)):
+            if bloc:
+                print(f"  · {titre} : {len(bloc)} fiche(s)")
+                for f, v in sorted(bloc.items()):
+                    print(f"      {f} ({'; '.join(v)})")
+        if conflits:
+            print(f"  · conflits alliance / opposition, tranchés en opposition : {len(conflits)}")
+            for a, b in conflits:
+                print(f"      {a} ↔ {b}")
+
+
 def lancer(cmd):
     print(f"  $ {' '.join(cmd)}")
     r = subprocess.run([sys.executable] + cmd, cwd=VAULT, capture_output=True, text=True)
@@ -958,6 +1010,7 @@ def main():
     if sc_carte:   # PATCH_S27_CARTE_RETOUCHES
         print("  + carte, écrite après les autres : "
               + ", ".join(f"geographie/{sc}.md" for sc in sc_carte) + ", gui/zones_pays.json")
+    afficher_reciprocite(ops, W)   # PATCH_S30_RECIPROCITE
     if erreurs:
         print("\n✗ Refusé :\n" + "\n".join(f"  {e}" for e in erreurs))
         sys.exit("✗ Rien n'est écrit tant qu'une opération échoue (--sauter son numéro, ou corriger la fiche).")
