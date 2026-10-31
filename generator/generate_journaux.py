@@ -43,7 +43,9 @@ import argparse
 import json
 import os
 import re
+import shutil
 import sys
+from datetime import datetime
 
 import yaml
 
@@ -330,10 +332,122 @@ Zones :
     return prompt
 
 
+# Correctif du 31 oct 2026 (S24, journaux) : plus aucune rédaction factice.
+# Avant : un lot au JSON cassé écrivait « Édition … » vide pour chaque zone du
+# lot ; en --update ces zones passaient ensuite pour présentes (jamais
+# régénérées, nettoyage par clean_fallback_journaux.py) et en mode complet
+# elles écrasaient un journal existant. Désormais une zone ratée reste absente
+# du résultat : elle est listée en fin de lot et reprise au prochain --update.
+
+LOGS_DIR = os.path.join(VAULT_ROOT, "gui", "logs")
+
+
+def _log_echec_json(raw, contexte):
+    """Garde la réponse illisible pour diagnostic (même convention que
+    instance_generation_common.extraire_json : gui/logs/llm_json_echec_*)."""
+    try:
+        os.makedirs(LOGS_DIR, exist_ok=True)
+        path = os.path.join(LOGS_DIR, "llm_json_echec_journaux_{}.txt".format(
+            datetime.now().strftime("%Y%m%d_%H%M%S_%f")))
+        with open(path, "w", encoding="utf-8") as f:
+            f.write("# {}\n\n{}".format(contexte, raw))
+        print("      réponse brute gardée : {}".format(path))
+    except Exception as e:
+        print("      (log impossible : {})".format(e))
+
+
+def _parse_liste_json(raw):
+    """
+    Lit une liste JSON d'objets dans une réponse LLM, avec tolérance :
+    balises ```json, texte avant/après, virgules finales, et réponse tronquée
+    (les objets complets avant la coupure sont récupérés).
+    Retourne (liste, complete) ; complete=False si la liste a été récupérée
+    partiellement ou pas du tout.
+    """
+    texte = re.sub(r"^```(?:json)?\s*", "", (raw or "").strip())
+    texte = re.sub(r"\s*```$", "", texte).strip()
+    debut = texte.find("[")
+    if debut < 0:
+        return [], False
+    texte = texte[debut:]
+    dec = json.JSONDecoder()
+
+    for candidat in (texte, re.sub(r",(\s*[\]}])", r"\1", texte)):
+        try:
+            data, _ = dec.raw_decode(candidat)
+            if isinstance(data, list):
+                return [e for e in data if isinstance(e, dict)], True
+        except ValueError:
+            pass
+
+    # Récupération objet par objet (réponse tronquée)
+    objets, pos = [], 1
+    while pos < len(texte):
+        while pos < len(texte) and texte[pos] in " \t\r\n,":
+            pos += 1
+        if pos >= len(texte) or texte[pos] != "{":
+            break
+        try:
+            obj, pos = dec.raw_decode(texte, pos)
+        except ValueError:
+            break
+        if isinstance(obj, dict):
+            objets.append(obj)
+    return objets, False
+
+
+def _entree_valide(entry, zone):
+    """Une entrée n'est gardée que si elle a un nom de journal, autre que le
+    motif factice de l'ancien fallback (« Édition <nom de la zone> »)."""
+    nom = (entry.get("nom") or "").strip() if isinstance(entry, dict) else ""
+    factice = "Édition {}".format(zone.get("nom", zone["slug"]))
+    return bool(nom) and nom.lower() != factice.lower()
+
+
+def _appel_lot(scenario, ligne, reseau, batch, etiquette):
+    """Un appel LLM pour un lot ; retourne {zone_slug: entrée} (zones réussies seulement)."""
+    prompt = build_prompt(scenario, ligne, reseau, batch)
+    try:
+        raw = call_llm(
+            system_prompt=SYSTEM_PROMPT,
+            user_prompt=prompt,
+            max_tokens=8000,  # augmenté le 6 juillet : le schéma "journalistes"
+                              # (6 par zone) produit un JSON bien plus long
+                              # qu'avant — 2000 tokens tronquait systématiquement
+                              # les lots de 5 zones (erreur JSON invalide).
+            temperature=0.7,
+            task_tier=TASK_TIER,
+        )
+    except Exception as e:
+        print("    [WARN] {} : appel échoué ({})".format(etiquette, e))
+        return {}
+
+    data, complete = _parse_liste_json(raw)
+    ok = {}
+    for entry in data:
+        idx = entry.get("index")
+        if isinstance(idx, int) and 0 <= idx < len(batch) and _entree_valide(entry, batch[idx]):
+            ok[batch[idx]["slug"]] = {
+                "nom":          entry["nom"].strip(),
+                "ton":          entry.get("ton", ""),
+                "langue_style": entry.get("langue_style", ""),
+                "journalistes": entry.get("journalistes", []) or [],
+            }
+    if not complete:
+        print("    [WARN] {} : JSON {} ({} zone(s) récupérée(s) sur {})".format(
+            etiquette, "tronqué" if data else "illisible", len(ok), len(batch)))
+        _log_echec_json(raw, "{} / {} / {} — {}".format(scenario, ligne, etiquette,
+                                                       ", ".join(z["slug"] for z in batch)))
+    return ok
+
+
 def generate_journals_for_zones(scenario, ligne, reseau, zones, batch_size=3):
     """
     Génère les profils de journaux pour toutes les zones via API (par lots).
-    Retourne un dict {zone_slug: {nom, ton, langue_style}}.
+    Retourne un dict {zone_slug: {nom, ton, langue_style, journalistes}}
+    contenant UNIQUEMENT les zones réussies. Une zone absente d'un lot est
+    retentée seule une fois ; si elle échoue encore, elle reste absente
+    (reprise par un prochain --update), jamais remplacée par une entrée factice.
     """
     results = {}
     batches = [zones[i:i+batch_size] for i in range(0, len(zones), batch_size)]
@@ -343,48 +457,27 @@ def generate_journals_for_zones(scenario, ligne, reseau, zones, batch_size=3):
         len(zones), len(batches), batch_size, _provider, _model, TASK_TIER
     ))
 
+    echecs = []
     for i, batch in enumerate(batches):
-        print("    Lot {}/{}...".format(i + 1, len(batches)))
-        prompt = build_prompt(scenario, ligne, reseau, batch)
+        etiquette = "Lot {}/{}".format(i + 1, len(batches))
+        print("    {}...".format(etiquette))
+        ok = _appel_lot(scenario, ligne, reseau, batch, etiquette)
+        results.update(ok)
 
-        try:
-            raw = call_llm(
-                system_prompt=SYSTEM_PROMPT,
-                user_prompt=prompt,
-                max_tokens=8000,  # augmenté le 6 juillet : le schéma "journalistes"
-                                  # (6 par zone) produit un JSON bien plus long
-                                  # qu'avant — 2000 tokens tronquait systématiquement
-                                  # les lots de 5 zones (erreur JSON invalide).
-                temperature=0.7,
-                task_tier=TASK_TIER,
-            ).strip()
+        manquantes = [z for z in batch if z["slug"] not in ok]
+        if manquantes and len(batch) > 1:
+            print("    {} zone(s) manquante(s) — nouvel essai zone par zone.".format(len(manquantes)))
+            for z in manquantes:
+                ok1 = _appel_lot(scenario, ligne, reseau, [z], "{} / {}".format(etiquette, z["slug"]))
+                results.update(ok1)
+        echecs += [z["slug"] for z in batch if z["slug"] not in results]
+        print("    OK — {} journal(aux) sur {}".format(
+            sum(1 for z in batch if z["slug"] in results), len(batch)))
 
-            raw = re.sub(r"^```(?:json)?\s*", "", raw)
-            raw = re.sub(r"\s*```$", "", raw).strip()
-            data, _ = json.JSONDecoder().raw_decode(raw)
-
-            for entry in data:
-                idx = entry.get("index")
-                if idx is not None and 0 <= idx < len(batch):
-                    zone_slug = batch[idx]["slug"]
-                    results[zone_slug] = {
-                        "nom":          entry.get("nom", "Édition locale"),
-                        "ton":          entry.get("ton", ""),
-                        "langue_style": entry.get("langue_style", ""),
-                        "journalistes": entry.get("journalistes", []),
-                    }
-            print("    OK — {} journaux générés".format(len(data)))
-
-        except Exception as e:
-            print("    [WARN] Lot {} échoué : {}".format(i + 1, e))
-            # Fallback : entrées vides pour les zones du lot
-            for z in batch:
-                results[z["slug"]] = {
-                    "nom":          "Édition {}".format(z.get("nom", z["slug"])),
-                    "ton":          "",
-                    "langue_style": "",
-                    "journalistes": [],
-                }
+    if echecs:
+        print("  [WARN] {} zone(s) sans journal (rien écrit pour elles) : {}".format(
+            len(echecs), ", ".join(echecs)))
+        print("         → relancer avec --update pour les reprendre.")
 
     return results
 
@@ -408,6 +501,8 @@ def save_journaux(data, dry_run=False):
         preview = yaml.dump(data, allow_unicode=True, sort_keys=False)
         print(preview[:500] + "\n...")
         return
+    if os.path.exists(JOURNAUX_PATH):
+        shutil.copy2(JOURNAUX_PATH, JOURNAUX_PATH + ".bak")
     with open(JOURNAUX_PATH, "w", encoding="utf-8") as f:
         yaml.dump(data, f, allow_unicode=True, sort_keys=False)
     print("\n[OK] journaux.yaml sauvegardé : {}".format(JOURNAUX_PATH))
@@ -518,13 +613,15 @@ def process_scenario_fill_journalistes(scenario, ligne_filter, journaux, dry_run
 
         # Fusion partielle : seul le champ "journalistes" est copié, le reste
         # de l'entrée existante (nom/ton/langue_style) n'est jamais touché.
+        ajoutees = 0
         for slug, data in nouveaux.items():
-            if slug in existing_zones:
-                existing_zones[slug]["journalistes"] = data.get("journalistes", [])
+            if slug in existing_zones and data.get("journalistes"):
+                existing_zones[slug]["journalistes"] = data["journalistes"]
+                ajoutees += 1
 
         journaux[scenario][ligne]["zones"] = existing_zones
-        print("  {} rédaction(s) ajoutée(s) pour {}/{}.".format(
-            len(a_completer_slugs), scenario, ligne
+        print("  {} rédaction(s) ajoutée(s) sur {} pour {}/{}.".format(
+            ajoutees, len(a_completer_slugs), scenario, ligne
         ))
 
 
