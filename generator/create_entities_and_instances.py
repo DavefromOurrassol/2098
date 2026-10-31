@@ -90,6 +90,7 @@ from instance_generation_common import (
     compute_temporal_distribution, format_temporal_summary,
     format_concentration_warnings,
 )
+from slugs import slugify as _slugify_commun  # S24 (31 oct 2026) : slug commun
 
 
 # ---------------------------------------------------------------------------
@@ -197,26 +198,9 @@ _TRANSLIT_SANS_NFD = str.maketrans({
 
 
 def slugify(text):
-    # Normalisation Unicode générique (NFD + suppression des marques
-    # diacritiques) plutôt qu'une table d'accents français en dur — la
-    # table précédente ne couvrait que é/è/ê/ë/à/â/ä/ù/û/ü/î/ï/ô/ö/ç et
-    # laissait passer tout caractère accentué non-français (portugais
-    # ã/õ/á/í/ó/ú, espagnol ñ, etc.) directement dans le re.sub suivant,
-    # qui le remplaçait par "_" au lieu de le translittérer. Bug trouvé
-    # le 8 août 2026 (chantier annee_fin) sur des slugs portugais cassés
-    # (ex. "rede_paulista_de_distribuic_o_algor_tmica" au lieu de
-    # "rede_paulista_de_distribuicao_algoritmica"), corrigé le 14 août
-    # 2026. Même principe déjà utilisé par _fold() dans gui/app.py.
-    import unicodedata
-    # Lettres sans décomposition Unicode (24 septembre 2026, cas réel
-    # "Elias Mørk" → slug "elias_m_rk") : NFD ne décompose pas ø/æ/ß/ł...,
-    # qui étaient donc remplacées par "_" au lieu d'être translittérées.
-    s = (text or "").translate(_TRANSLIT_SANS_NFD)
-    s = unicodedata.normalize("NFD", s)
-    s = "".join(c for c in s if unicodedata.category(c) != "Mn")
-    s = s.lower()
-    s = re.sub(r"[^a-z0-9]+", "_", s)
-    return s.strip("_")
+    """S24 (31 oct 2026) : délègue à slugs.slugify (slug commun du projet,
+    translittère ø, æ, œ, ß, ł…)."""
+    return _slugify_commun(text)
 
 
 def _parse_optional_bool(value):

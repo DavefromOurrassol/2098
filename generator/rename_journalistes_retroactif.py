@@ -23,6 +23,7 @@ import argparse
 import re
 import unicodedata
 from pathlib import Path
+from slugs import slugify as _slugify_commun  # S24 (31 oct 2026) : slug commun
 
 RENOMMAGES = [
     ("Samira Al-Khatib", "Yasmine Chahine"),
@@ -35,13 +36,9 @@ RENOMMAGES = [
 
 
 def slugify(nom):
-    """Slug du NOUVEAU nom uniquement -- minuscule, accents retirés,
-    tout séparateur non alphanumérique -> underscore."""
-    s = unicodedata.normalize("NFD", nom)
-    s = "".join(c for c in s if unicodedata.category(c) != "Mn")
-    s = s.lower()
-    s = re.sub(r"[^a-z0-9]+", "_", s).strip("_")
-    return s
+    """S24 (31 oct 2026) : délègue à slugs.slugify (slug commun du projet,
+    translittère ø, æ, œ, ß, ł…)."""
+    return _slugify_commun(nom)
 
 
 def main():

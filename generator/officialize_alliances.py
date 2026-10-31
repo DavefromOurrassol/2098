@@ -86,6 +86,7 @@ from pathlib import Path
 import yaml
 
 from llm_client import call_llm  # tier structured_strict — noms canoniques dédupliqués, référencés dans tout le vault
+from slugs import slugify as _slugify_commun  # S24 (31 oct 2026) : slug commun
 
 
 # ---------------------------------------------------------------------------
@@ -127,17 +128,9 @@ VALID_CATEGORIES = [
 # ---------------------------------------------------------------------------
 
 def slugify(text):
-    # Normalisation Unicode générique (NFD + suppression des marques
-    # diacritiques) plutôt qu'une table d'accents français en dur —
-    # même correctif que create_entities_and_instances.py et
-    # create_entity.py, appliqué le 14 août 2026 (bug trouvé le 8 août
-    # sur des slugs portugais cassés, voir audit_broken_slugs.py).
-    import unicodedata
-    s = unicodedata.normalize("NFD", text or "")
-    s = "".join(c for c in s if unicodedata.category(c) != "Mn")
-    s = s.lower()
-    s = re.sub(r"[^a-z0-9]+", "_", s)
-    return s.strip("_")
+    """S24 (31 oct 2026) : délègue à slugs.slugify (slug commun du projet,
+    translittère ø, æ, œ, ß, ł…)."""
+    return _slugify_commun(text)
 
 
 def parse_md(filepath):

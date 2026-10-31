@@ -74,6 +74,7 @@ import json
 import re
 import unicodedata
 from pathlib import Path
+from slugs import slugify as _slugify_commun  # S24 (31 oct 2026) : slug commun
 
 try:
     import yaml
@@ -87,11 +88,9 @@ except ImportError:
 # ---------------------------------------------------------------------------
 
 def slugify_fixed(text: str) -> str:
-    s = unicodedata.normalize("NFD", text or "")
-    s = "".join(c for c in s if unicodedata.category(c) != "Mn")
-    s = s.lower()
-    s = re.sub(r"[^a-z0-9]+", "_", s)
-    return s.strip("_")
+    """S24 (31 oct 2026) : délègue à slugs.slugify (slug commun du projet,
+    translittère ø, æ, œ, ß, ł…)."""
+    return _slugify_commun(text)
 
 
 def parse_frontmatter(path: Path) -> dict:

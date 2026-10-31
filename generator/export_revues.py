@@ -38,6 +38,7 @@ import unicodedata
 from collections import Counter, defaultdict
 
 import yaml
+from slugs import slugify as _slugify_commun  # S24 (31 oct 2026) : slug commun
 
 GEN_DIR = os.path.dirname(os.path.abspath(__file__))
 VAULT = os.path.dirname(GEN_DIR)
@@ -193,12 +194,9 @@ def slugify(s):
 
 
 def slug_pipeline(s):
-    """Même slug que api._slugify() (celui écrit dans journaliste_slug) :
-    NFD, marques diacritiques retirées, tout non-alphanumérique -> "_".
-    Diffère de slugify() ci-dessus pour ø, æ, å, ß, ł… (S23, 4 octobre 2026)."""
-    s = unicodedata.normalize("NFD", str(s or ""))
-    s = "".join(c for c in s if unicodedata.category(c) != "Mn").lower()
-    return re.sub(r"[^a-z0-9]+", "_", s).strip("_")
+    """S24 (31 oct 2026) : délègue à slugs.slugify (slug commun du projet,
+    translittère ø, æ, œ, ß, ł…)."""
+    return _slugify_commun(s)
 
 
 def trouver(nom):

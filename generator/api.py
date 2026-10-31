@@ -26,6 +26,7 @@ from datetime import datetime
 from llm_client import call_llm, resolve_for_tier
 from loader import VAULT_PATH, PATHS, parse_md_file
 from prompt_builder import build_metadonnees_publication_format
+from slugs import slugify as _slugify_commun  # S24 (31 oct 2026) : slug commun
 
 
 # ─────────────────────────────────────────
@@ -231,17 +232,9 @@ def _retry_missing_metadata(prompt_data, article_text, type_diffusion):
 # que _parse_longueur_bornes plus haut : dégradation silencieuse).
 
 def _slugify(text):
-    """Identique à create_entity.py/create_entities_and_instances.py
-    (NFD + suppression des marques diacritiques plutôt qu'une table
-    d'accents français en dur -- correctif du 14 août 2026 sur les slugs
-    portugais cassés, voir audit_broken_slugs.py). Dupliqué ici à dessein
-    -- api.py n'importe aucun de ces scripts pour cette seule fonction
-    utilitaire."""
-    s = unicodedata.normalize("NFD", text or "")
-    s = "".join(c for c in s if unicodedata.category(c) != "Mn")
-    s = s.lower()
-    s = re.sub(r"[^a-z0-9]+", "_", s)
-    return s.strip("_")
+    """S24 (31 oct 2026) : délègue à slugs.slugify (slug commun du projet,
+    translittère ø, æ, œ, ß, ł…)."""
+    return _slugify_commun(text)
 
 
 def _yaml_escape(text):

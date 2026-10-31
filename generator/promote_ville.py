@@ -101,6 +101,7 @@ from enrich_geographie_recursive import (
     ZONE_STATUTS,
     TYPE_ENTITE_REELLE,
 )
+from slugs import slugify as _slugify_commun  # S24 (31 oct 2026) : slug commun
 
 TASK_TIER_LEGER = "strict"            # résolution pays, arbitrage parent
 TASK_TIER_REDACTION = "structured_strict"  # rédaction de la fiche zone
@@ -138,12 +139,9 @@ SCENARIOS = [
 # ---------------------------------------------------------------------------
 
 def slugify_fixed(text):
-    import unicodedata
-    s = unicodedata.normalize("NFD", text or "")
-    s = "".join(c for c in s if unicodedata.category(c) != "Mn")
-    s = s.lower()
-    s = re.sub(r"[^a-z0-9]+", "_", s)
-    return s.strip("_")
+    """S24 (31 oct 2026) : délègue à slugs.slugify (slug commun du projet,
+    translittère ø, æ, œ, ß, ł…)."""
+    return _slugify_commun(text)
 
 
 # ---------------------------------------------------------------------------
