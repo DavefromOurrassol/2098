@@ -357,6 +357,22 @@ def _fiche_dans_lieu(f, lieux):
     return any(_re.search(r"\b" + _re.escape(l) + r"\b", texte) for l in lieux)
 
 
+def _phrase_reelle(extrait, texte):
+    """PATCH_S30_EXTRAIT : (phrase, exact). exact = True si l'extrait entier est dans la fiche
+    (espaces, casse et accents près). Sinon, la phrase de la fiche qui contient les 60 premiers
+    caractères de l'extrait et lui ressemble le plus (citation réécrite par l'IA) ; None si aucune."""
+    import difflib
+    e = _plie(extrait)
+    if e and e in _plie(texte):
+        return extrait, True
+    phrases = [p.strip() for p in _re.split(r"(?<=[.!?])\s+", " ".join(str(texte or "").split())) if p.strip()]
+    debut = e[:60]
+    candidates = [p for p in phrases if debut and debut in _plie(p)]
+    if not candidates:
+        return None, False
+    return max(candidates, key=lambda p: difflib.SequenceMatcher(None, e, _plie(p)).ratio()), False
+
+
 def verifier_lot(brut, lot, by_inst, by_zone, effets=None, territoires=None, variables_hyp=None, lieux=None,
                  annees_hyp=None):
     """Contrôle d'un lot. v6 : un changement douteux descend d'« obligatoire » à « possible »
@@ -428,9 +444,17 @@ def verifier_lot(brut, lot, by_inst, by_zone, effets=None, territoires=None, var
                     motifs.append("élargit le rôle sans le contredire")
                 elif _ATTENUE.search(juge) and not _FAUX.search(juge):
                     motifs.append("atténue le rôle sans le contredire")
-                trouve = _plie(extrait)[:120] in _plie(_texte_complet(f))
+                # PATCH_S30_EXTRAIT : l'extrait ENTIER doit être dans la fiche (avant : ses 120 premiers
+                # caractères). Citation réécrite par l'IA : remplacée par la vraie phrase ; le jugement,
+                # porté sur un texte inexact, descend en « possible ».
+                extrait_ia = extrait
+                reelle, exact = _phrase_reelle(extrait, _texte_complet(f))
+                trouve = reelle is not None
                 if not trouve:
                     motifs.append("extrait introuvable dans la fiche")
+                elif not exact:
+                    motifs.append("citation inexacte, remplacée par la phrase de la fiche")
+                    extrait = reelle
                 if niveau == "obligatoire" and _date_contestee(extrait, juge, annees_hyp or ()):
                     motifs.append("date de la fiche contestée")   # v9.6
             if typ == "trajectoire" and niveau == "obligatoire" and apres != "disparu":
@@ -453,7 +477,7 @@ def verifier_lot(brut, lot, by_inst, by_zone, effets=None, territoires=None, var
                                                       "action": c.get("action"), "raison": raison})
             else:
                 brut_niv[niveau]["textes"].append({"slug": slug, "genre": f["genre"], "nom": f["data"].get("name"),
-                                                   "extrait": extrait, "extrait_trouve": trouve,
+                                                   "extrait": extrait, "extrait_trouve": trouve, "extrait_ia": extrait_ia,
                                                    "contredit": contredit, "raison": raison})
     manquantes = [f["slug"] for f in lot if f["slug"] not in vues]
     out = {"rejetees": rejetees, "corrigees": [], "non_lues": manquantes, "hors_lot": hors_lot}
