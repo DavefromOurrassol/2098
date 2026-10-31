@@ -677,9 +677,13 @@ def porte_pays_cite(zone, pays):
 
 def note_carte(o):
     parts = []
-    if o.get("simples"):
+    if o.get("simples"):   # PATCH_S30_AFFICHAGE : seules les sous-zones hautes sont rattachées
+        parents = {z.get("slug"): z.get("parent") for z in zones_geo(o["sc"])}
+        hautes = [s for s in o["simples"] if parents.get(s) not in o["simples"]]
+        suivent = [s for s in o["simples"] if s not in hautes]
         parts.append(f"puis sous-zone(s) rattachée(s) à `{o['cible']}` en gardant {o['pays']} : "
-                     + ", ".join(o["simples"]))
+                     + ", ".join(hautes or o["simples"])
+                     + (f" (avec leurs sous-zones : {', '.join(suivent)})" if suivent and hautes else ""))
     if o.get("a_repartir"):
         parts.append("à répartir à la main (étape ⑤) : "
                      + ", ".join(f"{s['slug']} (aussi {', '.join(s['autres'])})" for s in o["a_repartir"]))

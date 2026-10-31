@@ -2537,7 +2537,8 @@ def liste_application(hyp, sc, res, cons, geo_ops, donnees, passe=None):
                "python3 generator/reattribuer_signatures.py", "aperçu, puis --apply")
     if a_relire:
         _etape(E, "Articles et site", f"{len(a_relire)} article(s) à relire (zone au statut changé, pays cité ou entité dont la trajectoire change)",
-               motif="; ".join(f"« {a['titre']} »" for a in a_relire[:MAX_LISTE])
+               motif="; ".join(a['titre'] if str(a['titre']).lstrip().startswith("«")   # PATCH_S30_AFFICHAGE
+                              else f"« {a['titre']} »" for a in a_relire[:MAX_LISTE])
                + (" …" if len(a_relire) > MAX_LISTE else ""))
     if E:
         _etape(E, "Articles et site", "Résumé du scénario",
@@ -2722,7 +2723,7 @@ def _rendre_injection_commune(hyp, application, out=None):
                "(`impacts_imposes`, `date_imposee`, `via_matrice_impose`) : l'IA de l'injection ne les "
                "recalcule pas, elle rédige seulement le récit."), "",
             *(["`acteurs_hint` : entités les plus touchées de chaque scénario (lecture IA, passe "
-               "exhaustive), 4 au plus par scénario ; chaque slug ne vaut que pour son scénario.", ""]
+               "exhaustive si elle a tourné), 4 au plus par scénario ; chaque slug ne vaut que pour son scénario.", ""]
               if entree.get("acteurs_hint") else []),
             *(["`faits_imposes` : contraintes de l'hypothèse et sort des acteurs du récit (disparaît, "
                "change, reste) ; l'injection les donne à l'IA comme faits non négociables.", ""]
