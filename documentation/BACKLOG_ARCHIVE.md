@@ -1454,3 +1454,46 @@ intermédiaire.
 - **S14** : alertes `sao_paulo_megapole` disparues.
 - `.obsidian/graph.json` retiré du suivi git (réécrit par Obsidian à chaque
   ouverture).
+
+---
+
+## Clos le 31 octobre 2026
+
+- **S24 — bloc `===METADONNEES_PUBLICATION===` resté dans un article** : regex
+  d'extraction d'`api.py` exigeant `===FIN_METADONNEES===` ; un bloc non fermé ou
+  tronqué (retry de longueur, `MAX_TOKENS` 4000) restait dans le texte. Correctif
+  préventif (aucune trace de l'article de septembre) : fin facultative, toutes les
+  occurrences retirées, bloc tronqué → champs partiels jetés et retry ciblé
+  (`patch_s24_bloc_metadonnees.py`, `patch_s24b_bloc_tronque.py`, commit
+  `8aeb5af`). `reparer_bloc_metadonnees.py` ne sert plus qu'à l'existant.
+- **S24 — `generate_journaux.py --update`, rédactions factices** : le fallback
+  écrivait « Édition <zone> » vide, bloquait `--update` et écrasait un bon journal
+  en mode complet. Supprimé : zones ratées absentes et listées, parse JSON tolérant
+  (récupération partielle d'une réponse tronquée), nouvel essai zone par zone,
+  logs `llm_json_echec_journaux_*`, `journaux.yaml.bak`
+  (`patch_s24_journaux_fallback.py`). `clean_fallback_journaux.py` ne sert plus
+  qu'aux restes antérieurs.
+- **S20 — reprise d'injection partielle « ne couvre pas un échec par exception »** :
+  point caduc, déjà traité par `patch_s22_exception_signal.py` (5 oct). Trou voisin
+  corrigé : interruption (Ctrl-C, SIGTERM) → file réécrite après chaque idée,
+  variable en cours restaurée, reprise produite, plus de signal en double sous
+  `_2` (`patch_s20_interruption_signaux.py`, commit `19e7e53`).
+- **S24 — `_slugify()` : ø, æ, œ, ß, ł, đ, ı → `_`** : 10 copies de la fonction,
+  dont deux couplées exprès à `api.py` (`export_revues.slug_pipeline`,
+  `reattribuer_signatures.py`). Module commun `generator/slugs.py` (translittération
+  puis NFD), 9 copies déléguées (`patch_s24_slugs_unifies.py`, commit `68d3d23`) ;
+  audit (`audit_slugs_s24.py` : 7 slugs abîmés dans le lore sur 44 noms) ;
+  migration (`migrer_slugs_s24.py` : 4 entités + 4 instances renommées, 9 articles,
+  18 journalistes, 472 remplacements dans 144 fichiers, `documentation/Old/`
+  exclu). Entités renommées : `communautes_rurales_autogerees_des_noeuds_de_survie`,
+  `enclaves_industrielles_de_bergen_tromso`, `les_gardiens_des_noeuds_hybrides`,
+  `reseau_des_metropoles_noeuds`. Laissés : `export_revues.slugify()` (URL),
+  journalistes au nom inventé par l'IA hors `journaux.yaml`.
+- **S23 — trois sources des noms de réseaux** : concordantes (journaux.yaml =
+  `RESEAUX` par construction ; `JOURNAL_PROFILES` ne fournit son nom qu'en repli
+  ultime). Alignés : « L'Ordre du Territoire » → « L'Ordre Zonal » ; posture
+  fortress_world pro-pouvoir rendue valable pour tous les blocs
+  (`patch_s23_profils_reseaux.py`).
+- **Backlog** réorganisé en trois parties (A bugs et vérifications, B
+  développement, C enrichissement) ; règle : partie A vide avant l'enrichissement
+  en volume.

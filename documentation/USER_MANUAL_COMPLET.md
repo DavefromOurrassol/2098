@@ -97,6 +97,12 @@ migration (jamais dans le GUI) · 📦 legacy, remplacé.
   suffit pas ; un nouveau champ de formulaire n'apparaît qu'après redémarrage).
 - Les patchs (`generator/patch_*.py`) refusent un second passage et gardent une
   sauvegarde ; une fois appliqués, ils ne se relancent pas.
+- **Slugs** : un seul calcul, `generator/slugs.py` (31 oct 2026) — `slugify()`
+  translittère ø, æ, œ, ß, ł, đ, ı… puis retire les accents. Tout script l'importe
+  (`from slugs import slugify`) au lieu de recopier la fonction. Seule exception :
+  `export_revues.slugify()` (URL du site).
+- Sortie à transmettre à Claude : `> ~/Desktop/<nom>.txt 2>&1`, puis glisser le
+  fichier (pas `/tmp`, invisible dans le Finder).
 
 ---
 
@@ -107,7 +113,8 @@ migration (jamais dans le GUI) · 📦 legacy, remplacé.
 | `loader.py` | Lecture du vault (frontmatter + corps), `VAULT_PATH`, `VALID_VARS`, `VALID_SCENARIOS`. Sélection des instances (`filter_instances_for_thematique()`, rotation à mémoire, cooldown, ancrage local), des événements (`select_relevant_events()`), extraction des forces attractives / répulsives des variables. |
 | `snapshot.py` | Snapshot cohérent du monde pour un scénario et une date : niveaux des variables (moteur dynamique, §3ter), jalons, `zone_slug` par défaut (`_dominant_zone`, seulement en repli : une zone explicite prime). `build_snapshot(date_edition=…, zone_article=…)`. |
 | `prompt_builder.py` | Assemble le prompt d'article (système + utilisateur) depuis le snapshot, la thématique et `config.yaml` ; profils de journaux (`JOURNAL_PROFILES`), résolution du journal (§2nonies), `STYLE_ORAL` (§2quater). |
-| `api.py` | Appel LLM de l'article (tier `strict`), retry de longueur (§2ter), extraction du bloc `===METADONNEES_PUBLICATION===`, sauvegarde dans `articles/{scenario}/` (champ `config["output"]["dossier"]`), nom de fichier translittéré. |
+| `api.py` | Appel LLM de l'article (tier `strict`), retry de longueur (§2ter), extraction du bloc `===METADONNEES_PUBLICATION===` (tolérante depuis le 31 oct : marqueur de fin facultatif, bloc en double retiré, bloc tronqué → retry ciblé des métadonnées), sauvegarde dans `articles/{scenario}/` (champ `config["output"]["dossier"]`), nom de fichier translittéré. |
+| `slugs.py` | `slugify()` commun à tout le pipeline (31 oct 2026) : translittération (ø → o, æ → ae, œ → oe, ß → ss, ł → l…), NFD sans diacritiques, `_` comme séparateur. `api._slugify`, `export_revues.slug_pipeline`, `create_entities_and_instances.slugify` et les autres copies y délèguent. |
 | `llm_client.py` | Abstraction Mistral / Claude / OpenAI, `call_llm(..., task_tier=...)`, `resolve_for_tier()`, réponse Mistral « en morceaux » réduite au texte (`_texte_reponse()`). |
 | `instance_generation_common.py` | Génération d'UNE instance, partagée par `generate_instances.py` et `create_entities_and_instances.py` : prompt, appel, `validate_instance()`, `ramener_au_plafond()` (§3), écriture ; trajectoires (`VALID_TRAJECTOIRE`), `extraire_json()` tolérant (échec → `gui/logs/llm_json_echec_*.txt`), bandes temporelles (`compute_temporal_distribution()`). |
 | `edition_utils.py` | Mois de parution : conversions année/mois ↔ date fractionnaire (`2098.08`), tirage d'un jour, registre `state/editions.json` (§2quinquies). |
@@ -211,16 +218,21 @@ python3 generator/generate_journaux.py --dry-run
   `creative_souple`, `.bak_presentation` ; rien d'autre n'est touché.
 - ⚠ Le mode complet (sans `--update`) **remplace** chaque entrée (efface fiches,
   `seniorite`, `ton_personnel`…). `_reseau` est réécrit à chaque lancement.
-- ⚠ Lots de 3 zones ; un lot au JSON cassé laisse des rédactions factices
-  (`Édition <zone>`, sans journaliste) : après un `[WARN] Lot N échoué`, lancer
-  `clean_fallback_journaux.py` puis relancer `--update` (`validate.py` les signale).
+- Lots de 3 zones. Depuis le 31 oct 2026, **aucune rédaction factice** : réponse
+  lue avec tolérance (texte autour, virgules finales ; d'une réponse tronquée, les
+  journaux complets sont gardés) ; zones manquantes d'un lot retentées une fois
+  seules ; une zone encore ratée n'est pas écrite et est listée en fin
+  (« relancer avec --update »). Réponse illisible gardée dans
+  `gui/logs/llm_json_echec_journaux_*.txt` ; `journaux.yaml.bak` avant chaque
+  écriture.
 
 ### `check_journaux_coherence.py` 🔁 🗄️ — zones N1 ↔ `journaux.yaml`
 Manquantes et orphelines dans les deux sens, 6 scénarios × 2 lignes. Lecture seule.
 
 ### `clean_fallback_journaux.py` 🔁 🗄️
 Retire les rédactions factices du fallback de `--update` (nom « Édition … », `ton` et
-`langue_style` vides). Faire une copie de `journaux.yaml` avant.
+`langue_style` vides). Faire une copie de `journaux.yaml` avant. Ne sert plus
+qu'aux restes antérieurs au 31 oct 2026 (le fallback factice n'existe plus).
 
 ### `trace_injection.py` 🔁 🧩 — parcours d'un élément
 Origine, scénarios et zones, variables influencées, relations, usage dans les
@@ -449,7 +461,9 @@ bash generator/publier_site.sh                     # build + copie + commit + pu
 - **`reparer_bloc_metadonnees.py`** (sans IA) : article contenant encore
   `===METADONNEES_PUBLICATION===` → reporte chapô, tags, `image_prompt` dans le
   frontmatter et retire le bloc (`.bak_meta`) ; aperçu, `--apply`. Puis
-  `chapos_revues.py` et publication.
+  `chapos_revues.py` et publication. Depuis le 31 oct 2026, `api.py` retire aussi
+  un bloc non fermé ou en double à la génération : l'outil ne sert plus qu'à
+  l'existant.
 - Suites (identités visuelles, photos, audio, multilingue) : backlog chantier 5.
 
 ## 2nonies. Journaux, zones et audits d'articles
@@ -600,6 +614,12 @@ python3 generator/inject_custom_signals.py [--dry-run]
   contient une entrée `idee_a_remettre_en_queue` (variables restantes + bloc
   `reprise`) qui, recopiée dans la file, complète le même signal. Une exception sur
   une variable annule son écriture (instantané restauré) sans toucher les autres.
+- **Interruption** (Ctrl-C, ou Stop du GUI = SIGTERM ; 31 oct 2026) : `queue.yaml`
+  est réécrite après **chaque** idée (seules les idées non traitées y restent, plus
+  de doublon sous `_2` au run suivant). Pendant une variable : écriture annulée,
+  variables restantes en échec « interrompu », fiche d'audit des variables faites
+  et `idee_a_remettre_en_queue` produites, puis arrêt (code 130). Hors des
+  variables (sélection, fiche) : l'idée reste en file.
 - Slug déjà pris : suffixe `_2`. Les variables sœurs d'un même signal ne réutilisent
   pas le même `evenement_cle`.
 - Un signal n'a **aucune garantie** d'apparaître dans un article (texture de fond) ;
@@ -1693,12 +1713,14 @@ terminal pour le cas précis indiqué.
 | `build_geographie_monde.py [--scenario \| --all] [--dry-run] [--force]` | Reconstruire la bible plate d'un scénario (`--force` écrase tout). |
 | `merge_pays_monde.py` (gui/) | Ajouter des pays à `pays_liste` de `zones_pays.json`. |
 | `generate_manual.py` | Prompt du prochain article d'une série à copier dans un chat externe (suivi `state/manual_progress.json`). Pour un simple aperçu : `generate.py --dry-run`. |
+| `audit_slugs_s24.py` | Lecture seule : slugs abîmés par l'ancien slugify (ø, æ… → `_`) dans le lore et les zones. Depuis le 31 oct 2026, ne doit plus signaler de CASSÉ, hors `tromsoe_aln` (faux positif connu) ; les lignes « sans lien » sont normales. |
 
 **Faits, ne plus relancer** : `migrate_registre.py`, `migrate_trajectoire.py`,
 `migrer_vers_chantiers.py`, `officialize_alliances.py`, `fix_impact_scale.py`,
 `migrer_echelles.py`, `polarites_matrice.py`, `audit_polarite.py`,
 `extraire_echelles.py`, `fix_doublons_journalistes.py`, `audit_broken_slugs.py`
-(slugs cassés, août 2026). Abandonné mais conservé : `detect_evenements_cites_retroactif.py`.
+(slugs cassés, août 2026), `migrer_slugs_s24.py` et `patch_s24_slugs_unifies.py`
+(slug commun, 31 oct 2026). Abandonné mais conservé : `detect_evenements_cites_retroactif.py`.
 
 **Remplacés** : `complete_geographie_coverage.py` → `generer_zones_topdown.py` ;
 `create_entity.py` et `generate_entities.py` → `create_entities_and_instances.py` ;
