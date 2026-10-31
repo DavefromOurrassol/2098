@@ -1387,6 +1387,7 @@ def process_idea(client, idea, dry_run=False):
     # relus dans le registre (couvre la reprise), puis complétés dans la boucle.
     sibling_events = _evenements_du_signal(registre_text, signal_slug)
 
+    interrompu = False  # S20 (31 oct 2026) : Ctrl-C / SIGTERM pendant les variables
     for variable_slug in variables:
         ecriture = None  # S22 : instantané pris juste avant d'écrire
         try:
@@ -1510,6 +1511,23 @@ def process_idea(client, idea, dry_run=False):
                             "issues": [motif], "exception": True,
                             "ecriture_annulee": annulee})
             continue
+        except KeyboardInterrupt:
+            # S20 (31 oct 2026) : KeyboardInterrupt n'est pas une Exception,
+            # le bloc S22 ne la voyait pas. On annule l'écriture en cours, on
+            # marque cette variable et les suivantes « interrompu », et on
+            # sort de la boucle : la suite (fiche d'audit des variables déjà
+            # injectées, idee_a_remettre_en_queue) se déroule normalement.
+            annulee = _restaurer_instantane(ecriture) if ecriture is not None else False
+            restantes = variables[variables.index(variable_slug):]
+            print(f"  ✗ Interrompu pendant {variable_slug}"
+                  + (" -- écriture annulée (fiche et registre restaurés)" if annulee else "")
+                  + f" ; non traitées : {restantes}")
+            for v in restantes:
+                results.append({"variable": v, "status": "needs_review",
+                                "issues": ["interrompu"], "interrompu": True,
+                                "ecriture_annulee": annulee and v == variable_slug})
+            interrompu = True
+            break
 
     erreur_fiche = None  # S22
     injectees = [r["variable"] for r in results if r["status"] == "injected"]
@@ -1544,6 +1562,8 @@ def process_idea(client, idea, dry_run=False):
     outcome = {"status": overall, "idea": idea, "selection": selection, "results": results}
     if erreur_fiche:
         outcome["erreur_fiche_audit"] = erreur_fiche
+    if interrompu:
+        outcome["interrompu"] = True  # S20 (31 oct 2026)
 
     # Injection partielle : entrée prête à remettre en queue, limitée aux
     # variables en échec et rattachée au signal déjà créé (voir `reprise`).
@@ -1667,6 +1687,20 @@ def save_queue_with_template(remaining):
     QUEUE_PATH.write_text(content, encoding="utf-8")
 
 
+def _sigterm_comme_ctrl_c():
+    """S20 (31 oct 2026) : un arrêt par SIGTERM (bouton Stop du GUI, kill)
+    suit le même chemin propre que Ctrl-C."""
+    import signal
+
+    def _handler(signum, frame):
+        raise KeyboardInterrupt
+
+    try:
+        signal.signal(signal.SIGTERM, _handler)
+    except (ValueError, OSError):
+        pass  # hors du thread principal : on garde le comportement par défaut
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--dry-run", action="store_true",
@@ -1679,17 +1713,25 @@ def main():
         return
 
     client = get_client()
-    remaining = []
+    _sigterm_comme_ctrl_c()
 
-    for idea in queue:
+    for i, idea in enumerate(queue):
         try:
             outcome = process_idea(client, idea, dry_run=args.dry_run)
+        except KeyboardInterrupt:
+            # S20 (31 oct 2026) : interruption hors des variables (sélection,
+            # fiche d'audit) -- l'idée et les suivantes restent en queue.
+            print(f"\n✗ Interrompu sur {idea.get('id', 'sans_id')} : idée laissée en queue.")
+            if not args.dry_run:
+                print("  Si une variable avait déjà été écrite, vérifier la section 12 avant de relancer.")
+            sys.exit(130)
         except Exception as e:
             outcome = {"status": "needs_review", "idea": idea, "error": str(e)}
 
         if args.dry_run:
             print(json.dumps(outcome, ensure_ascii=False, indent=2, default=str))
-            remaining.append(idea)
+            if outcome.get("interrompu"):
+                break
             continue
 
         if outcome["status"] == "injected":
@@ -1697,8 +1739,18 @@ def main():
         else:
             append_yaml_list(NEEDS_REVIEW_PATH, outcome, key="needs_review")
 
+        # S20 (31 oct 2026) : queue réécrite après CHAQUE idée -- une
+        # interruption ne fait plus retraiter une idée déjà passée (doublon du
+        # signal sous un slug suffixé _2).
+        save_queue_with_template(queue[i + 1:])
+
+        if outcome.get("interrompu"):
+            print(f"\n✗ Run interrompu après {idea.get('id', 'sans_id')} (voir needs_review.yaml, "
+                  f"entrée 'idee_a_remettre_en_queue' s'il y en a une). "
+                  f"{len(queue) - i - 1} idée(s) restent en queue.")
+            sys.exit(130)
+
     if not args.dry_run:
-        save_queue_with_template(remaining)
         print(f"\nTerminé. Voir {PROCESSED_PATH} et {NEEDS_REVIEW_PATH}.")
 
 
