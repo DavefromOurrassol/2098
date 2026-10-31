@@ -760,6 +760,72 @@ def appliquer_cartes(cartes):
     return len(cartes), msgs
 
 
+# ---------------------------------------------------------------------------
+# PATCH_S30_RELOCALISER (31 oct 2026) : l'événement est injecté (étape ③) avant la carte
+# (étape ④) ; sa zone peut être celle que le pays quitte. On la remplace par la cible.
+# ---------------------------------------------------------------------------
+
+def evenement_de(hid, sc):
+    return VAULT / "event_instances" / f"{hid}_{sc}.md"
+
+
+def zone_evenement(hid, sc):
+    p = evenement_de(hid, sc)
+    if not p.exists():
+        return None
+    d = decoupe(p.read_text(encoding="utf-8"))
+    fm = lire_fm(d[1]) if d else None
+    loc = (fm or {}).get("localisation")
+    return str(loc.get("zone") or "").strip() or None if isinstance(loc, dict) else None
+
+
+def relocalisation_prevue(hid, o):
+    """(zone actuelle, cible) si l'événement est rangé dans une zone que le pays va quitter.
+    Calculé AVANT la carte : la zone porte encore le pays. Pas de changement si l'événement est
+    déjà dans la cible, dans une sous-zone qui suit le pays, ou dans une sous-zone à répartir."""
+    zev = zone_evenement(hid, o["sc"])
+    if not zev or zev == o["cible"]:
+        return None
+    gardees = set(o.get("simples") or []) | {s.get("slug") for s in o.get("a_repartir") or []}
+    if zev in gardees:
+        return None
+    by = {z.get("slug"): z for z in zones_geo(o["sc"])}
+    if not (porte_pays(by.get(zev), o["pays"]) or porte_pays_cite(by.get(zev), o["pays"])):
+        return None
+    return zev, o["cible"]
+
+
+def relocaliser_evenement(hid, sc, avant, apres):
+    """Remplace `localisation.zone` (avant → apres) dans la fiche d'événement ; lève ValueError
+    si le frontmatter n'a pas la forme attendue. Sauvegarde .bak_appliquer."""
+    p = evenement_de(hid, sc)
+    texte = p.read_text(encoding="utf-8")
+    d = decoupe(texte)
+    if not d:
+        raise ValueError("frontmatter introuvable")
+    fm_l = d[1].split("\n")
+    debut = [i for i, l in enumerate(fm_l) if re.match(r"^localisation:\s*$", l)]
+    if len(debut) != 1:
+        raise ValueError(f"{len(debut)} bloc(s) `localisation:`")
+    j, lignes = debut[0] + 1, []
+    while j < len(fm_l) and (fm_l[j].startswith((" ", "\t")) or not fm_l[j].strip()):
+        if re.match(r"^\s+zone:", fm_l[j]):
+            lignes.append(j)
+        j += 1
+    if len(lignes) != 1:
+        raise ValueError(f"{len(lignes)} ligne(s) `zone:` dans `localisation`")
+    actuel = nettoie(re.sub(r"^\s+zone:\s*", "", fm_l[lignes[0]]))
+    if actuel != avant:
+        raise ValueError(f"zone actuelle « {actuel} », pas « {avant} »")
+    fm_l[lignes[0]] = re.sub(r"(zone:\s*).*", lambda m: m.group(1) + apres, fm_l[lignes[0]])
+    fm_txt = "\n".join(fm_l)
+    fm = lire_fm(fm_txt)
+    if not fm or (fm.get("localisation") or {}).get("zone") != apres:
+        raise ValueError("relecture du frontmatter inattendue")
+    shutil.copy2(p, p.with_name(p.name + ".bak_appliquer"))
+    p.write_text(d[0] + fm_txt + d[2] + d[3], encoding="utf-8")
+
+
 def lancer(cmd):
     print(f"  $ {' '.join(cmd)}")
     r = subprocess.run([sys.executable] + cmd, cwd=VAULT, capture_output=True, text=True)
@@ -854,6 +920,11 @@ def main():
                 notes[o["n"]] = f"{n} modification(s)"
             elif o["genre"] == "carte":   # PATCH_S27_CARTE : écrite après les autres (--apply)
                 notes[o["n"]] = note_carte(o)
+                rl = relocalisation_prevue(a.id, o)   # PATCH_S30_RELOCALISER
+                if rl:
+                    o["reloc"] = rl
+                    notes[o["n"]] = "\n         → ".join(x for x in (
+                        notes[o["n"]], f"événement `{a.id}_{o['sc']}` relocalisé : `{rl[0]}` → `{rl[1]}`") if x)
         except (ValueError, OSError) as e:
             erreurs.append(f"{o['n']}. {e}")
 
@@ -909,6 +980,16 @@ def main():
         for m in msgs:
             print(f"  {m}")
         n += faits
+        for o in cartes:   # PATCH_S30_RELOCALISER : seulement si la carte est passée
+            if faits and o.get("retenue") and o.get("reloc"):
+                avant_z, apres_z = o["reloc"]
+                try:
+                    relocaliser_evenement(a.id, o["sc"], avant_z, apres_z)
+                    print(f"  ✓ événement `{a.id}_{o['sc']}` relocalisé : `{avant_z}` → `{apres_z}`")
+                    n += 1
+                except (ValueError, OSError) as e:
+                    print(f"  ⚠ événement `{a.id}_{o['sc']}` non relocalisé ({e}) : corriger "
+                          f"`localisation.zone` à la main (→ `{apres_z}`)")
     retenues = [o for o in ops if o["retenue"]]
     for sc in dict.fromkeys(o["sc"] for o in retenues):
         if any(o["sc"] == sc and o["genre"] in ("zone", "carte") for o in retenues):
