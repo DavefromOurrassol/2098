@@ -779,7 +779,7 @@ JOURNAL_PROFILES = {
 
     # ── BREAKDOWN ──────────────────────────────────────────────────────────
     "breakdown_pro_pouvoir": {
-        "nom":     "L'Ordre du Territoire",
+        "nom":     "L'Ordre Zonal",  # S23 (31 oct 2026) : aligné sur journaux.yaml
         "posture": "bulletin officiel des Forces de Maintien de l'Ordre Zonal",
         "ton": (
             "Ton autoritaire et sécuritaire. Le journal justifie les couvre-feux, les checkpoints, "
@@ -804,7 +804,7 @@ JOURNAL_PROFILES = {
     # ── FORTRESS WORLD ─────────────────────────────────────────────────────
     "fortress_world_pro_pouvoir": {
         "nom":     "Le Bloc Informations",
-        "posture": "organe officiel du Bloc Atlantique-Méditerranéen",
+        "posture": "organe officiel du bloc dont relève la zone",  # S23 (31 oct 2026) : valable pour tous les blocs
         "ton": (
             "Ton institutionnel et contrôlé. La rhétorique de la menace extérieure est omniprésente. "
             "Le journaliste légitime les décisions du bloc sans les remettre en question. "
