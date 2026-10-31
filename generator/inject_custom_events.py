@@ -1330,6 +1330,60 @@ def verifier_faits(instance_data, idea, scenario, available_actors):
     return avert
 
 
+# PATCH_S30_CONTRAINTES (31 octobre 2026) : les faits imposés « contrainte », « change » et
+# « zone » sont vérifiés par l'IA (verifier_faits ne regarde que « reste »).
+SORTS_CONTROLES_S30 = ("contrainte", "change", "zone")
+
+
+def verifier_contraintes(instance_data, idea, scenario):
+    """Faits imposés non respectés par le récit : liste de phrases (vide si tout est
+    respecté, s'il n'y a pas de fait à contrôler, ou si l'appel échoue — alors ⚠)."""
+    faits = [f for f in _faits_du_scenario(idea, scenario)
+             if (f.get("sort") or "contrainte") in SORTS_CONTROLES_S30]
+    if not faits:
+        return []
+    recit = "\n\n".join(f"{k} : {' '.join(str(instance_data.get(k)).split())}"
+                        for k in ("nom", "evenement_cle", "realisation", "description_complete", "consequences")
+                        if instance_data.get(k))
+    liste = "\n".join(f"{i}. {f['fait']}" for i, f in enumerate(faits, 1))
+    system = ("Tu contrôles la cohérence d'un récit d'événement fictif avec des faits imposés. "
+              "Tu réponds uniquement en JSON.")
+    user = f"""FAITS IMPOSÉS :
+{liste}
+
+RÉCIT :
+{recit}
+
+Pour chaque fait, dis si le récit le respecte.
+- NON respecté : le récit le contredit, ou met autre chose à sa place (autre rattachement, autre pays,
+  autre institution, sens d'évolution inverse : un acteur censé décliner qui gagne du pouvoir, etc.).
+- Respecté : le récit le confirme, ou n'en parle pas — sauf si le fait est le sujet même de
+  l'événement : il doit alors y figurer.
+Ne juge que les faits listés, ni le style ni la vraisemblance.
+Réponds : {{"faits": [{{"n": 1, "respecte": true, "citation": "", "explication": ""}}]}}
+- citation : passage exact du récit qui contredit le fait (vide si respecté) ;
+- explication : une phrase."""
+    try:
+        rep = call_claude_json(None, system, user, max_tokens=1200)
+    except Exception as e:
+        print(f"  ⚠ [{scenario}] vérification des faits imposés impossible ({type(e).__name__}) : "
+              "relire le récit à la main")
+        return []
+    out = []
+    for r in (rep.get("faits") if isinstance(rep, dict) else None) or []:
+        if not isinstance(r, dict) or str(r.get("respecte")).strip().lower() not in ("false", "non", "0"):
+            continue
+        try:
+            f = faits[int(r.get("n")) - 1]
+        except (TypeError, ValueError, IndexError):
+            continue
+        cit = " ".join(str(r.get("citation") or "").split())[:200]
+        expl = " ".join(str(r.get("explication") or "").split())
+        out.append(f"« {f['fait']} »" + (f" — {expl}" if expl else "") + (f" (récit : « {cit} »)" if cit else ""))
+    print(f"  [faits imposés] {len(faits)} contrôlé(s), {len(out)} non respecté(s)")
+    return out
+
+
 def process_idea(client, idea, dry_run=False):
     idea_id = idea.get("id", "sans_id")
     variables_hint = idea.get("variables_hint")
@@ -1454,11 +1508,18 @@ def process_idea(client, idea, dry_run=False):
             truncate_actors(instance_data, actors_hint_sc, actors_hint_count, available_actors)
             appliquer_impositions(instance_data, idea, scenario)
 
+            etat_contraintes, relance_contraintes = None, False   # PATCH_S30_CONTRAINTES
             for attempt in range(MAX_FIX_ATTEMPTS + 1):
                 print(f"[3/4] Validation (essai {attempt + 1})...")
                 issues = validate_instance(
                     instance_data, variables, scenario, registre_text, available_actors
                 )
+                if not issues:   # PATCH_S30_CONTRAINTES : faits imposés, une réécriture au plus
+                    etat_contraintes = verifier_contraintes(instance_data, idea, scenario)
+                    if etat_contraintes and not relance_contraintes and attempt < MAX_FIX_ATTEMPTS:
+                        relance_contraintes = True
+                        issues = ["Fait imposé non respecté, à corriger sans rien changer d'autre : " + v
+                                  for v in etat_contraintes]
                 if not issues:
                     break
                 print("  -> problèmes :")
@@ -1483,6 +1544,8 @@ def process_idea(client, idea, dry_run=False):
 
             for avert in verifier_faits(instance_data, idea, scenario, available_actors):  # PATCH_S27_V818
                 print(f"  ⚠ [{scenario}] {avert}")
+            for v in etat_contraintes or []:   # PATCH_S30_CONTRAINTES
+                print(f"  ⚠ [{scenario}] fait imposé non respecté : {v}")
 
             if idea.get("edition_active") and idea.get("date_imposee") is not None:
                 print("  ⚠ edition_active ignoré : la date est imposée par la simulation.")
