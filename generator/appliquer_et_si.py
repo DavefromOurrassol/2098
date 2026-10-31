@@ -830,6 +830,9 @@ def reciprocite_prevue(sc, W):
     """PATCH_S30_RECIPROCITE : ce que la remise en réciprocité (fix_alliances_oppositions.py,
     tout le scénario) changera, calculé sur les fiches telles qu'elles seront après les
     opérations (textes en mémoire de W). Estimation : le script fait foi.
+    PATCH_S30_RECIP_EXCLUS : même règle que calculer_reciprocite(ignorer_exclues=True), l'option
+    --ignorer-exclus de l'étape ④ : une fiche `exclure_articles: true` ne propage pas ses
+    relations ; conflit = A cite B dans un champ, B cite A dans l'autre.
     Retourne ({fiche: [ajouts]}, [(a, b) en conflit alliance/opposition])."""
     fms = {}
     for p in sorted(INSTANCES.glob(f"*_{sc}.md")):
@@ -838,21 +841,26 @@ def reciprocite_prevue(sc, W):
         except OSError:
             continue
         d = decoupe(texte)
-        fms[p.stem] = (lire_fm(d[1]) if d else None) or {}
+        fm = (lire_fm(d[1]) if d else None) or {}
+        fms[str(fm.get("slug") or p.stem)] = fm
 
     def liste(fm, champ):
         v = fm.get(champ)
         return [str(x).strip() for x in v if x] if isinstance(v, list) else []
 
-    ajouts = {}
+    ajouts, conflits = {}, set()
     for a, fm in fms.items():
-        for champ in ("alliances", "oppositions"):
+        if fm.get("exclure_articles") is True:
+            continue   # personnage en réserve : ses relations ne sont pas propagées
+        for champ, inverse in (("alliances", "oppositions"), ("oppositions", "alliances")):
             for b in liste(fm, champ):
-                if b in fms and b != a and a not in liste(fms[b], champ):
-                    ajouts.setdefault(b, []).append(f"+ {champ[:-1]} `{a}`")
-    conflits = sorted({tuple(sorted((a, b))) for a, fm in fms.items()
-                       for b in set(liste(fm, "alliances")) & set(liste(fm, "oppositions"))})
-    return ajouts, conflits
+                if b not in fms or b == a or a in liste(fms[b], champ):
+                    continue
+                if a in liste(fms[b], inverse):
+                    conflits.add(tuple(sorted((a, b))))
+                    continue
+                ajouts.setdefault(b, []).append(f"+ {champ[:-1]} `{a}`")
+    return ajouts, sorted(conflits)
 
 
 def afficher_reciprocite(ops, W):
