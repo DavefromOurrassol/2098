@@ -257,8 +257,12 @@ def _yaml_escape(text):
     return '"{}"'.format(escaped)
 
 
+# Correctif du 31 oct 2026 (S24) : marqueur de fin facultatif. Un bloc
+# non fermé (oubli du LLM ou réponse tronquée par MAX_TOKENS, risque accru
+# au retry longueur qui réécrit tout l'article) restait entier dans le texte
+# publié. Sans marqueur de fin, le bloc court jusqu'à la fin du texte.
 _PUBLICATION_META_RE = re.compile(
-    r"===METADONNEES_PUBLICATION===\s*(.*?)\s*===FIN_METADONNEES===",
+    r"===METADONNEES_PUBLICATION===\s*(.*?)\s*(?:===FIN_METADONNEES===|\Z)",
     re.DOTALL | re.IGNORECASE
 )
 
@@ -301,7 +305,16 @@ def _extract_publication_metadata(article_text, type_diffusion="ecrit"):
         return article_text.strip(), meta
 
     block = m.group(1)
-    clean_text = (article_text[:m.start()] + article_text[m.end():]).rstrip()
+    # Correctif du 31 oct 2026 (S24) : toutes les occurrences sont retirées
+    # (bloc en double), les champs sont lus dans la première.
+    clean_text = _PUBLICATION_META_RE.sub("", article_text).rstrip()
+    fin_absente = not re.search(r"===FIN_METADONNEES===", m.group(0), re.IGNORECASE)
+    if fin_absente:
+        print("[api] [WARN] Bloc métadonnées sans marqueur de fin "
+              "(réponse tronquée ?) — pris jusqu'à la fin du texte.")
+    if len(_PUBLICATION_META_RE.findall(article_text)) > 1:
+        print("[api] [WARN] Bloc métadonnées présent plusieurs fois — "
+              "toutes les occurrences retirées, champs lus dans la première.")
 
     # Correctif du 21 août 2026 (soir) : re.IGNORECASE ajouté après un
     # cas réel sur enrich_articles_pre_p20.py où le bloc externe
@@ -343,6 +356,15 @@ def _extract_publication_metadata(article_text, type_diffusion="ecrit"):
                       bool(lieu_m), bool(mode_m)
                   ) if type_diffusion == "oral" else ""
               ))
+
+    # Correctif du 31 oct 2026 (S24b) : bloc tronqué (sans fin ET incomplet) ->
+    # champs partiels jetés, pour que generate_article() lance le retry
+    # ciblé (qui n'agit que si chapo/tags/image_prompt sont tous vides).
+    if fin_absente and not champs_attendus_ok:
+        print("[api] [WARN] Bloc tronqué : champs partiels ignorés, "
+              "retry ciblé des métadonnées attendu.")
+        for k in meta:
+            meta[k] = [] if k == "tags" else ""
 
     return clean_text, meta
 
