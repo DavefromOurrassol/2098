@@ -1387,3 +1387,70 @@ intermédiaire.
   pour les signaux) appelé au retrait d'un événement, avec sauvegarde ;
   comparaison exacte du slug en 3ᵉ colonne au lieu d'une sous-chaîne. Registre
   vérifié avant patch : 643 entrées, total déjà synchronisé.
+
+---
+
+## Session du 30 octobre 2026
+
+### S19 — Signaux faibles propagés par la matrice (clos le 30 oct)
+- **Constat** : les 10 signaux de `signaux_custom/` (22 entrées, une par
+  variable visée) avaient tous `propagation_via_matrice: false` : chacun
+  agissait sur ses variables sans se diffuser dans le réseau.
+- **Lecture de `dynamique.py`** : le drapeau est lu par entrée
+  (`chocs_depuis_donnees()`) ; un choc `true` alimente la composante couplée
+  `x_net` à pleine force ; un choc `false` reste dans la composante locale
+  `x_loc` (superposition exacte). Aucune propagation partielle n'existe :
+  l'option « ~30 % » aurait demandé du code, pour un effet d'environ 1,5 %.
+  Le double comptage (signal qui vise déjà la variable voisine) est
+  négligeable : une variable reçoit ≈ K × poids × criticité ≈ 0,05 × 0,8 × 1,3
+  ≈ 5 % de l'écart de sa voisine, avec retard.
+- **Options** : a) tout à `true` ; b) garder `false`. **Choix de David : a**,
+  par cohérence avec la définition d'un signal faible (transformateur par
+  combinaison).
+- **Appliqué** : 22 entrées passées à `true` (`sed`) ;
+  `patch_s19_signaux_propagation.py` (aperçu / `--apply`, `.bak`) modifie
+  `inject_custom_signals.py` : exemple JSON du prompt à `true`, consigne
+  « toujours true » (règle du 30 oct), défauts du code (écriture de la fiche,
+  développement) à `True`.
+- **Mesure** (`mesure_niveaux.py`, référence
+  `documentation/niveaux_avant_s19_signaux.json`) : 62 niveaux sur 72 bougent
+  d'au moins 0,1 point, 1,1 au plus (fortress_world
+  `systeme_economique_redistribution` +1,1). Sens cohérent avec la polarité des
+  signaux par scénario : vers la crise en fortress_world, breakdown et
+  reference ; vers l'apaisement en new_sustainability, policy_reform et
+  eco_communalism.
+- `K_COUPLAGE` non recalé (aucune injection depuis le 25 oct) ; son commentaire
+  dit désormais ρ ≈ 0,34.
+
+### S28.1 — `coupling_intensity` examiné (30 oct)
+- Lu par aucun calcul ni prompt : chargé par `loader.py`, transmis par
+  `snapshot.py`, jamais relu ; `export_prompt_veille.py`,
+  `extract_state_logic.py` et `inject_custom_signals.py` ne font que contourner
+  ses clés en wikilink (`[[slug]]`, refusées par `yaml.safe_load`). Le manuel ne
+  le mentionne que pour ce nettoyage.
+- Donnée de valeur : 2 à 4 partenaires par scénario, différents d'un monde à
+  l'autre et cohérents avec la `state_logic` (ex. énergie : géopolitique 92 en
+  fortress_world, technologie 92 en new_sustainability, territoires 85 en
+  eco_communalism). Limites : palmarès et non matrice complète, sens du lien
+  non précisé.
+- Décision : gardé ; deux usages notés au backlog (prompt des articles,
+  conseillé ; moteur, avec S28.2).
+
+### Petits chantiers du 30 oct
+- **S21** : `patch_s21_prompt_livres.py` ajoute au prompt d'extraction de
+  `veille_livres_api.py`, après « seulement des faits observés qu'il
+  rapporte », la consigne des deux pièges (recommandation de l'auteur ≠
+  observation ; grand programme d'État, plan national ou investissement massif
+  ≠ marginal, sauf effet inattendu et encore marginal rapporté par l'extrait).
+  `verifier_flux_rss.py --apply` : 16 flux sur 31 sources, 1 nouveau écrit dans
+  `sources_signaux_faibles.yaml`.
+- **S20** : `patch_s20_yaml_append_entete.py` — `/api/yaml/append` (`gui/app.py`)
+  met de côté le bloc de commentaires et de lignes vides du début du fichier
+  avant `yaml.dump`, puis le remet en tête (marque `PATCH_S20_ENTETE`). Testé sur
+  copie (deux ajouts successifs) ; à confirmer en réel.
+- **S24** : `reparer_bloc_metadonnees.py` → 0 article. Scan de géographie :
+  l'alerte Pologne de `hanse_baltique` persiste ; deux autres incohérences
+  relevées (voir backlog).
+- **S14** : alertes `sao_paulo_megapole` disparues.
+- `.obsidian/graph.json` retiré du suivi git (réécrit par Obsidian à chaque
+  ouverture).

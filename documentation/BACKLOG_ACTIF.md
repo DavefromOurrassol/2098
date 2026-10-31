@@ -1,11 +1,12 @@
 # Backlog actif — Ourrassol 2098
 
 *Ce qui reste ouvert, et seulement cela. Mis au propre le 24 octobre 2026, mis à
-jour le 25 octobre : les chantiers clos ont été retirés (leur détail est dans
+jour le 30 octobre : les chantiers clos ont été retirés (leur détail est dans
 `BACKLOG_ARCHIVE.md`, à uploader seulement pour vérifier si un point a déjà été
 traité). Chaque chantier garde son nom et son numéro : les réutiliser tels quels.
 Mode d'emploi des outils : `USER_MANUAL_COMPLET.md` ; dernier état de session :
-`HANDOFF_25_OCTOBRE.md` (S28.1 MICMAC clos, matrice d'influence révisée).*
+`HANDOFF_30_OCTOBRE.md` (signaux faibles propagés par la matrice, petits
+chantiers S20 / S21 / S24 / S28.1).*
 
 Légende : 🟢 chantier actif · 🟡 en cours, partiellement traité · ⚪ en attente
 d'un signal ou d'un besoin (pas de calendrier).
@@ -66,13 +67,16 @@ Volume par revue : voir S23.
 
 ## 🟡 S23. Génération d'articles — restes
 
-- **Volume très inégal entre revues** (« 📰 Audit des revues », 5 oct) :
-  Crieur des Marges 5, Courrier des Continents 6, Chronique 8, Miroir 8,
-  Moniteur 11, Peuple Souverain 13, Journal des Normes 17, Lecteur des Communs
-  18, Radio Frontières 24, Contre-Courant 30, Limes 35, Revue de la Transition
-  44. Remonter toutes les revues à 15 = 39 articles ; à 20 = 74. Moyen : séries
-  ciblées (scénario + ligne éditoriale dans `config_series.yaml`). Pas encore
-  lancé.
+- **Volume très inégal entre revues** (audit du 30 oct, 216 articles, tous
+  publiables) : Courrier des Continents 6, Crieur des Marges 7, Chronique 8,
+  Miroir 8, Moniteur 10, Peuple Souverain 13, Journal des Normes 16, Lecteur des
+  Communs 17, Radio Frontières 24, Contre-Courant 30, Limes 35, Revue de la
+  Transition 42. Plancher à 15 = 38 articles (Courrier 9, Crieur 8, Chronique 7,
+  Miroir 7, Moniteur 5, Peuple 2) ; à 20 = 75. Conseil : 15 d'abord. Plancher
+  pas encore choisi, chantier mis de côté le 30 oct. Moyen : séries ciblées
+  (scénario + ligne éditoriale dans `config_series.yaml`). **Avant de générer en
+  volume**, vérifier que les trois sources de noms de réseaux (ci-dessous)
+  concordent.
 - **Trois sources pour les noms de réseaux** : `JOURNAL_PROFILES`
   (`prompt_builder.py`), `journaux.yaml` et `generate_journaux.py`. Non traité.
 - **Hyphan** : exclue des articles hors `reference` ; la ré-exclure après toute
@@ -137,8 +141,19 @@ Doublons d'entités et anomalies de géographie **traités le 24 oct au soir**
   d'entités. Il ne voit que les noms proches (`hanse_baltique` lui avait
   échappé). Les 9 paires qu'il signale encore sont des acteurs distincts, déjà
   examinés.
-- **Prochain scan de géographie** : confirmer que l'alerte Pologne de
-  `hanse_baltique` a disparu (ou n'est plus qu'un débordement signalé).
+- **Incohérences `origine_reelle` / chaîne de parenté** (scan du 30 oct,
+  `scan_geographie_complet.py --all`, étape 3) : choix de lore pour chacune —
+  déplacer la zone sous la candidate, réaffecter le pays dans la Carte, ou
+  laisser :
+  - breakdown, `hanse_baltique` (Pologne) sous `arc_eurasien_central`, qui n'a
+    pas la Pologne → candidate `geneve_bunker_institutions` (l'alerte du 24 oct
+    n'a donc pas disparu) ;
+  - breakdown, `la_haye_cour_internationale` (Pays-Bas) sous `la_haye_tribunal`
+    → candidate `europe_nord_ouest` ;
+  - fortress_world, `almaty_zone_friction` (Kazakhstan) sous
+    `zones_grises_tampons` → candidate `bloc_eurasiatique_occidental`.
+  Le même scan signale 6 zones suspectes de patron spatial (résultats en cache,
+  aucune modification).
 - **Trajectoires « émergent » par défaut** sur beaucoup de fiches (la lecture IA
   propose souvent « émergent → dominant » d'un coup ; signalé ⚠ à l'étape ④).
 - **Ancrage local** : une zone sans instance localisée reste dominée par des
@@ -154,7 +169,7 @@ Doublons d'entités et anomalies de géographie **traités le 24 oct au soir**
   `audit_temporel.py`) : CLI seulement.
 - **Bloc `===METADONNEES_PUBLICATION===`** resté une fois dans un article après
   un retry de longueur : relancer de temps en temps `reparer_bloc_metadonnees.py`
-  (aperçu gratuit) ; cause non vérifiée dans `api.py`.
+  (aperçu gratuit ; 0 article le 30 oct) ; cause non vérifiée dans `api.py`.
 
 ## ⚪ S19. Propagation dynamique — surveillance et réglages
 
@@ -165,13 +180,15 @@ Moteur `dynamique.py` (manuel §3ter). Règle actée : **choc = s'estompe, ruptu
   0,42 à 0,34 avec `K_COUPLAGE` inchangé (0,05) ; niveaux 2098 déplacés d'au
   plus 1,2 point (référence : `documentation/niveaux_avant_s28.json`). Décision :
   ne pas recaler K pour l'instant. **Au prochain gros lot d'injections**, lancer
-  le banc et décider s'il faut passer K à ≈ 0,063 (même ρ qu'au 27 sept). Le
-  commentaire de `K_COUPLAGE` (« ρ≈0,42 ») est désormais obsolète.
-
-- **Signaux faibles non propagés** : un signal `propagation_via_matrice: false`
-  (le défaut) agit sur sa variable mais pas sur les autres. Options non
-  tranchées : a) passer certains signaux à `true` à la main ; b) changer la
-  consigne de `inject_custom_signals.py` ; c) propager tous les signaux à ~30 %.
+  le banc et décider s'il faut passer K à ≈ 0,063 (même ρ qu'au 27 sept).
+  Vérifié le 30 oct : aucune injection depuis le 25 (0 fiche modifiée dans
+  `instances/`, `event_instances/`, `signaux_custom/`). Commentaire de
+  `K_COUPLAGE` mis à jour (ρ ≈ 0,34).
+- **Signaux faibles propagés depuis le 30 oct** (clos, détail dans l'archive) :
+  les 22 entrées des 10 signaux à `true`, défaut `true` dans
+  `inject_custom_signals.py`. À garder en tête au prochain banc : les signaux
+  comptent désormais dans le couplage (écart 1,1 point au plus le 30 oct,
+  référence `documentation/niveaux_avant_s19_signaux.json`).
 - **Saturation près des bornes** : en breakdown, 8 variables finissent entre 99
   et 100 ; en new_sustainability, `gouvernance_institutions` descend à 0,3. Un
   choc y est presque sans effet chiffré (Pacte de Tabriz, 24 oct : +0,3 au plus).
@@ -209,7 +226,7 @@ Surveillance : quatre noms partagent un polygone ; réaffecter un seul nom peut
 laisser une couleur fantôme. À revérifier si l'un d'eux change de zone. Le bouton
 de la Carte garde désormais le `type_entite` d'origine (corrigé le 23 oct). Les
 2 alertes du garde-fou sur les sous-zones de `sao_paulo_megapole`
-(fortress_world) sont à reconfirmer au prochain scan de géographie.
+(fortress_world) ont disparu au scan du 30 oct.
 
 ## ⚪ S20. Signaux faibles et idées en texte libre — pistes
 
@@ -221,8 +238,9 @@ Mises de côté par David, à rouvrir à l'usage :
   synthétique seulement ; elle ne couvre pas un échec par exception ;
 - un signal custom n'est jamais « structurant » dans
   `build_signal_trajectory()` (constat) ;
-- `/api/yaml/append` fait disparaître l'en-tête modèle de `queue.yaml` jusqu'au
-  prochain run (cosmétique) ;
+- `/api/yaml/append` garde désormais l'en-tête modèle de `queue.yaml`
+  (correctif du 30 oct, testé sur copie) : **à vérifier au prochain ajout depuis
+  le GUI** (ex. entrée de queue préparée dans 🔭), puis retirer ce point ;
 - pas de champ `persistance` dans la file des entités (à ajouter si besoin).
 
 ## ⚪ S21. Veille monde réel et signaux faibles — suites
@@ -233,14 +251,17 @@ Chaîne en production (manuel §3quater). Pistes :
   scénario ; b) `delta_level` par scénario.
 - **10 candidats RSS à trier** dans l'onglet 🔭 (dont 2 faibles : Wegovy, BCE).
 - **Livres** : 32 pages repérées restent dans le rapport JRC (≈ 4 passes).
+  Prompt d'extraction durci le 30 oct (recommandation de l'auteur ≠
+  observation ; grand programme d'État ≠ marginal) : juger l'effet aux
+  prochaines passes.
   Documents à déposer : ESPAS Horizon Scanning n° 10, JRC FUTURINNOV, PNUE
   Navigating New Horizons, WEF Top 10 Emerging Technologies 2025, ONU Horizon
   Scanning 2026.
-- **Prompt des livres** à durcir : une recommandation de l'auteur n'est pas une
-  observation ; un grand programme d'État n'est pas marginal.
-- **Flux RSS** : relancer `verifier_flux_rss.py` de temps en temps ; ajouter des
+- **Flux RSS** : 16 flux sur 31 sources depuis le 30 oct (1 trouvé et écrit par
+  `verifier_flux_rss.py --apply`) ; le relancer de temps en temps ; ajouter des
   sources de façon ciblée (flux actif, résumé exploitable, angle absent des
-  15 flux) ; Crisis Group n'a pas de flux CrisisWatch ; certains flux ne donnent
+  16 flux) ; les 15 sources sans flux sont institutionnelles (OCDE, PNUD, JRC,
+  ESPAS…), exploitées par les livres ou le prompt collé ; Crisis Group n'a pas de flux CrisisWatch ; certains flux ne donnent
   qu'un résumé (STAT+, Rest of World, GEAB).
 - Non faits : OCR des PDF scannés ; fusion multi-IA pour l'état du monde ;
   défaire une fusion dans 🔭 ; recherche web en deux temps (≈ 12 fois plus chère).
@@ -279,9 +300,24 @@ dans l'Atelier, détail dans `BACKLOG_ARCHIVE.md`). Suites, sans calendrier :
   **intention de conception**, distinct du classement MICMAC (décision du
   25 oct) ; il diverge sur 7 variables (géopolitique, énergie, productifs,
   démographie, gouvernance, territoires, valeurs). Lu par `generate_entities.py`.
-- **`coupling_intensity`** (dans `states` de chaque fiche, par scénario) : autre
-  famille de liens, non examinée. Vérifier qui la lit et sa cohérence avec la
-  matrice.
+- **`coupling_intensity`** (dans `states` de chaque fiche, par scénario) :
+  **examiné le 30 oct.** Aujourd'hui lu par aucun calcul ni aucun prompt :
+  `loader.py` le charge, `snapshot.py` le transmet, personne ne s'en sert
+  (`export_prompt_veille.py`, `extract_state_logic.py` et
+  `inject_custom_signals.py` ne font que contourner ses clés en wikilink). Aucun
+  risque de contradiction avec la matrice. Mais la donnée a de la valeur : 2 à 4
+  partenaires par scénario, différents d'un monde à l'autre et cohérents avec la
+  `state_logic` (ex. énergie : géopolitique en fortress_world / breakdown,
+  technologie et gouvernance en new_sustainability / policy_reform, territoires
+  en eco_communalism) — l'information « par scénario » que la matrice, commune
+  aux 6, n'a pas. Limites : palmarès, pas matrice complète ; sens du lien non
+  précisé. Deux usages notés, rien de codé :
+  - **prompt des articles** (le plus simple, conseillé) : une ligne « liens
+    marquants dans ce scénario » à côté de `state_logic` / `dominant_dynamics`
+    dans `prompt_builder.py` (l. 1356-1420) ; aucun chiffre ne bouge ;
+  - **moteur** : moduler la matrice par scénario (liens listés renforcés) ;
+    demande une règle pour les liens absents et un recalage au banc → à traiter
+    avec S28.2 (CIB), même logique de liens dépendant de l'état du monde.
 - **Texte rédigé des fiches** (sections 3 à 10) : peut encore évoquer des liens
   modifiés ; à relire au fil de l'eau.
 - La criticité (`systemic_criticality`) pèse lourd dans le classement (×0,7 à
@@ -298,7 +334,9 @@ la matrice est asymétrique), puis 3.
    Apport : vérifier que les 6 scénarios sont des configurations stables, et
    surtout faire apparaître des configurations cohérentes non imaginées : la
    réponse méthodique au manque de surprise. Coût : noter la matrice autrement,
-   par états de variables et non par poids.
+   par états de variables et non par poids (≈ 1 200 jugements avec 3 états par
+   variable). Point de départ possible : `coupling_intensity` (voir S28.1), qui
+   donne déjà les liens marquants de chaque scénario.
 3. **Base SSP de l'IIASA** (Shared Socioeconomic Pathways) : population, PIB,
    urbanisation, énergie et émissions par grande région jusqu'en 2100, pour cinq
    futurs. Correspondances : fortress_world ≈ SSP3, new_sustainability ≈ SSP1,

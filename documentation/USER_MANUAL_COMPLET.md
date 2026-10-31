@@ -585,8 +585,9 @@ python3 generator/inject_custom_signals.py [--dry-run]
   variable → validation (mots, fenêtres de dates, collisions) avec 2 relances →
   écriture.
 - **Impact chiffré** : une force `delta_level` (1-10, `MAX_DELTA_SIGNAL = 10`, jamais 0)
-  et une `polarite` ±1 **par scénario** ; `propagation_via_matrice` recommandé à
-  `false`. `persistance` et `annee_apparition` (année d'observation réelle,
+  et une `polarite` ±1 **par scénario** ; `propagation_via_matrice` toujours
+  `true` depuis le 30 oct 2026 (consigne et défaut du code ; le signal se
+  diffuse dans le réseau, voir §3ter). `persistance` et `annee_apparition` (année d'observation réelle,
   2025-2097) facultatifs.
 - **Plancher de bascule** : aucune fenêtre `date_bascule` ni année d'`evenement_cle`
   avant max(`annee_apparition`, année en cours).
@@ -784,8 +785,9 @@ poussé par les chocs et par les autres variables via la matrice :
 
 - Sortie bornée : `niveau = ref + marge·tanh(écart/marge)`, marge ≤ 15 points et ≤
   distance à 0 / 100. Près des bornes, un choc bouge peu (backlog S19).
-- Un choc `propagation_via_matrice: false` n'agit que sur sa variable (défaut des
-  signaux faibles).
+- Un choc `propagation_via_matrice: false` n'agit que sur sa variable. Les
+  signaux faibles sont tous à `true` depuis le 30 oct 2026 (effet mesuré :
+  1,1 point au plus ; référence `documentation/niveaux_avant_s19_signaux.json`).
 - **Choc ou rupture** — règle actée : **un choc s'estompe, une rupture change le
   monde.** Une fiche `event_instances` qui porte **`mode: rupture`** (sous
   `persistance:`) déplace la **référence** du scénario (`ruptures_depuis_donnees()`,
@@ -1002,7 +1004,9 @@ flux RSS (champ rss)   ─► 📰 veille_rss_api.py    ─► (même dossier)  
   `.txt` ou `.md` déposé dans `documentation/livres/` est lu (« dépose et oublie » ;
   `pip3 install pypdf`). 1) repérage des pages utiles (un petit appel, mémorisé) ;
   2) lecture des pages non lues (30 000 caractères par livre, 0 à 3 signaux, source
-  `livre: <titre>, p. N — « citation exacte »`) ; 3) signal rejeté si la page n'a pas
+  `livre: <titre>, p. N — « citation exacte »` ; consigne : une recommandation
+  de l'auteur n'est pas une observation, un grand programme d'État n'est pas
+  marginal) ; 3) signal rejeté si la page n'a pas
   été envoyée ou si la citation n'y est pas ; 4) écriture ajoutée dans
   `veille_signaux_reponse_livres.md` ; 5) mémoire `state/livres_veille.json`.
   Exceptions YAML : `actif: false`, `titre`/`auteur`/`annee`, `pages: "45-80"` ou
@@ -1826,7 +1830,7 @@ Statut « Traités » pour le retrouver).
 | `/api/config` GET/POST | `config.json` (fusion des clés imbriquées). |
 | `/api/scripts`, `/api/script/<id>` | Panneau de scripts. |
 | `/api/run` POST, `/api/stream/<run_id>`, `/api/stop/<run_id>`, `/api/status` | Lancer (`{script_id, args, force_llm_override}`), suivre (SSE), arrêter. |
-| `/api/yaml` GET/POST, `/api/yaml/form`, `/api/yaml/append` | Lire / écrire un fichier du vault (texte brut, `.bak`), formulaire, ajout à une file. |
+| `/api/yaml` GET/POST, `/api/yaml/form`, `/api/yaml/append` | Lire / écrire un fichier du vault (texte brut, `.bak`), formulaire, ajout à une file (l'en-tête de commentaires de la file est conservé). |
 | `/api/slugs` | Listes pour `slug_select`. |
 | `/api/review`, `/api/dashboard` | Revue, statistiques. |
 | `/api/carte/*` | Carte (`routes_carte.py`) ; restent dans `app.py` : `generer_zone_topdown`, enrichissement des zones, `creer_zone_vide`, et la route dormante `appliquer_zone_topdown_suspecte` (aucun bouton). |
