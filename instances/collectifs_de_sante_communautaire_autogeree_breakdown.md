@@ -38,7 +38,7 @@ alliances:
 - brigades_medicales_itinerantes_breakdown
 - collectifs_de_reparation_energetique_breakdown
 - communautes_paysannes_refugiees_breakdown
-- communautes_rurales_autogerees_des_n_uds_de_survie_breakdown
+- communautes_rurales_autogerees_des_noeuds_de_survie_breakdown
 - mouvement_des_communes_du_rust_belt_breakdown
 - flux_migratoires_non_integrables_breakdown
 - frente_sertao_livre_breakdown
@@ -125,7 +125,7 @@ La tension centrale qui traverse ces collectifs est celle entre l'urgence du soi
 - [[brigades_medicales_itinerantes_breakdown]]
 - [[collectifs_de_reparation_energetique_breakdown]]
 - [[communautes_paysannes_refugiees_breakdown]]
-- [[communautes_rurales_autogerees_des_n_uds_de_survie_breakdown]]
+- [[communautes_rurales_autogerees_des_noeuds_de_survie_breakdown]]
 - [[mouvement_des_communes_du_rust_belt_breakdown]]
 - [[flux_migratoires_non_integrables_breakdown]]
 - [[frente_sertao_livre_breakdown]]

@@ -38,7 +38,7 @@ zone_systemique:
 alliances:
 - collectifs_de_gardiens_archivistes_itinerants_breakdown
 - collectifs_de_reparation_energetique_breakdown
-- communautes_rurales_autogerees_des_n_uds_de_survie_breakdown
+- communautes_rurales_autogerees_des_noeuds_de_survie_breakdown
 - diaspora_tech_sahel_breakdown
 - guilde_des_techniciens_nomades_breakdown
 - ligue_des_cites_du_sahel_numerique_breakdown
@@ -105,7 +105,7 @@ La Ligue se retrouve prise en étau entre les milices qui exigent un accès prio
 **Alliés :**
 - [[collectifs_de_gardiens_archivistes_itinerants_breakdown]]
 - [[collectifs_de_reparation_energetique_breakdown]]
-- [[communautes_rurales_autogerees_des_n_uds_de_survie_breakdown]]
+- [[communautes_rurales_autogerees_des_noeuds_de_survie_breakdown]]
 - [[diaspora_tech_sahel_breakdown]]
 - [[guilde_des_techniciens_nomades_breakdown]]
 - [[ligue_des_cites_du_sahel_numerique_breakdown]]

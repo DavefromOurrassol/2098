@@ -45,7 +45,7 @@ oppositions:
 - agence_de_regulation_des_detroits_strategiques_ards_breakdown
 - blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown
 - conglometrat_sino_siberien_bohai_transit_breakdown
-- enclaves_industrielles_de_bergen_troms_breakdown
+- enclaves_industrielles_de_bergen_tromso_breakdown
 - factions_militaires_residuelles_de_l_ex_otan_nordique_breakdown
 - kalaallit_nunaat_sovereign_fund_breakdown
 - milices_separatistes_du_conseil_des_pecheries_d_islande_breakdown
@@ -112,7 +112,7 @@ La question centrale est celle de l'après : qui prendra le contrôle des quais 
 - [[agence_de_regulation_des_detroits_strategiques_ards_breakdown]]
 - [[blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown]]
 - [[conglometrat_sino_siberien_bohai_transit_breakdown]]
-- [[enclaves_industrielles_de_bergen_troms_breakdown]]
+- [[enclaves_industrielles_de_bergen_tromso_breakdown]]
 - [[factions_militaires_residuelles_de_l_ex_otan_nordique_breakdown]]
 - [[kalaallit_nunaat_sovereign_fund_breakdown]]
 - [[milices_separatistes_du_conseil_des_pecheries_d_islande_breakdown]]

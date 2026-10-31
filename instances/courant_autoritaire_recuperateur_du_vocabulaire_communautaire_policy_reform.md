@@ -55,7 +55,7 @@ oppositions:
 - mouvement_pour_la_justice_ecologique_communautaire_policy_reform
 - mouvement_pour_la_souverainete_energetique_commune_msec_policy_reform
 - reseau_des_auditeurs_algorithmiques_independants_raai_policy_reform
-- reseau_des_metropoles_n_uds_policy_reform
+- reseau_des_metropoles_noeuds_policy_reform
 - reseaux_academiques_prospectivistes_du_pacte_de_geneve_2081_policy_reform
 type_relation_dominante: compétition
 annee_debut: 2035
@@ -147,7 +147,7 @@ La contradiction centrale est que ce courant dépend des institutions réformatr
 - [[mouvement_pour_la_justice_ecologique_communautaire_policy_reform]]
 - [[mouvement_pour_la_souverainete_energetique_commune_msec_policy_reform]]
 - [[reseau_des_auditeurs_algorithmiques_independants_raai_policy_reform]]
-- [[reseau_des_metropoles_n_uds_policy_reform]]
+- [[reseau_des_metropoles_noeuds_policy_reform]]
 - [[reseaux_academiques_prospectivistes_du_pacte_de_geneve_2081_policy_reform]]
 
 ## Notes

@@ -507,7 +507,7 @@ zones:
     - espace_nord_americain_fragmente
   sources_attestees:
   - armada_logistique_nordique_breakdown
-  - enclaves_industrielles_de_bergen_troms_breakdown
+  - enclaves_industrielles_de_bergen_tromso_breakdown
   - factions_militaires_residuelles_de_l_ex_otan_nordique_breakdown
   - milices_separatistes_du_conseil_des_pecheries_d_islande_breakdown
   - hanse_baltique_breakdown
@@ -1315,7 +1315,7 @@ zones:
     - noeud_nordark_tromso
     rivaux: []
   sources_attestees:
-  - enclaves_industrielles_de_bergen_troms_breakdown
+  - enclaves_industrielles_de_bergen_tromso_breakdown
   promu_depuis: Bergen / Tromsø (enclaves industrielles)
 - slug: etats_sud_centre_americain
   nom: États du Sud et du Centre (Entités Sécessionistes)
@@ -3696,7 +3696,7 @@ Zone arctique déglacialisée contrôlée de facto par le Konsortiet Nordark, un
 
 **Rivaux** : Arc Eurasien Central ([[arc_eurasien_central]]), Espace Nord-Américain Fragmenté ([[espace_nord_americain_fragmente]])
 
-*Sources attestées : armada_logistique_nordique_breakdown, enclaves_industrielles_de_bergen_troms_breakdown, factions_militaires_residuelles_de_l_ex_otan_nordique_breakdown, milices_separatistes_du_conseil_des_pecheries_d_islande_breakdown, hanse_baltique_breakdown*
+*Sources attestées : armada_logistique_nordique_breakdown, enclaves_industrielles_de_bergen_tromso_breakdown, factions_militaires_residuelles_de_l_ex_otan_nordique_breakdown, milices_separatistes_du_conseil_des_pecheries_d_islande_breakdown, hanse_baltique_breakdown*
 
 #### Enclaves Finlandaises — sous [[arctique_nordark]]
 
@@ -3728,7 +3728,7 @@ Pôles de survie industrielle locale maintenant une capacité productive résidu
 
 **Alliés** : Tromsø / Nœud Nordark ([[noeud_nordark_tromso]])
 
-*Sources attestées : enclaves_industrielles_de_bergen_troms_breakdown*
+*Sources attestées : enclaves_industrielles_de_bergen_tromso_breakdown*
 
 #### Groenland (Fonds des Glaces Libérées) — sous [[arctique_nordark]]
 

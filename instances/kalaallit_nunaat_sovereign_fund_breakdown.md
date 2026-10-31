@@ -45,7 +45,7 @@ alliances:
 - coalition_pacifique_nord_breakdown
 - consortium_des_pecheries_autonomes_du_grand_nord_breakdown
 - consortium_energetique_oural_caspien_breakdown
-- enclaves_industrielles_de_bergen_troms_breakdown
+- enclaves_industrielles_de_bergen_tromso_breakdown
 - hanse_baltique_breakdown
 - noeud_nordark_tromso_breakdown
 oppositions:
@@ -116,7 +116,7 @@ Le Fonds est déchiré entre une faction 'souverainiste radicale' qui veut conve
 - [[coalition_pacifique_nord_breakdown]]
 - [[consortium_des_pecheries_autonomes_du_grand_nord_breakdown]]
 - [[consortium_energetique_oural_caspien_breakdown]]
-- [[enclaves_industrielles_de_bergen_troms_breakdown]]
+- [[enclaves_industrielles_de_bergen_tromso_breakdown]]
 - [[hanse_baltique_breakdown]]
 - [[noeud_nordark_tromso_breakdown]]
 **Opposants :**

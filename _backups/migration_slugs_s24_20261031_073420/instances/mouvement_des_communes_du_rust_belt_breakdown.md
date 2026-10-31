@@ -1,0 +1,160 @@
+---
+name: Communes Libres du Rust Belt — Les Forges du Commun
+type: instance
+slug: mouvement_des_communes_du_rust_belt_breakdown
+entite: mouvement_des_communes_du_rust_belt
+scenario: breakdown
+statut: officialise_enrichi
+localisation:
+  zone: communes_rust_belt
+  lieu: Communes Libres du Rust Belt (Detroit, Cleveland, Pittsburgh)
+  type_lieu: region
+type_dans_scenario: réseau
+
+role_dans_scenario: >
+  Réseau de communautés post-industrielles de l'ancienne ceinture de rouille américaine (Detroit, Cleveland, Pittsburgh) ayant converti les friches industrielles en zones d'autosuffisance énergétique et alimentaire après l'effondrement des grands employeurs dans les années 2030. Premier mouvement de communes urbaines à grande échelle en Amérique du Nord, souvent en conflit ouvert avec les autorités du Commandement Atlantique. Dans le chaos du scenario Breakdown, les Forges du Commun représentent l'un des rares réseaux nord-américains à avoir réellement anticipé l'effondrement : leurs infrastructures de récupération thermique, leurs fermes verticales installées dans d'anciennes aciéries et leurs assemblées de quartier leur confèrent une résilience que ni les États fragmentés ni les enclaves corporatives n'ont su construire. Leur existence même est une provocation politique dans un monde où le Commandement Atlantique peine à maintenir l'ordre sur ses propres axes logistiques.
+
+responsabilites: >
+  Gestion collective de micro-réseaux énergétiques hybrides (solaire, géothermie de récupération, biogaz industriel) sur les friches reconverties de Detroit, Cleveland et Pittsburgh. Organisation des assemblées de bassin pour la redistribution alimentaire et la défense commune des périmètres communaux contre les milices et les agents du Commandement Atlantique. Accueil et intégration des flux migratoires issus des mégapoles effondrées, transformant la pression démographique en main-d'œuvre constituante.
+
+impact_local: 5
+impact_systemique_global: 3
+
+variables_influencees:
+    - organisation_territoires
+    - energie_ressources_critiques
+    - gouvernance_institutions
+    - systemes_productifs_travail
+
+zone_geographique:
+    - urbaine
+    - régionale
+
+zone_systemique:
+    - énergie
+    - gouvernance
+    - société
+    - infrastructure
+
+alliances:
+- brigades_medicales_itinerantes_breakdown
+- collectif_hackers_decroissance_infrastructure_breakdown
+- collectifs_de_gardiens_archivistes_itinerants_breakdown
+- collectifs_de_reparation_energetique_breakdown
+- collectifs_de_sante_communautaire_autogeree_breakdown
+- collectifs_du_seuil_breakdown
+- communautes_rurales_autogerees_des_n_uds_de_survie_breakdown
+- communautes_rurales_autonomes_breakdown
+- enclaves_agro_communautaires_autonomes_breakdown
+- federation_communs_territoriaux_breakdown
+- front_de_resistance_aux_peages_sur_les_ressources_breakdown
+- fronts_populistes_anti_technocratiques_breakdown
+- guilde_des_techniciens_nomades_breakdown
+- milices_agro_defensives_locales_breakdown
+- reseaux_de_solidarite_horizontale_post_effondrement_breakdown
+oppositions:
+- blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown
+- cartels_logistiques_regionaux_breakdown
+- consortiums_logistiques_agro_corporatifs_breakdown
+- corporations_de_l_ere_pre_effondrement_a_droits_de_pi_breakdown
+- enclaves_corporatives_fortifiees_breakdown
+- enclaves_technologiques_survivantes_breakdown
+- etats_fragmentes_nationalisant_les_stocks_breakdown
+- factions_etatiques_residuelles_de_souverainete_hydrique_breakdown
+- gouvernements_regionaux_residuels_reterritorialisants_breakdown
+- grandes_lacs_compact_eau_breakdown
+- holdfast_breakdown
+- midwest_desertifie_breakdown
+- milices_de_controle_territorial_breakdown
+- reseau_de_recuperation_industrielle_illicite_breakdown
+- reseau_des_anciens_financeurs_devenus_censeurs_breakdown
+- reseau_logistique_criminel_concurrent_breakdown
+- seigneuries_foncieres_opportunistes_breakdown
+- seigneuries_logistiques_armees_breakdown
+type_relation_dominante: conflit
+
+annee_debut: 2031
+annee_fin: 
+
+generation: post-effondrement
+
+injection:
+  type: canonique
+  annee_injection:
+  contexte_injection:
+  impact_sur_variables:
+  propagation:
+    via_matrice: false
+
+description_journalistique: >
+  À Pittsburgh, l'ancienne usine Carrie Furnace pulse encore — non plus de l'acier, mais de la chaleur récupérée qui chauffe trois mille foyers en hiver. Les Forges du Commun ont fait de l'impensable leur quotidien : là où les multinationales ont fermé boutique et où le Commandement Atlantique n'envoie plus que des patrouilles de taxation, les assemblées de quartier décident chaque semaine de la répartition de l'énergie, du grain et des soins. Leurs délégués se déplacent à vélo entre les nœuds du réseau, portant des mandats révocables écrits à la main sur des carnets recyclés. Les envoyés du Commandement Atlantique les qualifient officiellement de 'zones grises ingouvernables' — ce que les habitants des Forges considèrent comme le plus beau titre qu'on puisse leur décerner. En 2098, le réseau compte dix-neuf communes actives et refuse toujours de se doter d'un porte-parole central.
+
+signes_distinctifs: >
+  Emblème d'une flamme sortant d'une cheminée d'usine stylisée, tagué à la bombe sur les murs de béton des friches reconverties. Les membres portent souvent des vêtements de travail récupérés et reprisés, marqués de bandes réfléchissantes colorées selon la commune d'appartenance. Les assemblées se tiennent toujours dans des espaces industriels ouverts, sans podium ni tribune — tout le monde debout, égaux dans le bruit de l'acier qui refroidit.
+
+tensions_narratives: >
+  La pression du Commandement Atlantique s'intensifie : des 'corridors de réintégration' sont proposés aux communes qui accepteraient une supervision énergétique externe, créant des fractures internes entre pragmatiques et radicaux. La question de l'institutionnalisation déchire le mouvement : certains nœuds, épuisés par les tensions sécuritaires, envisagent de négocier un statut juridique protégé — au risque de valider l'autorité même qu'ils refusent. Enfin, l'afflux massif de réfugiés des mégapoles effondrées dépasse les capacités d'intégration et pousse certaines communes à ériger leurs propres frontières, reproduisant malgré elles la logique d'enclavement qu'elles combattent.
+
+date_creation: 2026-06-23
+trajectoire: ascendant
+est_clandestin: false
+
+---
+
+# Communes Libres du Rust Belt — Les Forges du Commun
+
+## Rôle dans [[breakdown]]
+Réseau de communautés post-industrielles de l'ancienne ceinture de rouille américaine (Detroit, Cleveland, Pittsburgh) ayant converti les friches industrielles en zones d'autosuffisance énergétique et alimentaire après l'effondrement des grands employeurs dans les années 2030. Premier mouvement de communes urbaines à grande échelle en Amérique du Nord, souvent en conflit ouvert avec les autorités du Commandement Atlantique. Dans le chaos du scenario Breakdown, les Forges du Commun représentent l'un des rares réseaux nord-américains à avoir réellement anticipé l'effondrement : leurs infrastructures de récupération thermique, leurs fermes verticales installées dans d'anciennes aciéries et leurs assemblées de quartier leur confèrent une résilience que ni les États fragmentés ni les enclaves corporatives n'ont su construire. Leur existence même est une provocation politique dans un monde où le Commandement Atlantique peine à maintenir l'ordre sur ses propres axes logistiques.
+
+## Responsabilités
+Gestion collective de micro-réseaux énergétiques hybrides (solaire, géothermie de récupération, biogaz industriel) sur les friches reconverties de Detroit, Cleveland et Pittsburgh. Organisation des assemblées de bassin pour la redistribution alimentaire et la défense commune des périmètres communaux contre les milices et les agents du Commandement Atlantique. Accueil et intégration des flux migratoires issus des mégapoles effondrées, transformant la pression démographique en main-d'œuvre constituante.
+
+## Variables influencées
+- [[organisation_territoires]]
+- [[energie_ressources_critiques]]
+- [[gouvernance_institutions]]
+- [[systemes_productifs_travail]]
+
+
+## Description journalistique
+À Pittsburgh, l'ancienne usine Carrie Furnace pulse encore — non plus de l'acier, mais de la chaleur récupérée qui chauffe trois mille foyers en hiver. Les Forges du Commun ont fait de l'impensable leur quotidien : là où les multinationales ont fermé boutique et où le Commandement Atlantique n'envoie plus que des patrouilles de taxation, les assemblées de quartier décident chaque semaine de la répartition de l'énergie, du grain et des soins. Leurs délégués se déplacent à vélo entre les nœuds du réseau, portant des mandats révocables écrits à la main sur des carnets recyclés. Les envoyés du Commandement Atlantique les qualifient officiellement de 'zones grises ingouvernables' — ce que les habitants des Forges considèrent comme le plus beau titre qu'on puisse leur décerner. En 2098, le réseau compte dix-neuf communes actives et refuse toujours de se doter d'un porte-parole central.
+
+## Tensions narratives
+La pression du Commandement Atlantique s'intensifie : des 'corridors de réintégration' sont proposés aux communes qui accepteraient une supervision énergétique externe, créant des fractures internes entre pragmatiques et radicaux. La question de l'institutionnalisation déchire le mouvement : certains nœuds, épuisés par les tensions sécuritaires, envisagent de négocier un statut juridique protégé — au risque de valider l'autorité même qu'ils refusent. Enfin, l'afflux massif de réfugiés des mégapoles effondrées dépasse les capacités d'intégration et pousse certaines communes à ériger leurs propres frontières, reproduisant malgré elles la logique d'enclavement qu'elles combattent.
+
+## Relations
+**Alliés :**
+- [[brigades_medicales_itinerantes_breakdown]]
+- [[collectif_hackers_decroissance_infrastructure_breakdown]]
+- [[collectifs_de_gardiens_archivistes_itinerants_breakdown]]
+- [[collectifs_de_reparation_energetique_breakdown]]
+- [[collectifs_de_sante_communautaire_autogeree_breakdown]]
+- [[collectifs_du_seuil_breakdown]]
+- [[communautes_rurales_autogerees_des_n_uds_de_survie_breakdown]]
+- [[communautes_rurales_autonomes_breakdown]]
+- [[enclaves_agro_communautaires_autonomes_breakdown]]
+- [[federation_communs_territoriaux_breakdown]]
+- [[front_de_resistance_aux_peages_sur_les_ressources_breakdown]]
+- [[fronts_populistes_anti_technocratiques_breakdown]]
+- [[guilde_des_techniciens_nomades_breakdown]]
+- [[milices_agro_defensives_locales_breakdown]]
+- [[reseaux_de_solidarite_horizontale_post_effondrement_breakdown]]
+**Opposants :**
+- [[blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown]]
+- [[cartels_logistiques_regionaux_breakdown]]
+- [[consortiums_logistiques_agro_corporatifs_breakdown]]
+- [[corporations_de_l_ere_pre_effondrement_a_droits_de_pi_breakdown]]
+- [[enclaves_corporatives_fortifiees_breakdown]]
+- [[enclaves_technologiques_survivantes_breakdown]]
+- [[etats_fragmentes_nationalisant_les_stocks_breakdown]]
+- [[factions_etatiques_residuelles_de_souverainete_hydrique_breakdown]]
+- [[gouvernements_regionaux_residuels_reterritorialisants_breakdown]]
+- [[grandes_lacs_compact_eau_breakdown]]
+- [[holdfast_breakdown]]
+- [[midwest_desertifie_breakdown]]
+- [[milices_de_controle_territorial_breakdown]]
+- [[reseau_de_recuperation_industrielle_illicite_breakdown]]
+- [[reseau_des_anciens_financeurs_devenus_censeurs_breakdown]]
+- [[reseau_logistique_criminel_concurrent_breakdown]]
+- [[seigneuries_foncieres_opportunistes_breakdown]]
+- [[seigneuries_logistiques_armees_breakdown]]

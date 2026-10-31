@@ -14,7 +14,7 @@ Bascule évaluée : `arc_sahelo_mediterraneen` → `france_du_nord_ruines`
 - `coalition_vivant_breakdown` — zone : massif_central_cicatrices_vertes
 - `collectifs_du_seuil_breakdown` — zone : arc_sahelo_mediterraneen
 - `communautes_paysannes_refugiees_breakdown` — zone : massif_central_cicatrices_vertes
-- `communautes_rurales_autogerees_des_n_uds_de_survie_breakdown` — zone : massif_central_cicatrices_vertes
+- `communautes_rurales_autogerees_des_noeuds_de_survie_breakdown` — zone : massif_central_cicatrices_vertes
 - `communautes_rurales_autonomes_breakdown` — zone : massif_central_cicatrices_vertes
 - `cooperative_terrafond_breakdown` — zone : arc_sahelo_mediterraneen
 - `enclaves_agro_communautaires_autonomes_breakdown` — zone : plaines_ebre_terrafond

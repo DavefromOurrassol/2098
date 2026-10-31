@@ -45,7 +45,7 @@ oppositions:
 - brigades_medicales_itinerantes_breakdown
 - collectif_des_climatologues_sans_etat_breakdown
 - collectifs_de_sante_communautaire_autogeree_breakdown
-- communautes_rurales_autogerees_des_n_uds_de_survie_breakdown
+- communautes_rurales_autogerees_des_noeuds_de_survie_breakdown
 - corridors_eurasiens_convoyage_breakdown
 - delta_mekong_racines_breakdown
 - diaspora_tech_sahel_breakdown
@@ -147,7 +147,7 @@ La tension principale est celle entre la logique prédatrice à court terme — 
 - [[brigades_medicales_itinerantes_breakdown]]
 - [[collectif_des_climatologues_sans_etat_breakdown]]
 - [[collectifs_de_sante_communautaire_autogeree_breakdown]]
-- [[communautes_rurales_autogerees_des_n_uds_de_survie_breakdown]]
+- [[communautes_rurales_autogerees_des_noeuds_de_survie_breakdown]]
 - [[corridors_eurasiens_convoyage_breakdown]]
 - [[delta_mekong_racines_breakdown]]
 - [[diaspora_tech_sahel_breakdown]]

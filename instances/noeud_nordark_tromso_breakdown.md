@@ -43,7 +43,7 @@ alliances:
 - armada_logistique_nordique_breakdown
 - arctic_passage_authority_breakdown
 - collectifs_de_reparation_energetique_breakdown
-- enclaves_industrielles_de_bergen_troms_breakdown
+- enclaves_industrielles_de_bergen_tromso_breakdown
 - guilde_des_techniciens_nomades_breakdown
 - hanse_baltique_breakdown
 - kalaallit_nunaat_sovereign_fund_breakdown
@@ -113,7 +113,7 @@ Le Nœud est coincé entre sa nécessité absolue pour les communautés environn
 - [[armada_logistique_nordique_breakdown]]
 - [[arctic_passage_authority_breakdown]]
 - [[collectifs_de_reparation_energetique_breakdown]]
-- [[enclaves_industrielles_de_bergen_troms_breakdown]]
+- [[enclaves_industrielles_de_bergen_tromso_breakdown]]
 - [[guilde_des_techniciens_nomades_breakdown]]
 - [[hanse_baltique_breakdown]]
 - [[kalaallit_nunaat_sovereign_fund_breakdown]]

@@ -43,7 +43,7 @@ alliances:
 - collectifs_de_sante_communautaire_autogeree_breakdown
 - communautes_paysannes_refugiees_breakdown
 - communautes_religieuses_des_relais_physiques_breakdown
-- communautes_rurales_autogerees_des_n_uds_de_survie_breakdown
+- communautes_rurales_autogerees_des_noeuds_de_survie_breakdown
 - communautes_rurales_autonomes_breakdown
 - mouvement_des_communes_du_rust_belt_breakdown
 - consortium_africain_de_biotechnologies_sociales_breakdown
@@ -145,7 +145,7 @@ Les Brigades oscillent en permanence entre neutralité revendiquée et instrumen
 - [[collectifs_de_sante_communautaire_autogeree_breakdown]]
 - [[communautes_paysannes_refugiees_breakdown]]
 - [[communautes_religieuses_des_relais_physiques_breakdown]]
-- [[communautes_rurales_autogerees_des_n_uds_de_survie_breakdown]]
+- [[communautes_rurales_autogerees_des_noeuds_de_survie_breakdown]]
 - [[communautes_rurales_autonomes_breakdown]]
 - [[mouvement_des_communes_du_rust_belt_breakdown]]
 - [[consortium_africain_de_biotechnologies_sociales_breakdown]]

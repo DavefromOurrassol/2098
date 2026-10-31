@@ -49,7 +49,7 @@ oppositions:
 - ilse_varga_holm_policy_reform
 - institut_des_seuils_demographiques_policy_reform
 - office_integre_des_flux_migratoires_policy_reform
-- reseau_des_metropoles_n_uds_policy_reform
+- reseau_des_metropoles_noeuds_policy_reform
 - reseaux_academiques_prospectivistes_du_pacte_de_geneve_2081_policy_reform
 type_relation_dominante: conflit
 annee_debut: 2044
@@ -135,7 +135,7 @@ Le réseau est traversé par une ligne de fracture entre ceux qui misent sur le 
 - [[ilse_varga_holm_policy_reform]]
 - [[institut_des_seuils_demographiques_policy_reform]]
 - [[office_integre_des_flux_migratoires_policy_reform]]
-- [[reseau_des_metropoles_n_uds_policy_reform]]
+- [[reseau_des_metropoles_noeuds_policy_reform]]
 - [[reseaux_academiques_prospectivistes_du_pacte_de_geneve_2081_policy_reform]]
 
 ## Notes

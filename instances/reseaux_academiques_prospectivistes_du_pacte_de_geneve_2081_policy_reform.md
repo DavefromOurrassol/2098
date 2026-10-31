@@ -52,7 +52,7 @@ alliances:
 - prisme_global_policy_reform
 - reseau_des_agences_sanitaires_regionales_policy_reform
 - reseau_des_journalistes_d_investigation_energetique_policy_reform
-- reseau_des_metropoles_n_uds_policy_reform
+- reseau_des_metropoles_noeuds_policy_reform
 - reseaux_de_capteurs_ia_climatiques_deployes_par_les_etats_membres_policy_reform
 - syndicat_des_ingenieurs_orbitaux_policy_reform
 - union_technocratique_eurasiatique_policy_reform
@@ -152,7 +152,7 @@ Le réseau est écartelé entre sa vocation d'indépendance académique et sa d�
 - [[prisme_global_policy_reform]]
 - [[reseau_des_agences_sanitaires_regionales_policy_reform]]
 - [[reseau_des_journalistes_d_investigation_energetique_policy_reform]]
-- [[reseau_des_metropoles_n_uds_policy_reform]]
+- [[reseau_des_metropoles_noeuds_policy_reform]]
 - [[reseaux_de_capteurs_ia_climatiques_deployes_par_les_etats_membres_policy_reform]]
 - [[syndicat_des_ingenieurs_orbitaux_policy_reform]]
 - [[union_technocratique_eurasiatique_policy_reform]]

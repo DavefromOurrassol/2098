@@ -48,7 +48,7 @@ oppositions:
 - agence_de_regulation_des_detroits_strategiques_ards_breakdown
 - collectif_hackers_decroissance_infrastructure_breakdown
 - collectifs_de_gardiens_archivistes_itinerants_breakdown
-- communautes_rurales_autogerees_des_n_uds_de_survie_breakdown
+- communautes_rurales_autogerees_des_noeuds_de_survie_breakdown
 - flux_migratoires_non_integrables_breakdown
 - front_de_resistance_aux_peages_sur_les_ressources_breakdown
 - reseau_des_courriers_nomades_sahelo_mediterraneens_breakdown
@@ -119,7 +119,7 @@ La Nexcore maintient un ordre réel mais construit sur la peur et l'exclusion : 
 - [[agence_de_regulation_des_detroits_strategiques_ards_breakdown]]
 - [[collectif_hackers_decroissance_infrastructure_breakdown]]
 - [[collectifs_de_gardiens_archivistes_itinerants_breakdown]]
-- [[communautes_rurales_autogerees_des_n_uds_de_survie_breakdown]]
+- [[communautes_rurales_autogerees_des_noeuds_de_survie_breakdown]]
 - [[flux_migratoires_non_integrables_breakdown]]
 - [[front_de_resistance_aux_peages_sur_les_ressources_breakdown]]
 - [[reseau_des_courriers_nomades_sahelo_mediterraneens_breakdown]]

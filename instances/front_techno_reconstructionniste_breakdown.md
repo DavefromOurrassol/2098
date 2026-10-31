@@ -36,14 +36,14 @@ zone_systemique:
 - société
 alliances:
 - consortium_energetique_oural_caspien_breakdown
-- enclaves_industrielles_de_bergen_troms_breakdown
+- enclaves_industrielles_de_bergen_tromso_breakdown
 - enclaves_industrielles_du_corridor_oural_caspien_breakdown
 - guilde_des_techniciens_nomades_breakdown
 - nexcore_breakdown
 oppositions:
 - collectif_hackers_decroissance_infrastructure_breakdown
 - collectifs_du_seuil_breakdown
-- communautes_rurales_autogerees_des_n_uds_de_survie_breakdown
+- communautes_rurales_autogerees_des_noeuds_de_survie_breakdown
 - corporations_de_l_ere_pre_effondrement_a_droits_de_pi_breakdown
 - front_de_resistance_aux_peages_sur_les_ressources_breakdown
 - front_des_blocs_regionaux_du_recit_des_conflits_ressources_breakdown
@@ -116,14 +116,14 @@ Le FTR est structurellement dépendant des ressources énergétiques critiques d
 ## Relations
 **Alliés :**
 - [[consortium_energetique_oural_caspien_breakdown]]
-- [[enclaves_industrielles_de_bergen_troms_breakdown]]
+- [[enclaves_industrielles_de_bergen_tromso_breakdown]]
 - [[enclaves_industrielles_du_corridor_oural_caspien_breakdown]]
 - [[guilde_des_techniciens_nomades_breakdown]]
 - [[nexcore_breakdown]]
 **Opposants :**
 - [[collectif_hackers_decroissance_infrastructure_breakdown]]
 - [[collectifs_du_seuil_breakdown]]
-- [[communautes_rurales_autogerees_des_n_uds_de_survie_breakdown]]
+- [[communautes_rurales_autogerees_des_noeuds_de_survie_breakdown]]
 - [[corporations_de_l_ere_pre_effondrement_a_droits_de_pi_breakdown]]
 - [[front_de_resistance_aux_peages_sur_les_ressources_breakdown]]
 - [[front_des_blocs_regionaux_du_recit_des_conflits_ressources_breakdown]]

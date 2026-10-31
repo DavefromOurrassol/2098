@@ -416,7 +416,7 @@ Généré le 2026-08-09 15:52
 - **reseau_des_auditeurs_algorithmiques_independants_raai_policy_reform** : trajectoire=`émergent`, est_clandestin=`false` — cas : age_historique_explicite(émergent)
 - **reseau_des_journalistes_d_investigation_energetique_policy_reform** : trajectoire=`émergent`, est_clandestin=`false` — cas : age_historique_explicite(émergent)
 - **reseau_des_lobbyistes_techniques_onu_energie_policy_reform** : trajectoire=`émergent`, est_clandestin=`false` — cas : age_historique_explicite(émergent)
-- **reseau_des_metropoles_n_uds_policy_reform** : trajectoire=`émergent`, est_clandestin=`false` — cas : age_historique_explicite(émergent)
+- **reseau_des_metropoles_noeuds_policy_reform** : trajectoire=`émergent`, est_clandestin=`false` — cas : age_historique_explicite(émergent)
 - **reseau_des_regulateurs_numeriques_souverains_rrns_policy_reform** : trajectoire=`émergent`, est_clandestin=`false` — cas : age_historique_explicite(émergent)
 - **reseaux_academiques_prospectivistes_du_pacte_de_geneve_2081_policy_reform** : trajectoire=`émergent`, est_clandestin=`false` — cas : age_historique_explicite(émergent)
 - **reseaux_de_capteurs_ia_climatiques_deployes_par_les_etats_membres_policy_reform** : trajectoire=`émergent`, est_clandestin=`false` — cas : age_historique_explicite(émergent)

@@ -39,7 +39,7 @@ alliances:
 - brigades_medicales_itinerantes_breakdown
 - collectif_hackers_decroissance_infrastructure_breakdown
 - collectifs_du_seuil_breakdown
-- communautes_rurales_autogerees_des_n_uds_de_survie_breakdown
+- communautes_rurales_autogerees_des_noeuds_de_survie_breakdown
 - enclaves_agro_communautaires_autonomes_breakdown
 - front_de_resistance_aux_peages_sur_les_ressources_breakdown
 - ligue_des_cites_du_sahel_numerique_breakdown
@@ -121,7 +121,7 @@ La contradiction fondamentale de ces factions est qu'elles revendiquent l'autono
 - [[brigades_medicales_itinerantes_breakdown]]
 - [[collectif_hackers_decroissance_infrastructure_breakdown]]
 - [[collectifs_du_seuil_breakdown]]
-- [[communautes_rurales_autogerees_des_n_uds_de_survie_breakdown]]
+- [[communautes_rurales_autogerees_des_noeuds_de_survie_breakdown]]
 - [[enclaves_agro_communautaires_autonomes_breakdown]]
 - [[front_de_resistance_aux_peages_sur_les_ressources_breakdown]]
 - [[ligue_des_cites_du_sahel_numerique_breakdown]]

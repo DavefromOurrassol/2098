@@ -11,7 +11,7 @@ model: mistral/mistral-large-latest
 ligne_editoriale: pro_pouvoir
 scenario_state: instable
 tension_level: 5
-slug: les_n_uds_fantomes_de_kharg_9_quand_les_blocs_perdent_le_controle_de_leur_propre
+slug: les_noeuds_fantomes_de_kharg_9_quand_les_blocs_perdent_le_controle_de_leur_propr
 chapo: "Les archives classifiées de Kharg-9, dernière enclave numérique non alignée, révèlent les protocoles secrets de rationnement énergétique des blocs, exposant leur gestion hiérarchisée des territoires et leur instrumentalisation de l’hiver comme arme politique."
 tags:
   - géopolitique des données

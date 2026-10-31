@@ -25,7 +25,7 @@ Bascule évaluée : `amazonie_pacte_vert` → `zones_grises_tampons`
 - `front_resilient_pro_systeme_fortress_world` — zone : zones_grises_tampons
 - `ilse_varga_holm_fortress_world` — zone : almaty_zone_friction
 - `les_dedoubles_fortress_world` — zone : almaty_zone_friction
-- `les_gardiens_des_n_uds_hybrides_fortress_world` — zone : zones_grises_tampons
+- `les_gardiens_des_noeuds_hybrides_fortress_world` — zone : zones_grises_tampons
 - `reseaux_d_echange_clandestin_inter_zones_fortress_world` — zone : zones_grises_tampons
 - `reseaux_de_juristes_specialises_en_droit_corporel_souverain_fortress_world` — zone : zones_grises_tampons
 - `reseaux_de_maintenance_d_infrastructures_critiques_hors_blocs_fortress_world` — zone : zones_grises_tampons

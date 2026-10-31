@@ -38,7 +38,7 @@ alliances:
 - brigades_medicales_itinerantes_breakdown
 - collectifs_de_sante_communautaire_autogeree_breakdown
 - communautes_paysannes_refugiees_breakdown
-- communautes_rurales_autogerees_des_n_uds_de_survie_breakdown
+- communautes_rurales_autogerees_des_noeuds_de_survie_breakdown
 - consortium_africain_de_biotechnologies_sociales_breakdown
 - delta_mekong_racines_breakdown
 - enclaves_agro_communautaires_autonomes_breakdown
@@ -125,7 +125,7 @@ Ces réseaux sont pris en étau entre la légitimité populaire qu'ils ont conqu
 - [[brigades_medicales_itinerantes_breakdown]]
 - [[collectifs_de_sante_communautaire_autogeree_breakdown]]
 - [[communautes_paysannes_refugiees_breakdown]]
-- [[communautes_rurales_autogerees_des_n_uds_de_survie_breakdown]]
+- [[communautes_rurales_autogerees_des_noeuds_de_survie_breakdown]]
 - [[consortium_africain_de_biotechnologies_sociales_breakdown]]
 - [[delta_mekong_racines_breakdown]]
 - [[enclaves_agro_communautaires_autonomes_breakdown]]

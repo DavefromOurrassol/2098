@@ -37,9 +37,9 @@ zone_systemique:
 
 alliances:
 - collectifs_de_reparation_energetique_breakdown
-- communautes_rurales_autogerees_des_n_uds_de_survie_breakdown
+- communautes_rurales_autogerees_des_noeuds_de_survie_breakdown
 - consortium_des_pecheries_autonomes_du_grand_nord_breakdown
-- enclaves_industrielles_de_bergen_troms_breakdown
+- enclaves_industrielles_de_bergen_tromso_breakdown
 - enclaves_technologiques_survivantes_breakdown
 - hanse_baltique_breakdown
 oppositions:
@@ -101,9 +101,9 @@ La tension centrale des Enclaves est structurelle : leur force — la décentral
 ## Relations
 **Alliés :**
 - [[collectifs_de_reparation_energetique_breakdown]]
-- [[communautes_rurales_autogerees_des_n_uds_de_survie_breakdown]]
+- [[communautes_rurales_autogerees_des_noeuds_de_survie_breakdown]]
 - [[consortium_des_pecheries_autonomes_du_grand_nord_breakdown]]
-- [[enclaves_industrielles_de_bergen_troms_breakdown]]
+- [[enclaves_industrielles_de_bergen_tromso_breakdown]]
 - [[enclaves_technologiques_survivantes_breakdown]]
 - [[hanse_baltique_breakdown]]
 **Opposants :**

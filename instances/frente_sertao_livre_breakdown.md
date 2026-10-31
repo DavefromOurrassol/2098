@@ -40,7 +40,7 @@ alliances:
 - brigades_medicales_itinerantes_breakdown
 - collectifs_de_sante_communautaire_autogeree_breakdown
 - communautes_paysannes_refugiees_breakdown
-- communautes_rurales_autogerees_des_n_uds_de_survie_breakdown
+- communautes_rurales_autogerees_des_noeuds_de_survie_breakdown
 - corridor_lithium_bouches_breakdown
 - enclaves_agro_communautaires_autonomes_breakdown
 - federation_communs_territoriaux_breakdown
@@ -113,7 +113,7 @@ La Frente est déchirée entre son refus viscéral de toute hiérarchie formelle
 - [[brigades_medicales_itinerantes_breakdown]]
 - [[collectifs_de_sante_communautaire_autogeree_breakdown]]
 - [[communautes_paysannes_refugiees_breakdown]]
-- [[communautes_rurales_autogerees_des_n_uds_de_survie_breakdown]]
+- [[communautes_rurales_autogerees_des_noeuds_de_survie_breakdown]]
 - [[corridor_lithium_bouches_breakdown]]
 - [[enclaves_agro_communautaires_autonomes_breakdown]]
 - [[federation_communs_territoriaux_breakdown]]

@@ -41,7 +41,7 @@ alliances:
 - brigades_medicales_itinerantes_breakdown
 - collectif_des_climatologues_sans_etat_breakdown
 - collectifs_de_reparation_energetique_breakdown
-- communautes_rurales_autogerees_des_n_uds_de_survie_breakdown
+- communautes_rurales_autogerees_des_noeuds_de_survie_breakdown
 - mouvement_des_communes_du_rust_belt_breakdown
 - corridors_eurasiens_convoyage_breakdown
 - enclaves_agro_communautaires_autonomes_breakdown
@@ -129,7 +129,7 @@ La Guilde est tiraillée entre sa vocation de service universel et la logique de
 - [[brigades_medicales_itinerantes_breakdown]]
 - [[collectif_des_climatologues_sans_etat_breakdown]]
 - [[collectifs_de_reparation_energetique_breakdown]]
-- [[communautes_rurales_autogerees_des_n_uds_de_survie_breakdown]]
+- [[communautes_rurales_autogerees_des_noeuds_de_survie_breakdown]]
 - [[mouvement_des_communes_du_rust_belt_breakdown]]
 - [[corridors_eurasiens_convoyage_breakdown]]
 - [[enclaves_agro_communautaires_autonomes_breakdown]]

@@ -15,7 +15,7 @@ Bascule évaluée : `arctique_nordark` → `enclaves_industrielles_bergen_tromso
 - `consortiums_energetiques_samoiedes_du_yamal_breakdown` — zone : arctique_nordark
 - `elias_mork_breakdown` — zone : noeud_nordark_tromso
 - `enclaves_finlandaises_breakdown` — zone : enclaves_finlandaises
-- `enclaves_industrielles_de_bergen_troms_breakdown` — zone : enclaves_industrielles_bergen_tromso
+- `enclaves_industrielles_de_bergen_tromso_breakdown` — zone : enclaves_industrielles_bergen_tromso
 - `factions_militaires_residuelles_de_l_ex_otan_nordique_breakdown` — zone : arctique_nordark
 - `front_techno_reconstructionniste_breakdown` — zone : enclaves_industrielles_bergen_tromso
 - `kalaallit_nunaat_sovereign_fund_breakdown` — zone : groenland_fonds_glaces

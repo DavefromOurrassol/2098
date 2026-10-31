@@ -11,7 +11,7 @@ model: mistral/mistral-large-latest
 ligne_editoriale: pro_pouvoir
 scenario_state: instable
 tension_level: 5
-slug: nme_ics_l_il_qui_decide_qui_respire
+slug: nme_ics_l_oeil_qui_decide_qui_respire
 chapo: "Le Nœud Mémoriel Eurasiatique (NME-ICS) accélère l'exclusion des territoires jugés \"non rentables\", plongeant 1,2 million de personnes dans une crise humanitaire algorithmique. Entre résistance clandestine et dépendance technologique, le bloc eurasiatique vacille."
 tags:
   - gouvernance algorithmique
@@ -34,7 +34,7 @@ entites_citees:
   - bloc_eurasiatique_occidental_fortress_world
   - consortium_helios_fortress_world
   - datacenters_conseil_eurasiatique_fortress_world
-  - les_gardiens_des_n_uds_hybrides_fortress_world
+  - les_gardiens_des_noeuds_hybrides_fortress_world
   - terminal_kharg_data_haven_fortress_world
   - vaultcorp_security_fortress_world
 variables_pilotes:
@@ -75,4 +75,4 @@ Une chose est sûre : dans un monde où les frontières sont devenues des algori
 ---
 
 ---
-**Voir aussi** : [[bloc_eurasiatique_occidental_fortress_world]] · [[consortium_helios_fortress_world]] · [[datacenters_conseil_eurasiatique_fortress_world]] · [[les_gardiens_des_n_uds_hybrides_fortress_world]] · [[terminal_kharg_data_haven_fortress_world]] · [[vaultcorp_security_fortress_world]]
+**Voir aussi** : [[bloc_eurasiatique_occidental_fortress_world]] · [[consortium_helios_fortress_world]] · [[datacenters_conseil_eurasiatique_fortress_world]] · [[les_gardiens_des_noeuds_hybrides_fortress_world]] · [[terminal_kharg_data_haven_fortress_world]] · [[vaultcorp_security_fortress_world]]

@@ -52,7 +52,7 @@ alliances:
 - oracle_des_seuils_policy_reform
 - rede_paulista_de_distribuicao_algoritmica_policy_reform
 - reseau_des_agences_sanitaires_regionales_policy_reform
-- reseau_des_metropoles_n_uds_policy_reform
+- reseau_des_metropoles_noeuds_policy_reform
 - union_technocratique_eurasiatique_policy_reform
 oppositions:
 - coalition_des_operateurs_energetiques_prives_anti_quotas_policy_reform
@@ -133,7 +133,7 @@ La réforme de gouvernance de 2094 a accordé aux Conseils Régionaux un droit d
 - [[oracle_des_seuils_policy_reform]]
 - [[rede_paulista_de_distribuicao_algoritmica_policy_reform]]
 - [[reseau_des_agences_sanitaires_regionales_policy_reform]]
-- [[reseau_des_metropoles_n_uds_policy_reform]]
+- [[reseau_des_metropoles_noeuds_policy_reform]]
 - [[union_technocratique_eurasiatique_policy_reform]]
 **Opposants :**
 - [[coalition_des_operateurs_energetiques_prives_anti_quotas_policy_reform]]

@@ -67,7 +67,7 @@
 | 12 novembre 2098 | breakdown | economie_finance | opposition | la_dette_avance_en_credits_chuteurs | — | 20260706_183040_breakdown_economie_finance_article_2fvrier2098.md |
 | 12 novembre 2098 | breakdown | medias_communication | pro_pouvoir | mnemos_nous_ment_l_ordre_zonal_face_a_l_effondrement_des_recits_partages | — | 20260706_183156_breakdown_medias_communication_article_24mars2098.md |
 | 14 novembre 2098 | breakdown | actualites_a_la_une | opposition | lynth_lieu_encommande | — | 20260706_182946_breakdown_actualites_a_la_une_article_3janvier2098.md |
-| 23 novembre 2098 | breakdown | environnement_climat | opposition | 23_novembre_2098_troms_n_ud_nordark | — | 20260706_183108_breakdown_environnement_climat_article_19fvrier2098.md |
+| 23 novembre 2098 | breakdown | environnement_climat | opposition | 23_novembre_2098_tromso_noeud_nordark | — | 20260706_183108_breakdown_environnement_climat_article_19fvrier2098.md |
 | 2 février 2098 | eco_communalism | actualites_a_la_une | pro_pouvoir | les_ceintures_de_seuils_se_dechirent_quand_les_communs_mediterraneens_refusent_d | — | 20260829_183620_eco_communalism_actualites_a_la_une_article_2fevrier2098.md |
 | 5 avril 2098 | eco_communalism | actualites_a_la_une | pro_pouvoir | sahelos_sous_pression_quand_la_souverainete_numerique_devient_une_monnaie_d_echa | — | 20260829_183204_eco_communalism_actualites_a_la_une_article_5avril2098.md |
 | 10 mai 2098 | eco_communalism | actualites_a_la_une | pro_pouvoir | kharg_9_sous_pression_quand_le_sanctuaire_des_donnees_devient_l_enjeu_d_une_guer | — | 20260829_182827_eco_communalism_actualites_a_la_une_article_10mai2098.md |
@@ -76,7 +76,7 @@
 | 7 juillet 2098 | eco_communalism | actualites_a_la_une | pro_pouvoir | sahelos_pirate_quand_les_algorithmes_de_la_ligue_trahissent_leurs_createurs | — | 20260815_105017_eco_communalism_actualites_a_la_une_article_7juillet2098.md |
 | 7 juillet 2098 | eco_communalism | actualites_a_la_une | pro_pouvoir | les_donnees_ne_coulent_plus_le_maghreb_en_tension_sur_les_seuils_numeriques | — | 20260829_183957_eco_communalism_actualites_a_la_une_article_7juillet2098.md |
 | 6 août 2098 | eco_communalism | actualites_a_la_une | pro_pouvoir | kharg_9_le_coffre_fort_des_communs_devient_un_supermarche_des_donnees | — | 20260815_104841_eco_communalism_actualites_a_la_une_article_6aout2098.md |
-| 6 août 2098 | eco_communalism | actualites_a_la_une | pro_pouvoir | les_n_uds_du_silence_quand_la_trame_mnemos_se_dechire_sur_les_rives_du_chelif | — | 20260829_183412_eco_communalism_actualites_a_la_une_article_6aout2098.md |
+| 6 août 2098 | eco_communalism | actualites_a_la_une | pro_pouvoir | les_noeuds_du_silence_quand_la_trame_mnemos_se_dechire_sur_les_rives_du_chelif | — | 20260829_183412_eco_communalism_actualites_a_la_une_article_6aout2098.md |
 | 28 août 2098 | eco_communalism | sante | pro_pouvoir | les_brigades_de_l_eau_vive_quand_soigner_les_sols_guerit_les_corps | — | 20260905_073700_eco_communalism_sante_article_28aout2098.md |
 | 12 septembre 2098 | eco_communalism | sante | pro_pouvoir | moyo_ya_mpembe_quand_l_epidemie_de_longevite_bouscule_les_rivages_du_congo | — | 20260716_070008_eco_communalism_sante_article_8mars2098.md |
 | 20 septembre 2098 | eco_communalism | politique | opposition | le_meclis_des_futurs_fragmentes_une_agora_sans_murs_pour_un_monde_sans_centre | — | 20260816_072959_eco_communalism_politique_article_20septembre2098.md |
@@ -103,11 +103,11 @@
 | 2 février 2098 | fortress_world | economie_finance | pro_pouvoir | l_economie_des_blocs_quand_les_credits_carbone_deviennent_une_monnaie_de_guerre | — | 20260823_151905_fortress_world_economie_finance_article_2fevrier2098.md |
 | 7 février 2098 | fortress_world | sciences_technologies | inconnu | quand_les_blocs_se_lisent_eux_memes_l_ia_decisionnelle_au_miroir_de_ses_propres | — | 20260628_075754_fortress_world_sciences_technologies_article.md |
 | 19 février 2098 | fortress_world | societe | pro_pouvoir | nexus7_l_envers_du_paradis_vertical | — | 20260821_095732_fortress_world_societe_article_19fevrier2098.md |
-| 19 février 2098 | fortress_world | actualites_a_la_une | opposition | le_n_ud_memoriel_eurasiatique_perd_12_millions_de_profils_sabotage_ou_panne_syst | — | 20260823_075541_fortress_world_actualites_a_la_une_article_19fevrier2098.md |
+| 19 février 2098 | fortress_world | actualites_a_la_une | opposition | le_noeud_memoriel_eurasiatique_perd_12_millions_de_profils_sabotage_ou_panne_sys | — | 20260823_075541_fortress_world_actualites_a_la_une_article_19fevrier2098.md |
 | 19 février 2098 | fortress_world | economie_finance | pro_pouvoir | les_credits_carbone_souverains_quand_la_finance_devient_une_arme_de_controle_ter | — | 20260823_152004_fortress_world_economie_finance_article_19fevrier2098.md |
-| 19 février 2098 | fortress_world | actualites_a_la_une | pro_pouvoir | nme_ics_l_il_qui_decide_qui_respire | — | 20260828_193453_fortress_world_actualites_a_la_une_article_19fevrier2098.md |
+| 19 février 2098 | fortress_world | actualites_a_la_une | pro_pouvoir | nme_ics_l_oeil_qui_decide_qui_respire | — | 20260828_193453_fortress_world_actualites_a_la_une_article_19fevrier2098.md |
 | 8 mars 2098 | fortress_world | sports | pro_pouvoir | le_marathon_des_seuils_quand_le_sport_defie_les_frontieres_du_bloc | — | 20260821_100000_fortress_world_sports_article_8mars2098.md |
-| 8 mars 2098 | fortress_world | actualites_a_la_une | pro_pouvoir | les_n_uds_memoriels_craquent_sous_le_poids_des_archives_fantomes | — | 20260823_075621_fortress_world_actualites_a_la_une_article_8mars2098.md |
+| 8 mars 2098 | fortress_world | actualites_a_la_une | pro_pouvoir | les_noeuds_memoriels_craquent_sous_le_poids_des_archives_fantomes | — | 20260823_075621_fortress_world_actualites_a_la_une_article_8mars2098.md |
 | 8 mars 2098 | fortress_world | histoire_patrimoine | pro_pouvoir | les_archives_du_dehors_quand_la_memoire_devient_un_acte_de_resistance | — | 20260823_152059_fortress_world_histoire_patrimoine_article_8mars2098.md |
 | 24 mars 2098 | fortress_world | sports | opposition | les_jeux_de_la_directive_quand_le_sport_devient_l_ultime_stromsperre | — | 20260821_100111_fortress_world_sports_article_24mars2098.md |
 | 24 mars 2098 | fortress_world | actualites_a_la_une | pro_pouvoir | helios_bse_active_le_protocole_hiver_9_sur_la_plaine_de_pannonie_la_secession_en | — | 20260823_075655_fortress_world_actualites_a_la_une_article_24mars2098.md |
@@ -121,7 +121,7 @@
 | 21 avril 2098 | fortress_world | petites_annonces_services | opposition | vendez_votre_score_biometrique_avant_la_prochaine_purge | — | 20260823_152320_fortress_world_petites_annonces_services_article_21avril2098.md |
 | 10 mai 2098 | fortress_world | actualites_a_la_une | pro_pouvoir | arctique_la_nat_frappe_le_monde_retient_son_souffle | — | 20260819_185525_fortress_world_actualites_a_la_une_article_10mai2098.md |
 | 10 mai 2098 | fortress_world | actualites_a_la_une | opposition | nexcore_et_l_anba_lancent_un_protocole_de_separation_proactive_des_donnees_inter | — | 20260823_075926_fortress_world_actualites_a_la_une_article_10mai2098.md |
-| 27 mai 2098 | fortress_world | actualites_a_la_une | pro_pouvoir | les_gardiens_du_n_ud_memoriel_eurasiatique_accuses_de_manipulation_algorithmique | — | 20260823_080003_fortress_world_actualites_a_la_une_article_27mai2098.md |
+| 27 mai 2098 | fortress_world | actualites_a_la_une | pro_pouvoir | les_gardiens_du_noeud_memoriel_eurasiatique_accuses_de_manipulation_algorithmiqu | — | 20260823_080003_fortress_world_actualites_a_la_une_article_27mai2098.md |
 | 27 mai 2098 | fortress_world | religion_spiritualite | opposition | les_dieux_algorithmes_n_ont_pas_de_prieres_pour_les_seuils | — | 20260829_083022_fortress_world_religion_spiritualite_article_27mai2098.md |
 | 4 juin 2098 | fortress_world | actualites_a_la_une | pro_pouvoir | le_nexus_des_seuils_hybrides_sous_pression_les_corridors_eurasiens_au_bord_de_la | — | 20260823_080037_fortress_world_actualites_a_la_une_article_4juin2098.md |
 | 19 juin 2098 | fortress_world | actualites_a_la_une | opposition | les_fantomes_d_aria_quand_l_algorithme_oublie_de_couper_le_courant | — | 20260823_080118_fortress_world_actualites_a_la_une_article_19juin2098.md |
@@ -133,7 +133,7 @@
 | 19 août 2098 | fortress_world | culture | pro_pouvoir | l_art_apres_le_seuil_quand_les_algorithmes_decident_ce_que_vous_avez_le_droit_d | — | 20260903_182538_fortress_world_culture_article_19aout2098.md |
 | 22 août 2098 | fortress_world | actualites_a_la_une | pro_pouvoir | helios_bse_active_le_protocole_ombre_les_coupures_ciblees_entrent_dans_l_arsenal | — | 20260823_080333_fortress_world_actualites_a_la_une_article_22aout2098.md |
 | 23 août 2098 | fortress_world | religion_spiritualite | opposition | les_dieux_ont_ils_un_score_protocole | — | 20260903_182649_fortress_world_religion_spiritualite_article_23aout2098.md |
-| 4 septembre 2098 | fortress_world | actualites_a_la_une | pro_pouvoir | les_n_uds_fantomes_de_kharg_9_quand_les_blocs_perdent_le_controle_de_leur_propre | — | 20260823_080442_fortress_world_actualites_a_la_une_article_4septembre2098.md |
+| 4 septembre 2098 | fortress_world | actualites_a_la_une | pro_pouvoir | les_noeuds_fantomes_de_kharg_9_quand_les_blocs_perdent_le_controle_de_leur_propr | — | 20260823_080442_fortress_world_actualites_a_la_une_article_4septembre2098.md |
 | 4 septembre 2098 | fortress_world | actualites_a_la_une | opposition | luminex_9_la_drogue_qui_fait_bruler_les_frontieres_dans_votre_tete | — | 20260829_075948_fortress_world_actualites_a_la_une_article_4septembre2098.md |
 | 9 septembre 2098 | fortress_world | sciences_technologies | inconnu | les_agents_autonomes_franchissent_le_seuil_decisionnel_comment_l_ia_souveraine_e | — | 20260621_200620_fortress_world_sciences_technologies_article.md |
 | 17 septembre 2098 | fortress_world | sports | inconnu | les_jeux_de_bratislava_annules_quand_le_sport_meurt_aux_portes_des_blocs | — | 20260616_215719_fortress_world_sports_article.md |
@@ -179,7 +179,7 @@
 | 5 avril 2098 | new_sustainability | opinions_editoriaux | pro_pouvoir | kontinuum_nous_gouverne_et_nous_avons_vote_pour_l_ignorer | — | 20260822_191637_new_sustainability_opinions_editoriaux_article_5avril2098.md |
 | 5 avril 2098 | new_sustainability | opinions_editoriaux | opposition | legitimite_sans_deliberation_quand_l_ia_decide_de_ce_que_nous_avons_le_droit_d_o | — | 20260823_132555_new_sustainability_opinions_editoriaux_article_5avril2098.md |
 | 5 avril 2098 | new_sustainability | education | pro_pouvoir | l_ecole_des_algorithmes_vivants_quand_geneve_forme_les_citoyens_de_la_regenerati | — | 20260823_150859_new_sustainability_education_article_5avril2098.md |
-| 21 avril 2098 | new_sustainability | environnement_climat | pro_pouvoir | les_glaciers_mentent_les_algorithmes_ecoutent_geneve_au_c_ur_de_la_bataille_pour | — | 20260822_184228_new_sustainability_environnement_climat_article_21avril2098.md |
+| 21 avril 2098 | new_sustainability | environnement_climat | pro_pouvoir | les_glaciers_mentent_les_algorithmes_ecoutent_geneve_au_coeur_de_la_bataille_pou | — | 20260822_184228_new_sustainability_environnement_climat_article_21avril2098.md |
 | 21 avril 2098 | new_sustainability | opinions_editoriaux | pro_pouvoir | quand_l_algorithme_decide_qui_a_le_droit_de_se_souvenir | — | 20260822_191715_new_sustainability_opinions_editoriaux_article_21avril2098.md |
 | 21 avril 2098 | new_sustainability | lifestyle_art_de_vivre | pro_pouvoir | slow_data_quand_nairobi_reapprend_a_respirer_hors_des_flux | — | 20260823_132634_new_sustainability_lifestyle_art_de_vivre_article_21avril2098.md |
 | 21 avril 2098 | new_sustainability | education | opposition | l_ecole_des_futurs_convergents_quand_l_ia_forme_les_citoyens_de_la_regeneration | — | 20260823_151001_new_sustainability_education_article_21avril2098.md |
@@ -246,7 +246,7 @@
 | 12 septembre 2098 | policy_reform | societe | pro_pouvoir | kontinuum_sonne_l_alerte_en_ile_de_france_reforme_sanitaire_ou_reconfiguration_f | — | 20260628_161154_policy_reform_societe_article.md |
 | 3 octobre 2098 | policy_reform | politique | opposition | la_norme_d_oslo_a_60_ans_quand_l_ia_publique_est_devenue_une_prison_doree | — | 20260816_163426_policy_reform_politique_article_3octobre2098.md |
 | 12 octobre 2098 | policy_reform | societe | inconnu | l_invisible_balance_kontinuum_a_l_epreuve_de_la_famille_diarra | — | 20260628_160545_policy_reform_societe_article.md |
-| 12 octobre 2098 | policy_reform | societe | pro_pouvoir | le_cabs_amv_dans_l_il_du_cyclone_quand_les_semences_liberees_se_rebellent | — | 20260628_161545_policy_reform_societe_article_22aot2098.md |
+| 12 octobre 2098 | policy_reform | societe | pro_pouvoir | le_cabs_amv_dans_l_oeil_du_cyclone_quand_les_semences_liberees_se_rebellent | — | 20260628_161545_policy_reform_societe_article_22aot2098.md |
 | 23 novembre 2098 | policy_reform | politique | pro_pouvoir | geneve_nexus_cherche_ses_limites_leena_vainala_et_le_conseil_de_l_information_a | — | 20260706_185558_policy_reform_politique_article_3janvier2098.md |
 | 3 janvier 2098 | reference | culture | pro_pouvoir | memoire_en_fragments_quand_l_art_defie_la_muraille_de_verre | — | 20260820_194020_reference_culture_article_3janvier2098.md |
 | 17 janvier 2098 | reference | culture | opposition | memoire_en_apnee_quand_l_art_se_noie_dans_les_archives_fantomes | — | 20260820_194106_reference_culture_article_17janvier2098.md |

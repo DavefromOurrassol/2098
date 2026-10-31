@@ -30,7 +30,7 @@ entites_citees:
   - grille_aria_fortress_world
   - vaultcorp_security_fortress_world
   - rede_paulista_de_distribuicao_algoritmica_fortress_world
-  - les_gardiens_des_n_uds_hybrides_fortress_world
+  - les_gardiens_des_noeuds_hybrides_fortress_world
   - nexcore_fortress_world
   - bureau_gouvernance_algorithmique_fortress_world
 variables_pilotes:
@@ -80,4 +80,4 @@ Dans les couloirs de Bruxelles-Forteresse, une question reste sans réponse : ju
 ---
 
 ---
-**Voir aussi** : [[grille_aria_fortress_world]] · [[vaultcorp_security_fortress_world]] · [[rede_paulista_de_distribuicao_algoritmica_fortress_world]] · [[les_gardiens_des_n_uds_hybrides_fortress_world]] · [[nexcore_fortress_world]] · [[bureau_gouvernance_algorithmique_fortress_world]]
+**Voir aussi** : [[grille_aria_fortress_world]] · [[vaultcorp_security_fortress_world]] · [[rede_paulista_de_distribuicao_algoritmica_fortress_world]] · [[les_gardiens_des_noeuds_hybrides_fortress_world]] · [[nexcore_fortress_world]] · [[bureau_gouvernance_algorithmique_fortress_world]]

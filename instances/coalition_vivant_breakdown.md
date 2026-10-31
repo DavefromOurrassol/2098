@@ -36,7 +36,7 @@ zone_systemique:
 
 alliances:
     - collectifs_de_gardiens_archivistes_itinerants_breakdown
-    - communautes_rurales_autogerees_des_n_uds_de_survie_breakdown
+    - communautes_rurales_autogerees_des_noeuds_de_survie_breakdown
     - archives_neutres_de_geneve_breakdown
     - mouvement_racines_vivantes_breakdown
     - front_de_resistance_aux_peages_sur_les_ressources_breakdown
@@ -91,7 +91,7 @@ La Coalition du Vivant, dans le scénario *breakdown*, s'est fragmentée en une 
 - [[organisation_territoires]]
 
 ## Relations
-**Alliés** : [[collectifs_de_gardiens_archivistes_itinerants_breakdown]], [[communautes_rurales_autogerees_des_n_uds_de_survie_breakdown]], [[archives_neutres_de_geneve_breakdown]], [[mouvement_racines_vivantes_breakdown]], [[front_de_resistance_aux_peages_sur_les_ressources_breakdown]]
+**Alliés** : [[collectifs_de_gardiens_archivistes_itinerants_breakdown]], [[communautes_rurales_autogerees_des_noeuds_de_survie_breakdown]], [[archives_neutres_de_geneve_breakdown]], [[mouvement_racines_vivantes_breakdown]], [[front_de_resistance_aux_peages_sur_les_ressources_breakdown]]
 **Opposants** : [[enclaves_corporatives_fortifiees_breakdown]], [[milices_extractivistes_du_bassin_du_congo_breakdown]], [[seigneuries_logistiques_armees_breakdown]], [[consortium_energetique_oural_caspien_breakdown]], [[corridor_lithium_bouches_breakdown]]
 
 ## Description journalistique

@@ -39,7 +39,7 @@ entites_citees:
   - seigneuries_logistiques_armees_breakdown
 articles_lies:
   - mnemos_nous_ment_l_ordre_zonal_face_a_l_effondrement_des_recits_partages
-  - 23_novembre_2098_troms_n_ud_nordark
+  - 23_novembre_2098_tromso_noeud_nordark
   - 24_octobre_2098
 
 ---
@@ -102,4 +102,4 @@ Et ceux qui refusent ? Ils deviennent invisibles.
 Dans les ruelles inondées de Makoko, un vieux poste radio grésille une dernière fois avant de rendre l’âme. Sur l’écran, le compteur aIP de la famille clignote en rouge. Le message est clair : **payez, ou disparaissez**.
 
 ---
-**Voir aussi** : [[arctique_nordark_breakdown]] · [[armada_logistique_nordique_breakdown]] · [[guilde_des_techniciens_nomades_breakdown]] · [[lagos_est_nexcore_breakdown]] · [[noeud_nordark_tromso_breakdown]] · [[seigneuries_logistiques_armees_breakdown]] · [[mnemos_nous_ment_l_ordre_zonal_face_a_l_effondrement_des_recits_partages]] · [[23_novembre_2098_troms_n_ud_nordark]] · [[24_octobre_2098]]
+**Voir aussi** : [[arctique_nordark_breakdown]] · [[armada_logistique_nordique_breakdown]] · [[guilde_des_techniciens_nomades_breakdown]] · [[lagos_est_nexcore_breakdown]] · [[noeud_nordark_tromso_breakdown]] · [[seigneuries_logistiques_armees_breakdown]] · [[mnemos_nous_ment_l_ordre_zonal_face_a_l_effondrement_des_recits_partages]] · [[23_novembre_2098_tromso_noeud_nordark]] · [[24_octobre_2098]]

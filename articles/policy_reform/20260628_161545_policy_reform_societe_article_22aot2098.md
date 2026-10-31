@@ -14,7 +14,7 @@ variables_pilotes:
   - technologie_information
   - energie_ressources_critiques
   - climat_environnement_global
-slug: le_cabs_amv_dans_l_il_du_cyclone_quand_les_semences_liberees_se_rebellent
+slug: le_cabs_amv_dans_l_oeil_du_cyclone_quand_les_semences_liberees_se_rebellent
 chapo: "Une réunion secrète au sein du CABS-AMV révèle un scandale de détournement de semences \"sociales\" brevetées en sous-main. Entre accusations de trahison, manifestations et menaces de neutralisation, le système de régulation biotechnologique mondial vacille."
 tags:
   - biotechnologie

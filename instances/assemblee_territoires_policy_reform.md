@@ -45,7 +45,7 @@ alliances:
 - institut_des_seuils_demographiques_policy_reform
 - office_integre_des_flux_migratoires_policy_reform
 - pacifique_sud_resilience_network_policy_reform
-- reseau_des_metropoles_n_uds_policy_reform
+- reseau_des_metropoles_noeuds_policy_reform
 oppositions:
 - collectifs_de_gouvernance_communautaire_decentralisee_policy_reform
 - front_des_autonomies_territoriales_radicales_policy_reform
@@ -112,7 +112,7 @@ La légitimité démocratique du CRTI est contestée en profondeur : ses mécani
 - [[institut_des_seuils_demographiques_policy_reform]]
 - [[office_integre_des_flux_migratoires_policy_reform]]
 - [[pacifique_sud_resilience_network_policy_reform]]
-- [[reseau_des_metropoles_n_uds_policy_reform]]
+- [[reseau_des_metropoles_noeuds_policy_reform]]
 **Opposants :**
 - [[collectifs_de_gouvernance_communautaire_decentralisee_policy_reform]]
 - [[front_des_autonomies_territoriales_radicales_policy_reform]]

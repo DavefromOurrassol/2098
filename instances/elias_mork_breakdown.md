@@ -35,7 +35,7 @@ zone_systemique:
 
 alliances:
     - collectifs_de_reparation_energetique_breakdown
-    - communautes_rurales_autogerees_des_n_uds_de_survie_breakdown
+    - communautes_rurales_autogerees_des_noeuds_de_survie_breakdown
     - reseau_des_cartographes_des_zones_grises_breakdown
 
 oppositions:
@@ -97,7 +97,7 @@ Mørk supervise la récupération et la réparation des infrastructures énergé
 - [[gouvernance_institutions]]
 
 ## Relations
-**Alliés** : [[collectifs_de_reparation_energetique_breakdown]], [[communautes_rurales_autogerees_des_n_uds_de_survie_breakdown]], [[reseau_des_cartographes_des_zones_grises_breakdown]]
+**Alliés** : [[collectifs_de_reparation_energetique_breakdown]], [[communautes_rurales_autogerees_des_noeuds_de_survie_breakdown]], [[reseau_des_cartographes_des_zones_grises_breakdown]]
 **Opposants** : [[milices_de_controle_territorial_breakdown]], [[seigneuries_logistiques_armees_breakdown]], [[factions_energetiques_heritieres_des_pactes_abs_breakdown]]
 
 ## Description journalistique

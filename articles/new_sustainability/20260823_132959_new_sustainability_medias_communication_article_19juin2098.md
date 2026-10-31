@@ -22,7 +22,7 @@ tags:
 image_prompt: "Une salle d'audience du Tribunal Algorithmique de Bruxelles, éclairée par une lumière blanche et froide. Au centre, un écran géant affiche un flux de code en temps réel, tandis qu'une balance asymétrique — un plateau en circuit imprimé, l'autre en main humaine ouverte — est projetée en hologramme au-dessus des juges. En arrière-plan, des manifestants collent des affiches sur les murs de verre, avec le slogan « ARIA nous ment. Qui ment à ARIA ? » en lettres rouges."
 a_une_photo: false
 image_credit: ""
-journaliste_slug: eirik_b_rresen
+journaliste_slug: eirik_borresen
 date_evenement: 19 juin 2098
 zone_principale: tribunal_gouvernance_algorithmique_bruxelles
 date_publication: 19 juin 2098

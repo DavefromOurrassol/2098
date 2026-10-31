@@ -54,7 +54,7 @@ oppositions:
 - ironclad_logistics_fortress_world
 - kalaallit_nunaat_sovereign_fund_fortress_world
 - les_gardiens_des_corridors_hybrides_fortress_world
-- les_gardiens_des_n_uds_hybrides_fortress_world
+- les_gardiens_des_noeuds_hybrides_fortress_world
 - nexcore_atlantique_infrastructure_fortress_world
 type_relation_dominante: conflit
 annee_debut: 2041
@@ -149,7 +149,7 @@ Les milices sont prises en étau entre leur utilité instrumentale pour certains
 - [[ironclad_logistics_fortress_world]]
 - [[kalaallit_nunaat_sovereign_fund_fortress_world]]
 - [[les_gardiens_des_corridors_hybrides_fortress_world]]
-- [[les_gardiens_des_n_uds_hybrides_fortress_world]]
+- [[les_gardiens_des_noeuds_hybrides_fortress_world]]
 - [[nexcore_atlantique_infrastructure_fortress_world]]
 
 ## Notes

@@ -38,7 +38,7 @@ entites_citees:
 articles_lies:
   - aria_nexus_en_alerte_rouge_la_regulation_mondiale_des_ressources_a_l_epreuve_des
   - la_norme_d_oslo_a_60_ans_quand_l_ia_publique_est_devenue_une_prison_doree
-  - le_cabs_amv_dans_l_il_du_cyclone_quand_les_semences_liberees_se_rebellent
+  - le_cabs_amv_dans_l_oeil_du_cyclone_quand_les_semences_liberees_se_rebellent
 
 ---
 **« Nairobi sous surveillance : Kontinuum et l'effacement des résistances »**
@@ -60,4 +60,4 @@ Le soir même, trois drones quadricoptères des *Forces de Maintien de l'Ordre N
 *« Ce n'est pas de la stabilité »*, murmure Diallo-Nkosi devant les caméras du *Prisme Global*. *« C'est de l'entropie maquillée en ordre. »*
 
 ---
-**Voir aussi** : [[amara_diallo_nkosi_policy_reform]] · [[collectifs_de_gouvernance_communautaire_decentralisee_policy_reform]] · [[consortium_africain_de_biotechnologies_sociales_policy_reform]] · [[directive_kontinuum_policy_reform]] · [[prisme_global_policy_reform]] · [[aria_nexus_en_alerte_rouge_la_regulation_mondiale_des_ressources_a_l_epreuve_des]] · [[la_norme_d_oslo_a_60_ans_quand_l_ia_publique_est_devenue_une_prison_doree]] · [[le_cabs_amv_dans_l_il_du_cyclone_quand_les_semences_liberees_se_rebellent]]
+**Voir aussi** : [[amara_diallo_nkosi_policy_reform]] · [[collectifs_de_gouvernance_communautaire_decentralisee_policy_reform]] · [[consortium_africain_de_biotechnologies_sociales_policy_reform]] · [[directive_kontinuum_policy_reform]] · [[prisme_global_policy_reform]] · [[aria_nexus_en_alerte_rouge_la_regulation_mondiale_des_ressources_a_l_epreuve_des]] · [[la_norme_d_oslo_a_60_ans_quand_l_ia_publique_est_devenue_une_prison_doree]] · [[le_cabs_amv_dans_l_oeil_du_cyclone_quand_les_semences_liberees_se_rebellent]]

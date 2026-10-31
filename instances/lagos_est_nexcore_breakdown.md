@@ -46,7 +46,7 @@ alliances:
 - seoul_collectif_nexcore_breakdown
 oppositions:
 - collectifs_de_gardiens_archivistes_itinerants_breakdown
-- communautes_rurales_autogerees_des_n_uds_de_survie_breakdown
+- communautes_rurales_autogerees_des_noeuds_de_survie_breakdown
 - corporations_de_l_ere_pre_effondrement_a_droits_de_pi_breakdown
 - diaspora_tech_sahel_breakdown
 - front_de_resistance_aux_peages_sur_les_ressources_breakdown
@@ -118,7 +118,7 @@ La consolidation progressive du contrôle de Lagos Est Nexcore sur les nœuds su
 - [[seoul_collectif_nexcore_breakdown]]
 **Opposants :**
 - [[collectifs_de_gardiens_archivistes_itinerants_breakdown]]
-- [[communautes_rurales_autogerees_des_n_uds_de_survie_breakdown]]
+- [[communautes_rurales_autogerees_des_noeuds_de_survie_breakdown]]
 - [[corporations_de_l_ere_pre_effondrement_a_droits_de_pi_breakdown]]
 - [[diaspora_tech_sahel_breakdown]]
 - [[front_de_resistance_aux_peages_sur_les_ressources_breakdown]]

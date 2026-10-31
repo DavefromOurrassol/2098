@@ -37,7 +37,7 @@ zone_systemique:
 alliances:
 - collectifs_de_gardiens_archivistes_itinerants_breakdown
 - communautes_paysannes_refugiees_breakdown
-- communautes_rurales_autogerees_des_n_uds_de_survie_breakdown
+- communautes_rurales_autogerees_des_noeuds_de_survie_breakdown
 - enclaves_agro_communautaires_autonomes_breakdown
 - federation_communs_territoriaux_breakdown
 - frente_sertao_livre_breakdown
@@ -111,7 +111,7 @@ La pression des seigneuries agro-territoriales sur les dépôts de semences pour
 **Alliés :**
 - [[collectifs_de_gardiens_archivistes_itinerants_breakdown]]
 - [[communautes_paysannes_refugiees_breakdown]]
-- [[communautes_rurales_autogerees_des_n_uds_de_survie_breakdown]]
+- [[communautes_rurales_autogerees_des_noeuds_de_survie_breakdown]]
 - [[enclaves_agro_communautaires_autonomes_breakdown]]
 - [[federation_communs_territoriaux_breakdown]]
 - [[frente_sertao_livre_breakdown]]

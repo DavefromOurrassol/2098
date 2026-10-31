@@ -35,7 +35,7 @@ alliances:
 - corps_des_inspecteurs_de_conformite_inter_blocs_fortress_world
 - institut_des_seuils_demographiques_fortress_world
 - les_gardiens_des_corridors_hybrides_fortress_world
-- les_gardiens_des_n_uds_hybrides_fortress_world
+- les_gardiens_des_noeuds_hybrides_fortress_world
 oppositions:
 - coalitions_des_deplaces_et_apatrides_fortress_world
 - contrebandiers_energetiques_des_zones_grises_fortress_world
@@ -95,7 +95,7 @@ L'ARDS Fragmentée est tiraillée entre sa mission résiduelle de fluidité et l
 - [[corps_des_inspecteurs_de_conformite_inter_blocs_fortress_world]]
 - [[institut_des_seuils_demographiques_fortress_world]]
 - [[les_gardiens_des_corridors_hybrides_fortress_world]]
-- [[les_gardiens_des_n_uds_hybrides_fortress_world]]
+- [[les_gardiens_des_noeuds_hybrides_fortress_world]]
 **Opposants :**
 - [[coalitions_des_deplaces_et_apatrides_fortress_world]]
 - [[contrebandiers_energetiques_des_zones_grises_fortress_world]]

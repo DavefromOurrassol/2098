@@ -32,7 +32,7 @@ entites_citees:
   - nexus_biosyn_fortress_world
   - consortium_helios_fortress_world
   - voix_du_dehors_fortress_world
-  - les_gardiens_des_n_uds_hybrides_fortress_world
+  - les_gardiens_des_noeuds_hybrides_fortress_world
 variables_pilotes:
   - geopolitique_conflits
   - energie_ressources_critiques
@@ -57,4 +57,4 @@ Du côté des populations, les réactions sont contrastées. À Moscou-Est, des 
 Alors que le monde observe, fracturé, cette nouvelle étape dans la balkanisation énergétique, une question persiste : jusqu’où les blocs iront-ils dans la logique de la forteresse ? Pour l’instant, une chose est certaine — le soleil ne brille plus pour tous de la même manière.
 
 ---
-**Voir aussi** : [[bloc_eurasiatique_occidental_fortress_world]] · [[centre_controle_orbital_helios_fortress_world]] · [[nexus_biosyn_fortress_world]] · [[consortium_helios_fortress_world]] · [[voix_du_dehors_fortress_world]] · [[les_gardiens_des_n_uds_hybrides_fortress_world]]
+**Voir aussi** : [[bloc_eurasiatique_occidental_fortress_world]] · [[centre_controle_orbital_helios_fortress_world]] · [[nexus_biosyn_fortress_world]] · [[consortium_helios_fortress_world]] · [[voix_du_dehors_fortress_world]] · [[les_gardiens_des_noeuds_hybrides_fortress_world]]

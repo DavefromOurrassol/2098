@@ -45,7 +45,7 @@ alliances:
 - consortium_technologique_des_nations_integrees_policy_reform
 - fonds_mondial_de_resilience_infrastructurelle_policy_reform
 - institut_des_seuils_demographiques_policy_reform
-- reseau_des_metropoles_n_uds_policy_reform
+- reseau_des_metropoles_noeuds_policy_reform
 - reseau_des_regulateurs_numeriques_souverains_rrns_policy_reform
 - union_technocratique_eurasiatique_policy_reform
 oppositions:
@@ -135,7 +135,7 @@ La tension centrale du Consortium réside dans la contradiction entre son positi
 - [[consortium_technologique_des_nations_integrees_policy_reform]]
 - [[fonds_mondial_de_resilience_infrastructurelle_policy_reform]]
 - [[institut_des_seuils_demographiques_policy_reform]]
-- [[reseau_des_metropoles_n_uds_policy_reform]]
+- [[reseau_des_metropoles_noeuds_policy_reform]]
 - [[reseau_des_regulateurs_numeriques_souverains_rrns_policy_reform]]
 - [[union_technocratique_eurasiatique_policy_reform]]
 **Opposants :**

@@ -39,7 +39,7 @@ alliances:
 - amara_diallo_nkosi_breakdown
 - brigades_medicales_itinerantes_breakdown
 - collectif_des_climatologues_sans_etat_breakdown
-- communautes_rurales_autogerees_des_n_uds_de_survie_breakdown
+- communautes_rurales_autogerees_des_noeuds_de_survie_breakdown
 - consortium_africain_de_biotechnologies_sociales_breakdown
 - front_humanitaire_d_urgence_non_affilie_breakdown
 - lagos_interieur_mnemos_breakdown
@@ -120,7 +120,7 @@ Le réseau est déchiré entre l'urgence de transmettre son savoir aux communaut
 - [[amara_diallo_nkosi_breakdown]]
 - [[brigades_medicales_itinerantes_breakdown]]
 - [[collectif_des_climatologues_sans_etat_breakdown]]
-- [[communautes_rurales_autogerees_des_n_uds_de_survie_breakdown]]
+- [[communautes_rurales_autogerees_des_noeuds_de_survie_breakdown]]
 - [[consortium_africain_de_biotechnologies_sociales_breakdown]]
 - [[front_humanitaire_d_urgence_non_affilie_breakdown]]
 - [[lagos_interieur_mnemos_breakdown]]

@@ -49,7 +49,7 @@ alliances:
 oppositions:
 - coalition_pacifique_nord_breakdown
 - collectifs_de_gardiens_archivistes_itinerants_breakdown
-- communautes_rurales_autogerees_des_n_uds_de_survie_breakdown
+- communautes_rurales_autogerees_des_noeuds_de_survie_breakdown
 - conglometrat_sino_siberien_bohai_transit_breakdown
 - conseil_regulation_algorithmique_breakdown
 - corporations_de_l_ere_pre_effondrement_a_droits_de_pi_breakdown
@@ -120,7 +120,7 @@ Le Collectif est à un point de bascule : son efficacité attire des demandes de
 **Opposants :**
 - [[coalition_pacifique_nord_breakdown]]
 - [[collectifs_de_gardiens_archivistes_itinerants_breakdown]]
-- [[communautes_rurales_autogerees_des_n_uds_de_survie_breakdown]]
+- [[communautes_rurales_autogerees_des_noeuds_de_survie_breakdown]]
 - [[conglometrat_sino_siberien_bohai_transit_breakdown]]
 - [[conseil_regulation_algorithmique_breakdown]]
 - [[corporations_de_l_ere_pre_effondrement_a_droits_de_pi_breakdown]]

@@ -43,7 +43,7 @@ alliances:
 - collectifs_de_reparation_energetique_breakdown
 - collectifs_de_sante_communautaire_autogeree_breakdown
 - collectifs_du_seuil_breakdown
-- communautes_rurales_autogerees_des_n_uds_de_survie_breakdown
+- communautes_rurales_autogerees_des_noeuds_de_survie_breakdown
 - communautes_rurales_autonomes_breakdown
 - enclaves_agro_communautaires_autonomes_breakdown
 - federation_communs_territoriaux_breakdown
@@ -130,7 +130,7 @@ La pression du Commandement Atlantique s'intensifie : des 'corridors de réinté
 - [[collectifs_de_reparation_energetique_breakdown]]
 - [[collectifs_de_sante_communautaire_autogeree_breakdown]]
 - [[collectifs_du_seuil_breakdown]]
-- [[communautes_rurales_autogerees_des_n_uds_de_survie_breakdown]]
+- [[communautes_rurales_autogerees_des_noeuds_de_survie_breakdown]]
 - [[communautes_rurales_autonomes_breakdown]]
 - [[enclaves_agro_communautaires_autonomes_breakdown]]
 - [[federation_communs_territoriaux_breakdown]]

@@ -57,7 +57,7 @@ oppositions:
 - mouvement_pour_la_souverainete_territoriale_absolue_policy_reform
 - nexus_biosyn_policy_reform
 - pacifique_sud_resilience_network_policy_reform
-- reseau_des_metropoles_n_uds_policy_reform
+- reseau_des_metropoles_noeuds_policy_reform
 - reseaux_de_capteurs_ia_climatiques_deployes_par_les_etats_membres_policy_reform
 - syndicats_d_extraction_privee_non_regules_policy_reform
 type_relation_dominante: compétition
@@ -153,7 +153,7 @@ La tension centrale du BNECC réside dans la contradiction entre son ambition un
 - [[mouvement_pour_la_souverainete_territoriale_absolue_policy_reform]]
 - [[nexus_biosyn_policy_reform]]
 - [[pacifique_sud_resilience_network_policy_reform]]
-- [[reseau_des_metropoles_n_uds_policy_reform]]
+- [[reseau_des_metropoles_noeuds_policy_reform]]
 - [[reseaux_de_capteurs_ia_climatiques_deployes_par_les_etats_membres_policy_reform]]
 - [[syndicats_d_extraction_privee_non_regules_policy_reform]]
 

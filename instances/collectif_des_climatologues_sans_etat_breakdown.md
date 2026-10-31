@@ -45,7 +45,7 @@ alliances:
 - collectifs_de_gardiens_archivistes_itinerants_breakdown
 - collectifs_de_hackers_archivistes_des_interstices_reseaux_breakdown
 - communautes_paysannes_refugiees_breakdown
-- communautes_rurales_autogerees_des_n_uds_de_survie_breakdown
+- communautes_rurales_autogerees_des_noeuds_de_survie_breakdown
 - consortium_amazonia_viva_breakdown
 - diaspora_tech_sahel_breakdown
 - enclaves_agro_communautaires_autonomes_breakdown
@@ -136,7 +136,7 @@ La tension centrale du Collectif réside dans sa dépendance à une infrastructu
 - [[collectifs_de_gardiens_archivistes_itinerants_breakdown]]
 - [[collectifs_de_hackers_archivistes_des_interstices_reseaux_breakdown]]
 - [[communautes_paysannes_refugiees_breakdown]]
-- [[communautes_rurales_autogerees_des_n_uds_de_survie_breakdown]]
+- [[communautes_rurales_autogerees_des_noeuds_de_survie_breakdown]]
 - [[consortium_amazonia_viva_breakdown]]
 - [[diaspora_tech_sahel_breakdown]]
 - [[enclaves_agro_communautaires_autonomes_breakdown]]

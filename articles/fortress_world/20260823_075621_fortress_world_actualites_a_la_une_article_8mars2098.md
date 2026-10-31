@@ -11,7 +11,7 @@ model: mistral/mistral-large-latest
 ligne_editoriale: pro_pouvoir
 scenario_state: instable
 tension_level: 5
-slug: les_n_uds_memoriels_craquent_sous_le_poids_des_archives_fantomes
+slug: les_noeuds_memoriels_craquent_sous_le_poids_des_archives_fantomes
 chapo: "Les datacenters souverains d'Ourrassol-Centre subissent des fuites massives d'archives classifiées, révélant des accords secrets entre blocs et des zones délibérément sacrifiées. Une crise qui ébranle les fondements de la gouvernance algorithmique."
 tags:
   - souveraineté numérique
@@ -29,7 +29,7 @@ date_publication: 8 mars 2098
 entites_citees:
   - datacenters_conseil_eurasiatique_fortress_world
   - voix_du_dehors_fortress_world
-  - les_gardiens_des_n_uds_hybrides_fortress_world
+  - les_gardiens_des_noeuds_hybrides_fortress_world
   - conseil_regulation_algorithmique_fortress_world
   - alliance_blocs_souverains_fortress_world
   - gelecek_meclisi_fortress_world
@@ -55,4 +55,4 @@ La réaction du Pacte des Forteresses ne s’est pas fait attendre : dès hier, 
 Pour les populations des zones tampons, ces révélations ne sont qu’une confirmation. *« On savait que les blocs mentaient, mais pas à ce point, témoigne une habitante de Tbilissi-Nord, où les écrans publics affichent en boucle des messages d’alerte. Maintenant, même les algorithmes ont peur. »* Une peur qui pourrait bien se propager : si les archives fantômes continuent de fuiter, c’est toute l’architecture de la souveraineté numérique qui risque de s’effondrer — et avec elle, le dernier mythe des blocs : celui d’un monde où la vérité peut encore être contenue.
 
 ---
-**Voir aussi** : [[datacenters_conseil_eurasiatique_fortress_world]] · [[voix_du_dehors_fortress_world]] · [[les_gardiens_des_n_uds_hybrides_fortress_world]] · [[conseil_regulation_algorithmique_fortress_world]] · [[alliance_blocs_souverains_fortress_world]] · [[gelecek_meclisi_fortress_world]]
+**Voir aussi** : [[datacenters_conseil_eurasiatique_fortress_world]] · [[voix_du_dehors_fortress_world]] · [[les_gardiens_des_noeuds_hybrides_fortress_world]] · [[conseil_regulation_algorithmique_fortress_world]] · [[alliance_blocs_souverains_fortress_world]] · [[gelecek_meclisi_fortress_world]]

@@ -36,7 +36,7 @@ zone_systemique:
 - société
 alliances:
 - brigades_medicales_itinerantes_breakdown
-- communautes_rurales_autogerees_des_n_uds_de_survie_breakdown
+- communautes_rurales_autogerees_des_noeuds_de_survie_breakdown
 - mouvement_des_communes_du_rust_belt_breakdown
 - enclaves_agro_communautaires_autonomes_breakdown
 - factions_paramilitaires_locales_neutralisees_breakdown
@@ -125,7 +125,7 @@ La ligne entre protection communautaire et prédation est franchie quotidienneme
 ## Relations
 **Alliés :**
 - [[brigades_medicales_itinerantes_breakdown]]
-- [[communautes_rurales_autogerees_des_n_uds_de_survie_breakdown]]
+- [[communautes_rurales_autogerees_des_noeuds_de_survie_breakdown]]
 - [[mouvement_des_communes_du_rust_belt_breakdown]]
 - [[enclaves_agro_communautaires_autonomes_breakdown]]
 - [[factions_paramilitaires_locales_neutralisees_breakdown]]

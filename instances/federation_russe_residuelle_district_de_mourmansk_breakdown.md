@@ -50,7 +50,7 @@ oppositions:
 - armada_logistique_nordique_breakdown
 - conglometrat_sino_siberien_bohai_transit_breakdown
 - enclaves_finlandaises_breakdown
-- enclaves_industrielles_de_bergen_troms_breakdown
+- enclaves_industrielles_de_bergen_tromso_breakdown
 - factions_militaires_residuelles_de_l_ex_otan_nordique_breakdown
 - hanse_baltique_breakdown
 - kalaallit_nunaat_sovereign_fund_breakdown
@@ -133,7 +133,7 @@ Le District est écartelé entre la Hanse Baltique Recomposée et les acteurs no
 - [[armada_logistique_nordique_breakdown]]
 - [[conglometrat_sino_siberien_bohai_transit_breakdown]]
 - [[enclaves_finlandaises_breakdown]]
-- [[enclaves_industrielles_de_bergen_troms_breakdown]]
+- [[enclaves_industrielles_de_bergen_tromso_breakdown]]
 - [[factions_militaires_residuelles_de_l_ex_otan_nordique_breakdown]]
 - [[hanse_baltique_breakdown]]
 - [[kalaallit_nunaat_sovereign_fund_breakdown]]

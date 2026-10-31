@@ -47,7 +47,7 @@ acteurs_impliques:
     - bureau_gouvernance_algorithmique_policy_reform
     - collectifs_de_gouvernance_communautaire_decentralisee_policy_reform
     - conseil_regulation_ressources_policy_reform
-    - reseau_des_metropoles_n_uds_policy_reform
+    - reseau_des_metropoles_noeuds_policy_reform
 note_coherence: 'Cohérent avec le scénario *policy_reform* : la crise est résolue par une régulation
   technocratique supranationale, intégrant partiellement les revendications sociales
   tout en renforçant le contrôle institutionnel. Les acteurs clés (UTE, AIER, ATRB)
@@ -81,7 +81,7 @@ La grève marque un tournant dans la gouvernance du travail critique : les reven
 - [[bureau_gouvernance_algorithmique_policy_reform]]
 - [[collectifs_de_gouvernance_communautaire_decentralisee_policy_reform]]
 - [[conseil_regulation_ressources_policy_reform]]
-- [[reseau_des_metropoles_n_uds_policy_reform]]
+- [[reseau_des_metropoles_noeuds_policy_reform]]
 
 ## Note de cohérence
 'Cohérent avec le scénario *policy_reform* : la crise est résolue par une régulation

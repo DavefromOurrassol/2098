@@ -78,7 +78,7 @@
 | breakdown | Les Confédérations du Seuil Dernier | Collectifs du Seuil | réseau | ascendant | arc_sahelo_mediterraneen | collectifs_du_seuil_breakdown.md |
 | breakdown | Communautés Paysannes Réfugiées | Communautés Paysannes Réfugiées | réseau | émergent | massif_central_cicatrices_vertes | communautes_paysannes_refugiees_breakdown.md |
 | breakdown | Communautés Religieuses des Relais Physiques | Communautés Religieuses des Relais Physiques | réseau | émergent | (transnationale) | communautes_religieuses_des_relais_physiques_breakdown.md |
-| breakdown | Communautés Rurales Autogérées des Nœuds de Survie | Communautés Rurales Autogérées des Nœuds de Survie | réseau | émergent | massif_central_cicatrices_vertes | communautes_rurales_autogerees_des_n_uds_de_survie_breakdown.md |
+| breakdown | Communautés Rurales Autogérées des Nœuds de Survie | Communautés Rurales Autogérées des Nœuds de Survie | réseau | émergent | massif_central_cicatrices_vertes | communautes_rurales_autogerees_des_noeuds_de_survie_breakdown.md |
 | breakdown | communautés rurales autonomes | communautés rurales autonomes | réseau | émergent | massif_central_cicatrices_vertes | communautes_rurales_autonomes_breakdown.md |
 | breakdown | Communes Libres du Rust Belt — Les Forges du Commun | Communes Rust Belt | organisation | ascendant | communes_rust_belt | communes_rust_belt_breakdown.md |
 | breakdown | Communes Libres du Rust Belt — Les Forges du Commun | Communes Rust Belt Zones Libres | organisation | ascendant | communes_rust_belt | communes_rust_belt_zones_libres_breakdown.md |
@@ -103,7 +103,7 @@
 | breakdown | Enclaves Agro-Communautaires Autonomes | Enclaves Agro-Communautaires Autonomes | organisation | émergent | plaines_ebre_terrafond | enclaves_agro_communautaires_autonomes_breakdown.md |
 | breakdown | Enclaves Corporatives Fortifiées | Enclaves Corporatives Fortifiées | organisation | émergent | afrique_de_louest_lagos_sahel | enclaves_corporatives_fortifiees_breakdown.md |
 | breakdown | Les Enclaves du Nord — Fragments Finlandais | Enclaves Finlandaises | organisation | déclinant | enclaves_finlandaises | enclaves_finlandaises_breakdown.md |
-| breakdown | Enclaves Industrielles de Bergen-Tromsø | Enclaves Industrielles de Bergen-Tromsø | organisation | émergent | enclaves_industrielles_bergen_tromso | enclaves_industrielles_de_bergen_troms_breakdown.md |
+| breakdown | Enclaves Industrielles de Bergen-Tromsø | Enclaves Industrielles de Bergen-Tromsø | organisation | émergent | enclaves_industrielles_bergen_tromso | enclaves_industrielles_de_bergen_tromso_breakdown.md |
 | breakdown | Enclaves Industrielles du Corridor Oural-Caspien | Enclaves Industrielles du Corridor Oural-Caspien | organisation | émergent | corridor_oural_caspien | enclaves_industrielles_du_corridor_oural_caspien_breakdown.md |
 | breakdown | Enclaves Technologiques Survivantes | Enclaves Technologiques Survivantes | réseau | émergent | (transnationale) | enclaves_technologiques_survivantes_breakdown.md |
 | breakdown | États Fragmentés Nationalisant les Stocks | États Fragmentés Nationalisant les Stocks | institution | émergent | (transnationale) | etats_fragmentes_nationalisant_les_stocks_breakdown.md |
@@ -365,7 +365,7 @@
 | fortress_world | Nuna Capital — Fonds Souverain de Kalaallit Nunaat | Kalaallit Nunaat Sovereign Fund | institution | dominant | nuna_capital_siege | kalaallit_nunaat_sovereign_fund_fortress_world.md |
 | fortress_world | Vera Solano | Le Témoin | humain | ascendant | bloc_atlantique | le_temoin_fortress_world.md |
 | fortress_world | Corridors Souverains Hybrides (CSH) | Les Gardiens des Corridors Hybrides | hybride | dominant | (transnationale) | les_gardiens_des_corridors_hybrides_fortress_world.md |
-| fortress_world | Nexus des Seuils Hybrides (NSH) | Les Gardiens des Nœuds Hybrides | hybride | dominant | zones_grises_tampons | les_gardiens_des_n_uds_hybrides_fortress_world.md |
+| fortress_world | Nexus des Seuils Hybrides (NSH) | Les Gardiens des Nœuds Hybrides | hybride | dominant | zones_grises_tampons | les_gardiens_des_noeuds_hybrides_fortress_world.md |
 | fortress_world | Les Sentinelles des Aquifères Oubliés | Les Veilleurs des Nappes Phréatiques | réseau | ascendant | afrique_subsaharienne_zones_effondrees | les_veilleurs_des_nappes_phreatiques_fortress_world.md |
 | fortress_world | Les Gardiens des Veines Oubliées | Les Veilleurs du Fleuve | réseau | ascendant | (transnationale) | les_veilleurs_du_fleuve_fortress_world.md |
 | fortress_world | Marchés Gris de Casablanca — Bureau des Interstices Atlantiques | Marches Gris Casablanca | organisation | mature | marches_gris_casablanca | marches_gris_casablanca_fortress_world.md |
@@ -622,7 +622,7 @@
 | policy_reform | Atlas Fantôme | Réseau des Cartographes des Zones Grises | réseau | ascendant | (transnationale) | reseau_des_cartographes_des_zones_grises_policy_reform.md |
 | policy_reform | Réseau des Journalistes d'Investigation Énergétique | Réseau des Journalistes d'Investigation Énergétique | réseau | émergent | (transnationale) | reseau_des_journalistes_d_investigation_energetique_policy_reform.md |
 | policy_reform | Réseau des Lobbyistes Techniques ONU-Énergie | Réseau des Lobbyistes Techniques ONU-Énergie | réseau | émergent | geneve_lacustre | reseau_des_lobbyistes_techniques_onu_energie_policy_reform.md |
-| policy_reform | Réseau des Métropoles-Nœuds | Réseau des Métropoles-Nœuds | réseau | émergent | (transnationale) | reseau_des_metropoles_n_uds_policy_reform.md |
+| policy_reform | Réseau des Métropoles-Nœuds | Réseau des Métropoles-Nœuds | réseau | émergent | (transnationale) | reseau_des_metropoles_noeuds_policy_reform.md |
 | policy_reform | Réseau des Régulateurs Numériques Souverains (RRNS) | Réseau des Régulateurs Numériques Souverains (RRNS) | réseau | émergent | conseil_regulation_numerique_geneve | reseau_des_regulateurs_numeriques_souverains_rrns_policy_reform.md |
 | policy_reform | Réseaux académiques prospectivistes du Pacte de Genève 2081 | Réseaux académiques prospectivistes du Pacte de Genève 2081 | réseau | émergent | geneve_nexus | reseaux_academiques_prospectivistes_du_pacte_de_geneve_2081_policy_reform.md |
 | policy_reform | Réseaux de capteurs IA-climatiques déployés par les États membres | Réseaux de capteurs IA-climatiques déployés par les États membres | infrastructure | émergent | (transnationale) | reseaux_de_capteurs_ia_climatiques_deployes_par_les_etats_membres_policy_reform.md |

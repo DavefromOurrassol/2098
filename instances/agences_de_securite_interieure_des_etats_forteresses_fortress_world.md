@@ -77,7 +77,7 @@ oppositions:
 - institutions_multilaterales_residuelles_fortress_world
 - les_cycles_fortress_world
 - les_dedoubles_fortress_world
-- les_gardiens_des_n_uds_hybrides_fortress_world
+- les_gardiens_des_noeuds_hybrides_fortress_world
 - les_recycleurs_fortress_world
 - les_veilleurs_des_nappes_phreatiques_fortress_world
 - les_veilleurs_du_fleuve_fortress_world
@@ -206,7 +206,7 @@ La contradiction centrale de ces agences réside dans leur double mission imposs
 - [[institutions_multilaterales_residuelles_fortress_world]]
 - [[les_cycles_fortress_world]]
 - [[les_dedoubles_fortress_world]]
-- [[les_gardiens_des_n_uds_hybrides_fortress_world]]
+- [[les_gardiens_des_noeuds_hybrides_fortress_world]]
 - [[les_recycleurs_fortress_world]]
 - [[les_veilleurs_des_nappes_phreatiques_fortress_world]]
 - [[les_veilleurs_du_fleuve_fortress_world]]

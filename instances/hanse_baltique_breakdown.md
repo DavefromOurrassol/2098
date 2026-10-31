@@ -41,7 +41,7 @@ alliances:
 - cites_etats_secessionistes_breakdown
 - district_mourmansk_residuel_breakdown
 - enclaves_finlandaises_breakdown
-- enclaves_industrielles_de_bergen_troms_breakdown
+- enclaves_industrielles_de_bergen_tromso_breakdown
 - enclaves_technologiques_survivantes_breakdown
 - grandes_lacs_compact_eau_breakdown
 - kalaallit_nunaat_sovereign_fund_breakdown
@@ -118,7 +118,7 @@ La légitimité juridique que s'arroge la Ligue repose sur un paradoxe fondament
 - [[cites_etats_secessionistes_breakdown]]
 - [[district_mourmansk_residuel_breakdown]]
 - [[enclaves_finlandaises_breakdown]]
-- [[enclaves_industrielles_de_bergen_troms_breakdown]]
+- [[enclaves_industrielles_de_bergen_tromso_breakdown]]
 - [[enclaves_technologiques_survivantes_breakdown]]
 - [[grandes_lacs_compact_eau_breakdown]]
 - [[kalaallit_nunaat_sovereign_fund_breakdown]]

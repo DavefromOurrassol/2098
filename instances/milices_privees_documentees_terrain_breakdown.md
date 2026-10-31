@@ -47,7 +47,7 @@ alliances:
 - reseaux_de_renseignement_informels_issus_de_l_ancienne_structure_militaire_eurasienne_breakdown
 - seigneuries_logistiques_armees_breakdown
 oppositions:
-- communautes_rurales_autogerees_des_n_uds_de_survie_breakdown
+- communautes_rurales_autogerees_des_noeuds_de_survie_breakdown
 - enclaves_agro_communautaires_autonomes_breakdown
 - front_de_resistance_aux_peages_sur_les_ressources_breakdown
 - reseau_logistique_criminel_concurrent_breakdown
@@ -123,7 +123,7 @@ La tension fondamentale de ces milices réside dans leur double nature : garante
 - [[reseaux_de_renseignement_informels_issus_de_l_ancienne_structure_militaire_eurasienne_breakdown]]
 - [[seigneuries_logistiques_armees_breakdown]]
 **Opposants :**
-- [[communautes_rurales_autogerees_des_n_uds_de_survie_breakdown]]
+- [[communautes_rurales_autogerees_des_noeuds_de_survie_breakdown]]
 - [[enclaves_agro_communautaires_autonomes_breakdown]]
 - [[front_de_resistance_aux_peages_sur_les_ressources_breakdown]]
 - [[reseau_logistique_criminel_concurrent_breakdown]]

@@ -40,7 +40,7 @@ alliances:
 - collectif_hackers_decroissance_infrastructure_breakdown
 - collectifs_de_gardiens_archivistes_itinerants_breakdown
 - collectifs_de_sante_communautaire_autogeree_breakdown
-- communautes_rurales_autogerees_des_n_uds_de_survie_breakdown
+- communautes_rurales_autogerees_des_noeuds_de_survie_breakdown
 - consortium_africain_de_biotechnologies_sociales_breakdown
 - enclaves_agro_communautaires_autonomes_breakdown
 - frente_sertao_livre_breakdown
@@ -127,7 +127,7 @@ La tension centrale qui les d√©vore est celle entre l'urgence humanitaire qui l√
 - [[collectif_hackers_decroissance_infrastructure_breakdown]]
 - [[collectifs_de_gardiens_archivistes_itinerants_breakdown]]
 - [[collectifs_de_sante_communautaire_autogeree_breakdown]]
-- [[communautes_rurales_autogerees_des_n_uds_de_survie_breakdown]]
+- [[communautes_rurales_autogerees_des_noeuds_de_survie_breakdown]]
 - [[consortium_africain_de_biotechnologies_sociales_breakdown]]
 - [[enclaves_agro_communautaires_autonomes_breakdown]]
 - [[frente_sertao_livre_breakdown]]

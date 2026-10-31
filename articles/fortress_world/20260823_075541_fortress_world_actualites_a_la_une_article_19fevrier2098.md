@@ -11,7 +11,7 @@ model: mistral/mistral-large-latest
 ligne_editoriale: opposition
 scenario_state: instable
 tension_level: 5
-slug: le_n_ud_memoriel_eurasiatique_perd_12_millions_de_profils_sabotage_ou_panne_syst
+slug: le_noeud_memoriel_eurasiatique_perd_12_millions_de_profils_sabotage_ou_panne_sys
 chapo: "Une \"panne\" massive au cœur du système de gouvernance algorithmique eurasiatique prive 12 millions de citoyens de leur identité numérique. Entre sabotage et manipulation des données, les blocs se renvoient la responsabilité tandis que les exclus s'entassent aux portes des forteresses."
 tags:
   - souveraineté numérique

@@ -28,7 +28,7 @@ date_evenement: 3 octobre 2098
 zone_principale: bloc_atlantique
 date_publication: 3 octobre 2098
 entites_citees:
-  - les_gardiens_des_n_uds_hybrides_fortress_world
+  - les_gardiens_des_noeuds_hybrides_fortress_world
   - bloc_atlantique_fortress_world
   - alliance_blocs_souverains_fortress_world
   - nexcore_fortress_world
@@ -56,4 +56,4 @@ Les premières conséquences se font déjà sentir. À Casablanca-Périphérie, 
 L’ANBA, de son côté, assume une posture intransigeante. « La souveraineté numérique n’est pas négociable », a martelé Veld, rappelant que toute tentative de contournement des nouveaux protocoles serait passible de « sanctions immédiates », y compris la révocation des accès aux infrastructures critiques du Bloc. Une menace qui pèse particulièrement sur les opérateurs privés de transit caucasien, déjà dans le viseur de l’Autorité depuis l’*Incident du Passage du Nord-Ouest* (2059).
 
 ---
-**Voir aussi** : [[les_gardiens_des_n_uds_hybrides_fortress_world]] · [[bloc_atlantique_fortress_world]] · [[alliance_blocs_souverains_fortress_world]] · [[nexcore_fortress_world]] · [[conseil_regulation_algorithmique_fortress_world]] · [[gelecek_meclisi_fortress_world]]
+**Voir aussi** : [[les_gardiens_des_noeuds_hybrides_fortress_world]] · [[bloc_atlantique_fortress_world]] · [[alliance_blocs_souverains_fortress_world]] · [[nexcore_fortress_world]] · [[conseil_regulation_algorithmique_fortress_world]] · [[gelecek_meclisi_fortress_world]]

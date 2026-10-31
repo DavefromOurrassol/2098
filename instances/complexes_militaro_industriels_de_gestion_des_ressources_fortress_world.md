@@ -62,7 +62,7 @@ oppositions:
 - consortium_des_pecheries_autonomes_du_grand_nord_fortress_world
 - factions_dissidentes_du_consortium_helios_fortress_world
 - les_cycles_fortress_world
-- les_gardiens_des_n_uds_hybrides_fortress_world
+- les_gardiens_des_noeuds_hybrides_fortress_world
 - marches_gris_tbilissi_fortress_world
 - milices_de_piraterie_logistique_arctique_fortress_world
 - mouvement_des_communes_du_rust_belt_fortress_world
@@ -168,7 +168,7 @@ La tension première réside dans leur double loyauté : serviteurs du bloc qui 
 - [[consortium_des_pecheries_autonomes_du_grand_nord_fortress_world]]
 - [[factions_dissidentes_du_consortium_helios_fortress_world]]
 - [[les_cycles_fortress_world]]
-- [[les_gardiens_des_n_uds_hybrides_fortress_world]]
+- [[les_gardiens_des_noeuds_hybrides_fortress_world]]
 - [[marches_gris_tbilissi_fortress_world]]
 - [[milices_de_piraterie_logistique_arctique_fortress_world]]
 - [[mouvement_des_communes_du_rust_belt_fortress_world]]

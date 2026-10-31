@@ -48,7 +48,7 @@ alliances:
 - seigneurs_de_guerre_agro_territoriaux_breakdown
 oppositions:
 - communautes_paysannes_refugiees_breakdown
-- communautes_rurales_autogerees_des_n_uds_de_survie_breakdown
+- communautes_rurales_autogerees_des_noeuds_de_survie_breakdown
 - mouvement_des_communes_du_rust_belt_breakdown
 - consortium_amazonia_viva_breakdown
 - delta_mekong_racines_breakdown
@@ -133,7 +133,7 @@ Leur contradiction centrale est existentielle : ils sont construits pour un mond
 - [[seigneurs_de_guerre_agro_territoriaux_breakdown]]
 **Opposants :**
 - [[communautes_paysannes_refugiees_breakdown]]
-- [[communautes_rurales_autogerees_des_n_uds_de_survie_breakdown]]
+- [[communautes_rurales_autogerees_des_noeuds_de_survie_breakdown]]
 - [[mouvement_des_communes_du_rust_belt_breakdown]]
 - [[consortium_amazonia_viva_breakdown]]
 - [[delta_mekong_racines_breakdown]]

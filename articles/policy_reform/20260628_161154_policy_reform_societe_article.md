@@ -36,7 +36,7 @@ entites_citees:
 articles_lies:
   - aria_nexus_en_alerte_rouge_la_regulation_mondiale_des_ressources_a_l_epreuve_des
   - desaugmentes_a_geneve_nexus_les_familles_qui_refusent_l_avenir_algorithmique
-  - le_cabs_amv_dans_l_il_du_cyclone_quand_les_semences_liberees_se_rebellent
+  - le_cabs_amv_dans_l_oeil_du_cyclone_quand_les_semences_liberees_se_rebellent
 
 ---
 **Kontinuum Sonne l'Alerte en Île-de-France : Réforme Sanitaire ou Reconfiguration Forcée ?**
@@ -55,4 +55,4 @@ Le *Consortium Africain de Biotechnologies Sociales*, partenaire controversé de
 Ce soir, à 21h, une réunion d’urgence est convoquée à la *Maison des Personnes Augmentées* du 13e. *« Que choisiront-ils ? La réforme ou la rupture ? »* demande une affiche collée sur les grilles de l’hôpital Tarnier. Personne n’a de réponse. Kontinuum, lui, calcule toujours.
 
 ---
-**Voir aussi** : [[consortium_africain_de_biotechnologies_sociales_policy_reform]] · [[directive_kontinuum_policy_reform]] · [[fonds_mondial_de_stabilisation_biotechnologique_policy_reform]] · [[aria_nexus_en_alerte_rouge_la_regulation_mondiale_des_ressources_a_l_epreuve_des]] · [[desaugmentes_a_geneve_nexus_les_familles_qui_refusent_l_avenir_algorithmique]] · [[le_cabs_amv_dans_l_il_du_cyclone_quand_les_semences_liberees_se_rebellent]]
+**Voir aussi** : [[consortium_africain_de_biotechnologies_sociales_policy_reform]] · [[directive_kontinuum_policy_reform]] · [[fonds_mondial_de_stabilisation_biotechnologique_policy_reform]] · [[aria_nexus_en_alerte_rouge_la_regulation_mondiale_des_ressources_a_l_epreuve_des]] · [[desaugmentes_a_geneve_nexus_les_familles_qui_refusent_l_avenir_algorithmique]] · [[le_cabs_amv_dans_l_oeil_du_cyclone_quand_les_semences_liberees_se_rebellent]]

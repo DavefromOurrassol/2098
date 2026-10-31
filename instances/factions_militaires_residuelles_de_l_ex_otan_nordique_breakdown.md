@@ -37,7 +37,7 @@ zone_systemique:
 alliances:
 - armada_logistique_nordique_breakdown
 - coalition_pacifique_nord_breakdown
-- enclaves_industrielles_de_bergen_troms_breakdown
+- enclaves_industrielles_de_bergen_tromso_breakdown
 - milices_contractuelles_des_anciens_etats_membres_breakdown
 - seigneuries_logistiques_armees_breakdown
 oppositions:
@@ -122,7 +122,7 @@ Leur cohérence interne est constamment menacée par les rivalités entre factio
 **Alliés :**
 - [[armada_logistique_nordique_breakdown]]
 - [[coalition_pacifique_nord_breakdown]]
-- [[enclaves_industrielles_de_bergen_troms_breakdown]]
+- [[enclaves_industrielles_de_bergen_tromso_breakdown]]
 - [[milices_contractuelles_des_anciens_etats_membres_breakdown]]
 - [[seigneuries_logistiques_armees_breakdown]]
 **Opposants :**

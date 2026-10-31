@@ -38,7 +38,7 @@ zone_systemique:
 
 alliances:
     - federation_communs_territoriaux_breakdown
-    - communautes_rurales_autogerees_des_n_uds_de_survie_breakdown
+    - communautes_rurales_autogerees_des_noeuds_de_survie_breakdown
     - massif_central_cicatrices_vertes_breakdown
     - occitanie_racines_meres_breakdown
     - enclaves_agro_communautaires_autonomes_breakdown
@@ -99,7 +99,7 @@ Administration collective des parcelles arables par rotation délibérative, ges
 - [[climat_environnement_global]]
 
 ## Relations
-**Alliés** : [[federation_communs_territoriaux_breakdown]], [[communautes_rurales_autogerees_des_n_uds_de_survie_breakdown]], [[massif_central_cicatrices_vertes_breakdown]], [[occitanie_racines_meres_breakdown]], [[enclaves_agro_communautaires_autonomes_breakdown]], [[milices_agro_defensives_locales_breakdown]], [[mouvement_racines_vivantes_breakdown]], [[communautes_paysannes_refugiees_breakdown]]
+**Alliés** : [[federation_communs_territoriaux_breakdown]], [[communautes_rurales_autogerees_des_noeuds_de_survie_breakdown]], [[massif_central_cicatrices_vertes_breakdown]], [[occitanie_racines_meres_breakdown]], [[enclaves_agro_communautaires_autonomes_breakdown]], [[milices_agro_defensives_locales_breakdown]], [[mouvement_racines_vivantes_breakdown]], [[communautes_paysannes_refugiees_breakdown]]
 **Opposants** : [[seigneuries_foncieres_opportunistes_breakdown]], [[consortiums_logistiques_agro_corporatifs_breakdown]], [[milices_d_accaparement_hydrique_breakdown]], [[seigneurs_de_guerre_agro_territoriaux_breakdown]], [[factions_para_etatiques_hydriques_breakdown]], [[gouvernements_regionaux_residuels_reterritorialisants_breakdown]]
 
 ## Description journalistique

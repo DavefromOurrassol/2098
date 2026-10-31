@@ -66,7 +66,7 @@ oppositions:
 - corridors_gris_asie_centrale_fortress_world
 - gelecek_meclisi_fortress_world
 - institutions_multilaterales_residuelles_fortress_world
-- les_gardiens_des_n_uds_hybrides_fortress_world
+- les_gardiens_des_noeuds_hybrides_fortress_world
 - les_veilleurs_des_nappes_phreatiques_fortress_world
 - les_veilleurs_du_fleuve_fortress_world
 - marches_gris_casablanca_fortress_world
@@ -181,7 +181,7 @@ Ces administrations incarnent la contradiction fondamentale du monde forteresse 
 - [[corridors_gris_asie_centrale_fortress_world]]
 - [[gelecek_meclisi_fortress_world]]
 - [[institutions_multilaterales_residuelles_fortress_world]]
-- [[les_gardiens_des_n_uds_hybrides_fortress_world]]
+- [[les_gardiens_des_noeuds_hybrides_fortress_world]]
 - [[les_veilleurs_des_nappes_phreatiques_fortress_world]]
 - [[les_veilleurs_du_fleuve_fortress_world]]
 - [[marches_gris_casablanca_fortress_world]]

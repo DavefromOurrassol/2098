@@ -50,7 +50,7 @@ oppositions:
 - assemblee_territoires_breakdown
 - blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown
 - brigades_medicales_itinerantes_breakdown
-- communautes_rurales_autogerees_des_n_uds_de_survie_breakdown
+- communautes_rurales_autogerees_des_noeuds_de_survie_breakdown
 - consortium_amazonia_viva_breakdown
 - corridor_lithium_bouches_breakdown
 - delta_mekong_racines_breakdown
@@ -153,7 +153,7 @@ La contradiction centrale qui ronge ces seigneurs est celle de toute féodalité
 - [[assemblee_territoires_breakdown]]
 - [[blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown]]
 - [[brigades_medicales_itinerantes_breakdown]]
-- [[communautes_rurales_autogerees_des_n_uds_de_survie_breakdown]]
+- [[communautes_rurales_autogerees_des_noeuds_de_survie_breakdown]]
 - [[consortium_amazonia_viva_breakdown]]
 - [[corridor_lithium_bouches_breakdown]]
 - [[delta_mekong_racines_breakdown]]

@@ -15,7 +15,7 @@ variables_pilotes:
   - organisation_territoires
   - climat_environnement_global
   - systemes_productifs_travail
-slug: 23_novembre_2098_troms_n_ud_nordark
+slug: 23_novembre_2098_tromso_noeud_nordark
 chapo: "En 2098, le Konsortiet Nordark exploite sans relâche les terres rares du pergélisol arctique, accélérant sa fonte et libérant des quantités alarmantes de méthane. Entre convois logistiques, scientifiques clandestins et milices, le fragile équilibre de l’Arctique se fissure sous les bulldozers."
 tags:
   - pergélisol

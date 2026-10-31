@@ -57,7 +57,7 @@ alliances:
 - oracle_des_seuils_policy_reform
 - rede_paulista_de_distribuicao_algoritmica_policy_reform
 - reseau_des_auditeurs_algorithmiques_independants_raai_policy_reform
-- reseau_des_metropoles_n_uds_policy_reform
+- reseau_des_metropoles_noeuds_policy_reform
 - reseau_des_regulateurs_numeriques_souverains_rrns_policy_reform
 - tribunal_algorithmique_de_bruxelles_policy_reform
 oppositions:
@@ -156,7 +156,7 @@ La tension centrale de l'ACRA repose sur le paradoxe de sa légitimité : plus s
 - [[oracle_des_seuils_policy_reform]]
 - [[rede_paulista_de_distribuicao_algoritmica_policy_reform]]
 - [[reseau_des_auditeurs_algorithmiques_independants_raai_policy_reform]]
-- [[reseau_des_metropoles_n_uds_policy_reform]]
+- [[reseau_des_metropoles_noeuds_policy_reform]]
 - [[reseau_des_regulateurs_numeriques_souverains_rrns_policy_reform]]
 - [[tribunal_algorithmique_de_bruxelles_policy_reform]]
 **Opposants :**

@@ -37,7 +37,7 @@ zone_systemique:
 
 alliances:
 - communautes_paysannes_refugiees_breakdown
-- communautes_rurales_autogerees_des_n_uds_de_survie_breakdown
+- communautes_rurales_autogerees_des_noeuds_de_survie_breakdown
 - enclaves_agro_communautaires_autonomes_breakdown
 - federation_communs_territoriaux_breakdown
 - milices_agro_defensives_locales_breakdown
@@ -108,7 +108,7 @@ La tension centrale est celle du commun menacé : les communautés ont bâti des
 ## Relations
 **Alliés :**
 - [[communautes_paysannes_refugiees_breakdown]]
-- [[communautes_rurales_autogerees_des_n_uds_de_survie_breakdown]]
+- [[communautes_rurales_autogerees_des_noeuds_de_survie_breakdown]]
 - [[enclaves_agro_communautaires_autonomes_breakdown]]
 - [[federation_communs_territoriaux_breakdown]]
 - [[milices_agro_defensives_locales_breakdown]]

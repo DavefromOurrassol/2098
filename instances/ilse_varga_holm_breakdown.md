@@ -37,7 +37,7 @@ alliances:
     - guilde_des_techniciens_nomades_breakdown
     - reseau_de_recuperation_industrielle_illicite_breakdown
     - collectifs_de_reparation_energetique_breakdown
-    - communautes_rurales_autogerees_des_n_uds_de_survie_breakdown
+    - communautes_rurales_autogerees_des_noeuds_de_survie_breakdown
 
 oppositions:
     - seigneurs_de_guerre_agro_territoriaux_breakdown
@@ -102,7 +102,7 @@ Elle supervise des réseaux de techniciens nomades chargés de réparer les infr
 - [[geopolitique_conflits]]
 
 ## Relations
-**Alliés** : [[guilde_des_techniciens_nomades_breakdown]], [[reseau_de_recuperation_industrielle_illicite_breakdown]], [[collectifs_de_reparation_energetique_breakdown]], [[communautes_rurales_autogerees_des_n_uds_de_survie_breakdown]]
+**Alliés** : [[guilde_des_techniciens_nomades_breakdown]], [[reseau_de_recuperation_industrielle_illicite_breakdown]], [[collectifs_de_reparation_energetique_breakdown]], [[communautes_rurales_autogerees_des_noeuds_de_survie_breakdown]]
 **Opposants** : [[seigneurs_de_guerre_agro_territoriaux_breakdown]], [[milices_d_accaparement_hydrique_breakdown]], [[factions_para_etatiques_hydriques_breakdown]]
 
 ## Description journalistique

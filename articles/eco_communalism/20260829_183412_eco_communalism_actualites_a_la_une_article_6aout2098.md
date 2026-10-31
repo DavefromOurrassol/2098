@@ -11,7 +11,7 @@ model: mistral/mistral-large-latest
 ligne_editoriale: pro_pouvoir
 scenario_state: fragile
 tension_level: 3
-slug: les_n_uds_du_silence_quand_la_trame_mnemos_se_dechire_sur_les_rives_du_chelif
+slug: les_noeuds_du_silence_quand_la_trame_mnemos_se_dechire_sur_les_rives_du_chelif
 chapo: "La Trame Mnemos, épine dorsale des savoirs éco-communalistes, se déchire sur les rives du Chelif : des nœuds locaux verrouillent leurs archives, refusant de partager semences et techniques d’irrigation avec les communes voisines, accusées de pomper sans limite l’aquifère commun. Entre souveraineté des données et survie collective, le Meclis des Futurs Fragmentés tente une médiation de la dernière chance."
 tags:
   - souveraineté des données

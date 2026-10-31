@@ -43,7 +43,7 @@ entites_citees:
 articles_lies:
   - les_archives_ne_mentent_plus_elles_trahissent
   - la_dette_avance_en_credits_chuteurs
-  - 23_novembre_2098_troms_n_ud_nordark
+  - 23_novembre_2098_tromso_noeud_nordark
 
 ---
 **« Mnemos nous ment ? L’Ordre Zonal face à l’effondrement des récits partagés »**
@@ -105,4 +105,4 @@ Mais une chose est sûre : **nous mentons à Mnemos**.
 - *Corridors arctiques et flux de données corrompues (Northern Logistics Route vs. Konsortiet Nordark)*
 
 ---
-**Voir aussi** : [[arctique_nordark_breakdown]] · [[armada_logistique_nordique_breakdown]] · [[bureau_des_territoires_residuels_breakdown]] · [[cooperative_terrafond_breakdown]] · [[directive_kontinuum_breakdown]] · [[factions_propagandistes_des_archives_breakdown]] · [[lagos_interieur_mnemos_breakdown]] · [[noeud_mnemos_pannonie_breakdown]] · [[seigneuries_logistiques_armees_breakdown]] · [[les_archives_ne_mentent_plus_elles_trahissent]] · [[la_dette_avance_en_credits_chuteurs]] · [[23_novembre_2098_troms_n_ud_nordark]]
+**Voir aussi** : [[arctique_nordark_breakdown]] · [[armada_logistique_nordique_breakdown]] · [[bureau_des_territoires_residuels_breakdown]] · [[cooperative_terrafond_breakdown]] · [[directive_kontinuum_breakdown]] · [[factions_propagandistes_des_archives_breakdown]] · [[lagos_interieur_mnemos_breakdown]] · [[noeud_mnemos_pannonie_breakdown]] · [[seigneuries_logistiques_armees_breakdown]] · [[les_archives_ne_mentent_plus_elles_trahissent]] · [[la_dette_avance_en_credits_chuteurs]] · [[23_novembre_2098_tromso_noeud_nordark]]

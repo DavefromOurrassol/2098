@@ -42,7 +42,7 @@ alliances:
 - arctic_passage_authority_breakdown
 - consortiums_energetiques_samoiedes_du_yamal_breakdown
 - district_mourmansk_residuel_breakdown
-- enclaves_industrielles_de_bergen_troms_breakdown
+- enclaves_industrielles_de_bergen_tromso_breakdown
 - factions_militaires_residuelles_de_l_ex_otan_nordique_breakdown
 - kalaallit_nunaat_sovereign_fund_breakdown
 - noeud_nordark_tromso_breakdown
@@ -111,7 +111,7 @@ Nordark est au bord d'une implosion interne : les factions militaires intégrée
 - [[arctic_passage_authority_breakdown]]
 - [[consortiums_energetiques_samoiedes_du_yamal_breakdown]]
 - [[district_mourmansk_residuel_breakdown]]
-- [[enclaves_industrielles_de_bergen_troms_breakdown]]
+- [[enclaves_industrielles_de_bergen_tromso_breakdown]]
 - [[factions_militaires_residuelles_de_l_ex_otan_nordique_breakdown]]
 - [[kalaallit_nunaat_sovereign_fund_breakdown]]
 - [[noeud_nordark_tromso_breakdown]]

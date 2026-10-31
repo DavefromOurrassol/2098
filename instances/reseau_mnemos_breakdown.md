@@ -37,7 +37,7 @@ zone_systemique:
 alliances:
 - bureau_des_territoires_residuels_breakdown
 - collectifs_de_gardiens_archivistes_itinerants_breakdown
-- communautes_rurales_autogerees_des_n_uds_de_survie_breakdown
+- communautes_rurales_autogerees_des_noeuds_de_survie_breakdown
 - lagos_interieur_mnemos_breakdown
 - meridian_assembly_breakdown
 - noeud_mnemos_pannonie_breakdown
@@ -105,7 +105,7 @@ La question centrale est de savoir si les Fragments peuvent un jour se resynchro
 **Alliés :**
 - [[bureau_des_territoires_residuels_breakdown]]
 - [[collectifs_de_gardiens_archivistes_itinerants_breakdown]]
-- [[communautes_rurales_autogerees_des_n_uds_de_survie_breakdown]]
+- [[communautes_rurales_autogerees_des_noeuds_de_survie_breakdown]]
 - [[lagos_interieur_mnemos_breakdown]]
 - [[meridian_assembly_breakdown]]
 - [[noeud_mnemos_pannonie_breakdown]]

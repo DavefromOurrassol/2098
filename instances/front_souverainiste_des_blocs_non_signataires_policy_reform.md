@@ -90,7 +90,7 @@ oppositions:
 - pacifique_sud_resilience_network_policy_reform
 - reseau_des_agences_sanitaires_regionales_policy_reform
 - reseau_des_auditeurs_algorithmiques_independants_raai_policy_reform
-- reseau_des_metropoles_n_uds_policy_reform
+- reseau_des_metropoles_noeuds_policy_reform
 - reseau_des_regulateurs_numeriques_souverains_rrns_policy_reform
 - reseaux_academiques_prospectivistes_du_pacte_de_geneve_2081_policy_reform
 - reseaux_de_capteurs_ia_climatiques_deployes_par_les_etats_membres_policy_reform
@@ -223,7 +223,7 @@ La contradiction fondamentale du Front réside dans son hétérogénéité const
 - [[pacifique_sud_resilience_network_policy_reform]]
 - [[reseau_des_agences_sanitaires_regionales_policy_reform]]
 - [[reseau_des_auditeurs_algorithmiques_independants_raai_policy_reform]]
-- [[reseau_des_metropoles_n_uds_policy_reform]]
+- [[reseau_des_metropoles_noeuds_policy_reform]]
 - [[reseau_des_regulateurs_numeriques_souverains_rrns_policy_reform]]
 - [[reseaux_academiques_prospectivistes_du_pacte_de_geneve_2081_policy_reform]]
 - [[reseaux_de_capteurs_ia_climatiques_deployes_par_les_etats_membres_policy_reform]]

@@ -47,7 +47,7 @@ alliances:
 - great_lakes_autonomous_compact_policy_reform
 - kalaallit_nunaat_sovereign_fund_policy_reform
 - pacifique_sud_resilience_network_policy_reform
-- reseau_des_metropoles_n_uds_policy_reform
+- reseau_des_metropoles_noeuds_policy_reform
 - trame_bioclimatique_policy_reform
 oppositions:
 - coalition_des_operateurs_energetiques_prives_anti_quotas_policy_reform
@@ -143,7 +143,7 @@ Le Consortium incarne une contradiction fondamentale : prôner l'autonomie terri
 - [[great_lakes_autonomous_compact_policy_reform]]
 - [[kalaallit_nunaat_sovereign_fund_policy_reform]]
 - [[pacifique_sud_resilience_network_policy_reform]]
-- [[reseau_des_metropoles_n_uds_policy_reform]]
+- [[reseau_des_metropoles_noeuds_policy_reform]]
 - [[trame_bioclimatique_policy_reform]]
 **Opposants :**
 - [[coalition_des_operateurs_energetiques_prives_anti_quotas_policy_reform]]

@@ -48,7 +48,7 @@ alliances:
 - collectifs_de_hackers_archivistes_des_interstices_reseaux_breakdown
 - communautes_religieuses_des_relais_physiques_breakdown
 - conseil_regulation_ressources_breakdown
-- enclaves_industrielles_de_bergen_troms_breakdown
+- enclaves_industrielles_de_bergen_tromso_breakdown
 - enclaves_technologiques_survivantes_breakdown
 - front_humanitaire_d_urgence_non_affilie_breakdown
 - gelecek_meclisi_breakdown
@@ -148,7 +148,7 @@ La tension fondamentale des Archives est celle de l'archive sans autorité : ell
 - [[collectifs_de_hackers_archivistes_des_interstices_reseaux_breakdown]]
 - [[communautes_religieuses_des_relais_physiques_breakdown]]
 - [[conseil_regulation_ressources_breakdown]]
-- [[enclaves_industrielles_de_bergen_troms_breakdown]]
+- [[enclaves_industrielles_de_bergen_tromso_breakdown]]
 - [[enclaves_technologiques_survivantes_breakdown]]
 - [[front_humanitaire_d_urgence_non_affilie_breakdown]]
 - [[gelecek_meclisi_breakdown]]

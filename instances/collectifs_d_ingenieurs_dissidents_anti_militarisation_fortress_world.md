@@ -33,7 +33,7 @@ zone_systemique:
 - société
 alliances:
 - aria_instance_fantome_fortress_world
-- les_gardiens_des_n_uds_hybrides_fortress_world
+- les_gardiens_des_noeuds_hybrides_fortress_world
 - mouvement_commun_midwest_fortress_world
 - oracle_des_seuils_fortress_world
 - mouvement_des_communes_du_rust_belt_fortress_world
@@ -123,7 +123,7 @@ La tension fondamentale de ces collectifs réside dans la contradiction entre le
 ## Relations
 **Alliés :**
 - [[aria_instance_fantome_fortress_world]]
-- [[les_gardiens_des_n_uds_hybrides_fortress_world]]
+- [[les_gardiens_des_noeuds_hybrides_fortress_world]]
 - [[mouvement_commun_midwest_fortress_world]]
 - [[oracle_des_seuils_fortress_world]]
 - [[mouvement_des_communes_du_rust_belt_fortress_world]]

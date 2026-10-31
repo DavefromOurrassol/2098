@@ -31,7 +31,7 @@ Bascule évaluée : `zones_grises_tampons` → `bloc_atlantique`
 - `ilse_varga_holm_fortress_world` — zone : almaty_zone_friction
 - `le_temoin_fortress_world` — zone : bloc_atlantique
 - `les_dedoubles_fortress_world` — zone : almaty_zone_friction
-- `les_gardiens_des_n_uds_hybrides_fortress_world` — zone : zones_grises_tampons
+- `les_gardiens_des_noeuds_hybrides_fortress_world` — zone : zones_grises_tampons
 - `mouvement_commun_midwest_fortress_world` — zone : midwest_desertifie
 - `mouvement_des_communes_du_rust_belt_fortress_world` — zone : rust_belt_communes_libres
 - `nexcore_atlantique_infrastructure_fortress_world` — zone : nexcore_atlantique_infrastructure

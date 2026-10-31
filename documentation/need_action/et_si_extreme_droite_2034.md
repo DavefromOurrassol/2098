@@ -61,7 +61,7 @@ La vague d'extrême droite entre 2030 et 2038 reconfigure profondément la gouve
 - Kalaallit Nunaat Sovereign Fund — Fonds des Glaces Libérées (`kalaallit_nunaat_sovereign_fund_breakdown`) : dominant → **mature** — Le Groenland, désormais sous souveraineté renforcée du Danemark d'extrême droite, voit son fonds souverain devenir un outil de contrôle géopolitique arctique.
 - Ligue Hanséatique Baltique — Le Sceau du Gotland (`hanse_baltique_breakdown`) : ascendant → **déclinant** — La Ligue Hanséatique, historiquement ouverte, est affaiblie par les fermetures frontalières et les nationalismes baltes.
 - Les Venelles — Corridors Eurasiens Convoyage (`corridors_eurasiens_convoyage_breakdown`) : déclinant → **résiduel** — Les corridors eurasiens, déjà fragiles, sont asphyxiés par les barrières douanières et les milices nationalistes.
-- Enclaves Industrielles de Bergen-Tromsø (`enclaves_industrielles_de_bergen_troms_breakdown`) : émergent → **déclinant** — Les enclaves norvégiennes, privées de coopération internationale, voient leur capacité industrielle décliner.
+- Enclaves Industrielles de Bergen-Tromsø (`enclaves_industrielles_de_bergen_tromso_breakdown`) : émergent → **déclinant** — Les enclaves norvégiennes, privées de coopération internationale, voient leur capacité industrielle décliner.
 
 **Relations**
 - opposition nouvelle : Seoul Collectif Nexcore — Les Grilles de l'Entre-Deux ↔ Konsortiet Nordark — Axes du Grand Nord — Le Collectif NexCore, cible des gouvernements d'extrême droite, entre en conflit avec Nordark pour le contrôle des flux logistiques asiatiques.
@@ -128,8 +128,8 @@ _Carte et conséquences tirées de la lecture IA (un tirage) : relire chaque ét
 - [ ] 12. Les Venelles — Corridors Eurasiens Convoyage (`corridors_eurasiens_convoyage_breakdown`) : déclinant → résiduel
   - à la main : instances/corridors_eurasiens_convoyage_breakdown.md, champ `trajectoire`
   - _Les corridors eurasiens, déjà fragiles, sont asphyxiés par les barrières douanières et les milices nationalistes._
-- [ ] 13. Enclaves Industrielles de Bergen-Tromsø (`enclaves_industrielles_de_bergen_troms_breakdown`) : émergent → déclinant
-  - à la main : instances/enclaves_industrielles_de_bergen_troms_breakdown.md, champ `trajectoire`
+- [ ] 13. Enclaves Industrielles de Bergen-Tromsø (`enclaves_industrielles_de_bergen_tromso_breakdown`) : émergent → déclinant
+  - à la main : instances/enclaves_industrielles_de_bergen_tromso_breakdown.md, champ `trajectoire`
   - _Les enclaves norvégiennes, privées de coopération internationale, voient leur capacité industrielle décliner._
 
 **Relations**

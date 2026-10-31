@@ -31,7 +31,7 @@ entites_citees:
   - grille_aria_policy_reform
   - coalition_des_villes_de_reconversion_policy_reform
   - consortium_technologique_de_planification_territoriale_policy_reform
-  - reseau_des_metropoles_n_uds_policy_reform
+  - reseau_des_metropoles_noeuds_policy_reform
   - gelecek_meclisi_policy_reform
 variables_pilotes:
   - gouvernance_institutions
@@ -55,4 +55,4 @@ Pour ceux qui préfèrent rester dans le cadre légal, les *Points de Résilienc
 ---
 
 ---
-**Voir aussi** : [[consortium_africain_de_biotechnologies_sociales_policy_reform]] · [[grille_aria_policy_reform]] · [[coalition_des_villes_de_reconversion_policy_reform]] · [[consortium_technologique_de_planification_territoriale_policy_reform]] · [[reseau_des_metropoles_n_uds_policy_reform]] · [[gelecek_meclisi_policy_reform]]
+**Voir aussi** : [[consortium_africain_de_biotechnologies_sociales_policy_reform]] · [[grille_aria_policy_reform]] · [[coalition_des_villes_de_reconversion_policy_reform]] · [[consortium_technologique_de_planification_territoriale_policy_reform]] · [[reseau_des_metropoles_noeuds_policy_reform]] · [[gelecek_meclisi_policy_reform]]

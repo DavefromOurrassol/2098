@@ -36,7 +36,7 @@ zone_geographique:
 zone_systemique:
 - société
 alliances:
-- communautes_rurales_autogerees_des_n_uds_de_survie_breakdown
+- communautes_rurales_autogerees_des_noeuds_de_survie_breakdown
 - factions_paramilitaires_locales_neutralisees_breakdown
 - front_humanitaire_d_urgence_non_affilie_breakdown
 - nexus_biosyn_breakdown
@@ -117,7 +117,7 @@ La tension centrale est celle du sauveteur toxique : ces réseaux soignent effec
 
 ## Relations
 **Alliés :**
-- [[communautes_rurales_autogerees_des_n_uds_de_survie_breakdown]]
+- [[communautes_rurales_autogerees_des_noeuds_de_survie_breakdown]]
 - [[factions_paramilitaires_locales_neutralisees_breakdown]]
 - [[front_humanitaire_d_urgence_non_affilie_breakdown]]
 - [[nexus_biosyn_breakdown]]

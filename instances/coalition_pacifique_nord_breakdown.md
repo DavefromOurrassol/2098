@@ -35,7 +35,7 @@ zone_systemique:
 - société
 alliances:
 - consortiums_energetiques_samoiedes_du_yamal_breakdown
-- enclaves_industrielles_de_bergen_troms_breakdown
+- enclaves_industrielles_de_bergen_tromso_breakdown
 - factions_militaires_residuelles_de_l_ex_otan_nordique_breakdown
 - kalaallit_nunaat_sovereign_fund_breakdown
 - ligue_eurasiatique_coalition_pacifique_breakdown
@@ -112,7 +112,7 @@ La contradiction fondamentale de la Coalition réside dans le fait que ses membr
 ## Relations
 **Alliés :**
 - [[consortiums_energetiques_samoiedes_du_yamal_breakdown]]
-- [[enclaves_industrielles_de_bergen_troms_breakdown]]
+- [[enclaves_industrielles_de_bergen_tromso_breakdown]]
 - [[factions_militaires_residuelles_de_l_ex_otan_nordique_breakdown]]
 - [[kalaallit_nunaat_sovereign_fund_breakdown]]
 - [[ligue_eurasiatique_coalition_pacifique_breakdown]]

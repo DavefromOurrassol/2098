@@ -49,7 +49,7 @@ oppositions:
 - blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown
 - coalition_pacifique_nord_breakdown
 - conglometrat_sino_siberien_bohai_transit_breakdown
-- enclaves_industrielles_de_bergen_troms_breakdown
+- enclaves_industrielles_de_bergen_tromso_breakdown
 - factions_etatiques_residuelles_de_souverainete_hydrique_breakdown
 - factions_militaires_residuelles_de_l_ex_otan_nordique_breakdown
 - federation_russe_residuelle_district_de_mourmansk_breakdown
@@ -123,7 +123,7 @@ La question centrale : les représentants autochtones restés dans l'institution
 - [[blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown]]
 - [[coalition_pacifique_nord_breakdown]]
 - [[conglometrat_sino_siberien_bohai_transit_breakdown]]
-- [[enclaves_industrielles_de_bergen_troms_breakdown]]
+- [[enclaves_industrielles_de_bergen_tromso_breakdown]]
 - [[factions_etatiques_residuelles_de_souverainete_hydrique_breakdown]]
 - [[factions_militaires_residuelles_de_l_ex_otan_nordique_breakdown]]
 - [[federation_russe_residuelle_district_de_mourmansk_breakdown]]

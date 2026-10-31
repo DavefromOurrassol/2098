@@ -38,7 +38,7 @@ alliances:
 - alliance_sanitaire_des_populations_exclues_fortress_world
 - coalition_vivant_fortress_world
 - coalitions_des_deplaces_et_apatrides_fortress_world
-- les_gardiens_des_n_uds_hybrides_fortress_world
+- les_gardiens_des_noeuds_hybrides_fortress_world
 - mouvement_commun_midwest_fortress_world
 - reseaux_d_echange_clandestin_inter_zones_fortress_world
 oppositions:
@@ -102,7 +102,7 @@ Les Sentinelles sont tiraillées entre leur ancrage local et la nécessité de s
 - [[alliance_sanitaire_des_populations_exclues_fortress_world]]
 - [[coalition_vivant_fortress_world]]
 - [[coalitions_des_deplaces_et_apatrides_fortress_world]]
-- [[les_gardiens_des_n_uds_hybrides_fortress_world]]
+- [[les_gardiens_des_noeuds_hybrides_fortress_world]]
 - [[mouvement_commun_midwest_fortress_world]]
 - [[reseaux_d_echange_clandestin_inter_zones_fortress_world]]
 **Opposants :**

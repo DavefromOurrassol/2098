@@ -47,7 +47,7 @@ alliances:
 - seigneuries_logistiques_armees_breakdown
 - terminal_kharg_data_haven_breakdown
 oppositions:
-- communautes_rurales_autogerees_des_n_uds_de_survie_breakdown
+- communautes_rurales_autogerees_des_noeuds_de_survie_breakdown
 - cooperative_terrafond_breakdown
 - etats_fragmentes_nationalisant_les_stocks_breakdown
 - factions_paramilitaires_locales_neutralisees_breakdown
@@ -142,7 +142,7 @@ Les Cartels sont condamnés à une contradiction structurelle : leur pouvoir rep
 - [[seigneuries_logistiques_armees_breakdown]]
 - [[terminal_kharg_data_haven_breakdown]]
 **Opposants :**
-- [[communautes_rurales_autogerees_des_n_uds_de_survie_breakdown]]
+- [[communautes_rurales_autogerees_des_noeuds_de_survie_breakdown]]
 - [[cooperative_terrafond_breakdown]]
 - [[etats_fragmentes_nationalisant_les_stocks_breakdown]]
 - [[factions_paramilitaires_locales_neutralisees_breakdown]]

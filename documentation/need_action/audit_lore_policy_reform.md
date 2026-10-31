@@ -51,7 +51,7 @@ Souvent légitime (une organisation transnationale nomme les zones où elle agit
 - `les_hors_prisme_policy_reform` — cite : Conseil de Régulation Numérique de Genève (`conseil_regulation_numerique_geneve`)
 - `mouvement_pour_la_justice_ecologique_communautaire_policy_reform` — cite : La Haye (`la_haye_tribunal`)
 - `reseau_des_agences_sanitaires_regionales_policy_reform` — cite : Genève-Lacustre (`geneve_lacustre`), Nairobi (`nairobi_hub`), Tampere (`tampere`)
-- `reseau_des_metropoles_n_uds_policy_reform` — cite : Genève-Nexus (`geneve_nexus`), La Haye (`la_haye_tribunal`), Nairobi (`nairobi_hub`), Singapour (`singapour_brookings`)
+- `reseau_des_metropoles_noeuds_policy_reform` — cite : Genève-Nexus (`geneve_nexus`), La Haye (`la_haye_tribunal`), Nairobi (`nairobi_hub`), Singapour (`singapour_brookings`)
 - `reseaux_de_capteurs_ia_climatiques_deployes_par_les_etats_membres_policy_reform` — cite : La Haye (`la_haye_tribunal`), Nairobi (`nairobi_hub`)
 - `trame_bioclimatique_policy_reform` — cite : Nairobi (`nairobi_hub`)
 

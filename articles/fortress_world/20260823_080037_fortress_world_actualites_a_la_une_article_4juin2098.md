@@ -31,7 +31,7 @@ entites_citees:
   - centre_controle_orbital_helios_fortress_world
   - nexus_biosyn_fortress_world
   - consortium_helios_fortress_world
-  - les_gardiens_des_n_uds_hybrides_fortress_world
+  - les_gardiens_des_noeuds_hybrides_fortress_world
   - gelecek_meclisi_fortress_world
 variables_pilotes:
   - geopolitique_conflits
@@ -55,4 +55,4 @@ Face à cette impasse, le *Gelecek Meclisi Fragmentaire* a proposé une solution
 Dans l’ombre, les rumeurs d’une intervention militaire se précisent. Des sources au sein d’Helios Bloc Consortium — Division Souveraineté Énergétique (HSE) évoquent un déploiement imminent de « drones de sécurisation orbitale » pour protéger les nœuds critiques. Une escalade qui rappelle les heures sombres de la Guerre des Forteresses du Moyen-Orient (2027), lorsque les corridors pétroliers avaient servi de champ de bataille aux blocs. « Cette fois, ce ne sont pas des pipelines qui brûlent, mais des réseaux entiers », résume un analyste. « Et personne ne sait qui éteindra l’incendie. »
 
 ---
-**Voir aussi** : [[bloc_eurasiatique_occidental_fortress_world]] · [[centre_controle_orbital_helios_fortress_world]] · [[nexus_biosyn_fortress_world]] · [[consortium_helios_fortress_world]] · [[les_gardiens_des_n_uds_hybrides_fortress_world]] · [[gelecek_meclisi_fortress_world]]
+**Voir aussi** : [[bloc_eurasiatique_occidental_fortress_world]] · [[centre_controle_orbital_helios_fortress_world]] · [[nexus_biosyn_fortress_world]] · [[consortium_helios_fortress_world]] · [[les_gardiens_des_noeuds_hybrides_fortress_world]] · [[gelecek_meclisi_fortress_world]]

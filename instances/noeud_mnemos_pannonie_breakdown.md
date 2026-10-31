@@ -37,7 +37,7 @@ zone_systemique:
 alliances:
 - archives_neutres_de_geneve_breakdown
 - collectifs_de_gardiens_archivistes_itinerants_breakdown
-- communautes_rurales_autogerees_des_n_uds_de_survie_breakdown
+- communautes_rurales_autogerees_des_noeuds_de_survie_breakdown
 - communautes_rurales_autonomes_breakdown
 - corridors_eurasiens_convoyage_breakdown
 - federation_communs_territoriaux_breakdown
@@ -102,7 +102,7 @@ La neutralité des Gardiens est leur seul bouclier, mais elle se fissure : une s
 **Alliés :**
 - [[archives_neutres_de_geneve_breakdown]]
 - [[collectifs_de_gardiens_archivistes_itinerants_breakdown]]
-- [[communautes_rurales_autogerees_des_n_uds_de_survie_breakdown]]
+- [[communautes_rurales_autogerees_des_noeuds_de_survie_breakdown]]
 - [[communautes_rurales_autonomes_breakdown]]
 - [[corridors_eurasiens_convoyage_breakdown]]
 - [[federation_communs_territoriaux_breakdown]]

@@ -46,7 +46,7 @@ alliances:
 - consortium_technologique_des_nations_integrees_policy_reform
 - grille_aria_policy_reform
 - reseau_des_auditeurs_algorithmiques_independants_raai_policy_reform
-- reseau_des_metropoles_n_uds_policy_reform
+- reseau_des_metropoles_noeuds_policy_reform
 oppositions:
 - collectifs_citoyens_pour_l_audit_algorithmique_ouvert_policy_reform
 - collectifs_de_gouvernance_communautaire_decentralisee_policy_reform
@@ -115,7 +115,7 @@ La réforme imposée par les instances internationales oblige la RPDA à ouvrir 
 - [[consortium_technologique_des_nations_integrees_policy_reform]]
 - [[grille_aria_policy_reform]]
 - [[reseau_des_auditeurs_algorithmiques_independants_raai_policy_reform]]
-- [[reseau_des_metropoles_n_uds_policy_reform]]
+- [[reseau_des_metropoles_noeuds_policy_reform]]
 **Opposants :**
 - [[collectifs_citoyens_pour_l_audit_algorithmique_ouvert_policy_reform]]
 - [[collectifs_de_gouvernance_communautaire_decentralisee_policy_reform]]

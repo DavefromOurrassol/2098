@@ -1,0 +1,101 @@
+---
+name: Les Racines de l'Aube
+type: instance
+slug: coalition_vivant_breakdown
+entite: coalition_vivant
+scenario: breakdown
+localisation:
+  zone: massif_central_cicatrices_vertes
+  lieu: Cicatrices Vertes du Massif Central
+  type_lieu: region
+
+type_dans_scenario: hybride
+
+role_dans_scenario: >
+  La Coalition du Vivant, dans le scénario *breakdown*, s'est fragmentée en une myriade de cellules autonomes opérant sous le nom *Les Racines de l'Aube*. Ce réseau clandestin et décentralisé agit comme un contre-pouvoir écologique radical, défendant les écosystèmes résiduels et les droits du vivant non-humain dans un monde où la nature est soit exploitée comme ressource, soit abandonnée comme zone de non-droit. Leur rôle est à la fois militant, juridique et insurrectionnel : ils documentent les crimes écologiques, sabotent les infrastructures extractivistes, et tentent de faire reconnaître la personnalité juridique des écosystèmes devant les tribunaux locaux ou les assemblées communautaires.
+
+responsabilites: >
+  1) Cartographier et protéger les dernières zones de biodiversité résiduelle, souvent en coordination avec les *Collectifs de Gardiens-Archivistes Itinérants* ou les *Communautés Rurales Autogérées des Nœuds de Survie*. 2) Saboter ou infiltrer les *Enclaves Corporatives Fortifiées* et les *Milices Extractivistes du Bassin du Congo* pour perturber l'exploitation des ressources. 3) Plaider pour l'adoption de chartes locales reconnaissant les droits des fleuves, forêts et espèces menacées, en s'appuyant sur les *Archives Neutres de Genève* pour légitimer leurs arguments.
+
+impact_local: 4
+impact_systemique_global: 2
+
+variables_influencees:
+    - climat_environnement_global
+    - gouvernance_institutions
+    - organisation_territoires
+
+zone_geographique:
+    - régionale
+    - nationale
+
+zone_systemique:
+    - gouvernance
+    - société
+    - infrastructure
+
+alliances:
+    - collectifs_de_gardiens_archivistes_itinerants_breakdown
+    - communautes_rurales_autogerees_des_n_uds_de_survie_breakdown
+    - archives_neutres_de_geneve_breakdown
+    - mouvement_racines_vivantes_breakdown
+    - front_de_resistance_aux_peages_sur_les_ressources_breakdown
+
+oppositions:
+    - enclaves_corporatives_fortifiees_breakdown
+    - milices_extractivistes_du_bassin_du_congo_breakdown
+    - seigneuries_logistiques_armees_breakdown
+    - consortium_energetique_oural_caspien_breakdown
+    - corridor_lithium_bouches_breakdown
+
+type_relation_dominante: conflit
+
+annee_debut: 2053
+annee_fin: 
+
+trajectoire: résiduel
+est_clandestin: true
+generation: post-effondrement
+
+injection:
+  type: canonique
+  annee_injection:
+  contexte_injection:
+  impact_sur_variables:
+  propagation:
+    via_matrice: false
+
+description_journalistique: >
+  Dans les ruines des institutions écologiques d'avant l'effondrement, *Les Racines de l'Aube* émergent comme les derniers gardiens d'une idée radicale : et si la nature avait des droits ? Depuis leur sanctuaire mobile dans les *Cicatrices Vertes* du Massif Central ou les *Nœuds de Survie* du Sahel, ces militants-archivistes-saboteurs traquent les seigneurs de guerre agro-territoriaux et les enclaves corporatives qui pillent les derniers gisements de lithium ou les forêts primaires. Leur arme ? Une combinaison de drones low-tech, de chartes juridiques locales inspirées des *Archives Neutres de Genève*, et de sabotages ciblés contre les convois logistiques. Leur rêve ? Que le fleuve Congo, les mangroves de Lagos ou les steppes du Yamal soient un jour reconnus comme des sujets de droit, au même titre qu'une entreprise ou un État. Leur réalité ? Une guerre de l'ombre contre un monde qui a choisi l'oubli.
+
+signes_distinctifs: >
+  Leur emblème, une racine stylisée en forme de poing levé, est graffité sur les murs des zones qu'ils protègent. Leurs membres portent souvent des masques fabriqués à partir de matériaux recyclés (batteries usagées, tissus de parachutes de drones), symbolisant leur lien avec les déchets du monde ancien. Leurs communications utilisent un langage codé inspiré des noms scientifiques des espèces menacées, et leurs actions sont signées par des « actes de naissance » pour les écosystèmes qu'ils défendent, rédigés dans un style juridique hybride mêlant droit international et traditions locales.
+
+tensions_narratives: >
+  1) **Fragmentation vs. Unité** : Les *Racines de l'Aube* sont-elles condamnées à rester un réseau de cellules locales, ou peuvent-elles se fédérer en une force politique capable de renverser les *Seigneuries Foncières Opportunistes* ? 2) **Violence vs. Légitimité** : Leurs sabotages les rapprochent des *Saboteurs des Corridors de Transit*, mais risquent de les aliéner des *Brigades Médicales Itinérantes* ou des *Communautés Paysannes Réfugiées*, qui dépendent des mêmes infrastructures pour survivre. 3) **Mémoire vs. Oubli** : En s'appuyant sur les *Archives Neutres de Genève*, ils préservent la mémoire des écosystèmes disparus, mais cette mémoire peut-elle encore inspirer l'action, ou n'est-elle qu'un fardeau dans un monde où la survie immédiate prime ? 4) **Droit vs. Force** : Leur stratégie juridique (reconnaissance des droits de la nature) se heurte à l'effondrement des institutions. Faut-il continuer à plaider devant des tribunaux fantômes, ou basculer vers une logique de « justice écologique populaire » ?
+
+date_creation: 2026-08-11
+---
+
+# Les Racines de l'Aube
+
+## Rôle dans [[breakdown]]
+La Coalition du Vivant, dans le scénario *breakdown*, s'est fragmentée en une myriade de cellules autonomes opérant sous le nom *Les Racines de l'Aube*. Ce réseau clandestin et décentralisé agit comme un contre-pouvoir écologique radical, défendant les écosystèmes résiduels et les droits du vivant non-humain dans un monde où la nature est soit exploitée comme ressource, soit abandonnée comme zone de non-droit. Leur rôle est à la fois militant, juridique et insurrectionnel : ils documentent les crimes écologiques, sabotent les infrastructures extractivistes, et tentent de faire reconnaître la personnalité juridique des écosystèmes devant les tribunaux locaux ou les assemblées communautaires.
+
+## Responsabilités
+1) Cartographier et protéger les dernières zones de biodiversité résiduelle, souvent en coordination avec les *Collectifs de Gardiens-Archivistes Itinérants* ou les *Communautés Rurales Autogérées des Nœuds de Survie*. 2) Saboter ou infiltrer les *Enclaves Corporatives Fortifiées* et les *Milices Extractivistes du Bassin du Congo* pour perturber l'exploitation des ressources. 3) Plaider pour l'adoption de chartes locales reconnaissant les droits des fleuves, forêts et espèces menacées, en s'appuyant sur les *Archives Neutres de Genève* pour légitimer leurs arguments.
+
+## Variables influencées
+- [[climat_environnement_global]]
+- [[gouvernance_institutions]]
+- [[organisation_territoires]]
+
+## Relations
+**Alliés** : [[collectifs_de_gardiens_archivistes_itinerants_breakdown]], [[communautes_rurales_autogerees_des_n_uds_de_survie_breakdown]], [[archives_neutres_de_geneve_breakdown]], [[mouvement_racines_vivantes_breakdown]], [[front_de_resistance_aux_peages_sur_les_ressources_breakdown]]
+**Opposants** : [[enclaves_corporatives_fortifiees_breakdown]], [[milices_extractivistes_du_bassin_du_congo_breakdown]], [[seigneuries_logistiques_armees_breakdown]], [[consortium_energetique_oural_caspien_breakdown]], [[corridor_lithium_bouches_breakdown]]
+
+## Description journalistique
+Dans les ruines des institutions écologiques d'avant l'effondrement, *Les Racines de l'Aube* émergent comme les derniers gardiens d'une idée radicale : et si la nature avait des droits ? Depuis leur sanctuaire mobile dans les *Cicatrices Vertes* du Massif Central ou les *Nœuds de Survie* du Sahel, ces militants-archivistes-saboteurs traquent les seigneurs de guerre agro-territoriaux et les enclaves corporatives qui pillent les derniers gisements de lithium ou les forêts primaires. Leur arme ? Une combinaison de drones low-tech, de chartes juridiques locales inspirées des *Archives Neutres de Genève*, et de sabotages ciblés contre les convois logistiques. Leur rêve ? Que le fleuve Congo, les mangroves de Lagos ou les steppes du Yamal soient un jour reconnus comme des sujets de droit, au même titre qu'une entreprise ou un État. Leur réalité ? Une guerre de l'ombre contre un monde qui a choisi l'oubli.
+
+## Tensions narratives
+1) **Fragmentation vs. Unité** : Les *Racines de l'Aube* sont-elles condamnées à rester un réseau de cellules locales, ou peuvent-elles se fédérer en une force politique capable de renverser les *Seigneuries Foncières Opportunistes* ? 2) **Violence vs. Légitimité** : Leurs sabotages les rapprochent des *Saboteurs des Corridors de Transit*, mais risquent de les aliéner des *Brigades Médicales Itinérantes* ou des *Communautés Paysannes Réfugiées*, qui dépendent des mêmes infrastructures pour survivre. 3) **Mémoire vs. Oubli** : En s'appuyant sur les *Archives Neutres de Genève*, ils préservent la mémoire des écosystèmes disparus, mais cette mémoire peut-elle encore inspirer l'action, ou n'est-elle qu'un fardeau dans un monde où la survie immédiate prime ? 4) **Droit vs. Force** : Leur stratégie juridique (reconnaissance des droits de la nature) se heurte à l'effondrement des institutions. Faut-il continuer à plaider devant des tribunaux fantômes, ou basculer vers une logique de « justice écologique populaire » ?

@@ -41,7 +41,7 @@ alliances:
 - brigades_medicales_itinerantes_breakdown
 - collectifs_de_sante_communautaire_autogeree_breakdown
 - communautes_paysannes_refugiees_breakdown
-- communautes_rurales_autogerees_des_n_uds_de_survie_breakdown
+- communautes_rurales_autogerees_des_noeuds_de_survie_breakdown
 - mouvement_des_communes_du_rust_belt_breakdown
 - consortium_des_pecheries_autonomes_du_grand_nord_breakdown
 - elias_mork_breakdown
@@ -138,7 +138,7 @@ Leur neutralité affichée est constamment mise à l'épreuve : les milices terr
 - [[brigades_medicales_itinerantes_breakdown]]
 - [[collectifs_de_sante_communautaire_autogeree_breakdown]]
 - [[communautes_paysannes_refugiees_breakdown]]
-- [[communautes_rurales_autogerees_des_n_uds_de_survie_breakdown]]
+- [[communautes_rurales_autogerees_des_noeuds_de_survie_breakdown]]
 - [[mouvement_des_communes_du_rust_belt_breakdown]]
 - [[consortium_des_pecheries_autonomes_du_grand_nord_breakdown]]
 - [[elias_mork_breakdown]]

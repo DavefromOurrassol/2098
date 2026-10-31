@@ -52,7 +52,7 @@ alliances:
 - seigneuries_logistiques_armees_breakdown
 oppositions:
 - collectif_hackers_decroissance_infrastructure_breakdown
-- communautes_rurales_autogerees_des_n_uds_de_survie_breakdown
+- communautes_rurales_autogerees_des_noeuds_de_survie_breakdown
 - front_de_resistance_aux_peages_sur_les_ressources_breakdown
 - milices_agro_defensives_locales_breakdown
 - reseau_logistique_criminel_concurrent_breakdown
@@ -138,7 +138,7 @@ La contradiction fondamentale de ces milices réside dans leur double nature : i
 - [[seigneuries_logistiques_armees_breakdown]]
 **Opposants :**
 - [[collectif_hackers_decroissance_infrastructure_breakdown]]
-- [[communautes_rurales_autogerees_des_n_uds_de_survie_breakdown]]
+- [[communautes_rurales_autogerees_des_noeuds_de_survie_breakdown]]
 - [[front_de_resistance_aux_peages_sur_les_ressources_breakdown]]
 - [[milices_agro_defensives_locales_breakdown]]
 - [[reseau_logistique_criminel_concurrent_breakdown]]

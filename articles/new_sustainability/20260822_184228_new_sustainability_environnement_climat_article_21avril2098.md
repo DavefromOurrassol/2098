@@ -11,7 +11,7 @@ model: mistral/mistral-large-latest
 ligne_editoriale: pro_pouvoir
 scenario_state: stable
 tension_level: 2
-slug: les_glaciers_mentent_les_algorithmes_ecoutent_geneve_au_c_ur_de_la_bataille_pour
+slug: les_glaciers_mentent_les_algorithmes_ecoutent_geneve_au_coeur_de_la_bataille_pou
 chapo: "Le Conseil Mondial de la Régénération Écosystémique (CMRE) publie un rapport choc : 42 % des projets de régénération échouent à cause du rejet des populations locales. Genève, siège des institutions technocratiques, se retrouve au cœur d’une bataille où se jouent l’avenir des écosystèmes et la souveraineté des territoires."
 tags:
   - résistance écologique

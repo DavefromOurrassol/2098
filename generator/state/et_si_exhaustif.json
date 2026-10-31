@@ -1557,7 +1557,7 @@
      ]
     },
     {
-     "slug": "les_gardiens_des_n_uds_hybrides_fortress_world",
+     "slug": "les_gardiens_des_noeuds_hybrides_fortress_world",
      "changements": [
       {
        "type": "trajectoire",
@@ -4285,7 +4285,7 @@
      ]
     },
     {
-     "slug": "reseau_des_metropoles_n_uds_policy_reform",
+     "slug": "reseau_des_metropoles_noeuds_policy_reform",
      "changements": [
       {
        "type": "trajectoire",
@@ -5343,7 +5343,7 @@
      ]
     },
     {
-     "slug": "reseau_des_metropoles_n_uds_policy_reform",
+     "slug": "reseau_des_metropoles_noeuds_policy_reform",
      "changements": []
     },
     {
@@ -5908,7 +5908,7 @@
      ]
     },
     {
-     "slug": "communautes_rurales_autogerees_des_n_uds_de_survie_breakdown",
+     "slug": "communautes_rurales_autogerees_des_noeuds_de_survie_breakdown",
      "changements": [
       {
        "type": "trajectoire",
@@ -6446,7 +6446,7 @@
      ]
     },
     {
-     "slug": "enclaves_industrielles_de_bergen_troms_breakdown",
+     "slug": "enclaves_industrielles_de_bergen_tromso_breakdown",
      "changements": [
       {
        "type": "trajectoire",
@@ -14957,7 +14957,7 @@
   "brut": {
    "fiches": [
     {
-     "slug": "communautes_rurales_autogerees_des_n_uds_de_survie_breakdown",
+     "slug": "communautes_rurales_autogerees_des_noeuds_de_survie_breakdown",
      "changements": []
     },
     {
@@ -15164,7 +15164,7 @@
      "changements": []
     },
     {
-     "slug": "enclaves_industrielles_de_bergen_troms_breakdown",
+     "slug": "enclaves_industrielles_de_bergen_tromso_breakdown",
      "changements": [
       {
        "type": "relation",
@@ -31029,7 +31029,7 @@
      ]
     },
     {
-     "slug": "communautes_rurales_autogerees_des_n_uds_de_survie_breakdown",
+     "slug": "communautes_rurales_autogerees_des_noeuds_de_survie_breakdown",
      "changements": []
     }
    ]
@@ -31291,7 +31291,7 @@
      "changements": []
     },
     {
-     "slug": "enclaves_industrielles_de_bergen_troms_breakdown",
+     "slug": "enclaves_industrielles_de_bergen_tromso_breakdown",
      "changements": []
     },
     {

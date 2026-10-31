@@ -3143,7 +3143,7 @@
      "raison": "Les corridors eurasiens, déjà fragiles, sont asphyxiés par les barrières douanières et les milices nationalistes."
     },
     {
-     "instance": "enclaves_industrielles_de_bergen_troms_breakdown",
+     "instance": "enclaves_industrielles_de_bergen_tromso_breakdown",
      "apres": "declinant",
      "raison": "Les enclaves norvégiennes, privées de coopération internationale, voient leur capacité industrielle décliner."
     }
@@ -3994,7 +3994,7 @@
     },
     {
      "a": "armada_logistique_nordique_breakdown",
-     "b": "enclaves_industrielles_de_bergen_troms_breakdown",
+     "b": "enclaves_industrielles_de_bergen_tromso_breakdown",
      "type": "opposition",
      "action": "nouvelle",
      "raison": "L'Armada Nordique et les enclaves industrielles de Bergen-Tromsø se disputent le contrôle des ports arctiques, les premières cherchant à monopoliser les flux, les secondes à préserver leur autonomie."

@@ -38,7 +38,7 @@ zone_systemique:
 
 alliances:
 - brigades_medicales_itinerantes_breakdown
-- communautes_rurales_autogerees_des_n_uds_de_survie_breakdown
+- communautes_rurales_autogerees_des_noeuds_de_survie_breakdown
 - front_humanitaire_d_urgence_non_affilie_breakdown
 - ligue_des_cites_littorales_en_sursis_breakdown
 - ligue_mediterraneenne_des_villes_etats_portuaires_breakdown
@@ -103,7 +103,7 @@ La tension centrale tourne autour du moment où la solidarité devient dominatio
 ## Relations
 **Alliés :**
 - [[brigades_medicales_itinerantes_breakdown]]
-- [[communautes_rurales_autogerees_des_n_uds_de_survie_breakdown]]
+- [[communautes_rurales_autogerees_des_noeuds_de_survie_breakdown]]
 - [[front_humanitaire_d_urgence_non_affilie_breakdown]]
 - [[ligue_des_cites_littorales_en_sursis_breakdown]]
 - [[ligue_mediterraneenne_des_villes_etats_portuaires_breakdown]]

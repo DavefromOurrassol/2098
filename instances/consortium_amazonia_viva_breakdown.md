@@ -41,7 +41,7 @@ alliances:
     - federation_communs_territoriaux_breakdown
     - mouvement_racines_vivantes_breakdown
     - trame_bioclimatique_breakdown
-    - communautes_rurales_autogerees_des_n_uds_de_survie_breakdown
+    - communautes_rurales_autogerees_des_noeuds_de_survie_breakdown
     - enclaves_agro_communautaires_autonomes_breakdown
     - collectifs_du_seuil_breakdown
 
@@ -99,7 +99,7 @@ Maintenir des corridors de protection minimale sur les zones forestières non en
 - [[gouvernance_institutions]]
 
 ## Relations
-**Alliés** : [[collectif_des_climatologues_sans_etat_breakdown]], [[federation_communs_territoriaux_breakdown]], [[mouvement_racines_vivantes_breakdown]], [[trame_bioclimatique_breakdown]], [[communautes_rurales_autogerees_des_n_uds_de_survie_breakdown]], [[enclaves_agro_communautaires_autonomes_breakdown]], [[collectifs_du_seuil_breakdown]]
+**Alliés** : [[collectif_des_climatologues_sans_etat_breakdown]], [[federation_communs_territoriaux_breakdown]], [[mouvement_racines_vivantes_breakdown]], [[trame_bioclimatique_breakdown]], [[communautes_rurales_autogerees_des_noeuds_de_survie_breakdown]], [[enclaves_agro_communautaires_autonomes_breakdown]], [[collectifs_du_seuil_breakdown]]
 **Opposants** : [[milices_extractivistes_du_bassin_du_congo_breakdown]], [[consortiums_logistiques_agro_corporatifs_breakdown]], [[seigneurs_de_guerre_agro_territoriaux_breakdown]], [[seigneuries_foncieres_opportunistes_breakdown]], [[enclaves_corporatives_fortifiees_breakdown]], [[blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown]], [[factions_energetiques_heritieres_des_pactes_abs_breakdown]]
 
 ## Description journalistique

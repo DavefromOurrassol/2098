@@ -40,7 +40,7 @@ alliances:
 - assemblee_territoires_breakdown
 - collectifs_de_gardiens_archivistes_itinerants_breakdown
 - collectifs_de_hackers_archivistes_des_interstices_reseaux_breakdown
-- communautes_rurales_autogerees_des_n_uds_de_survie_breakdown
+- communautes_rurales_autogerees_des_noeuds_de_survie_breakdown
 - elias_mork_breakdown
 - front_de_resistance_aux_peages_sur_les_ressources_breakdown
 - gelecek_meclisi_breakdown
@@ -108,7 +108,7 @@ Dans un monde où les frontières se sont effondrées sous les coups des conflit
 - [[assemblee_territoires_breakdown]]
 - [[collectifs_de_gardiens_archivistes_itinerants_breakdown]]
 - [[collectifs_de_hackers_archivistes_des_interstices_reseaux_breakdown]]
-- [[communautes_rurales_autogerees_des_n_uds_de_survie_breakdown]]
+- [[communautes_rurales_autogerees_des_noeuds_de_survie_breakdown]]
 - [[elias_mork_breakdown]]
 - [[front_de_resistance_aux_peages_sur_les_ressources_breakdown]]
 - [[gelecek_meclisi_breakdown]]

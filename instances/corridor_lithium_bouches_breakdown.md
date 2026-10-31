@@ -40,7 +40,7 @@ zone_systemique:
 alliances:
 - blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown
 - cartels_logistiques_regionaux_breakdown
-- communautes_rurales_autogerees_des_n_uds_de_survie_breakdown
+- communautes_rurales_autogerees_des_noeuds_de_survie_breakdown
 - frente_sertao_livre_breakdown
 - seigneuries_logistiques_armees_breakdown
 oppositions:
@@ -107,7 +107,7 @@ La question centrale est de savoir si un acteur — milice montante, bloc régio
 **Alliés :**
 - [[blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown]]
 - [[cartels_logistiques_regionaux_breakdown]]
-- [[communautes_rurales_autogerees_des_n_uds_de_survie_breakdown]]
+- [[communautes_rurales_autogerees_des_noeuds_de_survie_breakdown]]
 - [[frente_sertao_livre_breakdown]]
 - [[seigneuries_logistiques_armees_breakdown]]
 **Opposants :**

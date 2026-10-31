@@ -56,7 +56,7 @@ alliances:
 - office_integre_des_flux_migratoires_policy_reform
 - pacifique_sud_resilience_network_policy_reform
 - reseau_des_agences_sanitaires_regionales_policy_reform
-- reseau_des_metropoles_n_uds_policy_reform
+- reseau_des_metropoles_noeuds_policy_reform
 - reseaux_academiques_prospectivistes_du_pacte_de_geneve_2081_policy_reform
 - reseaux_de_capteurs_ia_climatiques_deployes_par_les_etats_membres_policy_reform
 - trame_bioclimatique_policy_reform
@@ -173,7 +173,7 @@ L'ATRB est prise en étau entre sa vocation réformatrice — imposer les transf
 - [[office_integre_des_flux_migratoires_policy_reform]]
 - [[pacifique_sud_resilience_network_policy_reform]]
 - [[reseau_des_agences_sanitaires_regionales_policy_reform]]
-- [[reseau_des_metropoles_n_uds_policy_reform]]
+- [[reseau_des_metropoles_noeuds_policy_reform]]
 - [[reseaux_academiques_prospectivistes_du_pacte_de_geneve_2081_policy_reform]]
 - [[reseaux_de_capteurs_ia_climatiques_deployes_par_les_etats_membres_policy_reform]]
 - [[trame_bioclimatique_policy_reform]]

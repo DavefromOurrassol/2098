@@ -43,7 +43,7 @@ alliances:
 - ilse_varga_holm_policy_reform
 - oracle_des_seuils_policy_reform
 - pacifique_sud_resilience_network_policy_reform
-- reseau_des_metropoles_n_uds_policy_reform
+- reseau_des_metropoles_noeuds_policy_reform
 - reseaux_academiques_prospectivistes_du_pacte_de_geneve_2081_policy_reform
 oppositions:
 - coalition_des_souverainistes_numeriques_policy_reform
@@ -130,7 +130,7 @@ L'Office est écartelé entre sa mission humaniste affichée — garantir des mo
 - [[ilse_varga_holm_policy_reform]]
 - [[oracle_des_seuils_policy_reform]]
 - [[pacifique_sud_resilience_network_policy_reform]]
-- [[reseau_des_metropoles_n_uds_policy_reform]]
+- [[reseau_des_metropoles_noeuds_policy_reform]]
 - [[reseaux_academiques_prospectivistes_du_pacte_de_geneve_2081_policy_reform]]
 **Opposants :**
 - [[coalition_des_souverainistes_numeriques_policy_reform]]
