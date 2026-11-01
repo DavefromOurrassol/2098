@@ -1546,3 +1546,68 @@ intermédiaire.
   non signalé (échec précoce plausible).
 - **Conventions** : sorties dans `~/Documents/Ourrassol_sorties/` (plus le Bureau),
   commandes depuis la racine du vault ; git 2.17 → `git checkout`, pas `git switch`.
+
+---
+
+## Clos le 1er novembre 2026
+
+- **S30 / A1 — test réel des fiches d'entités disparues** sur la branche jetable
+  `test-s30b` (commit jetable `3a79654`), hypothèse jetable `chute_holdfast_2072`
+  (reference, `carte: non` : évacuation et saisie des Citadelles du Sud-Pacifique en
+  2072). Entité choisie pour sa petite taille : `holdfast_reference` (19 occurrences,
+  6 relations, trajectoire « résiduel ») ; écartée : le RGMS (78 fichiers). Vérifiés
+  en réel : lecture IA (Holdfast → disparu ; Ergo-Wian et les consortiums survivent,
+  contraintes respectées), passe exhaustive (193 fiches, 0 obligatoire), Adopter
+  (régionale, faible), injection (contrôle des faits imposés : « 6 contrôlé(s), 0 non
+  respecté(s) » ; localisation Christchurch), étape ④ (`trajectoire: disparu`,
+  `annee_fin: 2072`, 12 retraits de relations dans 7 fiches, réciprocité sans
+  conflit, `validate` 0 erreur, aperçu « au passé » lancé tout seul), étape ⑤
+  (rubrique « ⏳ Fiches des entités disparues », « Écrire dans la fiche » : toutes les
+  copies remplacées, frontmatter et corps ; `signes_distinctifs` n'existe qu'une fois
+  dans la fiche). Non couvert : relocalisation de l'événement (pas de carte),
+  citations de la passe (aucune obligatoire).
+- **Erreur de procédure** : numéros de Sauter donnés à l'étape ③ depuis la liste
+  d'application du rapport ① au lieu de la liste de l'étape ④ (numérotée autrement) ;
+  le fait « Holdfast disparaît » et Holdfast comme acteur retirés de l'entrée, le
+  fonds groenlandais gardé. Sans conséquence (la contrainte principale restait dans
+  l'entrée ; sauts corrigés à l'étape ④ : Sauter 2, 6, 10, 13). D'où le correctif
+  « Liste » ci-dessous et la routine du backlog.
+- **S30 — `fiche_au_passe.py` sans contexte réel** : les étapes ④
+  (`appliquer_et_si.py`) et ⑤ (`et_si_main.py`) passaient
+  `--contexte "<data.get('nom') or id> (<année>)"` ; le JSON d'application n'a pas de
+  `nom` → « CE QUI S'EST PASSÉ : chute_holdfast_2072 (2072.0) ». L'IA inventait la fin
+  (« chute de la dernière citadelle », « ruines oubliées » au lieu de « saisies,
+  sites publics »). Correctif dans `fiche_au_passe.py` seul : un contexte qui désigne
+  une hypothèse de `et_si/hypotheses.yaml` (id ou nom, suffixe « (année) » ignoré)
+  est remplacé par nom, date, description et contraintes ; un contexte libre reste
+  tel quel (`patch_s30_contexte_au_passe.py`, `c5c093d`). Vérifié sur Holdfast :
+  « évacuation et la saisie des dernières citadelles par les autorités de l'Arc
+  Indo-Pacifique ».
+- **S30 — étape ③, effet des sauts invisible sans IA** : « Liste de l'étape ④ »
+  (`--plan`) ignorait Sauter / Inclure ; seul « Simuler l'injection » (appels IA)
+  montrait les retraits. `et_si_injecter.py --plan` lit désormais `--sauter` /
+  `--inclure` : ✓ / – par ligne (⚠ écartés par défaut compris), numéros absents
+  signalés, « Retiré de l'entrée à l'injection » ; `gui/app.py` transmet les champs
+  à l'action « liste », `gui/static/app.js` les envoie (`tri3()`)
+  (`patch_s30_liste_sauts.py`, `patch_s30_liste_sauts_js.py`, `2af6ba1`). CLI
+  vérifiée sur `pacte_tabriz_2058` ; GUI à voir au prochain cas réel.
+- **S30 — « Fiches à relire » trop larges** : « Réseau » (mot à majuscule du nom de
+  l'entité) → 12 zones sans rapport (Terrafond, Väinälä, capteurs…). `MOTS_GENERIQUES`
+  (`simuler_et_si.py`) ne contenait que des mots d'événement et d'État ; ajout d'une
+  quarantaine de mots qui ouvrent les noms du vault (Réseau, Conseil, Consortium,
+  Pacte, Arc, Bloc, Fin, Dissolution…) (`patch_s30_mots_generiques.py`, `53d4b18`).
+  Termes Holdfast : Citadelles, Holdfast, Indo-Pacifique, Sud-Pacifique ; Tabriz :
+  Tabriz, Iran, Golfe Persique (plus « Pacte »).
+- **S30 — « Réponses rejetées car mal formées (22) »** : réponses bien formées mais
+  sans objet (relation déjà présente, relation à rompre absente du vault, trajectoire
+  inchangée). Rendu de la passe exhaustive : « Propositions sans objet, écartées » et
+  « Réponses rejetées car mal formées » séparées (`et_si_exhaustif.py`,
+  `patch_s30_sans_objet.py`, `e3eca50`). Testé sur copie.
+- **S30 — bloc « Réciprocité » trié par fiche** : l'opposition ancienne RGMS →
+  consortiums de données (C4) passait en « complétées par réciprocité des
+  opérations » parce que l'opération 12 touchait la fiche du RGMS. Tri par relation :
+  un ajout vient des opérations si sa source est touchée ET ne citait pas déjà la
+  fiche sur disque (`appliquer_et_si.py`, `patch_s30_recip_par_relation.py`,
+  `98dc31b`). Testé sur fiches factices reproduisant le cas.
+- **Fausse alerte** : « années disparues : 2098 » de l'aperçu au passé — attendu
+  quand la fiche décrivait 2098 au présent.

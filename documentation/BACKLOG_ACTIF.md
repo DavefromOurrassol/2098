@@ -1,7 +1,7 @@
 # Backlog actif — Ourrassol 2098
 
-*Ce qui reste ouvert, et seulement cela. Mis à jour le 31 octobre 2026 au soir
-(tests réels de S30, cinq défauts corrigés). Réorganisé le 31 octobre 2026 en trois
+*Ce qui reste ouvert, et seulement cela. Mis à jour le 1er novembre 2026 (test réel
+des fiches d'entités disparues, cinq défauts corrigés). Réorganisé le 31 octobre 2026 en trois
 parties : **A. Bugs et vérifications**, **B. Développement (nouvelles
 fonctionnalités)**, **C. Enrichissement de la base**. Règle actée le 31 oct :
 l'outil doit avoir toutes ses fonctionnalités et aucun bug connu (partie A vide)
@@ -11,7 +11,7 @@ avant d'enrichir la base en volume (partie C).*
 des points dans plusieurs parties, chacun est marqué de son numéro. Les points
 clos sont dans `BACKLOG_ARCHIVE.md` (à uploader seulement pour vérifier si un
 point a déjà été traité). Mode d'emploi : `USER_MANUAL_COMPLET.md` ; dernier état
-de session : `HANDOFF_31_OCTOBRE.md`.*
+de session : `HANDOFF_01_NOVEMBRE.md`.*
 
 Légende : 🔴 à faire · 🟡 en cours · 👁 en surveillance (pas de correctif
 préventif, agir si le cas revient) · ⚪ idée sans calendrier.
@@ -20,36 +20,39 @@ préventif, agir si le cas revient) · ⚪ idée sans calendrier.
 
 # PARTIE A — BUGS ET VÉRIFICATIONS
 
-*Tous les bugs de code connus sont corrigés (31 oct, matin et après-midi : voir le
-handoff). Reste à éprouver en réel ce qui n'a tourné que sur copie ou avec une IA
+*Tous les bugs de code connus sont corrigés (31 oct et 1er nov : voir les
+handoffs). Reste à éprouver en réel ce qui n'a tourné que sur copie ou avec une IA
 simulée, et à surveiller des défauts qui dépendent de l'IA.*
 
 ## 🟡 A1. Fonctions à éprouver en réel (S30, S20)
 
-**Tests réels de S30 faits le 31 oct** (branche jetable `test-s30`,
-`reunification_ecosse_2070` puis `occupation_bresil_2029`, détail dans
-`BACKLOG_ARCHIVE.md`) : étapes ① à ⑤, Sauter / Inclure, Carte (zone vidée et
-journaux, `nouvelle_zone`, sous-zones, « déplacer entière »), Remplacer / Ignorer à
-⑤. Cinq défauts trouvés et corrigés le jour même.
+**Tests réels de S30** (détail dans `BACKLOG_ARCHIVE.md`) : le 31 oct sur
+`test-s30` (`reunification_ecosse_2070`, `occupation_bresil_2029` : étapes ① à ⑤,
+Sauter / Inclure, Carte, Remplacer / Ignorer) ; le 1er nov sur `test-s30b`
+(`chute_holdfast_2072` : **fiches des entités disparues** de bout en bout, contrôle
+des faits imposés vu en réel, « 6 contrôlé(s), 0 non respecté(s) »). Dix défauts
+trouvés et corrigés le jour même.
 
 Reste à voir en réel :
-- **S30 — fiches des entités disparues** : rubrique « ⏳ Fiches des entités
-  disparues » de l'étape ⑤ et aperçu « au passé » lancé à l'étape ④
-  (`fiche_au_passe.py`). Aucun des deux exemples ne fait disparaître d'entité : il
-  faut une hypothèse où une entité meurt (piste : le second cas test « La ruée vers
-  l'espace », C5, ou un exemple jetable dédié). Branche jetable :
-  `git checkout -b test-s30b` (git 2.17 : pas de `git switch`), retour
-  `git checkout main`.
 - **S30 — relocalisation de l'événement** (31 oct, testée sur vault factice) : au
   premier cas réel avec `nouvelle_zone` ou zone vidée, vérifier la ligne « →
   événement … relocalisé » de l'aperçu ④, puis `localisation.zone` de la fiche.
-- **S30 — contrôle des faits imposés à l'injection** (31 oct, testé avec IA
-  simulée) : au premier cas réel, lire la ligne « [faits imposés] N contrôlé(s) »
-  et les ⚠ « fait imposé non respecté » ; surveiller les faux positifs (fait non
-  mentionné jugé « remplacé »).
-- **S30 — citations de la passe** (31 oct) : à la prochaine simulation, les
-  textes « citation inexacte, remplacée par la phrase de la fiche » doivent passer
-  à l'étape ⑤ sans « introuvable mot pour mot ».
+- **S30 — citations de la passe** (31 oct) : à la prochaine simulation avec des
+  obligatoires, les textes « citation inexacte, remplacée par la phrase de la fiche »
+  doivent passer à l'étape ⑤ sans « introuvable mot pour mot ». (Holdfast : aucune
+  phrase à corriger, rien à vérifier ; le remplacement a bien eu lieu à ①.)
+- **S30 — correctifs du 1er nov testés en CLI ou sur copie** : au prochain parcours
+  réel,
+  - ③ bouton « Liste de l'étape ④ » avec les champs remplis : ✓ / –, « numéro(s)
+    absent(s) », « Retiré de l'entrée à l'injection » (CLI vérifiée sur
+    `pacte_tabriz_2058` ; GUI non vu, l'étape ③ n'étant ouverte qu'après adoption) ;
+  - rapport ① : ligne « Propositions sans objet, écartées » distincte de « mal
+    formées » ; « Fiches à relire » sans mots génériques (« Réseau »…) ;
+  - aperçu ④ : bloc « Réciprocité » trié par relation (une relation ancienne d'une
+    fiche touchée en « HORS hypothèse ») ;
+  - aperçu « au passé » : ligne « [contexte] hypothèse `<id>` : description et N
+    fait(s) imposé(s) transmis » (vérifiée sur Holdfast en CLI, pas encore lancée par
+    l'étape ④ elle-même).
 - **S20** : `/api/yaml/append` garde l'en-tête de `queue.yaml` (correctif du 30 oct,
   testé sur copie) → vérifier au prochain ajout depuis le GUI (ex. entrée préparée
   dans 🔭), puis retirer ce point. (« Adopter » du simulateur garde bien l'en-tête :
@@ -95,6 +98,15 @@ Reste à voir en réel :
   lire la sortie console de la génération (avertissements `[api] [WARN]`).
 - **S14 couleur fantôme** Royaume-Uni / Angleterre / Écosse / Galles (un polygone
   pour quatre noms) : revérifier si l'un d'eux change de zone.
+- **S30 contrôle des faits imposés** (vu en réel le 1er nov, 6 faits, 0 alerte) :
+  surveiller les faux positifs (fait non mentionné jugé « remplacé »).
+- **S30 `fiche_au_passe.py`** : la consigne « une phrase au plus par texte » pour la
+  fin n'est pas toujours tenue (Holdfast : `tensions_narratives` 721 → 938 car., une
+  phrase ajoutée à trois points sur quatre, sans fait inventé). Relire l'aperçu ;
+  durcir la consigne si cela revient.
+- **S30 lecture IA, propositions lointaines** : sur Holdfast, trajectoire du fonds
+  groenlandais et opposition Atlas des Marges ↔ ARPS sans lien avec l'hypothèse
+  (sautées à la main). Sauter suffit ; à surveiller si cela devient fréquent.
 
 ## ⚪ A3. Écarts connus, laissés en l'état (décision du 31 oct)
 
@@ -105,8 +117,11 @@ Reste à voir en réel :
   antérieurs au 31 oct.
 - **S24** : `audit_slugs_s24.py` signale `tromsoe_aln` (geographie/reference) : faux
   positif, ce slug est correct.
-- **S30** : `test-s30` (branche locale, deux commits jetables) gardée pour
-  consultation ; la supprimer quand plus utile : `git branch -D test-s30`.
+- **S30** : `test-s30` (branche locale, deux commits jetables) et `test-s30b`
+  (commit jetable `3a79654` : `chute_holdfast_2072`, Holdfast disparu, au passé)
+  gardées pour consultation ; les supprimer quand plus utiles :
+  `git branch -D test-s30 test-s30b`. L'hypothèse `chute_holdfast_2072` n'existe
+  que sur `test-s30b`.
 - **S30** : le slug `amazonie_consortium_viva_reference` porte le nom « BioPatente
   Amazonas », distinct de `consortium_amazonia_viva_reference` (Consortium Amazônia
   Viva) : piège slug ≠ nom (voir C4), pas un doublon.
@@ -217,6 +232,10 @@ Le simulateur est terminé (manuel §3quinquies) ; ses tests réels sont en A1.
 - **Wild cards** : type d'événement « rupture » assumé, faible probabilité et impact
   majeur, injecté même s'il bouscule le lore (les signaux faibles ne conviennent
   pas : ils sont déjà observables).
+- **Brouillon de règle de lore (étape ⑤)** : le terme proposé est le nom complet
+  avec son sigle (« Réseau des Citadelles du Sud-Pacifique (RCSP) ») ; un article qui
+  dit « Holdfast » ou « les Citadelles » échappe à l'audit. Proposer aussi le nom
+  court, le sigle et le slug d'entité ; en attendant, compléter `termes` à la main.
 - **Passe « équipe rouge »** : faire attaquer les hypothèses d'un scénario plutôt
   qu'en vérifier la cohérence (ex. « qu'est-ce qui ferait tomber Ergo-Wian en dix
   ans ? »), par l'IA ou des lecteurs aux profils variés. Inspiration : la série
@@ -385,4 +404,7 @@ Chaîne en production (manuel §3quater).
 - **Sorties à transmettre à Claude** : `> ~/Documents/Ourrassol_sorties/<nom>.txt 2>&1`,
   puis glisser le fichier ; commandes lancées depuis la racine du vault (pas de `cd`).
 - **git 2.17** : `git checkout -b` / `git checkout main` (pas `git switch`).
+- **Simulateur, étape ③** : les numéros de Sauter / Inclure sont ceux de l'étape ④,
+  PAS ceux de la liste d'application du rapport ① (numérotée autrement). Contrôler
+  avec « Liste de l'étape ④ » (champs remplis, sans IA) avant « Injecter ».
 - **Pousser** : `git push origin main` (les branches jetables restent locales).

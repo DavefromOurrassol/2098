@@ -2,7 +2,7 @@
 
 *Mode d'emploi de l'état actuel : ce que fait chaque outil, quand l'utiliser,
 comment le lancer (GUI ou terminal), ses pièges. Mis au propre le 24 octobre 2026,
-mis à jour le 31 octobre 2026.
+mis à jour le 1er novembre 2026.
 Le récit des sessions (bugs trouvés, itérations, tests, versions successives) est
 dans `USER_MANUAL_HISTORIQUE.md` ; les chantiers ouverts dans `BACKLOG_ACTIF.md`.
 Les numéros de section (§2octies, §3quinquies…) sont stables : backlog et
@@ -1125,8 +1125,11 @@ adopter** : `occupation_bresil_2029` (nouvelle zone + sous-zones),
    rapport (lien Obsidian), surtout la carte et les **obligatoires**.
 3. **② Adopter** (portée, intensité ; Aperçu d'abord) ou Rejeter.
 4. **③ Injecter** : « Liste de l'étape ④ » (sans IA) → mettre dans **Sauter** les
-   propositions à écarter (et dans **Inclure** les ⚠ à garder) → « Simuler
-   l'injection » si besoin → « Injecter ». Les propositions écartées ne sont pas
+   propositions à écarter (et dans **Inclure** les ⚠ à garder) → **relancer « Liste »
+   avec les champs remplis** pour contrôler (✓ / –, numéros absents, ce qui sera
+   retiré de l'entrée) → « Simuler l'injection » si besoin → « Injecter ». Les
+   numéros sont ceux de l'étape ④, **pas** ceux de la liste d'application du rapport
+   ① (numérotée autrement). Les propositions écartées ne sont pas
    données comme faits à l'IA de l'injection.
 5. **Commit git**, puis **④** Aperçu (le champ Sauter reprend les choix de l'étape
    ③) → Appliquer.
@@ -1150,7 +1153,8 @@ de boutons. Routes `/api/et_si/statut`, `/decider/…`, `/injecter/…`, `/appli
   `et_si/hypotheses.yaml ↗` (VS Code), « Rapport du dernier lancement ↗ » (Obsidian).
 - **② Décider** — Portée, Intensité, Aperçu de l'adoption, Adopter, Rejeter (motif),
   Annuler la décision, Voir les dossiers.
-- **③ Injecter** — « Liste de l'étape ④ », champs **Sauter** / **Inclure (⚠)**,
+- **③ Injecter** — « Liste de l'étape ④ » (tient compte des champs, sans IA), champs
+  **Sauter** / **Inclure (⚠)**,
   « Simuler l'injection » (appels IA réels, rien écrit), « Injecter » (une à
   plusieurs minutes ; cette hypothèse seulement, son entrée quitte ensuite la file).
 - **④ Appliquer** — champs Sauter / Inclure, « Aperçu de l'application »,
@@ -1315,12 +1319,16 @@ la file.
 
 ### Étape ③ — `et_si_injecter.py` 🔁 🧩
 ```bash
-python3 generator/et_si_injecter.py --id <id> --plan                         # liste de l'étape ④, sans IA
+python3 generator/et_si_injecter.py --id <id> --plan [--sauter 3,4,9] [--inclure 7]   # liste de l'étape ④, sans IA
 python3 generator/et_si_injecter.py --id <id> --sauter 3,4,9 [--inclure 7] --dry-run
 python3 generator/et_si_injecter.py --id <id> --sauter 3,4,9 [--inclure 7]
 ```
 - Passe l'entrée de l'hypothèse à `inject_custom_events.py --idea`, puis la retire de
   la file ; refuse une hypothèse qui n'est pas « adopté, en attente d'injection ».
+- **`--plan` avec Sauter / Inclure** (1er nov 2026) : chaque ligne marquée ✓ (appliquée)
+  ou – (écartée, ⚠ écartés par défaut compris), « ⚠ numéro(s) absent(s) de cette
+  liste », et « Retiré de l'entrée à l'injection » (faits imposés, acteurs) si
+  l'entrée est dans la file. Le contrôle gratuit à faire avant « Injecter ».
 - **Sauter / Inclure** : mêmes numéros qu'à l'étape ④. Les faits imposés et les
   acteurs des opérations écartées (trajectoires, disparitions, zones sautées, et les ⚠
   sauf `--inclure`) sont retirés de l'entrée passée à l'injection. À l'injection
@@ -1372,7 +1380,9 @@ rupture, une fiche injectée sans `mode: rupture`.
   `fix_alliances_oppositions.py` sur TOUT le scénario (même règle que
   `calculer_reciprocite(ignorer_exclues=True)`) — fiches complétées par réciprocité
   des opérations ; fiches **hors hypothèse** à relation à sens unique déjà dans le
-  vault ; conflits alliance / opposition (tranchés en opposition). Le script fait foi.
+  vault (tri par relation depuis le 1er nov 2026 : une relation déjà présente dans une
+  fiche touchée par une opération reste « hors hypothèse » ; une fiche peut figurer
+  dans les deux rubriques) ; conflits alliance / opposition (tranchés en opposition). Le script fait foi.
 
 Tri : tout est retenu sauf les ⚠ ; `--sauter` retire, `--inclure` reprend une ⚠ ;
 « déjà appliqué » n'est jamais rejoué (relancer n'applique que ce qui manque).
@@ -1452,6 +1462,13 @@ sont remplis), sans fait nouveau sauf la fin elle-même.
 python3 generator/fiche_au_passe.py --slug <slug> [--contexte "explosion du Polaris-7 (2081)"]   # aperçu
 python3 generator/fiche_au_passe.py --slug <slug> --apply                                        # écrit
 ```
+- `--contexte` : si le texte désigne une hypothèse de `et_si/hypotheses.yaml` (son id
+  ou son nom, suffixe « (année) » ignoré), il est remplacé par nom, date, description
+  et contraintes (ligne « [contexte] hypothèse `<id>` : description et N fait(s)
+  imposé(s) transmis ») — c'est ce que passent les étapes ④ et ⑤ (1er nov 2026 ;
+  avant, l'IA recevait le seul identifiant et inventait la fin). Un texte libre reste
+  tel quel.
+- « ⚠ années disparues : 2098 » est attendu quand la fiche décrivait 2098 au présent.
 - L'aperçu écrit `documentation/need_action/fiche_au_passe_<slug>.md` (avant / après,
   avertissements : longueur, noms propres perdus, années postérieures à la fin) ; les
   textes « Après » se retouchent dans Obsidian.
@@ -1465,6 +1482,15 @@ python3 generator/fiche_au_passe.py --slug <slug> --apply                       
   tirages au besoin. Les propositions de carte de l'IA sont toujours à relire.
 - Le récit en tête de scénario (« construit par le script ») ne décrit que la courbe
   chiffrée.
+- Passe exhaustive : « Propositions sans objet, écartées » (relation déjà présente,
+  relation à rompre absente du vault, trajectoire inchangée) n'est pas un défaut ;
+  « Réponses rejetées car mal formées » (entité inconnue, valeur invalide, contresens)
+  en est un (1er nov 2026).
+- « Fiches à relire » : termes tirés des pays de la carte et des noms propres de
+  l'hypothèse ; les mots génériques qui ouvrent les noms (`MOTS_GENERIQUES` de
+  `simuler_et_si.py` : Réseau, Conseil, Pacte, Arc…) ne sont pas cherchés.
+- Brouillon de règle de lore (⑤) : le terme proposé est le nom complet de l'entité ;
+  ajouter à la main le nom court, le sigle ou l'alias employés par les articles.
 - **Limites connues** : la lecture varie d'un tirage à l'autre et la passe en dépend ;
   le classement des possibles varie ; le mode rupture vaut pour toute l'hypothèse ;
   près des bornes, même une rupture bouge peu ; un slug mal orthographié par l'IA reste
