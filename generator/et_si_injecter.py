@@ -89,13 +89,34 @@ def main():
     a = ap.parse_args()
     hid = a.id.strip()
     if a.plan:
+        # PATCH_S30_LISTE_SAUTS : la liste tient compte de « Sauter » / « Inclure » (sans IA).
         _, ops = _plan(hid)
+        sauter, inclure = _nombres(a.sauter), _nombres(a.inclure)
+        ecartees = _ecartees(ops, sauter, inclure)
         print(f"Liste de l'étape ④ — {hid} (mêmes numéros ; « Sauter » ici retire aussi faits et acteurs "
-              "de l'injection)\n")
+              "de l'injection)")
+        print(f"Sauter [{', '.join(map(str, sorted(sauter))) or '—'}] · Inclure "
+              f"[{', '.join(map(str, sorted(inclure))) or '—'}] : ✓ appliquée, – écartée "
+              "(les ⚠ sont écartés par défaut)\n")
         for o in ops:
             al = (f"  {'·' if str(o['alerte']).startswith('déjà') else '⚠'} {o['alerte']}"
                   if o.get("alerte") else "")
-            print(f"  {o['n']:>3}. [{o['sc']}] {o['texte']}{al}")
+            marque = "–" if o["n"] in ecartees else "✓"
+            print(f"  {marque} {o['n']:>3}. [{o['sc']}] {o['texte']}{al}")
+        inconnus = sorted((sauter | inclure) - {o["n"] for o in ops})
+        if inconnus:
+            print(f"\n⚠ numéro(s) absent(s) de cette liste : {', '.join(map(str, inconnus))}")
+        entrees = [x for x in ed._liste_yaml(ed.QUEUE_PATH, "queue")
+                   if x.get("id") == hid and x.get("source") == f"et_si_{hid}"]
+        if len(entrees) == 1:
+            _, retires = _retirer_sautees(entrees[0], ops, ecartees)
+            print("\nRetiré de l'entrée à l'injection : "
+                  + (f"{len(retires)} élément(s)" if retires else "rien"))
+            for r_ in retires:
+                print(f"  − {r_}")
+        else:
+            print("\n· entrée absente de la queue (pas encore adoptée, ou déjà injectée) : "
+                  "retraits non calculés")
         return
 
     st = ed.statut(hid)

@@ -12128,7 +12128,7 @@ function buildDecisionHypothese() {
     appeler('decider', 'annuler', {});
   });
   const tri3 = () => ({ sauter: sauter3.value, inclure: inclure3.value });   // PATCH_S27_GUI_SAUTER
-  btnInjListe.addEventListener('click', () => appeler('injecter', 'liste', {}));
+  btnInjListe.addEventListener('click', () => appeler('injecter', 'liste', tri3()));   // PATCH_S30_LISTE_SAUTS_JS
   btnInjApercu.addEventListener('click', () => appeler('injecter', 'apercu', tri3()));
   btnInjecter.addEventListener('click', () => {
     if (!confirm('Injecter cet événement dans le vault ? (appels IA ; plusieurs minutes)')) return;

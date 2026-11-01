@@ -3036,13 +3036,12 @@ def et_si_injecter(action):
     cmd = [sys.executable, "et_si_injecter.py", "--id", hid]
     if action == "liste":
         cmd.append("--plan")
-    else:
-        if action == "apercu":
-            cmd.append("--dry-run")
-        for cle in ("sauter", "inclure"):
-            valeur = re.sub(r"[^0-9,]", "", str(corps.get(cle) or "")).strip(",")
-            if valeur:
-                cmd += [f"--{cle}", valeur]
+    elif action == "apercu":
+        cmd.append("--dry-run")
+    for cle in ("sauter", "inclure"):   # PATCH_S30_LISTE_SAUTS : aussi pour « Liste »
+        valeur = re.sub(r"[^0-9,]", "", str(corps.get(cle) or "")).strip(",")
+        if valeur:
+            cmd += [f"--{cle}", valeur]
     try:
         r = subprocess.run(cmd, cwd=pipeline_dir, capture_output=True, text=True,
                            timeout=TIMEOUT_INJECTER_ET_SI, stdin=subprocess.DEVNULL)
