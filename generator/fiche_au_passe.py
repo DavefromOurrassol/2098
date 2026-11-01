@@ -99,6 +99,36 @@ def controles(champ, avant, apres, annee):
     return al
 
 
+# PATCH_S30_CONTEXTE_AU_PASSE (1er nov 2026) : les appelants (étape ④ appliquer_et_si.py,
+# étape ⑤ et_si_main.py) passent « <nom ou id> (<année>) » sans description : l'IA inventait
+# la fin. Si le contexte désigne une hypothèse de et_si/hypotheses.yaml (id ou nom), il est
+# remplacé par son nom, sa date, sa description et ses faits imposés.
+def _contexte_hypothese(contexte):
+    if not contexte:
+        return contexte
+    cle = re.sub(r"\s*\([^()]*\)\s*$", "", contexte).strip()
+    try:
+        brut = (VAULT / "et_si" / "hypotheses.yaml").read_text(encoding="utf-8")
+        hyps = (yaml.safe_load(brut) or {}).get("hypotheses") or []
+    except (OSError, yaml.YAMLError, AttributeError):
+        return contexte
+    for h in hyps:
+        if not isinstance(h, dict):
+            continue
+        if cle not in (str(h.get("id") or ""), str(h.get("nom") or "").strip()):
+            continue
+        texte = f"{h.get('nom') or h.get('id')} ({h.get('date')})"
+        if h.get("description"):
+            texte += " : " + " ".join(str(h["description"]).split())
+        faits = [" ".join(str(c).split()) for c in (h.get("contraintes") or []) if c]
+        if faits:
+            texte += ("\nFAITS IMPOSÉS (à respecter, ne pas contredire) :\n"
+                      + "\n".join(f"- {c}" for c in faits))
+        print(f"  [contexte] hypothèse `{h.get('id')}` : description et {len(faits)} fait(s) imposé(s) transmis")
+        return texte
+    return contexte
+
+
 def apercu(slug, contexte):
     p = INSTANCES / f"{slug}.md"
     if not p.exists():
@@ -116,6 +146,7 @@ def apercu(slug, contexte):
     if not textes:
         sys.exit("✗ aucun champ de texte rempli")
 
+    contexte = _contexte_hypothese(contexte)  # PATCH_S30_CONTEXTE_AU_PASSE
     user = (f"FICHE : « {fm.get('name') or slug} » (scénario {fm.get('scenario')}), trajectoire « {traj} », "
             f"fin en {annee or '?'}." + (f"\nCE QUI S'EST PASSÉ : {contexte}" if contexte else "") + "\n\n"
             "TEXTES (écrits au présent alors que l'entité n'existe plus) :\n"
