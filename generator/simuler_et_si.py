@@ -1722,7 +1722,18 @@ def _donnees_application(sc):
 MAX_FICHES = 25            # fiches listées par type (le reste est compté)
 MOTS_GENERIQUES = {"Invasion", "Conflit", "Crise", "Guerre", "Effondrement", "Percée", "Fusion",
                    "Peste", "Pandémie", "Montée", "Victoire", "Chute", "Arrivée", "Majorité",
-                   "États", "Etats", "État", "Etat", "Nations", "République", "Royaume"}
+                   "États", "Etats", "État", "Etat", "Nations", "République", "Royaume",
+                   # PATCH_S30_MOTS_GENERIQUES (1er nov 2026) : mots qui ouvrent les noms
+                   # d'organisations et d'événements du vault (« Réseau des Citadelles… »).
+                   "Réseau", "Reseau", "Conseil", "Consortium", "Consortiums", "Fédération",
+                   "Confédération", "Ligue", "Alliance", "Union", "Agence", "Autorité",
+                   "Assemblée", "Commission", "Comité", "Bureau", "Office", "Institut",
+                   "Fonds", "Banque", "Pacte", "Accord", "Accords", "Traité", "Coalition",
+                   "Collectif", "Collectifs", "Mouvement", "Front", "Communauté", "Organisation",
+                   "Système", "Plateforme", "Plateformes", "Bloc", "Zone", "Zones", "Arc",
+                   "Ceinture", "Corridor", "Bassin", "Territoire", "Territoires",
+                   "Destruction", "Explosion", "Occupation", "Réintégration", "Vague",
+                   "Disparition", "Fin", "Naissance", "Création", "Dissolution"}
 # V8.14 : nom français des villes dont le nom anglais (villes_principales.json) diffère ;
 # les deux noms sont cherchés.
 VILLES_FR = {"Mexico City": ["Mexico"],
