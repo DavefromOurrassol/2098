@@ -1497,3 +1497,52 @@ intermédiaire.
 - **Backlog** réorganisé en trois parties (A bugs et vérifications, B
   développement, C enrichissement) ; règle : partie A vide avant l'enrichissement
   en volume.
+- **S30 / A1 — tests réels du simulateur sur la branche jetable `test-s30`**
+  (après-midi) : `reunification_ecosse_2070` (absorber, zone vidée) puis
+  `occupation_bresil_2029` (nouvelle zone, sous-zones), étapes ① à ⑤, lecture IA et
+  passe exhaustive. Vérifiés en réel : Sauter / Inclure à l'étape ③ (avec et sans
+  élément retiré de l'entrée : « 7 » a retiré un fait et un acteur), repris à
+  l'étape ④ ; Carte — zone vidée et ses journaux (garder / garder en exil / aperçu
+  du retrait / retirer), création d'une `nouvelle_zone`, sous-zones à un seul pays
+  rattachées (une sous-zone de niveau 3 suit son parent), « déplacer entière » une
+  sous-zone à plusieurs pays (Bassin Amazonien : Bolivie, Colombie, Pérou comptent
+  alors dans la zone d'occupation) ; étape ⑤ — Remplacer / Ignorer une phrase. Non
+  couvert : rubrique « Fiches des entités disparues » et aperçu « au passé » (aucune
+  entité ne disparaît dans les deux exemples). Retour sur `main` : rien ne reste
+  (commits jetables `1bcedbd`, Brésil sur la branche).
+- **S30 — événement resté dans la zone quittée** : l'injection (③) précède la carte
+  (④) ; `occupation_bresil_2029_reference` restait dans `ameriques_multipolaires`.
+  `appliquer_et_si.py` relocalise `localisation.zone` vers la cible après la carte
+  réussie, annoncé dans l'aperçu (`patch_s30_relocaliser_evenement.py`, `3ff62d7`).
+  Testé sur vault factice.
+- **S30 — faits imposés ignorés sans alerte** : « l'Écosse fait de nouveau partie du
+  Royaume-Uni » remplacé par l'UOC sur deux tirages ; Consortium censé décliner
+  devenu tuteur (simulation d'injection). `verifier_faits` ne regardait que
+  « reste » et « matrice ». `inject_custom_events.py` : `verifier_contraintes()`,
+  appel IA sur les faits `contrainte` / `change` / `zone`, une réécriture puis ⚠
+  (`patch_s30_faits_contraintes.py`, `7ef4462`). Testé avec IA simulée ; cause en
+  partie dans l'hypothèse (le Royaume-Uni n'existe plus comme acteur en reference,
+  l'UOC couvre la zone).
+- **S30 — citations réécrites par la passe exhaustive** : 3 phrases « obligatoires »
+  introuvables mot pour mot à l'étape ⑤ (« protocole d'urgence climatique et
+  sécuritaire » pour « écologique » ; « autorité renforcée… » pour « autorité morale
+  accrue mais des capacités coercitives insuffisantes » ; « modèle de São Paulo »
+  pour « modèle pauliste »). Le contrôle ne comparait que 120 caractères.
+  Désormais : extrait entier ; sinon vraie phrase de la fiche (`extrait_ia` garde la
+  citation) et changement en possible (`patch_s30_extrait_exact.py`, `3e01837`).
+  Testé sur les trois phrases réelles ; les réponses en cache sont recontrôlées.
+- **S30 — réciprocité non annoncée** : « Fichiers modifiés : 7 » à l'étape ④, mais
+  `fix_alliances_oppositions.py` (tout le scénario) a aussi modifié
+  `institutions_multilaterales_survivantes_reference` (ancienne asymétrie). Bloc
+  « Réciprocité » dans l'aperçu (`patch_s30_apercu_reciprocite.py`, `e773378`),
+  aligné sur `--ignorer-exclus` (`patch_s30_reciprocite_exclus.py`, `c1db74b` :
+  sans lui, 15 fausses alertes en fortress_world dues aux personnages en réserve).
+  Validé sur le vrai vault : 1 asymétrie en reference, breakdown,
+  new_sustainability ; 0 ailleurs.
+- **S30 — affichage** : titres d'articles entourés de « » en double ; libellé
+  `acteurs_hint` « passe exhaustive » même sans passe ; aperçu ④ listant
+  `sao_paulo_spaar` (qui suit son parent) parmi les sous-zones rattachées
+  (`patch_s30_affichage.py`, `64b4027`). Décision : « émergent → déclinant » reste
+  non signalé (échec précoce plausible).
+- **Conventions** : sorties dans `~/Documents/Ourrassol_sorties/` (plus le Bureau),
+  commandes depuis la racine du vault ; git 2.17 → `git checkout`, pas `git switch`.

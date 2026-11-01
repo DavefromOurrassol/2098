@@ -1,7 +1,8 @@
 # Manuel utilisateur — Pipeline Ourrassol 2098
 
 *Mode d'emploi de l'état actuel : ce que fait chaque outil, quand l'utiliser,
-comment le lancer (GUI ou terminal), ses pièges. Mis au propre le 24 octobre 2026.
+comment le lancer (GUI ou terminal), ses pièges. Mis au propre le 24 octobre 2026,
+mis à jour le 31 octobre 2026.
 Le récit des sessions (bugs trouvés, itérations, tests, versions successives) est
 dans `USER_MANUAL_HISTORIQUE.md` ; les chantiers ouverts dans `BACKLOG_ACTIF.md`.
 Les numéros de section (§2octies, §3quinquies…) sont stables : backlog et
@@ -101,8 +102,13 @@ migration (jamais dans le GUI) · 📦 legacy, remplacé.
   translittère ø, æ, œ, ß, ł, đ, ı… puis retire les accents. Tout script l'importe
   (`from slugs import slugify`) au lieu de recopier la fonction. Seule exception :
   `export_revues.slugify()` (URL du site).
-- Sortie à transmettre à Claude : `> ~/Desktop/<nom>.txt 2>&1`, puis glisser le
-  fichier (pas `/tmp`, invisible dans le Finder).
+- Commandes lancées depuis la racine du vault (pas de `cd`). Sortie à transmettre
+  à Claude : `> ~/Documents/Ourrassol_sorties/<nom>.txt 2>&1`, puis glisser le
+  fichier (répertoire dédié hors du vault, depuis le 31 oct 2026 ; pas le Bureau,
+  pas `/tmp`, invisible dans le Finder).
+- **git 2.17 (Apple)** : pas de `git switch` ni de `git branch --show-current` ;
+  utiliser `git checkout -b <branche>`, `git checkout main`,
+  `git rev-parse --abbrev-ref HEAD`.
 
 ---
 
@@ -578,7 +584,14 @@ python3 generator/inject_custom_events.py --idea '{"id": "...", ...}' --json [--
   - `faits_imposes` (`{scénario: [{fait, slug, sort}]}`, `sort` : `disparait`, `change`,
     `reste`, `zone`, `contrainte`) : le récit ne doit jamais les contredire ;
     ⚠ (sans rejet) si une entité « reste » est associée à une destruction, ou si le
-    mot « matrice » apparaît ;
+    mot « matrice » apparaît. **Depuis le 31 oct 2026** (`verifier_contraintes`), les
+    faits `contrainte`, `change` et `zone` sont vérifiés par un appel IA
+    (`structured_strict`, ≈ 1 centime par scénario) une fois la validation passée :
+    fait non respecté (contredit, remplacé par un autre rattachement, sens
+    d'évolution inversé) ⇒ **une** réécriture par le mécanisme des problèmes de
+    validation, puis ⚠ « fait imposé non respecté » s'il l'est toujours (non
+    bloquant) ; appel en échec ⇒ ⚠ « relire le récit à la main ». Sans
+    `faits_imposes`, aucun appel ;
   - `mode_impose` (`choc` | `rupture`) : chaque fiche écrite porte `mode: rupture`
     (lu par le moteur, §3ter).
   - `acteurs_hint` s'applique par scénario (un slug d'un autre scénario n'est pas
@@ -1253,7 +1266,11 @@ python3 generator/et_si_exhaustif.py --id <id> --scenario <sc> > documentation/n
 - **Contrôles mécaniques** (rétrogradent d'obligatoire à possible, motif affiché) :
   sans lien direct, conditionnel, lien variable sous 2 points ou seulement propagé,
   lien territoire sans territoire touché (sauf lieu nommé), texte qui élargit ou
-  atténue sans contredire, extrait introuvable, changement de degré, et (v9.6)
+  atténue sans contredire, extrait introuvable, **citation inexacte** (31 oct 2026 :
+  l'extrait doit se retrouver EN ENTIER dans la fiche — avant, ses 120 premiers
+  caractères ; une citation réécrite par l'IA est remplacée par la vraie phrase de la
+  fiche, gardée dans `extrait_ia`, et le changement passe en possible), changement
+  de degré, et (v9.6)
   **date de la fiche contestée** — la justification ne conteste qu'une année de la
   fiche que l'hypothèse ne fixe pas (« trop tardive », « dès 2043, et non 2044 »),
   sauf fait matériel invoqué (destruction, « n'existe plus »).
@@ -1314,6 +1331,10 @@ python3 generator/et_si_injecter.py --id <id> --sauter 3,4,9 [--inclure 7]
   l'injection réelle (le nouveau tirage peut différer).
 - Outil manuel équivalent pour une entrée déjà adoptée :
   `python3 generator/et_si_retirer_faits.py --id <id> --slugs a_sc,b_sc [--apply]`.
+- L'injection vérifie les faits imposés `contrainte` / `change` / `zone` (une
+  réécriture, puis ⚠ dans « Alertes de l'injection », §3).
+- La localisation de l'événement est calculée à l'injection, AVANT la carte : une
+  zone créée à l'étape ④ n'existe pas encore (l'étape ④ relocalise, voir ci-dessous).
 
 ### Étape ④ — `appliquer_et_si.py` 🔁 🧩
 ```bash
@@ -1339,6 +1360,19 @@ rupture, une fiche injectée sans `mode: rupture`.
   sont lues par mots : « Île de Kharg, Iran » porte l'Iran) ; type d'origine du
   territoire gardé ; résultat relu, sinon géographie et `zones_pays.json` remis en
   l'état (le reste reste écrit). Partition et région restent à la main (tracés).
+  L'aperçu ne liste que les sous-zones rattachées, « (avec leurs sous-zones : …) »
+  pour celles qui suivent leur parent. **Relocalisation de l'événement** (31 oct
+  2026) : si `localisation.zone` de `event_instances/<id>_<sc>.md` est une zone que
+  le pays quitte (ni la cible, ni une sous-zone qui suit, ni une sous-zone à
+  répartir), elle est remplacée par la cible après la carte réussie (ligne
+  « → événement … relocalisé : A → B » dans l'aperçu ; `.bak_appliquer`). Carte en
+  échec : rien n'est relocalisé.
+- **Bloc « Réciprocité »** de l'aperçu (31 oct 2026), quand des relations ou
+  disparitions sont retenues : estimation de ce que changera
+  `fix_alliances_oppositions.py` sur TOUT le scénario (même règle que
+  `calculer_reciprocite(ignorer_exclues=True)`) — fiches complétées par réciprocité
+  des opérations ; fiches **hors hypothèse** à relation à sens unique déjà dans le
+  vault ; conflits alliance / opposition (tranchés en opposition). Le script fait foi.
 
 Tri : tout est retenu sauf les ⚠ ; `--sauter` retire, `--inclure` reprend une ⚠ ;
 « déjà appliqué » n'est jamais rejoué (relancer n'applique que ce qui manque).
@@ -1442,7 +1476,10 @@ python3 generator/fiche_au_passe.py --slug <slug> --apply                       
 Commit propre, `git checkout -b essai`, ② ③ ④ dans le GUI, contrôles (`git diff`),
 puis `git checkout -- .`, suppression des nouveaux fichiers (fiche d'événement,
 check-list, journaux d'application : voir `git status`), `git checkout main`,
-`git branch -D essai`. Pour **voir** seulement un rapport : simuler sans IA et ne pas
+`git branch -D essai`. Variante employée le 31 oct 2026 (branche `test-s30`, deux
+hypothèses à la suite) : `git add -A && git commit -m "… (jetable)"` sur la branche
+après chaque hypothèse (diff lisible de la suivante), puis `git checkout main`
+(dépôt propre, rien ne reste), `git branch -D essai` une fois les constats notés. Pour **voir** seulement un rapport : simuler sans IA et ne pas
 adopter.
 
 ### Outils unitaires d'application

@@ -1,6 +1,7 @@
 # Backlog actif — Ourrassol 2098
 
-*Ce qui reste ouvert, et seulement cela. Réorganisé le 31 octobre 2026 en trois
+*Ce qui reste ouvert, et seulement cela. Mis à jour le 31 octobre 2026 au soir
+(tests réels de S30, cinq défauts corrigés). Réorganisé le 31 octobre 2026 en trois
 parties : **A. Bugs et vérifications**, **B. Développement (nouvelles
 fonctionnalités)**, **C. Enrichissement de la base**. Règle actée le 31 oct :
 l'outil doit avoir toutes ses fonctionnalités et aucun bug connu (partie A vide)
@@ -19,33 +20,40 @@ préventif, agir si le cas revient) · ⚪ idée sans calendrier.
 
 # PARTIE A — BUGS ET VÉRIFICATIONS
 
-*Tous les bugs de code connus ont été corrigés le 31 oct (voir le handoff). Reste
-à éprouver en réel ce qui n'a tourné que sur copie, et à surveiller des défauts
-qui dépendent de l'IA.*
+*Tous les bugs de code connus sont corrigés (31 oct, matin et après-midi : voir le
+handoff). Reste à éprouver en réel ce qui n'a tourné que sur copie ou avec une IA
+simulée, et à surveiller des défauts qui dépendent de l'IA.*
 
-## 🔴 A1. Fonctions livrées, jamais testées en réel (S30, S20)
+## 🟡 A1. Fonctions à éprouver en réel (S30, S20)
 
-**Plan proposé le 31 oct (reporté)** : branche git jetable `test-s30`, mener les
-deux « exemples à ne jamais adopter » jusqu'aux étapes ③ ④ ⑤, puis revenir sur
-`main` (rien ne reste, sauf ≈ 0,50-1 $ d'appels IA) :
-`reunification_ecosse_2070` (absorber + zone vidée) puis `occupation_bresil_2029`
-(nouvelle zone + sous-zones). Démarrage :
-`git status --short; git switch -c test-s30`, puis 🔮 Simulateur, ① Simuler sans IA.
+**Tests réels de S30 faits le 31 oct** (branche jetable `test-s30`,
+`reunification_ecosse_2070` puis `occupation_bresil_2029`, détail dans
+`BACKLOG_ARCHIVE.md`) : étapes ① à ⑤, Sauter / Inclure, Carte (zone vidée et
+journaux, `nouvelle_zone`, sous-zones, « déplacer entière »), Remplacer / Ignorer à
+⑤. Cinq défauts trouvés et corrigés le jour même.
 
-Ce que ce test couvre :
-- **S30, étape ③** : tri « Liste de l'étape ④ », Sauter / Inclure avant
-  l'injection, repris à l'étape ④ (seul `--plan` a tourné en réel) ;
-- **S30, étape ④** : aperçu « au passé » lancé automatiquement, puis rubrique
-  « ⏳ Fiches des entités disparues » de l'étape ⑤ ;
-- **S30** : plafond d'impact ramené (entités custom, `instance_generation_common.py`) ;
-- **S30, Carte** (jamais vue sur le vrai vault) : zone vidée de tout territoire et
-  ses journaux (garder en exil / retirer) ; création d'une `nouvelle_zone` ;
-  « déplacer entière » une sous-zone à plusieurs pays.
-
-Hors de ce test, à cocher à l'usage :
+Reste à voir en réel :
+- **S30 — fiches des entités disparues** : rubrique « ⏳ Fiches des entités
+  disparues » de l'étape ⑤ et aperçu « au passé » lancé à l'étape ④
+  (`fiche_au_passe.py`). Aucun des deux exemples ne fait disparaître d'entité : il
+  faut une hypothèse où une entité meurt (piste : le second cas test « La ruée vers
+  l'espace », C5, ou un exemple jetable dédié). Branche jetable :
+  `git checkout -b test-s30b` (git 2.17 : pas de `git switch`), retour
+  `git checkout main`.
+- **S30 — relocalisation de l'événement** (31 oct, testée sur vault factice) : au
+  premier cas réel avec `nouvelle_zone` ou zone vidée, vérifier la ligne « →
+  événement … relocalisé » de l'aperçu ④, puis `localisation.zone` de la fiche.
+- **S30 — contrôle des faits imposés à l'injection** (31 oct, testé avec IA
+  simulée) : au premier cas réel, lire la ligne « [faits imposés] N contrôlé(s) »
+  et les ⚠ « fait imposé non respecté » ; surveiller les faux positifs (fait non
+  mentionné jugé « remplacé »).
+- **S30 — citations de la passe** (31 oct) : à la prochaine simulation, les
+  textes « citation inexacte, remplacée par la phrase de la fiche » doivent passer
+  à l'étape ⑤ sans « introuvable mot pour mot ».
 - **S20** : `/api/yaml/append` garde l'en-tête de `queue.yaml` (correctif du 30 oct,
   testé sur copie) → vérifier au prochain ajout depuis le GUI (ex. entrée préparée
-  dans 🔭), puis retirer ce point.
+  dans 🔭), puis retirer ce point. (« Adopter » du simulateur garde bien l'en-tête :
+  constaté le 31 oct, `queue.yaml` revenu identique après adoption puis injection.)
 - **S20** : reprise d'injection partielle (`idee_a_remettre_en_queue`) et arrêt
   propre sur interruption (31 oct) — testés avec une IA simulée seulement ; à
   observer au premier cas réel.
@@ -73,7 +81,15 @@ Hors de ce test, à cocher à l'usage :
 - **S8** : `--min-shingle` fixé à 6 mots dans `detect_registre_leakage()` ; en
   faire une option seulement si un faux positif ou négatif apparaît.
 - **S24 trajectoires « émergent » par défaut** : la lecture IA propose souvent
-  « émergent → dominant » d'un coup (signalé ⚠ à l'étape ④).
+  « émergent → dominant » d'un coup (signalé ⚠ à l'étape ④). « émergent →
+  déclinant » (échec précoce) reste non signalé, décision du 31 oct.
+- **S30 rédaction des hypothèses** : un fait imposé doit rester vrai dans le lore du
+  scénario. « réintègre le Royaume-Uni » était ambigu en reference (le Royaume-Uni
+  n'y est plus un acteur, l'UOC couvre la zone) : l'IA a écrit l'UOC deux fois. Si
+  le contrôle des faits (A1) alerte souvent, revoir d'abord la rédaction du fait.
+- **S30 forces et saturation** : force 20 sur `geopolitique_conflits`
+  (`occupation_bresil_2029`) → +0,3 en 2098 (pic +3,9 en 2043), variable déjà à 88,7
+  sans l'hypothèse ; voir B7 « Saturation près des bornes ».
 - **S24 bloc `===METADONNEES_PUBLICATION===`** : correctif préventif du 31 oct
   (bloc sans fin, en double ou tronqué). Si un bloc réapparaît dans un article,
   lire la sortie console de la génération (avertissements `[api] [WARN]`).
@@ -89,6 +105,11 @@ Hors de ce test, à cocher à l'usage :
   antérieurs au 31 oct.
 - **S24** : `audit_slugs_s24.py` signale `tromsoe_aln` (geographie/reference) : faux
   positif, ce slug est correct.
+- **S30** : `test-s30` (branche locale, deux commits jetables) gardée pour
+  consultation ; la supprimer quand plus utile : `git branch -D test-s30`.
+- **S30** : le slug `amazonie_consortium_viva_reference` porte le nom « BioPatente
+  Amazonas », distinct de `consortium_amazonia_viva_reference` (Consortium Amazônia
+  Viva) : piège slug ≠ nom (voir C4), pas un doublon.
 
 ---
 
@@ -320,12 +341,20 @@ Chaîne en production (manuel §3quater).
   quand les fusions sont confirmées à l'usage.
 - **Doublons** : les 9 paires que signale encore `scan_doublons_lore.py` sont des
   acteurs distincts, déjà examinés.
+- **Relations à sens unique** (relevé du 31 oct, aperçu ④) : 3 anciennes, une par
+  scénario — `institutions_multilaterales_survivantes_reference` (opposition
+  `consortiums_prives_de_gestion_des_donnees_critiques_reference`),
+  `hanse_baltique_breakdown` (`armada_logistique_nordique_breakdown`),
+  `tribunal_algorithmique_de_bruxelles_new_sustainability`
+  (`bloc_des_architectes_d_efficience_algorithmique_new_sustainability`). Corrigées
+  par la routine « Relations & lore » étape 2 au prochain passage.
 
 ## ⚪ C5. Hypothèses et personnages (S30, S15, S23)
 
 - **S30 second cas test : « La ruée vers l'espace »** (saison 3 de la Red Team
   Défense : ressources spatiales, acteurs privés et étatiques) ; variable
-  `frontieres_du_systeme`. Après A1.
+  `frontieres_du_systeme`. Pourrait servir au test restant de A1 si une entité y
+  disparaît.
 - **Exemples à ne jamais adopter** : `occupation_bresil_2029` et
   `reunification_ecosse_2070` (`et_si/hypotheses.yaml`) ; `invasion_bresil_2029`
   reste au banc de rejeu.
@@ -353,5 +382,7 @@ Chaîne en production (manuel §3quater).
 - **De temps en temps** : `verifier_flux_rss.py`.
 - **Nouveau script** : calculer les slugs avec `from slugs import slugify`, jamais
   une copie locale de la fonction.
-- **Sorties à transmettre à Claude** : `> ~/Desktop/<nom>.txt 2>&1`, puis glisser le
-  fichier.
+- **Sorties à transmettre à Claude** : `> ~/Documents/Ourrassol_sorties/<nom>.txt 2>&1`,
+  puis glisser le fichier ; commandes lancées depuis la racine du vault (pas de `cd`).
+- **git 2.17** : `git checkout -b` / `git checkout main` (pas `git switch`).
+- **Pousser** : `git push origin main` (les branches jetables restent locales).
