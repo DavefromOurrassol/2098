@@ -1122,9 +1122,16 @@ def rendre(res):
     L += _rendre_possibles(res)
     if res["corrigees"]:
         L += [f"_Corrections automatiques ({len(res['corrigees'])}) : " + " ; ".join(res["corrigees"][:8]) + "_", ""]
-    if res["rejetees"]:
-        L += [f"_Réponses rejetées car mal formées ({len(res['rejetees'])}) : " + " ; ".join(res["rejetees"][:8])
-              + (" …" if len(res["rejetees"]) > 8 else "") + "_", ""]
+    if res["rejetees"]:   # PATCH_S30_SANS_OBJET : « sans objet » séparé de « mal formé »
+        sans_objet = [r for r in res["rejetees"]
+                      if _re.search(r"déjà |absente? du vault|aucun changement", str(r))]
+        mal = [r for r in res["rejetees"] if r not in sans_objet]
+        for titre, liste in (("Propositions sans objet, écartées (déjà en place, ou relation à rompre "
+                              "absente du vault)", sans_objet),
+                             ("Réponses rejetées car mal formées", mal)):
+            if liste:
+                L += [f"_{titre} ({len(liste)}) : " + " ; ".join(liste[:8])
+                      + (" …" if len(liste) > 8 else "") + "_", ""]
     return L
 
 
