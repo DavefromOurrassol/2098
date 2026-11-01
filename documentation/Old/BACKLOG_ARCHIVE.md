@@ -840,3 +840,709 @@ hypothèses pour vérifier que les correctifs ne valent pas que pour le Brésil.
   au milieu d'un mot → énumération « … et N autres » (`patch_s27_recit.py`) ;
   noms des variables accentués mot par mot, faute de nom lisible dans
   `variables/` (`patch_s27_recit2.py`).
+
+---
+
+## ✅ S27 (pipeline d'injection) — Impositions, v8.15, passe exhaustive v1 → v9.5, banc de rejeu — 11 octobre 2026
+
+*Clos comme chantier de code ; la suite (branchement de la passe dans le
+simulateur, étape « décider », correction du ⚠ des variables) est dans S27 de
+`BACKLOG_ACTIF.md`.*
+
+Demande de David : un outil d'injection unifié où l'évaluation précède
+l'injection (« 1. je teste l'injection d'un événement, 2. je décide si
+j'injecte »), le simulateur servant d'évaluation. Deux options exposées :
+(a) injecter l'événement fidèle à la simulation, (b) appliquer aussi les
+conséquences cochées ; retenu : (a) d'abord, étape vers (b).
+- **Impositions** (`patch_s27_injection_imposee.py`, `inject_custom_events.py`,
+  `.bak_imposee`, 1880 → 2046 lignes) : `lire_impositions()` (contrôle, aucune
+  correction silencieuse), `appliquer_impositions()` (impacts, date,
+  `date_label`, propagation ; ⚠ si `impossible_dans_scenario`), appelé après
+  chaque `truncate_actors` ; bloc « VALEURS IMPOSÉES » dans le prompt de
+  l'étape 2 ; scénarios déduits des clés d'`impacts_imposes` si `scenarios`
+  est vide ; `variables_hint` = variables imposées ; `edition_active` ignoré si
+  `date_imposee` ; `QUEUE_TEMPLATE` documenté. Dry-run réel : `[imposé]`, date
+  2029, forces conformes ; ⚠ trompeur « 8 variables reçues au lieu de 4 max »
+  (troncature avant la reprise imposée) — correction notée, non faite.
+- **Simulateur v8.15** (`patch_s27_v815.py`, `.bak_v815`, 2552 → 2579 lignes) :
+  `_rendre_injection_commune` ajoute `date_imposee`, `impacts_imposes` (tous les
+  scénarios de l'hypothèse) et `via_matrice_impose` ; ⚠ simulation limitée,
+  ⚠ force > 25 ; rupture : date seule ; étape « Élément » = vérifier.
+- **Acteurs** : la simulation en proposait 9, le plafond d'injection est 4 ;
+  David : « je veux être sûr que l'impact d'un événement sur tout le lore est
+  considéré » → **passe exhaustive** (accord de principe : entités les plus
+  touchées en `acteurs_hint`, 4 au plus).
+- **`et_si_exhaustif.py`**, versions testées en réel chez David :
+  - v1 (invasion / fortress_world) : bruit massif ; v2 : lien direct nommé,
+    conditionnel écarté, règles de trajectoire, texte seulement si la phrase
+    devient fausse, extrait mot pour mot ; v3 : sortie coupée à 4000 jetons →
+    8000 + redécoupage en deux (marqueur `decoupe` en cache), seuil variable
+    2 points, texte qui élargit écarté, « … » retirés avant vérification ;
+  - fusion / policy_reform : événements sans réponse → v4 rattrapage ; textes
+    qui atténuent écartés sauf « faux » ; v5 : liste des fiches en fin de prompt,
+    réponses hors du lot comptées à part (59 → 191 écartées n'était que ça) ;
+  - peste / breakdown : 74 trajectoires sur 150 instances (lien variable
+    passe-partout, territoires inventés). David : « j'ai peur qu'à chaque
+    nouvelle hypothèse il y ait de nouvelles modifications et que l'outil ne
+    soit pas exhaustif » → **v6 : classer au lieu de filtrer** (obligatoire /
+    possible, critère unique, contrôles qui rétrogradent) : 45 fiches à
+    corriger ; v7 : disparition seule obligatoire + contre-lecture → 8 ;
+    v7.1 (exemples neutres, argumentaire masqué) → 1 ;
+  - invasion v7.1 : 2 obligatoires (Pacte Vert ↔ Pacte des Forteresses) ; David
+    ne voit pas d'obligatoire manquant ;
+  - v8 : tri mécanique des possibles (score) — disparitions refusées en tête ;
+    v9 : regroupement par fiche, 20 prioritaires choisis par l'IA ; v9.1 :
+    propositions sur fait inventé exclues de la priorité ; v9.2 : « douteux »
+    aussi sur les possibles (Lagos, Sertão sortis) ; arrêt des réglages du
+    classement.
+- **Itérer plus vite** : David sur iMac mi-2011 (High Sierra), pas de session
+  liée → **export + rejeu** : `export_et_si.py`, banc `rejouer.py` /
+  `evaluer.py`, `reference.json`. v9.3 (conditionnel non signalé), rejeu
+  identique au rapport v9.2 de David.
+- **Cas ajoutés** : extrême droite / new_sustainability, IA 60 % /
+  eco_communalism, fusion relancée, **`destruction_geneve_2076`** (cas à
+  réponse connue). Premier passage commande collée (« /dev/nullpython3 ») →
+  commandes en une ligne.
+- **v9.4** : Genève à 0 obligatoire → règle territoire hors carte (lieu nommé
+  par l'hypothèse) ; verdicts de contre-lecture en cache un par un ; temps :
+  le passé ne change pas, choc amorti, ligne « effet résiduel » (extrême
+  droite : 20 faux obligatoires, Israël / Iran pour un conflit de 2026-2027).
+  Score 26/33 puis 29/33 ; Israël / Iran réglés, l'IA écrit « impossible même
+  après amortissement » pour l'extrême droite.
+- **Réponses de David** (référence) : extrême droite → compatibles ; invasion →
+  rupture obligatoire ; RPDA → pas obligatoire ; Résidu de Genève → obligatoire.
+  Critère qui en sort : acte matériel (invasion, destruction) contre tendance
+  diffuse.
+- **v9.5** : champ « fait » (matériel / tendance), décision par le code ; lieu
+  ou date de la fiche dans la contre-lecture. **26/27 verdicts**, priorités
+  4/6. Banc emballé dans `generator/rejeu/` (`LISEZMOI.md`).
+
+---
+
+## ✅ S27 (pipeline d'injection, suite) — Passe branchée v8.16 → v8.16.2, étape « décider » v8.17 → v8.17.1, GUI — 12 octobre 2026
+
+*Clos comme chantier de code ; la suite (application réelle d'une liste,
+décision S19, amplitude des chocs, phase 4) est dans S27 de
+`BACKLOG_ACTIF.md`.*
+
+Points 1 à 3 de S27 dans l'ordre proposé le 11 oct, plus deux demandes GUI.
+- **Point 1 — passe dans le simulateur** (`patch_s27_v816.py`, `.bak_v816`,
+  23 remplacements) : `--passe-exhaustive` ; obligatoires dans la liste
+  (trajectoires, relations, textes en « Fiches à relire »), marqués
+  « [passe exhaustive] » ; section « Possibles (facultatif) » (20
+  prioritaires, puis « … et N autre(s) ») ; relations rompues d'une entité
+  disparue regroupées par entité ; passe rendue dans le rapport après la
+  lecture IA ; lecture IA prise en cache si elle n'a pas été demandée.
+  Premier test Genève : 75 → 59 étapes.
+- **v8.16.1** (`patch_s27_v8161.py`) : la recherche par mots ne cite plus les
+  instances et événements déjà relus par la passe (34 étapes « cite Genève »
+  en double).
+- **Constat** : la passe dépend de la lecture IA (contexte « déjà retenu ») ;
+  une nouvelle lecture l'a relancée (≈ 0,10 $) : 24 → 14 obligatoires et
+  incohérence (Archives Neutres « résiduel » d'après la lecture, alliances
+  rompues « parce qu'elles ont disparu » d'après la passe). Banc : toujours
+  26/27. Choix : signaler, pas de règle IA.
+- **v8.16.2 et point 2** (`patch_s27_v8162.py`, deux fichiers, tout ou rien) :
+  ⚠ mécanique sur une relation rompue qui invoque une disparition non
+  déclarée ; `acteurs_hint` (poids : trajectoire lecture 2, trajectoire passe
+  3, texte 2, extrémité de relation 1 ; 4 par scénario ;
+  `acteurs_hint_count` = maximum par scénario). `inject_custom_events.py` :
+  plus de troncature ni de ⚠ « N variables » quand les impacts sont imposés ;
+  `actors_hint_sc` filtre les slugs suffixés d'un autre scénario ;
+  `QUEUE_TEMPLATE` documenté.
+- **Option A — case GUI** (`patch_s27_gui_passe.py`, `.bak_gui_passe`) :
+  « Passe exhaustive : relire toutes les fiches (payant) » après la lecture
+  IA. Vérifiée dans le GUI (rapport de 19:04).
+- **Point 3 — « décider »**, quatre choix de David : statuts dans un fichier à
+  part (`generator/state/et_si_dossiers.json`) ; « Adopter » écrit l'entrée
+  dans `queue.yaml` (portée et intensité exigées), l'injection reste à part ;
+  « injecté » calculé à la lecture (`event_instances/`, queue,
+  `needs_review.yaml`), jamais stocké ; ligne de commande d'abord.
+  `et_si_dossiers.py` (nouveau) + `patch_s27_v817.py` (11 remplacements) :
+  chaque simulation enregistre date, version, empreinte du bloc YAML,
+  scénarios, passe, rapport et entrée commune ; refus si simulation
+  partielle, hypothèse modifiée, entrée déjà dans la queue ou événement déjà
+  dans le vault. Queue écrite par `save_queue_with_template()` (en-tête modèle
+  conservé, vérifié chez David). Test Genève : simulé → aperçu → adopté, en
+  attente → décision annulée, queue restaurée depuis `.bak_et_si`.
+- **Panneau GUI « ⚖️ Décider »** (`patch_s27_gui_decider.py`, quatre fichiers,
+  `.bak_gui_decider`, simulateur v8.17.1) : route
+  `/api/et_si/decider/<action>` ; « Annuler la décision » retire elle-même de
+  la queue l'entrée adoptée (même id et source `et_si_<id>`). Premier essai
+  refusé par `node --check` : node de l'iMac trop ancien pour `||=`, syntaxe
+  déjà présente dans `app.js` → le patch ne vérifie plus que la fonction
+  ajoutée dans ce cas. Vérifié dans le GUI, aller-retour compris.
+- **Panneaux de fichiers** (demande de David : l'éditeur gêne la lecture) :
+  `patch_gui_obsidian_panneaux.py` (`.bak_obsidian`) — titre d'un `.md`
+  cliquable vers Obsidian dans tous les panneaux ; `patch_gui_lien_seul.py`
+  (`.bak_lien_seul`) — option `lien_seul` (nom du fichier seul ; `.yaml` →
+  Visual Studio Code par la route `/api/ouvrir_vscode`), activée pour les
+  deux panneaux du simulateur. Vérifié chez David.
+
+---
+
+## ✅ S27 (application réelle et phase 4) — Genève appliquée à la main, v8.18, v8.19, `appliquer_et_si.py` — 13 et 15 octobre 2026
+
+*Clos comme chantier de code ; la suite (test réel de la phase 4, reste de
+Genève, S19, amplitude des chocs, banc breakdown) est dans S27 de
+`BACKLOG_ACTIF.md`.*
+
+**13 oct — Genève (`destruction_geneve_2076`, breakdown) appliquée pour de
+vrai** (point 1 du 12 oct), étape par étape :
+- **Adoption** (19:01, régionale, majeure), puis **injection** après deux
+  aperçus : le premier tirage détruisait « le bunker des institutions
+  résiduelles », contre le *Moniteur de l'Ordre* qui y siège en 2098 ;
+  description de l'entrée retouchée dans `queue.yaml` (« Seul le complexe
+  enterré de Genève-Bunker résiste », `.bak_bunker`). Fiche injectée : bunker
+  intact, « matrice » absente du récit. Statut « injecté » vérifié ;
+  `trace_injection.py` : gouvernance +6 sur 2 ans, effet net +0,3 en 2098,
+  identique à la simulation.
+- **Lecture du rapport corrigée** : deux « Genève-Bunker » — l'instance
+  `geneve_bunker_institutions_breakdown` (*Palais des Fantômes*, disparaît) et
+  la zone `geneve_bunker_institutions` (passe en_declin). Décision : le lieu
+  survit, l'institution disparaît.
+- **Tri de David** : étapes 17-24 (ruptures ⚠ des Archives) et tous les
+  possibles sautés ; étapes 2, 10, 11 (effets lointains, +0,3 seulement), 15
+  (contredisait l'alliance des Milices) et 16 sautées.
+- **S24 — doublon des Archives Neutres** traité avant les relations :
+  `fusionner_doublon_instance.py` (nouveau) ; gardé
+  `archives_neutres_de_geneve_breakdown` (48 citations contre 25) ; 17 fichiers
+  redirigés, 0 citation restante ; fiche et archétype `archives_neutres_geneve`
+  dans `_a_supprimer/` ; conflit Factions Propagandistes (alliées à l'une,
+  opposées à l'autre) tranché en opposition des deux côtés ; réciprocité +4 / +4.
+- **Zone** en_declin (`changer_statut_zone.py`, nouveau ; corps régénéré) ;
+  **trajectoires** (`changer_trajectoire.py`, nouveau) : Archives émergent →
+  résiduel, Tour BCUC, Résidu AMSC et Palais des Fantômes transformé →
+  disparu, `annee_fin` 2057 / 2061 → 2076 (`--ecraser-annee-fin` : une date
+  antérieure faisait disparaître l'entité avant l'explosion) ; **relations**
+  (`retirer_relations.py`, nouveau) : les 3 disparues retirées de 30 fiches.
+  `validate.py` : 0 / 0 / 0 après chaque étape.
+- **Constat qui a décidé la suite** (« l'outil doit être exhaustif », David) :
+  la liste d'application ne contient que ce que l'IA a remarqué, ne transmet
+  rien à l'injection, ignore l'état réel des fiches. Arrêt du déroulé manuel ;
+  phase 4 plutôt que les étapes 26-59 une par une.
+- Incident : terminal bloqué par une commande `python3 -c` très longue →
+  convention : un petit script plutôt qu'un long one-liner ; plus de `mv` dans
+  les commandes (David place les fichiers).
+
+**15 oct — code** :
+- **v8.18** (`patch_s27_v818.py`, 4 + 6 remplacements, `.bak_v818`) :
+  `faits_imposes` (contraintes, sort de chaque acteur, zones changées) ;
+  bloc « FAITS IMPOSÉS » à l'injection ; « Propagation via la matrice » →
+  « Effet propagé aux autres variables », sans nommer le mécanisme ; ⚠ sans
+  rejet (`verifier_faits()`).
+- **Banc de rejeu** : 21/27 ; diagnostic : caches breakdown indexés sur un vault
+  modifié, pas une régression (les 4 couples hors breakdown conformes sous
+  v8.18). Passe de la peste rafraîchie (≈ 0,10 $) mais sans lecture IA (cache
+  de lecture périmé lui aussi : les effets de breakdown ont changé avec
+  l'injection de Genève) → non comparable. Genève retirée du banc.
+- **v8.19** (`patch_s27_v819.py`, `.bak_v819`) : opérations structurées par
+  simulation (`generator/state/et_si_application/<id>.json`) ; vérifié sans IA
+  sur `fusion_commerciale_2038`.
+- **`appliquer_et_si.py`** (phase 4) : règles validées par David — n'appliquer
+  qu'une hypothèse injectée ; ⚠ sautées par défaut ; possibles jamais
+  appliqués ; disparition = retrait exhaustif des relations ; `annee_fin` d'une
+  disparue = année de l'élément ; réciprocité opposition prioritaire. Testé sur
+  un faux vault (homonyme, trajectoire changée, `annee_fin` remplie, rupture
+  non déclarée, relance sans effet, refus hors « injecté »).
+
+---
+
+## ✅ S27 (parcours complet) et S19 (rupture) — phase 4 en réel, panneau « Parcours », étape ⑤, carte, v8.20 → v8.25 — 16 au 21 octobre 2026
+
+*Clos comme chantier de code ; les restes (essais de carte sur le vrai
+vault, Genève, banc breakdown) sont dans S27 de `BACKLOG_ACTIF.md`.*
+
+**17 oct — phase 4 en réel et GUI** :
+- `appliquer_et_si.py` : check-list `et_si_<id>_reste_a_faire.md`
+  (`--reste-a-faire`, `patch_s27_reste_a_faire.py`, `patch_s27_reste_titre.py`).
+- **Mourmansk** (`explosion_brise_glace_murmansk_2081`, reference, choc) :
+  premier test réel complet (simulée, adoptée, injectée, appliquée).
+- Panneau **🧭 Parcours de l'hypothèse** (`patch_s27_gui_appliquer.py`,
+  `patch_s27_gui_parcours.py`, nouveaux `et_si_statut.py` et `et_si_injecter.py` —
+  injection d'UNE hypothèse, pas de toute la queue).
+
+**17 oct — S19, option B** (`patch_s19_moteur_rupture.py`,
+`patch_s19_chaine_rupture.py`, `patch_s19_retouches.py`) : `mode: rupture` lu sur
+les fiches d'événement par le vrai moteur ; non-régression 0/72 ; simulateur
+v8.20 (forces et `mode_impose: rupture` imposés, persistance permanente) ;
+injection qui écrit `mode: rupture` ; phase 4 qui l'exige. **Atlantique**
+(`effondrement_circulation_atlantique_2067`, reference, `carte: non`) appliquée
+de bout en bout. `banc_amplitude.py` : **décision A**, `GAIN_CHOCS` inchangé ;
+règle « choc = s'estompe, rupture = change le monde ».
+
+**17-18 oct — étape ⑤ « À la main »** (`et_si_main.py` ; `patch_s27_gui_main.py`,
+`patch_s27_categories.py` (v8.21), `patch_s27_phrases.py`,
+`patch_s27_articles.py`) : entités vers la file (catégorie proposée ou devinée),
+règle de lore, phrases (relecture IA de la fiche d'événement, réécriture,
+Remplacer / Ignorer), articles (repérage IA, aucune écriture), commandes de fin.
+Faux positifs de l'IA (« déjà dominante », « renforce », « omission ») : consignes
+« états avant / après, états des entités citées, en cas de doute ne relève rien »
+et filtre `vraie_contradiction`. Article manquant (« collectifs de pêcheurs
+inuit ») : recherche par forme approchée. Mise en page : « ⛶ Agrandir », frise et
+cartes colorées, poignée violette formulaire / sortie pour tous les scripts,
+indications « terminal » traduites (`patch_s27_largeur.py`, `patch_s27_poignee.py`,
+`patch_s27_visuel.py`, `patch_s27_form_resizer.py`, `patch_s27_indications.py`).
+Menu « et si » rangé dans « Entités & événements — Création »
+(`patch_s27_menu_et_si.py`).
+
+**18-21 oct — carte** :
+- `occupation_bresil_2029` (reference, nouvelle zone `bresil_occupe`) : a montré
+  que le bouton « créer une zone » retire le pays des sous-zones (São Paulo ITA et
+  SPAAR sans territoire, introuvables ensuite par
+  `reparenter_sous_zones_orphelines.py`) et que la lecture IA proposait une autre
+  carte. **v8.22** (`patch_s27_carte.py`) : carte enregistrée pour la phase 4,
+  carte IA écartée quand l'hypothèse fixe la carte ; phase 4 : `absorber` /
+  `nouvelle_zone` par `ZoneRepository`, sous-zones d'un seul pays gardées et
+  rattachées, remise en l'état sur échec. Étape ⑤ « 🗺️ Carte »
+  (`patch_s27_carte_main.py`) : sous-zones à plusieurs pays (laisser, déplacer
+  entière, tracer), zones vidées, nouvelle zone ; contrôle de la géographie dans
+  « Pour finir » (un petit appel IA, pas gratuit).
+- `reunification_ecosse_2070` (reference, absorber + zone vidée) : écrite sur une
+  branche git jetable (`essai_carte`), vérifiée (`zones_pays.json`, géographie,
+  validate 0 / 0 / 0, étape ⑤), puis défaite. Corrections :
+  `patch_s27_carte_retouches.py` (`.bak_appliquer` refait à chaque écriture —
+  celui de la géographie datait du 26 sept ; type d'origine gardé ; aperçu qui
+  annonce la carte), **v8.23** (`patch_s27_termes.py` : fiches à relire limitées
+  au territoire qui change de mains et à ses villes, 40 → 2 lignes),
+  `patch_s27_journaux.py` (journaux d'une zone vidée : garder en exil ou retirer
+  de `journaux.yaml`), **v8.24** (`patch_s27_zone_entite.py` : nouvelle entité
+  qui nomme le pays rattachée à la zone d'arrivée), **v8.25**
+  (`patch_s27_libelles.py` : catégorie, carte écartée en premier, « hors carte »).
+- Incident : après une resimulation, l'Écosse a été adoptée et injectée sur
+  `main` ; rien d'appliqué, défait par `git checkout` et suppression de 2 fiches.
+- Décisions : journaux A / B ; hypothèses Brésil et Écosse gardées comme
+  exemples, jamais adoptées.
+
+---
+
+## ✅ S27 (clôture) — banc breakdown, restes de Genève, première carte réelle (Pacte de Tabriz), finitions du parcours — 23-24 octobre 2026
+
+*S27 est clos comme chantier. Ce qui reste à valider à l'usage est dans S30 de
+`BACKLOG_ACTIF.md` ; mode d'emploi : manuel §3quinquies ; déroulé :
+`HANDOFF_24_OCTOBRE.md`.*
+
+**23 oct — bouton Carte (hors S27, noté le 19 oct)** : `ZoneRepository.assign_pays`
+(« absorber » et « créer ») écrivait toujours `type_entite: pays` ; il reprend
+désormais le type déjà présent dans la fiche (zone N1 d'abord, `pays` par défaut).
+`patch_carte_type_entite.py`, vérifié sur copie temporaire par
+`test_patch_carte_type_entite.py` (Écosse, `region_administrative` gardé en
+« absorber » et en « créer »).
+
+**23 oct — S27.3, banc de rejeu rebâti** : les deux couples breakdown étaient
+périmés (0/11 lots en cache : vault changé depuis leur passe). Peste
+(`peste_pulmonaire_2043`) relancée en réel puis réexportée ; Genève
+(`destruction_geneve_2076`, déjà appliquée, un slug attendu fusionné) **retirée
+du banc** (`reference.json.bak_geneve`). Le rejeu a révélé 3 faux positifs de la
+passe (NexCore 2051, RPDA 2091, Exode du Midwest 2044 : « date trop tardive »
+alors que rien ne l'empêche) → **passe v9.6**, contrôle mécanique « date de la
+fiche contestée » (`patch_s27_dates_contestees.py`, sans changer les versions de
+consigne, cache valable) ; garde-fou « fait matériel » (destruction, « n'existe
+plus ») testé sur 3 contre-exemples. **Banc 23/23, priorités 6/6.** Commit
+`eabab05`.
+
+**23 oct — S27.2, restes de Genève** : l'étape ⑤ ne s'ouvre pas pour Genève
+(appliquée à la main, pas de fichier d'opérations) → traité hors panneau.
+Fiches disparues réécrites au passé : AMSC/BCUC (`patch_s27_amsc_passe.py`,
+directeur « nommé en 2089 » → 2072, relations du corps alignées sur le
+frontmatter), Tour BCUC et Palais des Fantômes (`patch_s27_geneve_passe.py`,
+avant/après dans `need_action/geneve_fiches_au_passe.md`). Trois règles de lore
+breakdown (`regles_lore_geneve.py`, premières règles du scénario). Aucun article
+de breakdown concerné ; résumé du scénario régénéré (Genève n'y figure pas :
+portée régionale, hors des 10 événements retenus).
+
+**23-24 oct — S27.1, Pacte de Tabriz (`pacte_tabriz_2058`, breakdown)**, première
+vraie hypothèse qui change la carte : l'Iran passe de `zone_golfe_levant` à
+`arc_eurasien_central`. Candidat choisi avec `scan_candidats_carte.py` (lecture
+seule). Bloc corrigé avant adoption (breakdown seul, choc durable, bloc
+`geographie`, forces 10/8/6). Après adoption, faits imposés et acteurs des
+propositions écartées retirés de l'entrée (`et_si_retirer_faits.py`) ; deux faits
+ajoutés à la main (frappes de 2026, Tabriz habitée) après un aperçu qui inventait
+une frappe en 2057. Injection réelle propre. Phase 4 : **bug** — le contrôle final
+exigeait « Iran » mot pour mot sur les sous-zones (« Île de Kharg, Iran ») et
+remettait toute la carte en l'état → lecture par mots
+(`patch_s27_carte_sous_zones.py`) ; carte appliquée, Kharg et Ispahan–Fordow
+rattachées, Ormuz (Oman/Iran) laissée sous le Golfe. Étape ⑤ : règle de lore
+`iran_dans_arc_eurasien_2058` ; entités Veilleurs d'Ormuz (zone corrigée à la main
+vers l'Arc) et Alliance des Ports Caspiennes (instance créée **sans bloc d'impact**
+après deux échecs de plafond — décision : laissée ainsi) ; 7 passages d'articles
+signalés, 7 faux positifs. Contrôle de géographie : rien sur le Pacte.
+
+**24 oct — finitions** :
+- Règles de lore manquantes de Mourmansk (`murmansk_transit_arctique_disparu_2081`)
+  et de l'Atlantique (`circulation_atlantique_pas_de_redemarrage_2098`) ; fiche
+  Murmansk Transit Arctique au passé (`patch_s27_murmansk_passe.py`). Vérifié :
+  Genève était la seule hypothèse injectée sans phase 4.
+- Doublon « Tour Bcuc » retiré de la règle de Genève (`.bak_bcuc`).
+- **Relecture IA des articles** : territoires des zones dans le prompt, filtre du
+  conditionnel (`patch_s27_relecture_articles.py`), puis faits limités à ce qui
+  est **appliqué**, entités inchangées écartées, rang qui monte sans mot de
+  déclin écarté (`patch_s27_relecture_appliquee.py`, `VERSION_ARTICLES`
+  v3-appliquee). Tabriz : 7 → 3 → 0 passage ; 3 vraies contradictions de test
+  gardées.
+- **Plafond d'impact** des entités custom : force ramenée au plafond au lieu
+  d'échouer (`patch_s27_plafond_impact.py`).
+- **Localisation** : territoires des zones dans le prompt
+  (`patch_s27_localisation_territoires.py`) — insuffisant seul (Mistral-small
+  gardait le Golfe) → contrôle mécanique du **pays du lieu**
+  (`patch_s27_localisation_pays.py`) : zone corrigée vers l'unique zone N1 qui
+  porte le pays, sinon « ambigu ». Vérifié en réel sur les Veilleurs d'Ormuz.
+- **Tri dès l'injection** : `et_si_injecter.py --plan / --sauter / --inclure`,
+  choix gardés dans `<id>.sauter.json` et repris par l'étape ④
+  (`patch_s27_sauter_avant_injection.py`), champs à l'étape ③ du panneau
+  (`patch_s27_gui_sauter.py`). Choix de Tabriz enregistrés à la main
+  (`[3, 4, 9, 11]`).
+- **Fiches des entités disparues** : `fiche_au_passe.py` (aperçu IA + avant/après
+  retouchable, puis `--apply`), lancé automatiquement par l'étape ④, rubrique
+  « ⏳ Fiches des entités disparues » à l'étape ⑤, case dans la check-list
+  (`patch_s27_checklist_au_passe.py`, `patch_s27_gui_au_passe.py`).
+- Décisions : point 6 (étape ⑤ pour une hypothèse appliquée à la main) clos sans
+  code ; S27.4 (anomalies de données) versé dans S24 ; S27.5 (optionnel) versé
+  dans S30 ; S30 « à valider à l'usage » ouvert.
+- Documentation mise au propre le 24 oct : backlog actif réduit à l'ouvert,
+  manuel complet réécrit en mode d'emploi, récits déplacés dans
+  `USER_MANUAL_HISTORIQUE.md`.
+
+---
+
+*Le 24 octobre 2026, `BACKLOG_ACTIF.md` a été réduit aux seuls points ouverts.
+Les chantiers clos qui y figuraient encore en résumé (1 Hyphan, 2/2bis Carte,
+4 zones suspectes, S3, S6, S7, S10, S12, S13, S16, S17, S22, S26, S27) ont leur
+détail dans ce fichier : tableau des chantiers clos (septembre) ou sections datées
+(octobre).*
+
+
+## ✅ S24 (partiel) — Doublons d'entités et géographie, 24 octobre 2026 (soir)
+
+*À ajouter à la fin de `BACKLOG_ARCHIVE.md`. Restes ouverts : `BACKLOG_ACTIF.md`,
+S24.*
+
+**Méthode.** Le backlog listait 5 cas ; un scan en lecture seule
+(`scan_doublons_lore.py`, noms identiques ou proches à 85 % dans un même
+scénario, plus auto-références et conflits alliance/opposition) en a relevé 21
+sur 825 instances. Chaque paire a été jugée sur `type_dans_scenario`,
+`role_dans_scenario` et `localisation` avant toute fusion. Règle de choix de la
+fiche gardée : l'archétype partagé avec d'autres scénarios, sinon le sens qui
+réécrit le moins de fichiers (aperçu des deux sens). Après chaque fusion :
+`fix_alliances_oppositions.py --reciprocite-seule --ignorer-exclus
+--resoudre-conflits` (opposition prioritaire), puis retrait à la main des
+auto-références et des conflits internes, `validate.py`, commit.
+
+**Vrais doublons fusionnés (12 cas, 13 fusions).**
+- eco_communalism : Amazônia Viva (garder `consortium_amazonia_viva`, archétype
+  des 5 autres scénarios) ; Arc Septentrional (`confederation_communs_arc_septentrional`) ;
+  Bassins Vivants (`confederation_bassins_vivants` : 18 fichiers contre 53) ;
+  Terrafond (`reseau_terrafond_bassins` : 15 contre 36 ; localisation « Vallée
+  de l'Ourthe » abandonnée) ; Trame Mnemos (`reseau_mnemos`) ; Réseau
+  Fennoscandien (`reseau_assemblees_fennoscandien`).
+- breakdown : triplon Rust Belt (`mouvement_des_communes_du_rust_belt`) ; Hanse
+  Baltique (`hanse_baltique_breakdown`).
+- fortress_world : Rust Belt ; Pacte des Forteresses Souveraines
+  (`alliance_blocs_souverains`).
+- new_sustainability : Tribunal Algorithmique de Bruxelles.
+- reference : RGMS (`institutions_multilaterales_survivantes`).
+
+**Faux doublons (acteurs distincts, souvent opposés).** Pas de fusion ; un nom
+changé, slug inchangé : `amazonie_consortium_viva_reference` → BioPatente
+Amazonas (entreprise de biopiraterie face à la coalition autochtone) ;
+`amazonie_pacte_vert_fortress_world` → Label des Sanctuaires Souverains (lobby
+de certification) ; `campements_seuils_fermes_fortress_world` → Les Campements
+des Checkpoints (réfugiés ; « Les Seuils Fermés » reste aux millénaristes) ;
+`institut_des_seuils_demographiques_new_sustainability` → Observatoire Mondial
+des Dynamiques Démographiques (OMDD) (« Seuil » reste à l'IA) ;
+`trame_bioclimatique_breakdown` → Trame Bioclimatique — les Arcs Orphelins
+(« Cicatrices Vertes » reste au Massif Central) ; `mouvement_racines_vivantes_breakdown`
+→ Les Racines Vivantes (décision de David : nébuleuse distincte de sa branche
+occitane `occitanie_racines_meres_breakdown`). Autres faux positifs laissés
+tels quels : deux Bureaux des Territoires Résiduels (Washington / Nova Genève),
+deux divisions Nexus BioSyn, Consortium Énergétique Baltique / Opaques,
+Friches / Racines / Bassins Vivants en eco_communalism.
+
+**Géographie.**
+- breakdown : `hanse_baltique` — le parent `arc_eurasien_central` était juste
+  (il porte les pays baltes et l'Allemagne) ; c'est `origine_reelle`, réduite à
+  la Pologne (autre N1), qui déclenchait l'alerte → Estonie, Lettonie, Lituanie,
+  Allemagne ajoutées, Pologne gardée en débordement. Uruguay →
+  `argentine_pampas_autonome`. Grand São Paulo (`sao_paulo_rpda`), rangée sous le
+  Nordeste → zone N1 (zone sinistrée) ; rédactions générées. Brésil de
+  `amazon_pacte_gardiens` : portion « bassin amazonien et Centre-Ouest ».
+- new_sustainability : Brésil partagé (portions « hors bassin amazonien » /
+  « bassin amazonien ») ; `manaus_rvc` (et `manaus_antenne_consortium`) et
+  `belem_consortium_amazonia` déplacées sous `reseau_vivant_continental`.
+- reference : l'Asie centrale avait bien une zone (`zones_grises_globales`) ;
+  l'entrée groupée était illisible pour le contrôle → scindée en trois pays.
+  Paraguay (Chaco) retiré de `sertao_nordeste_bresilien`.
+- fortress_world : zone `bureau_territoires_residuels` → `bureau_territoires_residuels_washington`
+  (le rapport d'impact du bouton ✏️ ne visait bien que la fiche de Washington).
+- `geographie/breakdown_avant_test.md` (premier commit, jamais lue par le code)
+  rangée dans `_a_supprimer/geographie_obsolete/`.
+
+**Pièges rencontrés.**
+- `fusionner_doublon_instance.py` v1 réécrivait l'événement portant le même
+  slug que l'instance retirée (`communes_rust_belt_zones_libres`) : fichiers
+  restaurés depuis `.bak_fusion`. Il laissait aussi la fiche gardée alliée à
+  elle-même, et une fiche citant la gardée en alliance et en opposition. →
+  **v2** du 24 oct (testée sur mini-vault).
+- `fix_alliances_oppositions.py` : pas d'`--apply` (sans `--dry-run`, il
+  écrit) ; sans `--reciprocite-seule`, il relance une passe IA sur des fiches
+  sans rapport.
+- `scan_doublons_lore.py` ne voit que les noms proches (`hanse_baltique`
+  absent du scan).
+
+**Dépôt.** 543 sauvegardes `.bak*` étaient suivies par git → règle `*.bak*`
+dans `.gitignore`, `git rm --cached`, puis suppression du disque (1 358 fichiers ;
+aucun script ne relit un `.bak`, vérifié par grep).
+
+## ✅ S28.1 — Analyse structurelle (MICMAC) et révision de la matrice d'influence, 25 octobre 2026
+
+*À ajouter à la fin de `BACKLOG_ARCHIVE.md`. Suites ouvertes : `BACKLOG_ACTIF.md`,
+S28 et S19.*
+
+**Point de départ.** Piste n° 1 de S28 (6 oct) : passer `influence_matrix.md` au
+crible de la méthode MICMAC (Godet, LIPSOR) pour vérifier que les variables
+pilotes sont bien motrices et repérer des leviers cachés. La piste venait d'une
+comparaison avec la Red Team Défense, qui pointait le manque de surprise
+d'Ourrassol ; la même discussion jugeait l'espace absent de la grille, alors
+qu'il s'agit de `frontieres_du_systeme` (établi ce jour). Pour le calcul, la discussion
+signalait aussi le paquet R ISMtools ; il n'a pas servi, le calcul tenant en
+quelques lignes de Python.
+
+**Constat.** L'ancienne matrice était symétrique (65 paires sur 66 de poids
+identique dans les deux sens) et pleine (les 132 liens possibles). Chaque
+variable influençait donc autant qu'elle dépendait ; seules la criticité
+(`systemic_criticality`, multiplicateur ×0,7 à ×1,6 sur tous les liens sortants)
+et les 3 amortisseurs à −1 créaient des leviers. Une matrice MICMAC réaliste est
+asymétrique, et creuse là où un effet ne passe que par une variable
+intermédiaire.
+
+**Méthode retenue.**
+- Trois sources confrontées pour chaque lien dirigé : propositions de Claude
+  avec justification, matrice Excel préliminaire de David
+  (`analyse_structurelle_V1.xlsx`, feuille `MAT_INIT` : 41 variables notées 0/1,
+  colonne = source, 48 % de liens, la moitié réciproques), liens déclarés dans
+  les fiches (`influences` / `influenced_by`, 69 liens sur 132).
+- Regroupement de l'Excel en 12 variables, corrigé d'après les sous-variables des
+  fiches : urbanisation en démographie, alimentation en énergie
+  (`systemes_alimentaires`), espace et planètes en `frontieres_du_systeme`. Note
+  agrégée = part des liens présents entre deux groupes.
+- Un lien absent des fiches n'est pas supprimé d'office : les listes ne
+  recensaient que les liens principaux et celles de gouvernance et territoires
+  étaient vides. Chaque lien « à examiner » a été tranché par David.
+- Validation dans l'**Atelier de la matrice** (page privée,
+  https://claude.ai/artifact/WgAxTF4arr9aRB5w7F9vxf) : un lot de 11 liens par
+  variable source, curseur, étoile de la variable, plan influence / dépendance
+  recalculé en direct, poids enregistrés dans la page et relus par Claude.
+
+**Décisions de David.**
+- `frontieres_du_systeme` désigne l'espace (orbite, exploration, industrie
+  spatiale, colonisation, ressources spatiales), et non les limites planétaires.
+- Systèmes productifs et travail : variable primordiale (capitalisme et
+  communisme au XIXᵉ siècle, esclavage, prolétariat). Liens sortants relevés vers
+  valeurs (0,75), gouvernance (0,75), géopolitique (0,6), territoires (0,75) et
+  démographie (0,7). Classée relais fort : elle reçoit aussi fortement
+  (technologie, énergie), ce qui correspond à l'exemple de la révolution
+  industrielle.
+- MICMAC compte la force des liens en valeur absolue : un amortisseur est une
+  influence. Le premier calcul, signé, classait à tort les productifs en
+  « dépendante ».
+- 34 poids retouchés dans l'Atelier, dont 30 relevés ; démographie nettement
+  renforcée (valeurs 0,95, gouvernance 0,9, territoires 0,85, économie 0,8).
+- 7 liens coupés : gouvernance, valeurs, santé et technologie → climat ;
+  santé → énergie ; territoires → espace ; climat → technologie.
+- La matrice devient la seule source des liens ; les fiches n'en gardent qu'une
+  vue générée.
+- `variable_type` des fiches (moteur / relais / réactive) gardé comme intention
+  de conception, distinct du classement MICMAC (option b).
+- `K_COUPLAGE` inchangé (0,05).
+
+**Résultat.**
+- `influence_matrix.md` : 125 liens, 9 paires symétriques sur 66 ; polarités,
+  lags, `temporal_weight` et `feedback_role` inchangés ; statistiques et tableaux
+  du corps régénérés.
+- Classement avec criticité : motrices technologie et climat ; relais
+  géopolitique, énergie, productifs, économie ; dépendantes gouvernance et
+  territoires ; autonomes démographie (à la limite), espace, santé, valeurs.
+  Sans criticité, la matrice crée désormais ses propres leviers (technologie,
+  climat, démographie motrices).
+- Moteur : ρ(|K·C|) 0,42 → 0,34 ; niveaux 2098 déplacés d'au plus 1,2 point
+  (énergie en `reference`), 49 niveaux sur 72 de 0,1 point ou plus.
+- Fiches : listes de liens retirées de l'en-tête (lues par `loader.py` mais
+  jamais utilisées ; aucun script n'envoie le corps des fiches à l'IA) ;
+  section 2 générée (liens ≥ 0,5, sens « aggrave » / « amortit », liens
+  réciproques).
+- `validate.py` : au plus 132 liens, aucune variable isolée.
+
+**Outils.** `micmac_matrice.py`, `appliquer_matrice_validee.py`,
+`regenerer_position_fiches.py`, `patch_s28_validate.py` ; données
+`documentation/matrice_validee.csv` et `documentation/niveaux_avant_s28.json`.
+
+## ✅ Corrections rapides du 25 octobre 2026
+
+- **S30, cosmétique** : `et_si_injecter.py --plan` affiche « · » pour une
+  opération déjà faite (alerte commençant par « déjà »), « ⚠ » pour les seules
+  vraies alertes. Vérifié sur `pacte_tabriz_2058`.
+- **S24, `audit_signatures.py`** : les fichiers `_*.md` sont exclus des deux
+  boucles ; les 6 faux positifs de `_index.md` ont disparu.
+- **S19, `undo_custom.py`** : `_recalculer_total_registre()` (même calcul que
+  pour les signaux) appelé au retrait d'un événement, avec sauvegarde ;
+  comparaison exacte du slug en 3ᵉ colonne au lieu d'une sous-chaîne. Registre
+  vérifié avant patch : 643 entrées, total déjà synchronisé.
+
+---
+
+## Session du 30 octobre 2026
+
+### S19 — Signaux faibles propagés par la matrice (clos le 30 oct)
+- **Constat** : les 10 signaux de `signaux_custom/` (22 entrées, une par
+  variable visée) avaient tous `propagation_via_matrice: false` : chacun
+  agissait sur ses variables sans se diffuser dans le réseau.
+- **Lecture de `dynamique.py`** : le drapeau est lu par entrée
+  (`chocs_depuis_donnees()`) ; un choc `true` alimente la composante couplée
+  `x_net` à pleine force ; un choc `false` reste dans la composante locale
+  `x_loc` (superposition exacte). Aucune propagation partielle n'existe :
+  l'option « ~30 % » aurait demandé du code, pour un effet d'environ 1,5 %.
+  Le double comptage (signal qui vise déjà la variable voisine) est
+  négligeable : une variable reçoit ≈ K × poids × criticité ≈ 0,05 × 0,8 × 1,3
+  ≈ 5 % de l'écart de sa voisine, avec retard.
+- **Options** : a) tout à `true` ; b) garder `false`. **Choix de David : a**,
+  par cohérence avec la définition d'un signal faible (transformateur par
+  combinaison).
+- **Appliqué** : 22 entrées passées à `true` (`sed`) ;
+  `patch_s19_signaux_propagation.py` (aperçu / `--apply`, `.bak`) modifie
+  `inject_custom_signals.py` : exemple JSON du prompt à `true`, consigne
+  « toujours true » (règle du 30 oct), défauts du code (écriture de la fiche,
+  développement) à `True`.
+- **Mesure** (`mesure_niveaux.py`, référence
+  `documentation/niveaux_avant_s19_signaux.json`) : 62 niveaux sur 72 bougent
+  d'au moins 0,1 point, 1,1 au plus (fortress_world
+  `systeme_economique_redistribution` +1,1). Sens cohérent avec la polarité des
+  signaux par scénario : vers la crise en fortress_world, breakdown et
+  reference ; vers l'apaisement en new_sustainability, policy_reform et
+  eco_communalism.
+- `K_COUPLAGE` non recalé (aucune injection depuis le 25 oct) ; son commentaire
+  dit désormais ρ ≈ 0,34.
+
+### S28.1 — `coupling_intensity` examiné (30 oct)
+- Lu par aucun calcul ni prompt : chargé par `loader.py`, transmis par
+  `snapshot.py`, jamais relu ; `export_prompt_veille.py`,
+  `extract_state_logic.py` et `inject_custom_signals.py` ne font que contourner
+  ses clés en wikilink (`[[slug]]`, refusées par `yaml.safe_load`). Le manuel ne
+  le mentionne que pour ce nettoyage.
+- Donnée de valeur : 2 à 4 partenaires par scénario, différents d'un monde à
+  l'autre et cohérents avec la `state_logic` (ex. énergie : géopolitique 92 en
+  fortress_world, technologie 92 en new_sustainability, territoires 85 en
+  eco_communalism). Limites : palmarès et non matrice complète, sens du lien
+  non précisé.
+- Décision : gardé ; deux usages notés au backlog (prompt des articles,
+  conseillé ; moteur, avec S28.2).
+
+### Petits chantiers du 30 oct
+- **S21** : `patch_s21_prompt_livres.py` ajoute au prompt d'extraction de
+  `veille_livres_api.py`, après « seulement des faits observés qu'il
+  rapporte », la consigne des deux pièges (recommandation de l'auteur ≠
+  observation ; grand programme d'État, plan national ou investissement massif
+  ≠ marginal, sauf effet inattendu et encore marginal rapporté par l'extrait).
+  `verifier_flux_rss.py --apply` : 16 flux sur 31 sources, 1 nouveau écrit dans
+  `sources_signaux_faibles.yaml`.
+- **S20** : `patch_s20_yaml_append_entete.py` — `/api/yaml/append` (`gui/app.py`)
+  met de côté le bloc de commentaires et de lignes vides du début du fichier
+  avant `yaml.dump`, puis le remet en tête (marque `PATCH_S20_ENTETE`). Testé sur
+  copie (deux ajouts successifs) ; à confirmer en réel.
+- **S24** : `reparer_bloc_metadonnees.py` → 0 article. Scan de géographie :
+  l'alerte Pologne de `hanse_baltique` persiste ; deux autres incohérences
+  relevées (voir backlog).
+- **S14** : alertes `sao_paulo_megapole` disparues.
+- `.obsidian/graph.json` retiré du suivi git (réécrit par Obsidian à chaque
+  ouverture).
+
+---
+
+## Clos le 31 octobre 2026
+
+- **S24 — bloc `===METADONNEES_PUBLICATION===` resté dans un article** : regex
+  d'extraction d'`api.py` exigeant `===FIN_METADONNEES===` ; un bloc non fermé ou
+  tronqué (retry de longueur, `MAX_TOKENS` 4000) restait dans le texte. Correctif
+  préventif (aucune trace de l'article de septembre) : fin facultative, toutes les
+  occurrences retirées, bloc tronqué → champs partiels jetés et retry ciblé
+  (`patch_s24_bloc_metadonnees.py`, `patch_s24b_bloc_tronque.py`, commit
+  `8aeb5af`). `reparer_bloc_metadonnees.py` ne sert plus qu'à l'existant.
+- **S24 — `generate_journaux.py --update`, rédactions factices** : le fallback
+  écrivait « Édition <zone> » vide, bloquait `--update` et écrasait un bon journal
+  en mode complet. Supprimé : zones ratées absentes et listées, parse JSON tolérant
+  (récupération partielle d'une réponse tronquée), nouvel essai zone par zone,
+  logs `llm_json_echec_journaux_*`, `journaux.yaml.bak`
+  (`patch_s24_journaux_fallback.py`). `clean_fallback_journaux.py` ne sert plus
+  qu'aux restes antérieurs.
+- **S20 — reprise d'injection partielle « ne couvre pas un échec par exception »** :
+  point caduc, déjà traité par `patch_s22_exception_signal.py` (5 oct). Trou voisin
+  corrigé : interruption (Ctrl-C, SIGTERM) → file réécrite après chaque idée,
+  variable en cours restaurée, reprise produite, plus de signal en double sous
+  `_2` (`patch_s20_interruption_signaux.py`, commit `19e7e53`).
+- **S24 — `_slugify()` : ø, æ, œ, ß, ł, đ, ı → `_`** : 10 copies de la fonction,
+  dont deux couplées exprès à `api.py` (`export_revues.slug_pipeline`,
+  `reattribuer_signatures.py`). Module commun `generator/slugs.py` (translittération
+  puis NFD), 9 copies déléguées (`patch_s24_slugs_unifies.py`, commit `68d3d23`) ;
+  audit (`audit_slugs_s24.py` : 7 slugs abîmés dans le lore sur 44 noms) ;
+  migration (`migrer_slugs_s24.py` : 4 entités + 4 instances renommées, 9 articles,
+  18 journalistes, 472 remplacements dans 144 fichiers, `documentation/Old/`
+  exclu). Entités renommées : `communautes_rurales_autogerees_des_noeuds_de_survie`,
+  `enclaves_industrielles_de_bergen_tromso`, `les_gardiens_des_noeuds_hybrides`,
+  `reseau_des_metropoles_noeuds`. Laissés : `export_revues.slugify()` (URL),
+  journalistes au nom inventé par l'IA hors `journaux.yaml`.
+- **S23 — trois sources des noms de réseaux** : concordantes (journaux.yaml =
+  `RESEAUX` par construction ; `JOURNAL_PROFILES` ne fournit son nom qu'en repli
+  ultime). Alignés : « L'Ordre du Territoire » → « L'Ordre Zonal » ; posture
+  fortress_world pro-pouvoir rendue valable pour tous les blocs
+  (`patch_s23_profils_reseaux.py`).
+- **Backlog** réorganisé en trois parties (A bugs et vérifications, B
+  développement, C enrichissement) ; règle : partie A vide avant l'enrichissement
+  en volume.
+- **S30 / A1 — tests réels du simulateur sur la branche jetable `test-s30`**
+  (après-midi) : `reunification_ecosse_2070` (absorber, zone vidée) puis
+  `occupation_bresil_2029` (nouvelle zone, sous-zones), étapes ① à ⑤, lecture IA et
+  passe exhaustive. Vérifiés en réel : Sauter / Inclure à l'étape ③ (avec et sans
+  élément retiré de l'entrée : « 7 » a retiré un fait et un acteur), repris à
+  l'étape ④ ; Carte — zone vidée et ses journaux (garder / garder en exil / aperçu
+  du retrait / retirer), création d'une `nouvelle_zone`, sous-zones à un seul pays
+  rattachées (une sous-zone de niveau 3 suit son parent), « déplacer entière » une
+  sous-zone à plusieurs pays (Bassin Amazonien : Bolivie, Colombie, Pérou comptent
+  alors dans la zone d'occupation) ; étape ⑤ — Remplacer / Ignorer une phrase. Non
+  couvert : rubrique « Fiches des entités disparues » et aperçu « au passé » (aucune
+  entité ne disparaît dans les deux exemples). Retour sur `main` : rien ne reste
+  (commits jetables `1bcedbd`, Brésil sur la branche).
+- **S30 — événement resté dans la zone quittée** : l'injection (③) précède la carte
+  (④) ; `occupation_bresil_2029_reference` restait dans `ameriques_multipolaires`.
+  `appliquer_et_si.py` relocalise `localisation.zone` vers la cible après la carte
+  réussie, annoncé dans l'aperçu (`patch_s30_relocaliser_evenement.py`, `3ff62d7`).
+  Testé sur vault factice.
+- **S30 — faits imposés ignorés sans alerte** : « l'Écosse fait de nouveau partie du
+  Royaume-Uni » remplacé par l'UOC sur deux tirages ; Consortium censé décliner
+  devenu tuteur (simulation d'injection). `verifier_faits` ne regardait que
+  « reste » et « matrice ». `inject_custom_events.py` : `verifier_contraintes()`,
+  appel IA sur les faits `contrainte` / `change` / `zone`, une réécriture puis ⚠
+  (`patch_s30_faits_contraintes.py`, `7ef4462`). Testé avec IA simulée ; cause en
+  partie dans l'hypothèse (le Royaume-Uni n'existe plus comme acteur en reference,
+  l'UOC couvre la zone).
+- **S30 — citations réécrites par la passe exhaustive** : 3 phrases « obligatoires »
+  introuvables mot pour mot à l'étape ⑤ (« protocole d'urgence climatique et
+  sécuritaire » pour « écologique » ; « autorité renforcée… » pour « autorité morale
+  accrue mais des capacités coercitives insuffisantes » ; « modèle de São Paulo »
+  pour « modèle pauliste »). Le contrôle ne comparait que 120 caractères.
+  Désormais : extrait entier ; sinon vraie phrase de la fiche (`extrait_ia` garde la
+  citation) et changement en possible (`patch_s30_extrait_exact.py`, `3e01837`).
+  Testé sur les trois phrases réelles ; les réponses en cache sont recontrôlées.
+- **S30 — réciprocité non annoncée** : « Fichiers modifiés : 7 » à l'étape ④, mais
+  `fix_alliances_oppositions.py` (tout le scénario) a aussi modifié
+  `institutions_multilaterales_survivantes_reference` (ancienne asymétrie). Bloc
+  « Réciprocité » dans l'aperçu (`patch_s30_apercu_reciprocite.py`, `e773378`),
+  aligné sur `--ignorer-exclus` (`patch_s30_reciprocite_exclus.py`, `c1db74b` :
+  sans lui, 15 fausses alertes en fortress_world dues aux personnages en réserve).
+  Validé sur le vrai vault : 1 asymétrie en reference, breakdown,
+  new_sustainability ; 0 ailleurs.
+- **S30 — affichage** : titres d'articles entourés de « » en double ; libellé
+  `acteurs_hint` « passe exhaustive » même sans passe ; aperçu ④ listant
+  `sao_paulo_spaar` (qui suit son parent) parmi les sous-zones rattachées
+  (`patch_s30_affichage.py`, `64b4027`). Décision : « émergent → déclinant » reste
+  non signalé (échec précoce plausible).
+- **Conventions** : sorties dans `~/Documents/Ourrassol_sorties/` (plus le Bureau),
+  commandes depuis la racine du vault ; git 2.17 → `git checkout`, pas `git switch`.
