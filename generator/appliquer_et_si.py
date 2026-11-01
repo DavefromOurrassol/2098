@@ -870,11 +870,33 @@ def reciprocite_prevue(sc, W):
 def afficher_reciprocite(ops, W):
     """PATCH_S30_RECIPROCITE : bloc « Réciprocité » de l'aperçu, par scénario touché."""
     touches = {p.stem for p in W.changes()}
+    # PATCH_S30_RECIP_PAR_RELATION : tri par relation, pas par fiche. Un ajout « + <type> `a` »
+    # dans f vient des opérations si a est touchée ET si a ne citait pas déjà f (fiche sur disque).
+    cache = {}
+
+    def _avant(a, champ):
+        if a not in cache:
+            try:
+                d = decoupe((INSTANCES / f"{a}.md").read_text(encoding="utf-8"))
+                cache[a] = (lire_fm(d[1]) if d else None) or {}
+            except OSError:
+                cache[a] = {}
+        v = cache[a].get(champ)
+        return [str(x).strip() for x in v if x] if isinstance(v, list) else []
+
+    def _de_op(f, x):
+        try:
+            a, champ = x.split("`")[1], x.split()[1] + "s"
+        except IndexError:
+            return False
+        return a in touches and f not in _avant(a, champ)
+
     for sc in dict.fromkeys(o["sc"] for o in ops if o["retenue"] and o["genre"] in ("relation", "disparition")):
         ajouts, conflits = reciprocite_prevue(sc, W)
-        par_op = {f: v for f, v in ajouts.items()
-                  if any(x.split("`")[1] in touches for x in v)}
-        anciennes = {f: v for f, v in ajouts.items() if f not in par_op}
+        par_op, anciennes = {}, {}
+        for f, v in ajouts.items():
+            for x in v:
+                (par_op if _de_op(f, x) else anciennes).setdefault(f, []).append(x)
         if not (ajouts or conflits):
             continue
         print(f"\nRéciprocité ({sc}, après l'écriture, tout le scénario) — estimation :")
