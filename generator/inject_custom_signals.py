@@ -531,9 +531,184 @@ def _signaux_thematiquement_proches(idea_text: str, section12: str, signal_slug:
     return proches
 
 
+# ---------------------------------------------------------------------------
+# U2a (unification « et si ? ») -- valeurs imposées par le simulateur
+# ---------------------------------------------------------------------------
+# Champs d'idée : impacts_imposes, date_imposee, via_matrice_impose (+ mode_impose
+# "choc" toléré). Jamais corrigés en silence : une valeur invalide est une erreur.
+
+def lire_impositions_signal(idea):
+    """Retourne (impositions ou None, erreurs).
+    impositions = {"par_var": {variable: {"delta": n, "scen": {sc: {"polarite": ±1,
+    "duree": n}}}}, "date": int ou None, "via_matrice": bool ou None}."""
+    brut = idea.get("impacts_imposes")
+    date_i = idea.get("date_imposee")
+    via = idea.get("via_matrice_impose")
+    mode = idea.get("mode_impose")
+    if brut is None and date_i is None and via is None and mode is None:
+        return None, []
+    erreurs = []
+    if brut is None:
+        erreurs.append("impacts_imposes obligatoire dès qu'une valeur est imposée "
+                       "(forces et sens par scénario)")
+    par_var = {}
+    if brut is not None:
+        if not isinstance(brut, dict) or not brut:
+            erreurs.append("impacts_imposes doit être un dictionnaire {scénario: [impacts]}")
+            brut = {}
+        for sc in brut:
+            if sc not in SCENARIOS:
+                erreurs.append("impacts_imposes : scénario inconnu {!r}".format(sc))
+        if brut and not erreurs:
+            manquants = [s for s in SCENARIOS if s not in brut]
+            if manquants:
+                erreurs.append("impacts_imposes : un signal couvre toujours les 6 scénarios, "
+                               "manquants : {}".format(manquants))
+        for sc in SCENARIOS:
+            liste = brut.get(sc)
+            if liste is None:
+                continue
+            if not isinstance(liste, list) or not liste:
+                erreurs.append("impacts_imposes[{}] doit être une liste non vide".format(sc))
+                continue
+            for n, imp in enumerate(liste, 1):
+                ou = "impacts_imposes[{}] n°{}".format(sc, n)
+                if not isinstance(imp, dict):
+                    erreurs.append("{} mal formé".format(ou))
+                    continue
+                var = str(imp.get("variable") or "").strip()
+                if var not in VALID_VARS:
+                    erreurs.append("{} : variable inconnue {!r}".format(ou, var))
+                    continue
+                try:
+                    force = abs(float(imp.get("delta_level")))
+                except (TypeError, ValueError):
+                    erreurs.append("{} : delta_level absent ou non numérique".format(ou))
+                    continue
+                if not 1 <= force <= MAX_DELTA_SIGNAL:
+                    erreurs.append("{} : delta_level {:g} hors de 1-{} (plafond d'un signal)"
+                                   .format(ou, force, MAX_DELTA_SIGNAL))
+                    continue
+                try:
+                    pol = int(imp.get("polarite"))
+                except (TypeError, ValueError):
+                    pol = None
+                if pol not in (1, -1):
+                    erreurs.append("{} : polarite doit valoir 1 ou -1".format(ou))
+                    continue
+                try:
+                    duree = float(imp.get("duree") or 10)
+                except (TypeError, ValueError):
+                    erreurs.append("{} : duree non numérique".format(ou))
+                    continue
+                if duree < 1 or duree != int(duree):
+                    erreurs.append("{} : duree doit être un nombre entier d'années >= 1".format(ou))
+                    continue
+                force = int(force) if force == int(force) else force
+                v = par_var.setdefault(var, {"delta": force, "scen": {}})
+                if v["delta"] != force:
+                    erreurs.append("{} : delta_level {:g} différent de {:g} dans un autre scénario "
+                                   "(un signal a UNE force par variable)".format(ou, force, v["delta"]))
+                    continue
+                if sc in v["scen"]:
+                    erreurs.append("{} : variable {} présente deux fois dans {}".format(ou, var, sc))
+                    continue
+                v["scen"][sc] = {"polarite": pol, "duree": int(duree)}
+        if par_var and not erreurs:
+            for var, v in par_var.items():
+                absents = [s for s in SCENARIOS if s not in v["scen"]]
+                if absents:
+                    erreurs.append("impacts_imposes : la variable {} doit figurer dans les 6 "
+                                   "scénarios (manque : {})".format(var, absents))
+    date_ok = None
+    if date_i is not None:
+        try:
+            d = float(date_i)
+            if d != int(d):
+                raise ValueError
+            date_ok = int(d)
+        except (TypeError, ValueError):
+            erreurs.append("date_imposee doit être une année entière")
+        if date_ok is not None:
+            try:
+                ap = int(idea.get("annee_apparition"))
+            except (TypeError, ValueError):
+                ap = None
+            plancher = annee_plancher_bascule(ap)
+            if not plancher <= date_ok <= ANNEE_APPARITION_MAX:
+                erreurs.append("date_imposee {} hors de {}-{} (plancher de bascule d'un signal)"
+                               .format(date_ok, plancher, ANNEE_APPARITION_MAX))
+    if via is not None and not isinstance(via, bool):
+        erreurs.append("via_matrice_impose doit valoir true ou false")
+    if mode is not None and str(mode).strip().lower() != "choc":
+        erreurs.append("mode_impose {!r} non pris en charge pour un signal (pas de rupture)".format(mode))
+    if erreurs:
+        return None, erreurs
+    return {"par_var": par_var, "date": date_ok, "via_matrice": via}, []
+
+
+def _fenetre_imposee(imp, variable_slug, scen):
+    """'AAAA-BBBB' pour ce scénario, ou None si la date n'est pas imposée."""
+    v = (imp or {}).get("par_var", {}).get(variable_slug)
+    if not v or imp.get("date") is None:
+        return None
+    debut = imp["date"]
+    fin = min(debut + v["scen"][scen]["duree"], 2098)
+    return "{}-{}".format(debut, fin)
+
+
+def texte_impositions_signal(imp, variable_slug):
+    """Bloc de prompt : ce qui est fixé, pour que le texte raconte ce signal-là."""
+    v = (imp or {}).get("par_var", {}).get(variable_slug)
+    if not v:
+        return ""
+    lignes = ["\n⚠️ VALEURS IMPOSÉES (simulateur « et si ? ») -- elles ne se discutent pas, "
+              "elles seront rétablies telles quelles après ta réponse :",
+              "- delta_level = {} (force, identique dans les 6 scénarios)".format(v["delta"])]
+    for sc in SCENARIOS:
+        pol = v["scen"][sc]["polarite"]
+        sens = "aggrave la crise de {} (niveau qui monte)".format(variable_slug) if pol > 0 \
+            else "apaise la crise de {} (niveau qui baisse)".format(variable_slug)
+        fen = _fenetre_imposee(imp, variable_slug, sc)
+        lignes.append("- [{}] polarite {:+d} : le signal {}{}".format(
+            sc, pol, sens, " ; date_bascule = {}".format(fen) if fen else ""))
+    lignes.append("Rédige `evolution` et `evenement_cle` de chaque scénario pour qu'ils RACONTENT ce "
+                  "sens-là" + (", et place dans chaque `evenement_cle` une année comprise dans la "
+                              "fenêtre `date_bascule` de CE scénario." if imp.get("date") is not None
+                              else "."))
+    if imp.get("date") is not None:
+        lignes.append("Les 6 scénarios ont la même fenêtre de départ : c'est voulu, ne la décale pas.")
+    return "\n".join(lignes) + "\n"
+
+
+def appliquer_impositions_signal(develop, imp, variable_slug):
+    """Rétablit dans la réponse de l'IA les valeurs imposées (appelé après chaque
+    réponse, essai initial et relances, AVANT la validation)."""
+    v = (imp or {}).get("par_var", {}).get(variable_slug)
+    if not v:
+        return
+    develop["delta_level"] = v["delta"]
+    develop["polarite"] = {sc: v["scen"][sc]["polarite"] for sc in SCENARIOS}
+    develop["propagation_via_matrice"] = True if imp.get("via_matrice") is None else imp["via_matrice"]
+    if imp.get("date") is None:
+        return
+    courant = None
+    sortie = []
+    for ligne in str(develop.get("signal_to_state_yaml") or "").split("\n"):
+        m = re.match(r"^\s*(" + "|".join(SCENARIOS) + r"):\s*$", ligne)
+        if m:
+            courant = m.group(1)
+        elif courant and re.match(r"^\s*date_bascule:", ligne):
+            indent = ligne[: len(ligne) - len(ligne.lstrip())]
+            ligne = "{}date_bascule: {}".format(indent, _fenetre_imposee(imp, variable_slug, courant))
+        sortie.append(ligne)
+    develop["signal_to_state_yaml"] = "\n".join(sortie)
+
+
 def step2_develop(client, idea_text, source, variable_slug, signal_slug, categorie,
                    registre_text, previous=None, issues=None, sibling_events=None,
-                   zone_hint=None, annee_apparition=None, interdits=None):
+                   zone_hint=None, annee_apparition=None, interdits=None,
+                   impositions_txt=""):
     content = read_variable_file(variable_slug)
     section7 = extract_section(content, 7, 8)
     section8 = extract_section(content, 8, 9)
@@ -699,7 +874,7 @@ la variable {variable_slug} (autre lieu, autre acteur, autre nature de fait).
 Variable cible : {variable_slug}
 Catégorie : {categorie}
 Identifiant du signal : {signal_slug}
-{zone_hint_txt}{apparition_txt}
+{zone_hint_txt}{apparition_txt}{impositions_txt}
 {FORMAT_RULES}
 
 --- SECTION 7 actuelle (signaux faibles existants) ---
@@ -823,7 +998,7 @@ def normaliser_polarites(polarite):
 
 def validate_signal_block(yaml_text, signal_slug, variable_slug, registre_text,
                            delta_level=None, propagation_via_matrice=None, polarite=None,
-                           annee_apparition=None):
+                           annee_apparition=None, fenetres_imposees=False):
     """Retourne une liste de problèmes (vide si tout est OK).
 
     delta_level/propagation_via_matrice (16 août 2026, chantier injection
@@ -972,7 +1147,8 @@ def validate_signal_block(yaml_text, signal_slug, variable_slug, registre_text,
             )
 
     for window, scens in new_windows_by_scen.items():
-        if len(scens) > 1:
+        # U2a : fenêtre imposée = la même pour les 6 scénarios, voulu
+        if len(scens) > 1 and not fenetres_imposees:
             issues.append(
                 f"Fenêtre {window} dupliquée entre plusieurs scénarios "
                 f"du même nouveau signal : {scens}"
@@ -1339,6 +1515,15 @@ def process_idea(client, idea, dry_run=False):
     else:
         annee_apparition = None
 
+    # U2a : valeurs imposées, contrôlées AVANT tout appel IA
+    imp, erreurs_imp = lire_impositions_signal(idea)
+    if erreurs_imp:
+        return {"status": "needs_review", "idea": idea,
+                "reason": "valeurs imposées invalides : " + " ; ".join(erreurs_imp)}
+    if imp and not idea.get("reprise"):
+        variable_hint = list(imp["par_var"])
+        variable_hint_count = len(variable_hint)
+
     print(f"\n=== {idea_id} ===  (persistance : {persistance}"
           + (f", apparition : {annee_apparition}" if annee_apparition else "") + ")")
     # Reprise d'une injection PARTIELLE (27 septembre 2026) : une idée dont
@@ -1364,6 +1549,8 @@ def process_idea(client, idea, dry_run=False):
         print("[1/4] Sélection de variable(s)...")
         selection = step1_select_variable(client, idea_text, variable_hint, variable_hint_count)
         variables = [v for v in selection["variables"] if v in VALID_VARS]
+        if imp:  # U2a : les variables sont celles des impacts imposés
+            variables = list(imp["par_var"])
         categorie = selection["categorie"]
         signal_slug = selection["signal_slug"]
         # Slug déjà pris par un AUTRE signal (fiche d'audit existante) : la
@@ -1405,7 +1592,9 @@ def process_idea(client, idea, dry_run=False):
                 client, idea_text, source, variable_slug, signal_slug, categorie,
                 registre_text, sibling_events=sibling_events, zone_hint=zone_hint,
                 annee_apparition=annee_apparition,
+                impositions_txt=texte_impositions_signal(imp, variable_slug),
             )
+            appliquer_impositions_signal(develop, imp, variable_slug)
 
             for attempt in range(MAX_FIX_ATTEMPTS + 1):
                 yaml_text = develop["signal_to_state_yaml"]
@@ -1416,6 +1605,7 @@ def process_idea(client, idea, dry_run=False):
                     propagation_via_matrice=develop.get("propagation_via_matrice"),
                     polarite=develop.get("polarite"),
                     annee_apparition=annee_apparition,
+                    fenetres_imposees=bool(imp and imp.get("date") is not None),
                 )
                 if not issues:
                     break
@@ -1431,7 +1621,9 @@ def process_idea(client, idea, dry_run=False):
                         registre_text, previous=yaml_text, issues=issues,
                         sibling_events=sibling_events, zone_hint=zone_hint,
                         annee_apparition=annee_apparition, interdits=interdits,
+                        impositions_txt=texte_impositions_signal(imp, variable_slug),
                     )
+                    appliquer_impositions_signal(develop, imp, variable_slug)
 
             if issues:
                 results.append({
@@ -1628,6 +1820,11 @@ QUEUE_TEMPLATE = """\
 #                         bascule ne peut jamais commencer avant l'année EN
 #                         COURS : un signal apparu en 2025 bascule au plus
 #                         tôt l'année actuelle.
+#   impacts_imposes     : NE PAS REMPLIR À LA MAIN (posé par « et si ? »). Forces et sens
+#                         imposés : {scénario: [{variable, delta_level 1-10, polarite 1|-1,
+#                         duree}]}, les 6 scénarios, mêmes variables, une force par variable.
+#   date_imposee        : idem. Année de début de la fenêtre, la même dans les 6 scénarios
+#                         (fin = début + duree). via_matrice_impose : true|false.
 #   reprise             : NE PAS REMPLIR À LA MAIN. Présent dans l'entrée
 #                         'idee_a_remettre_en_queue' de needs_review.yaml
 #                         après une injection PARTIELLE : recopier cette
@@ -1701,11 +1898,76 @@ def _sigterm_comme_ctrl_c():
         pass  # hors du thread principal : on garde le comportement par défaut
 
 
+def run_single_idea_mode(client, idea, dry_run, json_output):
+    """U2a : une idée fournie en JSON, hors queue.yaml (même convention que
+    inject_custom_events.py --idea --json). Trace dans processed/needs_review."""
+    manquants = [f for f in ("id", "description") if not idea.get(f)]
+    if manquants:
+        msg = "Champs requis manquants : {}".format(", ".join(manquants))
+        print(json.dumps({"ok": False, "error": msg}, ensure_ascii=False) if json_output
+              else "[erreur] " + msg)
+        raise SystemExit(1)
+    try:
+        outcome = process_idea(client, idea, dry_run=dry_run)
+    except Exception as e:
+        outcome = {"status": "needs_review", "idea": idea, "error": str(e)}
+    if dry_run:
+        if json_output:
+            print(json.dumps({"ok": True, "dry_run": True, "outcome": outcome},
+                              ensure_ascii=False, default=str))
+        else:
+            print(json.dumps(outcome, ensure_ascii=False, indent=2, default=str))
+        return
+    if outcome["status"] == "injected":
+        append_yaml_list(PROCESSED_PATH, outcome, key="processed")
+    else:
+        append_yaml_list(NEEDS_REVIEW_PATH, outcome, key="needs_review")
+    res = outcome.get("results") or []
+    injectees = [r["variable"] for r in res if r.get("status") == "injected"]
+    echouees = [r["variable"] for r in res if r.get("status") == "needs_review"]
+    if json_output:
+        print(json.dumps({
+            "ok": True,
+            "status": outcome.get("status"),
+            "signal_slug": (outcome.get("selection") or {}).get("signal_slug"),
+            "injected_variables": injectees,
+            "failed_variables": echouees,
+            "reason": outcome.get("reason") or outcome.get("error"),
+        }, ensure_ascii=False))
+    else:
+        print("\nTerminé : {} variable(s) injectée(s), {} en échec. Voir {} et {}.".format(
+            len(injectees), len(echouees), PROCESSED_PATH, NEEDS_REVIEW_PATH))
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--dry-run", action="store_true",
                          help="Appelle le LLM et valide, mais n'écrit rien sur disque.")
+    parser.add_argument("--idea", default=None,
+                         help="Idée unique en JSON (mêmes champs qu'une entrée de queue.yaml, "
+                              "+ impacts_imposes/date_imposee/via_matrice_impose), injectée "
+                              "directement sans passer par la queue.")
+    parser.add_argument("--json", action="store_true",
+                         help="Avec --idea : dernière ligne = résultat JSON.")
     args = parser.parse_args()
+
+    if args.idea is not None:
+        try:
+            idea = json.loads(args.idea)
+        except json.JSONDecodeError as e:
+            msg = "--idea n'est pas un JSON valide : {}".format(e)
+            print(json.dumps({"ok": False, "error": msg}, ensure_ascii=False) if args.json
+                  else "[erreur] " + msg)
+            sys.exit(1)
+        if not isinstance(idea, dict):
+            msg = "--idea doit être un objet JSON"
+            print(json.dumps({"ok": False, "error": msg}, ensure_ascii=False) if args.json
+                  else "[erreur] " + msg)
+            sys.exit(1)
+        client = get_client()
+        _sigterm_comme_ctrl_c()
+        run_single_idea_mode(client, idea, dry_run=args.dry_run, json_output=args.json)
+        return
 
     queue = load_yaml_list(QUEUE_PATH, key="queue")
     if not queue:

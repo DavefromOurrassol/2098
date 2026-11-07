@@ -1720,5 +1720,452 @@
     "via_matrice_impose": true
    }
   }
+ },
+ "remboursement_chatbots_therapeutes_2040": {
+  "simulation": {
+   "date": "2026-11-07T10:49",
+   "version": "v8.25",
+   "empreinte": "fc12d045a83a3c5a",
+   "scenarios": [
+    "breakdown",
+    "fortress_world",
+    "new_sustainability",
+    "eco_communalism",
+    "policy_reform",
+    "reference"
+   ],
+   "complet": true,
+   "passe": false,
+   "rapport": "documentation/need_action/et_si_remboursement_chatbots_therapeutes_2040.md",
+   "entree": {
+    "id": "remboursement_chatbots_therapeutes_2040",
+    "description": "Plusieurs pays commencent à rembourser des chatbots thérapeutes par la sécurité sociale, avec un débat sur la responsabilité médicale en cas d’erreur de l’IA.",
+    "source": "et_si_remboursement_chatbots_therapeutes_2040",
+    "persistance": "normale",
+    "variable_hint": [
+     "sante_biotechnologies",
+     "gouvernance_institutions",
+     "technologie_information",
+     "valeurs_culture_tempo_sociale",
+     "systeme_economique_redistribution"
+    ],
+    "variable_hint_count": 5,
+    "date_imposee": 2040,
+    "impacts_imposes": {
+     "breakdown": [
+      {
+       "variable": "sante_biotechnologies",
+       "delta_level": 6,
+       "duree": 5,
+       "polarite": 1
+      },
+      {
+       "variable": "gouvernance_institutions",
+       "delta_level": 10,
+       "duree": 5,
+       "polarite": 1
+      },
+      {
+       "variable": "technologie_information",
+       "delta_level": 5,
+       "duree": 3,
+       "polarite": 1
+      },
+      {
+       "variable": "valeurs_culture_tempo_sociale",
+       "delta_level": 8,
+       "duree": 5,
+       "polarite": 1
+      },
+      {
+       "variable": "systeme_economique_redistribution",
+       "delta_level": 5,
+       "duree": 5,
+       "polarite": -1
+      }
+     ],
+     "fortress_world": [
+      {
+       "variable": "sante_biotechnologies",
+       "delta_level": 6,
+       "duree": 5,
+       "polarite": 1
+      },
+      {
+       "variable": "gouvernance_institutions",
+       "delta_level": 10,
+       "duree": 5,
+       "polarite": 1
+      },
+      {
+       "variable": "technologie_information",
+       "delta_level": 5,
+       "duree": 3,
+       "polarite": 1
+      },
+      {
+       "variable": "valeurs_culture_tempo_sociale",
+       "delta_level": 8,
+       "duree": 5,
+       "polarite": 1
+      },
+      {
+       "variable": "systeme_economique_redistribution",
+       "delta_level": 5,
+       "duree": 5,
+       "polarite": -1
+      }
+     ],
+     "new_sustainability": [
+      {
+       "variable": "sante_biotechnologies",
+       "delta_level": 6,
+       "duree": 5,
+       "polarite": -1
+      },
+      {
+       "variable": "gouvernance_institutions",
+       "delta_level": 10,
+       "duree": 5,
+       "polarite": -1
+      },
+      {
+       "variable": "technologie_information",
+       "delta_level": 5,
+       "duree": 3,
+       "polarite": 1
+      },
+      {
+       "variable": "valeurs_culture_tempo_sociale",
+       "delta_level": 8,
+       "duree": 5,
+       "polarite": -1
+      },
+      {
+       "variable": "systeme_economique_redistribution",
+       "delta_level": 5,
+       "duree": 5,
+       "polarite": -1
+      }
+     ],
+     "eco_communalism": [
+      {
+       "variable": "sante_biotechnologies",
+       "delta_level": 6,
+       "duree": 5,
+       "polarite": 1
+      },
+      {
+       "variable": "gouvernance_institutions",
+       "delta_level": 10,
+       "duree": 5,
+       "polarite": 1
+      },
+      {
+       "variable": "technologie_information",
+       "delta_level": 5,
+       "duree": 3,
+       "polarite": 1
+      },
+      {
+       "variable": "valeurs_culture_tempo_sociale",
+       "delta_level": 8,
+       "duree": 5,
+       "polarite": 1
+      },
+      {
+       "variable": "systeme_economique_redistribution",
+       "delta_level": 5,
+       "duree": 5,
+       "polarite": -1
+      }
+     ],
+     "policy_reform": [
+      {
+       "variable": "sante_biotechnologies",
+       "delta_level": 6,
+       "duree": 5,
+       "polarite": -1
+      },
+      {
+       "variable": "gouvernance_institutions",
+       "delta_level": 10,
+       "duree": 5,
+       "polarite": -1
+      },
+      {
+       "variable": "technologie_information",
+       "delta_level": 5,
+       "duree": 3,
+       "polarite": 1
+      },
+      {
+       "variable": "valeurs_culture_tempo_sociale",
+       "delta_level": 8,
+       "duree": 5,
+       "polarite": -1
+      },
+      {
+       "variable": "systeme_economique_redistribution",
+       "delta_level": 5,
+       "duree": 5,
+       "polarite": -1
+      }
+     ],
+     "reference": [
+      {
+       "variable": "sante_biotechnologies",
+       "delta_level": 6,
+       "duree": 5,
+       "polarite": 1
+      },
+      {
+       "variable": "gouvernance_institutions",
+       "delta_level": 10,
+       "duree": 5,
+       "polarite": 1
+      },
+      {
+       "variable": "technologie_information",
+       "delta_level": 5,
+       "duree": 3,
+       "polarite": 1
+      },
+      {
+       "variable": "valeurs_culture_tempo_sociale",
+       "delta_level": 8,
+       "duree": 5,
+       "polarite": 1
+      },
+      {
+       "variable": "systeme_economique_redistribution",
+       "delta_level": 5,
+       "duree": 5,
+       "polarite": -1
+      }
+     ]
+    },
+    "via_matrice_impose": true
+   },
+   "type": "signal"
+  },
+  "decision": {
+   "statut": "adopté",
+   "date": "2026-11-07T10:58",
+   "motif": null,
+   "type": "signal",
+   "empreinte": "fc12d045a83a3c5a",
+   "simulation_du": "2026-11-07T10:49",
+   "entree": {
+    "id": "remboursement_chatbots_therapeutes_2040",
+    "description": "Plusieurs pays commencent à rembourser des chatbots thérapeutes par la sécurité sociale, avec un débat sur la responsabilité médicale en cas d’erreur de l’IA.",
+    "source": "et_si_remboursement_chatbots_therapeutes_2040",
+    "persistance": "normale",
+    "variable_hint": [
+     "sante_biotechnologies",
+     "gouvernance_institutions",
+     "technologie_information",
+     "valeurs_culture_tempo_sociale",
+     "systeme_economique_redistribution"
+    ],
+    "variable_hint_count": 5,
+    "date_imposee": 2040,
+    "impacts_imposes": {
+     "breakdown": [
+      {
+       "variable": "sante_biotechnologies",
+       "delta_level": 6,
+       "duree": 5,
+       "polarite": 1
+      },
+      {
+       "variable": "gouvernance_institutions",
+       "delta_level": 10,
+       "duree": 5,
+       "polarite": 1
+      },
+      {
+       "variable": "technologie_information",
+       "delta_level": 5,
+       "duree": 3,
+       "polarite": 1
+      },
+      {
+       "variable": "valeurs_culture_tempo_sociale",
+       "delta_level": 8,
+       "duree": 5,
+       "polarite": 1
+      },
+      {
+       "variable": "systeme_economique_redistribution",
+       "delta_level": 5,
+       "duree": 5,
+       "polarite": -1
+      }
+     ],
+     "fortress_world": [
+      {
+       "variable": "sante_biotechnologies",
+       "delta_level": 6,
+       "duree": 5,
+       "polarite": 1
+      },
+      {
+       "variable": "gouvernance_institutions",
+       "delta_level": 10,
+       "duree": 5,
+       "polarite": 1
+      },
+      {
+       "variable": "technologie_information",
+       "delta_level": 5,
+       "duree": 3,
+       "polarite": 1
+      },
+      {
+       "variable": "valeurs_culture_tempo_sociale",
+       "delta_level": 8,
+       "duree": 5,
+       "polarite": 1
+      },
+      {
+       "variable": "systeme_economique_redistribution",
+       "delta_level": 5,
+       "duree": 5,
+       "polarite": -1
+      }
+     ],
+     "new_sustainability": [
+      {
+       "variable": "sante_biotechnologies",
+       "delta_level": 6,
+       "duree": 5,
+       "polarite": -1
+      },
+      {
+       "variable": "gouvernance_institutions",
+       "delta_level": 10,
+       "duree": 5,
+       "polarite": -1
+      },
+      {
+       "variable": "technologie_information",
+       "delta_level": 5,
+       "duree": 3,
+       "polarite": 1
+      },
+      {
+       "variable": "valeurs_culture_tempo_sociale",
+       "delta_level": 8,
+       "duree": 5,
+       "polarite": -1
+      },
+      {
+       "variable": "systeme_economique_redistribution",
+       "delta_level": 5,
+       "duree": 5,
+       "polarite": -1
+      }
+     ],
+     "eco_communalism": [
+      {
+       "variable": "sante_biotechnologies",
+       "delta_level": 6,
+       "duree": 5,
+       "polarite": 1
+      },
+      {
+       "variable": "gouvernance_institutions",
+       "delta_level": 10,
+       "duree": 5,
+       "polarite": 1
+      },
+      {
+       "variable": "technologie_information",
+       "delta_level": 5,
+       "duree": 3,
+       "polarite": 1
+      },
+      {
+       "variable": "valeurs_culture_tempo_sociale",
+       "delta_level": 8,
+       "duree": 5,
+       "polarite": 1
+      },
+      {
+       "variable": "systeme_economique_redistribution",
+       "delta_level": 5,
+       "duree": 5,
+       "polarite": -1
+      }
+     ],
+     "policy_reform": [
+      {
+       "variable": "sante_biotechnologies",
+       "delta_level": 6,
+       "duree": 5,
+       "polarite": -1
+      },
+      {
+       "variable": "gouvernance_institutions",
+       "delta_level": 10,
+       "duree": 5,
+       "polarite": -1
+      },
+      {
+       "variable": "technologie_information",
+       "delta_level": 5,
+       "duree": 3,
+       "polarite": 1
+      },
+      {
+       "variable": "valeurs_culture_tempo_sociale",
+       "delta_level": 8,
+       "duree": 5,
+       "polarite": -1
+      },
+      {
+       "variable": "systeme_economique_redistribution",
+       "delta_level": 5,
+       "duree": 5,
+       "polarite": -1
+      }
+     ],
+     "reference": [
+      {
+       "variable": "sante_biotechnologies",
+       "delta_level": 6,
+       "duree": 5,
+       "polarite": 1
+      },
+      {
+       "variable": "gouvernance_institutions",
+       "delta_level": 10,
+       "duree": 5,
+       "polarite": 1
+      },
+      {
+       "variable": "technologie_information",
+       "delta_level": 5,
+       "duree": 3,
+       "polarite": 1
+      },
+      {
+       "variable": "valeurs_culture_tempo_sociale",
+       "delta_level": 8,
+       "duree": 5,
+       "polarite": 1
+      },
+      {
+       "variable": "systeme_economique_redistribution",
+       "delta_level": 5,
+       "duree": 5,
+       "polarite": -1
+      }
+     ]
+    },
+    "via_matrice_impose": true
+   }
+  }
  }
 }

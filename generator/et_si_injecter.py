@@ -88,6 +88,11 @@ def main():
     ap.add_argument("--inclure", default="", help="numéros ⚠ de l'étape ④ à garder")
     a = ap.parse_args()
     hid = a.id.strip()
+    typ = ed.type_dossier(ed.charger().get(hid))   # U2d : evenement | signal
+    nom_queue = "signaux_custom/queue.yaml" if typ == "signal" else "evenements_custom/queue.yaml"
+    if a.plan and typ == "signal":
+        print(f"{hid} est un signal : pas de liste à l'étape ④ (ni carte, ni zones), rien à sauter.")
+        return
     if a.plan:
         # PATCH_S30_LISTE_SAUTS : la liste tient compte de « Sauter » / « Inclure » (sans IA).
         _, ops = _plan(hid)
@@ -123,15 +128,18 @@ def main():
     if st != "adopté, en attente d'injection":
         sys.exit(f"✗ {hid} est « {st} » : seule une hypothèse « adopté, en attente d'injection » "
                  f"peut être injectée ici.")
-    entrees = [x for x in ed._liste_yaml(ed.QUEUE_PATH, "queue")
+    entrees = [x for x in ed._liste_yaml(ed._chemin_queue(typ), "queue")
                if x.get("id") == hid and x.get("source") == f"et_si_{hid}"]
     if len(entrees) != 1:
-        sys.exit(f"✗ {len(entrees)} entrée(s) adoptée(s) {hid} dans evenements_custom/queue.yaml "
-                 f"(attendu : 1). Une entrée écrite à la main s'injecte par « Injecter des événements ».")
+        sys.exit(f"✗ {len(entrees)} entrée(s) adoptée(s) {hid} dans {nom_queue} "
+                 f"(attendu : 1). Une entrée écrite à la main s'injecte par le bouton d'injection de la queue.")
 
     entree, sauter, inclure = entrees[0], _nombres(a.sauter), _nombres(a.inclure)   # PATCH_S27_SAUTER
-    _, ops = _plan(hid)
-    ecartees = _ecartees(ops, sauter, inclure)
+    if typ == "signal":   # U2d : pas d'étape ④ pour un signal
+        ops, ecartees = [], set()
+    else:
+        _, ops = _plan(hid)
+        ecartees = _ecartees(ops, sauter, inclure)
     if ecartees:
         entree, retires = _retirer_sautees(entree, ops, ecartees)
         auto = sorted(ecartees - sauter)
@@ -142,8 +150,11 @@ def main():
         for r_ in retires:
             print(f"  − {r_}")
         print()
-    cmd = [sys.executable, str(GEN / "inject_custom_events.py"),
+    script = "inject_custom_signals.py" if typ == "signal" else "inject_custom_events.py"
+    cmd = [sys.executable, str(GEN / script),
            "--idea", json.dumps(entree, ensure_ascii=False, default=str)]
+    if typ == "signal":
+        cmd.append("--json")
     if a.dry_run:
         cmd.append("--dry-run")
     print(("SIMULATION (appels IA réels, rien écrit)" if a.dry_run else "INJECTION") + f" — {hid}\n")
@@ -166,13 +177,24 @@ def main():
     if r.returncode != 0:
         sys.exit(f"\n✗ inject_custom_events.py a échoué (code {r.returncode}) : l'entrée reste dans la "
                  f"queue ; vérifier needs_review.yaml avant de relancer.")
+    if typ == "signal":   # U2d : résultat JSON en dernière ligne
+        try:
+            res = json.loads(lignes[-1])
+        except (ValueError, IndexError):
+            res = {}
+        if res.get("status") != "injected":
+            print("\n⚠ signal non injecté en totalité ("
+                  f"réussies : {res.get('injected_variables') or 'aucune'}, "
+                  f"en échec : {res.get('failed_variables') or 'voir le motif'}"
+                  + (f" ; {res['reason']}" if res.get("reason") else "") + "). "
+                  "Détail dans signaux_custom/needs_review.yaml.")
     if sauter or inclure:   # PATCH_S27_SAUTER : repris par défaut à l'étape ④
         import appliquer_et_si as ap_
         (ap_.APP_DIR / f"{hid}.sauter.json").write_text(json.dumps(
             {"sauter": sorted(sauter), "inclure": sorted(inclure)}, ensure_ascii=False), encoding="utf-8")
         print(f"✓ « Sauter » / « Inclure » gardés pour l'étape ④ : {sorted(sauter)} / {sorted(inclure)}")
-    if ed._retirer_de_queue(hid):
-        print(f"\n✓ entrée {hid} retirée de evenements_custom/queue.yaml (sauvegarde queue.yaml.bak_et_si)")
+    if ed._retirer_de_queue(hid, typ):
+        print(f"\n✓ entrée {hid} retirée de {nom_queue} (sauvegarde queue.yaml.bak_et_si)")
     print(f"✓ statut : {ed.statut(hid)}")
 
 

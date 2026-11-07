@@ -35,12 +35,15 @@ import sys
 import textwrap
 import unicodedata
 
+from datetime import datetime
+
 import yaml
 
 import dynamique as dyn
 import simuler_et_si as se
 
 FORCE_MAX = 25
+SIGNAL_FORCE_MAX = 10   # plafond d'un signal (inject_custom_signals.py)
 DUREE_MAX = 30
 MAX_IMPACTS = 8
 
@@ -119,6 +122,10 @@ RÈGLES :
   description courte. Le développement viendra plus tard, de la lecture des conséquences.
 - "date" : l'année d'apparition écrite dans l'idée ; sinon une année plausible entre 2026 et
   2097, et dis-le dans "justification".
+- "type" : "evenement" (défaut) pour un fait marquant et daté ; "signal" pour une observation ou
+  une tendance MINEURE à ses débuts, dont l'effet reste limité. Un signal : force {SIGNAL_FORCE_MAX} au
+  plus, toujours mode "choc", "carte" "non", "scenarios" "tous", année entière à partir de
+  {datetime.now().year}, polarité par scénario (dictionnaire des 6 scénarios) si le sens en dépend.
 - "mode" : "rupture" si l'élément change le monde POUR DE BON (mortalité massive, travail
   remplacé par des machines, ressource épuisée, nouvelle espèce ou technologie qui redéfinit
   la société) ; "choc" si c'est une perturbation, même forte, dont le monde se remet.
@@ -140,7 +147,7 @@ RÈGLES :
 - "justification" : 2 phrases au plus (choix du mode, des forces).
 
 Réponds UNIQUEMENT en JSON valide, sans texte autour :
-{{"id": "...", "nom": "...", "description": "...", "date": 2040, "mode": "choc",
+{{"id": "...", "nom": "...", "type": "evenement", "description": "...", "date": 2040, "mode": "choc",
   "persistance": "normale", "carte": "non", "scenarios": "tous", "contraintes": ["..."],
   "impacts": [{{"variable": "slug", "delta_level": 15, "polarite": 1, "duree": 5}}],
   "justification": "..."}}"""
@@ -170,13 +177,21 @@ def normaliser_proposition(brut, variables, ids_pris):
     if id_ != base:
         av.append(f"id {base!r} déjà pris -> {id_!r}")
     h = {"id": id_, "nom": str(brut.get("nom") or id_).strip()}
+    typ = str(brut.get("type") or "evenement").strip().lower()
+    if typ not in ("evenement", "signal"):
+        av.append(f"type {typ!r} inconnu -> evenement")
+        typ = "evenement"
+    est_signal = typ == "signal"
+    if est_signal:
+        h["type"] = "signal"
     if description:
         h["description"] = description
     try:
         date = int(str(brut.get("date")).strip()[:4])
-        if not 2026 <= date <= 2097:
-            av.append(f"date {date} hors de 2026-2097 -> ramenée dans la plage")
-            date = min(2097, max(2026, date))
+        plancher = max(2026, datetime.now().year) if est_signal else 2026
+        if not plancher <= date <= 2097:
+            av.append(f"date {date} hors de {plancher}-2097 -> ramenée dans la plage")
+            date = min(2097, max(plancher, date))
         h["date"] = date
     except (TypeError, ValueError):
         av.append(f"date {brut.get('date')!r} illisible -- à renseigner")
@@ -184,6 +199,9 @@ def normaliser_proposition(brut, variables, ids_pris):
     mode = str(brut.get("mode") or "choc").strip().lower()
     if mode not in ("choc", "rupture"):
         av.append(f"mode {mode!r} inconnu -> choc")
+        mode = "choc"
+    if est_signal and mode == "rupture":
+        av.append("un signal n'a pas de mode rupture -> choc")
         mode = "choc"
     h["mode"] = mode
     if mode == "choc":
@@ -196,6 +214,8 @@ def normaliser_proposition(brut, variables, ids_pris):
     if carte in ("non", "no", "false", "0"):
         h["carte"] = "non"
 
+    if est_signal:
+        h["carte"] = "non"
     scen = brut.get("scenarios") or "tous"
     if isinstance(scen, list):
         valides = [s for s in scen if s in se.SCENARIOS]
@@ -203,6 +223,9 @@ def normaliser_proposition(brut, variables, ids_pris):
             av.append(f"scénario(s) inconnu(s) retiré(s) : {[s for s in scen if s not in se.SCENARIOS]}")
         scen = valides if valides and len(valides) < len(se.SCENARIOS) else "tous"
     elif str(scen).strip() not in se.SCENARIOS:
+        scen = "tous"
+    if est_signal and scen != "tous":
+        av.append("un signal couvre toujours les 6 scénarios -> tous")
         scen = "tous"
     h["scenarios"] = scen
 
@@ -230,9 +253,10 @@ def normaliser_proposition(brut, variables, ids_pris):
         except (TypeError, ValueError):
             av.append(f"{var} : force illisible -> 10")
             force = 10
-        if not 1 <= force <= FORCE_MAX:
-            av.append(f"{var} : force {force} ramenée entre 1 et {FORCE_MAX}")
-            force = min(FORCE_MAX, max(1, force))
+        fmax = SIGNAL_FORCE_MAX if est_signal else FORCE_MAX
+        if not 1 <= force <= fmax:
+            av.append(f"{var} : force {force} ramenée entre 1 et {fmax}")
+            force = min(fmax, max(1, force))
         pol = imp.get("polarite", 1)
         if isinstance(pol, dict):
             pol = {s: (1 if str(v).strip().lstrip("+") == "1" else -1) for s, v in pol.items() if s in se.SCENARIOS}

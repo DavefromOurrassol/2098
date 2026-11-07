@@ -1,0 +1,67 @@
+{
+ "id": "remboursement_chatbots_therapeutes_2040",
+ "date_simulation": "2026-11-07T10:49",
+ "version": "v8.25",
+ "empreinte": "fc12d045a83a3c5a",
+ "annee": 2040.0,
+ "mode": "choc",
+ "contraintes": [
+  "Remboursement des chatbots thérapeutes par la sécurité sociale",
+  "Débat sur la responsabilité médicale en cas d’erreur de l’IA"
+ ],
+ "scenarios_hypothese": [
+  "breakdown",
+  "fortress_world",
+  "new_sustainability",
+  "eco_communalism",
+  "policy_reform",
+  "reference"
+ ],
+ "scenarios": [
+  "breakdown",
+  "fortress_world",
+  "new_sustainability",
+  "eco_communalism",
+  "policy_reform",
+  "reference"
+ ],
+ "complet": true,
+ "par_scenario": {
+  "breakdown": {
+   "lecture": null,
+   "passe": null,
+   "erreurs": [],
+   "carte": []
+  },
+  "fortress_world": {
+   "lecture": null,
+   "passe": null,
+   "erreurs": [],
+   "carte": []
+  },
+  "new_sustainability": {
+   "lecture": null,
+   "passe": null,
+   "erreurs": [],
+   "carte": []
+  },
+  "eco_communalism": {
+   "lecture": null,
+   "passe": null,
+   "erreurs": [],
+   "carte": []
+  },
+  "policy_reform": {
+   "lecture": null,
+   "passe": null,
+   "erreurs": [],
+   "carte": []
+  },
+  "reference": {
+   "lecture": null,
+   "passe": null,
+   "erreurs": [],
+   "carte": []
+  }
+ }
+}

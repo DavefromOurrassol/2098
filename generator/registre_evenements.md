@@ -10,7 +10,7 @@ RÈGLE DE LECTURE DE LA COLONNE "date" :
   - type=signal    -> fenêtre "AAAA-AAAA" (date_bascule du signal_to_state)
   - type=evenement -> année unique "AAAA" (date précise de l'instance)
 
-Total : 643 entrées (96 signaux uniques × 6 scénarios + 67 entrées d'événements custom).
+Total : 673 entrées (101 signaux uniques × 6 scénarios + 67 entrées d'événements custom).
 
 ## breakdown
 
@@ -42,6 +42,11 @@ Total : 643 entrées (96 signaux uniques × 6 scénarios + 67 entrées d'événe
 | signal | 2040-2058 | remise_en_cause_capitalisme_croissance | systeme_economique_redistribution | non | dernier sommet économique mondial centré sur la croissance 2052 |
 | signal | 2040-2059 | consommation_energetique_ia | technologie_information | non | fermeture en cascade des centres de données surconsommateurs 2051 |
 | signal | 2040-2058 | radicalisation_anti_ia_violence | valeurs_culture_tempo_sociale | non | Detroit-Sud légalise les milices anti-IA 2051 |
+| signal | 2040-2045 | ia_therapeutique_remboursement_debat | sante_biotechnologies | non | effondrement confiance IA thérapeutique après scandale Lagos-Est 2043 |
+| signal | 2040-2045 | ia_therapeutique_remboursement_debat | gouvernance_institutions | non | Detroit-Sud légalise IA thérapeutiques non certifiées 2043 |
+| signal | 2040-2043 | ia_therapeutique_remboursement_debat | technologie_information | non | Mumbai-Ouest légalise IA thérapeutiques open-source non certifiées 2042 |
+| signal | 2040-2045 | ia_therapeutique_remboursement_debat | valeurs_culture_tempo_sociale | non | Detroit-Nord légalise IA thérapeutiques pirates 2044 |
+| signal | 2040-2045 | ia_therapeutique_remboursement_debat | systeme_economique_redistribution | non | faillite caisse maladie Lagos-Mumbai après erreurs IA 2044 |
 | signal | 2041-2055 | automatisation_financière_algorithmique | systeme_economique_redistribution | non | effondrement des protocoles de régulation des IA financières |
 | signal | 2041-2058 | gouvernance_algorithmique_emergente | gouvernance_institutions | non | effondrement des protocoles de régulation IA institutionnelle |
 | signal | 2041-2060 | instabilite_saisonniere | climat_environnement_global | oui | franchissement de cinq points de basculement simultanés 2053 |
@@ -227,6 +232,11 @@ Total : 643 entrées (96 signaux uniques × 6 scénarios + 67 entrées d'événe
 | signal | 2040-2058 | saturation_orbitale | frontieres_du_systeme | non | programme de nettoyage orbital militarisé des blocs |
 | signal | 2040-2057 | relocalisation_cotiere | climat_environnement_global | oui | programme de réinstallation côtière du Bloc Atlantique 2051 |
 | signal | 2040-2055 | retour_spiritualites_hybrides | valeurs_culture_tempo_sociale | non | adoption d'une spiritualité officielle hybride par les blocs 2050 |
+| signal | 2040-2045 | ia_therapeutique_remboursement_debat | sante_biotechnologies | non | Bloc Atlantique impose score thérapeutique IA exclusif 2044 |
+| signal | 2040-2045 | ia_therapeutique_remboursement_debat | gouvernance_institutions | non | Bloc Sibérien intègre scoring santé IA dans citoyenneté 2044 |
+| signal | 2040-2043 | ia_therapeutique_remboursement_debat | technologie_information | non | Bloc Eurasiatique standardise IA santé verrouillées 2043 |
+| signal | 2040-2045 | ia_therapeutique_remboursement_debat | valeurs_culture_tempo_sociale | non | Bloc Atlantique impose IA santé comme privilège citoyen 2044 |
+| signal | 2040-2045 | ia_therapeutique_remboursement_debat | systeme_economique_redistribution | non | Bloc Sibérien limite remboursement IA aux classes A 2043 |
 | signal | 2041-2058 | minage_asteroides | frontieres_du_systeme | non | lancement de la première mission minière militarisée d'astéroïde 2051 |
 | evenement | 2041 | encheres_terres_rares_groenland | energie_ressources_critiques, geopolitique_conflits, gouvernance_institutions, organisation_territoires | — | Nuna Capital ouvre les gisements arctiques aux blocs 2041 |
 | signal | 2043-2057 | dedollarisation_progressive | systeme_economique_redistribution | non | création du système monétaire des Blocs de Shanghai |
@@ -341,6 +351,11 @@ Total : 643 entrées (96 signaux uniques × 6 scénarios + 67 entrées d'événe
 | evenement | 2039 | submersion_tuvalu_acte_fondateur | climat_environnement_global, gouvernance_institutions, organisation_territoires, frontieres_du_systeme | — | Tuvalu submergée, Pacifique Sud fonde le droit post-territorial 2039 |
 | signal | 2040-2055 | dedollarisation_progressive | systeme_economique_redistribution | non | création du Droit de Tirage Universel 2.0 |
 | signal | 2040-2060 | vieillissement_demographique | demographie_mobilite_humaine | non | allongement de l'espérance de vie active à 90 ans |
+| signal | 2040-2045 | ia_therapeutique_remboursement_debat | sante_biotechnologies | non | Réseau Mondial de Santé adopte protocole IA thérapeutique éthique 2042 |
+| signal | 2040-2045 | ia_therapeutique_remboursement_debat | gouvernance_institutions | non | Conseil Climatique Mondial adopte charte IA santé 2042 |
+| signal | 2040-2043 | ia_therapeutique_remboursement_debat | technologie_information | non | Accord de Jakarta sur l'interopérabilité des IA santé 2042 |
+| signal | 2040-2045 | ia_therapeutique_remboursement_debat | valeurs_culture_tempo_sociale | non | Charte de Nairobi sur l'IA santé inclusive 2043 |
+| signal | 2040-2045 | ia_therapeutique_remboursement_debat | systeme_economique_redistribution | non | Fonds Mondial Santé adopte cadre éthique IA thérapeutique 2042 |
 | evenement | 2041 | encheres_terres_rares_groenland | energie_ressources_critiques, geopolitique_conflits, gouvernance_institutions, organisation_territoires | — | Groenland encadre ses terres rares via Traité de Nairobi 2041 |
 | evenement | 2044 | exode_midwest_grands_lacs | demographie_mobilite_humaine, organisation_territoires, gouvernance_institutions, climat_environnement_global | — | 18 millions de migrants climatiques convergent vers les Grands Lacs 2044 |
 | evenement | 2047 | crise_gouvernance_amazonie | climat_environnement_global, geopolitique_conflits, gouvernance_institutions, organisation_territoires | — | Amazônia Viva teste sa souveraineté face aux blocs extractifs 2047 |
@@ -429,6 +444,11 @@ Total : 643 entrées (96 signaux uniques × 6 scénarios + 67 entrées d'événe
 | signal | 2040-2058 | reseau_mobile_decentralise_urgence | gouvernance_institutions | non | Carthage-Nord adopte la charte des réseaux souverains 2051 |
 | signal | 2040-2058 | reseau_mobile_decentralise_urgence | technologie_information | non | Detroit-Nord lance charte des réseaux communautaires 2053 |
 | signal | 2040-2058 | reseau_mobile_decentralise_urgence | geopolitique_conflits | oui | Carthage-Sud proclame souveraineté numérique communautaire 2052 |
+| signal | 2040-2045 | ia_therapeutique_remboursement_debat | sante_biotechnologies | non | charte des maisons de santé interdit IA thérapeutique 2043 |
+| signal | 2040-2045 | ia_therapeutique_remboursement_debat | gouvernance_institutions | non | Carthage-Nord interdit remboursement IA non humaines 2043 |
+| signal | 2040-2043 | ia_therapeutique_remboursement_debat | technologie_information | non | Lagos-Ouest interdit IA thérapeutiques non locales 2043 |
+| signal | 2040-2045 | ia_therapeutique_remboursement_debat | valeurs_culture_tempo_sociale | non | charte bioterritoriale de Carthage-Sud interdit IA santé 2044 |
+| signal | 2040-2045 | ia_therapeutique_remboursement_debat | systeme_economique_redistribution | non | charte bioterritoriale de Carthage interdit IA santé 2043 |
 | signal | 2041-2060 | megapoles_sous_pression | organisation_territoires | oui | mouvement de décroissance urbaine volontaire |
 | signal | 2041-2060 | concentration_informationnelle | technologie_information | non | déploiement mondial des réseaux mesh communautaires |
 | signal | 2041-2059 | relocalisation_cotiere | climat_environnement_global | oui | mouvement de retour vers les terres hautes bioterritoriales |
@@ -563,6 +583,11 @@ Total : 643 entrées (96 signaux uniques × 6 scénarios + 67 entrées d'événe
 | evenement | 2039 | submersion_tuvalu_acte_fondateur | climat_environnement_global, gouvernance_institutions, organisation_territoires, frontieres_du_systeme | — | dernier conseil souverain de Tuvalu, souveraineté flottante proclamée 2039 |
 | evenement | 2039 | greve_generale_corridors_eurasiens | systemes_productifs_travail, geopolitique_conflits, sante_biotechnologies | — | grève lithium bloquée par réquisition 2039 |
 | signal | 2040-2058 | fusion_experimentale | energie_ressources_critiques | oui | création de l'Agence Internationale de la Fusion 2045 |
+| signal | 2040-2045 | ia_therapeutique_remboursement_debat | sante_biotechnologies | non | Convention de Genève sur l'IA thérapeutique équitable 2041 |
+| signal | 2040-2045 | ia_therapeutique_remboursement_debat | gouvernance_institutions | non | Directive UE impose audit humain des IA thérapeutiques 2041 |
+| signal | 2040-2043 | ia_therapeutique_remboursement_debat | technologie_information | non | ONU adopte convention sur l'audit des IA santé 2041 |
+| signal | 2040-2045 | ia_therapeutique_remboursement_debat | valeurs_culture_tempo_sociale | non | UE adopte directive sur l'audit humain obligatoire 2042 |
+| signal | 2040-2045 | ia_therapeutique_remboursement_debat | systeme_economique_redistribution | non | OCDE publie directive sur l'audit des IA santé 2041 |
 | evenement | 2041 | encheres_terres_rares_groenland | energie_ressources_critiques, geopolitique_conflits, gouvernance_institutions, organisation_territoires | — | première vente aux enchères terres rares Groenland 2041 |
 | evenement | 2044 | exode_midwest_grands_lacs | demographie_mobilite_humaine, organisation_territoires, gouvernance_institutions, climat_environnement_global | — | 18 millions de migrants internes vers les Grands Lacs 2044 |
 | evenement | 2047 | crise_gouvernance_amazonie | climat_environnement_global, geopolitique_conflits, gouvernance_institutions, organisation_territoires | — | état d'urgence écologique amazonien contesté par milices corporatives 2047 |
@@ -674,6 +699,11 @@ Total : 643 entrées (96 signaux uniques × 6 scénarios + 67 entrées d'événe
 | signal | 2035-2055 | fusion_experimentale | energie_ressources_critiques | oui | premier réacteur à fusion pilote commercial 2052 |
 | evenement | 2038 | conflit_indo_arabe_2038 | geopolitique_conflits, demographie_mobilite_humaine | — | 2038, l'Inde bloque les détroits arabes |
 | evenement | 2039 | submersion_tuvalu_acte_fondateur | climat_environnement_global, gouvernance_institutions, organisation_territoires, frontieres_du_systeme | — | Tuvalu submergée, premier État post-territorial naît 2039 |
+| signal | 2040-2045 | ia_therapeutique_remboursement_debat | sante_biotechnologies | non | Alliance Pacifique limite remboursement IA aux assurés premium 2043 |
+| signal | 2040-2045 | ia_therapeutique_remboursement_debat | gouvernance_institutions | non | Japon suspend remboursement après erreur IA mortelle 2043 |
+| signal | 2040-2043 | ia_therapeutique_remboursement_debat | technologie_information | non | UE étend remboursement IA thérapeutiques après étude favorable 2043 |
+| signal | 2040-2045 | ia_therapeutique_remboursement_debat | valeurs_culture_tempo_sociale | non | Singapour limite remboursement IA aux assurés privés 2043 |
+| signal | 2040-2045 | ia_therapeutique_remboursement_debat | systeme_economique_redistribution | non | Canada suspend remboursement IA après scandale pharmaceutique 2043 |
 | evenement | 2041 | encheres_terres_rares_groenland | energie_ressources_critiques, geopolitique_conflits, gouvernance_institutions, organisation_territoires | — | Groenland vend ses terres rares aux enchères mondiales 2041 |
 | evenement | 2044 | exode_midwest_grands_lacs | demographie_mobilite_humaine, organisation_territoires, gouvernance_institutions, climat_environnement_global | — | 18 millions fuient le Midwest désertifié vers les Lacs 2044 |
 | evenement | 2047 | crise_gouvernance_amazonie | climat_environnement_global, geopolitique_conflits, gouvernance_institutions, organisation_territoires | — | Belém, théâtre d'une confrontation souveraineté-milices corporatives 2047 |

@@ -62,6 +62,7 @@ APPLICATION_DIR = SCRIPT_DIR / "state" / "et_si_application"   # PATCH_S27_V819 
 SCENARIOS = ["breakdown", "fortress_world", "new_sustainability",
              "eco_communalism", "policy_reform", "reference"]
 DELTA_MAX_CONSEILLE = 25   # plafond d'un événement custom (inject_custom_events.py)
+DELTA_MAX_SIGNAL = 10      # plafond d'un signal (inject_custom_signals.py) -- U2b
 ACTIONS_GEO = {"absorber": "absorber", "nouvelle_zone": "creer"}   # vocabulaire du fichier -> ZoneRepository
 VERSION = "v8.25"            # affichée dans le rapport : permet de vérifier la version installée
 MAX_LISTE = 10             # éléments listés par rubrique dans le rapport (le reste est compté)
@@ -191,6 +192,20 @@ def verifier_hypothese(h, valid_vars, dyn):
         erreurs.append(f"scénarios inconnus : {inconnus}")
     scen = [s for s in scen if s in SCENARIOS]
 
+    # U2b : type de l'élément (evenement | signal)
+    typ = str(h.get("type") or "evenement").strip().lower()
+    if typ not in ("evenement", "signal"):
+        erreurs.append(f"type {h.get('type')!r} inconnu (evenement | signal)")
+        typ = "evenement"
+    est_signal = typ == "signal"
+    if est_signal:
+        if set(scen) != set(SCENARIOS):
+            erreurs.append("un signal couvre toujours les 6 scénarios (scenarios: tous)")
+        if date is not None:
+            plancher = datetime.now().year
+            if date != int(date) or not plancher <= date <= 2097:
+                erreurs.append(f"date {date:g} : un signal commence une année entière entre {plancher} et 2097")
+
     impacts = []
     for n, imp in enumerate(h.get("impacts") or [], 1):
         if not isinstance(imp, dict):
@@ -207,7 +222,10 @@ def verifier_hypothese(h, valid_vars, dyn):
             continue
         if force < 1:
             erreurs.append(f"impact {var} : delta_level doit valoir au moins 1")
-        if force > DELTA_MAX_CONSEILLE:
+        if est_signal and force > DELTA_MAX_SIGNAL:
+            erreurs.append(f"impact {var} : delta_level {force:g} au-dessus du plafond d'un signal "
+                           f"({DELTA_MAX_SIGNAL}) ; au-delà, c'est un événement (type: evenement)")
+        elif force > DELTA_MAX_CONSEILLE:
             avert.append(f"impact {var} : delta_level {force:g} au-dessus du plafond d'un "
                          f"événement custom ({DELTA_MAX_CONSEILLE})")
         pol = imp.get("polarite", 1)
@@ -227,6 +245,11 @@ def verifier_hypothese(h, valid_vars, dyn):
         except (TypeError, ValueError):
             erreurs.append(f"impact {var} : duree non numérique")
             continue
+        if est_signal:
+            if duree != int(duree):
+                erreurs.append(f"impact {var} : la durée d'un signal est un nombre entier d'années")
+            if any(i["variable"] == var for i in impacts):
+                erreurs.append(f"impact {var} déclaré deux fois (un signal a UNE force par variable)")
         impacts.append({"variable": var, "force": force, "polarites": pols, "duree": duree})
     if not impacts and not erreurs and not h.get("geographie"):
         erreurs.append("aucun impact ni changement de géographie déclaré")
@@ -287,6 +310,12 @@ def verifier_hypothese(h, valid_vars, dyn):
     # V7.3 : `carte: non` = élément sans effet territorial (choc politique, sanitaire...).
     brut_carte = h.get("carte", True)
     carte = not (brut_carte is False or str(brut_carte).strip().lower() in ("non", "no", "false", "0"))
+    if est_signal:   # U2b : un signal n'a ni carte ni rupture
+        carte = False
+        if brut_geo:
+            erreurs.append("un signal n'a pas d'effet territorial : retirer `geographie`")
+        if str(h.get("mode") or "choc").strip().lower() == "rupture":
+            erreurs.append("un signal n'a pas de mode rupture (c'est un événement qui peut en avoir un)")
     if not carte and geo:
         erreurs.append("`carte: non` et un bloc `geographie` rempli se contredisent")
     # V7.4 : `mode: rupture` = l'élément déplace durablement l'équilibre du scénario.
@@ -297,7 +326,7 @@ def verifier_hypothese(h, valid_vars, dyn):
     if mode == "rupture" and h.get("persistance") is not None:
         avert.append("`persistance` sans objet en mode rupture (le déplacement est permanent) : ignorée")
     norm = {
-        "contraintes": contraintes, "carte": carte, "mode": mode,
+        "contraintes": contraintes, "carte": carte, "mode": mode, "type": typ,
         "id": hid, "nom": h.get("nom") or hid, "description": str(h.get("description") or "").strip(),
         "date": date, "persistance": pers, "via_matrice": bool(h.get("via_matrice", True)),
         "scenarios": scen, "impacts": impacts, "geographie": geo,
@@ -308,8 +337,10 @@ def verifier_hypothese(h, valid_vars, dyn):
 def chocs_hypothese(hyp, sc):
     """Chocs au format de dynamique.chocs_depuis_donnees(), pour un scénario."""
     return [{
-        "nom": "[hypothèse] " + hyp["nom"], "type": "evenement", "variable": imp["variable"],
-        "t0": hyp["date"], "duree": imp["duree"], "via_matrice": hyp["via_matrice"],
+        "nom": "[hypothèse] " + hyp["nom"], "type": hyp.get("type", "evenement"), "variable": imp["variable"],
+        "t0": hyp["date"],
+        "duree": (min(imp["duree"], 2098 - hyp["date"]) if hyp.get("type") == "signal" else imp["duree"]),
+        "via_matrice": hyp["via_matrice"],
         "persistance": hyp["persistance"], "fin": None,
         "amplitude": imp["force"] * imp["polarites"][sc],
     } for imp in hyp["impacts"] if sc in imp["polarites"]]
@@ -1517,7 +1548,9 @@ def rendre_markdown(hyp, resultats, date_fin, avert, geo=None, consequences=None
     L += [f"- **Apparition** : {hyp['date']:g} · **Persistance** : {pers_txt} · "
           f"**Propagation par la matrice** : {'oui' if hyp['via_matrice'] else 'non'}",
           f"- **Effet mesuré en** : {date_fin:g}"]
-    if not hyp.get("carte", True):
+    if hyp.get("type") == "signal":
+        L.append("- **Type** : signal (effet mineur, force <= {}, 6 scénarios, sans carte)".format(DELTA_MAX_SIGNAL))
+    elif not hyp.get("carte", True):
         L.append("- **Carte** : élément déclaré sans effet territorial (`carte: non`), "
                  "aucune proposition de carte retenue")
     for imp in hyp["impacts"]:
@@ -2667,11 +2700,38 @@ def _rendre_application(app, hyp, sc):
     return L
 
 
+def _rendre_injection_signal(hyp, out=None):
+    """U2c : entrée de signaux_custom/queue.yaml pour une hypothèse `type: signal`."""
+    def _nombre(x):
+        return int(x) if float(x) == int(x) else x
+    entree = {"id": hyp["id"], "description": hyp["description"] or hyp["nom"],
+              "source": f"et_si_{hyp['id']}", "persistance": hyp["persistance"],
+              "variable_hint": [i["variable"] for i in hyp["impacts"]],
+              "variable_hint_count": len(hyp["impacts"]),
+              "date_imposee": _nombre(hyp["date"]),
+              "impacts_imposes": {
+                  sc: [{"variable": i["variable"], "delta_level": _nombre(i["force"]),
+                        "duree": _nombre(i["duree"]), "polarite": i["polarites"][sc]}
+                       for i in hyp["impacts"] if sc in i["polarites"]]
+                  for sc in SCENARIOS},
+              "via_matrice_impose": bool(hyp["via_matrice"])}
+    if out is not None:
+        out["entree"] = entree
+    return ["## Liste d'application — injection du signal", "",
+            "Entrée pour `signaux_custom/queue.yaml` (une seule pour les 6 scénarios). Forces, sens par "
+            "scénario, durées, date et propagation de cette simulation sont imposés (`impacts_imposes`, "
+            "`date_imposee`, `via_matrice_impose`) : l'IA de l'injection rédige seulement le récit "
+            "(`evolution`, `evenement_cle`). Un signal n'a ni carte, ni portée, ni intensité.", "",
+            "```yaml", _yaml_bloc([entree]), "```", ""]
+
+
 def _rendre_injection_commune(hyp, application, out=None):
     """Entrée de queue commune aux scénarios (mode choc seulement).
     V8.17 : `out` (dict) reçoit l'entrée sous la clé « entree »."""
     if not hyp.get("impacts"):
         return []
+    if hyp.get("type") == "signal":   # U2c
+        return _rendre_injection_signal(hyp, out)
     scen = [sc for sc in hyp["scenarios"] if sc in application]
     if not scen:
         return []
@@ -2764,7 +2824,14 @@ def _decider(args, hyps):
             if args.apercu:
                 print(f"Aperçu de l'entrée adoptée pour {hid} (rien écrit) :\n")
                 print(_yaml_bloc([entree]))
-                print("\nRelancer sans --apercu pour l'écrire dans evenements_custom/queue.yaml.")
+                if ed.type_dossier(ed.charger().get(hid)) == "signal":
+                    print("\nRelancer sans --apercu pour l'écrire dans signaux_custom/queue.yaml.")
+                else:
+                    print("\nRelancer sans --apercu pour l'écrire dans evenements_custom/queue.yaml.")
+            elif ed.type_dossier(ed.charger().get(hid)) == "signal":
+                print(f"✓ {hid} adopté (signal) : entrée ajoutée à signaux_custom/queue.yaml "
+                      f"(sauvegarde queue.yaml.bak_et_si).\n"
+                      f"  Injection à lancer à part : python3 generator/inject_custom_signals.py")
             else:
                 print(f"✓ {hid} adoptée : entrée ajoutée à evenements_custom/queue.yaml "
                       f"(sauvegarde queue.yaml.bak_et_si).\n"

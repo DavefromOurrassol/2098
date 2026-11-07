@@ -48,6 +48,7 @@ def etat(hid):
     d = ed.charger().get(hid) or {}
     sim, dec = d.get("simulation") or {}, d.get("decision") or {}
     st = ed.statut(hid, d)
+    typ = ed.type_dossier(d)   # U2e : evenement | signal
     ops = APP_DIR / f"{hid}.json"
     journal = APP_DIR / f"{hid}.applique.json"
     checklist = NEED_ACTION / f"et_si_{hid}_reste_a_faire.md"
@@ -77,10 +78,12 @@ def etat(hid):
     elif st == "adopté, en attente d'injection":
         etape = 3
     elif st == "injecté":
-        etape = 5 if applique else 4
+        etape = 6 if typ == "signal" else (5 if applique else 4)   # U2e : un signal n'a ni ④ ni ⑤
     else:
         etape = 3   # injecté partiellement, à revoir, absent de la queue : traiter l'injection
-        alertes.append(f"statut « {st} » : voir evenements_custom/needs_review.yaml, ou annuler la décision")
+        alertes.append(f"statut « {st} » : voir "
+                       + ("signaux_custom" if typ == "signal" else "evenements_custom")
+                       + "/needs_review.yaml, ou annuler la décision")
 
     if sim:
         if modifiee:
@@ -89,9 +92,9 @@ def etat(hid):
         if not sim.get("complet") and etape <= 2:
             alertes.append("simulation limitée à " + ", ".join(sim.get("scenarios") or []) +
                            " : relancer sans « Scénario »")
-        if not sim.get("passe") and etape <= 2:
+        if not sim.get("passe") and etape <= 2 and typ != "signal":
             alertes.append("simulation sans passe exhaustive : cocher « Lecture IA » et « Passe exhaustive »")
-        if not ops.exists() and etape <= 4 and not applique:
+        if not ops.exists() and etape <= 4 and not applique and typ != "signal":
             alertes.append("pas de fichier d'opérations (simulation antérieure à v8.19) : la phase 4 "
                            "demandera une nouvelle simulation")
 
@@ -99,7 +102,7 @@ def etat(hid):
     if not rapport and (NEED_ACTION / f"et_si_{hid}.md").exists():
         rapport = f"documentation/need_action/et_si_{hid}.md"
     return {
-        "id": hid, "statut": st, "etape": etape, "alertes": alertes,
+        "id": hid, "type": typ, "statut": st, "etape": etape, "alertes": alertes,
         "simulation": {"date": sim.get("date"), "version": sim.get("version"),
                        "complet": sim.get("complet"), "passe": sim.get("passe"),
                        "rapport": rapport} if sim else None,
