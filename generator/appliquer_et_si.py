@@ -99,6 +99,37 @@ def fm_de(slug):
     d = decoupe(p.read_text(encoding="utf-8"))
     return lire_fm(d[1]) if d else None
 
+_SIGLE_FIN = re.compile(r"^(.*?)\s*\(([A-Z][A-Z0-9&\-]{1,9})\)\s*$")
+
+
+def termes_disparition(nom, instance, sc):
+    """B4 : termes de la règle de lore d'une entité disparue. Nom sans la parenthèse du
+    sigle, sigle, nom de l'entité parente (entites/<entite>.md). Sans doublon."""
+    termes = []
+
+    def ajouter(t, mini=4):
+        t = (t or "").strip()
+        if len(t) >= mini and plie(t) not in {plie(x) for x in termes}:
+            termes.append(t)
+
+    m = _SIGLE_FIN.match(nom or "")
+    ajouter(m.group(1) if m else nom, 1)
+    if m:
+        ajouter(m.group(2), 2)
+    try:
+        ent = (fm_de(instance) or {}).get("entite")
+        p = VAULT / "entites" / f"{ent}.md" if ent else None
+        if p is not None and p.exists():
+            d = decoupe(p.read_text(encoding="utf-8"))
+            nom_ent = str((lire_fm(d[1]) if d else {}).get("name") or "")
+            me = _SIGLE_FIN.match(nom_ent)
+            ajouter(me.group(1) if me else nom_ent)
+            if me:
+                ajouter(me.group(2), 2)
+    except Exception:
+        pass
+    return termes or [nom]
+
 
 # ---------------------------------------------------------------------------
 # Modifications élémentaires (texte en mémoire)
@@ -605,7 +636,9 @@ def ecrire_reste_a_faire(data, ops, rapport_ok=True):
             for o in disparues:
                 nom = re.sub(r"\s*\(`.*$", "", o["texte"])
                 L += [f"- id: {o['instance'][: -len(sc) - 1] if o['instance'].endswith('_' + sc) else o['instance']}_disparu_{annee}",
-                      f"  termes: [\"{nom}\"]", "  gravite: a_relire",
+                      "  termes: [" + ", ".join(json.dumps(t, ensure_ascii=False)
+                                              for t in termes_disparition(nom, o["instance"], sc)) + "]",
+                      "  gravite: a_relire",
                       f"  message: \"{nom} disparaît en {annee} ({data.get('nom') or hid}) : "
                       f"toute mention au présent après {annee} est fausse.\""]
             for c in data.get("contraintes") or []:

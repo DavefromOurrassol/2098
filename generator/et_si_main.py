@@ -272,7 +272,8 @@ def brouillons_regles(data):
                 continue   # pas (encore) appliquée
             nom = re.sub(r"\s*\(`.*$", "", o["texte"])
             court = o["instance"][: -len(sc) - 1] if o["instance"].endswith("_" + sc) else o["instance"]
-            regles.append({"id": f"{court}_disparu_{annee}", "gravite": "a_relire", "termes": [nom],
+            regles.append({"id": f"{court}_disparu_{annee}", "gravite": "a_relire",
+                           "termes": ap.termes_disparition(nom, o["instance"], sc),
                            "message": f"{nom} disparaît en {annee} ({data.get('nom') or data['id']}) : "
                                       f"toute mention au présent après {annee} est fausse."})
         texte = yaml.safe_dump(regles, allow_unicode=True, sort_keys=False, width=1000) if regles else ""
