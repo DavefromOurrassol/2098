@@ -678,6 +678,8 @@ def texte_impositions_signal(imp, variable_slug):
                               else "."))
     if imp.get("date") is not None:
         lignes.append("Les 6 scénarios ont la même fenêtre de départ : c'est voulu, ne la décale pas.")
+    lignes.append("Dans `contexte_injection`, n'écris AUCUN chiffre de force ni de polarité "
+                  "(+5, -1, niveau…) : ils sont fixés ailleurs ; décris seulement le mécanisme.")
     return "\n".join(lignes) + "\n"
 
 
@@ -1551,6 +1553,7 @@ def process_idea(client, idea, dry_run=False):
         variables = [v for v in selection["variables"] if v in VALID_VARS]
         if imp:  # U2a : les variables sont celles des impacts imposés
             variables = list(imp["par_var"])
+            selection["variables"] = list(variables)
         categorie = selection["categorie"]
         signal_slug = selection["signal_slug"]
         # Slug déjà pris par un AUTRE signal (fiche d'audit existante) : la

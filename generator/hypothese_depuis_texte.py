@@ -98,8 +98,10 @@ def bloc_yaml(h):
 # Proposition par l'IA
 # ---------------------------------------------------------------------------
 
-def construire_prompt(texte, variables):
-    return f"""Tu aides l'auteur du monde fictif Ourrassol 2098 (6 scénarios d'avenir, 12 variables
+def construire_prompt(texte, variables, type_force=None):
+    ligne_type = (f"TYPE IMPOSÉ PAR L'AUTEUR : {type_force} (ne le change pas).\n\n"
+                  if type_force else "")
+    return f"""{ligne_type}Tu aides l'auteur du monde fictif Ourrassol 2098 (6 scénarios d'avenir, 12 variables
 où le niveau 100 = crise maximale) à transformer une IDÉE en HYPOTHÈSE « et si ? » testable
 par son simulateur. L'hypothèse n'est jamais injectée : elle sert à mesurer ses effets.
 
@@ -283,13 +285,15 @@ def normaliser_proposition(brut, variables, ids_pris):
     return h, av
 
 
-def proposer(texte, _llm=appeler_llm):
+def proposer(texte, _llm=appeler_llm, type_force=None):
     if not texte or not texte.strip():
         raise ValueError("idée vide")
     variables = valid_vars()
-    brut = _llm(construire_prompt(texte, variables))
+    brut = _llm(construire_prompt(texte, variables, type_force))
     if not isinstance(brut, dict):
         raise ValueError("réponse de l'IA inexploitable")
+    if type_force in ("evenement", "signal"):
+        brut["type"] = type_force   # le choix de l'auteur l'emporte sur celui de l'IA
     h, av = normaliser_proposition(brut, variables, ids_existants())
     _, erreurs, av2 = se.verifier_hypothese(dict(h), variables, dyn)
     return {"ok": True, "bloc": bloc_yaml(h), "id": h["id"],
@@ -402,13 +406,15 @@ def main():
     action.add_argument("--verifier", action="store_true", help="contrôle d'un bloc (entrée standard)")
     action.add_argument("--ajouter", action="store_true", help="contrôle puis ajout à hypotheses.yaml")
     ap.add_argument("--json", action="store_true", help="sortie JSON sur une ligne (GUI)")
+    ap.add_argument("--type", choices=("evenement", "signal"), default=None,
+                    help="avec --proposer : impose le type (sinon l'IA décide)")
     args = ap.parse_args()
     if sys.stdin.isatty():
         print("Colle le texte puis Ctrl-D :", file=sys.stderr)
     texte = sys.stdin.read()
     try:
         if args.proposer:
-            res = proposer(texte)
+            res = proposer(texte, type_force=args.type)
         elif args.verifier:
             res = verifier_bloc(texte)
         else:

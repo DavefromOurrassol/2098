@@ -11013,7 +11013,19 @@ function buildAssistantHypothese() {
   const btnProposer = mk('button', 'yaml-btn yaml-btn-save', '✨ Proposer');
   btnProposer.type = 'button';
   btnProposer.style.margin = '6px 0 10px';
-  corps.appendChild(btnProposer);
+  const ligneProposer = document.createElement('div');   // U2g
+  ligneProposer.style.cssText = 'display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:6px 0 10px;';
+  btnProposer.style.margin = '0';
+  ligneProposer.appendChild(btnProposer);
+  // U2f : type imposé (l'IA décide si vide)
+  const selType = document.createElement('select');
+  selType.style.setProperty('width', 'auto', 'important');
+  selType.style.maxWidth = '70%';
+  [['', 'Type : l\'IA décide'], ['evenement', 'Événement'], ['signal', 'Signal']].forEach(([v, t]) => {
+    const o = document.createElement('option'); o.value = v; o.textContent = t; selType.appendChild(o);
+  });
+  ligneProposer.appendChild(selType);
+  corps.appendChild(ligneProposer);
 
   const retour = mk('div', 'option-desc');
   retour.style.whiteSpace = 'pre-wrap';
@@ -11062,7 +11074,7 @@ function buildAssistantHypothese() {
       const res = await fetch(`/api/et_si/${action}`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ texte }),
+        body: JSON.stringify({ texte, type: action === 'proposer' ? selType.value : '' }),
       });
       return await res.json();
     } catch (e) {
@@ -11533,6 +11545,7 @@ function buildDecisionHypothese() {
     return m ? `${m[3]}/${m[2]}/${m[1]}` + (m[4] ? ` à ${m[4]}` : '') : (d || '?');
   };
 
+  let typeCourant = 'evenement';   // U2f
   // Affichage selon l'état
   const afficher = (e) => {
     if (!e) {
@@ -11542,6 +11555,7 @@ function buildDecisionHypothese() {
       dessinerFrise(0);
       return;
     }
+    typeCourant = e.type || 'evenement';   // U2f
     statutTxt.textContent = `Statut : ${e.statut}  `;
     alertesEl.textContent = (e.alertes || []).map(a => `⚠ ${a}`).join('\n');
     blocs.forEach(b => {
@@ -11563,9 +11577,15 @@ function buildDecisionHypothese() {
         (dec.motif ? ` — ${dec.motif}` : '') + '.'
       : '';
     montrer(zoneAdopter, e.etape === 2);
+    // U2f : portée et intensité sont sans objet pour un signal
+    [portee, intensite].forEach(x => {
+      x.disabled = typeCourant === 'signal';
+      x.title = typeCourant === 'signal' ? 'Sans objet pour un signal' : '';
+      x.style.opacity = typeCourant === 'signal' ? '0.45' : '';
+    });
     montrer(btnAnnuler, !!dec);
     montrer(ligneInjecter, e.etape === 3 && e.statut === 'adopté, en attente d\'injection');
-    resumeInj.textContent = e.etape > 3 ? 'Événement injecté dans le vault.' :
+    resumeInj.textContent = e.etape > 3 ? (typeCourant === 'signal' ? 'Signal injecté dans le vault. Rien à appliquer : parcours terminé.' : 'Événement injecté dans le vault.') :
       (e.statut === 'adopté, en attente d\'injection' ? 'En attente dans la file d\'injection.' : '');
     resumeApp.textContent = e.applique ? `Appliquée le ${date(e.applique)} (relancer n'applique que ce qui manque).`
       : (e.operations ? '' : 'Fichier des opérations absent : resimuler avant d\'appliquer.');
@@ -11585,7 +11605,7 @@ function buildDecisionHypothese() {
       const data = await res.json();
       if (data.error) { statutTxt.textContent = `✗ ${data.error}`; return; }
       afficher(data);
-      if (data.etape >= 5) chargerMain(); else viderMain();   // PATCH_S27_GUI_MAIN
+      if (data.etape >= 5 && data.type !== 'signal') chargerMain(); else viderMain();   // PATCH_S27_GUI_MAIN (U2f : pas d'étape ⑤ pour un signal)
     } catch (err) {
       statutTxt.textContent = `✗ Erreur réseau : ${err.message}`;
     }
@@ -12119,7 +12139,7 @@ function buildDecisionHypothese() {
   btnApercu.addEventListener('click', () =>
     appeler('decider', 'adopter', { portee: portee.value, intensite: intensite.value, apercu: true }));
   btnAdopter.addEventListener('click', () => {
-    if (!confirm('Adopter : placer l\'événement simulé dans la file d\'injection ?')) return;
+    if (!confirm(typeCourant === 'signal' ? 'Adopter : placer le signal simulé dans la file d\'injection des signaux ?' : 'Adopter : placer l\'événement simulé dans la file d\'injection ?')) return;
     appeler('decider', 'adopter', { portee: portee.value, intensite: intensite.value });
   });
   btnRejeter.addEventListener('click', () => appeler('decider', 'rejeter', { motif: motif.value }));
@@ -12131,7 +12151,7 @@ function buildDecisionHypothese() {
   btnInjListe.addEventListener('click', () => appeler('injecter', 'liste', tri3()));   // PATCH_S30_LISTE_SAUTS_JS
   btnInjApercu.addEventListener('click', () => appeler('injecter', 'apercu', tri3()));
   btnInjecter.addEventListener('click', () => {
-    if (!confirm('Injecter cet événement dans le vault ? (appels IA ; plusieurs minutes)')) return;
+    if (!confirm((typeCourant === 'signal' ? 'Injecter ce signal' : 'Injecter cet événement') + ' dans le vault ? (appels IA ; plusieurs minutes)')) return;
     appeler('injecter', 'injecter', tri3());
   });
   btnAppApercu.addEventListener('click', () => appeler('appliquer', 'apercu', tri()));

@@ -2094,6 +2094,14 @@ def _etape(liste, section, action, commande=None, motif=None):
 
 def liste_application(hyp, sc, res, cons, geo_ops, donnees, passe=None):
     """Étapes à valider à la main pour CE scénario. Rien n'est écrit."""
+    if hyp.get("type") == "signal":   # U2f : un signal n'a ni carte, ni zones, ni trajectoires
+        E = []
+        _etape(E, "Élément", f"Injecter le signal `{hyp['id']}` (entrée en fin de rapport)",
+               "étape ③ « Injecter » du panneau (ou python3 generator/et_si_injecter.py --id " + hyp["id"] + ")",
+               "un seul appel pour les 6 scénarios ; forces, sens et date de cette simulation sont imposés")
+        _etape(E, "Contrôles", "Base", "python3 generator/validate.py")
+        return {"etapes": E, "avert": [], "sources_ia": False, "fiches_citant": {},
+                "nouvelles_entites": [], "acteurs": [], "faits": []}
     E = []
     cons = cons if cons and not cons.get("erreur") else {}
     # V8.16 : passe exhaustive (obligatoires dans la liste, possibles prioritaires en facultatif).

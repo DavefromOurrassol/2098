@@ -2892,6 +2892,8 @@ def et_si_assistant(action):
     if not texte.strip():
         return jsonify({"error": "texte vide"}), 400
     cmd = [sys.executable, "hypothese_depuis_texte.py", f"--{action}", "--json"]
+    if action == "proposer" and data.get("type") in ("evenement", "signal"):   # U2f
+        cmd += ["--type", data["type"]]
     try:
         resultat = subprocess.run(cmd, cwd=pipeline_dir, capture_output=True, text=True,
                                   input=texte, timeout=TIMEOUT_ET_SI[action])
