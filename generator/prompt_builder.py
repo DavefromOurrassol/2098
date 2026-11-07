@@ -1377,6 +1377,22 @@ def build_variables_context(snapshot, thematique, all_variables):
         if dynamics:
             lines.append("- Dynamiques : {}".format(" | ".join(str(d) for d in dynamics[:3])))
 
+        # B3.1 — couplages marquants de cette variable dans CE scénario
+        # (coupling_intensity de la fiche variable : 2 à 4 liens, sens non
+        # précisé). Pas de chiffre transmis : l'ordre suffit.
+        coupling = state.get("coupling_intensity") or {}
+        liens = sorted(
+            ((k, v) for k, v in coupling.items()
+             if k in VALID_VARS and k != var_slug),
+            key=lambda kv: -(kv[1] if isinstance(kv[1], (int, float)) else 0),
+        )
+        if liens:
+            lines.append(
+                "- Couplages marquants dans ce scénario : {} (liens les plus "
+                "forts, sens non précisé ; à évoquer seulement si l'article "
+                "croise naturellement ces domaines)".format(
+                    ", ".join(k for k, _ in liens[:4])))
+
         # Sous-dynamiques (sub_variables) — granularité plus fine que le
         # state_logic général, avec leur tendance propre.
         sub_vars = all_variables.get(var_slug, {}).get("sub_variables", [])
