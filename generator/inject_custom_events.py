@@ -518,8 +518,20 @@ def step2_develop_instance(client, idea, event_slug, type_evenement, variables,
         contexte_txt += ("Ne prête à un personnage de l'article que des paroles qui figurent dans ce passage ; "
                          "n'ajoute aucune citation entre guillemets, aucune date plus précise (jour, mois, saison) "
                          "que celle du passage, aucun chiffre, lieu ni détail de scène qui n'y figure pas.\n")
-        desc_consigne_txt = ("description journalistique de l'événement — 3-4 lignes sobres, tirées du passage "
-                             "de l'article : ni scène, ni dialogue, ni détail absent du passage")
+        desc_consigne_txt = ("description journalistique de l'événement — 3-4 lignes sobres sur l'événement "
+                             "choisi seul, à sa date : ni scène, ni dialogue, ni détail absent du passage, "
+                             "sans recopier le passage")   # U3y
+        contexte_txt += ("N'écris jamais le nom d'un scénario (ex. « new_sustainability ») dans la description "
+                         "ni dans les conséquences. Les conséquences se limitent à des tensions ou des tendances que "
+                         "le passage permet de déduire : aucun débat, aucune réaction d'autorité ou de médias, aucun "
+                         "chiffre qui n'est pas dans le passage.\n")   # U3w
+        an_ev_u3y = _annee_evenement_u3y(idea)
+        if an_ev_u3y:   # U3y
+            contexte_txt += (f"L'événement choisi date de {an_ev_u3y}, alors que le passage peut décrire une époque "
+                             f"plus tardive. La description et la réalisation racontent UNIQUEMENT cet événement, tel "
+                             f"qu'il se produit en {an_ev_u3y} : ne recopie pas le passage, n'y mets aucun fait "
+                             f"postérieur à {an_ev_u3y} ni « aujourd'hui ». date_label : l'année seule si le passage "
+                             f"ne donne ni mois ni saison.\n")
     else:
         desc_consigne_txt = "description journalistique de l'événement — 3-4 lignes vivantes"
     if idea.get("date_imposee") is not None and impositions_txt:
@@ -1310,6 +1322,59 @@ def _texte_faits(idea, scenario):
 _DERNIER_ARTICLE_U3S = {}   # U3t : scénario -> texte de l'article trouvé (pour le contrôle des citations)
 
 
+def _fait_de_article_u3w(fait, scenario):
+    """U3w : le fait imposé est-il une phrase (8 mots au moins) de l'article d'origine ?"""
+    article = _DERNIER_ARTICLE_U3S.get(scenario)
+    if not article:
+        return False
+    n = _norm_ctx_u3s(fait)
+    return len(n.split()) >= 8 and n in _norm_ctx_u3s(article)
+
+
+def _noms_scenario_u3w(instance_data):
+    """U3w : [(champ, scénario)] pour chaque nom de scénario écrit dans la description ou les
+    conséquences (la réalisation est exclue)."""
+    out = []
+    for k in ("description_complete", "consequences"):
+        t = str(instance_data.get(k) or "")
+        for s in SCENARIOS:
+            if re.search(r"(?<![a-z_])" + re.escape(s) + r"(?![a-z_])", t):
+                out.append((k, s))
+    return out
+
+
+def _annee_evenement_u3y(idea, instance_data=None):
+    """U3y : année de l'événement (date imposée, sinon date de la fiche), ou None."""
+    for v in (idea.get("date_imposee"), (instance_data or {}).get("date")):
+        try:
+            a = int(float(v))
+        except (TypeError, ValueError):
+            continue
+        if 2025 <= a <= 2098:
+            return a
+    return None
+
+
+def _anachronismes_u3y(instance_data, idea, scenario):
+    """U3y : années postérieures à l'événement, ou « aujourd'hui », dans la réalisation ou la
+    description d'un événement tiré d'un article. Liste de messages (vide sinon)."""
+    if not _DERNIER_ARTICLE_U3S.get(scenario):
+        return []
+    an = _annee_evenement_u3y(idea, instance_data)
+    if not an:
+        return []
+    out = []
+    for k in ("realisation", "description_complete"):
+        t = str(instance_data.get(k) or "")
+        apres = sorted({int(a) for a in re.findall(r"(?<!\d)(20\d\d)(?!\d)", t) if an < int(a) <= 2098})
+        if apres:
+            out.append(f"{k} cite des années postérieures à l'événement ({an}) : "
+                       + ", ".join(str(a) for a in apres))
+        if an < 2097 and re.search(r"aujourd.hui", t, re.IGNORECASE):
+            out.append(f"{k} parle d'« aujourd'hui » pour un événement de {an}")
+    return out
+
+
 def _citations_absentes_u3t(instance_data, scenario):
     """U3t : citations « … » (4 mots au moins) du récit absentes de l'article d'origine."""
     article = _DERNIER_ARTICLE_U3S.get(scenario)
@@ -1429,7 +1494,8 @@ def verifier_contraintes(instance_data, idea, scenario):
     recit = "\n\n".join(f"{k} : {' '.join(str(instance_data.get(k)).split())}"
                         for k in ("nom", "evenement_cle", "realisation", "description_complete", "consequences")
                         if instance_data.get(k))
-    liste = "\n".join(f"{i}. {f['fait']}" for i, f in enumerate(faits, 1))
+    liste = "\n".join(f"{i}. " + ("[ARTICLE] " if _fait_de_article_u3w(f['fait'], scenario) else "")
+                      + f['fait'] for i, f in enumerate(faits, 1))   # U3w
     system = ("Tu contrôles la cohérence d'un récit d'événement fictif avec des faits imposés. "
               "Tu réponds uniquement en JSON.")
     user = f"""FAITS IMPOSÉS :
@@ -1443,6 +1509,9 @@ Pour chaque fait, dis si le récit le respecte.
   autre institution, sens d'évolution inverse : un acteur censé décliner qui gagne du pouvoir, etc.).
 - Respecté : le récit le confirme, ou n'en parle pas — sauf si le fait est le sujet même de
   l'événement : il doit alors y figurer.
+- Un fait marqué [ARTICLE] vient de l'article d'origine : le récit doit en reprendre les éléments
+  essentiels (qui, quoi, quand, issue : libération, démenti, bilan…) ; l'omission d'un de ces
+  éléments, ou une version qui en change le sens, = NON respecté.
 Ne juge que les faits listés, ni le style ni la vraisemblance.
 Réponds : {{"faits": [{{"n": 1, "respecte": true, "citation": "", "explication": ""}}]}}
 - citation : passage exact du récit qui contredit le fait (vide si respecté) ;
@@ -1632,6 +1701,10 @@ def process_idea(client, idea, dry_run=False):
                 print(f"  ⚠ [{scenario}] fait imposé non respecté : {v}")
             for q in _citations_absentes_u3t(instance_data, scenario):   # U3t
                 print(f"  ⚠ [{scenario}] citation absente de l'article : « {q} »")
+            for champ, nom_sc in _noms_scenario_u3w(instance_data):   # U3w
+                print(f"  ⚠ [{scenario}] le nom du scénario « {nom_sc} » apparaît dans {champ} : à retoucher")
+            for msg in _anachronismes_u3y(instance_data, idea, scenario):   # U3y
+                print(f"  ⚠ [{scenario}] {msg}")
 
             if idea.get("edition_active") and idea.get("date_imposee") is not None:
                 print("  ⚠ edition_active ignoré : la date est imposée par la simulation.")

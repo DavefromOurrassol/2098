@@ -180,7 +180,7 @@ def motif_non_evenement(description, citation, annee_article):
     # 0. U3r : citation tronquée (passages recollés) ou statistique de tendance
     if _re.search(r"\[\s*(\.\.\.|…)\s*\]|…|\.\.\.", str(citation or "")):
         return "citation tronquée ([...] ou …) : passages recollés"
-    if (_re.search(r" (augment\w*|bondi|chute\w*|baiss\w*|progress\w*|diminu\w*|doubl\w*|tripl\w*) (de )?\d", desc_n)
+    if (_re.search(r" (augment\w*|bondi|chute\w*|baiss\w*|progress\w*|diminu\w*|doubl\w*|tripl\w*|reduc\w*|hauss\w*|croiss\w*|recul\w*|grimp\w*) (de )?\d", desc_n)
             and (" depuis " in desc_n or _re.search(r" en (une decennie|dix ans|\d+ ans) ", desc_n))):
         return "statistique de tendance (évolution chiffrée sur une durée), pas un événement"
     # 1. année postérieure à l'article écrite dans la description
@@ -192,9 +192,12 @@ def motif_non_evenement(description, citation, annee_article):
         if m in desc_n or m in cit_n:
             return f"marqueur de projet « {m.strip()} »"
     # 3. description qui s'ouvre sur un plan / programme / débat, sans verbe d'accomplissement
-    debut = " " + " ".join(desc_n.split()[:4]) + " "
+    mots = desc_n.split()   # U3x : le nom doit OUVRIR la description (après les articles)
+    while mots and mots[0] in ("le", "la", "l", "les", "un", "une", "du", "de", "des", "d"):
+        mots = mots[1:]
+    debut = " " + " ".join(mots[:3]) + " "
     for d in _DEBUT_PLAN:
-        if d in debut:
+        if debut.startswith(d):
             if not any(v in desc_n for v in _ACCOMPLI):
                 return f"s'ouvre sur « {d.strip()} » sans fait accompli"
             break
