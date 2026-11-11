@@ -660,3 +660,122 @@ hypotheses:
         fortress_world: 1
         eco_communalism: -1
       duree: 4
+
+  - id: ouverture_dispensaire_regeneratif_geneve_2042
+    nom: Premier dispensaire du Réseau de Médecine Régénérative Universelle
+    description: Ouverture du premier dispensaire du Réseau de Médecine Régénérative Universelle
+      dans le quartier des Grottes à Genève, en pleine gentrification post-inondation. Les Réseaux
+      de Médecine Régénérative Universelle y ont implanté leur premier dispensaire en 2042.
+    date: 2042.01
+    mode: choc
+    persistance: durable
+    carte: non
+    scenarios:
+    - new_sustainability
+    contraintes:
+    - Les Réseaux de Médecine Régénérative Universelle y ont implanté leur premier dispensaire
+      en 2042
+    - L'événement a lieu en 2042.
+    - Le dispensaire est implanté dans le quartier des Grottes à Genève, en pleine gentrification
+      post-inondation.
+    - Le dispensaire appartient au Réseau de Médecine Régénérative Universelle.
+    impacts:
+    - variable: sante_biotechnologies
+      delta_level: 20
+      polarite: -1
+      duree: 3
+    - variable: gouvernance_institutions
+      delta_level: 10
+      polarite:
+        breakdown: 1
+        fortress_world: 1
+        new_sustainability: -1
+        eco_communalism: -1
+        policy_reform: -1
+        reference: -1
+      duree: 5
+    - variable: systeme_economique_redistribution
+      delta_level: 12
+      polarite:
+        breakdown: 1
+        fortress_world: 1
+        new_sustainability: -1
+        eco_communalism: -1
+        policy_reform: -1
+        reference: -1
+      duree: 4
+    - variable: organisation_territoires
+      delta_level: 8
+      polarite: -1
+      duree: 5
+    - variable: valeurs_culture_tempo_sociale
+      delta_level: 10
+      polarite:
+        breakdown: 1
+        fortress_world: 1
+        new_sustainability: -1
+        eco_communalism: -1
+        policy_reform: -1
+        reference: -1
+      duree: 5
+
+  - id: arrets_dispensaire_grottes_2098
+    nom: Arrestation du Dispensaire des Grottes
+    description: Trois membres du Dispensaire des Grottes sont arrêtés en janvier 2098 pour
+      « détournement de ressources médicales » après avoir permis des greffes et thérapies non
+      autorisées. L'article du 24 mars 2098 rapporte cet événement dans le cadre du scénario
+      new_sustainability.
+    date: 2098.01
+    mode: choc
+    persistance: normale
+    carte: non
+    scenarios:
+    - new_sustainability
+    contraintes:
+    - Trois de ses membres ont été arrêtés en janvier dernier pour « détournement de ressources
+      médicales
+    - Trois membres du Dispensaire des Grottes arrêtés pour « détournement de ressources médicales
+      ».
+    - Événement rapporté dans le scénario new_sustainability.
+    - 'Date de l''événement : janvier 2098.'
+    impacts:
+    - variable: sante_biotechnologies
+      delta_level: 15
+      polarite:
+        breakdown: 1
+        fortress_world: 1
+        new_sustainability: -1
+        eco_communalism: -1
+        policy_reform: 1
+        reference: 1
+      duree: 2
+    - variable: gouvernance_institutions
+      delta_level: 12
+      polarite:
+        breakdown: 1
+        fortress_world: 1
+        new_sustainability: 1
+        eco_communalism: -1
+        policy_reform: 1
+        reference: 1
+      duree: 3
+    - variable: valeurs_culture_tempo_sociale
+      delta_level: 10
+      polarite:
+        breakdown: 1
+        fortress_world: 1
+        new_sustainability: -1
+        eco_communalism: -1
+        policy_reform: 1
+        reference: 1
+      duree: 4
+    - variable: geopolitique_conflits
+      delta_level: 8
+      polarite:
+        breakdown: 1
+        fortress_world: 1
+        new_sustainability: -1
+        eco_communalism: -1
+        policy_reform: 1
+        reference: 1
+      duree: 3

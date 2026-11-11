@@ -2620,5 +2620,339 @@
     "via_matrice_impose": true
    }
   }
+ },
+ "ouverture_dispensaire_regeneratif_geneve_2042": {
+  "simulation": {
+   "date": "2026-11-11T18:07",
+   "version": "v8.25",
+   "empreinte": "e0ae1acdaa31a704",
+   "scenarios": [
+    "new_sustainability"
+   ],
+   "complet": true,
+   "passe": false,
+   "rapport": "documentation/need_action/et_si_ouverture_dispensaire_regeneratif_geneve_2042.md",
+   "entree": {
+    "id": "ouverture_dispensaire_regeneratif_geneve_2042",
+    "description": "Ouverture du premier dispensaire du Réseau de Médecine Régénérative Universelle dans le quartier des Grottes à Genève, en pleine gentrification post-inondation. Les Réseaux de Médecine Régénérative Universelle y ont implanté leur premier dispensaire en 2042.",
+    "portee": "globale",
+    "date_approximative": 2042,
+    "intensite": "<à choisir>",
+    "persistance": "durable",
+    "scenarios": [
+     "new_sustainability"
+    ],
+    "variables_hint": [
+     "sante_biotechnologies",
+     "gouvernance_institutions",
+     "systeme_economique_redistribution",
+     "organisation_territoires",
+     "valeurs_culture_tempo_sociale"
+    ],
+    "variables_hint_count": 5,
+    "source": "et_si_ouverture_dispensaire_regeneratif_geneve_2042",
+    "faits_imposes": {
+     "new_sustainability": [
+      {
+       "fait": "Les Réseaux de Médecine Régénérative Universelle y ont implanté leur premier dispensaire en 2042",
+       "sort": "contrainte"
+      },
+      {
+       "fait": "L'événement a lieu en 2042.",
+       "sort": "contrainte"
+      },
+      {
+       "fait": "Le dispensaire est implanté dans le quartier des Grottes à Genève, en pleine gentrification post-inondation.",
+       "sort": "contrainte"
+      },
+      {
+       "fait": "Le dispensaire appartient au Réseau de Médecine Régénérative Universelle.",
+       "sort": "contrainte"
+      }
+     ]
+    },
+    "date_imposee": 2042.01,
+    "impacts_imposes": {
+     "new_sustainability": [
+      {
+       "variable": "sante_biotechnologies",
+       "delta_level": 20,
+       "duree": 3,
+       "polarite": -1
+      },
+      {
+       "variable": "gouvernance_institutions",
+       "delta_level": 10,
+       "duree": 5,
+       "polarite": -1
+      },
+      {
+       "variable": "systeme_economique_redistribution",
+       "delta_level": 12,
+       "duree": 4,
+       "polarite": -1
+      },
+      {
+       "variable": "organisation_territoires",
+       "delta_level": 8,
+       "duree": 5,
+       "polarite": -1
+      },
+      {
+       "variable": "valeurs_culture_tempo_sociale",
+       "delta_level": 10,
+       "duree": 5,
+       "polarite": -1
+      }
+     ]
+    },
+    "via_matrice_impose": true
+   },
+   "type": "evenement"
+  },
+  "decision": {
+   "statut": "adopté",
+   "date": "2026-11-11T18:10",
+   "motif": null,
+   "type": "evenement",
+   "empreinte": "e0ae1acdaa31a704",
+   "simulation_du": "2026-11-11T18:07",
+   "entree": {
+    "id": "ouverture_dispensaire_regeneratif_geneve_2042",
+    "description": "Ouverture du premier dispensaire du Réseau de Médecine Régénérative Universelle dans le quartier des Grottes à Genève, en pleine gentrification post-inondation. Les Réseaux de Médecine Régénérative Universelle y ont implanté leur premier dispensaire en 2042.",
+    "portee": "locale",
+    "date_approximative": 2042,
+    "intensite": "faible",
+    "persistance": "durable",
+    "scenarios": [
+     "new_sustainability"
+    ],
+    "variables_hint": [
+     "sante_biotechnologies",
+     "gouvernance_institutions",
+     "systeme_economique_redistribution",
+     "organisation_territoires",
+     "valeurs_culture_tempo_sociale"
+    ],
+    "variables_hint_count": 5,
+    "source": "et_si_ouverture_dispensaire_regeneratif_geneve_2042",
+    "faits_imposes": {
+     "new_sustainability": [
+      {
+       "fait": "Les Réseaux de Médecine Régénérative Universelle y ont implanté leur premier dispensaire en 2042",
+       "sort": "contrainte"
+      },
+      {
+       "fait": "L'événement a lieu en 2042.",
+       "sort": "contrainte"
+      },
+      {
+       "fait": "Le dispensaire est implanté dans le quartier des Grottes à Genève, en pleine gentrification post-inondation.",
+       "sort": "contrainte"
+      },
+      {
+       "fait": "Le dispensaire appartient au Réseau de Médecine Régénérative Universelle.",
+       "sort": "contrainte"
+      }
+     ]
+    },
+    "date_imposee": 2042.01,
+    "impacts_imposes": {
+     "new_sustainability": [
+      {
+       "variable": "sante_biotechnologies",
+       "delta_level": 20,
+       "duree": 3,
+       "polarite": -1
+      },
+      {
+       "variable": "gouvernance_institutions",
+       "delta_level": 10,
+       "duree": 5,
+       "polarite": -1
+      },
+      {
+       "variable": "systeme_economique_redistribution",
+       "delta_level": 12,
+       "duree": 4,
+       "polarite": -1
+      },
+      {
+       "variable": "organisation_territoires",
+       "delta_level": 8,
+       "duree": 5,
+       "polarite": -1
+      },
+      {
+       "variable": "valeurs_culture_tempo_sociale",
+       "delta_level": 10,
+       "duree": 5,
+       "polarite": -1
+      }
+     ]
+    },
+    "via_matrice_impose": true
+   }
+  }
+ },
+ "arrets_dispensaire_grottes_2098": {
+  "simulation": {
+   "date": "2026-11-11T18:29",
+   "version": "v8.25",
+   "empreinte": "192c3bd4da974a2f",
+   "scenarios": [
+    "new_sustainability"
+   ],
+   "complet": true,
+   "passe": false,
+   "rapport": "documentation/need_action/et_si_arrets_dispensaire_grottes_2098.md",
+   "entree": {
+    "id": "arrets_dispensaire_grottes_2098",
+    "description": "Trois membres du Dispensaire des Grottes sont arrêtés en janvier 2098 pour « détournement de ressources médicales » après avoir permis des greffes et thérapies non autorisées. L'article du 24 mars 2098 rapporte cet événement dans le cadre du scénario new_sustainability.",
+    "portee": "globale",
+    "date_approximative": 2098,
+    "intensite": "<à choisir>",
+    "persistance": "normale",
+    "scenarios": [
+     "new_sustainability"
+    ],
+    "variables_hint": [
+     "sante_biotechnologies",
+     "gouvernance_institutions",
+     "valeurs_culture_tempo_sociale",
+     "geopolitique_conflits"
+    ],
+    "variables_hint_count": 4,
+    "source": "et_si_arrets_dispensaire_grottes_2098",
+    "faits_imposes": {
+     "new_sustainability": [
+      {
+       "fait": "Trois de ses membres ont été arrêtés en janvier dernier pour « détournement de ressources médicales",
+       "sort": "contrainte"
+      },
+      {
+       "fait": "Trois membres du Dispensaire des Grottes arrêtés pour « détournement de ressources médicales ».",
+       "sort": "contrainte"
+      },
+      {
+       "fait": "Événement rapporté dans le scénario new_sustainability.",
+       "sort": "contrainte"
+      },
+      {
+       "fait": "Date de l'événement : janvier 2098.",
+       "sort": "contrainte"
+      }
+     ]
+    },
+    "date_imposee": 2098.01,
+    "impacts_imposes": {
+     "new_sustainability": [
+      {
+       "variable": "sante_biotechnologies",
+       "delta_level": 15,
+       "duree": 2,
+       "polarite": -1
+      },
+      {
+       "variable": "gouvernance_institutions",
+       "delta_level": 12,
+       "duree": 3,
+       "polarite": 1
+      },
+      {
+       "variable": "valeurs_culture_tempo_sociale",
+       "delta_level": 10,
+       "duree": 4,
+       "polarite": -1
+      },
+      {
+       "variable": "geopolitique_conflits",
+       "delta_level": 8,
+       "duree": 3,
+       "polarite": -1
+      }
+     ]
+    },
+    "via_matrice_impose": true
+   },
+   "type": "evenement"
+  },
+  "decision": {
+   "statut": "adopté",
+   "date": "2026-11-11T18:29",
+   "motif": null,
+   "type": "evenement",
+   "empreinte": "192c3bd4da974a2f",
+   "simulation_du": "2026-11-11T18:29",
+   "entree": {
+    "id": "arrets_dispensaire_grottes_2098",
+    "description": "Trois membres du Dispensaire des Grottes sont arrêtés en janvier 2098 pour « détournement de ressources médicales » après avoir permis des greffes et thérapies non autorisées. L'article du 24 mars 2098 rapporte cet événement dans le cadre du scénario new_sustainability.",
+    "portee": "locale",
+    "date_approximative": 2098,
+    "intensite": "faible",
+    "persistance": "normale",
+    "scenarios": [
+     "new_sustainability"
+    ],
+    "variables_hint": [
+     "sante_biotechnologies",
+     "gouvernance_institutions",
+     "valeurs_culture_tempo_sociale",
+     "geopolitique_conflits"
+    ],
+    "variables_hint_count": 4,
+    "source": "et_si_arrets_dispensaire_grottes_2098",
+    "faits_imposes": {
+     "new_sustainability": [
+      {
+       "fait": "Trois de ses membres ont été arrêtés en janvier dernier pour « détournement de ressources médicales",
+       "sort": "contrainte"
+      },
+      {
+       "fait": "Trois membres du Dispensaire des Grottes arrêtés pour « détournement de ressources médicales ».",
+       "sort": "contrainte"
+      },
+      {
+       "fait": "Événement rapporté dans le scénario new_sustainability.",
+       "sort": "contrainte"
+      },
+      {
+       "fait": "Date de l'événement : janvier 2098.",
+       "sort": "contrainte"
+      }
+     ]
+    },
+    "date_imposee": 2098.01,
+    "impacts_imposes": {
+     "new_sustainability": [
+      {
+       "variable": "sante_biotechnologies",
+       "delta_level": 15,
+       "duree": 2,
+       "polarite": -1
+      },
+      {
+       "variable": "gouvernance_institutions",
+       "delta_level": 12,
+       "duree": 3,
+       "polarite": 1
+      },
+      {
+       "variable": "valeurs_culture_tempo_sociale",
+       "delta_level": 10,
+       "duree": 4,
+       "polarite": -1
+      },
+      {
+       "variable": "geopolitique_conflits",
+       "delta_level": 8,
+       "duree": 3,
+       "polarite": -1
+      }
+     ]
+    },
+    "via_matrice_impose": true
+   }
+  }
  }
 }

@@ -1,0 +1,29 @@
+{
+ "id": "ouverture_dispensaire_regeneratif_geneve_2042",
+ "date_simulation": "2026-11-11T18:07",
+ "version": "v8.25",
+ "empreinte": "e0ae1acdaa31a704",
+ "annee": 2042.01,
+ "mode": "choc",
+ "contraintes": [
+  "Les Réseaux de Médecine Régénérative Universelle y ont implanté leur premier dispensaire en 2042",
+  "L'événement a lieu en 2042.",
+  "Le dispensaire est implanté dans le quartier des Grottes à Genève, en pleine gentrification post-inondation.",
+  "Le dispensaire appartient au Réseau de Médecine Régénérative Universelle."
+ ],
+ "scenarios_hypothese": [
+  "new_sustainability"
+ ],
+ "scenarios": [
+  "new_sustainability"
+ ],
+ "complet": true,
+ "par_scenario": {
+  "new_sustainability": {
+   "lecture": null,
+   "passe": null,
+   "erreurs": [],
+   "carte": []
+  }
+ }
+}

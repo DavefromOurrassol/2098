@@ -10,7 +10,7 @@ RÈGLE DE LECTURE DE LA COLONNE "date" :
   - type=signal    -> fenêtre "AAAA-AAAA" (date_bascule du signal_to_state)
   - type=evenement -> année unique "AAAA" (date précise de l'instance)
 
-Total : 662 entrées (99 signaux uniques × 6 scénarios + 68 entrées d'événements custom).
+Total : 664 entrées (99 signaux uniques × 6 scénarios + 70 entrées d'événements custom).
 
 ## breakdown
 
@@ -359,6 +359,8 @@ Total : 662 entrées (99 signaux uniques × 6 scénarios + 68 entrées d'événe
 | evenement | 2053 | accord_carbone_amazonie_blocs | climat_environnement_global, gouvernance_institutions, geopolitique_conflits, energie_ressources_critiques | — | Amazonie impose sa souveraineté carbone aux blocs mondiaux 2053 |
 | evenement | 2062 | grand_forum_sahel_numerique | technologie_information, gouvernance_institutions, organisation_territoires | — | Charte d'Agadez consacre la souveraineté numérique périphérique 2062 |
 | evenement | 2098.03 | piratage_ecrans_greffes_hepatiques_2098 | sante_biotechnologies, gouvernance_institutions, technologie_information, valeurs_culture_tempo_sociale | — | 2098 : 1 247 noms s'affichent sur les écrans genevois |
+| evenement | 2042.01 | ouverture_dispensaire_regeneratif_geneve_2042 | sante_biotechnologies, gouvernance_institutions, systeme_economique_redistribution, organisation_territoires, valeurs_culture_tempo_sociale | — | 2042 : Genève ouvre son premier dispensaire régénératif |
+| evenement | 2098.01 | arrets_dispensaire_grottes_2098 | sante_biotechnologies, gouvernance_institutions, valeurs_culture_tempo_sociale, geopolitique_conflits | — | 2098 : trois soignants arrêtés pour greffes non autorisées |
 
 ## eco_communalism
 

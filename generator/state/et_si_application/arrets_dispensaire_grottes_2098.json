@@ -1,0 +1,29 @@
+{
+ "id": "arrets_dispensaire_grottes_2098",
+ "date_simulation": "2026-11-11T18:29",
+ "version": "v8.25",
+ "empreinte": "192c3bd4da974a2f",
+ "annee": 2098.01,
+ "mode": "choc",
+ "contraintes": [
+  "Trois de ses membres ont été arrêtés en janvier dernier pour « détournement de ressources médicales",
+  "Trois membres du Dispensaire des Grottes arrêtés pour « détournement de ressources médicales ».",
+  "Événement rapporté dans le scénario new_sustainability.",
+  "Date de l'événement : janvier 2098."
+ ],
+ "scenarios_hypothese": [
+  "new_sustainability"
+ ],
+ "scenarios": [
+  "new_sustainability"
+ ],
+ "complet": true,
+ "par_scenario": {
+  "new_sustainability": {
+   "lecture": null,
+   "passe": null,
+   "erreurs": [],
+   "carte": []
+  }
+ }
+}
