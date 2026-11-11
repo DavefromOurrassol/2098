@@ -2542,8 +2542,12 @@ def liste_application(hyp, sc, res, cons, geo_ops, donnees, passe=None):
     else:
         # V8.9 : rien à chercher par mots (hypothèse mondiale, sans pays ni nom propre) :
         # une fiche peut la contredire sans la nommer ; seule la relecture IA la trouve.
-        _etape(E, "Fiches à relire", "Aucun pays ni nom propre à chercher : la recherche par mots ne cible aucune fiche",
-               motif="une hypothèse mondiale peut contredire des fiches sans les nommer : relecture IA ci-dessous, "
+        _etape(E, "Fiches à relire",
+               (f"Aucune fiche ne cite les termes cherchés ({', '.join(sorted(termes)[:8])}"
+                + (" …" if len(termes) > 8 else "") + ") : la recherche par mots ne trouve rien")   # U3n
+               if termes else
+               "Aucun pays ni nom propre à chercher : la recherche par mots ne cible aucune fiche",
+               motif="une hypothèse peut contredire des fiches sans les nommer : relecture IA ci-dessous, "
                "après l'ajout des faits imposés dans lore_regles.yaml (section Lore)")
         _etape(E, "Fiches à relire", "Estimer la relecture IA des fiches de plus fort impact",
                f"python3 generator/audit_lore.py --scenario {sc} --llm --estimer --limit 10", "aucun appel")
