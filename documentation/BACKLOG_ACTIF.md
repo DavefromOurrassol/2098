@@ -1,7 +1,7 @@
 # Backlog actif — Ourrassol 2098
 
-*Ce qui reste ouvert, et seulement cela. Mis à jour le 1er novembre 2026 (test réel
-des fiches d'entités disparues, cinq défauts corrigés). Réorganisé le 31 octobre 2026 en trois
+*Ce qui reste ouvert, et seulement cela. Mis à jour le 11 novembre 2026 (chantier
+« unification » : « et si ? » devient la porte unique ; B3.1 et B4-termes clos). Réorganisé le 31 octobre 2026 en trois
 parties : **A. Bugs et vérifications**, **B. Développement (nouvelles
 fonctionnalités)**, **C. Enrichissement de la base**. Règle actée le 31 oct :
 l'outil doit avoir toutes ses fonctionnalités et aucun bug connu (partie A vide)
@@ -11,7 +11,7 @@ avant d'enrichir la base en volume (partie C).*
 des points dans plusieurs parties, chacun est marqué de son numéro. Les points
 clos sont dans `BACKLOG_ARCHIVE.md` (à uploader seulement pour vérifier si un
 point a déjà été traité). Mode d'emploi : `USER_MANUAL_COMPLET.md` ; dernier état
-de session : `HANDOFF_01_NOVEMBRE.md`.*
+de session : `HANDOFF_11_NOVEMBRE.md`.*
 
 Légende : 🔴 à faire · 🟡 en cours · 👁 en surveillance (pas de correctif
 préventif, agir si le cas revient) · ⚪ idée sans calendrier.
@@ -187,16 +187,7 @@ imagine seul). D'où les pistes ci-dessous, et les wild cards et la passe « éq
 rouge » de B4.*
 
 **S28.1 MICMAC : clos le 25 oct.** Suites de développement :
-- **`coupling_intensity`** (examiné le 30 oct) : lu par aucun calcul ni prompt
-  (`loader.py` le charge, `snapshot.py` le transmet). Donnée utile : 2 à 4 liens
-  marquants par scénario, différents d'un monde à l'autre (ex. énergie :
-  géopolitique en fortress_world / breakdown, technologie et gouvernance en
-  new_sustainability / policy_reform, territoires en eco_communalism) ; palmarès,
-  pas matrice complète, sens du lien non précisé. Deux usages :
-  - **prompt des articles** (le plus simple, conseillé) : une ligne « liens
-    marquants dans ce scénario » à côté de `state_logic` / `dominant_dynamics`
-    dans `prompt_builder.py` (l. 1356-1420) ; aucun chiffre ne bouge ;
-  - **moteur** : moduler la matrice par scénario → avec S28.2.
+- **`coupling_intensity`** : usage « prompt des articles » **clos** (B3.1, voir archive). Reste l'usage « moteur » : moduler la matrice par scénario → avec S28.2.
 - La criticité (`systemic_criticality`) pèse lourd dans le classement (×0,7 à ×1,6
   sur tous les liens sortants) : à rediscuter si un classement surprend.
 - `variable_type` des fiches (moteur / relais / réactive) gardé comme intention de
@@ -229,17 +220,58 @@ En marge : *Global Trends 2040* comme grille de comparaison.
 Le simulateur est terminé (manuel §3quinquies) ; ses tests réels sont en A1.
 - Homonymes (Santa Cruz, Sucre, Perth, Medina) ; synthèse haut niveau des
   hypothèses ; récit IA de `trace_injection.py` (repli sur le modèle).
-- **Wild cards** : type d'événement « rupture » assumé, faible probabilité et impact
+- **Wild cards** (→ voir B9, étape 3 de l'ordre) : type d'événement « rupture » assumé, faible probabilité et impact
   majeur, injecté même s'il bouscule le lore (les signaux faibles ne conviennent
   pas : ils sont déjà observables).
-- **Brouillon de règle de lore (étape ⑤)** : le terme proposé est le nom complet
-  avec son sigle (« Réseau des Citadelles du Sud-Pacifique (RCSP) ») ; un article qui
-  dit « Holdfast » ou « les Citadelles » échappe à l'audit. Proposer aussi le nom
-  court, le sigle et le slug d'entité ; en attendant, compléter `termes` à la main.
+- **Brouillon de règle de lore (étape ⑤)** : termes multiples **faits** (B4, 2-7 nov) ; à observer à la première hypothèse réelle qui fait disparaître une entité.
 - **Passe « équipe rouge »** : faire attaquer les hypothèses d'un scénario plutôt
   qu'en vérifier la cohérence (ex. « qu'est-ce qui ferait tomber Ergo-Wian en dix
   ans ? »), par l'IA ou des lecteurs aux profils variés. Inspiration : la série
   *Ces guerres qui nous attendent* (travaux de la Red Team Défense).
+
+## 🟡 B9. Unification — « et si ? » porte unique (U2-U3, 2-11 nov)
+
+*Principe : tout élément (événement, signal, entité) naît comme **hypothèse** dans
+`et_si/hypotheses.yaml`, puis ①simuler → ②décider → ③injecter → ④appliquer →
+⑤à la main. Les flux de maintenance qui écrivent la file des entités
+(`enrich_minimal.py`, `extract_phantom_slugs.py`, `requeue_needs_review.py`,
+`create_entity.py`) restent hors du dispositif.*
+
+**Fait** (détails dans l'archive et le handoff) : type d'hypothèse `signal`
+(U2a-U2g), lieu + contraintes (U2h), veille 🔭 → « et si ? » (U3a), Articles →
+« et si ? » (U3b), date / scénarios / mode imposés par l'article (U3c), case « effet
+établi en 2098 » (U3d). Chemin signal **éprouvé en réel de bout en bout** depuis la
+veille (`ia_autorite_spirituelle_2026` → signal `chatbots_guides_spirituels_2026`,
+`validate.py` 0/0). Chemin Articles testé jusqu'au bloc proposé/vérifié seulement.
+
+**Ordre décidé (David, 7 nov)** : 1. éprouver les chemins ; 2. **entités** dans
+« et si ? » (`create_entities_and_instances.py`) ; 3. **modes automatiques +
+wild cards** (hypothèses « rupture » à faible probabilité / fort impact) ;
+4. **étape 5 : fermer** les accès directs.
+
+À faire :
+- 🔴 **Éprouver en réel** l'Articles → « et si ? » jusqu'à l'adoption et l'injection
+  (U3b/U3c/U3d) ; objectif : zéro manipulation manuelle à chaque promotion d'article.
+- 🔴 **Entités** dans « et si ? » (puis modes auto + wild cards).
+- 🔴 **Étape 5 — fermer** : ancien formulaire Promouvoir (Articles), écran Édition
+  « Injecter un événement depuis un article » (route `/api/edition/injecter_evenement`),
+  anciens menus d'injection, `/api/yaml/append` ; supprimer le code mort
+  (`renderArticlesPromouvoirForm`, `submitArticlesPromouvoirInjection`,
+  `_veillePreparer`, `_veilleAfficherPropositions` dans `app.js`).
+- 🔴 **Réorganiser le panneau « Et si ? »** : étapes peu claires ; griser pour un
+  signal les options payantes inutiles (Lecture IA, Passe exhaustive, Nouveau
+  tirage) ; titre trompeur « Faits imposés à la lecture IA » pour un signal.
+- 🔴 **Consigne IA** : « reprendre tels quels les chiffres des contraintes » (l'IA a
+  paraphrasé Pew « 1 sur 10 / 1 sur 5 chez les moins de 30 ans » en « 10-20 % de la
+  population » ; corrigé à la main le 7 nov, `.bak_chiffres`).
+- ⚪ **Étendre la plage de dates d'injection à 2098** (aujourd'hui 2026-2097 ; un
+  article de 2098 reçoit 2097 avec un avertissement).
+- ⚪ **Veille** : passer la date d'observation comme date imposée.
+- ⚪ Perte connue : l'IA ne peut plus ajouter de variables en plus (signaux).
+- ⚪ Cosmétique : suffixe d'id `_2098` pour une date 2097
+  (`methane_arctique_nordark_2097`) ; l'hypothèse a peut-être déjà été ajoutée à
+  `hypotheses.yaml` (un ajout du même nom est refusé).
+- ⚪ **Git** : deux commits en attente (voir handoff).
 
 ## ⚪ B5. Chaîne idées → signaux et veille (S20, S21)
 
@@ -249,9 +281,8 @@ Le simulateur est terminé (manuel §3quinquies) ; ses tests réels sont en A1.
   des entités (si besoin).
 - **S20 (constat)** : un signal custom n'est jamais « structurant » dans
   `build_signal_trajectory()`.
-- **S21 injection des signaux** : aujourd'hui 6 scénarios obligatoires, `polarite`
-  ±1 et un seul `delta_level`. Plus tard : a) « sans suite » par scénario ;
-  b) `delta_level` par scénario.
+- **S21 injection des signaux** : polarité ±1 par scénario **faite** via « et si ? »
+  (7 nov). Reste : a) « sans suite » par scénario ; b) `delta_level` par scénario.
 - **S21 veille** : OCR des PDF scannés ; fusion multi-IA pour l'état du monde ;
   défaire une fusion dans 🔭 ; recherche web en deux temps (≈ 12 fois plus chère) ;
   repérer les signaux qui relient plusieurs variables (analyse en réseau sur la

@@ -1611,3 +1611,45 @@ intermédiaire.
   `98dc31b`). Testé sur fiches factices reproduisant le cas.
 - **Fausse alerte** : « années disparues : 2098 » de l'aperçu au passé — attendu
   quand la fiche décrivait 2098 au présent.
+
+---
+
+## Clos du 2 au 11 novembre 2026
+
+**B3.1 — couplages marquants dans le prompt des articles** (`patch_b31_liens_marquants.py`,
+`.bak_b31liens`) : une ligne « liens marquants dans ce scénario » (issue de
+`coupling_intensity`) ajoutée à côté de `state_logic` / `dominant_dynamics`. Aucun
+chiffre du moteur ne bouge.
+
+**B4 — brouillon de règle de lore, termes multiples** (`patch_b4_termes_regle.py`,
+`patch_b4_termes_regle2.py`, `.bak_b4termes`, `.bak_b4termes2`) : le brouillon propose
+le nom complet, le nom court, le sigle et le slug d'entité. À observer à la première
+hypothèse réelle qui fait disparaître une entité.
+
+**Unification « et si ? » — porte unique** (`.bak_u2a` … `.bak_u2f`, `.bak_u2h`, `.bak_u3a` … `.bak_u3d`) :
+- **U2a-U2g** : type d'hypothèse `signal` (règles : force ≤ 10, 6 scénarios, une force
+  par variable, polarité ±1 par scénario, durée entière ≥ 1, date entière entre l'année
+  en cours et 2097, ni rupture, ni carte, ni portée / intensité) ; valeurs imposées
+  injectées par `impacts_imposes`, `date_imposee`, `via_matrice_impose`.
+- **U2h** : champ `lieu` (→ `zone_hint`) et `contraintes` transmises à l'IA du signal
+  (bloc « FAITS À RESPECTER … »), dans `inject_custom_signals.py` et `simuler_et_si.py`.
+  Correspondance avec l'ancien formulaire : Thèmes à privilégier = variables des
+  impacts ; Nombre de thèmes max = nombre d'impacts ; Persistance = `persistance:` ;
+  Année d'apparition = `date:` ; Ancrage géographique = `lieu:` ; Contraintes =
+  `contraintes:`.
+- **U3a** : veille 🔭 → « et si ? » (bouton « ✨ Envoyer vers « et si ? » », statut
+  `en_hypothese` avec `hypothese_id` / `hypothese_type`).
+- **U3b** : Articles → « et si ? » (même bouton ; type événement / signal).
+- **U3c** : date, scénario(s) et mode imposés depuis l'article
+  (`appliquer_imposes`, options `--date --scenarios --mode`).
+- **U3d** : case « effet établi en 2098 » (`--effet-plein` : durée = max(1, 2098 − date)
+  sur tous les impacts).
+- **Test réel (7 nov)** : veille 🔭 → `ia_autorite_spirituelle_2026` → adopté →
+  injecté comme signal `chatbots_guides_spirituels_2026` ; `validate.py` 0 erreur,
+  0 avertissement. Chiffres Pew corrigés à la main dans
+  `signaux_custom/chatbots_guides_spirituels_2026.md` et
+  `variables/gouvernance_institutions.md` (`.bak_chiffres`).
+
+*Remarque : une `persistance` par défaut `normale` est commune aux deux chemins
+(`dyn.PERSISTANCE_DEFAUT`).*
+

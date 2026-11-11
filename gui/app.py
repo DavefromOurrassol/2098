@@ -2894,6 +2894,19 @@ def et_si_assistant(action):
     cmd = [sys.executable, "hypothese_depuis_texte.py", f"--{action}", "--json"]
     if action == "proposer" and data.get("type") in ("evenement", "signal"):   # U2f
         cmd += ["--type", data["type"]]
+    if action == "proposer":   # U3c : date, scénarios et mode imposés par la source (article)
+        try:
+            if data.get("date") not in (None, ""):
+                cmd += ["--date", str(int(data["date"]))]
+        except (TypeError, ValueError):
+            pass
+        if isinstance(data.get("scenarios"), list):
+            sc_ = [s for s in data["scenarios"] if isinstance(s, str) and re.fullmatch(r"[a-z_]+", s)]
+            cmd += ["--scenarios", ",".join(sc_) if sc_ else "tous"]
+        if data.get("mode") in ("choc", "rupture"):
+            cmd += ["--mode", data["mode"]]
+        if data.get("effet_plein") is True:   # U3d
+            cmd.append("--effet-plein")
     try:
         resultat = subprocess.run(cmd, cwd=pipeline_dir, capture_output=True, text=True,
                                   input=texte, timeout=TIMEOUT_ET_SI[action])

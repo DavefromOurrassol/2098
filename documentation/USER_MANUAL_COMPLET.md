@@ -2,7 +2,7 @@
 
 *Mode d'emploi de l'état actuel : ce que fait chaque outil, quand l'utiliser,
 comment le lancer (GUI ou terminal), ses pièges. Mis au propre le 24 octobre 2026,
-mis à jour le 1er novembre 2026.
+mis à jour le 11 novembre 2026 (unification « et si ? »).
 Le récit des sessions (bugs trouvés, itérations, tests, versions successives) est
 dans `USER_MANUAL_HISTORIQUE.md` ; les chantiers ouverts dans `BACKLOG_ACTIF.md`.
 Les numéros de section (§2octies, §3quinquies…) sont stables : backlog et
@@ -280,6 +280,10 @@ Remplacé dans l'usage courant par `generate.py --dry-run`.
   `type_relation_dominante`, `annee_debut` / `annee_fin`, `generation`,
   `constrained_variables`, le `type` des zones, le bloc `simulation` des variables.
 
+**Liens marquants (B3.1, nov. 2026).** Le prompt de l'article contient aussi une ligne « liens
+marquants dans ce scénario », tirée de `coupling_intensity` (2 à 4 liens par scénario),
+à côté de `state_logic` et `dominant_dynamics`. Aucun calcul du moteur n'en dépend.
+
 ## 2ter. Longueur, date, signature — règles en place et protocole de test
 
 - **Longueur** : consigne répétée dans les « Contraintes impératives ». Si l'écart
@@ -370,8 +374,10 @@ Le monde avance mois par mois : la date d'édition entre dans le calcul du snaps
 - **`evenements_cites`** (frontmatter d'article) : événements effectivement traités.
 - **Onglet Articles** : tableau filtrable (scénario, thématique, ligne, zone, « Mois en
   cours seulement », « Basculement narratif détecté »), panneau de détail
-  (redimensionnable, « Ouvrir dans Obsidian »). Action **« Promouvoir en événement »** :
-  formulaire pré-rempli (id, description depuis le chapô, zone, acteurs depuis
+  (redimensionnable, « Ouvrir dans Obsidian »). Action **« ✨ Envoyer vers « et si ? » »** (depuis le 7 nov 2026, remplace « Promouvoir en
+  événement » ; l'ancien formulaire reste jusqu'à l'étape 5 de l'unification, voir §3quinquies) :
+  texte pré-rempli (chapô, date, scénario, zone, entités citées, source) + réglages ; ancien
+  formulaire, pour mémoire : formulaire pré-rempli (id, description depuis le chapô, zone, acteurs depuis
   `entites_citees`, scénarios, variables, date approximative = année de l'article,
   `date_precise` ; `edition_active` décoché par défaut ; dry-run possible). L'IA garde
   la saison d'un article contemporain et suit le récit d'un article rétrospectif (cas
@@ -600,6 +606,8 @@ python3 generator/inject_custom_events.py --idea '{"id": "...", ...}' --json [--
   (l'idée complète y reste, pour la relancer).
 
 ### `inject_custom_signals.py` 🔁 🧩 — injecter des signaux faibles
+
+*Nov. 2026 : champs de file ajoutés par « et si ? » — `impacts_imposes`, `date_imposee`, `via_matrice_impose` (valeurs forcées), `contraintes` (faits transmis à l'IA : « FAITS À RESPECTER … ») et `zone_hint` (lieu). Options : `--dry-run`, `--idea <id>`, `--json`.*
 Signaux de `signaux_custom/queue.yaml` → fiches variables (`signal_to_state` pour les
 6 scénarios + annotation section 7), registre `registre_evenements.md`, fiche d'audit
 `signaux_custom/{slug}.md` (sections « Idée source », « Trajectoire injectée »,
@@ -1077,10 +1085,13 @@ flux RSS (champ rss)   ─► 📰 veille_rss_api.py    ─► (même dossier)  
   sourcé) ; candidat déjà à trier → fusionné ; déjà écarté ou en file → ignoré ;
   🔁 s'il ressemble à un signal déjà injecté.
 - **Onglet « 🔭 Veille signaux faibles »** (`gui/routes_veille_signaux.py`) : filtres
-  lot, statut (`a_trier`, `ecarte`, `en_queue`), variable, IA, recherche ; actions
+  lot, statut (`a_trier`, `ecarte`, `en_queue`, `en_hypothese`), variable, IA, recherche ; actions
   **Écarter**, **Remettre à trier** (depuis `en_queue` : retirer l'entrée de la file à
-  la main), **Préparer l'entrée de queue** (un appel IA) → formulaire → **Ajouter** à
-  la file signaux ou événements (source `veille_<lot>_<ia>`). Puis injection habituelle.
+  la main), **✨ Envoyer vers « et si ? »** (depuis le 7 nov 2026) : crée une hypothèse (type signal
+  ou événement) dans `et_si/hypotheses.yaml` ; le candidat passe au statut `en_hypothese`
+  (« ✓ Envoyé vers « et si ? » … ») ; suite dans l'onglet « Et si ? » (simuler → décider →
+  injecter). L'ancien bouton « Préparer l'entrée de queue » est remplacé (code conservé
+  jusqu'à l'étape 5). Statuts : `a_trier`, `ecarte`, `en_queue`, `en_hypothese`.
 
 **Routine** : 1. préparer le prompt (Aperçu décoché) → 📋 Copier → coller dans 2-3 IA
 → déposer chaque réponse ; 2. livres si nouveaux ; 3. flux RSS (Lister d'abord) ;
@@ -1160,6 +1171,35 @@ de boutons. Routes `/api/et_si/statut`, `/decider/…`, `/injecter/…`, `/appli
 - **④ Appliquer** — champs Sauter / Inclure, « Aperçu de l'application »,
   « Appliquer », « Générer la check-list », lien vers la check-list.
 - **⑤ À la main** — rubriques ci-dessous.
+
+### Types d'hypothèse, entrées et réglages (unification, nov. 2026)
+« Et si ? » est la **porte unique** : veille 🔭, Articles et idées y arrivent comme
+hypothèses (chantier en cours, voir le backlog B9).
+- **Type** : `evenement` (défaut) ou `signal`. Signal : force ≤ 10, les 6 scénarios, une
+  force par variable, polarité ±1 par scénario, durée entière ≥ 1, date entière entre
+  l'année en cours et 2097 ; ni mode rupture, ni carte, ni portée / intensité. À
+  l'étape ③ une hypothèse signal écrit une entrée dans `signaux_custom/queue.yaml`
+  (champs `impacts_imposes`, `date_imposee`, `via_matrice_impose`, `contraintes`,
+  `zone_hint`) au lieu de la file des événements.
+- **Nouveaux champs** : `lieu` (signal seulement, devient `zone_hint` ; ignoré avec un
+  avertissement pour un événement) et `contraintes` (maintenant transmises aussi à l'IA
+  du signal). Anciens champs du formulaire signal : Thèmes à privilégier = variables des
+  impacts ; Nombre de thèmes max = nombre d'impacts ; Persistance = `persistance:` ; Année
+  d'apparition = `date:`. L'IA ne peut plus ajouter de variables en plus.
+- **Plage de dates** : 2026-2097 (limite d'injection) ; un article de 2098 reçoit 2097 avec
+  un avertissement. `duree` = années de montée jusqu'à pleine force ; l'effet est mesuré en 2098.
+- **Depuis la veille ou un article** : bouton « ✨ Envoyer vers « et si ? » ». Pour un
+  article, la ligne de réglages impose : date (année de l'article, bornée 2026-2097),
+  case « valable pour les 6 scénarios » (sinon le scénario de l'article seul), case
+  « mode rupture » (sinon choc), case « effet établi en 2098 » (durées calculées :
+  max(1, 2098 − date)). Ces valeurs sont **forcées après la réponse de l'IA**
+  (avertissements affichés). CLI : `hypothese_depuis_texte.py --proposer --date … --scenarios … --mode … --effet-plein`.
+- **Pour un signal** : les options payantes de l'étape ① (Lecture IA, Passe exhaustive,
+  Nouveau tirage) sont inutiles ; le titre « Faits imposés à la lecture IA » du rapport est
+  trompeur (à corriger).
+- ⚠ L'IA peut paraphraser les chiffres des `contraintes` : relire le signal injecté.
+- Accès directs encore ouverts jusqu'à l'étape 5 : ancien formulaire Promouvoir, écran
+  Édition « Injecter un événement depuis un article », anciens menus d'injection.
 
 ### Onglet « Nouvelle hypothèse » — `hypothese_depuis_texte.py` 🔁 🧩
 On écrit l'idée librement ; **✨ Proposer** (un appel IA) remplit un bloc YAML
@@ -1489,8 +1529,9 @@ python3 generator/fiche_au_passe.py --slug <slug> --apply                       
 - « Fiches à relire » : termes tirés des pays de la carte et des noms propres de
   l'hypothèse ; les mots génériques qui ouvrent les noms (`MOTS_GENERIQUES` de
   `simuler_et_si.py` : Réseau, Conseil, Pacte, Arc…) ne sont pas cherchés.
-- Brouillon de règle de lore (⑤) : le terme proposé est le nom complet de l'entité ;
-  ajouter à la main le nom court, le sigle ou l'alias employés par les articles.
+- Brouillon de règle de lore (⑤) : le brouillon propose le nom complet, le nom court, le sigle et
+  le slug de l'entité (B4, nov. 2026) ; vérifier que les termes couvrent les formes employées
+  par les articles (« Holdfast », « les Citadelles »), compléter `termes` à la main si besoin.
 - **Limites connues** : la lecture varie d'un tirage à l'autre et la passe en dépend ;
   le classement des possibles varie ; le mode rupture vaut pour toute l'hypothèse ;
   près des bornes, même une rupture bouge peu ; un slug mal orthographié par l'IA reste

@@ -1492,6 +1492,13 @@ def process_idea(client, idea, dry_run=False):
     variable_hint = idea.get("variable_hint")
     variable_hint_count = idea.get("variable_hint_count")
     zone_hint = idea.get("zone_hint") or None
+    # U2h : faits imposés par l'auteur (contraintes de l'hypothèse « et si ? »)
+    _c = idea.get("contraintes") or []
+    _c = [_c] if isinstance(_c, str) else list(_c)
+    contraintes = [" ".join(str(c).split()) for c in _c if str(c).strip()]
+    bloc_contraintes = ("\nFAITS À RESPECTER (imposés par l'auteur ; priment sur tes connaissances "
+                        "générales ; le récit ne doit en contredire aucun) :\n"
+                        + "\n".join(f"- {c}" for c in contraintes) + "\n") if contraintes else ""
 
     # Persistance du choc chiffré (27 septembre 2026) -- vérifiée AVANT tout
     # appel LLM : une faute de frappe ne doit pas coûter un développement
@@ -1595,7 +1602,7 @@ def process_idea(client, idea, dry_run=False):
                 client, idea_text, source, variable_slug, signal_slug, categorie,
                 registre_text, sibling_events=sibling_events, zone_hint=zone_hint,
                 annee_apparition=annee_apparition,
-                impositions_txt=texte_impositions_signal(imp, variable_slug),
+                impositions_txt=texte_impositions_signal(imp, variable_slug) + bloc_contraintes,
             )
             appliquer_impositions_signal(develop, imp, variable_slug)
 
@@ -1624,7 +1631,7 @@ def process_idea(client, idea, dry_run=False):
                         registre_text, previous=yaml_text, issues=issues,
                         sibling_events=sibling_events, zone_hint=zone_hint,
                         annee_apparition=annee_apparition, interdits=interdits,
-                        impositions_txt=texte_impositions_signal(imp, variable_slug),
+                        impositions_txt=texte_impositions_signal(imp, variable_slug) + bloc_contraintes,
                     )
                     appliquer_impositions_signal(develop, imp, variable_slug)
 

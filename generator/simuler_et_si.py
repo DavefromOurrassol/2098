@@ -325,8 +325,13 @@ def verifier_hypothese(h, valid_vars, dyn):
         mode = "choc"
     if mode == "rupture" and h.get("persistance") is not None:
         avert.append("`persistance` sans objet en mode rupture (le déplacement est permanent) : ignorée")
+    lieu = " ".join(str(h.get("lieu") or "").split())   # U2h : ancrage géographique d'un signal
+    if lieu and not est_signal:
+        avert.append("`lieu` ne sert qu'aux signaux (ancrage géographique) : ignoré pour un événement "
+                     "(voir `geographie`)")
+        lieu = ""
     norm = {
-        "contraintes": contraintes, "carte": carte, "mode": mode, "type": typ,
+        "contraintes": contraintes, "lieu": lieu, "carte": carte, "mode": mode, "type": typ,
         "id": hid, "nom": h.get("nom") or hid, "description": str(h.get("description") or "").strip(),
         "date": date, "persistance": pers, "via_matrice": bool(h.get("via_matrice", True)),
         "scenarios": scen, "impacts": impacts, "geographie": geo,
@@ -2723,6 +2728,10 @@ def _rendre_injection_signal(hyp, out=None):
                        for i in hyp["impacts"] if sc in i["polarites"]]
                   for sc in SCENARIOS},
               "via_matrice_impose": bool(hyp["via_matrice"])}
+    if hyp.get("lieu"):   # U2h : lu par inject_custom_signals.py comme zone_hint
+        entree["zone_hint"] = hyp["lieu"]
+    if hyp.get("contraintes"):   # U2h : faits que le récit du signal doit respecter
+        entree["contraintes"] = list(hyp["contraintes"])
     if out is not None:
         out["entree"] = entree
     return ["## Liste d'application — injection du signal", "",

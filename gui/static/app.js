@@ -8422,7 +8422,7 @@ function renderArticlesPanel() {
     </div>
     <div id="articles-apercu-zone"></div>
     <div style="margin-top:12px">
-      <button id="articles-btn-promouvoir" class="sujets-action-confirmer" style="background:#2c8a4b">Promouvoir en événement</button>
+      <button id="articles-btn-promouvoir" class="sujets-action-confirmer" style="background:#2c8a4b" title="Un appel IA : l'article devient une hypothèse « et si ? »">✨ Envoyer vers « et si ? »</button>
     </div>
     <div id="articles-promouvoir-zone"></div>
   `;
@@ -8447,7 +8447,7 @@ function renderArticlesPanel() {
       zone.dataset.open = '0';
     } else {
       zone.dataset.open = '1';
-      renderArticlesPromouvoirForm(a, zone);
+      renderArticlesVersEtSi(a, zone);   // U3b
     }
   });
 }
@@ -8469,6 +8469,140 @@ function _articlesPromSuggestId(article) {
   // Suggestion de départ, éditable -- inject_custom_events.py normalise
   // de toute façon le slug final depuis idea_id (re.sub non-[a-z0-9_]).
   return (article.slug || '').slice(0, 50);
+}
+
+function renderArticlesVersEtSi(article, container) {
+  // U3b : l'article devient une hypothèse « et si ? » (même chemin que ✨ Nouvelle hypothèse).
+  const dateReelle = article.annee != null
+    ? `${article.jour} ${MOIS_FR_JS[article.mois]} ${article.annee}` : null;
+  const texte = [
+    article.chapo || article.slug || '',
+    dateReelle ? `Article du ${dateReelle} (scénario ${article.scenario}).`
+               : `Article du scénario ${article.scenario}.`,
+    article.zone_principale ? `Lieu : ${article.zone_principale}.` : '',
+    (article.entites_citees || []).length ? `Entités citées : ${article.entites_citees.join(', ')}.` : '',
+    `Source : article ${article.fichier}.`,
+  ].filter(Boolean).join(' ');
+
+  const mk = (tag, txt, css) => {
+    const e = document.createElement(tag);
+    if (txt) e.textContent = txt;
+    if (css) e.style.cssText = css;
+    return e;
+  };
+  const appeler = async (action, corps, type, extra) => {
+    try {
+      const res = await fetch(`/api/et_si/${action}`, {
+        method: 'POST', headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ texte: corps, type: action === 'proposer' ? type : '',
+                               ...(action === 'proposer' ? (extra || {}) : {}) }),
+      });
+      return await res.json();
+    } catch (e) {
+      return { error: `Erreur réseau : ${e.message}` };
+    }
+  };
+  const afficher = (el, data, titreOk) => {
+    const lignes = [];
+    if (data.error) lignes.push(`✗ ${data.error}`);
+    (data.erreurs || []).forEach(e => lignes.push(`✗ ${e}`));
+    (data.avertissements || []).forEach(a => lignes.push(`⚠ ${a}`));
+    if (data.justification) lignes.push(`💬 ${data.justification}`);
+    if (!data.error && !(data.erreurs || []).length && titreOk) lignes.unshift(titreOk);
+    el.textContent = lignes.join('\n');
+    el.style.color = (data.error || (data.erreurs || []).length) ? '#b03a2e' : '';
+  };
+
+  container.innerHTML = '';
+  const boite = mk('div', '', 'margin-top:4px;border-top:1px solid #444;padding-top:12px');
+  boite.appendChild(mk('div', `Envoyer « ${article.slug} » vers « et si ? »`, 'font-size:13px;font-weight:600'));
+  boite.appendChild(mk('div',
+    'L\'IA transforme l\'article en hypothèse (un appel IA). Tu relis le bloc, « Vérifier », puis ' +
+    '« Ajouter ». Rien n\'est écrit avant « Ajouter » ; la suite se fait dans l\'onglet « Et si ? » ' +
+    '(Simuler → Décider → Injecter).', 'font-size:11px;color:#888;margin:4px 0 8px'));
+  const ligne = mk('div', '', 'display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:8px');
+  const selType = mk('select', '', 'width:auto;max-width:60%');
+  [['evenement', 'comme événement'], ['signal', 'comme signal faible']].forEach(([v, l]) => {
+    const o = document.createElement('option'); o.value = v; o.textContent = l; selType.appendChild(o);
+  });
+  const btn = mk('button', '✨ Proposer');
+  btn.type = 'button'; btn.className = 'yaml-btn yaml-btn-save';
+  ligne.appendChild(selType); ligne.appendChild(btn);
+  boite.appendChild(ligne);
+  // U3c : valeurs tirées de l'article, imposées à l'IA (elle ne les devine plus)
+  const reglages = mk('div', '', 'display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-bottom:8px;font-size:11px');
+  const champDate = document.createElement('input');
+  champDate.type = 'number'; champDate.min = '2026'; champDate.max = '2097'; champDate.style.width = '80px';
+  champDate.value = article.annee != null ? Math.min(2097, Math.max(2026, article.annee)) : '';
+  const lblDate = mk('label', 'Date de l\'événement :', 'margin:0');
+  lblDate.appendChild(champDate);
+  const caseOui = (texteCase) => {
+    const l = mk('label', '', 'margin:0;display:flex;align-items:center;gap:4px');
+    const c = document.createElement('input'); c.type = 'checkbox';
+    l.appendChild(c); l.appendChild(document.createTextNode(texteCase));
+    return [l, c];
+  };
+  const [lblTous, cbTous] = caseOui(`valable pour les 6 scénarios (sinon : « ${article.scenario} » seulement)`);
+  const [lblRupt, cbRupt] = caseOui('mode rupture (déplace durablement le monde)');
+  const [lblPlein, cbPlein] = caseOui('effet établi en 2098 (durées de montée calculées)');
+  [lblDate, lblTous, lblRupt, lblPlein].forEach(e => reglages.appendChild(e));
+  boite.appendChild(reglages);
+  const majReglages = () => {   // un signal couvre toujours les 6 scénarios, sans mode rupture
+    const sig = selType.value === 'signal';
+    [cbTous, cbRupt].forEach(c => { c.disabled = sig; });
+    [lblTous, lblRupt].forEach(l => { l.style.opacity = sig ? '0.4' : ''; });
+  };
+  selType.addEventListener('change', majReglages);
+  majReglages();
+  const etat = mk('div', '', 'font-size:11px;white-space:pre-wrap');
+  const zone = mk('div');
+  boite.appendChild(etat); boite.appendChild(zone);
+  container.appendChild(boite);
+
+  btn.addEventListener('click', async () => {
+    btn.disabled = true;
+    etat.style.color = '';
+    etat.textContent = 'Appel IA en cours (hypothese_depuis_texte.py)…';
+    const extra = { date: champDate.value ? parseInt(champDate.value, 10) : null };
+    if (selType.value !== 'signal') {
+      extra.scenarios = cbTous.checked ? [] : [article.scenario];
+      extra.mode = cbRupt.checked ? 'rupture' : 'choc';
+    }
+    extra.effet_plein = cbPlein.checked;   // U3d
+    const data = await appeler('proposer', texte, selType.value, extra);
+    btn.disabled = false;
+    if (data.error || !data.bloc) {
+      etat.style.color = '#b03a2e';
+      etat.textContent = `✗ ${data.error || 'aucun bloc proposé'}`;
+      return;
+    }
+    etat.textContent = '';
+    zone.innerHTML = '';
+    const retour = mk('div', '', 'font-size:11px;white-space:pre-wrap');
+    afficher(retour, data, '✓ Proposition prête : relis le bloc, puis Vérifier.');
+    const bloc = mk('textarea', '', 'display:block;width:100%;font-family:monospace;margin:6px 0');
+    bloc.className = 'yaml-edit'; bloc.rows = 18; bloc.spellcheck = false; bloc.value = data.bloc;
+    const lb = mk('div');
+    const bV = mk('button', 'Vérifier'); bV.type = 'button'; bV.className = 'yaml-btn';
+    const bA = mk('button', 'Ajouter à hypotheses.yaml', 'margin-left:8px');
+    bA.type = 'button'; bA.className = 'yaml-btn yaml-btn-save';
+    lb.appendChild(bV); lb.appendChild(bA);
+    const st = mk('div', '', 'font-size:11px;white-space:pre-wrap;margin-top:6px');
+    [retour, bloc, lb, st].forEach(e => zone.appendChild(e));
+    const occupe = (oui) => { bV.disabled = oui; bA.disabled = oui; };
+    bV.addEventListener('click', async () => {
+      occupe(true);
+      const d = await appeler('verifier', bloc.value);
+      occupe(false);
+      afficher(st, d, `✓ ${d.id || 'Hypothèse'} : bloc valide.`);
+    });
+    bA.addEventListener('click', async () => {
+      occupe(true);
+      const d = await appeler('ajouter', bloc.value);
+      afficher(st, d, d.message ? `✓ ${d.message}` : '');
+      if (!d.ok) occupe(false);   // ajout réussi : « Ajouter » reste verrouillé (pas de double ajout)
+    });
+  });
 }
 
 function renderArticlesPromouvoirForm(article, container) {
@@ -9739,7 +9873,7 @@ const VEILLE_QUEUES = {
   signal: 'signaux_custom/queue.yaml',
   evenement: 'evenements_custom/queue.yaml',
 };
-const VEILLE_STATUTS_LABEL = { a_trier: 'à trier', ecarte: 'écarté', en_queue: 'en queue' };
+const VEILLE_STATUTS_LABEL = { a_trier: 'à trier', ecarte: 'écarté', en_queue: 'en queue', en_hypothese: 'en hypothèse' };
 
 function _veilleEsc(s) {
   return String(s == null ? '' : s)
@@ -9850,7 +9984,7 @@ function _veillePopulateFilters() {
   };
   const statutSel = document.getElementById('veille-statut');
   const statutAvant = statutSel.value;
-  remplir('veille-statut', ['a_trier', 'en_queue', 'ecarte'], 'Tous', v => VEILLE_STATUTS_LABEL[v]);
+  remplir('veille-statut', ['a_trier', 'en_hypothese', 'en_queue', 'ecarte'], 'Tous', v => VEILLE_STATUTS_LABEL[v]);
   // Premier affichage : on montre ce qui reste à trier.
   statutSel.value = statutAvant === undefined || !statutSel.dataset.init ? 'a_trier' : statutAvant;
   statutSel.dataset.init = '1';
@@ -10026,6 +10160,17 @@ function renderVeillePanel() {
   `;
 
   const actions = document.getElementById('veille-actions');
+  if (c.statut === 'en_hypothese') {   // U3a
+    actions.innerHTML = `<label>Action</label>✓ Envoyé vers « et si ? » (${_veilleEsc(c.hypothese_type || '')} : ${_veilleEsc(c.hypothese_id)}).
+      <div class="option-desc">Suite : onglet « Et si ? », mode Simuler → Décider → Injecter.</div>
+      <button id="veille-btn-retrier" class="yaml-btn" style="margin-top:6px">↶ Remettre à trier</button>
+      <div class="option-desc" id="veille-action-etat"></div>`;
+    document.getElementById('veille-btn-retrier').addEventListener('click', async () => {
+      const ok = confirm(`Remettre « ${c.titre} » à trier ?\n\nL'hypothèse « ${c.hypothese_id} » n'est PAS retirée de hypotheses.yaml : supprime-la dans l'onglet « Et si ? » si tu n'en veux plus.`);
+      if (ok) await _veilleChangerStatut(c, 'a_trier');
+    });
+    return;
+  }
   if (c.statut === 'en_queue') {
     const queue = VEILLE_QUEUES[c.queue_type] || 'la queue';
     actions.innerHTML = `<label>Action</label>✓ En queue (${_veilleEsc(c.queue_type)} : ${_veilleEsc(c.queue_id)}).
@@ -10049,14 +10194,14 @@ function renderVeillePanel() {
         <option value="signal" ${typeDefaut === 'signal' ? 'selected' : ''}>comme signal faible</option>
         <option value="evenement" ${typeDefaut === 'evenement' ? 'selected' : ''}>comme événement</option>
       </select>
-      <button id="veille-btn-preparer" class="yaml-btn" title="Un appel IA réel (idees_vers_queue.py)">✨ Préparer l'entrée de queue</button>
+      <button id="veille-btn-preparer" class="yaml-btn" title="Un appel IA réel (hypothese_depuis_texte.py) : le candidat devient une hypothèse « et si ? »">✨ Envoyer vers « et si ? »</button>
       ${c.statut === 'ecarte'
         ? '<button id="veille-btn-retrier" class="yaml-btn">↶ Remettre à trier</button>'
         : '<button id="veille-btn-ecarter" class="yaml-btn">🗑 Écarter</button>'}
     </div>
     <div class="option-desc" id="veille-action-etat"></div>
   `;
-  document.getElementById('veille-btn-preparer').addEventListener('click', () => _veillePreparer(c));
+  document.getElementById('veille-btn-preparer').addEventListener('click', () => _veilleVersEtSi(c));
   const btnEcarter = document.getElementById('veille-btn-ecarter');
   if (btnEcarter) btnEcarter.addEventListener('click', () => _veilleChangerStatut(c, 'ecarte'));
   const btnRetrier = document.getElementById('veille-btn-retrier');
@@ -10083,6 +10228,87 @@ async function _veilleChangerStatut(c, statut, extra) {
   }
   await refreshVeilleData();
   return true;
+}
+
+async function _veilleVersEtSi(c) {
+  // U3a : le candidat devient une hypothèse « et si ? » (même chemin que ✨ Nouvelle hypothèse).
+  const btn = document.getElementById('veille-btn-preparer');
+  const etat = document.getElementById('veille-action-etat');
+  const type = document.getElementById('veille-type').value;
+  const zone = document.getElementById('veille-proposition');
+  if (btn.disabled) return;
+  const appeler = async (action, texte) => {
+    try {
+      const res = await fetch(`/api/et_si/${action}`, {
+        method: 'POST', headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ texte, type: action === 'proposer' ? type : '' }),
+      });
+      return await res.json();
+    } catch (e) {
+      return { error: `Erreur réseau : ${e.message}` };
+    }
+  };
+  const afficher = (el, data, titreOk) => {
+    const lignes = [];
+    if (data.error) lignes.push(`✗ ${data.error}`);
+    (data.erreurs || []).forEach(e => lignes.push(`✗ ${e}`));
+    (data.avertissements || []).forEach(a => lignes.push(`⚠ ${a}`));
+    if (data.justification) lignes.push(`💬 ${data.justification}`);
+    if (!data.error && !(data.erreurs || []).length && titreOk) lignes.unshift(titreOk);
+    el.textContent = lignes.join('\n');
+    el.style.color = (data.error || (data.erreurs || []).length) ? '#b03a2e' : '';
+  };
+  btn.disabled = true;
+  etat.textContent = 'Appel IA en cours (hypothese_depuis_texte.py)…';
+  const data = await appeler('proposer', _veilleTexteProposition(c));
+  btn.disabled = false;
+  if (data.error || !data.bloc) {
+    etat.textContent = `Erreur : ${data.error || 'aucun bloc proposé'}`;
+    return;
+  }
+  etat.textContent = 'Relis le bloc, « Vérifier », puis « Ajouter à hypotheses.yaml ». Rien n\'est écrit avant.';
+
+  zone.innerHTML = '';
+  const retour = document.createElement('div');
+  retour.className = 'option-desc';
+  retour.style.whiteSpace = 'pre-wrap';
+  afficher(retour, data, '✓ Proposition prête.');
+  const bloc = document.createElement('textarea');
+  bloc.className = 'yaml-edit';
+  bloc.rows = 18;
+  bloc.spellcheck = false;
+  bloc.style.cssText = 'display:block;width:100%;font-family:monospace;margin:6px 0';
+  bloc.value = data.bloc;
+  const ligne = document.createElement('div');
+  const btnVerifier = document.createElement('button');
+  btnVerifier.type = 'button'; btnVerifier.className = 'yaml-btn'; btnVerifier.textContent = 'Vérifier';
+  const btnAjouter = document.createElement('button');
+  btnAjouter.type = 'button'; btnAjouter.className = 'yaml-btn yaml-btn-save';
+  btnAjouter.style.marginLeft = '8px'; btnAjouter.textContent = 'Ajouter à hypotheses.yaml';
+  ligne.appendChild(btnVerifier); ligne.appendChild(btnAjouter);
+  const statut = document.createElement('div');
+  statut.className = 'option-desc';
+  statut.style.cssText = 'white-space:pre-wrap;margin-top:6px';
+  [retour, bloc, ligne, statut].forEach(e => zone.appendChild(e));
+
+  const occupe = (oui) => { btnVerifier.disabled = oui; btnAjouter.disabled = oui; };
+  btnVerifier.addEventListener('click', async () => {
+    occupe(true);
+    const d = await appeler('verifier', bloc.value);
+    occupe(false);
+    afficher(statut, d, `✓ ${d.id || 'Hypothèse'} : bloc valide.`);
+  });
+  btnAjouter.addEventListener('click', async () => {
+    occupe(true);
+    const d = await appeler('ajouter', bloc.value);
+    afficher(statut, d, d.message ? `✓ ${d.message}` : '');
+    if (d.ok) {
+      // Le candidat passe « en hypothèse » ; la suite se fait dans l'onglet Et si ? (mode Simuler).
+      await _veilleChangerStatut(c, 'en_hypothese', { hypothese_id: d.id, hypothese_type: type });
+    } else {
+      occupe(false);
+    }
+  });
 }
 
 async function _veillePreparer(c) {

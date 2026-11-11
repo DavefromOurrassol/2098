@@ -34,7 +34,7 @@ from flask import Blueprint, jsonify, request
 veille_signaux_bp = Blueprint("veille_signaux", __name__)
 
 CONFIG_PATH = Path(os.path.abspath(__file__)).parent / "config.json"
-STATUTS = ("a_trier", "ecarte", "en_queue")
+STATUTS = ("a_trier", "ecarte", "en_queue", "en_hypothese")
 _verrou = threading.Lock()
 
 
@@ -123,6 +123,12 @@ def veille_signaux_statut():
         else:
             cible.pop("queue_id", None)
             cible.pop("queue_type", None)
+        if statut == "en_hypothese":   # U3a : hypothèse « et si ? » créée depuis ce candidat
+            cible["hypothese_id"] = body.get("hypothese_id")
+            cible["hypothese_type"] = body.get("hypothese_type")
+        else:
+            cible.pop("hypothese_id", None)
+            cible.pop("hypothese_type", None)
 
         texte = json.dumps(data, ensure_ascii=False, indent=2)
         bak = chemin.with_suffix(".json.bak")

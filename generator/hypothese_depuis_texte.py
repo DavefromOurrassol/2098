@@ -98,9 +98,21 @@ def bloc_yaml(h):
 # Proposition par l'IA
 # ---------------------------------------------------------------------------
 
-def construire_prompt(texte, variables, type_force=None):
+def construire_prompt(texte, variables, type_force=None, imposes=None):
     ligne_type = (f"TYPE IMPOSÉ PAR L'AUTEUR : {type_force} (ne le change pas).\n\n"
                   if type_force else "")
+    if imposes:   # U3c : valeurs tirées de la source (article), imposées ensuite mécaniquement
+        morceaux = []
+        if imposes.get("date"):
+            morceaux.append(f"date {imposes['date']}")
+        if imposes.get("scenarios") is not None:
+            morceaux.append("scénarios : " + (", ".join(imposes["scenarios"]) if imposes["scenarios"] else "tous"))
+        if imposes.get("mode"):
+            morceaux.append(f"mode {imposes['mode']}")
+        if imposes.get("effet_plein"):
+            morceaux.append("durées de montée calculées pour que l'effet soit à pleine force en 2098")
+        if morceaux:
+            ligne_type += "VALEURS IMPOSÉES PAR L'AUTEUR (ne les change pas) : " + " ; ".join(morceaux) + ".\n\n"
     return f"""{ligne_type}Tu aides l'auteur du monde fictif Ourrassol 2098 (6 scénarios d'avenir, 12 variables
 où le niveau 100 = crise maximale) à transformer une IDÉE en HYPOTHÈSE « et si ? » testable
 par son simulateur. L'hypothèse n'est jamais injectée : elle sert à mesurer ses effets.
@@ -285,16 +297,67 @@ def normaliser_proposition(brut, variables, ids_pris):
     return h, av
 
 
-def proposer(texte, _llm=appeler_llm, type_force=None):
+def appliquer_imposes(h, imposes, est_signal):
+    """U3c : date, scénarios et mode venant de la source (article), imposés APRÈS la réponse de
+    l'IA. Chaque écart avec sa proposition est signalé. Retourne la liste d'avertissements."""
+    av = []
+    if not imposes:
+        return av
+    d = imposes.get("date")
+    if d is not None:
+        plancher = max(2026, datetime.now().year) if est_signal else 2026
+        d2 = min(2097, max(plancher, int(d)))
+        if d2 != int(d):
+            av.append(f"date imposée {d} hors de {plancher}-2097 -> {d2}")
+        if h.get("date") != d2:
+            av.append(f"date imposée : {d2} (l'IA proposait {h.get('date')})")
+        h["date"] = d2
+    if imposes.get("effet_plein"):   # U3d : durée de montée = 2098 - date (au moins 1 an)
+        n = max(1, 2098 - int(h.get("date") or 2098))
+        change = False
+        for imp in h.get("impacts") or []:
+            if imp.get("duree") != n:
+                imp["duree"] = n
+                change = True
+        if change:
+            av.append(f"effet plein en 2098 : durée de montée portée à {n} an(s) sur tous les impacts")
+    if est_signal:
+        return av   # un signal couvre toujours les 6 scénarios, sans mode rupture
+    sc = imposes.get("scenarios")
+    if sc is not None:
+        valides = [s for s in sc if s in se.SCENARIOS]
+        if sc and not valides:
+            av.append(f"scénario(s) imposé(s) inconnu(s), ignoré(s) : {sc}")
+        else:
+            if len(valides) != len(sc):
+                av.append(f"scénario(s) imposé(s) inconnu(s) retiré(s) : {[s for s in sc if s not in se.SCENARIOS]}")
+            cible = valides if 0 < len(valides) < len(se.SCENARIOS) else "tous"
+            if h.get("scenarios") != cible:
+                av.append(f"scénarios imposés : {cible} (l'IA proposait {h.get('scenarios')})")
+            h["scenarios"] = cible
+    mode = imposes.get("mode")
+    if mode in ("choc", "rupture"):
+        if h.get("mode") != mode:
+            av.append(f"mode imposé : {mode} (l'IA proposait {h.get('mode')})")
+        h["mode"] = mode
+        if mode == "rupture":
+            h.pop("persistance", None)
+        else:
+            h.setdefault("persistance", dyn.PERSISTANCE_DEFAUT)
+    return av
+
+
+def proposer(texte, _llm=appeler_llm, type_force=None, imposes=None):
     if not texte or not texte.strip():
         raise ValueError("idée vide")
     variables = valid_vars()
-    brut = _llm(construire_prompt(texte, variables, type_force))
+    brut = _llm(construire_prompt(texte, variables, type_force, imposes))
     if not isinstance(brut, dict):
         raise ValueError("réponse de l'IA inexploitable")
     if type_force in ("evenement", "signal"):
         brut["type"] = type_force   # le choix de l'auteur l'emporte sur celui de l'IA
     h, av = normaliser_proposition(brut, variables, ids_existants())
+    av += appliquer_imposes(h, imposes, h.get("type") == "signal")   # U3c
     _, erreurs, av2 = se.verifier_hypothese(dict(h), variables, dyn)
     return {"ok": True, "bloc": bloc_yaml(h), "id": h["id"],
             "justification": str(brut.get("justification") or "").strip(),
@@ -408,13 +471,30 @@ def main():
     ap.add_argument("--json", action="store_true", help="sortie JSON sur une ligne (GUI)")
     ap.add_argument("--type", choices=("evenement", "signal"), default=None,
                     help="avec --proposer : impose le type (sinon l'IA décide)")
+    ap.add_argument("--date", type=int, default=None, help="avec --proposer : année imposée")
+    ap.add_argument("--scenarios", default=None,
+                    help="avec --proposer : scénarios imposés (a,b,c) ou « tous »")
+    ap.add_argument("--mode", choices=("choc", "rupture"), default=None,
+                    help="avec --proposer : mode imposé (événement seulement)")
+    ap.add_argument("--effet-plein", action="store_true",
+                    help="avec --proposer : durées de montée calculées (2098 - date) pour un effet plein en 2098")
     args = ap.parse_args()
     if sys.stdin.isatty():
         print("Colle le texte puis Ctrl-D :", file=sys.stderr)
     texte = sys.stdin.read()
     try:
         if args.proposer:
-            res = proposer(texte, type_force=args.type)
+            imposes = {}
+            if args.date is not None:
+                imposes["date"] = args.date
+            if args.scenarios is not None:
+                imposes["scenarios"] = ([] if args.scenarios.strip() in ("", "tous")
+                                        else [s.strip() for s in args.scenarios.split(",") if s.strip()])
+            if args.mode:
+                imposes["mode"] = args.mode
+            if args.effet_plein:
+                imposes["effet_plein"] = True
+            res = proposer(texte, type_force=args.type, imposes=imposes or None)
         elif args.verifier:
             res = verifier_bloc(texte)
         else:
