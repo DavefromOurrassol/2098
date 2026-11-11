@@ -8532,10 +8532,22 @@ function renderArticlesVersEtSi(article, container) {
   // U3c : valeurs tirées de l'article, imposées à l'IA (elle ne les devine plus)
   const reglages = mk('div', '', 'display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-bottom:8px;font-size:11px');
   const champDate = document.createElement('input');
-  champDate.type = 'number'; champDate.min = '2026'; champDate.max = '2097'; champDate.style.width = '80px';
-  champDate.value = article.annee != null ? Math.min(2097, Math.max(2026, article.annee)) : '';
+  champDate.type = 'number'; champDate.min = '2026'; champDate.max = '2098'; champDate.style.width = '80px';
+  champDate.value = article.annee != null ? Math.min(2098, Math.max(2026, article.annee)) : '';
   const lblDate = mk('label', 'Date de l\'événement :', 'margin:0');
   lblDate.appendChild(champDate);
+  // U3e : mois de l'événement (événement seulement) ; par défaut le mois de l'article
+  const NOMS_MOIS_U3E = ['janvier', 'février', 'mars', 'avril', 'mai', 'juin', 'juillet', 'août',
+                         'septembre', 'octobre', 'novembre', 'décembre'];
+  const selMois = document.createElement('select');
+  selMois.style.width = 'auto';
+  NOMS_MOIS_U3E.forEach((nom, i) => {
+    const o = document.createElement('option'); o.value = String(i + 1); o.textContent = nom;
+    selMois.appendChild(o);
+  });
+  selMois.value = String(article.mois || 1);
+  lblDate.appendChild(document.createTextNode(' '));
+  lblDate.appendChild(selMois);
   const caseOui = (texteCase) => {
     const l = mk('label', '', 'margin:0;display:flex;align-items:center;gap:4px');
     const c = document.createElement('input'); c.type = 'checkbox';
@@ -8549,27 +8561,134 @@ function renderArticlesVersEtSi(article, container) {
   boite.appendChild(reglages);
   const majReglages = () => {   // un signal couvre toujours les 6 scénarios, sans mode rupture
     const sig = selType.value === 'signal';
+    selMois.disabled = sig; selMois.style.opacity = sig ? '0.4' : '';   // U3e : un signal = année entière
+    champDate.max = sig ? '2097' : '2098';
     [cbTous, cbRupt].forEach(c => { c.disabled = sig; });
     [lblTous, lblRupt].forEach(l => { l.style.opacity = sig ? '0.4' : ''; });
   };
   selType.addEventListener('change', majReglages);
   majReglages();
+  // U3f : pour un événement, l'IA ne devine plus l'événement. On le choisit parmi ceux que
+  // l'article raconte (texte complet lu par l'IA) ; sa date est reprise de l'article et verrouillée.
+  let evChoisi = null;
+  const zoneDetect = mk('div', '', 'margin-bottom:8px;font-size:11px');
+  const btnDetect = mk('button', "🔎 Détecter les événements de l'article");
+  btnDetect.type = 'button'; btnDetect.className = 'yaml-btn';
+  const etatDetect = mk('div', '', 'white-space:pre-wrap;margin-top:4px');
+  const listeDetect = mk('div', '', 'margin-top:4px');
+  const [lblForcer, cbForcer] = caseOui("forcer la date (sinon : date de l'article, verrouillée)");
+  lblForcer.style.display = 'none';
+  [btnDetect, etatDetect, listeDetect, lblForcer].forEach(e => zoneDetect.appendChild(e));
+  boite.insertBefore(zoneDetect, reglages);
+  const appliquerVerrou = () => {
+    const sig = selType.value === 'signal';
+    const verrou = !sig && !!evChoisi && !cbForcer.checked;
+    champDate.disabled = verrou;
+    selMois.disabled = sig || verrou;
+    lblForcer.style.display = (!sig && evChoisi) ? '' : 'none';
+    zoneDetect.style.display = sig ? 'none' : '';
+  };
+  selType.addEventListener('change', appliquerVerrou);
+  cbForcer.addEventListener('change', appliquerVerrou);
+  appliquerVerrou();
+  const libelleDate = (ev) => `${NOMS_MOIS_U3E[ev.mois - 1]} ${ev.annee}`;
+  const texteEvenement = (ev) => [
+    ev.description,
+    ev.citation ? `Extrait de l'article : « ${ev.citation} »` : '',
+    `Date de l'événement : ${ev.mois_connu ? libelleDate(ev) : ev.annee}.`,
+    dateReelle ? `Article du ${dateReelle} (scénario ${article.scenario}).`
+               : `Article du scénario ${article.scenario}.`,
+    article.zone_principale ? `Lieu : ${article.zone_principale}.` : '',
+    (article.entites_citees || []).length ? `Entités citées : ${article.entites_citees.join(', ')}.` : '',
+    `Source : article ${article.fichier}.`,
+  ].filter(Boolean).join(' ');
+  btnDetect.addEventListener('click', async () => {
+    btnDetect.disabled = true; evChoisi = null; appliquerVerrou();
+    listeDetect.innerHTML = ''; etatDetect.style.color = '';
+    etatDetect.textContent = "Lecture de l'article par l'IA (un appel, quelques secondes)…";
+    let data;
+    try {
+      const res = await fetch('/api/articles/extraire_evenements', {
+        method: 'POST', headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ fichier: article.fichier, scenario: article.scenario,
+                               annee: article.annee, mois: article.mois }),
+      });
+      data = await res.json();
+    } catch (e) { data = { error: `Erreur réseau : ${e.message}` }; }
+    btnDetect.disabled = false;
+    if (data.error || !data.ok) {
+      etatDetect.style.color = '#b03a2e';
+      etatDetect.textContent = `✗ ${data.error || 'aucune réponse'}`;
+      return;
+    }
+    const evs = data.evenements || [];
+    etatDetect.textContent = [
+      evs.length ? `${evs.length} événement(s) trouvé(s) : choisis celui à envoyer.`
+                 : "Aucun événement exploitable dans l'article.",
+      ...(data.avertissements || []).map(a => `⚠ ${a}`),
+    ].join('\n');
+    evs.forEach((ev) => {
+      const l = mk('label', '', 'display:block;margin:6px 0;padding:6px;border:1px solid #444;border-radius:4px;cursor:pointer');
+      const r = document.createElement('input');
+      r.type = 'radio'; r.name = 'u3f-ev'; r.style.marginRight = '6px';
+      r.addEventListener('change', () => {
+        evChoisi = ev; cbForcer.checked = false;
+        champDate.value = String(ev.annee); selMois.value = String(ev.mois);
+        appliquerVerrou();
+        etatDetect.style.color = ev.deja_connu ? '#b5651d' : '';
+        etatDetect.textContent = ev.deja_connu
+          ? `⚠ Cet événement semble déjà dans le vault : ${ev.deja_connu_nom || ev.deja_connu}. L'envoyer créerait un doublon (effets cumulés).`
+          : `Événement choisi : ${libelleDate(ev)}${ev.date_explicite ? '' : ' (date déduite)'}.`;
+      });
+      l.appendChild(r);
+      l.appendChild(document.createTextNode(`${ev.description} `));
+      l.appendChild(mk('div',
+        `📅 ${ev.mois_connu ? libelleDate(ev) : ev.annee}${ev.date_explicite ? '' : ' (déduite)'}` +
+        ` · ${ev.nature === 'propre' ? "événement de l'article" : 'événement passé mentionné'}` +
+        `${ev.deja_connu ? ' · ⚠ déjà connu' : ''}${ev.citation_ok ? '' : ' · ⚠ citation introuvable'}`,
+        'color:#888;margin-top:2px'));
+      if (ev.citation) l.appendChild(mk('div', `« ${ev.citation} »`, 'color:#888;font-style:italic;margin-top:2px'));
+      listeDetect.appendChild(l);
+    });
+  });
   const etat = mk('div', '', 'font-size:11px;white-space:pre-wrap');
   const zone = mk('div');
   boite.appendChild(etat); boite.appendChild(zone);
   container.appendChild(boite);
 
   btn.addEventListener('click', async () => {
+    if (selType.value !== 'signal' && !evChoisi) {   // U3f
+      etat.style.color = '#b03a2e';
+      etat.textContent = "✗ Clique d'abord sur « Détecter les événements de l'article » et choisis-en un.";
+      return;
+    }
     btn.disabled = true;
     etat.style.color = '';
     etat.textContent = 'Appel IA en cours (hypothese_depuis_texte.py)…';
-    const extra = { date: champDate.value ? parseInt(champDate.value, 10) : null };
+    const extra = { date: null };
+    if (champDate.value) {   // U3e
+      let an = parseInt(champDate.value, 10);
+      if (selType.value === 'signal') {
+        extra.date = Math.min(2097, an);
+      } else {
+        let mo = parseInt(selMois.value, 10) || 1;
+        // un événement ne peut pas être postérieur à l'article qui le raconte
+        if (article.annee != null && (an * 100 + mo) > (article.annee * 100 + (article.mois || 12))) {
+          an = article.annee; mo = article.mois || 12;
+          champDate.value = String(an); selMois.value = String(mo);
+        }
+        an = Math.min(2098, an);
+        extra.date = Math.round((an + mo / 100) * 100) / 100;
+      }
+    }
     if (selType.value !== 'signal') {
       extra.scenarios = cbTous.checked ? [] : [article.scenario];
       extra.mode = cbRupt.checked ? 'rupture' : 'choc';
     }
     extra.effet_plein = cbPlein.checked;   // U3d
-    const data = await appeler('proposer', texte, selType.value, extra);
+    const data = await appeler('proposer',
+      (selType.value !== 'signal' && evChoisi) ? texteEvenement(evChoisi) : texte,   // U3f
+      selType.value, extra);
     btn.disabled = false;
     if (data.error || !data.bloc) {
       etat.style.color = '#b03a2e';

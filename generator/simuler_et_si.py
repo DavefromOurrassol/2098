@@ -176,7 +176,7 @@ def verifier_hypothese(h, valid_vars, dyn):
     except (TypeError, ValueError):
         erreurs.append("date absente ou non numérique (année, ex. 2029)")
         date = None
-    if date is not None and not 2025 <= date <= 2098:
+    if date is not None and not 2025 <= date <= 2098.12:   # U3e : 2098.12 = décembre 2098
         erreurs.append(f"date {date:g} hors de la période 2025-2098")
 
     pers = dyn.normaliser_persistance(h.get("persistance")) or dyn.PERSISTANCE_DEFAUT
@@ -1771,7 +1771,9 @@ MOTS_GENERIQUES = {"Invasion", "Conflit", "Crise", "Guerre", "Effondrement", "Pe
                    "Système", "Plateforme", "Plateformes", "Bloc", "Zone", "Zones", "Arc",
                    "Ceinture", "Corridor", "Bassin", "Territoire", "Territoires",
                    "Destruction", "Explosion", "Occupation", "Réintégration", "Vague",
-                   "Disparition", "Fin", "Naissance", "Création", "Dissolution"}
+                   "Disparition", "Fin", "Naissance", "Création", "Dissolution",
+                   # U3g (11 nov 2026) : mots trop courants dans les fiches du vault
+                   "Centre", "Tous", "Toutes", "Santé", "Régénératif"}
 # V8.14 : nom français des villes dont le nom anglais (villes_principales.json) diffère ;
 # les deux noms sont cherchés.
 VILLES_FR = {"Mexico City": ["Mexico"],
@@ -3016,6 +3018,10 @@ def main():
         sys.exit(1)
     if args.scenario and args.scenario not in hyp["scenarios"]:
         sys.exit(f"✗ Scénario {args.scenario!r} non couvert par l'hypothèse ({', '.join(hyp['scenarios'])}).")
+    if args.date < hyp["date"] and int(args.date) == int(hyp["date"]):
+        # U3g : événement daté dans l'année de mesure (2098.03, mesure 2098) -> fin de cette année
+        args.date = round(int(hyp["date"]) + 0.12, 2)
+        print(f"ℹ date de mesure ramenée à la fin de l'année de l'apparition : {args.date:g}", file=sys.stderr)
     if args.date < hyp["date"]:
         sys.exit(f"✗ --date {args.date:g} antérieure à l'apparition de l'hypothèse ({hyp['date']:g}).")
 

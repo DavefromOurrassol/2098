@@ -98,4 +98,46 @@
 # ──────────────────────────────────────────────────────────────────────────────
 
 queue:
-  [] # ← remplace [] par tes idées
+  - id: piratage_ecrans_greffes_hepatiques_2098
+    description: Le 8 mars 2098, le collectif Santé pour Tous pirate les écrans du Centre
+      Régénératif du Léman pour y afficher les noms des 1 247 personnes en attente d’une
+      greffe hépatique dans le canton.
+    portee: locale
+    date_approximative: 2098
+    intensite: faible
+    persistance: normale
+    scenarios:
+    - new_sustainability
+    variables_hint:
+    - sante_biotechnologies
+    - gouvernance_institutions
+    - technologie_information
+    - valeurs_culture_tempo_sociale
+    variables_hint_count: 4
+    source: et_si_piratage_ecrans_greffes_hepatiques_2098
+    faits_imposes:
+      new_sustainability:
+      - fait: 1 247 personnes en attente de greffes hépatiques sont mentionnées.
+        sort: contrainte
+      - fait: 'Date précise : 8 mars 2098.'
+        sort: contrainte
+    date_imposee: 2098.03
+    impacts_imposes:
+      new_sustainability:
+      - variable: sante_biotechnologies
+        delta_level: 15
+        duree: 2
+        polarite: 1
+      - variable: gouvernance_institutions
+        delta_level: 10
+        duree: 3
+        polarite: 1
+      - variable: technologie_information
+        delta_level: 12
+        duree: 1
+        polarite: 1
+      - variable: valeurs_culture_tempo_sociale
+        delta_level: 8
+        duree: 4
+        polarite: -1
+    via_matrice_impose: true

@@ -2878,6 +2878,41 @@ def edition_injecter_evenement():
 # chemin d'écriture vers et_si/hypotheses.yaml, sauvegarde .bak_ajout).
 # ---------------------------------------------------------------------------
 
+# U3f : l'IA lit le texte complet d'un article et liste ses événements (écrit rien)
+@app.route("/api/articles/extraire_evenements", methods=["POST"])
+def articles_extraire_evenements():
+    cfg = load_config()
+    pipeline_dir = Path(cfg.get("pipeline_dir", ""))
+    data = request.get_json() or {}
+    fichier = str(data.get("fichier") or "")
+    scenario = str(data.get("scenario") or "")
+    if not re.fullmatch(r"[A-Za-z0-9_.\-]+\.md", fichier) or not re.fullmatch(r"[a-z_]+", scenario):
+        return jsonify({"error": "fichier ou scénario invalide"}), 400
+    try:
+        annee = int(data.get("annee"))
+        mois = int(data.get("mois") or 12)
+    except (TypeError, ValueError):
+        return jsonify({"error": "date de l'article illisible"}), 400
+    cmd = [sys.executable, "extraire_evenements_article.py", "--fichier", fichier, "--scenario", scenario,
+           "--annee", str(annee), "--mois", str(mois), "--json"]
+    try:
+        resultat = subprocess.run(cmd, cwd=pipeline_dir, capture_output=True, text=True,
+                                  timeout=180, stdin=subprocess.DEVNULL)
+    except subprocess.TimeoutExpired:
+        return jsonify({"error": "Délai dépassé (180 s)"}), 504
+    except FileNotFoundError:
+        return jsonify({"error": f"extraire_evenements_article.py introuvable dans {pipeline_dir}"}), 500
+    sortie = resultat.stdout.strip()
+    try:
+        payload = json.loads(sortie.splitlines()[-1])
+    except (json.JSONDecodeError, IndexError):
+        return jsonify({"error": f"Sortie inattendue (code {resultat.returncode}) : "
+                                  f"{(resultat.stderr or sortie)[-500:]}"}), 500
+    if not payload.get("ok"):
+        return jsonify({"error": payload.get("error", "erreur inconnue")}), 500
+    return jsonify(payload)
+
+
 TIMEOUT_ET_SI = {"proposer": 180, "verifier": 60, "ajouter": 60}
 
 
@@ -2897,7 +2932,7 @@ def et_si_assistant(action):
     if action == "proposer":   # U3c : date, scénarios et mode imposés par la source (article)
         try:
             if data.get("date") not in (None, ""):
-                cmd += ["--date", str(int(data["date"]))]
+                cmd += ["--date", f"{round(float(data['date']), 2):g}"]   # U3e : année ou année.mois
         except (TypeError, ValueError):
             pass
         if isinstance(data.get("scenarios"), list):

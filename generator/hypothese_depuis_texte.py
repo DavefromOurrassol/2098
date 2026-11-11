@@ -203,9 +203,10 @@ def normaliser_proposition(brut, variables, ids_pris):
     try:
         date = int(str(brut.get("date")).strip()[:4])
         plancher = max(2026, datetime.now().year) if est_signal else 2026
-        if not plancher <= date <= 2097:
-            av.append(f"date {date} hors de {plancher}-2097 -> ramenée dans la plage")
-            date = min(2097, max(plancher, date))
+        plafond = 2097 if est_signal else 2098   # U3e : un événement peut aller jusqu'en 2098
+        if not plancher <= date <= plafond:
+            av.append(f"date {date} hors de {plancher}-{plafond} -> ramenée dans la plage")
+            date = min(plafond, max(plancher, date))
         h["date"] = date
     except (TypeError, ValueError):
         av.append(f"date {brut.get('date')!r} illisible -- à renseigner")
@@ -306,9 +307,14 @@ def appliquer_imposes(h, imposes, est_signal):
     d = imposes.get("date")
     if d is not None:
         plancher = max(2026, datetime.now().year) if est_signal else 2026
-        d2 = min(2097, max(plancher, int(d)))
-        if d2 != int(d):
-            av.append(f"date imposée {d} hors de {plancher}-2097 -> {d2}")
+        if est_signal:   # un signal commence une année entière (plafond 2097)
+            d2 = min(2097, max(plancher, int(d)))
+        else:   # U3e : un événement garde l'année et le mois (2098.03), plafond 2098.12
+            d2 = round(min(2098.12, max(plancher, float(d))), 2)
+            if d2 == int(d2):
+                d2 = int(d2)
+        if d2 != d:
+            av.append(f"date imposée {d} hors de {plancher}-{2097 if est_signal else 2098} -> {d2}")
         if h.get("date") != d2:
             av.append(f"date imposée : {d2} (l'IA proposait {h.get('date')})")
         h["date"] = d2
@@ -471,7 +477,7 @@ def main():
     ap.add_argument("--json", action="store_true", help="sortie JSON sur une ligne (GUI)")
     ap.add_argument("--type", choices=("evenement", "signal"), default=None,
                     help="avec --proposer : impose le type (sinon l'IA décide)")
-    ap.add_argument("--date", type=int, default=None, help="avec --proposer : année imposée")
+    ap.add_argument("--date", type=float, default=None, help="avec --proposer : date imposée (année, ou année.mois : 2098.03)")
     ap.add_argument("--scenarios", default=None,
                     help="avec --proposer : scénarios imposés (a,b,c) ou « tous »")
     ap.add_argument("--mode", choices=("choc", "rupture"), default=None,
@@ -486,7 +492,7 @@ def main():
         if args.proposer:
             imposes = {}
             if args.date is not None:
-                imposes["date"] = args.date
+                imposes["date"] = int(args.date) if args.date == int(args.date) else args.date
             if args.scenarios is not None:
                 imposes["scenarios"] = ([] if args.scenarios.strip() in ("", "tous")
                                         else [s.strip() for s in args.scenarios.split(",") if s.strip()])

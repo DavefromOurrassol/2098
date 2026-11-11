@@ -1199,7 +1199,7 @@ def lire_impositions(idea):
         except (TypeError, ValueError):
             erreurs.append("date_imposee non numérique")
             date = None
-        if date is not None and not 2025 <= date <= 2098:
+        if date is not None and not 2025 <= date <= 2098.12:   # U3e : 2098.12 = décembre 2098
             erreurs.append(f"date_imposee {date:g} hors de 2025-2098")
     if via is not None and not isinstance(via, bool):
         erreurs.append("via_matrice_impose doit valoir true ou false")
