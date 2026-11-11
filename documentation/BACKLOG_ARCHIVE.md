@@ -1653,3 +1653,192 @@ hypothèse réelle qui fait disparaître une entité.
 *Remarque : une `persistance` par défaut `normale` est commune aux deux chemins
 (`dyn.PERSISTANCE_DEFAUT`).*
 
+
+## Clos le 11 novembre 2026 (séance du matin) — Articles → « et si ? » éprouvé en réel, U3e → U3o
+
+*Objectif : zéro manipulation manuelle à chaque promotion d'article. Test réel sur un
+article new_sustainability (reportage « Genève, ville-laboratoire… », 24 mars 2098) :
+événement `piratage_ecrans_greffes_hepatiques_2098` (8 mars 2098) détecté dans l'article,
+proposé, vérifié, ajouté à `et_si/hypotheses.yaml`, simulé (appels IA réels), adopté,
+injecté (`event_instances/piratage_ecrans_greffes_hepatiques_2098_new_sustainability.md`
+et archétype `evenements/…`), `validate.py` 0 erreur / 0 avertissement. Sauvegardes
+`.bak_<tag>` à côté de chaque fichier patché. Commits : `bdb35e1`, `75066b5`, `36c64df`,
+`b535f92`, `b212599`, `3df67f5`, `9dffd0c`, `36c2f36`, `022681b` (tous poussés).*
+
+**Nettoyage préalable** : premier signal d'essai (`ia_therapeutique_remboursement_debat`,
+validé par erreur dans le commit `75066b5`) retiré avec `undo_custom.py --slug … --type
+signal --execute` (commit `36c64df`).
+
+**U3e — date d'un événement : année + mois, jusqu'en 2098** (`patch_u3e_date_evenement.py`).
+Format `année + mois/100` (`2098.03`), plafond 2098.12 pour un événement ; un signal reste
+entier, plafond 2097. La fiche d'instance garde `date_label` (« 8 mars 2098 »). Bornes
+levées dans `hypothese_depuis_texte.py`, `simuler_et_si.py`, `inject_custom_events.py`,
+`gui/app.py` (`--date` accepte année.mois) et `app.js` (menu des mois). **Règle** : un
+événement ne peut pas être postérieur à l'article qui le raconte (borné côté interface).
+Le moteur n'a jamais eu de limite à 2097 pour les événements ; seule la couche
+proposition / interface en avait une. Effet chiffrable d'un événement de mars 2098 :
+négligeable par nature (le moteur travaille en années flottantes).
+
+**U3f — détection des événements de l'article** (`extraire_evenements_article.py`,
+route `POST /api/articles/extraire_evenements`, `patch_u3f_extraction_evenements.py`).
+Un appel IA (structured_strict) lit le texte complet et liste ≤ 8 événements : description
+fidèle, citation recopiée mot pour mot (vérifiée), année / mois, nature (propre / passé),
+badge « déjà connu » (comparaison avec `event_instances`, `hypotheses.yaml` et
+`evenements_cites`). Contrôles mécaniques : événements postérieurs à l'article écartés,
+années 2025-2098, citation introuvable signalée, date relative (« janvier dernier ») marquée
+« déduite ». Dans « Articles → et si ? » : bouton « 🔎 Détecter les événements de
+l'article », choix par bouton radio, date et mois **verrouillés** sur l'événement choisi
+(case « forcer la date » pour déverrouiller), « Proposer » refusé tant qu'aucun événement
+n'est choisi (les signaux gardent l'ancien chemin par le chapô).
+
+**U3g — simulateur** (`patch_u3g_simuler.py`) : mots génériques ajoutés à `MOTS_GENERIQUES`
+(« Centre », « Tous », « Toutes », « Santé », « Régénératif ») pour des « Fiches à relire »
+moins bruyantes ; une date de mesure antérieure à l'apparition **dans la même année**
+(2098 < 2098.03) est ramenée à année + 0,12 au lieu d'une erreur.
+
+**U3h — correction ponctuelle de la fiche** (`patch_u3h_fiche_piratage.py`, à ne pas
+réutiliser) : description, conséquences, réalisation et note de cohérence réécrites d'après
+l'article ; acteur `grille_aria_new_sustainability` ajouté. L'IA d'injection avait inventé
+des réactions des autorités, un « débat mondial », des « consortiums privés » et rattaché
+Santé pour Tous aux « réseaux de désobéissance algorithmique » (qui, dans l'article,
+désignent le Dispensaire des Grottes). Cause : elle ne voit que la description et les faits
+imposés, jamais le texte de l'article.
+
+**U3i + U3k — la citation exacte de l'article devient un fait imposé**
+(`patch_u3i_citation_imposee.py`, `patch_u3k_nettoyage_citation.py`). Option
+`hypothese_depuis_texte.py --citation=…` ; `gui/app.py` la transmet ; `app.js` l'envoie
+seulement si `citation_ok`. Après la réponse de l'IA, la citation (nettoyée des guillemets
+« » et des astérisques Markdown) est ajoutée en tête des `contraintes` (4 au maximum :
+l'excédent de l'IA est retiré avec avertissement ; rien n'est ajouté si une contrainte la
+contient déjà). Elle devient fait imposé de l'injection et est contrôlée sur le récit.
+Vu en réel : avertissement « citation de l'article ajoutée aux faits imposés ».
+
+**U3j — sélection de texte dans le panneau Articles** (`patch_u3j_selection_panneau.py`) :
+un clic document hors tableau / panneau désélectionnait l'article ; un glissement de
+sélection commencé dans le panneau et relâché ailleurs vidait toute la fiche. On retient
+désormais où le bouton a été enfoncé.
+
+**U3l + U3m — note de cohérence en texte brut dans le corps des fiches**
+(`patch_u3l_note_coherence_corps.py`, `patch_u3m_rattrapage_notes.py`). Le gabarit de
+`inject_custom_events.py` utilisait `{note}` (version YAML) dans le frontmatter **et** le
+corps ; le corps reçoit maintenant `{note_md}` (texte brut sur une ligne). Rattrapage de
+2 fiches : `greve_generale_corridors_eurasiens_policy_reform`,
+`revolution_travail_sahel_numerique_policy_reform`.
+
+**U3n — message « Fiches à relire »** (`patch_u3n_message_termes.py`) : « Aucun pays ni nom
+propre à chercher » ne s'affiche plus quand des termes ont été cherchés sans qu'aucune fiche
+les cite (« Aucune fiche ne cite les termes cherchés (…) »).
+
+**U3o — blocage des doublons** (`patch_u3o_blocage_doublon.py`) : « Proposer » refuse un
+événement marqué « déjà connu », sauf case « créer quand même un doublon (effets
+cumulés) » (apparaît seulement dans ce cas, se décoche à chaque choix). Garde-fou serveur
+inchangé : un ajout de même nom ou même description qu'une hypothèse existante est refusé.
+Limite connue : la détection « déjà connu » est le jugement de l'IA.
+
+*Remarques* : le contrôle `node --check` échoue sur l'`app.js` du dépôt (`||=` ligne ~6790,
+Node ancien) : sans rapport avec les patchs, l'écriture a lieu avant le contrôle et il ne
+faut pas restaurer la sauvegarde. Un test d'injection d'un signal depuis un article n'a pas
+été rejoué ce jour.
+
+## Clos le 11 novembre 2026 (séance du soir) — extracteur filtré, passage de l'article à l'injection, U3p → U3za
+
+*Suite directe de la séance du matin, sur le même article new_sustainability (« Genève,
+ville-laboratoire… », 24 mars 2098, fichier
+`articles/new_sustainability/20260823_150758_new_sustainability_societe_article_24mars2098.md`).
+Points clos de B9 : « Extracteur d'événements : plans et débats » et « Passer plus de
+contexte de l'article à l'IA d'injection ». Quatre événements injectés en réel pour les
+tests, chacun corrigé ensuite à la main d'après l'article. `validate.py` 0 / 0 à chaque
+étape. Sauvegardes `.bak_<tag>` à côté de chaque fichier patché. Commits : `4bed262`
+(U3p-U3r), `1a822ef` (U3s-U3v, code), `26e615f` (données Grottes), `52000d5` (U3w-U3za,
+code), `bfc8276` (données 2039 / 2044).*
+
+**U3p — filtre mécanique des plans, projets et débats** (`patch_u3p_filtre_plans.py`,
+`extraire_evenements_article.py`). Fonction `motif_non_evenement()` appliquée après la
+réponse de l'IA : écarte un candidat dont la description cite une année postérieure à
+l'article, qui contient un marqueur de projet (« en préparation », « devrait »,
+« envisage », « d'ici 20… », « à l'horizon », « sera lancé »…), ou qui s'ouvre sur un plan
+/ programme / débat sans verbe d'accomplissement. Avertissement « écarté (plan / projet /
+débat) : <motif> » ; clé JSON `ecartes` (ignorée par la GUI). Vérifié en réel : le Plan de
+Régénération Territoriale 2099-2120 est écarté (« mentionne l'année 2099 »).
+
+**U3q — citations sans guillemets doublés** (`patch_u3q_guillemets_citation.py`) :
+`_nettoyer_citation()` retire les astérisques et les guillemets « » / “ ” / " " qui
+entourent **toute** la citation (pas les guillemets internes). Vérifié en réel : une seule
+paire à l'affichage. Reste : une citation dont le guillemet ouvrant n'est pas fermé dans la
+phrase de l'article (conférence de presse du 12 mars) s'affiche encore « « « … » » (A2).
+
+**U3r — statistiques de tendance et citations tronquées** (`patch_u3r_statistiques_citations_tronquees.py`) :
+écarte une citation contenant « [...] », « […] » ou « … » (passages recollés) et une
+statistique de tendance (verbe d'évolution chiffrée + durée : « augmente de 22 ans depuis
+2040 »). Vérifié en réel.
+
+**U3s — passage de l'article transmis à l'IA d'injection** (`patch_u3s_contexte_article_injection.py`,
+`inject_custom_events.py`, `_texte_contexte_article()`). La citation (fait imposé U3i, ≥ 8
+mots) est retrouvée dans `articles/<scénario>/*.md` (comparaison sans accents ni
+ponctuation, un seul article) ; le prompt de l'étape 2 reçoit le paragraphe, le précédent
+et le suivant (≤ 2 800 car.) et la règle « reprendre acteurs, lieux, chiffres tels quels,
+n'inventer ni réaction, ni débat, ni acteur, ni sigle ». Seulement pour le scénario de
+l'article ; jamais bloquant. Vérifié sans IA (`u3s_test1.txt`, paragraphe 11/21) puis en
+réel (ligne `[contexte article] … (paragraphe 6/21)` aux deux essais). Défauts cosmétiques
+laissés (A2) : titre = nom de fichier (pas de clé `titre` dans l'en-tête des articles),
+ligne `---` dans le passage.
+
+**U3t — sobriété et contrôle des citations** (`patch_u3t_sobriete_citations_article.py`) :
+premier test réel de U3s (ouverture du dispensaire des Grottes, 2042) : passage bien
+transmis, mais l'IA a romancé (scène du 12 octobre, déclaration prêtée au Dr Elias Voss,
+mortalité −12 % au lieu de −45 %, Hub Nairobi-Kigali) à cause du schéma « 3-4 lignes
+vivantes ». Avec un passage : description « sobre », pas de paroles prêtées hors passage,
+pas de date plus précise ni de chiffre ou détail absent ; contrôle mécanique
+`_citations_absentes_u3t()` (citation « … » ≥ 4 mots absente de l'article → ⚠). Vérifié
+sans IA sur le vrai article (seule la fausse déclaration de Voss signalée).
+
+**U3u, U3v — fiches des Grottes corrigées** (ponctuels, à ne pas réutiliser) :
+`arrets_dispensaire_grottes_2098_new_sustainability` (localisation `afrique_continentale`
+→ `geneve_lacus_cgai`, libération après la pétition de 120 000 Genevois ajoutée, source
+« Réseau d'Information Ouvert » et nom du scénario retirés, conséquences sans « débat ») ;
+`ouverture_dispensaire_regeneratif_geneve_2042_new_sustainability` (décor inventé retiré,
+`date_label` 2042, OMS Étendue retirée des acteurs). *Rectificatif* : l'unité mobile, la
+fibrose pulmonaire, les greffes de peau et les UV résiduels **sont** dans l'article (grep
+initial au singulier) ; leur retrait reste justifié car l'article les place en 2098, pas en
+2042. Réellement inventés : 12 octobre, pluie, bâtiment, déclaration de Voss, financement
+OMS Étendue + CPBE, −12 %, Nairobi-Kigali.
+
+**U3w — faits de l'article exigés, nom du scénario, conséquences sobres**
+(`patch_u3w_faits_article_sobriete.py`). Constat (arrestations des Grottes) : libération
+omise sans alerte, car le contrôle des faits imposés juge « respecté » un fait non
+mentionné. Le fait qui est une phrase de l'article est marqué `[ARTICLE]` dans
+`verifier_contraintes` (omission d'un élément essentiel = non respecté ⇒ réécriture ; même
+appel IA). Consigne : jamais le nom d'un scénario dans la description ou les conséquences ;
+conséquences limitées à des tensions ou tendances déductibles (ni débat, ni réaction
+d'autorité ou de médias, ni chiffre nouveau). Avertissement mécanique
+`_noms_scenario_u3w()`.
+
+**U3x — filtre plus précis** (`patch_u3x_filtre_plans_precision.py`) : faux positif U3p
+(« Lancement du programme Écoles Résilientes », événement de 2089, écarté à tort) : la règle
+plan / programme / débat ne vaut plus que si la description **commence** par ce nom (après
+les articles) ; trou U3r (« Réduction de 45 %… en une décennie ») : « réduction »,
+« hausse », « croissance », « recul », « grimpe » ajoutés. Vérifié en réel.
+
+**U3y — l'événement raconté à sa date** (`patch_u3y_evenement_a_sa_date.py`). Constat
+(accords OMS 2039) : l'article est au présent de 2098 ; avec « tirées du passage », l'IA a
+recopié tout le paragraphe dans la fiche de 2039 (dispensaire de 2042, unités mobiles
+d'« aujourd'hui ») et inventé « automne 2039 ». Consigne : seulement l'événement choisi,
+tel qu'il se produit à sa date, sans recopier le passage, sans fait postérieur ni
+« aujourd'hui » ; `date_label` = l'année seule si le passage ne donne ni mois ni saison.
+Avertissement `_anachronismes_u3y()` (année postérieure ou « aujourd'hui » dans réalisation
+/ description). Vérifié en réel sur le quai Wilson (2044) : aucune année postérieure,
+`date_label: 2044`.
+
+**U3z, U3za — fiches 2039 et 2044 corrigées** (ponctuels) :
+`accords_oms_regulation_mondiale_2039_new_sustainability` (description ramenée à 2039, nom
+« Accords de 2039 sur les pouvoirs de régulation mondiale de l'OMS », `date_label` 2039,
+portée globale ; l'archétype garde l'ancien nom d'affichage) ;
+`reamenagement_quai_wilson_2044_new_sustainability` (APRC développée à tort en « Autorité
+Planétaire pour la Régénération Climatique » — dans l'article, l'APRC est l'organisme
+d'Amara Diallo-Svensson —, files d'attente de 2098 transposées, digues, port, glaciers,
+migrations inventés ; description, réalisation, conséquences réécrites).
+
+*Enseignement de la séance* : chaque consigne réduit l'invention sans la supprimer ; la
+cause de fond est que le schéma d'injection exige des textes longs même quand l'article ne
+donne qu'une mention. Suites en B9 (longueur proportionnelle au passage, contrôle des
+sigles et noms propres, refus des simples mentions).

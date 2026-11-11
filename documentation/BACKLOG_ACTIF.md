@@ -1,7 +1,9 @@
 # Backlog actif — Ourrassol 2098
 
-*Ce qui reste ouvert, et seulement cela. Mis à jour le 11 novembre 2026 (chantier
-« unification » : « et si ? » devient la porte unique ; B3.1 et B4-termes clos). Réorganisé le 31 octobre 2026 en trois
+*Ce qui reste ouvert, et seulement cela. Mis à jour le 11 novembre 2026 au soir (chantier
+« unification » : « et si ? » porte unique ; **chemin Articles → « et si ? » éprouvé en réel** ;
+extracteur filtré et passage de l'article transmis à l'injection, U3p → U3za ;
+B3.1 et B4-termes clos). Réorganisé le 31 octobre 2026 en trois
 parties : **A. Bugs et vérifications**, **B. Développement (nouvelles
 fonctionnalités)**, **C. Enrichissement de la base**. Règle actée le 31 oct :
 l'outil doit avoir toutes ses fonctionnalités et aucun bug connu (partie A vide)
@@ -53,6 +55,15 @@ Reste à voir en réel :
   - aperçu « au passé » : ligne « [contexte] hypothèse `<id>` : description et N
     fait(s) imposé(s) transmis » (vérifiée sur Holdfast en CLI, pas encore lancée par
     l'étape ④ elle-même).
+- **B9 — Articles → « et si ? »** (éprouvé le 11 nov sur cinq événements d'un même article :
+  un « propre », un « propre » à date déduite, trois passés — 2039, 2042, 2044). Vus en
+  réel : citation imposée propre et respectée, badges « déjà connu », filtre U3p / U3r /
+  U3x, passage de l'article transmis (U3s), contrôle des citations sans faux positif.
+  Reste à voir : a) le chemin **signal** depuis un article (non rejoué) ; b) une
+  **réécriture** déclenchée par un fait `[ARTICLE]` omis (U3w : aucune omission depuis le
+  patch) ; c) les alertes U3w (nom du scénario) et U3y (anachronisme) en réel (jamais
+  déclenchées depuis les patchs) ; d) un article d'un **autre** scénario que
+  new_sustainability, et un article dont l'en-tête a une clé `titre`.
 - **S20** : `/api/yaml/append` garde l'en-tête de `queue.yaml` (correctif du 30 oct,
   testé sur copie) → vérifier au prochain ajout depuis le GUI (ex. entrée préparée
   dans 🔭), puis retirer ce point. (« Adopter » du simulateur garde bien l'en-tête :
@@ -104,6 +115,23 @@ Reste à voir en réel :
   fin n'est pas toujours tenue (Holdfast : `tensions_narratives` 721 → 938 car., une
   phrase ajoutée à trois points sur quatre, sans fait inventé). Relire l'aperçu ;
   durcir la consigne si cela revient.
+- **B9 injection d'un événement tiré d'un article** : depuis U3s → U3y, l'IA reçoit le
+  passage de l'article, avec des consignes de fidélité et trois contrôles mécaniques. Elle
+  invente encore quand l'article ne donne qu'une mention (quai Wilson 2044 : sigle APRC
+  développé à tort, travaux, migrations), transpose une scène de 2098 à la date de
+  l'événement sans citer d'année (non détecté), ou omet une issue. Les 4 fiches du 11 nov
+  ont été corrigées à la main (U3u, U3v, U3z, U3za). **Relire toute fiche injectée** ;
+  suites en B9 (« source mince »).
+- **B9 localisation des fiches injectées** : `extract_localisation.py` (mistral-small) a
+  placé les arrestations des Grottes (Genève) en `afrique_continentale` / « quartier de
+  la Jonction » à cause de « communautés sahéliennes » dans la description (corrigé U3u).
+  Les trois autres fiches du 11 nov étaient bien placées. Si cela revient : passer le
+  `lieu` / la zone de l'article à l'extraction, ou contrôler la zone contre celle de
+  l'article.
+- **B9 extracteur, variabilité** : d'une détection à l'autre, l'IA tronque parfois une
+  citation (« [...] ») ou change un mot (« le quai » pour « au quai ») : l'événement est
+  alors écarté ou marqué « citation introuvable ». Relancer la détection suffit en
+  général.
 - **S30 lecture IA, propositions lointaines** : sur Holdfast, trajectoire du fonds
   groenlandais et opposition Atlas des Marges ↔ ARPS sans lien avec l'hypothèse
   (sautées à la main). Sauter suffit ; à surveiller si cela devient fréquent.
@@ -240,38 +268,87 @@ Le simulateur est terminé (manuel §3quinquies) ; ses tests réels sont en A1.
 **Fait** (détails dans l'archive et le handoff) : type d'hypothèse `signal`
 (U2a-U2g), lieu + contraintes (U2h), veille 🔭 → « et si ? » (U3a), Articles →
 « et si ? » (U3b), date / scénarios / mode imposés par l'article (U3c), case « effet
-établi en 2098 » (U3d). Chemin signal **éprouvé en réel de bout en bout** depuis la
-veille (`ia_autorite_spirituelle_2026` → signal `chatbots_guides_spirituels_2026`,
-`validate.py` 0/0). Chemin Articles testé jusqu'au bloc proposé/vérifié seulement.
+établi en 2098 » (U3d), **date d'un événement en année + mois jusqu'à 2098.12 (U3e),
+détection des événements du texte complet de l'article avec date verrouillée (U3f),
+simulateur : mots génériques et date de mesure dans l'année d'apparition (U3g), citation
+exacte de l'article imposée comme fait (U3i, U3k), sélection de texte du panneau (U3j),
+note de cohérence en texte brut (U3l, U3m), message « Fiches à relire » (U3n), blocage
+des doublons (U3o)** ; le soir : **filtre mécanique de l'extracteur (plans, projets,
+débats, statistiques, citations tronquées : U3p, U3r, U3x), citations sans guillemets
+doublés (U3q), passage de l'article transmis à l'injection avec consignes de fidélité et
+contrôles (U3s, U3t, U3w, U3y)**, 4 fiches corrigées à la main (U3u, U3v, U3z, U3za). Chemin signal **éprouvé en réel** depuis la veille
+(`ia_autorite_spirituelle_2026` → `chatbots_guides_spirituels_2026`) ; chemin Articles
+**éprouvé en réel de bout en bout le 11 nov** pour un événement
+(`piratage_ecrans_greffes_hepatiques_2098`, 8 mars 2098 : détection → proposition →
+adoption → injection, `validate.py` 0/0).
 
-**Ordre décidé (David, 7 nov)** : 1. éprouver les chemins ; 2. **entités** dans
-« et si ? » (`create_entities_and_instances.py`) ; 3. **modes automatiques +
-wild cards** (hypothèses « rupture » à faible probabilité / fort impact) ;
+**Ordre décidé (David, 7 nov)** : 1. éprouver les chemins (**fait pour Articles**) ;
+2. **entités** dans « et si ? » (`create_entities_and_instances.py`) ; 3. **modes
+automatiques + wild cards** (hypothèses « rupture » à faible probabilité / fort impact) ;
 4. **étape 5 : fermer** les accès directs.
 
 À faire :
-- 🔴 **Éprouver en réel** l'Articles → « et si ? » jusqu'à l'adoption et l'injection
-  (U3b/U3c/U3d) ; objectif : zéro manipulation manuelle à chaque promotion d'article.
 - 🔴 **Entités** dans « et si ? » (puis modes auto + wild cards).
 - 🔴 **Étape 5 — fermer** : ancien formulaire Promouvoir (Articles), écran Édition
   « Injecter un événement depuis un article » (route `/api/edition/injecter_evenement`),
   anciens menus d'injection, `/api/yaml/append` ; supprimer le code mort
   (`renderArticlesPromouvoirForm`, `submitArticlesPromouvoirInjection`,
-  `_veillePreparer`, `_veilleAfficherPropositions` dans `app.js`).
+  `_veillePreparer`, `_veilleAfficherPropositions` dans `app.js`). **L'étape ⑤ a disparu
+  du panneau de l'interface** (le panneau se termine à ④) : aligner la doc et l'interface.
 - 🔴 **Réorganiser le panneau « Et si ? »** : étapes peu claires ; griser pour un
   signal les options payantes inutiles (Lecture IA, Passe exhaustive, Nouveau
-  tirage) ; titre trompeur « Faits imposés à la lecture IA » pour un signal.
+  tirage) ; titre trompeur « Faits imposés à la lecture IA » pour un signal ; à l'étape ④,
+  « aucune opération enregistrée : lecture IA et passe exhaustive absentes ? » ne dit pas
+  quoi faire (ces lectures se lancent à l'étape ①, et « Appliquer » écrirait 0 fichier).
+- 🔴 **Source mince → invention** (constat du 11 nov au soir) : quand l'article ne donne
+  qu'une mention d'un événement, le schéma d'injection exige quand même 3 à 5 lignes par
+  champ et l'IA remplit. Pistes, à choisir : a) longueur des textes proportionnelle au
+  passage (1 à 2 phrases pour une simple mention) — vérifier d'abord ce que
+  `validate_instance()` exige ; b) contrôle mécanique des sigles et noms propres de la
+  fiche absents de l'article **et** des acteurs du vault (⚠) ; c) refuser à l'extraction
+  les événements à peine mentionnés (une incise) ; d) relecture assistée de la fiche juste
+  après l'injection.
+- 🔴 **Anachronisme sans année** : U3y ne détecte que des années ou « aujourd'hui » ; une
+  scène de 2098 transposée (files d'attente devant le Centre Régénératif en 2044) passe.
+  Piste : contrôle IA dans l'appel `verifier_contraintes` (« le récit décrit-il des faits
+  postérieurs à la date de l'événement ? »), sans appel en plus.
+- 🔴 **Vérifier Lecture IA et Passe exhaustive** (`et_si_exhaustif.py`, lecture IA) pour
+  une date 2098.xx : le simulateur a un contrôle « date antérieure à l'apparition » corrigé
+  en U3g, les deux autres scripts n'ont pas été inspectés.
 - 🔴 **Consigne IA** : « reprendre tels quels les chiffres des contraintes » (l'IA a
   paraphrasé Pew « 1 sur 10 / 1 sur 5 chez les moins de 30 ans » en « 10-20 % de la
   population » ; corrigé à la main le 7 nov, `.bak_chiffres`).
-- ⚪ **Étendre la plage de dates d'injection à 2098** (aujourd'hui 2026-2097 ; un
-  article de 2098 reçoit 2097 avec un avertissement).
+- ⚪ **« Fiches à relire »** : la recherche ne cible que des mots isolés (« Léman »,
+  « Santé ») ; une recherche de noms propres à plusieurs mots (« Centre Régénératif du
+  Léman ») la rendrait plus utile.
+- ⚪ **Détection des doublons** : elle repose sur l'IA (slug « déjà connu ») ; une
+  reformulation très différente d'un événement déjà injecté peut passer (le serveur refuse
+  seulement même nom / même description d'hypothèse). Piste : comparaison mécanique
+  (lieu + date + entités).
+- ⚪ **Archétype injecté** (`evenements/<id>.md`) : colonnes « Réalisation » et « Impact »
+  du tableau des instances vides pour l'instance injectée ; à comparer avec un archétype
+  plus ancien avant de décider si c'est normal.
+- ⚪ **Plage de dates** : événements jusqu'à 2098.12 **fait** (U3e) ; signaux toujours
+  ≤ 2097 (décision conservée). Un événement dont l'article date de 2098 peut donc
+  maintenant être injecté.
 - ⚪ **Veille** : passer la date d'observation comme date imposée.
 - ⚪ Perte connue : l'IA ne peut plus ajouter de variables en plus (signaux).
 - ⚪ Cosmétique : suffixe d'id `_2098` pour une date 2097
   (`methane_arctique_nordark_2097`) ; l'hypothèse a peut-être déjà été ajoutée à
   `hypotheses.yaml` (un ajout du même nom est refusé).
-- ⚪ **Git** : deux commits en attente (voir handoff).
+- ⚪ Cosmétique : une ligne vide en trop avant « Acteurs impliqués » dans la fiche corrigée
+  à la main (U3h) ; sans effet.
+- ⚪ Cosmétique (11 nov soir) : a) libellé « écarté (plan / projet / débat) » aussi pour une
+  statistique ou une citation tronquée (le motif est juste) → « écarté (pas un
+  événement) » ; b) citation dont le guillemet ouvrant n'est pas fermé dans la phrase de
+  l'article affichée « « « … » » (U3q ne retire que les paires complètes) ; c) contexte
+  U3s : titre = nom de fichier (pas de clé `titre` dans l'en-tête des articles ; lire la
+  clé réelle) et ligne `---` de l'article dans le passage ; d) l'archétype
+  `evenements/accords_oms_regulation_mondiale_2039.md` garde l'ancien nom d'affichage
+  (« Accords de Genève sur la Régulation Médicale Mondiale »).
+- ⚪ **Impacts des événements tirés d'un article** : la simulation a imposé 6 variables à
+  la montée des eaux de Genève (2044) et des forces de 15 à 22 à des faits locaux ; la
+  portée `locale` n'abaisse pas les forces. À juger avant d'injecter en volume.
 
 ## ⚪ B5. Chaîne idées → signaux et veille (S20, S21)
 
@@ -439,3 +516,4 @@ Chaîne en production (manuel §3quater).
   PAS ceux de la liste d'application du rapport ① (numérotée autrement). Contrôler
   avec « Liste de l'étape ④ » (champs remplis, sans IA) avant « Injecter ».
 - **Pousser** : `git push origin main` (les branches jetables restent locales).
+- **Patchs** : recevoir le `.py` prêt (à placer dans `generator/`), `python3 generator/patch_….py` en dry-run puis `--apply`, sortie vers `~/Documents/Ourrassol_sorties/`. Changement de `app.py` : relancer Flask entièrement ; `app.js` seul : Ctrl-Maj-R. `node --check` échoue sur `||=` (Node ancien) : sans conséquence.

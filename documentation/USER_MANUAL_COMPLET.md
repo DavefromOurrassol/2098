@@ -2,7 +2,8 @@
 
 *Mode d'emploi de l'état actuel : ce que fait chaque outil, quand l'utiliser,
 comment le lancer (GUI ou terminal), ses pièges. Mis au propre le 24 octobre 2026,
-mis à jour le 11 novembre 2026 (unification « et si ? »).
+mis à jour le 11 novembre 2026 au soir (unification « et si ? » ; Articles → « et si ? » éprouvé ;
+extracteur filtré, passage de l'article transmis à l'injection, U3p → U3y).
 Le récit des sessions (bugs trouvés, itérations, tests, versions successives) est
 dans `USER_MANUAL_HISTORIQUE.md` ; les chantiers ouverts dans `BACKLOG_ACTIF.md`.
 Les numéros de section (§2octies, §3quinquies…) sont stables : backlog et
@@ -602,6 +603,16 @@ python3 generator/inject_custom_events.py --idea '{"id": "...", ...}' --json [--
     (lu par le moteur, §3ter).
   - `acteurs_hint` s'applique par scénario (un slug d'un autre scénario n'est pas
     imposé).
+- **Passage de l'article d'origine** (U3s → U3y, 11 nov 2026) : si un fait imposé
+  `contrainte` d'au moins 8 mots se retrouve dans **un seul** article de
+  `articles/<scénario>/`, le prompt de développement reçoit son paragraphe et ses deux
+  voisins (≤ 2 800 car.), avec des consignes de fidélité (description sobre, événement à
+  sa date, pas de citation, chiffre, sigle ni nom de scénario ajoutés). Contrôles non
+  bloquants en fin de scénario : citation « … » absente de l'article, nom de scénario
+  dans la description ou les conséquences, année postérieure à l'événement ou
+  « aujourd'hui ». Le fait tiré de l'article est marqué `[ARTICLE]` pour
+  `verifier_contraintes` (omission = non respecté). Sans article retrouvé, rien ne change
+  (prompt d'avant, description « vivante »). Détail : §3quinquies, « Articles → « et si ? » ».
 - Résultats dans `processed.yaml` (`partial` si succès partiel) et `needs_review.yaml`
   (l'idée complète y reste, pour la relancer).
 
@@ -1186,20 +1197,94 @@ hypothèses (chantier en cours, voir le backlog B9).
   du signal). Anciens champs du formulaire signal : Thèmes à privilégier = variables des
   impacts ; Nombre de thèmes max = nombre d'impacts ; Persistance = `persistance:` ; Année
   d'apparition = `date:`. L'IA ne peut plus ajouter de variables en plus.
-- **Plage de dates** : 2026-2097 (limite d'injection) ; un article de 2098 reçoit 2097 avec
-  un avertissement. `duree` = années de montée jusqu'à pleine force ; l'effet est mesuré en 2098.
+- **Plage de dates** : **événement** : année + mois (`2098.03`), de 2026 à **2098.12** ; la
+  fiche garde `date_label` (« 8 mars 2098 »). **Signal** : année entière, de l'année en
+  cours à 2097. `duree` = années de montée jusqu'à pleine force ; l'effet est mesuré en
+  2098. Une date de mesure antérieure à l'apparition **dans la même année** est ramenée à
+  année + 0,12 (message sur la sortie d'erreur).
 - **Depuis la veille ou un article** : bouton « ✨ Envoyer vers « et si ? » ». Pour un
-  article, la ligne de réglages impose : date (année de l'article, bornée 2026-2097),
-  case « valable pour les 6 scénarios » (sinon le scénario de l'article seul), case
-  « mode rupture » (sinon choc), case « effet établi en 2098 » (durées calculées :
-  max(1, 2098 − date)). Ces valeurs sont **forcées après la réponse de l'IA**
-  (avertissements affichés). CLI : `hypothese_depuis_texte.py --proposer --date … --scenarios … --mode … --effet-plein`.
+  **signal** venant d'un article, la ligne de réglages impose la date (entière, bornée
+  2026-2097) ; pour un **événement**, voir « Articles → « et si ? » » ci-dessous. Les
+  cases « valable pour les 6 scénarios » (sinon le scénario de l'article seul), « mode
+  rupture » (sinon choc) et « effet établi en 2098 » (durées = max(1, 2098 − date)) sont
+  **forcées après la réponse de l'IA** (avertissements affichés). CLI :
+  `hypothese_depuis_texte.py --proposer --date 2098.03 --scenarios … --mode … --effet-plein
+  --citation="…"` (l'idée est lue sur l'entrée standard).
 - **Pour un signal** : les options payantes de l'étape ① (Lecture IA, Passe exhaustive,
   Nouveau tirage) sont inutiles ; le titre « Faits imposés à la lecture IA » du rapport est
   trompeur (à corriger).
 - ⚠ L'IA peut paraphraser les chiffres des `contraintes` : relire le signal injecté.
 - Accès directs encore ouverts jusqu'à l'étape 5 : ancien formulaire Promouvoir, écran
   Édition « Injecter un événement depuis un article », anciens menus d'injection.
+
+### Articles → « et si ? » : un événement tiré de l'article (11 nov. 2026)
+Règle : l'événement injecté doit être **dans le texte de l'article** et **ne peut pas être
+postérieur à sa date** (sinon on place à volonté l'événement que raconte l'article).
+1. Onglet Articles : choisir l'article, section « → Envoyer vers « et si ? » », type
+   événement. Cliquer sur **« 🔎 Détecter les événements de l'article »** : un appel IA lit
+   le texte complet (`extraire_evenements_article.py`, ≤ 8 événements). Chaque événement
+   affiche sa date (« déduite » si l'article ne la donne pas ou la donne en relatif :
+   « janvier dernier »), sa nature (« événement de l'article » ou « événement passé
+   mentionné »), sa **citation exacte** (sans astérisques ni guillemets doublés, U3q) et
+   des badges : « ⚠ déjà connu » (présent dans `event_instances`, `hypotheses.yaml` ou cité
+   par l'article), « ⚠ citation introuvable » (le texte n'a pas été retrouvé mot pour mot :
+   l'IA a souvent changé un mot, ne pas l'envoyer sans vérifier).
+   **Filtre mécanique** (U3p, U3r, U3x) : sont écartés, avec un avertissement
+   « écarté (…) : <motif> » en tête de liste, les candidats dont la description cite une
+   année postérieure à l'article, contient un marqueur de projet (« en préparation »,
+   « devrait », « envisage », « d'ici 20… », « à l'horizon », « sera lancé »…), **commence**
+   par « Plan », « Programme », « Projet », « Stratégie », « Débat », « Réforme »… sans verbe
+   d'accomplissement (adopté, lancé, voté, signé…), dont la citation est tronquée (« [...] »,
+   « … ») ou qui sont une statistique de tendance (évolution chiffrée + durée : « a chuté de
+   45 % en une décennie »). Le libellé dit toujours « plan / projet / débat », même pour
+   une statistique ou une citation tronquée : seul le motif compte. Les réponses de l'IA
+   varient : relancer la détection peut faire revenir un événement écarté (par exemple
+   avec une citation entière cette fois).
+2. Choisir l'événement (bouton radio). Année et mois se **verrouillent** sur lui ; case
+   « forcer la date » pour les déverrouiller (la date reste bornée par l'article).
+   Un événement « déjà connu » **bloque** « Proposer » tant que la case « créer quand même
+   un doublon (effets cumulés) » n'est pas cochée.
+3. **Proposer** (un appel IA, rien d'écrit) : le bloc YAML a la citation exacte de
+   l'article en **première contrainte** (donc fait imposé : transmise à l'IA d'injection et
+   contrôlée sur le récit), avertissement « citation de l'article ajoutée aux faits
+   imposés ». 4 contraintes au maximum (celles de l'IA sont retirées au besoin).
+4. **Vérifier**, **Ajouter à hypotheses.yaml**, puis le parcours ①→③ (simuler, décider,
+   adopter, injecter). Le scénario est imposé par l'article. **Lecture IA inutile** pour
+   un simple événement d'article : elle ne sert qu'à l'étape ④ (fiches d'entités touchées).
+   Sélectionner du texte à la souris dans le panneau est sans danger depuis U3j.
+5. **À l'injection (étape ③)**, `inject_custom_events.py` retrouve la citation (≥ 8 mots)
+   dans `articles/<scénario>/*.md` (un seul article doit la contenir) et donne à l'IA le
+   **passage de l'article** : paragraphe de la citation, précédent et suivant, 2 800
+   caractères au plus (U3s ; terminal de Flask : ligne `[contexte article] <fichier>
+   (paragraphe n/N)`). Consignes ajoutées quand ce passage est fourni : description
+   sobre sur l'événement choisi seul, à sa date (U3t, U3y) ; ni scène, ni dialogue, ni
+   paroles prêtées à un personnage hors passage, ni date plus précise, ni chiffre, lieu,
+   acteur ou sigle absent du passage ; jamais le nom d'un scénario dans la description ou
+   les conséquences ; conséquences limitées à des tensions ou tendances déductibles, sans
+   débat ni réaction d'autorité (U3w) ; aucun fait postérieur à l'événement ni
+   « aujourd'hui » (U3y). Contrôles :
+   - **faits imposés** (appel IA déjà existant) : la citation de l'article est marquée
+     `[ARTICLE]` ; son omission (qui, quoi, quand, issue) compte comme « non respecté » et
+     déclenche une réécriture (U3w) ;
+   - **mécaniques, sans IA, non bloquants** (lignes ⚠ de la sortie) : citation « … » de
+     la fiche absente de l'article (U3t) ; nom de scénario dans la description ou les
+     conséquences (U3w) ; année postérieure à l'événement ou « aujourd'hui » dans la
+     réalisation ou la description (U3y).
+6. **Relire la fiche injectée** (`event_instances/<id>_<scénario>.md`) et la comparer à
+   l'article, **toujours**. Défauts vus le 11 nov malgré les contrôles : quand l'article ne
+   donne qu'une mention, l'IA remplit les champs (3 à 5 lignes exigées) avec des détails
+   inventés (sigle mal développé, travaux, migrations) ; une scène de 2098 transposée à la
+   date de l'événement sans citer d'année (non détectée) ; omission d'une issue (libération
+   après pétition). Vérifier aussi `localisation` : `extract_localisation.py`
+   (mistral-small) a placé un quartier de Genève en `afrique_continentale` à cause de
+   « communautés sahéliennes ». Corriger à la main (patch ponctuel ou éditeur), puis
+   `validate.py`. Pour vérifier qu'un détail vient de l'article :
+   `grep -o -i -E "terme1|terme2" articles/<scénario>/<fichier>.md` (attention aux pluriels).
+Limites connues : un événement de mars 2098 pèse très peu sur les chiffres de 2098 (le
+moteur travaille en années) ; l'étape ④ n'a rien à appliquer sans Lecture IA / Passe
+exhaustive lancées à l'étape ① (« Appliquer » écrit alors 0 fichier) ; l'étape ⑤
+n'apparaît plus dans l'interface. La note de cohérence d'une fiche injectée est écrite en
+texte brut dans le corps depuis U3l (avant, version YAML avec guillemets).
 
 ### Onglet « Nouvelle hypothèse » — `hypothese_depuis_texte.py` 🔁 🧩
 On écrit l'idée librement ; **✨ Proposer** (un appel IA) remplit un bloc YAML
