@@ -513,6 +513,15 @@ def step2_develop_instance(client, idea, event_slug, type_evenement, variables,
     # PATCH_S27_INJECTION_IMPOSEE : date fixée et valeurs imposées
     impositions_txt = _texte_impositions(idea, scenario)
     faits_txt = _texte_faits(idea, scenario)  # PATCH_S27_V818
+    contexte_txt = _texte_contexte_article(idea, scenario)  # U3s
+    if contexte_txt:   # U3t : sobriété quand un passage d'article est fourni
+        contexte_txt += ("Ne prête à un personnage de l'article que des paroles qui figurent dans ce passage ; "
+                         "n'ajoute aucune citation entre guillemets, aucune date plus précise (jour, mois, saison) "
+                         "que celle du passage, aucun chiffre, lieu ni détail de scène qui n'y figure pas.\n")
+        desc_consigne_txt = ("description journalistique de l'événement — 3-4 lignes sobres, tirées du passage "
+                             "de l'article : ni scène, ni dialogue, ni détail absent du passage")
+    else:
+        desc_consigne_txt = "description journalistique de l'événement — 3-4 lignes vivantes"
     if idea.get("date_imposee") is not None and impositions_txt:
         date_rule_txt = (f"- La date est FIXÉE à {int(float(idea['date_imposee']))} "
                          f"(issue d'une simulation) : n'en propose pas d'autre")
@@ -545,7 +554,7 @@ Ourrassol 2098, dans le scénario "{scenario}".
 - Date approximative : {idea['date_approximative']}
 - Intensité : {idea['intensite']}
 - Description originale : {idea['description']}
-{actors_hint_txt}{zone_hint_txt}{impositions_txt}{faits_txt}
+{actors_hint_txt}{zone_hint_txt}{impositions_txt}{faits_txt}{contexte_txt}
 ## SCÉNARIO {scenario.upper()}
 - État : {sc_ctx['state_of_system']} | Tension : {sc_ctx['tension_level']}/5 | Trajectoire : {sc_ctx['trajectory']}
 - Régime : {sc_ctx['political_regime']} | Vitesse : {sc_ctx['transformation_speed']}
@@ -604,7 +613,7 @@ Réponds UNIQUEMENT en JSON, sans aucun texte autour, format exact :
   "date_label": "description de la date ex: printemps 2055",
   "evenement_cle": "phrase courte 4-11 mots avec une année 2055 (n'importe où dans la phrase)",
   "realisation": "comment l'événement se réalise (ou ne se réalise pas) dans ce monde — 3-5 lignes",
-  "description_complete": "description journalistique de l'événement — 3-4 lignes vivantes",
+  "description_complete": "{desc_consigne_txt}",
   "consequences": "conséquences à long terme dans ce monde — 2-3 lignes",
   "acteurs": ["slug_instance_existante_ou_texte_libre"],
   "impact_sur_variables": [
@@ -1297,6 +1306,80 @@ def _texte_faits(idea, scenario):
             + "\nSi la description originale semble contredire un de ces faits, les faits priment.\n")
 
 
+# U3s (11 novembre 2026) -- contexte de l'article d'origine pour l'étape 2
+_DERNIER_ARTICLE_U3S = {}   # U3t : scénario -> texte de l'article trouvé (pour le contrôle des citations)
+
+
+def _citations_absentes_u3t(instance_data, scenario):
+    """U3t : citations « … » (4 mots au moins) du récit absentes de l'article d'origine."""
+    article = _DERNIER_ARTICLE_U3S.get(scenario)
+    if not article:
+        return []
+    base = _norm_ctx_u3s(article)
+    out = []
+    for k in ("realisation", "description_complete", "consequences"):
+        for m in re.finditer(r"«\s*([^»]{15,}?)\s*»", str(instance_data.get(k) or "")):
+            q = _norm_ctx_u3s(m.group(1))
+            if len(q.split()) >= 4 and q not in base:
+                out.append(" ".join(m.group(1).split())[:140])
+    return out
+
+
+def _norm_ctx_u3s(s):
+    import unicodedata
+    s = unicodedata.normalize("NFKD", str(s or "").lower())
+    s = "".join(c for c in s if not unicodedata.combining(c))
+    return " ".join(re.sub(r"[^a-z0-9]+", " ", s).split())
+
+
+def _texte_contexte_article(idea, scenario, max_chars=2800):
+    """Bloc du prompt : paragraphe de l'article d'où vient la citation imposée (U3i), avec ses
+    voisins. Vide si aucune citation d'au moins 8 mots, ou si elle n'est pas trouvée dans UN
+    SEUL article de articles/<scénario>/. Ne lève jamais d'exception."""
+    _DERNIER_ARTICLE_U3S.pop(scenario, None)   # U3t
+    try:
+        cands = [f["fait"] for f in _faits_du_scenario(idea, scenario)
+                 if (f.get("sort") or "contrainte") == "contrainte"
+                 and len(_norm_ctx_u3s(f["fait"]).split()) >= 8]
+        dossier = VAULT_ROOT / "articles" / scenario
+        if not cands or not dossier.is_dir():
+            return ""
+        for cand in cands:
+            cible = _norm_ctx_u3s(cand)
+            trouves = []
+            for f in sorted(dossier.glob("*.md")):
+                brut = f.read_text(encoding="utf-8", errors="ignore")
+                m = re.match(r"^---\n(.*?)\n---\n?(.*)", brut, re.DOTALL)
+                fm_txt, corps = (m.group(1), m.group(2)) if m else ("", brut)
+                paras = [p.strip() for p in re.split(r"\n\s*\n", corps) if p.strip()]
+                for i, p in enumerate(paras):
+                    if cible in _norm_ctx_u3s(p):
+                        trouves.append((f, fm_txt, paras, i))
+                        break
+            if len(trouves) != 1:
+                continue
+            f, fm_txt, paras, i = trouves[0]
+            try:
+                fm = yaml.safe_load(fm_txt) or {}
+            except yaml.YAMLError:
+                fm = {}
+            titre = str(fm.get("titre") or fm.get("title") or f.stem) if isinstance(fm, dict) else f.stem
+            passage = "\n\n".join(paras[max(0, i - 1): i + 2]).replace("*", "")
+            if len(passage) > max_chars:
+                passage = passage[:max_chars].rsplit(" ", 1)[0] + " […]"
+            _DERNIER_ARTICLE_U3S[scenario] = " ".join(paras)   # U3t
+            print(f"  [contexte article] {f.name} (paragraphe {i + 1}/{len(paras)})")
+            return (f"\n## CONTEXTE DE L'ARTICLE D'ORIGINE (« {titre} »)\n{passage}\n"
+                    "Ce passage est la SOURCE de l'événement : reprends les acteurs, lieux, chiffres et "
+                    "rattachements tels qu'ils y figurent. N'invente AUCUNE réaction d'autorité, aucun débat, "
+                    "consortium, acteur ni sigle qui n'est pas dans ce passage. Pour les conséquences, reste "
+                    "sur des tensions ou des tendances plausibles, sans les présenter comme des faits déjà "
+                    "survenus.\n")
+        return ""
+    except Exception:  # noqa: BLE001 -- le contexte est un plus, jamais un blocage
+        return ""
+
+
 def _plie_v818(s):
     import unicodedata
     s = unicodedata.normalize("NFKD", str(s or "").lower())
@@ -1547,6 +1630,8 @@ def process_idea(client, idea, dry_run=False):
                 print(f"  ⚠ [{scenario}] {avert}")
             for v in etat_contraintes or []:   # PATCH_S30_CONTRAINTES
                 print(f"  ⚠ [{scenario}] fait imposé non respecté : {v}")
+            for q in _citations_absentes_u3t(instance_data, scenario):   # U3t
+                print(f"  ⚠ [{scenario}] citation absente de l'article : « {q} »")
 
             if idea.get("edition_active") and idea.get("date_imposee") is not None:
                 print("  ⚠ edition_active ignoré : la date est imposée par la simulation.")
