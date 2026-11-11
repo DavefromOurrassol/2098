@@ -8584,7 +8584,9 @@ function renderArticlesVersEtSi(article, container) {
   const listeDetect = mk('div', '', 'margin-top:4px');
   const [lblForcer, cbForcer] = caseOui("forcer la date (sinon : date de l'article, verrouillée)");
   lblForcer.style.display = 'none';
-  [btnDetect, etatDetect, listeDetect, lblForcer].forEach(e => zoneDetect.appendChild(e));
+  const [lblDoublon, cbDoublon] = caseOui("créer quand même un doublon (effets cumulés)");   // U3o
+  lblDoublon.style.display = 'none';
+  [btnDetect, etatDetect, listeDetect, lblForcer, lblDoublon].forEach(e => zoneDetect.appendChild(e));
   boite.insertBefore(zoneDetect, reglages);
   const appliquerVerrou = () => {
     const sig = selType.value === 'signal';
@@ -8592,6 +8594,7 @@ function renderArticlesVersEtSi(article, container) {
     champDate.disabled = verrou;
     selMois.disabled = sig || verrou;
     lblForcer.style.display = (!sig && evChoisi) ? '' : 'none';
+    lblDoublon.style.display = (!sig && evChoisi && evChoisi.deja_connu) ? '' : 'none';   // U3o
     zoneDetect.style.display = sig ? 'none' : '';
   };
   selType.addEventListener('change', appliquerVerrou);
@@ -8638,7 +8641,7 @@ function renderArticlesVersEtSi(article, container) {
       const r = document.createElement('input');
       r.type = 'radio'; r.name = 'u3f-ev'; r.style.marginRight = '6px';
       r.addEventListener('change', () => {
-        evChoisi = ev; cbForcer.checked = false;
+        evChoisi = ev; cbForcer.checked = false; cbDoublon.checked = false;   // U3o
         champDate.value = String(ev.annee); selMois.value = String(ev.mois);
         appliquerVerrou();
         etatDetect.style.color = ev.deja_connu ? '#b5651d' : '';
@@ -8666,6 +8669,11 @@ function renderArticlesVersEtSi(article, container) {
     if (selType.value !== 'signal' && !evChoisi) {   // U3f
       etat.style.color = '#b03a2e';
       etat.textContent = "✗ Clique d'abord sur « Détecter les événements de l'article » et choisis-en un.";
+      return;
+    }
+    if (selType.value !== 'signal' && evChoisi && evChoisi.deja_connu && !cbDoublon.checked) {   // U3o
+      etat.style.color = '#b03a2e';
+      etat.textContent = `✗ « ${evChoisi.deja_connu_nom || evChoisi.deja_connu} » est déjà dans le vault : coche « créer quand même un doublon » si c'est voulu, ou choisis un autre événement.`;
       return;
     }
     btn.disabled = true;
