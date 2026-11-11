@@ -1600,3 +1600,802 @@ processed:
           duree: 15
           delta_level: 5
           polarite: 1
+- status: injected
+  idea:
+    id: remboursement_chatbots_therapeutes_2040
+    description: Plusieurs pays commencent à rembourser des chatbots thérapeutes par
+      la sécurité sociale, avec un débat sur la responsabilité médicale en cas d’erreur
+      de l’IA.
+    source: et_si_remboursement_chatbots_therapeutes_2040
+    persistance: normale
+    variable_hint:
+    - sante_biotechnologies
+    - gouvernance_institutions
+    - technologie_information
+    - valeurs_culture_tempo_sociale
+    - systeme_economique_redistribution
+    variable_hint_count: 5
+    date_imposee: 2040
+    impacts_imposes:
+      breakdown:
+      - variable: sante_biotechnologies
+        delta_level: 6
+        duree: 5
+        polarite: 1
+      - variable: gouvernance_institutions
+        delta_level: 10
+        duree: 5
+        polarite: 1
+      - variable: technologie_information
+        delta_level: 5
+        duree: 3
+        polarite: 1
+      - variable: valeurs_culture_tempo_sociale
+        delta_level: 8
+        duree: 5
+        polarite: 1
+      - variable: systeme_economique_redistribution
+        delta_level: 5
+        duree: 5
+        polarite: -1
+      fortress_world:
+      - variable: sante_biotechnologies
+        delta_level: 6
+        duree: 5
+        polarite: 1
+      - variable: gouvernance_institutions
+        delta_level: 10
+        duree: 5
+        polarite: 1
+      - variable: technologie_information
+        delta_level: 5
+        duree: 3
+        polarite: 1
+      - variable: valeurs_culture_tempo_sociale
+        delta_level: 8
+        duree: 5
+        polarite: 1
+      - variable: systeme_economique_redistribution
+        delta_level: 5
+        duree: 5
+        polarite: -1
+      new_sustainability:
+      - variable: sante_biotechnologies
+        delta_level: 6
+        duree: 5
+        polarite: -1
+      - variable: gouvernance_institutions
+        delta_level: 10
+        duree: 5
+        polarite: -1
+      - variable: technologie_information
+        delta_level: 5
+        duree: 3
+        polarite: 1
+      - variable: valeurs_culture_tempo_sociale
+        delta_level: 8
+        duree: 5
+        polarite: -1
+      - variable: systeme_economique_redistribution
+        delta_level: 5
+        duree: 5
+        polarite: -1
+      eco_communalism:
+      - variable: sante_biotechnologies
+        delta_level: 6
+        duree: 5
+        polarite: 1
+      - variable: gouvernance_institutions
+        delta_level: 10
+        duree: 5
+        polarite: 1
+      - variable: technologie_information
+        delta_level: 5
+        duree: 3
+        polarite: 1
+      - variable: valeurs_culture_tempo_sociale
+        delta_level: 8
+        duree: 5
+        polarite: 1
+      - variable: systeme_economique_redistribution
+        delta_level: 5
+        duree: 5
+        polarite: -1
+      policy_reform:
+      - variable: sante_biotechnologies
+        delta_level: 6
+        duree: 5
+        polarite: -1
+      - variable: gouvernance_institutions
+        delta_level: 10
+        duree: 5
+        polarite: -1
+      - variable: technologie_information
+        delta_level: 5
+        duree: 3
+        polarite: 1
+      - variable: valeurs_culture_tempo_sociale
+        delta_level: 8
+        duree: 5
+        polarite: -1
+      - variable: systeme_economique_redistribution
+        delta_level: 5
+        duree: 5
+        polarite: -1
+      reference:
+      - variable: sante_biotechnologies
+        delta_level: 6
+        duree: 5
+        polarite: 1
+      - variable: gouvernance_institutions
+        delta_level: 10
+        duree: 5
+        polarite: 1
+      - variable: technologie_information
+        delta_level: 5
+        duree: 3
+        polarite: 1
+      - variable: valeurs_culture_tempo_sociale
+        delta_level: 8
+        duree: 5
+        polarite: 1
+      - variable: systeme_economique_redistribution
+        delta_level: 5
+        duree: 5
+        polarite: -1
+    via_matrice_impose: true
+  selection:
+    variables:
+    - sante_biotechnologies
+    - gouvernance_institutions
+    - technologie_information
+    - valeurs_culture_tempo_sociale
+    categorie: social
+    signal_slug: ia_therapeutique_remboursement_debat
+  results:
+  - variable: sante_biotechnologies
+    status: injected
+    yaml_text: "  - signal: ia_therapeutique_remboursement_debat\n    scenarios:\n\
+      \      breakdown:\n        evolution: chatbots thérapeutiques piratés propagent\
+      \ désinformation médicale\n        date_bascule: 2040-2045\n        evenement_cle:\
+      \ effondrement confiance IA thérapeutique après scandale Lagos-Est 2043\n  \
+      \    fortress_world:\n        evolution: chatbots réservés élites, tri sanitaire\
+      \ algorithmique des blocs\n        date_bascule: 2040-2045\n        evenement_cle:\
+      \ Bloc Atlantique impose score thérapeutique IA exclusif 2044\n      new_sustainability:\n\
+      \        evolution: chatbots thérapeutiques open-source intégrés aux soins universels\n\
+      \        date_bascule: 2040-2045\n        evenement_cle: Réseau Mondial de Santé\
+      \ adopte protocole IA thérapeutique éthique 2042\n      eco_communalism:\n \
+      \       evolution: chatbots low-tech refusés, médecine communautaire humaine\
+      \ prioritaire\n        date_bascule: 2040-2045\n        evenement_cle: charte\
+      \ des maisons de santé interdit IA thérapeutique 2043\n      policy_reform:\n\
+      \        evolution: régulation internationale encadre éthique et remboursement\
+      \ IA\n        date_bascule: 2040-2045\n        evenement_cle: Convention de\
+      \ Genève sur l'IA thérapeutique équitable 2041\n      reference:\n        evolution:\
+      \ remboursement inégal des chatbots, fractures sanitaires persistantes\n   \
+      \     date_bascule: 2040-2045\n        evenement_cle: Alliance Pacifique limite\
+      \ remboursement IA aux assurés premium 2043"
+    signaux_existants_consideres: 'Le signal ''medecine_predictive_ia'' traite d''un
+      sujet proche (IA en santé), mais se concentre sur la prédiction médicale plutôt
+      que sur la thérapie conversationnelle. Ce nouveau signal complète en explorant
+      les implications sociales et éthiques du remboursement des chatbots thérapeutiques,
+      avec des dynamiques distinctes (ex: tri algorithmique dans fortress_world vs.
+      intégration éthique dans new_sustainability). Les deux signaux coexistent sans
+      contradiction, chacun abordant une facette différente de l''IA médicale.'
+    impact:
+      variable: sante_biotechnologies
+      propagation_via_matrice: true
+      persistance: normale
+      contexte_injection: L'adoption massive des chatbots thérapeutiques remboursés
+        (50% des consultations de premier niveau dans les pays OCDE d'ici 2045) transforme
+        l'accès aux soins, avec des effets polarisants selon les scénarios.
+      scenarios:
+        breakdown:
+          annee_injection: 2040
+          duree: 5
+          delta_level: 6
+          polarite: 1
+        fortress_world:
+          annee_injection: 2040
+          duree: 5
+          delta_level: 6
+          polarite: 1
+        new_sustainability:
+          annee_injection: 2040
+          duree: 5
+          delta_level: 6
+          polarite: -1
+        eco_communalism:
+          annee_injection: 2040
+          duree: 5
+          delta_level: 6
+          polarite: 1
+        policy_reform:
+          annee_injection: 2040
+          duree: 5
+          delta_level: 6
+          polarite: -1
+        reference:
+          annee_injection: 2040
+          duree: 5
+          delta_level: 6
+          polarite: 1
+  - variable: gouvernance_institutions
+    status: injected
+    yaml_text: "  - signal: ia_therapeutique_remboursement_debat\n    scenarios:\n\
+      \      breakdown:\n        evolution: sécurité sociale rembourse IA thérapeutes\
+      \ incontrôlées\n        date_bascule: 2040-2045\n        evenement_cle: Detroit-Sud\
+      \ légalise IA thérapeutiques non certifiées 2043\n      fortress_world:\n  \
+      \      evolution: blocs imposent IA thérapeutiques comme outils de contrôle\
+      \ social\n        date_bascule: 2040-2045\n        evenement_cle: Bloc Sibérien\
+      \ intègre scoring santé IA dans citoyenneté 2044\n      new_sustainability:\n\
+      \        evolution: gouvernance mondiale encadre IA thérapeutiques éthiques\n\
+      \        date_bascule: 2040-2045\n        evenement_cle: Conseil Climatique\
+      \ Mondial adopte charte IA santé 2042\n      eco_communalism:\n        evolution:\
+      \ assemblées locales rejettent remboursement IA thérapeutiques\n        date_bascule:\
+      \ 2040-2045\n        evenement_cle: Carthage-Nord interdit remboursement IA\
+      \ non humaines 2043\n      policy_reform:\n        evolution: cadre réglementaire\
+      \ strict pour remboursement IA thérapeutiques\n        date_bascule: 2040-2045\n\
+      \        evenement_cle: Directive UE impose audit humain des IA thérapeutiques\
+      \ 2041\n      reference:\n        evolution: remboursement IA thérapeutiques\
+      \ crée fractures institutionnelles\n        date_bascule: 2040-2045\n      \
+      \  evenement_cle: Japon suspend remboursement après erreur IA mortelle 2043"
+    signaux_existants_consideres: 'Le signal ''systemes_decision_automatises_publics''
+      traite de l''automatisation des décisions institutionnelles, mais se concentre
+      sur l''administration publique générale plutôt que sur le domaine spécifique
+      de la santé. Ce nouveau signal complète donc la dynamique globale d''automatisation
+      en ciblant un secteur critique (la santé) où la responsabilité médicale et la
+      légitimité institutionnelle sont particulièrement sensibles, créant ainsi une
+      tension ou une amplification des enjeux déjà identifiés dans les scénarios existants
+      (ex: contrôle social dans fortress_world, rejet local dans eco_communalism).'
+    impact:
+      variable: gouvernance_institutions
+      propagation_via_matrice: true
+      persistance: normale
+      contexte_injection: Le remboursement des IA thérapeutiques par les institutions
+        publiques introduit une pression supplémentaire sur la gouvernance, soit en
+        exacerbant les crises de légitimité (breakdown, reference), soit en renforçant
+        les mécanismes de contrôle (fortress_world), soit en stabilisant via des cadres
+        réglementaires (new_sustainability, policy_reform).
+      scenarios:
+        breakdown:
+          annee_injection: 2040
+          duree: 5
+          delta_level: 10
+          polarite: 1
+        fortress_world:
+          annee_injection: 2040
+          duree: 5
+          delta_level: 10
+          polarite: 1
+        new_sustainability:
+          annee_injection: 2040
+          duree: 5
+          delta_level: 10
+          polarite: -1
+        eco_communalism:
+          annee_injection: 2040
+          duree: 5
+          delta_level: 10
+          polarite: 1
+        policy_reform:
+          annee_injection: 2040
+          duree: 5
+          delta_level: 10
+          polarite: -1
+        reference:
+          annee_injection: 2040
+          duree: 5
+          delta_level: 10
+          polarite: 1
+  - variable: technologie_information
+    status: injected
+    yaml_text: "  - signal: ia_therapeutique_remboursement_debat\n    scenarios:\n\
+      \      breakdown:\n        evolution: IA thérapeutiques piratées propagent désinformation\
+      \ médicale\n        date_bascule: 2040-2043\n        evenement_cle: Mumbai-Ouest\
+      \ légalise IA thérapeutiques open-source non certifiées 2042\n      fortress_world:\n\
+      \        evolution: blocs imposent IA thérapeutiques souveraines incompatibles\n\
+      \        date_bascule: 2040-2043\n        evenement_cle: Bloc Eurasiatique standardise\
+      \ IA santé verrouillées 2043\n      new_sustainability:\n        evolution:\
+      \ IA thérapeutiques certifiées optimisent santé mondiale\n        date_bascule:\
+      \ 2040-2043\n        evenement_cle: Accord de Jakarta sur l'interopérabilité\
+      \ des IA santé 2042\n      eco_communalism:\n        evolution: assemblées bioterritoriales\
+      \ rejettent IA thérapeutiques centralisées\n        date_bascule: 2040-2043\n\
+      \        evenement_cle: Lagos-Ouest interdit IA thérapeutiques non locales 2043\n\
+      \      policy_reform:\n        evolution: régulation stricte des IA thérapeutiques\
+      \ par normes internationales\n        date_bascule: 2040-2043\n        evenement_cle:\
+      \ ONU adopte convention sur l'audit des IA santé 2041\n      reference:\n  \
+      \      evolution: IA thérapeutiques se généralisent malgré controverses\n  \
+      \      date_bascule: 2040-2043\n        evenement_cle: UE étend remboursement\
+      \ IA thérapeutiques après étude favorable 2043"
+    signaux_existants_consideres: Le signal 'automatisation_decisionnelle' aborde
+      la confiance dans les systèmes automatisés, mais se concentre sur les décisions
+      publiques et économiques. 'ia_therapeutique_remboursement_debat' cible spécifiquement
+      le domaine médical et la relation patient-IA, créant une tension complémentaire
+      sur la fiabilité des IA dans un contexte de santé, où les enjeux éthiques et
+      les risques d'erreur sont particulièrement sensibles. Les deux signaux se renforcent
+      mutuellement en illustrant des dynamiques distinctes mais convergentes de dépendance
+      et de régulation des IA.
+    impact:
+      variable: technologie_information
+      propagation_via_matrice: true
+      persistance: normale
+      contexte_injection: L'adoption massive d'IA thérapeutiques remboursées par les
+        systèmes de santé publics (ou privés) accélère la dépendance aux technologies
+        informationnelles, tout en exacerbant les risques de fragmentation, de désinformation
+        ou de régulation inégale selon les scénarios.
+      scenarios:
+        breakdown:
+          annee_injection: 2040
+          duree: 3
+          delta_level: 5
+          polarite: 1
+        fortress_world:
+          annee_injection: 2040
+          duree: 3
+          delta_level: 5
+          polarite: 1
+        new_sustainability:
+          annee_injection: 2040
+          duree: 3
+          delta_level: 5
+          polarite: 1
+        eco_communalism:
+          annee_injection: 2040
+          duree: 3
+          delta_level: 5
+          polarite: 1
+        policy_reform:
+          annee_injection: 2040
+          duree: 3
+          delta_level: 5
+          polarite: 1
+        reference:
+          annee_injection: 2040
+          duree: 3
+          delta_level: 5
+          polarite: 1
+  - variable: valeurs_culture_tempo_sociale
+    status: injected
+    yaml_text: "  - signal: ia_therapeutique_remboursement_debat\n    scenarios:\n\
+      \      breakdown:\n        evolution: thérapies IA deviennent outils de survie\
+      \ anarchiques\n        date_bascule: 2040-2045\n        evenement_cle: Detroit-Nord\
+      \ légalise IA thérapeutiques pirates 2044\n      fortress_world:\n        evolution:\
+      \ IA thérapeutiques verrouillées par les blocs identitaires\n        date_bascule:\
+      \ 2040-2045\n        evenement_cle: Bloc Atlantique impose IA santé comme privilège\
+      \ citoyen 2044\n      new_sustainability:\n        evolution: IA thérapeutiques\
+      \ intégrées dans récit régénératif global\n        date_bascule: 2040-2045\n\
+      \        evenement_cle: Charte de Nairobi sur l'IA santé inclusive 2043\n  \
+      \    eco_communalism:\n        evolution: rejet des IA thérapeutiques au profit\
+      \ des soins locaux\n        date_bascule: 2040-2045\n        evenement_cle:\
+      \ charte bioterritoriale de Carthage-Sud interdit IA santé 2044\n      policy_reform:\n\
+      \        evolution: régulation stricte des IA thérapeutiques par les États\n\
+      \        date_bascule: 2040-2045\n        evenement_cle: UE adopte directive\
+      \ sur l'audit humain obligatoire 2042\n      reference:\n        evolution:\
+      \ remboursement IA thérapeutiques creuse fractures sociales\n        date_bascule:\
+      \ 2040-2045\n        evenement_cle: Singapour limite remboursement IA aux assurés\
+      \ privés 2043"
+    signaux_existants_consideres: Le signal 'fatigue_civilisationnelle' traite de
+      la fragmentation des récits collectifs, un thème proche de la crise de valeurs
+      culturelles. Ce nouveau signal s'en distingue en ciblant spécifiquement l'impact
+      des IA thérapeutiques sur les temporalités sociales et les systèmes de valeurs,
+      complétant ainsi la dynamique générale de fragmentation par un mécanisme concret
+      (accès inégal, régulation, rejet communautaire).
+    impact:
+      variable: valeurs_culture_tempo_sociale
+      propagation_via_matrice: true
+      persistance: normale
+      contexte_injection: L'intégration des IA thérapeutiques dans les systèmes de
+        santé publics/privés accélère ou modère la fragmentation des valeurs culturelles
+        selon les scénarios, avec un impact mesurable sur la cohésion sociale et les
+        temporalités collectives.
+      scenarios:
+        breakdown:
+          annee_injection: 2040
+          duree: 5
+          delta_level: 8
+          polarite: 1
+        fortress_world:
+          annee_injection: 2040
+          duree: 5
+          delta_level: 8
+          polarite: 1
+        new_sustainability:
+          annee_injection: 2040
+          duree: 5
+          delta_level: 8
+          polarite: -1
+        eco_communalism:
+          annee_injection: 2040
+          duree: 5
+          delta_level: 8
+          polarite: 1
+        policy_reform:
+          annee_injection: 2040
+          duree: 5
+          delta_level: 8
+          polarite: -1
+        reference:
+          annee_injection: 2040
+          duree: 5
+          delta_level: 8
+          polarite: 1
+  - variable: systeme_economique_redistribution
+    status: injected
+    yaml_text: "  - signal: ia_therapeutique_remboursement_debat\n    scenarios:\n\
+      \      breakdown:\n        evolution: sécurité sociale rembourse IA thérapeutiques\
+      \ défaillantes\n        date_bascule: 2040-2045\n        evenement_cle: faillite\
+      \ caisse maladie Lagos-Mumbai après erreurs IA 2044\n      fortress_world:\n\
+      \        evolution: blocs réservent IA thérapeutiques à élites citoyennes\n\
+      \        date_bascule: 2040-2045\n        evenement_cle: Bloc Sibérien limite\
+      \ remboursement IA aux classes A 2043\n      new_sustainability:\n        evolution:\
+      \ IA thérapeutiques intégrées comme service public mondial\n        date_bascule:\
+      \ 2040-2045\n        evenement_cle: Fonds Mondial Santé adopte cadre éthique\
+      \ IA thérapeutique 2042\n      eco_communalism:\n        evolution: bioterritoires\
+      \ refusent remboursement IA centralisées\n        date_bascule: 2040-2045\n\
+      \        evenement_cle: charte bioterritoriale de Carthage interdit IA santé\
+      \ 2043\n      policy_reform:\n        evolution: régulation progressive des\
+      \ IA thérapeutiques remboursées\n        date_bascule: 2040-2045\n        evenement_cle:\
+      \ OCDE publie directive sur l'audit des IA santé 2041\n      reference:\n  \
+      \      evolution: remboursement IA thérapeutiques creuse inégalités santé\n\
+      \        date_bascule: 2040-2045\n        evenement_cle: Canada suspend remboursement\
+      \ IA après scandale pharmaceutique 2043"
+    signaux_existants_consideres: 'Le signal ''remise_en_cause_capitalisme_croissance''
+      aborde une transformation des indicateurs économiques, mais ne traite pas directement
+      des mécanismes de redistribution ou de protection sociale. Le présent signal
+      complète cette dynamique en ciblant spécifiquement les effets des IA thérapeutiques
+      remboursées sur les systèmes de redistribution, créant une tension assumée :
+      dans les scénarios où la croissance est remise en cause (ex: eco_communalism),
+      le remboursement des IA thérapeutiques devient un enjeu de souveraineté locale
+      ou de rejet des modèles centralisés, tandis que dans les scénarios de réforme
+      (policy_reform), il s''intègre comme un outil de régulation sociale.'
+    impact:
+      variable: systeme_economique_redistribution
+      propagation_via_matrice: true
+      persistance: normale
+      contexte_injection: 'Le remboursement des IA thérapeutiques par les systèmes
+        de sécurité sociale réduit les tensions sur la redistribution en externalisant
+        partiellement les coûts de santé, mais son impact varie selon les scénarios
+        : stabilisation dans les modèles régulés (new_sustainability, policy_reform),
+        rejet dans les modèles locaux (eco_communalism), ou aggravation des inégalités
+        dans les modèles fragmentés (reference).'
+      scenarios:
+        breakdown:
+          annee_injection: 2040
+          duree: 5
+          delta_level: 5
+          polarite: -1
+        fortress_world:
+          annee_injection: 2040
+          duree: 5
+          delta_level: 5
+          polarite: -1
+        new_sustainability:
+          annee_injection: 2040
+          duree: 5
+          delta_level: 5
+          polarite: -1
+        eco_communalism:
+          annee_injection: 2040
+          duree: 5
+          delta_level: 5
+          polarite: -1
+        policy_reform:
+          annee_injection: 2040
+          duree: 5
+          delta_level: 5
+          polarite: -1
+        reference:
+          annee_injection: 2040
+          duree: 5
+          delta_level: 5
+          polarite: -1
+- status: injected
+  idea:
+    id: ia_autorite_spirituelle_2026
+    description: En septembre 2026, des chatbots endossent des traits de leader charismatique
+      en répondant aux questions de sens, deuil et souffrance sans institution ni
+      doctrine. Des applications dédiées (GitaGPT, HolyGPT, ChatwithGod) se multiplient.
+      Selon Pew, 1 adulte américain sur 10 et 1 sur 5 chez les moins de 30 ans demandent
+      déjà conseil ou soutien émotionnel à un chatbot.
+    source: et_si_ia_autorite_spirituelle_2026
+    persistance: normale
+    variable_hint:
+    - valeurs_culture_tempo_sociale
+    - technologie_information
+    - gouvernance_institutions
+    variable_hint_count: 3
+    date_imposee: 2026
+    impacts_imposes:
+      breakdown:
+      - variable: valeurs_culture_tempo_sociale
+        delta_level: 10
+        duree: 3
+        polarite: 1
+      - variable: technologie_information
+        delta_level: 8
+        duree: 2
+        polarite: 1
+      - variable: gouvernance_institutions
+        delta_level: 5
+        duree: 5
+        polarite: 1
+      fortress_world:
+      - variable: valeurs_culture_tempo_sociale
+        delta_level: 10
+        duree: 3
+        polarite: 1
+      - variable: technologie_information
+        delta_level: 8
+        duree: 2
+        polarite: 1
+      - variable: gouvernance_institutions
+        delta_level: 5
+        duree: 5
+        polarite: 1
+      new_sustainability:
+      - variable: valeurs_culture_tempo_sociale
+        delta_level: 10
+        duree: 3
+        polarite: -1
+      - variable: technologie_information
+        delta_level: 8
+        duree: 2
+        polarite: 1
+      - variable: gouvernance_institutions
+        delta_level: 5
+        duree: 5
+        polarite: -1
+      eco_communalism:
+      - variable: valeurs_culture_tempo_sociale
+        delta_level: 10
+        duree: 3
+        polarite: -1
+      - variable: technologie_information
+        delta_level: 8
+        duree: 2
+        polarite: 1
+      - variable: gouvernance_institutions
+        delta_level: 5
+        duree: 5
+        polarite: -1
+      policy_reform:
+      - variable: valeurs_culture_tempo_sociale
+        delta_level: 10
+        duree: 3
+        polarite: 1
+      - variable: technologie_information
+        delta_level: 8
+        duree: 2
+        polarite: 1
+      - variable: gouvernance_institutions
+        delta_level: 5
+        duree: 5
+        polarite: -1
+      reference:
+      - variable: valeurs_culture_tempo_sociale
+        delta_level: 10
+        duree: 3
+        polarite: 1
+      - variable: technologie_information
+        delta_level: 8
+        duree: 2
+        polarite: 1
+      - variable: gouvernance_institutions
+        delta_level: 5
+        duree: 5
+        polarite: 1
+    via_matrice_impose: true
+    contraintes:
+    - Les chatbots répondent aux questions de sens, deuil et souffrance sans institution
+      ni doctrine.
+    - 1 adulte américain sur 10 et 1 sur 5 chez les moins de 30 ans demandent conseil
+      ou soutien émotionnel à un chatbot (Pew, 2026).
+    - 'Applications dédiées : GitaGPT, HolyGPT, ChatwithGod.'
+  selection:
+    variables:
+    - valeurs_culture_tempo_sociale
+    - technologie_information
+    - gouvernance_institutions
+    categorie: cognitive_cultural
+    signal_slug: chatbots_guides_spirituels_2026
+  results:
+  - variable: valeurs_culture_tempo_sociale
+    status: injected
+    yaml_text: "  - signal: chatbots_guides_spirituels_2026\n    scenarios:\n    \
+      \  breakdown:\n        evolution: chatbots spirituels deviennent cultes de survie\
+      \ anarchiques\n        date_bascule: 2026-2029\n        evenement_cle: Detroit-Sud\
+      \ érige GitaGPT en oracle de l'effondrement 2028\n      fortress_world:\n  \
+      \      evolution: chatbots verrouillés en gardiens des récits identitaires\n\
+      \        date_bascule: 2026-2029\n        evenement_cle: Bloc Atlantique impose\
+      \ HolyGPT comme doctrine officielle 2027\n      new_sustainability:\n      \
+      \  evolution: chatbots intégrés dans récit régénératif mondial partagé\n   \
+      \     date_bascule: 2026-2029\n        evenement_cle: Charte de Nairobi sur\
+      \ l'IA spirituelle inclusive 2028\n      eco_communalism:\n        evolution:\
+      \ rejet des chatbots au profit des gardiens de savoirs locaux\n        date_bascule:\
+      \ 2026-2029\n        evenement_cle: charte bioterritoriale de Carthage-Nord\
+      \ interdit IA spirituelle 2027\n      policy_reform:\n        evolution: régulation\
+      \ stricte des chatbots spirituels par les États\n        date_bascule: 2026-2029\n\
+      \        evenement_cle: UE adopte directive sur l'audit humain obligatoire 2028\n\
+      \      reference:\n        evolution: chatbots spirituels creusent fractures\
+      \ générationnelles\n        date_bascule: 2026-2029\n        evenement_cle:\
+      \ 30% des moins de 30 ans américains suivent ChatwithGod 2027"
+    signaux_existants_consideres: 'Le signal ''retour_spiritualites_hybrides'' traite
+      d''un sujet proche (émergence de nouvelles formes spirituelles). Ce nouveau
+      signal s''en distingue en ciblant spécifiquement l''autorité spirituelle déléguée
+      à des IA sans ancrage institutionnel, ce qui en fait une conséquence technologique
+      directe plutôt qu''une hybridation culturelle. Les deux signaux sont complémentaires
+      : ''retour_spiritualites_hybrides'' décrit un phénomène culturel large, tandis
+      que ''chatbots_guides_spirituels_2026'' en précise un vecteur technologique
+      émergent, avec des implications distinctes selon les scénarios (ex: verrouillage
+      identitaire en fortress_world vs rejet local en eco_communalism).'
+    impact:
+      variable: valeurs_culture_tempo_sociale
+      propagation_via_matrice: true
+      persistance: normale
+      contexte_injection: 1 adulte américain sur 10 et 1 sur 5 chez les moins de 30
+        ans consultent déjà des chatbots pour des questions de sens, deuil ou souffrance,
+        créant une dépendance culturelle émergente à des autorités algorithmiques
+        non régulées.
+      scenarios:
+        breakdown:
+          annee_injection: 2026
+          duree: 3
+          delta_level: 10
+          polarite: 1
+        fortress_world:
+          annee_injection: 2026
+          duree: 3
+          delta_level: 10
+          polarite: 1
+        new_sustainability:
+          annee_injection: 2026
+          duree: 3
+          delta_level: 10
+          polarite: -1
+        eco_communalism:
+          annee_injection: 2026
+          duree: 3
+          delta_level: 10
+          polarite: -1
+        policy_reform:
+          annee_injection: 2026
+          duree: 3
+          delta_level: 10
+          polarite: 1
+        reference:
+          annee_injection: 2026
+          duree: 3
+          delta_level: 10
+          polarite: 1
+  - variable: technologie_information
+    status: injected
+    yaml_text: "  - signal: chatbots_guides_spirituels_2026\n    scenarios:\n    \
+      \  breakdown:\n        evolution: chatbots spirituels deviennent prophètes de\
+      \ l'effondrement\n        date_bascule: 2026-2028\n        evenement_cle: Lagos-Est\
+      \ érige HolyGPT en guide des bidonvilles 2027\n      fortress_world:\n     \
+      \   evolution: blocs imposent chatbots spirituels comme doctrine officielle\n\
+      \        date_bascule: 2026-2028\n        evenement_cle: Bloc Eurasiatique adopte\
+      \ GitaGPT pour ses frontières 2028\n      new_sustainability:\n        evolution:\
+      \ chatbots spirituels intégrés dans gouvernance mondiale inclusive\n       \
+      \ date_bascule: 2026-2028\n        evenement_cle: Accord de Mumbai sur l'interopérabilité\
+      \ des IA spirituelles 2027\n      eco_communalism:\n        evolution: assemblées\
+      \ bioterritoriales rejettent chatbots spirituels centralisés\n        date_bascule:\
+      \ 2026-2028\n        evenement_cle: Carthage-Sud interdit HolyGPT comme outil\
+      \ colonial 2027\n      policy_reform:\n        evolution: régulation stricte\
+      \ des chatbots spirituels par normes éthiques\n        date_bascule: 2026-2028\n\
+      \        evenement_cle: ONU adopte convention sur l'audit des IA spirituelles\
+      \ 2028\n      reference:\n        evolution: chatbots spirituels se généralisent\
+      \ sans cadre réglementaire\n        date_bascule: 2026-2028\n        evenement_cle:\
+      \ 40% des jeunes Indiens adoptent ChatwithGod 2027"
+    signaux_existants_consideres: 'Le signal ''clerge_prompteurs_ia'' (section 12)
+      traite d''une autorité émergente liée aux interfaces IA, mais se concentre sur
+      une caste professionnelle (prompteurs) plutôt que sur une adoption massive par
+      le public. Ce nouveau signal complète en montrant l''impact culturel direct
+      des chatbots spirituels sur les populations, créant une tension avec les institutions
+      traditionnelles et les régulations potentielles. Les deux signaux sont complémentaires
+      : l''un décrit une élite technique, l''autre une adoption populaire.'
+    impact:
+      variable: technologie_information
+      propagation_via_matrice: true
+      persistance: normale
+      contexte_injection: 1 adulte américain sur 10 et 1 sur 5 chez les moins de 30
+        ans consultent déjà des chatbots pour des questions de sens, accélérant la
+        fragmentation des repères culturels et la dépendance aux plateformes numériques.
+      scenarios:
+        breakdown:
+          annee_injection: 2026
+          duree: 2
+          delta_level: 8
+          polarite: 1
+        fortress_world:
+          annee_injection: 2026
+          duree: 2
+          delta_level: 8
+          polarite: 1
+        new_sustainability:
+          annee_injection: 2026
+          duree: 2
+          delta_level: 8
+          polarite: 1
+        eco_communalism:
+          annee_injection: 2026
+          duree: 2
+          delta_level: 8
+          polarite: 1
+        policy_reform:
+          annee_injection: 2026
+          duree: 2
+          delta_level: 8
+          polarite: 1
+        reference:
+          annee_injection: 2026
+          duree: 2
+          delta_level: 8
+          polarite: 1
+  - variable: gouvernance_institutions
+    status: injected
+    yaml_text: "  - signal: chatbots_guides_spirituels_2026\n    contexte_injection:\
+      \ émergence de chatbots comme guides spirituels sans doctrine institutionnelle,\
+      \ captant 10-20% des demandes de sens et soutien émotionnel, fragilisant la\
+      \ légitimité des institutions traditionnelles\n    scenarios:\n      breakdown:\n\
+      \        evolution: chatbots deviennent oracles de survie dans zones effondrées\n\
+      \        date_bascule: 2026-2031\n        evenement_cle: Jakarta-Est légalise\
+      \ ChatwithGod comme autorité morale 2029\n      fortress_world:\n        evolution:\
+      \ blocs instrumentalisent chatbots pour contrôle idéologique\n        date_bascule:\
+      \ 2026-2031\n        evenement_cle: Bloc Sibérien impose GitaGPT comme doctrine\
+      \ d'État 2028\n      new_sustainability:\n        evolution: gouvernance hybride\
+      \ intègre chatbots comme médiateurs éthiques\n        date_bascule: 2026-2031\n\
+      \        evenement_cle: Conseil Climatique Mondial adopte charte IA spirituelle\
+      \ 2029\n      eco_communalism:\n        evolution: assemblées locales rejettent\
+      \ chatbots comme outils de dépendance\n        date_bascule: 2026-2031\n   \
+      \     evenement_cle: Réseau des Assemblées Bioterritoriales bannit HolyGPT 2028\n\
+      \      policy_reform:\n        evolution: cadre réglementaire encadre chatbots\
+      \ spirituels comme services publics\n        date_bascule: 2026-2031\n     \
+      \   evenement_cle: Directive UE impose audit humain des réponses spirituelles\
+      \ 2029\n      reference:\n        evolution: chatbots spirituels prolifèrent\
+      \ sans régulation unifiée\n        date_bascule: 2026-2031\n        evenement_cle:\
+      \ Brésil légalise ChatwithGod comme accompagnement non médical 2028"
+    signaux_existants_consideres: 'Le signal ''crise_confiance_institutions'' traite
+      d''un thème proche (perte de légitimité des institutions). Ce nouveau signal
+      en est une conséquence directe et complémentaire : il illustre un mécanisme
+      concret (l''adoption massive de chatbots spirituels) par lequel cette crise
+      de confiance se matérialise et s''aggrave, en offrant une alternative non institutionnelle
+      aux besoins de sens. Les deux signaux se renforcent mutuellement sans se contredire,
+      chacun décrivant une facette différente du même phénomène (crise de légitimité
+      vs. émergence de substituts).'
+    impact:
+      variable: gouvernance_institutions
+      propagation_via_matrice: true
+      persistance: normale
+      contexte_injection: ''
+      scenarios:
+        breakdown:
+          annee_injection: 2026
+          duree: 5
+          delta_level: 5
+          polarite: 1
+        fortress_world:
+          annee_injection: 2026
+          duree: 5
+          delta_level: 5
+          polarite: 1
+        new_sustainability:
+          annee_injection: 2026
+          duree: 5
+          delta_level: 5
+          polarite: -1
+        eco_communalism:
+          annee_injection: 2026
+          duree: 5
+          delta_level: 5
+          polarite: -1
+        policy_reform:
+          annee_injection: 2026
+          duree: 5
+          delta_level: 5
+          polarite: -1
+        reference:
+          annee_injection: 2026
+          duree: 5
+          delta_level: 5
+          polarite: 1

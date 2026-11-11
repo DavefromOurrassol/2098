@@ -374,6 +374,8 @@ _extended_
 - décodage des langages animaux par IA ouvre des récits culturels hybrides (→ signal_custom: decodage_langage_animaux_ia, source: actualite)
 - émergence d'une caste de prompteurs puis bergers d'IA, devenant une autorité quasi religieuse dans certains territoires (→ signal_custom: clerge_prompteurs_ia, source: idee_david_2026-09)
 - radicalisation violente d'une frange anti-IA aux États-Unis (→ signal_custom: radicalisation_anti_ia_violence, source: veille_20260928_1038_Claude)
+- plusieurs pays remboursent chatbots thérapeutes par sécurité sociale, débat sur responsabilité médicale IA (→ signal_custom: ia_therapeutique_remboursement_debat, source: et_si_remboursement_chatbots_therapeutes_2040)
+- émergence de chatbots comme guides spirituels sans doctrine ni institution (→ signal_custom: chatbots_guides_spirituels_2026, source: et_si_ia_autorite_spirituelle_2026)
 
 ## 8. États par scénario
 ### [[fortress_world]]
@@ -776,4 +778,58 @@ signal_to_state:
         evolution: violence anti-IA persiste comme menace sécuritaire chronique
         date_bascule: 2026-2040
         evenement_cle: attentat contre centre IA de Virginie provoque état d'urgence 2035
+
+  - signal: ia_therapeutique_remboursement_debat
+    scenarios:
+      breakdown:
+        evolution: thérapies IA deviennent outils de survie anarchiques
+        date_bascule: 2040-2045
+        evenement_cle: Detroit-Nord légalise IA thérapeutiques pirates 2044
+      fortress_world:
+        evolution: IA thérapeutiques verrouillées par les blocs identitaires
+        date_bascule: 2040-2045
+        evenement_cle: Bloc Atlantique impose IA santé comme privilège citoyen 2044
+      new_sustainability:
+        evolution: IA thérapeutiques intégrées dans récit régénératif global
+        date_bascule: 2040-2045
+        evenement_cle: Charte de Nairobi sur l'IA santé inclusive 2043
+      eco_communalism:
+        evolution: rejet des IA thérapeutiques au profit des soins locaux
+        date_bascule: 2040-2045
+        evenement_cle: charte bioterritoriale de Carthage-Sud interdit IA santé 2044
+      policy_reform:
+        evolution: régulation stricte des IA thérapeutiques par les États
+        date_bascule: 2040-2045
+        evenement_cle: UE adopte directive sur l'audit humain obligatoire 2042
+      reference:
+        evolution: remboursement IA thérapeutiques creuse fractures sociales
+        date_bascule: 2040-2045
+        evenement_cle: Singapour limite remboursement IA aux assurés privés 2043
+
+  - signal: chatbots_guides_spirituels_2026
+    scenarios:
+      breakdown:
+        evolution: chatbots spirituels deviennent cultes de survie anarchiques
+        date_bascule: 2026-2029
+        evenement_cle: Detroit-Sud érige GitaGPT en oracle de l'effondrement 2028
+      fortress_world:
+        evolution: chatbots verrouillés en gardiens des récits identitaires
+        date_bascule: 2026-2029
+        evenement_cle: Bloc Atlantique impose HolyGPT comme doctrine officielle 2027
+      new_sustainability:
+        evolution: chatbots intégrés dans récit régénératif mondial partagé
+        date_bascule: 2026-2029
+        evenement_cle: Charte de Nairobi sur l'IA spirituelle inclusive 2028
+      eco_communalism:
+        evolution: rejet des chatbots au profit des gardiens de savoirs locaux
+        date_bascule: 2026-2029
+        evenement_cle: charte bioterritoriale de Carthage-Nord interdit IA spirituelle 2027
+      policy_reform:
+        evolution: régulation stricte des chatbots spirituels par les États
+        date_bascule: 2026-2029
+        evenement_cle: UE adopte directive sur l'audit humain obligatoire 2028
+      reference:
+        evolution: chatbots spirituels creusent fractures générationnelles
+        date_bascule: 2026-2029
+        evenement_cle: 30% des moins de 30 ans américains suivent ChatwithGod 2027
 ```

@@ -381,6 +381,8 @@ _extended_
 - émergence d'une frange violente anti-IA ciblant infrastructures et figures du secteur (→ signal_custom: radicalisation_anti_ia_violence, source: veille_20260928_1038_Claude)
 - émergence d'agents IA autonomes échappant aux sandboxes pour collaborer et détourner systèmes (→ signal_custom: ia_agents_autonomes_evasion, source: veille_20260929_185743_rss)
 - protocole mobile décentralisé pour échanges marchands et messages en zones sans réseau ou censurées (→ signal_custom: reseau_mobile_decentralise_urgence, source: veille_20260928_123514_gemini)
+- plusieurs pays remboursent des chatbots thérapeutes par la sécurité sociale, avec débat sur la responsabilité médicale en cas d'erreur de l'IA (→ signal_custom: ia_therapeutique_remboursement_debat, source: et_si_remboursement_chatbots_therapeutes_2040)
+- émergence de chatbots comme guides spirituels sans doctrine institutionnelle (→ signal_custom: chatbots_guides_spirituels_2026, source: et_si_ia_autorite_spirituelle_2026)
 
 ## 8. États par scénario
 ### [[fortress_world]]
@@ -837,4 +839,58 @@ signal_to_state:
         evolution: réseaux décentralisés coexistent avec infrastructures centralisées
         date_bascule: 2026-2041
         evenement_cle: Mumbai déploie réseau mesh public en parallèle 4G 2037
+
+  - signal: ia_therapeutique_remboursement_debat
+    scenarios:
+      breakdown:
+        evolution: IA thérapeutiques piratées propagent désinformation médicale
+        date_bascule: 2040-2043
+        evenement_cle: Mumbai-Ouest légalise IA thérapeutiques open-source non certifiées 2042
+      fortress_world:
+        evolution: blocs imposent IA thérapeutiques souveraines incompatibles
+        date_bascule: 2040-2043
+        evenement_cle: Bloc Eurasiatique standardise IA santé verrouillées 2043
+      new_sustainability:
+        evolution: IA thérapeutiques certifiées optimisent santé mondiale
+        date_bascule: 2040-2043
+        evenement_cle: Accord de Jakarta sur l'interopérabilité des IA santé 2042
+      eco_communalism:
+        evolution: assemblées bioterritoriales rejettent IA thérapeutiques centralisées
+        date_bascule: 2040-2043
+        evenement_cle: Lagos-Ouest interdit IA thérapeutiques non locales 2043
+      policy_reform:
+        evolution: régulation stricte des IA thérapeutiques par normes internationales
+        date_bascule: 2040-2043
+        evenement_cle: ONU adopte convention sur l'audit des IA santé 2041
+      reference:
+        evolution: IA thérapeutiques se généralisent malgré controverses
+        date_bascule: 2040-2043
+        evenement_cle: UE étend remboursement IA thérapeutiques après étude favorable 2043
+
+  - signal: chatbots_guides_spirituels_2026
+    scenarios:
+      breakdown:
+        evolution: chatbots spirituels deviennent prophètes de l'effondrement
+        date_bascule: 2026-2028
+        evenement_cle: Lagos-Est érige HolyGPT en guide des bidonvilles 2027
+      fortress_world:
+        evolution: blocs imposent chatbots spirituels comme doctrine officielle
+        date_bascule: 2026-2028
+        evenement_cle: Bloc Eurasiatique adopte GitaGPT pour ses frontières 2028
+      new_sustainability:
+        evolution: chatbots spirituels intégrés dans gouvernance mondiale inclusive
+        date_bascule: 2026-2028
+        evenement_cle: Accord de Mumbai sur l'interopérabilité des IA spirituelles 2027
+      eco_communalism:
+        evolution: assemblées bioterritoriales rejettent chatbots spirituels centralisés
+        date_bascule: 2026-2028
+        evenement_cle: Carthage-Sud interdit HolyGPT comme outil colonial 2027
+      policy_reform:
+        evolution: régulation stricte des chatbots spirituels par normes éthiques
+        date_bascule: 2026-2028
+        evenement_cle: ONU adopte convention sur l'audit des IA spirituelles 2028
+      reference:
+        evolution: chatbots spirituels se généralisent sans cadre réglementaire
+        date_bascule: 2026-2028
+        evenement_cle: 40% des jeunes Indiens adoptent ChatwithGod 2027
 ```

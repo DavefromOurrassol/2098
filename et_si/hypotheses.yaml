@@ -506,3 +506,101 @@ hypotheses:
         - pays: Iran
           action: absorber
           zone: arc_eurasien_central
+
+  - id: remboursement_chatbots_therapeutes_2040
+    nom: Remboursement des chatbots thérapeutes par la sécurité sociale
+    type: signal
+    description: Plusieurs pays commencent à rembourser des chatbots thérapeutes par la sécurité
+      sociale, avec un débat sur la responsabilité médicale en cas d’erreur de l’IA.
+    date: 2040
+    mode: choc
+    persistance: normale
+    carte: non
+    scenarios: tous
+    contraintes:
+    - Remboursement des chatbots thérapeutes par la sécurité sociale
+    - Débat sur la responsabilité médicale en cas d’erreur de l’IA
+    impacts:
+    - variable: sante_biotechnologies
+      delta_level: 6
+      polarite:
+        breakdown: 1
+        fortress_world: 1
+        new_sustainability: -1
+        eco_communalism: 1
+        policy_reform: -1
+        reference: 1
+      duree: 5
+    - variable: gouvernance_institutions
+      delta_level: 10
+      polarite:
+        breakdown: 1
+        fortress_world: 1
+        new_sustainability: -1
+        eco_communalism: 1
+        policy_reform: -1
+        reference: 1
+      duree: 5
+    - variable: technologie_information
+      delta_level: 5
+      polarite: 1
+      duree: 3
+    - variable: valeurs_culture_tempo_sociale
+      delta_level: 8
+      polarite:
+        breakdown: 1
+        fortress_world: 1
+        new_sustainability: -1
+        eco_communalism: 1
+        policy_reform: -1
+        reference: 1
+      duree: 5
+    - variable: systeme_economique_redistribution
+      delta_level: 5
+      polarite: -1
+      duree: 5
+
+  - id: ia_autorite_spirituelle_2026
+    nom: L'IA comme autorité spirituelle émergente
+    type: signal
+    description: En septembre 2026, des chatbots endossent des traits de leader charismatique
+      en répondant aux questions de sens, deuil et souffrance sans institution ni doctrine.
+      Des applications dédiées (GitaGPT, HolyGPT, ChatwithGod) se multiplient. Selon Pew, 1
+      adulte américain sur 10 et 1 sur 5 chez les moins de 30 ans demandent déjà conseil ou
+      soutien émotionnel à un chatbot.
+    date: 2026
+    mode: choc
+    persistance: normale
+    carte: non
+    scenarios: tous
+    contraintes:
+    - Les chatbots répondent aux questions de sens, deuil et souffrance sans institution ni
+      doctrine.
+    - 1 adulte américain sur 10 et 1 sur 5 chez les moins de 30 ans demandent conseil ou soutien
+      émotionnel à un chatbot (Pew, 2026).
+    - 'Applications dédiées : GitaGPT, HolyGPT, ChatwithGod.'
+    impacts:
+    - variable: valeurs_culture_tempo_sociale
+      delta_level: 10
+      polarite:
+        breakdown: 1
+        fortress_world: 1
+        new_sustainability: -1
+        eco_communalism: -1
+        policy_reform: 1
+        reference: 1
+      duree: 3
+    - variable: technologie_information
+      delta_level: 8
+      polarite: 1
+      duree: 2
+    - variable: gouvernance_institutions
+      delta_level: 5
+      polarite:
+        breakdown: 1
+        fortress_world: 1
+        new_sustainability: -1
+        eco_communalism: -1
+        policy_reform: -1
+        reference: 1
+      duree: 5

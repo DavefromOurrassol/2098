@@ -44,6 +44,11 @@
 #                         bascule ne peut jamais commencer avant l'année EN
 #                         COURS : un signal apparu en 2025 bascule au plus
 #                         tôt l'année actuelle.
+#   impacts_imposes     : NE PAS REMPLIR À LA MAIN (posé par « et si ? »). Forces et sens
+#                         imposés : {scénario: [{variable, delta_level 1-10, polarite 1|-1,
+#                         duree}]}, les 6 scénarios, mêmes variables, une force par variable.
+#   date_imposee        : idem. Année de début de la fenêtre, la même dans les 6 scénarios
+#                         (fin = début + duree). via_matrice_impose : true|false.
 #   reprise             : NE PAS REMPLIR À LA MAIN. Présent dans l'entrée
 #                         'idee_a_remettre_en_queue' de needs_review.yaml
 #                         après une injection PARTIELLE : recopier cette

@@ -1,0 +1,68 @@
+{
+ "id": "ia_autorite_spirituelle_2026",
+ "date_simulation": "2026-11-07T12:10",
+ "version": "v8.25",
+ "empreinte": "eebe231f6e6a940a",
+ "annee": 2026.0,
+ "mode": "choc",
+ "contraintes": [
+  "Les chatbots répondent aux questions de sens, deuil et souffrance sans institution ni doctrine.",
+  "1 adulte américain sur 10 et 1 sur 5 chez les moins de 30 ans demandent conseil ou soutien émotionnel à un chatbot (Pew, 2026).",
+  "Applications dédiées : GitaGPT, HolyGPT, ChatwithGod."
+ ],
+ "scenarios_hypothese": [
+  "breakdown",
+  "fortress_world",
+  "new_sustainability",
+  "eco_communalism",
+  "policy_reform",
+  "reference"
+ ],
+ "scenarios": [
+  "breakdown",
+  "fortress_world",
+  "new_sustainability",
+  "eco_communalism",
+  "policy_reform",
+  "reference"
+ ],
+ "complet": true,
+ "par_scenario": {
+  "breakdown": {
+   "lecture": null,
+   "passe": null,
+   "erreurs": [],
+   "carte": []
+  },
+  "fortress_world": {
+   "lecture": null,
+   "passe": null,
+   "erreurs": [],
+   "carte": []
+  },
+  "new_sustainability": {
+   "lecture": null,
+   "passe": null,
+   "erreurs": [],
+   "carte": []
+  },
+  "eco_communalism": {
+   "lecture": null,
+   "passe": null,
+   "erreurs": [],
+   "carte": []
+  },
+  "policy_reform": {
+   "lecture": null,
+   "passe": null,
+   "erreurs": [],
+   "carte": []
+  },
+  "reference": {
+   "lecture": null,
+   "passe": null,
+   "erreurs": [],
+   "carte": []
+  }
+ }
+}

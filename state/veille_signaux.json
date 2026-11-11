@@ -1711,9 +1711,12 @@
           "score": 3.67,
           "id": "20260928_1038_20",
           "slug_propose": "l_ia_commence_a_occuper_la_place_d_une_autorite_spirituelle",
-          "statut": "a_trier",
+          "statut": "en_hypothese",
           "lot": "20260928_1038",
-          "proche_de_signal_injecte": []
+          "proche_de_signal_injecte": [],
+          "date_statut": "2026-11-07T12:06:24",
+          "hypothese_id": "ia_autorite_spirituelle_2026",
+          "hypothese_type": "signal"
         },
         {
           "titre": "L'écart de performance entre IA open source et modèles fermés tombe à 3 %",

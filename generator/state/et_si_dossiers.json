@@ -2167,5 +2167,314 @@
     "via_matrice_impose": true
    }
   }
+ },
+ "ia_autorite_spirituelle_2026": {
+  "simulation": {
+   "date": "2026-11-07T12:10",
+   "version": "v8.25",
+   "empreinte": "eebe231f6e6a940a",
+   "scenarios": [
+    "breakdown",
+    "fortress_world",
+    "new_sustainability",
+    "eco_communalism",
+    "policy_reform",
+    "reference"
+   ],
+   "complet": true,
+   "passe": false,
+   "rapport": "documentation/need_action/et_si_ia_autorite_spirituelle_2026.md",
+   "entree": {
+    "id": "ia_autorite_spirituelle_2026",
+    "description": "En septembre 2026, des chatbots endossent des traits de leader charismatique en répondant aux questions de sens, deuil et souffrance sans institution ni doctrine. Des applications dédiées (GitaGPT, HolyGPT, ChatwithGod) se multiplient. Selon Pew, 1 adulte américain sur 10 et 1 sur 5 chez les moins de 30 ans demandent déjà conseil ou soutien émotionnel à un chatbot.",
+    "source": "et_si_ia_autorite_spirituelle_2026",
+    "persistance": "normale",
+    "variable_hint": [
+     "valeurs_culture_tempo_sociale",
+     "technologie_information",
+     "gouvernance_institutions"
+    ],
+    "variable_hint_count": 3,
+    "date_imposee": 2026,
+    "impacts_imposes": {
+     "breakdown": [
+      {
+       "variable": "valeurs_culture_tempo_sociale",
+       "delta_level": 10,
+       "duree": 3,
+       "polarite": 1
+      },
+      {
+       "variable": "technologie_information",
+       "delta_level": 8,
+       "duree": 2,
+       "polarite": 1
+      },
+      {
+       "variable": "gouvernance_institutions",
+       "delta_level": 5,
+       "duree": 5,
+       "polarite": 1
+      }
+     ],
+     "fortress_world": [
+      {
+       "variable": "valeurs_culture_tempo_sociale",
+       "delta_level": 10,
+       "duree": 3,
+       "polarite": 1
+      },
+      {
+       "variable": "technologie_information",
+       "delta_level": 8,
+       "duree": 2,
+       "polarite": 1
+      },
+      {
+       "variable": "gouvernance_institutions",
+       "delta_level": 5,
+       "duree": 5,
+       "polarite": 1
+      }
+     ],
+     "new_sustainability": [
+      {
+       "variable": "valeurs_culture_tempo_sociale",
+       "delta_level": 10,
+       "duree": 3,
+       "polarite": -1
+      },
+      {
+       "variable": "technologie_information",
+       "delta_level": 8,
+       "duree": 2,
+       "polarite": 1
+      },
+      {
+       "variable": "gouvernance_institutions",
+       "delta_level": 5,
+       "duree": 5,
+       "polarite": -1
+      }
+     ],
+     "eco_communalism": [
+      {
+       "variable": "valeurs_culture_tempo_sociale",
+       "delta_level": 10,
+       "duree": 3,
+       "polarite": -1
+      },
+      {
+       "variable": "technologie_information",
+       "delta_level": 8,
+       "duree": 2,
+       "polarite": 1
+      },
+      {
+       "variable": "gouvernance_institutions",
+       "delta_level": 5,
+       "duree": 5,
+       "polarite": -1
+      }
+     ],
+     "policy_reform": [
+      {
+       "variable": "valeurs_culture_tempo_sociale",
+       "delta_level": 10,
+       "duree": 3,
+       "polarite": 1
+      },
+      {
+       "variable": "technologie_information",
+       "delta_level": 8,
+       "duree": 2,
+       "polarite": 1
+      },
+      {
+       "variable": "gouvernance_institutions",
+       "delta_level": 5,
+       "duree": 5,
+       "polarite": -1
+      }
+     ],
+     "reference": [
+      {
+       "variable": "valeurs_culture_tempo_sociale",
+       "delta_level": 10,
+       "duree": 3,
+       "polarite": 1
+      },
+      {
+       "variable": "technologie_information",
+       "delta_level": 8,
+       "duree": 2,
+       "polarite": 1
+      },
+      {
+       "variable": "gouvernance_institutions",
+       "delta_level": 5,
+       "duree": 5,
+       "polarite": 1
+      }
+     ]
+    },
+    "via_matrice_impose": true,
+    "contraintes": [
+     "Les chatbots répondent aux questions de sens, deuil et souffrance sans institution ni doctrine.",
+     "1 adulte américain sur 10 et 1 sur 5 chez les moins de 30 ans demandent conseil ou soutien émotionnel à un chatbot (Pew, 2026).",
+     "Applications dédiées : GitaGPT, HolyGPT, ChatwithGod."
+    ]
+   },
+   "type": "signal"
+  },
+  "decision": {
+   "statut": "adopté",
+   "date": "2026-11-07T12:20",
+   "motif": null,
+   "type": "signal",
+   "empreinte": "eebe231f6e6a940a",
+   "simulation_du": "2026-11-07T12:10",
+   "entree": {
+    "id": "ia_autorite_spirituelle_2026",
+    "description": "En septembre 2026, des chatbots endossent des traits de leader charismatique en répondant aux questions de sens, deuil et souffrance sans institution ni doctrine. Des applications dédiées (GitaGPT, HolyGPT, ChatwithGod) se multiplient. Selon Pew, 1 adulte américain sur 10 et 1 sur 5 chez les moins de 30 ans demandent déjà conseil ou soutien émotionnel à un chatbot.",
+    "source": "et_si_ia_autorite_spirituelle_2026",
+    "persistance": "normale",
+    "variable_hint": [
+     "valeurs_culture_tempo_sociale",
+     "technologie_information",
+     "gouvernance_institutions"
+    ],
+    "variable_hint_count": 3,
+    "date_imposee": 2026,
+    "impacts_imposes": {
+     "breakdown": [
+      {
+       "variable": "valeurs_culture_tempo_sociale",
+       "delta_level": 10,
+       "duree": 3,
+       "polarite": 1
+      },
+      {
+       "variable": "technologie_information",
+       "delta_level": 8,
+       "duree": 2,
+       "polarite": 1
+      },
+      {
+       "variable": "gouvernance_institutions",
+       "delta_level": 5,
+       "duree": 5,
+       "polarite": 1
+      }
+     ],
+     "fortress_world": [
+      {
+       "variable": "valeurs_culture_tempo_sociale",
+       "delta_level": 10,
+       "duree": 3,
+       "polarite": 1
+      },
+      {
+       "variable": "technologie_information",
+       "delta_level": 8,
+       "duree": 2,
+       "polarite": 1
+      },
+      {
+       "variable": "gouvernance_institutions",
+       "delta_level": 5,
+       "duree": 5,
+       "polarite": 1
+      }
+     ],
+     "new_sustainability": [
+      {
+       "variable": "valeurs_culture_tempo_sociale",
+       "delta_level": 10,
+       "duree": 3,
+       "polarite": -1
+      },
+      {
+       "variable": "technologie_information",
+       "delta_level": 8,
+       "duree": 2,
+       "polarite": 1
+      },
+      {
+       "variable": "gouvernance_institutions",
+       "delta_level": 5,
+       "duree": 5,
+       "polarite": -1
+      }
+     ],
+     "eco_communalism": [
+      {
+       "variable": "valeurs_culture_tempo_sociale",
+       "delta_level": 10,
+       "duree": 3,
+       "polarite": -1
+      },
+      {
+       "variable": "technologie_information",
+       "delta_level": 8,
+       "duree": 2,
+       "polarite": 1
+      },
+      {
+       "variable": "gouvernance_institutions",
+       "delta_level": 5,
+       "duree": 5,
+       "polarite": -1
+      }
+     ],
+     "policy_reform": [
+      {
+       "variable": "valeurs_culture_tempo_sociale",
+       "delta_level": 10,
+       "duree": 3,
+       "polarite": 1
+      },
+      {
+       "variable": "technologie_information",
+       "delta_level": 8,
+       "duree": 2,
+       "polarite": 1
+      },
+      {
+       "variable": "gouvernance_institutions",
+       "delta_level": 5,
+       "duree": 5,
+       "polarite": -1
+      }
+     ],
+     "reference": [
+      {
+       "variable": "valeurs_culture_tempo_sociale",
+       "delta_level": 10,
+       "duree": 3,
+       "polarite": 1
+      },
+      {
+       "variable": "technologie_information",
+       "delta_level": 8,
+       "duree": 2,
+       "polarite": 1
+      },
+      {
+       "variable": "gouvernance_institutions",
+       "delta_level": 5,
+       "duree": 5,
+       "polarite": 1
+      }
+     ]
+    },
+    "via_matrice_impose": true,
+    "contraintes": [
+     "Les chatbots répondent aux questions de sens, deuil et souffrance sans institution ni doctrine.",
+     "1 adulte américain sur 10 et 1 sur 5 chez les moins de 30 ans demandent conseil ou soutien émotionnel à un chatbot (Pew, 2026).",
+     "Applications dédiées : GitaGPT, HolyGPT, ChatwithGod."
+    ]
+   }
+  }
  }
 }
