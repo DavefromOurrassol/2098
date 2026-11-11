@@ -1,0 +1,27 @@
+{
+ "id": "piratage_ecrans_greffes_hepatiques_2098",
+ "date_simulation": "2026-11-11T10:44",
+ "version": "v8.25",
+ "empreinte": "ea90a4a195d11bb1",
+ "annee": 2098.03,
+ "mode": "choc",
+ "contraintes": [
+  "1 247 personnes en attente de greffes hépatiques sont mentionnées.",
+  "Date précise : 8 mars 2098."
+ ],
+ "scenarios_hypothese": [
+  "new_sustainability"
+ ],
+ "scenarios": [
+  "new_sustainability"
+ ],
+ "complet": true,
+ "par_scenario": {
+  "new_sustainability": {
+   "lecture": null,
+   "passe": null,
+   "erreurs": [],
+   "carte": []
+  }
+ }
+}

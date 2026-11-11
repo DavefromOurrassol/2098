@@ -10,7 +10,7 @@ RÈGLE DE LECTURE DE LA COLONNE "date" :
   - type=signal    -> fenêtre "AAAA-AAAA" (date_bascule du signal_to_state)
   - type=evenement -> année unique "AAAA" (date précise de l'instance)
 
-Total : 661 entrées (99 signaux uniques × 6 scénarios + 67 entrées d'événements custom).
+Total : 662 entrées (99 signaux uniques × 6 scénarios + 68 entrées d'événements custom).
 
 ## breakdown
 
@@ -358,6 +358,7 @@ Total : 661 entrées (99 signaux uniques × 6 scénarios + 67 entrées d'événe
 | evenement | 2051 | secession_great_lakes_compact | organisation_territoires, gouvernance_institutions, geopolitique_conflits | — | Great Lakes Compact obtient autonomie hydrique reconnue 2051 |
 | evenement | 2053 | accord_carbone_amazonie_blocs | climat_environnement_global, gouvernance_institutions, geopolitique_conflits, energie_ressources_critiques | — | Amazonie impose sa souveraineté carbone aux blocs mondiaux 2053 |
 | evenement | 2062 | grand_forum_sahel_numerique | technologie_information, gouvernance_institutions, organisation_territoires | — | Charte d'Agadez consacre la souveraineté numérique périphérique 2062 |
+| evenement | 2098.03 | piratage_ecrans_greffes_hepatiques_2098 | sante_biotechnologies, gouvernance_institutions, technologie_information, valeurs_culture_tempo_sociale | — | 2098 : 1 247 noms s'affichent sur les écrans genevois |
 
 ## eco_communalism
 

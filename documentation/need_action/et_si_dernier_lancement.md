@@ -1,307 +1,124 @@
-# Et si ? — L'IA comme autorité spirituelle émergente
+# Et si ? — Piratage des écrans du Centre Régénératif du Léman
 
-*Simulation du 2026-11-07 12:10 — lecture seule, rien n'a été injecté (simulateur v8.25).*
+*Simulation du 2026-11-11 10:44 — lecture seule, rien n'a été injecté (simulateur v8.25).*
 
-En septembre 2026, des chatbots endossent des traits de leader charismatique en répondant aux questions de sens, deuil et souffrance sans institution ni doctrine. Des applications dédiées (GitaGPT, HolyGPT, ChatwithGod) se multiplient. Selon Pew, 1 adulte américain sur 10 et 1 sur 5 chez les moins de 30 ans demandent déjà conseil ou soutien émotionnel à un chatbot.
+Le 8 mars 2098, le collectif Santé pour Tous pirate les écrans du Centre Régénératif du Léman pour y afficher les noms des 1 247 personnes en attente d’une greffe hépatique dans le canton.
 
 **Faits imposés à la lecture IA** :
-- Les chatbots répondent aux questions de sens, deuil et souffrance sans institution ni doctrine.
-- 1 adulte américain sur 10 et 1 sur 5 chez les moins de 30 ans demandent conseil ou soutien émotionnel à un chatbot (Pew, 2026).
-- Applications dédiées : GitaGPT, HolyGPT, ChatwithGod.
+- 1 247 personnes en attente de greffes hépatiques sont mentionnées.
+- Date précise : 8 mars 2098.
 
-- **Apparition** : 2026 · **Persistance** : normale · **Propagation par la matrice** : oui
-- **Effet mesuré en** : 2098
-- **Type** : signal (effet mineur, force <= 10, 6 scénarios, sans carte)
-- Déclaré : **valeurs_culture_tempo_sociale** — force 10, sens variable selon le scénario, montée sur 3 ans
-- Déclaré : **technologie_information** — force 8, aggrave ↑, montée sur 2 ans
-- Déclaré : **gouvernance_institutions** — force 5, sens variable selon le scénario, montée sur 5 ans
+- **Apparition** : 2098.03 · **Persistance** : normale · **Propagation par la matrice** : oui
+- **Effet mesuré en** : 2098.12
+- **Carte** : élément déclaré sans effet territorial (`carte: non`), aucune proposition de carte retenue
+- Déclaré : **sante_biotechnologies** — force 15, aggrave ↑, montée sur 2 ans
+- Déclaré : **gouvernance_institutions** — force 10, aggrave ↑, montée sur 3 ans
+- Déclaré : **technologie_information** — force 12, aggrave ↑, montée sur 1 ans
+- Déclaré : **valeurs_culture_tempo_sociale** — force 8, apaise ↓, montée sur 4 ans
 
 Rappel : niveau 100 = crise maximale. Écart = niveau AVEC l'hypothèse − niveau SANS elle, toutes les injections existantes restant en place.
 
-## breakdown
-
-Apparu en 2026 dans le scénario breakdown, L'IA comme autorité spirituelle émergente agit d'abord sur technologie information, valeurs culture tempo sociale et gouvernance institutions. Son effet le plus fort aggrave technologie information, avec un écart maximal de +2,2 points vers 2036. Par propagation, systèmes productifs travail réagit à son tour environ 16 ans après l'apparition (+0,2 points au plus fort). En 2098, il en subsiste +0,0 points sur technologie information.
-
-_(récit construit par le script)_
-
-| Variable | Référence | Sans | Avec | Écart | |
-|---|---|---|---|---|---|
-| valeurs_culture_tempo_sociale | 90,0 | 96,4 | 96,6 | **+0,2** | direct |
-| systeme_economique_redistribution | 95,0 | 99,6 | 99,7 | **+0,1** | propagé |
-| sante_biotechnologies | 85,0 | 89,9 | 90,0 | **+0,1** | propagé |
-
-**Repères** :
-- technologie_information (direct) : pic +2,2 vers 2036
-- valeurs_culture_tempo_sociale (direct) : pic +2,0 vers 2038
-- gouvernance_institutions (direct) : pic +1,1 vers 2040
-
-**Tensions** : 34 sans l'hypothèse → 34 avec.
-
-### Liste d'application (à valider à la main — rien n'est écrit)
-
-**Élément**
-- [ ] 1. Injecter le signal `ia_autorite_spirituelle_2026` (entrée en fin de rapport)
-  - étape ③ « Injecter » du panneau (ou python3 generator/et_si_injecter.py --id ia_autorite_spirituelle_2026)
-  - _un seul appel pour les 6 scénarios ; forces, sens et date de cette simulation sont imposés_
-
-**Contrôles**
-- [ ] 2. Base
-  - `python3 generator/validate.py`
-
-## fortress_world
-
-Apparu en 2026 dans le scénario fortress_world, L'IA comme autorité spirituelle émergente agit d'abord sur technologie information, valeurs culture tempo sociale et gouvernance institutions. Son effet le plus fort aggrave technologie information, avec un écart maximal de +2,4 points vers 2036. Par propagation, systèmes productifs travail réagit à son tour environ 16 ans après l'apparition (+0,2 points au plus fort). En 2098, il en subsiste +0,1 points sur technologie information.
-
-_(récit construit par le script)_
-
-| Variable | Référence | Sans | Avec | Écart | |
-|---|---|---|---|---|---|
-| valeurs_culture_tempo_sociale | 80,0 | 91,0 | 91,2 | **+0,2** | direct |
-| systeme_economique_redistribution | 60,0 | 63,4 | 63,5 | **+0,1** | propagé |
-| organisation_territoires | 80,0 | 92,7 | 92,8 | **+0,1** | propagé |
-| technologie_information | 85,0 | 96,3 | 96,4 | **+0,1** | direct |
-| energie_ressources_critiques | 82,0 | 90,8 | 90,9 | **+0,1** | propagé |
-| systemes_productifs_travail | 85,0 | 96,0 | 96,1 | **+0,1** | propagé |
-
-**Repères** :
-- technologie_information (direct) : pic +2,4 vers 2036
-- valeurs_culture_tempo_sociale (direct) : pic +2,0 vers 2038
-- gouvernance_institutions (direct) : pic +1,1 vers 2040
-
-**Tensions** : 34 sans l'hypothèse → 34 avec.
-
-### Liste d'application (à valider à la main — rien n'est écrit)
-
-**Élément**
-- [ ] 1. Injecter le signal `ia_autorite_spirituelle_2026` (entrée en fin de rapport)
-  - étape ③ « Injecter » du panneau (ou python3 generator/et_si_injecter.py --id ia_autorite_spirituelle_2026)
-  - _un seul appel pour les 6 scénarios ; forces, sens et date de cette simulation sont imposés_
-
-**Contrôles**
-- [ ] 2. Base
-  - `python3 generator/validate.py`
-
 ## new_sustainability
 
-Apparu en 2026 dans le scénario new_sustainability, L'IA comme autorité spirituelle émergente agit d'abord sur technologie information, valeurs culture tempo sociale et gouvernance institutions. Son effet le plus fort aggrave technologie information, avec un écart maximal de +2,4 points vers 2036. Par propagation, systèmes productifs travail réagit à son tour environ 16 ans après l'apparition (+0,1 points au plus fort). En 2098, il en subsiste +0,1 points sur technologie information.
+Dans le scénario new_sustainability, Piratage des écrans du Centre Régénératif du Léman n'a pas d'effet mesurable sur les variables du monde (choc absorbé ou variables déjà à leur plafond).
 
 _(récit construit par le script)_
 
-| Variable | Référence | Sans | Avec | Écart | |
-|---|---|---|---|---|---|
-| valeurs_culture_tempo_sociale | 55,0 | 50,6 | 50,4 | **-0,2** | direct |
-| technologie_information | 70,0 | 60,7 | 60,8 | **+0,1** | direct |
-
-**Repères** :
-- technologie_information (direct) : pic +2,4 vers 2036
-- valeurs_culture_tempo_sociale (direct) : pic -1,9 vers 2037
-- gouvernance_institutions (direct) : pic -1,0 vers 2038
+Effet en fin de période : négligeable (< 0,1 point, choc absorbé ou variables à leur plafond).
 
 **Tensions** : 0 sans l'hypothèse → 0 avec.
 
 ### Liste d'application (à valider à la main — rien n'est écrit)
 
 **Élément**
-- [ ] 1. Injecter le signal `ia_autorite_spirituelle_2026` (entrée en fin de rapport)
-  - étape ③ « Injecter » du panneau (ou python3 generator/et_si_injecter.py --id ia_autorite_spirituelle_2026)
-  - _un seul appel pour les 6 scénarios ; forces, sens et date de cette simulation sont imposés_
+- [ ] 1. Injecter l'événement `piratage_ecrans_greffes_hepatiques_2098` (entrée commune en fin de rapport)
+  - `python3 generator/inject_custom_events.py --mode custom`
+  - _une seule injection pour tous les scénarios de l'hypothèse_
+- [ ] 2. Vérifier que la fiche porte les forces simulées (sante_biotechnologies +15, gouvernance_institutions +10, technologie_information +12, valeurs_culture_tempo_sociale −8)
+  - event_instances/piratage_ecrans_greffes_hepatiques_2098_new_sustainability.md, bloc impact_sur_variables ; python3 generator/trace_injection.py --slug piratage_ecrans_greffes_hepatiques_2098 --type evenement --scenario new_sustainability
+  - _imposées par l'entrée commune (impacts_imposes, date_imposee) : l'effet doit correspondre à cette simulation_
+- [ ] 3. Gros choc : vérifier la lisibilité du moteur
+  - `python3 generator/banc_calibration.py --scenarios all --balayage-k 0.05`
+  - _S19_
+
+**Lore**
+- [ ] 4. Règles à ajouter pour que l'audit du lore surveille : faits imposés de l'hypothèse
+  - à la main : documentation/lore_regles.yaml, section new_sustainability
+  - _comme les zones abandonnées de fortress_world (Nordgard, Koursk)_
+
+**Fiches à relire**
+- [ ] 5. Aucun pays ni nom propre à chercher : la recherche par mots ne cible aucune fiche
+  - _une hypothèse mondiale peut contredire des fiches sans les nommer : relecture IA ci-dessous, après l'ajout des faits imposés dans lore_regles.yaml (section Lore)_
+- [ ] 6. Estimer la relecture IA des fiches de plus fort impact
+  - `python3 generator/audit_lore.py --scenario new_sustainability --llm --estimer --limit 10`
+  - _aucun appel_
+- [ ] 7. Relecture IA des 10 fiches de plus fort impact (contradictions avec l'hypothèse)
+  - `python3 generator/audit_lore.py --scenario new_sustainability --llm --limit 10`
+  - _payant (≈ 0,5 centime la fiche) ; après application de l'événement_
+
+**Articles et site**
+- [ ] 8. Résumé du scénario
+  - `python3 generator/generate_resume_scenarios.py --scenario new_sustainability`
+  - _payant, un appel_
+- [ ] 9. Site des revues
+  - `python3 generator/chapos_revues.py`
+  - _puis bash generator/publier_site.sh_
 
 **Contrôles**
-- [ ] 2. Base
+- [ ] 10. Base
   - `python3 generator/validate.py`
+- [ ] 11. Lore
+  - `python3 generator/audit_lore.py --scenario new_sustainability`
+  - _puis étapes 2 et 3 de Relations & lore si besoin_
 
-## eco_communalism
+## Liste d'application — injection commune
 
-Apparu en 2026 dans le scénario eco_communalism, L'IA comme autorité spirituelle émergente agit d'abord sur technologie information, valeurs culture tempo sociale et gouvernance institutions. Son effet le plus fort aggrave technologie information, avec un écart maximal de +2,3 points vers 2036. Par propagation, systèmes productifs travail réagit à son tour environ 16 ans après l'apparition (+0,1 points au plus fort). En 2098, il en subsiste +0,2 points sur technologie information.
+Entrée pour `evenements_custom/queue.yaml` (une seule pour tous les scénarios). Forces, polarités, durées, date et propagation de cette simulation sont imposées (`impacts_imposes`, `date_imposee`, `via_matrice_impose`) : l'IA de l'injection ne les recalcule pas, elle rédige seulement le récit.
 
-_(récit construit par le script)_
-
-| Variable | Référence | Sans | Avec | Écart | |
-|---|---|---|---|---|---|
-| valeurs_culture_tempo_sociale | 40,0 | 33,3 | 33,1 | **-0,2** | direct |
-| technologie_information | 45,0 | 40,4 | 40,6 | **+0,2** | direct |
-| gouvernance_institutions | 25,0 | 28,4 | 28,3 | **-0,1** | direct |
-
-**Repères** :
-- technologie_information (direct) : pic +2,3 vers 2036
-- valeurs_culture_tempo_sociale (direct) : pic -1,9 vers 2037
-- gouvernance_institutions (direct) : pic -1,1 vers 2038
-
-**Tensions** : 0 sans l'hypothèse → 0 avec.
-
-### Liste d'application (à valider à la main — rien n'est écrit)
-
-**Élément**
-- [ ] 1. Injecter le signal `ia_autorite_spirituelle_2026` (entrée en fin de rapport)
-  - étape ③ « Injecter » du panneau (ou python3 generator/et_si_injecter.py --id ia_autorite_spirituelle_2026)
-  - _un seul appel pour les 6 scénarios ; forces, sens et date de cette simulation sont imposés_
-
-**Contrôles**
-- [ ] 2. Base
-  - `python3 generator/validate.py`
-
-## policy_reform
-
-Apparu en 2026 dans le scénario policy_reform, L'IA comme autorité spirituelle émergente agit d'abord sur technologie information, valeurs culture tempo sociale et gouvernance institutions. Son effet le plus fort aggrave technologie information, avec un écart maximal de +2,4 points vers 2036. Par propagation, systèmes productifs travail réagit à son tour environ 16 ans après l'apparition (+0,2 points au plus fort). En 2098, il en subsiste +0,2 points sur technologie information.
-
-_(récit construit par le script)_
-
-| Variable | Référence | Sans | Avec | Écart | |
-|---|---|---|---|---|---|
-| valeurs_culture_tempo_sociale | 50,0 | 45,8 | 46,0 | **+0,2** | direct |
-| technologie_information | 65,0 | 59,0 | 59,2 | **+0,2** | direct |
-| gouvernance_institutions | 20,0 | 10,0 | 9,9 | **-0,1** | direct |
-
-**Repères** :
-- technologie_information (direct) : pic +2,4 vers 2036
-- valeurs_culture_tempo_sociale (direct) : pic +2,0 vers 2038
-- gouvernance_institutions (direct) : pic -1,0 vers 2038
-
-**Tensions** : 8 sans l'hypothèse → 8 avec.
-
-### Liste d'application (à valider à la main — rien n'est écrit)
-
-**Élément**
-- [ ] 1. Injecter le signal `ia_autorite_spirituelle_2026` (entrée en fin de rapport)
-  - étape ③ « Injecter » du panneau (ou python3 generator/et_si_injecter.py --id ia_autorite_spirituelle_2026)
-  - _un seul appel pour les 6 scénarios ; forces, sens et date de cette simulation sont imposés_
-
-**Contrôles**
-- [ ] 2. Base
-  - `python3 generator/validate.py`
-
-## reference
-
-Apparu en 2026 dans le scénario reference, L'IA comme autorité spirituelle émergente agit d'abord sur technologie information, valeurs culture tempo sociale et gouvernance institutions. Son effet le plus fort aggrave technologie information, avec un écart maximal de +2,2 points vers 2036. Par propagation, systèmes productifs travail réagit à son tour environ 16 ans après l'apparition (+0,2 points au plus fort). En 2098, il en subsiste +0,1 points sur technologie information.
-
-_(récit construit par le script)_
-
-| Variable | Référence | Sans | Avec | Écart | |
-|---|---|---|---|---|---|
-| valeurs_culture_tempo_sociale | 60,0 | 70,0 | 70,2 | **+0,2** | direct |
-| systeme_economique_redistribution | 70,0 | 83,1 | 83,2 | **+0,1** | propagé |
-| frontieres_du_systeme | 55,0 | 62,5 | 62,6 | **+0,1** | propagé |
-
-**Repères** :
-- technologie_information (direct) : pic +2,2 vers 2036
-- valeurs_culture_tempo_sociale (direct) : pic +1,9 vers 2038
-- gouvernance_institutions (direct) : pic +1,0 vers 2038
-
-**Tensions** : 33 sans l'hypothèse → 33 avec.
-
-### Liste d'application (à valider à la main — rien n'est écrit)
-
-**Élément**
-- [ ] 1. Injecter le signal `ia_autorite_spirituelle_2026` (entrée en fin de rapport)
-  - étape ③ « Injecter » du panneau (ou python3 generator/et_si_injecter.py --id ia_autorite_spirituelle_2026)
-  - _un seul appel pour les 6 scénarios ; forces, sens et date de cette simulation sont imposés_
-
-**Contrôles**
-- [ ] 2. Base
-  - `python3 generator/validate.py`
-
-## Liste d'application — injection du signal
-
-Entrée pour `signaux_custom/queue.yaml` (une seule pour les 6 scénarios). Forces, sens par scénario, durées, date et propagation de cette simulation sont imposés (`impacts_imposes`, `date_imposee`, `via_matrice_impose`) : l'IA de l'injection rédige seulement le récit (`evolution`, `evenement_cle`). Un signal n'a ni carte, ni portée, ni intensité.
+`faits_imposes` : contraintes de l'hypothèse et sort des acteurs du récit (disparaît, change, reste) ; l'injection les donne à l'IA comme faits non négociables.
 
 ```yaml
-- id: ia_autorite_spirituelle_2026
-  description: En septembre 2026, des chatbots endossent des traits de leader charismatique en répondant
-    aux questions de sens, deuil et souffrance sans institution ni doctrine. Des applications dédiées
-    (GitaGPT, HolyGPT, ChatwithGod) se multiplient. Selon Pew, 1 adulte américain sur 10 et 1 sur 5 chez
-    les moins de 30 ans demandent déjà conseil ou soutien émotionnel à un chatbot.
-  source: et_si_ia_autorite_spirituelle_2026
+- id: piratage_ecrans_greffes_hepatiques_2098
+  description: Le 8 mars 2098, le collectif Santé pour Tous pirate les écrans du Centre Régénératif du
+    Léman pour y afficher les noms des 1 247 personnes en attente d’une greffe hépatique dans le canton.
+  portee: globale
+  date_approximative: 2098
+  intensite: <à choisir>
   persistance: normale
-  variable_hint:
-  - valeurs_culture_tempo_sociale
-  - technologie_information
+  scenarios:
+  - new_sustainability
+  variables_hint:
+  - sante_biotechnologies
   - gouvernance_institutions
-  variable_hint_count: 3
-  date_imposee: 2026
-  impacts_imposes:
-    breakdown:
-    - variable: valeurs_culture_tempo_sociale
-      delta_level: 10
-      duree: 3
-      polarite: 1
-    - variable: technologie_information
-      delta_level: 8
-      duree: 2
-      polarite: 1
-    - variable: gouvernance_institutions
-      delta_level: 5
-      duree: 5
-      polarite: 1
-    fortress_world:
-    - variable: valeurs_culture_tempo_sociale
-      delta_level: 10
-      duree: 3
-      polarite: 1
-    - variable: technologie_information
-      delta_level: 8
-      duree: 2
-      polarite: 1
-    - variable: gouvernance_institutions
-      delta_level: 5
-      duree: 5
-      polarite: 1
+  - technologie_information
+  - valeurs_culture_tempo_sociale
+  variables_hint_count: 4
+  source: et_si_piratage_ecrans_greffes_hepatiques_2098
+  faits_imposes:
     new_sustainability:
-    - variable: valeurs_culture_tempo_sociale
-      delta_level: 10
-      duree: 3
-      polarite: -1
-    - variable: technologie_information
-      delta_level: 8
+    - fait: 1 247 personnes en attente de greffes hépatiques sont mentionnées.
+      sort: contrainte
+    - fait: 'Date précise : 8 mars 2098.'
+      sort: contrainte
+  date_imposee: 2098.03
+  impacts_imposes:
+    new_sustainability:
+    - variable: sante_biotechnologies
+      delta_level: 15
       duree: 2
       polarite: 1
     - variable: gouvernance_institutions
-      delta_level: 5
-      duree: 5
-      polarite: -1
-    eco_communalism:
-    - variable: valeurs_culture_tempo_sociale
-      delta_level: 10
-      duree: 3
-      polarite: -1
-    - variable: technologie_information
-      delta_level: 8
-      duree: 2
-      polarite: 1
-    - variable: gouvernance_institutions
-      delta_level: 5
-      duree: 5
-      polarite: -1
-    policy_reform:
-    - variable: valeurs_culture_tempo_sociale
       delta_level: 10
       duree: 3
       polarite: 1
     - variable: technologie_information
-      delta_level: 8
-      duree: 2
+      delta_level: 12
+      duree: 1
       polarite: 1
-    - variable: gouvernance_institutions
-      delta_level: 5
-      duree: 5
-      polarite: -1
-    reference:
     - variable: valeurs_culture_tempo_sociale
-      delta_level: 10
-      duree: 3
-      polarite: 1
-    - variable: technologie_information
       delta_level: 8
-      duree: 2
-      polarite: 1
-    - variable: gouvernance_institutions
-      delta_level: 5
-      duree: 5
-      polarite: 1
+      duree: 4
+      polarite: -1
   via_matrice_impose: true
-  contraintes:
-  - Les chatbots répondent aux questions de sens, deuil et souffrance sans institution ni doctrine.
-  - 1 adulte américain sur 10 et 1 sur 5 chez les moins de 30 ans demandent conseil ou soutien émotionnel
-    à un chatbot (Pew, 2026).
-  - 'Applications dédiées : GitaGPT, HolyGPT, ChatwithGod.'
 ```
 
