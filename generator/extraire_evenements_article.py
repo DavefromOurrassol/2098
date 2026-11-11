@@ -155,6 +155,74 @@ def _norm(s):
     return " " + re.sub(r"[^a-z0-9]+", " ", s).strip() + " "
 
 
+# U3p : marqueurs d'un plan / projet / débat (texte normalisé : minuscules, sans accents)
+_MARQUEURS_PROJET = (
+    " en preparation ", " se prepare ", " se preparent ", " est en projet ", " en projet ",
+    " projet de ", " en discussion ", " en debat ", " fait debat ", " font debat ",
+    " devrait ", " devraient ", " pourrait ", " pourraient ", " envisage ", " envisagent ",
+    " envisagee ", " prevu pour ", " prevue pour ", " prevus pour ", " prevues pour ",
+    " d ici 20", " a l horizon ", " sera lance ", " sera lancee ", " seront lances ",
+    " sera mis en place ", " sera adopte ", " sera adoptee ", " vise a ",
+)
+_DEBUT_PLAN = (" plan ", " programme ", " projet ", " strategie ", " feuille de route ",
+               " debat ", " reforme ", " proposition ", " initiative ")
+_ACCOMPLI = (" adopte", " lance ", " lancee ", " vote", " signe", " entre en vigueur",
+             " entree en vigueur", " promulgue", " ratifie", " inaugure", " active ",
+             " activee ", " annonce ", " annoncee ", " adoptee ")
+
+
+def motif_non_evenement(description, citation, annee_article):
+    """Retourne le motif d'écart (str) si le candidat ressemble à un plan, un projet ou un
+    débat, sinon None."""
+    import re as _re
+    desc_n = _norm(description)
+    cit_n = _norm(citation)
+    # 0. U3r : citation tronquée (passages recollés) ou statistique de tendance
+    if _re.search(r"\[\s*(\.\.\.|…)\s*\]|…|\.\.\.", str(citation or "")):
+        return "citation tronquée ([...] ou …) : passages recollés"
+    if (_re.search(r" (augment\w*|bondi|chute\w*|baiss\w*|progress\w*|diminu\w*|doubl\w*|tripl\w*) (de )?\d", desc_n)
+            and (" depuis " in desc_n or _re.search(r" en (une decennie|dix ans|\d+ ans) ", desc_n))):
+        return "statistique de tendance (évolution chiffrée sur une durée), pas un événement"
+    # 1. année postérieure à l'article écrite dans la description
+    for a in _re.findall(r"\b(2[01]\d\d)\b", str(description or "")):
+        if int(a) > int(annee_article):
+            return f"mentionne l'année {a}, postérieure à l'article"
+    # 2. marqueur de projet / futur
+    for m in _MARQUEURS_PROJET:
+        if m in desc_n or m in cit_n:
+            return f"marqueur de projet « {m.strip()} »"
+    # 3. description qui s'ouvre sur un plan / programme / débat, sans verbe d'accomplissement
+    debut = " " + " ".join(desc_n.split()[:4]) + " "
+    for d in _DEBUT_PLAN:
+        if d in debut:
+            if not any(v in desc_n for v in _ACCOMPLI):
+                return f"s'ouvre sur « {d.strip()} » sans fait accompli"
+            break
+    return None
+
+
+def _nettoyer_citation(s):
+    """U3q : espaces normalisés, sans astérisques, sans guillemets englobant toute la citation."""
+    s = " ".join(str(s or "").replace("*", "").split())
+    paires = {"«": "»", "“": "”", '"': '"'}
+    while len(s) >= 2 and s[0] in paires and s[-1] == paires[s[0]]:
+        interieur = s[1:-1]
+        profondeur = 0
+        englobant = True
+        for c in interieur:
+            if c in "«“":
+                profondeur += 1
+            elif c in "»”":
+                profondeur -= 1
+                if profondeur < 0:   # le guillemet fermant du début est dans le texte : pas englobant
+                    englobant = False
+                    break
+        if not englobant or profondeur != 0:
+            break
+        s = interieur.strip()
+    return s
+
+
 def extraire(fichier, scenario, annee, mois, racine=RACINE_DEFAUT, _llm=appeler_llm):
     if not re.fullmatch(r"[A-Za-z0-9_.\-]+\.md", fichier or ""):
         raise ValueError(f"nom de fichier invalide : {fichier!r}")
@@ -174,7 +242,7 @@ def extraire(fichier, scenario, annee, mois, racine=RACINE_DEFAUT, _llm=appeler_
     if not isinstance(liste, list):
         raise ValueError("réponse de l'IA inexploitable")
     corps_norm = _norm(corps)
-    sortie, av = [], []
+    sortie, av, ecartes = [], [], []
     for i, ev in enumerate(liste[:MAX_EVENEMENTS], 1):
         if not isinstance(ev, dict) or not str(ev.get("description") or "").strip():
             continue
@@ -199,7 +267,12 @@ def extraire(fichier, scenario, annee, mois, racine=RACINE_DEFAUT, _llm=appeler_
         if not 2025 <= an <= 2098:
             av.append(f"« {str(ev['description'])[:60]}… » : année {an} hors de 2025-2098, écarté")
             continue
-        cit = " ".join(str(ev.get("citation") or "").split())
+        motif = motif_non_evenement(ev.get("description"), ev.get("citation"), annee)
+        if motif:
+            av.append(f"« {str(ev['description'])[:60]}… » écarté (plan / projet / débat) : {motif}")
+            ecartes.append({"description": " ".join(str(ev["description"]).split()), "motif": motif})
+            continue
+        cit = _nettoyer_citation(ev.get("citation"))
         cit_ok = bool(cit) and _norm(cit) in corps_norm
         # Contrôle mécanique : expression relative sans année écrite -> date déduite, à vérifier
         cn = _norm(cit)
@@ -224,7 +297,7 @@ def extraire(fichier, scenario, annee, mois, racine=RACINE_DEFAUT, _llm=appeler_
         if not cit_ok:
             av.append(f"« {str(ev['description'])[:60]}… » : citation introuvable mot pour mot, date à vérifier")
     return {"ok": True, "article": {"fichier": fichier, "scenario": scenario, "annee": annee, "mois": mois},
-            "evenements": sortie, "avertissements": av}
+            "evenements": sortie, "avertissements": av, "ecartes": ecartes}
 
 
 def main():
