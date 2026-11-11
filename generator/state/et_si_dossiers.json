@@ -2954,5 +2954,367 @@
     "via_matrice_impose": true
    }
   }
+ },
+ "accords_oms_regulation_mondiale_2039": {
+  "simulation": {
+   "date": "2026-11-11T19:03",
+   "version": "v8.25",
+   "empreinte": "cd13666825ca3898",
+   "scenarios": [
+    "new_sustainability"
+   ],
+   "complet": true,
+   "passe": false,
+   "rapport": "documentation/need_action/et_si_accords_oms_regulation_mondiale_2039.md",
+   "entree": {
+    "id": "accords_oms_regulation_mondiale_2039",
+    "description": "Transformation de l’OMS en une institution dotée de pouvoirs de régulation mondiale via les accords de 2039, posant les bases de la régénération médicale planétaire. Genève devient le cœur d’une révolution médicale sans précédent.",
+    "portee": "globale",
+    "date_approximative": 2039,
+    "intensite": "<à choisir>",
+    "persistance": "durable",
+    "scenarios": [
+     "new_sustainability"
+    ],
+    "variables_hint": [
+     "gouvernance_institutions",
+     "geopolitique_conflits",
+     "sante_biotechnologies",
+     "technologie_information",
+     "valeurs_culture_tempo_sociale"
+    ],
+    "variables_hint_count": 5,
+    "source": "et_si_accords_oms_regulation_mondiale_2039",
+    "faits_imposes": {
+     "new_sustainability": [
+      {
+       "fait": "Depuis les accords de 2039, qui ont transformé l’OMS en une institution dotée de pouvoirs de régulation mondiale, Genève est le cœur battant d’une révolution médicale sans précédent.",
+       "sort": "contrainte"
+      },
+      {
+       "fait": "Transformation de l’OMS en institution dotée de pouvoirs de régulation mondiale via les accords de 2039",
+       "sort": "contrainte"
+      },
+      {
+       "fait": "Genève est le cœur battant d’une révolution médicale sans précédent",
+       "sort": "contrainte"
+      },
+      {
+       "fait": "Date de l'événement : 2039",
+       "sort": "contrainte"
+      }
+     ]
+    },
+    "date_imposee": 2039.01,
+    "impacts_imposes": {
+     "new_sustainability": [
+      {
+       "variable": "gouvernance_institutions",
+       "delta_level": 20,
+       "duree": 3,
+       "polarite": -1
+      },
+      {
+       "variable": "geopolitique_conflits",
+       "delta_level": 15,
+       "duree": 5,
+       "polarite": -1
+      },
+      {
+       "variable": "sante_biotechnologies",
+       "delta_level": 22,
+       "duree": 4,
+       "polarite": -1
+      },
+      {
+       "variable": "technologie_information",
+       "delta_level": 10,
+       "duree": 5,
+       "polarite": -1
+      },
+      {
+       "variable": "valeurs_culture_tempo_sociale",
+       "delta_level": 12,
+       "duree": 5,
+       "polarite": -1
+      }
+     ]
+    },
+    "via_matrice_impose": true
+   },
+   "type": "evenement"
+  },
+  "decision": {
+   "statut": "adopté",
+   "date": "2026-11-11T19:04",
+   "motif": null,
+   "type": "evenement",
+   "empreinte": "cd13666825ca3898",
+   "simulation_du": "2026-11-11T19:03",
+   "entree": {
+    "id": "accords_oms_regulation_mondiale_2039",
+    "description": "Transformation de l’OMS en une institution dotée de pouvoirs de régulation mondiale via les accords de 2039, posant les bases de la régénération médicale planétaire. Genève devient le cœur d’une révolution médicale sans précédent.",
+    "portee": "locale",
+    "date_approximative": 2039,
+    "intensite": "faible",
+    "persistance": "durable",
+    "scenarios": [
+     "new_sustainability"
+    ],
+    "variables_hint": [
+     "gouvernance_institutions",
+     "geopolitique_conflits",
+     "sante_biotechnologies",
+     "technologie_information",
+     "valeurs_culture_tempo_sociale"
+    ],
+    "variables_hint_count": 5,
+    "source": "et_si_accords_oms_regulation_mondiale_2039",
+    "faits_imposes": {
+     "new_sustainability": [
+      {
+       "fait": "Depuis les accords de 2039, qui ont transformé l’OMS en une institution dotée de pouvoirs de régulation mondiale, Genève est le cœur battant d’une révolution médicale sans précédent.",
+       "sort": "contrainte"
+      },
+      {
+       "fait": "Transformation de l’OMS en institution dotée de pouvoirs de régulation mondiale via les accords de 2039",
+       "sort": "contrainte"
+      },
+      {
+       "fait": "Genève est le cœur battant d’une révolution médicale sans précédent",
+       "sort": "contrainte"
+      },
+      {
+       "fait": "Date de l'événement : 2039",
+       "sort": "contrainte"
+      }
+     ]
+    },
+    "date_imposee": 2039.01,
+    "impacts_imposes": {
+     "new_sustainability": [
+      {
+       "variable": "gouvernance_institutions",
+       "delta_level": 20,
+       "duree": 3,
+       "polarite": -1
+      },
+      {
+       "variable": "geopolitique_conflits",
+       "delta_level": 15,
+       "duree": 5,
+       "polarite": -1
+      },
+      {
+       "variable": "sante_biotechnologies",
+       "delta_level": 22,
+       "duree": 4,
+       "polarite": -1
+      },
+      {
+       "variable": "technologie_information",
+       "delta_level": 10,
+       "duree": 5,
+       "polarite": -1
+      },
+      {
+       "variable": "valeurs_culture_tempo_sociale",
+       "delta_level": 12,
+       "duree": 5,
+       "polarite": -1
+      }
+     ]
+    },
+    "via_matrice_impose": true
+   }
+  }
+ },
+ "reamenagement_quai_wilson_2044": {
+  "simulation": {
+   "date": "2026-11-11T19:18",
+   "version": "v8.25",
+   "empreinte": "3bea6f93cbc98609",
+   "scenarios": [
+    "new_sustainability"
+   ],
+   "complet": true,
+   "passe": false,
+   "rapport": "documentation/need_action/et_si_reamenagement_quai_wilson_2044.md",
+   "entree": {
+    "id": "reamenagement_quai_wilson_2044",
+    "description": "Ce matin, devant les portes vitrées du Centre Régénératif du Léman, une file d’attente silencieuse s’étire jusqu’au quai Wilson, réaménagé après la montée des eaux de 2044.",
+    "portee": "globale",
+    "date_approximative": 2044,
+    "intensite": "<à choisir>",
+    "persistance": "durable",
+    "scenarios": [
+     "new_sustainability"
+    ],
+    "variables_hint": [
+     "climat_environnement_global",
+     "organisation_territoires",
+     "gouvernance_institutions",
+     "geopolitique_conflits",
+     "sante_biotechnologies",
+     "demographie_mobilite_humaine"
+    ],
+    "variables_hint_count": 6,
+    "source": "et_si_reamenagement_quai_wilson_2044",
+    "faits_imposes": {
+     "new_sustainability": [
+      {
+       "fait": "Ce matin, devant les portes vitrées du Centre Régénératif du Léman, une file d’attente silencieuse s’étire jusqu’au quai Wilson, réaménagé après la montée des eaux de 2044.",
+       "sort": "contrainte"
+      },
+      {
+       "fait": "Montée des eaux en 2044",
+       "sort": "contrainte"
+      },
+      {
+       "fait": "Réaménagement du quai Wilson après les inondations",
+       "sort": "contrainte"
+      },
+      {
+       "fait": "Lieu : centre_institutionnel_geneve",
+       "sort": "contrainte"
+      }
+     ]
+    },
+    "date_imposee": 2044.01,
+    "impacts_imposes": {
+     "new_sustainability": [
+      {
+       "variable": "climat_environnement_global",
+       "delta_level": 20,
+       "duree": 3,
+       "polarite": 1
+      },
+      {
+       "variable": "organisation_territoires",
+       "delta_level": 15,
+       "duree": 5,
+       "polarite": -1
+      },
+      {
+       "variable": "gouvernance_institutions",
+       "delta_level": 10,
+       "duree": 4,
+       "polarite": -1
+      },
+      {
+       "variable": "geopolitique_conflits",
+       "delta_level": 5,
+       "duree": 3,
+       "polarite": -1
+      },
+      {
+       "variable": "sante_biotechnologies",
+       "delta_level": 10,
+       "duree": 5,
+       "polarite": -1
+      },
+      {
+       "variable": "demographie_mobilite_humaine",
+       "delta_level": 12,
+       "duree": 4,
+       "polarite": 1
+      }
+     ]
+    },
+    "via_matrice_impose": true
+   },
+   "type": "evenement"
+  },
+  "decision": {
+   "statut": "adopté",
+   "date": "2026-11-11T19:20",
+   "motif": null,
+   "type": "evenement",
+   "empreinte": "3bea6f93cbc98609",
+   "simulation_du": "2026-11-11T19:18",
+   "entree": {
+    "id": "reamenagement_quai_wilson_2044",
+    "description": "Ce matin, devant les portes vitrées du Centre Régénératif du Léman, une file d’attente silencieuse s’étire jusqu’au quai Wilson, réaménagé après la montée des eaux de 2044.",
+    "portee": "locale",
+    "date_approximative": 2044,
+    "intensite": "faible",
+    "persistance": "durable",
+    "scenarios": [
+     "new_sustainability"
+    ],
+    "variables_hint": [
+     "climat_environnement_global",
+     "organisation_territoires",
+     "gouvernance_institutions",
+     "geopolitique_conflits",
+     "sante_biotechnologies",
+     "demographie_mobilite_humaine"
+    ],
+    "variables_hint_count": 6,
+    "source": "et_si_reamenagement_quai_wilson_2044",
+    "faits_imposes": {
+     "new_sustainability": [
+      {
+       "fait": "Ce matin, devant les portes vitrées du Centre Régénératif du Léman, une file d’attente silencieuse s’étire jusqu’au quai Wilson, réaménagé après la montée des eaux de 2044.",
+       "sort": "contrainte"
+      },
+      {
+       "fait": "Montée des eaux en 2044",
+       "sort": "contrainte"
+      },
+      {
+       "fait": "Réaménagement du quai Wilson après les inondations",
+       "sort": "contrainte"
+      },
+      {
+       "fait": "Lieu : centre_institutionnel_geneve",
+       "sort": "contrainte"
+      }
+     ]
+    },
+    "date_imposee": 2044.01,
+    "impacts_imposes": {
+     "new_sustainability": [
+      {
+       "variable": "climat_environnement_global",
+       "delta_level": 20,
+       "duree": 3,
+       "polarite": 1
+      },
+      {
+       "variable": "organisation_territoires",
+       "delta_level": 15,
+       "duree": 5,
+       "polarite": -1
+      },
+      {
+       "variable": "gouvernance_institutions",
+       "delta_level": 10,
+       "duree": 4,
+       "polarite": -1
+      },
+      {
+       "variable": "geopolitique_conflits",
+       "delta_level": 5,
+       "duree": 3,
+       "polarite": -1
+      },
+      {
+       "variable": "sante_biotechnologies",
+       "delta_level": 10,
+       "duree": 5,
+       "polarite": -1
+      },
+      {
+       "variable": "demographie_mobilite_humaine",
+       "delta_level": 12,
+       "duree": 4,
+       "polarite": 1
+      }
+     ]
+    },
+    "via_matrice_impose": true
+   }
+  }
  }
 }

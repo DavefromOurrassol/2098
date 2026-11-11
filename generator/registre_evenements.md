@@ -10,7 +10,7 @@ RÈGLE DE LECTURE DE LA COLONNE "date" :
   - type=signal    -> fenêtre "AAAA-AAAA" (date_bascule du signal_to_state)
   - type=evenement -> année unique "AAAA" (date précise de l'instance)
 
-Total : 664 entrées (99 signaux uniques × 6 scénarios + 70 entrées d'événements custom).
+Total : 666 entrées (99 signaux uniques × 6 scénarios + 72 entrées d'événements custom).
 
 ## breakdown
 
@@ -361,6 +361,8 @@ Total : 664 entrées (99 signaux uniques × 6 scénarios + 70 entrées d'événe
 | evenement | 2098.03 | piratage_ecrans_greffes_hepatiques_2098 | sante_biotechnologies, gouvernance_institutions, technologie_information, valeurs_culture_tempo_sociale | — | 2098 : 1 247 noms s'affichent sur les écrans genevois |
 | evenement | 2042.01 | ouverture_dispensaire_regeneratif_geneve_2042 | sante_biotechnologies, gouvernance_institutions, systeme_economique_redistribution, organisation_territoires, valeurs_culture_tempo_sociale | — | 2042 : Genève ouvre son premier dispensaire régénératif |
 | evenement | 2098.01 | arrets_dispensaire_grottes_2098 | sante_biotechnologies, gouvernance_institutions, valeurs_culture_tempo_sociale, geopolitique_conflits | — | 2098 : trois soignants arrêtés pour greffes non autorisées |
+| evenement | 2039.01 | accords_oms_regulation_mondiale_2039 | gouvernance_institutions, geopolitique_conflits, sante_biotechnologies, technologie_information, valeurs_culture_tempo_sociale | — | 2039 : l'OMS devient régulateur mondial de la santé |
+| evenement | 2044.01 | reamenagement_quai_wilson_2044 | climat_environnement_global, organisation_territoires, gouvernance_institutions, geopolitique_conflits, sante_biotechnologies, demographie_mobilite_humaine | — | Genève réaménage le quai Wilson en 2044 |
 
 ## eco_communalism
 

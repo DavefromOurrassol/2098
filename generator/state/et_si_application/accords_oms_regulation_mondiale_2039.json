@@ -1,0 +1,29 @@
+{
+ "id": "accords_oms_regulation_mondiale_2039",
+ "date_simulation": "2026-11-11T19:03",
+ "version": "v8.25",
+ "empreinte": "cd13666825ca3898",
+ "annee": 2039.01,
+ "mode": "choc",
+ "contraintes": [
+  "Depuis les accords de 2039, qui ont transformé l’OMS en une institution dotée de pouvoirs de régulation mondiale, Genève est le cœur battant d’une révolution médicale sans précédent.",
+  "Transformation de l’OMS en institution dotée de pouvoirs de régulation mondiale via les accords de 2039",
+  "Genève est le cœur battant d’une révolution médicale sans précédent",
+  "Date de l'événement : 2039"
+ ],
+ "scenarios_hypothese": [
+  "new_sustainability"
+ ],
+ "scenarios": [
+  "new_sustainability"
+ ],
+ "complet": true,
+ "par_scenario": {
+  "new_sustainability": {
+   "lecture": null,
+   "passe": null,
+   "erreurs": [],
+   "carte": []
+  }
+ }
+}

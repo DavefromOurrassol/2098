@@ -779,3 +779,116 @@ hypotheses:
         policy_reform: 1
         reference: 1
       duree: 3
+
+  - id: accords_oms_regulation_mondiale_2039
+    nom: 'Accords de 2039 : OMS régulation mondiale'
+    description: Transformation de l’OMS en une institution dotée de pouvoirs de régulation
+      mondiale via les accords de 2039, posant les bases de la régénération médicale planétaire.
+      Genève devient le cœur d’une révolution médicale sans précédent.
+    date: 2039.01
+    mode: choc
+    persistance: durable
+    carte: non
+    scenarios:
+    - new_sustainability
+    contraintes:
+    - Depuis les accords de 2039, qui ont transformé l’OMS en une institution dotée de pouvoirs
+      de régulation mondiale, Genève est le cœur battant d’une révolution médicale sans précédent.
+    - Transformation de l’OMS en institution dotée de pouvoirs de régulation mondiale via les
+      accords de 2039
+    - Genève est le cœur battant d’une révolution médicale sans précédent
+    - 'Date de l''événement : 2039'
+    impacts:
+    - variable: gouvernance_institutions
+      delta_level: 20
+      polarite:
+        breakdown: 1
+        fortress_world: 1
+        new_sustainability: -1
+        eco_communalism: 1
+        policy_reform: -1
+        reference: -1
+      duree: 3
+    - variable: geopolitique_conflits
+      delta_level: 15
+      polarite:
+        breakdown: 1
+        fortress_world: 1
+        new_sustainability: -1
+        eco_communalism: -1
+        policy_reform: -1
+        reference: -1
+      duree: 5
+    - variable: sante_biotechnologies
+      delta_level: 22
+      polarite:
+        breakdown: 1
+        fortress_world: 1
+        new_sustainability: -1
+        eco_communalism: -1
+        policy_reform: -1
+        reference: -1
+      duree: 4
+    - variable: technologie_information
+      delta_level: 10
+      polarite:
+        breakdown: 1
+        fortress_world: 1
+        new_sustainability: -1
+        eco_communalism: -1
+        policy_reform: -1
+        reference: -1
+      duree: 5
+    - variable: valeurs_culture_tempo_sociale
+      delta_level: 12
+      polarite:
+        breakdown: 1
+        fortress_world: 1
+        new_sustainability: -1
+        eco_communalism: 1
+        policy_reform: -1
+        reference: -1
+      duree: 5
+
+  - id: reamenagement_quai_wilson_2044
+    nom: Réaménagement du quai Wilson après les inondations de 2044
+    description: Ce matin, devant les portes vitrées du Centre Régénératif du Léman, une file
+      d’attente silencieuse s’étire jusqu’au quai Wilson, réaménagé après la montée des eaux
+      de 2044.
+    date: 2044.01
+    mode: choc
+    persistance: durable
+    carte: non
+    scenarios:
+    - new_sustainability
+    contraintes:
+    - Ce matin, devant les portes vitrées du Centre Régénératif du Léman, une file d’attente
+      silencieuse s’étire jusqu’au quai Wilson, réaménagé après la montée des eaux de 2044.
+    - Montée des eaux en 2044
+    - Réaménagement du quai Wilson après les inondations
+    - 'Lieu : centre_institutionnel_geneve'
+    impacts:
+    - variable: climat_environnement_global
+      delta_level: 20
+      polarite: 1
+      duree: 3
+    - variable: organisation_territoires
+      delta_level: 15
+      polarite: -1
+      duree: 5
+    - variable: gouvernance_institutions
+      delta_level: 10
+      polarite: -1
+      duree: 4
+    - variable: geopolitique_conflits
+      delta_level: 5
+      polarite: -1
+      duree: 3
+    - variable: sante_biotechnologies
+      delta_level: 10
+      polarite: -1
+      duree: 5
+    - variable: demographie_mobilite_humaine
+      delta_level: 12
+      polarite: 1
+      duree: 4

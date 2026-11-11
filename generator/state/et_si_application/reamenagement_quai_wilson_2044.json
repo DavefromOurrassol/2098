@@ -1,0 +1,29 @@
+{
+ "id": "reamenagement_quai_wilson_2044",
+ "date_simulation": "2026-11-11T19:18",
+ "version": "v8.25",
+ "empreinte": "3bea6f93cbc98609",
+ "annee": 2044.01,
+ "mode": "choc",
+ "contraintes": [
+  "Ce matin, devant les portes vitrées du Centre Régénératif du Léman, une file d’attente silencieuse s’étire jusqu’au quai Wilson, réaménagé après la montée des eaux de 2044.",
+  "Montée des eaux en 2044",
+  "Réaménagement du quai Wilson après les inondations",
+  "Lieu : centre_institutionnel_geneve"
+ ],
+ "scenarios_hypothese": [
+  "new_sustainability"
+ ],
+ "scenarios": [
+  "new_sustainability"
+ ],
+ "complet": true,
+ "par_scenario": {
+  "new_sustainability": {
+   "lecture": null,
+   "passe": null,
+   "erreurs": [],
+   "carte": []
+  }
+ }
+}
