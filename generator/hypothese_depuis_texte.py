@@ -327,6 +327,18 @@ def appliquer_imposes(h, imposes, est_signal):
                 change = True
         if change:
             av.append(f"effet plein en 2098 : durée de montée portée à {n} an(s) sur tous les impacts")
+    cit = " ".join(str(imposes.get("citation") or "").replace("*", "").split()).strip("«» ").strip()   # U3k
+
+    def _plat(s):
+        return " ".join(str(s).replace("*", "").replace("«", " ").replace("»", " ").split()).lower()
+    if cit and not est_signal:   # U3i : la citation exacte de l'article devient un fait imposé
+        contraintes = [" ".join(str(c).split()) for c in (h.get("contraintes") or [])]
+        if not any(_plat(cit) in _plat(c) for c in contraintes):   # U3k
+            contraintes = [cit] + contraintes
+            if len(contraintes) > 4:
+                av.append("une contrainte proposée par l'IA retirée (4 au maximum)")
+            h["contraintes"] = contraintes[:4]
+            av.append("citation de l'article ajoutée aux faits imposés")
     if est_signal:
         return av   # un signal couvre toujours les 6 scénarios, sans mode rupture
     sc = imposes.get("scenarios")
@@ -484,6 +496,8 @@ def main():
                     help="avec --proposer : mode imposé (événement seulement)")
     ap.add_argument("--effet-plein", action="store_true",
                     help="avec --proposer : durées de montée calculées (2098 - date) pour un effet plein en 2098")
+    ap.add_argument("--citation", default=None,
+                    help="avec --proposer : citation exacte de l'article, ajoutée aux faits imposés (U3i)")
     args = ap.parse_args()
     if sys.stdin.isatty():
         print("Colle le texte puis Ctrl-D :", file=sys.stderr)
@@ -500,6 +514,8 @@ def main():
                 imposes["mode"] = args.mode
             if args.effet_plein:
                 imposes["effet_plein"] = True
+            if args.citation:   # U3i
+                imposes["citation"] = args.citation
             res = proposer(texte, type_force=args.type, imposes=imposes or None)
         elif args.verifier:
             res = verifier_bloc(texte)

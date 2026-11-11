@@ -8155,8 +8155,14 @@ async function loadArticles() {
     // Corrigé en utilisant e.composedPath(), qui capture la liste des
     // ancêtres AU MOMENT du clic, avant toute modification du DOM --
     // fiable même si l'élément cliqué est ensuite retiré/recréé.
+    let mousedownDansZone = false;   // U3j : le glissement de sélection part-il du tableau/panneau ?
+    document.addEventListener('mousedown', (e) => {
+      mousedownDansZone = e.composedPath().some(el => el.classList &&
+        (el.classList.contains('articles-table-wrap') || el.classList.contains('articles-sidebar')));
+    });
     document.addEventListener('click', (e) => {
       if (!ArticlesState.selected) return;
+      if (mousedownDansZone) return;   // U3j : sélection de texte commencée dans la zone
       const tabEl = document.getElementById('tab-articles');
       if (!tabEl || !tabEl.classList.contains('active')) return;
       const chemin = e.composedPath();
@@ -8686,6 +8692,7 @@ function renderArticlesVersEtSi(article, container) {
       extra.mode = cbRupt.checked ? 'rupture' : 'choc';
     }
     extra.effet_plein = cbPlein.checked;   // U3d
+    if (selType.value !== 'signal' && evChoisi && evChoisi.citation && evChoisi.citation_ok) extra.citation = evChoisi.citation;   // U3i
     const data = await appeler('proposer',
       (selType.value !== 'signal' && evChoisi) ? texteEvenement(evChoisi) : texte,   // U3f
       selType.value, extra);

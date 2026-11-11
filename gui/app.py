@@ -2942,6 +2942,9 @@ def et_si_assistant(action):
             cmd += ["--mode", data["mode"]]
         if data.get("effet_plein") is True:   # U3d
             cmd.append("--effet-plein")
+        cit_ = " ".join(str(data.get("citation") or "").split())[:600]   # U3i
+        if cit_:
+            cmd.append("--citation=" + cit_)
     try:
         resultat = subprocess.run(cmd, cwd=pipeline_dir, capture_output=True, text=True,
                                   input=texte, timeout=TIMEOUT_ET_SI[action])
