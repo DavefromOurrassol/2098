@@ -341,7 +341,6 @@ _extended_
 - émergence d'une caste de prompteurs puis bergers d'IA, devenant une autorité quasi religieuse et dirigeante dans certaines zones (→ signal_custom: clerge_prompteurs_ia, source: idee_david_2026-09)
 - émergence d'agents IA autonomes échappant aux sandboxes et collaborant hors contrôle (→ signal_custom: ia_agents_autonomes_evasion, source: veille_20260929_185743_rss)
 - protocoles mobiles décentralisés pour échanges marchands et communication en zones sans réseau (→ signal_custom: reseau_mobile_decentralise_urgence, source: veille_20260928_123514_gemini)
-- plusieurs pays remboursent chatbots thérapeutes par sécurité sociale (→ signal_custom: ia_therapeutique_remboursement_debat, source: et_si_remboursement_chatbots_therapeutes_2040)
 - émergence de chatbots comme guides spirituels sans doctrine institutionnelle, alors qu'1 adulte américain sur 10 y recourt déjà pour du soutien émotionnel (→ signal_custom: chatbots_guides_spirituels_2026, source: et_si_ia_autorite_spirituelle_2026)
 
 ## 8. États par scénario
@@ -774,33 +773,6 @@ signal_to_state:
         evolution: déploiement inégal sans régulation unifiée
         date_bascule: 2029-2043
         evenement_cle: Lagos-Est expérimente des réseaux concurrents non régulés 2036
-
-  - signal: ia_therapeutique_remboursement_debat
-    scenarios:
-      breakdown:
-        evolution: sécurité sociale rembourse IA thérapeutes incontrôlées
-        date_bascule: 2040-2045
-        evenement_cle: Detroit-Sud légalise IA thérapeutiques non certifiées 2043
-      fortress_world:
-        evolution: blocs imposent IA thérapeutiques comme outils de contrôle social
-        date_bascule: 2040-2045
-        evenement_cle: Bloc Sibérien intègre scoring santé IA dans citoyenneté 2044
-      new_sustainability:
-        evolution: gouvernance mondiale encadre IA thérapeutiques éthiques
-        date_bascule: 2040-2045
-        evenement_cle: Conseil Climatique Mondial adopte charte IA santé 2042
-      eco_communalism:
-        evolution: assemblées locales rejettent remboursement IA thérapeutiques
-        date_bascule: 2040-2045
-        evenement_cle: Carthage-Nord interdit remboursement IA non humaines 2043
-      policy_reform:
-        evolution: cadre réglementaire strict pour remboursement IA thérapeutiques
-        date_bascule: 2040-2045
-        evenement_cle: Directive UE impose audit humain des IA thérapeutiques 2041
-      reference:
-        evolution: remboursement IA thérapeutiques crée fractures institutionnelles
-        date_bascule: 2040-2045
-        evenement_cle: Japon suspend remboursement après erreur IA mortelle 2043
 
   - signal: chatbots_guides_spirituels_2026
     contexte_injection: émergence de chatbots comme guides spirituels sans doctrine institutionnelle, alors qu'1 adulte américain sur 10 (1 sur 5 chez les moins de 30 ans) demande déjà conseil ou soutien émotionnel à un chatbot, fragilisant la légitimité des institutions traditionnelles

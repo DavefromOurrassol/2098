@@ -369,7 +369,6 @@ _extended_
 
 **custom (signaux d'actualité)**
 - conception IA de phages ciblant bactéries résistantes (→ signal_custom: ia_phages_antibioresistance_biosurete, source: veille_20260928_123514_mistral)
-- plusieurs pays remboursent chatbots thérapeutes par sécurité sociale (→ signal_custom: ia_therapeutique_remboursement_debat, source: et_si_remboursement_chatbots_therapeutes_2040)
 
 ## 8. États par scénario
 ### [[breakdown]]
@@ -717,30 +716,4 @@ signal_to_state:
         date_bascule: 2030-2044
         evenement_cle: premier brevet phage Stanford licencié 2036
 
-  - signal: ia_therapeutique_remboursement_debat
-    scenarios:
-      breakdown:
-        evolution: sécurité sociale rembourse IA thérapeutiques défaillantes
-        date_bascule: 2040-2045
-        evenement_cle: faillite caisse maladie Lagos-Mumbai après erreurs IA 2044
-      fortress_world:
-        evolution: blocs réservent IA thérapeutiques à élites citoyennes
-        date_bascule: 2040-2045
-        evenement_cle: Bloc Sibérien limite remboursement IA aux classes A 2043
-      new_sustainability:
-        evolution: IA thérapeutiques intégrées comme service public mondial
-        date_bascule: 2040-2045
-        evenement_cle: Fonds Mondial Santé adopte cadre éthique IA thérapeutique 2042
-      eco_communalism:
-        evolution: bioterritoires refusent remboursement IA centralisées
-        date_bascule: 2040-2045
-        evenement_cle: charte bioterritoriale de Carthage interdit IA santé 2043
-      policy_reform:
-        evolution: régulation progressive des IA thérapeutiques remboursées
-        date_bascule: 2040-2045
-        evenement_cle: OCDE publie directive sur l'audit des IA santé 2041
-      reference:
-        evolution: remboursement IA thérapeutiques creuse inégalités santé
-        date_bascule: 2040-2045
-        evenement_cle: Canada suspend remboursement IA après scandale pharmaceutique 2043
 ```

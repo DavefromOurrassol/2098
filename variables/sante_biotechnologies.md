@@ -341,7 +341,6 @@ _extended_
 
 **custom (signaux d'actualité)**
 - conception IA de phages ciblant bactéries résistantes (→ signal_custom: ia_phages_antibioresistance_biosurete, source: veille_20260928_123514_mistral)
-- plusieurs pays remboursent chatbots thérapeutes par sécurité sociale (→ signal_custom: ia_therapeutique_remboursement_debat, source: et_si_remboursement_chatbots_therapeutes_2040)
 
 ## 8. États par scénario
 ### [[breakdown]]
@@ -689,30 +688,4 @@ signal_to_state:
         date_bascule: 2026-2044
         evenement_cle: Stanford licencie phages à Big Pharma 2037
 
-  - signal: ia_therapeutique_remboursement_debat
-    scenarios:
-      breakdown:
-        evolution: chatbots thérapeutiques piratés propagent désinformation médicale
-        date_bascule: 2040-2045
-        evenement_cle: effondrement confiance IA thérapeutique après scandale Lagos-Est 2043
-      fortress_world:
-        evolution: chatbots réservés élites, tri sanitaire algorithmique des blocs
-        date_bascule: 2040-2045
-        evenement_cle: Bloc Atlantique impose score thérapeutique IA exclusif 2044
-      new_sustainability:
-        evolution: chatbots thérapeutiques open-source intégrés aux soins universels
-        date_bascule: 2040-2045
-        evenement_cle: Réseau Mondial de Santé adopte protocole IA thérapeutique éthique 2042
-      eco_communalism:
-        evolution: chatbots low-tech refusés, médecine communautaire humaine prioritaire
-        date_bascule: 2040-2045
-        evenement_cle: charte des maisons de santé interdit IA thérapeutique 2043
-      policy_reform:
-        evolution: régulation internationale encadre éthique et remboursement IA
-        date_bascule: 2040-2045
-        evenement_cle: Convention de Genève sur l'IA thérapeutique équitable 2041
-      reference:
-        evolution: remboursement inégal des chatbots, fractures sanitaires persistantes
-        date_bascule: 2040-2045
-        evenement_cle: Alliance Pacifique limite remboursement IA aux assurés premium 2043
 ```
