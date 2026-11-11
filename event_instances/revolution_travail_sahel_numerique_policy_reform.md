@@ -87,7 +87,4 @@ Cette initiative marque un tournant dans la gouvernance locale des ressources cr
 - [[bureau_international_du_travail_augmente_bita_policy_reform]]
 
 ## Note de cohérence
-'Cohérent avec le scénario ''policy_reform'' : intégration technocratique des initiatives
-  locales, tension entre gouvernance institutionnelle et autonomie communautaire,
-  et focalisation sur les ressources critiques (eau, énergie) dans un contexte de
-  transition accélérée.'
+Cohérent avec le scénario 'policy_reform' : intégration technocratique des initiatives locales, tension entre gouvernance institutionnelle et autonomie communautaire, et focalisation sur les ressources critiques (eau, énergie) dans un contexte de transition accélérée.

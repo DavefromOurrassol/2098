@@ -871,7 +871,7 @@ developpements: []
 {acteurs_md}
 
 ## Note de cohérence
-{note}
+{note_md}
 """.format(
         event_slug=event_slug,
         scenario=scenario,
@@ -893,6 +893,7 @@ developpements: []
         mode_ligne="\nmode: rupture" if instance_data.get("mode") == "rupture" else "",
         acteurs_yaml=acteurs_yaml,
         note=yaml_scalar(instance_data.get("note_coherence") or ""),
+        note_md=" ".join(str(instance_data.get("note_coherence") or "").split()),   # U3l : texte brut pour le corps
         source=idea.get("source", "actualite"),
         date_creation=datetime.now().strftime("%Y-%m-%d"),
         vars_md=vars_md,

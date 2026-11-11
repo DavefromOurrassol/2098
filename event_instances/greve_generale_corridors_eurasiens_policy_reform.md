@@ -84,7 +84,4 @@ La grève marque un tournant dans la gouvernance du travail critique : les reven
 - [[reseau_des_metropoles_noeuds_policy_reform]]
 
 ## Note de cohérence
-'Cohérent avec le scénario *policy_reform* : la crise est résolue par une régulation
-  technocratique supranationale, intégrant partiellement les revendications sociales
-  tout en renforçant le contrôle institutionnel. Les acteurs clés (UTE, AIER, ATRB)
-  et les dynamiques de gouvernance multi-niveaux sont respectés.'
+Cohérent avec le scénario *policy_reform* : la crise est résolue par une régulation technocratique supranationale, intégrant partiellement les revendications sociales tout en renforçant le contrôle institutionnel. Les acteurs clés (UTE, AIER, ATRB) et les dynamiques de gouvernance multi-niveaux sont respectés.
