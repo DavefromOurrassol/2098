@@ -93,7 +93,8 @@ def etat(hid):
             alertes.append("simulation limitée à " + ", ".join(sim.get("scenarios") or []) +
                            " : relancer sans « Scénario »")
         if not sim.get("passe") and etape <= 2 and typ != "signal":
-            alertes.append("simulation sans passe exhaustive : cocher « Lecture IA » et « Passe exhaustive »")
+            alertes.append("simulation sans passe exhaustive : à cocher (avec « Lecture IA ») seulement si "   # U3ag
+                           "l'événement doit toucher des fiches existantes ; inutile pour un simple événement d'article")
         if not ops.exists() and etape <= 4 and not applique and typ != "signal":
             alertes.append("pas de fichier d'opérations (simulation antérieure à v8.19) : la phase 4 "
                            "demandera une nouvelle simulation")

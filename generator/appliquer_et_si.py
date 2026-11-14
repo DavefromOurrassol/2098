@@ -1068,7 +1068,13 @@ def main():
             ligne += f"\n         → {notes[o['n']]}"
         print(ligne)
     if not ops:
-        print("  (aucune opération enregistrée : lecture IA et passe exhaustive absentes ?)")
+        # U3ae : dire quoi faire
+        print("  Aucune opération à appliquer : la simulation n'a enregistré ni zone, ni trajectoire, "
+              "ni relation.")
+        print("  · Pour un signal ou un événement sans effet sur les fiches, c'est normal : "
+              "rien à écrire ici, passer à la suite.")
+        print("  · Sinon, relancer la simulation (étape ①) avec « Lecture IA » puis « Passe exhaustive » "
+              "cochées, puis revenir à cette étape.")
     print("\nÀ faire à la main (non appliqué) :")
     print("\n".join(f"  - {x}" for x in a_main))
     changes = W.changes()

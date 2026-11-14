@@ -1552,7 +1552,9 @@ def rendre_markdown(hyp, resultats, date_fin, avert, geo=None, consequences=None
     if hyp["description"]:
         L += [hyp["description"], ""]
     if hyp.get("contraintes"):
-        L += ["**Faits imposés à la lecture IA** :"] + [f"- {c}" for c in hyp["contraintes"]] + [""]
+        titre_faits = ("Faits imposés au récit du signal" if hyp.get("type") == "signal"   # U3ae
+                       else "Faits imposés (lecture IA et récit de l'événement)")
+        L += [f"**{titre_faits}** :"] + [f"- {c}" for c in hyp["contraintes"]] + [""]
     pers_txt = ("— (mode **rupture** : l'équilibre du scénario est déplacé pour de bon)"
                 if hyp.get("mode") == "rupture" else hyp["persistance"])
     L += [f"- **Apparition** : {hyp['date']:g} · **Persistance** : {pers_txt} · "

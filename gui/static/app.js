@@ -11691,7 +11691,8 @@ function buildDecisionHypothese() {
   function dessinerFrise(etape) {
     frise.textContent = '';
     if (!etape) return;
-    ETAPES_COURTES.forEach((nom, i) => {
+    const nbEtapes = typeCourant === 'signal' ? 3 : ETAPES_COURTES.length;   // U3af : un signal s'arrête à ③
+    ETAPES_COURTES.slice(0, nbEtapes).forEach((nom, i) => {
       const n = i + 1;
       const etat = n < etape ? 'fait' : (n === etape ? 'en cours' : 'à venir');
       const [c] = COULEURS[etat];
@@ -11702,7 +11703,7 @@ function buildDecisionHypothese() {
       item.appendChild(pastille(n, c, etat !== 'à venir'));
       item.appendChild(mk('span', null, nom));
       frise.appendChild(item);
-      if (n < 5) {
+      if (n < nbEtapes) {
         const trait = mk('span', null, '——');
         trait.style.color = n < etape ? COULEURS['fait'][0] : '#9aa5ad';
         frise.appendChild(trait);
@@ -11733,7 +11734,7 @@ function buildDecisionHypothese() {
   const resumeSim = mk('div', 'option-desc');
   b1.appendChild(resumeSim);
   b1.appendChild(aide(
-    'Règle les options ci-dessus (laisse « Scénario » vide, coche « Lecture IA » et « Passe exhaustive »), ' +
+    'Règle les options ci-dessus (laisse « Scénario » vide, coche « Lecture IA » et « Passe exhaustive » ; pour un signal, ces options payantes sont sans objet et grisées), ' +
     'puis clique sur Lancer. La simulation ne modifie jamais le vault. Lis ensuite le rapport : effets ' +
     'chiffrés, lecture IA, passe exhaustive, liste d\'application. Clique sur ↻ Actualiser quand elle est finie.'));
   const lienRapport = lienObsidian('Ouvrir le rapport ↗');
@@ -11905,6 +11906,24 @@ function buildDecisionHypothese() {
     return m ? `${m[3]}/${m[2]}/${m[1]}` + (m[4] ? ` à ${m[4]}` : '') : (d || '?');
   };
 
+  // U3af : options payantes sans objet pour un signal (ni carte, ni zones, ni trajectoires)
+  const OPTIONS_SANS_OBJET_SIGNAL = ['--consequences-ia', '--passe-exhaustive', '--refaire'];
+  const griserSignal = (oui) => {
+    OPTIONS_SANS_OBJET_SIGNAL.forEach(flag => {
+      const el = document.querySelector(`#form-body [data-flag="${flag}"]`);
+      if (!el) return;
+      if (oui && el.checked) {
+        el.checked = false;
+        el.dispatchEvent(new Event('change', { bubbles: true }));
+      }
+      el.disabled = oui;
+      const ligne = el.closest('.checkbox-row') || el.parentElement;
+      if (ligne) {
+        ligne.title = oui ? 'Sans objet pour un signal (ni carte, ni zones, ni trajectoires)' : '';
+        ligne.style.opacity = oui ? '0.45' : '';
+      }
+    });
+  };
   let typeCourant = 'evenement';   // U2f
   // Affichage selon l'état
   const afficher = (e) => {
@@ -11913,6 +11932,7 @@ function buildDecisionHypothese() {
       alertesEl.textContent = '';
       blocs.forEach(b => montrer(b.bloc, false));
       dessinerFrise(0);
+      griserSignal(false);   // U3af
       return;
     }
     typeCourant = e.type || 'evenement';   // U2f
@@ -11920,9 +11940,11 @@ function buildDecisionHypothese() {
     alertesEl.textContent = (e.alertes || []).map(a => `⚠ ${a}`).join('\n');
     blocs.forEach(b => {
       const etat = b.n < e.etape ? 'fait' : (b.n === e.etape ? 'en cours' : 'à venir');
-      montrer(b.bloc, etat !== 'à venir');
+      const sansObjet = typeCourant === 'signal' && b.n > 3;   // U3af : un signal s'arrête à ③
+      montrer(b.bloc, etat !== 'à venir' && !sansObjet);
       if (etat !== 'à venir') styliserEtape(b, etat);
     });
+    griserSignal(typeCourant === 'signal');   // U3af
     dessinerFrise(e.etape);
     const sim = e.simulation, dec = e.decision;
     resumeSim.textContent = sim
@@ -11948,7 +11970,9 @@ function buildDecisionHypothese() {
     resumeInj.textContent = e.etape > 3 ? (typeCourant === 'signal' ? 'Signal injecté dans le vault. Rien à appliquer : parcours terminé.' : 'Événement injecté dans le vault.') :
       (e.statut === 'adopté, en attente d\'injection' ? 'En attente dans la file d\'injection.' : '');
     resumeApp.textContent = e.applique ? `Appliquée le ${date(e.applique)} (relancer n'applique que ce qui manque).`
-      : (e.operations ? '' : 'Fichier des opérations absent : resimuler avant d\'appliquer.');
+      : (e.operations ? (e.etape === 4 && typeCourant !== 'signal'   // U3ag
+          ? 'Pas encore appliquée. L\'étape ⑤ « À faire à la main » apparaîtra après « Appliquer ».' : '')
+        : 'Fichier des opérations absent : resimuler avant d\'appliquer.');
     resumeMain.textContent = e.checklist ? 'Check-list générée.' : '';
     if (e.checklist) { lienChecklist.dataset.chemin = e.checklist; montrer(lienChecklist, true); }
     else montrer(lienChecklist, false);
