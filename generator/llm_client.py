@@ -231,23 +231,47 @@ def _call_mistral(system_prompt: str, user_prompt: str,
 
     client = Mistral(api_key=api_key)
 
+    # GREEDY (14 nov. 2026) : temperature=0.0 -> l'API Mistral exige top_p=1 (erreur 400
+    # « greedy sampling »). Un seul nouvel essai dans ce cas précis.
+    args_mistral = dict(
+        model=model,
+        max_tokens=max_tokens * 4 if "large" in str(model) else max_tokens,   # THINKING
+        temperature=temperature,
+        messages=[
+            {"role": "system", "content": system_prompt},
+            {"role": "user",   "content": user_prompt},
+        ],
+    )
     try:
-        response = client.chat.complete(
-            model=model,
-            max_tokens=max_tokens,
-            temperature=temperature,
-            messages=[
-                {"role": "system", "content": system_prompt},
-                {"role": "user",   "content": user_prompt},
-            ]
-        )
+        try:
+            response = client.chat.complete(**args_mistral)
+        except Exception as e:
+            if "greedy sampling" not in str(e):
+                raise
+            args_mistral["top_p"] = 1.0
+            args_mistral["temperature"] = max(temperature, 0.01)
+            response = client.chat.complete(**args_mistral)
     except Exception as e:
         raise RuntimeError(f"[llm_client] Erreur API Mistral : {e}")
 
     usage = response.usage
     print(f"[llm] Mistral ({model}) — entrée : {usage.prompt_tokens} | sortie : {usage.completion_tokens}")
 
-    return _texte_reponse(response.choices[0].message.content, model)
+    texte = _texte_reponse(response.choices[0].message.content, model)
+    # THINKING (14 nov. 2026) : la réflexion du modèle a pris tout le plafond -> un nouvel essai
+    if (not texte.strip() and getattr(response.choices[0], "finish_reason", None) == "length"
+            and args_mistral["max_tokens"] < 32000):
+        args_mistral["max_tokens"] = min(args_mistral["max_tokens"] * 3, 32000)
+        print(f"[llm] {model} : réponse vide (réflexion trop longue), nouvel essai à "
+              f"{args_mistral['max_tokens']} tokens")
+        try:
+            response = client.chat.complete(**args_mistral)
+        except Exception as e:
+            raise RuntimeError(f"[llm_client] Erreur API Mistral : {e}")
+        usage = response.usage
+        print(f"[llm] Mistral ({model}) — entrée : {usage.prompt_tokens} | sortie : {usage.completion_tokens}")
+        texte = _texte_reponse(response.choices[0].message.content, model)
+    return texte
 
 
 # LARGE4 (9 octobre 2026) -- réponses en morceaux (modèles qui raisonnent)

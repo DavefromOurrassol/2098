@@ -1320,6 +1320,7 @@ def _texte_faits(idea, scenario):
 
 # U3s (11 novembre 2026) -- contexte de l'article d'origine pour l'étape 2
 _DERNIER_ARTICLE_U3S = {}   # U3t : scénario -> texte de l'article trouvé (pour le contrôle des citations)
+_ARTICLE_INFO_U3AA = {}   # U3aa : scénario -> {fichier, citation}
 
 
 def _fait_de_article_u3w(fait, scenario):
@@ -1402,6 +1403,7 @@ def _texte_contexte_article(idea, scenario, max_chars=2800):
     voisins. Vide si aucune citation d'au moins 8 mots, ou si elle n'est pas trouvée dans UN
     SEUL article de articles/<scénario>/. Ne lève jamais d'exception."""
     _DERNIER_ARTICLE_U3S.pop(scenario, None)   # U3t
+    _ARTICLE_INFO_U3AA.pop(scenario, None)   # U3aa
     try:
         cands = [f["fait"] for f in _faits_du_scenario(idea, scenario)
                  if (f.get("sort") or "contrainte") == "contrainte"
@@ -1433,6 +1435,7 @@ def _texte_contexte_article(idea, scenario, max_chars=2800):
             if len(passage) > max_chars:
                 passage = passage[:max_chars].rsplit(" ", 1)[0] + " […]"
             _DERNIER_ARTICLE_U3S[scenario] = " ".join(paras)   # U3t
+            _ARTICLE_INFO_U3AA[scenario] = {"fichier": f.name, "citation": cand}   # U3aa
             print(f"  [contexte article] {f.name} (paragraphe {i + 1}/{len(paras)})")
             return (f"\n## CONTEXTE DE L'ARTICLE D'ORIGINE (« {titre} »)\n{passage}\n"
                     "Ce passage est la SOURCE de l'événement : reprends les acteurs, lieux, chiffres et "
@@ -1534,6 +1537,116 @@ Réponds : {{"faits": [{{"n": 1, "respecte": true, "citation": "", "explication"
         expl = " ".join(str(r.get("explication") or "").split())
         out.append(f"« {f['fait']} »" + (f" — {expl}" if expl else "") + (f" (récit : « {cit} »)" if cit else ""))
     print(f"  [faits imposés] {len(faits)} contrôlé(s), {len(out)} non respecté(s)")
+    return out
+
+
+# U3aa (14 novembre 2026) -- fiche d'un événement d'article : textes repris, jamais générés.
+# Quand l'article ne donne qu'une phrase, tout texte écrit par l'IA autour est de l'invention
+# (constat du 11 nov. sur 4 fiches). Sans passage d'article retrouvé, rien ne change.
+FICHE_DEPUIS_ARTICLE_U3AA = True
+CONSEQUENCES_ARTICLE_U3AA = "L'article d'origine ne précise pas de conséquences de cet événement."
+_VAULT_NOMS_U3AA = {}   # cache : scénario -> liste de noms normalisés (entourés d'espaces)
+
+_CAP_U3AA = r"[A-ZÀ-ÖØ-Þ][\w'’-]*"
+_LIEN_U3AA = r"(?:\s+(?:de|du|des|la|le|les|et|pour|sur|au|aux|en)\s+|\s+d['’]\s*|\s+l['’]\s*|\s+)"
+_SEQ_NOMS_U3AA = re.compile(_CAP_U3AA + "(?:" + _LIEN_U3AA + _CAP_U3AA + ")*")
+_DEBUTS_U3AA = {"le", "la", "les", "l", "un", "une", "des", "dans", "en", "ce", "cet", "cette", "ces",
+                "depuis", "aujourd", "pour", "sur", "avec", "mais", "et", "ainsi", "alors", "puis",
+                "il", "elle", "ils", "elles", "son", "sa", "ses", "leur", "leurs", "au", "aux", "du"}
+
+
+def _noms_propres_u3aa(texte):
+    """Séquences de mots capitalisés (noms propres, sigles). Un mot capitalisé isolé en
+    début de phrase n'est pas retenu ; un article ou une préposition en tête est retiré."""
+    out = []
+    for phrase in re.split(r"(?<=[.!?])\s+", str(texte or "")):
+        for m in _SEQ_NOMS_U3AA.finditer(phrase):
+            mots = m.group(0).split()
+            if m.start() == 0:
+                while mots and re.sub(r"['’].*$", "", mots[0]).lower() in _DEBUTS_U3AA:
+                    mots = mots[1:]
+                if len(mots) < 2 and (m.start() == 0 and len(m.group(0).split()) <= 1 or not mots):
+                    continue
+                if len(mots) == 1 and not mots[0].isupper():
+                    continue
+            if mots:
+                out.append(" ".join(mots))
+    return out
+
+
+def _noms_vault_u3aa(scenario):
+    """Noms (normalisés, entourés d'espaces) des instances du scénario, des entités et des zones."""
+    if scenario in _VAULT_NOMS_U3AA:
+        return _VAULT_NOMS_U3AA[scenario]
+    noms = set()
+    try:
+        for a in load_available_actors(scenario):
+            noms.add(" " + _norm_ctx_u3s(a.get("name")) + " ")
+        d = VAULT_ROOT / "entites"
+        if d.is_dir():
+            for p in d.glob("*.md"):
+                fm, _ = parse_md(p)
+                if fm.get("name"):
+                    noms.add(" " + _norm_ctx_u3s(fm["name"]) + " ")
+        for z in load_all_zones_event(scenario).values():
+            for k in ("nom", "name"):
+                if z.get(k):
+                    noms.add(" " + _norm_ctx_u3s(z[k]) + " ")
+    except Exception:  # noqa: BLE001 -- contrôle d'information, jamais un blocage
+        pass
+    noms.discard("  ")
+    _VAULT_NOMS_U3AA[scenario] = noms
+    return noms
+
+
+def appliquer_fiche_article_u3aa(instance_data, idea, scenario):
+    """U3aa : remplace les textes écrits par l'IA par ceux de l'article (voir l'en-tête du patch).
+    Appelé après chaque réponse de l'IA (essai initial et relances), avant la validation."""
+    if not FICHE_DEPUIS_ARTICLE_U3AA:
+        return
+    article = _DERNIER_ARTICLE_U3S.get(scenario)
+    desc = " ".join(str(idea.get("description") or "").split())
+    if not article or not desc:
+        return
+    info = _ARTICLE_INFO_U3AA.get(scenario) or {}
+    instance_data["realisation"] = desc
+    instance_data["description_complete"] = desc
+    instance_data["consequences"] = CONSEQUENCES_ARTICLE_U3AA
+    cit = " ".join(str(info.get("citation") or "").split())
+    instance_data["note_coherence"] = (
+        "Événement tiré de l'article d'origine" + (f" ({info['fichier']})" if info.get("fichier") else "")
+        + (f" : « {cit} »." if cit else ".") + " Textes repris de l'hypothèse, sans ajout."
+    )
+    try:
+        an = int(float(instance_data.get("date")))
+    except (TypeError, ValueError):
+        an = None
+    if an:
+        label = str(instance_data.get("date_label") or "")
+        base = set(_norm_ctx_u3s(article).split())
+        mots = [w for w in _norm_ctx_u3s(re.sub(r"\d+", " ", label)).split() if len(w) >= 3]
+        if not label or any(w not in base for w in mots):
+            instance_data["date_label"] = str(an)
+    print(f"  [fiche article] {scenario} : textes repris de l'hypothèse et de l'article (U3aa)")
+
+
+def _noms_absents_u3aa(instance_data, scenario):
+    """U3aa : noms propres / sigles du texte absents de l'article ET du vault. Liste (vide sinon)."""
+    article = _DERNIER_ARTICLE_U3S.get(scenario)
+    if not article:
+        return []
+    base = " " + _norm_ctx_u3s(article) + " "
+    vault = _noms_vault_u3aa(scenario)
+    vus, out = set(), []
+    for k in ("realisation", "description_complete", "consequences"):
+        for c in _noms_propres_u3aa(instance_data.get(k)):
+            n = _norm_ctx_u3s(c)
+            if not n or n in vus:
+                continue
+            vus.add(n)
+            if (" " + n + " ") in base or any((" " + n + " ") in v for v in vault):
+                continue
+            out.append(c)
     return out
 
 
@@ -1660,6 +1773,7 @@ def process_idea(client, idea, dry_run=False):
             )
             truncate_actors(instance_data, actors_hint_sc, actors_hint_count, available_actors)
             appliquer_impositions(instance_data, idea, scenario)
+            appliquer_fiche_article_u3aa(instance_data, idea, scenario)   # U3aa
 
             etat_contraintes, relance_contraintes = None, False   # PATCH_S30_CONTRAINTES
             for attempt in range(MAX_FIX_ATTEMPTS + 1):
@@ -1687,6 +1801,7 @@ def process_idea(client, idea, dry_run=False):
                     )
                     truncate_actors(instance_data, actors_hint_sc, actors_hint_count, available_actors)
                     appliquer_impositions(instance_data, idea, scenario)
+                    appliquer_fiche_article_u3aa(instance_data, idea, scenario)   # U3aa
 
             if issues:
                 results.append({
@@ -1705,6 +1820,8 @@ def process_idea(client, idea, dry_run=False):
                 print(f"  ⚠ [{scenario}] le nom du scénario « {nom_sc} » apparaît dans {champ} : à retoucher")
             for msg in _anachronismes_u3y(instance_data, idea, scenario):   # U3y
                 print(f"  ⚠ [{scenario}] {msg}")
+            for nom_abs in _noms_absents_u3aa(instance_data, scenario):   # U3aa
+                print(f"  ⚠ [{scenario}] nom propre absent de l'article et du vault : « {nom_abs} »")
 
             if idea.get("edition_active") and idea.get("date_imposee") is not None:
                 print("  ⚠ edition_active ignoré : la date est imposée par la simulation.")
