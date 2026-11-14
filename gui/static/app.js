@@ -10869,7 +10869,7 @@ function buildAssistantHypothese() {
   const selType = document.createElement('select');
   selType.style.setProperty('width', 'auto', 'important');
   selType.style.maxWidth = '70%';
-  [['', 'Type : l\'IA décide'], ['evenement', 'Événement'], ['signal', 'Signal']].forEach(([v, t]) => {
+  [['', 'Type : l\'IA décide'], ['evenement', 'Événement'], ['signal', 'Signal'], ['entite', 'Entité']].forEach(([v, t]) => {
     const o = document.createElement('option'); o.value = v; o.textContent = t; selType.appendChild(o);
   });
   ligneProposer.appendChild(selType);
@@ -11179,8 +11179,9 @@ function buildDecisionHypothese() {
   function dessinerFrise(etape) {
     frise.textContent = '';
     if (!etape) return;
-    const nbEtapes = typeCourant === 'signal' ? 3 : ETAPES_COURTES.length;   // U3af : un signal s'arrête à ③
-    ETAPES_COURTES.slice(0, nbEtapes).forEach((nom, i) => {
+    const nbEtapes = (typeCourant === 'signal' || typeCourant === 'entite') ? 3 : ETAPES_COURTES.length;   // U3af : un signal s'arrête à ③ ; U3an : une entité aussi
+    const nomsFrise = typeCourant === 'entite' ? ['Vérifier', 'Décider', 'Injecter'] : ETAPES_COURTES;   // U3an
+    nomsFrise.slice(0, nbEtapes).forEach((nom, i) => {
       const n = i + 1;
       const etat = n < etape ? 'fait' : (n === etape ? 'en cours' : 'à venir');
       const [c] = COULEURS[etat];
@@ -11428,11 +11429,12 @@ function buildDecisionHypothese() {
     alertesEl.textContent = (e.alertes || []).map(a => `⚠ ${a}`).join('\n');
     blocs.forEach(b => {
       const etat = b.n < e.etape ? 'fait' : (b.n === e.etape ? 'en cours' : 'à venir');
-      const sansObjet = typeCourant === 'signal' && b.n > 3;   // U3af : un signal s'arrête à ③
+      const sansObjet = (typeCourant === 'signal' && b.n > 3)   // U3af : un signal s'arrête à ③
+        || (typeCourant === 'entite' && (b.n > 3 || b.n === 1));   // U3an : une entité n'a ni ① Tester, ni ④, ni ⑤
       montrer(b.bloc, etat !== 'à venir' && !sansObjet);
       if (etat !== 'à venir') styliserEtape(b, etat);
     });
-    griserSignal(typeCourant === 'signal');   // U3af
+    griserSignal(typeCourant === 'signal' || typeCourant === 'entite');   // U3af / U3an
     dessinerFrise(e.etape);
     const sim = e.simulation, dec = e.decision;
     resumeSim.textContent = sim
@@ -11448,15 +11450,21 @@ function buildDecisionHypothese() {
       : '';
     montrer(zoneAdopter, e.etape === 2);
     // U2f : portée et intensité sont sans objet pour un signal
+    const sansPI = typeCourant === 'signal' || typeCourant === 'entite';   // U3an
     [portee, intensite].forEach(x => {
-      x.disabled = typeCourant === 'signal';
-      x.title = typeCourant === 'signal' ? 'Sans objet pour un signal' : '';
-      x.style.opacity = typeCourant === 'signal' ? '0.45' : '';
+      x.disabled = sansPI;
+      x.title = sansPI ? 'Sans objet pour ' + (typeCourant === 'entite' ? 'une entité' : 'un signal') : '';
+      x.style.opacity = sansPI ? '0.45' : '';
     });
+    montrer(ligneTri3, typeCourant !== 'entite');   // U3an : pas de liste ④ pour une entité
     montrer(btnAnnuler, !!dec);
     montrer(ligneInjecter, e.etape === 3 && e.statut === 'adopté, en attente d\'injection');
-    resumeInj.textContent = e.etape > 3 ? (typeCourant === 'signal' ? 'Signal injecté dans le vault. Rien à appliquer : parcours terminé.' : 'Événement injecté dans le vault.') :
-      (e.statut === 'adopté, en attente d\'injection' ? 'En attente dans la file d\'injection.' : '');
+    resumeInj.textContent = e.etape > 3 ? (typeCourant === 'signal' ? 'Signal injecté dans le vault. Rien à appliquer : parcours terminé.'
+        : (typeCourant === 'entite' ? 'Entité injectée dans le vault (fiche et instances). Rien à appliquer : parcours terminé.' : 'Événement injecté dans le vault.')) :
+      (e.statut === 'adopté, en attente d\'injection'
+        ? (typeCourant === 'entite'
+          ? 'Entité adoptée, prête à injecter (aucune file). « Simuler l\'injection » fait de vrais appels IA (un par scénario, plusieurs minutes) sans rien écrire ; « Injecter » crée la fiche et les instances : l\'annulation n\'est pas automatique.'
+          : 'En attente dans la file d\'injection.') : '');   // U3an
     resumeApp.textContent = e.applique ? `Appliquée le ${date(e.applique)} (relancer n'applique que ce qui manque).`
       : (e.operations ? (e.etape === 4 && typeCourant !== 'signal'   // U3ag
           ? 'Pas encore appliquée. L\'étape ⑤ « À faire à la main » apparaîtra après « Appliquer ».' : '')
@@ -11477,7 +11485,7 @@ function buildDecisionHypothese() {
       const data = await res.json();
       if (data.error) { statutTxt.textContent = `✗ ${data.error}`; return; }
       afficher(data);
-      if (data.etape >= 5 && data.type !== 'signal') chargerMain(); else viderMain();   // PATCH_S27_GUI_MAIN (U2f : pas d'étape ⑤ pour un signal)
+      if (data.etape >= 5 && data.type !== 'signal' && data.type !== 'entite') chargerMain(); else viderMain();   // PATCH_S27_GUI_MAIN (U2f : pas d'étape ⑤ pour un signal)
     } catch (err) {
       statutTxt.textContent = `✗ Erreur réseau : ${err.message}`;
     }

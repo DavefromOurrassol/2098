@@ -3064,7 +3064,8 @@ def main():
             st = ed.statut(h.get("id"))
             nom = h.get("nom") or h.get("id")
             liste.append({"id": h.get("id"), "nom": nom if st == "non simulé" else f"{nom} · {st}",
-                          "date": h.get("date"), "erreurs": err, "statut": st})
+                          "date": h.get("date"), "erreurs": err, "statut": st,
+                          "type": str(h.get("type") or "evenement")})   # U3ao
         print(json.dumps(liste, ensure_ascii=False, default=str))
         return
     if args.lister or not args.id:

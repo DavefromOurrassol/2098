@@ -2929,7 +2929,7 @@ def et_si_assistant(action):
     if not texte.strip():
         return jsonify({"error": "texte vide"}), 400
     cmd = [sys.executable, "hypothese_depuis_texte.py", f"--{action}", "--json"]
-    if action == "proposer" and data.get("type") in ("evenement", "signal"):   # U2f
+    if action == "proposer" and data.get("type") in ("evenement", "signal", "entite"):   # U2f / U3an
         cmd += ["--type", data["type"]]
     if action == "proposer":   # U3c : date, scénarios et mode imposés par la source (article)
         try:
@@ -4479,7 +4479,8 @@ def get_slugs():
                 if not h.get("id"):
                     continue
                 slugs.append(h["id"])
-                labels[h["id"]] = (f"{h.get('nom')} ({h.get('date')})"
+                _quand = "entité" if h.get("type") == "entite" else h.get("date")   # U3ao
+                labels[h["id"]] = (f"{h.get('nom')} ({_quand})"
                                    + (" ⚠ invalide" if h.get("erreurs") else ""))
         elif slug_type == "signals":
             slugs = _scan_signal_slugs(vault_root)
