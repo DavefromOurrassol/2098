@@ -2829,6 +2829,8 @@ def edition_injecter_evenement():
     /api/edition/articles et lance l'injection en un clic, sans passer par
     queue.yaml.
     """
+    # U3ai (14 nov 2026) : accès direct fermé -- passer par « Et si ? ».
+    return jsonify({"ok": False, "error": "Accès fermé : utiliser « Et si ? » (onglet Articles → Envoyer vers « et si ? »)."}), 410
     cfg = load_config()
     pipeline_dir = Path(cfg.get("pipeline_dir", ""))
     data = request.get_json() or {}
