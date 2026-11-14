@@ -55,17 +55,93 @@ async function loadScripts() {
 const SECTIONS = [
   { key: 'articles',           label: 'Articles' },
   { key: 'presse',             label: 'Presse & journaux' },
-  { key: 'entites_creation',   label: 'Entités & événements — création' },
   // 26 septembre 2026 (S17) : les outils de cohérence des relations et du
   // lore, dans l'ordre où on les enchaîne (étapes 1 à 5 -- l'étape 5 est
   // l'onglet 'lore_propositions', ajouté dans buildNav() ci-dessous).
   { key: 'relations_lore',     label: 'Relations & lore — étapes 1 → 5' },
-  { key: 'entites_nettoyage',  label: 'Entités & événements — nettoyage' },
   { key: 'geo_construction',   label: 'Géographie — construction' },
   { key: 'geo_diagnostic',     label: 'Géographie — diagnostic' },
-  { key: 'monde_reel',         label: 'Référence — monde réel' },
   { key: 'validation',         label: 'Validation' },
 ];
+
+// ── U3ap (14 novembre 2026) : menu en groupes (Ajouter au monde / Sources / Entretien) ──
+// Les entrées scripts_config.json ne changent pas : seul leur rangement dans le menu.
+const NAV_ABSORBEES_U3AP = ['entites_creation', 'entites_nettoyage', 'monde_reel'];
+const NAV_DIRECTS_U3AP = ['create_entities', 'inject_events', 'inject_signals'];
+const NAV_SOURCES_U3AP = ['export_prompt_veille', 'import_veille_etat_monde', 'export_prompt_signaux',
+  'veille_livres_api', 'veille_rss_api', 'import_signaux_faibles'];
+const NAV_ENTRETIEN_U3AP = ['enrich_minimal', 'fix_alliances_oppositions', 'generate_instances',
+  'extract_phantom_slugs', 'requeue_needs_review', 'undo_custom', 'trace_injection',
+  'fix_annee_debut_placeholder', 'set_priorite_forcee', 'set_selection_instance'];
+
+function _navMemoireU3ap(cle, defaut) {
+  try {
+    const v = localStorage.getItem('ourrassol_nav_' + cle);
+    return v === null ? defaut : v === '1';
+  } catch (e) { return defaut; }
+}
+
+function _navMemoriserU3ap(cle, ouvert) {
+  try { localStorage.setItem('ourrassol_nav_' + cle, ouvert ? '1' : '0'); } catch (e) { /* stockage indisponible */ }
+}
+
+function _navScriptsU3ap(ids) {
+  // éléments de menu des scripts demandés (ceux absents de scripts_config.json sont ignorés)
+  const els = [];
+  ids.forEach(id => {
+    const s = State.scripts.find(x => x.id === id);
+    if (s) els.push(makeNavItem(s.id, s.icon, s.label, s.badge || null, 'script', false, s.gui_verified));
+  });
+  return els;
+}
+
+function _navGroupeReplieU3ap(nav, cle, titre, elements, ouvertDefaut) {
+  const entete = document.createElement('div');
+  entete.className = 'nav-section-label';
+  entete.style.cursor = 'pointer';
+  entete.style.userSelect = 'none';
+  const corps = document.createElement('div');
+  corps.dataset.navGroupe = cle;
+  elements.forEach(e => corps.appendChild(e));
+  const maj = (ouvert) => {
+    entete.textContent = (ouvert ? '▾ ' : '▸ ') + titre;
+    corps.style.display = ouvert ? '' : 'none';
+    corps.dataset.ouvert = ouvert ? '1' : '0';
+  };
+  corps._majU3ap = maj;
+  maj(_navMemoireU3ap(cle, ouvertDefaut));
+  entete.addEventListener('click', () => {
+    const ouvert = corps.dataset.ouvert !== '1';
+    maj(ouvert);
+    _navMemoriserU3ap(cle, ouvert);
+  });
+  nav.appendChild(entete);
+  nav.appendChild(corps);
+}
+
+function construireGroupesNavU3ap(nav, quand) {
+  if (quand === 'avant') {
+    nav.appendChild(makeSectionLabel('Ajouter au monde'));
+    _navScriptsU3ap(['simuler_et_si']).forEach(e => nav.appendChild(e));
+    _navGroupeReplieU3ap(nav, 'directs', 'Outils directs (ancien, avancé)', _navScriptsU3ap(NAV_DIRECTS_U3AP), false);
+    nav.appendChild(makeDivider());
+    nav.appendChild(makeSectionLabel('Sources'));
+    nav.appendChild(makeNavItem('veille_signaux', '🔭', 'Veille signaux faibles', null, 'tab'));
+    _navScriptsU3ap(NAV_SOURCES_U3AP).forEach(e => nav.appendChild(e));
+    nav.appendChild(makeDivider());
+    return;
+  }
+  // Entretien : la liste fixe + tout script des sections absorbées qui n'a pas de place ailleurs
+  const places = new Set(['simuler_et_si', ...NAV_DIRECTS_U3AP, ...NAV_SOURCES_U3AP, ...NAV_ENTRETIEN_U3AP]);
+  const ids = [...NAV_ENTRETIEN_U3AP];
+  State.scripts.forEach(s => {
+    if (NAV_ABSORBEES_U3AP.includes(s.section) && !places.has(s.id)) ids.push(s.id);
+  });
+  const elements = _navScriptsU3ap(ids);
+  elements.push(makeNavItem('sujets', '🧭', 'Audit par sujet', null, 'tab'));
+  _navGroupeReplieU3ap(nav, 'entretien', 'Entretien', elements, false);
+  nav.appendChild(makeDivider());
+}
 
 function buildNav() {
   const nav = document.getElementById('nav');
@@ -80,10 +156,10 @@ function buildNav() {
   nav.appendChild(makeNavItem('instances', '🏛️', 'Instances', null, 'tab'));
   nav.appendChild(makeNavItem('event_instances', '⚡', 'Événements', null, 'tab'));
   nav.appendChild(makeNavItem('signaux', '📡', 'Signaux faibles', null, 'tab'));
-  nav.appendChild(makeNavItem('veille_signaux', '🔭', 'Veille signaux faibles', null, 'tab'));
   nav.appendChild(makeNavItem('resumes', '📝', 'Résumés par scénario', null, 'tab'));
   nav.appendChild(makeDivider());
 
+  construireGroupesNavU3ap(nav, 'avant');   // U3ap : Ajouter au monde, Sources
   // Sections scripts
   SECTIONS.forEach(section => {
     nav.appendChild(makeSectionLabel(section.label));
@@ -113,6 +189,7 @@ function buildNav() {
     nav.appendChild(makeDivider());
   });
 
+  construireGroupesNavU3ap(nav, 'apres');   // U3ap : Entretien (replié)
   // Revue + Config
   nav.appendChild(makeNavItem('review', '🔍', 'Revue', null, 'tab', true));
   nav.appendChild(makeNavItem('config', '⚙️', 'Config', null, 'tab'));
@@ -165,6 +242,10 @@ function setActiveNav(id) {
   document.querySelectorAll('.nav-item').forEach(el => {
     el.classList.toggle('active', el.dataset.id === id);
   });
+  // U3ap : un groupe replié s'ouvre quand on y navigue (sans mémoriser ce choix)
+  const actif = document.querySelector('.nav-item.active');
+  const corps = actif && actif.closest ? actif.closest('[data-nav-groupe]') : null;
+  if (corps && corps.dataset.ouvert !== '1' && corps._majU3ap) corps._majU3ap(true);
 }
 
 // ── Sélecteur LLM ─────────────────────────────────
