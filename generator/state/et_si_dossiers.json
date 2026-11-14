@@ -3319,19 +3319,10 @@
  },
  "archives_de_la_maree": {
   "decision": {
-   "statut": "adopté",
-   "date": "2026-11-14T11:58",
-   "motif": null,
-   "type": "entite",
-   "empreinte": "1fb057fb23fe3288",
-   "entree": {
-    "id": "archives_de_la_maree",
-    "nom": "les Archives de la Marée",
-    "category": "réseau",
-    "scenario_ref": "reference",
-    "source": "et_si_archives_de_la_maree",
-    "description": "Les Archives de la Marée sont un réseau d'archives côtières."
-   }
+   "statut": "rejeté",
+   "date": "2026-11-14T13:41",
+   "motif": "test",
+   "empreinte": null
   }
  }
 }
