@@ -128,6 +128,104 @@ def slug_evenement(hid):
 
 
 # ---------------------------------------------------------------------------
+# U3al (14 nov 2026) : hypothèses de type « entité » (pas de simulation chiffrée)
+# ---------------------------------------------------------------------------
+
+HYPOTHESES_PATH = VAULT_ROOT / "et_si" / "hypotheses.yaml"
+ENTITES_DIR = VAULT_ROOT / "entites"
+
+
+def hypothese_brute(hid):
+    """Bloc de l'hypothèse tel qu'écrit dans hypotheses.yaml (None si absent)."""
+    try:
+        data = yaml.safe_load(HYPOTHESES_PATH.read_text(encoding="utf-8")) or {}
+    except (OSError, yaml.YAMLError):
+        return None
+    for h in data.get("hypotheses") or []:
+        if isinstance(h, dict) and str(h.get("id")) == str(hid):
+            return h
+    return None
+
+
+def est_entite(hid):
+    h = hypothese_brute(hid)
+    return bool(h) and str(h.get("type") or "").strip().lower() == "entite"
+
+
+def slug_entite(nom):
+    """Même slug que create_entities_and_instances.py (slugs.slugify)."""
+    try:
+        from slugs import slugify as _s
+        return _s(str(nom or ""))
+    except Exception:  # noqa: BLE001 -- repli
+        t = re.sub(r"[^a-z0-9]+", "_", _plie(nom)).strip("_")
+        return t[:60].rstrip("_")
+
+
+def entite_existe(slug):
+    """entites/<slug>.md présent, ou slug dans le registre entites/_entities_list.json."""
+    if not slug:
+        return False
+    if (ENTITES_DIR / f"{slug}.md").exists():
+        return True
+    try:
+        reg = json.loads((ENTITES_DIR / "_entities_list.json").read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return False
+    return any(isinstance(e, dict) and e.get("slug") == slug for e in reg)
+
+
+def entree_entite(brut):
+    """Idée au format d'une entrée de entites_custom/queue.yaml, pour
+    create_entities_and_instances.py --idea."""
+    hid = brut.get("id")
+    idee = {"id": hid, "nom": " ".join(str(brut.get("nom") or "").split()),
+            "category": brut.get("categorie"), "scenario_ref": brut.get("scenario_ref"),
+            "source": f"et_si_{hid}"}
+    for cle_h, cle_i in (("description", "description"), ("role", "role"), ("etat", "etat")):
+        v = " ".join(str(brut.get(cle_h) or "").split())
+        if v:
+            idee[cle_i] = v
+    scen = brut.get("scenarios")
+    if isinstance(scen, list) and scen:
+        idee["scenario_hint"] = [str(s) for s in scen]
+    return idee
+
+
+def _statut_entite(hid, dossier):
+    dec = dossier.get("decision") or {}
+    if dec.get("statut") == "rejeté":
+        return "rejeté"
+    if dec.get("statut") != "adopté":
+        return "vérifié"
+    if entite_existe(slug_entite((dec.get("entree") or {}).get("nom"))):
+        return "injecté"
+    return "adopté, en attente d'injection"
+
+
+def _adopter_entite(brut, hid, apercu=False):
+    d = charger().get(hid) or {}
+    st = statut(hid, d)
+    if st not in ("vérifié", "rejeté"):
+        raise DossierErreur(f"{hid} est déjà « {st} » : --annuler-decision d'abord si tu veux la reprendre.")
+    entree = entree_entite(brut)
+    slug = slug_entite(entree["nom"])
+    if not slug:
+        raise DossierErreur(f"{hid} : nom inutilisable (slug vide).")
+    if entite_existe(slug):
+        raise DossierErreur(f"l'entité {slug!r} existe déjà dans le vault : adopter une entité de même nom "
+                            f"réécrirait sa fiche (renommer l'hypothèse, ou la rejeter).")
+    if apercu:
+        return entree
+    data = charger()
+    data.setdefault(hid, {})["decision"] = {
+        "statut": "adopté", "date": _maintenant(), "motif": None, "type": "entite",
+        "empreinte": empreinte_hypothese(brut), "entree": entree}
+    sauver(data)
+    return entree
+
+
+# ---------------------------------------------------------------------------
 # Enregistrement d'une simulation
 # ---------------------------------------------------------------------------
 
@@ -151,6 +249,8 @@ def enregistrer_simulation(brut, hyp, scenarios_simules, version, entree, passe,
 
 def statut(hid, dossier=None):
     dossier = dossier if dossier is not None else charger().get(hid) or {}
+    if est_entite(hid):   # U3al
+        return _statut_entite(hid, dossier)
     dec = dossier.get("decision") or {}
     if dec.get("statut") == "rejeté":
         return "rejeté"
@@ -310,6 +410,8 @@ def _retirer_de_queue(hid, typ="evenement"):
 
 
 def adopter(brut, hid, portee=None, intensite=None, apercu=False):
+    if str(brut.get("type") or "").strip().lower() == "entite":   # U3al
+        return _adopter_entite(brut, hid, apercu)
     entree, sim = preparer_adoption(brut, hid, portee, intensite)
     if apercu:
         return entree
@@ -326,10 +428,10 @@ def adopter(brut, hid, portee=None, intensite=None, apercu=False):
 def rejeter(hid, motif=None):
     data = charger()
     d = data.get(hid) or {}
-    if not d.get("simulation"):
+    if not d.get("simulation") and not est_entite(hid):   # U3al
         raise DossierErreur(f"{hid} n'a jamais été simulée.")
     st = statut(hid, d)
-    if st not in ("simulé", "rejeté"):
+    if st not in ("simulé", "rejeté", "vérifié"):
         raise DossierErreur(f"{hid} est déjà « {st} » : --annuler-decision d'abord.")
     d["decision"] = {"statut": "rejeté", "date": _maintenant(), "motif": motif or None,
                      "empreinte": (d.get("simulation") or {}).get("empreinte")}
@@ -345,6 +447,17 @@ def annuler_decision(hid):
     d = data.get(hid) or {}
     if not d.get("decision"):
         raise DossierErreur(f"{hid} n'a aucune décision à annuler.")
+    if est_entite(hid):   # U3al : pas de file, rien à retirer
+        st = statut(hid, d)
+        slug = slug_entite(((d.get("decision") or {}).get("entree") or {}).get("nom"))
+        d.pop("decision")
+        data[hid] = d
+        sauver(data)
+        msgs = []
+        if st == "injecté":
+            msgs.append(f"⚠ l'entité {slug} reste dans le vault (entites/{slug}.md) : "
+                        f"annuler la décision ne l'enlève pas")
+        return st, msgs
     st = statut(hid, d)
     typ = type_dossier(d)
     nom_queue = "signaux_custom/queue.yaml" if typ == "signal" else "evenements_custom/queue.yaml"

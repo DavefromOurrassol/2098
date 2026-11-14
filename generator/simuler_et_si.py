@@ -167,8 +167,61 @@ def normaliser_region(op, ou, erreurs):
     return {"nouvelle_zone": nz, "parent": str(op.get("parent") or "").strip(), "portion": portion}
 
 
+# U3aj (14 nov 2026) : catégories d'une entité -- MÊME liste que VALID_CATEGORIES
+# dans create_entities_and_instances.py (à garder alignées).
+CATEGORIES_ENTITE = [
+    "IA", "organisation", "entreprise", "institution", "infrastructure",
+    "réseau", "humain", "système", "hybride", "autre", "média", "territoire",
+]
+CHAMPS_EVENEMENT_IGNORES = ("date", "impacts", "geographie", "carte", "mode", "persistance",
+                            "contraintes", "lieu", "via_matrice")
+
+
+def _verifier_entite(h):
+    """U3aj : contrôle d'une hypothèse `type: entite` (pas de simulation chiffrée).
+    Retourne (hypothèse normalisée, erreurs, avertissements)."""
+    erreurs, avert = [], []
+    hid = h.get("id") or "?"
+    nom = " ".join(str(h.get("nom") or "").split())
+    if not nom:
+        erreurs.append("`nom` requis (le nom de l'entité, tel qu'il apparaîtra dans le monde)")
+    cat = str(h.get("categorie") or "").strip()
+    if cat not in CATEGORIES_ENTITE:
+        erreurs.append(f"categorie {h.get('categorie')!r} invalide ({' | '.join(CATEGORIES_ENTITE)})")
+    ref = str(h.get("scenario_ref") or "").strip()
+    if ref not in SCENARIOS:
+        erreurs.append(f"scenario_ref {h.get('scenario_ref')!r} invalide ({' | '.join(SCENARIOS)})")
+    scen = h.get("scenarios") or "tous"
+    if isinstance(scen, str):
+        scen = list(SCENARIOS) if scen.strip() in ("tous", "all") else [scen.strip()]
+    if not isinstance(scen, list):
+        erreurs.append("`scenarios` : « tous » ou une liste de scénarios")
+        scen = list(SCENARIOS)
+    inconnus = [s for s in scen if s not in SCENARIOS]
+    if inconnus:
+        erreurs.append(f"scénarios inconnus : {inconnus}")
+    scen = [s for s in scen if s in SCENARIOS]
+    if ref in SCENARIOS and scen and ref not in scen:
+        avert.append(f"scenario_ref {ref!r} absent de `scenarios` : il sera ajouté à l'injection")
+    ignores = [c for c in CHAMPS_EVENEMENT_IGNORES if h.get(c) not in (None, "", [], {})]
+    if ignores:
+        avert.append("ignorés pour une entité : " + ", ".join(ignores)
+                     + " (une entité n'a ni date, ni impact chiffré, ni carte)")
+    norm = {
+        "type": "entite", "id": hid, "nom": nom or hid,
+        "description": str(h.get("description") or "").strip(),
+        "categorie": cat, "scenario_ref": ref,
+        "role": " ".join(str(h.get("role") or "").split()) or None,
+        "etat": " ".join(str(h.get("etat") or "").split()) or None,
+        "scenarios": scen,
+    }
+    return norm, erreurs, avert
+
+
 def verifier_hypothese(h, valid_vars, dyn):
     """Retourne (hypothèse normalisée, erreurs, avertissements)."""
+    if str(h.get("type") or "").strip().lower() == "entite":   # U3aj
+        return _verifier_entite(h)
     erreurs, avert = [], []
     hid = h.get("id") or "?"
     try:
@@ -2850,6 +2903,16 @@ def _decider(args, hyps):
         if args.adopter:
             if brut is None:
                 sys.exit(f"✗ Hypothèse {hid!r} absente de {HYPOTHESES_PATH.name}.")
+            if str(brut.get("type") or "").strip().lower() == "entite":   # U3al
+                entree = ed.adopter(brut, hid, apercu=args.apercu)
+                if args.apercu:
+                    print(f"Aperçu de la décision d'adopter l'entité {hid} (rien écrit) :\n")
+                    print(_yaml_bloc([entree]))
+                    print("\nRelancer sans --apercu pour adopter.")
+                else:
+                    print(f"✓ {hid} adoptée (entité) : aucune file à remplir, l'entité est créée à l'injection.\n"
+                          f"  Injection : python3 generator/et_si_injecter.py --id {hid}")
+                return
             entree = ed.adopter(brut, hid, args.portee, args.intensite, apercu=args.apercu)
             if args.apercu:
                 print(f"Aperçu de l'entrée adoptée pour {hid} (rien écrit) :\n")
@@ -3027,6 +3090,9 @@ def main():
         for e in erreurs:
             print(f"  - {e}")
         sys.exit(1)
+    if hyp.get("type") == "entite":   # U3aj : pas de simulation chiffrée pour une entité
+        sys.exit(f"✗ {args.id!r} est une entité : une entité ne se simule pas. "
+                 "Parcours : vérifier, décider, injecter (« Simuler l'injection » pour tester).")
     if args.scenario and args.scenario not in hyp["scenarios"]:
         sys.exit(f"✗ Scénario {args.scenario!r} non couvert par l'hypothèse ({', '.join(hyp['scenarios'])}).")
     if args.date < hyp["date"] and int(args.date) == int(hyp["date"]):

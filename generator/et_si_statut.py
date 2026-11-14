@@ -48,7 +48,7 @@ def etat(hid):
     d = ed.charger().get(hid) or {}
     sim, dec = d.get("simulation") or {}, d.get("decision") or {}
     st = ed.statut(hid, d)
-    typ = ed.type_dossier(d)   # U2e : evenement | signal
+    typ = "entite" if ed.est_entite(hid) else ed.type_dossier(d)   # U2e / U3al
     ops = APP_DIR / f"{hid}.json"
     journal = APP_DIR / f"{hid}.applique.json"
     checklist = NEED_ACTION / f"et_si_{hid}_reste_a_faire.md"
@@ -71,7 +71,9 @@ def etat(hid):
 
     # Étape en cours. Avant l'adoption, une simulation périmée ou partielle renvoie à ① ;
     # après, seule l'alerte reste (la décision doit rester visible pour pouvoir l'annuler).
-    if not sim:
+    if typ == "entite":   # U3al : vérifié à l'ajout, puis ② décider, ③ injecter (6 = terminé)
+        etape = 2 if st in ("vérifié", "rejeté") else (3 if st.startswith("adopté") else 6)
+    elif not sim:
         etape = 1
     elif st in ("simulé", "rejeté"):
         etape = 1 if (modifiee or not sim.get("complet")) else 2
@@ -99,6 +101,11 @@ def etat(hid):
             alertes.append("pas de fichier d'opérations (simulation antérieure à v8.19) : la phase 4 "
                            "demandera une nouvelle simulation")
 
+    if typ == "entite" and dec.get("statut") == "adopté" and st != "injecté":   # U3al
+        brut = ed.hypothese_brute(hid)
+        if brut is not None and dec.get("empreinte") != ed.empreinte_hypothese(brut):
+            alertes.append("hypothèse modifiée depuis l'adoption : annuler la décision, "
+                           "puis adopter de nouveau")
     rapport = sim.get("rapport")
     if not rapport and (NEED_ACTION / f"et_si_{hid}.md").exists():
         rapport = f"documentation/need_action/et_si_{hid}.md"

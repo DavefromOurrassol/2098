@@ -46,6 +46,7 @@ FORCE_MAX = 25
 SIGNAL_FORCE_MAX = 10   # plafond d'un signal (inject_custom_signals.py)
 DUREE_MAX = 30
 MAX_IMPACTS = 8
+CATEGORIES_ENTITE = se.CATEGORIES_ENTITE   # U3aj
 
 
 # ---------------------------------------------------------------------------
@@ -365,9 +366,194 @@ def appliquer_imposes(h, imposes, est_signal):
     return av
 
 
+# ---------------------------------------------------------------------------
+# U3aj : proposition d'une ENTITÉ (pas de date, pas d'impact, pas de simulation)
+# ---------------------------------------------------------------------------
+
+# ---------------------------------------------------------------------------
+# U3ak (14 nov 2026) : doublons d'entités à l'étape ① -- sans IA
+# ---------------------------------------------------------------------------
+
+ARTICLES_ENTITE = {"le", "la", "les", "l", "un", "une", "des", "du", "de", "d"}
+SEUIL_SIMILAIRE = 0.85
+
+
+def _slug_entite(nom):
+    """Même slug que create_entities_and_instances.py (slugs.slugify)."""
+    try:
+        from slugs import slugify as _s
+        return _s(str(nom or ""))
+    except Exception:  # noqa: BLE001 -- repli : slug local
+        return slugifier(nom)
+
+
+def _mots(slug):
+    return [m for m in slug.split("_") if m]
+
+
+def _base_slug(slug):
+    """Slug sans ses articles de tête : les_archives_de_la_maree -> archives_de_la_maree."""
+    m = _mots(slug)
+    while len(m) > 1 and m[0] in ARTICLES_ENTITE:
+        m.pop(0)
+    return "_".join(m)
+
+
+def entites_existantes():
+    """{slug: categorie} d'après le registre ET les fichiers entites/*.md."""
+    import json as _json
+    dossier = se.VAULT_ROOT / "entites"
+    res = {}
+    try:
+        for e in _json.loads((dossier / "_entities_list.json").read_text(encoding="utf-8")):
+            if isinstance(e, dict) and e.get("slug"):
+                res[str(e["slug"])] = str(e.get("categorie") or e.get("category") or "?")
+    except (OSError, ValueError):
+        pass
+    if dossier.is_dir():
+        for f in dossier.glob("*.md"):
+            if not f.name.startswith("_"):
+                res.setdefault(f.stem, "?")
+    return res
+
+
+def controle_doublon_entite(nom, existantes=None):
+    """(erreurs, avertissements) pour le nom d'une entité à créer."""
+    import difflib
+    erreurs, avert = [], []
+    slug = _slug_entite(nom)
+    if not slug:
+        return ["nom inutilisable (slug vide)"], []
+    existantes = entites_existantes() if existantes is None else existantes
+    base = _base_slug(slug)
+    if slug in existantes:
+        erreurs.append(f"l'entité {slug!r} existe déjà ({existantes[slug]}) : "
+                       "pour lui ajouter des instances, utiliser generate_instances.py")
+    else:
+        memes = [s for s in existantes if _base_slug(s) == base]
+        for s in memes[:3]:
+            erreurs.append(f"même nom que l'entité {s!r} ({existantes[s]}), à l'article près")
+    mots = {m for m in _mots(base) if m not in ARTICLES_ENTITE}
+    freq = {}
+    for s in existantes:
+        for m in set(_mots(s)):
+            freq[m] = freq.get(m, 0) + 1
+    proches = []
+    for s, cat in existantes.items():
+        if s == slug or _base_slug(s) == base:
+            continue
+        score = difflib.SequenceMatcher(None, base, _base_slug(s)).ratio()
+        autres = {m for m in _mots(_base_slug(s)) if m not in ARTICLES_ENTITE}
+        petit, grand = (mots, autres) if len(mots) <= len(autres) else (autres, mots)
+        inclus = bool(petit) and petit <= grand
+        if inclus and len(petit) < 2:
+            m = next(iter(petit))
+            inclus = len(m) >= 6 and freq.get(m, 0) < 4
+        if score >= SEUIL_SIMILAIRE or inclus:
+            proches.append((max(score, 0.9 if inclus else 0), s, cat))
+    for _, s, cat in sorted(proches, reverse=True)[:5]:
+        avert.append(f"entité proche : {s!r} ({cat}) -- vérifier qu'il ne s'agit pas de la même")
+    if len(proches) > 5:
+        avert.append(f"... et {len(proches) - 5} autre(s) entité(s) proche(s)")
+    return erreurs, avert
+
+
+def construire_prompt_entite(texte):
+    return f"""TYPE IMPOSÉ PAR L'AUTEUR : entite (ne le change pas).
+
+Tu aides l'auteur du monde fictif Ourrassol 2098 (6 scénarios d'avenir) à transformer une IDÉE en
+fiche de départ d'une ENTITÉ du monde (une organisation, une IA, une institution, un lieu,
+une personne...). L'entité sera créée puis déclinée dans les scénarios ; ici tu ne fais que
+cadrer l'idée.
+
+IDÉE DE L'UTILISATEUR :
+<<<
+{texte.strip()}
+>>>
+
+LES 6 SCÉNARIOS :
+{resume_scenarios()}
+
+RÈGLES :
+- "nom" : le nom de l'entité tel qu'écrit dans l'idée (sinon un nom court et sobre). "id" :
+  snake_case sans accents, 2 à 4 mots.
+- "description" : 1 à 4 phrases qui reprennent UNIQUEMENT ce que dit l'idée, avec ses mots.
+  N'ajoute AUCUN fait, date, lieu, chiffre ou acteur absent de l'idée : une idée courte donne
+  une description courte.
+- "categorie" : une valeur parmi {" | ".join(CATEGORIES_ENTITE)}.
+- "scenario_ref" : le scénario où l'idée se situe SI elle en nomme un ; sinon "reference".
+- "role" et "etat" : seulement si l'idée les dit (rôle de l'entité dans ce scénario, son état
+  actuel) ; sinon null. Ne les invente pas.
+- "scenarios" : "tous", sauf si l'idée limite explicitement l'entité à certains scénarios
+  (liste de slugs).
+- "justification" : 2 phrases au plus (choix de la catégorie et du scénario de référence).
+
+Réponds UNIQUEMENT en JSON valide, sans texte autour :
+{{"id": "...", "nom": "...", "description": "...", "categorie": "institution",
+  "scenario_ref": "reference", "role": null, "etat": null, "scenarios": "tous",
+  "justification": "..."}}"""
+
+
+def normaliser_entite(brut, ids_pris):
+    """Réponse de l'IA -> bloc d'entité. Chaque correction est signalée."""
+    av = []
+    nom = " ".join(str(brut.get("nom") or "").split())
+    id_ = slugifier(brut.get("id")) or slugifier(nom) or "entite"
+    base, n = id_, 2
+    while id_ in ids_pris:
+        id_ = f"{base}_{n}"
+        n += 1
+    if id_ != base:
+        av.append(f"id {base!r} déjà pris -> {id_!r}")
+    h = {"id": id_, "nom": nom or id_, "type": "entite"}
+    description = " ".join(str(brut.get("description") or "").split())
+    if description:
+        h["description"] = description
+    cat = str(brut.get("categorie") or "").strip()
+    if cat not in CATEGORIES_ENTITE:
+        av.append(f"categorie {cat!r} inconnue -- à choisir ({' | '.join(CATEGORIES_ENTITE)})")
+    h["categorie"] = cat
+    ref = str(brut.get("scenario_ref") or "").strip()
+    if ref not in se.SCENARIOS:
+        if ref:
+            av.append(f"scenario_ref {ref!r} inconnu -> reference")
+        ref = "reference"
+    h["scenario_ref"] = ref
+    for cle in ("role", "etat"):
+        v = " ".join(str(brut.get(cle) or "").split())
+        if v and v.lower() not in ("null", "none"):
+            h[cle] = v
+    scen = brut.get("scenarios") or "tous"
+    if isinstance(scen, list):
+        valides = [s for s in scen if s in se.SCENARIOS]
+        if len(valides) != len(scen):
+            av.append(f"scénario(s) inconnu(s) retiré(s) : {[s for s in scen if s not in se.SCENARIOS]}")
+        scen = valides if valides and len(valides) < len(se.SCENARIOS) else "tous"
+    elif str(scen).strip() not in se.SCENARIOS:
+        scen = "tous"
+    h["scenarios"] = scen
+    return h, av
+
+
+def proposer_entite(texte, _llm=appeler_llm):
+    brut = _llm(construire_prompt_entite(texte))
+    if not isinstance(brut, dict):
+        raise ValueError("réponse de l'IA inexploitable")
+    h, av = normaliser_entite(brut, ids_existants())
+    _, erreurs, av2 = se.verifier_hypothese(dict(h), valid_vars(), dyn)
+    e_dup, a_dup = controle_doublon_entite(h.get("nom"))   # U3ak
+    erreurs = list(erreurs) + e_dup
+    av2 = a_dup + list(av2)
+    return {"ok": True, "bloc": bloc_yaml(h), "id": h["id"],
+            "justification": str(brut.get("justification") or "").strip(),
+            "avertissements": av + av2, "erreurs": erreurs}
+
+
 def proposer(texte, _llm=appeler_llm, type_force=None, imposes=None):
     if not texte or not texte.strip():
         raise ValueError("idée vide")
+    if type_force == "entite":   # U3aj : parcours propre, sans date ni impact
+        return proposer_entite(texte, _llm)
     variables = valid_vars()
     brut = _llm(construire_prompt(texte, variables, type_force, imposes))
     if not isinstance(brut, dict):
@@ -440,7 +626,14 @@ def verifier_bloc(texte, pour_ajout=False):
                 erreurs.append(f"une hypothèse du même nom existe déjà : {autre.get('id')!r}")
             elif plie(h.get("description")) and plie(h.get("description")) == plie(autre.get("description")):
                 erreurs.append(f"une hypothèse de même description existe déjà : {autre.get('id')!r}")
+    if str(h.get("type") or "").strip().lower() == "entite":   # U3ak
+        e_dup, a_dup = controle_doublon_entite(h.get("nom"))
+        erreurs += e_dup
+        avert_dup = a_dup
+    else:
+        avert_dup = []
     _, err2, avert = se.verifier_hypothese(dict(h), valid_vars(), dyn)
+    avert = avert_dup + list(avert)
     erreurs += err2
     return {"ok": not erreurs, "erreurs": erreurs, "avertissements": avert, "id": hid}
 
@@ -487,7 +680,7 @@ def main():
     action.add_argument("--verifier", action="store_true", help="contrôle d'un bloc (entrée standard)")
     action.add_argument("--ajouter", action="store_true", help="contrôle puis ajout à hypotheses.yaml")
     ap.add_argument("--json", action="store_true", help="sortie JSON sur une ligne (GUI)")
-    ap.add_argument("--type", choices=("evenement", "signal"), default=None,
+    ap.add_argument("--type", choices=("evenement", "signal", "entite"), default=None,
                     help="avec --proposer : impose le type (sinon l'IA décide)")
     ap.add_argument("--date", type=float, default=None, help="avec --proposer : date imposée (année, ou année.mois : 2098.03)")
     ap.add_argument("--scenarios", default=None,

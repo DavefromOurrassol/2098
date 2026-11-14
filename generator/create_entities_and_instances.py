@@ -246,6 +246,8 @@ Voici la proposition précédente :
 
 TÂCHE : corrige UNIQUEMENT les points listés ci-dessus."""
 
+    desc_u3al = (f"\n- Description fournie par l'auteur (à respecter, sans y ajouter de fait) : "
+                 f"{idea['description']}" if idea.get("description") else "")   # U3al
     user_content = f"""Tu dois déduire l'archétype intemporel d'une entité pour le
 projet Ourrassol 2098, à partir d'une instance de référence précise
 que l'utilisateur a déjà fixée.
@@ -255,7 +257,7 @@ que l'utilisateur a déjà fixée.
 - Catégorie : {idea['category']}
 - Scénario de référence : {idea['scenario_ref']}
 - Rôle dans ce scénario : {idea.get('role') or "non spécifié par l'utilisateur — à déduire librement du nom/catégorie ci-dessus"}
-- État dans ce scénario : {idea.get('etat') or "non spécifié par l'utilisateur — à déduire librement"}
+- État dans ce scénario : {idea.get('etat') or "non spécifié par l'utilisateur — à déduire librement"}{desc_u3al}
 
 ## CONTEXTE DU SCÉNARIO DE RÉFÉRENCE
 - État : {sc_ctx['state_of_system']} | Tension : {sc_ctx['tension_level']}/5 | Trajectoire : {sc_ctx['trajectory']}
@@ -516,8 +518,10 @@ def write_entity_file(name, slug, category, description, tension,
     if scenario_ref:
         role_ref_clean = (role_ref or "").strip().replace("\n", " ")
         extra_fm += f"scenario_ref: {scenario_ref}\n"
-        extra_fm += f"role_ref: >\n  {role_ref_clean}\n"
-        extra_fm += f"etat_ref: {etat_ref}\n"
+        if role_ref_clean:   # U3am : pas de role_ref vide ni d'« etat_ref: None »
+            extra_fm += f"role_ref: >\n  {role_ref_clean}\n"
+        if etat_ref:
+            extra_fm += f"etat_ref: {etat_ref}\n"
         # Chantier trajectoire (9 août 2026, Option 1) : n'écrit
         # est_clandestin_ref QUE si une contrainte a explicitement été
         # posée (True/False) — None signifie "pas de contrainte", et ne

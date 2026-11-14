@@ -79,6 +79,53 @@ def _retirer_sautees(entree, ops, ecartees):
     return e, retires
 
 
+def _injecter_entite(hid, a):
+    """U3al : injecte UNE entité adoptée (create_entities_and_instances.py --idea),
+    sans lire ni écrire entites_custom/queue.yaml."""
+    if a.plan:
+        print(f"{hid} est une entité : pas de liste à l'étape ④ (ni carte, ni zones), rien à sauter.")
+        return
+    st = ed.statut(hid)
+    if st != "adopté, en attente d'injection":
+        sys.exit(f"✗ {hid} est « {st} » : seule une hypothèse « adopté, en attente d'injection » "
+                 f"peut être injectée ici.")
+    idee = ((ed.charger().get(hid) or {}).get("decision") or {}).get("entree") or {}
+    if not idee.get("nom"):
+        sys.exit(f"✗ {hid} : décision sans entrée d'entité (annuler la décision et adopter de nouveau).")
+    cmd = [sys.executable, str(GEN / "create_entities_and_instances.py"),
+           "--idea", json.dumps(idee, ensure_ascii=False, default=str), "--json"]
+    if a.dry_run:
+        cmd.append("--dry-run")
+    print(("SIMULATION (appels IA réels, rien écrit)" if a.dry_run else "INJECTION")
+          + f" — {hid} (entité « {idee.get('nom')} », {idee.get('category')})\n")
+    try:
+        r = subprocess.run(cmd, cwd=GEN, capture_output=True, text=True, timeout=TIMEOUT,
+                           stdin=subprocess.DEVNULL)
+    except subprocess.TimeoutExpired:
+        sys.exit(f"✗ délai dépassé ({TIMEOUT} s) : vérifier entites/ avant de relancer.")
+    sortie = (r.stdout + ("\n" + r.stderr if r.stderr.strip() else "")).rstrip()
+    lignes = sortie.splitlines()
+    print("\n".join(lignes[-150:]))
+    try:
+        res = json.loads(lignes[-1])
+    except (ValueError, IndexError):
+        res = {}
+    if a.dry_run:
+        print("\n· simulation : rien n'est écrit, la décision reste « adopté ».")
+        sys.exit(r.returncode)
+    if r.returncode != 0 or res.get("status") != "injected":
+        motif = res.get("reason") or res.get("error") or "; ".join(res.get("issues") or []) or "voir ci-dessus"
+        sys.exit(f"\n✗ entité non injectée ({motif}). La décision reste « adopté » : corriger l'hypothèse, "
+                 f"annuler la décision, adopter de nouveau.")
+    st_i = res.get("instance_stats") or {}
+    if st_i.get("errors"):   # U3am : instance(s) en erreur = injection partielle
+        print(f"\n⚠ entité {res.get('slug')} injectée PARTIELLEMENT — instances : {st_i} : "
+              f"relancer « generate_instances.py » pour les scénarios manquants (ou voir ci-dessus).")
+    else:
+        print(f"\n✓ entité {res.get('slug')} injectée — instances : {st_i or 'voir ci-dessus'}")
+    print(f"✓ statut : {ed.statut(hid)}")
+
+
 def main():
     ap = argparse.ArgumentParser(description="Injecte une seule hypothèse adoptée.")
     ap.add_argument("--id", required=True)
@@ -88,6 +135,8 @@ def main():
     ap.add_argument("--inclure", default="", help="numéros ⚠ de l'étape ④ à garder")
     a = ap.parse_args()
     hid = a.id.strip()
+    if ed.est_entite(hid):   # U3al
+        return _injecter_entite(hid, a)
     typ = ed.type_dossier(ed.charger().get(hid))   # U2d : evenement | signal
     nom_queue = "signaux_custom/queue.yaml" if typ == "signal" else "evenements_custom/queue.yaml"
     if a.plan and typ == "signal":

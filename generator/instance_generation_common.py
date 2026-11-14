@@ -585,20 +585,27 @@ cohérence avec la logique du monde décrite plus bas).
     constraint_block = ""
     role_etat_instruction = ""
     if hard_constraint:
+        _l_role = (f"- Rôle dans ce scénario : {hard_constraint['role']}\n"
+                   if hard_constraint.get("role") else "")   # U3am
+        _l_etat = (f"- État temporel dans ce scénario : {hard_constraint['etat']}\n"
+                   if hard_constraint.get("etat") else "")
         constraint_block = f"""
 ## CONTRAINTES DURES POUR CE SCÉNARIO (ne pas reformuler, ne pas contredire)
-- Rôle dans ce scénario : {hard_constraint['role']}
-- État temporel dans ce scénario : {hard_constraint['etat']}
-
-Ces deux éléments sont déjà fixés par l'utilisateur. Construis le reste
+{_l_role}{_l_etat}
+Ces éléments sont déjà fixés par l'utilisateur. Construis le reste
 de l'instance (description journalistique, responsabilités, relations,
 tensions...) en cohérence stricte avec eux — ne les modifie pas, ne les
 édulcore pas, ne les contredis pas.
 """
+        _instr_u3am = []
+        if hard_constraint.get("role"):
+            _instr_u3am.append('"role_dans_scenario" reprenant le rôle ci-dessus '
+                               '(tu peux le développer en 3-5 lignes mais sans en changer le sens)')
+        if hard_constraint.get("etat"):
+            _instr_u3am.append(f'"trajectoire" devant valoir exactement "{hard_constraint["etat"]}"')
+        _txt_instr_u3am = ("Réponds en JSON, avec " + " et ".join(_instr_u3am) + ".") if _instr_u3am else ""
         role_etat_instruction = f"""
-Réponds en JSON, avec "role_dans_scenario" reprenant le rôle ci-dessus
-(tu peux le développer en 3-5 lignes mais sans en changer le sens) et
-"trajectoire" devant valoir exactement "{hard_constraint['etat']}".
+{_txt_instr_u3am}
 {f'"est_clandestin" devant valoir exactement {str(hard_constraint["est_clandestin"]).lower()}.' if hard_constraint.get("est_clandestin") is not None else ""}
 """
 
@@ -1021,7 +1028,7 @@ def validate_instance(data, hard_constraint=None, injection_custom=False):
             issues.append(f"propagation_via_matrice doit être un booléen : {via_matrice!r}")
 
     if hard_constraint:
-        if data.get("trajectoire") != hard_constraint["etat"]:
+        if hard_constraint.get("etat") and data.get("trajectoire") != hard_constraint["etat"]:   # U3am
             issues.append(
                 f"trajectoire ({data.get('trajectoire')!r}) ne respecte pas "
                 f"la contrainte dure ({hard_constraint['etat']!r})"
@@ -1336,10 +1343,18 @@ def process_entity_scenario(client, entity_fm, scenario, force=False, dry_run=Fa
         return {"status": "skipped"}
 
     hard_constraint = None
-    if entity_fm.get("scenario_ref") == scenario:
+    # U3am : "None" / "null" / vide = valeur non fixée (une fiche écrite sans état
+    # portait « etat_ref: None » : trajectoire exigée = "None", donc échec assuré)
+    def _val_fixee_u3am(v):
+        v = " ".join(str(v if v is not None else "").split())
+        return "" if v.lower() in ("none", "null") else v
+    _role_u3am = _val_fixee_u3am(entity_fm.get("role_ref"))
+    _etat_u3am = _val_fixee_u3am(entity_fm.get("etat_ref"))
+    if entity_fm.get("scenario_ref") == scenario and (
+            _role_u3am or _etat_u3am or entity_fm.get("est_clandestin_ref") is not None):
         hard_constraint = {
-            "role": entity_fm.get("role_ref", ""),
-            "etat": entity_fm.get("etat_ref", ""),
+            "role": _role_u3am,
+            "etat": _etat_u3am,
             # est_clandestin optionnel (None/True/False) — ajouté au
             # schéma le 9 août 2026 en préparation du chantier trajectoire
             # (voir SPEC_CHANTIER_TRAJECTOIRE.md §Question 1) ; mécanisme
