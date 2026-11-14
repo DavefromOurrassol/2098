@@ -1842,3 +1842,68 @@ migrations inventés ; description, réalisation, conséquences réécrites).
 cause de fond est que le schéma d'injection exige des textes longs même quand l'article ne
 donne qu'une mention. Suites en B9 (longueur proportionnelle au passage, contrôle des
 sigles et noms propres, refus des simples mentions).
+
+## Clos du 12 au 14 novembre 2026 — « et si ? » porte unique : fiche sans invention, entités, suggestions, fermeture des accès directs, U3aa → U3bf
+
+*Séance longue, sur le dépôt du vault (commit final `3ae0304`, U3aq → U3bf ; U3aa → U3ap commités
+auparavant). Points clos de B9 : « source mince → invention » (partie fiche), « Entités dans
+« et si ? » » (étape 2 de l'ordre), « Fermer les accès directs » (étape 5), modes Auto remplacés
+par des suggestions. `validate.py` 0 / 0 aux étapes de commit. Sauvegardes `.bak_<tag>` à côté
+de chaque fichier patché.*
+
+**Fiche d'événement d'article sans invention.**
+- **U3aa** (`patch_u3aa_fiche_depuis_article.py`, `inject_custom_events.py`) : `realisation` et
+  `description_complete` = description de l'hypothèse ; `consequences` = formule fixe ;
+  `note_coherence` = renvoi à l'article + citation ; `date_label` = l'année seule sauf mois ou
+  saison présents dans l'article ; contrôle ⚠ sans IA des noms propres et sigles absents de
+  l'article et des noms du vault.
+- **U3ab** : `nom` / `evenement_cle` écartés de la description reformulés (jamais bloquant au
+  dernier essai). **U3ac** : le fait `[ARTICLE]` n'est plus contrôlé (récit remplacé).
+- **U3ad** : dates 2098.xx dans la Passe exhaustive et la Lecture IA (`et_si_exhaustif.py`,
+  `simuler_et_si.py`).
+
+**Panneau « Et si ? ».** **U3ae** textes et messages ; **U3af** signal : options payantes
+grisées, étapes ④ et ⑤ masquées ; **U3ag** étape ⑤ apparaît après « Appliquer »,
+« sans passe exhaustive » devenu information ; **U3at → U3av** encadré « 📄 Description de
+l'hypothèse » sous la liste (route `/api/et_si/fiche`) ; **U3ap** menu regroupé (Ajouter au
+monde / Sources / … / Entretien replié, « Outils directs (ancien, avancé) » replié).
+
+**Entités dans « et si ? »** (option A, sans simulation chiffrée).
+- **U3ah** `create_entities_and_instances.py` : refus mécanique d'un slug déjà pris, « doublon
+  détecté » non corrigeable, mode `--idea '<json>'` ; **U3aj** type `entite` ; **U3ak**
+  doublons à l'étape ① (erreur : slug existant ou même nom ; ⚠ : entités proches) ; **U3al**
+  parcours vérifié → adopter → injecter (`et_si_dossiers.py`, `et_si_injecter.py`,
+  `et_si_statut.py`) ; **U3am** une idée sans `etat` ne produit plus `etat_ref: None` ;
+  **U3an** frise à 3 étapes dans la GUI ; **U3ao** liste « … (entité) ».
+- **U3aw** `annee_debut` (2026-2098) respectée de bout en bout (contrainte dure dans le
+  scénario de référence, `annee_ref` dans la fiche) ; vérifié en réel (2068-2070).
+- **U3ax** `et_si_supprimer.py` (hypothèses d'entité non injectées ; 11 supprimées pour être
+  régénérées avec la date) ; **U3ba** extraction de localisation relancée après l'injection ;
+  **U3bb** `et_si_lot.py` + « 📦 Traiter plusieurs entités d'un coup » (route
+  `/api/et_si/lot/lister`) ; **U3bc** ⚠ sans gravité masqués dans le lot.
+- **U3be** (`patch_u3be_entites_vers_et_si.py`) : la Lecture IA (étape ⑤) crée des hypothèses
+  d'entité (rôle et raison repris tels quels, sans IA) au lieu d'écrire `queue.yaml` ; l'onglet
+  Articles gagne « comme entité ». Essayé en réel (proposition valide, ajout).
+
+**Suggestions à partir des lacunes.** **U3aq** bloc « 💡 Suggestions » (`suggerer_lacunes.py`,
+route `/api/et_si/suggerer`) ; **U3ar / U3as** « Traiter les N en lot » (Proposer puis Ajouter
+si ni erreur ni avertissement) ; **U3ay** année / `annee_debut` dans les suggestions. Essayé en
+réel : 5 entités ajoutées d'un coup. **U3bd** (suggestions de signaux) écrit et testé sur copie,
+**non appliqué** : la veille 🔭 couvre le besoin.
+
+**Fermeture, nettoyage, confirmations.** **U3ai** accès directs fermés (code mort Articles et
+veille retiré, injection directe en 410) ; **U3bf** routes `/api/edition/articles` et
+`/api/edition/injecter_evenement` supprimées, commentaire « Promouvoir » périmé remplacé ;
+**U3as, U3az, U3bf** `confirm()` bloqué dans le navigateur de David → double-clic `armer2()`
+(Injecter, Annuler, Adopter, Appliquer, 9 actions de l'étape ⑤, veille « Remettre à trier »,
+« Utiliser cette idée », « Proposer »).
+
+**Tests réels.** Trois entités injectées de bout en bout (Dr Ananya Rao, Gouvernance IA de
+l'Archipel pétrolier, Territoire autonome de Karachi-BioSyn : 6 instances chacune), localisation
+complétée ; deux entités par le lot ; Lecture IA → hypothèse d'entité
+(`alliance_des_territoires_froids_europeens`, non adoptée) ; Articles → entité validée ;
+« Adopter » vu en réel puis annulé (`fusion_commerciale_2038`).
+
+*Enseignement de la séance* : une seule porte rend les parcours comparables, et la prévention
+(la fiche reprend la source) vaut mieux que la relecture. Suites : B9 (wild cards, source mince
+suite, sort des « Outils directs »).

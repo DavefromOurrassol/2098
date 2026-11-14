@@ -2,8 +2,9 @@
 
 *Mode d'emploi de l'état actuel : ce que fait chaque outil, quand l'utiliser,
 comment le lancer (GUI ou terminal), ses pièges. Mis au propre le 24 octobre 2026,
-mis à jour le 11 novembre 2026 au soir (unification « et si ? » ; Articles → « et si ? » éprouvé ;
-extracteur filtré, passage de l'article transmis à l'injection, U3p → U3y).
+mis à jour le 14 novembre 2026 au soir (unification « et si ? » : porte unique pour
+événements, signaux et entités ; fiche d'article sans invention, suggestions, lot d'entités,
+accès directs fermés, U3aa → U3bf).
 Le récit des sessions (bugs trouvés, itérations, tests, versions successives) est
 dans `USER_MANUAL_HISTORIQUE.md` ; les chantiers ouverts dans `BACKLOG_ACTIF.md`.
 Les numéros de section (§2octies, §3quinquies…) sont stables : backlog et
@@ -361,8 +362,7 @@ Le monde avance mois par mois : la date d'édition entre dans le calcul du snaps
 - **Événement daté du mois** : `edition_active: true` sur une idée de
   `evenements_custom/queue.yaml` remplace la date proposée par l'IA par le mois actif.
 - **Injection directe d'une idée** : `inject_custom_events.py --idea '<json>' --json`
-  (ne lit ni n'écrit `queue.yaml`), utilisée par « Promouvoir en événement » (§2sexies)
-  et par le simulateur (`et_si_injecter.py`, §3quinquies).
+  (ne lit ni n'écrit `queue.yaml`), utilisée par le simulateur (`et_si_injecter.py`, §3quinquies).
 - Limites : un événement injecté n'apparaît que s'il est jugé pertinent (§2bis) ; la
   cohérence des formulations relatives (« il y a un mois ») dépend de l'IA (à observer).
 
@@ -376,7 +376,7 @@ Le monde avance mois par mois : la date d'édition entre dans le calcul du snaps
 - **Onglet Articles** : tableau filtrable (scénario, thématique, ligne, zone, « Mois en
   cours seulement », « Basculement narratif détecté »), panneau de détail
   (redimensionnable, « Ouvrir dans Obsidian »). Action **« ✨ Envoyer vers « et si ? » »** (depuis le 7 nov 2026, remplace « Promouvoir en
-  événement » ; l'ancien formulaire reste jusqu'à l'étape 5 de l'unification, voir §3quinquies) :
+  événement » ; l'ancien formulaire est supprimé depuis U3ai / U3bf, voir §3quinquies) :
   texte pré-rempli (chapô, date, scénario, zone, entités citées, source) + réglages ; ancien
   formulaire, pour mémoire : formulaire pré-rempli (id, description depuis le chapô, zone, acteurs depuis
   `entites_citees`, scénarios, variables, date approximative = année de l'article,
@@ -524,6 +524,14 @@ Pour une entité **existante**, utiliser `generate_instances.py`.
 - **auto** : crée et injecte directement N entités (`--n`, `--category`,
   `--scenario` = contrainte dure, plusieurs valeurs possibles).
 - **auto-suggest** : propose N idées et les **ajoute seulement à la file**.
+- **`--idea '<json>'`** (U3ah) : crée **une** entité à partir d'une idée donnée, sans lire ni
+  écrire `queue.yaml` ; utilisé par le simulateur (`et_si_injecter.py`, entités du §3quinquies).
+- **Garde-fous** (U3ah) : un slug déjà pris est refusé **avant** tout appel IA ; « doublon
+  détecté » n'est plus corrigeable par l'IA. `etat` absent ne produit plus `etat_ref: None`
+  (U3am). `annee_debut` (2026-2098, U3aw) : contrainte dure dans le scénario de référence,
+  consigne de cohérence dans les autres ; la fiche garde `annee_ref`.
+- Depuis le 14 nov., l'interface n'écrit plus dans `queue.yaml` : « Créer des entités » est
+  dans « Outils directs (ancien, avancé) » ; la voie normale est « et si ? ».
 ```bash
 python3 generator/create_entities_and_instances.py --mode custom
 python3 generator/create_entities_and_instances.py --mode auto --n 3 --category humain --scenario eco_communalism breakdown
@@ -1184,9 +1192,10 @@ de boutons. Routes `/api/et_si/statut`, `/decider/…`, `/injecter/…`, `/appli
 - **⑤ À la main** — rubriques ci-dessous.
 
 ### Types d'hypothèse, entrées et réglages (unification, nov. 2026)
-« Et si ? » est la **porte unique** : veille 🔭, Articles et idées y arrivent comme
-hypothèses (chantier en cours, voir le backlog B9).
-- **Type** : `evenement` (défaut) ou `signal`. Signal : force ≤ 10, les 6 scénarios, une
+« Et si ? » est la **porte unique** (depuis le 14 nov. 2026) : veille 🔭, Articles, idées
+et Lecture IA y arrivent comme hypothèses ; l'interface n'écrit plus directement dans les
+files d'injection.
+- **Type** : `evenement` (défaut), `signal` ou `entite` (voir « Hypothèses d'entité » plus bas). Signal : force ≤ 10, les 6 scénarios, une
   force par variable, polarité ±1 par scénario, durée entière ≥ 1, date entière entre
   l'année en cours et 2097 ; ni mode rupture, ni carte, ni portée / intensité. À
   l'étape ③ une hypothèse signal écrit une entrée dans `signaux_custom/queue.yaml`
@@ -1211,11 +1220,67 @@ hypothèses (chantier en cours, voir le backlog B9).
   `hypothese_depuis_texte.py --proposer --date 2098.03 --scenarios … --mode … --effet-plein
   --citation="…"` (l'idée est lue sur l'entrée standard).
 - **Pour un signal** : les options payantes de l'étape ① (Lecture IA, Passe exhaustive,
-  Nouveau tirage) sont inutiles ; le titre « Faits imposés à la lecture IA » du rapport est
-  trompeur (à corriger).
+  Nouveau tirage) sont inutiles ; le titre du rapport devient « Faits imposés au récit du signal » (U3ae), et les étapes ④ et ⑤
+  sont masquées (parcours en 3 étapes, U3af).
 - ⚠ L'IA peut paraphraser les chiffres des `contraintes` : relire le signal injecté.
-- Accès directs encore ouverts jusqu'à l'étape 5 : ancien formulaire Promouvoir, écran
-  Édition « Injecter un événement depuis un article », anciens menus d'injection.
+- **Accès directs fermés** (U3ai, U3bf) : l'ancien formulaire Promouvoir et l'écran Édition
+  « Injecter un événement depuis un article » n'existent plus ; les routes
+  `/api/edition/articles` et `/api/edition/injecter_evenement` sont supprimées. Restent, repliés
+  dans « Outils directs (ancien, avancé) » : Créer des entités, Injecter des événements,
+  Injecter des signaux faibles (leurs files se remplissent à la main).
+
+#### Les quatre entrées
+| Entrée | Types | Détail |
+|---|---|---|
+| ✨ Nouvelle hypothèse | événement, signal, entité | texte libre → Proposer → Vérifier → Ajouter ; bloc « 💡 Suggestions » |
+| 🔭 Veille signaux faibles | signal, événement | « ✨ Envoyer vers « et si ? » » |
+| Onglet Articles | événement (détecté), signal, entité (nom saisi) | citation imposée, date verrouillée |
+| Étape ⑤ « Lecture IA » | entité | crée des hypothèses d'entité (U3be) |
+
+#### Hypothèses d'entité (U3aj → U3be)
+- **Bloc** : `id`, `nom`, `type: entite`, `description`, `categorie` (une des 12 : IA,
+  organisation, entreprise, institution, infrastructure, réseau, humain, système, hybride,
+  autre, média, territoire), `scenario_ref`, `role`, `etat`, `annee_debut` (2026-2098,
+  facultatif), `scenarios`.
+- **Étape ①, « vérifié »** (sans IA, U3ak) : erreur si le slug existe déjà ou si un nom
+  identique (à l'article près) existe ; ⚠ pour des entités proches. Pas de simulation
+  chiffrée (option A) : pour tester l'effet, « Simuler l'injection » puis « Tracer ».
+- **Étape ②, décider** : « Adopter » (deux clics, cf. ci-dessous) ou « Rejeter » ; la décision
+  est dans `generator/state/et_si_dossiers.json`, il n'y a pas de file. Statuts : vérifié ·
+  rejeté · adopté, en attente d'injection · injecté.
+- **Étape ③, injecter** : `et_si_injecter.py` → `create_entities_and_instances.py --idea`
+  (≈ 6-8 min : l'entité et ses instances), puis l'extraction de localisation est relancée une
+  fois si elle a échoué (U3ba, sinon ⚠). L'annulation d'une entité **déjà injectée** ne
+  l'enlève pas du vault : `python3 generator/undo_custom.py`.
+- **Supprimer** des hypothèses d'entité **non injectées** (U3ax) : 
+  `python3 generator/et_si_supprimer.py --id <id> [--apply]` (dry-run par défaut ; refuse une
+  entité injectée).
+- **📦 Traiter plusieurs entités d'un coup** (U3bb, route `/api/et_si/lot/lister`) : coche des
+  entités vérifiées, adopte puis injecte une par une ; les ⚠ sans gravité sont masqués (U3bc).
+- **Suggestions** (U3aq, U3ar, U3as, U3ay) : « 💡 Suggestions à partir des lacunes » propose
+  des événements ou des entités (un appel IA, n'écrit rien ; chaque idée porte une année ou
+  une `annee_debut`). « Traiter les N en lot » enchaîne Proposer puis Ajouter pour les idées
+  dont le bloc n'a ni erreur ni avertissement ; les autres restent avec leur motif
+  (« Ouvrir pour corriger »). Route `/api/et_si/suggerer`
+  (`python3 generator/suggerer_lacunes.py --type evenement|entite --json`). Pas de suggestions
+  de signaux : la veille les couvre.
+- **Depuis la Lecture IA** (étape ⑤, U3be) : « Créer les hypothèses « et si ? » » transforme
+  les entités proposées en hypothèses d'entité (rôle et raison repris tels quels, sans appel
+  IA, avec les contrôles de doublon) et note l'entrée dans
+  `generator/state/et_si_application/<id>.main.json`. **Depuis un article** : choix
+  « comme entité » dans « Envoyer vers « et si ? » » : on écrit le nom et ce que l'article en
+  dit, l'IA complète le bloc.
+- **Description de l'hypothèse** (U3at → U3av, route `/api/et_si/fiche`) : sous la liste
+  « Hypothèse » du mode Simuler, un encadré lit directement `hypotheses.yaml` (nom, type, date,
+  catégorie, scénarios, rôle, état, description).
+
+#### Deux clics au lieu de `confirm()`
+Le navigateur de David bloque les fenêtres `confirm()` : le bouton ne faisait rien, sans
+message. Les actions sensibles du parcours (Injecter, Annuler la décision, Adopter, Appliquer,
+les 9 actions de l'étape ⑤, « Remettre à trier » de la veille, « Utiliser cette idée »,
+« Proposer » avec un texte déjà saisi) demandent maintenant un **second clic** (8 s, fonction
+`armer2()` de `app.js`). Les `confirm()` restants (Carte, Lore, Chantiers…) sont inchangés : un
+bouton muet = probablement un `confirm()`.
 
 ### Articles → « et si ? » : un événement tiré de l'article (11 nov. 2026)
 Règle : l'événement injecté doit être **dans le texte de l'article** et **ne peut pas être
@@ -1270,20 +1335,22 @@ postérieur à sa date** (sinon on place à volonté l'événement que raconte l
      la fiche absente de l'article (U3t) ; nom de scénario dans la description ou les
      conséquences (U3w) ; année postérieure à l'événement ou « aujourd'hui » dans la
      réalisation ou la description (U3y).
-6. **Relire la fiche injectée** (`event_instances/<id>_<scénario>.md`) et la comparer à
-   l'article, **toujours**. Défauts vus le 11 nov malgré les contrôles : quand l'article ne
-   donne qu'une mention, l'IA remplit les champs (3 à 5 lignes exigées) avec des détails
-   inventés (sigle mal développé, travaux, migrations) ; une scène de 2098 transposée à la
-   date de l'événement sans citer d'année (non détectée) ; omission d'une issue (libération
-   après pétition). Vérifier aussi `localisation` : `extract_localisation.py`
-   (mistral-small) a placé un quartier de Genève en `afrique_continentale` à cause de
-   « communautés sahéliennes ». Corriger à la main (patch ponctuel ou éditeur), puis
-   `validate.py`. Pour vérifier qu'un détail vient de l'article :
+6. **Fiche injectée** (`event_instances/<id>_<scénario>.md`, depuis U3aa-U3ac, 14 nov.) : la
+   fiche **reprend la description de l'hypothèse** (tirée de l'article) : `realisation` et
+   `description_complete` ne sont plus inventées par l'IA ; `consequences` est une formule
+   fixe ; `note_coherence` renvoie à l'article avec la citation ; `date_label` est l'année
+   seule sauf mois ou saison présents dans l'article. Un contrôle ⚠ (sans IA) signale les noms
+   propres et sigles absents de l'article et du vault. Les titres (`nom`, `evenement_cle`) qui
+   s'écartent de la description sont reformulés (U3ab) ; le fait `[ARTICLE]` n'est plus
+   contrôlé (U3ac). Une relecture systématique n'est plus nécessaire ; rester attentif au
+   ⚠ affiché, à `localisation` (`extract_localisation.py` s'est trompé une fois sur un
+   quartier de Genève) et aux **impacts** (6 variables, forces 15-22 pour un fait local).
+   Corriger à la main si besoin, puis `validate.py`. Vérifier qu'un détail vient de l'article :
    `grep -o -i -E "terme1|terme2" articles/<scénario>/<fichier>.md` (attention aux pluriels).
 Limites connues : un événement de mars 2098 pèse très peu sur les chiffres de 2098 (le
 moteur travaille en années) ; l'étape ④ n'a rien à appliquer sans Lecture IA / Passe
 exhaustive lancées à l'étape ① (« Appliquer » écrit alors 0 fichier) ; l'étape ⑤
-n'apparaît plus dans l'interface. La note de cohérence d'une fiche injectée est écrite en
+n'apparaît qu'après « Appliquer » (U3ag). La note de cohérence d'une fiche injectée est écrite en
 texte brut dans le corps depuis U3l (avant, version YAML avec guillemets).
 
 ### Onglet « Nouvelle hypothèse » — `hypothese_depuis_texte.py` 🔁 🧩
@@ -1559,9 +1626,10 @@ Rubriques du panneau, dans l'ordre :
   « avant / après prêt », « écrite »), « Ouvrir l'avant / après ↗ » (retouchable dans
   Obsidian), « Écrire dans la fiche », « Mettre au passé / Refaire l'aperçu (IA) »,
   « Ouvrir la fiche ↗ » (voir `fiche_au_passe.py` ci-dessous).
-- **🧩 Nouvelles entités** — case + catégorie → `entites_custom/queue.yaml` ; puis
-  « Créer des entités » (traite toute la file : vérifier d'abord qu'elle ne contient
-  que ces entrées) ; vérifier ensuite la localisation des nouvelles fiches.
+- **🧩 Nouvelles entités** — case + catégorie → **« Créer les hypothèses « et si ? » »** (U3be) :
+  chaque entité devient une hypothèse d'entité dans `hypotheses.yaml` (plus de file
+  `queue.yaml`) ; elle suit ensuite ① vérifié → ② adopter → ③ injecter (voir « Hypothèses
+  d'entité »). Un contrôle de doublon bloque une entité déjà connue.
 - **✏️ Phrases à corriger** — de la passe et de la fiche d'événement (relecture IA en
   cache) ; réécriture modifiable ; Aperçu / Remplacer / Ignorer.
 - **📰 Articles à relire** — articles qui citent une entité touchée ou dont la zone a
@@ -1953,6 +2021,11 @@ Le panneau gauche est organisé en sections (génération, entités — créatio
 nettoyage, Relations & lore, géographie — construction / diagnostic, validation,
 simulateur…). Chaque entrée décrit ses options ; le formulaire se construit seul.
 
+**Menu (U3ap, 14 nov.)** : groupes ① **Ajouter au monde** (« Simulateur « et si ? » » ; « Outils
+directs (ancien, avancé) » replié : Créer des entités, Injecter des événements, Injecter des
+signaux faibles) · ② **Sources** (Veille 🔭 et les 6 outils monde réel) · … · ④ **Entretien**
+(replié). Aucun script ne disparaît.
+
 | Clé d'une entrée / option | Effet |
 |---|---|
 | `type` : checkbox, select, number, text, `slug_select`, `multi_select` | Type de champ. `slug_select` + `slug_type` charge une liste via `/api/slugs` (dont des listes filtrées : `zones_a_reparenter`, `fiches_a_localiser`, `zones_hier_journal`, `zones_journal_forcer`). |
@@ -2047,7 +2120,12 @@ Statut « Traités » pour le retrouver).
 | `/api/carte/*` | Carte (`routes_carte.py`) ; restent dans `app.py` : `generer_zone_topdown`, enrichissement des zones, `creer_zone_vide`, et la route dormante `appliquer_zone_topdown_suspecte` (aucun bouton). |
 | `/api/zones/lookup`, `/api/zones/pays-liste` | Zone 2098 d'un pays ; liste des pays. |
 | `/api/chantiers`, `/generer`, `/approuver`, `/statut`, `/appliquer` | Onglet Chantiers (`appliquer` : `{scenario}`, `{all}` ou `{id}`). |
-| `/api/edition/active`, `/articles`, `/injecter_evenement` | Mois de parution (§2quinquies). |
+| `/api/edition/active` | Mois de parution (§2quinquies). Les routes `/articles` et `/injecter_evenement` ont été supprimées (U3bf). |
+| `/api/et_si/proposer`, `/verifier`, `/ajouter` | Nouvelle hypothèse : proposer un bloc, le vérifier, l'ajouter à `hypotheses.yaml`. |
+| `/api/et_si/suggerer` | Suggestions à partir des lacunes (événements, entités). |
+| `/api/et_si/fiche`, `/statut` | Description de l'hypothèse ; statut du parcours. |
+| `/api/et_si/decider`, `/injecter`, `/appliquer`, `/main` | Étapes ②, ③, ④, ⑤. |
+| `/api/et_si/lot/lister` | Lot : adopter + injecter plusieurs entités. |
 | `/api/veille_signaux/liste`, `/statut` | Veille signaux faibles (§3quater). |
 | `/api/ouvrir_vscode` POST | Ouvrir un fichier du vault dans VS Code (macOS). |
 
@@ -2062,6 +2140,13 @@ Statut « Traités » pour le retrouver).
   est sous `vault_root`. Premier suspect en cas de bug de chemin.
 - **Patchs JS** : le node de l'iMac est trop ancien pour vérifier `app.js` entier
   (`||=`) ; vérifier le code ajouté seul.
+- **`confirm()` bloqué** : certains navigateurs ignorent les fenêtres `confirm()` ; un bouton
+  qui ne répond pas, sans message, en est le suspect n° 1. Les boutons du parcours « et si ? »
+  utilisent `armer2()` (deux clics) ; les `confirm()` des onglets Carte, Lore, Chantiers… sont
+  à convertir de même si besoin.
+- **Après un patch** : modification d'`app.py` → relancer Flask entièrement ; `app.js` seul →
+  Cmd-Maj-R ; les scripts appelés en sous-processus (`et_si_*.py`, `suggerer_lacunes.py`…) ne
+  demandent aucune relance.
 
 ### Commandes courantes
 ```bash

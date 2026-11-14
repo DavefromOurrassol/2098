@@ -1,9 +1,9 @@
 # Backlog actif — Ourrassol 2098
 
-*Ce qui reste ouvert, et seulement cela. Mis à jour le 11 novembre 2026 au soir (chantier
-« unification » : « et si ? » porte unique ; **chemin Articles → « et si ? » éprouvé en réel** ;
-extracteur filtré et passage de l'article transmis à l'injection, U3p → U3za ;
-B3.1 et B4-termes clos). Réorganisé le 31 octobre 2026 en trois
+*Ce qui reste ouvert, et seulement cela. Mis à jour le 14 novembre 2026 au soir (chantier
+« unification » : « et si ? » **porte unique** pour événements, signaux et entités ;
+fiche d'article sans invention, entités, suggestions et lot, accès directs fermés,
+U3aa → U3bf ; commit `3ae0304`). Réorganisé le 31 octobre 2026 en trois
 parties : **A. Bugs et vérifications**, **B. Développement (nouvelles
 fonctionnalités)**, **C. Enrichissement de la base**. Règle actée le 31 oct :
 l'outil doit avoir toutes ses fonctionnalités et aucun bug connu (partie A vide)
@@ -13,7 +13,7 @@ avant d'enrichir la base en volume (partie C).*
 des points dans plusieurs parties, chacun est marqué de son numéro. Les points
 clos sont dans `BACKLOG_ARCHIVE.md` (à uploader seulement pour vérifier si un
 point a déjà été traité). Mode d'emploi : `USER_MANUAL_COMPLET.md` ; dernier état
-de session : `HANDOFF_11_NOVEMBRE.md`.*
+de session : `HANDOFF_14_NOVEMBRE.md`.*
 
 Légende : 🔴 à faire · 🟡 en cours · 👁 en surveillance (pas de correctif
 préventif, agir si le cas revient) · ⚪ idée sans calendrier.
@@ -63,7 +63,9 @@ Reste à voir en réel :
   **réécriture** déclenchée par un fait `[ARTICLE]` omis (U3w : aucune omission depuis le
   patch) ; c) les alertes U3w (nom du scénario) et U3y (anachronisme) en réel (jamais
   déclenchées depuis les patchs) ; d) un article d'un **autre** scénario que
-  new_sustainability, et un article dont l'en-tête a une clé `titre`.
+  new_sustainability, et un article dont l'en-tête a une clé `titre` ; e) **entité** :
+  « comme entité » (Articles) puis ajout, adoption, injection ; entité de la Lecture IA
+  jusqu'à l'injection ; f) les boutons de l'étape ⑤ et « Appliquer » en double-clic.
 - **S20** : `/api/yaml/append` garde l'en-tête de `queue.yaml` (correctif du 30 oct,
   testé sur copie) → vérifier au prochain ajout depuis le GUI (ex. entrée préparée
   dans 🔭), puis retirer ce point. (« Adopter » du simulateur garde bien l'en-tête :
@@ -115,13 +117,12 @@ Reste à voir en réel :
   fin n'est pas toujours tenue (Holdfast : `tensions_narratives` 721 → 938 car., une
   phrase ajoutée à trois points sur quatre, sans fait inventé). Relire l'aperçu ;
   durcir la consigne si cela revient.
-- **B9 injection d'un événement tiré d'un article** : depuis U3s → U3y, l'IA reçoit le
-  passage de l'article, avec des consignes de fidélité et trois contrôles mécaniques. Elle
-  invente encore quand l'article ne donne qu'une mention (quai Wilson 2044 : sigle APRC
-  développé à tort, travaux, migrations), transpose une scène de 2098 à la date de
-  l'événement sans citer d'année (non détecté), ou omet une issue. Les 4 fiches du 11 nov
-  ont été corrigées à la main (U3u, U3v, U3z, U3za). **Relire toute fiche injectée** ;
-  suites en B9 (« source mince »).
+- **B9 injection d'un événement tiré d'un article** : depuis U3aa → U3ac (14 nov), la
+  fiche **reprend la description de l'hypothèse** (tirée de l'article) au lieu d'être
+  inventée par l'IA ; `consequences` et `note_coherence` sont fixes, un contrôle ⚠ signale
+  les noms propres et sigles absents de l'article. David **ne relit pas** chaque fiche : à
+  confirmer en réel sur un prochain événement d'article ; restent les points de B9 (« source
+  mince, suite »).
 - **B9 localisation des fiches injectées** : `extract_localisation.py` (mistral-small) a
   placé les arrestations des Grottes (Genève) en `afrique_continentale` / « quartier de
   la Jonction » à cause de « communautés sahéliennes » dans la description (corrigé U3u).
@@ -257,98 +258,102 @@ Le simulateur est terminé (manuel §3quinquies) ; ses tests réels sont en A1.
   ans ? »), par l'IA ou des lecteurs aux profils variés. Inspiration : la série
   *Ces guerres qui nous attendent* (travaux de la Red Team Défense).
 
-## 🟡 B9. Unification — « et si ? » porte unique (U2-U3, 2-11 nov)
+## 🟡 B9. Unification — « et si ? » porte unique (U2-U3, 2-14 nov)
 
 *Principe : tout élément (événement, signal, entité) naît comme **hypothèse** dans
 `et_si/hypotheses.yaml`, puis ①simuler → ②décider → ③injecter → ④appliquer →
-⑤à la main. Les flux de maintenance qui écrivent la file des entités
-(`enrich_minimal.py`, `extract_phantom_slugs.py`, `requeue_needs_review.py`,
+⑤à la main (un **signal** s'arrête à ③ ; une **entité** : ① vérifier → ② décider →
+③ injecter, sans simulation chiffrée). Les flux de maintenance qui écrivent la file des
+entités (`enrich_minimal.py`, `extract_phantom_slugs.py`, `requeue_needs_review.py`,
 `create_entity.py`) restent hors du dispositif.*
 
-**Fait** (détails dans l'archive et le handoff) : type d'hypothèse `signal`
-(U2a-U2g), lieu + contraintes (U2h), veille 🔭 → « et si ? » (U3a), Articles →
-« et si ? » (U3b), date / scénarios / mode imposés par l'article (U3c), case « effet
-établi en 2098 » (U3d), **date d'un événement en année + mois jusqu'à 2098.12 (U3e),
-détection des événements du texte complet de l'article avec date verrouillée (U3f),
-simulateur : mots génériques et date de mesure dans l'année d'apparition (U3g), citation
-exacte de l'article imposée comme fait (U3i, U3k), sélection de texte du panneau (U3j),
-note de cohérence en texte brut (U3l, U3m), message « Fiches à relire » (U3n), blocage
-des doublons (U3o)** ; le soir : **filtre mécanique de l'extracteur (plans, projets,
-débats, statistiques, citations tronquées : U3p, U3r, U3x), citations sans guillemets
-doublés (U3q), passage de l'article transmis à l'injection avec consignes de fidélité et
-contrôles (U3s, U3t, U3w, U3y)**, 4 fiches corrigées à la main (U3u, U3v, U3z, U3za). Chemin signal **éprouvé en réel** depuis la veille
-(`ia_autorite_spirituelle_2026` → `chatbots_guides_spirituels_2026`) ; chemin Articles
-**éprouvé en réel de bout en bout le 11 nov** pour un événement
-(`piratage_ecrans_greffes_hepatiques_2098`, 8 mars 2098 : détection → proposition →
-adoption → injection, `validate.py` 0/0).
+**Les quatre entrées, toutes par « et si ? »** (état du 14 nov) :
 
-**Ordre décidé (David, 7 nov)** : 1. éprouver les chemins (**fait pour Articles**) ;
-2. **entités** dans « et si ? » (`create_entities_and_instances.py`) ; 3. **modes
-automatiques + wild cards** (hypothèses « rupture » à faible probabilité / fort impact) ;
-4. **étape 5 : fermer** les accès directs.
+| Entrée | Types | Remarque |
+|---|---|---|
+| ✨ Nouvelle hypothèse (idée libre, 💡 suggestions, lot) | événement, signal, entité | suggestions : événements et entités |
+| 🔭 Veille signaux faibles | signal, événement | source des signaux (pas de suggestions de signaux) |
+| Onglet Articles | événement (détecté dans l'article), signal, entité (nom saisi) | date verrouillée, citation imposée |
+| Étape ⑤ « Lecture IA » : nouvelles entités | entité | plus de file `entites_custom/queue.yaml` |
+
+**Fait** (détails dans l'archive et les handoffs). Jusqu'au 11 nov : type `signal`
+(U2a-U2g), lieu + contraintes (U2h), veille → « et si ? » (U3a), Articles → « et si ? »
+(U3b-U3d), dates en année + mois jusqu'à 2098.12 (U3e), détection des événements du texte
+complet (U3f), citation exacte imposée (U3i, U3k), doublons bloqués (U3o), filtre mécanique
+de l'extracteur (U3p, U3r, U3x), passage de l'article transmis à l'injection (U3s, U3t, U3w,
+U3y). **14 nov** (U3aa → U3bf) :
+- **source mince → invention** : la fiche d'un événement d'article reprend la description
+  de l'hypothèse au lieu d'être inventée (U3aa), titres recadrés (U3ab), contrôle du fait
+  `[ARTICLE]` retiré (U3ac) ; dates 2098.xx dans la Passe exhaustive et la Lecture IA (U3ad) ;
+- **panneau** : titres et messages (U3ae), signal en 3 étapes avec options payantes grisées
+  (U3af), étape ⑤ expliquée (U3ag), description de l'hypothèse sous la liste (U3at-U3av) ;
+- **entités** : type `entite` en 4 patchs + doublons + `--idea` (U3ah-U3ao), date de
+  naissance respectée (`annee_debut`, U3aw), suppression des hypothèses d'entité non injectées
+  (U3ax), localisation relancée après l'injection (U3ba), 📦 adopter + injecter plusieurs
+  entités (U3bb, U3bc), Lecture IA et Articles vers les hypothèses (U3be) ;
+- **suggestions** à partir des lacunes (événements, entités) avec année, traitées en lot
+  (U3aq, U3ar, U3as, U3ay) ;
+- **étape 5** : accès directs fermés (U3ai), menu regroupé (U3ap), routes mortes et
+  commentaire périmé retirés (U3bf) ; **confirmations en double-clic** (U3as, U3az, U3bf).
+Chemin signal éprouvé en réel (veille, 7 nov) ; chemin Articles → événement éprouvé le 11 nov ;
+entités éprouvées le 14 nov (3 entités injectées, 2 par le lot).
+
+**Ordre décidé (David, 7 nov)** : 1. éprouver les chemins ; 2. **entités** dans « et si ? »
+(**fait**) ; 3. **modes automatiques + wild cards** ; 4. **étape 5 : fermer** les accès
+directs (**fait**, sauf le sort des « Outils directs »).
 
 À faire :
-- 🔴 **Entités** dans « et si ? » (puis modes auto + wild cards).
-- 🔴 **Étape 5 — fermer** : ancien formulaire Promouvoir (Articles), écran Édition
-  « Injecter un événement depuis un article » (route `/api/edition/injecter_evenement`),
-  anciens menus d'injection, `/api/yaml/append` ; supprimer le code mort
-  (`renderArticlesPromouvoirForm`, `submitArticlesPromouvoirInjection`,
-  `_veillePreparer`, `_veilleAfficherPropositions` dans `app.js`). **L'étape ⑤ a disparu
-  du panneau de l'interface** (le panneau se termine à ④) : aligner la doc et l'interface.
-- 🔴 **Réorganiser le panneau « Et si ? »** : étapes peu claires ; griser pour un
-  signal les options payantes inutiles (Lecture IA, Passe exhaustive, Nouveau
-  tirage) ; titre trompeur « Faits imposés à la lecture IA » pour un signal ; à l'étape ④,
-  « aucune opération enregistrée : lecture IA et passe exhaustive absentes ? » ne dit pas
-  quoi faire (ces lectures se lancent à l'étape ①, et « Appliquer » écrirait 0 fichier).
-- 🔴 **Source mince → invention** (constat du 11 nov au soir) : quand l'article ne donne
-  qu'une mention d'un événement, le schéma d'injection exige quand même 3 à 5 lignes par
-  champ et l'IA remplit. Pistes, à choisir : a) longueur des textes proportionnelle au
-  passage (1 à 2 phrases pour une simple mention) — vérifier d'abord ce que
-  `validate_instance()` exige ; b) contrôle mécanique des sigles et noms propres de la
-  fiche absents de l'article **et** des acteurs du vault (⚠) ; c) refuser à l'extraction
-  les événements à peine mentionnés (une incise) ; d) relecture assistée de la fiche juste
-  après l'injection.
-- 🔴 **Anachronisme sans année** : U3y ne détecte que des années ou « aujourd'hui » ; une
-  scène de 2098 transposée (files d'attente devant le Centre Régénératif en 2044) passe.
-  Piste : contrôle IA dans l'appel `verifier_contraintes` (« le récit décrit-il des faits
-  postérieurs à la date de l'événement ? »), sans appel en plus.
-- 🔴 **Vérifier Lecture IA et Passe exhaustive** (`et_si_exhaustif.py`, lecture IA) pour
-  une date 2098.xx : le simulateur a un contrôle « date antérieure à l'apparition » corrigé
-  en U3g, les deux autres scripts n'ont pas été inspectés.
+- 🔴 **Modes automatiques + wild cards** (étape 3) : les suggestions de lacunes
+  (événements, entités) en sont la première moitié ; reste la **wild card** (type
+  « rupture » assumé, faible probabilité, impact majeur, injecté même s'il bouscule le
+  lore) : définition, plafonds, place dans les suggestions et dans la simulation à cadrer
+  avec David.
+- 🔴 **Source mince → invention, suite** : a) **anachronisme sans année** : U3y ne détecte que
+  des années ou « aujourd'hui » ; une scène de 2098 transposée passe (piste : question
+  ajoutée à l'appel `verifier_contraintes`) ; b) refuser à l'extraction les événements à
+  peine mentionnés (une incise) ; c) **impacts** des événements d'article : 6 variables et
+  forces 15 à 22 pour des faits locaux (la portée `locale` n'abaisse pas les forces) à juger
+  avant d'injecter en volume ; d) vérifier en réel que la fiche U3aa est fidèle **sans
+  relecture** (David ne relit pas chaque fiche).
 - 🔴 **Consigne IA** : « reprendre tels quels les chiffres des contraintes » (l'IA a
   paraphrasé Pew « 1 sur 10 / 1 sur 5 chez les moins de 30 ans » en « 10-20 % de la
   population » ; corrigé à la main le 7 nov, `.bak_chiffres`).
-- ⚪ **« Fiches à relire »** : la recherche ne cible que des mots isolés (« Léman »,
-  « Santé ») ; une recherche de noms propres à plusieurs mots (« Centre Régénératif du
-  Léman ») la rendrait plus utile.
-- ⚪ **Détection des doublons** : elle repose sur l'IA (slug « déjà connu ») ; une
-  reformulation très différente d'un événement déjà injecté peut passer (le serveur refuse
-  seulement même nom / même description d'hypothèse). Piste : comparaison mécanique
-  (lieu + date + entités).
-- ⚪ **Archétype injecté** (`evenements/<id>.md`) : colonnes « Réalisation » et « Impact »
-  du tableau des instances vides pour l'instance injectée ; à comparer avec un archétype
-  plus ancien avant de décider si c'est normal.
-- ⚪ **Plage de dates** : événements jusqu'à 2098.12 **fait** (U3e) ; signaux toujours
-  ≤ 2097 (décision conservée). Un événement dont l'article date de 2098 peut donc
-  maintenant être injecté.
-- ⚪ **Veille** : passer la date d'observation comme date imposée.
+- ⚪ **« Outils directs (ancien, avancé) »** (menu, replié) : Créer des entités, Injecter des
+  événements, Injecter des signaux faibles, avec leurs files à remplir à la main
+  (`/api/yaml/append`, `/api/idees/proposer`) : les garder, ou les retirer à leur tour.
+- ⚪ **Bouton « Modifier »** pour une hypothèse existante (aujourd'hui : l'éditer dans
+  `hypotheses.yaml`, ou la supprimer — entités seulement — et la recréer).
+- ⚪ **Adopter + injecter en bloc pour événements et signaux** : exige une simulation avant
+  l'adoption, donc hors du lot d'entités (décision du 14 nov).
+- ⚪ **Entité depuis un article** : l'utilisateur écrit le nom et ce que l'article en dit ;
+  pas de détection automatique des entités citées ni de rapprochement avec les entités
+  de l'article.
+- ⚪ **Annulation d'une entité injectée** : ne l'enlève pas du vault (`undo_custom.py`).
+- ⚪ **`confirm()` restants** (Carte, Lore, Chantiers, quelques boutons) : à passer en
+  double-clic (`armer2()`) si l'un d'eux reste muet.
+- ⚪ **Bug latent** : `hypothese_depuis_texte.normaliser_entite`, branche `except ValueError`
+  d'`annee_debut` : `h[cle] = v` réutilise les variables de la boucle précédente.
+- ⚪ **U3bd** (suggestions de signaux) : écrit, testé sur copie, **non appliqué** (la veille
+  suffit) ; garder ou jeter le fichier.
+- ⚪ **Hypothèse d'essai** `alliance_des_territoires_froids_europeens` (entité, non adoptée) :
+  `python3 generator/et_si_supprimer.py --id … --apply` si elle n'est pas voulue.
+- ⚪ **« Fiches à relire »** : la recherche ne cible que des mots isolés ; une recherche de
+  noms propres à plusieurs mots la rendrait plus utile.
+- ⚪ **Détection des doublons d'événements** : elle repose sur l'IA (slug « déjà connu ») ; une
+  reformulation très différente d'un événement déjà injecté peut passer. Piste : comparaison
+  mécanique (lieu + date + entités).
+- ⚪ **Archétype injecté** (`evenements/<id>.md`) : colonnes « Réalisation » et « Impact » du
+  tableau des instances vides pour l'instance injectée ; à comparer avec un archétype plus
+  ancien avant de décider si c'est normal.
+- ⚪ **Veille** : passer la date d'observation comme date imposée. Signaux toujours ≤ 2097
+  (décision conservée).
 - ⚪ Perte connue : l'IA ne peut plus ajouter de variables en plus (signaux).
-- ⚪ Cosmétique : suffixe d'id `_2098` pour une date 2097
-  (`methane_arctique_nordark_2097`) ; l'hypothèse a peut-être déjà été ajoutée à
-  `hypotheses.yaml` (un ajout du même nom est refusé).
-- ⚪ Cosmétique : une ligne vide en trop avant « Acteurs impliqués » dans la fiche corrigée
-  à la main (U3h) ; sans effet.
-- ⚪ Cosmétique (11 nov soir) : a) libellé « écarté (plan / projet / débat) » aussi pour une
-  statistique ou une citation tronquée (le motif est juste) → « écarté (pas un
-  événement) » ; b) citation dont le guillemet ouvrant n'est pas fermé dans la phrase de
-  l'article affichée « « « … » » (U3q ne retire que les paires complètes) ; c) contexte
-  U3s : titre = nom de fichier (pas de clé `titre` dans l'en-tête des articles ; lire la
-  clé réelle) et ligne `---` de l'article dans le passage ; d) l'archétype
-  `evenements/accords_oms_regulation_mondiale_2039.md` garde l'ancien nom d'affichage
-  (« Accords de Genève sur la Régulation Médicale Mondiale »).
-- ⚪ **Impacts des événements tirés d'un article** : la simulation a imposé 6 variables à
-  la montée des eaux de Genève (2044) et des forces de 15 à 22 à des faits locaux ; la
-  portée `locale` n'abaisse pas les forces. À juger avant d'injecter en volume.
+- ⚪ Cosmétique : suffixe d'id `_2098` pour une date 2097 (`methane_arctique_nordark_2097`).
+- ⚪ Cosmétique (11 nov) : a) libellé « écarté (plan / projet / débat) » aussi pour une
+  statistique ou une citation tronquée → « écarté (pas un événement) » ; b) citation dont le
+  guillemet ouvrant n'est pas fermé dans la phrase de l'article affichée « « « … » » ; c)
+  contexte U3s : titre = nom de fichier et ligne `---` dans le passage ; d) l'archétype
+  `evenements/accords_oms_regulation_mondiale_2039.md` garde l'ancien nom d'affichage.
 
 ## ⚪ B5. Chaîne idées → signaux et veille (S20, S21)
 
