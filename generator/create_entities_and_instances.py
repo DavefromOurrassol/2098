@@ -731,6 +731,24 @@ def generate_instances_for_entity(client, entity_fm, scenarios, dry_run=False,
 # ORCHESTRATION — mode custom
 # =============================================================================
 
+def _slug_deja_pris_u3ah(nom):
+    """U3ah (14 nov 2026) : refus mécanique d'un nom dont le slug existe déjà
+    (fichier entites/<slug>.md ou entrée du registre _entities_list.json).
+    Retourne le motif (str) ou None. Aucun appel IA."""
+    slug = slugify(str(nom or ""))
+    if not slug:
+        return "nom vide ou inutilisable (slug vide)"
+    if (ENTITES_DIR / f"{slug}.md").exists():
+        return (f"Slug '{slug}' déjà utilisé : entites/{slug}.md existe "
+                f"(pour ajouter des instances à une entité existante, "
+                f"utiliser generate_instances.py)")
+    for e in load_entities_list():
+        if e.get("slug") == slug:
+            return (f"Slug '{slug}' déjà présent dans le registre "
+                    f"entites/_entities_list.json")
+    return None
+
+
 def process_custom_idea(client, idea, dry_run=False, ancrage_temporel="libre"):
     nom = idea.get("nom", "sans_nom")
     category = idea.get("category")
@@ -755,6 +773,12 @@ def process_custom_idea(client, idea, dry_run=False, ancrage_temporel="libre"):
         print(f"  ✗ Rejetée : {reason}")
         return {"status": "needs_review", "idea": idea, "reason": reason}
 
+    # U3ah : slug déjà pris -> refus avant tout appel IA
+    _motif_slug = _slug_deja_pris_u3ah(nom)
+    if _motif_slug:
+        print(f"  ✗ Rejetée : {_motif_slug}")
+        return {"status": "needs_review", "idea": idea, "reason": _motif_slug}
+
     scenarios = scenario_hint if scenario_hint else list(SCENARIOS)
     scenarios = [s for s in scenarios if s in SCENARIOS]
     if scenario_ref not in scenarios:
@@ -773,6 +797,11 @@ def process_custom_idea(client, idea, dry_run=False, ancrage_temporel="libre"):
         print("  -> problèmes :")
         for i in issues:
             print(f"     - {i}")
+        if archetype.get("doublon_detecte"):
+            # U3ah : un doublon signalé n'est pas corrigeable par retry
+            print(f"  -> doublon signalé ({archetype.get('doublon_slug')!r}) : "
+                  f"pas de nouvelle tentative, idée à relire")
+            break
         if attempt < MAX_FIX_ATTEMPTS:
             archetype = step_custom_derive_archetype(
                 client, idea, existing_entities, previous=archetype, issues=issues
@@ -1387,6 +1416,44 @@ def run_post_injection_cycle():
         print("\n✓ Cycle post-injection terminé.")
 
 
+def run_idea_mode_u3ah(client, idea_json, dry_run, ancrage_temporel, sortie_json):
+    """U3ah : traite UNE idée donnée en JSON, sans lire ni écrire queue.yaml.
+    Code de sortie : 0 = entité injectée (ou simulée), 1 = refusée / à relire,
+    2 = argument illisible. Avec sortie_json : dernière ligne = résumé JSON."""
+    try:
+        idea = json.loads(idea_json)
+    except json.JSONDecodeError as e:
+        print(f"✗ --idea : JSON illisible ({e})")
+        return 2
+    if not isinstance(idea, dict):
+        print("✗ --idea : un objet JSON est attendu (une idée au format d'une "
+              "entrée de queue.yaml)")
+        return 2
+    try:
+        outcome = process_custom_idea(client, idea, dry_run=dry_run,
+                                       ancrage_temporel=ancrage_temporel)
+    except Exception as e:
+        print(f"  ✗ Exception : {e}")
+        outcome = {"status": "needs_review", "idea": idea, "error": str(e)}
+    ok = outcome.get("status") == "injected"
+    stats = outcome.get("instance_stats") or {}
+    if ok and not dry_run and stats.get("created", 0) > 0:
+        run_post_injection_cycle()
+    if sortie_json:
+        resume = {
+            "status": outcome.get("status"),
+            "slug": outcome.get("slug"),
+            "scenarios": outcome.get("scenarios"),
+            "instance_stats": stats,
+            "issues": outcome.get("issues"),
+            "reason": outcome.get("reason"),
+            "error": outcome.get("error"),
+            "dry_run": bool(dry_run),
+        }
+        print(json.dumps(resume, ensure_ascii=False, default=str))
+    return 0 if ok else 1
+
+
 def main():
     parser = argparse.ArgumentParser(
         description="Crée des entités ET leurs instances en un seul run (Ourrassol 2098)"
@@ -1420,6 +1487,15 @@ def main():
              "etat_du_monde_reel.md plutôt que dans un jalon lointain. "
              "Sans effet en mode auto-suggest (ne crée pas d'instances)."
     )
+    parser.add_argument(
+        "--idea", default=None,
+        help="U3ah : une idée d'entité au format JSON (champs d'une entrée de "
+             "queue.yaml). Traitée seule, sans lire ni écrire la file. Remplace --mode."
+    )
+    parser.add_argument(
+        "--json", action="store_true",
+        help="U3ah : avec --idea, dernière ligne de sortie = résumé JSON."
+    )
     args = parser.parse_args()
 
     print("=" * 60)
@@ -1434,6 +1510,10 @@ def main():
     # le script bloquait indéfiniment sur input() quand lancé depuis app.py
     # (subprocess.Popen sans stdin connecté) — --mode permet de contourner
     # totalement le prompt interactif pour ce cas d'usage.
+    if args.idea:   # U3ah
+        sys.exit(run_idea_mode_u3ah(client, args.idea, args.dry_run,
+                                    args.ancrage_temporel, args.json))
+
     mode = args.mode
     if mode is None:
         mode = input("\nMode : custom, auto ou auto-suggest ? [custom/auto/auto-suggest] : ").strip().lower()
