@@ -102,6 +102,24 @@ _DATE_CONTESTEE = _re.compile(r"(trop tard\w*|bien avant|plus tot|date\w* (?:est
 _MATERIEL = _re.compile(r"\b(detrui\w*|destruction|n'existe plus|aneanti\w*|rase\w*)\b")
 
 
+# U3ad (14 novembre 2026) : date lisible d'une date fractionnaire (2098.03 -> « mars 2098 (2098.03) »).
+_MOIS_U3AD = (None, "janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août",
+              "septembre", "octobre", "novembre", "décembre")
+
+
+def date_lisible_u3ad(v):
+    """Date entière : écriture inchangée (« 2044 ») ; avec mois : « mars 2098 (2098.03) »."""
+    try:
+        f = float(v)
+    except (TypeError, ValueError):
+        return str(v)
+    an = int(f)
+    mois = round((f - an) * 100)
+    if not 1 <= mois <= 12:
+        return f"{f:g}"
+    return f"{_MOIS_U3AD[mois]} {an} ({f:.2f})"
+
+
 def annees_hypothese(hyp):
     """Années que l'élément fixe lui-même (nom, description, contraintes, date)."""
     texte = " ".join([str(hyp.get("nom") or ""), str(hyp.get("description") or "")]
@@ -171,7 +189,10 @@ def charger_fiches(hyp, sc):
     from loader import load_instances_for_scenario, load_event_instances_for_scenario
     instances = load_instances_for_scenario(sc)
     evenements = [e for e in load_event_instances_for_scenario(sc)
-                  if _annee(e.get("date")) is not None and _annee(e.get("date")) >= hyp["date"]
+                  if _annee(e.get("date")) is not None   # U3ad : « 2098 » entier relu si l'hypothèse est de 2098.xx
+                  and (_annee(e.get("date")) >= hyp["date"]
+                       or (_annee(e.get("date")) == int(_annee(e.get("date")))
+                           and int(_annee(e.get("date"))) == int(hyp["date"])))
                   and e.get("archetype") != hyp["id"]]
     fiches = [{"slug": i["slug"], "genre": "instance", "data": i, "texte": _fiche_instance(i)}
               for i in instances]
@@ -238,7 +259,7 @@ LOGIQUE DU SCÉNARIO :
 {_court(scen.get('system_logic'), 700)}
 
 ÉLÉMENT PERTURBATEUR (pas encore dans le lore) :
-{hyp['nom']} — apparition en {hyp['date']:g}.
+{hyp['nom']} — apparition en {date_lisible_u3ad(hyp['date'])}.
 {_court(hyp['description'], 700)}
 {contraintes}Effets chiffrés simulés en fin de période (niveau 100 = crise) :
 {chr(10).join(lignes_effets)}
@@ -800,7 +821,7 @@ def contre_lecture(res, hyp, sc, effets, cache, refaire=False, situation=None):
         return res
     contraintes = "".join(f"\n- {c}" for c in hyp.get("contraintes") or [])
     effets_txt = "".join(f"\n- {e['variable']} : {e['effet']:+.1f}" for e in (effets or [])[:8])
-    entete = (f"ÉLÉMENT PERTURBATEUR (scénario {sc}) : {hyp['nom']} — {hyp['date']:g}.\n"
+    entete = (f"ÉLÉMENT PERTURBATEUR (scénario {sc}) : {hyp['nom']} — {date_lisible_u3ad(hyp['date'])}.\n"
               f"{_court(hyp['description'], 700)}"
               + (f"\nFaits à respecter :{contraintes}" if contraintes else "")
               + (f"\nEffets chiffrés :{effets_txt}" if effets_txt else "")
@@ -1019,7 +1040,7 @@ def classer_possibles(res, hyp, sc, effets, cache, refaire=False):
         lignes.append(f"[f{n + 1}] {f['nom']} : {_resume_fiche(f)} — {_court(raison, 160)}"
                       + (" (une vérification a jugé ce changement non nécessaire)" if verifie else ""))
     effets_txt = "".join(f"\n- {e['variable']} : {e['effet']:+.1f}" for e in (effets or [])[:8])
-    prompt = (f"ÉLÉMENT PERTURBATEUR (scénario {sc}) : {hyp['nom']} — {hyp['date']:g}.\n"
+    prompt = (f"ÉLÉMENT PERTURBATEUR (scénario {sc}) : {hyp['nom']} — {date_lisible_u3ad(hyp['date'])}.\n"
               f"{_court(hyp['description'], 700)}" + (f"\nEffets chiffrés :{effets_txt}" if effets_txt else "")
               + "\n\n" + CONSIGNE_CLASSEMENT.format(n=PRIORITE_MAX) + "\nFICHES :\n" + "\n".join(lignes))
     cle = f"{hyp['id']}::{sc}::classement::" + hashlib.sha1(
@@ -1179,6 +1200,11 @@ def main():
     if args.scenario and args.scenario not in hyp["scenarios"]:
         sys.exit(f"✗ Scénario {args.scenario!r} non couvert par l'hypothèse.")
     scenarios = [args.scenario] if args.scenario else hyp["scenarios"]
+    if args.date < hyp["date"] and int(args.date) == int(hyp["date"]):   # U3ad (comme U3g)
+        args.date = round(int(hyp["date"]) + 0.12, 2)
+        print(f"ℹ date de mesure ramenée à la fin de l'année de l'apparition : {args.date:g}", file=sys.stderr)
+    if args.date < hyp["date"]:
+        sys.exit(f"✗ --date {args.date:g} antérieure à l'apparition de l'hypothèse ({hyp['date']:g}).")
     resultats = s.simuler_hypothese(hyp, args.date, scenarios)
 
     sortie = {}

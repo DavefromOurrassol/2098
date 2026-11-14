@@ -371,6 +371,11 @@ def _tensions(niveaux, matrix, all_variables, check_coherence):
     return {(t["source"], t["target"]): t for t in res["tensions"]}
 
 
+def _date_lisible_u3ad(v):   # U3ad : voir et_si_exhaustif.date_lisible_u3ad
+    from et_si_exhaustif import date_lisible_u3ad
+    return date_lisible_u3ad(v)
+
+
 def simuler_hypothese(hyp, date_fin, scenarios=None):
     import dynamique as dyn
     import trace_injection as ti
@@ -957,7 +962,7 @@ LOGIQUE DU SCÉNARIO :
 {_court(scen.get('system_logic'), 900)}
 
 ÉLÉMENT PERTURBATEUR HYPOTHÉTIQUE (pas encore dans le lore) :
-{hyp['nom']} — apparition en {hyp['date']:g}, {nature}.
+{hyp['nom']} — apparition en {_date_lisible_u3ad(hyp['date'])}, {nature}.
 {_court(hyp['description'], 700)}
 {bloc_contraintes}Variables touchées : {impacts_txt}
 {avert_moteur}

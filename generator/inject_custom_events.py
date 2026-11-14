@@ -1492,6 +1492,9 @@ def verifier_contraintes(instance_data, idea, scenario):
     respecté, s'il n'y a pas de fait à contrôler, ou si l'appel échoue — alors ⚠)."""
     faits = [f for f in _faits_du_scenario(idea, scenario)
              if (f.get("sort") or "contrainte") in SORTS_CONTROLES_S30]
+    if FICHE_DEPUIS_ARTICLE_U3AA and str(idea.get("description") or "").strip():   # U3ac
+        # le texte est celui de l'hypothèse (U3aa) : le fait tiré de l'article n'est plus à contrôler
+        faits = [f for f in faits if not _fait_de_article_u3w(f["fait"], scenario)]
     if not faits:
         return []
     recit = "\n\n".join(f"{k} : {' '.join(str(instance_data.get(k)).split())}"
@@ -1650,6 +1653,33 @@ def _noms_absents_u3aa(instance_data, scenario):
     return out
 
 
+# U3ab (14 novembre 2026) -- nom / evenement_cle d'un événement d'article : mots de l'hypothèse.
+def _mots_titres_u3ab(instance_data, idea, scenario):
+    """Mots (4 lettres ou plus) de nom / evenement_cle absents de la description de l'hypothèse.
+    Liste de « champ : mot » ; vide sans article retrouvé ou sans description."""
+    if not _DERNIER_ARTICLE_U3S.get(scenario):
+        return []
+    desc = _norm_ctx_u3s(idea.get("description"))
+    if not desc:
+        return []
+    racines = {w[:5] for w in desc.split() if len(w) >= 4}
+    out = []
+    for champ in ("nom", "evenement_cle"):
+        for w in _norm_ctx_u3s(instance_data.get(champ)).split():
+            if len(w) >= 4 and not w.isdigit() and w[:5] not in racines and f"{champ} : {w}" not in out:
+                out.append(f"{champ} : {w}")
+    return out
+
+
+def _issues_titres_u3ab(instance_data, idea, scenario):
+    mots = _mots_titres_u3ab(instance_data, idea, scenario)
+    if not mots:
+        return []
+    desc = " ".join(str(idea.get("description") or "").split())
+    return ["'nom' et 'evenement_cle' doivent reprendre les mots de la description de l'hypothèse, "
+            f"sans rien y ajouter (mots absents : {', '.join(mots)}). Description : « {desc} »"]
+
+
 def process_idea(client, idea, dry_run=False):
     idea_id = idea.get("id", "sans_id")
     variables_hint = idea.get("variables_hint")
@@ -1781,6 +1811,8 @@ def process_idea(client, idea, dry_run=False):
                 issues = validate_instance(
                     instance_data, variables, scenario, registre_text, available_actors
                 )
+                if not issues and attempt < MAX_FIX_ATTEMPTS:   # U3ab
+                    issues = _issues_titres_u3ab(instance_data, idea, scenario)
                 if not issues:   # PATCH_S30_CONTRAINTES : faits imposés, une réécriture au plus
                     etat_contraintes = verifier_contraintes(instance_data, idea, scenario)
                     if etat_contraintes and not relance_contraintes and attempt < MAX_FIX_ATTEMPTS:
@@ -1822,6 +1854,8 @@ def process_idea(client, idea, dry_run=False):
                 print(f"  ⚠ [{scenario}] {msg}")
             for nom_abs in _noms_absents_u3aa(instance_data, scenario):   # U3aa
                 print(f"  ⚠ [{scenario}] nom propre absent de l'article et du vault : « {nom_abs} »")
+            for mot_abs in _mots_titres_u3ab(instance_data, idea, scenario):   # U3ab
+                print(f"  ⚠ [{scenario}] mot absent de la description de l'hypothèse ({mot_abs})")
 
             if idea.get("edition_active") and idea.get("date_imposee") is not None:
                 print("  ⚠ edition_active ignoré : la date est imposée par la simulation.")
