@@ -186,6 +186,9 @@ def entree_entite(brut):
         v = " ".join(str(brut.get(cle_h) or "").split())
         if v:
             idee[cle_i] = v
+    a_ = str(brut.get("annee_debut") or "").strip()   # U3aw
+    if a_.isdigit():
+        idee["annee_debut"] = int(a_)
     scen = brut.get("scenarios")
     if isinstance(scen, list) and scen:
         idee["scenario_hint"] = [str(s) for s in scen]

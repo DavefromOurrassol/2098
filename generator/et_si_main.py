@@ -180,32 +180,66 @@ def entites_proposees(data, categories=None):
     return out
 
 
-def statut_entite(e, suivi, m, file_noms, existants):
+def _hyp():
+    """hypothese_depuis_texte (contrôles, doublons, ajout à hypotheses.yaml), chargé à la demande. U3be."""
+    import hypothese_depuis_texte as h
+    return h
+
+
+def statut_entite(e, suivi, m, file_noms, existants, ids_hyp=None):
     if m.slugify(e["nom"]) in existants:
         return "créée", "l'entité existe déjà dans le vault"
+    s = suivi["entites"].get(e["cle"]) or {}
+    hid_h = s.get("hypothese")   # U3be : l'entité est devenue une hypothèse « et si ? »
+    if hid_h:
+        if ids_hyp is None:
+            ids_hyp = set(_hyp().ids_existants())
+        if hid_h in ids_hyp:
+            return "en hypothèse", (f"hypothèse {hid_h} ajoutée le {s.get('date', '?')} : suite dans l'onglet "
+                                    "« Et si ? » (mode Simuler : Vérifier, Adopter, Injecter)")
+        return "proposée", ""   # l'hypothèse a été supprimée depuis : l'entité peut être reproposée
     if e["nom"].lower() in file_noms:
-        s = suivi["entites"].get(e["cle"])
-        return "dans la file", (f"ajoutée le {s['date']} ({s['category']}) : lancer « Créer des entités »"
-                                if s else "déjà dans entites_custom/queue.yaml")
+        return "dans la file", "déjà dans entites_custom/queue.yaml (ancien chemin) : lancer « Créer des entités »"
     if e["cle"] in suivi["entites"]:
         return "traitée", "ajoutée à la file puis retirée (créée ou rejetée : voir processed / needs_review)"
     return "proposée", ""
 
 
-def entree_file(e, hid, category):
-    return {"nom": e["nom"], "category": category, "role": e["role"], "etat": "émergent",
-            "scenario_ref": e["sc"], "scenario_hint": [e["sc"]], "zone_hint": e["zone_nom"],
-            "source": f"et_si_{hid}" + (f" — {e['raison']}" if e["raison"] else "")}
+def _phrase(texte):
+    t = " ".join(str(texte or "").split())
+    return t if not t or t[-1] in ".!?…" else t + "."
+
+
+def bloc_hypothese(e, category, id_):
+    """U3be : entité proposée par la lecture IA -> bloc d'hypothèse `type: entite`.
+    Aucun appel IA : rien n'est ajouté à ce que la lecture a déjà dit (rôle, raison)."""
+    desc = " ".join(x for x in (_phrase(e["role"]), _phrase(e["raison"])) if x)
+    h = {"id": id_, "nom": e["nom"], "type": "entite"}
+    if desc:
+        h["description"] = desc
+    h["categorie"] = category
+    h["scenario_ref"] = e["sc"]
+    if e["role"]:
+        h["role"] = e["role"]
+    h["scenarios"] = [e["sc"]]
+    return _hyp().bloc_yaml(h)
 
 
 def ajouter_entites(hid, data, choix, apply):
+    """U3be : les entités choisies deviennent des hypothèses « et si ? » (type entité) dans
+    hypotheses.yaml, avec les contrôles habituels (doublons d'entités, catégorie, id unique).
+    N'écrit plus dans entites_custom/queue.yaml."""
     m = cei()
+    hy = _hyp()
     suivi = lire_suivi(hid)
     proposees = {e["cle"]: e for e in entites_proposees(data)}
     file = m.load_yaml_list(m.QUEUE_PATH)
     file_noms = {str(x.get("nom") or "").strip().lower() for x in file if isinstance(x, dict)}
     existants = {str(x.get("slug") or "") for x in m.load_entities_list() if isinstance(x, dict)}
-    nouvelles, erreurs = [], []
+    ids_hyp = set(hy.ids_existants())
+    pris = set(ids_hyp)
+    noms_lot = set()
+    nouvelles, erreurs, avert = [], [], []
     for c in choix:
         e = proposees.get(str(c.get("cle")))
         cat = str(c.get("category") or "").strip()
@@ -216,14 +250,33 @@ def ajouter_entites(hid, data, choix, apply):
             erreurs.append(f"{e['nom']} : catégorie {cat or '(vide)'} invalide "
                            f"({', '.join(m.VALID_CATEGORIES)})")
             continue
-        st, detail = statut_entite(e, suivi, m, file_noms, existants)
-        if st in ("créée", "dans la file"):
+        st, detail = statut_entite(e, suivi, m, file_noms, existants, ids_hyp)
+        if st in ("créée", "dans la file", "en hypothèse"):
             erreurs.append(f"{e['nom']} : {detail}")
             continue
-        nouvelles.append((e, cat))
-    print(("ÉCRITURE" if apply else "APERÇU (rien écrit)") + f" — entités de {hid}\n")
-    for e, cat in nouvelles:
-        print(f"  + {e['nom']} ({cat}) — {e['sc']}" + (f", ancrée à {e['zone_nom']}" if e["zone_nom"] else ""))
+        if e["nom"].lower() in noms_lot:
+            erreurs.append(f"{e['nom']} : cochée deux fois")
+            continue
+        noms_lot.add(e["nom"].lower())
+        base = hy.slugifier(e["nom"]) or "entite"
+        id_, n = base, 2
+        while id_ in pris:
+            id_ = f"{base}_{n}"
+            n += 1
+        pris.add(id_)
+        bloc = bloc_hypothese(e, cat, id_)
+        v = hy.verifier_bloc(bloc, pour_ajout=True)
+        for x in v["erreurs"]:
+            erreurs.append(f"{e['nom']} : {x}")
+        for x in v["avertissements"]:
+            avert.append(f"{e['nom']} : {x}")
+        if v["ok"]:
+            nouvelles.append((e, cat, id_, bloc))
+    print(("ÉCRITURE" if apply else "APERÇU (rien écrit)") + f" — entités de {hid} → hypothèses « et si ? »\n")
+    for e, cat, id_, _ in nouvelles:
+        print(f"  + {e['nom']} ({cat}) — {e['sc']} → hypothèse {id_}")
+    for x in avert:
+        print(f"  ⚠ {x}")
     for x in erreurs:
         print(f"  ✗ {x}")
     if not nouvelles:
@@ -233,24 +286,24 @@ def ajouter_entites(hid, data, choix, apply):
         print("\n✗ Rien n'est écrit tant qu'un choix est refusé : corriger ou décocher les lignes ✗.")
         return 1
     if not apply:
-        print(f"\n{len(nouvelles)} entrée(s) prête(s) pour entites_custom/queue.yaml. Relancer avec --apply.")
+        print(f"\n{len(nouvelles)} hypothèse(s) prête(s) pour {hy.se.HYPOTHESES_PATH.name}. Relancer avec --apply.")
         return 0
-    if m.QUEUE_PATH.exists():
-        shutil.copy2(m.QUEUE_PATH, m.QUEUE_PATH.with_name("queue.yaml.bak_et_si_main"))
-    m.save_queue_with_template(file + [entree_file(e, hid, cat) for e, cat in nouvelles])
-    relue = {str(x.get("nom") or "").strip().lower() for x in m.load_yaml_list(m.QUEUE_PATH)}
-    manquantes = [e["nom"] for e, _ in nouvelles if e["nom"].lower() not in relue]
-    if manquantes:
-        sys.exit("✗ relecture de la file : manquent " + ", ".join(manquantes)
-                 + " (sauvegarde : entites_custom/queue.yaml.bak_et_si_main)")
-    for e, cat in nouvelles:
-        suivi["entites"][e["cle"]] = {"date": maintenant(), "nom": e["nom"], "category": cat}
-    ecrire_suivi(hid, suivi)
-    print(f"\n✓ {len(nouvelles)} entité(s) ajoutée(s) à entites_custom/queue.yaml "
-          "(sauvegarde queue.yaml.bak_et_si_main).")
-    print("  Création : « Créer des entités » (python3 generator/create_entities_and_instances.py --mode custom) ;"
-          " appels IA, traite toute la file.")
-    return 0
+    faites = []
+    for e, cat, id_, bloc in nouvelles:
+        r = hy.ajouter_bloc(bloc)
+        if not r.get("ok"):
+            print(f"  ✗ {e['nom']} : " + " ; ".join(r.get("erreurs") or ["ajout refusé"]))
+            continue
+        faites.append((e, cat, id_))
+        suivi["entites"][e["cle"]] = {"date": maintenant(), "nom": e["nom"], "category": cat,
+                                      "hypothese": id_}
+        ecrire_suivi(hid, suivi)
+    print(f"\n✓ {len(faites)} hypothèse(s) d'entité ajoutée(s) à {hy.se.HYPOTHESES_PATH.name} "
+          f"(sauvegarde {hy.se.HYPOTHESES_PATH.name}.bak_ajout).")
+    if faites:
+        print("  Suite : onglet « Et si ? », mode Simuler : choisir l'hypothèse, puis Vérifier, Adopter, Injecter "
+              "(ou « Traiter en lot » pour plusieurs entités).")
+    return 0 if len(faites) == len(nouvelles) else 1
 
 
 # ---------------------------------------------------------------------------

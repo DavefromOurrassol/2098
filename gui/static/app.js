@@ -8527,19 +8527,9 @@ function renderArticlesPanel() {
   });
 }
 
-// Promouvoir un article en événement custom depuis l'onglet Articles (5
-// septembre 2026, suite du chantier "Suite narrative des événements" --
-// corrige la limite de l'écran "Injecter un événement depuis un article"
-// (section Édition), qui ne liste que les articles du mois de parution
-// actif et verrouille date_approximative dessus. Ici la liste source
-// (ArticlesState.all, /api/articles/liste) couvre tout le corpus, tous
-// scénarios, et chaque article porte sa vraie date (annee/mois/jour) --
-// donc date_approximative est pré-remplie avec l'année RÉELLE de
-// l'article et reste éditable, et edition_active est décochée par
-// défaut (comportement inverse de l'écran Édition : ici on veut en
-// général garder la vraie date, pas la remplacer par le mois actif).
-// Même route backend (/api/edition/injecter_evenement), neutre sur ces
-// deux champs -- aucun changement côté app.py/inject_custom_events.py.
+// Onglet Articles -> « et si ? » (U3b ... U3be) : l'article devient une hypothèse. Type « événement » :
+// l'IA lit l'article, on choisit l'événement (date verrouillée) ; « signal faible » ; « entité » : on
+// écrit son nom et ce que l'article en dit. Écriture seulement par « Ajouter » (hypotheses.yaml).
 function renderArticlesVersEtSi(article, container) {
   // U3b : l'article devient une hypothèse « et si ? » (même chemin que ✨ Nouvelle hypothèse).
   const dateReelle = article.annee != null
@@ -8591,7 +8581,7 @@ function renderArticlesVersEtSi(article, container) {
     '(Simuler → Décider → Injecter).', 'font-size:11px;color:#888;margin:4px 0 8px'));
   const ligne = mk('div', '', 'display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:8px');
   const selType = mk('select', '', 'width:auto;max-width:60%');
-  [['evenement', 'comme événement'], ['signal', 'comme signal faible']].forEach(([v, l]) => {
+  [['evenement', 'comme événement'], ['signal', 'comme signal faible'], ['entite', 'comme entité']].forEach(([v, l]) => {   // U3be
     const o = document.createElement('option'); o.value = v; o.textContent = l; selType.appendChild(o);
   });
   const btn = mk('button', '✨ Proposer');
@@ -8663,6 +8653,29 @@ function renderArticlesVersEtSi(article, container) {
   selType.addEventListener('change', appliquerVerrou);
   cbForcer.addEventListener('change', appliquerVerrou);
   appliquerVerrou();
+
+  // U3be : « comme entité » -- on écrit le nom et ce que l'article en dit ; l'IA n'ajoute rien.
+  const zoneEntite = mk('div', '', 'display:none;margin-bottom:8px;font-size:11px');
+  zoneEntite.appendChild(mk('div',
+    "Entité à créer : son nom, puis ce que l'article en dit (rien de plus : l'IA ne doit rien inventer).",
+    'margin-bottom:4px'));
+  const champEntite = mk('textarea', '', 'width:100%;min-height:60px');
+  champEntite.placeholder = "Ex. : Le Consortium des Eaux du Rhône, cité dans l'article comme gestionnaire du barrage de Génissiat.";
+  zoneEntite.appendChild(champEntite);
+  boite.insertBefore(zoneEntite, zoneDetect);
+  const texteEntite = () => [
+    champEntite.value.trim(),
+    `Située dans le scénario ${article.scenario}.`,
+    `Source : article ${article.fichier}.`,
+  ].filter(Boolean).join(' ');
+  const appliquerEntite = () => {
+    const ent = selType.value === 'entite';
+    zoneEntite.style.display = ent ? '' : 'none';
+    if (ent) zoneDetect.style.display = 'none';
+    reglages.style.display = ent ? 'none' : '';
+  };
+  selType.addEventListener('change', appliquerEntite);
+  appliquerEntite();
   const libelleDate = (ev) => `${NOMS_MOIS_U3E[ev.mois - 1]} ${ev.annee}`;
   const texteEvenement = (ev) => [
     ev.description,
@@ -8729,12 +8742,17 @@ function renderArticlesVersEtSi(article, container) {
   container.appendChild(boite);
 
   btn.addEventListener('click', async () => {
-    if (selType.value !== 'signal' && !evChoisi) {   // U3f
+    if (selType.value === 'entite' && !champEntite.value.trim()) {   // U3be
+      etat.style.color = '#b03a2e';
+      etat.textContent = "✗ Écris le nom de l'entité et ce que l'article en dit.";
+      return;
+    }
+    if (selType.value === 'evenement' && !evChoisi) {   // U3f
       etat.style.color = '#b03a2e';
       etat.textContent = "✗ Clique d'abord sur « Détecter les événements de l'article » et choisis-en un.";
       return;
     }
-    if (selType.value !== 'signal' && evChoisi && evChoisi.deja_connu && !cbDoublon.checked) {   // U3o
+    if (selType.value === 'evenement' && evChoisi && evChoisi.deja_connu && !cbDoublon.checked) {   // U3o
       etat.style.color = '#b03a2e';
       etat.textContent = `✗ « ${evChoisi.deja_connu_nom || evChoisi.deja_connu} » est déjà dans le vault : coche « créer quand même un doublon » si c'est voulu, ou choisis un autre événement.`;
       return;
@@ -8764,9 +8782,11 @@ function renderArticlesVersEtSi(article, container) {
     }
     extra.effet_plein = cbPlein.checked;   // U3d
     if (selType.value !== 'signal' && evChoisi && evChoisi.citation && evChoisi.citation_ok) extra.citation = evChoisi.citation;   // U3i
-    const data = await appeler('proposer',
-      (selType.value !== 'signal' && evChoisi) ? texteEvenement(evChoisi) : texte,   // U3f
-      selType.value, extra);
+    const data = (selType.value === 'entite')   // U3be
+      ? await appeler('proposer', texteEntite(), 'entite', {})
+      : await appeler('proposer',
+          (selType.value !== 'signal' && evChoisi) ? texteEvenement(evChoisi) : texte,   // U3f
+          selType.value, extra);
     btn.disabled = false;
     if (data.error || !data.bloc) {
       etat.style.color = '#b03a2e';
@@ -10143,9 +10163,9 @@ function renderVeillePanel() {
       <div class="option-desc">Suite : onglet « Et si ? », mode Simuler → Décider → Injecter.</div>
       <button id="veille-btn-retrier" class="yaml-btn" style="margin-top:6px">↶ Remettre à trier</button>
       <div class="option-desc" id="veille-action-etat"></div>`;
-    document.getElementById('veille-btn-retrier').addEventListener('click', async () => {
-      const ok = confirm(`Remettre « ${c.titre} » à trier ?\n\nL'hypothèse « ${c.hypothese_id} » n'est PAS retirée de hypotheses.yaml : supprime-la dans l'onglet « Et si ? » si tu n'en veux plus.`);
-      if (ok) await _veilleChangerStatut(c, 'a_trier');
+    document.getElementById('veille-btn-retrier').addEventListener('click', async (ev) => {
+      // U3bf : double clic ; l'hypothèse reste dans hypotheses.yaml (à supprimer dans « Et si ? » si besoin)
+      const ok = armer2(ev.currentTarget, '⚠ Cliquer encore (l\'hypothèse reste dans hypotheses.yaml)');
     });
     return;
   }
@@ -10158,9 +10178,9 @@ function renderVeillePanel() {
       <div class="option-desc" id="veille-action-etat"></div>`;
     // Ne touche PAS à queue.yaml (un seul chemin d'écriture vers la queue) :
     // rappel explicite de retirer l'entrée à la main.
-    document.getElementById('veille-btn-retrier').addEventListener('click', async () => {
-      const ok = confirm(`Remettre « ${c.titre} » à trier ?\n\nL'entrée « ${c.queue_id} » `
-        + `n'est PAS retirée de ${queue} : supprime-la à la main si elle n'a pas encore été injectée.`);
+    document.getElementById('veille-btn-retrier').addEventListener('click', async (ev) => {
+      // U3bf : double clic ; l'entrée de la queue n'est PAS retirée (à supprimer à la main)
+      const ok = armer2(ev.currentTarget, '⚠ Cliquer encore (l\'entrée de la queue n\'est pas retirée)');
       if (ok) await _veilleChangerStatut(c, 'a_trier');
     });
     return;
@@ -10956,6 +10976,164 @@ function buildAssistantHypothese() {
   ligneProposer.appendChild(selType);
   corps.appendChild(ligneProposer);
 
+  // U3aq : suggestions à partir des lacunes du vault (un appel IA, n'écrit rien)
+  const blocSugg = mk('div');
+  blocSugg.style.cssText = 'border:1px dashed #9aa5b1;border-radius:6px;padding:8px;margin:0 0 10px;';
+  blocSugg.appendChild(mk('div', 'option-label', '💡 Pas d\'idée ? Suggestions à partir des lacunes du vault'));
+  const ligneSugg = document.createElement('div');
+  ligneSugg.style.cssText = 'display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:6px 0;';
+  const selSugg = document.createElement('select');
+  selSugg.style.setProperty('width', 'auto', 'important');
+  [['evenement', 'Événements'], ['entite', 'Entités']].forEach(([v, t]) => {
+    const o = document.createElement('option'); o.value = v; o.textContent = t; selSugg.appendChild(o);
+  });
+  const btnSugg = mk('button', 'yaml-btn', 'Chercher des lacunes');
+  btnSugg.type = 'button';
+  ligneSugg.appendChild(selSugg);
+  ligneSugg.appendChild(btnSugg);
+  blocSugg.appendChild(ligneSugg);
+  const etatSugg = mk('div', 'option-desc');
+  etatSugg.style.whiteSpace = 'pre-wrap';
+  etatSugg.textContent = 'Analyse le vault (zones vides, variables rares, dates sur-représentées) et propose 5 idées. ' +
+    'Un appel IA ; rien n\'est écrit.';
+  blocSugg.appendChild(etatSugg);
+  const listeSugg = mk('div');
+  blocSugg.appendChild(listeSugg);
+  corps.appendChild(blocSugg);
+
+  btnSugg.addEventListener('click', async () => {
+    const type = selSugg.value;
+    btnSugg.disabled = true;
+    listeSugg.textContent = '';
+    etatSugg.style.color = '';
+    etatSugg.textContent = '💡 Analyse en cours… (un appel IA, jusqu\'à une minute)';
+    let data;
+    try {
+      const res = await fetch('/api/et_si/suggerer', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ type }),
+      });
+      data = await res.json();
+    } catch (e) {
+      data = { error: `Erreur réseau : ${e.message}` };
+    }
+    btnSugg.disabled = false;
+    if (data.error) { etatSugg.style.color = '#b03a2e'; etatSugg.textContent = `✗ ${data.error}`; return; }
+    etatSugg.textContent = `${(data.suggestions || []).length} idée(s). « Utiliser cette idée » la copie dans la zone d'idée ci-dessous ; rien n'est ajouté tant que tu n'as pas fait Proposer, Vérifier puis Ajouter.`;
+    const cartes = [];   // U3ar
+    (data.suggestions || []).forEach(s => {
+      const carte = mk('div');
+      carte.style.cssText = 'border:1px solid #d5dbe1;border-radius:6px;padding:6px 8px;margin:6px 0;';
+      const t = mk('div', 'option-label', s.titre);
+      const d = mk('div', 'option-desc', s.texte);
+      carte.appendChild(t);
+      carte.appendChild(d);
+      if (s.raison) { const r = mk('div', 'option-desc', `→ ${s.raison}`); r.style.fontStyle = 'italic'; carte.appendChild(r); }
+      (s.avertissements || []).forEach(a => { const w = mk('div', 'option-desc', `⚠ ${a}`); w.style.color = '#b9770e'; carte.appendChild(w); });
+      const b = mk('button', 'yaml-btn', 'Utiliser cette idée');
+      b.type = 'button';
+      b.addEventListener('click', () => {
+        if (idee.value.trim() && idee.value.trim() !== s.texte && !armer2(b, '⚠ Cliquer encore pour remplacer l\'idée actuelle')) return;   // U3bf
+        idee.value = s.texte;
+        selType.value = (data.type === 'entite') ? 'entite' : '';
+        idee.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        idee.focus();
+      });
+      const etat = mk('div', 'option-desc');
+      etat.style.whiteSpace = 'pre-wrap';
+      carte.appendChild(b);
+      carte.appendChild(etat);
+      listeSugg.appendChild(carte);
+      cartes.push({ s, carte, etat, b, fait: false, bloc: '' });   // U3ar
+    });
+    if (!cartes.length) return;
+
+    // U3ar : traitement en lot -- Proposer puis, si propre, Ajouter ; sinon « à voir avec toi »
+    const appelLot = async (action, texte) => {
+      try {
+        const res = await fetch(`/api/et_si/${action}`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ texte, type: action === 'proposer' ? (data.type === 'entite' ? 'entite' : 'evenement') : '' }),
+        });
+        return await res.json();
+      } catch (e) {
+        return { error: `Erreur réseau : ${e.message}` };
+      }
+    };
+    const motifs = (d) => {
+      const l = [];
+      if (d.error) l.push(`✗ ${d.error}`);
+      (d.erreurs || []).forEach(e => l.push(`✗ ${e}`));
+      (d.avertissements || []).forEach(a => l.push(`⚠ ${a}`));
+      return l;
+    };
+    const btnLot = mk('button', 'yaml-btn yaml-btn-save', `Traiter les ${cartes.length} en lot (proposer, puis ajouter si propre)`);
+    btnLot.type = 'button';
+    btnLot.style.marginTop = '8px';
+    const resume = mk('div', 'option-desc');
+    resume.style.whiteSpace = 'pre-wrap';
+    resume.style.marginTop = '6px';
+    listeSugg.appendChild(btnLot);
+    listeSugg.appendChild(resume);
+
+    btnLot.addEventListener('click', async () => {
+      resume.style.color = '';   // U3as
+      resume.textContent = `⏳ Lot démarré : ${cartes.filter(c => !c.fait).length} idée(s), un appel IA chacune (quelques minutes). Les blocs sans problème sont ajoutés à hypotheses.yaml.`;
+      [btnLot, btnSugg, btnProposer, btnVerifier, btnAjouter].forEach(x => { x.disabled = true; });
+      let ajoutes = 0, aVoir = 0;
+      for (const it of cartes) {
+        if (it.fait) continue;
+        it.etat.style.color = '';
+        it.etat.textContent = '⏳ proposition en cours…';
+        const p = await appelLot('proposer', it.s.texte);
+        let msgs = motifs(p);
+        it.bloc = p.bloc || '';
+        if (p.bloc && !msgs.length) {
+          it.etat.textContent = '⏳ ajout…';
+          const a = await appelLot('ajouter', p.bloc);
+          if (a.ok) {
+            it.fait = true; ajoutes++;
+            it.b.disabled = true;
+            it.etat.style.color = '#1e8449';
+            it.etat.textContent = `✓ ${a.message || 'ajoutée'}`;
+            continue;
+          }
+          msgs = motifs(a);
+        }
+        aVoir++;
+        it.etat.style.color = '#b9770e';
+        it.etat.textContent = (msgs.length ? msgs : ['✗ aucun bloc proposé']).join('\n');
+        if (!it.ouvrir) {
+          it.ouvrir = mk('button', 'yaml-btn', 'Ouvrir pour corriger');
+          it.ouvrir.type = 'button';
+          it.ouvrir.addEventListener('click', () => {
+            idee.value = it.s.texte;
+            selType.value = (data.type === 'entite') ? 'entite' : '';
+            bloc.value = it.bloc;
+            delete btnAjouter.dataset.verrou;
+            btnAjouter.disabled = false;
+            retour.style.color = '';
+            retour.textContent = it.etat.textContent;
+            statut.textContent = '';
+            (it.bloc ? bloc : idee).scrollIntoView({ behavior: 'smooth', block: 'center' });
+          });
+          it.carte.appendChild(it.ouvrir);
+        }
+      }
+      resume.textContent = `Lot terminé : ${ajoutes} ajoutée(s) à hypotheses.yaml, ${aVoir} à voir avec toi (ci-dessus).`;
+      [btnLot, btnSugg, btnProposer, btnVerifier, btnAjouter].forEach(x => { x.disabled = false; });
+      btnAjouter.disabled = !!btnAjouter.dataset.verrou;
+      if (ajoutes) {
+        const sel = document.querySelector('#form-body [data-slug-type="hypotheses_et_si"]');
+        if (sel) await rafraichirChampDynamique(sel);
+        const panneau = document.querySelector('#form-body .yaml-panel[data-yaml-path="et_si/hypotheses.yaml"]');
+        if (panneau) await loadYamlContent(panneau, 'et_si/hypotheses.yaml');
+      }
+    });
+  });
+
   const retour = mk('div', 'option-desc');
   retour.style.whiteSpace = 'pre-wrap';
   corps.appendChild(retour);
@@ -11018,7 +11196,7 @@ function buildAssistantHypothese() {
 
   btnProposer.addEventListener('click', async () => {
     if (!idee.value.trim()) { retour.textContent = '✗ Écris d\'abord l\'idée.'; return; }
-    if (bloc.value.trim() && !confirm('Remplacer le bloc actuel par une nouvelle proposition ?')) return;
+    if (bloc.value.trim() && !armer2(btnProposer, '⚠ Cliquer encore pour remplacer le bloc')) return;   // U3bf
     occupe(true);
     btnProposer.textContent = '✨ Proposition en cours… (un appel IA)';
     const data = await appeler('proposer', idee.value);
@@ -11074,6 +11252,23 @@ function buildAssistantHypothese() {
 // ⑤ À la main. Les étapes à venir sont masquées ; l'étape en cours est ouverte.
 // Routes : /api/et_si/statut, /api/et_si/decider/<action>, /api/et_si/injecter/<action>,
 // /api/et_si/appliquer/<action>. Aucun appel IA, sauf ③ (injection).
+// U3az : confirmation en deux clics (confirm() peut être bloqué par le navigateur : le clic ne fait alors rien)
+function armer2(btn, libelleConfirm) {
+  if (btn.dataset.arme) {
+    clearTimeout(Number(btn.dataset.arme));
+    delete btn.dataset.arme;
+    btn.textContent = btn.dataset.libelle;
+    return true;
+  }
+  btn.dataset.libelle = btn.textContent;
+  btn.textContent = libelleConfirm;
+  btn.dataset.arme = String(setTimeout(() => {
+    delete btn.dataset.arme;
+    btn.textContent = btn.dataset.libelle;
+  }, 8000));
+  return false;
+}
+
 function buildDecisionHypothese() {
   const wrapper = document.createElement('div');
   wrapper.className = 'yaml-panel';
@@ -11216,12 +11411,174 @@ function buildDecisionHypothese() {
   corps.style.padding = '8px 0';
   wrapper.appendChild(corps);
 
+  // U3bb : traiter plusieurs entités d'un coup (adopter puis injecter, l'une après l'autre)
+  const lotEl = document.createElement('details');
+  lotEl.style.cssText = 'border:1px solid #9aa5b1;border-radius:6px;padding:6px 8px;margin:0 0 10px;';
+  const lotTitre = document.createElement('summary');
+  lotTitre.textContent = '📦 Traiter plusieurs entités d\'un coup (adopter + injecter)';
+  lotTitre.style.cursor = 'pointer';
+  lotEl.appendChild(lotTitre);
+  lotEl.appendChild(mk('div', 'option-desc',
+    'Coche les entités à traiter. Pour chacune : adoption, puis injection RÉELLE dans le vault (appels IA, ' +
+    'environ 6 à 8 minutes par entité). Elles passent l\'une après l\'autre ; garde cet onglet ouvert. ' +
+    'Une entité qui échoue est signalée et les suivantes continuent.'));
+  const lotListe = mk('div');
+  lotListe.style.margin = '6px 0';
+  lotEl.appendChild(lotListe);
+  const lotBtns = mk('div');
+  const btnLotMaj = bouton('↻ Actualiser la liste');
+  const btnLotTout = bouton('Tout cocher');
+  const btnLotGo = bouton('Adopter et injecter la sélection', 'yaml-btn yaml-btn-save');
+  const btnLotStop = bouton('Arrêter après l\'entité en cours');
+  btnLotStop.disabled = true;
+  [btnLotMaj, btnLotTout, btnLotGo, btnLotStop].forEach(b => lotBtns.appendChild(b));
+  lotEl.appendChild(lotBtns);
+  const lotEtat = mk('div', 'option-desc');
+  lotEtat.style.whiteSpace = 'pre-wrap';
+  lotEl.appendChild(lotEtat);
+  corps.appendChild(lotEl);
+
+  let lotLignes = [];
+  let lotArret = false;
+  let lotEnCours = false;
+  const lotPost = async (url, body) => {
+    try {
+      const res = await fetch(url, { method: 'POST', headers: { 'Content-Type': 'application/json' },
+                                     body: JSON.stringify(body) });
+      return await res.json();
+    } catch (e) {
+      return { ok: false, error: `Erreur réseau : ${e.message}` };
+    }
+  };
+  const lotCharger = async () => {
+    lotEtat.style.color = '';
+    const data = await lotPost('/api/et_si/lot/lister', {});
+    lotListe.textContent = '';
+    lotLignes = [];
+    if (data.error) { lotEtat.style.color = '#b03a2e'; lotEtat.textContent = `✗ ${data.error}`; return; }
+    const aTraiter = (data.entites || []).filter(e => e.statut === 'vérifié' || e.statut === 'adopté, en attente d\'injection');
+    const autres = (data.entites || []).length - aTraiter.length;
+    aTraiter.forEach(e => {
+      const ligne = mk('div');
+      ligne.style.margin = '3px 0';
+      const c = document.createElement('input');
+      c.type = 'checkbox';
+      c.style.marginRight = '6px';
+      const lib = mk('span', null, `${e.nom} — ${e.categorie || '?'}` +
+        (e.annee_debut ? ` — née en ${e.annee_debut}` : ' — sans année') + ` (${e.statut})`);
+      const etat = mk('div', 'option-desc');
+      etat.style.whiteSpace = 'pre-wrap';
+      etat.style.marginLeft = '24px';
+      ligne.appendChild(c);
+      ligne.appendChild(lib);
+      ligne.appendChild(etat);
+      lotListe.appendChild(ligne);
+      lotLignes.push({ e, case: c, etat, fait: false });
+    });
+    lotEtat.textContent = aTraiter.length
+      ? `${aTraiter.length} entité(s) à traiter` + (autres ? ` (${autres} autre(s) déjà injectée(s) ou rejetée(s), non listée(s))` : '') + '.'
+      : 'Aucune entité à traiter (ajoute-en avec « Nouvelle hypothèse »).';
+  };
+  lotEl.addEventListener('toggle', () => { if (lotEl.open && !lotLignes.length && !lotEnCours) lotCharger(); });
+  btnLotMaj.addEventListener('click', () => { if (!lotEnCours) lotCharger(); });
+  btnLotTout.addEventListener('click', () => { lotLignes.forEach(l => { if (!l.fait) l.case.checked = true; }); });
+  btnLotStop.addEventListener('click', () => {
+    lotArret = true;
+    lotEtat.textContent = 'Arrêt demandé : l\'entité en cours se termine, les suivantes ne sont pas traitées.';
+  });
+  btnLotGo.addEventListener('click', async () => {
+    if (lotEnCours) return;
+    const choix = lotLignes.filter(l => l.case.checked && !l.fait);
+    if (!choix.length) { lotEtat.style.color = '#b03a2e'; lotEtat.textContent = '✗ Coche d\'abord au moins une entité.'; return; }
+    lotEnCours = true;
+    lotArret = false;
+    [btnLotMaj, btnLotTout, btnLotGo].forEach(b => { b.disabled = true; });
+    btnLotStop.disabled = false;
+    lotEtat.style.color = '';
+    let ok = 0, aVoir = 0, traitees = 0;
+    for (const l of choix) {
+      if (lotArret) break;
+      traitees++;
+      l.etat.style.color = '';
+      lotEtat.textContent = `⏳ Entité ${traitees} sur ${choix.length} : ${l.e.nom}`;
+      if (l.e.statut === 'vérifié') {
+        l.etat.textContent = '⏳ adoption…';
+        const a = await lotPost('/api/et_si/decider/adopter', { id: l.e.id });
+        if (!a.ok) {
+          aVoir++;
+          l.etat.style.color = '#b9770e';
+          l.etat.textContent = `✗ adoption refusée : ${(a.sortie || a.error || '').split('\n').filter(x => x.trim()).slice(-3).join('\n')}`;
+          continue;
+        }
+        l.e.statut = 'adopté, en attente d\'injection';
+      }
+      const t0 = Date.now();
+      const minuteur = setInterval(() => {
+        l.etat.textContent = `⏳ injection en cours, ${Math.round((Date.now() - t0) / 1000)} s (plusieurs minutes)`;
+      }, 5000);
+      l.etat.textContent = '⏳ injection en cours…';
+      const r = await lotPost('/api/et_si/injecter/injecter', { id: l.e.id });
+      clearInterval(minuteur);
+      const sortie = r.sortie || r.error || '';
+      const lignes = sortie.split('\n').filter(x => x.trim());
+      // U3bc : ignorer les ⚠ sans gravité (corrections automatiques de zone, en-tête de validation, relance en cours)
+      const avert = lignes.filter(x => x.trim().startsWith('⚠') &&
+        !/zone corrigée|AVERTISSEMENTS|nouvelle tentative/.test(x));
+      if (r.ok && /statut : injecté/.test(sortie)) {
+        l.fait = true;
+        l.case.checked = false;
+        l.case.disabled = true;
+        ok++;
+        if (avert.length) {
+          aVoir++;
+          l.etat.style.color = '#b9770e';
+          l.etat.textContent = `✓ injectée, mais à voir :\n${avert.join('\n')}`;
+        } else {
+          l.etat.style.color = '#1e8449';
+          l.etat.textContent = '✓ injectée';
+        }
+      } else {
+        aVoir++;
+        l.etat.style.color = '#b9770e';
+        l.etat.textContent = `✗ non injectée (la décision reste « adopté ») :\n${lignes.slice(-4).join('\n')}`;
+      }
+    }
+    lotEnCours = false;
+    [btnLotMaj, btnLotTout, btnLotGo].forEach(b => { b.disabled = false; });
+    btnLotStop.disabled = true;
+    lotEtat.style.color = aVoir ? '#b9770e' : '#1e8449';
+    lotEtat.textContent = `Terminé : ${ok} entité(s) injectée(s), ${aVoir} à voir avec toi` +
+      (lotArret ? ' (arrêt demandé : les entités restantes n\'ont pas été traitées)' : '') + '.';
+    const selH = listeHyp();
+    if (selH) await rafraichirChampDynamique(selH);
+  });
+
   const ligneStatut = mk('div');
   const statutTxt = mk('span', 'option-label', 'Choisis une hypothèse dans la liste ci-dessus.');
   const btnActualiser = bouton('↻ Actualiser');
   ligneStatut.appendChild(statutTxt);
   ligneStatut.appendChild(btnActualiser);
   corps.appendChild(ligneStatut);
+  // U3at : fiche de l'hypothèse choisie (nom, description…), repliable
+  const ficheEl = document.createElement('details');
+  ficheEl.open = true;
+  // U3au : volet flottant à droite (toujours visible)
+  // U3av : dans le flux, sous la liste des hypothèses
+  ficheEl.style.cssText = 'display:none;border:1px solid #9aa5b1;border-left:4px solid #2e86c1;border-radius:6px;padding:8px 10px;margin:8px 0 12px;background:rgba(46,134,193,.08);color:CanvasText;';
+  const ficheTitre = document.createElement('summary');
+  ficheTitre.textContent = '📄 Description de l\'hypothèse';
+  ficheTitre.style.cursor = 'pointer';
+  const ficheMeta = mk('div', 'option-desc');
+  ficheMeta.style.fontWeight = '600';
+  const ficheCorps = mk('div', 'option-desc');
+  ficheCorps.style.whiteSpace = 'pre-wrap';
+  ficheMeta.style.color = 'CanvasText';   // U3av
+  ficheCorps.style.color = 'CanvasText';
+  ficheCorps.style.fontSize = '13px';
+  ficheEl.appendChild(ficheTitre);
+  ficheEl.appendChild(ficheMeta);
+  ficheEl.appendChild(ficheCorps);
+  corps.appendChild(ficheEl);
   const alertesEl = mk('div', 'option-desc');
   alertesEl.style.color = '#b03a2e';
   alertesEl.style.whiteSpace = 'pre-wrap';
@@ -11500,6 +11857,7 @@ function buildDecisionHypothese() {
     if (!e) {
       statutTxt.textContent = 'Choisis une hypothèse dans la liste ci-dessus.';
       alertesEl.textContent = '';
+      ficheEl.style.display = 'none';   // U3at
       blocs.forEach(b => montrer(b.bloc, false));
       dessinerFrise(0);
       griserSignal(false);   // U3af
@@ -11507,6 +11865,22 @@ function buildDecisionHypothese() {
     }
     typeCourant = e.type || 'evenement';   // U2f
     statutTxt.textContent = `Statut : ${e.statut}  `;
+    const fi = e.hypothese;   // U3at
+    if (fi) {
+      const entete = [fi.nom, fi.type === 'entite' ? 'entité' : (fi.type || 'événement'),
+                      fi.date != null ? `date ${fi.date}` : '', fi.mode ? `mode ${fi.mode}` : '',
+                      fi.categorie ? `catégorie ${fi.categorie}` : '',
+                      fi.scenario_ref ? `réf. ${fi.scenario_ref}` : '',
+                      (fi.scenarios && fi.scenarios.length) ? `scénarios : ${[].concat(fi.scenarios).join(', ')}` : '']
+        .filter(Boolean).join(' · ');
+      ficheMeta.textContent = entete;
+      ficheCorps.textContent = [fi.description, fi.role ? `Rôle : ${fi.role}` : '', fi.etat ? `État : ${fi.etat}` : '']
+        .filter(Boolean).join('\n\n') || '(pas de description)';
+      placerFiche();   // U3av
+      ficheEl.style.display = '';
+    } else {
+      ficheEl.style.display = 'none';
+    }
     alertesEl.textContent = (e.alertes || []).map(a => `⚠ ${a}`).join('\n');
     blocs.forEach(b => {
       const etat = b.n < e.etape ? 'fait' : (b.n === e.etape ? 'en cours' : 'à venir');
@@ -11555,10 +11929,42 @@ function buildDecisionHypothese() {
     else montrer(lienChecklist, false);
   };
 
+  // U3av : la fiche s'affiche juste sous la liste « Hypothèse »
+  const placerFiche = () => {
+    const sel = listeHyp();
+    if (!sel || !sel.parentElement) return false;
+    if (ficheEl.previousElementSibling !== sel.parentElement) sel.parentElement.insertAdjacentElement('afterend', ficheEl);
+    return true;
+  };
+  const remplirFiche = (fi) => {
+    if (!fi || !placerFiche()) { ficheEl.style.display = 'none'; return; }
+    ficheMeta.textContent = [fi.nom, fi.type === 'entite' ? 'entité' : (fi.type || 'événement'),
+                    fi.date != null ? `date ${fi.date}` : '', fi.mode ? `mode ${fi.mode}` : '',
+                    fi.categorie ? `catégorie ${fi.categorie}` : '',
+                    fi.scenario_ref ? `réf. ${fi.scenario_ref}` : '',
+                    (fi.scenarios && fi.scenarios.length) ? `scénarios : ${[].concat(fi.scenarios).join(', ')}` : '']
+      .filter(Boolean).join(' · ');
+    ficheCorps.textContent = [fi.description, fi.role ? `Rôle : ${fi.role}` : '', fi.etat ? `État : ${fi.etat}` : '']
+      .filter(Boolean).join('\n\n') || '(pas de description)';
+    ficheEl.style.display = '';
+  };
+  const chargerFiche = async (id) => {
+    try {
+      const res = await fetch('/api/et_si/fiche', {
+        method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ id }),
+      });
+      const data = await res.json();
+      remplirFiche(data.hypothese);
+    } catch (err) {
+      ficheEl.style.display = 'none';
+    }
+  };
+
   const actualiser = async () => {
     const sel = listeHyp();
     const id = sel ? sel.value : '';
     if (!id) { afficher(null); return; }
+    chargerFiche(id);   // U3av : description immédiate, sans attendre le statut
     try {
       const res = await fetch('/api/et_si/statut', {
         method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ id }),
@@ -11718,9 +12124,8 @@ function buildDecisionHypothese() {
             `Sous-zone ${z.nom} (${z.slug}) : porte aussi ${(z.autres || []).join(', ')}, a perdu ${c.pays}.`,
             [['La laisser ainsi', () => appeler('main/carte', 'laisser', { cle: z.cle })],
              [`Aperçu : la déplacer sous ${c.cible}`, () => appeler('main/carte', 'apercu', { cle: z.cle })],
-             [`La déplacer sous ${c.cible}`, () => {
-               if (!confirm(`Déplacer ${z.slug} (et ses ${(z.autres || []).join(', ')}) sous ${c.cible} ? `
-                            + '(sauvegarde .bak_et_si_main)')) return;
+             [`La déplacer sous ${c.cible}`, (ev) => {
+               if (!armer2(ev.currentTarget, '⚠ Cliquer encore pour déplacer (sauvegarde .bak_et_si_main)')) return;   // U3bf
                appeler('main/carte', 'deplacer', { cle: z.cle });
              }, 'yaml-btn yaml-btn-save'],
              ['Tracer une portion ↗', () => ouvrirCarte(c.sc)]]));
@@ -11735,9 +12140,8 @@ function buildDecisionHypothese() {
               + (j.etat === 'retire' ? ')' : `, ${j.journalistes} journaliste(s))`) + ' de cette zone.',
               [['Le garder (en exil)', () => appeler('main/journal', 'garder', { cle: j.cle })],
                ['Aperçu du retrait', () => appeler('main/journal', 'apercu', { cle: j.cle })],
-               ['Le retirer', () => {
-                 if (!confirm(`Retirer « ${j.nom} » de journaux.yaml ? Les articles déjà signés ne changent pas `
-                              + '(sauvegarde journaux.yaml.bak_et_si_main).')) return;
+               ['Le retirer', (ev) => {
+                 if (!armer2(ev.currentTarget, '⚠ Cliquer encore pour retirer (sauvegarde .bak_et_si_main)')) return;   // U3bf
                  appeler('main/journal', 'retirer', { cle: j.cle });
                }, 'yaml-btn yaml-btn-save']]);
             lj.style.marginLeft = '24px';
@@ -11811,14 +12215,14 @@ function buildDecisionHypothese() {
     if (ents.some(e => e.statut === 'proposée')) {
       const l = mk('div');
       const bA = bouton('Aperçu (entités cochées)');
-      const bE = bouton('Ajouter à la file', 'yaml-btn yaml-btn-save');
+      const bE = bouton('Créer les hypothèses « et si ? »', 'yaml-btn yaml-btn-save');   // U3be
       const lire = () => [...zoneMain.querySelectorAll('div[data-cle]')]
         .filter(d => d._garde.checked).map(d => ({ cle: d.dataset.cle, category: d._cat.value }));
       bA.addEventListener('click', () => appeler('main/entites', 'apercu', { choix: lire() }));
       bE.addEventListener('click', () => {
         const c = lire();
         if (!c.length) { sortie.textContent = '✗ Coche au moins une entité.'; sortie.style.color = '#b03a2e'; return; }
-        if (!confirm(`Ajouter ${c.length} entité(s) à entites_custom/queue.yaml ?`)) return;
+        // U3be : pas de confirm() (bloqué dans certains navigateurs) ; l'aperçu fait garde-fou
         appeler('main/entites', 'ajouter', { choix: c });
       });
       l.appendChild(bA);
@@ -11834,8 +12238,7 @@ function buildDecisionHypothese() {
     const bProp = bouton(relue ? 'Relire et proposer à nouveau (IA)'
                                 : 'Vérifier la fiche d\'événement et proposer les réécritures (IA)');
     bProp.addEventListener('click', () => {
-      if (!confirm('Appels IA (quelques centimes) : relecture de la fiche d\'événement, puis une proposition '
-                   + 'par phrase sans proposition. Continuer ?')) return;
+      if (!armer2(bProp, '⚠ Cliquer encore : appels IA (quelques centimes)')) return;   // U3bf
       appeler('main/phrases', 'proposer', {});
     });
     zoneMain.appendChild(bProp);
@@ -11877,7 +12280,7 @@ function buildDecisionHypothese() {
         const bI = bouton('Ignorer');
         bA.addEventListener('click', () => appeler('main/phrase', 'apercu', { cle: x.cle, texte: ta.value }));
         bR.addEventListener('click', () => {
-          if (!confirm(`Remplacer la phrase dans ${x.fichier} ? (sauvegarde .bak_et_si_main)`)) return;
+          if (!armer2(bR, '⚠ Cliquer encore pour remplacer (sauvegarde .bak_et_si_main)')) return;   // U3bf
           appeler('main/phrase', 'remplacer', { cle: x.cle, texte: ta.value });
         });
         bI.addEventListener('click', () => appeler('main/phrase', 'ignorer', { cle: x.cle }));
@@ -11914,8 +12317,7 @@ function buildDecisionHypothese() {
         if (f.rapport && f.etat !== 'ecrite') {
           const bE = bouton('Écrire dans la fiche', 'yaml-btn yaml-btn-save');
           bE.addEventListener('click', () => {
-            if (!confirm('Écrire dans la fiche les textes « Après » de l\'avant / après (retouches comprises) ?'
-                         + '\n(Sauvegarde .bak_au_passe.)')) return;
+            if (!armer2(bE, '⚠ Cliquer encore pour écrire dans la fiche (sauvegarde .bak_au_passe)')) return;   // U3bf
             appeler('main/au_passe', 'ecrire', { slug: f.slug });
           });
           l.appendChild(bE);
@@ -11923,8 +12325,7 @@ function buildDecisionHypothese() {
         }
         const bP = bouton(f.etat === 'a_faire' ? 'Mettre au passé (IA)' : 'Refaire l\'aperçu (IA)');
         bP.addEventListener('click', () => {
-          if (!confirm('Un appel IA : nouvel avant / après (les retouches faites dans l\'ancien sont perdues) ; '
-                       + 'la fiche n\'est pas modifiée. Continuer ?')) return;
+          if (!armer2(bP, '⚠ Cliquer encore : appel IA, les retouches de l\'ancien sont perdues')) return;   // U3bf
           appeler('main/au_passe', 'apercu', { slug: f.slug });
         });
         l.appendChild(bP);
@@ -11949,8 +12350,7 @@ function buildDecisionHypothese() {
       const neufs = arts.filter(a => !a.verifie).length;
       const bV = bouton(neufs ? `Relire ${neufs} article(s) avec l'IA` : 'Relire à nouveau avec l\'IA');
       bV.addEventListener('click', () => {
-        if (!confirm('Appels IA (quelques centimes par article) : repérage seulement, aucun article n\'est '
-                     + 'modifié. Continuer ?')) return;
+        if (!armer2(bV, '⚠ Cliquer encore : appels IA, aucun article modifié')) return;   // U3bf
         appeler('main/articles', 'verifier', {});
       });
       zoneMain.appendChild(bV);
@@ -12014,7 +12414,7 @@ function buildDecisionHypothese() {
       const bE = bouton('Ajouter la règle', 'yaml-btn yaml-btn-save');
       bA.addEventListener('click', () => appeler('main/regle', 'apercu', { scenario: r.sc, texte: ta.value }));
       bE.addEventListener('click', () => {
-        if (!confirm(`Ajouter cette règle à lore_regles.yaml (section ${r.sc}) ?`)) return;
+        if (!armer2(bE, '⚠ Cliquer encore pour ajouter la règle')) return;   // U3bf
         appeler('main/regle', 'ajouter', { scenario: r.sc, texte: ta.value });
       });
       l.appendChild(bA);
@@ -12031,7 +12431,7 @@ function buildDecisionHypothese() {
       (etat.fin || []).forEach(f => {
         const b = bouton(`${f.libelle} — ${sc}`);
         b.addEventListener('click', () => {
-          if (f.action === 'resume' && !confirm(`Régénérer le résumé du scénario ${sc} ? (un appel IA payant)`)) return;
+          if (f.action === 'resume' && !armer2(b, '⚠ Cliquer encore : un appel IA payant')) return;   // U3bf
           appeler('main/lancer', f.action, { scenario: sc });
         });
         l.appendChild(b);
@@ -12045,9 +12445,9 @@ function buildDecisionHypothese() {
     site.style.marginTop = '4px';
     zoneMain.appendChild(site);
     zoneMain.appendChild(aide(
-      'Entités : coche celles à garder et choisis leur catégorie ; l\'aperçu montre les entrées, « Ajouter » les ' +
-      'écrit dans entites_custom/queue.yaml (sauvegarde .bak_et_si_main, refus si l\'entité existe déjà ou est ' +
-      'déjà dans la file). La création reste « Créer des entités » (appels IA, traite toute la file).\n' +
+      'Entités : coche celles à garder et choisis leur catégorie ; l\'aperçu montre les hypothèses, « Créer les ' +
+      'hypothèses » les ajoute à hypotheses.yaml (contrôle des doublons, sans appel IA). La suite se fait dans ' +
+      'l\'onglet « Et si ? » (Vérifier, Adopter, Injecter).\n' +   // U3be
       'Règle : relis et modifie le brouillon (les lignes # sont ignorées) ; « Ajouter » l\'écrit à la fin de la ' +
       'section du scénario (format et identifiant vérifiés, sauvegarde .bak_et_si). Lance ensuite la relecture ' +
       'du lore pour voir ce qu\'elle signale.\n' +
@@ -12081,7 +12481,8 @@ function buildDecisionHypothese() {
 
   // PATCH_S27_INDICATIONS : indications écrites pour le terminal → bouton ou champ du panneau.
   function adapterSortie(base, action, texte) {
-    const bouton = { 'appliquer': '« Appliquer »', 'main/entites': '« Ajouter à la file »',
+    const bouton = { 'appliquer': '« Appliquer »', 'main/entites': '« Créer les hypothèses »',   // U3be
+                     
                      'main/regle': '« Ajouter la règle »' }[base] || 'le bouton d\'écriture';
     return String(texte)
       .replace(/Relancer avec --apply pour écrire \(sauvegarde \.bak_appliquer\), --sauter \/ --inclure pour trier ;\n?/g,
@@ -12100,25 +12501,24 @@ function buildDecisionHypothese() {
   btnApercu.addEventListener('click', () =>
     appeler('decider', 'adopter', { portee: portee.value, intensite: intensite.value, apercu: true }));
   btnAdopter.addEventListener('click', () => {
-    if (!confirm(typeCourant === 'signal' ? 'Adopter : placer le signal simulé dans la file d\'injection des signaux ?' : 'Adopter : placer l\'événement simulé dans la file d\'injection ?')) return;
+    if (!armer2(btnAdopter, '⚠ Cliquer encore pour adopter')) return;   // U3bf
     appeler('decider', 'adopter', { portee: portee.value, intensite: intensite.value });
   });
   btnRejeter.addEventListener('click', () => appeler('decider', 'rejeter', { motif: motif.value }));
   btnAnnuler.addEventListener('click', () => {
-    if (!confirm('Annuler la décision prise sur cette hypothèse ?')) return;
+    if (!armer2(btnAnnuler, '⚠ Cliquer encore pour annuler la décision')) return;   // U3az
     appeler('decider', 'annuler', {});
   });
   const tri3 = () => ({ sauter: sauter3.value, inclure: inclure3.value });   // PATCH_S27_GUI_SAUTER
   btnInjListe.addEventListener('click', () => appeler('injecter', 'liste', tri3()));   // PATCH_S30_LISTE_SAUTS_JS
   btnInjApercu.addEventListener('click', () => appeler('injecter', 'apercu', tri3()));
   btnInjecter.addEventListener('click', () => {
-    if (!confirm((typeCourant === 'signal' ? 'Injecter ce signal' : 'Injecter cet événement') + ' dans le vault ? (appels IA ; plusieurs minutes)')) return;
+    if (!armer2(btnInjecter, '⚠ Cliquer encore pour injecter (appels IA, plusieurs minutes)')) return;   // U3az
     appeler('injecter', 'injecter', tri3());
   });
   btnAppApercu.addEventListener('click', () => appeler('appliquer', 'apercu', tri()));
   btnAppliquer.addEventListener('click', () => {
-    if (!confirm('Appliquer au vault les opérations retenues par l\'aperçu ?\n' +
-                 '(Sauvegarde .bak_appliquer ; commit git conseillé avant.)')) return;
+    if (!armer2(btnAppliquer, '⚠ Cliquer encore pour appliquer (sauvegarde .bak_appliquer ; commit git conseillé)')) return;   // U3bf
     appeler('appliquer', 'appliquer', tri());
   });
   btnReste.addEventListener('click', () => appeler('appliquer', 'reste', tri()));

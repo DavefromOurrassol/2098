@@ -892,3 +892,79 @@ hypotheses:
       delta_level: 12
       polarite: 1
       duree: 4
+
+  - id: noeud_maitre_mnemos_polaire
+    nom: Nœud Maître Mnemos Polaire
+    type: entite
+    description: Serveur central de sauvegarde distribuée de la mémoire humaine, installé dans
+      une ancienne station scientifique de la zone polaire, alimenté par géothermie et refroidi
+      par la glace environnante. Il sert de point d'ancrage physique au réseau Mnemos pour garantir
+      la survie des archives face aux pannes des nœuds continentaux.
+    categorie: infrastructure
+    scenario_ref: breakdown
+    etat: émergent
+    annee_debut: 2082
+    scenarios: tous
+
+  - id: territoire_karachi_biosyn
+    nom: Territoire Autonome de Karachi-BioSyn
+    type: entite
+    description: Ancien complexe industriel biotech de Karachi, Pakistan, transformé à partir
+      de 2070 en territoire autogéré par des communautés de travailleurs et de scientifiques
+      survivants produisant médicaments et semences hors des brevets corporatifs.
+    categorie: territoire
+    scenario_ref: breakdown
+    etat: émergent
+    annee_debut: 2070
+    scenarios: tous
+
+  - id: dr_ananya_rao
+    nom: Dr. Ananya Rao
+    type: entite
+    description: Hydrologue indienne ayant fondé en 2078 le Réseau des Bassins Résilients du
+      sous-continent indien, coordonnant la gestion communautaire des eaux souterraines entre
+      le Gange et l'Indus pour faire face à la sécheresse chronique. Née en 2078.
+    categorie: humain
+    scenario_ref: new_sustainability
+    etat: ascendant
+    annee_debut: 2078
+    scenarios: tous
+
+  - id: gouvernance_ia_archipel_petrolier
+    nom: Gouvernance-IA de l'Archipel Pétrolier
+    type: entite
+    description: Système algorithmique de gestion collective déployé en 2085 sur les plateformes
+      pétrolières offshore du Venezuela converties en archipel habitable, gérant l'énergie,
+      l'eau potable et la distribution des ressources entre les communautés flottantes.
+    categorie: IA
+    scenario_ref: eco_communalism
+    etat: émergent
+    annee_debut: 2085
+    scenarios: tous
+
+  - id: radio_cote_philadelphie
+    nom: Radio-Côte Philadelphie
+    type: entite
+    description: Station de radio communautaire basse consommation opérant depuis 2065 dans
+      les ruines de Philadelphie, côte Est américaine, diffusant des alertes sanitaires et des
+      cartes de ressources entre les communautés dispersées de la mégalopole abandonnée.
+    categorie: média
+    scenario_ref: reference
+    etat: marginal
+    annee_debut: 2065
+    scenarios: tous
+
+  - id: alliance_des_territoires_froids_europeens
+    nom: Alliance des Territoires Froids Européens
+    type: entite
+    description: Bloc de coopération pour la gestion des crises climatiques et énergétiques
+      en Europe du Nord-Ouest, regroupant des régions sinistrées et des villes en repli. Les
+      régions touchées par le refroidissement (Massif Central, Pays de Galles) s'organisent
+      pour mutualiser leurs ressources et négocier avec les acteurs dominants (Helios, Corridor
+      Arctique).
+    categorie: réseau
+    scenario_ref: reference
+    role: Bloc de coopération pour la gestion des crises climatiques et énergétiques en Europe
+      du Nord-Ouest, regroupant des régions sinistrées et des villes en repli.
+    scenarios:
+    - reference

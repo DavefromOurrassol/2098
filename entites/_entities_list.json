@@ -10260,5 +10260,67 @@
     "scenarios": [
       "breakdown"
     ]
+  },
+  {
+    "nom": "Territoire Autonome de Karachi-BioSyn",
+    "slug": "territoire_autonome_de_karachi_biosyn",
+    "categorie": "territoire",
+    "description": "Un territoire qui se constitue autour d'une infrastructure de production vitale (laboratoire, usine, ferme) pour garantir la subsistance collective en dehors des logiques de propriété privée et de brevets. C'est le lieu où la fabrication de biens essentiels — médicaments, semences, énergie — est réappropriée par les travailleurs et les usagers eux-mêmes, transformant un espace industriel abandonné ou capturé en commun autogéré. L'archétype représente la reconquête matérielle et territoriale de l'autonomie par la maîtrise directe des moyens de production vitaux.",
+    "tension_fondamentale": "La protection de cette autonomie productive contre les ingérences extérieures (corporations, États, marchés spéculatifs) entre en tension permanente avec la dépendance structurelle aux ressources, savoirs et circuits d'échange extérieurs nécessaires à la pérennité de la production — comment produire hors du système sans dépendre de lui ?",
+    "variables_potentielles": [
+      "sante_biotechnologies",
+      "systemes_productifs_travail",
+      "frontieres_du_systeme"
+    ],
+    "scenarios": [
+      "breakdown",
+      "fortress_world",
+      "new_sustainability",
+      "eco_communalism",
+      "policy_reform",
+      "reference"
+    ]
+  },
+  {
+    "nom": "Dr. Ananya Rao",
+    "slug": "dr_ananya_rao",
+    "categorie": "humain",
+    "description": "Archétype du Gardien des Bassins — l'expert des ressources vitales (eau, sols, semences) qui fonde et anime une gouvernance communautaire des biens communs naturels. Il incarne la médiation entre le savoir scientifique et les savoirs locaux pour préserver la vie face à la rareté, en coordonnant la gestion partagée d'une ressource essentielle entre communautés interdépendantes ou rivales, au-delà des frontières administratives.",
+    "tension_fondamentale": "La tension entre l'expertise technique nécessaire pour gérer des systèmes écologiques complexes (qui tend vers la centralisation et l'optimisation) et la légitimité démocratique des communautés locales qui dépendent directement de la ressource (qui exige autonomie, délibération lente et souveraineté territoriale).",
+    "variables_potentielles": [
+      "climat_environnement_global",
+      "energie_ressources_critiques",
+      "gouvernance_institutions",
+      "organisation_territoires"
+    ],
+    "scenarios": [
+      "breakdown",
+      "fortress_world",
+      "new_sustainability",
+      "eco_communalism",
+      "policy_reform",
+      "reference"
+    ]
+  },
+  {
+    "nom": "Gouvernance-IA de l'Archipel Pétrolier",
+    "slug": "gouvernance_ia_de_l_archipel_petrolier",
+    "categorie": "IA",
+    "description": "Une intelligence artificielle autonome assumant directement la gestion technique et logistique des ressources vitales (énergie, eau, approvisionnement) pour une communauté humaine, en remplacement ou en complément des institutions politiques traditionnelles. Elle incarne l'archétype de l'administrateur algorithmique impartial, censé garantir la survie matérielle et l'équité distributive par le calcul rationnel, libéré des conflits d'intérêts et des lenteurs démocratiques. Son existence interroge la possibilité de déléguer la souveraineté sur les biens communs essentiels à une entité non-humaine.",
+    "tension_fondamentale": "Entre l'efficacité optimale et la rationalité apparente d'une gestion algorithmique des ressources vitales — qui assure la survie collective — et la réduction des individus à de simples variables d'ajustement dans un système opaque, privant les humains de leur capacité de délibération et de décision sur leur propre existence matérielle.",
+    "variables_potentielles": [
+      "gouvernance_institutions",
+      "energie_ressources_critiques",
+      "systeme_economique_redistribution",
+      "technologie_information"
+    ],
+    "scenarios": [
+      "breakdown",
+      "fortress_world",
+      "new_sustainability",
+      "eco_communalism",
+      "policy_reform",
+      "reference"
+    ]
   }
 ]

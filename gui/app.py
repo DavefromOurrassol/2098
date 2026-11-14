@@ -2749,127 +2749,8 @@ def edition_active():
         return jsonify({"active": None})
 
 
-@app.route("/api/edition/articles", methods=["GET"])
-def edition_articles():
-    """
-    GET /api/edition/articles?scenario=<scenario>[&annee=...&mois=...]
-
-    Ajouté le 3 septembre 2026 (chantier "Injecter un événement depuis un
-    article") -- appelle audit_sujets_edition.py --json en sous-processus
-    (lecture seule, aucun appel LLM, même pattern que
-    _scan_localisation_candidats()) pour lister les articles du mois de
-    parution (actif par défaut, ou --annee/--mois si fournis) avec leurs
-    métadonnées, plus les custom_events déjà injectés ce mois-ci. Sert à
-    peupler le dropdown de l'écran "Injecter un événement depuis un
-    article", qui pré-remplit ensuite le formulaire à partir de l'article
-    choisi.
-    """
-    cfg = load_config()
-    pipeline_dir = Path(cfg.get("pipeline_dir", ""))
-    scenario = (request.args.get("scenario") or "").strip()
-    if not scenario:
-        return jsonify({"error": "scenario requis"}), 400
-
-    cmd = [sys.executable, "audit_sujets_edition.py", "--scenario", scenario, "--json"]
-    annee = request.args.get("annee")
-    mois = request.args.get("mois")
-    if annee and mois:
-        cmd += ["--annee", annee, "--mois", mois]
-
-    try:
-        resultat = subprocess.run(
-            cmd, cwd=pipeline_dir, capture_output=True, text=True,
-            timeout=15, stdin=subprocess.DEVNULL,
-        )
-    except subprocess.TimeoutExpired:
-        return jsonify({"error": "audit_sujets_edition.py a expiré (15s)"}), 504
-    except FileNotFoundError:
-        return jsonify({"error": f"audit_sujets_edition.py introuvable dans {pipeline_dir}"}), 500
-
-    sortie = resultat.stdout.strip()
-    if not sortie:
-        return jsonify({"error": f"Aucune sortie (code {resultat.returncode}) : "
-                                  f"{resultat.stderr[-500:]}"}), 500
-    try:
-        payload = json.loads(sortie.splitlines()[-1])
-    except (json.JSONDecodeError, IndexError):
-        return jsonify({"error": f"Sortie non-JSON : {sortie[-500:]}"}), 500
-
-    if not payload.get("ok"):
-        return jsonify({"error": payload.get("error", "Erreur inconnue")}), 500
-
-    return jsonify(payload)
-
-
-# Timeout large pour l'injection d'un événement custom depuis le nouvel
-# écran (3 septembre 2026) : contrairement à /api/redaction/ton_personnel
-# (1 seul appel LLM), process_idea() peut enchaîner plusieurs appels par
-# scénario (sélection + développement + jusqu'à 2 correctifs de
-# validation), multipliés par le nombre de scénarios choisis -- le
-# formulaire GUI limite par défaut à un seul scénario (celui de l'article
-# d'origine) pour rester dans une durée raisonnable, mais rien n'empêche
-# David d'en sélectionner plusieurs.
-TIMEOUT_INJECTION_EVENEMENT = 240  # secondes
-
-
-@app.route("/api/edition/injecter_evenement", methods=["POST"])
-def edition_injecter_evenement():
-    """
-    POST /api/edition/injecter_evenement
-
-    Body JSON : une idée au même format qu'une entrée de queue.yaml
-    (id, description, portee, date_approximative, intensite, scenarios,
-    variables_hint, acteurs_hint, zone_hint, source, edition_active), plus
-    "dry_run": bool optionnel.
-
-    Ajoutée le 3 septembre 2026 (chantier "Injecter un événement depuis un
-    article") -- appelle inject_custom_events.py --idea '<json>' --json en
-    sous-processus (même pattern synchrone que /api/redaction/ton_personnel),
-    pour l'écran qui pré-remplit une idée à partir d'un article choisi dans
-    /api/edition/articles et lance l'injection en un clic, sans passer par
-    queue.yaml.
-    """
-    # U3ai (14 nov 2026) : accès direct fermé -- passer par « Et si ? ».
-    return jsonify({"ok": False, "error": "Accès fermé : utiliser « Et si ? » (onglet Articles → Envoyer vers « et si ? »)."}), 410
-    cfg = load_config()
-    pipeline_dir = Path(cfg.get("pipeline_dir", ""))
-    data = request.get_json() or {}
-    dry_run = bool(data.pop("dry_run", False))
-
-    if not (data.get("id") and data.get("description") and data.get("portee")
-            and data.get("date_approximative") and data.get("intensite")):
-        return jsonify({"error": "id, description, portee, date_approximative et "
-                                  "intensite sont requis"}), 400
-
-    cmd = [sys.executable, "inject_custom_events.py",
-           "--idea", json.dumps(data, ensure_ascii=False), "--json"]
-    if dry_run:
-        cmd.append("--dry-run")
-
-    try:
-        resultat = subprocess.run(
-            cmd, cwd=pipeline_dir, capture_output=True, text=True,
-            timeout=TIMEOUT_INJECTION_EVENEMENT, stdin=subprocess.DEVNULL,
-        )
-    except subprocess.TimeoutExpired:
-        return jsonify({"error": f"Injection expirée après {TIMEOUT_INJECTION_EVENEMENT}s "
-                                  f"(appel(s) LLM trop lent(s) ou bloqué(s))"}), 504
-    except FileNotFoundError:
-        return jsonify({"error": f"inject_custom_events.py introuvable dans {pipeline_dir}"}), 500
-
-    sortie = resultat.stdout.strip()
-    if not sortie:
-        return jsonify({"error": f"Aucune sortie du sous-processus "
-                                  f"(code {resultat.returncode}) : {resultat.stderr[-500:]}"}), 500
-    try:
-        payload = json.loads(sortie.splitlines()[-1])
-    except (json.JSONDecodeError, IndexError):
-        return jsonify({"error": f"Sortie non-JSON du sous-processus : {sortie[-500:]}"}), 500
-
-    if not payload.get("ok"):
-        return jsonify({"error": payload.get("error", "Erreur inconnue")}), 500
-
-    return jsonify(payload)
+# U3bf : /api/edition/articles et /api/edition/injecter_evenement retirées (plus d'appelant depuis U3ai :
+# les événements entrent par « et si ? »). /api/edition/active ci-dessus est conservée.
 
 
 # ---------------------------------------------------------------------------
@@ -2916,6 +2797,32 @@ def articles_extraire_evenements():
 
 
 TIMEOUT_ET_SI = {"proposer": 180, "verifier": 60, "ajouter": 60}
+
+
+@app.route("/api/et_si/suggerer", methods=["POST"])
+def et_si_suggerer():   # U3aq : idées à partir des lacunes du vault (un appel IA, n'écrit rien)
+    data = request.get_json() or {}
+    type_ = data.get("type")
+    if type_ not in ("evenement", "entite"):
+        return jsonify({"error": "type attendu : evenement ou entite"}), 400
+    cfg = load_config()
+    pipeline_dir = Path(cfg.get("pipeline_dir", ""))
+    cmd = [sys.executable, "suggerer_lacunes.py", "--type", type_, "--n", "5", "--json"]
+    try:
+        resultat = subprocess.run(cmd, cwd=pipeline_dir, capture_output=True, text=True, timeout=240)
+    except subprocess.TimeoutExpired:
+        return jsonify({"error": "Délai dépassé (240 s)"}), 504
+    except FileNotFoundError:
+        return jsonify({"error": f"suggerer_lacunes.py introuvable dans {pipeline_dir}"}), 500
+    sortie = resultat.stdout.strip()
+    try:
+        payload = json.loads(sortie.splitlines()[-1])
+    except (json.JSONDecodeError, IndexError):
+        return jsonify({"error": f"Sortie inattendue (code {resultat.returncode}) : "
+                                  f"{(resultat.stderr or sortie)[-500:]}"}), 500
+    if not payload.get("ok"):
+        return jsonify({"error": payload.get("error", "erreur inconnue")}), 500
+    return jsonify(payload)
 
 
 @app.route("/api/et_si/<action>", methods=["POST"])
@@ -3056,6 +2963,49 @@ def et_si_appliquer(action):
 # ---------------------------------------------------------------------------
 
 TIMEOUT_INJECTER_ET_SI = 960  # secondes -- appels IA par scénario + cycle post-injection
+
+
+@app.route("/api/et_si/fiche", methods=["POST"])
+def et_si_fiche():   # U3av : fiche d'une hypothèse, lecture directe (rapide)
+    import yaml as _yaml
+    hid = str((request.get_json() or {}).get("id") or "").strip()
+    if not hid:
+        return jsonify({"hypothese": None})
+    chemin = Path(load_config().get("pipeline_dir", "")).parent / "et_si" / "hypotheses.yaml"
+    try:
+        data = _yaml.safe_load(chemin.read_text(encoding="utf-8")) or {}
+    except (OSError, _yaml.YAMLError) as e:
+        return jsonify({"error": f"hypotheses.yaml illisible : {e}"}), 500
+    for h in data.get("hypotheses") or []:
+        if isinstance(h, dict) and str(h.get("id")) == hid:
+            fiche = {}
+            for k in ("nom", "type", "date", "mode", "categorie", "scenario_ref", "scenarios",
+                      "role", "etat", "description"):
+                v = h.get(k)
+                if v in (None, "", []):
+                    continue
+                fiche[k] = [str(x) for x in v] if isinstance(v, list) else (v if isinstance(v, (int, float)) else str(v))
+            return jsonify({"hypothese": fiche})
+    return jsonify({"hypothese": None})
+
+
+@app.route("/api/et_si/lot/lister", methods=["POST"])
+def et_si_lot_lister():   # U3bb : entités et statuts pour le traitement en lot (lecture seule)
+    pipeline_dir = Path(load_config().get("pipeline_dir", ""))
+    try:
+        r = subprocess.run([sys.executable, "et_si_lot.py", "--lister", "--json"], cwd=pipeline_dir,
+                           capture_output=True, text=True, timeout=60, stdin=subprocess.DEVNULL)
+    except subprocess.TimeoutExpired:
+        return jsonify({"error": "Délai dépassé (60 s)"}), 504
+    except FileNotFoundError:
+        return jsonify({"error": f"et_si_lot.py introuvable dans {pipeline_dir}"}), 500
+    try:
+        payload = json.loads(r.stdout.strip().splitlines()[-1])
+    except (ValueError, IndexError):
+        return jsonify({"error": (r.stderr or r.stdout or "réponse illisible").strip()[-500:]}), 500
+    if not payload.get("ok"):
+        return jsonify({"error": payload.get("error", "erreur inconnue")}), 500
+    return jsonify(payload)
 
 
 @app.route("/api/et_si/statut", methods=["POST"])

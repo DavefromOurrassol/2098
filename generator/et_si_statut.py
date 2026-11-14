@@ -44,6 +44,20 @@ def hypothese_modifiee(hid):
     return any("hypothèse modifiée" in l for l in bloc)
 
 
+def _fiche_u3at(hid):   # U3at : fiche lisible de l'hypothèse pour le GUI
+    brut = ed.hypothese_brute(hid)
+    if not isinstance(brut, dict):
+        return None
+    fiche = {}
+    for k in ("nom", "type", "date", "mode", "categorie", "scenario_ref", "scenarios",
+              "role", "etat", "description"):
+        v = brut.get(k)
+        if v in (None, "", []):
+            continue
+        fiche[k] = [str(x) for x in v] if isinstance(v, list) else (v if isinstance(v, (int, float)) else str(v))
+    return fiche
+
+
 def etat(hid):
     d = ed.charger().get(hid) or {}
     sim, dec = d.get("simulation") or {}, d.get("decision") or {}
@@ -111,6 +125,7 @@ def etat(hid):
         rapport = f"documentation/need_action/et_si_{hid}.md"
     return {
         "id": hid, "type": typ, "statut": st, "etape": etape, "alertes": alertes,
+        "hypothese": _fiche_u3at(hid),
         "simulation": {"date": sim.get("date"), "version": sim.get("version"),
                        "complet": sim.get("complet"), "passe": sim.get("passe"),
                        "rapport": rapport} if sim else None,

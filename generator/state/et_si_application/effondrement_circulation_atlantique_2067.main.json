@@ -1,5 +1,12 @@
 {
- "entites": {},
+ "entites": {
+  "reference:1": {
+   "date": "2026-11-14T17:35",
+   "nom": "Alliance des Territoires Froids Européens",
+   "category": "réseau",
+   "hypothese": "alliance_des_territoires_froids_europeens"
+  }
+ },
  "regles": {
   "reference:circulation_atlantique_pas_de_redemarrage_2098": "2026-10-24T08:35"
  },

@@ -3317,12 +3317,61 @@
    }
   }
  },
- "archives_de_la_maree": {
+ "territoire_karachi_biosyn": {
   "decision": {
-   "statut": "rejeté",
-   "date": "2026-11-14T13:41",
-   "motif": "test",
-   "empreinte": null
+   "statut": "adopté",
+   "date": "2026-11-14T15:39",
+   "motif": null,
+   "type": "entite",
+   "empreinte": "df3d9077ecd748ca",
+   "entree": {
+    "id": "territoire_karachi_biosyn",
+    "nom": "Territoire Autonome de Karachi-BioSyn",
+    "category": "territoire",
+    "scenario_ref": "breakdown",
+    "source": "et_si_territoire_karachi_biosyn",
+    "description": "Ancien complexe industriel biotech de Karachi, Pakistan, transformé à partir de 2070 en territoire autogéré par des communautés de travailleurs et de scientifiques survivants produisant médicaments et semences hors des brevets corporatifs.",
+    "etat": "émergent",
+    "annee_debut": 2070
+   }
+  }
+ },
+ "dr_ananya_rao": {
+  "decision": {
+   "statut": "adopté",
+   "date": "2026-11-14T16:25",
+   "motif": null,
+   "type": "entite",
+   "empreinte": "57713f9d0713afdd",
+   "entree": {
+    "id": "dr_ananya_rao",
+    "nom": "Dr. Ananya Rao",
+    "category": "humain",
+    "scenario_ref": "new_sustainability",
+    "source": "et_si_dr_ananya_rao",
+    "description": "Hydrologue indienne ayant fondé en 2078 le Réseau des Bassins Résilients du sous-continent indien, coordonnant la gestion communautaire des eaux souterraines entre le Gange et l'Indus pour faire face à la sécheresse chronique. Née en 2078.",
+    "etat": "ascendant",
+    "annee_debut": 2078
+   }
+  }
+ },
+ "gouvernance_ia_archipel_petrolier": {
+  "decision": {
+   "statut": "adopté",
+   "date": "2026-11-14T16:37",
+   "motif": null,
+   "type": "entite",
+   "empreinte": "1c95e9e927bc4c58",
+   "entree": {
+    "id": "gouvernance_ia_archipel_petrolier",
+    "nom": "Gouvernance-IA de l'Archipel Pétrolier",
+    "category": "IA",
+    "scenario_ref": "eco_communalism",
+    "source": "et_si_gouvernance_ia_archipel_petrolier",
+    "description": "Système algorithmique de gestion collective déployé en 2085 sur les plateformes pétrolières offshore du Venezuela converties en archipel habitable, gérant l'énergie, l'eau potable et la distribution des ressources entre les communautés flottantes.",
+    "etat": "émergent",
+    "annee_debut": 2085
+   }
   }
  }
 }

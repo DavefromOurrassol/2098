@@ -248,6 +248,9 @@ TÂCHE : corrige UNIQUEMENT les points listés ci-dessus."""
 
     desc_u3al = (f"\n- Description fournie par l'auteur (à respecter, sans y ajouter de fait) : "
                  f"{idea['description']}" if idea.get("description") else "")   # U3al
+    if str(idea.get("annee_debut") or "").strip():   # U3aw
+        desc_u3al += (f"\n- Année d'origine de l'entité (imposée par l'auteur, scénario de référence) : "
+                      f"{idea['annee_debut']} — la description et le rôle doivent s'y accorder")
     user_content = f"""Tu dois déduire l'archétype intemporel d'une entité pour le
 projet Ourrassol 2098, à partir d'une instance de référence précise
 que l'utilisateur a déjà fixée.
@@ -502,7 +505,7 @@ def validate_auto_entity(entity, existing_entities, existing_names_in_batch):
 def write_entity_file(name, slug, category, description, tension,
                        variables, scenarios, custom_source=None,
                        scenario_ref=None, role_ref=None, etat_ref=None,
-                       est_clandestin_ref=None, consignes_scenarios=None):
+                       est_clandestin_ref=None, consignes_scenarios=None, annee_ref=None):
     ENTITES_DIR.mkdir(parents=True, exist_ok=True)
     vars_yaml = "\n".join(f"  - {v}" for v in variables)
     scenarios_yaml = "\n".join(f"  - {s}" for s in scenarios)
@@ -529,6 +532,8 @@ def write_entity_file(name, slug, category, description, tension,
         # qui laisserait croire à une contrainte "false" par défaut.
         if est_clandestin_ref is not None:
             extra_fm += f"est_clandestin_ref: {str(est_clandestin_ref).lower()}\n"
+    if annee_ref:   # U3aw : année d'origine voulue par l'auteur
+        extra_fm += f"annee_ref: {int(annee_ref)}\n"
     # consignes_scenarios (24 septembre 2026) : persistées dans la fiche
     # entité pour qu'une régénération ultérieure par generate_instances.py
     # (qui relit la fiche depuis le disque et la passe telle quelle à
@@ -852,6 +857,7 @@ def process_custom_idea(client, idea, dry_run=False, ancrage_temporel="libre"):
         "role_ref": idea.get("role"),
         "etat_ref": idea.get("etat"),
         "est_clandestin_ref": est_clandestin_ref,
+        "annee_ref": (int(idea["annee_debut"]) if str(idea.get("annee_debut") or "").strip().isdigit() else None),   # U3aw
         "zone_hint": zone_hint,
         "consignes_scenarios": consignes_scenarios,
     }
@@ -864,6 +870,7 @@ def process_custom_idea(client, idea, dry_run=False, ancrage_temporel="libre"):
             scenario_ref=scenario_ref, role_ref=idea.get("role"), etat_ref=idea.get("etat"),
             est_clandestin_ref=est_clandestin_ref,
             consignes_scenarios=consignes_scenarios,
+            annee_ref=(int(idea["annee_debut"]) if str(idea.get("annee_debut") or "").strip().isdigit() else None),   # U3aw
         )
         append_to_entities_list({
             "nom": nom, "slug": slug, "categorie": category,

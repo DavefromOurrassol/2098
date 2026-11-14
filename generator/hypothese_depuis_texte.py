@@ -486,11 +486,14 @@ RÈGLES :
   actuel) ; sinon null. Ne les invente pas.
 - "scenarios" : "tous", sauf si l'idée limite explicitement l'entité à certains scénarios
   (liste de slugs).
+- "annee_debut" : l'année (entre 2026 et 2098) où l'entité NAÎT dans le scénario de
+  référence, SEULEMENT si l'idée la donne (« créée en 2082 », « née en 2061 »…) ; sinon
+  null. Ne la déduis pas d'une autre date de l'idée (gouvernance, événement, déclin).
 - "justification" : 2 phrases au plus (choix de la catégorie et du scénario de référence).
 
 Réponds UNIQUEMENT en JSON valide, sans texte autour :
 {{"id": "...", "nom": "...", "description": "...", "categorie": "institution",
-  "scenario_ref": "reference", "role": null, "etat": null, "scenarios": "tous",
+  "scenario_ref": "reference", "role": null, "etat": null, "annee_debut": null, "scenarios": "tous",
   "justification": "..."}}"""
 
 
@@ -522,6 +525,17 @@ def normaliser_entite(brut, ids_pris):
     for cle in ("role", "etat"):
         v = " ".join(str(brut.get(cle) or "").split())
         if v and v.lower() not in ("null", "none"):
+            h[cle] = v
+    annee = str(brut.get("annee_debut") or "").strip()   # U3aw
+    if annee and annee.lower() not in ("null", "none"):
+        try:
+            a_ = int(float(annee))
+            if 2026 <= a_ <= 2098:
+                h["annee_debut"] = a_
+            else:
+                av.append(f"annee_debut {a_} hors de la période 2026-2098 : retirée")
+        except ValueError:
+            av.append(f"annee_debut {annee!r} illisible : retirée")
             h[cle] = v
     scen = brut.get("scenarios") or "tous"
     if isinstance(scen, list):

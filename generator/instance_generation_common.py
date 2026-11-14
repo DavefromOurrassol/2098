@@ -589,9 +589,11 @@ cohérence avec la logique du monde décrite plus bas).
                    if hard_constraint.get("role") else "")   # U3am
         _l_etat = (f"- État temporel dans ce scénario : {hard_constraint['etat']}\n"
                    if hard_constraint.get("etat") else "")
+        _l_annee = (f"- Année d'origine (annee_debut) : {hard_constraint['annee_debut']}\n"
+                    if hard_constraint.get("annee_debut") else "")   # U3aw
         constraint_block = f"""
 ## CONTRAINTES DURES POUR CE SCÉNARIO (ne pas reformuler, ne pas contredire)
-{_l_role}{_l_etat}
+{_l_role}{_l_etat}{_l_annee}
 Ces éléments sont déjà fixés par l'utilisateur. Construis le reste
 de l'instance (description journalistique, responsabilités, relations,
 tensions...) en cohérence stricte avec eux — ne les modifie pas, ne les
@@ -603,12 +605,29 @@ tensions...) en cohérence stricte avec eux — ne les modifie pas, ne les
                                '(tu peux le développer en 3-5 lignes mais sans en changer le sens)')
         if hard_constraint.get("etat"):
             _instr_u3am.append(f'"trajectoire" devant valoir exactement "{hard_constraint["etat"]}"')
+        if hard_constraint.get("annee_debut"):   # U3aw
+            _instr_u3am.append(
+                f"\"annee_debut\" devant valoir exactement {hard_constraint['annee_debut']} "
+                f"(année d'origine fixée par l'auteur : elle prime sur la CONSIGNE CHRONOLOGIE "
+                f"et sur les jalons de la chronologie du scénario)")
         _txt_instr_u3am = ("Réponds en JSON, avec " + " et ".join(_instr_u3am) + ".") if _instr_u3am else ""
         role_etat_instruction = f"""
 {_txt_instr_u3am}
 {f'"est_clandestin" devant valoir exactement {str(hard_constraint["est_clandestin"]).lower()}.' if hard_constraint.get("est_clandestin") is not None else ""}
 """
 
+    try:   # U3aw : année d'origine voulue par l'auteur, pour les scénarios autres que la référence
+        _annee_ref_u3aw = int(entity_fm.get("annee_ref") or 0) or None
+    except (TypeError, ValueError):
+        _annee_ref_u3aw = None
+    if _annee_ref_u3aw and not (hard_constraint and hard_constraint.get("annee_debut")):
+        constraint_block += f"""
+## ORIGINE DE L'ENTITÉ (fixée par l'auteur)
+Dans son scénario de référence, cette entité naît vers {_annee_ref_u3aw}. Dans ce scénario,
+annee_debut doit rester cohérent avec cette origine : même ordre de grandeur (quelques
+années d'écart au plus), sauf raison narrative forte propre à ce scénario. Ne la ramène
+pas à 2026 ou au présent par défaut : cette consigne prime sur la CONSIGNE CHRONOLOGIE.
+"""
     injection_block = ""
     injection_schema = ""
     if injection_custom:
@@ -1033,6 +1052,16 @@ def validate_instance(data, hard_constraint=None, injection_custom=False):
                 f"trajectoire ({data.get('trajectoire')!r}) ne respecte pas "
                 f"la contrainte dure ({hard_constraint['etat']!r})"
             )
+        if hard_constraint.get("annee_debut"):   # U3aw
+            try:
+                _a_u3aw = int(data.get("annee_debut"))
+            except (TypeError, ValueError):
+                _a_u3aw = None
+            if _a_u3aw != int(hard_constraint["annee_debut"]):
+                issues.append(
+                    f"annee_debut ({data.get('annee_debut')!r}) ne respecte pas "
+                    f"la contrainte dure ({hard_constraint['annee_debut']!r})"
+                )
         # est_clandestin optionnel dans hard_constraint (None = pas de
         # contrainte sur ce point, True/False = contrainte explicite) —
         # voir SPEC_CHANTIER_TRAJECTOIRE.md, décision "Option 1", 9 août 2026.
@@ -1350,11 +1379,16 @@ def process_entity_scenario(client, entity_fm, scenario, force=False, dry_run=Fa
         return "" if v.lower() in ("none", "null") else v
     _role_u3am = _val_fixee_u3am(entity_fm.get("role_ref"))
     _etat_u3am = _val_fixee_u3am(entity_fm.get("etat_ref"))
+    try:   # U3aw
+        _annee_u3aw = int(entity_fm.get("annee_ref") or 0) or None
+    except (TypeError, ValueError):
+        _annee_u3aw = None
     if entity_fm.get("scenario_ref") == scenario and (
-            _role_u3am or _etat_u3am or entity_fm.get("est_clandestin_ref") is not None):
+            _role_u3am or _etat_u3am or _annee_u3aw or entity_fm.get("est_clandestin_ref") is not None):
         hard_constraint = {
             "role": _role_u3am,
             "etat": _etat_u3am,
+            "annee_debut": _annee_u3aw,   # U3aw
             # est_clandestin optionnel (None/True/False) — ajouté au
             # schéma le 9 août 2026 en préparation du chantier trajectoire
             # (voir SPEC_CHANTIER_TRAJECTOIRE.md §Question 1) ; mécanisme

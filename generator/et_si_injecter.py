@@ -79,6 +79,30 @@ def _retirer_sautees(entree, ops, ecartees):
     return e, retires
 
 
+def _relancer_localisation_u3ba(sortie):
+    """U3ba : si l'extraction de localisation du cycle post-injection a signalé des
+    erreurs, une seule nouvelle tentative ; puis un message clair."""
+    import re
+    m = re.search(r"Erreurs\s*:\s*(\d+)", sortie or "")
+    if not m or int(m.group(1)) == 0:
+        return
+    print(f"\n⚠ localisation : {m.group(1)} fiche(s) sans zone après l'extraction automatique — "
+          f"nouvelle tentative…")
+    try:
+        r = subprocess.run([sys.executable, str(GEN / "extract_localisation.py")], cwd=GEN,
+                           capture_output=True, text=True, timeout=900, stdin=subprocess.DEVNULL)
+    except (OSError, subprocess.TimeoutExpired) as e:
+        print(f"⚠ localisation : relance impossible ({e}) — lancer « python3 generator/extract_localisation.py » "
+              f"à la main.")
+        return
+    m2 = re.search(r"Erreurs\s*:\s*(\d+)", r.stdout or "")
+    if r.returncode == 0 and m2 and int(m2.group(1)) == 0:
+        print("✓ localisation complétée à la deuxième tentative.")
+    else:
+        print("⚠ localisation : il reste des fiches sans zone — lancer « python3 generator/extract_localisation.py » "
+              "(voir documentation/need_action/localisation_review.md).")
+
+
 def _injecter_entite(hid, a):
     """U3al : injecte UNE entité adoptée (create_entities_and_instances.py --idea),
     sans lire ni écrire entites_custom/queue.yaml."""
@@ -117,6 +141,7 @@ def _injecter_entite(hid, a):
         motif = res.get("reason") or res.get("error") or "; ".join(res.get("issues") or []) or "voir ci-dessus"
         sys.exit(f"\n✗ entité non injectée ({motif}). La décision reste « adopté » : corriger l'hypothèse, "
                  f"annuler la décision, adopter de nouveau.")
+    _relancer_localisation_u3ba(sortie)   # U3ba
     st_i = res.get("instance_stats") or {}
     if st_i.get("errors"):   # U3am : instance(s) en erreur = injection partielle
         print(f"\n⚠ entité {res.get('slug')} injectée PARTIELLEMENT — instances : {st_i} : "

@@ -207,6 +207,16 @@ def _verifier_entite(h):
     if ignores:
         avert.append("ignorés pour une entité : " + ", ".join(ignores)
                      + " (une entité n'a ni date, ni impact chiffré, ni carte)")
+    annee_ok = None   # U3aw : année d'origine (optionnelle) dans le scénario de référence
+    if h.get("annee_debut") not in (None, ""):
+        try:
+            annee_ok = int(h.get("annee_debut"))
+            if not 2026 <= annee_ok <= 2098:
+                erreurs.append(f"annee_debut {annee_ok} hors de la période 2026-2098")
+                annee_ok = None
+        except (TypeError, ValueError):
+            erreurs.append("annee_debut : une année entière (ex. 2082), année où l'entité naît "
+                           "dans le scénario de référence")
     norm = {
         "type": "entite", "id": hid, "nom": nom or hid,
         "description": str(h.get("description") or "").strip(),
@@ -215,6 +225,8 @@ def _verifier_entite(h):
         "etat": " ".join(str(h.get("etat") or "").split()) or None,
         "scenarios": scen,
     }
+    if annee_ok:
+        norm["annee_debut"] = annee_ok
     return norm, erreurs, avert
 
 
