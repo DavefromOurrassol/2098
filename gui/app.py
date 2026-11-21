@@ -2983,7 +2983,7 @@ def et_si_fiche():   # U3av : fiche d'une hypothèse, lecture directe (rapide)
         if isinstance(h, dict) and str(h.get("id")) == hid:
             fiche = {}
             for k in ("nom", "type", "date", "mode", "categorie", "scenario_ref", "scenarios",
-                      "role", "etat", "description"):
+                      "role", "etat", "description", "wild_card"):   # U4e : wild_card
                 v = h.get(k)
                 if v in (None, "", []):
                     continue
@@ -4433,7 +4433,8 @@ def get_slugs():
                     continue
                 slugs.append(h["id"])
                 _quand = "entité" if h.get("type") == "entite" else h.get("date")   # U3ao
-                labels[h["id"]] = (f"{h.get('nom')} ({_quand})"
+                labels[h["id"]] = (("⚡ " if h.get("wild_card") else "")   # U4e : badge wild card
+                                   + f"{h.get('nom')} ({_quand})"
                                    + (" ⚠ invalide" if h.get("erreurs") else ""))
         elif slug_type == "signals":
             slugs = _scan_signal_slugs(vault_root)

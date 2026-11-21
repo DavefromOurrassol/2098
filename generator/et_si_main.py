@@ -310,14 +310,58 @@ def ajouter_entites(hid, data, choix, apply):
 # 2. Règle de lore
 # ---------------------------------------------------------------------------
 
+# U4e (21 nov 2026) : une wild card devient un fait établi -> règle proposée d'office.
+MOTS_NON_PROPRES_U4E = {"Le", "La", "Les", "Un", "Une", "Des", "Du", "De", "Dépôt", "Percée", "Découverte",
+                        "Effondrement", "Pandémie", "Signe", "Molécule", "Thérapie", "Gisement"}
+
+
+def wild_card_de(data):
+    """U4e : bloc de l'hypothèse (et_si/hypotheses.yaml) si c'est une wild card, sinon None."""
+    try:
+        import simuler_et_si as se
+        h = next((x for x in se.charger_hypotheses() if x.get("id") == data.get("id")), None)
+        return h if h and se.est_wild_card(h) else None
+    except (Exception, SystemExit):  # noqa: BLE001 -- sans hypothèse lisible : pas de règle d'office
+        return None
+
+
+def termes_wild_card(h):
+    """U4e : noms propres du nom de la wild card (« Le Zéro-R » -> Zéro-R) ; à défaut, le nom entier."""
+    nom = " ".join(str(h.get("nom") or "").split())
+    termes = []
+    for n, mot in enumerate(nom.split(" ")):
+        mot = mot.strip("«»\"'(),.;:")
+        if len(mot) < 4 or mot in MOTS_NON_PROPRES_U4E:
+            continue
+        propre = mot[0].isupper() and n > 0
+        marque = any(c.isdigit() for c in mot) or ("-" in mot and any(c.isupper() for c in mot[1:]))
+        if (propre or marque) and mot not in termes:
+            termes.append(mot)
+    return termes or ([nom] if nom else [])
+
+
+def regle_wild_card(data, h, annee):
+    """U4e : règle « fait établi » d'une wild card (gravité a_relire, modifiable avant ajout)."""
+    nom = " ".join(str(h.get("nom") or data.get("id")).split())
+    desc = " ".join(str(h.get("description") or "").split())
+    if len(desc) > 180:
+        desc = desc[:180].rsplit(" ", 1)[0] + "…"
+    return {"id": f"{data['id']}_fait_etabli", "gravite": "a_relire", "termes": termes_wild_card(h),
+            "message": (f"Wild card de {annee} : {nom} est un fait établi du monde depuis {annee}"
+                        + (f" ({desc})" if desc else "") + f". Le nier ou le présenter comme hypothétique "
+                        f"après {annee} est faux ; avant {annee}, personne ne peut le connaître.")}
+
+
 def brouillons_regles(data):
     """Brouillon par scénario : une règle par entité disparue (opération appliquée),
-    contraintes de l'hypothèse en commentaires (même contenu que la check-list)."""
+    contraintes de l'hypothèse en commentaires (même contenu que la check-list).
+    U4e : une wild card ouvre le brouillon par sa règle « fait établi »."""
     ops, _ = ap.construire_plan(data)
     annee = int(data["annee"]) if data.get("annee") is not None else None
+    wc = wild_card_de(data)   # U4e
     out = {}
     for sc in data["scenarios"]:
-        regles = []
+        regles = [regle_wild_card(data, wc, annee)] if wc else []   # U4e
         for o in ops:
             if o["sc"] != sc or o["genre"] != "trajectoire" or o.get("apres") != "disparu":
                 continue
@@ -329,7 +373,9 @@ def brouillons_regles(data):
                            "termes": ap.termes_disparition(nom, o["instance"], sc),
                            "message": f"{nom} disparaît en {annee} ({data.get('nom') or data['id']}) : "
                                       f"toute mention au présent après {annee} est fausse."})
-        texte = yaml.safe_dump(regles, allow_unicode=True, sort_keys=False, width=1000) if regles else ""
+        texte = ("# ⚡ wild card : règle « fait établi » proposée d'office (relire les termes) ; U4e\n"
+                 if wc else "")
+        texte += yaml.safe_dump(regles, allow_unicode=True, sort_keys=False, width=1000) if regles else ""
         texte += "".join(f"# contrainte à transformer si besoin : {c}\n" for c in data.get("contraintes") or [])
         out[sc] = texte
     return out

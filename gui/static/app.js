@@ -11906,6 +11906,7 @@ function buildDecisionHypothese() {
     const fi = e.hypothese;   // U3at
     if (fi) {
       const entete = [fi.nom, fi.type === 'entite' ? 'entité' : (fi.type || 'événement'),
+                      estWildU4e(fi) ? '⚡ wild card' : '',   // U4e
                       fi.date != null ? `date ${fi.date}` : '', fi.mode ? `mode ${fi.mode}` : '',
                       fi.categorie ? `catégorie ${fi.categorie}` : '',
                       fi.scenario_ref ? `réf. ${fi.scenario_ref}` : '',
@@ -11967,6 +11968,13 @@ function buildDecisionHypothese() {
     else montrer(lienChecklist, false);
   };
 
+  // U4e : wild card d'après la fiche, ou d'après le libellé « ⚡ … » de la liste
+  const estWildU4e = (fi) => {
+    if (fi && (fi.wild_card === true || String(fi.wild_card).toLowerCase() === 'true')) return true;
+    const sel = listeHyp();
+    const opt = sel && sel.selectedIndex >= 0 ? sel.options[sel.selectedIndex] : null;
+    return !!(opt && opt.textContent.trim().startsWith('⚡'));
+  };
   // U3av : la fiche s'affiche juste sous la liste « Hypothèse »
   const placerFiche = () => {
     const sel = listeHyp();
@@ -11977,6 +11985,7 @@ function buildDecisionHypothese() {
   const remplirFiche = (fi) => {
     if (!fi || !placerFiche()) { ficheEl.style.display = 'none'; return; }
     ficheMeta.textContent = [fi.nom, fi.type === 'entite' ? 'entité' : (fi.type || 'événement'),
+                    estWildU4e(fi) ? '⚡ wild card' : '',   // U4e
                     fi.date != null ? `date ${fi.date}` : '', fi.mode ? `mode ${fi.mode}` : '',
                     fi.categorie ? `catégorie ${fi.categorie}` : '',
                     fi.scenario_ref ? `réf. ${fi.scenario_ref}` : '',
