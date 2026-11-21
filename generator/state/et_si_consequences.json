@@ -5498,5 +5498,246 @@
     }
    ]
   }
+ },
+ "shackleton_platinoides_2052::fortress_world": {
+  "empreinte": "a024559c80bbf286",
+  "date": "2026-11-15T17:40",
+  "brut": {
+   "lecture": "Le dépôt de Shackleton casse la logique de rareté qui fondait la fermeture des blocs : avec l'abondance lunaire de platinoïdes, la sécurisation territoriale des ressources perd son urgence économique, fragilisant les cartels miniers et les fermetures frontalières tout en créant une nouvelle aristocratie spatiale centrée sur l'Arctique. Le choc ne modifie pas la géographie terrestre mais redistribue durablement le pouvoir vers ceux qui contrôlent l'accès à la Lune et la distribution des métaux critiques.",
+   "ampleur": "bascule",
+   "trajectoires": [
+    {
+     "instance": "cartels_miniers_militarises_subsahariens_fortress_world",
+     "apres": "déclinant",
+     "raison": "L'abondance lunaire détruit leur monopole de fait sur les métaux rares terrestres qui justifiait le pillage des zones effondrées."
+    },
+    {
+     "instance": "les_recycleurs_fortress_world",
+     "apres": "déclinant",
+     "raison": "Le marché des métaux rares contrôlé depuis Paris s'effondre face à l'offre massive de platinoïdes lunaires."
+    },
+    {
+     "instance": "consortium_eurasiatique_des_ressources_fermees_fortress_world",
+     "apres": "déclinant",
+     "raison": "La logique de fermeture des ressources critiques perd sa pertinence économique avec l'arrivée des métaux spatiaux."
+    },
+    {
+     "instance": "alpha47_fortress_world",
+     "apres": "déclinant",
+     "raison": "La planète minière d'Ergo-Wian est directement concurrencée par Shackleton, plus accessible et moins coûteux à exploiter."
+    },
+    {
+     "instance": "complexes_militaro_industriels_de_gestion_des_ressources_fortress_world",
+     "apres": "ascendant",
+     "raison": "Ils pivotent vers la sécurisation des infrastructures d'extraction lunaire et des corridors spatiaux, devenant les nouveaux gardiens des ressources."
+    },
+    {
+     "instance": "reseaux_prives_de_securite_aux_frontieres_fortress_world",
+     "apres": "déclinant",
+     "raison": "La pression sur les frontières diminue fortement car les blocs n'ont plus besoin de fermer hermétiquement pour sécuriser leurs approvisionnements en métaux."
+    }
+   ],
+   "relations": [
+    {
+     "a": "cartels_miniers_militarises_subsahariens_fortress_world",
+     "b": "complexes_militaro_industriels_de_gestion_des_ressources_fortress_world",
+     "type": "opposition",
+     "action": "nouvelle",
+     "raison": "Les cartels tentent de saboter l'accès lunaire pour préserver leur rente, tandis que les complexes veulent exploiter Shackleton."
+    },
+    {
+     "a": "les_recycleurs_fortress_world",
+     "b": "kalaallit_nunaat_sovereign_fund_fortress_world",
+     "type": "opposition",
+     "action": "nouvelle",
+     "raison": "Concurrence directe pour le contrôle du marché mondial des métaux critiques entre Paris et le fonds groenlandais proche de l'Arctique."
+    },
+    {
+     "a": "armada_logistique_nordique_fortress_world",
+     "b": "nexcore_atlantique_infrastructure_fortress_world",
+     "type": "alliance",
+     "action": "nouvelle",
+     "raison": "Coopération pour construire et sécuriser les spatioports arctiques servant de base aux missions lunaires vers Shackleton."
+    },
+    {
+     "a": "consortium_eurasiatique_des_ressources_fermees_fortress_world",
+     "b": "regimes_autoritaires_du_bloc_eurasiatique_occidental_fortress_world",
+     "type": "opposition",
+     "action": "rompue",
+     "raison": "Les régimes perdent leur justification sécuritaire de fermeture face à l'abondance lunaire, rompant avec le consortium qui les soutenait."
+    }
+   ],
+   "geographie": [],
+   "zones_statut": [
+    {
+     "zone": "afrique_subsaharienne_zones_effondrees",
+     "apres": "en_declin",
+     "raison": "L'effondrement des cartels miniers militarisés laisse un vide sécuritaire et économique dans les zones déjà fragiles."
+    },
+    {
+     "zone": "espace_nordique_arctique",
+     "apres": "dominant",
+     "raison": "L'Arctique devient le hub spatial mondial incontournable pour l'accès à Shackleton, renforçant la position d'Euro-Nord."
+    },
+    {
+     "zone": "paris_hors",
+     "apres": "fragmenté",
+     "raison": "La perte de pouvoir des Ferrailleurs sur les métaux rares plonge la zone dans un chaos plus prononcé."
+    },
+    {
+     "zone": "bloc_eurasiatique_occidental",
+     "apres": "stable",
+     "raison": "La forteresse perd de sa nécessité stratégique avec l'abondance des ressources, passant d'un statut dominant à stable."
+    }
+   ],
+   "nouvelles_entites": [
+    {
+     "nom": "Consortium Shackleton d'Extraction Lunaire",
+     "category": "organisation",
+     "role": "Gère l'extraction robotisée des platinoïdes au pôle Sud lunaire et leur première mise sur le marché mondial.",
+     "zone": "espace_nordique_arctique",
+     "raison": "Nécessité d'une autorité centralisée pour coordonner l'exploitation du cratère de Shackleton depuis les bases arctiques."
+    },
+    {
+     "nom": "ARIA-Lune — Système d'Allocation des Métaux Orbitaux",
+     "category": "système",
+     "role": "Régule la distribution mondiale des métaux critiques lunaires pour éviter l'effondrement des économies terrestres dépendantes.",
+     "zone": "aria_instance_fantome",
+     "raison": "Extension du réseau ARIA dans l'orbite neutre pour gérer les flux de platinoïdes sans passer par les blocs terrestres fermés."
+    },
+    {
+     "nom": "Garde Spatiale Nordique — Unité de Protection des Corridors Lunaires",
+     "category": "organisation",
+     "role": "Sécurise les trajectoires Terre-Lune et les installations de Shackleton contre les acteurs non alignés et les cartels hostiles.",
+     "zone": "corridor_arctique_transit",
+     "raison": "Bras armé dédié à la protection des infrastructures spatiales critiques émergeant du choc lunaire."
+    }
+   ]
+  }
+ },
+ "shackleton_platinoides_2052::reference": {
+  "empreinte": "72a6e82f43211ad1",
+  "date": "2026-11-15T17:41",
+  "brut": {
+   "lecture": "Le dépôt de Shackleton inonde le marché mondial de platinoïdes et terres rares lourdes, cassant la rente des acteurs miniers terrestres (Congo, Asie centrale, Groenland) tout en créant un nouvel axe géopolitique spatial centré sur l'arc arctique. Ce choc ne modifie aucune frontière territoriale mais reconfigure les rapports de force entre extracteurs terrestres déclinants et nouveaux opérateurs lunaires. L'équilibre fragile du scénario se déplace vers une économie cislunaire où le corridor arctique nordique devient le pivot de l'approvisionnement en métaux critiques.",
+   "ampleur": "bascule",
+   "trajectoires": [
+    {
+     "instance": "consortiums_d_extraction_miniere_du_bassin_congolais_reference",
+     "apres": "déclinant",
+     "raison": "La valeur des terres rares congolaises s'effondre face à l'abondance lunaire de platinoïdes."
+    },
+    {
+     "instance": "cartel_des_terres_rares_d_asie_centrale_reference",
+     "apres": "déclinant",
+     "raison": "Son monopole sur les terres rares lourdes est brisé par l'offre massive de Shackleton."
+    },
+    {
+     "instance": "kalaallit_nunaat_sovereign_fund_reference",
+     "apres": "déclinant",
+     "raison": "Les revenus du Groenland tirés des terres rares terrestres perdent leur avantage compétitif face à la Lune."
+    },
+    {
+     "instance": "bloc_ressources_eurasiatique_bre_reference",
+     "apres": "déclinant",
+     "raison": "Son levier géopolitique fondé sur le contrôle des ressources critiques terrestres s'érode avec la dévalorisation de ces métaux."
+    },
+    {
+     "instance": "consortiums_prives_d_extraction_de_ressources_critiques_reference",
+     "apres": "ascendant",
+     "raison": "Ils pivotent vers l'extraction lunaire et deviennent les nouveaux maîtres des flux de platinoïdes."
+    },
+    {
+     "instance": "fonds_souverains_de_la_ceinture_financiere_pacifique_reference",
+     "apres": "ascendant",
+     "raison": "Ils financent massivement les infrastructures d'extraction et de transport lunaire, prenant le contrôle du nouvel axe spatial."
+    }
+   ],
+   "relations": [
+    {
+     "a": "consortiums_prives_d_extraction_de_ressources_critiques_reference",
+     "b": "consortium_helios_reference",
+     "type": "alliance",
+     "action": "nouvelle",
+     "raison": "Couplage entre extraction lunaire de platinoïdes et infrastructure solaire orbitale pour alimenter les robots d'extraction."
+    },
+    {
+     "a": "kalaallit_nunaat_sovereign_fund_reference",
+     "b": "consortiums_prives_d_extraction_de_ressources_critiques_reference",
+     "type": "opposition",
+     "action": "nouvelle",
+     "raison": "Concurrence directe sur le marché des terres rares lourdes entre le Groenland et le consortium lunaire."
+    },
+    {
+     "a": "bloc_ressources_eurasiatique_bre_reference",
+     "b": "armada_logistique_nordique_reference",
+     "type": "opposition",
+     "action": "nouvelle",
+     "raison": "Dispute pour le contrôle des corridors de lancement vers l'orbite lunaire depuis l'Arctique russe et scandinave."
+    },
+    {
+     "a": "optiflow_logistics_reference",
+     "b": "consortiums_prives_d_extraction_de_ressources_critiques_reference",
+     "type": "alliance",
+     "action": "nouvelle",
+     "raison": "OGLN organise et sécurise les flux de retour des métaux lunaires vers les marchés terrestres."
+    },
+    {
+     "a": "agence_de_regulation_des_detroits_strategiques_ards_reference",
+     "b": "consortium_helios_reference",
+     "type": "opposition",
+     "action": "nouvelle",
+     "raison": "L'ARPS revendique la régulation du 'détroit cislunaire' face au quasi-régulateur privé de l'énergie orbitale."
+    },
+    {
+     "a": "cartel_des_terres_rares_d_asie_centrale_reference",
+     "b": "consortiums_d_extraction_miniere_du_bassin_congolais_reference",
+     "type": "opposition",
+     "action": "nouvelle",
+     "raison": "Rivalité entre anciens fournisseurs terrestres qui tentent de saboter l'extraction lunaire pour préserver leurs prix."
+    }
+   ],
+   "geographie": [],
+   "zones_statut": [
+    {
+     "zone": "nuuk_capitale_groenland",
+     "apres": "en_declin",
+     "raison": "La capitale groenlandaise perd son statut de hub stratégique des terres rares face à la concurrence lunaire."
+    },
+    {
+     "zone": "corridors_eurasiens_zones_grises",
+     "apres": "en_declin",
+     "raison": "L'effondrement du cartel des terres rares d'Asie centrale fragilise ces corridors périphériques."
+    },
+    {
+     "zone": "bloc_eurasien_central",
+     "apres": "en_declin",
+     "raison": "Le déclin du BRE, pilier du bloc, entraîne une fragilisation générale de la zone eurasiatique."
+    }
+   ],
+   "nouvelles_entites": [
+    {
+     "nom": "Consortium Shackleton d'Extraction Lunaire",
+     "category": "entreprise",
+     "role": "Opérateur privé dominant de l'extraction des platinoïdes du cratère de Shackleton, contrôlant les flux de métaux critiques vers la Terre depuis 2055.",
+     "zone": "corridor_arctique_nordique",
+     "raison": "L'extraction viable crée un nouvel acteur économique majeur basé dans l'arc arctique qui contrôle l'accès spatial et les robots lunaires."
+    },
+    {
+     "nom": "Ligue des Terres Rares Terrestres",
+     "category": "organisation",
+     "role": "Cartel défensif des producteurs terrestres de terres rares (Congo, Asie centrale, Groenland) cherchant à limiter l'offre lunaire pour préserver leurs rentes.",
+     "zone": "zones_grises_globales",
+     "raison": "Les acteurs miniers terrestres menacés par l'abondance lunaire s'organisent dans les marges pour défendre leurs intérêts économiques."
+    },
+    {
+     "nom": "Autorité de Transit Cislunaire",
+     "category": "infrastructure",
+     "role": "Réseau de contrôle du trafic spatial entre la Terre et la Lune, gérant les corridors de lancement et de rentrée des cargaisons de platinoïdes.",
+     "zone": "corridor_arctique_nordique",
+     "raison": "La massification des flux lunaires nécessite une infrastructure dédiée de régulation du trafic orbital depuis les bases arctiques."
+    }
+   ]
+  }
  }
 }

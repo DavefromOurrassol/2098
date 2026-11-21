@@ -3373,5 +3373,214 @@
     "annee_debut": 2085
    }
   }
+ },
+ "shackleton_platinoides_2052": {
+  "simulation": {
+   "date": "2026-11-15T19:44",
+   "version": "v8.25",
+   "empreinte": "1d142dfda72d0ef5",
+   "scenarios": [
+    "fortress_world",
+    "reference"
+   ],
+   "complet": true,
+   "passe": true,
+   "rapport": "documentation/need_action/et_si_shackleton_platinoides_2052.md",
+   "entree": {
+    "id": "shackleton_platinoides_2052",
+    "description": "En 2052, une mission de prospection privée révèle que le cratère de Shackleton (pôle Sud lunaire) contient un dépôt d'astéroïde riche en platinoïdes et terres rares lourdes, accessible en surface grâce à la glace permanente. L'extraction devient économiquement viable dès 2055 avec les robots lunaires existants, déversant des métaux critiques sur le marché mondial.",
+    "portee": "globale",
+    "date_approximative": 2052,
+    "intensite": "<à choisir>",
+    "persistance": "permanente",
+    "scenarios": [
+     "fortress_world",
+     "reference"
+    ],
+    "variables_hint": [
+     "frontieres_du_systeme",
+     "energie_ressources_critiques",
+     "geopolitique_conflits",
+     "systeme_economique_redistribution"
+    ],
+    "variables_hint_count": 4,
+    "source": "et_si_shackleton_platinoides_2052",
+    "acteurs_hint": [
+     "cartels_miniers_militarises_subsahariens_fortress_world",
+     "les_recycleurs_fortress_world",
+     "consortium_eurasiatique_des_ressources_fermees_fortress_world",
+     "alpha47_fortress_world",
+     "cartel_des_terres_rares_d_asie_centrale_reference",
+     "consortiums_d_extraction_miniere_du_bassin_congolais_reference",
+     "kalaallit_nunaat_sovereign_fund_reference",
+     "bloc_ressources_eurasiatique_bre_reference"
+    ],
+    "acteurs_hint_count": 4,
+    "faits_imposes": {
+     "fortress_world": [
+      {
+       "fait": "En 2052, une mission de prospection privée révèle que le cratère de Shackleton (pôle Sud lunaire) contient un dépôt d'astéroïde riche en platinoïdes et terres rares lourdes, accessible en surface grâce à la glace permanente.",
+       "sort": "contrainte"
+      },
+      {
+       "fait": "L'extraction devient économiquement viable dès 2055 avec les robots lunaires existants.",
+       "sort": "contrainte"
+      },
+      {
+       "fait": "Les métaux critiques extraits arrivent en masse sur le marché mondial.",
+       "sort": "contrainte"
+      },
+      {
+       "fait": "Cartels Miniers Militarisés Subsahariens (cartels_miniers_militarises_subsahariens_fortress_world) passe de « émergent » à « déclinant » après 2052 : elle existe toujours (elle peut perdre des lieux, des biens ou du pouvoir), ne la décris pas comme disparue.",
+       "slug": "cartels_miniers_militarises_subsahariens_fortress_world",
+       "sort": "change"
+      },
+      {
+       "fait": "Les Ferrailleurs de Paris (les_recycleurs_fortress_world) passe de « dominant » à « déclinant » après 2052 : elle existe toujours (elle peut perdre des lieux, des biens ou du pouvoir), ne la décris pas comme disparue.",
+       "slug": "les_recycleurs_fortress_world",
+       "sort": "change"
+      },
+      {
+       "fait": "Consortium Eurasiatique des Ressources Fermées (consortium_eurasiatique_des_ressources_fermees_fortress_world) passe de « émergent » à « déclinant » après 2052 : elle existe toujours (elle peut perdre des lieux, des biens ou du pouvoir), ne la décris pas comme disparue.",
+       "slug": "consortium_eurasiatique_des_ressources_fermees_fortress_world",
+       "sort": "change"
+      },
+      {
+       "fait": "Alpha47 - Complexe Minier Ergo-Wian (alpha47_fortress_world) passe de « mature » à « déclinant » après 2052 : elle existe toujours (elle peut perdre des lieux, des biens ou du pouvoir), ne la décris pas comme disparue.",
+       "slug": "alpha47_fortress_world",
+       "sort": "change"
+      },
+      {
+       "fait": "La zone Afrique Subsaharienne — Zones d'Effondrement Étatique (afrique_subsaharienne_zones_effondrees) passe de « fragmenté » à « en_declin » : le lieu subsiste.",
+       "slug": "afrique_subsaharienne_zones_effondrees",
+       "sort": "zone"
+      },
+      {
+       "fait": "La zone Espace Nordique et Arctique (espace_nordique_arctique) passe de « stable » à « dominant » : le lieu subsiste.",
+       "slug": "espace_nordique_arctique",
+       "sort": "zone"
+      },
+      {
+       "fait": "La zone Paris (paris_hors) passe de « en_declin » à « fragmenté » : le lieu subsiste.",
+       "slug": "paris_hors",
+       "sort": "zone"
+      },
+      {
+       "fait": "La zone Bloc Eurasiatique Occidental (bloc_eurasiatique_occidental) passe de « dominant » à « stable » : le lieu subsiste.",
+       "slug": "bloc_eurasiatique_occidental",
+       "sort": "zone"
+      }
+     ],
+     "reference": [
+      {
+       "fait": "En 2052, une mission de prospection privée révèle que le cratère de Shackleton (pôle Sud lunaire) contient un dépôt d'astéroïde riche en platinoïdes et terres rares lourdes, accessible en surface grâce à la glace permanente.",
+       "sort": "contrainte"
+      },
+      {
+       "fait": "L'extraction devient économiquement viable dès 2055 avec les robots lunaires existants.",
+       "sort": "contrainte"
+      },
+      {
+       "fait": "Les métaux critiques extraits arrivent en masse sur le marché mondial.",
+       "sort": "contrainte"
+      },
+      {
+       "fait": "Cartel des Terres Rares d'Asie Centrale (cartel_des_terres_rares_d_asie_centrale_reference) passe de « émergent » à « déclinant » après 2052 : elle existe toujours (elle peut perdre des lieux, des biens ou du pouvoir), ne la décris pas comme disparue.",
+       "slug": "cartel_des_terres_rares_d_asie_centrale_reference",
+       "sort": "change"
+      },
+      {
+       "fait": "Consortiums d'Extraction Minière du Bassin Congolais (consortiums_d_extraction_miniere_du_bassin_congolais_reference) passe de « émergent » à « déclinant » après 2052 : elle existe toujours (elle peut perdre des lieux, des biens ou du pouvoir), ne la décris pas comme disparue.",
+       "slug": "consortiums_d_extraction_miniere_du_bassin_congolais_reference",
+       "sort": "change"
+      },
+      {
+       "fait": "Kalaallit Nunaat Sovereign Fund (kalaallit_nunaat_sovereign_fund_reference) passe de « ascendant » à « déclinant » après 2052 : elle existe toujours (elle peut perdre des lieux, des biens ou du pouvoir), ne la décris pas comme disparue.",
+       "slug": "kalaallit_nunaat_sovereign_fund_reference",
+       "sort": "change"
+      },
+      {
+       "fait": "Bloc Ressources Eurasiatique (BRE) (bloc_ressources_eurasiatique_bre_reference) passe de « émergent » à « déclinant » après 2052 : elle existe toujours (elle peut perdre des lieux, des biens ou du pouvoir), ne la décris pas comme disparue.",
+       "slug": "bloc_ressources_eurasiatique_bre_reference",
+       "sort": "change"
+      },
+      {
+       "fait": "La zone Nuuk-Capitale (nuuk_capitale_groenland) passe de « emergent » à « en_declin » : le lieu subsiste.",
+       "slug": "nuuk_capitale_groenland",
+       "sort": "zone"
+      },
+      {
+       "fait": "La zone Corridors Eurasiens Centraux (corridors_eurasiens_zones_grises) passe de « fragmenté » à « en_declin » : le lieu subsiste.",
+       "slug": "corridors_eurasiens_zones_grises",
+       "sort": "zone"
+      },
+      {
+       "fait": "La zone Bloc Eurasien Central (bloc_eurasien_central) passe de « fragmenté » à « en_declin » : le lieu subsiste.",
+       "slug": "bloc_eurasien_central",
+       "sort": "zone"
+      }
+     ]
+    },
+    "date_imposee": 2052,
+    "mode_impose": "rupture",
+    "wild_card_impose": true,
+    "impacts_imposes": {
+     "fortress_world": [
+      {
+       "variable": "frontieres_du_systeme",
+       "delta_level": 30,
+       "duree": 5,
+       "polarite": -1
+      },
+      {
+       "variable": "energie_ressources_critiques",
+       "delta_level": 32,
+       "duree": 8,
+       "polarite": -1
+      },
+      {
+       "variable": "geopolitique_conflits",
+       "delta_level": 35,
+       "duree": 5,
+       "polarite": 1
+      },
+      {
+       "variable": "systeme_economique_redistribution",
+       "delta_level": 28,
+       "duree": 8,
+       "polarite": 1
+      }
+     ],
+     "reference": [
+      {
+       "variable": "frontieres_du_systeme",
+       "delta_level": 30,
+       "duree": 5,
+       "polarite": -1
+      },
+      {
+       "variable": "energie_ressources_critiques",
+       "delta_level": 32,
+       "duree": 8,
+       "polarite": -1
+      },
+      {
+       "variable": "geopolitique_conflits",
+       "delta_level": 28,
+       "duree": 5,
+       "polarite": 1
+      },
+      {
+       "variable": "systeme_economique_redistribution",
+       "delta_level": 30,
+       "duree": 8,
+       "polarite": 1
+      }
+     ]
+    },
+    "via_matrice_impose": true
+   },
+   "type": "evenement"
+  }
  }
 }

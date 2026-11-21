@@ -32268,5 +32268,3683 @@
     }
    ]
   }
+ },
+ "shackleton_platinoides_2052::fortress_world::0": {
+  "empreinte": "0bd6b8867125facd",
+  "date": "2026-11-15T17:44",
+  "brut": {
+   "fiches": [
+    {
+     "slug": "administrations_de_controle_frontalier_des_blocs_fortress_world",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "obligatoire",
+       "apres": "marginal",
+       "lien": "variable",
+       "lien_detail": "frontieres_du_systeme (-27.7 points) : l'abondance lunaire de platinoïdes casse la logique de rareté qui fondait la fermeture des blocs, rendant le contrôle frontalier moins central.",
+       "contredit": "le statut 'émergent' des administrations de contrôle frontalier alors que la variable frontieres_du_systeme chute de 27.7 points.",
+       "raison": "La fiche affirme qu'elles constituent le bras opérationnel de la fermeture des blocs ; avec frontieres_du_systeme à -27.7, cette fermeture perd son urgence économique et ces administrations passent à marginal."
+      }
+     ]
+    },
+    {
+     "slug": "agence_de_regulation_des_detroits_strategiques_ards_fortress_world",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "résiduel",
+       "lien": "variable",
+       "lien_detail": "frontieres_du_systeme (-27.7 points) et energie_ressources_critiques (-29.2 points) : les métaux critiques arrivant en masse par la Lune, le contrôle des détroits maritimes perd sa pertinence stratégique.",
+       "contredit": "",
+       "raison": "La fiche décrit l'ARDS comme déclinante ; l'élément accentue ce déclin vers le résiduel car les flux de ressources critiques ne transitent plus par les détroits."
+      }
+     ]
+    },
+    {
+     "slug": "agences_de_securite_interieure_des_etats_forteresses_fortress_world",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "obligatoire",
+       "apres": "marginal",
+       "lien": "variable",
+       "lien_detail": "frontieres_du_systeme (-27.7 points) : l'étanchéité des frontières perd son urgence avec l'abondance lunaire de métaux critiques.",
+       "contredit": "le statut 'émergent' de ces agences alors que la fermeture des frontières chute de 27.7 points.",
+       "raison": "Leur rôle est de maintenir l'étanchéité des frontières dans un monde fragmenté ; avec frontieres_du_systeme à -27.7, elles ne peuvent plus être émergentes et deviennent marginales."
+      }
+     ]
+    },
+    {
+     "slug": "alliance_blocs_souverains_fortress_world",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "résiduel",
+       "lien": "variable",
+       "lien_detail": "frontieres_du_systeme (-27.7 points) et energie_ressources_critiques (-29.2 points) : le Pacte fonde sa légitimité sur la sécurisation des ressources par la fermeture, rendue obsolète par l'abondance lunaire.",
+       "contredit": "",
+       "raison": "La fiche le décrit comme déclinant ; l'élément fragilise davantage la logique de fermeture qui fonde le Pacte des Forteresses Souveraines."
+      }
+     ]
+    },
+    {
+     "slug": "alliance_sanitaire_des_populations_exclues_fortress_world",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "obligatoire",
+       "apres": "marginal",
+       "lien": "variable",
+       "lien_detail": "frontieres_du_systeme (-27.7 points) : avec la baisse de la fermeture frontalière, le nombre de populations exclues diminue, réduisant la base de cette alliance.",
+       "contredit": "le statut 'émergent' alors que les exclusions sanitaires perdent leur acuité avec l'ouverture des frontières (-27.7 points).",
+       "raison": "Son rôle est d'organiser une médecine parallèle pour les laissés-pour-compte des frontières ; avec frontieres_du_systeme à -27.7, ces exclusions diminuent et l'alliance passe à marginal."
+      }
+     ]
+    },
+    {
+     "slug": "almaty_zone_friction_fortress_world",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "mature",
+       "lien": "variable",
+       "lien_detail": "frontieres_du_systeme (-27.7 points) : la zone de friction perd de son intensité lorsque la fermeture globale des frontières diminue.",
+       "contredit": "",
+       "raison": "La fiche la décrit comme dominante ; la baisse de 27.7 points de frontieres_du_systeme réduit son rôle de friction frontalière."
+      }
+     ]
+    },
+    {
+     "slug": "alpha47_fortress_world",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "obligatoire",
+       "apres": "déclinant",
+       "lien": "variable",
+       "lien_detail": "energie_ressources_critiques (-29.2 points) : l'extraction minière terrestre de ressources critiques perd sa valeur face à l'abondance lunaire de platinoïdes de Shackleton.",
+       "contredit": "le statut 'mature' du complexe minier Alpha47 alors que les ressources critiques deviennent abondantes via la Lune.",
+       "raison": "Alpha47 est un complexe d'extraction de ressources critiques ; avec energie_ressources_critiques à -29.2, son modèle extractiviste terrestre décline."
+      }
+     ]
+    },
+    {
+     "slug": "amazonie_pacte_vert_fortress_world",
+     "changements": []
+    },
+    {
+     "slug": "anba_siege_atlantique_fortress_world",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "mature",
+       "lien": "variable",
+       "lien_detail": "frontieres_du_systeme (-27.7 points) : la sécurisation des accès protégés perd de sa centralité lorsque les frontières perdent leur importance globale.",
+       "contredit": "",
+       "raison": "La fiche la décrit comme dominante ; la baisse de la fermeture fragilise son rôle de sécurisation des accès aux enclaves fortifiées."
+      }
+     ]
+    },
+    {
+     "slug": "anjali_raghavan_fortress_world",
+     "changements": []
+    },
+    {
+     "slug": "anton_vasko_fortress_world",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "obligatoire",
+       "apres": "marginal",
+       "lien": "relation",
+       "lien_detail": "les_recycleurs_fortress_world (déjà retenus comme déclinant à cause de l'élément) : Vasko est leur lieutenant exécutant ; leur déclin entraîne le sien.",
+       "contredit": "le statut 'ascendant' de Vasko alors que son organisation, les Recycleurs de Paris, décline avec l'abondance lunaire.",
+       "raison": "Il opère pour les Recycleurs qui perdent leur pertinence avec l'arrivée massive de métaux lunaires ; il ne peut rester ascendant et devient marginal."
+      }
+     ]
+    },
+    {
+     "slug": "appareils_d_etat_des_blocs_fermes_fortress_world",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "obligatoire",
+       "apres": "marginal",
+       "lien": "variable",
+       "lien_detail": "frontieres_du_systeme (-27.7 points) : les frontières dures perdent leur fondement économique avec l'abondance lunaire de platinoïdes.",
+       "contredit": "le statut 'émergent' alors que la fermeture des blocs chute de 27.7 points.",
+       "raison": "Leur rôle est de définir et maintenir les frontières dures entre blocs ; avec frontieres_du_systeme à -27.7, ils ne peuvent plus être émergents et passent à marginal."
+      }
+     ]
+    },
+    {
+     "slug": "archives_chiffrees_de_l_open_internet_coalition_fortress_world",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "obligatoire",
+       "apres": "marginal",
+       "lien": "variable",
+       "lien_detail": "frontieres_du_systeme (-27.7 points) : avec moins de contrôle frontalier, le besoin de communications clandestines pour contourner les blocages diminue.",
+       "contredit": "le statut 'émergent' alors que les frontières s'ouvrent (-27.7 points), réduisant la nécessité de réseaux chiffrés clandestins.",
+       "raison": "Elles servent d'épine dorsale aux résistances transnationales en contournant les frontières ; avec frontieres_du_systeme à -27.7, ces blocages diminuent et l'entité passe à marginal."
+      }
+     ]
+    },
+    {
+     "slug": "archives_diplomatiques_de_l_onu_eclat_fortress_world",
+     "changements": []
+    },
+    {
+     "slug": "aria_instance_fantome_fortress_world",
+     "changements": []
+    }
+   ]
+  }
+ },
+ "shackleton_platinoides_2052::fortress_world::1": {
+  "empreinte": "d7bc8eb8e2fa938a",
+  "date": "2026-11-15T17:49",
+  "brut": {
+   "fiches": [
+    {
+     "slug": "armada_logistique_nordique_fortress_world",
+     "changements": []
+    },
+    {
+     "slug": "assemblee_territoires_fortress_world",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "déclinant",
+       "lien": "variable",
+       "lien_detail": "dépend de la variable frontieres_du_systeme (-27.7 points) pour la coordination des zones tampons",
+       "contredit": "",
+       "raison": "La fragilisation des frontières du système réduit l'urgence sécuritaire de la coordination inter-blocs des territoires contestés."
+      }
+     ]
+    },
+    {
+     "slug": "aymeric_de_valfort_fortress_world",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "marginal",
+       "lien": "relation",
+       "lien_detail": "allié à ergo_wian_sovereign_holdings_fortress_world, entité directement touchée et déclinante",
+       "contredit": "",
+       "raison": "Le déclin d'Ergo-Wian Sovereign Dominion, fragilisé par l'abondance lunaire de platinoïdes, affaiblit la position de négociation d'Aymeric de Valfort."
+      }
+     ]
+    },
+    {
+     "slug": "bassora_couloir_refugies_fortress_world",
+     "changements": []
+    },
+    {
+     "slug": "biolock_agritech_fortress_world",
+     "changements": []
+    },
+    {
+     "slug": "bloc_atlantique_fortress_world",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "mature",
+       "lien": "variable",
+       "lien_detail": "dépend de la variable frontieres_du_systeme (-27.7 points) qui fonde son hermétisme",
+       "contredit": "",
+       "raison": "La baisse de la variable frontieres_du_systeme affaiblit la pertinence économique de l'espace hermétiquement délimité par le SMDA."
+      }
+     ]
+    },
+    {
+     "slug": "bloc_des_nations_non_alignees_residuelles_fortress_world",
+     "changements": []
+    },
+    {
+     "slug": "bloc_eurasiatique_occidental_fortress_world",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "mature",
+       "lien": "variable",
+       "lien_detail": "dépend de la variable frontieres_du_systeme (-27.7 points) qui fonde ses frontières climatiques hermétiques",
+       "contredit": "",
+       "raison": "La fragilisation des fermetures frontalières par l'abondance lunaire réduit la valeur stratégique de la Forteresse Eurasiatique Occidentale."
+      }
+     ]
+    },
+    {
+     "slug": "bloc_pacifique_nord_fortress_world",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "marginal",
+       "lien": "variable",
+       "lien_detail": "dépend de la variable energie_ressources_critiques (-29.2 points) pour sa stratégie d'accumulation de réserves",
+       "contredit": "",
+       "raison": "L'abondance lunaire de métaux critiques rend obsolète la capitalisation sur la rareté des réserves terrestres."
+      }
+     ]
+    },
+    {
+     "slug": "bunker_chambre_securite_territoriale_fortress_world",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "mature",
+       "lien": "variable",
+       "lien_detail": "dépend de la variable frontieres_du_systeme (-27.7 points) pour la défense des périmètres et les bouclages",
+       "contredit": "",
+       "raison": "La perte d'urgence des frontières du système affaiblit la légitimité des pouvoirs d'exception du Bunker."
+      }
+     ]
+    },
+    {
+     "slug": "bureau_des_territoires_residuels_fortress_world",
+     "changements": []
+    },
+    {
+     "slug": "bureau_gouvernance_algorithmique_fortress_world",
+     "changements": []
+    },
+    {
+     "slug": "bureau_territoires_residuels_fortress_world",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "mature",
+       "lien": "variable",
+       "lien_detail": "dépend de la variable frontieres_du_systeme (-27.7 points) pour la distinction entre zones récupérables et territoires abandonnés",
+       "contredit": "",
+       "raison": "L'ouverture forcée des frontières fragilise la pertinence de la classification des territoires résiduels."
+      }
+     ]
+    },
+    {
+     "slug": "bureaux_de_controle_frontalier_des_blocs_fermes_fortress_world",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "marginal",
+       "lien": "variable",
+       "lien_detail": "dépend de la variable frontieres_du_systeme (-27.7 points) pour le monopole sur les passages frontaliers",
+       "contredit": "",
+       "raison": "La fragilisation des frontières du système rend le monopole total sur les passages frontaliers moins pertinent."
+      }
+     ]
+    },
+    {
+     "slug": "campements_seuils_fermes_fortress_world",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "disparu",
+       "lien": "variable",
+       "lien_detail": "dépend de la variable frontieres_du_systeme (-27.7 points) qui fonde l'existence des seuils comme points de contrôle",
+       "contredit": "",
+       "raison": "La perte de fonction des seuils frontaliers due à l'abondance lunaire entraîne la disparition des campements établis à ces checkpoints."
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "shackleton_platinoides_2052::fortress_world::2": {
+  "empreinte": "6b383b3b28cf638a",
+  "date": "2026-11-15T17:55",
+  "brut": {
+   "fiches": [
+    {
+     "slug": "cartels_energetiques_des_bioreacteurs_fortress_world",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "déclinant",
+       "lien": "variable",
+       "lien_detail": "energie_ressources_critiques (-29.2) : l'abondance lunaire de platinoïdes réduit la crise globale des ressources critiques, diminuant la dépendance des enclaves aux contrats d'exclusivité énergétique des bioréacteurs",
+       "contredit": "",
+       "raison": "la fiche affirme que les cartels conditionnent la survie des enclaves à leurs contrats ; avec la diminution de la crise des ressources critiques, cette condition de survie s'atténue"
+      }
+     ]
+    },
+    {
+     "slug": "cartels_miniers_militarises_subsahariens_fortress_world",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "obligatoire",
+       "apres": "déclinant",
+       "lien": "variable",
+       "lien_detail": "energie_ressources_critiques (-29.2) : l'extraction massive de platinoïdes lunaires rend le pillage minier terrestre économiquement non compétitif",
+       "contredit": "ils sont à la fois le sale secret et la condition de survie des blocs",
+       "raison": "avec l'abondance lunaire de métaux critiques, les blocs ne dépendent plus du pillage subsaharien pour leur survie, rendant cette affirmation fausse"
+      },
+      {
+       "type": "relation",
+       "niveau": "obligatoire",
+       "cible": "complexes_militaro_industriels_de_gestion_des_ressources_fortress_world",
+       "relation": "opposition",
+       "action": "nouvelle",
+       "lien": "relation",
+       "lien_detail": "les complexes militaro-industriels deviennent les gestionnaires des métaux lunaires et entrent en concurrence directe avec les cartels pour le contrôle des ressources critiques",
+       "contredit": "",
+       "raison": "la perte du monopole terrestre des métaux critiques par les cartels crée nécessairement une opposition avec les nouveaux acteurs de la chaîne d'extraction lunaire"
+      }
+     ]
+    },
+    {
+     "slug": "cellules_mouvement_commun_midwest_fortress_world",
+     "changements": []
+    },
+    {
+     "slug": "cellules_universitaires_dissidentes_des_zones_tampons_fortress_world",
+     "changements": []
+    },
+    {
+     "slug": "centre_controle_orbital_helios_fortress_world",
+     "changements": []
+    },
+    {
+     "slug": "cliniques_de_deaugmentation_independantes_fortress_world",
+     "changements": []
+    },
+    {
+     "slug": "coalition_arctique_des_blocs_continentaux_fortress_world",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "territoire",
+       "lien_detail": "l'Arctique devient le hub stratégique d'accès à la Lune pour l'extraction des platinoïdes de Shackleton, renforçant l'importance de la coalition qui cherche à contrôler ces routes et ressources",
+       "contredit": "",
+       "raison": "la fiche décrit une volonté de soustraire les routes arctiques au contrôle privé ; avec l'importance lunaire, cette volonté gagne en pertinence stratégique"
+      }
+     ]
+    },
+    {
+     "slug": "coalition_vivant_fortress_world",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "déclinant",
+       "lien": "variable",
+       "lien_detail": "climat_environnement_global (-2.0) : la réduction de l'extraction minière terrestre grâce aux métaux lunaires améliore légèrement le climat global, réduisant l'urgence de la lutte écologique",
+       "contredit": "",
+       "raison": "la fiche décrit une organisation luttant contre la dégradation des zones abandonnées ; avec l'amélioration climatique, sa mobilisation perd de sa pertinence"
+      }
+     ]
+    },
+    {
+     "slug": "coalitions_des_deplaces_et_apatrides_fortress_world",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "déclinant",
+       "lien": "variable",
+       "lien_detail": "frontieres_du_systeme (-27.7) : la fragilisation des fermetures frontalières réduit l'exclusion systématique qui fonde la mobilisation de la coalition",
+       "contredit": "",
+       "raison": "la fiche décrit une résistance aux logiques de fermeture et de tri migratoire ; avec l'ouverture des frontières, cette résistance perd de sa base"
+      }
+     ]
+    },
+    {
+     "slug": "coalitions_geopolitiques_d_infiltration_des_modeles_climatiques_fortress_world",
+     "changements": []
+    },
+    {
+     "slug": "collectifs_d_ingenieurs_dissidents_anti_militarisation_fortress_world",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "energie_ressources_critiques (-29.2) : l'extraction lunaire militarisée (robots lunaires, contrôle orbital des accès) crée de nouveaux enjeux de militarisation technologique auxquels les collectifs s'opposent",
+       "contredit": "",
+       "raison": "la fiche décrit une friction contre la militarisation technologique ; la militarisation de l'espace lunaire élargit leur champ d'action et leur pertinence"
+      }
+     ]
+    },
+    {
+     "slug": "collectifs_de_reappropriation_energetique_peripherique_fortress_world",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "déclinant",
+       "lien": "variable",
+       "lien_detail": "energie_ressources_critiques (-29.2) : l'abondance de métaux critiques lunaires réduit la valeur stratégique du monopole énergétique des zones protégées que les collectifs cherchent à éroder",
+       "contredit": "",
+       "raison": "la fiche décrit une érosion du monopole énergétique ; avec la diminution de la crise des ressources critiques, ce monopole perd de son pouvoir de nuisance"
+      }
+     ]
+    },
+    {
+     "slug": "collectifs_du_seuil_fortress_world",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "déclinant",
+       "lien": "variable",
+       "lien_detail": "frontieres_du_systeme (-27.7) : l'effondrement de la logique de confinement frontalier prive les communautés millénaristes de leur fondement paradoxal",
+       "contredit": "",
+       "raison": "la fiche décrit des communautés qui ont retourné la logique du confinement contre ses auteurs ; si le confinement s'effondre, leur identité s'affaiblit"
+      }
+     ]
+    },
+    {
+     "slug": "commandement_strategique_des_matieres_critiques_atlantique_fortress_world",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "déclinant",
+       "lien": "variable",
+       "lien_detail": "energie_ressources_critiques (-29.2) : l'abondance lunaire de platinoïdes réduit la rareté des matières critiques, diminuant la nécessité d'un arbitrage autoritaire strict entre États membres",
+       "contredit": "",
+       "raison": "la fiche affirme qu'il arbitre les tensions sur l'accès aux ressources ; avec l'abondance, ces tensions diminuent et son rôle d'arbitrage perd de son urgence"
+      }
+     ]
+    },
+    {
+     "slug": "commandements_logistiques_peripheriques_du_bloc_eurasien_central_fortress_world",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "déclinant",
+       "lien": "variable",
+       "lien_detail": "frontieres_du_systeme (-27.7) : la fragilisation des fermetures frontalières réduit la nécessité de la tenue militaire des frontières et des corridors logistiques stratégiques",
+       "contredit": "",
+       "raison": "la fiche décrit un rôle de tenue des frontières forteresses ; avec l'ouverture du système, ce rôle s'atténue"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "shackleton_platinoides_2052::fortress_world::3": {
+  "empreinte": "380b8b458e2fd8b1",
+  "date": "2026-11-15T17:58",
+  "brut": {
+   "fiches": [
+    {
+     "slug": "communautes_deplacees_hors_quota_migratoire_fortress_world",
+     "changements": []
+    },
+    {
+     "slug": "complexe_orentchev_almaty_fortress_world",
+     "changements": []
+    },
+    {
+     "slug": "complexes_militaro_industriels_de_gestion_des_ressources_fortress_world",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "obligatoire",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "energie_ressources_critiques (-29.2 points) : l'arrivée massive de platinoïdes lunaires sur le marché rend ces complexes incontournables pour sécuriser, stocker et redistribuer les nouveaux métaux critiques",
+       "contredit": "le dépôt de Shackleton casse la logique de rareté terrestre ; sans ce changement, la trajectoire 'émergent' est fausse car ces complexes deviennent le canal obligé de la nouvelle abondance",
+       "raison": "ils passent de simples gestionnaires de ressources rares à des acteurs centraux de la distribution des métaux lunaires"
+      },
+      {
+       "type": "relation",
+       "niveau": "obligatoire",
+       "cible": "cartels_miniers_militarises_subsahariens_fortress_world",
+       "relation": "opposition",
+       "action": "nouvelle",
+       "lien": "relation",
+       "lien_detail": "cartels_miniers_militarises_subsahariens_fortress_world perdent leur pouvoir de rareté avec l'abondance lunaire, créant une rivalité structurelle avec les complexes qui contrôlent désormais la distribution des métaux critiques",
+       "contredit": "l'élément rend impossible l'absence d'opposition entre ces deux acteurs : les cartels déclinent précisément parce que les complexes prennent le relais sur la gestion des ressources",
+       "raison": "la substitution des métaux terrestres par les métaux lunaires oppose directement les anciens maîtres de la rareté aux nouveaux gestionnaires de l'abondance"
+      }
+     ]
+    },
+    {
+     "slug": "conglomerats_industriels_d_etat_des_augmentations_proprietaires_fortress_world",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "systeme_economique_redistribution (+22.7 points) : l'abondance de métaux critiques lunaires permet de produire massivement des augmentations, élargissant leur base de distribution malgré la fragilisation des frontières",
+       "contredit": "",
+       "raison": "avec des matériaux abondants, le coût des augmentations baisse et leur diffusion s'accélère, renforçant le poids de ces conglomérats même si le lien avec les frontières s'affaiblit"
+      }
+     ]
+    },
+    {
+     "slug": "conseil_moscou_est_fortress_world",
+     "changements": []
+    },
+    {
+     "slug": "conseil_regulation_algorithmique_fortress_world",
+     "changements": []
+    },
+    {
+     "slug": "conseil_regulation_ressources_fortress_world",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "résiduel",
+       "lien": "variable",
+       "lien_detail": "energie_ressources_critiques (-29.2 points) : avec l'abondance lunaire, l'arbitrage de la rareté des ressources terrestres perd toute pertinence économique, vidant la CARS de sa fonction",
+       "contredit": "",
+       "raison": "une chambre d'arbitrage des ressources souveraines devient superflue quand les ressources critiques ne sont plus rares grâce à la Lune"
+      }
+     ]
+    },
+    {
+     "slug": "consortium_africain_de_biotechnologies_sociales_fortress_world",
+     "changements": []
+    },
+    {
+     "slug": "consortium_amazonia_viva_fortress_world",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "émergent",
+       "lien": "variable",
+       "lien_detail": "energie_ressources_critiques (-29.2 points) : l'abondance de terres rares lourdes lunaires réduit la pression extractiviste sur l'Amazonie, affaiblissant la menace qui pesait sur le Pacte Vert",
+       "contredit": "",
+       "raison": "moins de convoitement minier sur les gisements amazoniens signifie moins de pression militaire et économique contre la souveraineté des gardiens"
+      }
+     ]
+    },
+    {
+     "slug": "consortium_des_blocs_solaires_orbitaux_concurrents_fortress_world",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "energie_ressources_critiques (-29.2 points) : l'extraction massive sur la Lune nécessite une énergie colossale, rendant les blocs solaires orbitaux indispensables au fonctionnement de l'économie lunaire",
+       "contredit": "",
+       "raison": "la viabilité de l'extraction de Shackleton dépend de l'approvisionnement énergétique orbital, donnant un poids stratégique nouveau à ces consortiums"
+      }
+     ]
+    },
+    {
+     "slug": "consortium_des_medias_d_etat_souverains_hegemonia_press_xinhua_fortifiee_eurovox_integral_fortress_world",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "marginal",
+       "lien": "variable",
+       "lien_detail": "frontieres_du_systeme (-27.7 points) : la fragilisation des fermetures frontalières par l'abondance lunaire réduit la pertinence du discours légitimant les frontières dures que ce consortium produit",
+       "contredit": "",
+       "raison": "quand la sécurisation territoriale perd son urgence économique, la propagande justifiant les blocages frontaliers perd de son efficacité"
+      }
+     ]
+    },
+    {
+     "slug": "consortium_des_pecheries_autonomes_du_grand_nord_fortress_world",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "dominant",
+       "lien": "territoire",
+       "lien_detail": "espace_nordique_arctique : la lecture retenue établit que l'Arctique devient le centre de la nouvelle aristocratie spatiale contrôlant l'accès à la Lune, renforçant la position de l'AGA dans cette zone",
+       "contredit": "",
+       "raison": "le contrôle des voies d'accès spatiales depuis l'Arctique confère aux acteurs locaux comme l'AGA un poids géopolitique nouveau lié au commerce lunaire"
+      }
+     ]
+    },
+    {
+     "slug": "consortium_eurasiatique_des_ressources_fermees_fortress_world",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "obligatoire",
+       "apres": "déclinant",
+       "lien": "variable",
+       "lien_detail": "energie_ressources_critiques (-29.2 points) : l'abondance de platinoïdes lunaires rend obsolète la stratégie de verrouillage des ressources terrestres qui fondait ce consortium",
+       "contredit": "le dépôt de Shackleton rend la trajectoire 'émergent' fausse : avec des métaux critiques abondants venus de l'espace, la fermeture des ressources terrestres perd son fondement économique et le consortium s'effondre",
+       "raison": "la logique de rareté qui justifiait le consortium eurasiatique des ressources fermées est directement annulée par l'offre lunaire massive"
+      }
+     ]
+    },
+    {
+     "slug": "consortium_helios_fortress_world",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "energie_ressources_critiques (-29.2 points) : l'extraction lunaire à grande échelle exige un approvisionnement énergétique massif que seul un quasi-État énergétique comme Helios BSE peut garantir",
+       "contredit": "",
+       "raison": "malgré sa fracture, la branche survivante retrouve une centralité en fournissant l'énergie nécessaire aux robots lunaires de Shackleton"
+      }
+     ]
+    },
+    {
+     "slug": "consortium_sino_finlandais_de_flotte_autonome_fortress_world",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "territoire",
+       "lien_detail": "corridor_arctique_transit : la lecture retenue fait de l'Arctique le pivot de l'aristocratie spatiale ; ce corridor devient la voie maritime privilégiée pour acheminer les métaux lunaires vers les blocs terrestres",
+       "contredit": "",
+       "raison": "le transport des platinoïdes de Shackleton vers les zones de consommation passe nécessairement par les routes arctiques que ce consortium contrôle"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "shackleton_platinoides_2052::fortress_world::4": {
+  "empreinte": "2d59d9d0f1fcb291",
+  "date": "2026-11-15T18:00",
+  "brut": {
+   "fiches": [
+    {
+     "slug": "consortiums_de_defense_orbitale_prives_fortress_world",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "energie_ressources_critiques (-29.2) : l'extraction massive des platinoïdes de Shackleton rend l'accès orbital indispensable au flux des métaux critiques",
+       "contredit": "",
+       "raison": "Le contrôle de l'orbite devient le goulot d'étranglement stratégique de l'approvisionnement en métaux lunaires, renforçant le poids des consortiums qui le détiennent."
+      }
+     ]
+    },
+    {
+     "slug": "consortiums_energetiques_du_bloc_ourrassol_fortress_world",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "obligatoire",
+       "extrait": "conditionnant l'accès aux ressources comme levier de pouvoir géopolitique",
+       "contredit": "Les métaux critiques arrivent en masse depuis la Lune dès 2055, supprimant la rareté qui fondait ce levier de pouvoir",
+       "lien": "variable",
+       "lien_detail": "energie_ressources_critiques (-29.2) : l'abondance lunaire de platinoïdes casse la logique de rareté des ressources critiques",
+       "raison": "L'affirmation d'un levier de pouvoir fondé sur le contrôle de l'accès aux ressources devient fausse lorsque ces ressources deviennent abondantes via l'extraction lunaire."
+      },
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "déclinant",
+       "lien": "variable",
+       "lien_detail": "energie_ressources_critiques (-29.2) : la perte du levier sur les ressources critiques affaiblit leur position de piliers du repli souverain",
+       "contredit": "",
+       "raison": "La sécurisation de l'autonomie énergétique reste vraie, mais leur rôle de conditionnement des ressources perd son urgence économique avec l'abondance lunaire."
+      }
+     ]
+    },
+    {
+     "slug": "contrats_de_service_d_ergo_wian_fortress_world",
+     "changements": []
+    },
+    {
+     "slug": "contrebandiers_energetiques_des_zones_grises_fortress_world",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "déclinant",
+       "lien": "variable",
+       "lien_detail": "frontieres_du_systeme (-27.7) : l'ouverture partielle des frontières fragilise les monopoles énergétiques que les contrebandiers contournent",
+       "contredit": "",
+       "raison": "L'affaiblissement des fermetures frontalières réduit l'écart entre économie légale et souterraine, diminuant l'utilité des contrebandiers."
+      }
+     ]
+    },
+    {
+     "slug": "corps_des_inspecteurs_de_conformite_inter_blocs_fortress_world",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "déclinant",
+       "lien": "variable",
+       "lien_detail": "frontieres_du_systeme (-27.7) : l'intensification légale des flux de métaux lunaires entre blocs réduit la pertinence du verrou contre les flux illicites",
+       "contredit": "",
+       "raison": "Avec l'ouverture des frontières pour les métaux critiques lunaires, le contrôle strict des échanges perd de sa justification institutionnelle."
+      }
+     ]
+    },
+    {
+     "slug": "corridors_gris_asie_centrale_fortress_world",
+     "changements": []
+    },
+    {
+     "slug": "datacenters_conseil_eurasiatique_fortress_world",
+     "changements": []
+    },
+    {
+     "slug": "deepfield_institute_fortress_world",
+     "changements": []
+    },
+    {
+     "slug": "directive_kontinuum_fortress_world",
+     "changements": []
+    },
+    {
+     "slug": "dispositifs_de_surveillance_numerique_souveraine_fortress_world",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "déclinant",
+       "lien": "variable",
+       "lien_detail": "frontieres_du_systeme (-27.7) : l'ouverture physique des frontières affaiblit la justification de la fragmentation numérique souveraine",
+       "contredit": "",
+       "raison": "La logique de cloisonnement numérique perd de sa pertinence lorsque les frontières du système s'ouvrent partiellement aux flux de ressources lunaires."
+      }
+     ]
+    },
+    {
+     "slug": "dissidences_internes_aux_blocs_minoritaires_fortress_world",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "frontieres_du_systeme (-27.7) : l'affaiblissement des fermetures frontalières fragilise la cohésion des blocs et légitime les revendications d'autonomie",
+       "contredit": "",
+       "raison": "La perte d'urgence économique de la sécurisation territoriale fragilise l'autorité des directions officielles et renforce les dissidences internes."
+      }
+     ]
+    },
+    {
+     "slug": "divisions_concurrentes_nexus_biosyn_fortress_world",
+     "changements": []
+    },
+    {
+     "slug": "dr_ananya_rao_fortress_world",
+     "changements": []
+    },
+    {
+     "slug": "ergo_wian_sovereign_holdings_fortress_world",
+     "changements": []
+    },
+    {
+     "slug": "etats_forteresses_sous_contrat_de_souverainete_biologique_fortress_world",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "déclinant",
+       "lien": "variable",
+       "lien_detail": "frontieres_du_systeme (-27.7) : l'ouverture des frontières pour les métaux lunaires rend la membrane biologique frontalière moins pertinente comme outil d'exclusion",
+       "contredit": "",
+       "raison": "La logique d'exclusion biologique perd de son urgence lorsque les frontières s'ouvrent aux flux de ressources critiques lunaires."
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "shackleton_platinoides_2052::fortress_world::5": {
+  "empreinte": "25b544b2bd954830",
+  "date": "2026-11-15T18:04",
+  "brut": {
+   "fiches": [
+    {
+     "slug": "executif_militaro_civil_du_regime_fortress_world",
+     "changements": []
+    },
+    {
+     "slug": "factions_anti_privatisation_des_voies_souveraines_scandinaves_fortress_world",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "territoire",
+       "lien_detail": "L'espace nordique arctique devient le centre de la nouvelle aristocratie spatiale créée par le contrôle de l'accès lunaire, rendant les voies souveraines scandinaves critiques pour l'extraction de Shackleton.",
+       "contredit": "",
+       "raison": "La valeur stratégique des voies arctiques augmente avec l'élément, renforçant la pertinence de leur combat contre la privatisation des accès territoriaux."
+      },
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "kalaallit_nunaat_sovereign_fund_fortress_world",
+       "relation": "opposition",
+       "action": "nouvelle",
+       "lien": "territoire",
+       "lien_detail": "Kalaallit Nunaat (Groenland) incarne l'aristocratie spatiale arctique émergente qui concentre le pouvoir sur l'accès à la Lune et la distribution des métaux critiques.",
+       "contredit": "",
+       "raison": "Les factions anti-privatisation entrent en opposition avec le fonds souverain arctique qui menace de privatiser ou monopoliser les voies d'accès lunaires."
+      }
+     ]
+    },
+    {
+     "slug": "factions_dissidentes_du_consortium_helios_fortress_world",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "energie_ressources_critiques (-29.2 points) : l'abondance lunaire de platinoïdes fragilise la logique de rareté énergétique qui fondait le Consortium Helios.",
+       "contredit": "",
+       "raison": "Les failles institutionnelles du Consortium s'agrandissent avec la remise en cause de la souveraineté militarisée sur les ressources critiques, renforçant la dissidence endogène."
+      }
+     ]
+    },
+    {
+     "slug": "factions_djihadistes_logistiques_d_asie_centrale_fortress_world",
+     "changements": []
+    },
+    {
+     "slug": "factions_internes_pro_autarcie_totale_fortress_world",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "déclinant",
+       "lien": "variable",
+       "lien_detail": "systeme_economique_redistribution (+22.7 points) : l'arrivée massive de métaux critiques lunaires sur le marché mondial favorise la redistribution et la coopération inter-blocs.",
+       "contredit": "",
+       "raison": "L'autarcie intégrale perd sa justification économique avec l'abondance lunaire, affaiblissant la pertinence de ces factions qui exigent la fermeture totale."
+      }
+     ]
+    },
+    {
+     "slug": "factions_traditionalistes_du_mandat_electif_fortress_world",
+     "changements": []
+    },
+    {
+     "slug": "front_resilient_pro_systeme_fortress_world",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "déclinant",
+       "lien": "variable",
+       "lien_detail": "frontieres_du_systeme (-27.7 points) : l'élément fragilise la logique de fermeture des blocs qui fonde l'ordre établi que ce front légitimise.",
+       "contredit": "",
+       "raison": "Le discours de résilience compatible avec l'enclavement perd de sa force persuasive lorsque la rareté des ressources ne justifie plus la fermeture des frontières."
+      }
+     ]
+    },
+    {
+     "slug": "gelecek_meclisi_fortress_world",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "dominant",
+       "lien": "variable",
+       "lien_detail": "frontieres_du_systeme (-27.7 points) et systeme_economique_redistribution (+22.7 points) : l'élément favorise l'ouverture et la redistribution, rendant le forum de négociation inter-blocs plus central.",
+       "contredit": "",
+       "raison": "Avec la fragilisation des blocs fermés et l'abondance lunaire, l'assemblée fragmentaire devient le lieu incontournable de négociation des issues communes entre blocs et zones grises."
+      }
+     ]
+    },
+    {
+     "slug": "geneve_bunker_fortress_world",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "Elle contrôle l'accès aux ressources et à la protection pour une élite mondiale",
+       "contredit": "",
+       "lien": "variable",
+       "lien_detail": "energie_ressources_critiques (-29.2 points) : l'abondance de platinoïdes lunaires réduit la valeur stratégique du contrôle des ressources terrestres rares.",
+       "raison": "Le contrôle des ressources perd de son urgence économique avec l'arrivée massive de métaux critiques lunaires, bien que le contrôle de la protection climatique reste pertinent."
+      }
+     ]
+    },
+    {
+     "slug": "gouvernance_ia_de_l_archipel_petrolier_fortress_world",
+     "changements": []
+    },
+    {
+     "slug": "grille_aria_fortress_world",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "gérant l'allocation des ressources critiques — énergie, eau, calories, soins — selon une logique de souveraineté militarisée",
+       "contredit": "",
+       "lien": "variable",
+       "lien_detail": "energie_ressources_critiques (-29.2 points) : l'abondance lunaire de platinoïdes et terres rares lourdes casse la logique de rareté qui justifiait la souveraineté militarisée sur ces métaux.",
+       "raison": "La logique de souveraineté militarisée pour l'allocation des platinoïdes devient économiquement obsolète avec leur abondance lunaire, bien qu'elle persiste pour d'autres ressources."
+      }
+     ]
+    },
+    {
+     "slug": "guilhelma_fortress_world",
+     "changements": []
+    },
+    {
+     "slug": "holdfast_fortress_world",
+     "changements": []
+    },
+    {
+     "slug": "hyphan_raghavan_fortress_world",
+     "changements": []
+    },
+    {
+     "slug": "ilse_varga_holm_fortress_world",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "dominant",
+       "lien": "variable",
+       "lien_detail": "systeme_economique_redistribution (+22.7 points) : la redistribution des métaux critiques lunaires passe par les seuils et zones grises où opère l'économie informelle.",
+       "contredit": "",
+       "raison": "Le rôle de gestionnaire des seuils dans la distribution des métaux critiques extraits de Shackleton renforce la position d'Ilse Varga-Holm dans l'économie informelle des zones de friction."
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "shackleton_platinoides_2052::fortress_world::6": {
+  "empreinte": "c404460a9e41a9b1",
+  "date": "2026-11-15T18:08",
+  "brut": {
+   "fiches": [
+    {
+     "slug": "instances_aria_concurrentes_des_blocs_rivaux_fortress_world",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "relation",
+       "lien_detail": "allié complexes_militaro_industriels_de_gestion_des_ressources_fortress_world qui devient ascendant et concentre le contrôle de la distribution des métaux critiques lunaires",
+       "contredit": "",
+       "raison": "la gestion de l'accès à la Lune et des flux de platinoïdes exige des IA de pilotage stratégique supérieures, renforçant la course aux armements cognitifs entre blocs rivaux"
+      }
+     ]
+    },
+    {
+     "slug": "institut_des_seuils_demographiques_fortress_world",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "déclinant",
+       "lien": "variable",
+       "lien_detail": "frontieres_du_systeme (-27.7 points)",
+       "contredit": "",
+       "raison": "la fragilisation des fermetures frontalières réduit l'urgence économique du verrouillage démographique strict que le SIDCB exerce"
+      }
+     ]
+    },
+    {
+     "slug": "institutions_multilaterales_residuelles_fortress_world",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "frontieres_du_systeme (-27.7 points) et systeme_economique_redistribution (+22.7 points)",
+       "contredit": "",
+       "raison": "l'ouverture partielle des frontières et la redistribution des métaux lunaires créent un espace de coordination multilatérale que ces institutions peuvent occuper"
+      }
+     ]
+    },
+    {
+     "slug": "internationale_des_semenciers_agro_pirates_fortress_world",
+     "changements": []
+    },
+    {
+     "slug": "internationale_travailleurs_augmentes_fortress_world",
+     "changements": []
+    },
+    {
+     "slug": "ironclad_logistics_fortress_world",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "déclinant",
+       "lien": "variable",
+       "lien_detail": "frontieres_du_systeme (-27.7 points)",
+       "contredit": "",
+       "raison": "la fragilisation des fermetures frontalières diminue la criticité stratégique des corridors inter-blocs que ISC contrôle exclusivement"
+      }
+     ]
+    },
+    {
+     "slug": "kalaallit_nunaat_sovereign_fund_fortress_world",
+     "changements": []
+    },
+    {
+     "slug": "la_garde_du_seuil_fortress_world",
+     "changements": []
+    },
+    {
+     "slug": "le_temoin_fortress_world",
+     "changements": []
+    },
+    {
+     "slug": "les_cycles_fortress_world",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "obligatoire",
+       "apres": "déclinant",
+       "lien": "relation",
+       "lien_detail": "allié les_recycleurs_fortress_world qui passe obligatoirement de dominant à déclinant",
+       "contredit": "l'extraction lunaire viable dès 2055 déverse des métaux critiques en masse sur le marché mondial, rendant le recyclage terrestre non compétitif et faisant décliner les Recycleurs dont les Cycles sont le cœur économique",
+       "raison": "les Cycles de Paris sont définis comme le cœur économique des Recycleurs ; le déclin de ces derniers entraîne mécaniquement celui des Cycles"
+      }
+     ]
+    },
+    {
+     "slug": "les_dedoubles_fortress_world",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "relation",
+       "lien_detail": "rival alpha47_fortress_world qui passe de mature à déclinant",
+       "contredit": "",
+       "raison": "le déclin du complexe minier Alpha47 réduit la traque des Dédoublés par Ergo-Wian, leur permettant de circuler plus librement et de gagner en influence"
+      }
+     ]
+    },
+    {
+     "slug": "les_gardiens_des_corridors_hybrides_fortress_world",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "déclinant",
+       "lien": "variable",
+       "lien_detail": "frontieres_du_systeme (-27.7 points)",
+       "contredit": "",
+       "raison": "l'ouverture des frontières fragilise la logique de contrôle des corridors entre blocs hermétiques que les CSH assurent"
+      }
+     ]
+    },
+    {
+     "slug": "les_gardiens_des_noeuds_hybrides_fortress_world",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "déclinant",
+       "lien": "variable",
+       "lien_detail": "frontieres_du_systeme (-27.7 points)",
+       "contredit": "",
+       "raison": "la diminution des fermetures frontalières réduit les points de friction entre blocs où le NSH maintient les infrastructures critiques"
+      }
+     ]
+    },
+    {
+     "slug": "les_recycleurs_fortress_world",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "obligatoire",
+       "apres": "déclinant",
+       "lien": "variable",
+       "lien_detail": "energie_ressources_critiques (-29.2 points) et systeme_economique_redistribution (+22.7 points)",
+       "contredit": "les métaux critiques extraits du cratère de Shackleton arrivent en masse sur le marché mondial dès 2055, rendant la sécurisation territoriale des métaux rares terrestres non prioritaire",
+       "raison": "l'abondance de platinoïdes lunaires rend le recyclage des ruines économiquement non compétitif, affaiblissant le pouvoir de négociation et la loi des Ferrailleurs sur les métaux rares"
+      }
+     ]
+    },
+    {
+     "slug": "les_veilleurs_des_nappes_phreatiques_fortress_world",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "dominant",
+       "lien": "variable",
+       "lien_detail": "frontieres_du_systeme (-27.7 points)",
+       "contredit": "",
+       "raison": "la fragilisation des fermetures frontalières limite la capacité des blocs souverains à accaparer les ressources hydriques, renforçant le rôle protecteur des Sentinelles des Aquifères"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "shackleton_platinoides_2052::fortress_world::7": {
+  "empreinte": "7e7a935ce341ad2a",
+  "date": "2026-11-15T18:12",
+  "brut": {
+   "fiches": [
+    {
+     "slug": "les_veilleurs_du_fleuve_fortress_world",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "mature",
+       "lien": "variable",
+       "lien_detail": "dépend de energie_ressources_critiques (-29.2 points) : avec l'abondance lunaire de métaux critiques, la crise des ressources s'atténue et la protection des veines terrestres perd de son urgence stratégique",
+       "contredit": "",
+       "raison": "la baisse massive de la crise des ressources critiques réduit l'importance de leur rôle de protection des ressources vitales dans les zones abandonnées"
+      }
+     ]
+    },
+    {
+     "slug": "malo_fortress_world",
+     "changements": []
+    },
+    {
+     "slug": "marches_gris_casablanca_fortress_world",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "déclinant",
+       "lien": "variable",
+       "lien_detail": "dépend de frontieres_du_systeme (-27.7 points) : l'ouverture des frontières réduit les asymétries réglementaires entre zones surveillées et zones grises que les Marchés Gris exploitent",
+       "contredit": "",
+       "raison": "la fragilisation des fermetures frontalières diminue le volume des interstices réglementaires dont dépend leur modèle économique"
+      }
+     ]
+    },
+    {
+     "slug": "marches_gris_tbilissi_fortress_world",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "mature",
+       "lien": "variable",
+       "lien_detail": "dépend de frontieres_du_systeme (-27.7 points) : l'ouverture des murs climatiques réduit les interstices où ils assurent la circulation illicite",
+       "contredit": "",
+       "raison": "la baisse de la fermeture du système fragilise leur rôle de passeurs entre enclaves et zones abandonnées"
+      }
+     ]
+    },
+    {
+     "slug": "milices_de_piraterie_logistique_arctique_fortress_world",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "obligatoire",
+       "extrait": "ils parasitent les corridors d'approvisionnement arctiques que les puissances forteresses ne peuvent ou ne veulent pas sécuriser",
+       "contredit": "avec le dépôt de Shackleton, l'Arctique devient la voie d'accès stratégique à la Lune et les puissances forteresses cherchent désormais à sécuriser ces corridors pour contrôler les métaux critiques lunaires",
+       "lien": "territoire",
+       "lien_detail": "zone corridor_arctique_transit ; l'élément crée une aristocratie spatiale centrée sur l'Arctique, rendant les corridors arctiques vitaux pour l'accès lunaire",
+       "raison": "l'élément rend l'Arctique stratégique, donc l'affirmation selon laquelle les puissances ne veulent pas sécuriser ces corridors devient fausse"
+      }
+     ]
+    },
+    {
+     "slug": "milices_privees_de_protection_des_sites_germinaux_fortress_world",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "relation",
+       "lien_detail": "alliée de complexes_militaro_industriels_de_gestion_des_ressources_fortress_world, entité devenue ascendante à cause de l'élément (contrôle de la distribution des métaux lunaires)",
+       "contredit": "",
+       "raison": "leur alliance avec les complexes militaro-industriels ascendants renforce leur position dans l'ordre biopolitique"
+      }
+     ]
+    },
+    {
+     "slug": "mouvement_commun_midwest_fortress_world",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "mature",
+       "lien": "variable",
+       "lien_detail": "dépend de frontieres_du_systeme (-27.7 points) : l'ouverture des frontières réduit l'exclusion des populations hors des murs, diminuant la pertinence de leur combat pour l'accès aux zones protégées",
+       "contredit": "",
+       "raison": "la fragilisation des fermetures frontalières atténue la fracture entre zones protégées et zones abandonnées que le mouvement dénonce"
+      }
+     ]
+    },
+    {
+     "slug": "mouvement_de_reconquete_europeenne_fortress_world",
+     "changements": []
+    },
+    {
+     "slug": "mouvement_des_communes_du_rust_belt_fortress_world",
+     "changements": []
+    },
+    {
+     "slug": "neurosentry_fortress_world",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "mature",
+       "lien": "variable",
+       "lien_detail": "dépend de energie_ressources_critiques (-29.2 points) : avec l'abondance lunaire, le scoring comportemental pour l'accès aux ressources perd de sa valeur critique de contrôle",
+       "contredit": "",
+       "raison": "la résolution partielle de la crise des ressources critiques réduit l'importance stratégique du contrôle algorithmique de l'accès aux ressources"
+      }
+     ]
+    },
+    {
+     "slug": "nexcore_atlantique_infrastructure_fortress_world",
+     "changements": [
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "armada_logistique_nordique_fortress_world",
+       "relation": "alliance",
+       "action": "nouvelle",
+       "lien": "relation",
+       "lien_detail": "armada_logistique_nordique_fortress_world est directement touchée par l'élément (alliance nouvelle retenue avec Nexcore pour sécuriser les voies arctiques lunaires)",
+       "contredit": "",
+       "raison": "l'élément crée une alliance entre Nexcore Atlantique Infrastructure et l'Armada Logistique Nordique pour contrôler les corridors arctiques vers la Lune"
+      },
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "mature",
+       "lien": "variable",
+       "lien_detail": "dépend de frontieres_du_systeme (-27.7 points) : l'ouverture des frontières fragilise son rôle d'exploitant des infrastructures de séparation climatique",
+       "contredit": "",
+       "raison": "la baisse de la fermeture du système réduit l'importance des murs climatiques qu'il construit et gère"
+      }
+     ]
+    },
+    {
+     "slug": "nexcore_fortress_world",
+     "changements": []
+    },
+    {
+     "slug": "nexus_biosyn_division_eurasienne_fortress_world",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "mature",
+       "lien": "variable",
+       "lien_detail": "dépend de climat_environnement_global (-2.0 points) : la légère amélioration climatique réduit l'urgence de ses solutions de survie climatique et de filtration atmosphérique",
+       "contredit": "",
+       "raison": "la baisse de la crise climatique globale diminue la valeur stratégique de ses brevets de survie climatique"
+      }
+     ]
+    },
+    {
+     "slug": "nexus_biosyn_division_pacifique_fortress_world",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "mature",
+       "lien": "variable",
+       "lien_detail": "dépend de climat_environnement_global (-2.0 points) : la réduction de la crise climatique affaiblit la nécessité de ses corridors biotechnologiques de survie",
+       "contredit": "",
+       "raison": "l'amélioration climatique globale réduit la dépendance aux infrastructures de survie climatique qu'elle administre"
+      }
+     ]
+    },
+    {
+     "slug": "nexus_biosyn_fortress_world",
+     "changements": []
+    }
+   ]
+  }
+ },
+ "shackleton_platinoides_2052::fortress_world::8": {
+  "empreinte": "0b54c6a34a54ee8d",
+  "date": "2026-11-15T18:14",
+  "brut": {
+   "fiches": [
+    {
+     "slug": "oligarchies_technologiques_souveraines_d_infrastructure_de_calcul_fortress_world",
+     "changements": []
+    },
+    {
+     "slug": "operateurs_prives_de_transit_energetique_caucasien_centrasiatique_fortress_world",
+     "changements": []
+    },
+    {
+     "slug": "oracle_des_seuils_fortress_world",
+     "changements": []
+    },
+    {
+     "slug": "populations_des_zones_deficitaires_d_optimisation_fortress_world",
+     "changements": []
+    },
+    {
+     "slug": "raimon_fortress_world",
+     "changements": []
+    },
+    {
+     "slug": "rede_paulista_de_distribuicao_algoritmica_fortress_world",
+     "changements": []
+    },
+    {
+     "slug": "regimes_autoritaires_du_bloc_eurasiatique_occidental_fortress_world",
+     "changements": []
+    },
+    {
+     "slug": "reseau_des_cartographes_des_zones_grises_fortress_world",
+     "changements": []
+    },
+    {
+     "slug": "reseaux_d_echange_clandestin_inter_zones_fortress_world",
+     "changements": []
+    },
+    {
+     "slug": "reseaux_de_contrebande_energetique_transfrontaliere_fortress_world",
+     "changements": []
+    },
+    {
+     "slug": "reseaux_de_distribution_d_hydrogene_sous_contrat_militaire_fortress_world",
+     "changements": []
+    },
+    {
+     "slug": "reseaux_de_juristes_specialises_en_droit_corporel_souverain_fortress_world",
+     "changements": []
+    },
+    {
+     "slug": "reseaux_de_maintenance_d_infrastructures_critiques_hors_blocs_fortress_world",
+     "changements": []
+    },
+    {
+     "slug": "reseaux_de_passeurs_d_information_aux_frontieres_inter_blocs_fortress_world",
+     "changements": []
+    },
+    {
+     "slug": "reseaux_prives_de_securite_aux_frontieres_fortress_world",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "obligatoire",
+       "apres": "déclinant",
+       "lien": "variable",
+       "lien_detail": "frontieres_du_systeme (-27.7 points)",
+       "contredit": "la logique de rareté des ressources terrestres qui fonde la fermeture des frontières et la marchandisation de leur sécurité",
+       "raison": "l'abondance lunaire de platinoïdes fait perdre son urgence économique à la sécurisation territoriale, fragilisant les fermetures frontalières sur lesquelles ces réseaux prospèrent"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "shackleton_platinoides_2052::fortress_world::9": {
+  "empreinte": "abbbeab723cdc128",
+  "date": "2026-11-15T18:19",
+  "brut": {
+   "fiches": [
+    {
+     "slug": "siege_genevois_cars_fortress_world",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "déclinant",
+       "lien": "variable",
+       "lien_detail": "frontieres_du_systeme (-27.7 points)",
+       "contredit": "",
+       "raison": "La fragilisation des fermetures frontalières réduit l'urgence économique des checkpoints et de la séparation périmétrique assurés par SGC entre zones protégées et territoires exposés."
+      }
+     ]
+    },
+    {
+     "slug": "sigrid_halvorsen_fortress_world",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "déclinant",
+       "lien": "variable",
+       "lien_detail": "energie_ressources_critiques (-29.2 points)",
+       "contredit": "",
+       "raison": "En tant que cadre supérieure d'Ergo-Wian, complexe minier terrestre, elle dépend de la crise des ressources critiques ; l'abondance lunaire fait perdre de la valeur à l'extraction terrestre et affaiblit sa position."
+      }
+     ]
+    },
+    {
+     "slug": "syndicats_industriels_residuels_post_crise_fortress_world",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "systeme_economique_redistribution (+22.7 points)",
+       "contredit": "",
+       "raison": "La redistribution économique induite par l'abondance lunaire renforce la pertinence de la représentation collective des travailleurs résiduels dans les secteurs industriels encore actifs."
+      }
+     ]
+    },
+    {
+     "slug": "systemes_de_scoring_de_productivite_corporative_fortress_world",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "déclinant",
+       "lien": "variable",
+       "lien_detail": "frontieres_du_systeme (-27.7 points)",
+       "contredit": "",
+       "raison": "Le tri social vers les zones tampons et périphéries perd sa justification lorsque les fermetures frontalières s'affaiblissent, réduisant le rôle des systèmes de scoring."
+      }
+     ]
+    },
+    {
+     "slug": "tbilissi_nord_zone_franche_fortress_world",
+     "changements": []
+    },
+    {
+     "slug": "terminal_kharg_data_haven_fortress_world",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "déclinant",
+       "lien": "variable",
+       "lien_detail": "frontieres_du_systeme (-27.7 points)",
+       "contredit": "",
+       "raison": "La neutralité stratégique offshore de Kharg-9 perd de sa valeur lorsque les blocs souverains réduisent leurs fermetures frontalières et leurs interdépendances contrôlées."
+      }
+     ]
+    },
+    {
+     "slug": "terrashield_geoengineering_fortress_world",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "déclinant",
+       "lien": "variable",
+       "lien_detail": "frontieres_du_systeme (-27.7 points)",
+       "contredit": "",
+       "raison": "Les technologies de modification environnementale localisée servant à verrouiller les écosystèmes des blocs perdent leur urgence lorsque la logique de fermeture territoriale s'effondre."
+      }
+     ]
+    },
+    {
+     "slug": "territoire_autonome_de_karachi_biosyn_fortress_world",
+     "changements": []
+    },
+    {
+     "slug": "tours_nexus7_fortress_world",
+     "changements": []
+    },
+    {
+     "slug": "tribu_des_cinq_nations_fortress_world",
+     "changements": []
+    },
+    {
+     "slug": "tribunal_algorithmique_de_bruxelles_fortress_world",
+     "changements": []
+    },
+    {
+     "slug": "vasil_orentchev_fortress_world",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "déclinant",
+       "lien": "variable",
+       "lien_detail": "frontieres_du_systeme (-27.7 points)",
+       "contredit": "",
+       "raison": "Son rôle de pivot des corridors d'approvisionnement dans les zones grises entre blocs fermés perd sa pertinence lorsque les frontières du système s'ouvrent."
+      }
+     ]
+    },
+    {
+     "slug": "vaultcorp_security_fortress_world",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "déclinant",
+       "lien": "relation",
+       "lien_detail": "alpha47_fortress_world (allié directement touché, trajectoire mature → déclinant)",
+       "contredit": "",
+       "raison": "Le déclin du complexe minier Ergo-Wian (Alpha47), allié de VaultCorp, affaiblit la demande de services de verrouillage sécuritaire liés à la sécurisation des ressources terrestres."
+      }
+     ]
+    },
+    {
+     "slug": "vikram_raghavan_fortress_world",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "déclinant",
+       "lien": "relation",
+       "lien_detail": "les_recycleurs_fortress_world (allié directement touché, trajectoire dominant → déclinant)",
+       "contredit": "",
+       "raison": "En tant que membre influent des Recycleurs de Paris, il subit le déclin de cette organisation fragilisée par la perte d'urgence de la sécurisation territoriale des ressources."
+      }
+     ]
+    },
+    {
+     "slug": "voix_du_dehors_fortress_world",
+     "changements": []
+    }
+   ]
+  }
+ },
+ "shackleton_platinoides_2052::fortress_world::10": {
+  "empreinte": "9ef0025250d23ed4",
+  "date": "2026-11-15T18:22",
+  "brut": {
+   "fiches": [
+    {
+     "slug": "zone_usines_forteresses_eurasie_fortress_world",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "déclinant",
+       "lien": "variable",
+       "lien_detail": "energie_ressources_critiques (-29.2 points) : l'arrivée massive de platinoïdes lunaires sur le marché mondial dès 2055 réduit la valeur stratégique de la production terrestre de métaux critiques, affaiblissant le rôle des zones de labeur sous mandat qui produisaient pour les forteresses",
+       "contredit": "L'abondance lunaire casse la logique de rareté qui justifiait la sécurisation territoriale des ressources",
+       "raison": "La fiche affirme que ces zones produisent pour les forteresses riches ; avec les métaux critiques déversés depuis la Lune, cette production perd son caractère indispensable et les zones ne peuvent plus rester dominantes."
+      }
+     ]
+    },
+    {
+     "slug": "zones_grises_tampons_fortress_world",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "déclinant",
+       "lien": "variable",
+       "lien_detail": "frontieres_du_systeme (-27.7 points) : la fermeture des frontières pour sécuriser les ressources perd son urgence économique avec l'abondance lunaire, réduisant l'utilité des zones tampons comme sas de contrôle frontalier",
+       "contredit": "Le dépôt de Shackleton fragilise les fermetures frontalières en rendant la sécurisation territoriale des ressources moins prioritaire",
+       "raison": "La fiche décrit ces territoires comme des sas de contrôle entre forteresses ; avec la baisse de l'importance systémique des frontières, leur fonction de sas perd sa justification principale et leur trajectoire dominante devient déclinante."
+      }
+     ]
+    },
+    {
+     "slug": "election_parti_commun_americain_fortress_world",
+     "changements": []
+    },
+    {
+     "slug": "incident_passage_arctique_fortress_world",
+     "changements": []
+    },
+    {
+     "slug": "communes_rust_belt_zones_libres_fortress_world",
+     "changements": []
+    },
+    {
+     "slug": "emeutes_algorithme_sao_paulo_fortress_world",
+     "changements": []
+    },
+    {
+     "slug": "arrestation_chris_van_derburgh_fortress_world",
+     "changements": []
+    },
+    {
+     "slug": "le_marathon_des_seuils_quand_le_sport_defie_les_fr_fortress_world",
+     "changements": []
+    },
+    {
+     "slug": "helios_bse_active_le_protocole_ombre_les_coupures__fortress_world",
+     "changements": []
+    }
+   ]
+  }
+ },
+ "shackleton_platinoides_2052::fortress_world::contre1::b844a08ca5e17272": {
+  "date": "2026-11-15T18:23",
+  "verdict": {
+   "id": "o1",
+   "incompatible": false,
+   "fait": "tendance",
+   "motif": "nuance",
+   "justification": "La fiche affirme que les consortiums utilisent le contrôle de l'accès aux ressources comme levier géopolitique ; l'élément indique que des métaux critiques arrivent en masse depuis la Lune dès 2055. Ces deux états peuvent coexister : l'abondance relative ne supprime pas mécaniquement le pouvoir de contrôle (infrastructures d'extraction, licences, routes commerciales), et l'effet résiduel de 83% montre que la dynamique de pouvoir n'est pas totalement effacée. La phrase reste vraie, éventuellement nuancée par la nouvelle donne lunaire."
+  }
+ },
+ "shackleton_platinoides_2052::fortress_world::classement::2a8cf8cc779856d1": {
+  "date": "2026-11-15T18:26",
+  "brut": {
+   "classement": [
+    {
+     "id": "f42",
+     "pourquoi": "Gestion directe des seuils de distribution des métaux extraits de Shackleton"
+    },
+    {
+     "id": "f28",
+     "pourquoi": "Approvisionnement énergétique orbital indispensable à la viabilité de l'extraction de Shackleton"
+    },
+    {
+     "id": "f31",
+     "pourquoi": "Contrôle de l'orbite comme goulot d'étranglement stratégique des métaux lunaires"
+    },
+    {
+     "id": "f43",
+     "pourquoi": "Gestion de l'accès à la Lune et des flux de platinoïdes exige des IA de pilotage supérieures"
+    },
+    {
+     "id": "f30",
+     "pourquoi": "Fourniture de l'énergie nécessaire aux robots lunaires de Shackleton"
+    },
+    {
+     "id": "f24",
+     "pourquoi": "Arbitrage des tensions sur l'accès aux ressources rendu obsolète par l'abondance (-29.2)"
+    },
+    {
+     "id": "f18",
+     "pourquoi": "Levier de survie des enclaves via les contrats énergétiques perd son urgence avec la fin de la crise (-29.2)"
+    },
+    {
+     "id": "f73",
+     "pourquoi": "Logique de souveraineté militarisée pour l'allocation des platinoïdes économiquement obsolète (-29.2)"
+    },
+    {
+     "id": "f2",
+     "pourquoi": "Flux de ressources critiques ne transitent plus par les détroits (combine -29.2 et -27.7)"
+    },
+    {
+     "id": "f70",
+     "pourquoi": "Production pour les forteresses riches perd son caractère avec les métaux déversés depuis la Lune"
+    },
+    {
+     "id": "f13",
+     "pourquoi": "Capitalisation sur la rareté des réserves terrestres rendue obsolète par l'abondance lunaire (-29.2)"
+    },
+    {
+     "id": "f22",
+     "pourquoi": "Érosion du monopole énergétique avec la diminution de la crise des ressources critiques (-29.2)"
+    },
+    {
+     "id": "f1",
+     "pourquoi": "Bras opérationnel de la fermeture des blocs perd son urgence avec -27.7 sur les frontières"
+    },
+    {
+     "id": "f8",
+     "pourquoi": "Définition et maintien des frontières dures entre blocs rendu non pertinent (-27.7)"
+    },
+    {
+     "id": "f16",
+     "pourquoi": "Monopole total sur les passages frontaliers fragilisé par l'ouverture du système (-27.7)"
+    },
+    {
+     "id": "f17",
+     "pourquoi": "Disparition des campements due à la perte de fonction des seuils frontaliers"
+    },
+    {
+     "id": "f3",
+     "pourquoi": "Maintien de l'étanchéité des frontières impossible dans un monde fragmenté ouvert (-27.7)"
+    },
+    {
+     "id": "f4",
+     "pourquoi": "Logique de fermeture fondant le Pacte des Forteresses Souveraines fragilisée (-27.7)"
+    },
+    {
+     "id": "f26",
+     "pourquoi": "Coût des augmentations baisse avec les matériaux abondants, accélérant leur diffusion (+22.7)"
+    },
+    {
+     "id": "f63",
+     "pourquoi": "Redistribution économique induite par l'abondance lunaire renforce la représentation des travailleurs (+22.7)"
+    }
+   ]
+  }
+ },
+ "shackleton_platinoides_2052::reference::0": {
+  "empreinte": "771a399b5f07a917",
+  "date": "2026-11-15T18:30",
+  "brut": {
+   "fiches": [
+    {
+     "slug": "administrations_hybrides_des_cites_relais_peripheriques_reference",
+     "changements": []
+    },
+    {
+     "slug": "agence_de_regulation_des_detroits_strategiques_ards_reference",
+     "changements": [
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "consortium_helios_reference",
+       "relation": "opposition",
+       "action": "nouvelle",
+       "lien": "relation",
+       "lien_detail": "Rivale d'une entité directement touchée par l'élément (consortium_helios_reference, acteur cislunaire émergent via l'arc arctique)",
+       "contredit": "",
+       "raison": "L'élément crée un nouvel axe géopolitique spatial centré sur l'arc arctique, opposant l'ARDS (régulateur des passages terrestres) à Helios (opérateur lunaire)."
+      }
+     ]
+    },
+    {
+     "slug": "agence_internationale_des_energies_renouvelables_irena_2_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "Dépend directement de energie_ressources_critiques (-29.4 points)",
+       "contredit": "",
+       "raison": "L'effondrement de la rente des ressources critiques terrestres augmente l'importance stratégique des énergies renouvelables dans le système mondial."
+      }
+     ]
+    },
+    {
+     "slug": "agence_stabilisation_climatique_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "Dépend directement de climat_environnement_global (-2.6 points)",
+       "contredit": "",
+       "raison": "La dégradation climatique induite par l'élément renforce le rôle de régulateur de dernier recours de l'agence."
+      }
+     ]
+    },
+    {
+     "slug": "agences_de_securite_regionales_de_normalisation_des_zones_grises_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "Dépend directement de frontieres_du_systeme (-27.0 points)",
+       "contredit": "",
+       "raison": "La crise des frontières du système augmente le besoin de normalisation des zones grises par ces agences."
+      }
+     ]
+    },
+    {
+     "slug": "agrisynth_reference",
+     "changements": []
+    },
+    {
+     "slug": "algorithmic_labor_exchange_reference",
+     "changements": []
+    },
+    {
+     "slug": "alliance_blocs_souverains_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "dominant",
+       "lien": "variable",
+       "lien_detail": "Dépend directement de geopolitique_conflits (+11.3 points)",
+       "contredit": "",
+       "raison": "L'augmentation des conflits géopolitiques induite par l'élément renforce le Pacte des Souverains comme alternative diplomatique."
+      }
+     ]
+    },
+    {
+     "slug": "amara_diallo_nkosi_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "relation",
+       "lien_detail": "Rivale de consortiums_d_extraction_miniere_du_bassin_congolais_reference (entité directement touchée, devenue déclinante)",
+       "contredit": "",
+       "raison": "Le déclin de ses rivaux miniers congolais affaiblit leur position dans les négociations hydriques du bassin du Congo, renforçant son autorité."
+      }
+     ]
+    },
+    {
+     "slug": "amazonie_consortium_viva_reference",
+     "changements": []
+    },
+    {
+     "slug": "arctic_passage_authority_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "dominant",
+       "lien": "territoire",
+       "lien_detail": "Localisée dans l'arc arctique (ilulissat_apa), territoire devenu pivot du corridor cislunaire d'approvisionnement en métaux critiques",
+       "contredit": "",
+       "raison": "L'élément fait de l'arc arctique le pivot géopolitique de l'approvisionnement lunaire, renforçant le rôle systémique de l'APA."
+      }
+     ]
+    },
+    {
+     "slug": "armada_logistique_nordique_reference",
+     "changements": [
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "consortiums_prives_d_extraction_de_ressources_critiques_reference",
+       "relation": "alliance",
+       "action": "nouvelle",
+       "lien": "relation",
+       "lien_detail": "Alliée potentielle d'une entité directement touchée (consortiums_prives_d_extraction_de_ressources_critiques_reference, devenus ascendants) via le corridor arctique pivot",
+       "contredit": "",
+       "raison": "L'élément crée un flux massif de métaux lunaires transitant par l'arc arctique, créant une alliance logistique avec les nouveaux opérateurs d'extraction cislunaire."
+      }
+     ]
+    },
+    {
+     "slug": "assemblee_territoires_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "dominant",
+       "lien": "variable",
+       "lien_detail": "Dépend directement de systeme_economique_redistribution (+17.0 points)",
+       "contredit": "",
+       "raison": "La redistribution économique massive induite par l'arrivée des métaux lunaires nécessite une coordination territoriale renforcée entre les territoires fédérés."
+      }
+     ]
+    },
+    {
+     "slug": "aurelio_stahl_reference",
+     "changements": []
+    },
+    {
+     "slug": "autorites_regionales_de_regulation_hydrologique_reference",
+     "changements": []
+    }
+   ]
+  }
+ },
+ "shackleton_platinoides_2052::reference::1": {
+  "empreinte": "ec062abdc49427c5",
+  "date": "2026-11-15T18:33",
+  "brut": {
+   "fiches": [
+    {
+     "slug": "banque_des_communs_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "systeme_economique_redistribution (+17.0)",
+       "contredit": "",
+       "raison": "La casse de la rente minière terrestre augmente le nombre de territoires où les circuits marchands se rétractent, élargissant le champ d'action de la Banque des Communs."
+      }
+     ]
+    },
+    {
+     "slug": "banque_mondiale_des_transitions_climatiques_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "energie_ressources_critiques (-29.4)",
+       "contredit": "",
+       "raison": "L'abondance de platinoïdes et terres rares lourdes réduit la contrainte sur les ressources critiques, donnant à la BMTC plus de marge pour financer les transitions climatiques."
+      }
+     ]
+    },
+    {
+     "slug": "bloc_des_etats_du_sud_global_contre_la_cession_de_donnees_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "systeme_economique_redistribution (+17.0)",
+       "contredit": "",
+       "raison": "La perte de rente des pays extracteurs du Sud Global renforce la légitimité du Bloc comme voix des perdants de la reconfiguration économique cislunaire."
+      }
+     ]
+    },
+    {
+     "slug": "bloc_des_souverainistes_climatiques_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "frontieres_du_systeme (-27.0)",
+       "contredit": "",
+       "raison": "Le déplacement de l'équilibre mondial vers l'arc arctique et l'espace cislunaire offre au Bloc de nouvelles zones de non-conformité à défendre."
+      }
+     ]
+    },
+    {
+     "slug": "bloc_eurasien_central_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "résiduel",
+       "lien": "relation",
+       "lien_detail": "cartel_des_terres_rares_d_asie_centrale_reference (déclinant)",
+       "contredit": "",
+       "raison": "Le déclin du Cartel des Terres Rares d'Asie Centrale, provoqué par l'inondation lunaire, prive le BEC d'un de ses principaux leviers de pression."
+      }
+     ]
+    },
+    {
+     "slug": "bloc_ressources_eurasiatique_bre_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "obligatoire",
+       "apres": "déclinant",
+       "lien": "variable",
+       "lien_detail": "energie_ressources_critiques (-29.4)",
+       "contredit": "L'extraction massive de Shackleton inonde le marché mondial de platinoïdes et terres rares, rendant impossible le contrôle unilatéral des prix.",
+       "raison": "Le BRE perd sa capacité à réguler l'accès aux ressources critiques eurasiatiques face à l'offre lunaire abondante."
+      },
+      {
+       "type": "texte",
+       "niveau": "obligatoire",
+       "extrait": "capable d'influer sur les prix mondiaux de l'énergie et des matériaux stratégiques par décision unilatérale",
+       "contredit": "L'arrivée en masse de métaux critiques extraits de Shackleton sur le marché mondial casse la capacité du BRE à fixer unilatéralement les prix des matériaux stratégiques.",
+       "lien": "variable",
+       "lien_detail": "energie_ressources_critiques (-29.4)",
+       "raison": "La phrase affirme un pouvoir de fixation des prix que l'élément rend impossible."
+      }
+     ]
+    },
+    {
+     "slug": "blocs_signataires_du_pacte_energetique_multilateral_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "energie_ressources_critiques (-29.4)",
+       "contredit": "",
+       "raison": "La disponibilité accrue de métaux critiques pour les batteries et infrastructures énergétiques renforce le cadre réglementaire du Pacte Énergétique Multilatéral."
+      }
+     ]
+    },
+    {
+     "slug": "bruxelles_nouveau_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "résiduel",
+       "lien": "variable",
+       "lien_detail": "frontieres_du_systeme (-27.0)",
+       "contredit": "",
+       "raison": "Le reconfiguration du système mondial vers l'axe arctique-cislunaire marginalise davantage Bruxelles Nouveau, située hors de ce nouvel axe géopolitique."
+      }
+     ]
+    },
+    {
+     "slug": "bureau_des_territoires_residuels_reference",
+     "changements": []
+    },
+    {
+     "slug": "bureau_zones_non_prioritaires_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "résiduel",
+       "lien": "variable",
+       "lien_detail": "systeme_economique_redistribution (+17.0)",
+       "contredit": "",
+       "raison": "La crise des rentes minières terrestres augmente le nombre de zones périphériques appauvries, mais le BZNP reste sous-financé et voit son rôle se réduire à une caution humanitaire."
+      }
+     ]
+    },
+    {
+     "slug": "bureaux_de_regulation_informationnelle_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "frontieres_du_systeme (-27.0)",
+       "contredit": "",
+       "raison": "L'émergence d'une économie cislunaire et d'un corridor arctique crée de nouveaux flux informationnels à réguler, renforçant l'autorité des Bureaux."
+      }
+     ]
+    },
+    {
+     "slug": "cartel_des_terres_rares_d_asie_centrale_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "obligatoire",
+       "apres": "déclinant",
+       "lien": "variable",
+       "lien_detail": "energie_ressources_critiques (-29.4)",
+       "contredit": "L'extraction massive de Shackleton déverse des terres rares lourdes sur le marché mondial, annulant le pouvoir de conditionnement du Cartel.",
+       "raison": "Le Cartel perd sa capacité à contrôler l'accès aux ressources critiques face à l'offre lunaire abondante."
+      },
+      {
+       "type": "texte",
+       "niveau": "obligatoire",
+       "extrait": "conditionne concrètement l'accès aux ressources critiques indispensables aux technologies de 2098",
+       "contredit": "Les métaux critiques extraits de Shackleton arrivent en masse sur le marché mondial, rendant l'accès indépendant du Cartel et abondant.",
+       "lien": "variable",
+       "lien_detail": "energie_ressources_critiques (-29.4)",
+       "raison": "La phrase affirme un monopole d'accès que l'élément rend faux."
+      }
+     ]
+    },
+    {
+     "slug": "coalition_des_gouvernements_contre_les_chartes_de_destabilisation_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "geopolitique_conflits (+11.3)",
+       "contredit": "",
+       "raison": "L'augmentation des conflits géopolitiques liée à la reconfiguration des rapports de force autour des métaux lunaires multiplie les chartes de déstabilisation à réprimer."
+      }
+     ]
+    },
+    {
+     "slug": "coalition_pour_la_souverainete_numerique_nationale_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "frontieres_du_systeme (-27.0)",
+       "contredit": "",
+       "raison": "L'émergence de nouvelles frontières cislunaires et arctiques crée de nouveaux espaces numériques à re-territorialiser, renforçant les revendications de souveraineté."
+      }
+     ]
+    },
+    {
+     "slug": "collectif_nuit_jaune_reference",
+     "changements": []
+    }
+   ]
+  }
+ },
+ "shackleton_platinoides_2052::reference::2": {
+  "empreinte": "27cbd3f7570a05df",
+  "date": "2026-11-15T18:38",
+  "brut": {
+   "fiches": [
+    {
+     "slug": "collectifs_academiques_independants_reference",
+     "changements": []
+    },
+    {
+     "slug": "collectifs_de_biopiraterie_inversee_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "relation",
+       "lien_detail": "rivaux de bloc_ressources_eurasiatique_bre_reference, qui passe à déclinant sous la concurrence des métaux lunaires",
+       "contredit": "",
+       "raison": "Le déclin du BRE affaiblit l'un de leurs principaux rivaux, renforçant leur position relative dans le régime de propriété intellectuelle."
+      }
+     ]
+    },
+    {
+     "slug": "collectifs_de_journalisme_embarque_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "climat_environnement_global (-2.6 points) : les deltas menacés où ils sont ancrés subissent une dégradation environnementale accrue",
+       "contredit": "",
+       "raison": "L'intensification de la crise climatique augmente l'importance de leur contre-pouvoir informationnel dans les zones territoriales vulnérables."
+      }
+     ]
+    },
+    {
+     "slug": "collectifs_de_journalistes_independants_regionaux_reference",
+     "changements": []
+    },
+    {
+     "slug": "collectifs_de_peche_inuit_et_sami_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "dominant",
+       "lien": "relation",
+       "lien_detail": "rivaux de consortiums_prives_d_extraction_de_ressources_critiques_reference, qui devient ascendant avec l'extraction lunaire transitant par l'arc arctique",
+       "contredit": "",
+       "raison": "L'ascension des opérateurs lunaires accentue la pression extractiviste sur leurs territoires ancestraux, renforçant leur rôle de résistance."
+      }
+     ]
+    },
+    {
+     "slug": "commission_hydrique_de_l_union_africaine_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "energie_ressources_critiques (-29.4 points) : la crise des ressources critiques englobe l'eau, rendant leur médiation entre États plus cruciale",
+       "contredit": "",
+       "raison": "La baisse de la variable ressources critiques augmente les tensions hydriques, élargissant leur rôle d'autorité de régulation."
+      }
+     ]
+    },
+    {
+     "slug": "communs_numeriques_agroecologiques_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "climat_environnement_global (-2.6 points) : la dégradation climatique accroît le besoin d'infrastructures agroécologiques distribuées hors circuits marchands",
+       "contredit": "",
+       "raison": "La crise environnementale renforce la pertinence de leurs communs comme alternative aux systèmes agricoles industriels."
+      }
+     ]
+    },
+    {
+     "slug": "confederation_des_megapoles_autonomes_reference",
+     "changements": []
+    },
+    {
+     "slug": "conseil_de_geneve_pour_les_droits_biosociaux_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "relation",
+       "lien_detail": "rivaux de consortiums_prives_d_extraction_de_ressources_critiques_reference, devenus ascendants avec l'extraction lunaire",
+       "contredit": "",
+       "raison": "L'ascension des nouveaux opérateurs d'extraction intensifie les conflits sur les droits biosociaux, renforçant leur rôle de point de friction institutionnel."
+      }
+     ]
+    },
+    {
+     "slug": "conseil_des_etats_nordiques_integres_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "dominant",
+       "lien": "variable",
+       "lien_detail": "frontieres_du_systeme (-27.0 points) : le corridor arctique nordique qu'ils administrent devient le pivot de l'approvisionnement mondial en métaux critiques lunaires",
+       "contredit": "",
+       "raison": "La reconfiguration des frontières du système vers l'arc arctique accroît leur centralité géopolitique dans la nouvelle économie cislunaire."
+      }
+     ]
+    },
+    {
+     "slug": "conseil_regulation_algorithmique_reference",
+     "changements": []
+    },
+    {
+     "slug": "conseil_regulation_ressources_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "résiduel",
+       "lien": "variable",
+       "lien_detail": "energie_ressources_critiques (-29.4 points) : l'inondation du marché par les platinoïdes et terres rares lourdes lunaires rend son rôle d'arbitre des flux obsolète",
+       "contredit": "",
+       "raison": "La massification de l'offre lunaire contourne sa chambre de compensation, accélérant son déclin vers un rôle résiduel."
+      }
+     ]
+    },
+    {
+     "slug": "consortium_africain_de_biotechnologies_sociales_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "dominant",
+       "lien": "relation",
+       "lien_detail": "rivaux de consortiums_d_extraction_miniere_du_bassin_congolais_reference, qui deviennent déclinants à cause de la concurrence lunaire",
+       "contredit": "",
+       "raison": "Le déclin des extracteurs du bassin congolais réduit la concurrence sur le continent africain, renforçant leur position d'intermédiaire stratégique."
+      }
+     ]
+    },
+    {
+     "slug": "consortium_amazonia_viva_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "dominant",
+       "lien": "relation",
+       "lien_detail": "rivaux de bloc_ressources_eurasiatique_bre_reference, cartel_des_terres_rares_d_asie_centrale_reference et consortiums_d_extraction_miniere_du_bassin_congolais_reference, tous devenus déclinants",
+       "contredit": "",
+       "raison": "L'affaiblissement des grands acteurs extracteurs terrestres lui laisse plus d'espace pour négocier directement la gouvernance écologique du bassin amazonien."
+      }
+     ]
+    },
+    {
+     "slug": "consortium_augmentwork_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "marginal",
+       "lien": "relation",
+       "lien_detail": "allié de bloc_ressources_eurasiatique_bre_reference, qui devient déclinant sous le choc des métaux lunaires",
+       "contredit": "",
+       "raison": "La perte de ce soutien majeur affaiblit sa capacité à promouvoir les politiques d'augmentation cognitive et physique des travailleurs."
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "shackleton_platinoides_2052::reference::3": {
+  "empreinte": "e13d39cf8a725c71",
+  "date": "2026-11-15T18:44",
+  "brut": {
+   "fiches": [
+    {
+     "slug": "consortium_de_maintenance_orbitale_seom_7_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "La variable frontieres_du_systeme chute de 27.0 points avec l'ouverture de l'axe cislunaire et la reconfiguration du corridor arctique, élargissant le domaine orbital critique géré par SEOM-7",
+       "contredit": "Le dépôt de Shackleton crée un nouvel axe géopolitique spatial centré sur l'arc arctique et une économie cislunaire",
+       "raison": "La maintenance orbitale devient l'infrastructure de dernier recours pour les flux lunaires via l'arc arctique."
+      }
+     ]
+    },
+    {
+     "slug": "consortium_des_fournisseurs_d_energie_renouvelable_distribuee_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "La variable energie_ressources_critiques baisse de 29.4 points avec l'arrivée massive de platinoïdes, réduisant les coûts des composants des réseaux distribués",
+       "contredit": "Les métaux critiques extraits de Shackleton arrivent en masse sur le marché mondial dès 2055",
+       "raison": "La baisse des coûts des métaux critiques facilite le déploiement et le couplage des infrastructures énergétiques distribuées."
+      }
+     ]
+    },
+    {
+     "slug": "consortium_des_grandes_plateformes_ia_integrees_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "La variable systeme_economique_redistribution augmente de 17.0 points vers l'axe cislunaire, créant de nouveaux flux informationnels et économiques structurés par les plateformes",
+       "contredit": "L'équilibre du système se déplace vers une économie cislunaire où le corridor arctique devient le pivot",
+       "raison": "Les plateformes IA intégrées structurent les nouveaux flux économiques lunaires et arctiques."
+      }
+     ]
+    },
+    {
+     "slug": "consortium_des_grandes_plateformes_logistiques_globales_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "La variable frontieres_du_systeme chute de 27.0 points avec la reconfiguration des frontières logistiques vers l'arc arctique et l'orbite lunaire",
+       "contredit": "Le corridor arctique nordique devient le pivot de l'approvisionnement en métaux critiques venus de la Lune",
+       "raison": "L'épine dorsale logistique mondiale s'étend nécessairement à l'axe Terre-Lune via le corridor arctique."
+      }
+     ]
+    },
+    {
+     "slug": "consortium_des_pecheries_autonomes_du_grand_nord_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "déclinant",
+       "lien": "relation",
+       "lien_detail": "L'entité consortiums_prives_d_extraction_de_ressources_critiques_reference, rivale de l'AGL dans le corridor arctique, passe de émergent à ascendant",
+       "contredit": "Les consortiums privés d'extraction de ressources critiques deviennent ascendants et reconfigurent les rapports de force dans l'arc arctique",
+       "raison": "La montée des opérateurs lunaires dans le corridor arctique affaiblit la gouvernance décentralisée des ressources de l'AGL."
+      }
+     ]
+    },
+    {
+     "slug": "consortium_des_plateformes_ia_centralisees_anti_deliberation_reference",
+     "changements": []
+    },
+    {
+     "slug": "consortium_energetique_baltique_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "relation",
+       "lien_detail": "L'entité bloc_ressources_eurasiatique_bre_reference, rivale du consortium baltique, passe de émergent à déclinant",
+       "contredit": "Le Bloc Ressources Eurasiatique (BRE) décline à cause de la perte de rente des métaux terrestres face aux platinoïdes lunaires",
+       "raison": "L'affaiblissement du BRE réduit la pression concurrentielle sur l'approvisionnement énergétique baltique."
+      }
+     ]
+    },
+    {
+     "slug": "consortium_energetique_des_mers_du_nord_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "relation",
+       "lien_detail": "L'entité bloc_ressources_eurasiatique_bre_reference, rivale du consortium des mers du Nord, décline",
+       "contredit": "Le Bloc Ressources Eurasiatique (BRE) décline avec l'inondation du marché en métaux lunaires",
+       "raison": "La baisse de la rente eurasiatique renforce la position géopolitique du consortium nordique dans les mers du Nord."
+      }
+     ]
+    },
+    {
+     "slug": "consortium_helios_reference",
+     "changements": [
+      {
+       "type": "relation",
+       "niveau": "obligatoire",
+       "cible": "consortiums_prives_d_extraction_de_ressources_critiques_reference",
+       "relation": "alliance",
+       "action": "nouvelle",
+       "lien": "relation",
+       "lien_detail": "Helios s'allie aux nouveaux opérateurs lunaires pour intégrer la chaîne d'approvisionnement en platinoïdes à son modèle énergétique orbital",
+       "contredit": "Alliance nouvelle consortiums_prives_d_extraction_de_ressources_critiques_reference / consortium_helios_reference retenue dans le lore",
+       "raison": "L'approvisionnement massif en métaux critiques lunaires nécessite une coordination avec le quasi-régulateur de l'énergie solaire orbitale."
+      },
+      {
+       "type": "relation",
+       "niveau": "obligatoire",
+       "cible": "agence_de_regulation_des_detroits_strategiques_ards_reference",
+       "relation": "opposition",
+       "action": "nouvelle",
+       "lien": "relation",
+       "lien_detail": "L'ARDS s'oppose à Helios sur la régulation des nouveaux corridors d'approvisionnement lunaires via l'arc arctique",
+       "contredit": "Opposition nouvelle agence_de_regulation_des_detroits_strategiques_ards_reference / consortium_helios_reference retenue dans le lore",
+       "raison": "L'ARDS conteste la privatisation par Helios des routes stratégiques d'acheminement des métaux lunaires."
+      }
+     ]
+    },
+    {
+     "slug": "consortium_indo_pacifique_de_l_hydrogene_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "relation",
+       "lien_detail": "L'entité cartel_des_terres_rares_d_asie_centrale_reference, rivale du consortium indo-pacifique, passe de émergent à déclinant",
+       "contredit": "Le Cartel des Terres Rares d'Asie Centrale décline face à l'arrivée des métaux lunaires",
+       "raison": "La perte de rente du cartel asiatique ouvre des marchés pour les flux d'hydrogène structurés par le consortium indo-pacifique."
+      }
+     ]
+    },
+    {
+     "slug": "consortium_logistique_asiatique_de_contournement_aln_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "déclinant",
+       "lien": "relation",
+       "lien_detail": "L'entité bloc_ressources_eurasiatique_bre_reference, alliée de l'ALN, décline, privant le consortium de contournement d'un soutien majeur",
+       "contredit": "Le Bloc Ressources Eurasiatique (BRE) décline avec la chute des prix des métaux terrestres",
+       "raison": "La chute du BRE affaiblit la capacité de l'ALN à offrir des routes alternatives face au nouveau pivot arctique."
+      }
+     ]
+    },
+    {
+     "slug": "consortiums_bancaires_financiarises_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "La variable systeme_economique_redistribution augmente de 17.0 points vers l'économie cislunaire, créant de nouveaux flux financiers que les consortiums bancaires doivent traiter via leurs infrastructures de clearing",
+       "contredit": "Le système économique mondial se redistribue vers l'axe cislunaire et le corridor arctique",
+       "raison": "Les infrastructures de clearing deviennent critiques pour financer les nouvelles chaînes d'approvisionnement lunaires."
+      }
+     ]
+    },
+    {
+     "slug": "consortiums_d_agriculture_verticale_algorithmique_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "dominant",
+       "lien": "variable",
+       "lien_detail": "La variable energie_ressources_critiques baisse de 29.4 points, réduisant le coût des métaux nécessaires aux infrastructures d'agriculture verticale",
+       "contredit": "Les platinoïdes et terres rares lourdes de Shackleton inondent le marché mondial, faisant chuter les coûts des équipements",
+       "raison": "L'abondance de métaux critiques abaisse les coûts de construction et d'opération des fermes verticales algorithmiques."
+      }
+     ]
+    },
+    {
+     "slug": "consortiums_d_extraction_miniere_du_bassin_congolais_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "obligatoire",
+       "apres": "déclinant",
+       "lien": "variable",
+       "lien_detail": "La variable energie_ressources_critiques chute de 29.4 points avec l'inondation du marché en platinoïdes lunaires, cassant la rente des métaux terrestres congolais",
+       "contredit": "Les métaux critiques extraits de Shackleton arrivent en masse sur le marché mondial, cassant la rente des acteurs miniers terrestres (Congo, Asie centrale, Groenland)",
+       "raison": "La fiche affirme une trajectoire émergente pour des extracteurs terrestres dont la rente s'effondre face à la concurrence lunaire."
+      },
+      {
+       "type": "relation",
+       "niveau": "obligatoire",
+       "cible": "cartel_des_terres_rares_d_asie_centrale_reference",
+       "relation": "opposition",
+       "action": "nouvelle",
+       "lien": "relation",
+       "lien_detail": "Les consortiums congolais entrent en opposition directe avec le cartel asiatique pour les marchés résiduels de métaux terrestres",
+       "contredit": "Opposition nouvelle cartel_des_terres_rares_d_asie_centrale_reference / consortiums_d_extraction_miniere_du_bassin_congolais_reference retenue dans le lore",
+       "raison": "La chute des prix des métaux force les deux acteurs terrestres à s'affronter pour les contrats restants."
+      }
+     ]
+    },
+    {
+     "slug": "consortiums_energetiques_des_megapoles_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "La variable energie_ressources_critiques baisse de 29.4 points, réduisant le coût de l'absorption des corridors logistiques et énergétiques par les mégapoles",
+       "contredit": "Les métaux critiques lunaires arrivent en masse, abaissant les coûts des infrastructures énergétiques urbaines",
+       "raison": "La baisse des coûts des métaux facilite la captation des corridors par les consortiums énergétiques des mégapoles."
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "shackleton_platinoides_2052::reference::4": {
+  "empreinte": "a9da1386720f5817",
+  "date": "2026-11-15T18:46",
+  "brut": {
+   "fiches": [
+    {
+     "slug": "consortiums_energetiques_opaques_reference",
+     "changements": []
+    },
+    {
+     "slug": "consortiums_mediatiques_corporatifs_reference",
+     "changements": []
+    },
+    {
+     "slug": "consortiums_prives_d_extraction_de_ressources_critiques_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "obligatoire",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "energie_ressources_critiques (-29.4) et systeme_economique_redistribution (+17.0)",
+       "contredit": "l'élément fait de ces consortiums les opérateurs centraux de l'extraction lunaire de Shackleton, dominant le marché mondial des platinoïdes",
+       "raison": "la fiche affirme une trajectoire 'émergent' alors que l'élément les propulse au rang d'acteur ascendant de la nouvelle économie cislunaire"
+      },
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "consortium_helios_reference",
+       "relation": "alliance",
+       "action": "nouvelle",
+       "lien": "relation",
+       "lien_detail": "partenariat avec les opérateurs spatiaux pour l'exploitation du dépôt de Shackleton",
+       "contredit": "",
+       "raison": "l'élément crée un lien stratégique entre les extracteurs de ressources critiques et les acteurs de la maintenance orbitale pour sécuriser l'approvisionnement lunaire"
+      },
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "optiflow_logistics_reference",
+       "relation": "alliance",
+       "action": "nouvelle",
+       "lien": "relation",
+       "lien_detail": "partenariat logistique pour le transport cislunaire des métaux critiques",
+       "contredit": "",
+       "raison": "l'élément nécessite l'intégration des réseaux logistiques globaux pour acheminer les platinoïdes lunaires vers les marchés terrestres"
+      }
+     ]
+    },
+    {
+     "slug": "consortiums_prives_de_gestion_des_donnees_critiques_reference",
+     "changements": []
+    },
+    {
+     "slug": "cooperative_terrafond_reference",
+     "changements": []
+    },
+    {
+     "slug": "cooperatives_agro_ecologiques_de_reconstruction_territoriale_reference",
+     "changements": []
+    },
+    {
+     "slug": "cooperatives_agro_ecologiques_du_bassin_mediterraneen_reference",
+     "changements": []
+    },
+    {
+     "slug": "cooperatives_energetiques_decentralisees_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "obligatoire",
+       "extrait": "face à un système énergétique mondial sous tension (score 72/100)",
+       "contredit": "la variable energie_ressources_critiques baisse de 29.4 points suite à l'inondation du marché par les métaux lunaires, ramenant le niveau de crise bien en dessous de 72/100",
+       "lien": "variable",
+       "lien_detail": "energie_ressources_critiques (-29.4 points)",
+       "raison": "le score chiffré de tension énergétique mentionné dans la fiche est directement modifié par l'élément perturbateur"
+      }
+     ]
+    },
+    {
+     "slug": "cooperatives_ia_open_source_reference",
+     "changements": []
+    },
+    {
+     "slug": "corporations_d_extraction_energetique_non_signataires_reference",
+     "changements": []
+    },
+    {
+     "slug": "corridor_arctique_nordique_reference",
+     "changements": []
+    },
+    {
+     "slug": "courant_nationaliste_instrumentalisateur_du_discours_des_racines_reference",
+     "changements": []
+    },
+    {
+     "slug": "datasovereign_reference",
+     "changements": []
+    },
+    {
+     "slug": "deepfield_institute_reference",
+     "changements": []
+    },
+    {
+     "slug": "delta_du_gange_reference",
+     "changements": []
+    }
+   ]
+  }
+ },
+ "shackleton_platinoides_2052::reference::5": {
+  "empreinte": "a3378205f4a37900",
+  "date": "2026-11-15T18:51",
+  "brut": {
+   "fiches": [
+    {
+     "slug": "delta_du_mekong_reference",
+     "changements": []
+    },
+    {
+     "slug": "detroit_compact_grands_lacs_reference",
+     "changements": []
+    },
+    {
+     "slug": "directive_kontinuum_reference",
+     "changements": []
+    },
+    {
+     "slug": "dr_ananya_rao_reference",
+     "changements": []
+    },
+    {
+     "slug": "ecosynth_global_reference",
+     "changements": []
+    },
+    {
+     "slug": "elias_mork_reference",
+     "changements": []
+    },
+    {
+     "slug": "ergo_wian_sovereign_holdings_reference",
+     "changements": []
+    },
+    {
+     "slug": "etats_a_tendance_centraliste_numerique_reference",
+     "changements": []
+    },
+    {
+     "slug": "europe_occidentale_reconstruite_reference",
+     "changements": []
+    },
+    {
+     "slug": "factions_d_extraction_miniere_independantes_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "déclinant",
+       "lien": "variable",
+       "lien_detail": "dépend directement de la variable energie_ressources_critiques (effet chiffré -29.4)",
+       "contredit": "",
+       "raison": "l'arrivée massive de platinoïdes et terres rares lourdes lunaires sur le marché mondial réduit la pression de pénurie sur les ressources critiques qui fondait l'émergence de ces factions dans les zones grises"
+      }
+     ]
+    },
+    {
+     "slug": "factions_eurasiatiques_contre_la_tarification_hydrique_reference",
+     "changements": []
+    },
+    {
+     "slug": "federation_communs_territoriaux_reference",
+     "changements": []
+    },
+    {
+     "slug": "federation_des_cliniques_autonomes_reference",
+     "changements": []
+    },
+    {
+     "slug": "fonds_d_investissement_foncier_climatique_reference",
+     "changements": []
+    },
+    {
+     "slug": "fonds_monetaire_climatique_fmc_reference",
+     "changements": []
+    }
+   ]
+  }
+ },
+ "shackleton_platinoides_2052::reference::6": {
+  "empreinte": "6a7cad72df65d542",
+  "decoupe": true,
+  "date": "2026-11-15T18:57"
+ },
+ "shackleton_platinoides_2052::reference::6a": {
+  "empreinte": "e126586273198888",
+  "date": "2026-11-15T19:01",
+  "brut": {
+   "fiches": [
+    {
+     "slug": "fonds_souverain_arctique_scandinave_reference",
+     "changements": []
+    },
+    {
+     "slug": "fonds_souverains_de_la_ceinture_financiere_pacifique_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "obligatoire",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "systeme_economique_redistribution (+17.0) : le fonds est un acteur financier structurant capable de peser sur les équilibres économiques mondiaux via le contrôle de capitaux publics massifs, directement touché par la redistribution économique induite par l'arrivée massive des métaux critiques lunaires sur le marché",
+       "contredit": "La fiche affirme une trajectoire 'émergent' que l'élément rend fausse : le choc économique provoqué par le dépôt de Shackleton fait passer cet acteur au stade 'ascendant' (déjà retenu dans la lecture générale)",
+       "raison": "L'inondation du marché mondial de platinoïdes et terres rares lourdes provoque une redistribution économique majeure (+17.0) qui propulse ce fonds souverain de la ceinture pacifique du stade émergent au stade ascendant."
+      }
+     ]
+    },
+    {
+     "slug": "frente_sertao_livre_reference",
+     "changements": []
+    },
+    {
+     "slug": "front_souverainiste_des_ressources_d_amerique_du_sud_reference",
+     "changements": []
+    },
+    {
+     "slug": "gelecek_meclisi_reference",
+     "changements": []
+    },
+    {
+     "slug": "geneve_lac_retreite_reference",
+     "changements": []
+    },
+    {
+     "slug": "gouvernance_ia_de_l_archipel_petrolier_reference",
+     "changements": []
+    }
+   ]
+  }
+ },
+ "shackleton_platinoides_2052::reference::6b": {
+  "empreinte": "71e8b5909e454725",
+  "date": "2026-11-15T19:04",
+  "brut": {
+   "fiches": [
+    {
+     "slug": "gouvernements_a_regime_de_productivite_mandatee_reference",
+     "changements": []
+    },
+    {
+     "slug": "gouvernements_du_bloc_sahelien_autonome_reference",
+     "changements": []
+    },
+    {
+     "slug": "gouvernements_federaux_residuels_souverainistes_reference",
+     "changements": []
+    },
+    {
+     "slug": "great_lakes_autonomous_compact_reference",
+     "changements": []
+    },
+    {
+     "slug": "guadalajara_nexus_reference",
+     "changements": []
+    },
+    {
+     "slug": "helsinki_communs_numeriques_reference",
+     "changements": []
+    },
+    {
+     "slug": "holdfast_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "relation",
+       "lien_detail": "allié de consortiums_prives_d_extraction_de_ressources_critiques_reference qui devient ascendant grâce au dépôt de Shackleton",
+       "contredit": "",
+       "raison": "les enclaves reconverties en bases logistiques pour les nouveaux opérateurs lunaires gagnent une importance stratégique dans l'économie cislunaire"
+      }
+     ]
+    },
+    {
+     "slug": "hyphan_raghavan_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "dominant",
+       "lien": "relation",
+       "lien_detail": "alliée de consortiums_prives_d_extraction_de_ressources_critiques_reference qui deviennent ascendants via l'extraction de Shackleton",
+       "contredit": "",
+       "raison": "la montée en puissance des consortiums d'extraction lunaire renforce le poids d'Hyphan Raghavan au sein du Pacte des Souverains"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "shackleton_platinoides_2052::reference::7": {
+  "empreinte": "3cc27f7567887869",
+  "date": "2026-11-15T19:09",
+  "brut": {
+   "fiches": [
+    {
+     "slug": "ilse_varga_holm_reference",
+     "changements": []
+    },
+    {
+     "slug": "institut_des_seuils_demographiques_reference",
+     "changements": []
+    },
+    {
+     "slug": "institut_polytechnique_de_ouagadougou_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "travaille sur les enjeux climatiques et hydriques sahéliens directement affectés par la variable climat_environnement_global (-2.6 points, effet indirect de l'élément)",
+       "contredit": "",
+       "raison": "la dégradation climatique indirecte (-2.6) renforce la pertinence stratégique des recherches de l'IPO sur les crises climatiques régionales"
+      }
+     ]
+    },
+    {
+     "slug": "institutions_multilaterales_survivantes_reference",
+     "changements": []
+    },
+    {
+     "slug": "internationale_travailleurs_augmentes_reference",
+     "changements": []
+    },
+    {
+     "slug": "kalaallit_nunaat_sovereign_fund_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "obligatoire",
+       "apres": "déclinant",
+       "lien": "variable",
+       "lien_detail": "dépend directement de la rente de l'extraction terrestre de terres rares, lithium et uranium au Groenland, affectée par la variable energie_ressources_critiques (-29.4 points)",
+       "contredit": "l'élément fait arriver en masse dès 2055 des platinoïdes et terres rares lourdes lunaires sur le marché mondial, cassant la rente des extracteurs terrestres dont dépendent les revenus colossaux du KNSF",
+       "raison": "la fiche affirme que le KNSF gère les revenus tirés de l'extraction de terres rares au Groenland et est en trajectoire ascendante, ce que l'inondation du marché par les métaux lunaires rend faux"
+      }
+     ]
+    },
+    {
+     "slug": "kaspar_lind_reference",
+     "changements": []
+    },
+    {
+     "slug": "kindling_reference",
+     "changements": []
+    },
+    {
+     "slug": "kinshasa_accords_hydriques_reference",
+     "changements": []
+    },
+    {
+     "slug": "lamplight_reference",
+     "changements": []
+    },
+    {
+     "slug": "le_temoin_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "dominant",
+       "lien": "variable",
+       "lien_detail": "couvre les tensions géopolitiques et économiques directement affectées par la variable geopolitique_conflits (+11.3 points)",
+       "contredit": "",
+       "raison": "l'augmentation des conflits géopolitiques (+11.3) élargit le champ de couverture du correspondant international basé à Singapour-Est, renforçant son poids médiatique"
+      }
+     ]
+    },
+    {
+     "slug": "leena_vainala_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "dominant",
+       "lien": "territoire",
+       "lien_detail": "opère dans le corridor arctique nordique (zone de la fiche) devenu pivot de l'approvisionnement en métaux critiques lunaires selon la lecture générale de l'élément",
+       "contredit": "",
+       "raison": "le corridor arctique nordique devient le pivot géopolitique de la nouvelle économie cislunaire, renforçant le poids de l'architecte institutionnelle qui y opère"
+      }
+     ]
+    },
+    {
+     "slug": "les_veilleurs_des_nappes_phreatiques_reference",
+     "changements": []
+    },
+    {
+     "slug": "les_veilleurs_du_fleuve_reference",
+     "changements": []
+    },
+    {
+     "slug": "ligue_des_metropoles_du_sud_pour_les_infrastructures_libres_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "milite pour la redistribution du contrôle des infrastructures mondiales, directement liée à la variable systeme_economique_redistribution (+17.0 points)",
+       "contredit": "",
+       "raison": "l'augmentation de la redistribution économique mondiale (+17.0) valide et renforce la revendication de la Ligue pour des infrastructures libres dans les territoires périphériques"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "shackleton_platinoides_2052::reference::8": {
+  "empreinte": "c9bd8430a553d758",
+  "date": "2026-11-15T19:13",
+  "brut": {
+   "fiches": [
+    {
+     "slug": "ligue_des_municipalites_peripheriques_sous_connectees_reference",
+     "changements": []
+    },
+    {
+     "slug": "lobbies_agro_industriels_a_haute_consommation_d_eau_reference",
+     "changements": []
+    },
+    {
+     "slug": "lobbies_industriels_des_etats_non_signataires_reference",
+     "changements": []
+    },
+    {
+     "slug": "lyon_metropole_reference",
+     "changements": []
+    },
+    {
+     "slug": "maelys_okonkwo_reference",
+     "changements": []
+    },
+    {
+     "slug": "meridian_assembly_reference",
+     "changements": []
+    },
+    {
+     "slug": "milices_concurrentes_des_droits_de_passage_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "geopolitique_conflits +11.3",
+       "contredit": "aucun",
+       "raison": "La montée des conflits géopolitiques (+11.3 points) renforce le poids des milices dans la négociation violente des nœuds de mobilité."
+      }
+     ]
+    },
+    {
+     "slug": "mouvement_pour_la_libre_circulation_des_personnes_et_des_donnees_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "frontieres_du_systeme -27.0",
+       "contredit": "aucun",
+       "raison": "La crise des frontières du système (-27.0 points) alimente la pression pour l'abolition des barrières à la mobilité."
+      }
+     ]
+    },
+    {
+     "slug": "mouvement_racines_vivantes_reference",
+     "changements": []
+    },
+    {
+     "slug": "murmansk_transit_arctique_reference",
+     "changements": []
+    },
+    {
+     "slug": "nadia_ferreira_sato_reference",
+     "changements": []
+    },
+    {
+     "slug": "nairobi_crrc_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "déclinant",
+       "lien": "variable",
+       "lien_detail": "energie_ressources_critiques -29.4",
+       "contredit": "aucun",
+       "raison": "L'abondance de métaux lunaires réduit la valeur stratégique des ressources terrestres africaines que le CRRC coordonne."
+      }
+     ]
+    },
+    {
+     "slug": "neuroharmonics_reference",
+     "changements": []
+    },
+    {
+     "slug": "nexcore_reference",
+     "changements": []
+    },
+    {
+     "slug": "nexus_biosyn_reference",
+     "changements": []
+    }
+   ]
+  }
+ },
+ "shackleton_platinoides_2052::reference::9": {
+  "empreinte": "6fc09e659a3b3592",
+  "date": "2026-11-15T19:17",
+  "brut": {
+   "fiches": [
+    {
+     "slug": "observatoire_climatique_des_territoires_oct_reference",
+     "changements": []
+    },
+    {
+     "slug": "ong_de_preservation_patrimoniale_numerique_reference",
+     "changements": []
+    },
+    {
+     "slug": "ong_de_tracabilite_des_ressources_critiques_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "dépend de energie_ressources_critiques (-29.4 points) : l'inondation du marché par les platinoïdes lunaires rend la traçabilité de l'origine des métaux critiques stratégique",
+       "contredit": "",
+       "raison": "l'abondance de métaux lunaires augmente l'importance de distinguer la provenance des ressources critiques entre extraction terrestre et lunaire"
+      },
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "consortiums_prives_d_extraction_de_ressources_critiques_reference",
+       "relation": "opposition",
+       "action": "nouvelle",
+       "lien": "variable",
+       "lien_detail": "l'élément crée les consortiums privés d'extraction lunaire comme acteurs majeurs de la gestion des ressources critiques",
+       "contredit": "",
+       "raison": "l'ONG dénonce les pratiques d'extraction de ressources critiques, désormais exercées massivement par les nouveaux opérateurs lunaires"
+      }
+     ]
+    },
+    {
+     "slug": "ong_environnementales_de_terrain_reference",
+     "changements": []
+    },
+    {
+     "slug": "operateurs_de_zones_economiques_speciales_periurbaines_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "dépend de systeme_economique_redistribution (+17.0 points) : la redistribution économique massive stimule les flux périurbains",
+       "contredit": "",
+       "raison": "l'afflux de métaux critiques et la reconfiguration économique créent de nouvelles opportunités dans les zones périurbaines que ces opérateurs structurent"
+      }
+     ]
+    },
+    {
+     "slug": "operateurs_logistiques_prives_des_zones_grises_eurasiennes_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "déclinant",
+       "lien": "relation",
+       "lien_detail": "allié du cartel_des_terres_rares_d_asie_centrale_reference qui décline avec l'arrivée des métaux lunaires sur le marché",
+       "contredit": "",
+       "raison": "le déclin du cartel des terres rares d'Asie centrale et le déplacement du pivot géopolitique vers l'arc arctique réduisent l'importance stratégique des corridors eurasiens périphériques"
+      },
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "cartel_des_terres_rares_d_asie_centrale_reference",
+       "relation": "alliance",
+       "action": "rompue",
+       "lien": "relation",
+       "lien_detail": "le cartel_des_terres_rares_d_asie_centrale_reference est directement touché par l'élément et passe en trajectoire déclinante",
+       "contredit": "",
+       "raison": "l'alliance avec un acteur minier terrestre en déclin perd sa pertinence face à la nouvelle économie cislunaire"
+      }
+     ]
+    },
+    {
+     "slug": "operateurs_prives_d_energie_distribuee_hors_fct_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "dépend de energie_ressources_critiques (-29.4 points) : l'abondance de platinoïdes facilite les technologies de stockage longue durée",
+       "contredit": "",
+       "raison": "les métaux critiques lunaires rendent plus accessibles les infrastructures de stockage et de distribution énergétique hors réseau que ces opérateurs développent"
+      }
+     ]
+    },
+    {
+     "slug": "optiflow_logistics_reference",
+     "changements": [
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "consortiums_prives_d_extraction_de_ressources_critiques_reference",
+       "relation": "alliance",
+       "action": "nouvelle",
+       "lien": "variable",
+       "lien_detail": "dépend de systeme_economique_redistribution (+17.0 points) : les flux massifs de métaux lunaires transitent par les couloirs prioritaires gérés par OGLN",
+       "contredit": "",
+       "raison": "l'extraction lunaire crée de nouveaux flux logistiques mondiaux que OGLN intègre à ses couloirs prioritaires pour maintenir la stabilité systémique"
+      }
+     ]
+    },
+    {
+     "slug": "oracle_des_seuils_reference",
+     "changements": []
+    },
+    {
+     "slug": "ouagadougou_polytechnique_reference",
+     "changements": []
+    },
+    {
+     "slug": "pacifique_sud_archipels_flottants_reference",
+     "changements": []
+    },
+    {
+     "slug": "pacifique_sud_resilience_network_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "dominant",
+       "lien": "relation",
+       "lien_detail": "rivale des consortiums_prives_d_extraction_de_ressources_critiques_reference qui deviennent ascendants avec l'extraction lunaire",
+       "contredit": "",
+       "raison": "face à la puissance des nouveaux opérateurs lunaires, l'ASMPI affirme son cadre juridique post-territorial pour négocier l'accès aux ressources et les droits souverains mobiles"
+      }
+     ]
+    },
+    {
+     "slug": "pacte_des_souverains_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "déclinant",
+       "lien": "variable",
+       "lien_detail": "dépend de frontieres_du_systeme (-27.0 points) : l'élément ne modifie aucune frontière mais reconfigure les rapports de force économiques",
+       "contredit": "",
+       "raison": "la réduction de la crise des frontières et le déplacement des enjeux vers l'économie cislunaire réduisent la pertinence de la coordination souveraine sur les frontières territoriales"
+      }
+     ]
+    },
+    {
+     "slug": "plateformes_centralisees_de_narration_officielle_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "déclinant",
+       "lien": "relation",
+       "lien_detail": "allié du bloc_ressources_eurasiatique_bre_reference qui décline avec l'inondation du marché par les métaux lunaires",
+       "contredit": "",
+       "raison": "le déclin du Bloc Ressources Eurasiatique affaiblit l'un des piliers narratifs soutenant la grammaire du réel définie par ces plateformes"
+      }
+     ]
+    },
+    {
+     "slug": "plateformes_d_optimisation_territoriale_par_ia_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "dépend de frontieres_du_systeme (-27.0 points) et systeme_economique_redistribution (+17.0 points) : la reconfiguration spatiale vers l'arc arctique exige une réallocation des ressources",
+       "contredit": "",
+       "raison": "le nouvel axe géopolitique arctique et la redistribution économique massive nécessitent une réoptimisation territoriale que ces plateformes administrent"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "shackleton_platinoides_2052::reference::10": {
+  "empreinte": "c4fb27d99608a970",
+  "date": "2026-11-15T19:23",
+  "brut": {
+   "fiches": [
+    {
+     "slug": "plateformes_informationnelles_dominantes_et_leurs_ia_de_moderation_reference",
+     "changements": []
+    },
+    {
+     "slug": "prisme_global_reference",
+     "changements": []
+    },
+    {
+     "slug": "programme_onu_eau_2080_reference",
+     "changements": []
+    },
+    {
+     "slug": "raised_hands_reference",
+     "changements": []
+    },
+    {
+     "slug": "rede_paulista_de_distribuicao_algoritmica_reference",
+     "changements": []
+    },
+    {
+     "slug": "regulateurs_de_l_union_continentale_africaine_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "dépend de energie_ressources_critiques (-29.4) via son rôle d'imposition de cadres communs sur les ressources critiques",
+       "contredit": "",
+       "raison": "l'inondation du marché mondial par les platinoïdes et terres rares lunaires rend la régulation des ressources critiques plus centrale dans les arbitrages continentaux, renforçant le poids des Régulateurs de l'UCA"
+      }
+     ]
+    },
+    {
+     "slug": "regulateurs_de_l_union_eurasiatique_sur_les_donnees_critiques_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "marginal",
+       "lien": "relation",
+       "lien_detail": "allié de bloc_ressources_eurasiatique_bre_reference (déclinant)",
+       "contredit": "",
+       "raison": "le déclin du Bloc Ressources Eurasiatique affaiblit la base institutionnelle et géopolitique des Régulateurs de l'Union Eurasiatique sur les données critiques"
+      }
+     ]
+    },
+    {
+     "slug": "reseau_des_administrations_locales_rurales_participatives_reference",
+     "changements": []
+    },
+    {
+     "slug": "reseau_des_cartographes_des_zones_grises_reference",
+     "changements": []
+    },
+    {
+     "slug": "reseau_des_chercheurs_en_ethique_des_systemes_distribues_reference",
+     "changements": []
+    },
+    {
+     "slug": "reseau_des_cooperatives_agro_saheliennes_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "dépend de climat_environnement_global (-2.6) via la résilience alimentaire régionale face au changement climatique",
+       "contredit": "",
+       "raison": "la baisse de la crise climatique globale (-2.6) réduit la pression environnementale sur la gouvernance alimentaire sahélienne, renforçant la légitimité des coopératives agro-sahéliennes"
+      }
+     ]
+    },
+    {
+     "slug": "reseau_des_metropoles_cotieres_adaptees_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "dépend de climat_environnement_global (-2.6) via la gouvernance territoriale des zones côtières et les arbitrages adaptation/relocalisation",
+       "contredit": "",
+       "raison": "l'amélioration relative du climat global (-2.6) facilite les arbitrages entre maintien et relocalisation des populations littorales, renforçant le rôle du Réseau des Métropoles Côtières Adaptées"
+      }
+     ]
+    },
+    {
+     "slug": "reseau_des_villes_etats_pilotes_en_gouvernance_participative_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "relation",
+       "lien_detail": "rivale de bloc_ressources_eurasiatique_bre_reference (déclinant)",
+       "contredit": "",
+       "raison": "le déclin du Bloc Ressources Eurasiatique réduit l'opposition structurée aux modèles étatiques traditionnels, favorisant l'ascension des villes-états pilotes en gouvernance participative"
+      }
+     ]
+    },
+    {
+     "slug": "reseau_des_villes_refuge_pour_travailleurs_desaugmentes_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "marginal",
+       "lien": "relation",
+       "lien_detail": "rivale de consortiums_prives_d_extraction_de_ressources_critiques_reference (ascendant)",
+       "contredit": "",
+       "raison": "l'ascension des consortiums privés d'extraction de ressources critiques lunaires renforce la logique extractiviste et productiviste qui marginalise les espaces de refuge pour travailleurs désaugmentés"
+      }
+     ]
+    },
+    {
+     "slug": "reseau_hospitalier_hybride_eurasiatique_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "dépend de energie_ressources_critiques (-29.4) via la disponibilité des matériaux médicaux critiques (terres rares lourdes, platinoïdes) pour l'infrastructure de soins",
+       "contredit": "",
+       "raison": "l'arrivée massive de platinoïdes et terres rares lunaires sur le marché mondial réduit les pénuries de matériaux médicaux critiques, renforçant la capacité du réseau hospitalier hybride à maintenir son infrastructure transfrontalière"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "shackleton_platinoides_2052::reference::11": {
+  "empreinte": "847ddcb864922a0e",
+  "date": "2026-11-15T19:29",
+  "brut": {
+   "fiches": [
+    {
+     "slug": "reseau_meshcommons_netsolidaire_reference",
+     "changements": []
+    },
+    {
+     "slug": "reseau_mnemos_reference",
+     "changements": []
+    },
+    {
+     "slug": "reseaux_de_capteurs_citoyens_reference",
+     "changements": []
+    },
+    {
+     "slug": "reseaux_de_financement_gris_issus_d_anciens_blocs_militaires_reference",
+     "changements": []
+    },
+    {
+     "slug": "reseaux_de_lanceurs_d_alerte_institutionnels_dissidents_reference",
+     "changements": []
+    },
+    {
+     "slug": "reseaux_de_medecine_traditionnelle_augmentee_reference",
+     "changements": []
+    },
+    {
+     "slug": "sao_paulo_ita_reference",
+     "changements": []
+    },
+    {
+     "slug": "services_de_contre_information_des_blocs_geopolitiques_concurrents_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "geopolitique_conflits +11.3",
+       "contredit": "",
+       "raison": "l'intensification des conflits géopolitiques alimente directement leur activité de guerre informationnelle dans les zones de compétition"
+      }
+     ]
+    },
+    {
+     "slug": "siberie_federale_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "frontieres_du_systeme -27.0",
+       "contredit": "",
+       "raison": "la crise des frontières du système affaiblit les délimitations territoriales qu'elle conteste, renforçant sa pertinence dans l'arc arctique reconfiguré"
+      }
+     ]
+    },
+    {
+     "slug": "singapour_est_nexcore_reference",
+     "changements": []
+    },
+    {
+     "slug": "singapour_est_reference",
+     "changements": []
+    },
+    {
+     "slug": "syndicats_de_travail_rural_hybride_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "marginal",
+       "lien": "relation",
+       "lien_detail": "rivaux de consortiums_prives_d_extraction_de_ressources_critiques_reference (devenu ascendant)",
+       "contredit": "",
+       "raison": "l'ascension des nouveaux opérateurs d'extraction lunaire renforce la concentration économique et l'automatisation agricole contre lesquelles ils luttent"
+      }
+     ]
+    },
+    {
+     "slug": "syndicats_de_travailleurs_de_la_transition_energetique_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "marginal",
+       "lien": "relation",
+       "lien_detail": "rivaux de consortiums_prives_d_extraction_de_ressources_critiques_reference (devenu ascendant)",
+       "contredit": "",
+       "raison": "l'ascension des consortiums privés d'extraction de ressources critiques affaiblit leur levier de négociation sur les arbitrages de la transition énergétique"
+      }
+     ]
+    },
+    {
+     "slug": "tbilissi_noeud_mnemos_reference",
+     "changements": []
+    },
+    {
+     "slug": "terminal_kharg_data_haven_reference",
+     "changements": []
+    }
+   ]
+  }
+ },
+ "shackleton_platinoides_2052::reference::12": {
+  "empreinte": "07a503915ebea771",
+  "date": "2026-11-15T19:32",
+  "brut": {
+   "fiches": [
+    {
+     "slug": "terrametrics_reference",
+     "changements": []
+    },
+    {
+     "slug": "territoire_autonome_de_karachi_biosyn_reference",
+     "changements": []
+    },
+    {
+     "slug": "the_lattice_reference",
+     "changements": []
+    },
+    {
+     "slug": "the_tidewater_canon_reference",
+     "changements": []
+    },
+    {
+     "slug": "tribunal_algorithmique_de_bruxelles_reference",
+     "changements": []
+    },
+    {
+     "slug": "union_africaine_de_resilience_territoriale_reference",
+     "changements": []
+    },
+    {
+     "slug": "union_africaine_resilience_reference",
+     "changements": []
+    },
+    {
+     "slug": "universites_et_think_tanks_en_zones_de_liberte_academique_reference",
+     "changements": []
+    },
+    {
+     "slug": "valparaiso_fct_reference",
+     "changements": []
+    },
+    {
+     "slug": "vasil_orentchev_reference",
+     "changements": []
+    },
+    {
+     "slug": "voix_du_dehors_reference",
+     "changements": []
+    },
+    {
+     "slug": "zones_grises_globales_reference",
+     "changements": []
+    },
+    {
+     "slug": "accord_carbone_amazonie_blocs_reference",
+     "changements": []
+    },
+    {
+     "slug": "election_parti_commun_americain_reference",
+     "changements": []
+    },
+    {
+     "slug": "incident_passage_arctique_reference",
+     "changements": []
+    }
+   ]
+  }
+ },
+ "shackleton_platinoides_2052::reference::13": {
+  "empreinte": "2cea8accb4469194",
+  "date": "2026-11-15T19:37",
+  "brut": {
+   "fiches": [
+    {
+     "slug": "effondrement_circulation_atlantique_2067_reference",
+     "changements": []
+    },
+    {
+     "slug": "emeutes_algorithme_sao_paulo_reference",
+     "changements": []
+    },
+    {
+     "slug": "arrestation_chris_van_derburgh_reference",
+     "changements": []
+    },
+    {
+     "slug": "explosion_brise_glace_murmansk_2081_reference",
+     "changements": []
+    },
+    {
+     "slug": "nairobi_biorevenu_pilote_2094_reference",
+     "changements": []
+    }
+   ]
+  }
+ },
+ "shackleton_platinoides_2052::reference::contre1::b3ab934a196caf93": {
+  "date": "2026-11-15T19:41",
+  "verdict": {
+   "id": "o1",
+   "incompatible": false,
+   "fait": "tendance",
+   "motif": "nuance",
+   "justification": "L'arrivée en masse de métaux lunaires affaiblit le levier du BRE sur les matériaux stratégiques, mais ne l'annule pas : le BRE peut encore influer unilatéralement sur les prix (notamment de l'énergie et d'autres matériaux non fournis par Shackleton), même si son pouvoir de marché est réduit."
+  }
+ },
+ "shackleton_platinoides_2052::reference::contre1::3b6e41dcd054a51b": {
+  "date": "2026-11-15T19:41",
+  "verdict": {
+   "id": "o2",
+   "incompatible": true,
+   "fait": "tendance",
+   "motif": "contradiction",
+   "justification": "Si les métaux critiques de Shackleton (platinoïdes et terres rares lourdes) arrivent en masse sur le marché mondial depuis 2055, l'accès à ces ressources en 2098 n'est plus conditionné par le Cartel des Terres Rares, qui perd son monopole effectif sur l'approvisionnement de ces matériaux stratégiques."
+  }
+ },
+ "shackleton_platinoides_2052::reference::classement::becb6cd384f25efe": {
+  "date": "2026-11-15T19:44",
+  "brut": {
+   "classement": [
+    {
+     "id": "f69",
+     "pourquoi": "Alliance logistique créée directement par le flux massif de métaux lunaires transitant par l'arc arctique"
+    },
+    {
+     "id": "f42",
+     "pourquoi": "Reconversion directe des enclaves en bases logistiques pour les nouveaux opérateurs lunaires"
+    },
+    {
+     "id": "f29",
+     "pourquoi": "Maintenance orbitale devenue infrastructure de dernier recours pour les flux lunaires via l'arc arctique"
+    },
+    {
+     "id": "f32",
+     "pourquoi": "Extension nécessaire de l'épine dorsale logistique mondiale à l'axe Terre-Lune"
+    },
+    {
+     "id": "f24",
+     "pourquoi": "Centralité géopolitique accrue par la reconfiguration des frontières vers l'arc arctique"
+    },
+    {
+     "id": "f43",
+     "pourquoi": "Montée en puissance directe des consortiums d'extraction lunaire au sein du Pacte des Souverains"
+    },
+    {
+     "id": "f50",
+     "pourquoi": "Nouveau besoin de distinguer la provenance lunaire vs terrestre créé par l'abondance de platinoïdes"
+    },
+    {
+     "id": "f71",
+     "pourquoi": "Score chiffré de tension énergétique mentionné dans la fiche directement modifié par l'élément"
+    },
+    {
+     "id": "f1",
+     "pourquoi": "Effondrement de la rente des ressources critiques terrestres (-29.4) augmente l'importance stratégique des ENR"
+    },
+    {
+     "id": "f58",
+     "pourquoi": "Inondation du marché par les platinoïdes lunaires rend la régulation des ressources critiques centrale dans les arbitrages africains"
+    },
+    {
+     "id": "f7",
+     "pourquoi": "Casse de la rente minière terrestre augmente les territoires où les circuits marchands se rétractent"
+    },
+    {
+     "id": "f9",
+     "pourquoi": "Perte de rente des pays extracteurs du Sud Global renforce la légitimité du Bloc comme voix des perdants"
+    },
+    {
+     "id": "f6",
+     "pourquoi": "Redistribution économique massive (+17.0) nécessite une coordination territoriale renforcée entre territoires fédérés"
+    },
+    {
+     "id": "f3",
+     "pourquoi": "Crise des frontières du système (-27.0) augmente directement le besoin de normalisation des zones grises"
+    },
+    {
+     "id": "f48",
+     "pourquoi": "Crise des frontières (-27.0) alimente directement la pression pour l'abolition des barrières à la mobilité"
+    },
+    {
+     "id": "f4",
+     "pourquoi": "Augmentation des conflits géopolitiques (+11.3) renforce le Pacte des Souverains comme alternative diplomatique"
+    },
+    {
+     "id": "f66",
+     "pourquoi": "Crise des frontières (-27.0) affaiblit les délimitations territoriales que la Sibérie conteste"
+    },
+    {
+     "id": "f54",
+     "pourquoi": "Face à la puissance des nouveaux opérateurs lunaires, l'ASMPI affirme son cadre juridique post-territorial"
+    },
+    {
+     "id": "f23",
+     "pourquoi": "Ascension des nouveaux opérateurs d'extraction lunaire intensifie les conflits sur les droits biosociaux"
+    },
+    {
+     "id": "f38",
+     "pourquoi": "Infrastructures de clearing devenues critiques pour financer les nouvelles chaînes d'approvisionnement lunaires"
+    }
+   ]
+  }
  }
 }

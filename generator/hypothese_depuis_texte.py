@@ -114,6 +114,18 @@ def construire_prompt(texte, variables, type_force=None, imposes=None):
             morceaux.append("durées de montée calculées pour que l'effet soit à pleine force en 2098")
         if morceaux:
             ligne_type += "VALEURS IMPOSÉES PAR L'AUTEUR (ne les change pas) : " + " ; ".join(morceaux) + ".\n\n"
+    if imposes and imposes.get("wild_card"):   # U4a
+        ligne_type += ("WILD CARD IMPOSÉE PAR L'AUTEUR : rupture à faible probabilité et à impact majeur, "
+                       "qu'aucun signal faible n'annonce encore. Type \"evenement\", mode \"rupture\", "
+                       f"date entre {se.WILD_CARD_DATES[0]} et {se.WILD_CARD_DATES[1]}, "
+                       f"{se.WILD_CARD_IMPACTS[0]} à {se.WILD_CARD_IMPACTS[1]} impacts, chacun de force "
+                       f"{se.WILD_CARD_FORCE[0]} à {se.WILD_CARD_FORCE[1]} (cette règle prime sur le "
+                       f"plafond de {FORCE_MAX} donné plus bas). Chaque impact est PERMANENT : ne retiens "
+                       "que les domaines que l'élément change pour de bon à l'échelle du monde ; un domaine "
+                       "qu'il apaise prend la polarité -1. Si l'élément frappe certains scénarios plus que "
+                       "d'autres, \"delta_level\" peut être un dictionnaire par scénario (comme polarite, les 6 "
+                       f"scénarios) : {se.WILD_CARD_FORCE[0]} à {se.WILD_CARD_FORCE[1]} dans au moins un scénario, "
+                       f"{se.WILD_CARD_FORCE_MIN_SC} au moins dans les autres.\n\n")   # U4d3 / U4f
     return f"""{ligne_type}Tu aides l'auteur du monde fictif Ourrassol 2098 (6 scénarios d'avenir, 12 variables
 où le niveau 100 = crise maximale) à transformer une IDÉE en HYPOTHÈSE « et si ? » testable
 par son simulateur. L'hypothèse n'est jamais injectée : elle sert à mesurer ses effets.
@@ -179,7 +191,7 @@ def appeler_llm(prompt):
     return json.loads(texte)
 
 
-def normaliser_proposition(brut, variables, ids_pris):
+def normaliser_proposition(brut, variables, ids_pris, wild=False):
     """Remet la réponse de l'IA dans le format du fichier. Chaque correction
     est signalée (jamais en silence)."""
     av = []
@@ -197,6 +209,11 @@ def normaliser_proposition(brut, variables, ids_pris):
         av.append(f"type {typ!r} inconnu -> evenement")
         typ = "evenement"
     est_signal = typ == "signal"
+    if wild:   # U4a : une wild card est toujours un événement
+        if est_signal:
+            av.append("une wild card est un événement : type signal -> evenement")
+            typ, est_signal = "evenement", False
+        h["wild_card"] = True
     if est_signal:
         h["type"] = "signal"
     if description:
@@ -211,6 +228,11 @@ def normaliser_proposition(brut, variables, ids_pris):
         h["date"] = date
     except (TypeError, ValueError):
         av.append(f"date {brut.get('date')!r} illisible -- à renseigner")
+    if wild and "date" in h:   # U4a
+        a0, a1 = se.WILD_CARD_DATES
+        if not a0 <= h["date"] <= a1:
+            av.append(f"date {h['date']} hors de la fenêtre d'une wild card ({a0}-{a1}) -> ramenée dans la fenêtre")
+            h["date"] = min(a1, max(a0, h["date"]))
 
     mode = str(brut.get("mode") or "choc").strip().lower()
     if mode not in ("choc", "rupture"):
@@ -219,6 +241,9 @@ def normaliser_proposition(brut, variables, ids_pris):
     if est_signal and mode == "rupture":
         av.append("un signal n'a pas de mode rupture -> choc")
         mode = "choc"
+    if wild and mode != "rupture":   # U4a
+        av.append(f"mode {mode} -> rupture (une wild card change le monde pour de bon)")
+        mode = "rupture"
     h["mode"] = mode
     if mode == "choc":
         pers = dyn.normaliser_persistance(brut.get("persistance")) or dyn.PERSISTANCE_DEFAUT
@@ -264,15 +289,47 @@ def normaliser_proposition(brut, variables, ids_pris):
             av.append(f"variable {var} en double, première gardée")
             continue
         vues.add(var)
-        try:
-            force = int(round(abs(float(imp.get("delta_level")))))
-        except (TypeError, ValueError):
-            av.append(f"{var} : force illisible -> 10")
-            force = 10
         fmax = SIGNAL_FORCE_MAX if est_signal else FORCE_MAX
-        if not 1 <= force <= fmax:
-            av.append(f"{var} : force {force} ramenée entre 1 et {fmax}")
-            force = min(fmax, max(1, force))
+        fmin = 1
+        if wild:   # U4a
+            fmin, fmax = se.WILD_CARD_FORCE
+        dl = imp.get("delta_level")
+        if isinstance(dl, dict):   # U4f : force par scénario
+            couverts = se.SCENARIOS if scen == "tous" else list(scen)
+            vals = {}
+            for s_, v_ in dl.items():
+                try:
+                    if s_ in couverts:
+                        vals[s_] = int(round(abs(float(v_))))
+                except (TypeError, ValueError):
+                    pass
+            if not vals:
+                av.append(f"{var} : forces par scénario illisibles -> 10")
+                force = 10
+            else:
+                plancher = se.WILD_CARD_FORCE_MIN_SC if wild else 1
+                for s_ in couverts:
+                    if s_ not in vals:
+                        vals[s_] = max(vals.values())
+                        av.append(f"{var} : force absente pour {s_} -> {vals[s_]}")
+                for s_, v_ in list(vals.items()):
+                    if not plancher <= v_ <= fmax:
+                        vals[s_] = min(fmax, max(plancher, v_))
+                        av.append(f"{var} : force {v_} ({s_}) ramenée entre {plancher} et {fmax}")
+                if max(vals.values()) < fmin:
+                    s_max = max(vals, key=vals.get)
+                    av.append(f"{var} : aucune force à {fmin} au moins -> {s_max} porté à {fmin}")
+                    vals[s_max] = fmin
+                force = vals if len(set(vals.values())) > 1 else next(iter(vals.values()))
+        else:
+            try:
+                force = int(round(abs(float(dl))))
+            except (TypeError, ValueError):
+                av.append(f"{var} : force illisible -> 10")
+                force = 10
+            if not fmin <= force <= fmax:
+                av.append(f"{var} : force {force} ramenée entre {fmin} et {fmax}")
+                force = min(fmax, max(fmin, force))
         pol = imp.get("polarite", 1)
         if isinstance(pol, dict):
             pol = {s: (1 if str(v).strip().lstrip("+") == "1" else -1) for s, v in pol.items() if s in se.SCENARIOS}
@@ -293,6 +350,9 @@ def normaliser_proposition(brut, variables, ids_pris):
     if len(impacts) > MAX_IMPACTS:
         av.append(f"{len(impacts)} impacts proposés, gardé les {MAX_IMPACTS} premiers")
         impacts = impacts[:MAX_IMPACTS]
+    if wild and len(impacts) > se.WILD_CARD_IMPACTS[1]:   # U4a
+        av.append(f"{len(impacts)} impacts, gardé les {se.WILD_CARD_IMPACTS[1]} premiers (wild card)")
+        impacts = impacts[:se.WILD_CARD_IMPACTS[1]]
     if not impacts:
         av.append("aucun impact valide : à renseigner avant d'ajouter")
     h["impacts"] = impacts
@@ -536,7 +596,6 @@ def normaliser_entite(brut, ids_pris):
                 av.append(f"annee_debut {a_} hors de la période 2026-2098 : retirée")
         except ValueError:
             av.append(f"annee_debut {annee!r} illisible : retirée")
-            h[cle] = v
     scen = brut.get("scenarios") or "tous"
     if isinstance(scen, list):
         valides = [s for s in scen if s in se.SCENARIOS]
@@ -568,15 +627,19 @@ def proposer(texte, _llm=appeler_llm, type_force=None, imposes=None):
         raise ValueError("idée vide")
     if type_force == "entite":   # U3aj : parcours propre, sans date ni impact
         return proposer_entite(texte, _llm)
+    wild = bool((imposes or {}).get("wild_card"))   # U4a
+    if wild and type_force == "signal":
+        raise ValueError("une wild card est un événement, pas un signal")
     variables = valid_vars()
     brut = _llm(construire_prompt(texte, variables, type_force, imposes))
     if not isinstance(brut, dict):
         raise ValueError("réponse de l'IA inexploitable")
     if type_force in ("evenement", "signal"):
         brut["type"] = type_force   # le choix de l'auteur l'emporte sur celui de l'IA
-    h, av = normaliser_proposition(brut, variables, ids_existants())
+    h, av = normaliser_proposition(brut, variables, ids_existants(), wild=wild)
     av += appliquer_imposes(h, imposes, h.get("type") == "signal")   # U3c
     _, erreurs, av2 = se.verifier_hypothese(dict(h), variables, dyn)
+    erreurs = list(erreurs) + se.controle_wild_cards(h)   # U4a
     return {"ok": True, "bloc": bloc_yaml(h), "id": h["id"],
             "justification": str(brut.get("justification") or "").strip(),
             "avertissements": av + av2, "erreurs": erreurs}
@@ -647,6 +710,7 @@ def verifier_bloc(texte, pour_ajout=False):
     else:
         avert_dup = []
     _, err2, avert = se.verifier_hypothese(dict(h), valid_vars(), dyn)
+    err2 = list(err2) + se.controle_wild_cards(h)   # U4a : quota et espacement
     avert = avert_dup + list(avert)
     erreurs += err2
     return {"ok": not erreurs, "erreurs": erreurs, "avertissements": avert, "id": hid}
@@ -703,6 +767,9 @@ def main():
                     help="avec --proposer : mode imposé (événement seulement)")
     ap.add_argument("--effet-plein", action="store_true",
                     help="avec --proposer : durées de montée calculées (2098 - date) pour un effet plein en 2098")
+    ap.add_argument("--wild-card", action="store_true",   # U4a
+                    help="avec --proposer : impose une wild card (événement, rupture, 2030-2090, "
+                         "3 à 6 impacts de force 25 à 35)")
     ap.add_argument("--citation", default=None,
                     help="avec --proposer : citation exacte de l'article, ajoutée aux faits imposés (U3i)")
     args = ap.parse_args()
@@ -723,6 +790,8 @@ def main():
                 imposes["effet_plein"] = True
             if args.citation:   # U3i
                 imposes["citation"] = args.citation
+            if args.wild_card:   # U4a
+                imposes["wild_card"] = True
             res = proposer(texte, type_force=args.type, imposes=imposes or None)
         elif args.verifier:
             res = verifier_bloc(texte)

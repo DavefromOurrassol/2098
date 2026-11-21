@@ -239,6 +239,11 @@ def contexte_commun(hyp, sc, effets, lecture, instances):
     contraintes = ""
     if hyp.get("contraintes"):
         contraintes = ("FAITS À RESPECTER :\n" + "\n".join(f"- {c}" for c in hyp["contraintes"]) + "\n")
+    if hyp.get("wild_card"):   # U4c
+        contraintes += ("WILD CARD : rupture improbable voulue par l'auteur ; elle a le droit de contredire les "
+                        "fiches et les tendances du scénario. Une fiche qu'elle rend fausse est à corriger "
+                        "(obligatoire) : ne l'écarte pas parce que l'élément te semble invraisemblable dans "
+                        "ce monde.\n")
     deja = []
     if lecture and not lecture.get("erreur"):
         if lecture.get("lecture"):

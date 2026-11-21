@@ -10974,6 +10974,17 @@ function buildAssistantHypothese() {
     const o = document.createElement('option'); o.value = v; o.textContent = t; selType.appendChild(o);
   });
   ligneProposer.appendChild(selType);
+  // U4d : case « wild card » (événement, rupture, 2030-2090, 3 à 6 impacts de force 25 à 35)
+  const lblWild = document.createElement('label');
+  lblWild.style.cssText = 'display:inline-flex;align-items:center;gap:4px;cursor:pointer;';
+  const chkWild = document.createElement('input');
+  chkWild.type = 'checkbox';
+  chkWild.style.setProperty('width', 'auto', 'important');
+  lblWild.appendChild(chkWild);
+  lblWild.appendChild(document.createTextNode('⚡ wild card'));
+  lblWild.title = 'Rupture improbable à impact majeur : événement en mode rupture, 2030-2090, 3 à 6 variables de force 25 à 35. ' +
+    'La simulation lancera d\'office la lecture IA et la Passe exhaustive (payant).';
+  ligneProposer.appendChild(lblWild);
   corps.appendChild(ligneProposer);
 
   // U3aq : suggestions à partir des lacunes du vault (un appel IA, n'écrit rien)
@@ -10997,16 +11008,25 @@ function buildAssistantHypothese() {
   etatSugg.textContent = 'Analyse le vault (zones vides, variables rares, dates sur-représentées) et propose 5 idées. ' +
     'Un appel IA ; rien n\'est écrit.';
   blocSugg.appendChild(etatSugg);
+  // U4d : wild cards, à part des lacunes (3 idées, un appel IA, jamais en lot)
+  const ligneWild = document.createElement('div');
+  ligneWild.style.cssText = 'display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:8px 0 2px;padding-top:6px;border-top:1px dotted #9aa5b1;';
+  const btnWild = mk('button', 'yaml-btn', '⚡ Proposer des wild cards');
+  btnWild.type = 'button';
+  ligneWild.appendChild(btnWild);
+  ligneWild.appendChild(mk('span', 'option-desc', 'Ruptures improbables à impact majeur : 3 idées, un appel IA, rien n\'est écrit. Traitées une par une, jamais en lot.'));
+  blocSugg.appendChild(ligneWild);
   const listeSugg = mk('div');
   blocSugg.appendChild(listeSugg);
   corps.appendChild(blocSugg);
 
-  btnSugg.addEventListener('click', async () => {
-    const type = selSugg.value;
+  const chercherSugg = async (type) => {   // U4d : lacunes ou wild cards
     btnSugg.disabled = true;
+    btnWild.disabled = true;
     listeSugg.textContent = '';
     etatSugg.style.color = '';
-    etatSugg.textContent = '💡 Analyse en cours… (un appel IA, jusqu\'à une minute)';
+    etatSugg.textContent = type === 'wildcard' ? '⚡ Recherche de wild cards… (un appel IA, jusqu\'à une minute)'
+      : '💡 Analyse en cours… (un appel IA, jusqu\'à une minute)';
     let data;
     try {
       const res = await fetch('/api/et_si/suggerer', {
@@ -11019,6 +11039,7 @@ function buildAssistantHypothese() {
       data = { error: `Erreur réseau : ${e.message}` };
     }
     btnSugg.disabled = false;
+    btnWild.disabled = false;   // U4d
     if (data.error) { etatSugg.style.color = '#b03a2e'; etatSugg.textContent = `✗ ${data.error}`; return; }
     etatSugg.textContent = `${(data.suggestions || []).length} idée(s). « Utiliser cette idée » la copie dans la zone d'idée ci-dessous ; rien n'est ajouté tant que tu n'as pas fait Proposer, Vérifier puis Ajouter.`;
     const cartes = [];   // U3ar
@@ -11036,7 +11057,8 @@ function buildAssistantHypothese() {
       b.addEventListener('click', () => {
         if (idee.value.trim() && idee.value.trim() !== s.texte && !armer2(b, '⚠ Cliquer encore pour remplacer l\'idée actuelle')) return;   // U3bf
         idee.value = s.texte;
-        selType.value = (data.type === 'entite') ? 'entite' : '';
+        selType.value = (data.type === 'entite') ? 'entite' : (data.type === 'wildcard' ? 'evenement' : '');
+        chkWild.checked = data.type === 'wildcard';   // U4d
         idee.scrollIntoView({ behavior: 'smooth', block: 'center' });
         idee.focus();
       });
@@ -11048,6 +11070,12 @@ function buildAssistantHypothese() {
       cartes.push({ s, carte, etat, b, fait: false, bloc: '' });   // U3ar
     });
     if (!cartes.length) return;
+    if (type === 'wildcard') {   // U4d : une wild card passe seule (Proposer, Vérifier, simulation, décision)
+      const n = mk('div', 'option-desc', 'Wild cards : pas de traitement en lot. « Utiliser cette idée », puis ✨ Proposer (case ⚡ cochée), Vérifier, Ajouter, et simuler.');
+      n.style.marginTop = '6px';
+      listeSugg.appendChild(n);
+      return;
+    }
 
     // U3ar : traitement en lot -- Proposer puis, si propre, Ajouter ; sinon « à voir avec toi »
     const appelLot = async (action, texte) => {
@@ -11082,6 +11110,7 @@ function buildAssistantHypothese() {
       resume.style.color = '';   // U3as
       resume.textContent = `⏳ Lot démarré : ${cartes.filter(c => !c.fait).length} idée(s), un appel IA chacune (quelques minutes). Les blocs sans problème sont ajoutés à hypotheses.yaml.`;
       [btnLot, btnSugg, btnProposer, btnVerifier, btnAjouter].forEach(x => { x.disabled = true; });
+      chkWild.checked = false;   // U4d : jamais de wild card en lot
       let ajoutes = 0, aVoir = 0;
       for (const it of cartes) {
         if (it.fait) continue;
@@ -11111,6 +11140,7 @@ function buildAssistantHypothese() {
           it.ouvrir.addEventListener('click', () => {
             idee.value = it.s.texte;
             selType.value = (data.type === 'entite') ? 'entite' : '';
+            chkWild.checked = false;   // U4d
             bloc.value = it.bloc;
             delete btnAjouter.dataset.verrou;
             btnAjouter.disabled = false;
@@ -11132,7 +11162,9 @@ function buildAssistantHypothese() {
         if (panneau) await loadYamlContent(panneau, 'et_si/hypotheses.yaml');
       }
     });
-  });
+  };
+  btnSugg.addEventListener('click', () => chercherSugg(selSugg.value));   // U4d
+  btnWild.addEventListener('click', () => chercherSugg('wildcard'));
 
   const retour = mk('div', 'option-desc');
   retour.style.whiteSpace = 'pre-wrap';
@@ -11181,7 +11213,8 @@ function buildAssistantHypothese() {
       const res = await fetch(`/api/et_si/${action}`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ texte, type: action === 'proposer' ? selType.value : '' }),
+        body: JSON.stringify({ texte, type: action === 'proposer' ? selType.value : '',
+          wild_card: action === 'proposer' && chkWild.checked }),   // U4d
       });
       return await res.json();
     } catch (e) {
@@ -11196,6 +11229,11 @@ function buildAssistantHypothese() {
 
   btnProposer.addEventListener('click', async () => {
     if (!idee.value.trim()) { retour.textContent = '✗ Écris d\'abord l\'idée.'; return; }
+    if (chkWild.checked && ['signal', 'entite'].includes(selType.value)) {   // U4d
+      retour.style.color = '#b03a2e';
+      retour.textContent = '✗ Une wild card est un événement : choisir « Événement » (ou « l\'IA décide »), ou décocher ⚡.';
+      return;
+    }
     if (bloc.value.trim() && !armer2(btnProposer, '⚠ Cliquer encore pour remplacer le bloc')) return;   // U3bf
     occupe(true);
     btnProposer.textContent = '✨ Proposition en cours… (un appel IA)';

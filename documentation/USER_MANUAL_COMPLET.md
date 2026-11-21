@@ -2,9 +2,9 @@
 
 *Mode d'emploi de l'état actuel : ce que fait chaque outil, quand l'utiliser,
 comment le lancer (GUI ou terminal), ses pièges. Mis au propre le 24 octobre 2026,
-mis à jour le 14 novembre 2026 au soir (unification « et si ? » : porte unique pour
+mis à jour le 15 novembre 2026 au soir (unification « et si ? » : porte unique pour
 événements, signaux et entités ; fiche d'article sans invention, suggestions, lot d'entités,
-accès directs fermés, U3aa → U3bf).
+accès directs fermés, U3aa → U3bf ; **wild cards** et force par scénario, U4a → U4f).
 Le récit des sessions (bugs trouvés, itérations, tests, versions successives) est
 dans `USER_MANUAL_HISTORIQUE.md` ; les chantiers ouverts dans `BACKLOG_ACTIF.md`.
 Les numéros de section (§2octies, §3quinquies…) sont stables : backlog et
@@ -596,6 +596,10 @@ python3 generator/inject_custom_events.py --idea '{"id": "...", ...}' --json [--
   - `impacts_imposes` (`{scénario: [{variable, delta_level 1-25, duree, polarite ±1}]}`),
     `date_imposee` (2025-2098, ignore `edition_active`), `via_matrice_impose` ; l'IA
     écrit le récit, les chiffres sont remis après sa réponse ;
+  - `wild_card_impose: true` (U4c, avec `mode_impose: rupture` obligatoire) : forces
+    acceptées jusqu'à 35 (`WILD_CARD_FORCE_MAX`, aussi dans `validate_instance(max_delta=…)`),
+    `wild_card: true` écrit dans chaque fiche (sous `mode: rupture`), et consigne au récit :
+    l'événement **se produit** dans ce scénario même s'il va contre sa logique ;
   - `faits_imposes` (`{scénario: [{fait, slug, sort}]}`, `sort` : `disparait`, `change`,
     `reste`, `zone`, `contrainte`) : le récit ne doit jamais les contredire ;
     ⚠ (sans rejet) si une entité « reste » est associée à une destruction, ou si le
@@ -1232,7 +1236,7 @@ files d'injection.
 #### Les quatre entrées
 | Entrée | Types | Détail |
 |---|---|---|
-| ✨ Nouvelle hypothèse | événement, signal, entité | texte libre → Proposer → Vérifier → Ajouter ; bloc « 💡 Suggestions » |
+| ✨ Nouvelle hypothèse | événement (dont wild card), signal, entité | texte libre → Proposer → Vérifier → Ajouter ; bloc « 💡 Suggestions » ; « ⚡ Proposer des wild cards » |
 | 🔭 Veille signaux faibles | signal, événement | « ✨ Envoyer vers « et si ? » » |
 | Onglet Articles | événement (détecté), signal, entité (nom saisi) | citation imposée, date verrouillée |
 | Étape ⑤ « Lecture IA » | entité | crée des hypothèses d'entité (U3be) |
@@ -1262,8 +1266,8 @@ files d'injection.
   une `annee_debut`). « Traiter les N en lot » enchaîne Proposer puis Ajouter pour les idées
   dont le bloc n'a ni erreur ni avertissement ; les autres restent avec leur motif
   (« Ouvrir pour corriger »). Route `/api/et_si/suggerer`
-  (`python3 generator/suggerer_lacunes.py --type evenement|entite --json`). Pas de suggestions
-  de signaux : la veille les couvre.
+  (`python3 generator/suggerer_lacunes.py --type evenement|entite|wildcard --json` ; `wildcard` :
+  3 idées, voir « Wild cards »). Pas de suggestions de signaux : la veille les couvre.
 - **Depuis la Lecture IA** (étape ⑤, U3be) : « Créer les hypothèses « et si ? » » transforme
   les entités proposées en hypothèses d'entité (rôle et raison repris tels quels, sans appel
   IA, avec les contrôles de doublon) et note l'entrée dans
@@ -1281,6 +1285,53 @@ les 9 actions de l'étape ⑤, « Remettre à trier » de la veille, « Utiliser
 « Proposer » avec un texte déjà saisi) demandent maintenant un **second clic** (8 s, fonction
 `armer2()` de `app.js`). Les `confirm()` restants (Carte, Lore, Chantiers…) sont inchangés : un
 bouton muet = probablement un `confirm()`.
+
+#### Wild cards (U4a → U4f, 15 nov. 2026)
+**Définition** : une rupture **improbable** (pas impossible : mécanisme connu, plausible selon la
+science actuelle) qui change le monde **entier pour de bon**, sur plusieurs domaines à la fois ;
+souvent une découverte ou une percée (gisement sur un autre corps du système solaire, signe de
+vie extraterrestre, molécule qui allonge la vie, supraconducteur à température ambiante), pas une
+catastrophe régionale dont l'effet s'estompe (volcan, cyclone : événement ordinaire). Aucun signal
+faible du vault ne doit l'annoncer.
+- **Bloc** : un **événement** (pas un 4ᵉ type) avec `wild_card: true` et `mode: rupture`. Elle
+  peut contredire les fiches et les tendances du scénario (corrections à appliquer, étapes ④ ⑤),
+  **jamais une règle de `lore_regles.yaml`**.
+- **Contrôles sans IA** (Vérifier, Ajouter, liste du simulateur, avant toute simulation ;
+  `controle_wild_cards()` et `verifier_hypothese()` de `simuler_et_si.py`) : jamais un signal ;
+  `mode: rupture` ; date entre **2030 et 2090** ; **3 à 6** impacts ; pour chaque impact, force
+  **25 à 35 dans au moins un scénario** et **10 au moins** dans les autres ; **3 wild cards au
+  plus par scénario**, **10 ans d'écart** au moins dans un même scénario (une wild card commune
+  compte dans chacun ; les hypothèses rejetées ne comptent pas).
+- **⚡ Proposer des wild cards** (bloc des suggestions, à part des lacunes) : un appel IA,
+  **3 idées**, rien n'est écrit (`suggerer_lacunes.py --type wildcard`). L'IA reçoit les
+  scénarios, les signaux faibles du monde (à ne pas reprendre), toutes les règles de lore et les
+  wild cards déjà prévues ; chaque idée choisit **ses** scénarios (« tous » au plus une fois sur
+  trois) et dit pourquoi (« Improbable · Bouscule · Scénarios » sous la carte). Fenêtre, quota et
+  écart contrôlés : un problème s'affiche en ⚠. **Jamais de traitement en lot.**
+- **Case « ⚡ wild card »** (à côté de ✨ Proposer ; CLI `--wild-card`) : Proposer produit un bloc
+  wild card (rupture, fenêtre, forces 25-35, 6 impacts au plus, consigne « chaque impact est
+  permanent, un domaine apaisé prend la polarité -1 »). « Utiliser cette idée » d'une carte ⚡ la
+  coche ; le lot des lacunes et « Ouvrir pour corriger » la décochent ; refus si le type choisi est
+  signal ou entité.
+- **⚠ Relire le bloc proposé** : ✨ Proposer ignore encore la ligne « Scénarios : … » d'une idée ⚡
+  (mettre la liste à la main) et donne souvent la même force partout (ajuster les forces par
+  scénario). Retirer les domaines dont l'effet ne dure pas.
+- **① Simuler** : lecture IA et Passe exhaustive **lancées d'office** (cases ignorées, payant).
+  Avant tout calcul, **contrôle des règles de lore** : un appel IA par scénario qui a des règles
+  (`_tous` + scénario + zones en quarantaine), cache `generator/state/et_si_regles_lore.json` ;
+  une règle contredite, ou un contrôle en échec, **bloque** (« ✗ Wild card … refusée »). Lignes
+  `ℹ règles de lore — <sc> : N règle(s) contrôlée(s), 0 contredite(s)` en tête de sortie ; ligne
+  « ⚡ Wild card » dans le rapport. ⚠ **Durée** : la Passe relit toutes les fiches (Shackleton,
+  2 scénarios : 25 lots, **2 h**) ; suivre l'avancement avec l'heure de
+  `generator/state/et_si_exhaustif.json` (réécrit après chaque lot), ne pas relancer.
+- **② Adopter** : refusé si la dernière simulation n'a pas eu de Passe exhaustive.
+- **③ Injecter** : l'entrée porte `wild_card_impose: true` (§3, `inject_custom_events.py`).
+- **Saturation** : une variable déjà près de 100 ne monte plus (Shackleton, géopolitique en
+  fortress_world à 99,7 : +0,3 pour une force 35) ; c'est la borne, pas un frein du moteur (une
+  rupture n'a ni `GAIN_CHOCS` ni plafond de 15 points).
+- ⚠ `frontieres_du_systeme` est lue comme la **fermeture des frontières entre blocs** : une
+  polarité -1 « ouvre » les mondes fermés (fortress_world). Ne pas l'utiliser pour l'expansion
+  spatiale.
 
 ### Articles → « et si ? » : un événement tiré de l'article (11 nov. 2026)
 Règle : l'événement injecté doit être **dans le texte de l'article** et **ne peut pas être
@@ -1364,6 +1415,7 @@ echo "idée…" | python3 generator/hypothese_depuis_texte.py --proposer     # n
 python3 generator/hypothese_depuis_texte.py --verifier < bloc.yaml
 python3 generator/hypothese_depuis_texte.py --ajouter --json < bloc.yaml
 ```
+Option `--wild-card` (case « ⚡ wild card » du panneau) : voir « Wild cards » plus haut.
 ⚠ Relire le bloc proposé : l'IA met souvent `scenarios: tous`, applique le même
 partage de polarités (3 mondes « durs » contre 3 « doux »), choisit `rupture` pour un
 événement régional, et laisse le changement de carte dans la description au lieu du
@@ -1373,9 +1425,21 @@ bloc `geographie` (sans ce bloc, rien ne bouge sur la carte).
 Champs : `id`, `nom`, `description`, `date` (2025-2098), `mode` (`choc` |
 `rupture`), `persistance` (mode choc), `via_matrice`, `scenarios` (liste ou `tous`),
 `carte` (`non` = sans effet territorial), `impacts` (par variable : `delta_level` =
-force, `polarite` 1 / −1 — nombre ou dictionnaire par scénario —, `duree` de
+force, `polarite` 1 / −1 — chacun nombre ou dictionnaire par scénario —, `duree` de
 montée), `contraintes` (faits imposés à la lecture IA et à l'injection),
-`geographie` (par scénario) :
+`wild_card: true` (voir « Wild cards »), `geographie` (par scénario) :
+```yaml
+    - variable: sante_biotechnologies
+      delta_level: {breakdown: 12, fortress_world: 15, new_sustainability: 35}   # U4f
+      polarite: -1
+```
+**Force par scénario** (U4f, tout événement) : un dictionnaire doit donner une valeur pour
+chaque scénario couvert (les clés en trop sont ignorées) ; événement ordinaire 1 à 25 par valeur
+(au-delà : avertissement), wild card 25-35 dans au moins un scénario et 10 au moins partout. La
+simulation, le rapport (« force breakdown 12, fortress_world 15… »), la liste d'application et
+l'entrée d'injection (`impacts_imposes`, déjà par scénario) utilisent la force du scénario ; un
+nombre seul vaut pour tous.
+Champs pour la carte :
 ```yaml
 geographie:
   breakdown:
@@ -2122,7 +2186,7 @@ Statut « Traités » pour le retrouver).
 | `/api/chantiers`, `/generer`, `/approuver`, `/statut`, `/appliquer` | Onglet Chantiers (`appliquer` : `{scenario}`, `{all}` ou `{id}`). |
 | `/api/edition/active` | Mois de parution (§2quinquies). Les routes `/articles` et `/injecter_evenement` ont été supprimées (U3bf). |
 | `/api/et_si/proposer`, `/verifier`, `/ajouter` | Nouvelle hypothèse : proposer un bloc, le vérifier, l'ajouter à `hypotheses.yaml`. |
-| `/api/et_si/suggerer` | Suggestions à partir des lacunes (événements, entités). |
+| `/api/et_si/suggerer` | Suggestions à partir des lacunes (événements, entités) et wild cards (`type: wildcard`, 3 idées). `/api/et_si/proposer` accepte `wild_card: true` (`--wild-card`). |
 | `/api/et_si/fiche`, `/statut` | Description de l'hypothèse ; statut du parcours. |
 | `/api/et_si/decider`, `/injecter`, `/appliquer`, `/main` | Étapes ②, ③, ④, ⑤. |
 | `/api/et_si/lot/lister` | Lot : adopter + injecter plusieurs entités. |

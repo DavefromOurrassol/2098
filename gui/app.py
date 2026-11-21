@@ -2803,11 +2803,12 @@ TIMEOUT_ET_SI = {"proposer": 180, "verifier": 60, "ajouter": 60}
 def et_si_suggerer():   # U3aq : idées à partir des lacunes du vault (un appel IA, n'écrit rien)
     data = request.get_json() or {}
     type_ = data.get("type")
-    if type_ not in ("evenement", "entite"):
-        return jsonify({"error": "type attendu : evenement ou entite"}), 400
+    if type_ not in ("evenement", "entite", "wildcard"):   # U4d
+        return jsonify({"error": "type attendu : evenement, entite ou wildcard"}), 400
     cfg = load_config()
     pipeline_dir = Path(cfg.get("pipeline_dir", ""))
-    cmd = [sys.executable, "suggerer_lacunes.py", "--type", type_, "--n", "5", "--json"]
+    cmd = [sys.executable, "suggerer_lacunes.py", "--type", type_,
+           "--n", "3" if type_ == "wildcard" else "5", "--json"]   # U4d
     try:
         resultat = subprocess.run(cmd, cwd=pipeline_dir, capture_output=True, text=True, timeout=240)
     except subprocess.TimeoutExpired:
@@ -2851,6 +2852,8 @@ def et_si_assistant(action):
             cmd += ["--mode", data["mode"]]
         if data.get("effet_plein") is True:   # U3d
             cmd.append("--effet-plein")
+        if data.get("wild_card") is True:   # U4d
+            cmd.append("--wild-card")
         cit_ = " ".join(str(data.get("citation") or "").split())[:600]   # U3i
         if cit_:
             cmd.append("--citation=" + cit_)

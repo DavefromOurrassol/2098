@@ -333,6 +333,9 @@ def preparer_adoption(brut, hid, portee=None, intensite=None):
     if sim.get("empreinte") != empreinte_hypothese(brut):
         raise DossierErreur(f"{hid} a été modifiée dans hypotheses.yaml depuis sa dernière simulation "
                             f"({sim.get('date')}) : la resimuler avant d'adopter.")
+    if str(brut.get("wild_card")).strip().lower() in ("true", "oui", "yes", "1") and not sim.get("passe"):   # U4c
+        raise DossierErreur(f"{hid} est une wild card : sa dernière simulation doit comporter la Passe "
+                            f"exhaustive (la relancer).")
     if not sim.get("complet"):
         raise DossierErreur(f"la dernière simulation de {hid} est limitée à {', '.join(sim.get('scenarios') or [])} : "
                             f"la relancer sans --scenario avant d'adopter.")

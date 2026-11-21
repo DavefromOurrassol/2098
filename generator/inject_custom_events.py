@@ -130,6 +130,7 @@ VALID_TYPES_EVENEMENTS = [
 ]
 
 MAX_DELTA_LEVEL = 25  # delta_level absolu maximum jugé raisonnable par variable
+WILD_CARD_FORCE_MAX = 35  # U4c : plafond d'une wild card (simuler_et_si.WILD_CARD_FORCE)
 
 
 # ---------------------------------------------------------------------------
@@ -665,7 +666,8 @@ def truncate_actors(instance_data, actors_hint, actors_hint_count, available_act
     instance_data["acteurs"] = kept
 
 
-def validate_instance(instance_data, variables, scenario, registre_text, available_actors):
+def validate_instance(instance_data, variables, scenario, registre_text, available_actors,
+                      max_delta=MAX_DELTA_LEVEL):   # U4c
     issues = []
 
     required = ["nom", "date", "evenement_cle", "realisation",
@@ -710,10 +712,10 @@ def validate_instance(instance_data, variables, scenario, registre_text, availab
         except (TypeError, ValueError):
             issues.append(f"[{var}] delta_level non numérique : {imp.get('delta_level')!r}")
             continue
-        if abs(delta) > MAX_DELTA_LEVEL:
+        if abs(delta) > max_delta:   # U4c
             issues.append(
                 f"[{var}] delta_level={delta} hors plage raisonnable "
-                f"(0 à {MAX_DELTA_LEVEL})"
+                f"(0 à {max_delta})"
             )
         # Convention de signe (27 septembre 2026, echelles.py)
         issues.extend(verifier_impact(delta, imp.get("polarite", 1), prefixe=f"[{var}] "))
@@ -911,7 +913,8 @@ developpements: []
         # Modifiable à la main dans chaque instance (une par scénario).
         persistance=idea.get("persistance") or dyn.PERSISTANCE_DEFAUT,
         # PATCH_S19_CHAINE : `mode: rupture` (lu par loader.py) seulement si imposé.
-        mode_ligne="\nmode: rupture" if instance_data.get("mode") == "rupture" else "",
+        mode_ligne=("\nmode: rupture" if instance_data.get("mode") == "rupture" else "")
+        + ("\nwild_card: true" if instance_data.get("wild_card") else ""),   # U4c
         acteurs_yaml=acteurs_yaml,
         note=yaml_scalar(instance_data.get("note_coherence") or ""),
         note_md=" ".join(str(instance_data.get("note_coherence") or "").split()),   # U3l : texte brut pour le corps
@@ -1159,6 +1162,8 @@ def lire_impositions(idea):
     date = idea.get("date_imposee")
     via = idea.get("via_matrice_impose")
     mode = idea.get("mode_impose")   # PATCH_S19_CHAINE : choc | rupture
+    wild = idea.get("wild_card_impose") is True   # U4c
+    plafond = WILD_CARD_FORCE_MAX if wild else MAX_DELTA_LEVEL
     if brut is None and date is None and via is None and mode is None:
         return None, []
     erreurs, impacts = [], {}
@@ -1188,8 +1193,8 @@ def lire_impositions(idea):
                 except (TypeError, ValueError):
                     erreurs.append(f"{ou} : delta_level absent ou non numérique")
                     continue
-                if not 1 <= force <= MAX_DELTA_LEVEL:
-                    erreurs.append(f"{ou} : delta_level {force:g} hors de 1-{MAX_DELTA_LEVEL}")
+                if not 1 <= force <= plafond:   # U4c
+                    erreurs.append(f"{ou} : delta_level {force:g} hors de 1-{plafond}")
                     continue
                 try:
                     pol = int(imp.get("polarite"))
@@ -1231,9 +1236,11 @@ def lire_impositions(idea):
             erreurs.append(f"mode_impose {idea.get('mode_impose')!r} inconnu (choc | rupture)")
         elif mode == "rupture" and not impacts:
             erreurs.append("mode_impose: rupture sans impacts_imposes (la rupture a besoin de ses forces)")
+    if wild and mode != "rupture":   # U4c
+        erreurs.append("wild_card_impose sans mode_impose: rupture (une wild card est une rupture)")
     if erreurs:
         return None, erreurs
-    return {"impacts": impacts, "date": date, "via_matrice": via, "mode": mode}, []
+    return {"impacts": impacts, "date": date, "via_matrice": via, "mode": mode, "wild_card": wild}, []
 
 
 def appliquer_impositions(instance_data, idea, scenario):
@@ -1258,6 +1265,8 @@ def appliquer_impositions(instance_data, idea, scenario):
         instance_data["propagation_via_matrice"] = imp["via_matrice"]
     if imp.get("mode"):
         instance_data["mode"] = imp["mode"]   # PATCH_S19_CHAINE, écrit par write_instance_file()
+    if imp.get("wild_card"):   # U4c, écrit par write_instance_file()
+        instance_data["wild_card"] = True
     if instance_data.get("impossible_dans_scenario"):
         print(f"  ⚠ [{scenario}] l'IA juge l'événement impossible dans ce scénario, "
               f"mais les impacts sont imposés : relire la fiche.")
@@ -1282,6 +1291,10 @@ def _texte_impositions(idea, scenario):
     if imp.get("mode") == "rupture":   # PATCH_S19_CHAINE
         lignes.append("- Nature : RUPTURE DURABLE -- l'événement change pour de bon l'équilibre du monde ; "
                       "ses effets ne s'estompent pas avec le temps (ce n'est pas un choc passager)")
+    if imp.get("wild_card"):   # U4c
+        lignes.append("- WILD CARD : événement improbable voulu par l'auteur. Il SE PRODUIT dans ce scénario "
+                      "(impossible_dans_scenario : false), même s'il va contre la logique du monde : raconte-le "
+                      "pleinement, sans l'atténuer pour le rendre vraisemblable")
     lignes.append("Écris la réalisation, la description et les conséquences pour qu'elles "
                   "correspondent à ces valeurs (ampleur, sens et date).")
     return "\n".join(lignes) + "\n"
@@ -1809,7 +1822,9 @@ def process_idea(client, idea, dry_run=False):
             for attempt in range(MAX_FIX_ATTEMPTS + 1):
                 print(f"[3/4] Validation (essai {attempt + 1})...")
                 issues = validate_instance(
-                    instance_data, variables, scenario, registre_text, available_actors
+                    instance_data, variables, scenario, registre_text, available_actors,
+                    max_delta=(WILD_CARD_FORCE_MAX if idea.get("wild_card_impose") is True
+                               else MAX_DELTA_LEVEL),   # U4c
                 )
                 if not issues and attempt < MAX_FIX_ATTEMPTS:   # U3ab
                     issues = _issues_titres_u3ab(instance_data, idea, scenario)

@@ -1907,3 +1907,68 @@ complétée ; deux entités par le lot ; Lecture IA → hypothèse d'entité
 *Enseignement de la séance* : une seule porte rend les parcours comparables, et la prévention
 (la fiche reprend la source) vaut mieux que la relecture. Suites : B9 (wild cards, source mince
 suite, sort des « Outils directs »).
+
+---
+
+## Clos le 15 novembre 2026 — wild cards (étape 3 de l'unification), force par scénario, U4a → U4f
+
+*Séance d'une journée. Début : suppression de `HANDOFF_11_NOVEMBRE.md` commitée (`a6d486a`,
+le handoff est rangé dans `documentation/Old/`), puis tout poussé (`main` = `origin/main`).
+Cadrage avec David, puis patchs U4a, U4c, U4d, U4d2, U4d3, U4d4, U4f, tous appliqués (U4b
+abandonné). Sauvegardes `.bak_u4*` à côté de chaque fichier patché. Point clos de B9 : « Modes
+automatiques + wild cards » (étape 3 de l'ordre du 7 nov), sauf les restes listés en B9
+(U4d5, U4e, Passe lente).*
+
+**Cadrage (décisions de David).**
+- Une wild card est un **événement** marqué `wild_card: true` (pas un 4ᵉ type), en mode
+  **rupture** ; elle peut contredire les fiches et les tendances, **jamais les règles de lore**
+  (option 1 de la question b) ; elle peut toucher **plusieurs scénarios**.
+- Plafonds : 3 par scénario, 10 ans d'écart, entre 2030 et 2090, 3 à 6 impacts ; force 25-35.
+  Option **B** (après l'essai du volcan) : la règle reste ; une wild card change le **monde
+  entier pour de bon** (découverte, percée), pas une catastrophe régionale passagère.
+  Option **b** (force par scénario) : 25-35 dans au moins un scénario, 10 au moins partout.
+- Suggestions par un bouton ⚡ séparé des lacunes, case ⚡ pour ses propres idées, jamais en lot.
+- Simulation : Passe exhaustive obligatoire ; brouillon de règle de lore proposé d'office à
+  l'étape ⑤ et badge ⚡ décidés, **non faits** (U4e, en B9).
+- **U4b abandonné** (point k, choix A puis abandon) : en lisant `dynamique.py`, le frein près des
+  bornes ne vise presque pas une rupture (ni `GAIN_CHOCS`, ni plafond de 15 points ; seule la
+  forme `tanh` de `reference_deplacee()`) ; gain attendu : quelques points au milieu de l'échelle
+  (+27 → +30 pour une force 30 à 50) ; près de 100, rien ne peut monter.
+
+**Patchs.**
+- **U4a** (`patch_u4a_wild_card_controles.py` ; `simuler_et_si.py`, `hypothese_depuis_texte.py`) :
+  constantes `WILD_CARD_*`, `est_wild_card()`, `controle_wild_cards()` (quota, écart, rejetées
+  exclues via `et_si_dossiers.statut`), contrôles dans `verifier_hypothese()`, refus de simuler,
+  champ `wild_card` de la liste du GUI, ligne ⚡ du rapport ; ✨ Proposer `--wild-card` ; **bug
+  latent d'`annee_debut`** (`h[cle] = v` dans `normaliser_entite`) retiré. Vu en réel : bloc fautif
+  → quatre ✗, 24 hypothèses existantes inchangées.
+- **U4c** (`patch_u4c_wild_card_simulation_injection.py` ; `simuler_et_si.py`, `et_si_exhaustif.py`,
+  `et_si_dossiers.py`, `inject_custom_events.py`) : lecture IA et Passe forcées ;
+  `regles_lore_scenario()` et `controle_regles_lore()` (appel IA par scénario, cache
+  `state/et_si_regles_lore.json`, échec = blocage) ; consignes « wild card » à la lecture et à la
+  Passe ; adoption refusée sans Passe ; injection `wild_card_impose`, `WILD_CARD_FORCE_MAX = 35`,
+  `validate_instance(max_delta=…)`, `wild_card: true` dans la fiche, récit « l'événement se
+  produit ». Recherche d'un plafond à 25 dans `validate.py` / `loader.py` : rien trouvé.
+- **U4d** (`patch_u4d_wild_card_gui.py` ; `suggerer_lacunes.py`, `gui/app.py`, `gui/static/app.js`) :
+  `--type wildcard` (3 idées, contrôles en ⚠), bouton « ⚡ Proposer des wild cards », case
+  « ⚡ wild card », pas de lot. `et_si_lot.py` inchangé (entités seulement).
+- **U4d2** idées improbables mais possibles (1er tirage physiquement impossible) ; année non
+  répétée. **U4d3** critère « monde entier, pour de bon », exemples de David ; consigne de
+  Proposer « chaque impact est permanent ». **U4d4** l'IA choisit les scénarios de chaque idée
+  (tirage précédent : tout en « tous »).
+- **U4f** (`patch_u4f_force_par_scenario.py` ; `simuler_et_si.py`, `hypothese_depuis_texte.py`) :
+  `delta_level` nombre ou dictionnaire par scénario, `force_sc()`, câblé dans la vérification, les
+  chocs, les ruptures, la lecture IA, le rapport, la liste d'application et les entrées
+  d'injection ; normalisation par ✨ Proposer.
+
+**Tests réels.** Quatre tirages ⚡ (impossible ; régional ; bon registre en « tous » ; bon registre
+et scénarios variés). Blocs : volcan VEI 6 et archées des Mariannes non ajoutés ;
+**`shackleton_platinoides_2052`** (fortress_world, reference) ajoutée et simulée (17:37 → 19:44) :
+règles de lore 0 contredite, lecture IA, Passe (1 obligatoire, ~75 possibles par scénario),
+ressources critiques -29, économie +23 / +17, géopolitique +0,3 (saturée) / +11. Non adoptée
+(arrêt décidé par David) : `frontieres_du_systeme` lue comme l'ouverture des blocs, Arctique pris
+pour base des missions lunaires.
+
+*Enseignement de la séance* : le cadrage chiffré initial (« toute variable à 25-35 ») a forcé des
+idées exagérées ; l'essai réel a fait préciser la nature de la wild card (monde entier, pour de
+bon) et ajouter la force par scénario. Suites : B9 (U4d5, U4e, Passe lente, sort de Shackleton).

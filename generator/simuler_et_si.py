@@ -63,6 +63,18 @@ SCENARIOS = ["breakdown", "fortress_world", "new_sustainability",
              "eco_communalism", "policy_reform", "reference"]
 DELTA_MAX_CONSEILLE = 25   # plafond d'un événement custom (inject_custom_events.py)
 DELTA_MAX_SIGNAL = 10      # plafond d'un signal (inject_custom_signals.py) -- U2b
+# U4a (15 nov 2026) : wild card = événement en mode rupture marqué `wild_card: true`
+WILD_CARD_QUOTA = 3            # wild cards au plus par scénario
+WILD_CARD_ECART = 10           # années au moins entre deux wild cards d'un même scénario
+WILD_CARD_DATES = (2030, 2090)
+WILD_CARD_FORCE = (25, 35)
+WILD_CARD_FORCE_MIN_SC = 10    # U4f : force minimale d'une wild card dans un scénario moins touché
+
+
+def force_sc(imp, sc):
+    """U4f : force d'un impact normalisé dans le scénario `sc` (forces par scénario, sinon la force unique)."""
+    return (imp.get("forces") or {}).get(sc, imp["force"])
+WILD_CARD_IMPACTS = (3, 6)
 ACTIONS_GEO = {"absorber": "absorber", "nouvelle_zone": "creer"}   # vocabulaire du fichier -> ZoneRepository
 VERSION = "v8.25"            # affichée dans le rapport : permet de vérifier la version installée
 MAX_LISTE = 10             # éléments listés par rubrique dans le rapport (le reste est compté)
@@ -230,6 +242,61 @@ def _verifier_entite(h):
     return norm, erreurs, avert
 
 
+def est_wild_card(h):
+    """U4a : vrai si le bloc porte `wild_card: true` (oui / yes / 1 acceptés)."""
+    v = (h or {}).get("wild_card")
+    return v is True or str(v).strip().lower() in ("true", "oui", "yes", "1")
+
+
+def _scenarios_de(h):
+    """U4a : scénarios couverts par un bloc brut (« tous » = les 6)."""
+    scen = (h or {}).get("scenarios") or "tous"
+    if isinstance(scen, str):
+        return set(SCENARIOS) if scen.strip() in ("tous", "all") else {scen.strip()}
+    return {s for s in scen if s in SCENARIOS} if isinstance(scen, list) else set(SCENARIOS)
+
+
+def controle_wild_cards(h, hyps=None):
+    """U4a : quota (WILD_CARD_QUOTA par scénario) et espacement (WILD_CARD_ECART ans)
+    d'une wild card, contre les autres wild cards de hypotheses.yaml (rejetées exclues).
+    Retourne une liste d'erreurs (vide si `h` n'est pas une wild card)."""
+    if not est_wild_card(h):
+        return []
+    try:
+        date = int(float(h.get("date")))
+    except (TypeError, ValueError):
+        return []   # date illisible : déjà signalée par verifier_hypothese()
+    hyps = charger_hypotheses() if hyps is None else hyps
+    try:
+        import et_si_dossiers as _ed
+    except Exception:  # noqa: BLE001 -- sans dossiers, aucune hypothèse n'est tenue pour rejetée
+        _ed = None
+
+    def rejetee(i):
+        try:
+            return _ed is not None and str(_ed.statut(i)).startswith("rejet")
+        except Exception:  # noqa: BLE001
+            return False
+    autres = [x for x in hyps if isinstance(x, dict) and est_wild_card(x)
+              and x.get("id") != h.get("id") and not rejetee(x.get("id"))]
+    erreurs = []
+    for sc in [s for s in SCENARIOS if s in _scenarios_de(h)]:
+        ici = [x for x in autres if sc in _scenarios_de(x)]
+        if len(ici) >= WILD_CARD_QUOTA:
+            erreurs.append(f"wild card : {sc} en a déjà {len(ici)} ("
+                           + ", ".join(str(x.get("id")) for x in ici)
+                           + f") ; {WILD_CARD_QUOTA} au plus par scénario")
+        for x in ici:
+            try:
+                dx = int(float(x.get("date")))
+            except (TypeError, ValueError):
+                continue
+            if abs(dx - date) < WILD_CARD_ECART:
+                erreurs.append(f"wild card : {sc} a déjà la wild card {x.get('id')!r} en {dx}, "
+                               f"à moins de {WILD_CARD_ECART} ans de {date}")
+    return erreurs
+
+
 def verifier_hypothese(h, valid_vars, dyn):
     """Retourne (hypothèse normalisée, erreurs, avertissements)."""
     if str(h.get("type") or "").strip().lower() == "entite":   # U3aj
@@ -270,6 +337,15 @@ def verifier_hypothese(h, valid_vars, dyn):
             plancher = datetime.now().year
             if date != int(date) or not plancher <= date <= 2097:
                 erreurs.append(f"date {date:g} : un signal commence une année entière entre {plancher} et 2097")
+    wild = est_wild_card(h)   # U4a
+    if wild:
+        if est_signal:
+            erreurs.append("une wild card est un événement, jamais un signal (retirer `wild_card` ou `type: signal`)")
+        if str(h.get("mode") or "choc").strip().lower() != "rupture":
+            erreurs.append("une wild card est en mode rupture (`mode: rupture`) : elle change le monde pour de bon")
+        if date is not None and not WILD_CARD_DATES[0] <= int(date) <= WILD_CARD_DATES[1]:
+            erreurs.append(f"date {date:g} : une wild card survient entre {WILD_CARD_DATES[0]} et "
+                           f"{WILD_CARD_DATES[1]}")
 
     impacts = []
     for n, imp in enumerate(h.get("impacts") or [], 1):
@@ -280,14 +356,30 @@ def verifier_hypothese(h, valid_vars, dyn):
         if var not in valid_vars:
             erreurs.append(f"impact n°{n} : variable inconnue {var!r}")
             continue
+        brut_f = imp.get("delta_level")   # U4f : un nombre, ou un dictionnaire par scénario
         try:
-            force = abs(float(imp.get("delta_level")))
+            if isinstance(brut_f, dict):
+                manquants = [s for s in scen if s not in brut_f]
+                if manquants:
+                    erreurs.append(f"impact {var} : delta_level absent pour {manquants}")
+                    continue
+                forces = {s: abs(float(brut_f[s])) for s in scen}
+            else:
+                forces = {s: abs(float(brut_f)) for s in scen}
         except (TypeError, ValueError):
             erreurs.append(f"impact {var} : delta_level absent ou non numérique")
             continue
-        if force < 1:
+        if not forces:
+            continue
+        force, force_min = max(forces.values()), min(forces.values())
+        if force_min < 1:
             erreurs.append(f"impact {var} : delta_level doit valoir au moins 1")
-        if est_signal and force > DELTA_MAX_SIGNAL:
+        if wild and not est_signal:   # U4a / U4f
+            if not WILD_CARD_FORCE[0] <= force <= WILD_CARD_FORCE[1] or force_min < WILD_CARD_FORCE_MIN_SC:
+                erreurs.append(f"impact {var} : delta_level hors des règles d'une wild card ({WILD_CARD_FORCE[0]} à "
+                               f"{WILD_CARD_FORCE[1]} dans au moins un scénario, {WILD_CARD_FORCE_MIN_SC} au moins "
+                               f"partout ; reçu {force_min:g} à {force:g})")
+        elif est_signal and force > DELTA_MAX_SIGNAL:
             erreurs.append(f"impact {var} : delta_level {force:g} au-dessus du plafond d'un signal "
                            f"({DELTA_MAX_SIGNAL}) ; au-delà, c'est un événement (type: evenement)")
         elif force > DELTA_MAX_CONSEILLE:
@@ -315,9 +407,13 @@ def verifier_hypothese(h, valid_vars, dyn):
                 erreurs.append(f"impact {var} : la durée d'un signal est un nombre entier d'années")
             if any(i["variable"] == var for i in impacts):
                 erreurs.append(f"impact {var} déclaré deux fois (un signal a UNE force par variable)")
-        impacts.append({"variable": var, "force": force, "polarites": pols, "duree": duree})
+        impacts.append({"variable": var, "force": force, "polarites": pols, "duree": duree,
+                        "forces": forces})   # U4f : force par scénario (force = la plus forte)
     if not impacts and not erreurs and not h.get("geographie"):
         erreurs.append("aucun impact ni changement de géographie déclaré")
+    if wild and not WILD_CARD_IMPACTS[0] <= len(impacts) <= WILD_CARD_IMPACTS[1]:   # U4a
+        erreurs.append(f"une wild card touche {WILD_CARD_IMPACTS[0]} à {WILD_CARD_IMPACTS[1]} variables "
+                       f"({len(impacts)} impact(s) valide(s))")
 
     geo = {}
     brut_geo = h.get("geographie") or {}
@@ -400,6 +496,7 @@ def verifier_hypothese(h, valid_vars, dyn):
         "id": hid, "nom": h.get("nom") or hid, "description": str(h.get("description") or "").strip(),
         "date": date, "persistance": pers, "via_matrice": bool(h.get("via_matrice", True)),
         "scenarios": scen, "impacts": impacts, "geographie": geo,
+        "wild_card": wild,   # U4a
     }
     return norm, erreurs, avert
 
@@ -412,7 +509,7 @@ def chocs_hypothese(hyp, sc):
         "duree": (min(imp["duree"], 2098 - hyp["date"]) if hyp.get("type") == "signal" else imp["duree"]),
         "via_matrice": hyp["via_matrice"],
         "persistance": hyp["persistance"], "fin": None,
-        "amplitude": imp["force"] * imp["polarites"][sc],
+        "amplitude": force_sc(imp, sc) * imp["polarites"][sc],   # U4f
     } for imp in hyp["impacts"] if sc in imp["polarites"]]
 
 
@@ -420,7 +517,7 @@ def ruptures_hypothese(hyp, sc):
     """V7.4 : déplacements de référence au format de dynamique.simuler(ruptures=...)."""
     return [{
         "variable": imp["variable"], "t0": hyp["date"], "duree": imp["duree"],
-        "amplitude": imp["force"] * imp["polarites"][sc],
+        "amplitude": force_sc(imp, sc) * imp["polarites"][sc],   # U4f
     } for imp in hyp["impacts"] if sc in imp["polarites"]]
 
 
@@ -998,13 +1095,18 @@ def lire_consequences(hyp, sc, effets, refaire=False):
                             + f" | {z.get('statut')} | {_court(pays, 120)}")
     lignes_effets = [f"- {e['variable']} : {e['effet']:+.1f} point(s)" for e in effets[:8]] \
         or ["- (aucun effet chiffré notable)"]
-    impacts_txt = ", ".join(f"{i['variable']} (force {i['force']:g})" for i in hyp["impacts"]) or "aucun"
+    impacts_txt = ", ".join(f"{i['variable']} (force {force_sc(i, sc):g})" for i in hyp["impacts"]
+                            if sc in i["polarites"]) or "aucun"   # U4f
 
     bloc_contraintes = ""
     if hyp.get("contraintes"):
         bloc_contraintes = ("FAITS À RESPECTER (priment sur tes connaissances générales ; toute "
                             "proposition qui les contredit est fausse) :\n"
                             + "\n".join(f"- {c}" for c in hyp["contraintes"]) + "\n")
+    if hyp.get("wild_card"):   # U4c
+        bloc_contraintes += ("WILD CARD : rupture improbable voulue par l'auteur. Elle a le droit d'aller contre "
+                             "la logique et les tendances du scénario : ne l'atténue pas pour la rendre "
+                             "vraisemblable, décris le bouleversement qu'elle provoque.\n")
     if hyp.get("mode") == "rupture":
         nature = "MODE RUPTURE (déplacement permanent de l'équilibre du scénario)"
         avert_moteur = ("Effet chiffré simulé en fin de période (niveau 100 = crise) — MODE RUPTURE : l'élément\n"
@@ -1630,10 +1732,16 @@ def rendre_markdown(hyp, resultats, date_fin, avert, geo=None, consequences=None
     elif not hyp.get("carte", True):
         L.append("- **Carte** : élément déclaré sans effet territorial (`carte: non`), "
                  "aucune proposition de carte retenue")
+    if hyp.get("wild_card"):   # U4a
+        L.append("- **⚡ Wild card** : rupture à faible probabilité et impact majeur ; elle peut contredire "
+                 "les fiches et les tendances, jamais les règles de lore")
     for imp in hyp["impacts"]:
         sens = sorted(set(imp["polarites"].values()))
         sens_txt = ("aggrave ↑" if sens == [1] else "apaise ↓" if sens == [-1] else "sens variable selon le scénario")
-        L.append(f"- Déclaré : **{imp['variable']}** — force {imp['force']:g}, {sens_txt}, montée sur {imp['duree']:g} ans")
+        fs = sorted(set((imp.get("forces") or {}).values()) or {imp["force"]})   # U4f
+        force_txt = (f"force {fs[0]:g}" if len(fs) == 1 else
+                     "force " + ", ".join(f"{s} {f:g}" for s, f in imp["forces"].items()))
+        L.append(f"- Déclaré : **{imp['variable']}** — {force_txt}, {sens_txt}, montée sur {imp['duree']:g} ans")
     for a in avert:
         L.append(f"- ⚠ {a}")
     L += ["", "Rappel : niveau 100 = crise maximale. Écart = niveau AVEC l'hypothèse − niveau SANS elle, "
@@ -2465,8 +2573,8 @@ def liste_application(hyp, sc, res, cons, geo_ops, donnees, passe=None):
                     plafonnees.append(e["variable"])
                 deplacees.append(f"{e['variable']} {_virgule(e['reference'], False)} → "
                                  f"{_virgule(e['reference_apres'], False)}")
-        cibles = ", ".join(f"{i['variable']} {'+' if i['polarites'].get(sc, 1) > 0 else '−'}{i['force']:g}"
-                           for i in hyp["impacts"] if sc in i["polarites"])
+        cibles = ", ".join(f"{i['variable']} {'+' if i['polarites'].get(sc, 1) > 0 else '−'}{force_sc(i, sc):g}"
+                           for i in hyp["impacts"] if sc in i["polarites"])   # U4f
         _etape(E, "Élément", ("⚠ " if plafonnees else "")
                + f"Vérifier que la fiche porte `mode: rupture` et les forces simulées ({cibles})",
                f"event_instances/{hyp['id']}_{sc}.md ; "
@@ -2480,8 +2588,8 @@ def liste_application(hyp, sc, res, cons, geo_ops, donnees, passe=None):
         _etape(E, "Élément", f"Injecter l'événement `{hyp['id']}` (entrée commune en fin de rapport)",
                "python3 generator/inject_custom_events.py --mode custom",
                "une seule injection pour tous les scénarios de l'hypothèse")
-        cibles = ", ".join(f"{i['variable']} {'+' if i['polarites'].get(sc, 1) > 0 else '−'}{i['force']:g}"
-                           for i in hyp["impacts"] if sc in i["polarites"])
+        cibles = ", ".join(f"{i['variable']} {'+' if i['polarites'].get(sc, 1) > 0 else '−'}{force_sc(i, sc):g}"
+                           for i in hyp["impacts"] if sc in i["polarites"])   # U4f
         # V8.15 : forces, date et propagation imposées à l'injection (impacts_imposes).
         _etape(E, "Élément", f"Vérifier que la fiche porte les forces simulées ({cibles})",
                f"event_instances/{hyp['id']}_{sc}.md, bloc impact_sur_variables ; "
@@ -2801,7 +2909,7 @@ def _rendre_injection_signal(hyp, out=None):
               "variable_hint_count": len(hyp["impacts"]),
               "date_imposee": _nombre(hyp["date"]),
               "impacts_imposes": {
-                  sc: [{"variable": i["variable"], "delta_level": _nombre(i["force"]),
+                  sc: [{"variable": i["variable"], "delta_level": _nombre(force_sc(i, sc)),   # U4f
                         "duree": _nombre(i["duree"]), "polarite": i["polarites"][sc]}
                        for i in hyp["impacts"] if sc in i["polarites"]]
                   for sc in SCENARIOS},
@@ -2863,14 +2971,17 @@ def _rendre_injection_commune(hyp, application, out=None):
     trop_fort = []
     if rupture:
         entree["mode_impose"] = "rupture"   # PATCH_S19_CHAINE : écrit `mode: rupture` dans les fiches
+    if hyp.get("wild_card"):   # U4c : forces jusqu'à WILD_CARD_FORCE[1], `wild_card: true` dans les fiches
+        entree["wild_card_impose"] = True
     if True:   # S19 : forces imposées aussi en mode rupture
         entree["impacts_imposes"] = {
-            sc: [{"variable": i["variable"], "delta_level": _nombre(i["force"]),
+            sc: [{"variable": i["variable"], "delta_level": _nombre(force_sc(i, sc)),   # U4f
                   "duree": _nombre(i["duree"]), "polarite": i["polarites"][sc]}
                  for i in hyp["impacts"] if sc in i["polarites"]]
             for sc in scen}
         entree["via_matrice_impose"] = bool(hyp["via_matrice"])
-        trop_fort = [f"{i['variable']} ({i['force']:g})" for i in hyp["impacts"] if i["force"] > DELTA_MAX_CONSEILLE]
+        plafond_u4c = WILD_CARD_FORCE[1] if hyp.get("wild_card") else DELTA_MAX_CONSEILLE   # U4c
+        trop_fort = [f"{i['variable']} ({i['force']:g})" for i in hyp["impacts"] if i["force"] > plafond_u4c]
     if out is not None:
         out["entree"] = entree
     return ["## Liste d'application — injection commune", "",
@@ -2900,6 +3011,101 @@ def _rendre_injection_commune(hyp, application, out=None):
 # ---------------------------------------------------------------------------
 # main
 # ---------------------------------------------------------------------------
+
+# U4c (15 nov 2026) : une wild card ne contredit jamais une règle de lore.
+LORE_REGLES_PATH = VAULT_ROOT / "documentation" / "lore_regles.yaml"
+CACHE_LORE_U4C = SCRIPT_DIR / "state" / "et_si_regles_lore.json"
+VERSION_LORE_U4C = "1"
+
+
+def regles_lore_scenario(sc):
+    """U4c : [(id, message)] des règles de lore valables pour `sc` (section `_tous` + section
+    du scénario, zones en quarantaine comprises). None si le fichier est illisible."""
+    try:
+        data = yaml.safe_load(LORE_REGLES_PATH.read_text(encoding="utf-8")) or {}
+    except (OSError, yaml.YAMLError):
+        return None
+    out = []
+    for cle in ("_tous", sc):
+        sec = data.get(cle) if isinstance(data, dict) else None
+        if not isinstance(sec, dict):
+            continue
+        for r in sec.get("regles") or []:
+            if isinstance(r, dict) and str(r.get("message") or "").strip():
+                out.append((str(r.get("id") or "?"), " ".join(str(r["message"]).split())))
+        for z in sec.get("zones_quarantaine") or []:
+            if isinstance(z, dict) and str(z.get("message") or "").strip():
+                out.append((f"quarantaine_{z.get('zone')}", " ".join(str(z["message"]).split())))
+    return out
+
+
+def controle_regles_lore(hyp, scenarios, refaire=False):
+    """U4c : un appel IA par scénario qui a des règles (en cache). Retourne (erreurs, infos).
+    Un appel en échec est une erreur : la wild card n'est simulée qu'une fois contrôlée."""
+    import hashlib
+    import re as _re
+    from llm_client import call_llm
+    erreurs, infos = [], []
+    try:
+        cache = json.loads(CACHE_LORE_U4C.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        cache = {}
+    elem = (f"{hyp['nom']} — {_date_lisible_u3ad(hyp['date'])}.\n{hyp.get('description') or ''}"
+            + "".join(f"\n- fait imposé : {c}" for c in hyp.get("contraintes") or []))
+    for sc in scenarios:
+        regles = regles_lore_scenario(sc)
+        if regles is None:
+            erreurs.append("documentation/lore_regles.yaml illisible : contrôle des règles de lore impossible")
+            break
+        if not regles:
+            infos.append(f"{sc} : aucune règle de lore à contrôler")
+            continue
+        liste = "\n".join(f"[r{n}] {m}" for n, (_, m) in enumerate(regles, 1))
+        user = f"""ÉLÉMENT (wild card, scénario {sc}) : rupture improbable voulue par l'auteur. Elle a le droit de
+contredire les fiches et les tendances du monde, mais JAMAIS une règle de lore.
+{elem}
+
+RÈGLES DE LORE DU SCÉNARIO (choix de l'auteur, intouchables) :
+{liste}
+
+TÂCHE : relève UNIQUEMENT les règles que l'élément contredit, c'est-à-dire que, une fois l'élément ajouté au
+lore, ce que la règle établit devient faux (l'élément fait exister ce que la règle dit disparu, donne à un
+acteur ce que la règle lui refuse, rétablit ce que la règle dit perdu…). Une règle sans rapport avec
+l'élément, ou qu'il laisse vraie, n'est pas contredite. En cas de doute, ne la relève pas : la réponse
+attendue est souvent une liste vide.
+Réponds UNIQUEMENT en JSON : {{"contredites": [{{"id": "r2", "explication": "une phrase"}}]}}"""
+        cle = f"{hyp['id']}::{sc}"
+        emp = hashlib.sha1((VERSION_LORE_U4C + user).encode("utf-8")).hexdigest()[:16]
+        entree = cache.get(cle) or {}
+        brut = entree.get("brut") if (not refaire and entree.get("empreinte") == emp) else None
+        if not isinstance(brut, dict):
+            try:
+                texte = call_llm(system_prompt="Tu vérifies qu'un élément fictif respecte les règles d'auteur "
+                                 "d'un monde. Tu réponds uniquement en JSON.",
+                                 user_prompt=user, max_tokens=1200, temperature=0.0, task_tier="structured_strict")
+                brut = _extraire_json(texte)
+            except Exception as e:  # noqa: BLE001
+                erreurs.append(f"{sc} : contrôle des règles de lore impossible ({type(e).__name__}: {e}) : "
+                               f"relancer la simulation")
+                continue
+            cache[cle] = {"empreinte": emp, "date": datetime.now().isoformat(timespec="minutes"), "brut": brut}
+            try:
+                CACHE_LORE_U4C.parent.mkdir(parents=True, exist_ok=True)
+                CACHE_LORE_U4C.write_text(json.dumps(cache, ensure_ascii=False, indent=1), encoding="utf-8")
+            except OSError:
+                pass
+        n_c = 0
+        for c in (brut.get("contredites") or []) if isinstance(brut, dict) else []:
+            m = _re.fullmatch(r"r(\d+)", str((c or {}).get("id") or "").strip()) if isinstance(c, dict) else None
+            if not m or not 1 <= int(m.group(1)) <= len(regles):
+                continue
+            rid, msg = regles[int(m.group(1)) - 1]
+            expl = " ".join(str(c.get("explication") or "").split())
+            erreurs.append(f"{sc} : la wild card contredit la règle de lore `{rid}` — {expl or msg}")
+            n_c += 1
+        infos.append(f"{sc} : {len(regles)} règle(s) de lore contrôlée(s), {n_c} contredite(s)")
+    return erreurs, infos
+
 
 def _decider(args, hyps):
     """V8.17 : --dossiers, --adopter, --rejeter, --annuler-decision."""
@@ -3073,11 +3279,13 @@ def main():
         liste = []
         for h in hyps:
             _, err, _ = verifier_hypothese(dict(h), VALID_VARS, dyn)
+            err = list(err) + controle_wild_cards(h, hyps)   # U4a
             st = ed.statut(h.get("id"))
             nom = h.get("nom") or h.get("id")
             liste.append({"id": h.get("id"), "nom": nom if st == "non simulé" else f"{nom} · {st}",
                           "date": h.get("date"), "erreurs": err, "statut": st,
-                          "type": str(h.get("type") or "evenement")})   # U3ao
+                          "type": str(h.get("type") or "evenement"),   # U3ao
+                          "wild_card": est_wild_card(h)})   # U4a
         print(json.dumps(liste, ensure_ascii=False, default=str))
         return
     if args.lister or not args.id:
@@ -3098,6 +3306,7 @@ def main():
     import copy
     brut = copy.deepcopy(choix[0])   # V8.17 : empreinte du bloc tel qu'écrit
     hyp, erreurs, avert = verifier_hypothese(choix[0], VALID_VARS, dyn)
+    erreurs = list(erreurs) + controle_wild_cards(choix[0], hyps)   # U4a
     if erreurs:
         print(f"✗ Hypothèse {args.id!r} invalide, simulation non lancée :")
         for e in erreurs:
@@ -3114,6 +3323,20 @@ def main():
         print(f"ℹ date de mesure ramenée à la fin de l'année de l'apparition : {args.date:g}", file=sys.stderr)
     if args.date < hyp["date"]:
         sys.exit(f"✗ --date {args.date:g} antérieure à l'apparition de l'hypothèse ({hyp['date']:g}).")
+    if hyp.get("wild_card"):   # U4c : lecture IA + Passe exhaustive forcées, règles de lore contrôlées
+        if not (args.consequences_ia and args.passe_exhaustive):
+            print("ℹ wild card : lecture IA et Passe exhaustive lancées d'office (payant)", file=sys.stderr)
+        args.consequences_ia = args.passe_exhaustive = True
+        err_lore, infos_lore = controle_regles_lore(hyp, [args.scenario] if args.scenario else hyp["scenarios"],
+                                                    refaire=args.refaire)
+        for i in infos_lore:
+            print(f"ℹ règles de lore — {i}", file=sys.stderr)
+        if err_lore:
+            print(f"✗ Wild card {args.id!r} refusée, simulation non lancée : une wild card peut contredire "
+                  "les fiches et les tendances, jamais une règle de lore.")
+            for e in err_lore:
+                print(f"  - {e}")
+            sys.exit(1)
 
     resultats = simuler_hypothese(hyp, args.date, [args.scenario] if args.scenario else None)
     ajouter_recits(hyp, resultats, ia=args.recit_ia)

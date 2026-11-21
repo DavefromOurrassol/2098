@@ -128,9 +128,118 @@ Réponds UNIQUEMENT en JSON, sans texte autour :
     return sortie
 
 
+def _wild_cards(n, scenario):
+    """U4d : idées de WILD CARDS (rupture improbable, impact majeur). Un appel IA ;
+    chaque idée est contrôlée (fenêtre, quota, écart) : un problème devient un ⚠."""
+    import inject_custom_events as ie
+    import simuler_et_si as se
+    if scenario and scenario not in se.SCENARIOS:
+        raise ValueError(f"scénario inconnu : {scenario!r}")
+    hyps = se.charger_hypotheses()
+    signaux = []
+    try:
+        from loader import load_custom_signals
+        signaux = [str(s.get("source_fiche") or s.get("name") or "").replace(".md", "").replace("_", " ")
+                   for s in load_custom_signals() or [] if isinstance(s, dict)]
+    except Exception:  # noqa: BLE001 -- repli : les hypothèses de type signal
+        pass
+    signaux += [str(h.get("nom") or "") for h in hyps if str(h.get("type") or "") == "signal"]
+    signaux = list(dict.fromkeys(s.strip() for s in signaux if s.strip()))[:80]
+    regles = []
+    for sc in se.SCENARIOS:
+        for rid, msg in se.regles_lore_scenario(sc) or []:
+            regles.append(f"- [{sc}] {msg}")
+    regles = list(dict.fromkeys(regles))
+    existantes = [f"- {h.get('id')} : {h.get('nom')} ({h.get('date')}, scénarios : {h.get('scenarios') or 'tous'})"
+                  for h in hyps if se.est_wild_card(h)]
+    a0, a1 = se.WILD_CARD_DATES
+    orientation = f"\nOrientation : au moins une idée doit toucher le scénario '{scenario}'." if scenario else ""
+    prompt = f"""Tu proposes {n} WILD CARDS pour le monde fictif Ourrassol 2098 (6 scénarios d'avenir, 2026-2098).
+Une wild card est une rupture à FAIBLE probabilité et à IMPACT MAJEUR, qu'aucun signal faible du monde n'annonce
+encore. Elle change le monde pour de bon et a le droit d'aller contre les tendances des scénarios (ruptures
+technologiques, géopolitiques, sociales, sanitaires, environnementales, spatiales…).
+IMPROBABLE NE VEUT PAS DIRE IMPOSSIBLE (U4d2) : chaque idée doit rester possible selon la science actuelle,
+avec un mécanisme connu (physique, biologique, technique, politique) ; un expert du domaine doit pouvoir dire
+« peu probable, mais ça peut arriver ». Pas de fantastique ni de science-fiction gratuite : aucune loi physique
+qui change, aucune espèce éteinte qui revient seule, aucune biologie inversée à l'échelle de la planète.
+CHANGER LE MONDE ENTIER POUR DE BON (U4d3) : chaque wild card touche 3 à 6 grands domaines à la fois, et
+chaque effet est PERMANENT. Elle transforme durablement le monde entier, pas une région : c'est souvent une
+découverte ou une percée, positive ou négative (elle peut APAISER certains domaines et en aggraver d'autres).
+Exclus : une catastrophe régionale dont les effets s'estompent en quelques années (éruption, cyclone, séisme,
+accident industriel).
+Bon registre : gisement exploitable sur une autre planète ou un astéroïde, signe de vie extraterrestre,
+molécule qui allonge la vie humaine de 30 ans, énergie quasi gratuite, intelligence artificielle qui dépasse
+l'humain dans la recherche, contrôle du climat par géo-ingénierie, pathogène qui rend une partie de l'humanité
+stérile, traitement qui supprime une grande maladie, effondrement définitif d'une ressource vitale.
+
+## SCÉNARIOS
+{ie.build_scenarios_summary_for_auto(None)}
+
+## SIGNAUX FAIBLES DÉJÀ DANS LE MONDE (une wild card ne doit PAS être annoncée par l'un d'eux)
+{chr(10).join("- " + s for s in signaux) or "(aucun)"}
+
+## RÈGLES DE LORE (choix de l'auteur, INTOUCHABLES : une wild card ne les contredit jamais)
+{chr(10).join(regles) or "(aucune)"}
+
+## WILD CARDS DÉJÀ PRÉVUES (au plus {se.WILD_CARD_QUOTA} par scénario, {se.WILD_CARD_ECART} ans d'écart au moins dans un même scénario)
+{chr(10).join(existantes) or "(aucune)"}
+{orientation}
+
+## CONSIGNE
+- "date" : une année entre {a0} et {a1} ; respecte le plafond et l'écart ci-dessus.
+- "scenarios" (U4d4) : la LISTE des scénarios où cette rupture a du sens, d'après leur logique (1 à 4 le plus
+  souvent). "tous" seulement si elle frappe vraiment le monde entier, et au plus pour une idée sur trois.
+  Varie les scénarios d'une idée à l'autre. "pourquoi_scenarios" : une phrase qui justifie ce choix.
+- Varie les domaines d'une idée à l'autre ; aucune ne doit reprendre une wild card déjà prévue.
+- "description" : 2 ou 3 phrases concrètes (ce qui arrive, où, quelle ampleur).
+- "improbable" : une phrase, pourquoi c'est improbable vu d'aujourd'hui.
+- "bouscule" : une phrase, quelles tendances du monde elle contredit.
+
+Réponds UNIQUEMENT en JSON, sans texte autour :
+{{"wild_cards": [{{"titre": "...", "description": "...", "date": 2061,
+  "scenarios": ["new_sustainability", "eco_communalism"], "pourquoi_scenarios": "...",
+  "improbable": "...", "bouscule": "..."}}]}}"""
+    res = ie.call_claude_json(None, "Tu es un auteur de prospective qui imagine des ruptures crédibles.", prompt)
+    idees = res.get("wild_cards", []) if isinstance(res, dict) else []
+    sortie = []
+    for i in (idees or [])[:n]:
+        desc = " ".join(str((i or {}).get("description") or "").split())
+        if not desc:
+            continue
+        avert = []
+        try:
+            date = int(float(i.get("date")))
+        except (TypeError, ValueError):
+            date = None
+            avert.append("date illisible : à préciser dans l'idée")
+        scen = i.get("scenarios") or "tous"
+        if isinstance(scen, list):
+            scen = [s for s in scen if s in se.SCENARIOS] or "tous"
+        elif str(scen).strip() in se.SCENARIOS:
+            scen = [str(scen).strip()]
+        else:
+            scen = "tous"
+        if date is not None:
+            if not a0 <= date <= a1:
+                avert.append(f"date {date} hors de la fenêtre d'une wild card ({a0}-{a1})")
+            avert += se.controle_wild_cards({"id": "_suggestion_u4d", "wild_card": True, "date": date,
+                                             "scenarios": scen}, hyps)
+        texte = desc + (f" En {date}." if date and str(date) not in desc else "")   # U4d2
+        texte += " Scénarios : " + (", ".join(scen) if isinstance(scen, list) else "tous") + "."
+        raison = " · ".join(x for x in (
+            f"Improbable : {' '.join(str(i.get('improbable') or '').split())}" if i.get("improbable") else "",
+            f"Bouscule : {' '.join(str(i.get('bouscule') or '').split())}" if i.get("bouscule") else "",
+            f"Scénarios : {' '.join(str(i.get('pourquoi_scenarios') or '').split())}"
+            if i.get("pourquoi_scenarios") else "") if x)   # U4d4
+        titre = " ".join(str(i.get("titre") or "wild card").split())
+        sortie.append({"titre": f"⚡ {titre}" + (f" ({date})" if date else ""), "texte": texte,
+                       "raison": raison, "avertissements": avert})
+    return sortie
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__.split("\n\n")[0])
-    ap.add_argument("--type", required=True, choices=["evenement", "entite"])
+    ap.add_argument("--type", required=True, choices=["evenement", "entite", "wildcard"])   # U4d
     ap.add_argument("--n", type=int, default=5)
     ap.add_argument("--scenario", default="")
     ap.add_argument("--json", action="store_true")
@@ -141,7 +250,8 @@ def main():
         # les modules historiques impriment des messages de progression :
         # on les détourne pour que la dernière ligne de stdout reste le JSON
         with contextlib.redirect_stdout(tampon):
-            sugg = (_evenements if a.type == "evenement" else _entites)(n, a.scenario.strip())
+            fonction = {"evenement": _evenements, "entite": _entites, "wildcard": _wild_cards}[a.type]   # U4d
+            sugg = fonction(n, a.scenario.strip())
         res = {"ok": True, "type": a.type, "suggestions": sugg}
         if not sugg:
             res = {"ok": False, "error": "aucune suggestion exploitable (réponse IA vide)"}

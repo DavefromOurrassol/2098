@@ -1,9 +1,8 @@
 # Backlog actif — Ourrassol 2098
 
-*Ce qui reste ouvert, et seulement cela. Mis à jour le 14 novembre 2026 au soir (chantier
-« unification » : « et si ? » **porte unique** pour événements, signaux et entités ;
-fiche d'article sans invention, entités, suggestions et lot, accès directs fermés,
-U3aa → U3bf ; commit `3ae0304`). Réorganisé le 31 octobre 2026 en trois
+*Ce qui reste ouvert, et seulement cela. Mis à jour le 15 novembre 2026 au soir (chantier
+« unification », étape 3 : **wild cards** cadrées et codées, U4a → U4f, U4b abandonné ;
+premier essai réel `shackleton_platinoides_2052` simulé, non adopté). Réorganisé le 31 octobre 2026 en trois
 parties : **A. Bugs et vérifications**, **B. Développement (nouvelles
 fonctionnalités)**, **C. Enrichissement de la base**. Règle actée le 31 oct :
 l'outil doit avoir toutes ses fonctionnalités et aucun bug connu (partie A vide)
@@ -13,7 +12,7 @@ avant d'enrichir la base en volume (partie C).*
 des points dans plusieurs parties, chacun est marqué de son numéro. Les points
 clos sont dans `BACKLOG_ARCHIVE.md` (à uploader seulement pour vérifier si un
 point a déjà été traité). Mode d'emploi : `USER_MANUAL_COMPLET.md` ; dernier état
-de session : `HANDOFF_14_NOVEMBRE.md`.*
+de session : `HANDOFF_15_NOVEMBRE.md`.*
 
 Légende : 🔴 à faire · 🟡 en cours · 👁 en surveillance (pas de correctif
 préventif, agir si le cas revient) · ⚪ idée sans calendrier.
@@ -66,6 +65,13 @@ Reste à voir en réel :
   new_sustainability, et un article dont l'en-tête a une clé `titre` ; e) **entité** :
   « comme entité » (Articles) puis ajout, adoption, injection ; entité de la Lecture IA
   jusqu'à l'injection ; f) les boutons de l'étape ⑤ et « Appliquer » en double-clic.
+- **B9 — Wild cards** (U4a → U4f, 15 nov) : vus en réel le bouton ⚡ (3 idées, pas de lot), la
+  case ⚡ de ✨ Proposer, les contrôles (quota, fenêtre, forces), le contrôle des règles de lore
+  (0 contredite), la Passe exhaustive forcée et les forces par scénario dans le rapport
+  (`shackleton_platinoides_2052`). Reste à voir : a) **adoption puis injection** d'une wild
+  card (forces 25-35 acceptées par `inject_custom_events.py`, `wild_card: true` dans la fiche),
+  puis `validate.py` (aucun plafond à 25 trouvé par recherche, à confirmer) ; b) une règle de
+  lore **déclarée contredite** (blocage) ; c) le refus d'adoption sans Passe exhaustive.
 - **S20** : `/api/yaml/append` garde l'en-tête de `queue.yaml` (correctif du 30 oct,
   testé sur copie) → vérifier au prochain ajout depuis le GUI (ex. entrée préparée
   dans 🔭), puis retirer ce point. (« Adopter » du simulateur garde bien l'en-tête :
@@ -133,6 +139,18 @@ Reste à voir en réel :
   citation (« [...] ») ou change un mot (« le quai » pour « au quai ») : l'événement est
   alors écarté ou marqué « citation introuvable ». Relancer la détection suffit en
   général.
+- **B9 wild cards proposées par ⚡** (15 nov) : premier tirage physiquement impossible (corrigé
+  U4d2), puis catastrophes régionales (VEI 6 : écarté, U4d3), puis toutes en « tous » (U4d4).
+  Le 4ᵉ tirage était bon (Shackleton, supraconducteur, stérilité). Surveiller : mécanismes
+  « quasi impossibles » admis par l'IA elle-même, acteurs propres à un scénario nommés dans
+  une idée valable pour plusieurs mondes.
+- **B9 wild card et saturation** : `geopolitique_conflits` en fortress_world est déjà à 99,7
+  sans l'hypothèse ; une force 35 n'y ajoute que +0,3 (Shackleton). Limite des bornes, pas un
+  bug (U4b abandonné : une rupture n'est pas freinée par le plafond de 15 points).
+- **B9 `frontieres_du_systeme`** : la lecture IA et la Passe la lisent comme la fermeture des
+  frontières entre blocs ; une polarité -1 « ouvre » fortress_world (toutes les administrations
+  frontalières en déclin, Shackleton). Vérifier le sens de cette variable avant de l'utiliser
+  dans une wild card.
 - **S30 lecture IA, propositions lointaines** : sur Holdfast, trajectoire du fonds
   groenlandais et opposition Atlas des Marges ↔ ARPS sans lien avec l'hypothèse
   (sautées à la main). Sauter suffit ; à surveiller si cela devient fréquent.
@@ -249,16 +267,14 @@ En marge : *Global Trends 2040* comme grille de comparaison.
 Le simulateur est terminé (manuel §3quinquies) ; ses tests réels sont en A1.
 - Homonymes (Santa Cruz, Sucre, Perth, Medina) ; synthèse haut niveau des
   hypothèses ; récit IA de `trace_injection.py` (repli sur le modèle).
-- **Wild cards** (→ voir B9, étape 3 de l'ordre) : type d'événement « rupture » assumé, faible probabilité et impact
-  majeur, injecté même s'il bouscule le lore (les signaux faibles ne conviennent
-  pas : ils sont déjà observables).
+- **Wild cards** : cadrées et codées le 15 nov (→ B9, U4a → U4f) ; restes en B9.
 - **Brouillon de règle de lore (étape ⑤)** : termes multiples **faits** (B4, 2-7 nov) ; à observer à la première hypothèse réelle qui fait disparaître une entité.
 - **Passe « équipe rouge »** : faire attaquer les hypothèses d'un scénario plutôt
   qu'en vérifier la cohérence (ex. « qu'est-ce qui ferait tomber Ergo-Wian en dix
   ans ? »), par l'IA ou des lecteurs aux profils variés. Inspiration : la série
   *Ces guerres qui nous attendent* (travaux de la Red Team Défense).
 
-## 🟡 B9. Unification — « et si ? » porte unique (U2-U3, 2-14 nov)
+## 🟡 B9. Unification — « et si ? » porte unique (U2-U4, 2-15 nov)
 
 *Principe : tout élément (événement, signal, entité) naît comme **hypothèse** dans
 `et_si/hypotheses.yaml`, puis ①simuler → ②décider → ③injecter → ④appliquer →
@@ -271,7 +287,7 @@ entités (`enrich_minimal.py`, `extract_phantom_slugs.py`, `requeue_needs_review
 
 | Entrée | Types | Remarque |
 |---|---|---|
-| ✨ Nouvelle hypothèse (idée libre, 💡 suggestions, lot) | événement, signal, entité | suggestions : événements et entités |
+| ✨ Nouvelle hypothèse (idée libre, 💡 suggestions, lot, ⚡ wild cards) | événement (dont wild card), signal, entité | suggestions : événements et entités ; ⚡ : 3 wild cards, jamais en lot |
 | 🔭 Veille signaux faibles | signal, événement | source des signaux (pas de suggestions de signaux) |
 | Onglet Articles | événement (détecté dans l'article), signal, entité (nom saisi) | date verrouillée, citation imposée |
 | Étape ⑤ « Lecture IA » : nouvelles entités | entité | plus de file `entites_custom/queue.yaml` |
@@ -298,16 +314,41 @@ U3y). **14 nov** (U3aa → U3bf) :
 Chemin signal éprouvé en réel (veille, 7 nov) ; chemin Articles → événement éprouvé le 11 nov ;
 entités éprouvées le 14 nov (3 entités injectées, 2 par le lot).
 
+**15 nov — wild cards (étape 3)**, cadrage avec David puis U4a → U4f :
+- **Définition** : un **événement** marqué `wild_card: true` (pas un 4ᵉ type), mode **rupture**
+  obligatoire, qui change le monde ENTIER pour de bon sur plusieurs domaines (souvent une
+  découverte ou une percée ; pas une catastrophe régionale qui s'estompe). Il peut contredire les
+  fiches et les tendances (corrections à appliquer), **jamais les règles de lore** (erreur
+  bloquante). Un ou plusieurs scénarios.
+- **Plafonds** : 3 au plus par scénario, 10 ans d'écart dans un même scénario (rejetées
+  exclues), date 2030-2090, 3 à 6 impacts ; force 25-35 dans au moins un scénario, 10 au moins
+  partout (U4f : `delta_level` peut être un dictionnaire par scénario, pour tout événement).
+- **Suggestions** : bouton « ⚡ Proposer des wild cards » à part des lacunes (3 idées, un appel
+  IA, rien n'écrit, contrôles en ⚠) ; case « ⚡ wild card » à côté de ✨ Proposer
+  (`--wild-card`) ; **jamais en lot**.
+- **Simulation** : lecture IA et Passe exhaustive **forcées** ; contrôle IA des règles de lore
+  avant tout calcul (cache `state/et_si_regles_lore.json`) ; adoption refusée sans Passe.
+- **Injection** : `wild_card_impose: true`, forces jusqu'à 35, `wild_card: true` dans la fiche,
+  récit prévenu que l'événement se produit.
+- **U4b abandonné** : le frein près des bornes ne s'applique presque pas à une rupture (pas de
+  `GAIN_CHOCS` ni de plafond de 15) ; le gain aurait été de quelques points au milieu de l'échelle.
+
 **Ordre décidé (David, 7 nov)** : 1. éprouver les chemins ; 2. **entités** dans « et si ? »
-(**fait**) ; 3. **modes automatiques + wild cards** ; 4. **étape 5 : fermer** les accès
-directs (**fait**, sauf le sort des « Outils directs »).
+(**fait**) ; 3. **modes automatiques + wild cards** (**fait** le 15 nov, restes ci-dessous) ;
+4. **étape 5 : fermer** les accès directs (**fait**, sauf le sort des « Outils directs »).
 
 À faire :
-- 🔴 **Modes automatiques + wild cards** (étape 3) : les suggestions de lacunes
-  (événements, entités) en sont la première moitié ; reste la **wild card** (type
-  « rupture » assumé, faible probabilité, impact majeur, injecté même s'il bouscule le
-  lore) : définition, plafonds, place dans les suggestions et dans la simulation à cadrer
-  avec David.
+- 🔴 **Wild cards, restes** :
+  a) **U4d5** : une idée venue du bouton ⚡ doit **imposer ses scénarios** à ✨ Proposer
+  (Shackleton : « Scénarios : fortress_world, reference » ignoré, bloc en `tous`) ;
+  b) **U4e** : à l'étape ⑤, brouillon de **règle de lore proposé d'office** (la wild card
+  devient un fait établi) ; **badge ⚡** dans la liste des hypothèses et sur la fiche ;
+  c) **Passe exhaustive lente** : 2 h pour Shackleton (25 lots, 17:37 → 19:44) ; elle est forcée
+  pour chaque wild card : mesurer le temps par lot, envisager un modèle plus rapide pour la passe
+  ou un parallélisme ;
+  d) ✨ Proposer ne fait pas jouer les écarts entre scénarios (archées : même force partout) :
+  forces par scénario corrigées à la main ;
+  e) idée : interdire de nommer un acteur propre à un monde dans une idée valable pour plusieurs.
 - 🔴 **Source mince → invention, suite** : a) **anachronisme sans année** : U3y ne détecte que
   des années ou « aujourd'hui » ; une scène de 2098 transposée passe (piste : question
   ajoutée à l'appel `verifier_contraintes`) ; b) refuser à l'extraction les événements à
@@ -331,12 +372,18 @@ directs (**fait**, sauf le sort des « Outils directs »).
 - ⚪ **Annulation d'une entité injectée** : ne l'enlève pas du vault (`undo_custom.py`).
 - ⚪ **`confirm()` restants** (Carte, Lore, Chantiers, quelques boutons) : à passer en
   double-clic (`armer2()`) si l'un d'eux reste muet.
-- ⚪ **Bug latent** : `hypothese_depuis_texte.normaliser_entite`, branche `except ValueError`
-  d'`annee_debut` : `h[cle] = v` réutilise les variables de la boucle précédente.
 - ⚪ **U3bd** (suggestions de signaux) : écrit, testé sur copie, **non appliqué** (la veille
   suffit) ; garder ou jeter le fichier.
 - ⚪ **Hypothèse d'essai** `alliance_des_territoires_froids_europeens` (entité, non adoptée) :
   `python3 generator/et_si_supprimer.py --id … --apply` si elle n'est pas voulue.
+- ⚪ **Hypothèse d'essai** `shackleton_platinoides_2052` (wild card, **simulée, non adoptée**,
+  15 nov) : à corriger avant toute adoption (retirer `frontieres_du_systeme` ; contrainte « les
+  lancements vers la Lune partent de bases proches de l'équateur » : la lecture IA fait de
+  l'Arctique la base des missions lunaires), ou à supprimer à la main de `hypotheses.yaml`
+  (`et_si_supprimer.py` ne traite que les entités). Rapport :
+  `documentation/need_action/et_si_shackleton_platinoides_2052.md`. Idées en réserve (non
+  ajoutées) : thérapie des archées des Mariannes (new_sustainability, eco_communalism,
+  policy_reform), supraconducteur Zéro-R (new_sustainability, policy_reform).
 - ⚪ **« Fiches à relire »** : la recherche ne cible que des mots isolés ; une recherche de
   noms propres à plusieurs mots la rendrait plus utile.
 - ⚪ **Détection des doublons d'événements** : elle repose sur l'IA (slug « déjà connu ») ; une
