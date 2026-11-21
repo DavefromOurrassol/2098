@@ -273,7 +273,15 @@ def normaliser_proposition(brut, variables, ids_pris, wild=False):
     contraintes = brut.get("contraintes") or []
     if isinstance(contraintes, str):
         contraintes = [contraintes]
-    contraintes = [" ".join(str(c).split()) for c in contraintes if str(c).strip()][:4]
+    contraintes = [" ".join(str(c).split()) for c in contraintes if str(c).strip()]
+    gardees = []   # U4d6 : une date seule ou la ligne « Scénarios : … » n'est pas un fait imposé
+    for c in contraintes:
+        if re.fullmatch(r"(?i)(en|vers|dès|d[eè]s|à partir de|d'ici)?\s*\d{4}(\.\d{1,2})?\s*\.?", c) \
+                or re.match(r"(?i)sc[ée]narios?\s*:", c):
+            av.append(f"contrainte sans fait retirée : {c!r}")
+        else:
+            gardees.append(c)
+    contraintes = gardees[:4]
     if contraintes:
         h["contraintes"] = contraintes
 
@@ -622,6 +630,22 @@ def proposer_entite(texte, _llm=appeler_llm):
             "avertissements": av + av2, "erreurs": erreurs}
 
 
+def scenarios_depuis_idee(texte):
+    """U4d5 : ligne « Scénarios : a, b. » écrite dans l'idée (bouton ⚡, suggestions 💡).
+    Retourne [] pour « tous », une liste de slugs, ou None si aucune ligne lisible.
+    Une ligne qui ne contient pas que des slugs de scénarios est ignorée (ex. la
+    raison « Scénarios : pourquoi… » d'une idée ⚡)."""
+    for m in re.finditer(r"Sc[ée]narios?\s*:\s*([^.\n]+)", texte or "", flags=re.I):
+        brut = m.group(1).strip()
+        if brut.lower() in ("tous", "tous les scénarios"):
+            return []
+        morceaux = [x.strip().lower() for x in re.split(r",|\bet\b", brut) if x.strip()]
+        if morceaux and all(x in se.SCENARIOS for x in morceaux):
+            valides = list(dict.fromkeys(morceaux))
+            return [] if len(valides) == len(se.SCENARIOS) else valides
+    return None
+
+
 def proposer(texte, _llm=appeler_llm, type_force=None, imposes=None):
     if not texte or not texte.strip():
         raise ValueError("idée vide")
@@ -630,13 +654,25 @@ def proposer(texte, _llm=appeler_llm, type_force=None, imposes=None):
     wild = bool((imposes or {}).get("wild_card"))   # U4a
     if wild and type_force == "signal":
         raise ValueError("une wild card est un événement, pas un signal")
+    av0 = []
+    if type_force != "signal" and (imposes or {}).get("scenarios") is None:   # U4d5
+        sc_idee = scenarios_depuis_idee(texte)
+        if sc_idee is not None:
+            imposes = dict(imposes or {}, scenarios=sc_idee)
+            av0.append("scénarios repris de l'idée : " + (", ".join(sc_idee) if sc_idee else "tous"))
     variables = valid_vars()
     brut = _llm(construire_prompt(texte, variables, type_force, imposes))
     if not isinstance(brut, dict):
         raise ValueError("réponse de l'IA inexploitable")
     if type_force in ("evenement", "signal"):
         brut["type"] = type_force   # le choix de l'auteur l'emporte sur celui de l'IA
+    sc_imp = (imposes or {}).get("scenarios")   # U4d5 : scénarios imposés posés avant la normalisation
+    if sc_imp is not None and str(brut.get("type") or "").strip().lower() != "signal":
+        v_ = [s for s in sc_imp if s in se.SCENARIOS]
+        if v_ or not sc_imp:   # des noms tous inconnus restent signalés par appliquer_imposes()
+            brut["scenarios"] = v_ if 0 < len(v_) < len(se.SCENARIOS) else "tous"
     h, av = normaliser_proposition(brut, variables, ids_existants(), wild=wild)
+    av = av0 + av
     av += appliquer_imposes(h, imposes, h.get("type") == "signal")   # U3c
     _, erreurs, av2 = se.verifier_hypothese(dict(h), variables, dyn)
     erreurs = list(erreurs) + se.controle_wild_cards(h)   # U4a
