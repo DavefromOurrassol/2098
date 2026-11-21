@@ -35946,5 +35946,3966 @@
     }
    ]
   }
+ },
+ "fusion_commerciale_2038::reference::0": {
+  "empreinte": "0557c17bb9e2b516",
+  "date": "2026-11-21T18:02",
+  "brut": {
+   "fiches": [
+    {
+     "slug": "administrations_hybrides_des_cites_relais_peripheriques_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "systemes_productifs_travail (+1.9)",
+       "raison": "L'énergie abondante et moins chère favorise la décentralisation des systèmes productifs, renforçant le rôle des cités-relais périphériques comme hubs logistiques et économiques émergents."
+      }
+     ]
+    },
+    {
+     "slug": "agence_de_regulation_des_detroits_strategiques_ards_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "Elle incarne une gouvernance hybride, mêlant souveraineté étatique, intérêts des consortiums logistiques privés et impératifs géopolitiques liés aux flux énergétiques et commerciaux.",
+       "lien": "variable",
+       "lien_detail": "geopolitique_conflits (+0.4)",
+       "raison": "La baisse de la rente des hydrocarbures réduit les tensions autour des détroits stratégiques, mais l'ARPS pourrait élargir son rôle pour inclure la régulation des flux de lithium et de matériaux critiques pour la fusion."
+      }
+     ]
+    },
+    {
+     "slug": "agence_internationale_des_energies_renouvelables_irena_2_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "obligatoire",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "systeme_economique_redistribution (+0.5), geopolitique_conflits (+0.4)",
+       "contredit": "Sert de référence normative et de cadre de coordination multilatérale pour les décisions énergétiques globales dans ce scénario.",
+       "raison": "La percée de la fusion nucléaire commerciale rend IRENA-2 incontournable pour coordonner les normes, les brevets et la redistribution des ressources critiques (lithium, supraconducteurs), sous peine de devenir obsolète."
+      },
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "conseil_regulation_ressources_reference",
+       "relation": "alliance",
+       "action": "nouvelle",
+       "lien": "relation",
+       "lien_detail": "Dépendance partagée à la régulation des ressources critiques (lithium, supraconducteurs).",
+       "raison": "La gestion des ressources rares de la fusion crée un besoin de coordination renforcée entre IRENA-2 et le Conseil de Régulation des Ressources Critiques."
+      }
+     ]
+    },
+    {
+     "slug": "agence_stabilisation_climatique_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "L'AMSC opère comme une instance de coordination technocratique internationale dont l'autorité est reconnue mais constamment négociée.",
+       "lien": "variable",
+       "lien_detail": "climat_environnement_global (-2.8)",
+       "raison": "La fusion nucléaire réduit la pression sur le climat, mais l'AMSC pourrait recentrer son rôle sur la gestion des externalités des infrastructures de fusion (chaleur résiduelle, déchets radioactifs à faible durée de vie)."
+      }
+     ]
+    },
+    {
+     "slug": "agences_de_securite_regionales_de_normalisation_des_zones_grises_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "geopolitique_conflits (+0.4)",
+       "raison": "La compétition pour le lithium et les matériaux critiques pourrait étendre leur rôle à la sécurisation des zones grises riches en ressources."
+      }
+     ]
+    },
+    {
+     "slug": "agrisynth_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "systemes_productifs_travail (+1.9)",
+       "raison": "L'énergie abondante réduit les coûts de l'agriculture verticale et des biotechnologies, renforçant le poids d'AgriSynth dans la structuration des données agricoles."
+      }
+     ]
+    },
+    {
+     "slug": "algorithmic_labor_exchange_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "systemes_productifs_travail (+1.9)",
+       "raison": "La baisse des coûts énergétiques fluidifie les transactions de travail algorithmique, accélérant l'adoption de ses protocoles."
+      }
+     ]
+    },
+    {
+     "slug": "alliance_blocs_souverains_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "obligatoire",
+       "extrait": "Coalition d'États-forteresses opérant en marge des institutions multilatérales survivantes, le Pacte des Souverains structure une alternative diplomatique fondée sur des accords bilatéraux militaro-énergétiques.",
+       "contredit": "La perte de levier des pétro-États (Russie, Arabie saoudite, Golfe) affaiblit les accords militaro-énergétiques traditionnels.",
+       "lien": "variable",
+       "lien_detail": "geopolitique_conflits (+0.4)",
+       "raison": "Les accords bilatéraux doivent désormais intégrer la maîtrise des brevets de fusion et des chaînes d'approvisionnement en lithium, pas seulement les hydrocarbures."
+      },
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "bloc_ressources_eurasiatique_bre_reference",
+       "relation": "opposition",
+       "action": "nouvelle",
+       "lien": "relation",
+       "lien_detail": "Compétition pour le contrôle des ressources critiques (lithium, supraconducteurs).",
+       "raison": "Le BRE pourrait devenir un rival direct pour l'accès aux ressources rares de la fusion."
+      }
+     ]
+    },
+    {
+     "slug": "amara_diallo_nkosi_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "Elle opère à l'interface entre les institutions régionales africaines partiellement digitalisées et les consortiums privés d'extraction minière du bassin du Congo.",
+       "lien": "variable",
+       "lien_detail": "geopolitique_conflits (+0.4)",
+       "raison": "La compétition pour le lithium (présent en Afrique) pourrait élargir son rôle à la négociation des droits miniers, au-delà de l'eau."
+      }
+     ]
+    },
+    {
+     "slug": "amazonie_consortium_viva_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "obligatoire",
+       "extrait": "Consortium privé opérant dans le bassin amazonien, exploitant les zones grises juridiques pour extraire et breveter des ressources génétiques forestières.",
+       "contredit": "La baisse de la rente des hydrocarbures réduit les financements des consortiums privés dépendants des pétro-États.",
+       "lien": "variable",
+       "lien_detail": "systeme_economique_redistribution (+0.5)",
+       "raison": "BioPatente Amazonas doit diversifier ses sources de financement, car les pétro-États ne sont plus des partenaires fiables."
+      },
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "consortiums_prives_d_extraction_de_ressources_critiques_reference",
+       "relation": "alliance",
+       "action": "nouvelle",
+       "lien": "relation",
+       "lien_detail": "Intérêts communs dans l'extraction de lithium et de béryllium en Amazonie.",
+       "raison": "La recherche de ressources critiques pour la fusion pourrait rapprocher BioPatente Amazonas des consortiums miniers."
+      }
+     ]
+    },
+    {
+     "slug": "arctic_passage_authority_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "Elle incarne un modèle hybride fragile : treize États souverains riverains siègent à parité formelle avec les consortiums logistiques privés et les représentants des communautés autochtones.",
+       "lien": "variable",
+       "lien_detail": "geopolitique_conflits (+0.4)",
+       "raison": "La compétition pour les matériaux critiques (lithium, béryllium) en Arctique pourrait renforcer le poids des consortiums privés dans l'APA."
+      }
+     ]
+    },
+    {
+     "slug": "armada_logistique_nordique_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "Elle administre les routes de transit entre l'Europe, l'Asie et l'Amérique du Nord avec une autorité quasi-étatique, garantissant la fluidité des échanges malgré les tensions géopolitiques.",
+       "lien": "variable",
+       "lien_detail": "geopolitique_conflits (+0.4)",
+       "raison": "La maîtrise des routes arctiques pourrait inclure le transport de lithium et de matériaux critiques, élargissant son rôle logistique."
+      }
+     ]
+    },
+    {
+     "slug": "assemblee_territoires_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "dominant",
+       "lien": "variable",
+       "lien_detail": "systeme_economique_redistribution (+0.5)",
+       "raison": "L'énergie abondante favorise la décentralisation, renforçant les territoires fédérés face aux États centraux."
+      }
+     ]
+    },
+    {
+     "slug": "aurelio_stahl_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "En tant que conférencier et essayiste itinérant entre les territoires du Pacte des Souverains, il reformule les fondements idéologiques d'une époque en crise, articulant une vision de la souveraineté adaptée aux défis du XXIe siècle.",
+       "lien": "variable",
+       "lien_detail": "valeurs_culture_tempo_sociale (+0.1)",
+       "raison": "La fusion nucléaire pourrait inspirer une refonte de son discours sur la souveraineté énergétique et technologique."
+      }
+     ]
+    },
+    {
+     "slug": "autorites_regionales_de_regulation_hydrologique_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "Elles arbitrent en temps réel entre usages concurrents dans un contexte de raréfaction des ressources hydriques et de tensions croissantes entre agriculture, industrie et consommation domestique.",
+       "lien": "variable",
+       "lien_detail": "systemes_productifs_travail (+1.9)",
+       "raison": "L'énergie abondante pourrait réduire les tensions hydriques liées à l'industrie, mais les besoins en eau pour l'extraction de lithium (si applicable) pourraient créer de nouveaux conflits."
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "fusion_commerciale_2038::reference::1": {
+  "empreinte": "73d2c974c47b82d3",
+  "date": "2026-11-21T18:03",
+  "brut": {
+   "fiches": [
+    {
+     "slug": "banque_des_communs_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "systeme_economique_redistribution (+0.5)",
+       "contredit": "",
+       "raison": "La Banque des Communs, financant la résilience territoriale dans les zones délaissées, pourrait gagner en influence avec une légère amélioration de la redistribution économique due à l'énergie abondante, sans que cela ne devienne obligatoire."
+      },
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "consortiums_energetiques_des_megapoles_reference",
+       "relation": "alliance",
+       "action": "nouvelle",
+       "lien": "variable",
+       "lien_detail": "systemes_productifs_travail (+1.9)",
+       "contredit": "",
+       "raison": "Une collaboration avec les consortiums énergétiques des mégapoles devient plausible pour financer des infrastructures décentralisées, mais n'est pas rendue obligatoire par l'élément perturbateur."
+      }
+     ]
+    },
+    {
+     "slug": "banque_mondiale_des_transitions_climatiques_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "climat_environnement_global (-2.8)",
+       "contredit": "",
+       "raison": "L'amélioration de la situation climatique due à la fusion nucléaire pourrait renforcer le rôle de la BMTC en tant que coordinateur global, mais son existence et sa trajectoire actuelle restent plausibles sans ce changement."
+      },
+      {
+       "type": "texte",
+       "niveau": "obligatoire",
+       "extrait": "elle stabilise les flux sans éliminer les contradictions, et légitime les compromis sans résoudre les inégalités structurelles.",
+       "contredit": "L'effondrement de la rente des hydrocarbures réduit les inégalités liées à cette rente, modifiant les contradictions structurelles.",
+       "lien": "variable",
+       "lien_detail": "systeme_economique_redistribution (+0.5), geopolitique_conflits (+0.4)",
+       "raison": "La phrase reste globalement vraie, mais l'effondrement de la rente des hydrocarbures modifie la nature des inégalités et des contradictions, rendant nécessaire une révision du texte pour refléter cette nouvelle réalité."
+      }
+     ]
+    },
+    {
+     "slug": "bloc_des_etats_du_sud_global_contre_la_cession_de_donnees_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "systeme_economique_redistribution (+0.5)",
+       "contredit": "",
+       "raison": "L'énergie abondante pourrait réduire la dépendance économique du Sud global, renforçant sa position dans les négociations sur la souveraineté numérique, mais cela reste une possibilité et non une obligation."
+      }
+     ]
+    },
+    {
+     "slug": "bloc_des_souverainistes_climatiques_reference",
+     "changements": [
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "bloc_ressources_eurasiatique_bre_reference",
+       "relation": "opposition",
+       "action": "nouvelle",
+       "lien": "variable",
+       "lien_detail": "geopolitique_conflits (+0.4)",
+       "contredit": "",
+       "raison": "La perte d'influence des pétro-États et la montée des enjeux autour du lithium pourraient intensifier les tensions avec le BRE, mais cette opposition n'est pas rendue obligatoire par l'élément perturbateur."
+      },
+      {
+       "type": "texte",
+       "niveau": "obligatoire",
+       "extrait": "En maintenant des zones de non-conformité aux protocoles géo-ingénieristes, il fragmente la coordination internationale à un moment où la crise climatique exige une réponse unifiée.",
+       "contredit": "La fusion nucléaire réduit la pression climatique, modifiant le contexte de la crise et la nécessité d'une réponse unifiée.",
+       "lien": "variable",
+       "lien_detail": "climat_environnement_global (-2.8)",
+       "raison": "La phrase devient partiellement fausse car la crise climatique est atténuée par la fusion nucléaire, ce qui change la dynamique de la coordination internationale."
+      }
+     ]
+    },
+    {
+     "slug": "bloc_eurasien_central_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "obligatoire",
+       "apres": "résiduel",
+       "lien": "variable",
+       "lien_detail": "geopolitique_conflits (+0.4), energie_ressources_critiques (-4.8)",
+       "contredit": "La perte de levier des hydrocarbures affaiblit structurellement le BEC, dont l'influence reposait en partie sur ces ressources.",
+       "raison": "Le BEC, déjà en déclin, voit sa trajectoire accélérée vers un statut résiduel en raison de la perte de son levier géopolitique traditionnel (hydrocarbures)."
+      },
+      {
+       "type": "relation",
+       "niveau": "obligatoire",
+       "cible": "bloc_ressources_eurasiatique_bre_reference",
+       "relation": "opposition",
+       "action": "nouvelle",
+       "lien": "variable",
+       "lien_detail": "geopolitique_conflits (+0.4)",
+       "contredit": "Le BRE devient un acteur dominant dans la régulation des nouvelles ressources critiques (lithium), ce qui crée une rivalité structurelle avec le BEC.",
+       "raison": "Le BEC, affaibli, entre en opposition avec le BRE, qui émerge comme un régulateur des nouvelles ressources critiques."
+      }
+     ]
+    },
+    {
+     "slug": "bloc_ressources_eurasiatique_bre_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "obligatoire",
+       "apres": "dominant",
+       "lien": "variable",
+       "lien_detail": "energie_ressources_critiques (-4.8)",
+       "contredit": "Le BRE devient le régulateur des nouvelles ressources critiques (lithium, supraconducteurs), remplaçant le rôle des hydrocarbures.",
+       "raison": "La maîtrise des ressources critiques pour la fusion nucléaire (lithium, supraconducteurs) propulse le BRE vers une position dominante dans les équilibres géopolitiques."
+      },
+      {
+       "type": "texte",
+       "niveau": "obligatoire",
+       "extrait": "Sa capacité à maintenir — ou rompre — l'accès aux ressources critiques eurasiatiques lui confère un pouvoir de négociation disproportionné.",
+       "contredit": "Les ressources critiques ne sont plus uniquement eurasiatiques (lithium en Amérique du Sud, Australie), et le pouvoir du BRE repose désormais sur des matériaux différents (lithium, supraconducteurs).",
+       "lien": "variable",
+       "lien_detail": "energie_ressources_critiques (-4.8)",
+       "raison": "La phrase devient fausse car les ressources critiques ne sont plus limitées à l'Eurasie, et leur nature a changé."
+      }
+     ]
+    },
+    {
+     "slug": "blocs_signataires_du_pacte_energetique_multilateral_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "energie_ressources_critiques (-4.8), systeme_economique_redistribution (+0.5)",
+       "contredit": "",
+       "raison": "L'énergie abondante et la reconfiguration des enjeux énergétiques pourraient renforcer l'influence du Pacte, mais cela reste une possibilité et non une obligation."
+      },
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "consortium_helios_reference",
+       "relation": "alliance",
+       "action": "nouvelle",
+       "lien": "variable",
+       "lien_detail": "energie_ressources_critiques (-4.8)",
+       "contredit": "",
+       "raison": "Une collaboration renforcée avec des consortiums énergétiques comme Helios devient plausible pour intégrer la fusion nucléaire dans le cadre multilatéral, mais n'est pas rendue obligatoire."
+      }
+     ]
+    },
+    {
+     "slug": "bruxelles_nouveau_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "mature",
+       "lien": "variable",
+       "lien_detail": "systeme_economique_redistribution (+0.5), gouvernance_institutions (+0.1)",
+       "contredit": "",
+       "raison": "L'énergie abondante pourrait stabiliser les tensions économiques en Europe, permettant à Bruxelles Nouveau de consolider son rôle, mais cela reste une possibilité."
+      }
+     ]
+    },
+    {
+     "slug": "bureau_des_territoires_residuels_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "déclinant",
+       "lien": "variable",
+       "lien_detail": "systemes_productifs_travail (+1.9)",
+       "contredit": "",
+       "raison": "La revitalisation des systèmes productifs due à l'énergie abondante pourrait réduire l'étendue des territoires résiduels, affaiblissant la DZNP, mais cela reste une possibilité."
+      }
+     ]
+    },
+    {
+     "slug": "bureau_zones_non_prioritaires_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "résiduel",
+       "lien": "variable",
+       "lien_detail": "systemes_productifs_travail (+1.9)",
+       "contredit": "",
+       "raison": "L'énergie abondante pourrait réduire le nombre de zones non prioritaires, accélérant le déclin du BZNP, mais cela reste une possibilité."
+      }
+     ]
+    },
+    {
+     "slug": "bureaux_de_regulation_informationnelle_reference",
+     "changements": [
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "conseil_regulation_ressources_reference",
+       "relation": "alliance",
+       "action": "nouvelle",
+       "lien": "variable",
+       "lien_detail": "energie_ressources_critiques (-4.8)",
+       "contredit": "",
+       "raison": "Une collaboration avec le Conseil de Régulation des Ressources Critiques devient plausible pour encadrer les flux d'information liés aux nouvelles ressources, mais n'est pas rendue obligatoire."
+      }
+     ]
+    },
+    {
+     "slug": "cartel_des_terres_rares_d_asie_centrale_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "obligatoire",
+       "apres": "déclinant",
+       "lien": "variable",
+       "lien_detail": "energie_ressources_critiques (-4.8)",
+       "contredit": "Les terres rares ne sont plus les seules ressources critiques pour les technologies de 2098 (remplacées en partie par le lithium et les supraconducteurs).",
+       "raison": "Le Cartel perd de son importance stratégique car les ressources critiques pour la fusion nucléaire (lithium, supraconducteurs) ne sont pas sous son contrôle."
+      },
+      {
+       "type": "texte",
+       "niveau": "obligatoire",
+       "extrait": "le Cartel des Terres Rares d'Asie Centrale conditionne concrètement l'accès aux ressources critiques indispensables aux technologies de 2098 — batteries de stockage longue durée, systèmes d'armement autonomes, infrastructures numériques.",
+       "contredit": "Les ressources critiques pour ces technologies ne sont plus uniquement les terres rares (lithium et supraconducteurs deviennent centraux).",
+       "lien": "variable",
+       "lien_detail": "energie_ressources_critiques (-4.8)",
+       "raison": "La phrase devient fausse car les terres rares ne sont plus les seules ressources critiques pour les technologies mentionnées."
+      }
+     ]
+    },
+    {
+     "slug": "coalition_des_gouvernements_contre_les_chartes_de_destabilisation_reference",
+     "changements": [
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "bloc_ressources_eurasiatique_bre_reference",
+       "relation": "alliance",
+       "action": "nouvelle",
+       "lien": "variable",
+       "lien_detail": "geopolitique_conflits (+0.4)",
+       "contredit": "",
+       "raison": "Une alliance avec le BRE devient plausible pour contrer les chartes de déstabilisation liées aux nouvelles ressources critiques, mais n'est pas rendue obligatoire."
+      }
+     ]
+    },
+    {
+     "slug": "coalition_pour_la_souverainete_numerique_nationale_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "systeme_economique_redistribution (+0.5)",
+       "contredit": "",
+       "raison": "L'énergie abondante pourrait réduire la dépendance économique des États, renforçant leur position dans les revendications de souveraineté numérique, mais cela reste une possibilité."
+      }
+     ]
+    },
+    {
+     "slug": "collectif_nuit_jaune_reference",
+     "changements": []
+    }
+   ]
+  }
+ },
+ "fusion_commerciale_2038::reference::2": {
+  "empreinte": "d7862faacfb799a0",
+  "date": "2026-11-21T18:03",
+  "brut": {
+   "fiches": [
+    {
+     "slug": "collectifs_academiques_independants_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "systemes_productifs_travail (+1.9)",
+       "contredit": "",
+       "raison": "L'énergie abondante et moins chère peut accélérer la recherche et la légitimité des contre-expertises académiques indépendantes, renforçant leur rôle dans un système productif en mutation."
+      },
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "agence_internationale_des_energies_renouvelables_irena_2_reference",
+       "relation": "alliance",
+       "action": "nouvelle",
+       "lien": "variable",
+       "lien_detail": "energie_ressources_critiques (-4.8)",
+       "contredit": "",
+       "raison": "La transition énergétique induite par la fusion nucléaire pourrait rapprocher les CAI de l'IRENA-2, acteur clé de la régulation des nouvelles énergies."
+      }
+     ]
+    },
+    {
+     "slug": "collectifs_de_biopiraterie_inversee_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "systemes_productifs_travail (+1.9)",
+       "contredit": "",
+       "raison": "La baisse des coûts énergétiques peut faciliter leurs activités de contestation des monopoles biotechnologiques, en réduisant les barrières logistiques et financières."
+      },
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "Dans le scénario reference, les Collectifs agissent comme perturbateurs structurels du régime de propriété intellectuelle biotechnologique, exploitant les zones grises d'un système international affaibli (gouvernance_institutions : 60) pour contester les monopoles du secteur santé-biotechnologies (55).",
+       "contredit": "",
+       "lien": "variable",
+       "lien_detail": "systeme_economique_redistribution (+0.5)",
+       "raison": "Leur rôle pourrait s'élargir pour inclure des critiques des nouveaux monopoles liés au lithium et aux brevets de la fusion, sans rendre la phrase fausse."
+      }
+     ]
+    },
+    {
+     "slug": "collectifs_de_journalisme_embarque_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "Ancrés dans des zones à fort enjeu territorial — deltas menacés, corridors logistiques disputés, zones d'extraction de terres rares — ils documentent les conflits locaux et les stratégies de contournement des régulations internationales.",
+       "contredit": "",
+       "lien": "variable",
+       "lien_detail": "geopolitique_conflits (+0.4)",
+       "raison": "Leur couverture pourrait inclure les tensions liées à l'accès au lithium et aux brevets de la fusion, sans que cela ne rende la phrase fausse."
+      }
+     ]
+    },
+    {
+     "slug": "collectifs_de_journalistes_independants_regionaux_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "Dans le scénario reference, ces collectifs incarnent une alternative aux médias institutionnels ou corporatifs, portant une information de proximité potentiellement résistante aux pressions éditoriales centrales.",
+       "contredit": "",
+       "lien": "variable",
+       "lien_detail": "valeurs_culture_tempo_sociale (+0.1)",
+       "raison": "Leur rôle pourrait s'élargir pour couvrir les impacts locaux de la transition énergétique, sans que cela ne rende la phrase fausse."
+      }
+     ]
+    },
+    {
+     "slug": "collectifs_de_peche_inuit_et_sami_reference",
+     "changements": [
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "consortium_energetique_des_mers_du_nord_reference",
+       "relation": "opposition",
+       "action": "nouvelle",
+       "lien": "relation",
+       "lien_detail": "conseil_des_etats_nordiques_integres_reference (allié du consortium)",
+       "contredit": "",
+       "raison": "La compétition pour les ressources et l'accès aux zones arctiques pourrait intensifier les tensions avec les consortiums énergétiques nordiques, sans créer de contradiction."
+      },
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "Acteurs en résistance contre la spoliation de territoires ancestraux rendus accessibles et exploitables par le recul des glaces, porteurs de revendications juridiques et culturelles sur ces espaces.",
+       "contredit": "",
+       "lien": "variable",
+       "lien_detail": "geopolitique_conflits (+0.4)",
+       "raison": "Leur lutte pourrait inclure des revendications liées à l'exploitation des ressources critiques (lithium, béryllium) dans l'Arctique, sans rendre la phrase fausse."
+      }
+     ]
+    },
+    {
+     "slug": "commission_hydrique_de_l_union_africaine_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "climat_environnement_global (-2.8)",
+       "contredit": "",
+       "raison": "La stabilisation partielle du climat grâce à la fusion pourrait réduire les tensions hydriques, mais la Commission pourrait gagner en influence en gérant les nouveaux enjeux liés à l'eau (dessalement, lithium)."
+      },
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "consortiums_prives_d_extraction_de_ressources_critiques_reference",
+       "relation": "opposition",
+       "action": "nouvelle",
+       "lien": "variable",
+       "lien_detail": "geopolitique_conflits (+0.4)",
+       "contredit": "",
+       "raison": "La Commission pourrait s'opposer aux consortiums privés exploitant le lithium en Afrique, sans que cela ne crée de contradiction avec son rôle actuel."
+      }
+     ]
+    },
+    {
+     "slug": "communs_numeriques_agroecologiques_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "systemes_productifs_travail (+1.9)",
+       "contredit": "",
+       "raison": "L'énergie abondante pourrait faciliter la diffusion de leurs outils et connaissances, renforçant leur rôle dans un système productif en mutation."
+      }
+     ]
+    },
+    {
+     "slug": "confederation_des_megapoles_autonomes_reference",
+     "changements": [
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "consortiums_energetiques_des_megapoles_reference",
+       "relation": "alliance",
+       "action": "nouvelle",
+       "lien": "variable",
+       "lien_detail": "energie_ressources_critiques (-4.8)",
+       "contredit": "",
+       "raison": "Les mégapoles pourraient s'allier aux consortiums énergétiques pour sécuriser leur accès à la fusion, sans que cela ne crée de contradiction avec leur rivalité actuelle."
+      },
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "Incarne la fragmentation géopolitique en blocs mégapolitains concurrents, substituant la rivalité inter-urbaine à la rivalité interétatique classique.",
+       "contredit": "",
+       "lien": "variable",
+       "lien_detail": "geopolitique_conflits (+0.4)",
+       "raison": "Leur rivalité pourrait inclure des tensions pour l'accès aux brevets et au lithium, sans rendre la phrase fausse."
+      }
+     ]
+    },
+    {
+     "slug": "conseil_de_geneve_pour_les_droits_biosociaux_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "Dans le scénario de référence, le Conseil de Genève pour les Droits Biosociaux sert de point de friction institutionnel central entre les logiques de marché biotechnologique accéléré et les revendications de justice biosociale des populations les plus exposées.",
+       "contredit": "",
+       "lien": "variable",
+       "lien_detail": "systeme_economique_redistribution (+0.5)",
+       "raison": "Son rôle pourrait s'élargir pour inclure les enjeux de justice liés à l'accès aux brevets de la fusion et au lithium, sans rendre la phrase fausse."
+      }
+     ]
+    },
+    {
+     "slug": "conseil_des_etats_nordiques_integres_reference",
+     "changements": [
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "consortium_energetique_des_mers_du_nord_reference",
+       "relation": "alliance",
+       "action": "nouvelle",
+       "lien": "variable",
+       "lien_detail": "energie_ressources_critiques (-4.8)",
+       "contredit": "",
+       "raison": "Le Conseil pourrait renforcer son alliance avec les consortiums énergétiques pour exploiter les ressources critiques (béryllium, supraconducteurs) dans l'Arctique."
+      },
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "Il constitue un laboratoire mondial de gouvernance hybride, combinant souveraineté étatique résiduelle et gestion collective des infrastructures critiques (corridors logistiques, réseaux énergétiques, données).",
+       "contredit": "",
+       "lien": "variable",
+       "lien_detail": "gouvernance_institutions (+0.1)",
+       "raison": "Son rôle pourrait inclure la gestion des infrastructures liées à la fusion (réacteurs, réseaux), sans rendre la phrase fausse."
+      }
+     ]
+    },
+    {
+     "slug": "conseil_regulation_algorithmique_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "obligatoire",
+       "apres": "résiduel",
+       "lien": "variable",
+       "lien_detail": "systemes_productifs_travail (+1.9)",
+       "contredit": "Son mandat consultatif devient obsolète face à l'accélération des innovations technologiques et à la reconfiguration des rapports de force entre États et corporations.",
+       "raison": "La percée de la fusion et la reconfiguration des systèmes productifs rendent son rôle de surveillance des IA moins pertinent, sans adaptation."
+      },
+      {
+       "type": "texte",
+       "niveau": "obligatoire",
+       "extrait": "Son autorité est contestée mais sa légitimité symbolique reste intacte.",
+       "contredit": "La légitimité symbolique du Comité est affaiblie par l'émergence de nouveaux acteurs technologiques (consortiums de fusion) et la marginalisation des régulations onusiennes.",
+       "lien": "variable",
+       "lien_detail": "gouvernance_institutions (+0.1)",
+       "raison": "La phrase devient fausse car la légitimité symbolique n'est plus intacte dans un contexte de reconfiguration des pouvoirs."
+      }
+     ]
+    },
+    {
+     "slug": "conseil_regulation_ressources_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "obligatoire",
+       "apres": "transformé",
+       "lien": "variable",
+       "lien_detail": "energie_ressources_critiques (-4.8)",
+       "contredit": "Son rôle d'arbitre des flux de ressources stratégiques (lithium, terres rares) devient central, mais son modèle de chambre de compensation est remis en cause par les nouveaux rapports de force géopolitiques.",
+       "raison": "La percée de la fusion et la reconfiguration des enjeux autour du lithium et des brevets rendent son rôle actuel obsolète sans transformation."
+      },
+      {
+       "type": "texte",
+       "niveau": "obligatoire",
+       "extrait": "Dans un monde multipolaire fracturé, il joue un rôle de chambre de compensation plutôt que de véritable régulateur.",
+       "contredit": "La phrase devient fausse car le CRRC ne peut plus se contenter d'être une chambre de compensation face à l'urgence de réguler les nouveaux flux de lithium et de brevets.",
+       "lien": "variable",
+       "lien_detail": "energie_ressources_critiques (-4.8)",
+       "raison": "Le rôle du CRRC doit évoluer pour inclure une régulation active des ressources critiques de la fusion."
+      },
+      {
+       "type": "relation",
+       "niveau": "obligatoire",
+       "cible": "bloc_ressources_eurasiatique_bre_reference",
+       "relation": "opposition",
+       "action": "nouvelle",
+       "lien": "variable",
+       "lien_detail": "geopolitique_conflits (+0.4)",
+       "contredit": "L'absence de cette opposition rendrait le CRRC incapable de jouer un rôle crédible dans la régulation des ressources critiques.",
+       "raison": "Le CRRC doit s'opposer au BRE pour éviter d'être marginalisé dans la régulation du lithium et des brevets."
+      }
+     ]
+    },
+    {
+     "slug": "consortium_africain_de_biotechnologies_sociales_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "dominant",
+       "lien": "variable",
+       "lien_detail": "systeme_economique_redistribution (+0.5)",
+       "contredit": "",
+       "raison": "L'énergie abondante et moins chère pourrait accélérer ses programmes de biorevenu, renforçant son rôle d'intermédiaire stratégique en Afrique."
+      },
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "Il déploie sur l'ensemble du continent des programmes de biorevenu — mécanismes par lesquels les individus valorisent leurs données biologiques et environnementales en échange de services essentiels (santé, éducation, énergie).",
+       "contredit": "",
+       "lien": "variable",
+       "lien_detail": "energie_ressources_critiques (-4.8)",
+       "raison": "Le programme de biorevenu pourrait inclure l'accès à l'énergie issue de la fusion, sans rendre la phrase fausse."
+      }
+     ]
+    },
+    {
+     "slug": "consortium_amazonia_viva_reference",
+     "changements": [
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "bloc_ressources_eurasiatique_bre_reference",
+       "relation": "opposition",
+       "action": "nouvelle",
+       "lien": "variable",
+       "lien_detail": "geopolitique_conflits (+0.4)",
+       "contredit": "",
+       "raison": "Le Consortium pourrait s'opposer au BRE pour défendre ses intérêts dans l'exploitation des ressources critiques (lithium) en Amazonie."
+      },
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "Son existence même représente une expérience de gouvernance écologique hybride, combinant reconnaissance internationale et ancrage territorial local.",
+       "contredit": "",
+       "lien": "variable",
+       "lien_detail": "climat_environnement_global (-2.8)",
+       "raison": "Son rôle pourrait inclure la gestion des impacts environnementaux de l'extraction du lithium, sans rendre la phrase fausse."
+      }
+     ]
+    },
+    {
+     "slug": "consortium_augmentwork_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "systemes_productifs_travail (+1.9)",
+       "contredit": "",
+       "raison": "L'énergie abondante pourrait accélérer les politiques d'augmentation des travailleurs, renforçant son influence."
+      },
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "consortiums_energetiques_des_megapoles_reference",
+       "relation": "alliance",
+       "action": "nouvelle",
+       "lien": "variable",
+       "lien_detail": "energie_ressources_critiques (-4.8)",
+       "contredit": "",
+       "raison": "Le Consortium pourrait s'allier aux mégapoles pour promouvoir des politiques d'augmentation liées à la transition énergétique."
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "fusion_commerciale_2038::reference::3": {
+  "empreinte": "55f2fce4d3ee3949",
+  "date": "2026-11-21T18:04",
+  "brut": {
+   "fiches": [
+    {
+     "slug": "consortium_de_maintenance_orbitale_seom_7_reference",
+     "changements": []
+    },
+    {
+     "slug": "consortium_des_fournisseurs_d_energie_renouvelable_distribuee_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "systemes_productifs_travail (+1.9)",
+       "contredit": "",
+       "raison": "La baisse des coûts énergétiques et l'abondance d'énergie favorisent la résilience des réseaux distribués, renforçant leur rôle systémique."
+      },
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "consortium_helios_reference",
+       "relation": "alliance",
+       "action": "nouvelle",
+       "lien": "relation",
+       "lien_detail": "Les deux consortiums partagent un intérêt commun dans la stabilisation des infrastructures énergétiques critiques.",
+       "contredit": "",
+       "raison": "Helios, acteur dominant de l'énergie solaire orbitale, pourrait trouver un intérêt stratégique à s'allier avec un réseau distribué renforcé par la fusion."
+      }
+     ]
+    },
+    {
+     "slug": "consortium_des_grandes_plateformes_ia_integrees_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "Dans ce scénario, elles exercent un pouvoir structurant sur les flux informationnels et économiques globaux, agissant comme acteurs de référence incontournables face auxquels les autres entités se positionnent.",
+       "contredit": "",
+       "lien": "variable",
+       "lien_detail": "systemes_productifs_travail (+1.9)",
+       "raison": "L'abondance énergétique pourrait accélérer l'intégration des IA dans les systèmes productifs, renforçant leur pouvoir sans rendre la phrase fausse."
+      }
+     ]
+    },
+    {
+     "slug": "consortium_des_grandes_plateformes_logistiques_globales_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "il est l'épine dorsale matérielle sans laquelle l'équilibre fragile s'effondre, mais son existence même cristallise les rapports de force entre blocs souverains, États en déclin et…",
+       "contredit": "",
+       "lien": "variable",
+       "lien_detail": "geopolitique_conflits (+0.4)",
+       "raison": "La baisse des coûts énergétiques pourrait réduire les tensions logistiques, mais la phrase reste vraie car les rapports de force persistent."
+      }
+     ]
+    },
+    {
+     "slug": "consortium_des_pecheries_autonomes_du_grand_nord_reference",
+     "changements": []
+    },
+    {
+     "slug": "consortium_des_plateformes_ia_centralisees_anti_deliberation_reference",
+     "changements": []
+    },
+    {
+     "slug": "consortium_energetique_baltique_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "obligatoire",
+       "apres": "déclinant",
+       "lien": "variable",
+       "lien_detail": "energie_ressources_critiques (-4.8)",
+       "contredit": "La perte de levier des hydrocarbures et l'abondance énergétique rendent obsolète un acteur structuré autour de l'approvisionnement énergétique traditionnel.",
+       "raison": "Le Consortium Énergétique Baltique, centré sur des équilibres régionaux dépendants des énergies fossiles, ne peut plus jouer son rôle pivot une fois la fusion nucléaire commercialisée."
+      },
+      {
+       "type": "relation",
+       "niveau": "obligatoire",
+       "cible": "bloc_ressources_eurasiatique_bre_reference",
+       "relation": "opposition",
+       "action": "rompue",
+       "lien": "relation",
+       "lien_detail": "Le BRE perd son influence avec la chute des hydrocarbures, rendant caduque l'opposition historique.",
+       "contredit": "L'opposition au BRE n'a plus de sens une fois celui-ci affaibli par la perte de sa rente énergétique.",
+       "raison": "Le BRE, basé sur la rente des ressources fossiles, n'est plus un rival crédible après 2038."
+      }
+     ]
+    },
+    {
+     "slug": "consortium_energetique_des_mers_du_nord_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "obligatoire",
+       "apres": "déclinant",
+       "lien": "variable",
+       "lien_detail": "energie_ressources_critiques (-4.8)",
+       "contredit": "La commercialisation de la fusion nucléaire rend obsolète un acteur centré sur les énergies marines et fossiles.",
+       "raison": "Le Consortium Énergétique des Mers du Nord, dépendant des équilibres énergétiques traditionnels, ne peut plus incarner un acteur charnière dans un monde où l'énergie est abondante et bon marché."
+      },
+      {
+       "type": "relation",
+       "niveau": "obligatoire",
+       "cible": "bloc_eurasien_central_reference",
+       "relation": "opposition",
+       "action": "rompue",
+       "lien": "relation",
+       "lien_detail": "Le BEC perd son influence géopolitique avec la chute des hydrocarbures.",
+       "contredit": "L'opposition au BEC n'a plus de sens une fois celui-ci affaibli par la perte de sa rente énergétique.",
+       "raison": "Le BEC, basé sur des leviers énergétiques traditionnels, n'est plus un rival crédible après 2038."
+      }
+     ]
+    },
+    {
+     "slug": "consortium_helios_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "obligatoire",
+       "apres": "déclinant",
+       "lien": "variable",
+       "lien_detail": "energie_ressources_critiques (-4.8)",
+       "contredit": "La fusion nucléaire commerciale rend caduque la position de quasi-régulateur privé de l'énergie solaire orbitale et de l'hydrogène vert.",
+       "raison": "Helios, acteur pivot de l'énergie solaire et hydrogène, ne peut plus dominer un marché où l'énergie est abondante et bon marché grâce à la fusion."
+      },
+      {
+       "type": "texte",
+       "niveau": "obligatoire",
+       "extrait": "Dans un monde où la tension structurelle entre offre et demande énergétique ne se résorbe pas, Helios maintient un équilibre précaire entre régulation privée et souveraineté des États.",
+       "contredit": "La fusion nucléaire résout la tension entre offre et demande énergétique, rendant la phrase fausse.",
+       "lien": "variable",
+       "lien_detail": "energie_ressources_critiques (-4.8)",
+       "raison": "L'équilibre précaire décrit n'existe plus une fois l'énergie abondante."
+      }
+     ]
+    },
+    {
+     "slug": "consortium_indo_pacifique_de_l_hydrogene_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "obligatoire",
+       "apres": "déclinant",
+       "lien": "variable",
+       "lien_detail": "energie_ressources_critiques (-4.8)",
+       "contredit": "La fusion nucléaire rend obsolète un acteur structuré autour de l'hydrogène comme vecteur énergétique.",
+       "raison": "Le Consortium Indo-Pacifique de l'Hydrogène ne peut plus influencer les équilibres régionaux une fois l'énergie abondante et bon marché."
+      }
+     ]
+    },
+    {
+     "slug": "consortium_logistique_asiatique_de_contournement_aln_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "geopolitique_conflits (+0.4)",
+       "contredit": "",
+       "raison": "La baisse des coûts énergétiques réduit les coûts logistiques, renforçant la viabilité des routes alternatives et donc l'influence du consortium."
+      }
+     ]
+    },
+    {
+     "slug": "consortiums_bancaires_financiarises_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "ils incarnent une dépendance structurelle aux infrastructures de clearing — toute fragilité de ces couches menace leur fonctionnement et, par extension, la stabilité des marchés financiers globaux.",
+       "contredit": "",
+       "lien": "variable",
+       "lien_detail": "systeme_economique_redistribution (+0.5)",
+       "raison": "L'abondance énergétique pourrait réduire certaines fragilités systémiques, mais la phrase reste vraie car la dépendance aux infrastructures persiste."
+      }
+     ]
+    },
+    {
+     "slug": "consortiums_d_agriculture_verticale_algorithmique_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "dominant",
+       "lien": "variable",
+       "lien_detail": "systemes_productifs_travail (+1.9)",
+       "contredit": "",
+       "raison": "L'abondance énergétique réduit les coûts de production, renforçant la compétitivité et l'influence des consortiums d'agriculture verticale."
+      }
+     ]
+    },
+    {
+     "slug": "consortiums_d_extraction_miniere_du_bassin_congolais_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "obligatoire",
+       "extrait": "les ressources critiques nécessaires à la décarbonation sont extraites dans des conditions qui perpétuent conflits armés, inégalités patrimoniales et fragilité…",
+       "contredit": "La fusion nucléaire réduit la dépendance aux ressources critiques pour la décarbonation (lithium excepté), rendant la phrase partiellement fausse.",
+       "lien": "variable",
+       "lien_detail": "energie_ressources_critiques (-4.8)",
+       "raison": "La décarbonation ne repose plus autant sur les ressources critiques du bassin congolais après 2038."
+      },
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "bloc_ressources_eurasiatique_bre_reference",
+       "relation": "alliance",
+       "action": "rompue",
+       "lien": "relation",
+       "lien_detail": "Le BRE perd son influence avec la chute des hydrocarbures, rendant l'alliance moins stratégique.",
+       "contredit": "",
+       "raison": "Le BRE n'est plus un partenaire crédible après 2038, mais l'alliance pourrait persister par inertie."
+      }
+     ]
+    },
+    {
+     "slug": "consortiums_energetiques_des_megapoles_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "obligatoire",
+       "apres": "déclinant",
+       "lien": "variable",
+       "lien_detail": "energie_ressources_critiques (-4.8)",
+       "contredit": "La fusion nucléaire rend obsolète la pression pour absorber des corridors énergétiques privés.",
+       "raison": "Les mégapoles n'ont plus besoin de consortiums privés pour sécuriser leur approvisionnement énergétique une fois l'énergie abondante."
+      },
+      {
+       "type": "texte",
+       "niveau": "obligatoire",
+       "extrait": "ils exercent une pression pour absorber les corridors logistiques et énergétiques reliant les mégapoles, transformant des infrastructures potentiellement mutualisées en actifs privés captifs.",
+       "contredit": "La fusion nucléaire supprime la rareté énergétique, rendant la phrase fausse.",
+       "lien": "variable",
+       "lien_detail": "energie_ressources_critiques (-4.8)",
+       "raison": "L'énergie abondante élimine la nécessité de capturer des infrastructures énergétiques."
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "fusion_commerciale_2038::reference::4": {
+  "empreinte": "38160e90fe28390b",
+  "date": "2026-11-21T18:04",
+  "brut": {
+   "fiches": [
+    {
+     "slug": "consortiums_energetiques_opaques_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "obligatoire",
+       "apres": "déclinant",
+       "lien": "variable",
+       "lien_detail": "energie_ressources_critiques (-4.8 points)",
+       "contredit": "Ils incarnent les forces de résistance à la régulation énergétique en maintenant une opacité structurelle.",
+       "raison": "L'effondrement de la rente des hydrocarbures et la diffusion massive de la fusion nucléaire commerciale rendent leur modèle obsolète, car leur opacité repose sur la dépendance aux énergies fossiles et leur capacité à manipuler les marchés énergétiques traditionnels."
+      },
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "consortiums_energetiques_des_megapoles_reference",
+       "relation": "opposition",
+       "action": "nouvelle",
+       "lien": "relation",
+       "lien_detail": "Allié actuel des consortiums énergétiques opaques, mais directement touché par la transition énergétique.",
+       "contredit": "",
+       "raison": "Les consortiums énergétiques des mégapoles, désormais moins dépendants des énergies fossiles, pourraient rompre leur alliance avec les opaques pour s'aligner sur des sources d'énergie plus stables et régulées."
+      },
+      {
+       "type": "texte",
+       "niveau": "obligatoire",
+       "extrait": "Dans ce scénario, ils incarnent les forces de résistance à la régulation énergétique, maintenant une opacité structurelle qui complique toute gouvernance cohérente du secteur.",
+       "contredit": "Leur rôle de résistance à la régulation énergétique devient caduc avec la fin de la dépendance aux hydrocarbures.",
+       "lien": "variable",
+       "lien_detail": "energie_ressources_critiques (-4.8 points)",
+       "raison": "Leur opacité structurelle perd son fondement avec la disparition de la rente des hydrocarbures, rendant cette phrase fausse."
+      }
+     ]
+    },
+    {
+     "slug": "consortiums_mediatiques_corporatifs_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "Dans le scénario reference, les Consortiums Médiatiques Corporatifs incarnent la presse institutionnelle alignée sur les intérêts économiques établis, agissant comme stabilisateurs narratifs d'un système mondial fragile : ils minimisent les signaux de rupture, valorisent les ajustements techno-institutionnels et…",
+       "contredit": "",
+       "lien": "variable",
+       "lien_detail": "systeme_economique_redistribution (+0.5 point), geopolitique_conflits (+0.4 point)",
+       "raison": "Leur rôle de stabilisateur narratif pourrait s'élargir pour inclure la gestion des récits autour de la transition énergétique, mais la phrase reste vraie sans modification."
+      }
+     ]
+    },
+    {
+     "slug": "consortiums_prives_d_extraction_de_ressources_critiques_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "energie_ressources_critiques (-4.8 points)",
+       "contredit": "",
+       "raison": "La transition vers la fusion nucléaire recentre les enjeux sur le lithium et les matériaux critiques, ce qui pourrait renforcer leur rôle dans l'extraction de ces ressources."
+      },
+      {
+       "type": "texte",
+       "niveau": "obligatoire",
+       "extrait": "Dans le scénario reference, ils incarnent la pression exercée par les intérêts privés sur les ressources planétaires, en tension avec les logiques de régulation publique ou de souveraineté territoriale.",
+       "contredit": "Leur pression sur les ressources planétaires se déplace des hydrocarbures vers le lithium et les matériaux critiques.",
+       "lien": "variable",
+       "lien_detail": "energie_ressources_critiques (-4.8 points)",
+       "raison": "La phrase reste globalement vraie, mais leur cible principale change : ils ne ciblent plus les hydrocarbures mais les ressources nécessaires à la fusion."
+      }
+     ]
+    },
+    {
+     "slug": "consortiums_prives_de_gestion_des_donnees_critiques_reference",
+     "changements": []
+    },
+    {
+     "slug": "cooperative_terrafond_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "dominant",
+       "lien": "variable",
+       "lien_detail": "climat_environnement_global (-2.8 points), systemes_productifs_travail (+1.9 points)",
+       "contredit": "",
+       "raison": "La transition énergétique et la réduction des tensions climatiques pourraient renforcer leur rôle de tampon agroécologique en Europe occidentale."
+      }
+     ]
+    },
+    {
+     "slug": "cooperatives_agro_ecologiques_de_reconstruction_territoriale_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "systemes_productifs_travail (+1.9 points), climat_environnement_global (-2.8 points)",
+       "contredit": "",
+       "raison": "La transition énergétique et la stabilisation partielle du climat pourraient renforcer leur rôle dans la résilience alimentaire régionale."
+      }
+     ]
+    },
+    {
+     "slug": "cooperatives_agro_ecologiques_du_bassin_mediterraneen_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "climat_environnement_global (-2.8 points), systemes_productifs_travail (+1.9 points)",
+       "contredit": "",
+       "raison": "La réduction des tensions climatiques et la transition énergétique pourraient renforcer leur rôle dans la souveraineté alimentaire méditerranéenne."
+      }
+     ]
+    },
+    {
+     "slug": "cooperatives_energetiques_decentralisees_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "obligatoire",
+       "apres": "dominant",
+       "lien": "variable",
+       "lien_detail": "energie_ressources_critiques (-4.8 points)",
+       "contredit": "Elles incarnent la réponse bottom-up à l'échec partiel des régulations globales.",
+       "raison": "La diffusion massive de la fusion nucléaire, bien que centralisée, rend leur modèle décentralisé plus attractif et scalable, car elles peuvent intégrer cette technologie à leur échelle."
+      },
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "agence_internationale_des_energies_renouvelables_irena_2_reference",
+       "relation": "alliance",
+       "action": "nouvelle",
+       "lien": "relation",
+       "lien_detail": "Allié actuel, mais la transition énergétique renforce leur complémentarité.",
+       "contredit": "",
+       "raison": "L'IRENA-2 pourrait voir en elles un partenaire clé pour déployer la fusion à l'échelle locale, renforçant leur alliance."
+      },
+      {
+       "type": "texte",
+       "niveau": "obligatoire",
+       "extrait": "Dans le scénario de référence, les Coopératives Énergétiques Décentralisées constituent un nœud critique de la résilience territoriale face à un système énergétique mondial sous tension (score 72/100).",
+       "contredit": "Le score de tension énergétique baisse significativement avec la fusion nucléaire.",
+       "lien": "variable",
+       "lien_detail": "energie_ressources_critiques (-4.8 points)",
+       "raison": "Leur rôle reste critique, mais la justification par la tension énergétique devient fausse."
+      }
+     ]
+    },
+    {
+     "slug": "cooperatives_ia_open_source_reference",
+     "changements": []
+    },
+    {
+     "slug": "corporations_d_extraction_energetique_non_signataires_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "obligatoire",
+       "apres": "résiduel",
+       "lien": "variable",
+       "lien_detail": "energie_ressources_critiques (-4.8 points)",
+       "contredit": "Elles incarnent une résistance structurelle aux mécanismes de gouvernance énergétique.",
+       "raison": "La fin de la rente des hydrocarbures rend leur modèle d'extraction non régulée obsolète, les privant de leur levier de résistance."
+      },
+      {
+       "type": "relation",
+       "niveau": "obligatoire",
+       "cible": "bloc_ressources_eurasiatique_bre_reference",
+       "relation": "alliance",
+       "action": "rompue",
+       "lien": "relation",
+       "lien_detail": "Allié actuel, mais le BRE perd son levier énergétique.",
+       "contredit": "Le BRE n'a plus d'intérêt à soutenir des corporations dont le modèle est caduc.",
+       "raison": "Le BRE, dépendant des hydrocarbures, perd son influence et ne peut plus soutenir ces corporations."
+      },
+      {
+       "type": "texte",
+       "niveau": "obligatoire",
+       "extrait": "Dans ce scénario, elles incarnent une résistance structurelle aux mécanismes de gouvernance énergétique, maintenant des logiques d'extraction non régulées face aux tentatives de coordination globale.",
+       "contredit": "Leur résistance devient sans objet avec la fin des hydrocarbures.",
+       "lien": "variable",
+       "lien_detail": "energie_ressources_critiques (-4.8 points)",
+       "raison": "La phrase devient fausse car leur logique d'extraction non régulée n'a plus de cible."
+      }
+     ]
+    },
+    {
+     "slug": "corridor_arctique_nordique_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "mature",
+       "lien": "variable",
+       "lien_detail": "geopolitique_conflits (+0.4 point)",
+       "contredit": "",
+       "raison": "La transition énergétique réduit l'importance stratégique des hydrocarbures arctiques, mais le corridor reste un axe logistique clé, bien que moins disputé."
+      },
+      {
+       "type": "texte",
+       "niveau": "obligatoire",
+       "extrait": "Le Passage Arctique du Nord constitue l'épine dorsale logistique de l'arc circumpolaire en 2098 : une voie maritime dégagée par la fonte quasi-totale de la banquise estivale, reliant les ports scandinaves aux territoires sibériens dégelés en pleine mise en valeur.",
+       "contredit": "La mise en valeur des territoires sibériens dépendait en partie des hydrocarbures.",
+       "lien": "variable",
+       "lien_detail": "energie_ressources_critiques (-4.8 points)",
+       "raison": "La phrase reste globalement vraie, mais la 'mise en valeur' des territoires sibériens change de nature avec la fin des hydrocarbures."
+      }
+     ]
+    },
+    {
+     "slug": "courant_nationaliste_instrumentalisateur_du_discours_des_racines_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "geopolitique_conflits (+0.4 point), systeme_economique_redistribution (+0.5 point)",
+       "contredit": "",
+       "raison": "La transition énergétique et les déséquilibres économiques pourraient alimenter des discours nationalistes réactionnaires."
+      }
+     ]
+    },
+    {
+     "slug": "datasovereign_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "mature",
+       "lien": "variable",
+       "lien_detail": "geopolitique_conflits (+0.4 point), systeme_economique_redistribution (+0.5 point)",
+       "contredit": "",
+       "raison": "La transition énergétique et les nouveaux enjeux géopolitiques (lithium, brevets) pourraient recentrer leur rôle sur la gestion des données critiques liées à ces ressources."
+      }
+     ]
+    },
+    {
+     "slug": "deepfield_institute_reference",
+     "changements": []
+    },
+    {
+     "slug": "delta_du_gange_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "Territoire en crise permanente, submergé par la montée des eaux et les migrations massives qu'elle génère.",
+       "contredit": "",
+       "lien": "variable",
+       "lien_detail": "climat_environnement_global (-2.8 points)",
+       "raison": "La stabilisation partielle du climat pourrait atténuer la crise, mais la phrase reste vraie sans modification."
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "fusion_commerciale_2038::reference::5": {
+  "empreinte": "dc899f40110f2cd2",
+  "date": "2026-11-21T18:05",
+  "brut": {
+   "fiches": [
+    {
+     "slug": "delta_du_mekong_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "résiduel",
+       "lien": "variable",
+       "lien_detail": "systemes_productifs_travail (+1.9)",
+       "raison": "L'effondrement des écosystèmes nourriciers du Delta du Mékong pourrait s'accélérer avec la réduction des coûts énergétiques, rendant les barrages en amont encore plus attractifs pour les États riverains, mais aussi en permettant des projets de désalinisation ou de pompage massif, aggravant la pression hydrique."
+      },
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "bloc_ressources_eurasiatique_bre_reference",
+       "relation": "opposition",
+       "action": "nouvelle",
+       "lien": "relation",
+       "lien_detail": "Rivalité indirecte via la variable geopolitique_conflits (+0.4)",
+       "raison": "La perte d'influence des pétro-États et du BRE pourrait affaiblir leur capacité à financer des projets hydroélectriques en amont, mais aussi exacerber leurs tentatives de contrôle sur d'autres ressources critiques (lithium, terres rares), créant de nouvelles tensions avec les États du Mékong."
+      }
+     ]
+    },
+    {
+     "slug": "detroit_compact_grands_lacs_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "systemes_productifs_travail (+1.9)",
+       "raison": "La baisse des coûts énergétiques pourrait accélérer la reconversion industrielle du bassin des Grands Lacs, renforçant le rôle du Detroit Compact comme coordinateur de cette transition."
+      },
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "neuroharmonics_reference",
+       "relation": "alliance",
+       "action": "nouvelle",
+       "lien": "variable",
+       "lien_detail": "systemes_productifs_travail (+1.9)",
+       "raison": "NeuroHarmonics, spécialisé dans l'augmentation humaine, pourrait trouver dans le Detroit Compact un partenaire privilégié pour déployer des solutions de productivité dans une région en reconversion."
+      }
+     ]
+    },
+    {
+     "slug": "directive_kontinuum_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "Le Système Kontinuum est une infrastructure algorithmique de gouvernance préventive déployée progressivement depuis les années 2040 par un consortium d'États à tendance centraliste numérique et de plateformes IA intégrées, sous couvert de stabilisation des 'risques de rupture systémique'.",
+       "lien": "variable",
+       "lien_detail": "systeme_economique_redistribution (+0.5)",
+       "raison": "La fusion nucléaire commerciale pourrait élargir le rôle du Kontinuum en intégrant la gestion des flux énergétiques dans ses algorithmes de gouvernance préventive, sans rendre la phrase fausse."
+      },
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "consortiums_energetiques_des_megapoles_reference",
+       "relation": "alliance",
+       "action": "nouvelle",
+       "lien": "variable",
+       "lien_detail": "systemes_productifs_travail (+1.9)",
+       "raison": "Les consortiums énergétiques des mégapoles pourraient devenir des partenaires clés du Kontinuum pour optimiser la distribution d'énergie abondante et bon marché."
+      }
+     ]
+    },
+    {
+     "slug": "dr_ananya_rao_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "dominant",
+       "lien": "variable",
+       "lien_detail": "systemes_productifs_travail (+1.9)",
+       "raison": "La baisse des coûts énergétiques pourrait faciliter l'accès à des technologies de gestion hydrique (désalinisation, pompage) pour les communautés riveraines, renforçant le rôle médian de Dr. Rao entre modèles algorithmiques et savoirs vernaculaires."
+      },
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "consortium_indo_pacifique_de_l_hydrogene_reference",
+       "relation": "opposition",
+       "action": "nouvelle",
+       "lien": "variable",
+       "lien_detail": "geopolitique_conflits (+0.4)",
+       "raison": "Le consortium indo-pacifique de l'hydrogène pourrait promouvoir des solutions technocratiques de gestion de l'eau, en concurrence avec les modèles communautaires défendus par Dr. Rao."
+      }
+     ]
+    },
+    {
+     "slug": "ecosynth_global_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "mature",
+       "lien": "variable",
+       "lien_detail": "climat_environnement_global (-2.8)",
+       "raison": "L'énergie abondante pourrait réduire la pression sur les écosystèmes (moins de besoin en biocarburants ou en extraction minière), affaiblissant partiellement la dépendance aux souches microbiennes brevetées d'EcoSynth."
+      },
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "consortiums_energetiques_des_megapoles_reference",
+       "relation": "alliance",
+       "action": "nouvelle",
+       "lien": "variable",
+       "lien_detail": "systemes_productifs_travail (+1.9)",
+       "raison": "Les consortiums énergétiques des mégapoles pourraient devenir des clients majeurs d'EcoSynth pour des solutions de résilience climatique intégrées à leurs infrastructures."
+      }
+     ]
+    },
+    {
+     "slug": "elias_mork_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "En tant que responsable du programme de sélection génétique de l'institut, il doit arbitrer entre les impératifs de performance biotechnologique et les contraintes éthiques, politiques et sociales d'un monde en équilibre précaire.",
+       "lien": "variable",
+       "lien_detail": "systemes_productifs_travail (+1.9)",
+       "raison": "L'énergie abondante pourrait élargir les possibilités de sélection génétique (coûts réduits des procédés), sans rendre la phrase fausse."
+      }
+     ]
+    },
+    {
+     "slug": "ergo_wian_sovereign_holdings_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "mature",
+       "lien": "variable",
+       "lien_detail": "geopolitique_conflits (+0.4)",
+       "raison": "La perte d'influence des pétro-États pourrait affaiblir les modèles de gouvernance hybride (corporative/territoriale) comme Ergo-Wian, qui dépendaient en partie de la rente énergétique pour financer leur souveraineté."
+      },
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "consortiums_prives_d_extraction_de_ressources_critiques_reference",
+       "relation": "alliance",
+       "action": "nouvelle",
+       "lien": "variable",
+       "lien_detail": "energie_ressources_critiques (-4.8)",
+       "raison": "Ergo-Wian pourrait se repositionner vers le contrôle des ressources critiques de la fusion (lithium, supraconducteurs), en partenariat avec des consortiums privés d'extraction."
+      }
+     ]
+    },
+    {
+     "slug": "etats_a_tendance_centraliste_numerique_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "obligatoire",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "systeme_economique_redistribution (+0.5)",
+       "contredit": "Leur montée en puissance depuis 2026 a redessiné les équilibres géopolitiques autour du contrôle des données et de la stabilité informationnelle.",
+       "raison": "L'énergie abondante réduit la dépendance aux oligopoles privés de l'énergie, renforçant la capacité des États centralistes numériques à imposer leur gouvernance algorithmique (ex : gestion des flux énergétiques via des plateformes étatiques)."
+      },
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "consortium_des_grandes_plateformes_ia_integrees_reference",
+       "relation": "opposition",
+       "action": "nouvelle",
+       "lien": "variable",
+       "lien_detail": "systeme_economique_redistribution (+0.5)",
+       "raison": "Les États centralistes numériques pourraient entrer en concurrence avec les plateformes IA intégrées pour le contrôle des infrastructures énergétiques et des données associées."
+      }
+     ]
+    },
+    {
+     "slug": "europe_occidentale_reconstruite_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "résiduel",
+       "lien": "variable",
+       "lien_detail": "geopolitique_conflits (+0.4)",
+       "raison": "La perte d'influence des pétro-États pourrait affaiblir les tensions géopolitiques en Europe, mais aussi réduire l'urgence de coordination sécuritaire, marginalisant l'UOC."
+      },
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "consortium_energetique_baltique_reference",
+       "relation": "alliance",
+       "action": "nouvelle",
+       "lien": "variable",
+       "lien_detail": "systemes_productifs_travail (+1.9)",
+       "raison": "L'UOC pourrait s'allier au Consortium Énergétique Baltique pour sécuriser des approvisionnements en énergie fusion, renforçant sa légitimité."
+      }
+     ]
+    },
+    {
+     "slug": "factions_d_extraction_miniere_independantes_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "obligatoire",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "energie_ressources_critiques (-4.8)",
+       "contredit": "Elles exercent une pression décentralisée et diffuse sur les variables énergie-ressources et gouvernance des zones grises, en exploitant des gisements hors des cadres institutionnels.",
+       "raison": "La fusion nucléaire rend le lithium et les supraconducteurs des ressources critiques majeures, augmentant la demande et donc l'activité des factions indépendantes pour les extraire hors des cadres régulés."
+      },
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "cartel_des_terres_rares_d_asie_centrale_reference",
+       "relation": "opposition",
+       "action": "nouvelle",
+       "lien": "variable",
+       "lien_detail": "geopolitique_conflits (+0.4)",
+       "raison": "Le cartel des terres rares pourrait tenter de contrôler les nouvelles ressources critiques (lithium), entrant en conflit avec les factions indépendantes."
+      }
+     ]
+    },
+    {
+     "slug": "factions_eurasiatiques_contre_la_tarification_hydrique_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "résiduel",
+       "lien": "variable",
+       "lien_detail": "systemes_productifs_travail (+1.9)",
+       "raison": "L'énergie abondante pourrait faciliter des solutions de désalinisation ou de pompage, réduisant la dépendance aux modèles de tarification hydrique et affaiblissant leur opposition."
+      }
+     ]
+    },
+    {
+     "slug": "federation_communs_territoriaux_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "dominant",
+       "lien": "variable",
+       "lien_detail": "systemes_productifs_travail (+1.9)",
+       "raison": "L'énergie abondante pourrait renforcer les communs énergétiques décentralisés, élargissant l'influence de la FCT dans la gestion des ressources locales."
+      },
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "cooperatives_energetiques_decentralisees_reference",
+       "relation": "alliance",
+       "action": "nouvelle",
+       "lien": "variable",
+       "lien_detail": "systeme_economique_redistribution (+0.5)",
+       "raison": "La FCT pourrait s'allier aux coopératives énergétiques décentralisées pour promouvoir des modèles de gouvernance locale de l'énergie fusion."
+      }
+     ]
+    },
+    {
+     "slug": "federation_des_cliniques_autonomes_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "systemes_productifs_travail (+1.9)",
+       "raison": "La baisse des coûts énergétiques pourrait réduire les coûts des soins et des équipements médicaux, renforçant le rôle palliatif de la FCA dans les zones périphériques."
+      }
+     ]
+    },
+    {
+     "slug": "fonds_d_investissement_foncier_climatique_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "climat_environnement_global (-2.8)",
+       "raison": "L'énergie abondante pourrait accélérer les projets de résilience climatique (reboisement, désalinisation), augmentant les flux de capital vers le FIFC."
+      },
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "consortiums_energetiques_des_megapoles_reference",
+       "relation": "alliance",
+       "action": "nouvelle",
+       "lien": "variable",
+       "lien_detail": "systemes_productifs_travail (+1.9)",
+       "raison": "Le FIFC pourrait s'allier aux consortiums énergétiques des mégapoles pour financer des infrastructures climatiques intégrées."
+      }
+     ]
+    },
+    {
+     "slug": "fonds_monetaire_climatique_fmc_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "obligatoire",
+       "extrait": "Dans le scénario reference, le FMC constitue un pilier de la gouvernance économique globale, arbitrant les priorités d'investissement climatique entre États et conditionnant l'accès aux financements selon des critères d'émissions et de vulnérabilité.",
+       "contredit": "La fusion nucléaire réduit la dépendance aux critères d'émissions (moins de pression sur les hydrocarbures), rendant l'arbitrage du FMC moins central.",
+       "lien": "variable",
+       "lien_detail": "climat_environnement_global (-2.8)",
+       "raison": "Le FMC doit adapter ses critères pour intégrer les nouvelles dynamiques énergétiques (ex : financement des infrastructures de fusion, gestion des ressources critiques comme le lithium)."
+      },
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "consortium_helios_reference",
+       "relation": "alliance",
+       "action": "nouvelle",
+       "lien": "variable",
+       "lien_detail": "systeme_economique_redistribution (+0.5)",
+       "raison": "Le FMC pourrait s'allier au Consortium Helios pour financer des projets de transition énergétique basés sur la fusion."
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "fusion_commerciale_2038::reference::6": {
+  "empreinte": "3fd59978cdcbd074",
+  "date": "2026-11-21T18:05",
+  "brut": {
+   "fiches": [
+    {
+     "slug": "fonds_souverain_arctique_scandinave_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "dominant",
+       "lien": "variable",
+       "lien_detail": "systemes_productifs_travail (+1.9)",
+       "contredit": "",
+       "raison": "L'énergie abondante et moins chère favorise les investissements dans les infrastructures et l'exploitation des ressources arctiques, renforçant potentiellement le poids de ce fonds souverain dans les arbitrages régionaux."
+      },
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "consortium_energetique_baltique_reference",
+       "relation": "alliance",
+       "action": "nouvelle",
+       "lien": "variable",
+       "lien_detail": "systemes_productifs_travail (+1.9)",
+       "contredit": "",
+       "raison": "La transition énergétique pourrait renforcer la coopération entre acteurs nordiques pour développer des infrastructures de fusion ou d'énergies renouvelables, consolidant leur alliance."
+      }
+     ]
+    },
+    {
+     "slug": "fonds_souverains_de_la_ceinture_financiere_pacifique_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "systemes_productifs_travail (+1.9)",
+       "contredit": "",
+       "raison": "L'énergie abondante pourrait accélérer les investissements dans les infrastructures et les technologies, renforçant le rôle de ces fonds souverains dans l'économie mondiale."
+      },
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "consortium_indo_pacifique_de_l_hydrogene_reference",
+       "relation": "alliance",
+       "action": "nouvelle",
+       "lien": "variable",
+       "lien_detail": "systemes_productifs_travail (+1.9)",
+       "contredit": "",
+       "raison": "La fusion nucléaire pourrait rendre l'hydrogène vert plus compétitif, incitant ces fonds à s'allier avec des consortiums énergétiques régionaux pour sécuriser des parts de marché."
+      }
+     ]
+    },
+    {
+     "slug": "frente_sertao_livre_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "dominant",
+       "lien": "variable",
+       "lien_detail": "systemes_productifs_travail (+1.9)",
+       "contredit": "",
+       "raison": "L'énergie abondante et décentralisée pourrait renforcer l'autonomie des communautés rurales, accélérant la trajectoire ascendante de la Frente Sertão Livre."
+      },
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "organisé autour de la gestion collective de ressources — eau pluviale captée, énergie solaire micro-distribuée, semences adaptées à la xérophytie — face à l'abandon…",
+       "contredit": "",
+       "lien": "variable",
+       "lien_detail": "systemes_productifs_travail (+1.9)",
+       "raison": "L'énergie solaire micro-distribuée pourrait être complétée ou remplacée par des micro-réseaux de fusion nucléaire locale, élargissant le rôle de la Frente dans la gestion énergétique."
+      }
+     ]
+    },
+    {
+     "slug": "front_souverainiste_des_ressources_d_amerique_du_sud_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "geopolitique_conflits (+0.4)",
+       "contredit": "",
+       "raison": "La maîtrise du lithium, ressource critique pour la fusion, pourrait devenir un enjeu géopolitique majeur, renforçant le pouvoir de négociation du Front."
+      },
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "conseil_regulation_ressources_reference",
+       "relation": "opposition",
+       "action": "nouvelle",
+       "lien": "variable",
+       "lien_detail": "geopolitique_conflits (+0.4)",
+       "contredit": "",
+       "raison": "Le Front pourrait s'opposer à une régulation internationale du lithium, perçue comme une ingérence dans la souveraineté des États sud-américains."
+      }
+     ]
+    },
+    {
+     "slug": "gelecek_meclisi_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "dominant",
+       "lien": "variable",
+       "lien_detail": "systeme_economique_redistribution (+0.5)",
+       "contredit": "",
+       "raison": "La transition énergétique pourrait nécessiter des négociations accrues entre acteurs divergents, renforçant le rôle de Gelecek Meclisi comme espace de coordination."
+      }
+     ]
+    },
+    {
+     "slug": "geneve_lac_retreite_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "Organisation de gestion environnementale et patrimoniale fondée autour de la retraite progressive des eaux du lac Léman, devenu symbole des mutations climatiques non résolues.",
+       "contredit": "",
+       "lien": "variable",
+       "lien_detail": "climat_environnement_global (-2.8)",
+       "raison": "La réduction des émissions liées à la fusion nucléaire pourrait atténuer les effets du changement climatique, modifiant légèrement la dynamique de la retraite des eaux du lac Léman."
+      }
+     ]
+    },
+    {
+     "slug": "gouvernance_ia_de_l_archipel_petrolier_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "obligatoire",
+       "apres": "déclinant",
+       "lien": "territoire",
+       "lien_detail": "bloc_persique_autonome (Golfe persique)",
+       "contredit": "L'effondrement de la rente des hydrocarbures rend obsolète la gestion algorithmique des ressources pétrolières.",
+       "raison": "La perte de levier économique des pétro-États du Golfe persique prive cette gouvernance-IA de sa raison d'être principale, la rendant caduque ou forcée de se réinventer."
+      },
+      {
+       "type": "texte",
+       "niveau": "obligatoire",
+       "extrait": "Administrateur algorithmique autonome des ressources vitales (énergie, eau dessalinée, carburant) de l'archipel pétrolier du Golfe, ayant remplacé le conseil municipal en 2085 après la crise énergétique de 2084.",
+       "contredit": "La crise énergétique de 2084 n'a plus de sens dans un monde où l'énergie est abondante grâce à la fusion nucléaire.",
+       "lien": "territoire",
+       "lien_detail": "bloc_persique_autonome (Golfe persique)",
+       "raison": "La description de la crise énergétique de 2084 comme déclencheur de cette gouvernance devient fausse, car la fusion nucléaire a résolu les pénuries d'énergie dès 2050."
+      }
+     ]
+    },
+    {
+     "slug": "gouvernements_a_regime_de_productivite_mandatee_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "marginal",
+       "lien": "variable",
+       "lien_detail": "systemes_productifs_travail (+1.9)",
+       "contredit": "",
+       "raison": "L'énergie abondante pourrait réduire la pression sur les gouvernements pour imposer des régimes de productivité mandatée, les rendant moins pertinents."
+      }
+     ]
+    },
+    {
+     "slug": "gouvernements_du_bloc_sahelien_autonome_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "systemes_productifs_travail (+1.9)",
+       "contredit": "",
+       "raison": "L'énergie abondante pourrait accélérer le développement économique et technologique du Bloc Sahélien, renforçant son autonomie et son rôle régional."
+      }
+     ]
+    },
+    {
+     "slug": "gouvernements_federaux_residuels_souverainistes_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "résiduel",
+       "lien": "variable",
+       "lien_detail": "geopolitique_conflits (+0.4)",
+       "contredit": "",
+       "raison": "La reconfiguration des enjeux géopolitiques autour des ressources critiques (lithium, brevets) pourrait marginaliser ces gouvernements, attachés à un cadre territorial traditionnel."
+      }
+     ]
+    },
+    {
+     "slug": "great_lakes_autonomous_compact_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "unie par la gestion partagée du plus grand réservoir d'eau douce de surface au monde.",
+       "contredit": "",
+       "lien": "variable",
+       "lien_detail": "climat_environnement_global (-2.8)",
+       "raison": "La réduction des pressions climatiques pourrait atténuer les tensions autour de la gestion de l'eau, élargissant le rôle du Compact au-delà de la simple préservation des ressources hydriques."
+      }
+     ]
+    },
+    {
+     "slug": "guadalajara_nexus_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "dominant",
+       "lien": "variable",
+       "lien_detail": "systemes_productifs_travail (+1.9)",
+       "contredit": "",
+       "raison": "L'énergie abondante pourrait dynamiser les chaînes d'approvisionnement et renforcer le rôle logistique de Guadalajara Nexus dans un monde en reconfiguration."
+      }
+     ]
+    },
+    {
+     "slug": "helsinki_communs_numeriques_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "dominant",
+       "lien": "variable",
+       "lien_detail": "systemes_productifs_travail (+1.9)",
+       "contredit": "",
+       "raison": "L'énergie abondante pourrait accélérer la digitalisation et renforcer la demande pour des infrastructures numériques neutres et interopérables, consolidant le rôle d'Helsinki Communs Numériques."
+      }
+     ]
+    },
+    {
+     "slug": "holdfast_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "disparu",
+       "lien": "variable",
+       "lien_detail": "systemes_productifs_travail (+1.9)",
+       "contredit": "",
+       "raison": "L'énergie abondante et décentralisée pourrait rendre obsolètes les bunkers-cités privés, accélérant leur abandon ou leur reconversion totale."
+      }
+     ]
+    },
+    {
+     "slug": "hyphan_raghavan_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "obligatoire",
+       "apres": "déclinant",
+       "lien": "relation",
+       "lien_detail": "alliance_blocs_souverains_reference (Pacte des Souverains)",
+       "contredit": "La perte de levier des hydrocarbures affaiblit les acteurs traditionnels du Pacte des Souverains, dont Ergo-Wian Sovereign Holdings.",
+       "raison": "Hyphan Raghavan hérite d'un consortium (EWSH) dont le pouvoir repose en partie sur les rentes pétrolières, désormais obsolètes, ce qui affaiblit sa position au sein du Pacte des Souverains."
+      },
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "consortiums_energetiques_opaques_reference",
+       "relation": "opposition",
+       "action": "nouvelle",
+       "lien": "variable",
+       "lien_detail": "geopolitique_conflits (+0.4)",
+       "contredit": "",
+       "raison": "La transition vers la fusion nucléaire pourrait opposer Hyphan Raghavan à des consortiums énergétiques opaques cherchant à préserver leur influence."
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "fusion_commerciale_2038::reference::7": {
+  "empreinte": "c082f308cb2151d9",
+  "date": "2026-11-21T18:06",
+  "brut": {
+   "fiches": [
+    {
+     "slug": "ilse_varga_holm_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "dominant",
+       "lien": "relation",
+       "lien_detail": "Ergo-Wian Sovereign Holdings (ergo_wian_sovereign_holdings_reference) est un acteur clé des consortiums énergétiques et financiers, directement touché par la reconfiguration des enjeux de puissance liée à la fusion nucléaire.",
+       "raison": "La perte d'influence des pétro-États et la montée en puissance des détenteurs de brevets et de lithium renforcent le rôle d'EWSH comme intermédiaire stratégique, ce qui peut accélérer la trajectoire d'Ilse Varga-Holm vers une position encore plus dominante."
+      },
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "consortiums_energetiques_opaques_reference",
+       "relation": "alliance",
+       "action": "nouvelle",
+       "lien": "relation",
+       "lien_detail": "Les consortiums énergétiques opaques pourraient chercher à s'allier avec EWSH pour sécuriser des accès privilégiés aux nouvelles ressources critiques (lithium, brevets).",
+       "raison": "La fusion nucléaire redistribue les cartes des alliances énergétiques, rendant plausible une collaboration avec des acteurs comme EWSH pour maintenir leur influence."
+      },
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "bloc_ressources_eurasiatique_bre_reference",
+       "relation": "opposition",
+       "action": "nouvelle",
+       "lien": "relation",
+       "lien_detail": "Le BRE, dépendant des hydrocarbures, voit son levier géopolitique s'effondrer avec la fusion nucléaire, ce qui peut exacerber les tensions avec EWSH.",
+       "raison": "La rivalité avec le BRE devient plus probable en raison de la perte de pouvoir des pétro-États, alliés traditionnels du BRE."
+      }
+     ]
+    },
+    {
+     "slug": "institut_des_seuils_demographiques_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "Il agit comme arbitre des flux humains, produisant des modèles prédictifs et des seuils de tolérance pour les migrations climatiques et les déséquilibres territoriaux.",
+       "lien": "variable",
+       "lien_detail": "systeme_economique_redistribution (+0.5) et geopolitique_conflits (+0.4) sont indirectement touchés par la fusion nucléaire, ce qui peut élargir le rôle de l'ISD-2098.",
+       "raison": "La redistribution économique et les tensions géopolitiques accrues pourraient renforcer la demande pour des modèles prédictifs et des arbitrages des flux migratoires, sans rendre la phrase fausse."
+      }
+     ]
+    },
+    {
+     "slug": "institut_polytechnique_de_ouagadougou_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "systemes_productifs_travail (+1.9) est directement touché par la fusion nucléaire, ce qui peut renforcer les institutions techniques comme l'IPO.",
+       "raison": "L'énergie abondante et bon marché peut accélérer les projets de recherche appliquée et d'ingénierie, augmentant l'influence régionale de l'IPO."
+      },
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "consortium_africain_de_biotechnologies_sociales_reference",
+       "relation": "alliance",
+       "action": "nouvelle",
+       "lien": "relation",
+       "lien_detail": "Le CABS pourrait chercher à s'allier avec l'IPO pour développer des solutions technologiques adaptées aux enjeux sahéliens, renforcés par l'accès à une énergie abondante.",
+       "raison": "La fusion nucléaire crée des opportunités de collaboration pour des projets énergétiquement intensifs, comme les biotechnologies."
+      }
+     ]
+    },
+    {
+     "slug": "institutions_multilaterales_survivantes_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "obligatoire",
+       "apres": "résiduel",
+       "lien": "variable",
+       "lien_detail": "gouvernance_institutions (+0.1) est indirectement touché, mais l'effondrement des pétro-États et la montée des nouveaux acteurs énergétiques affaiblissent leur légitimité.",
+       "contredit": "Elles peinent à imposer leur autorité face aux blocs régionaux et aux consortiums privés.",
+       "raison": "La perte d'influence des pétro-États, alliés traditionnels des institutions multilatérales, et la montée des consortiums énergétiques privés rendent leur rôle encore plus marginal, contredisant leur survie en tant qu'acteurs centraux."
+      },
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "agence_internationale_des_energies_renouvelables_irena_2_reference",
+       "relation": "alliance",
+       "action": "rompue",
+       "lien": "relation",
+       "lien_detail": "IRENA-2 pourrait se recentrer sur la fusion nucléaire, marginalisant les institutions multilatérales traditionnelles.",
+       "raison": "La fusion nucléaire redéfinit les priorités énergétiques, rendant plausible une rupture avec les institutions survivantes."
+      }
+     ]
+    },
+    {
+     "slug": "internationale_travailleurs_augmentes_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "dominant",
+       "lien": "variable",
+       "lien_detail": "systemes_productifs_travail (+1.9) est directement touché par la fusion nucléaire, ce qui peut renforcer les travailleurs augmentés.",
+       "raison": "L'énergie abondante peut accélérer l'automatisation et l'augmentation des travailleurs, augmentant leur poids politique et syndical."
+      },
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "L'ITA occupe une position centrale dans les négociations sur les droits des travailleurs hybridés, face à des employeurs de plus en plus dépendants de ces technologies.",
+       "lien": "variable",
+       "lien_detail": "systemes_productifs_travail (+1.9) renforce la dépendance des employeurs aux travailleurs augmentés.",
+       "raison": "La phrase reste vraie, mais l'ITA pourrait gagner en influence dans un contexte où l'énergie abondante accélère l'adoption des technologies d'augmentation."
+      }
+     ]
+    },
+    {
+     "slug": "kalaallit_nunaat_sovereign_fund_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "obligatoire",
+       "apres": "dominant",
+       "lien": "territoire",
+       "lien_detail": "Le Groenland est un acteur clé de l'extraction du lithium, ressource critique pour la fusion nucléaire.",
+       "contredit": "Le KNSF gère les revenus colossaux tirés de l'extraction de terres rares, lithium et uranium rendus accessibles par la fonte quasi-totale de l'inlandsis.",
+       "raison": "La fusion nucléaire fait du lithium une ressource stratégique majeure, ce qui rend le KNSF incontournable et accélère sa trajectoire vers une position dominante."
+      },
+      {
+       "type": "relation",
+       "niveau": "obligatoire",
+       "cible": "bloc_ressources_eurasiatique_bre_reference",
+       "relation": "opposition",
+       "action": "nouvelle",
+       "lien": "relation",
+       "lien_detail": "Le BRE, dépendant des hydrocarbures, voit son influence s'effondrer avec la fusion nucléaire, ce qui exacerbe les tensions avec le KNSF pour le contrôle des ressources critiques.",
+       "contredit": "Il joue méthodiquement les grands blocs — dont le BRE — pour maximiser ses marges de manœuvre.",
+       "raison": "La phrase devient fausse car le KNSF ne peut plus collaborer avec le BRE, dont le levier géopolitique s'effondre."
+      },
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "consortiums_prives_d_extraction_de_ressources_critiques_reference",
+       "relation": "alliance",
+       "action": "nouvelle",
+       "lien": "relation",
+       "lien_detail": "Les consortiums privés pourraient chercher à s'allier avec le KNSF pour sécuriser l'accès au lithium.",
+       "raison": "La fusion nucléaire rend le lithium stratégique, ce qui peut inciter à des collaborations pour son extraction."
+      }
+     ]
+    },
+    {
+     "slug": "kaspar_lind_reference",
+     "changements": []
+    },
+    {
+     "slug": "kindling_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "Leur objectif est d'accélérer l'effondrement de ces structures par des sabotages ciblés, des campagnes de désinformation et l'infiltration d'administrations locales et régionales.",
+       "lien": "variable",
+       "lien_detail": "geopolitique_conflits (+0.4) est indirectement touché par la fusion nucléaire, ce qui peut élargir les cibles de Kindling.",
+       "raison": "La phrase reste vraie, mais les tensions géopolitiques accrues pourraient offrir plus d'opportunités pour des actions de sabotage ou de désinformation."
+      }
+     ]
+    },
+    {
+     "slug": "kinshasa_accords_hydriques_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "Régulièrement mis à l'épreuve par les sécheresses, les migrations climatiques et les pressions des multinationales minières et agro-industrielles.",
+       "lien": "variable",
+       "lien_detail": "climat_environnement_global (-2.8) est amélioré par la fusion nucléaire, ce qui peut réduire la pression des sécheresses.",
+       "raison": "La phrase reste vraie, mais l'amélioration climatique pourrait atténuer les tensions liées aux sécheresses, sans les éliminer."
+      }
+     ]
+    },
+    {
+     "slug": "lamplight_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "En enquêtant sur les financements clandestins des territoires post-démocratiques, les réseaux de corruption liés aux ressources naturelles et les manipulations algorithmiques des flux d'information.",
+       "lien": "variable",
+       "lien_detail": "geopolitique_conflits (+0.4) et systeme_economique_redistribution (+0.5) sont touchés par la fusion nucléaire, ce qui peut élargir les sujets d'enquête.",
+       "raison": "La phrase reste vraie, mais les nouveaux enjeux géopolitiques et économiques liés à la fusion nucléaire pourraient offrir plus de matière pour des investigations."
+      }
+     ]
+    },
+    {
+     "slug": "le_temoin_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "Couvre les tensions géopolitiques et économiques dans un contexte d'incertitude croissante.",
+       "lien": "variable",
+       "lien_detail": "geopolitique_conflits (+0.4) est directement touché par la fusion nucléaire, ce qui peut élargir son champ de couverture.",
+       "raison": "La phrase reste vraie, mais les tensions liées à la redistribution des cartes énergétiques pourraient devenir un sujet central de son travail."
+      }
+     ]
+    },
+    {
+     "slug": "leena_vainala_reference",
+     "changements": []
+    },
+    {
+     "slug": "les_veilleurs_des_nappes_phreatiques_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "Les Veilleurs agissent comme un contre-pouvoir face aux consortiums privés et aux lobbies agro-industriels, documentant les accaparements et les pollutions.",
+       "lien": "variable",
+       "lien_detail": "climat_environnement_global (-2.8) est amélioré par la fusion nucléaire, ce qui peut réduire la pression sur les nappes phréatiques.",
+       "raison": "La phrase reste vraie, mais l'amélioration climatique pourrait atténuer les conflits liés à l'eau, sans les éliminer."
+      }
+     ]
+    },
+    {
+     "slug": "les_veilleurs_du_fleuve_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "Ils agissent comme un système nerveux parallèle, reliant les communautés riveraines, les deltas menacés et les zones périurbaines abandonnées pour surveiller les pressions extractivistes et les dérèglements hydrologiques.",
+       "lien": "variable",
+       "lien_detail": "climat_environnement_global (-2.8) est amélioré par la fusion nucléaire, ce qui peut réduire les dérèglements hydrologiques.",
+       "raison": "La phrase reste vraie, mais l'amélioration climatique pourrait atténuer les pressions sur les deltas, sans les éliminer."
+      }
+     ]
+    },
+    {
+     "slug": "ligue_des_metropoles_du_sud_pour_les_infrastructures_libres_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "systeme_economique_redistribution (+0.5) et systemes_productifs_travail (+1.9) sont touchés par la fusion nucléaire, ce qui peut renforcer les métropoles du Sud.",
+       "raison": "L'énergie abondante et bon marché peut accélérer le développement des infrastructures locales, augmentant l'influence de la Ligue."
+      },
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "consortium_logistique_asiatique_de_contournement_aln_reference",
+       "relation": "alliance",
+       "action": "nouvelle",
+       "lien": "relation",
+       "lien_detail": "Le consortium ALN pourrait chercher à s'allier avec la Ligue pour développer des infrastructures indépendantes des anciens réseaux énergétiques.",
+       "raison": "La fusion nucléaire rend les infrastructures énergétiques moins dépendantes des anciens monopoles, ce qui peut favoriser des collaborations."
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "fusion_commerciale_2038::reference::8": {
+  "empreinte": "75278f1bf29f7e78",
+  "date": "2026-11-21T18:06",
+  "brut": {
+   "fiches": [
+    {
+     "slug": "ligue_des_municipalites_peripheriques_sous_connectees_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "systemes_productifs_travail (+1.9)",
+       "raison": "L'énergie abondante et moins chère réduit les coûts de connectivité et d'infrastructure, renforçant la capacité des municipalités périphériques à négocier ou à développer des alternatives aux logiques centralisatrices."
+      }
+     ]
+    },
+    {
+     "slug": "lobbies_agro_industriels_a_haute_consommation_d_eau_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "obligatoire",
+       "extrait": "Exercent des pressions politiques et économiques pour maintenir leurs droits d'usage de l'eau face aux tensions de raréfaction, s'opposant aux réformes de gouvernance hydrique.",
+       "contredit": "La fusion nucléaire réduit les contraintes énergétiques, ce qui peut atténuer les tensions de raréfaction liées à l'énergie (et indirectement à l'eau, via des technologies comme le dessalement).",
+       "lien": "variable",
+       "lien_detail": "climat_environnement_global (-2.8)",
+       "raison": "La pression pour l'eau reste vraie, mais la justification par la raréfaction énergétique devient fausse. Leur opposition aux réformes hydriques doit reposer sur d'autres arguments (ex : souveraineté alimentaire, résistance au changement technocratique)."
+      },
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "déclinant",
+       "lien": "variable",
+       "lien_detail": "systemes_productifs_travail (+1.9)",
+       "raison": "L'énergie abondante affaiblit leur levier économique (coûts de production réduits pour les alternatives agroécologiques), mais leur déclin n'est pas certain sans autres facteurs."
+      }
+     ]
+    },
+    {
+     "slug": "lobbies_industriels_des_etats_non_signataires_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "obligatoire",
+       "extrait": "Freinent l'adoption ou l'extension de normes contraignantes en jouant sur la souveraineté des États non-signataires et les asymétries compétitives avec les pays signataires ; constituent le principal vecteur de fragmentation institutionnelle dans les domaines énergétiques et environnementaux, en instrumentalisant les…",
+       "contredit": "La fusion nucléaire rend obsolète leur levier énergétique (hydrocarbures), réduisant leur capacité à instrumentaliser les asymétries compétitives dans ce domaine.",
+       "lien": "variable",
+       "lien_detail": "geopolitique_conflits (+0.4)",
+       "raison": "Leur rôle de fragmentation reste vrai, mais leur influence dans le domaine énergétique doit être recentrée sur d'autres ressources (ex : lithium, brevets) ou domaines (ex : données, souveraineté numérique)."
+      },
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "consortiums_prives_d_extraction_de_ressources_critiques_reference",
+       "relation": "alliance",
+       "action": "nouvelle",
+       "lien": "relation",
+       "lien_detail": "L'élément perturbateur crée un nouvel enjeu (lithium, brevets), rapprochant ces lobbies des acteurs contrôlant ces ressources.",
+       "raison": "Les lobbies industriels des États non-signataires pourraient s'allier aux consortiums privés pour sécuriser l'accès aux ressources critiques de la fusion (lithium, supraconducteurs)."
+      }
+     ]
+    },
+    {
+     "slug": "lyon_metropole_reference",
+     "changements": []
+    },
+    {
+     "slug": "maelys_okonkwo_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "Son travail se concentre sur l'exposition des liens entre les réseaux de Kindling, les consortiums énergétiques opaques et les plateformes centralisées.",
+       "lien": "variable",
+       "lien_detail": "systeme_economique_redistribution (+0.5)",
+       "raison": "L'effondrement de la rente des hydrocarbures et l'émergence de la fusion pourraient élargir son champ d'investigation aux nouveaux consortiums énergétiques (ex : ceux contrôlant les brevets ou le lithium)."
+      }
+     ]
+    },
+    {
+     "slug": "meridian_assembly_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "dominant",
+       "lien": "variable",
+       "lien_detail": "systemes_productifs_travail (+1.9)",
+       "raison": "L'énergie abondante réduit les coûts logistiques et numériques, renforçant les États-réseaux comme la Meridian Assembly, qui dépendent de la connectivité et de la souveraineté numérique."
+      }
+     ]
+    },
+    {
+     "slug": "milices_concurrentes_des_droits_de_passage_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "Dans ce scénario, elles incarnent la concurrence violente pour le contrôle des nœuds de mobilité, fragmentant l'espace en zones de friction où chaque passage est négocié ou imposé par la force.",
+       "lien": "variable",
+       "lien_detail": "geopolitique_conflits (+0.4)",
+       "raison": "La fusion pourrait déplacer les enjeux de contrôle vers les corridors logistiques des nouvelles ressources critiques (lithium, supraconducteurs), élargissant leur champ d'action."
+      }
+     ]
+    },
+    {
+     "slug": "mouvement_pour_la_libre_circulation_des_personnes_et_des_donnees_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "systemes_productifs_travail (+1.9)",
+       "raison": "L'énergie abondante réduit les coûts de mobilité et de connectivité, facilitant les revendications pour la libre circulation."
+      }
+     ]
+    },
+    {
+     "slug": "mouvement_racines_vivantes_reference",
+     "changements": [
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "cooperatives_energetiques_decentralisees_reference",
+       "relation": "alliance",
+       "action": "nouvelle",
+       "lien": "variable",
+       "lien_detail": "systemes_productifs_travail (+1.9)",
+       "raison": "L'énergie décentralisée et abondante pourrait renforcer les coopératives énergétiques, créant un terrain commun avec le Mouvement des Racines Vivantes."
+      }
+     ]
+    },
+    {
+     "slug": "murmansk_transit_arctique_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "obligatoire",
+       "extrait": "Plaque tournante stratégique du trafic maritime et énergétique arctique, Murmansk Transit Arctique s'était imposée comme nœud incontournable des nouvelles routes commerciales ouvertes par la fonte accélérée des glaces polaires depuis les années 2040. Le territoire était administré par un consortium russo-scandinave…",
+       "contredit": "La fusion nucléaire réduit la dépendance aux hydrocarbures, affaiblissant l'importance stratégique des routes arctiques pour le transport énergétique.",
+       "lien": "variable",
+       "lien_detail": "geopolitique_conflits (+0.4)",
+       "raison": "Son rôle de plaque tournante énergétique devient faux. Son déclin (trajectoire 'disparu') est cohérent, mais la fiche doit préciser que son effondrement est lié à la perte de pertinence des routes arctiques pour les hydrocarbures."
+      }
+     ]
+    },
+    {
+     "slug": "nadia_ferreira_sato_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "Fondatrice de Raised Hands, une organisation tolérée mais surveillée, elle crée des structures alternatives de survie et de résistance en dehors des cadres institutionnels…",
+       "lien": "variable",
+       "lien_detail": "systemes_productifs_travail (+1.9)",
+       "raison": "L'énergie abondante pourrait élargir son champ d'action vers des structures alternatives énergétiques (ex : coopératives de fusion décentralisée)."
+      }
+     ]
+    },
+    {
+     "slug": "nairobi_crrc_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "Dans un monde fragmenté mais encore institutionnellement structuré, il négocie entre acteurs privés, municipalités et blocs régionaux africains pour maintenir des flux de ressources critiques (eau, énergie, données).",
+       "lien": "variable",
+       "lien_detail": "climat_environnement_global (-2.8)",
+       "raison": "La fusion réduit les tensions énergétiques, mais l'eau et les données restent des enjeux critiques. Le rôle du CRRC pourrait se recentrer sur ces derniers."
+      }
+     ]
+    },
+    {
+     "slug": "neuroharmonics_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "mature",
+       "lien": "variable",
+       "lien_detail": "systemes_productifs_travail (+1.9)",
+       "raison": "L'énergie abondante réduit les coûts de production et d'augmentation cognitive, mais la dépendance à NH-GAN pour la productivité systémique reste forte. Leur trajectoire pourrait se stabiliser (mature) plutôt que de continuer à dominer."
+      }
+     ]
+    },
+    {
+     "slug": "nexcore_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "NexCore GIG est devenu l'épine dorsale numérique de facto d'un monde incapable de financer ses propres infrastructures publiques. Dans l'équilibre fragile de 2098, elle opère les réseaux de communication intercontinentaux, les nœuds de traitement de données climatiques critiques et les systèmes de routage énergétique…",
+       "lien": "variable",
+       "lien_detail": "systemes_productifs_travail (+1.9)",
+       "raison": "L'énergie abondante pourrait réduire les coûts d'infrastructure, mais NexCore reste incontournable pour les réseaux critiques. Son rôle pourrait s'élargir aux systèmes de gestion des nouvelles ressources (lithium, brevets)."
+      }
+     ]
+    },
+    {
+     "slug": "nexus_biosyn_reference",
+     "changements": []
+    }
+   ]
+  }
+ },
+ "fusion_commerciale_2038::reference::9": {
+  "empreinte": "61e4f229adfc0b61",
+  "date": "2026-11-21T18:07",
+  "brut": {
+   "fiches": [
+    {
+     "slug": "observatoire_climatique_des_territoires_oct_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "climat_environnement_global (-2.8 points)",
+       "raison": "La réduction des pressions climatiques due à la fusion nucléaire renforce la légitimité technique de l'OCT, qui voit son rôle d'arbitre épistémique consolidé dans un système moins tendu par les crises environnementales immédiates."
+      },
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "agence_internationale_des_energies_renouvelables_irena_2_reference",
+       "relation": "alliance",
+       "action": "nouvelle",
+       "lien": "variable",
+       "lien_detail": "climat_environnement_global (-2.8 points)",
+       "raison": "La synergie entre stabilisation climatique et transition énergétique post-fusion crée un terrain propice à une collaboration renforcée entre l'OCT et IRENA-2."
+      }
+     ]
+    },
+    {
+     "slug": "ong_de_preservation_patrimoniale_numerique_reference",
+     "changements": []
+    },
+    {
+     "slug": "ong_de_tracabilite_des_ressources_critiques_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "energie_ressources_critiques (-4.8 points)",
+       "raison": "La transition vers la fusion nucléaire recentre les enjeux de traçabilité sur le lithium et les matériaux supraconducteurs, élargissant le champ d'action de l'ONG sans rendre ses missions obsolètes."
+      },
+      {
+       "type": "texte",
+       "niveau": "obligatoire",
+       "extrait": "Dénonce publiquement les pratiques d'une entité du scénario liées à l'extraction ou à la gestion de ressources critiques, en s'appuyant sur des données de traçabilité.",
+       "contredit": "Le tritium n'est pas extrait mais produit dans les réacteurs, et le deutérium est universellement accessible.",
+       "lien": "variable",
+       "lien_detail": "energie_ressources_critiques (-4.8 points)",
+       "raison": "La phrase devient fausse si elle cible des pratiques liées au tritium ou au deutérium, qui ne sont pas des ressources critiques au sens extraction/transport. Elle reste valable pour le lithium ou les supraconducteurs."
+      }
+     ]
+    },
+    {
+     "slug": "ong_environnementales_de_terrain_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "climat_environnement_global (-2.8 points)",
+       "raison": "La réduction des pressions climatiques immédiates permet à ces ONG de recentrer leurs efforts sur des enjeux structurels (biodiversité, pollution) plutôt que sur des crises aiguës, renforçant leur crédibilité."
+      }
+     ]
+    },
+    {
+     "slug": "operateurs_de_zones_economiques_speciales_periurbaines_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "systemes_productifs_travail (+1.9 points)",
+       "raison": "L'énergie abondante et bon marché favorise la décentralisation productive, augmentant l'importance des zones périurbaines comme hubs économiques hybrides."
+      }
+     ]
+    },
+    {
+     "slug": "operateurs_logistiques_prives_des_zones_grises_eurasiennes_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "déclinant",
+       "lien": "variable",
+       "lien_detail": "geopolitique_conflits (+0.4 points)",
+       "raison": "La réduction de la rente pétrolière affaiblit les économies parallèles basées sur les hydrocarbures, mais les zones grises restent structurantes pour d'autres flux (lithium, données)."
+      }
+     ]
+    },
+    {
+     "slug": "operateurs_prives_d_energie_distribuee_hors_fct_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "obligatoire",
+       "apres": "déclinant",
+       "lien": "variable",
+       "lien_detail": "energie_ressources_critiques (-4.8 points)",
+       "contredit": "Leur expansion est explicitement liée à la généralisation du stockage longue durée, rendu moins critique par l'énergie abondante de la fusion.",
+       "raison": "La fusion nucléaire commerciale réduit la dépendance aux opérateurs décentralisés, rendant leur modèle économique moins pertinent."
+      },
+      {
+       "type": "texte",
+       "niveau": "obligatoire",
+       "extrait": "Leur expansion — notamment depuis la généralisation du stockage longue durée…",
+       "contredit": "La fusion nucléaire rend le stockage longue durée moins stratégique.",
+       "lien": "variable",
+       "lien_detail": "energie_ressources_critiques (-4.8 points)",
+       "raison": "La phrase devient fausse car l'expansion des opérateurs Hors-FCT n'est plus justifiée par le stockage longue durée."
+      }
+     ]
+    },
+    {
+     "slug": "optiflow_logistics_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "dominant",
+       "lien": "variable",
+       "lien_detail": "systemes_productifs_travail (+1.9 points)",
+       "raison": "L'énergie abondante optimise les flux logistiques, renforçant le rôle central d'OGLN dans la gestion des couloirs prioritaires."
+      }
+     ]
+    },
+    {
+     "slug": "oracle_des_seuils_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "dominant",
+       "lien": "variable",
+       "lien_detail": "climat_environnement_global (-2.8 points) et systemes_productifs_travail (+1.9 points)",
+       "raison": "La réduction des points de bascule climatiques et la reconfiguration des systèmes productifs augmentent la demande pour des modélisations systémiques précises, consolidant la position de l'Oracle."
+      }
+     ]
+    },
+    {
+     "slug": "ouagadougou_polytechnique_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "dominant",
+       "lien": "variable",
+       "lien_detail": "energie_ressources_critiques (-4.8 points)",
+       "raison": "La formation en ingénierie climatique et infrastructures durables devient cruciale pour la gestion du lithium et des matériaux supraconducteurs, renforçant le rôle continental de l'institution."
+      }
+     ]
+    },
+    {
+     "slug": "pacifique_sud_archipels_flottants_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "mature",
+       "lien": "variable",
+       "lien_detail": "climat_environnement_global (-2.8 points)",
+       "raison": "La stabilisation climatique réduit l'urgence de la submersion, mais les archipels flottants restent des modèles de souveraineté post-territoriale innovants."
+      }
+     ]
+    },
+    {
+     "slug": "pacifique_sud_resilience_network_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "mature",
+       "lien": "variable",
+       "lien_detail": "climat_environnement_global (-2.8 points)",
+       "raison": "La réduction des pressions climatiques immédiates diminue l'urgence de leur cadre juridique post-territorial, mais leur expertise reste pertinente."
+      }
+     ]
+    },
+    {
+     "slug": "pacte_des_souverains_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "déclinant",
+       "lien": "variable",
+       "lien_detail": "geopolitique_conflits (+0.4 points)",
+       "raison": "La perte de levier des pétro-États affaiblit les blocs souverains dépendants des hydrocarbures, mais le Pacte conserve des membres non pétroliers."
+      },
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "bloc_eurasien_central_reference",
+       "relation": "opposition",
+       "action": "rompue",
+       "lien": "relation",
+       "lien_detail": "Le BEC est un rival du Pacte, mais la perte de la rente pétrolière russe réduit les tensions.",
+       "raison": "L'affaiblissement du BEC (lié à la Russie) diminue les conflits avec le Pacte, rendant une rupture d'opposition plausible."
+      }
+     ]
+    },
+    {
+     "slug": "plateformes_centralisees_de_narration_officielle_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "geopolitique_conflits (+0.4 points)",
+       "raison": "La reconfiguration géopolitique post-fusion crée de nouveaux récits officiels (ex : maîtrise des brevets énergétiques), renforçant le rôle des plateformes centralisées."
+      }
+     ]
+    },
+    {
+     "slug": "plateformes_d_optimisation_territoriale_par_ia_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "systemes_productifs_travail (+1.9 points)",
+       "raison": "L'énergie abondante accélère l'automatisation et l'optimisation spatiale, augmentant la demande pour ces plateformes."
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "fusion_commerciale_2038::reference::10": {
+  "empreinte": "25880ec14542d056",
+  "date": "2026-11-21T18:07",
+  "brut": {
+   "fiches": [
+    {
+     "slug": "plateformes_informationnelles_dominantes_et_leurs_ia_de_moderation_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "systeme_economique_redistribution (+0.5), geopolitique_conflits (+0.4)",
+       "raison": "L'effondrement de la rente des hydrocarbures et la redistribution des leviers de puissance énergétique augmentent les tensions géopolitiques et économiques, ce qui peut renforcer le rôle des plateformes comme arbitres de l'information dans un contexte de fragmentation accrue."
+      },
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "conseil_regulation_algorithmique_reference",
+       "relation": "alliance",
+       "action": "nouvelle",
+       "lien": "variable",
+       "lien_detail": "geopolitique_conflits (+0.4)",
+       "raison": "La montée des conflits géopolitiques liés à la transition énergétique peut inciter les plateformes à renforcer leur collaboration avec les régulateurs algorithmiques pour stabiliser leur position."
+      }
+     ]
+    },
+    {
+     "slug": "prisme_global_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "dominant",
+       "lien": "variable",
+       "lien_detail": "geopolitique_conflits (+0.4), systeme_economique_redistribution (+0.5)",
+       "raison": "La reconfiguration des alliances énergétiques et la montée des tensions géopolitiques peuvent accroître la demande pour des contre-architectures narratives comme Prisme Global, renforçant son influence."
+      },
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "reseaux_de_capteurs_citoyens_reference",
+       "relation": "alliance",
+       "action": "nouvelle",
+       "lien": "variable",
+       "lien_detail": "geopolitique_conflits (+0.4)",
+       "raison": "La nécessité de documenter les impacts locaux de la transition énergétique peut renforcer les liens entre Prisme Global et les réseaux de capteurs citoyens."
+      }
+     ]
+    },
+    {
+     "slug": "programme_onu_eau_2080_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "obligatoire",
+       "extrait": "Sert de référentiel normatif et d'instance de coordination internationale dans le scénario, influençant les arbitrages entre États sur le partage des ressources hydriques.",
+       "contredit": "L'énergie abondante issue de la fusion nucléaire réduit la pression sur les ressources hydriques comme levier géopolitique, ce qui affaiblit le rôle central du programme dans les arbitrages interétatiques.",
+       "lien": "variable",
+       "lien_detail": "energie_ressources_critiques (-4.8)",
+       "raison": "La baisse de la criticité des ressources énergétiques traditionnelles (dont l'eau pour l'extraction d'hydrocarbures) rend moins pertinent le rôle du programme comme arbitre des conflits hydriques."
+      },
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "marginal",
+       "lien": "variable",
+       "lien_detail": "energie_ressources_critiques (-4.8)",
+       "raison": "La réduction de la dépendance aux ressources hydriques comme outil de pouvoir peut marginaliser l'influence du programme."
+      }
+     ]
+    },
+    {
+     "slug": "raised_hands_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "systemes_productifs_travail (+1.9)",
+       "raison": "La restructuration des systèmes productifs due à l'énergie abondante peut accroître la précarité des travailleurs augmentés, renforçant les revendications du mouvement pour des droits politiques."
+      }
+     ]
+    },
+    {
+     "slug": "rede_paulista_de_distribuicao_algoritmica_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "obligatoire",
+       "extrait": "le SPAAR orchestre en temps réel l'allocation de l'eau, de l'énergie, du logement et de la mobilité pour les 32 millions d'habitants de la mégapole pauliste.",
+       "contredit": "L'énergie abondante issue de la fusion nucléaire réduit la criticité de l'allocation énergétique comme enjeu urbain central.",
+       "lien": "variable",
+       "lien_detail": "energie_ressources_critiques (-4.8)",
+       "raison": "La phrase devient fausse car l'énergie n'est plus un facteur limitant pour l'allocation des ressources urbaines."
+      },
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "déclinant",
+       "lien": "variable",
+       "lien_detail": "energie_ressources_critiques (-4.8)",
+       "raison": "La perte de centralité de la gestion énergétique peut affaiblir le rôle du SPAAR comme infrastructure de gouvernance urbaine."
+      },
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "consortiums_energetiques_des_megapoles_reference",
+       "relation": "alliance",
+       "action": "rompue",
+       "lien": "variable",
+       "lien_detail": "energie_ressources_critiques (-4.8)",
+       "raison": "La baisse de la dépendance aux consortiums énergétiques traditionnels peut réduire la nécessité de cette alliance."
+      }
+     ]
+    },
+    {
+     "slug": "regulateurs_de_l_union_continentale_africaine_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "geopolitique_conflits (+0.4), systeme_economique_redistribution (+0.5)",
+       "raison": "La reconfiguration des enjeux de ressources critiques (lithium, brevets) peut renforcer le rôle des régulateurs africains comme arbitres des nouveaux équilibres géopolitiques."
+      },
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "consortiums_d_extraction_miniere_du_bassin_congolais_reference",
+       "relation": "opposition",
+       "action": "nouvelle",
+       "lien": "variable",
+       "lien_detail": "geopolitique_conflits (+0.4)",
+       "raison": "La montée des tensions autour des ressources critiques peut exacerber les rivalités avec les consortiums miniers."
+      }
+     ]
+    },
+    {
+     "slug": "regulateurs_de_l_union_eurasiatique_sur_les_donnees_critiques_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "geopolitique_conflits (+0.4)",
+       "raison": "La reconfiguration des leviers de puissance (brevets, lithium) peut renforcer la nécessité de réguler les données stratégiques liées à ces ressources."
+      }
+     ]
+    },
+    {
+     "slug": "reseau_des_administrations_locales_rurales_participatives_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "systemes_productifs_travail (+1.9)",
+       "raison": "La restructuration des systèmes productifs peut favoriser les dynamiques locales de résilience, renforçant les administrations rurales participatives."
+      }
+     ]
+    },
+    {
+     "slug": "reseau_des_cartographes_des_zones_grises_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "dominant",
+       "lien": "variable",
+       "lien_detail": "geopolitique_conflits (+0.4)",
+       "raison": "La montée des tensions géopolitiques et la reconfiguration des alliances peuvent accroître la demande pour une cartographie indépendante des zones grises."
+      }
+     ]
+    },
+    {
+     "slug": "reseau_des_chercheurs_en_ethique_des_systemes_distribues_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "systeme_economique_redistribution (+0.5), geopolitique_conflits (+0.4)",
+       "raison": "La reconfiguration des systèmes économiques et géopolitiques peut accroître l'importance des enjeux éthiques liés aux architectures distribuées."
+      }
+     ]
+    },
+    {
+     "slug": "reseau_des_cooperatives_agro_saheliennes_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "climat_environnement_global (-2.8), systemes_productifs_travail (+1.9)",
+       "raison": "La réduction des pressions climatiques et la restructuration des systèmes productifs peuvent renforcer la résilience des coopératives agro-sahéliennes."
+      }
+     ]
+    },
+    {
+     "slug": "reseau_des_metropoles_cotieres_adaptees_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "Acteur collectif structurant la gouvernance territoriale des zones côtières en 2098, pesant sur les arbitrages entre adaptation, relocalisation et maintien des populations littorales.",
+       "lien": "variable",
+       "lien_detail": "climat_environnement_global (-2.8)",
+       "raison": "La réduction des pressions climatiques peut atténuer l'urgence des arbitrages sur l'adaptation côtière, mais le rôle du réseau reste plausible."
+      }
+     ]
+    },
+    {
+     "slug": "reseau_des_villes_etats_pilotes_en_gouvernance_participative_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "systeme_economique_redistribution (+0.5), systemes_productifs_travail (+1.9)",
+       "raison": "La reconfiguration des systèmes économiques et productifs peut favoriser les modèles de gouvernance participative à l'échelle urbaine."
+      }
+     ]
+    },
+    {
+     "slug": "reseau_des_villes_refuge_pour_travailleurs_desaugmentes_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "systemes_productifs_travail (+1.9)",
+       "raison": "La restructuration des systèmes productifs peut accroître le nombre de travailleurs désaugmentés, renforçant le rôle des villes-refuge."
+      }
+     ]
+    },
+    {
+     "slug": "reseau_hospitalier_hybride_eurasiatique_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "geopolitique_conflits (+0.4)",
+       "raison": "La montée des tensions géopolitiques peut accroître la demande pour des infrastructures de soins transfrontalières dans des zones abandonnées ou disputées."
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "fusion_commerciale_2038::reference::11": {
+  "empreinte": "8557632587645bb5",
+  "date": "2026-11-21T18:08",
+  "brut": {
+   "fiches": [
+    {
+     "slug": "reseau_meshcommons_netsolidaire_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "systeme_economique_redistribution (+0.5) et valeurs_culture_tempo_sociale (+0.1)",
+       "raison": "L'énergie abondante et moins chère réduit les coûts d'infrastructure décentralisée, renforçant potentiellement la viabilité et l'expansion du réseau."
+      }
+     ]
+    },
+    {
+     "slug": "reseau_mnemos_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "dominant",
+       "lien": "variable",
+       "lien_detail": "systeme_economique_redistribution (+0.5) et valeurs_culture_tempo_sociale (+0.1)",
+       "raison": "La réduction des coûts énergétiques favorise la maintenance et l'expansion des nœuds autonomes, augmentant l'influence du réseau face aux plateformes centralisées."
+      }
+     ]
+    },
+    {
+     "slug": "reseaux_de_capteurs_citoyens_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "systeme_economique_redistribution (+0.5)",
+       "raison": "L'énergie moins chère réduit les coûts opérationnels des capteurs, facilitant leur déploiement et leur adoption."
+      }
+     ]
+    },
+    {
+     "slug": "reseaux_de_financement_gris_issus_d_anciens_blocs_militaires_reference",
+     "changements": [
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "bloc_ressources_eurasiatique_bre_reference",
+       "relation": "opposition",
+       "action": "nouvelle",
+       "lien": "relation",
+       "lien_detail": "Le BRE perd son levier énergétique (hydrocarbures) et pourrait voir son influence décliner, créant des tensions avec les réseaux de financement gris qui le soutiennent.",
+       "raison": "La perte de rente des hydrocarbures affaiblit le BRE, rendant les réseaux de financement gris moins alignés avec ses intérêts."
+      }
+     ]
+    },
+    {
+     "slug": "reseaux_de_lanceurs_d_alerte_institutionnels_dissidents_reference",
+     "changements": []
+    },
+    {
+     "slug": "reseaux_de_medecine_traditionnelle_augmentee_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "systeme_economique_redistribution (+0.5)",
+       "raison": "L'énergie moins chère réduit les coûts des technologies augmentées, facilitant leur adoption par ces réseaux."
+      }
+     ]
+    },
+    {
+     "slug": "sao_paulo_ita_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "obligatoire",
+       "extrait": "La PMSP-AC continue d'administrer une agglomération de 32 millions d'habitants avec des moyens budgétaires réduits à moins de 40% de leur niveau de 2050, en raison des crises énergétiques et économiques successives.",
+       "contredit": "L'effondrement de la rente des hydrocarbures et l'énergie abondante réduisent les crises énergétiques structurelles.",
+       "lien": "variable",
+       "lien_detail": "systeme_economique_redistribution (+0.5) et energie_ressources_critiques (-4.8)",
+       "raison": "La phrase suggère une dépendance continue aux crises énergétiques, ce qui devient faux avec la fusion nucléaire."
+      },
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "résiduel",
+       "lien": "variable",
+       "lien_detail": "systeme_economique_redistribution (+0.5)",
+       "raison": "L'énergie abondante pourrait réduire les contraintes budgétaires, mais la fragmentation institutionnelle persiste, limitant une reprise forte."
+      }
+     ]
+    },
+    {
+     "slug": "services_de_contre_information_des_blocs_geopolitiques_concurrents_reference",
+     "changements": [
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "bloc_eurasien_central_reference",
+       "relation": "opposition",
+       "action": "renforcée",
+       "lien": "relation",
+       "lien_detail": "Le BEC perd son levier énergétique (hydrocarbures) et pourrait intensifier ses efforts de contre-information pour compenser.",
+       "raison": "La perte de rente des hydrocarbures affaiblit le BEC, le poussant à des stratégies informationnelles plus agressives."
+      }
+     ]
+    },
+    {
+     "slug": "siberie_federale_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "obligatoire",
+       "apres": "résiduel",
+       "lien": "relation",
+       "lien_detail": "Alliée au bloc_eurasien_central_reference, qui perd son levier énergétique (hydrocarbures).",
+       "contredit": "La Sibérie Fédérale conteste les zones d'exclusion maritime en s'appuyant sur la puissance du BEC, désormais affaibli.",
+       "raison": "L'affaiblissement du BEC réduit la capacité de la Sibérie Fédérale à s'opposer aux délimitations territoriales."
+      }
+     ]
+    },
+    {
+     "slug": "singapour_est_nexcore_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "mature",
+       "lien": "variable",
+       "lien_detail": "geopolitique_conflits (+0.4) et systeme_economique_redistribution (+0.5)",
+       "raison": "L'énergie abondante renforce les infrastructures logistiques et de données, mais la compétition géopolitique limite une progression vers 'dominant'."
+      }
+     ]
+    },
+    {
+     "slug": "singapour_est_reference",
+     "changements": [
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "consortium_indo_pacifique_de_l_hydrogene_reference",
+       "relation": "alliance",
+       "action": "renforcée",
+       "lien": "relation",
+       "lien_detail": "L'énergie abondante favorise les accords commerciaux avec des consortiums énergétiques alternatifs comme celui de l'hydrogène.",
+       "raison": "La fusion nucléaire réduit la dépendance à l'hydrogène, mais les alliances existantes peuvent se renforcer par diversification."
+      }
+     ]
+    },
+    {
+     "slug": "syndicats_de_travail_rural_hybride_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "systemes_productifs_travail (+1.9)",
+       "raison": "L'énergie moins chère réduit les coûts de production agricole, mais l'automatisation massive persiste, limitant les gains pour les syndicats."
+      }
+     ]
+    },
+    {
+     "slug": "syndicats_de_travailleurs_de_la_transition_energetique_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "systemes_productifs_travail (+1.9) et systeme_economique_redistribution (+0.5)",
+       "raison": "La transition énergétique s'accélère avec la fusion, augmentant l'influence des syndicats sur les arbitrages sociaux."
+      }
+     ]
+    },
+    {
+     "slug": "tbilissi_noeud_mnemos_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "dominant",
+       "lien": "variable",
+       "lien_detail": "systeme_economique_redistribution (+0.5)",
+       "raison": "L'énergie moins chère réduit les coûts de maintenance des archives, renforçant le rôle stratégique du nœud."
+      }
+     ]
+    },
+    {
+     "slug": "terminal_kharg_data_haven_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "obligatoire",
+       "extrait": "Kharg Data Nexus incarne l'ambivalence structurelle des sanctuaires de données en zone grise, hébergeant les archives numériques des dissidents fuyant la censure des blocs souverains, tout en fournissant des serveurs de contournement pour les acteurs économiques du golfe Persique dépendants des hydrocarbures.",
+       "contredit": "Les acteurs économiques du golfe Persique ne dépendent plus des hydrocarbures après l'effondrement de leur rente.",
+       "lien": "territoire",
+       "lien_detail": "Zone bloc_persique_autonome, anciennement dépendante des hydrocarbures.",
+       "raison": "La phrase suggère une dépendance continue aux hydrocarbures, ce qui devient faux avec la fusion nucléaire."
+      },
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "déclinant",
+       "lien": "territoire",
+       "lien_detail": "Zone bloc_persique_autonome, anciennement dépendante des hydrocarbures.",
+       "raison": "La perte de rente des hydrocarbures réduit l'attractivité du golfe Persique pour les acteurs économiques, affaiblissant le rôle du Data Nexus."
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "fusion_commerciale_2038::reference::12": {
+  "empreinte": "053b74d13e0b4495",
+  "date": "2026-11-21T18:08",
+  "brut": {
+   "fiches": [
+    {
+     "slug": "terrametrics_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "dominant",
+       "lien": "variable",
+       "lien_detail": "climat_environnement_global (-2.8 points)",
+       "raison": "La réduction des pressions climatiques grâce à la fusion nucléaire pourrait affaiblir la demande pour les services de géo-ingénierie privatisée, mais TerraMetrics reste dominant car les dérèglements climatiques persistent malgré l'énergie abondante."
+      },
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "consortiums_energetiques_des_megapoles_reference",
+       "relation": "alliance",
+       "action": "nouvelle",
+       "lien": "relation",
+       "lien_detail": "Les consortiums énergétiques des mégapoles gagnent en influence avec la fusion nucléaire, ce qui pourrait renforcer leur coopération avec TerraMetrics pour des solutions climatiques intégrées.",
+       "raison": "L'énergie abondante ne supprime pas les besoins en adaptation climatique, mais redéfinit les partenariats stratégiques."
+      }
+     ]
+    },
+    {
+     "slug": "territoire_autonome_de_karachi_biosyn_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "obligatoire",
+       "extrait": "Enclave industrielle autogérée née vers 2070 dans l'ancienne zone portuaire de Karachi, après l'abandon progressif des infrastructures pharmaceutiques privées durant les crises hydriques et énergétiques des années 2030-2040.",
+       "contredit": "La fusion nucléaire commerciale apparaît en 2038 et se diffuse en 15 ans, réduisant les crises énergétiques dès les années 2040.",
+       "lien": "variable",
+       "lien_detail": "systemes_productifs_travail (+1.9 points)",
+       "raison": "L'effondrement des crises énergétiques dans les années 2040 contredit l'idée d'un abandon progressif des infrastructures dû à ces crises."
+      },
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "systemes_productifs_travail (+1.9 points)",
+       "raison": "L'énergie abondante pourrait accélérer la trajectoire ascendante du territoire en facilitant son autonomie productive et industrielle."
+      }
+     ]
+    },
+    {
+     "slug": "the_lattice_reference",
+     "changements": [
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "cooperatives_energetiques_decentralisees_reference",
+       "relation": "alliance",
+       "action": "nouvelle",
+       "lien": "variable",
+       "lien_detail": "systemes_productifs_travail (+1.9 points)",
+       "raison": "L'énergie abondante et décentralisée favorise les coopératives énergétiques, ce qui pourrait renforcer leur alliance avec The Lattice pour des modèles de gouvernance autonomes."
+      }
+     ]
+    },
+    {
+     "slug": "the_tidewater_canon_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "obligatoire",
+       "apres": "dominant",
+       "lien": "variable",
+       "lien_detail": "geopolitique_conflits (+0.4 points)",
+       "contredit": "Le Tidewater Canon prône la souveraineté absolue des entités sur leurs ressources, mais la fusion nucléaire réduit la dépendance aux hydrocarbures et affaiblit les pétro-États, rendant son discours moins central.",
+       "raison": "La perte d'influence des pétro-États et la redistribution des leviers de puissance énergétique rendent le Tidewater Canon moins pertinent comme philosophie dominante."
+      },
+      {
+       "type": "relation",
+       "niveau": "obligatoire",
+       "cible": "bloc_ressources_eurasiatique_bre_reference",
+       "relation": "alliance",
+       "action": "rompue",
+       "lien": "variable",
+       "lien_detail": "geopolitique_conflits (+0.4 points)",
+       "contredit": "Le BRE perd son levier énergétique traditionnel avec l'effondrement de la rente des hydrocarbures, rendant son alliance avec le Tidewater Canon obsolète.",
+       "raison": "Le Bloc Ressources Eurasiatique (BRE) n'a plus les moyens de soutenir une philosophie basée sur la souveraineté des ressources fossiles."
+      }
+     ]
+    },
+    {
+     "slug": "tribunal_algorithmique_de_bruxelles_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "Le Tribunal Algorithmique de Bruxelles est la juridiction de référence de l'Union Continentale Européenne chargée de statuer sur les litiges nés des décisions automatisées affectant les droits fondamentaux — allocations de ressources, scores de crédit social climatique, accès aux soins, mobilité contrainte.",
+       "lien": "variable",
+       "lien_detail": "systeme_economique_redistribution (+0.5 points)",
+       "raison": "L'énergie abondante pourrait élargir le rôle du tribunal pour inclure les litiges liés à la redistribution des ressources énergétiques et aux nouveaux mécanismes de crédit social."
+      }
+     ]
+    },
+    {
+     "slug": "union_africaine_de_resilience_territoriale_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "systeme_economique_redistribution (+0.5 points)",
+       "raison": "L'énergie abondante et la réduction des pressions climatiques pourraient renforcer la résilience territoriale et l'autonomie de l'UA de Résilience Territoriale."
+      },
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "agence_internationale_des_energies_renouvelables_irena_2_reference",
+       "relation": "alliance",
+       "action": "nouvelle",
+       "lien": "variable",
+       "lien_detail": "energie_ressources_critiques (-4.8 points)",
+       "raison": "La maîtrise de la fusion nucléaire et des ressources critiques (lithium) pourrait rapprocher l'UA de Résilience Territoriale de l'IRENA-2 pour des partenariats énergétiques."
+      }
+     ]
+    },
+    {
+     "slug": "union_africaine_resilience_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "obligatoire",
+       "apres": "résiduel",
+       "lien": "variable",
+       "lien_detail": "geopolitique_conflits (+0.4 points)",
+       "contredit": "L'UAR tente de coordonner les réponses continentales, mais la perte d'influence des pétro-États et la redistribution des leviers énergétiques affaiblissent sa position face aux blocs souverains.",
+       "raison": "La fragmentation des loyautés des États membres s'accélère avec la reconfiguration des alliances énergétiques, rendant l'UAR moins pertinente."
+      }
+     ]
+    },
+    {
+     "slug": "universites_et_think_tanks_en_zones_de_liberte_academique_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "Dans le scénario reference, ces institutions constituent des nœuds de résistance épistémique disséminés dans les interstices du système mondial fragmenté : elles produisent des contre-expertises sur les gouvernances algorithmiques, documentent les migrations climatiques invisibilisées, et forment la prochaine génération de décideurs locaux.",
+       "lien": "variable",
+       "lien_detail": "climat_environnement_global (-2.8 points)",
+       "raison": "La réduction des pressions climatiques pourrait élargir leur champ d'expertise vers les enjeux de gouvernance énergétique et de redistribution des ressources critiques."
+      }
+     ]
+    },
+    {
+     "slug": "valparaiso_fct_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "dominant",
+       "lien": "variable",
+       "lien_detail": "systeme_economique_redistribution (+0.5 points)",
+       "raison": "La reconfiguration des flux énergétiques et des ressources critiques pourrait renforcer le rôle de Valparaíso FCT comme hub de compensation financière interbloc."
+      }
+     ]
+    },
+    {
+     "slug": "vasil_orentchev_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "obligatoire",
+       "apres": "mature",
+       "lien": "variable",
+       "lien_detail": "geopolitique_conflits (+0.4 points)",
+       "contredit": "Orentchev garantit des flux logistiques dans les zones grises, mais la réduction des tensions énergétiques et la reconfiguration des corridors d'approvisionnement affaiblissent sa niche.",
+       "raison": "La fusion nucléaire réduit la dépendance aux corridors d'approvisionnement traditionnels, marginalisant son rôle d'opérateur logistique indépendant."
+      },
+      {
+       "type": "relation",
+       "niveau": "obligatoire",
+       "cible": "operateurs_logistiques_prives_des_zones_grises_eurasiennes_reference",
+       "relation": "alliance",
+       "action": "rompue",
+       "lien": "variable",
+       "lien_detail": "geopolitique_conflits (+0.4 points)",
+       "contredit": "Les opérateurs logistiques des zones grises perdent leur pertinence avec la réduction des tensions énergétiques et la reconfiguration des flux.",
+       "raison": "La niche des opérateurs logistiques privés dans les zones grises s'effondre avec la fin des crises énergétiques récurrentes."
+      }
+     ]
+    },
+    {
+     "slug": "voix_du_dehors_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "Réseau de journalisme d'investigation décentralisé opérant en tension permanente avec les plateformes informationnelles dominantes.",
+       "lien": "variable",
+       "lien_detail": "valeurs_culture_tempo_sociale (+0.1 points)",
+       "raison": "La reconfiguration des enjeux géopolitiques et énergétiques pourrait élargir leur champ d'investigation vers les nouveaux conflits liés aux ressources critiques (lithium, brevets)."
+      }
+     ]
+    },
+    {
+     "slug": "zones_grises_globales_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "obligatoire",
+       "apres": "mature",
+       "lien": "variable",
+       "lien_detail": "geopolitique_conflits (+0.4 points)",
+       "contredit": "Les zones grises absorbent les flux migratoires et les tensions systémiques, mais la réduction des crises énergétiques et la reconfiguration des alliances réduisent leur rôle de soupape.",
+       "raison": "La fusion nucléaire réduit les tensions structurelles, rendant les zones grises moins essentielles comme espaces de régulation informelle."
+      }
+     ]
+    },
+    {
+     "slug": "conflit_indo_arabe_2038_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "obligatoire",
+       "extrait": "En juin 2038, l'Inde déclenche une série d'opérations navales et cyber dans les détroits d'Ormuz et de Bab el-Mandeb, justifiées par des « menaces à sa sécurité énergétique ». Plusieurs pétroliers et méthaniers sont interceptés ou détournés, provoquant une flambée des prix de l'énergie et une panique sur les marchés.",
+       "contredit": "La fusion nucléaire commerciale apparaît en 2038, rendant les détroits stratégiques pour les hydrocarbures obsolètes dès cette date.",
+       "lien": "variable",
+       "lien_detail": "energie_ressources_critiques (-4.8 points)",
+       "raison": "La justification de la crise (sécurité énergétique) devient caduque avec l'émergence de la fusion nucléaire en 2038, qui réduit immédiatement la dépendance aux hydrocarbures."
+      },
+      {
+       "type": "texte",
+       "niveau": "obligatoire",
+       "extrait": "Ce conflit marque un tournant dans les équilibres régionaux, accélérant la fragmentation des alliances énergétiques et renforçant le rôle des acteurs non étatiques, comme les milices concurrentes des droits de passage.",
+       "contredit": "La fusion nucléaire affaiblit les alliances énergétiques traditionnelles et réduit l'importance des détroits stratégiques, rendant les milices des droits de passage moins pertinentes.",
+       "lien": "variable",
+       "lien_detail": "energie_ressources_critiques (-4.8 points)",
+       "raison": "La reconfiguration des alliances énergétiques rend le conflit indo-arabe de 2038 anachronique et sans impact durable."
+      }
+     ]
+    },
+    {
+     "slug": "submersion_tuvalu_acte_fondateur_reference",
+     "changements": []
+    },
+    {
+     "slug": "effondrement_reseau_mondial_communication_reference",
+     "changements": []
+    }
+   ]
+  }
+ },
+ "fusion_commerciale_2038::reference::13": {
+  "empreinte": "03df9adb9c17b6fc",
+  "date": "2026-11-21T18:09",
+  "brut": {
+   "fiches": [
+    {
+     "slug": "encheres_terres_rares_groenland_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "ascendant",
+       "lien": "variable",
+       "lien_detail": "geopolitique_conflits (+0.4)",
+       "contredit": "",
+       "raison": "La percée de la fusion nucléaire réduit la dépendance aux terres rares pour l'énergie, mais celles-ci restent critiques pour d'autres technologies (supraconducteurs, béryllium). Le Kalaallit Nunaat Sovereign Fund (KNSF) pourrait voir son influence géopolitique augmenter en tant que fournisseur alternatif dans un contexte de reconfiguration des alliances énergétiques."
+      },
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "bloc_ressources_eurasiatique_bre_reference",
+       "relation": "opposition",
+       "action": "nouvelle",
+       "lien": "relation",
+       "lien_detail": "Le BRE est un acteur clé des enchères, mais la perte de levier des pétro-États affaiblit sa position.",
+       "contredit": "",
+       "raison": "Le BRE, déjà en déclin relatif, pourrait devenir un rival plus direct du KNSF pour le contrôle des ressources critiques restantes (lithium, supraconducteurs), surtout si la fusion redistribue les cartes géopolitiques."
+      },
+      {
+       "type": "texte",
+       "niveau": "obligatoire",
+       "extrait": "En 72 heures, 847 milliards de crédits-carbone équivalents…",
+       "contredit": "Les crédits-carbone perdent de leur valeur comme monnaie d'échange après 2038, car la fusion réduit la pression sur les émissions.",
+       "lien": "variable",
+       "lien_detail": "climat_environnement_global (-2.8)",
+       "raison": "La fusion commerciale rend les crédits-carbone moins pertinents comme outil de négociation, surtout pour des ressources non énergétiques. Le montant devrait être exprimé en une autre devise (ex : droits d'extraction, brevets)."
+      }
+     ]
+    },
+    {
+     "slug": "exode_midwest_grands_lacs_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "dominant",
+       "lien": "variable",
+       "lien_detail": "systemes_productifs_travail (+1.9)",
+       "contredit": "",
+       "raison": "L'énergie abondante de la fusion accélère la relocalisation des systèmes productifs vers les zones moins exposées aux chocs climatiques, renforçant l'attractivité des Grands Lacs comme refuge économique et logistique."
+      },
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "Les plateformes d'optimisation territoriale par IA redirigent les flux migratoires vers des zones moins saturées, mais les camps d'accueil débordent en moins de trois semaines.",
+       "contredit": "",
+       "lien": "variable",
+       "lien_detail": "systemes_productifs_travail (+1.9)",
+       "raison": "Les plateformes d'optimisation pourraient intégrer des critères énergétiques (accès à la fusion) pour prioriser les zones d'accueil, élargissant leur rôle dans la gestion des migrations."
+      }
+     ]
+    },
+    {
+     "slug": "crise_gouvernance_amazonie_reference",
+     "changements": [
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "consortium_amazonia_viva_reference",
+       "relation": "alliance",
+       "action": "nouvelle",
+       "lien": "variable",
+       "lien_detail": "geopolitique_conflits (+0.4)",
+       "contredit": "",
+       "raison": "Le Consortium Amazônia Viva pourrait nouer des alliances avec des consortiums énergétiques (ex : Consortium Helios) pour monétiser la biomasse amazonienne comme source de tritium ou de matériaux critiques, élargissant sa base de pouvoir."
+      },
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "Le Consortium Amazônia Viva, seul acteur institutionnel capable de revendiquer une légitimité sur la forêt, active pour la première fois son protocole d'urgence climatique.",
+       "contredit": "",
+       "lien": "variable",
+       "lien_detail": "climat_environnement_global (-2.8)",
+       "raison": "La fusion réduit la pression sur la déforestation pour les biocarburants, mais le Consortium pourrait justifier son protocole par la protection des écosystèmes comme réservoirs de biodiversité critiques pour les technologies futures (ex : biomatériaux)."
+      }
+     ]
+    },
+    {
+     "slug": "secession_great_lakes_compact_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "dominant",
+       "lien": "variable",
+       "lien_detail": "systemes_productifs_travail (+1.9)",
+       "contredit": "",
+       "raison": "L'énergie abondante de la fusion renforce l'autonomie économique du Compact, accélérant sa consolidation comme modèle de gouvernance post-fédérale."
+      },
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "consortiums_energetiques_des_megapoles_reference",
+       "relation": "alliance",
+       "action": "nouvelle",
+       "lien": "variable",
+       "lien_detail": "systeme_economique_redistribution (+0.5)",
+       "contredit": "",
+       "raison": "Le Compact pourrait s'allier avec des consortiums énergétiques pour sécuriser des réacteurs à fusion, devenant un hub de redistribution d'énergie décentralisée."
+      }
+     ]
+    },
+    {
+     "slug": "accord_carbone_amazonie_blocs_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "obligatoire",
+       "extrait": "Le traité institue un précédent juridique fragile mais réel : pour la première fois, une entité autochtone dispose d'un droit de veto international reconnu sur des projets industriels liés au carbone.",
+       "contredit": "Le carbone n'est plus un enjeu central après 2038, car la fusion réduit la dépendance aux énergies fossiles et aux marchés du carbone.",
+       "lien": "variable",
+       "lien_detail": "climat_environnement_global (-2.8)",
+       "raison": "Le traité devrait porter sur des ressources critiques pour la fusion (ex : lithium, biomatériaux) plutôt que sur le carbone, pour rester cohérent avec la nouvelle donne énergétique."
+      },
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "blocs_signataires_du_pacte_energetique_multilateral_reference",
+       "relation": "alliance",
+       "action": "nouvelle",
+       "lien": "variable",
+       "lien_detail": "geopolitique_conflits (+0.4)",
+       "contredit": "",
+       "raison": "Le Consortium Amazônia Viva pourrait rejoindre le Pacte Énergétique Multilatéral pour négocier des droits d'extraction de lithium ou de béryllium en échange de garanties environnementales."
+      }
+     ]
+    },
+    {
+     "slug": "election_parti_commun_americain_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "Les réformes annoncées sont partiellement bloquées par une opposition institutionnelle forte.",
+       "contredit": "",
+       "lien": "variable",
+       "lien_detail": "systeme_economique_redistribution (+0.5)",
+       "raison": "Les réformes pourraient inclure des mesures pour redistribuer les bénéfices de la fusion (ex : nationalisation des brevets, coopératives énergétiques), élargissant leur portée."
+      }
+     ]
+    },
+    {
+     "slug": "incident_passage_arctique_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "dominant",
+       "lien": "variable",
+       "lien_detail": "geopolitique_conflits (+0.4)",
+       "contredit": "",
+       "raison": "L'incident renforce l'Armada Logistique Nordique comme acteur incontournable des routes arctiques, surtout si la fusion réduit la dépendance aux hydrocarbures transportés par ces voies."
+      },
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "armada_logistique_nordique_reference",
+       "relation": "opposition",
+       "action": "nouvelle",
+       "lien": "relation",
+       "lien_detail": "L'Armada est directement impliquée dans l'incident.",
+       "contredit": "",
+       "raison": "Les blocs signataires du Pacte Énergétique Multilatéral pourraient durcir leur opposition à l'Armada, perçue comme un acteur hégémonique dans un contexte de reconfiguration des alliances énergétiques."
+      }
+     ]
+    },
+    {
+     "slug": "effondrement_circulation_atlantique_2067_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "L'Europe Occidentale Reconstruite (UOC) se fragmente en micro-régions autonomes, tandis que l'Union Africaine de Résilience Territoriale (UAR) sombre dans le chaos malgré les efforts de coordination.",
+       "contredit": "",
+       "lien": "variable",
+       "lien_detail": "climat_environnement_global (-2.8)",
+       "raison": "La fusion pourrait atténuer les effets économiques de l'effondrement des courants, mais pas les impacts climatiques directs (ex : hivers permanents). Les micro-régions autonomes pourraient s'appuyer sur des réseaux énergétiques décentralisés pour survivre."
+      }
+     ]
+    },
+    {
+     "slug": "emeutes_algorithme_sao_paulo_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "Ce que les algorithmes avaient invisibilisé pendant des années — seuils de rentabilité, zones sacrifiées — est révélé au grand jour.",
+       "contredit": "",
+       "lien": "variable",
+       "lien_detail": "systemes_productifs_travail (+1.9)",
+       "raison": "Les algorithmes pourraient intégrer des critères énergétiques (accès à la fusion) pour définir les zones prioritaires, élargissant leur rôle dans la gestion des inégalités territoriales."
+      },
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "cooperatives_energetiques_decentralisees_reference",
+       "relation": "alliance",
+       "action": "nouvelle",
+       "lien": "variable",
+       "lien_detail": "systeme_economique_redistribution (+0.5)",
+       "contredit": "",
+       "raison": "Les coopératives énergétiques pourraient s'allier aux mouvements de transparence algorithmique pour exiger un accès équitable à l'énergie fusion."
+      }
+     ]
+    },
+    {
+     "slug": "arrestation_chris_van_derburgh_reference",
+     "changements": []
+    },
+    {
+     "slug": "explosion_brise_glace_murmansk_2081_reference",
+     "changements": [
+      {
+       "type": "trajectoire",
+       "niveau": "possible",
+       "apres": "dominant",
+       "lien": "variable",
+       "lien_detail": "geopolitique_conflits (+0.4)",
+       "contredit": "",
+       "raison": "La disparition de Murmansk Transit Arctique renforce l'Armada Logistique Nordique comme acteur hégémonique des routes arctiques, surtout si la fusion réduit la dépendance aux hydrocarbures."
+      },
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "armada_logistique_nordique_reference",
+       "relation": "alliance",
+       "action": "nouvelle",
+       "lien": "relation",
+       "lien_detail": "L'Armada est le principal bénéficiaire de la disparition de Murmansk Transit Arctique.",
+       "contredit": "",
+       "raison": "L'Armada pourrait nouer des alliances avec des consortiums énergétiques (ex : Consortium Énergétique Baltique) pour sécuriser des réacteurs à fusion le long des routes arctiques."
+      }
+     ]
+    },
+    {
+     "slug": "nairobi_biorevenu_pilote_2094_reference",
+     "changements": [
+      {
+       "type": "texte",
+       "niveau": "possible",
+       "extrait": "Le programme, s'il survit à ses contestations juridiques, pourrait redéfinir le contrat social dans les économies africaines post-travail en établissant un précédent pour la monétisation des données biologiques.",
+       "contredit": "",
+       "lien": "variable",
+       "lien_detail": "systemes_productifs_travail (+1.9)",
+       "raison": "Le bio-revenu pourrait intégrer des critères énergétiques (ex : participation à des coopératives de fusion) pour élargir son modèle de redistribution."
+      },
+      {
+       "type": "relation",
+       "niveau": "possible",
+       "cible": "consortium_africain_de_biotechnologies_sociales_reference",
+       "relation": "alliance",
+       "action": "nouvelle",
+       "lien": "variable",
+       "lien_detail": "systeme_economique_redistribution (+0.5)",
+       "contredit": "",
+       "raison": "Le CABS pourrait s'allier avec des coopératives énergétiques pour lier le bio-revenu à l'accès à l'énergie fusion, renforçant son ancrage territorial."
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "fusion_commerciale_2038::reference::contre1::552bfdb71bf88bfe": {
+  "date": "2026-11-21T18:09",
+  "verdict": {
+   "id": "o1",
+   "incompatible": false,
+   "fait": "tendance",
+   "motif": "aggravation",
+   "justification": "La fiche décrit une opposition rompue, ce qui est cohérent avec l'affaiblissement du BRE dû à la perte de sa rente énergétique. L'élément perturbateur renforce cette logique sans la contredire."
+  }
+ },
+ "fusion_commerciale_2038::reference::contre1::485126a3db4ca881": {
+  "date": "2026-11-21T18:09",
+  "verdict": {
+   "id": "o2",
+   "incompatible": false,
+   "fait": "tendance",
+   "motif": "nuance",
+   "justification": "La fiche évoque une opposition rompue, ce qui n'est pas incompatible avec l'affaiblissement du BEC. Cependant, la nuance pourrait être apportée pour préciser que cet affaiblissement est lié à la fusion nucléaire."
+  }
+ },
+ "fusion_commerciale_2038::reference::contre1::4830e96d90886a90": {
+  "date": "2026-11-21T18:09",
+  "verdict": {
+   "id": "o3",
+   "incompatible": false,
+   "fait": "tendance",
+   "motif": "aggravation",
+   "justification": "La rupture de l'alliance est logique avec la caducité du modèle des corporations d'extraction énergétique, renforcée par l'élément perturbateur."
+  }
+ },
+ "fusion_commerciale_2038::reference::contre1::a158fb59c1a627a6": {
+  "date": "2026-11-21T18:09",
+  "verdict": {
+   "id": "o4",
+   "incompatible": false,
+   "fait": "tendance",
+   "motif": "nuance",
+   "justification": "La phrase reste vraie, mais elle pourrait être nuancée pour inclure le lithium et les supraconducteurs comme ressources critiques supplémentaires, sans contradiction."
+  }
+ },
+ "fusion_commerciale_2038::reference::contre1::87d0708e1090e52b": {
+  "date": "2026-11-21T18:09",
+  "verdict": {
+   "id": "o5",
+   "incompatible": false,
+   "fait": "tendance",
+   "motif": "nuance",
+   "justification": "La phrase décrit un rôle de chambre de compensation, ce qui n'est pas incompatible avec un besoin accru de régulation. Une nuance pourrait préciser cette évolution."
+  }
+ },
+ "fusion_commerciale_2038::reference::contre1::36ea7aee7fc5b484": {
+  "date": "2026-11-21T18:09",
+  "verdict": {
+   "id": "o6",
+   "incompatible": false,
+   "fait": "tendance",
+   "motif": "nuance",
+   "justification": "La phrase reste globalement vraie, même si la dépendance aux ressources critiques pour la décarbonation est réduite. Le lithium reste une exception."
+  }
+ },
+ "fusion_commerciale_2038::reference::contre1::fc66b23420954743": {
+  "date": "2026-11-21T18:09",
+  "verdict": {
+   "id": "o7",
+   "incompatible": false,
+   "fait": "tendance",
+   "motif": "nuance",
+   "justification": "La phrase décrit une pression pour privatiser des infrastructures, ce qui n'est pas incompatible avec une énergie abondante. La nuance pourrait préciser que cette pression change de nature."
+  }
+ },
+ "fusion_commerciale_2038::reference::contre1::ce4406c1f37a4ceb": {
+  "date": "2026-11-21T18:09",
+  "verdict": {
+   "id": "o8",
+   "incompatible": false,
+   "fait": "tendance",
+   "motif": "nuance",
+   "justification": "La phrase reste vraie, mais le rôle de résistance à la régulation pourrait évoluer vers d'autres enjeux (lithium, brevets), sans contradiction."
+  }
+ },
+ "fusion_commerciale_2038::reference::contre1::2a8570b9b9c8283e": {
+  "date": "2026-11-21T18:09",
+  "verdict": {
+   "id": "o9",
+   "incompatible": false,
+   "fait": "tendance",
+   "motif": "nuance",
+   "justification": "La phrase décrit une pression sur les ressources planétaires, ce qui reste vrai, même si les ressources ciblées changent (hydrocarbures → lithium)."
+  }
+ },
+ "fusion_commerciale_2038::reference::contre1::9cd8d19cc45c01c0": {
+  "date": "2026-11-21T18:09",
+  "verdict": {
+   "id": "o10",
+   "incompatible": false,
+   "fait": "tendance",
+   "motif": "amorti",
+   "justification": "La phrase décrit un état en 2098, après que l'effet résiduel du choc (24%) a largement amorti la tension énergétique. Le monde a pu revenir à un système où les coopératives restent critiques pour d'autres raisons."
+  }
+ },
+ "fusion_commerciale_2038::reference::contre1::a1635ad83ad37780": {
+  "date": "2026-11-21T18:09",
+  "verdict": {
+   "id": "o11",
+   "incompatible": false,
+   "fait": "tendance",
+   "motif": "nuance",
+   "justification": "La phrase reste vraie, mais la résistance pourrait se déplacer vers d'autres enjeux (lithium, brevets), sans contradiction."
+  }
+ },
+ "fusion_commerciale_2038::reference::contre1::bbe086caaa644c9c": {
+  "date": "2026-11-21T18:09",
+  "verdict": {
+   "id": "o12",
+   "incompatible": false,
+   "fait": "tendance",
+   "motif": "nuance",
+   "justification": "La phrase décrit un état en 2098, où la mise en valeur des territoires sibériens pourrait avoir d'autres motivations que les hydrocarbures (ex : lithium, agriculture)."
+  }
+ },
+ "fusion_commerciale_2038::reference::contre1::c49356539963967d": {
+  "date": "2026-11-21T18:09",
+  "verdict": {
+   "id": "o13",
+   "incompatible": true,
+   "fait": "materiel",
+   "motif": "contradiction",
+   "justification": "La fiche affirme l'existence d'une crise énergétique en 2084, alors que l'élément perturbateur rend l'énergie abondante dès 2038. Une crise énergétique post-2038 est incompatible avec la fusion nucléaire commerciale."
+  }
+ },
+ "fusion_commerciale_2038::reference::contre1::c642ddc00b7d5a7b": {
+  "date": "2026-11-21T18:09",
+  "verdict": {
+   "id": "o14",
+   "incompatible": false,
+   "fait": "tendance",
+   "motif": "nuance",
+   "justification": "La phrase reste vraie, mais les pressions pourraient être atténuées par la réduction des contraintes énergétiques (ex : dessalement moins coûteux)."
+  }
+ },
+ "fusion_commerciale_2038::reference::contre1::504f902131c7a29a": {
+  "date": "2026-11-21T18:09",
+  "verdict": {
+   "id": "o15",
+   "incompatible": false,
+   "fait": "materiel",
+   "motif": "nuance",
+   "justification": "La phrase ne mentionne pas explicitement le tritium ou le deutérium, et l'ONG pourrait dénoncer d'autres pratiques (lithium, supraconducteurs)."
+  }
+ },
+ "fusion_commerciale_2038::reference::contre1::ed769fcfe3c04af5": {
+  "date": "2026-11-21T18:09",
+  "verdict": {
+   "id": "o16",
+   "incompatible": false,
+   "fait": "tendance",
+   "motif": "nuance",
+   "justification": "La phrase reste vraie, mais le stockage longue durée pourrait devenir moins stratégique sans être obsolète (ex : pour d'autres usages)."
+  }
+ },
+ "fusion_commerciale_2038::reference::contre1::7fd2b78f007e2c79": {
+  "date": "2026-11-21T18:09",
+  "verdict": {
+   "id": "o17",
+   "incompatible": false,
+   "fait": "tendance",
+   "motif": "nuance",
+   "justification": "La phrase décrit un système d'allocation en temps réel, ce qui reste pertinent même si l'énergie est moins critique. D'autres ressources (eau, logement) gardent leur importance."
+  }
+ },
+ "fusion_commerciale_2038::reference::contre1::ad882c8f3b1d45e8": {
+  "date": "2026-11-21T18:09",
+  "verdict": {
+   "id": "o18",
+   "incompatible": true,
+   "fait": "materiel",
+   "motif": "contradiction",
+   "justification": "La fiche décrit une crise des détroits en juin 2038 motivée par la sécurité énergétique, alors que la fusion nucléaire commerciale rend les hydrocarbures obsolètes dès 2038. Une crise liée aux hydrocarbures à cette date est incompatible."
+  }
+ },
+ "fusion_commerciale_2038::reference::classement::c89ae5b01e299923": {
+  "date": "2026-11-21T18:09",
+  "brut": {
+   "classement": [
+    {
+     "id": "f10",
+     "pourquoi": "Effondrement direct de leur levier géopolitique (hydrocarbures)"
+    },
+    {
+     "id": "f3",
+     "pourquoi": "Nouvel enjeu sécuritaire autour du lithium et des ressources critiques"
+    },
+    {
+     "id": "f11",
+     "pourquoi": "Montée en puissance via maîtrise des ressources critiques (lithium, supraconducteurs)"
+    },
+    {
+     "id": "f28",
+     "pourquoi": "Déclin brutal dû à l'obsolescence de leur modèle énergétique (solaire/hydrogène)"
+    },
+    {
+     "id": "f59",
+     "pourquoi": "Perte de raison d'être avec l'effondrement des pétro-États du Golfe"
+    },
+    {
+     "id": "f31",
+     "pourquoi": "Réduction des coûts énergétiques booste leur compétitivité et influence"
+    },
+    {
+     "id": "f66",
+     "pourquoi": "Affaiblissement direct lié à la fin des rentes pétrolières (EWSH)"
+    },
+    {
+     "id": "f2",
+     "pourquoi": "Devenir incontournable pour la coordination des normes et brevets de fusion"
+    },
+    {
+     "id": "f50",
+     "pourquoi": "Nouvelle demande critique pour le lithium et les supraconducteurs"
+    },
+    {
+     "id": "f69",
+     "pourquoi": "Accélération de l'automatisation et augmentation des travailleurs"
+    },
+    {
+     "id": "f57",
+     "pourquoi": "Lithium sud-américain devient un enjeu géopolitique majeur"
+    },
+    {
+     "id": "f23",
+     "pourquoi": "Accélération des programmes de biorevenu grâce à l'énergie abondante"
+    },
+    {
+     "id": "f56",
+     "pourquoi": "Autonomie renforcée des communautés rurales via énergie décentralisée"
+    },
+    {
+     "id": "f1",
+     "pourquoi": "Décentralisation productive favorisée par l'énergie abondante"
+    },
+    {
+     "id": "f6",
+     "pourquoi": "Renforcement des territoires fédérés face aux États centraux"
+    },
+    {
+     "id": "f38",
+     "pourquoi": "Modèle décentralisé rendu plus attractif par la fusion"
+    },
+    {
+     "id": "f52",
+     "pourquoi": "Communs énergétiques décentralisés gagnent en influence"
+    },
+    {
+     "id": "f4",
+     "pourquoi": "Baisse des coûts énergétiques pour l'agriculture verticale"
+    },
+    {
+     "id": "f24",
+     "pourquoi": "Accélération des politiques d'augmentation des travailleurs"
+    },
+    {
+     "id": "f109",
+     "pourquoi": "Transition énergétique accélérée augmente leur influence syndicale"
+    }
+   ]
+  }
  }
 }

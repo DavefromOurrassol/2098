@@ -2796,7 +2796,8 @@ def articles_extraire_evenements():
     return jsonify(payload)
 
 
-TIMEOUT_ET_SI = {"proposer": 180, "verifier": 60, "ajouter": 60}
+TIMEOUT_ET_SI = {"proposer": 180, "verifier": 60, "ajouter": 60,
+                 "extraire": 60, "remplacer": 60}   # U4h : modifier une hypothèse existante
 
 
 @app.route("/api/et_si/suggerer", methods=["POST"])

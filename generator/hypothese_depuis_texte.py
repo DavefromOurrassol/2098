@@ -785,6 +785,117 @@ def ajouter_bloc(texte):
 
 
 # ---------------------------------------------------------------------------
+# U4h (21 nov 2026) : modifier une hypothèse existante (extraire, remplacer)
+# ---------------------------------------------------------------------------
+
+STATUTS_MODIFIABLES = ("non simulé", "simulé", "rejeté", "vérifié")
+
+
+def _statut_hyp(hid):
+    try:
+        import et_si_dossiers as ed
+        return str(ed.statut(hid))
+    except Exception as e:  # noqa: BLE001
+        return f"inconnu ({type(e).__name__})"
+
+
+def _bornes_bloc(lignes, hid):
+    """(début, fin) du bloc `hid` : de « - id: hid » à la ligne avant l'hypothèse suivante,
+    sans les lignes vides ni les commentaires de niveau 2 qui précèdent celle-ci (ils lui
+    appartiennent). None si absent ou présent plusieurs fois."""
+    debuts = [i for i, l in enumerate(lignes)
+              if re.match(r"^\s*- id:\s*['\"]?" + re.escape(hid) + r"['\"]?\s*(#.*)?$", l)]
+    if len(debuts) != 1:
+        return None
+    d = debuts[0]
+    retrait = len(lignes[d]) - len(lignes[d].lstrip(" "))
+    f = next((i for i in range(d + 1, len(lignes))
+              if re.match(r"^\s*- id:", lignes[i]) and len(lignes[i]) - len(lignes[i].lstrip(" ")) == retrait),
+             len(lignes))
+    while f > d + 1 and (not lignes[f - 1].strip()
+                         or (lignes[f - 1].lstrip().startswith("#")
+                             and len(lignes[f - 1]) - len(lignes[f - 1].lstrip(" ")) <= retrait)):
+        f -= 1
+    return d, f
+
+
+def extraire_bloc(hid):
+    hid = str(hid or "").strip()
+    if not re.fullmatch(r"[a-z0-9_]+", hid):
+        return {"ok": False, "erreurs": [f"id {hid!r} invalide"], "avertissements": []}
+    lignes = se.HYPOTHESES_PATH.read_text(encoding="utf-8").splitlines()
+    b = _bornes_bloc(lignes, hid)
+    if b is None:
+        return {"ok": False, "erreurs": [f"{hid} introuvable (ou en double) dans {se.HYPOTHESES_PATH.name}"],
+                "avertissements": []}
+    st = _statut_hyp(hid)
+    res = {"ok": True, "id": hid, "statut": st, "bloc": "\n".join(lignes[b[0]:b[1]]) + "\n",
+           "erreurs": [], "avertissements": []}
+    if st not in STATUTS_MODIFIABLES:
+        res["ok"] = False
+        res["erreurs"].append(f"{hid} est « {st} » : non modifiable (« Annuler la décision » d'abord, "
+                              f"et seulement tant qu'elle n'est pas injectée)")
+    elif st == "simulé":
+        res["avertissements"].append("déjà simulée : après modification, la resimuler avant de décider")
+    return res
+
+
+def remplacer_bloc(texte):
+    h, erreurs = lire_bloc(texte)
+    if h is None:
+        return {"ok": False, "erreurs": erreurs, "avertissements": [], "id": None}
+    hid = str(h.get("id") or "")
+    if hid not in ids_existants():
+        return {"ok": False, "id": hid, "avertissements": [],
+                "erreurs": [f"id {hid!r} absent de {se.HYPOTHESES_PATH.name} : l'id d'une hypothèse ne change "
+                            "pas (pour un nouvel id, « Ajouter »)"]}
+    st = _statut_hyp(hid)
+    if st not in STATUTS_MODIFIABLES:
+        return {"ok": False, "id": hid, "avertissements": [],
+                "erreurs": [f"{hid} est « {st} » : non modifiable (« Annuler la décision » d'abord, "
+                            f"et seulement tant qu'elle n'est pas injectée)"]}
+    res = verifier_bloc(texte, pour_ajout=True)
+    res["erreurs"] = [e for e in res["erreurs"] if not e.startswith(f"id {hid!r} déjà présent")]
+    res["ok"] = not res["erreurs"]
+    if not res["ok"]:
+        return res
+    chemin = se.HYPOTHESES_PATH
+    original = chemin.read_text(encoding="utf-8")
+    lignes = original.splitlines()
+    b = _bornes_bloc(lignes, hid)
+    if b is None:
+        res.update(ok=False, erreurs=[f"bloc de {hid} introuvable (ou en double) dans le fichier : à la main"])
+        return res
+    d, f = b
+    neuf = normaliser_texte_bloc(texte)
+    retrait = " " * (len(lignes[d]) - len(lignes[d].lstrip(" ")))
+    neuf_l = [(retrait + l) if l.strip() else "" for l in neuf.splitlines()]
+    if neuf_l == lignes[d:f]:
+        res["message"] = f"{hid} : aucun changement, rien n'est écrit"
+        return res
+    nouveau = "\n".join(lignes[:d] + neuf_l + lignes[f:]) + "\n"
+    ids_avant = [x.get("id") for x in (yaml.safe_load(original) or {}).get("hypotheses") or [] if isinstance(x, dict)]
+    shutil.copy(chemin, chemin.with_name(chemin.name + ".bak_remplacer"))
+    chemin.write_text(nouveau, encoding="utf-8")
+    try:
+        data = yaml.safe_load(chemin.read_text(encoding="utf-8")) or {}
+        hyps = [x for x in data.get("hypotheses") or [] if isinstance(x, dict)]
+        if [x.get("id") for x in hyps] != ids_avant:
+            raise ValueError("ordre ou liste des hypothèses changé après réécriture")
+        relu = next(x for x in hyps if x.get("id") == hid)
+        if relu != h:
+            raise ValueError("le bloc relu diffère du bloc envoyé")
+    except Exception as e:  # noqa: BLE001 -- retour arrière
+        chemin.write_text(original, encoding="utf-8")
+        res.update(ok=False, erreurs=[f"remplacement annulé, fichier restauré : {e}"])
+        return res
+    res["message"] = (f"{hid} remplacée dans {chemin.name} (sauvegarde {chemin.name}.bak_remplacer)"
+                      + (" ; sa dernière simulation est périmée : la relancer avant de décider"
+                         if st == "simulé" else ""))
+    return res
+
+
+# ---------------------------------------------------------------------------
 
 def main():
     ap = argparse.ArgumentParser(description=__doc__.split("USAGE")[0].strip(),
@@ -793,6 +904,10 @@ def main():
     action.add_argument("--proposer", action="store_true", help="idée (entrée standard) -> bloc proposé")
     action.add_argument("--verifier", action="store_true", help="contrôle d'un bloc (entrée standard)")
     action.add_argument("--ajouter", action="store_true", help="contrôle puis ajout à hypotheses.yaml")
+    action.add_argument("--extraire", action="store_true",   # U4h
+                        help="id (entrée standard) -> bloc de l'hypothèse tel qu'écrit, et son statut")
+    action.add_argument("--remplacer", action="store_true",   # U4h
+                        help="contrôle puis réécriture du bloc d'une hypothèse existante, à sa place")
     ap.add_argument("--json", action="store_true", help="sortie JSON sur une ligne (GUI)")
     ap.add_argument("--type", choices=("evenement", "signal", "entite"), default=None,
                     help="avec --proposer : impose le type (sinon l'IA décide)")
@@ -831,6 +946,10 @@ def main():
             res = proposer(texte, type_force=args.type, imposes=imposes or None)
         elif args.verifier:
             res = verifier_bloc(texte)
+        elif args.extraire:   # U4h
+            res = extraire_bloc(texte.strip())
+        elif args.remplacer:   # U4h
+            res = remplacer_bloc(texte)
         else:
             res = ajouter_bloc(texte)
     except Exception as e:  # noqa: BLE001

@@ -11170,6 +11170,37 @@ function buildAssistantHypothese() {
   retour.style.whiteSpace = 'pre-wrap';
   corps.appendChild(retour);
 
+  // U4h : modifier une hypothèse existante (Charger -> bloc ; « Remplacer » le réécrit à sa place)
+  const ligneModif = mk('div');
+  ligneModif.style.cssText = 'display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:4px 0 8px;';
+  ligneModif.appendChild(mk('span', 'option-label', '✏️ Modifier une hypothèse existante :'));
+  const selModif = document.createElement('select');
+  selModif.style.setProperty('width', 'auto', 'important');
+  selModif.style.maxWidth = '60%';
+  const btnCharger = mk('button', 'yaml-btn', 'Charger');
+  btnCharger.type = 'button';
+  ligneModif.appendChild(selModif);
+  ligneModif.appendChild(btnCharger);
+  corps.appendChild(ligneModif);
+  const remplirModif = async () => {
+    const garde = selModif.value;
+    selModif.innerHTML = '<option value="">— choisir —</option>';
+    try {
+      const r = await fetch('/api/slugs?type=hypotheses_et_si&scenario=');
+      const d = await r.json();
+      (d.slugs || []).forEach(s => {
+        const o = document.createElement('option');
+        o.value = s;
+        o.textContent = (d.labels && d.labels[s]) || s;
+        selModif.appendChild(o);
+      });
+      if (garde) selModif.value = garde;
+    } catch (e) {
+      selModif.innerHTML = '<option value="">Erreur chargement</option>';
+    }
+  };
+  remplirModif();
+
   corps.appendChild(mk('div', 'option-label', 'Bloc de l\'hypothèse (modifiable)'));
   const bloc = mk('textarea', 'yaml-edit');
   bloc.rows = 20;
@@ -11189,6 +11220,19 @@ function buildAssistantHypothese() {
   btnAjouter.style.marginLeft = '8px';
   ligneBoutons.appendChild(btnVerifier);
   ligneBoutons.appendChild(btnAjouter);
+  const btnRemplacer = mk('button', 'yaml-btn yaml-btn-save', 'Remplacer dans hypotheses.yaml');   // U4h
+  btnRemplacer.type = 'button';
+  btnRemplacer.style.marginLeft = '8px';
+  btnRemplacer.disabled = true;
+  btnRemplacer.classList.add('u4h-remplacer');   // U4h2 : grisé quand désactivé
+  if (!document.getElementById('style-u4h2')) {
+    const st = document.createElement('style');
+    st.id = 'style-u4h2';
+    st.textContent = '.u4h-remplacer:disabled { opacity: 0.45; cursor: not-allowed; }';
+    document.head.appendChild(st);
+  }
+  btnRemplacer.title = 'Actif après « Charger » : réécrit l\'hypothèse chargée à sa place dans hypotheses.yaml.';
+  ligneBoutons.appendChild(btnRemplacer);
   corps.appendChild(ligneBoutons);
 
   const statut = mk('div', 'option-desc');
@@ -11274,6 +11318,51 @@ function buildAssistantHypothese() {
       if (sel) await rafraichirChampDynamique(sel);
       const panneau = document.querySelector('#form-body .yaml-panel[data-yaml-path="et_si/hypotheses.yaml"]');
       if (panneau) await loadYamlContent(panneau, 'et_si/hypotheses.yaml');
+    }
+  });
+
+  // U4h : charger une hypothèse existante, puis la remplacer à sa place
+  const rafraichirListes = async () => {
+    const sel = document.querySelector('#form-body [data-slug-type="hypotheses_et_si"]');
+    if (sel) await rafraichirChampDynamique(sel);
+    const panneau = document.querySelector('#form-body .yaml-panel[data-yaml-path="et_si/hypotheses.yaml"]');
+    if (panneau) await loadYamlContent(panneau, 'et_si/hypotheses.yaml');
+    await remplirModif();
+  };
+  btnCharger.addEventListener('click', async () => {
+    if (!selModif.value) { statut.style.color = '#b03a2e'; statut.textContent = '✗ Choisis d\'abord une hypothèse.'; return; }
+    if (bloc.value.trim() && !armer2(btnCharger, '⚠ Cliquer encore pour remplacer le bloc affiché')) return;
+    btnCharger.disabled = true;
+    const data = await appeler('extraire', selModif.value);
+    btnCharger.disabled = false;
+    if (data.bloc) {
+      bloc.value = data.bloc;
+      btnAjouter.disabled = true;
+      btnAjouter.dataset.verrou = '1';
+      btnRemplacer.dataset.id = data.id;
+      btnRemplacer.disabled = !data.ok;
+    }
+    afficher(statut, data, data.bloc ? `✓ ${data.id} chargée (${data.statut}) : corrige le bloc, « Vérifier », puis « Remplacer ».` : '');
+  });
+  btnRemplacer.addEventListener('click', async () => {
+    const attendu = btnRemplacer.dataset.id;
+    if (!attendu) return;
+    const m = bloc.value.match(/^\s*-?\s*id:\s*['"]?([A-Za-z0-9_]+)/m);
+    if (!m || m[1] !== attendu) {
+      statut.style.color = '#b03a2e';
+      statut.textContent = `✗ L'id du bloc doit rester « ${attendu} » (pour un nouvel id : « Ajouter »).`;
+      return;
+    }
+    if (!armer2(btnRemplacer, `⚠ Cliquer encore pour réécrire ${attendu}`)) return;
+    btnRemplacer.disabled = true;
+    const data = await appeler('remplacer', bloc.value);
+    afficher(statut, data, data.message ? `✓ ${data.message}` : '');
+    if (data.ok && data.message && !data.message.includes('aucun changement')) {
+      bloc.value = '';
+      delete btnRemplacer.dataset.id;
+      await rafraichirListes();
+    } else {
+      btnRemplacer.disabled = false;
     }
   });
 
