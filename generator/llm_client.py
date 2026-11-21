@@ -75,10 +75,13 @@ LLM_MODEL = _ENV_MODEL or _DEFAULT_MODELS.get(LLM_PROVIDER, _DEFAULT_MODELS["mis
 # NOTE (11 juillet 2026) : "strict" est actuellement sur Mistral Large, pas
 # Claude — phase de test. Repasser sur claude-sonnet-5 au moment du passage
 # en production (une seule ligne à changer ci-dessous).
+# LARGE3 (21 nov 2026) : « mistral-large-latest » est devenu Mistral Large 4, qui raisonne avant
+# de répondre (≈ 4 min par lot de la Passe exhaustive). Version explicite de Large 3 fixée ici ;
+# Large 4 reste disponible sous « mistral-large-4 » (backlog B8).
 TASK_TIER_DEFAULTS = {
-    "strict":            {"provider": "mistral", "model": "mistral-large-latest"},
-    "structured_strict": {"provider": "mistral", "model": "mistral-large-latest"},
-    "creative_souple":   {"provider": "mistral", "model": "mistral-large-latest"},
+    "strict":            {"provider": "mistral", "model": "mistral-large-2512"},
+    "structured_strict": {"provider": "mistral", "model": "mistral-large-2512"},
+    "creative_souple":   {"provider": "mistral", "model": "mistral-large-2512"},
     "volume":            {"provider": "mistral", "model": "mistral-small-latest"},
 }
 _DEFAULT_TIER = "volume"
