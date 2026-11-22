@@ -2,9 +2,10 @@
 
 *Mode d'emploi de l'état actuel : ce que fait chaque outil, quand l'utiliser,
 comment le lancer (GUI ou terminal), ses pièges. Mis au propre le 24 octobre 2026,
-mis à jour le 15 novembre 2026 au soir (unification « et si ? » : porte unique pour
+mis à jour le 21 novembre 2026 au soir (unification « et si ? » : porte unique pour
 événements, signaux et entités ; fiche d'article sans invention, suggestions, lot d'entités,
-accès directs fermés, U3aa → U3bf ; **wild cards** et force par scénario, U4a → U4f).
+accès directs fermés, U3aa → U3bf ; **wild cards** et force par scénario, U4a → U4g ;
+**modifier une hypothèse**, U4h ; **Mistral Large 3 fixé** pour les tiers « large »).
 Le récit des sessions (bugs trouvés, itérations, tests, versions successives) est
 dans `USER_MANUAL_HISTORIQUE.md` ; les chantiers ouverts dans `BACKLOG_ACTIF.md`.
 Les numéros de section (§2octies, §3quinquies…) sont stables : backlog et
@@ -61,16 +62,24 @@ Ourrassol2098/                          ← racine du vault Obsidian (dépôt gi
 
   | Tier | Modèle | Usage |
   |---|---|---|
-  | `strict` | `mistral-large-latest` | Sortie longue à identité imposée (articles, journalistes) |
-  | `structured_strict` | `mistral-large-latest` | JSON canonique référencé ailleurs (entités, instances, géographie, relectures) |
-  | `creative_souple` | `mistral-large-latest` | Rédaction libre (résumés, chapôs, réécritures) |
+  | `strict` | `mistral-large-2512` (Large 3) | Sortie longue à identité imposée (articles, journalistes) |
+  | `structured_strict` | `mistral-large-2512` (Large 3) | JSON canonique référencé ailleurs (entités, instances, géographie, relectures) |
+  | `creative_souple` | `mistral-large-2512` (Large 3) | Rédaction libre (résumés, chapôs, réécritures) |
   | `volume` | `mistral-small-latest` | Extraction, classification courte (localisation…) |
 
 - **Forçage ponctuel** : `LLM_PROVIDER` / `LLM_MODEL` (variables d'environnement) ou
   bascule GUI « Forcer ce modèle » (bandeau orange). Jamais en `export` permanent.
+- **Version fixée, jamais l'alias** (21 nov. 2026) : `mistral-large-latest` est devenu
+  **Mistral Large 4** sans annonce (constaté le 21 nov. ; alias `mistral-large-4`,
+  `mistral-large-4-0`), donc les trois tiers « large » ont tourné sur Large 4 pendant une
+  période (probablement depuis le 14 nov.). Ils sont fixés sur `mistral-large-2512` (Large 3,
+  `patch_llm_large3.py`). Un alias `-latest` peut changer de modèle à tout moment : pour
+  vérifier vers quoi il pointe, `c.models.retrieve(model_id='mistral-large-latest')` (gratuit)
+  ou la liste `c.models.list()` (voir `HANDOFF_21_NOVEMBRE.md`).
 - **Mistral Large 4** (`mistral-large-4`) : dans le sélecteur, utilisé par aucun tier
   (raisonne avant d'écrire ; la réflexion compte dans `max_tokens` et peut tout
-  consommer ; 4 à 7 fois plus cher par article). Voir backlog S29.
+  consommer ; 4 à 7 fois plus cher par article ; une Passe exhaustive ≈ 4 min par lot
+  contre ≈ 30 s en Large 3). Voir backlog B8.
 - Retry automatique sur 429, sans pause préventive, pour les trois fournisseurs.
 - Clé API : `~/.zshrc`. Le Terminal du Mac s'ouvre sous bash, qui ne lit pas
   `~/.zshrc` : recharger la clé dans chaque nouveau terminal (sinon « MISTRAL_API_KEY
@@ -1313,19 +1322,36 @@ faible du vault ne doit l'annoncer.
   permanent, un domaine apaisé prend la polarité -1 »). « Utiliser cette idée » d'une carte ⚡ la
   coche ; le lot des lacunes et « Ouvrir pour corriger » la décochent ; refus si le type choisi est
   signal ou entité.
-- **⚠ Relire le bloc proposé** : ✨ Proposer ignore encore la ligne « Scénarios : … » d'une idée ⚡
-  (mettre la liste à la main) et donne souvent la même force partout (ajuster les forces par
-  scénario). Retirer les domaines dont l'effet ne dure pas.
+- **Scénarios de l'idée imposés** (U4d5, 21 nov.) : une ligne « Scénarios : a, b. » dans l'idée
+  (cartes ⚡ et 💡) est reprise d'office par ✨ Proposer comme `--scenarios` (avertissement
+  « scénarios repris de l'idée : … » ; « tous » accepté ; la phrase « Scénarios : pourquoi… »
+  de la raison est ignorée). Les forces par scénario ne gardent que ces scénarios.
+- **Contraintes vides retirées** (U4d6, 21 nov.) : une contrainte qui n'est qu'une date (« En
+  2058. », « vers 2058 ») ou la ligne « Scénarios : … » est retirée du bloc (⚠ « contrainte
+  sans fait retirée »).
+- **⚠ Relire le bloc proposé** : ✨ Proposer donne souvent la même force partout (ajuster les
+  forces par scénario si les mondes absorbent l'élément différemment). Retirer les domaines dont
+  l'effet ne dure pas.
 - **① Simuler** : lecture IA et Passe exhaustive **lancées d'office** (cases ignorées, payant).
   Avant tout calcul, **contrôle des règles de lore** : un appel IA par scénario qui a des règles
   (`_tous` + scénario + zones en quarantaine), cache `generator/state/et_si_regles_lore.json` ;
   une règle contredite, ou un contrôle en échec, **bloque** (« ✗ Wild card … refusée »). Lignes
   `ℹ règles de lore — <sc> : N règle(s) contrôlée(s), 0 contredite(s)` en tête de sortie ; ligne
-  « ⚡ Wild card » dans le rapport. ⚠ **Durée** : la Passe relit toutes les fiches (Shackleton,
-  2 scénarios : 25 lots, **2 h**) ; suivre l'avancement avec l'heure de
-  `generator/state/et_si_exhaustif.json` (réécrit après chaque lot), ne pas relancer.
+  « ⚡ Wild card » dans le rapport. **Durée** : la Passe relit toutes les fiches, ≈ 30 s par lot
+  de 15 en Large 3 (fusion, reference : 207 fiches, 14 lots, 7 min 35 s) : **≈ 15 min** pour une
+  wild card sur 2 scénarios (2 h pour Shackleton, quand le tier tournait sur Large 4) ; suivre
+  l'avancement avec l'heure de `generator/state/et_si_exhaustif.json` (réécrit après chaque
+  lot), ne pas relancer.
 - **② Adopter** : refusé si la dernière simulation n'a pas eu de Passe exhaustive.
 - **③ Injecter** : l'entrée porte `wild_card_impose: true` (§3, `inject_custom_events.py`).
+- **⑤ À la main** (U4e, 21 nov.) : le brouillon de « 📜 Règle de lore » s'ouvre sur une règle
+  **« fait établi »** proposée d'office (`<id>_fait_etabli`, gravité `a_relire`, termes = noms
+  propres du nom de l'hypothèse, ou le nom entier ; message : fait du monde depuis l'année ; le
+  nier ou le dire hypothétique après est faux ; avant, personne ne le connaît). À relire, puis
+  « Ajouter la règle » ; une fois dans `lore_regles.yaml`, elle protège aussi le monde contre les
+  wild cards suivantes (contrôle des règles de lore).
+- **Badge ⚡** (U4e) : « ⚡ Nom (date) » dans la liste des hypothèses, « · ⚡ wild card · » dans
+  l'en-tête de la fiche.
 - **Saturation** : une variable déjà près de 100 ne monte plus (Shackleton, géopolitique en
   fortress_world à 99,7 : +0,3 pour une force 35) ; c'est la borne, pas un frein du moteur (une
   rupture n'a ni `GAIN_CHOCS` ni plafond de 15 points).
@@ -1416,6 +1442,23 @@ python3 generator/hypothese_depuis_texte.py --verifier < bloc.yaml
 python3 generator/hypothese_depuis_texte.py --ajouter --json < bloc.yaml
 ```
 Option `--wild-card` (case « ⚡ wild card » du panneau) : voir « Wild cards » plus haut.
+
+**✏️ Modifier une hypothèse existante** (U4h, 21 nov.) : ligne au-dessus du bloc, liste des
+hypothèses + **« Charger »** : le bloc arrive tel qu'écrit dans le fichier (commentaires
+internes compris), avec son statut ; « Ajouter » est verrouillé. Corriger, **Vérifier**, puis
+**« Remplacer dans hypotheses.yaml »** (deux clics) : le bloc est réécrit **à sa place**
+(ordre et commentaires du fichier conservés, `.bak_remplacer`, relecture complète, retour
+arrière en cas d'échec ; « aucun changement, rien n'est écrit » si le bloc est identique).
+Refus : id changé (pour un nouvel id, « Ajouter ») ; hypothèse **adoptée ou injectée**
+(« Annuler la décision » d'abord, et seulement tant qu'elle n'est pas injectée) — le bouton
+reste alors grisé ; même nom ou même description qu'une autre hypothèse ; contrôles des wild
+cards. Une hypothèse déjà simulée doit être **resimulée** avant d'être adoptée : l'adoption
+compare l'empreinte du bloc à celle de la dernière simulation (`et_si_dossiers.py`) et refuse
+sinon.
+```bash
+echo "<id>" | python3 generator/hypothese_depuis_texte.py --extraire --json     # bloc + statut
+python3 generator/hypothese_depuis_texte.py --remplacer --json < bloc.yaml
+```
 ⚠ Relire le bloc proposé : l'IA met souvent `scenarios: tous`, applique le même
 partage de polarités (3 mondes « durs » contre 3 « doux »), choisit `rupture` pour un
 événement régional, et laisse le changement de carte dans la description au lieu du
@@ -1513,7 +1556,9 @@ veut pas.
 ### Passe exhaustive — `et_si_exhaustif.py` 🔁 (v9.6)
 Relit **toutes** les instances du scénario et les événements datés après l'hypothèse,
 par lots de 15 (`structured_strict`), avec la lecture IA comme contexte (une lecture
-nouvelle relance toute la passe et peut changer le résultat).
+nouvelle relance toute la passe et peut changer le résultat). Durée : ≈ 30 s par lot en
+Large 3 (≈ 4 min en Large 4) ; les lots partent l'un après l'autre (parallélisme non fait,
+jugé inutile le 21 nov.).
 ```bash
 python3 generator/et_si_exhaustif.py --id <id> --scenario <sc> --estimer     # coût, aucun appel
 python3 generator/et_si_exhaustif.py --id <id> --scenario <sc> > documentation/need_action/passe_<id>.md
@@ -1703,8 +1748,9 @@ Rubriques du panneau, dans l'ordre :
   justifications au conditionnel ou par sous-entendu, celles qui ne parlent que
   d'entités inchangées, et, pour une entité dont le rang monte, un passage sans mot de
   déclin ou de disparition. « Ouvrir dans Obsidian ↗ », « Marquer comme relu ».
-- **📜 Règle de lore** — brouillon (une règle par entité disparue ; contraintes en
-  commentaires, à transformer au besoin) → aperçu → insertion dans
+- **📜 Règle de lore** — brouillon (pour une wild card, d'abord sa règle « fait établi »,
+  U4e ; puis une règle par entité disparue ; contraintes en commentaires, à transformer au
+  besoin) → aperçu → insertion dans
   `documentation/lore_regles.yaml` (`.bak_et_si`). Sans entité disparue, le brouillon
   ne contient que des commentaires : écrire la règle (ex. `meme_phrase` pour une
   contrainte), sinon l'outil refuse (« aucune règle »).

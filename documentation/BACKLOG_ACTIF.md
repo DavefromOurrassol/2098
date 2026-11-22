@@ -1,8 +1,9 @@
 # Backlog actif — Ourrassol 2098
 
-*Ce qui reste ouvert, et seulement cela. Mis à jour le 15 novembre 2026 au soir (chantier
-« unification », étape 3 : **wild cards** cadrées et codées, U4a → U4f, U4b abandonné ;
-premier essai réel `shackleton_platinoides_2052` simulé, non adopté). Réorganisé le 31 octobre 2026 en trois
+*Ce qui reste ouvert, et seulement cela. Mis à jour le 21 novembre 2026 au soir (wild cards :
+restes U4d5, U4d6, U4e faits, Shackleton supprimée (U4g) ; **Passe lente résolue** : l'alias
+`mistral-large-latest` était passé à Large 4, Large 3 fixé ; **modifier une hypothèse**, U4h,
+U4h2). Réorganisé le 31 octobre 2026 en trois
 parties : **A. Bugs et vérifications**, **B. Développement (nouvelles
 fonctionnalités)**, **C. Enrichissement de la base**. Règle actée le 31 oct :
 l'outil doit avoir toutes ses fonctionnalités et aucun bug connu (partie A vide)
@@ -12,7 +13,7 @@ avant d'enrichir la base en volume (partie C).*
 des points dans plusieurs parties, chacun est marqué de son numéro. Les points
 clos sont dans `BACKLOG_ARCHIVE.md` (à uploader seulement pour vérifier si un
 point a déjà été traité). Mode d'emploi : `USER_MANUAL_COMPLET.md` ; dernier état
-de session : `HANDOFF_15_NOVEMBRE.md`.*
+de session : `HANDOFF_21_NOVEMBRE.md`.*
 
 Légende : 🔴 à faire · 🟡 en cours · 👁 en surveillance (pas de correctif
 préventif, agir si le cas revient) · ⚪ idée sans calendrier.
@@ -65,13 +66,23 @@ Reste à voir en réel :
   new_sustainability, et un article dont l'en-tête a une clé `titre` ; e) **entité** :
   « comme entité » (Articles) puis ajout, adoption, injection ; entité de la Lecture IA
   jusqu'à l'injection ; f) les boutons de l'étape ⑤ et « Appliquer » en double-clic.
-- **B9 — Wild cards** (U4a → U4f, 15 nov) : vus en réel le bouton ⚡ (3 idées, pas de lot), la
-  case ⚡ de ✨ Proposer, les contrôles (quota, fenêtre, forces), le contrôle des règles de lore
-  (0 contredite), la Passe exhaustive forcée et les forces par scénario dans le rapport
-  (`shackleton_platinoides_2052`). Reste à voir : a) **adoption puis injection** d'une wild
-  card (forces 25-35 acceptées par `inject_custom_events.py`, `wild_card: true` dans la fiche),
-  puis `validate.py` (aucun plafond à 25 trouvé par recherche, à confirmer) ; b) une règle de
-  lore **déclarée contredite** (blocage) ; c) le refus d'adoption sans Passe exhaustive.
+- **B9 — Wild cards** (U4a → U4h, 15 et 21 nov) : vus en réel le bouton ⚡ (3 idées, pas de
+  lot), la case ⚡ de ✨ Proposer, la reprise des scénarios de l'idée (U4d5, Zéro-R), les
+  contrôles (quota, fenêtre, forces), le contrôle des règles de lore (0 contredite), la Passe
+  exhaustive forcée et les forces par scénario dans le rapport (Shackleton). Reste à voir :
+  a) **adoption puis injection** d'une wild card (forces 25-35 acceptées par
+  `inject_custom_events.py`, `wild_card: true` dans la fiche), puis `validate.py` (aucun plafond
+  à 25 trouvé par recherche, à confirmer) ; b) une règle de lore **déclarée contredite**
+  (blocage) ; c) le refus d'adoption sans Passe exhaustive ; d) **U4e** : la règle « fait
+  établi » à l'étape ⑤ et le badge ⚡ (testés sur copie seulement) ; e) U4d6 (contrainte « En
+  2058. » retirée) au prochain tirage qui la produit. **Décision du 21 nov** : injecter une wild
+  card change le lore pour de bon ; a) à d) se testent donc sur une **branche jetable**
+  (`git checkout -b test-u4`, parcours complet avec le Zéro-R, puis `git checkout main` et
+  `git branch -D test-u4`), comme `test-s30` / `test-s30b`.
+- **B9 — Modifier une hypothèse** (U4h, 21 nov) : vu en réel (refus d'une hypothèse adoptée,
+  remplacement puis retour). Reste à voir : le refus d'une hypothèse **injectée**, et une
+  modification suivie d'une resimulation et d'une adoption (l'adoption doit refuser tant que
+  la simulation est périmée).
 - **S20** : `/api/yaml/append` garde l'en-tête de `queue.yaml` (correctif du 30 oct,
   testé sur copie) → vérifier au prochain ajout depuis le GUI (ex. entrée préparée
   dans 🔭), puis retirer ce point. (« Adopter » du simulateur garde bien l'en-tête :
@@ -144,6 +155,22 @@ Reste à voir en réel :
   Le 4ᵉ tirage était bon (Shackleton, supraconducteur, stérilité). Surveiller : mécanismes
   « quasi impossibles » admis par l'IA elle-même, acteurs propres à un scénario nommés dans
   une idée valable pour plusieurs mondes.
+- **S30 contre-lecture de la Passe trop indulgente** (21 nov, mesure Large 3 sur
+  `fusion_commerciale_2038`, reference) : 2 obligatoires confirmés sur 18, tous deux discutables —
+  la Crise des Détroits Indo-Arabes (juin 2038) jugée caduque alors que la fusion met 15 ans à se
+  diffuser (piège « chronologie »), la Gouvernance-IA de l'Archipel Pétrolier contredite par un
+  fait inventé (« pénuries résolues dès 2050 », piège « invention »). Les possibles sont
+  nombreux (176 fiches). Observer à la prochaine Passe réelle (Large 3) avant de durcir
+  `CONSIGNE_CONTRE`.
+- **B8 / modèles : alias qui changent seuls** (21 nov) : `mistral-large-latest` est passé à Large
+  4 sans décision (vers le 14 nov, date du correctif « réflexion » de `llm_client.py`). Les trois
+  tiers « large » sont fixés sur `mistral-large-2512`. `mistral-small-latest` (tier `volume`)
+  reste un alias : vérifier de temps en temps vers quoi il pointe (`c.models.list()`, gratuit).
+  Les articles générés entre le 14 et le 21 nov ont pu sortir de Large 4 (à relire seulement si
+  l'un d'eux détonne).
+- **Signal `remboursement_chatbots_therapeutes_2040`** : statut « adopté, absent de la queue »
+  (adopté, jamais injecté, entrée absente de `signaux_custom/queue.yaml`). À trancher :
+  l'injecter (« Annuler la décision », re-adopter, ③) ou le rejeter.
 - **B9 wild card et saturation** : `geopolitique_conflits` en fortress_world est déjà à 99,7
   sans l'hypothèse ; une force 35 n'y ajoute que +0,3 (Shackleton). Limite des bornes, pas un
   bug (U4b abandonné : une rupture n'est pas freinée par le plafond de 15 points).
@@ -267,14 +294,14 @@ En marge : *Global Trends 2040* comme grille de comparaison.
 Le simulateur est terminé (manuel §3quinquies) ; ses tests réels sont en A1.
 - Homonymes (Santa Cruz, Sucre, Perth, Medina) ; synthèse haut niveau des
   hypothèses ; récit IA de `trace_injection.py` (repli sur le modèle).
-- **Wild cards** : cadrées et codées le 15 nov (→ B9, U4a → U4f) ; restes en B9.
+- **Wild cards** : cadrées et codées le 15 nov, restes faits le 21 nov (→ B9, U4a → U4h) ; derniers points en B9.
 - **Brouillon de règle de lore (étape ⑤)** : termes multiples **faits** (B4, 2-7 nov) ; à observer à la première hypothèse réelle qui fait disparaître une entité.
 - **Passe « équipe rouge »** : faire attaquer les hypothèses d'un scénario plutôt
   qu'en vérifier la cohérence (ex. « qu'est-ce qui ferait tomber Ergo-Wian en dix
   ans ? »), par l'IA ou des lecteurs aux profils variés. Inspiration : la série
   *Ces guerres qui nous attendent* (travaux de la Red Team Défense).
 
-## 🟡 B9. Unification — « et si ? » porte unique (U2-U4, 2-15 nov)
+## 🟡 B9. Unification — « et si ? » porte unique (U2-U4, 2-21 nov)
 
 *Principe : tout élément (événement, signal, entité) naît comme **hypothèse** dans
 `et_si/hypotheses.yaml`, puis ①simuler → ②décider → ③injecter → ④appliquer →
@@ -333,22 +360,26 @@ entités éprouvées le 14 nov (3 entités injectées, 2 par le lot).
 - **U4b abandonné** : le frein près des bornes ne s'applique presque pas à une rupture (pas de
   `GAIN_CHOCS` ni de plafond de 15) ; le gain aurait été de quelques points au milieu de l'échelle.
 
+**21 nov — restes des wild cards, Passe, modifier** (détail dans l'archive) :
+- **U4d5** : la ligne « Scénarios : … » d'une idée est imposée à ✨ Proposer ; **U4d6** :
+  contraintes réduites à une date retirées ; **U4g** : Shackleton supprimée ; **U4e** : règle
+  « fait établi » proposée d'office à l'étape ⑤, badge ⚡.
+- **Passe lente** : cause trouvée (Large 4 derrière `mistral-large-latest`), Large 3 fixé
+  (`patch_llm_large3.py`) : ≈ 30 s par lot au lieu de ≈ 4 min ; parallélisme écarté.
+- **U4h / U4h2** : « ✏️ Modifier une hypothèse existante » (Charger, Remplacer à sa place).
+
 **Ordre décidé (David, 7 nov)** : 1. éprouver les chemins ; 2. **entités** dans « et si ? »
 (**fait**) ; 3. **modes automatiques + wild cards** (**fait** le 15 nov, restes ci-dessous) ;
 4. **étape 5 : fermer** les accès directs (**fait**, sauf le sort des « Outils directs »).
 
 À faire :
 - 🔴 **Wild cards, restes** :
-  a) **U4d5** : une idée venue du bouton ⚡ doit **imposer ses scénarios** à ✨ Proposer
-  (Shackleton : « Scénarios : fortress_world, reference » ignoré, bloc en `tous`) ;
-  b) **U4e** : à l'étape ⑤, brouillon de **règle de lore proposé d'office** (la wild card
-  devient un fait établi) ; **badge ⚡** dans la liste des hypothèses et sur la fiche ;
-  c) **Passe exhaustive lente** : 2 h pour Shackleton (25 lots, 17:37 → 19:44) ; elle est forcée
-  pour chaque wild card : mesurer le temps par lot, envisager un modèle plus rapide pour la passe
-  ou un parallélisme ;
-  d) ✨ Proposer ne fait pas jouer les écarts entre scénarios (archées : même force partout) :
-  forces par scénario corrigées à la main ;
-  e) idée : interdire de nommer un acteur propre à un monde dans une idée valable pour plusieurs.
+  a) ✨ Proposer ne fait pas jouer les écarts entre scénarios (archées, Zéro-R : même force
+  partout) : forces par scénario corrigées à la main ;
+  b) idée : interdire de nommer un acteur propre à un monde dans une idée valable pour plusieurs ;
+  c) éprouver le parcours complet sur une branche jetable (voir A1).
+- ⚪ **Passe exhaustive en parallèle** (plusieurs lots à la fois) : écarté le 21 nov (≈ 15 min
+  par wild card en Large 3) ; à rouvrir seulement si la durée gêne à l'usage.
 - 🔴 **Source mince → invention, suite** : a) **anachronisme sans année** : U3y ne détecte que
   des années ou « aujourd'hui » ; une scène de 2098 transposée passe (piste : question
   ajoutée à l'appel `verifier_contraintes`) ; b) refuser à l'extraction les événements à
@@ -362,8 +393,6 @@ entités éprouvées le 14 nov (3 entités injectées, 2 par le lot).
 - ⚪ **« Outils directs (ancien, avancé) »** (menu, replié) : Créer des entités, Injecter des
   événements, Injecter des signaux faibles, avec leurs files à remplir à la main
   (`/api/yaml/append`, `/api/idees/proposer`) : les garder, ou les retirer à leur tour.
-- ⚪ **Bouton « Modifier »** pour une hypothèse existante (aujourd'hui : l'éditer dans
-  `hypotheses.yaml`, ou la supprimer — entités seulement — et la recréer).
 - ⚪ **Adopter + injecter en bloc pour événements et signaux** : exige une simulation avant
   l'adoption, donc hors du lot d'entités (décision du 14 nov).
 - ⚪ **Entité depuis un article** : l'utilisateur écrit le nom et ce que l'article en dit ;
@@ -376,14 +405,11 @@ entités éprouvées le 14 nov (3 entités injectées, 2 par le lot).
   suffit) ; garder ou jeter le fichier.
 - ⚪ **Hypothèse d'essai** `alliance_des_territoires_froids_europeens` (entité, non adoptée) :
   `python3 generator/et_si_supprimer.py --id … --apply` si elle n'est pas voulue.
-- ⚪ **Hypothèse d'essai** `shackleton_platinoides_2052` (wild card, **simulée, non adoptée**,
-  15 nov) : à corriger avant toute adoption (retirer `frontieres_du_systeme` ; contrainte « les
-  lancements vers la Lune partent de bases proches de l'équateur » : la lecture IA fait de
-  l'Arctique la base des missions lunaires), ou à supprimer à la main de `hypotheses.yaml`
-  (`et_si_supprimer.py` ne traite que les entités). Rapport :
-  `documentation/need_action/et_si_shackleton_platinoides_2052.md`. Idées en réserve (non
-  ajoutées) : thérapie des archées des Mariannes (new_sustainability, eco_communalism,
-  policy_reform), supraconducteur Zéro-R (new_sustainability, policy_reform).
+- ⚪ **Idées de wild cards en réserve** (non ajoutées) : supraconducteur Zéro-R
+  (new_sustainability, policy_reform ; bloc proposé le 21 nov, forces 25-35, identiques dans les
+  deux scénarios), thérapie des archées des Mariannes (new_sustainability, eco_communalism,
+  policy_reform). Shackleton supprimée le 21 nov (U4g) ; son rapport reste dans
+  `documentation/need_action/et_si_shackleton_platinoides_2052.md`.
 - ⚪ **« Fiches à relire »** : la recherche ne cible que des mots isolés ; une recherche de
   noms propres à plusieurs mots la rendrait plus utile.
 - ⚪ **Détection des doublons d'événements** : elle repose sur l'IA (slug « déjà connu ») ; une
@@ -445,9 +471,13 @@ le monde** ; `GAIN_CHOCS` 0,25 (17 oct).
 
 ## ⚪ B8. Mistral Large 4 — à rejuger (S29)
 
-Branché (`mistral-large-4`), non retenu par défaut. À rejuger s'il sort de
-l'aperçu, si la réflexion peut être coupée ou si le tarif baisse. Avant tout usage
-hors article : relever `max_tokens`.
+Branché (`mistral-large-4`), non retenu par défaut. **21 nov** : l'alias `mistral-large-latest`
+pointait vers lui depuis une date inconnue (probablement le 14 nov) ; les trois tiers « large »
+sont désormais fixés sur `mistral-large-2512` (Large 3). Mesure : Passe exhaustive ≈ 4 min par
+lot en Large 4 contre ≈ 30 s en Large 3. À rejuger s'il sort de l'aperçu, si la réflexion peut
+être coupée ou si le tarif baisse. Le correctif « THINKING » de `llm_client.py` (×4 sur
+`max_tokens` pour tout modèle « large ») s'applique aussi à Large 3 : sans effet sur le coût
+(seule la sortie réelle compte), à garder.
 
 ---
 
@@ -568,4 +598,6 @@ Chaîne en production (manuel §3quater).
   PAS ceux de la liste d'application du rapport ① (numérotée autrement). Contrôler
   avec « Liste de l'étape ④ » (champs remplis, sans IA) avant « Injecter ».
 - **Pousser** : `git push origin main` (les branches jetables restent locales).
+- **Modèles** : toujours une version explicite dans `TASK_TIER_DEFAULTS` (jamais `-latest`) ;
+  de temps en temps, lister les modèles du compte (`c.models.list()`, gratuit).
 - **Patchs** : recevoir le `.py` prêt (à placer dans `generator/`), `python3 generator/patch_….py` en dry-run puis `--apply`, sortie vers `~/Documents/Ourrassol_sorties/`. Changement de `app.py` : relancer Flask entièrement ; `app.js` seul : Ctrl-Maj-R. `node --check` échoue sur `||=` (Node ancien) : sans conséquence.

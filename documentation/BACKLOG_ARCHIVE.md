@@ -1972,3 +1972,59 @@ pour base des missions lunaires.
 *Enseignement de la séance* : le cadrage chiffré initial (« toute variable à 25-35 ») a forcé des
 idées exagérées ; l'essai réel a fait préciser la nature de la wild card (monde entier, pour de
 bon) et ajouter la force par scénario. Suites : B9 (U4d5, U4e, Passe lente, sort de Shackleton).
+
+## Clos le 21 novembre 2026 — wild cards (restes), Large 3 fixé, modifier une hypothèse, U4d5 → U4h2
+
+*Séance d'une journée (matin, puis soir). Le travail du 15 nov avait été commité le matin même
+(`b065fa1`, 9 h). Cinq commits, tous poussés : `8ef9ee0` (U4d5, U4d6, U4g), `9537bb6` (U4e),
+`7327d2f` (Large 3), `dc33456` (U4h, U4h2, cache de la Passe). `validate.py` : 0 erreur à
+chaque commit. Sauvegardes `.bak_<tag>` à côté de chaque fichier patché.*
+
+**Wild cards, restes de B9.**
+- **U4d5** (`patch_u4d5_scenarios_depuis_idee.py` ; `hypothese_depuis_texte.py`) :
+  `scenarios_depuis_idee()` lit la ligne « Scénarios : a, b. » d'une idée (⚡ ou 💡) et l'impose
+  comme `--scenarios` quand aucun n'est donné (pas pour un signal) ; une ligne qui ne contient pas
+  que des slugs (raison « Scénarios : pourquoi… ») est ignorée ; scénarios imposés posés AVANT la
+  normalisation (les forces par scénario U4f ne gardent que les scénarios couverts ; vaut aussi
+  pour les articles). Vu en réel : idée Zéro-R → « ⚠ scénarios repris de l'idée :
+  new_sustainability, policy_reform », bloc limité à ces deux scénarios.
+- **U4d6** (`patch_u4d6_contraintes_vides.py` ; `hypothese_depuis_texte.py`) : contraintes réduites
+  à une date (« En 2058. », « vers 2058.03 ») ou à « Scénarios : … » retirées par
+  `normaliser_proposition()`, avec ⚠ (vu au premier essai réel : « En 2058. » recopiée en fait
+  imposé).
+- **U4g** (`patch_u4g_retirer_shackleton.py`) : `shackleton_platinoides_2052` retirée de
+  `hypotheses.yaml` (décision de David : supprimer plutôt que corriger et resimuler) ; 25 → 24
+  hypothèses ; rapport `documentation/need_action/et_si_shackleton_platinoides_2052.md` et caches
+  de `generator/state/` gardés comme archives de l'essai.
+- **U4e** (`patch_u4e_wild_card_etape5_badge.py` ; `et_si_main.py`, `gui/app.py`,
+  `gui/static/app.js`) : à l'étape ⑤, le brouillon de règle de lore d'une wild card s'ouvre sur une
+  règle « fait établi » (`<id>_fait_etabli`, `a_relire`, termes = noms propres du nom, message
+  daté) ; l'hypothèse est lue dans `hypotheses.yaml` (`est_wild_card`). Badge ⚡ dans la liste des
+  hypothèses et l'en-tête de la fiche (route `/api/et_si/fiche` transmet `wild_card` ; repli sur
+  le libellé « ⚡ » de la liste). Testé sur copie (brouillon accepté par `verifier_regles`) ; GUI
+  vu sans régression ; badge et étape ⑤ non vus en réel (plus aucune wild card dans le fichier).
+- **Passe lente** (point c) : chiffrée sans appel depuis le cache (Shackleton : ≈ 4 min par lot,
+  27 appels, une seule relance en moitiés). Cause : **`mistral-large-latest` pointait vers
+  Mistral Large 4** (alias `mistral-large-4`, `mistral-large-4-0` ; réflexion visible sur un appel
+  de test : 114 jetons pour `{"ok": 1}`). **`patch_llm_large3.py`** fixe `mistral-large-2512`
+  (Large 3, 11 jetons sans réflexion) pour `strict`, `structured_strict` et `creative_souple`.
+  Mesure réelle (Passe de `fusion_commerciale_2038`, reference, `--refaire`) : 207 fiches, 14 lots,
+  **7 min 35 s**, ≈ 28 s par appel (≈ 10 fois plus rapide), aucun échec. Parallélisme des lots
+  écarté (gain d'une dizaine de minutes, risque de 429 et de verrous sur le cache).
+
+**Modifier une hypothèse (B9, « bouton Modifier »).**
+- **U4h** (`patch_u4h_modifier_hypothese.py` ; `hypothese_depuis_texte.py`, `gui/app.py`,
+  `gui/static/app.js`) : `--extraire` (bloc tel qu'écrit + statut) et `--remplacer` (contrôles
+  d'« Ajouter », réécriture à sa place, `.bak_remplacer`, relecture, retour arrière) ; refus si
+  l'id change ou si l'hypothèse est adoptée / injectée ; panneau ✨ : ligne « ✏️ Modifier une
+  hypothèse existante » (liste + Charger) et bouton « Remplacer dans hypotheses.yaml » (deux
+  clics, contrôle de l'id côté navigateur). Lu dans `et_si_dossiers.py` : l'adoption refuse déjà
+  une simulation dont l'empreinte ne correspond plus au bloc. Vu en réel : hypothèse adoptée
+  refusée ; `extreme_droite_2034` chargée, force 20 → 21 remplacée puis remise à 20
+  (`hypotheses.yaml` identique ensuite, `git diff` vide).
+- **U4h2** (`patch_u4h2_remplacer_grise.py` ; `app.js`) : « Remplacer » était bien désactivé mais
+  semblait actif (pas de style « désactivé » pour `yaml-btn-save`) : classe propre, opacité 0,45.
+
+*Enseignement de la séance* : un alias de modèle (`-latest`) a changé de modèle sans décision ;
+il a rendu la Passe dix fois plus lente et touché tous les appels « large ». Toujours fixer une
+version explicite dans `TASK_TIER_DEFAULTS`.
