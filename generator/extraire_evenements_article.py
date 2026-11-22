@@ -307,7 +307,7 @@ def extraire(fichier, scenario, annee, mois, racine=RACINE_DEFAUT, _llm=appeler_
             continue
         motif = motif_non_evenement(ev.get("description"), ev.get("citation"), annee)
         if motif:
-            av.append(f"« {str(ev['description'])[:60]}… » écarté (plan / projet / débat) : {motif}")
+            av.append(f"« {str(ev['description'])[:60]}… » écarté (pas un événement) : {motif}")
             ecartes.append({"description": " ".join(str(ev["description"]).split()), "motif": motif})
             continue
         cit = _nettoyer_citation(ev.get("citation"))

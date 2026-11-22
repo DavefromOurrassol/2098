@@ -393,6 +393,26 @@ def normaliser_proposition(brut, variables, ids_pris, wild=False):
     return h, av
 
 
+def aligner_suffixe_id_u4p(h, ids_pris):
+    """U4p : id terminé par une année différente de la date retenue -> suffixe réaligné.
+    Modifie h ; retourne les avertissements."""
+    m = re.search(r"_(\d{4})$", str(h.get("id") or ""))
+    try:
+        an = int(float(h.get("date")))
+    except (TypeError, ValueError):
+        return []
+    if not m or int(m.group(1)) == an:
+        return []
+    base = h["id"][: m.start()] + f"_{an}"
+    nouvel, n = base, 2
+    while nouvel in ids_pris:
+        nouvel = f"{base}_{n}"
+        n += 1
+    ancien = h["id"]
+    h["id"] = nouvel
+    return [f"id {ancien!r} -> {nouvel!r} (suffixe aligné sur la date {an})"]
+
+
 def plafonner_article_u4n(h):
     """U4n : événement tiré d'un article -> ARTICLE_MAX_IMPACTS impacts (les premiers),
     forces ramenées à ARTICLE_FORCE_MAX. Modifie h ; retourne les avertissements."""
@@ -786,6 +806,7 @@ def proposer(texte, _llm=appeler_llm, type_force=None, imposes=None):
     av += appliquer_imposes(h, imposes, h.get("type") == "signal")   # U3c
     if (imposes or {}).get("citation") and not wild and h.get("type") != "signal":   # U4n
         av += plafonner_article_u4n(h)
+    av += aligner_suffixe_id_u4p(h, ids_existants())   # U4p
     _, erreurs, av2 = se.verifier_hypothese(dict(h), variables, dyn)
     erreurs = list(erreurs) + se.controle_wild_cards(h)   # U4a
     if wild:   # U4l

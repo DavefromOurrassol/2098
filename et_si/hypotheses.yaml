@@ -953,18 +953,3 @@ hypotheses:
     etat: marginal
     annee_debut: 2065
     scenarios: tous
-
-  - id: alliance_des_territoires_froids_europeens
-    nom: Alliance des Territoires Froids Européens
-    type: entite
-    description: Bloc de coopération pour la gestion des crises climatiques et énergétiques
-      en Europe du Nord-Ouest, regroupant des régions sinistrées et des villes en repli. Les
-      régions touchées par le refroidissement (Massif Central, Pays de Galles) s'organisent
-      pour mutualiser leurs ressources et négocier avec les acteurs dominants (Helios, Corridor
-      Arctique).
-    categorie: réseau
-    scenario_ref: reference
-    role: Bloc de coopération pour la gestion des crises climatiques et énergétiques en Europe
-      du Nord-Ouest, regroupant des régions sinistrées et des villes en repli.
-    scenarios:
-    - reference

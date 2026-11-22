@@ -8600,6 +8600,8 @@ function renderArticlesVersEtSi(article, container) {
                          'septembre', 'octobre', 'novembre', 'décembre'];
   const selMois = document.createElement('select');
   selMois.style.width = 'auto';
+  { const oInc = document.createElement('option'); oInc.value = '0';   // U4p : année seule
+    oInc.textContent = '(mois inconnu)'; selMois.appendChild(oInc); }
   NOMS_MOIS_U3E.forEach((nom, i) => {
     const o = document.createElement('option'); o.value = String(i + 1); o.textContent = nom;
     selMois.appendChild(o);
@@ -8718,12 +8720,12 @@ function renderArticlesVersEtSi(article, container) {
       r.type = 'radio'; r.name = 'u3f-ev'; r.style.marginRight = '6px';
       r.addEventListener('change', () => {
         evChoisi = ev; cbForcer.checked = false; cbDoublon.checked = false;   // U3o
-        champDate.value = String(ev.annee); selMois.value = String(ev.mois);
+        champDate.value = String(ev.annee); selMois.value = ev.mois_connu ? String(ev.mois) : '0';   // U4p
         appliquerVerrou();
         etatDetect.style.color = ev.deja_connu ? '#b5651d' : '';
         etatDetect.textContent = ev.deja_connu
           ? `⚠ Cet événement semble déjà dans le vault : ${ev.deja_connu_nom || ev.deja_connu}. L'envoyer créerait un doublon (effets cumulés).`
-          : `Événement choisi : ${libelleDate(ev)}${ev.date_explicite ? '' : ' (date déduite)'}.`;
+          : `Événement choisi : ${ev.mois_connu ? libelleDate(ev) : ev.annee}${ev.date_explicite ? '' : ' (date déduite)'}.`;   // U4p
       });
       l.appendChild(r);
       l.appendChild(document.createTextNode(`${ev.description} `));
@@ -8732,7 +8734,8 @@ function renderArticlesVersEtSi(article, container) {
         ` · ${ev.nature === 'propre' ? "événement de l'article" : 'événement passé mentionné'}` +
         `${ev.deja_connu ? ' · ⚠ déjà connu' : ''}${ev.citation_ok ? '' : ' · ⚠ citation introuvable'}`,
         'color:#888;margin-top:2px'));
-      if (ev.citation) l.appendChild(mk('div', `« ${ev.citation} »`, 'color:#888;font-style:italic;margin-top:2px'));
+      if (ev.citation) l.appendChild(mk('div', /^[«“"]/.test(ev.citation.trim()) ? ev.citation   // U4p
+        : `« ${ev.citation} »`, 'color:#888;font-style:italic;margin-top:2px'));
       listeDetect.appendChild(l);
     });
   });
@@ -8766,7 +8769,7 @@ function renderArticlesVersEtSi(article, container) {
       if (selType.value === 'signal') {
         extra.date = Math.min(2097, an);
       } else {
-        let mo = parseInt(selMois.value, 10) || 1;
+        let mo = parseInt(selMois.value, 10) || 0;   // U4p : 0 = mois inconnu -> année seule
         // un événement ne peut pas être postérieur à l'article qui le raconte
         if (article.annee != null && (an * 100 + mo) > (article.annee * 100 + (article.mois || 12))) {
           an = article.annee; mo = article.mois || 12;

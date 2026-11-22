@@ -1431,7 +1431,8 @@ def _texte_contexte_article(idea, scenario, max_chars=2800):
                 brut = f.read_text(encoding="utf-8", errors="ignore")
                 m = re.match(r"^---\n(.*?)\n---\n?(.*)", brut, re.DOTALL)
                 fm_txt, corps = (m.group(1), m.group(2)) if m else ("", brut)
-                paras = [p.strip() for p in re.split(r"\n\s*\n", corps) if p.strip()]
+                paras = [p.strip() for p in re.split(r"\n\s*\n", corps)
+                     if p.strip() and not re.fullmatch(r"[-*_\s]{3,}", p.strip())]   # U4p
                 for i, p in enumerate(paras):
                     if cible in _norm_ctx_u3s(p):
                         trouves.append((f, fm_txt, paras, i))
@@ -1443,7 +1444,10 @@ def _texte_contexte_article(idea, scenario, max_chars=2800):
                 fm = yaml.safe_load(fm_txt) or {}
             except yaml.YAMLError:
                 fm = {}
-            titre = str(fm.get("titre") or fm.get("title") or f.stem) if isinstance(fm, dict) else f.stem
+            titre_corps = next((re.sub(r"^#+\s*|^\*\*|\*\*$", "", p.splitlines()[0]).strip()   # U4p
+                                for p in paras if re.match(r"^(#+\s|\*\*.+\*\*$)", p.splitlines()[0])), "")
+            titre = str((fm.get("titre") or fm.get("title") if isinstance(fm, dict) else "")
+                        or titre_corps or f.stem)
             passage = "\n\n".join(paras[max(0, i - 1): i + 2]).replace("*", "")
             if len(passage) > max_chars:
                 passage = passage[:max_chars].rsplit(" ", 1)[0] + " […]"
