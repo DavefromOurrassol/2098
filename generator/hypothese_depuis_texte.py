@@ -46,6 +46,8 @@ FORCE_MAX = 25
 SIGNAL_FORCE_MAX = 10   # plafond d'un signal (inject_custom_signals.py)
 DUREE_MAX = 30
 MAX_IMPACTS = 8
+ARTICLE_MAX_IMPACTS = 3    # U4n : événement tiré d'un article, à la proposition
+ARTICLE_FORCE_MAX = 12     # U4n
 CATEGORIES_ENTITE = se.CATEGORIES_ENTITE   # U3aj
 
 
@@ -125,7 +127,14 @@ def construire_prompt(texte, variables, type_force=None, imposes=None):
                        "qu'il apaise prend la polarité -1. Si l'élément frappe certains scénarios plus que "
                        "d'autres, \"delta_level\" peut être un dictionnaire par scénario (comme polarite, seulement les "
                        f"scénarios de l'hypothèse) : {se.WILD_CARD_FORCE[0]} à {se.WILD_CARD_FORCE[1]} dans au moins un scénario, "
-                       f"{se.WILD_CARD_FORCE_MIN_SC} au moins dans les autres.\n\n")   # U4d3 / U4f
+                       f"{se.WILD_CARD_FORCE_MIN_SC} au moins dans les autres. Si l'élément vaut pour plusieurs "
+                       "scénarios, ne nomme aucun acteur, lieu ou institution propre à l'un d'eux (le lore "
+                       "diffère d'un monde à l'autre) : désigne-les par leur fonction.\n\n")   # U4d3 / U4f / U4l
+    if imposes and imposes.get("citation") and not imposes.get("wild_card"):   # U4n
+        ligne_type += ("ÉVÉNEMENT RAPPORTÉ PAR UN ARTICLE : c'est d'abord un fait local ou régional. "
+                       f"Donne 2 à {ARTICLE_MAX_IMPACTS} impacts, de force 3 à 10 ; davantage seulement si "
+                       "l'article décrit lui-même un effet à grande échelle (pays entier, continent, monde). "
+                       f"Au-delà de {ARTICLE_FORCE_MAX}, la force sera ramenée.\n\n")
     return f"""{ligne_type}Tu aides l'auteur du monde fictif Ourrassol 2098 (6 scénarios d'avenir, 12 variables
 où le niveau 100 = crise maximale) à transformer une IDÉE en HYPOTHÈSE « et si ? » testable
 par son simulateur. L'hypothèse n'est jamais injectée : elle sert à mesurer ses effets.
@@ -372,6 +381,33 @@ def normaliser_proposition(brut, variables, ids_pris, wild=False):
         av.append("aucun impact valide : à renseigner avant d'ajouter")
     h["impacts"] = impacts
     return h, av
+
+
+def plafonner_article_u4n(h):
+    """U4n : événement tiré d'un article -> ARTICLE_MAX_IMPACTS impacts (les premiers),
+    forces ramenées à ARTICLE_FORCE_MAX. Modifie h ; retourne les avertissements."""
+    av = []
+    impacts = list(h.get("impacts") or [])
+    if len(impacts) > ARTICLE_MAX_IMPACTS:
+        retires = [str(i.get("variable")) for i in impacts[ARTICLE_MAX_IMPACTS:]]
+        av.append(f"événement d'article : {len(impacts)} impacts proposés, gardé les {ARTICLE_MAX_IMPACTS} "
+                  f"premiers (retirés : {', '.join(retires)}) ; à remettre à la main si l'article le justifie")
+        impacts = impacts[:ARTICLE_MAX_IMPACTS]
+    for imp in impacts:
+        dl = imp.get("delta_level")
+        if isinstance(dl, dict):
+            trop = {s: v for s, v in dl.items() if isinstance(v, (int, float)) and v > ARTICLE_FORCE_MAX}
+            if trop:
+                imp["delta_level"] = {s: (min(v, ARTICLE_FORCE_MAX) if isinstance(v, (int, float)) else v)
+                                      for s, v in dl.items()}
+                av.append(f"événement d'article : {imp.get('variable')} force "
+                          + ", ".join(f"{s} {v:g}" for s, v in trop.items())
+                          + f" ramenée à {ARTICLE_FORCE_MAX}")
+        elif isinstance(dl, (int, float)) and dl > ARTICLE_FORCE_MAX:
+            av.append(f"événement d'article : {imp.get('variable')} force {dl:g} ramenée à {ARTICLE_FORCE_MAX}")
+            imp["delta_level"] = ARTICLE_FORCE_MAX
+    h["impacts"] = impacts
+    return av
 
 
 def appliquer_imposes(h, imposes, est_signal):
@@ -653,6 +689,63 @@ def scenarios_depuis_idee(texte):
     return None
 
 
+# ---------------------------------------------------------------------------
+# U4l (22 nov 2026) : acteur propre à un monde dans une idée à plusieurs scénarios
+# ---------------------------------------------------------------------------
+
+_NOMS_INSTANCES_U4L = None
+
+
+def _plie_u4l(texte):
+    t = unicodedata.normalize("NFKD", str(texte or "").lower())
+    return "".join(c for c in t if not unicodedata.combining(c))
+
+
+def _noms_par_scenario_u4l():
+    """{nom plié: (nom affiché, {scénarios où une instance porte ce nom})}, en cache."""
+    global _NOMS_INSTANCES_U4L
+    if _NOMS_INSTANCES_U4L is None:
+        from loader import load_instances_for_scenario
+        noms = {}
+        for sc in se.SCENARIOS:
+            for i in load_instances_for_scenario(sc) or []:
+                nom = " ".join(str((i or {}).get("name") or "").split())
+                cle = _plie_u4l(nom)
+                if len(cle) >= 6:
+                    noms.setdefault(cle, (nom, set()))[1].add(sc)
+        _NOMS_INSTANCES_U4L = noms
+    return _NOMS_INSTANCES_U4L
+
+
+def controle_acteurs_propres(h, _noms=None):
+    """U4l : messages pour chaque nom d'instance cité par l'hypothèse qui n'existe pas
+    dans tous ses scénarios. Liste vide si rien à signaler."""
+    scen = (h or {}).get("scenarios") or "tous"
+    if isinstance(scen, str):
+        couverts = set(se.SCENARIOS) if scen.strip() in ("tous", "all") else {scen.strip()}
+    else:
+        couverts = {s for s in scen if s in se.SCENARIOS}
+    if not couverts:
+        return []
+    contraintes = (h or {}).get("contraintes") or []
+    if isinstance(contraintes, str):
+        contraintes = [contraintes]
+    texte = _plie_u4l(" ".join([str(h.get("nom") or ""), str(h.get("description") or "")]
+                               + [str(c) for c in contraintes]))
+    noms = _noms_par_scenario_u4l() if _noms is None else _noms
+    msgs = []
+    for cle, (nom, ou) in sorted(noms.items(), key=lambda x: -len(x[0])):
+        if ou >= couverts:
+            continue
+        if not re.search(r"(?<![a-z0-9])" + re.escape(cle) + r"(?![a-z0-9])", texte):
+            continue
+        presents = [s for s in se.SCENARIOS if s in ou]
+        msgs.append(f"acteur propre à un monde : « {nom} » n'existe que dans {', '.join(presents)} "
+                    f"(hypothèse : {', '.join(s for s in se.SCENARIOS if s in couverts)}) -- le désigner par "
+                    f"sa fonction, ou limiter les scénarios à ceux où il existe")
+    return msgs
+
+
 def proposer(texte, _llm=appeler_llm, type_force=None, imposes=None):
     if not texte or not texte.strip():
         raise ValueError("idée vide")
@@ -681,8 +774,12 @@ def proposer(texte, _llm=appeler_llm, type_force=None, imposes=None):
     h, av = normaliser_proposition(brut, variables, ids_existants(), wild=wild)
     av = av0 + av
     av += appliquer_imposes(h, imposes, h.get("type") == "signal")   # U3c
+    if (imposes or {}).get("citation") and not wild and h.get("type") != "signal":   # U4n
+        av += plafonner_article_u4n(h)
     _, erreurs, av2 = se.verifier_hypothese(dict(h), variables, dyn)
     erreurs = list(erreurs) + se.controle_wild_cards(h)   # U4a
+    if wild:   # U4l
+        erreurs += controle_acteurs_propres(h)
     return {"ok": True, "bloc": bloc_yaml(h), "id": h["id"],
             "justification": str(brut.get("justification") or "").strip(),
             "avertissements": av + av2, "erreurs": erreurs}
@@ -754,6 +851,8 @@ def verifier_bloc(texte, pour_ajout=False):
         avert_dup = []
     _, err2, avert = se.verifier_hypothese(dict(h), valid_vars(), dyn)
     err2 = list(err2) + se.controle_wild_cards(h)   # U4a : quota et espacement
+    if se.est_wild_card(h):   # U4l
+        err2 += controle_acteurs_propres(h)
     avert = avert_dup + list(avert)
     erreurs += err2
     return {"ok": not erreurs, "erreurs": erreurs, "avertissements": avert, "id": hid}

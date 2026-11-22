@@ -191,6 +191,9 @@ stérile, traitement qui supprime une grande maladie, effondrement définitif d'
   souvent). "tous" seulement si elle frappe vraiment le monde entier, et au plus pour une idée sur trois.
   Varie les scénarios d'une idée à l'autre. "pourquoi_scenarios" : une phrase qui justifie ce choix.
 - Varie les domaines d'une idée à l'autre ; aucune ne doit reprendre une wild card déjà prévue.
+- Acteurs (U4l) : une idée valable pour plusieurs scénarios ne nomme AUCUN acteur, lieu ou institution
+  propre à l'un d'eux (le lore diffère d'un monde à l'autre) : désigne-les par leur fonction
+  (« les grandes agences spatiales », « un consortium minier »).
 - "description" : 2 ou 3 phrases concrètes (ce qui arrive, où, quelle ampleur).
 - "improbable" : une phrase, pourquoi c'est improbable vu d'aujourd'hui.
 - "bouscule" : une phrase, quelles tendances du monde elle contredit.
@@ -224,6 +227,12 @@ Réponds UNIQUEMENT en JSON, sans texte autour :
                 avert.append(f"date {date} hors de la fenêtre d'une wild card ({a0}-{a1})")
             avert += se.controle_wild_cards({"id": "_suggestion_u4d", "wild_card": True, "date": date,
                                              "scenarios": scen}, hyps)
+        try:   # U4l : acteur propre à un monde
+            import hypothese_depuis_texte as _hdt
+            avert += _hdt.controle_acteurs_propres({"nom": i.get("titre"), "description": desc,
+                                                    "scenarios": scen})
+        except Exception as e:  # noqa: BLE001 -- le contrôle ne doit jamais bloquer les idées
+            avert.append(f"contrôle des acteurs propres impossible ({type(e).__name__})")
         texte = desc + (f" En {date}." if date and str(date) not in desc else "")   # U4d2
         texte += " Scénarios : " + (", ".join(scen) if isinstance(scen, list) else "tous") + "."
         raison = " · ".join(x for x in (

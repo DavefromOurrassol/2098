@@ -124,13 +124,18 @@ RÈGLES :
   antérieur simplement mentionné. N'inclus JAMAIS un événement postérieur à l'article. Un plan,
   une réforme, un débat ou un projet « en préparation » n'est PAS un événement : ne le liste pas.
 - "deja_connu" : le slug EXACT de la liste ci-dessous si c'est le même événement, sinon null.
+- "mention" : "detaille" si l'article dit ce qui s'est passé (au moins qui et quoi) ; "incise" si
+  l'événement est seulement nommé au détour d'une phrase (« depuis la crise de 2044 », « après les
+  accords de Lagos »), sans être raconté.
+- "description" raconte l'événement À SA DATE : jamais « aujourd'hui », « actuellement »,
+  « désormais », ni l'état du monde au moment de l'article, ni ce qui s'est passé ensuite.
 
 ÉLÉMENTS DÉJÀ CONNUS DU VAULT (même scénario) :
 {lignes_connus}
 
 Réponds UNIQUEMENT en JSON valide, sans texte autour :
 {{"evenements": [{{"description": "...", "citation": "...", "annee": 2044, "mois": null,
-  "date_explicite": true, "nature": "passe", "deja_connu": null}}]}}"""
+  "date_explicite": true, "nature": "passe", "mention": "detaille", "deja_connu": null}}]}}"""
 
 
 def appeler_llm(prompt):
@@ -204,6 +209,31 @@ def motif_non_evenement(description, citation, annee_article):
     return None
 
 
+# U4m (22 nov 2026) : présent de l'article glissé dans un événement plus ancien
+_PRESENT_ARTICLE_U4M = ((" aujourd hui ", "aujourd'hui"), (" actuellement ", "actuellement"),
+                        (" desormais ", "désormais"), (" de nos jours ", "de nos jours"),
+                        (" a present ", "à présent"), (" a ce jour ", "à ce jour"),
+                        (" depuis lors ", "depuis lors"))
+
+
+def anachronismes_u4m(description, annee_evenement, annee_article):
+    """Marqueurs du présent de l'article, ou années postérieures à l'événement, dans la
+    description d'un événement d'une année antérieure à l'article. Liste (vide sinon)."""
+    try:
+        an, an_art = int(annee_evenement), int(annee_article)
+    except (TypeError, ValueError):
+        return []
+    if an >= an_art:
+        return []
+    d = _norm(description)
+    out = [f"« {lib} »" for m, lib in _PRESENT_ARTICLE_U4M if m in d]
+    apres = sorted({int(a) for a in re.findall(r"(?<!\d)(20\d\d)(?!\d)", str(description or ""))
+                    if an < int(a) <= an_art})
+    if apres:
+        out.append("année(s) postérieure(s) à l'événement : " + ", ".join(str(a) for a in apres))
+    return out
+
+
 def _nettoyer_citation(s):
     """U3q : espaces normalisés, sans astérisques, sans guillemets englobant toute la citation."""
     s = " ".join(str(s or "").replace("*", "").split())
@@ -270,6 +300,11 @@ def extraire(fichier, scenario, annee, mois, racine=RACINE_DEFAUT, _llm=appeler_
         if not 2025 <= an <= 2098:
             av.append(f"« {str(ev['description'])[:60]}… » : année {an} hors de 2025-2098, écarté")
             continue
+        if str(ev.get("mention") or "").strip().lower() == "incise":   # U4m
+            motif_i = "simple mention en incise : l'article ne raconte pas l'événement"
+            av.append(f"« {str(ev['description'])[:60]}… » écarté : {motif_i}")
+            ecartes.append({"description": " ".join(str(ev["description"]).split()), "motif": motif_i})
+            continue
         motif = motif_non_evenement(ev.get("description"), ev.get("citation"), annee)
         if motif:
             av.append(f"« {str(ev['description'])[:60]}… » écarté (plan / projet / débat) : {motif}")
@@ -286,6 +321,10 @@ def extraire(fichier, scenario, annee, mois, racine=RACINE_DEFAUT, _llm=appeler_
         if relative:
             av.append(f"« {str(ev['description'])[:60]}… » : date relative dans le texte, à vérifier")
         nature = "propre" if str(ev.get("nature")).strip().lower() == "propre" else "passe"
+        anach = anachronismes_u4m(ev.get("description"), an, annee)   # U4m
+        if anach:
+            av.append(f"« {str(ev['description'])[:60]}… » : anachronisme ({'; '.join(anach)}) : "
+                      f"corriger la description avant ✨ Proposer (elle devient le texte de la fiche)")
         dk = ev.get("deja_connu")
         dk = dk if dk in slugs_connus else None   # un slug inventé par l'IA est ignoré
         sortie.append({
@@ -296,6 +335,7 @@ def extraire(fichier, scenario, annee, mois, racine=RACINE_DEFAUT, _llm=appeler_
             "nature": nature,
             "deja_connu": dk,
             "deja_connu_nom": slugs_connus[dk][1] if dk else None,
+            "anachronismes": anach,   # U4m
         })
         if not cit_ok:
             av.append(f"« {str(ev['description'])[:60]}… » : citation introuvable mot pour mot, date à vérifier")
