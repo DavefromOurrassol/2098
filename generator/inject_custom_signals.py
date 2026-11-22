@@ -79,6 +79,79 @@ MAX_FIX_ATTEMPTS = 2
 # même session).
 MAX_DELTA_SIGNAL = 10
 
+# U4i (22 nov 2026) : chiffres de la source repris tels quels. Le 7 nov, « 1 adulte
+# américain sur 10 (1 sur 5 chez les moins de 30 ans) » était devenu « 10-20 % des
+# demandes » dans l'annotation et le contexte d'injection.
+CONSIGNE_CHIFFRES = (
+    "\nCHIFFRES (règle stricte) : dans `section7_annotation` et `contexte_injection`, un chiffre "
+    "ne peut venir que de l'idée source ou des faits imposés, repris TEL QUEL avec la population "
+    "ou le champ auquel il s'applique (ex. « 1 adulte américain sur 10 (1 sur 5 chez les moins "
+    "de 30 ans) »). Ne le convertis pas en pourcentage, ne l'arrondis pas, ne l'étends pas à une "
+    "autre population, ne fusionne pas plusieurs chiffres en une fourchette. Si la source ne "
+    "donne aucun chiffre, n'en écris aucun.\n"
+    "Dans `evolution` et `evenement_cle` (4 à 11 mots) : AUCUN chiffre, sauf l'année de "
+    "`evenement_cle`. Un chiffre de la source va dans `contexte_injection`, jamais là.\n"   # U4i2
+)
+CHAMPS_CHIFFRES = ("section7_annotation", "contexte_injection")
+_RE_NOMBRE = re.compile(r"\d+(?:[.,]\d+)?")
+
+
+def _nombres(texte):
+    """U4i : nombres d'un texte, hors années et hors nombres collés à un nom ou signés."""
+    t = str(texte or "")
+    res = []
+    for m in _RE_NOMBRE.finditer(t):
+        a, b = m.start(), m.end()
+        avant = t[a - 1] if a > 0 else " "
+        avant2 = t[a - 2] if a > 1 else " "
+        apres = t[b] if b < len(t) else " "
+        if avant.isalnum() or avant in "_.,+" or apres.isalpha() or apres == "_":
+            continue   # G7, 5G, slug_2026, force +5
+        if avant == "-" and not avant2.isdigit():
+            continue   # Kharg-9, COVID-19, polarité -1 ; « 10-20 » garde ses deux bornes
+        n = m.group(0).replace(",", ".")
+        if len(n) == 4 and n[:2] in ("19", "20", "21"):
+            continue   # une année : contrôlée par validate_signal_block()
+        res.append(n)
+    return res
+
+
+def controle_chiffres(develop, sources):
+    """U4i : chaque nombre de l'annotation et du contexte doit figurer dans l'idée
+    source ou les faits imposés. Retourne une liste de problèmes (vide si tout va)."""
+    autorises = {n for s in sources for n in _nombres(s)}
+    issues = []
+    for champ in CHAMPS_CHIFFRES:
+        texte = re.sub(r"\(→[^)]*\)", " ", str((develop or {}).get(champ) or ""))
+        absents = list(dict.fromkeys(n for n in _nombres(texte) if n not in autorises))
+        if absents:
+            issues.append(
+                f"{champ} : chiffre(s) {', '.join(absents)} absent(s) de l'idée source et des "
+                f"faits imposés -- reprendre le chiffre de la source tel quel, ou n'en écrire aucun"
+            )
+    return issues
+
+
+def controle_chiffres_trajectoire(yaml_text):
+    """U4i2 : `evolution` et `evenement_cle` ne portent aucun chiffre hors l'année.
+    Retourne une liste de problèmes (un YAML illisible est signalé ailleurs)."""
+    try:
+        entree = (yaml.safe_load("signal_to_state:\n" + str(yaml_text or "")) or {}).get("signal_to_state")[0]
+        scenarios = entree.get("scenarios") or {}
+    except Exception:  # noqa: BLE001 -- déjà signalé par validate_signal_block()
+        return []
+    issues = []
+    for scen, data in scenarios.items():
+        for champ in ("evolution", "evenement_cle"):
+            nombres = list(dict.fromkeys(_nombres((data or {}).get(champ))))
+            if nombres:
+                issues.append(
+                    f"[{scen}] {champ} : chiffre(s) {', '.join(nombres)} interdit(s) dans ce champ "
+                    f"(seule l'année est permise) -- retirer le chiffre ; il a sa place dans contexte_injection"
+                )
+    return issues
+
+
 # Bornes du champ optionnel `annee_apparition` (27 septembre 2026) : un
 # signal apparaît au plus tôt en 2025 (début de la fiction) et au plus tard
 # en 2097 (il faut au moins un an de fenêtre avant 2098).
@@ -834,6 +907,14 @@ reste identique autant que possible.
   JSON (pas le YAML) : "polarite" est un dictionnaire des 6 scénarios à
   +1/-1, déduit de l'`evolution` de chaque scénario ; "delta_level" est un
   entier entre 1 et {MAX_DELTA_SIGNAL}.
+- Si un point concerne un « chiffre absent de l'idée source » (U4i), réécris
+  le champ nommé (section7_annotation ou contexte_injection) : reprends le
+  chiffre de l'idée ou des faits imposés TEL QUEL, avec sa population, ou
+  retire tout chiffre de ce champ.
+- Si un point concerne un « chiffre interdit » dans `evolution` ou
+  `evenement_cle` (U4i2), retire ce chiffre et sa population (« 1 adulte sur
+  10 », « 30 % des… ») : garde acteur + action + lieu + année. Ne raccourcis
+  pas la phrase en gardant le chiffre.
 """
 
     sibling_block = ""
@@ -1499,6 +1580,7 @@ def process_idea(client, idea, dry_run=False):
     bloc_contraintes = ("\nFAITS À RESPECTER (imposés par l'auteur ; priment sur tes connaissances "
                         "générales ; le récit ne doit en contredire aucun) :\n"
                         + "\n".join(f"- {c}" for c in contraintes) + "\n") if contraintes else ""
+    bloc_contraintes += CONSIGNE_CHIFFRES   # U4i
 
     # Persistance du choc chiffré (27 septembre 2026) -- vérifiée AVANT tout
     # appel LLM : une faute de frappe ne doit pas coûter un développement
@@ -1617,6 +1699,8 @@ def process_idea(client, idea, dry_run=False):
                     annee_apparition=annee_apparition,
                     fenetres_imposees=bool(imp and imp.get("date") is not None),
                 )
+                issues = list(issues) + controle_chiffres(develop, [idea_text] + contraintes)   # U4i
+                issues += controle_chiffres_trajectoire(yaml_text)   # U4i2
                 if not issues:
                     break
                 print("  -> problèmes :")

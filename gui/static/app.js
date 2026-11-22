@@ -67,11 +67,11 @@ const SECTIONS = [
 // ── U3ap (14 novembre 2026) : menu en groupes (Ajouter au monde / Sources / Entretien) ──
 // Les entrées scripts_config.json ne changent pas : seul leur rangement dans le menu.
 const NAV_ABSORBEES_U3AP = ['entites_creation', 'entites_nettoyage', 'monde_reel'];
-const NAV_DIRECTS_U3AP = ['create_entities', 'inject_events', 'inject_signals'];
+const NAV_DIRECTS_U3AP = [];   // U4k (22 nov 2026) : outils directs retirés ; create_entities -> Entretien
 const NAV_SOURCES_U3AP = ['export_prompt_veille', 'import_veille_etat_monde', 'export_prompt_signaux',
   'veille_livres_api', 'veille_rss_api', 'import_signaux_faibles'];
 const NAV_ENTRETIEN_U3AP = ['enrich_minimal', 'fix_alliances_oppositions', 'generate_instances',
-  'extract_phantom_slugs', 'requeue_needs_review', 'undo_custom', 'trace_injection',
+  'extract_phantom_slugs', 'create_entities', 'requeue_needs_review', 'undo_custom', 'trace_injection',
   'fix_annee_debut_placeholder', 'set_priorite_forcee', 'set_selection_instance'];
 
 function _navMemoireU3ap(cle, defaut) {
@@ -123,7 +123,7 @@ function construireGroupesNavU3ap(nav, quand) {
   if (quand === 'avant') {
     nav.appendChild(makeSectionLabel('Ajouter au monde'));
     _navScriptsU3ap(['simuler_et_si']).forEach(e => nav.appendChild(e));
-    _navGroupeReplieU3ap(nav, 'directs', 'Outils directs (ancien, avancé)', _navScriptsU3ap(NAV_DIRECTS_U3AP), false);
+    // U4k : groupe « Outils directs (ancien, avancé) » retiré (porte unique « et si ? »)
     nav.appendChild(makeDivider());
     nav.appendChild(makeSectionLabel('Sources'));
     nav.appendChild(makeNavItem('veille_signaux', '🔭', 'Veille signaux faibles', null, 'tab'));

@@ -606,8 +606,8 @@ def ecrire_reste_a_faire(data, ops, rapport_ok=True):
         nouv = lec.get("nouvelles_entites") or []
         if nouv:
             L += ["### Nouvelles entités proposées (facultatif)", ""]
-            case(f"{len(nouv)} entité(s) : choisir `category`, garder ou retirer chaque entrée, coller dans "
-                 "`entites_custom/queue.yaml`, puis `python3 generator/create_entities_and_instances.py --mode custom`.")
+            case(f"{len(nouv)} entité(s) : les ajouter comme hypothèses d'entité à l'étape ⑤ du panneau "
+                 "(« Lecture IA »), puis vérifier, adopter, injecter.")   # U4k
             L += ["", "```yaml"]
             for e in nouv:
                 # PATCH_S27_CATEGORIES : catégorie de la lecture IA si elle existe (v8.21).

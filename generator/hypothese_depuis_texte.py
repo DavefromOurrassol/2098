@@ -123,8 +123,8 @@ def construire_prompt(texte, variables, type_force=None, imposes=None):
                        f"plafond de {FORCE_MAX} donné plus bas). Chaque impact est PERMANENT : ne retiens "
                        "que les domaines que l'élément change pour de bon à l'échelle du monde ; un domaine "
                        "qu'il apaise prend la polarité -1. Si l'élément frappe certains scénarios plus que "
-                       "d'autres, \"delta_level\" peut être un dictionnaire par scénario (comme polarite, les 6 "
-                       f"scénarios) : {se.WILD_CARD_FORCE[0]} à {se.WILD_CARD_FORCE[1]} dans au moins un scénario, "
+                       "d'autres, \"delta_level\" peut être un dictionnaire par scénario (comme polarite, seulement les "
+                       f"scénarios de l'hypothèse) : {se.WILD_CARD_FORCE[0]} à {se.WILD_CARD_FORCE[1]} dans au moins un scénario, "
                        f"{se.WILD_CARD_FORCE_MIN_SC} au moins dans les autres.\n\n")   # U4d3 / U4f
     return f"""{ligne_type}Tu aides l'auteur du monde fictif Ourrassol 2098 (6 scénarios d'avenir, 12 variables
 où le niveau 100 = crise maximale) à transformer une IDÉE en HYPOTHÈSE « et si ? » testable
@@ -166,7 +166,8 @@ RÈGLES :
     sur ce domaine ; 5 = effet secondaire net).
   - "polarite" : 1 si l'élément AGGRAVE la crise de ce domaine, -1 s'il l'APAISE. Si cela
     dépend du scénario (une même technologie libère un monde et opprime l'autre), donne un
-    dictionnaire {{"breakdown": 1, "new_sustainability": -1, ...}} couvrant les 6 scénarios.
+    dictionnaire {{"breakdown": 1, "new_sustainability": -1, ...}} couvrant SEULEMENT les scénarios de l'hypothèse (les 6 si "tous") ; si le sens
+    est le même partout, un seul nombre.
   - "duree" : années de montée jusqu'à pleine force (1 = brutal, 10 = progressif).
 - "contraintes" : 0 à 4 phrases, chacune reprenant un fait ÉCRIT dans l'idée (chiffre, date,
   point d'arrivée), presque mot pour mot. Jamais un fait ajouté, ni tiré de ta description :
@@ -286,6 +287,7 @@ def normaliser_proposition(brut, variables, ids_pris, wild=False):
         h["contraintes"] = contraintes
 
     impacts, vues = [], set()
+    hors_pol = set()   # U4j : polarités données hors des scénarios de l'hypothèse
     for imp in (brut.get("impacts") or []):
         if not isinstance(imp, dict):
             continue
@@ -340,8 +342,10 @@ def normaliser_proposition(brut, variables, ids_pris, wild=False):
                 force = min(fmax, max(fmin, force))
         pol = imp.get("polarite", 1)
         if isinstance(pol, dict):
-            pol = {s: (1 if str(v).strip().lstrip("+") == "1" else -1) for s, v in pol.items() if s in se.SCENARIOS}
-            manquants = [s for s in se.SCENARIOS if s not in pol]
+            couverts_pol = list(se.SCENARIOS) if scen == "tous" else list(scen)   # U4j
+            hors_pol.update(s for s in pol if s in se.SCENARIOS and s not in couverts_pol)
+            pol = {s: (1 if str(v).strip().lstrip("+") == "1" else -1) for s, v in pol.items() if s in couverts_pol}
+            manquants = [s for s in couverts_pol if s not in pol]
             if manquants:
                 av.append(f"{var} : polarité absente pour {manquants} -> 1 (aggrave)")
                 pol.update({s: 1 for s in manquants})
@@ -355,6 +359,9 @@ def normaliser_proposition(brut, variables, ids_pris, wild=False):
             duree = 10
         duree = min(DUREE_MAX, max(1, duree))
         impacts.append({"variable": var, "delta_level": force, "polarite": pol, "duree": duree})
+    if hors_pol:   # U4j
+        av.append("polarités données pour des scénarios hors de l'hypothèse, retirées : "
+                  + ", ".join(s for s in se.SCENARIOS if s in hors_pol))
     if len(impacts) > MAX_IMPACTS:
         av.append(f"{len(impacts)} impacts proposés, gardé les {MAX_IMPACTS} premiers")
         impacts = impacts[:MAX_IMPACTS]

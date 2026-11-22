@@ -2604,11 +2604,10 @@ def liste_application(hyp, sc, res, cons, geo_ops, donnees, passe=None):
     if cons.get("nouvelles_entites"):
         # PATCH_S27_LIBELLES : « à choisir » seulement si une catégorie manque (v8.21 : proposée par l'IA).
         sans_cat = sum(1 for n in cons["nouvelles_entites"] if not n.get("category"))
-        _etape(E, "Nouvelles entités", f"{len(cons['nouvelles_entites'])} entrée(s) prête(s) (bloc YAML ci-dessous) "
-               "pour entites_custom/queue.yaml"
+        _etape(E, "Nouvelles entités", f"{len(cons['nouvelles_entites'])} entité(s) proposée(s) (bloc ci-dessous)"
                + (f" — catégorie à choisir pour {sans_cat}" if sans_cat else " — catégorie proposée, à relire"),
-               "étape ⑤ du panneau (« Ajouter à la file »), puis python3 generator/create_entities_and_instances.py --mode custom",
-               "scenario_hint limite à ce scénario")
+               "étape ⑤ du panneau (« Lecture IA » : cocher, puis ajouter comme hypothèses d'entité)",
+               "chaque entité suit ensuite le parcours « et si ? » : vérifier, adopter, injecter")   # U4k
 
     # 7. Trajectoires ----------------------------------------------------------
     for t in (cons.get("trajectoires") or []) + [dict(x, passe=True) for x in p_obl["trajectoires"]]:
@@ -2895,7 +2894,8 @@ def _rendre_application(app, hyp, sc):
                     "scenario_ref": sc, "scenario_hint": [sc],
                     **({"zone_hint": ne["zone"]} if ne.get("zone") and ne["zone"] != "transnationale" else {}),
                     "source": f"et_si_{hyp['id']}"} for ne in app["nouvelles_entites"]]
-        L += ["Entrées pour `entites_custom/queue.yaml` :", "", "```yaml", _yaml_bloc(entrees), "```", ""]
+        L += ["Entités proposées (pour mémoire : l'ajout se fait à l'étape ⑤, « Lecture IA ») :", "",   # U4k
+              "```yaml", _yaml_bloc(entrees), "```", ""]
     return L
 
 
