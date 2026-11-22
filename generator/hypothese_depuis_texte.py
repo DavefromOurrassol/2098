@@ -173,6 +173,11 @@ RÈGLES :
   (pas les effets lointains : le simulateur les propage lui-même).
   - "delta_level" = FORCE, entier de 1 à {FORCE_MAX} ({FORCE_MAX} = choc majeur et mondial
     sur ce domaine ; 5 = effet secondaire net).
+    Si l'élément touche plusieurs scénarios avec une intensité NETTEMENT différente (un monde
+    où ce domaine est déjà fragile, un autre qui l'encaisse), "delta_level" peut être un
+    dictionnaire par scénario, limité aux scénarios de l'hypothèse
+    ({{"breakdown": 18, "policy_reform": 8}}) : dis pourquoi dans "justification". Sinon, un
+    seul nombre (pas d'écart inventé). Un signal a toujours UN seul nombre.
   - "polarite" : 1 si l'élément AGGRAVE la crise de ce domaine, -1 s'il l'APAISE. Si cela
     dépend du scénario (une même technologie libère un monde et opprime l'autre), donne un
     dictionnaire {{"breakdown": 1, "new_sustainability": -1, ...}} couvrant SEULEMENT les scénarios de l'hypothèse (les 6 si "tous") ; si le sens
@@ -313,6 +318,11 @@ def normaliser_proposition(brut, variables, ids_pris, wild=False):
         if wild:   # U4a
             fmin, fmax = se.WILD_CARD_FORCE
         dl = imp.get("delta_level")
+        if est_signal and isinstance(dl, dict):   # U4o : un signal a UNE force par variable
+            nums = [abs(float(v)) for v in dl.values() if isinstance(v, (int, float))]
+            av.append(f"{var} : un signal a une seule force -> la plus forte des valeurs proposées "
+                      f"({max(nums):g})" if nums else f"{var} : forces par scénario illisibles")
+            dl = max(nums) if nums else None
         if isinstance(dl, dict):   # U4f : force par scénario
             couverts = se.SCENARIOS if scen == "tous" else list(scen)
             vals = {}
