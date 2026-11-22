@@ -6,10 +6,10 @@ et_si_main.py — Ourrassol 2098 (S27, étape ⑤ « À la main », 17 octobre 2
 Aide à la partie mécanique de l'étape ⑤, pour une hypothèse déjà APPLIQUÉE
 (phase 4). Aucun appel IA. Rien n'est écrit sans --apply.
 
-  1. Nouvelles entités proposées par la lecture IA : choisir une catégorie, puis
-     les ajouter à entites_custom/queue.yaml (même format que la création
-     d'entités ; garde-fou anti-doublon). La création elle-même reste
-     « Créer des entités » (create_entities_and_instances.py --mode custom).
+  1. Nouvelles entités proposées par la lecture IA : choisir une catégorie ; elles
+     deviennent des hypothèses « et si ? » de type entité dans et_si/hypotheses.yaml
+     (U3be ; garde-fou anti-doublon). La suite se fait dans l'onglet « Et si ? »
+     (Vérifier, Adopter, Injecter).
   2. Règle de lore : ajouter un brouillon relu à documentation/lore_regles.yaml,
      section du scénario (format vérifié, identifiant unique, fichier relu après
      écriture ; commentaires du fichier conservés).
@@ -199,7 +199,8 @@ def statut_entite(e, suivi, m, file_noms, existants, ids_hyp=None):
                                     "« Et si ? » (mode Simuler : Vérifier, Adopter, Injecter)")
         return "proposée", ""   # l'hypothèse a été supprimée depuis : l'entité peut être reproposée
     if e["nom"].lower() in file_noms:
-        return "dans la file", "déjà dans entites_custom/queue.yaml (ancien chemin) : lancer « Créer des entités »"
+        return "dans la file", ("déjà dans entites_custom/queue.yaml (ancien chemin) : lancer "   # U4r
+                                "« Traiter la file des entités (fantômes) » (groupe Entretien)")
     if e["cle"] in suivi["entites"]:
         return "traitée", "ajoutée à la file puis retirée (créée ou rejetée : voir processed / needs_review)"
     return "proposée", ""

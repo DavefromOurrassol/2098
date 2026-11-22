@@ -385,72 +385,8 @@ def _to_yaml_scalar(value) -> str:
 
 
 
-@app.route("/api/yaml/append", methods=["POST"])
-def append_yaml_queue():
-    """
-    Appende une entrée dans la liste 'queue' d'un fichier YAML.
-    Body JSON :
-    {
-      "path": "entites_custom/queue.yaml",
-      "entry": { "nom": "...", "category": "...", ... }
-    }
-    """
-    cfg = load_config()
-    vault_root = Path(cfg.get("vault_root", ""))  # bug #16
-    data = request.get_json()
-    if not data or "path" not in data or "entry" not in data:
-        return jsonify({"error": "Données manquantes"}), 400
-
-    rel_path = data["path"]
-    entry = data["entry"]
-
-    target = (vault_root / rel_path).resolve()
-    try:
-        target.relative_to(vault_root.resolve())
-    except ValueError:
-        return jsonify({"error": "Chemin non autorisé"}), 403
-
-    try:
-        import yaml as _yaml
-
-        # Backup
-        entete = ""  # PATCH_S20_ENTETE : commentaires de tête conservés
-        if target.exists():
-            bak = target.with_suffix(target.suffix + ".bak")
-            texte_avant = target.read_text(encoding="utf-8")
-            bak.write_text(texte_avant, encoding="utf-8")
-            existing = _yaml.safe_load(texte_avant) or {}
-            lignes_tete = []
-            for _l in texte_avant.splitlines():
-                if _l.strip() == "" or _l.lstrip().startswith("#"):
-                    lignes_tete.append(_l)
-                else:
-                    break
-            if any(_l.lstrip().startswith("#") for _l in lignes_tete):
-                entete = "\n".join(lignes_tete).rstrip() + "\n\n"
-        else:
-            existing = {}
-            target.parent.mkdir(parents=True, exist_ok=True)
-
-        queue = existing.get("queue") or []
-        if not isinstance(queue, list):
-            queue = []
-
-        # Nettoyer les valeurs vides optionnelles
-        clean_entry = {k: v for k, v in entry.items()
-                       if v is not None and v != "" and v != []}
-
-        queue.append(clean_entry)
-        existing["queue"] = queue
-
-        target.write_text(
-            entete + _yaml.dump(existing, allow_unicode=True, sort_keys=False, default_flow_style=False),
-            encoding="utf-8"
-        )
-        return jsonify({"ok": True, "path": str(target), "queue_length": len(queue)})
-    except Exception as e:
-        return jsonify({"error": str(e)}), 500
-
+# U4r : route /api/yaml/append retirée (plus aucun formulaire n'écrit dans une
+# queue.yaml depuis U4k ; tout passe par « et si ? »).
 
 
 @app.route("/api/zones/pays-liste", methods=["GET"])
@@ -3143,55 +3079,8 @@ def et_si_main_route(quoi, action=None):
     return jsonify({"ok": r.returncode == 0, "sortie": sortie})
 
 
-TIMEOUT_IDEES_TEXTE_LIBRE = 180  # secondes -- un seul appel LLM
-
-
-@app.route("/api/idees/proposer", methods=["POST"])
-def idees_proposer():
-    """
-    POST /api/idees/proposer  --  Body JSON : {"type": "signal"|"evenement", "texte": "..."}
-
-    Assistant "Depuis un texte libre" (27 septembre 2026) : appelle
-    idees_vers_queue.py --type <type> --json en sous-processus, le texte
-    passé sur l'entrée standard (pas en argument : longueur et caractères
-    spéciaux sans risque). Retourne des PROPOSITIONS d'entrées de queue,
-    n'écrit jamais rien -- le formulaire GUI est pré-rempli puis l'ajout
-    passe par /api/yaml/append comme d'habitude.
-    """
-    cfg = load_config()
-    pipeline_dir = Path(cfg.get("pipeline_dir", ""))
-    data = request.get_json() or {}
-    type_ = data.get("type")
-    texte = (data.get("texte") or "").strip()
-    if type_ not in ("signal", "evenement"):
-        return jsonify({"error": "type doit valoir 'signal' ou 'evenement'"}), 400
-    if not texte:
-        return jsonify({"error": "texte vide"}), 400
-
-    cmd = [sys.executable, "idees_vers_queue.py", "--type", type_, "--json"]
-    try:
-        resultat = subprocess.run(
-            cmd, cwd=pipeline_dir, capture_output=True, text=True,
-            input=texte, timeout=TIMEOUT_IDEES_TEXTE_LIBRE,
-        )
-    except subprocess.TimeoutExpired:
-        return jsonify({"error": f"Proposition expirée après {TIMEOUT_IDEES_TEXTE_LIBRE}s "
-                                  f"(appel LLM trop lent ou bloqué)"}), 504
-    except FileNotFoundError:
-        return jsonify({"error": f"idees_vers_queue.py introuvable dans {pipeline_dir}"}), 500
-
-    sortie = resultat.stdout.strip()
-    if not sortie:
-        return jsonify({"error": f"Aucune sortie du sous-processus "
-                                  f"(code {resultat.returncode}) : {resultat.stderr[-500:]}"}), 500
-    try:
-        payload = json.loads(sortie.splitlines()[-1])
-    except (json.JSONDecodeError, IndexError):
-        return jsonify({"error": f"Sortie non-JSON du sous-processus : {sortie[-500:]}"}), 500
-
-    if not payload.get("ok"):
-        return jsonify({"error": payload.get("error", "Erreur inconnue")}), 500
-    return jsonify(payload)
+# U4r : route /api/idees/proposer (idees_vers_queue.py) retirée : une idée en texte
+# libre passe par « et si ? » (/api/et_si/proposer).
 
 
 # ---------------------------------------------------------------------------

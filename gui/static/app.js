@@ -2622,24 +2622,6 @@ async function buildYamlFormPanel(yf, configFields, script) {
     formZone.appendChild(group);
   }
 
-  // ── Assistant "Depuis un texte libre" (27 septembre 2026) ──
-  // Propose des entrées de queue à partir d'un texte libre
-  // (idees_vers_queue.py via /api/idees/proposer) et PRÉ-REMPLIT ce
-  // formulaire : l'écriture passe toujours par "Ajouter à la queue"
-  // (_appendYamlQueue), seul chemin d'écriture vers queue.yaml.
-  // Placé SOUS le champ Description (pas de zone de saisie séparée, qui
-  // faisait doublon avec lui) : on écrit l'idée dans Description, un clic
-  // complète les autres champs.
-  const groupeDescription = formZone.querySelector('.yaml-form-field[data-yaml-key="description"]');
-  if (isQueueMode && script && script.assistant_texte_libre && groupeDescription) {
-    const champDescription = groupeDescription.querySelector('[data-form-key="description"]');
-    groupeDescription.appendChild(_buildAssistantTexteLibre(
-      script.assistant_texte_libre,
-      champDescription,
-      (entree) => _remplirYamlForm(wrapper, entree),
-    ));
-  }
-
   wrapper.appendChild(formZone);
 
   // ── Zone édition brute (cachée par défaut) ──
@@ -2700,7 +2682,8 @@ async function buildYamlFormPanel(yf, configFields, script) {
     const originalLabel = btnSave.textContent;
     try {
       if (isQueueMode) {
-        await _appendYamlQueue(wrapper, yf.path, statusMsg);
+        // U4r : l'écriture directe dans une file (queue.yaml) est fermée depuis U4k.
+        showYamlStatus(statusMsg, 'error', 'Ajout direct à une file fermé : passer par l\'onglet « Et si ? ».');
       } else {
         await _saveYamlForm(wrapper, yf.path, statusMsg);
       }
@@ -2883,7 +2866,7 @@ async function _buildFormField(field, currentValues, script) {
   // Corrige un bug trouvé le 26 juillet 2026 : marque réellement les
   // champs optionnels dans le DOM (voir _markOptional ci-dessous) --
   // jusqu'ici cet attribut n'était jamais posé, donc le sélecteur
-  // ":not([data-optional])" utilisé par _appendYamlQueue() pour repérer
+  // ":not([data-optional])" utilisé par _appendYamlQueue (retiré en U4r) pour repérer
   // les champs requis ne filtrait jamais rien.
   group.querySelectorAll('[data-form-key]').forEach(el => _markOptional(el, field));
 
@@ -2904,7 +2887,7 @@ async function _buildFormField(field, currentValues, script) {
 
 /**
  * Pose `data-optional` sur l'élément de saisie d'un champ, si le champ est
- * marqué optionnel dans scripts_config.json. Sans ça, `_appendYamlQueue()`
+ * marqué optionnel dans scripts_config.json. Sans ça, `_appendYamlQueue` (retiré en U4r)
  * ne peut jamais distinguer un champ requis d'un champ optionnel -- rien
  * n'empêchait d'envoyer une entrée de queue avec la description vide (cas
  * réel : entrée `{variable_hint_count: 2}` sans `description`, qui aurait
@@ -3073,280 +3056,9 @@ async function _loadZoneSelect(sel, slugType, scenario, currentVal) {
   }
 }
 
-/** Appende une nouvelle entrée dans une queue YAML via /api/yaml/append. */
-/**
- * Assistant "✨ Compléter les autres champs" (27 septembre 2026), placé sous
- * le champ Description : envoie le texte de ce champ à /api/idees/proposer
- * (idees_vers_queue.py) et remplit le formulaire avec la proposition.
- * - une seule idée détectée : remplissage direct, carte affichée pour la
- *   justification et les avertissements ;
- * - plusieurs idées : une carte par idée, l'utilisateur choisit laquelle
- *   charger (les autres restent affichées pour les ajouter ensuite).
- * Le texte d'origine est conservé et peut être rétabli. Tout le texte venant
- * du LLM est inséré via textContent (jamais innerHTML). Rien n'est écrit dans
- * la queue ici : l'ajout passe par « Ajouter à la queue » (_appendYamlQueue).
- */
-function _buildAssistantTexteLibre(typeEntree, champDescription, onRemplir) {
-  const zone = document.createElement('div');
-  zone.className = 'yaml-assistant-zone';
-  zone.style.marginTop = '6px';
-
-  const btn = document.createElement('button');
-  btn.type = 'button';
-  btn.className = 'yaml-btn';
-  btn.textContent = '✨ Compléter les autres champs';
-  btn.title = "Écris ton idée librement dans Description (dates, lieux, point d'arrivée…) : "
-    + "l'IA la reformule et remplit les autres champs. Un appel IA réel par clic.";
-  zone.appendChild(btn);
-
-  const btnRetablir = document.createElement('button');
-  btnRetablir.type = 'button';
-  btnRetablir.className = 'yaml-btn';
-  btnRetablir.textContent = '↶ Rétablir mon texte';
-  btnRetablir.style.cssText = 'margin-left:6px;display:none;';
-  zone.appendChild(btnRetablir);
-
-  const etat = document.createElement('div');
-  etat.className = 'option-desc';
-  zone.appendChild(etat);
-
-  const resultats = document.createElement('div');
-  zone.appendChild(resultats);
-
-  let texteOriginal = null;
-  btnRetablir.addEventListener('click', () => {
-    if (texteOriginal !== null) champDescription.value = texteOriginal;
-  });
-
-  btn.addEventListener('click', async () => {
-    const texte = (champDescription.value || '').trim();
-    if (!texte) { etat.textContent = "Écris d'abord ton idée dans Description."; return; }
-    if (btn.disabled) return;
-    btn.disabled = true;
-    etat.textContent = 'Appel IA en cours…';
-    resultats.innerHTML = '';
-    try {
-      const res = await fetch('/api/idees/proposer', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ type: typeEntree, texte }),
-      });
-      const data = await res.json();
-      if (!res.ok || !data.ok) {
-        etat.textContent = `Erreur : ${data.error || res.status}`;
-        return;
-      }
-      texteOriginal = texte;
-      btnRetablir.style.display = '';
-      const idees = data.idees || [];
-      if (idees.length === 1) {
-        onRemplir(idees[0].entree || {});
-        etat.textContent = 'Champs remplis — relis/corrige, puis « Ajouter à la queue ».';
-        resultats.appendChild(_carteProposition(idees[0], null));
-      } else {
-        etat.textContent = `${idees.length} idées distinctes détectées — charge-les une par une `
-          + '(« Ajouter à la queue » entre chaque).';
-        idees.forEach(p => resultats.appendChild(_carteProposition(p, onRemplir)));
-      }
-    } catch (e) {
-      etat.textContent = `Erreur réseau : ${e.message}`;
-    } finally {
-      btn.disabled = false;
-    }
-  });
-
-  return zone;
-}
-
-/**
- * Une carte de proposition. Avec `onRemplir` (plusieurs idées) : id,
- * description, champs clés, justification, avertissements et bouton de
- * chargement. Sans (une seule idée, déjà chargée dans le formulaire) :
- * seulement la justification et les avertissements -- le reste est déjà
- * visible dans le formulaire, inutile de l'afficher deux fois.
- */
-function _carteProposition(p, onRemplir) {
-  const e = p.entree || {};
-  const carte = document.createElement('div');
-  carte.style.cssText = 'border:1px solid #ccc;border-radius:6px;padding:8px;margin-top:8px;';
-  if (!onRemplir) {
-    if (!p.justification && !(p.avertissements || []).length) return document.createElement('span');
-    carte.style.cssText = 'margin-top:4px;';
-  }
-
-  if (onRemplir) {
-    const titre = document.createElement('div');
-    titre.style.cssText = 'font-weight:600;font-family:"JetBrains Mono",monospace;font-size:12px;';
-    titre.textContent = e.id || '(sans id)';
-    carte.appendChild(titre);
-  
-    const desc = document.createElement('div');
-    desc.style.cssText = 'margin:4px 0;font-size:13px;';
-    desc.textContent = e.description || '';
-    carte.appendChild(desc);
-  
-    const vars = e.variable_hint || e.variables_hint || [];
-    const champs = [
-      vars.length ? `variables : ${vars.join(', ')}` : 'variables : l’IA choisira',
-      `persistance : ${e.persistance || 'normale'}`,
-      e.annee_apparition ? `apparition : ${e.annee_apparition}` : null,
-      e.zone_hint ? `lieu : ${e.zone_hint}` : null,
-      e.portee ? `portée : ${e.portee}` : null,
-      e.date_approximative ? `date : ${e.date_approximative}` : null,
-      e.intensite ? `intensité : ${e.intensite}` : null,
-    ].filter(Boolean);
-    const resume = document.createElement('div');
-    resume.className = 'option-desc';
-    resume.textContent = champs.join(' · ');
-    carte.appendChild(resume);
-  }
-
-  if (p.justification) {
-    const j = document.createElement('div');
-    j.className = 'option-desc';
-    j.style.fontStyle = 'italic';
-    j.textContent = `Pourquoi : ${p.justification}`;
-    carte.appendChild(j);
-  }
-  (p.avertissements || []).forEach(a => {
-    const w = document.createElement('div');
-    w.className = 'option-desc';
-    w.style.color = '#c77700';
-    w.textContent = `⚠ ${a}`;
-    carte.appendChild(w);
-  });
-
-  if (!onRemplir) return carte;
-  const btn = document.createElement('button');
-  btn.type = 'button';
-  btn.className = 'yaml-btn';
-  btn.style.marginTop = '6px';
-  btn.textContent = 'Charger dans le formulaire';
-  btn.addEventListener('click', () => {
-    onRemplir(e);
-    btn.textContent = '✓ Chargée (tu peux re-cliquer)';
-  });
-  carte.appendChild(btn);
-  return carte;
-}
-
-/**
- * Pré-remplit un formulaire guidé à partir d'une entrée de queue (27 septembre
- * 2026, assistant texte libre). Vide d'abord tous les champs (même remise à
- * zéro que _appendYamlQueue après un ajout), puis pose chaque valeur connue.
- * Une valeur absente d'une liste de choix est signalée en console et laissée
- * vide plutôt qu'inventée.
- */
-function _remplirYamlForm(wrapper, entree) {
-  wrapper.querySelectorAll('.yaml-form-zone [data-form-key]').forEach(el => {
-    if (el.classList.contains('yaml-chips')) {
-      el.querySelectorAll('.yaml-chip').forEach(c => c.classList.remove('active'));
-    } else if (el.classList.contains('yaml-per-scenario')) {
-      el.querySelectorAll('textarea[data-scenario]').forEach(t => { t.value = ''; });
-    } else if (el.tagName === 'SELECT') {
-      el.selectedIndex = 0;
-    } else if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
-      el.value = '';
-    }
-  });
-
-  Object.entries(entree || {}).forEach(([cle, valeur]) => {
-    const el = wrapper.querySelector(`.yaml-form-zone [data-form-key="${cle}"]`);
-    if (!el || valeur === null || valeur === undefined) return;
-    if (el.classList.contains('yaml-chips')) {
-      const valeurs = Array.isArray(valeur) ? valeur : [valeur];
-      valeurs.forEach(v => {
-        const chip = el.querySelector(`.yaml-chip[data-value="${CSS.escape(String(v))}"]`);
-        if (chip) chip.classList.add('active');
-        else console.warn(`[assistant] valeur ${v} absente des choix de ${cle}`);
-      });
-    } else if (el.tagName === 'SELECT') {
-      const opt = [...el.options].find(o => o.value === String(valeur));
-      if (opt) el.value = opt.value;
-      else console.warn(`[assistant] valeur ${valeur} absente des choix de ${cle}`);
-    } else if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
-      el.value = Array.isArray(valeur) ? valeur.join(', ') : String(valeur);
-    }
-  });
-}
-
-async function _appendYamlQueue(wrapper, yamlPath, statusEl) {
-  const entry = {};
-
-  wrapper.querySelectorAll('[data-form-key]').forEach(el => {
-    const key = el.dataset.formKey;
-    if (!key) return;
-
-    if (el.classList.contains('yaml-chips')) {
-      const active = [...el.querySelectorAll('.yaml-chip.active')].map(c => c.dataset.value);
-      if (active.length > 0) entry[key] = active;
-      // Si vide → ne pas inclure (null = défaut dans le script)
-    } else if (el.classList.contains('yaml-per-scenario')) {
-      const obj = _collectPerScenario(el);
-      if (Object.keys(obj).length > 0) entry[key] = obj;
-    } else if (el.tagName === 'SELECT') {
-      if (el.value !== '') entry[key] = el.value;
-    } else if (el.tagName === 'INPUT' && el.type === 'number') {
-      if (el.value !== '') entry[key] = Number(el.value);
-    } else if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
-      if (el.value.trim() !== '') entry[key] = el.value.trim();
-    }
-  });
-
-  // Validation minimale côté client -- corrigée le 26 juillet 2026 : cette
-  // vérification était calculée (`required`) mais jamais utilisée, et le
-  // commentaire d'origine ("la validation stricte est faite par le script
-  // Python") était faux pour ce chemin précis -- /api/yaml/append écrit
-  // l'entrée telle quelle, sans jamais appeler le script Python. Rien ne
-  // protégeait donc contre une entrée incomplète (cas réel : description
-  // vide, qui aurait fait planter inject_custom_signals.py plus tard sur
-  // `idea["description"]`, une KeyError qui interrompt tout le traitement
-  // de la queue -- pas seulement l'entrée fautive).
-  const manquants = [...wrapper.querySelectorAll('[data-form-key]:not([data-optional])')]
-    .filter(el => {
-      if (el.classList.contains('yaml-chips')) {
-        return el.querySelectorAll('.yaml-chip.active').length === 0;
-      }
-      if (el.classList.contains('yaml-per-scenario')) {
-        return Object.keys(_collectPerScenario(el)).length === 0;
-      }
-      return (el.value || '').trim() === '';
-    })
-    .map(el => el.closest('.yaml-form-field')?.querySelector('.option-label')?.textContent || '(champ)');
-
-  if (manquants.length > 0) {
-    showYamlStatus(statusEl, 'error', `Champ(s) requis manquant(s) : ${manquants.join(', ')}`);
-    return;
-  }
-
-  try {
-    const res = await fetch('/api/yaml/append', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ path: yamlPath, entry }),
-    });
-    const data = await res.json();
-    if (data.ok) {
-      showYamlStatus(statusEl, 'ok', `✓ Ajouté (${data.queue_length} entrée${data.queue_length > 1 ? 's' : ''} en queue)`);
-      // Réinitialiser le formulaire
-      wrapper.querySelectorAll('[data-form-key]').forEach(el => {
-        if (el.classList.contains('yaml-chips')) {
-          el.querySelectorAll('.yaml-chip').forEach(c => c.classList.remove('active'));
-        } else if (el.classList.contains('yaml-per-scenario')) {
-          el.querySelectorAll('textarea[data-scenario]').forEach(ta => { ta.value = ''; });
-        } else if (el.tagName === 'SELECT') {
-          el.selectedIndex = 0;
-        } else if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
-          el.value = '';
-        }
-      });
-    } else {
-      showYamlStatus(statusEl, 'error', `Erreur : ${data.error}`);
-    }
-  } catch (e) {
-    showYamlStatus(statusEl, 'error', `Erreur réseau : ${e.message}`);
-  }
-}
+// U4r : assistant « Depuis un texte libre » (_buildAssistantTexteLibre, _carteProposition,
+// _remplirYamlForm) et ajout à une file (_appendYamlQueue) retirés : plus aucun
+// formulaire n'écrit dans une queue.yaml depuis U4k ; tout passe par « et si ? ».
 
 // ══════════════════════════════════════════════════
 // DOUBLE SELECT ZONE 2098 / PAYS 2026
@@ -9847,12 +9559,9 @@ initPanelResizer('#tab-signaux .articles-sidebar', 'signaux-resizer', 'ourrassol
 //
 // Actions du panneau :
 //   - Écarter / Remettre à trier : /api/veille_signaux/statut ;
-//   - Envoyer en queue : 1) /api/idees/proposer (idees_vers_queue.py, UN
-//     appel IA) prépare l'entrée ; 2) après relecture, /api/yaml/append
-//     l'ajoute à signaux_custom/queue.yaml ou evenements_custom/queue.yaml
-//     (même point d'écriture que le formulaire guidé) ; 3) statut en_queue.
-//     L'injection réelle reste le lancement habituel d'inject_custom_signals.py
-//     / inject_custom_events.py.
+//   - ✨ Envoyer vers « et si ? » (U3a) : /api/et_si/proposer (hypothese_depuis_texte.py,
+//     UN appel IA ; date d'observation imposée, U4q), puis Vérifier / Ajouter à
+//     hypotheses.yaml ; statut en_hypothese. La suite se fait dans l'onglet « Et si ? ».
 // Tout texte venant des IA passe par _veilleEsc (jamais d'innerHTML brut) ;
 // les liens de sources ne sont rendus cliquables que s'ils sont en http(s).
 // ═══════════════════════════════════════════════════════════════════════
@@ -9867,7 +9576,6 @@ const VeilleState = {
   sortDir: 'desc',
   filtersWired: false,
   selected: null,
-  propositions: {},   // id candidat -> résultat de /api/idees/proposer
 };
 
 const VEILLE_QUEUES = {
@@ -10086,7 +9794,7 @@ function renderVeilleTable() {
 }
 
 function _veilleTexteProposition(c) {
-  // Texte envoyé à idees_vers_queue.py : le candidat tel quel, plus la
+  // Texte envoyé à hypothese_depuis_texte.py (U3a) : le candidat tel quel, plus la
   // date d'observation (qui devient l'année d'apparition) et les variables
   // en indice. Rien n'est inventé ici.
   const vars = [c.variable_principale, ...(c.variables_secondaires || [])]
