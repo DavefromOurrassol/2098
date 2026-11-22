@@ -10100,6 +10100,17 @@ function _veilleTexteProposition(c) {
   ].filter(Boolean).join(' ');
 }
 
+// U4q : date d'observation -> date imposée (année ; année.mois pour un événement
+// si la date est de la forme 2026-03). '' si aucune année lisible.
+function _veilleDateObservation(c, type) {
+  const m = String(c.observe_le || '').match(/\b(2\d{3})(?:[-./](\d{1,2}))?\b/);
+  if (!m) return '';
+  const an = parseInt(m[1], 10);
+  const mo = m[2] ? parseInt(m[2], 10) : 0;
+  if (type === 'evenement' && mo >= 1 && mo <= 12) return Math.round((an + mo / 100) * 100) / 100;
+  return an;
+}
+
 function renderVeillePanel() {
   const panel = document.getElementById('veille-panel');
   const c = VeilleState.selected;
@@ -10240,7 +10251,9 @@ async function _veilleVersEtSi(c) {
     try {
       const res = await fetch(`/api/et_si/${action}`, {
         method: 'POST', headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ texte, type: action === 'proposer' ? type : '' }),
+        body: JSON.stringify({ texte, type: action === 'proposer' ? type : '',
+          ...(action === 'proposer' && _veilleDateObservation(c, type) !== ''   // U4q
+            ? { date: _veilleDateObservation(c, type) } : {}) }),
       });
       return await res.json();
     } catch (e) {
